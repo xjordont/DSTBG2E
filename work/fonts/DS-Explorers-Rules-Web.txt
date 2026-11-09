@@ -1,0 +1,54 @@
+name                                 type              encoding         emb sub uni object ID
+------------------------------------ ----------------- ---------------- --- --- --- ---------
+FXPWIR+OptimusPrinceps               TrueType          WinAnsi          yes yes yes   1005  0
+FDMMVB+Arimo-Regular                 CID TrueType      Identity-H       yes yes yes   1015  0
+FXPWIR+ACaslonPro-Regular            Type 1C           Custom           yes yes yes    854  0
+FXPWIR+ACaslonPro-Italic             Type 1C           Custom           yes yes yes    843  0
+FXPWIR+ACaslonPro-Regular            Type 1C           WinAnsi          yes yes yes    865  0
+FXPWIR+ACaslonPro-Regular            Type 1C           WinAnsi          yes yes yes    875  0
+FXPWIR+ACaslonPro-Regular            Type 1C           WinAnsi          yes yes yes    871  0
+FXPWIR+ACaslonPro-Italic             Type 1C           WinAnsi          yes yes yes    861  0
+FXPWIR+ACaslonPro-Regular            Type 1C           WinAnsi          yes yes yes    885  0
+FXPWIR+ACaslonPro-Italic             Type 1C           WinAnsi          yes yes yes    863  0
+FXPWIR+ACaslonPro-Bold               Type 1C           Custom           yes yes yes    876  0
+FXPWIR+OptimusPrinceps               TrueType          WinAnsi          yes yes yes    877  0
+FXPWIR+OptimusPrinceps               TrueType          WinAnsi          yes yes yes    891  0
+FXPWIR+OptimusPrinceps               TrueType          WinAnsi          yes yes yes    879  0
+FXPWIR+OptimusPrincepsSemiBold       TrueType          WinAnsi          yes yes yes    862  0
+FXPWIR+OptimusPrinceps               TrueType          WinAnsi          yes yes yes    878  0
+FXPWIR+OptimusPrincepsSemiBold       TrueType          WinAnsi          yes yes yes    866  0
+FXPWIR+ACaslonPro-Regular            Type 1C           WinAnsi          yes yes yes    911  0
+FXPWIR+ACaslonPro-Regular            Type 1C           Custom           yes yes yes    921  0
+FXPWIR+ACaslonPro-Regular            Type 1C           Custom           yes yes yes    922  0
+FXPWIR+ACaslonPro-Regular            Type 1C           WinAnsi          yes yes yes    920  0
+FXPWIR+ACaslonPro-Regular            Type 1C           Custom           yes yes yes    912  0
+FXPWIR+ACaslonPro-Regular            Type 1C           Custom           yes yes yes    916  0
+FXPWIR+ACaslonPro-Regular            Type 1C           Custom           yes yes yes    918  0
+FXPWIR+ACaslonPro-Regular            Type 1C           Custom           yes yes yes    919  0
+FXPWIR+ACaslonPro-Regular            Type 1C           Custom           yes yes yes    913  0
+FXPWIR+ACaslonPro-Semibold           Type 1C           Custom           yes yes yes    910  0
+FXPWIR+ACaslonPro-Regular            Type 1C           Custom           yes yes yes    923  0
+FXPWIR+OptimusPrinceps               TrueType          WinAnsi          yes yes yes    914  0
+FXPWIR+OptimusPrinceps               TrueType          WinAnsi          yes yes yes    917  0
+FXPWIR+OptimusPrinceps               TrueType          WinAnsi          yes yes yes    915  0
+FXPWIR+OptimusPrinceps               TrueType          WinAnsi          yes yes yes    924  0
+FXPWIR+OptimusPrincepsSemiBold       TrueType          WinAnsi          yes yes yes    927  0
+FXPWIR+OptimusPrinceps               TrueType          WinAnsi          yes yes yes    926  0
+FXPWIR+OptimusPrinceps               TrueType          WinAnsi          yes yes yes    925  0
+FXPWIR+OptimusPrincepsSemiBold       TrueType          WinAnsi          yes yes yes    929  0
+FXPWIR+OptimusPrinceps               TrueType          WinAnsi          yes yes yes    928  0
+FXPWIR+OptimusPrinceps               TrueType          WinAnsi          yes yes yes    930  0
+FXPWIR+ACaslonPro-Regular            Type 1C           WinAnsi          yes yes yes    971  0
+FXPWIR+ACaslonPro-Italic             Type 1C           WinAnsi          yes yes yes    973  0
+FXPWIR+ACaslonPro-Regular            Type 1C           WinAnsi          yes yes yes    974  0
+FXPWIR+OptimusPrinceps               TrueType          WinAnsi          yes yes yes    978  0
+FXPWIR+OptimusPrincepsSemiBold       TrueType          WinAnsi          yes yes yes    979  0
+FXPWIR+OptimusPrinceps               TrueType          WinAnsi          yes yes yes    977  0
+FXPWIR+ACaslonPro-Regular            Type 1C           WinAnsi          yes yes yes    986  0
+FXPWIR+ACaslonPro-Regular            Type 1C           WinAnsi          yes yes yes    987  0
+FXPWIR+ACaslonPro-Regular            Type 1C           WinAnsi          yes yes yes    989  0
+FXPWIR+ACaslonPro-Italic             Type 1C           WinAnsi          yes yes yes    988  0
+FXPWIR+OptimusPrinceps               TrueType          WinAnsi          yes yes yes    990  0
+FXPWIR+OptimusPrinceps               TrueType          WinAnsi          yes yes yes    984  0
+FXPWIR+OptimusPrinceps               TrueType          WinAnsi          yes yes yes    983  0
+FXPWIR+OptimusPrincepsSemiBold       TrueType          WinAnsi          yes yes yes    993  0

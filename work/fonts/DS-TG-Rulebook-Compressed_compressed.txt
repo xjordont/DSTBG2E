@@ -1,0 +1,19 @@
+name                                 type              encoding         emb sub uni object ID
+------------------------------------ ----------------- ---------------- --- --- --- ---------
+BFEUIT+OptimusPrinceps               TrueType          WinAnsi          yes yes yes     44  0
+ASJHEV+Helvetica                     TrueType          WinAnsi          yes yes yes     57  0
+UTVXPX+Arimo-Regular                 CID TrueType      Identity-H       yes yes yes   2350  0
+BKOVKY+ACaslonPro-Regular            Type 1C           Custom           yes yes yes     69  0
+ORRCEK+ACaslonPro-Bold               Type 1C           Custom           yes yes yes     76  0
+ORRCEK+ACaslonPro-Italic             Type 1C           Custom           yes yes yes     86  0
+BFEUIT+OptimusPrinceps               TrueType          WinAnsi          yes yes yes    102  0
+BBTWED+OptimusPrincepsSemiBold       TrueType          WinAnsi          yes yes yes    104  0
+BKSOEQ+ACaslonPro-Regular            Type 1C           Custom           yes yes yes    108  0
+BFEUIT+OptimusPrinceps               TrueType          WinAnsi          yes yes yes    126  0
+BBTWED+OptimusPrincepsSemiBold       TrueType          WinAnsi          yes yes yes    128  0
+BKSOEQ+ACaslonPro-Regular            Type 1C           Custom           yes yes yes    130  0
+BFEUIT+OptimusPrinceps               TrueType          WinAnsi          yes yes yes    146  0
+BBTWED+OptimusPrincepsSemiBold       TrueType          WinAnsi          yes yes yes    147  0
+BKSOEQ+ACaslonPro-Regular            Type 1C           Custom           yes yes yes    149  0
+BBTWED+OptimusPrincepsSemiBold       TrueType          WinAnsi          yes yes yes   1307  0
+BKOVKY+ACaslonPro-Regular            Type 1C           WinAnsi          yes yes yes   1309  0

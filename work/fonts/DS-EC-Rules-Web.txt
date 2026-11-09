@@ -1,0 +1,52 @@
+name                                 type              encoding         emb sub uni object ID
+------------------------------------ ----------------- ---------------- --- --- --- ---------
+BSIJUZ+OptimusPrinceps               TrueType          WinAnsi          yes yes yes   2889  0
+JILANR+Arimo-Regular                 CID TrueType      Identity-H       yes yes yes   2899  0
+BSIJUZ+ACaslonPro-Regular            Type 1C           Custom           yes yes yes   2763  0
+BSIJUZ+ACaslonPro-Italic             Type 1C           Custom           yes yes yes   2760  0
+BSIJUZ+ACaslonPro-Bold               Type 1C           Custom           yes yes yes   2767  0
+BSIJUZ+ACaslonPro-Regular            Type 1C           WinAnsi          yes yes yes   2836  0
+BSIJUZ+ACaslonPro-Regular            Type 1C           WinAnsi          yes yes yes   2839  0
+BSIJUZ+OptimusPrinceps               TrueType          WinAnsi          yes yes yes   2837  0
+BSIJUZ+OptimusPrinceps               TrueType          WinAnsi          yes yes yes   2830  0
+BSIJUZ+OptimusPrincepsSemiBold       TrueType          WinAnsi          yes yes yes   2832  0
+BSIJUZ+ACaslonPro-Regular            Type 1C           Custom           yes yes yes    257  0
+BSIJUZ+ACaslonPro-Semibold           Type 1C           Custom           yes yes yes    262  0
+BSIJUZ+OptimusPrinceps               TrueType          WinAnsi          yes yes yes    264  0
+BSIJUZ+ACaslonPro-Regular            Type 1C           WinAnsi          yes yes yes    382  0
+BSIJUZ+OptimusPrinceps               TrueType          WinAnsi          yes yes yes    384  0
+BSIJUZ+ACaslonPro-Regular            Type 1C           WinAnsi          yes yes yes    462  0
+BSIJUZ+OptimusPrinceps               TrueType          WinAnsi          yes yes yes    464  0
+BSIJUZ+OptimusPrinceps               TrueType          WinAnsi          yes yes yes    466  0
+BSIJUZ+ACaslonPro-Regular            Type 1C           WinAnsi          yes yes yes    616  0
+BSIJUZ+ACaslonPro-Regular            Type 1C           Custom           yes yes yes    619  0
+BSIJUZ+OptimusPrinceps               TrueType          WinAnsi          yes yes yes    621  0
+BSIJUZ+ACaslonPro-Regular            Type 1C           WinAnsi          yes yes yes    903  0
+BSIJUZ+OptimusPrinceps               TrueType          WinAnsi          yes yes yes    905  0
+BSIJUZ+ACaslonPro-Regular            Type 1C           WinAnsi          yes yes yes   1299  0
+BSIJUZ+OptimusPrinceps               TrueType          WinAnsi          yes yes yes   1301  0
+BSIJUZ+ACaslonPro-Regular            Type 1C           WinAnsi          yes yes yes   1611  0
+BSIJUZ+OptimusPrinceps               TrueType          WinAnsi          yes yes yes   1613  0
+BSIJUZ+ACaslonPro-Regular            Type 1C           Custom           yes yes yes   1869  0
+BSIJUZ+ACaslonPro-Regular            Type 1C           Custom           yes yes yes   1872  0
+BSIJUZ+OptimusPrinceps               TrueType          WinAnsi          yes yes yes   1874  0
+BSIJUZ+OptimusPrincepsSemiBold       TrueType          WinAnsi          yes yes yes   1876  0
+BSIJUZ+ACaslonPro-Regular            Type 1C           WinAnsi          yes yes yes   1976  0
+BSIJUZ+OptimusPrinceps               TrueType          WinAnsi          yes yes yes   1978  0
+BSIJUZ+ACaslonPro-Regular            Type 1C           WinAnsi          yes yes yes   2123  0
+BSIJUZ+OptimusPrinceps               TrueType          WinAnsi          yes yes yes   2125  0
+BSIJUZ+ACaslonPro-Regular            Type 1C           WinAnsi          yes yes yes   2239  0
+BSIJUZ+OptimusPrinceps               TrueType          WinAnsi          yes yes yes   2241  0
+BSIJUZ+ACaslonPro-Regular            Type 1C           WinAnsi          yes yes yes   2295  0
+BSIJUZ+OptimusPrinceps               TrueType          WinAnsi          yes yes yes   2297  0
+BSIJUZ+OptimusPrinceps               TrueType          WinAnsi          yes yes yes   2299  0
+BSIJUZ+ACaslonPro-Regular            Type 1C           WinAnsi          yes yes yes   2347  0
+BSIJUZ+OptimusPrinceps               TrueType          WinAnsi          yes yes yes   2349  0
+BSIJUZ+OptimusPrinceps               TrueType          WinAnsi          yes yes yes   2351  0
+BSIJUZ+ACaslonPro-Regular            Type 1C           WinAnsi          yes yes yes   2435  0
+BSIJUZ+OptimusPrinceps               TrueType          WinAnsi          yes yes yes   2437  0
+BSIJUZ+ACaslonPro-Regular            Type 1C           WinAnsi          yes yes yes   2542  0
+BSIJUZ+OptimusPrinceps               TrueType          WinAnsi          yes yes yes   2544  0
+BSIJUZ+ACaslonPro-Regular            Type 1C           WinAnsi          yes yes yes   2631  0
+BSIJUZ+OptimusPrinceps               TrueType          WinAnsi          yes yes yes   2633  0
+BSIJUZ+OptimusPrinceps               TrueType          WinAnsi          yes yes yes   2635  0

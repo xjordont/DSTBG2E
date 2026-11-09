@@ -1,0 +1,7 @@
+name                                 type              encoding         emb sub uni object ID
+------------------------------------ ----------------- ---------------- --- --- --- ---------
+OptimusPrinceps                      CID TrueType      Identity-H       yes no  yes     11  0
+TYHFJM+BookmanOldStyle-Bold          CID TrueType      Identity-H       yes yes yes     21  0
+BUAFIE+BookmanOldStyle               CID TrueType      Identity-H       yes yes yes     22  0
+THROZH+BookmanOldStyle-Italic        CID TrueType      Identity-H       yes yes yes     23  0
+NVMXVM+BookmanOldStyle-BoldItalic    CID TrueType      Identity-H       yes yes yes     82  0
