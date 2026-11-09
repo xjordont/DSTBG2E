@@ -1,0 +1,8 @@
+# User-supplied reference material is not committed (rights-holder keeps originals; SHA-256 recorded in 00_intake_validation.md)
+sources/
+# Scratch renders and decrypted working copies
+work/renders/
+work/pdf_decrypted/
+work/docx/media/
+*.err
+__pycache__/
