@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Merge the per-agent audit CSVs (work/audit/*_rows.csv) into 02_audit_table.csv.
-Validates the 11-column schema, de-duplicates IDs, normalises severity/tag vocab,
-and prints summary counts. Usage: python3 tools/merge_audit.py"""
+Validates the 11-column schema, rejects duplicate IDs and malformed rows (exit 1, output
+untouched), normalises severity/tag vocab, and prints summary counts. Usage: python3 tools/merge_audit.py"""
 import csv, glob, sys, collections, pathlib
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 HEADER = ["ID","Location","Issue type","Severity","Evidence","Current text","Proposed fix","Rationale","Gameplay impact","Tag","Decision needed"]
@@ -23,12 +23,12 @@ for f in sorted(glob.glob(str(ROOT/"work/audit/*_rows.csv"))):
             row[3] = SEV.get(row[3].lower(), row[3]); row[9] = TAG.get(row[9].lower(), row[9])
             row[10] = "Y" if row[10].strip().upper().startswith("Y") else "N"
             rows.append(row)
-def key(r):
-    order = {"Blocker":0,"Major":1,"Minor":2,"Note":3}
-    return (r[0][0], order.get(r[3],9), r[0])
+if problems:
+    for p in problems: print("PROBLEM:", p)
+    print(f"ABORT: {len(problems)} validation problem(s); 02_audit_table.csv was NOT written.")
+    sys.exit(1)
 rows.sort(key=lambda r: (r[0].split("-")[0], int(''.join(ch for ch in r[0].split("-")[-1] if ch.isdigit()) or 0)))
 with open(ROOT/"02_audit_table.csv","w",newline="",encoding="utf-8") as fh:
     w = csv.writer(fh, quoting=csv.QUOTE_ALL); w.writerow(HEADER); w.writerows(rows)
 c = collections.Counter(r[3] for r in rows); t = collections.Counter(r[9] for r in rows); a = collections.Counter(r[0].split("-")[0] for r in rows)
 print(f"rows={len(rows)} severity={dict(c)} tags={dict(t)} agents={dict(a)} decisions={sum(1 for r in rows if r[10]=='Y')}")
-for p in problems: print("PROBLEM:", p)

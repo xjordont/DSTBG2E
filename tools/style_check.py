@@ -14,10 +14,12 @@ def check(path):
     out = []; in_example = False
     for n, line in enumerate(pathlib.Path(path).read_text(encoding="utf-8").splitlines(), 1):
         low = line.lower()
-        if re.match(r"^\s*(>?\s*)?\*?_?\**example", low) or low.strip().startswith("> **example") or low.strip().startswith("**example"):
+        # The second-person exemption covers only a paragraph that opens with "Example"
+        # (optionally emphasised) and ends at the first blank line or heading.
+        if line.strip() == "" or line.startswith("#"):
+            in_example = False
+        elif re.match(r"^\s*(>\s*)?[*_]*example\b", low):
             in_example = True
-        elif line.strip() == "" or line.startswith("#"):
-            in_example = False if line.startswith("#") else in_example
         for m in re.finditer(HEDGE, low): out.append((path, n, "hedge", m.group(0), line.strip()))
         for m in re.finditer(AMER, low):
             w = m.group(0)
