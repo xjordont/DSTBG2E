@@ -83,6 +83,7 @@ def pandoc(md):
 
 
 MISSING_ICONS = set()
+NO_ENDMARK = set()   # chapters whose closing ornament would otherwise sit alone on a new page
 
 
 def icon_tag(slug):
@@ -186,9 +187,10 @@ class Chapter:
         sec.append(flow)
         for fig in figures_for(soup, key, 'end'):
             sec.append(fig)
-        end = soup.new_tag('div'); end['class'] = 'endmark'
-        end.append(soup.new_tag('img', src='assets/ornaments/ast-0082-section-divider-knot-rule-knot.png', alt=''))
-        sec.append(end)
+        if self.id not in NO_ENDMARK:
+            end = soup.new_tag('div', id=f'end-{self.id}'); end['class'] = 'endmark'
+            end.append(soup.new_tag('img', src='assets/ornaments/ast-0082-section-divider-knot-rule-knot.png', alt=''))
+            sec.append(end)
         soup.append(sec)
         self.decorate(heads)
 
@@ -324,7 +326,7 @@ def contents(chapters):
     return f'<section class="front" id="contents"><h1 class="ft">Contents</h1>{rule}<div class="toc">{"".join(rows)}</div></section>'
 
 
-def build(edition='screen', only=None, out=None, html_only=False):
+def build(edition='screen', only=None, out=None, html_only=False, _retry=False):
     if not (ROOT / 'build/tex/lava_scales_clean.jpg').exists() or not (ROOT / 'build/icons').exists():
         import make_layout_assets; make_layout_assets.lava(); make_layout_assets.icons()
     heads = glossary_heads()
@@ -355,10 +357,14 @@ def build(edition='screen', only=None, out=None, html_only=False):
     import wp_patch  # noqa: F401  (column-balancing patch; must precede rendering)
     from weasyprint import HTML
     doc = HTML(string=html, base_url=str(ROOT) + '/').render()
+    stranded = {e['id'][4:] for e in pagemap(doc) if e['id'].startswith('end-') and e['y'] < 70}
+    if stranded and not _retry:
+        NO_ENDMARK.update(stranded)
+        return build(edition, only, out, html_only, _retry=True)
     doc.metadata.title = TITLE; doc.metadata.authors = ['PittedPanda']; doc.metadata.lang = 'en-GB'
     out = pathlib.Path(out) if out else ROOT / f'build/book_{edition}.pdf'
     doc.write_pdf(str(out))
-    report.update(pages=len(doc.pages), out=str(out.relative_to(ROOT)) if out.is_relative_to(ROOT) else str(out), patch=wp_patch.PATCH_APPLIED)
+    report.update(no_endmark=sorted(NO_ENDMARK), pages=len(doc.pages), out=str(out.relative_to(ROOT)) if out.is_relative_to(ROOT) else str(out), patch=wp_patch.PATCH_APPLIED)
     (ROOT / f'build/pagemap_{edition}.json').write_text(json.dumps(pagemap(doc), indent=0), encoding='utf-8')
     print(json.dumps(report, ensure_ascii=False))
     return report
