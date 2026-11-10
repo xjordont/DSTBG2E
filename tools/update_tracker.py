@@ -43,7 +43,8 @@ def linenums(s):
     if out:
         # A reference list such as "manuscript.md 661–667 (components), 1133, 1161 (setup), 939 (scrying)"
         # continues with bare numbers after commas; take those too (years excluded).
-        for m in re.finditer(r'(?:,|;)\s*(?:L)?(\d{3,4})(?:\s*[–-]\s*(\d{3,4}))?', s):
+        # continuation separators: comma, semicolon, slash, ampersand, "vs", "and", "or", "with", "to"
+        for m in re.finditer(r'(?:,|;|/|&|\bvs\.?|\band|\bor|\bwith|\bto)\s*(?:L|line[s]?\s*)?(\d{3,4})(?:\s*[–-]\s*(\d{3,4}))?', s):
             if m.group(1) in ('2017','2022'): continue
             add_range(int(m.group(1)), int(m.group(2)) if m.group(2) else None)
     return out
