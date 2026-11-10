@@ -1086,7 +1086,7 @@ Groups: logos (AST-0001–0005), icon set from the 2022 reference page (AST-0006
 - Format: png
 - Method: pdftoppm 1200 dpi crop → parchment-key alpha (bg (244, 242, 234))
 - Cleaned file: assets/ornaments/ast-0082-section-divider-knot-rule-knot.png
-- Proposed placement: raster fallback of AST-0017
+- Proposed placement: raster fallback of AST-0081
 - Licensing: authorised under owner's rights assertion
 - Notes: —
 
@@ -1370,7 +1370,7 @@ Groups: logos (AST-0001–0005), icon set from the 2022 reference page (AST-0006
 - Cleaned file: assets/diagrams/ast-0105-character-board-anatomy-2017.png
 - Proposed placement: Characters chapter (2017 variant, reference)
 - Licensing: authorised under owner's rights assertion
-- Notes: 2017 board layout; superseded by AST-0040 but useful for comparison.
+- Notes: 2017 board layout; superseded by AST-0090 but useful for comparison.
 
 ### [AST-0106] Bonfire tile anatomy (2017) call-outs 1–6
 - Source: DS-Core-Rules-lores.pdf, p.13
@@ -1529,7 +1529,7 @@ Groups: logos (AST-0001–0005), icon set from the 2022 reference page (AST-0006
 - Cleaned file: assets/art/ast-0118-core-2017-front-cover-composition.png
 - Proposed placement: cover concept reference (texture + logo); 2E cover to be re-composed
 - Licensing: authorised under owner's rights assertion
-- Notes: Composition only: texture (AST-0033) + logo (AST-0004).
+- Notes: Composition only: texture (AST-0142) + logo (AST-0004).
 
 ### [AST-0119] 2022 Tomb of Giants cover art (Gravelord Nito on black) — PROVENANCE REVIEW
 - Source: DS-TG-Rulebook-Compressed_compressed.pdf, p.1
@@ -1795,7 +1795,7 @@ Groups: logos (AST-0001–0005), icon set from the 2022 reference page (AST-0006
 - Region: whole embedded image (see Method)
 - Dimensions: 2587×3378 px
 - Format: png
-- Method: AST-0030 cropped to right half (x 2587–5174 px)
+- Method: AST-0139 cropped to right half (x 2587–5174 px)
 - Cleaned file: assets/textures/ast-0140-parchment-right-page-bg.png
 - Proposed placement: right-hand (recto) page background
 - Licensing: authorised under owner's rights assertion
@@ -1807,7 +1807,7 @@ Groups: logos (AST-0001–0005), icon set from the 2022 reference page (AST-0006
 - Region: whole embedded image (see Method)
 - Dimensions: 2587×3378 px
 - Format: png
-- Method: AST-0030 cropped to left half (x 0–2587 px)
+- Method: AST-0139 cropped to left half (x 0–2587 px)
 - Cleaned file: assets/textures/ast-0141-parchment-left-page-bg.png
 - Proposed placement: left-hand (verso) page background
 - Licensing: authorised under owner's rights assertion
@@ -1847,7 +1847,7 @@ Groups: logos (AST-0001–0005), icon set from the 2022 reference page (AST-0006
 - Cleaned file: assets/textures/ast-0144-parchment-spread-bg-2017.png
 - Proposed placement: low-res alternative background (2017 RGB export)
 - Licensing: authorised under owner's rights assertion
-- Notes: Keep only as colour reference; AST-0030 supersedes.
+- Notes: Keep only as colour reference; AST-0139 supersedes.
 
 ### [AST-0145] Card text-box parchment fill (worn cream paper)
 - Source: DS-TG-Rulebook-Compressed_compressed.pdf, p.16
@@ -1986,7 +1986,7 @@ Groups: logos (AST-0001–0005), icon set from the 2022 reference page (AST-0006
 
 ## Provenance Review
 
-Items below are **not** designated for reuse until the project lead rules on them. Nothing in this section has been extracted into `assets/` except AST-0122 (TG cover art), which was pulled because the brief asked for one cover art and is held as `BLOCKED`.
+Items below are **not** designated for reuse until the project lead rules on them. Nothing in this section has been extracted into `assets/` except AST-0119 (TG cover art), which was pulled because the brief asked for one cover art and is held as `BLOCKED`.
 
 ### A. Third-party (FromSoftware / Bandai Namco) artwork inside the SFG PDFs
 The owner's rights assertion covers the SFG publications. The paintings, screenshots and key art below are, however, FromSoftware/Bandai Namco intellectual property that SFG reproduced under licence (every credits block reads "Dark Souls™ & ©BANDAI NAMCO Entertainment Inc. / ©FromSoftware, Inc."). The lead must decide whether the assertion extends to this licensed art.

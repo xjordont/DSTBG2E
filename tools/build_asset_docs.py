@@ -158,11 +158,18 @@ for e in entries:
     e['old_id']=e.get('id'); e['id']=new
 missing=[e['file'] for e in entries if e.get('file') and not os.path.exists(e['file'])]
 assert not missing, missing
+# ---- rewrite embedded cross-references (notes, placement, method…) from the pre-renumber IDs
+idmap={e['old_id']:e['id'] for e in entries if e.get('old_id')}
+def remap(s): return re.sub(r'AST-\d{4}', lambda m: idmap.get(m.group(0), m.group(0)), s) if isinstance(s,str) else s
+for e in entries:
+    for f in ('notes','placement','method','region','name','note'):
+        if e.get(f): e[f]=remap(e[f])
+TG_COVER=next((e['id'] for e in entries if str(e.get('name','')).startswith('2022 Tomb of Giants cover art')),'(see catalogue)')
 json.dump(entries,open('work/asset_catalogue_final.json','w'),indent=1,default=str)
 # ---- write log
 head=open('22_asset_extraction_log.md').read().split('## Colour Palette (sampled)')[0]
 out=[head.rstrip()+'\n\n## Colour Palette (sampled)\n\nSampled with PIL/numpy from 400–600 dpi `pdftoppm` renders (sRGB) and from the extracted icon crops (median of saturated pixels in the named hue band). CMYK is a naive RGB→CMYK conversion for orientation only — the source PDFs are U.S. Web Coated (SWOP) CMYK; re-pick in the layout application against that profile.\n\n| Swatch | Hex (sRGB) | Approx. CMYK | Used for | Sampled from |\n|---|---|---|---|---|\n']
-for k,v in PAL.items(): out.append(f"| {k.replace('_',' ')} | `{v['hex']}` | {v['cmyk']} | {v['use']} | {v['src']} |\n")
+for k,v in PAL.items(): out.append(f"| {k.replace('_',' ')} | `{v['hex']}` | {v['cmyk']} | {v['use']} | {v.get('src','—')} |\n")
 out.append('\nReading of the palette: the books are essentially two-tone — warm parchment (`#f4f2ea`) with charcoal ink (`#231f20`, i.e. rich black ≈ C0 M11 Y9 K86 in the CMYK source) — with gold (`#9c8141`/`#b77e2e`) as the single decorative accent and a small functional colour code borrowed from the components: red = enemy/spawn/weak, magenta = terrain, blue/purple = encounter level, green = attack arc/adjacency, orange/blue/black = dice. Covers and the back cover use a warm near-black (`#110f0e`).\n\n## Asset Catalogue\n\nGroups: logos (AST-0001–0005), icon set from the 2022 reference page (AST-0006 onward), ornaments, frames, diagrams, art, photography, textures, typographic specimens. Entries whose Method is `TO EXTRACT` have no file yet; entries marked `NOT EXTRACTED — provenance` are catalogued for the lead\'s decision only.\n\n')
 def fmt_entry(e):
     src=e['src']; page=e.get('page'); 
@@ -182,7 +189,7 @@ for e in entries:
 # provenance review
 out.append('''## Provenance Review
 
-Items below are **not** designated for reuse until the project lead rules on them. Nothing in this section has been extracted into `assets/` except AST-0122 (TG cover art), which was pulled because the brief asked for one cover art and is held as `BLOCKED`.
+Items below are **not** designated for reuse until the project lead rules on them. Nothing in this section has been extracted into `assets/` except '''+TG_COVER+''' (TG cover art), which was pulled because the brief asked for one cover art and is held as `BLOCKED`.
 
 ### A. Third-party (FromSoftware / Bandai Namco) artwork inside the SFG PDFs
 The owner's rights assertion covers the SFG publications. The paintings, screenshots and key art below are, however, FromSoftware/Bandai Namco intellectual property that SFG reproduced under licence (every credits block reads "Dark Souls™ & ©BANDAI NAMCO Entertainment Inc. / ©FromSoftware, Inc."). The lead must decide whether the assertion extends to this licensed art.

@@ -102,8 +102,9 @@ def sat_median(path,smin=0.35,vmin=0.25,hue=None):
     if len(sel)<20: return None
     return tuple(np.median(sel,axis=0)*255)
 P={}
-def put(k,c,use): 
-    if c is not None: P[k]=dict(hex=hx(c),cmyk=cmyk(c),use=use)
+def put(k,c,use,src='sampled from 400–600 dpi page renders / parchment-keyed icon crops (see tools/finalise_tg_icons.py)'):
+    # schema must match what tools/build_asset_docs.py reads: hex, cmyk, use, src
+    if c is not None: P[k]=dict(hex=hx(c),cmyk=cmyk(c),use=use,src=src)
 def region_median(path,box,dark_pct=None):
     im=Image.open(path).convert('RGB'); im=im.crop(box) if box else im
     a=np.asarray(im).reshape(-1,3).astype(float)
