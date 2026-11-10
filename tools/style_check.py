@@ -40,7 +40,12 @@ def main(argv):
     # keyword coverage: italic terms must have a glossary headword
     gl = [f for f in files if f.endswith("12_glossary.md")]
     if gl:
-        heads = set(h.lower() for h in re.findall(r"^\*\*([^*]+)\*\*", pathlib.Path(gl[0]).read_text(encoding="utf-8"), re.M))
+        heads = set()
+        for h in re.findall(r"^\*\*([^*]+)\*\*", pathlib.Path(gl[0]).read_text(encoding="utf-8"), re.M):
+            h = h.strip().lower().rstrip(".,;:")          # "**Bonfire.**" -> "bonfire"
+            heads.add(h)
+            m = re.match(r"^(.*?)\s*\(([^)]+)\)\s*$", h)     # "area-of-effect (aoe)" -> both forms
+            if m: heads.add(m.group(1).strip()); heads.add(m.group(2).strip())
         for f in files:
             if f.endswith("12_glossary.md"): continue
             txt = pathlib.Path(f).read_text(encoding="utf-8")

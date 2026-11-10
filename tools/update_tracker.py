@@ -29,8 +29,10 @@ def linenums(s):
     return out
 audit=collections.defaultdict(set); comp=collections.defaultdict(set)
 def ingest(path, bucket):
+    """Return the number of rows ingested, or None when the source file is absent
+    (the corresponding tracker column is then preserved, not blanked)."""
     p=ROOT/path
-    if not p.exists(): return 0
+    if not p.exists(): return None
     n=0
     for row in csv.DictReader(open(p,newline='',encoding='utf-8')):
         nums=linenums(row.get('Location','')+' '+row.get('Evidence',''))
@@ -47,6 +49,9 @@ def ingest(path, bucket):
         n+=1
     return n
 na=ingest("02_audit_table.csv", audit); ne=ingest("work/audit/E_rows.csv", comp)
+if na is None and ne is None:
+    print("ABORT: neither 02_audit_table.csv nor work/audit/E_rows.csv exists; tracker left untouched.")
+    raise SystemExit(1)
 tr=(ROOT/"03_coverage_tracker.md").read_text(encoding="utf-8").split("\n")
 out=[]; filled=0
 for l in tr:
@@ -58,9 +63,10 @@ for l in tr:
             ids=sorted(audit.get(key,set()), key=lambda s:(s.split('-')[0], int(re.sub(r'\D','',s.split('-')[-1]) or 0)))
             cids=sorted(comp.get(key,set()))
             if sec=='(empty heading)': ids=[]
-            cells[3]=', '.join(ids); cells[4]=', '.join(cids)
+            if na is not None: cells[3]=', '.join(ids)   # preserve column when source absent
+            if ne is not None: cells[4]=', '.join(cids)
             if ids or cids: filled+=1
             l='| '+' | '.join(cells)+' |'
     out.append(l)
 (ROOT/"03_coverage_tracker.md").write_text('\n'.join(out), encoding="utf-8")
-print(f"audit rows={na} completion rows={ne} tracker rows annotated={filled}")
+print(f"audit rows={na if na is not None else '(absent, column preserved)'} completion rows={ne if ne is not None else '(absent, column preserved)'} tracker rows annotated={filled}")
