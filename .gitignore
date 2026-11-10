@@ -8,3 +8,5 @@ work/docx/media/
 __pycache__/
 # Derived text extracts of the reference PDFs (regenerable with pdftotext -layout; not committed)
 work/text/
+# Raw pdfimages dumps (scratch for asset extraction; cleaned assets live in assets/)
+work/pdfimages/
