@@ -166,6 +166,8 @@ with pdfplumber.open(CORE) as pdf:
         p=pdf.pages[pg-1]; ims=[i for i in p.images if 100<(i['x1']-i['x0'])<500 and (i['bottom']-i['top'])>80]
         if pg==27: ims=[i for i in ims if i['top']>400]
         if pg==12: ims=[i for i in ims if i['x0']<350]
+        if not ims and pg==12:
+            bb=(150,165,315,352); diag(idn,nm,CORE,COREN,pg,bb,600,fn,'fallback bbox from contact-sheet estimate'); continue
         if not ims: print('no image for core p',pg); continue
         ims.sort(key=lambda i:-(i['x1']-i['x0'])*(i['bottom']-i['top'])); i=ims[0]
         bb=(i['x0']-20,i['top']-16,i['x1']+20,i['bottom']+14)
@@ -193,8 +195,8 @@ with pdfplumber.open(TG) as pdf:
     sizes=sorted(set(round(c['size'],1) for c in ch))
     spec('AST-0072','Body text specimen: Adobe Caslon Pro Regular + Bold run-in heads, numbered list',TG,TGN,13,bb,600,'ast-0072-body-text-caslon.png',f'sizes {sizes} pt')
     p=pdf.pages[15]
-    ch=[c for c in p.chars if 'Optimus' in c['fontname'] and 9<c['size']<18 and c['top']<140]
-    bb=(min(c['x0'] for c in ch)-10,min(c['top'] for c in ch)-6,max(c['x1'] for c in ch)+10,max(c['bottom'] for c in ch)+6)
+    ch=[c for c in p.chars if 'Optimus' in c['fontname'] and 9<c['size']<19 and c['top']<200]
+    bb=(min(c['x0'] for c in ch)-10,min(c['top'] for c in ch)-6,max(c['x1'] for c in ch)+10,max(c['bottom'] for c in ch)+6) if ch else (55,88,590,122)
     spec('AST-0073','Sub-head specimen: OptimusPrinceps small caps ("Exploration Basics / Encounter Cards")',TG,TGN,16,bb,600,'ast-0073-subhead-optimusprinceps.png',f'size {sorted(set(round(c["size"],1) for c in ch))} pt')
     p=pdf.pages[25]
     ch=[c for c in p.chars if 'Italic' in c['fontname'] and c['x0']>330 and c['top']>600]
@@ -209,7 +211,7 @@ with pdfplumber.open(TG) as pdf:
     spec('AST-0076','Cover subtitle specimen: "Tomb of Giants" in OptimusPrinceps SemiBold, white',TG,TGN,1,bb,600,'ast-0076-cover-subtitle-optimusprinceps-semibold.png',f'size {sorted(set(round(c["size"],1) for c in ch))} pt')
     p=pdf.pages[2]
     ch=[c for c in p.chars if 'Italic' in c['fontname'] and c['top']<300]
-    bb=(min(c['x0'] for c in ch)-6,min(c['top'] for c in ch)-6,max(c['x1'] for c in ch)+6,max(c['bottom'] for c in ch)+6)
+    bb=(min(c['x0'] for c in ch)-6,min(c['top'] for c in ch)-6,max(c['x1'] for c in ch)+6,max(c['bottom'] for c in ch)+6) if ch else (140,95,510,300)
     spec('AST-0077','Introduction / lore block specimen: Caslon Italic paragraphs',TG,TGN,3,bb,400,'ast-0077-lore-block-caslon-italic.png')
 
 # ---------------- ART ----------------
