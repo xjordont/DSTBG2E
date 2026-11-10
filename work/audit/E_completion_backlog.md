@@ -1033,3 +1033,183 @@ Index: CMP-0001 Estus Flask · CMP-0002 Glossary · CMP-0003 F.A.Q. · CMP-0004 
 - Status: awaiting-approval
 
 ---
+
+### [CMP-0014] MIMICS / Gameplay › Treasure Rewards / Tiles & Nodes › Chests — Mimic and chest procedure reconciliation — Proposed Completion
+- Current state: Three passages state the chest-and-mimic procedure with differences. Chests (line 963): undecided treasure goes to "a randomly selected character". Treasure Rewards (lines 1453–1475): undecided treasure goes to the character who ended the encounter with the aggro token; no recovery "until a decision is made"; one treasure if the ambush card shows treasure; mimic encounter set up immediately. Mimics (lines 2041–2047): the expansion is called "Encounters" then "Explorers"; the aggro holder makes the open/leave decision; after leaving the chest the characters "recover all stamina and two damage" (Encounter Recovery, line 1347, removes one damage cube); "min-boss"; killing the mimic gives two treasures and marks the encounter *cleared*; a mimic that defeats the characters is fought again "next time they complete the normal encounter"; "once the mimic has been fought once, it must be fought again at the end of the encounter until it is killed".
+- Proposed completion: The Mimics chapter owns the procedure. Treasure Rewards and Chests keep one pointer each.
+
+  Replacement for Tiles & Nodes › Chests bullet at line 963: "Upon *clearing* an encounter containing a chest, the players flip the chest to its open side and decide which character takes the revealed treasure. If they cannot decide, the character who ended the encounter with the *aggro* token takes it. When playing with mimics, see Mimics before opening a chest."
+
+  Replacement for Treasure Rewards lines 1463–1475 (the five mimic bullets): "- If playing with mimics, a chest is opened only as the Mimics chapter describes; the encounter is not resolved until the characters have decided whether to open it."
+
+  Replacement for the MIMICS chapter (lines 2039–2047):
+
+  > # MIMICS
+  >
+  > Mimics are an optional challenge from the Explorers expansion. The players decide during setup whether to include them. Groups with new players are advised to leave mimics out; experienced groups are advised to include them. When mimics are in play, one face-down *ambush* card is dealt beside each encounter tile at setup.
+  >
+  > When an encounter containing an unopened chest is *cleared*, the characters do not recover at once. They remain on their nodes and decide collectively whether to open the chest. If they cannot agree, the character holding the *aggro* token decides.
+  >
+  > If the characters leave the chest closed, they recover as Encounter Recovery describes and collect their *soul* and treasure rewards. The chest stays closed and may be opened after a later clearing of the same encounter.
+  >
+  > If the characters open the chest, reveal the *ambush* card beside the tile. If it shows Treasure, the characters receive the treasure card beneath the chest and assign it as the Chests rules describe; then they recover and collect their rewards. If it shows Mimic, a mimic encounter begins at once, before any recovery or reward.
+  >
+  > The mimic encounter is a mini-boss encounter fought on the same tile. Use the Hungry Mimic's data and behaviour cards if the mini-boss has not yet been defeated, and the Voracious Mimic's if it has. Replace the chest token with the mimic model on the chest's node. The characters keep their damage cubes, stamina cubes and condition tokens and remain on the nodes they occupied. Build the mimic's behaviour deck from random behaviour cards equal to its deck size. The mimic takes the first turn, then the characters and the mimic alternate as in any boss encounter. Mimics have no arcs and no heat-up cards; see Boss Special Rules › Explorers Expansion.
+  >
+  > If the mimic is slain, the characters receive two treasure cards of the current tier in place of the chest's one, assign them as the Chests rules describe, recover as Encounter Recovery describes, and collect the rewards of the encounter that contained the chest. Mark that encounter *cleared*. The mimic does not return; the chest's node is a basic node for the rest of the game.
+  >
+  > If every character dies, the mimic encounter is *failed*: the characters drop their *souls*, the encounter card is turned face down and the characters must rest at the *bonfire*. The mimic returns to its chest. Each later time the characters *clear* that encounter, they may again choose to open the chest, and the mimic must be fought again until it is slain.
+
+- Design rationale: One procedure, in one chapter, with the other two passages reduced to pointers so no second version can drift. The aggro holder is chosen as tie-breaker in every case because Treasure Rewards and Mimics both already use it and a random draw adds a step. Recovery after leaving the chest follows Encounter Recovery (one damage cube) rather than the Mimics chapter's "two damage". The mimic replacing the chest token on its node follows the Explorers booklet ("the mimic returns to its terrain node") and gives the mimic a defined starting node, which the manuscript never states. "Each later time… they may again choose" resolves the manuscript's two incompatible sentences (fought "next time they complete the encounter" versus "must be fought again until it is killed") in favour of choice, since the characters can always decline to open the chest.
+- Mechanical impact: Recovery after declining a chest is one damage cube, not two. The mimic starts on the chest node (previously undefined). Everything else is unchanged.
+- Follow-on changes required: Delete the empty heading at line 2049. Glossary entries Chest, Mimic, Ambush card (CMP-0002) align. CMP-0005 holds the mimic's special rules.
+- Status: awaiting-approval
+
+---
+
+### [CMP-0015] CRYSTAL LIZARDS / Treasure Rewards — Reward card name — Proposed Completion
+- Current state: Treasure Rewards (line 1477) awards "a Titanite Chunk card" for killing a *crystal lizard*; Crystal Lizards (line 2055) awards "one Titanite Scale card". The Iron Keep expansion contains three Titanite Scale cards; Titanite Chunk is a Community Update Pack card with STR 25 / DEX 25 requirements (CMP-0004).
+- Proposed completion: Titanite Scale is the reward. Replacement for line 1477: "If playing with the option of *crystal lizards*, award a Titanite Scale card to each character who killed a *crystal lizard* during the encounter, as the Crystal Lizards chapter describes." Addition to the Crystal Lizards chapter after line 2055: "The Iron Keep expansion supplies three Titanite Scale cards. When none remains, ignore the crystal lizard symbol on encounter cards; no further *crystal lizards* are placed."
+- Design rationale: Titanite Scale is the physical card in the Iron Keep box and the name the chapter that owns the rule uses. Titanite Chunk carries tier two requirements that a low-stat character who killed the lizard might never meet, and the Community Update Pack defines it as a shop-sorted upgrade, not a reward. The three-card limit follows the Iron Keep booklet and prevents an undefined state when the supply runs out.
+- Mechanical impact: Lizard rewards are capped at three per game.
+- Follow-on changes required: Glossary entry Crystal lizard and Titanite (CMP-0002) name Titanite Scale. Delete the empty heading at line 2059.
+- Status: awaiting-approval
+
+---
+
+### [CMP-0016] EQUIPMENT › Spells — Duplicate heading — Proposed Completion
+- Current state: "## Spells" (line 855) is followed at once by "### Spells" (line 857); the bullet list is split by a stray comment marker (line 875). The second group of bullets concerns catalysts, not spells in general.
+- Proposed completion: Delete line 857 and line 875. Retitle the two bullet groups as sub-sections:
+
+  > ## Spells
+  >
+  > ### Spell Cards
+  >
+  > (bullets at lines 859–873 unchanged)
+  >
+  > ### Catalysts
+  >
+  > - Spells stored in a matching *catalyst* may use their *attack options* as if equipped.
+  > - A pyromancer flame stores up to three pyromancies; a staff or catalyst stores up to three sorceries; a talisman or chime stores up to three miracles.
+  > - A spell card is stored in the *catalyst* card it is attached to and occupies no equipment slot of its own.
+  > - Spells may be transferred between a character's *catalyst* and inventory only between encounters.
+- Design rationale: Structural fix with no rule change; the second heading names what the bullets define. "Occupies no equipment slot of its own" states what "as if equipped" implies and answers a question the Equipment Slots section otherwise leaves open.
+- Mechanical impact: None.
+- Follow-on changes required: Glossary entry Catalyst (CMP-0002). Regenerate TOC.
+- Status: awaiting-approval
+
+---
+
+### [CMP-0017] BOSS SPECIAL RULES › Wind Up — Scope — Proposed Completion
+- Current state: "Wind Up" (lines 2211–2213) is a sub-section under "Asylum Demon & Stray Demon", but its text describes a behaviour icon generically ("When the Wind Up behaviour icon is resolved…"). Whether any other boss uses the icon cannot be verified: the Asylum Demon booklet was not supplied.
+- Proposed completion: Keep the rule under Asylum Demon & Stray Demon (as in CMP-0005) and add one sentence: "The Wind Up icon appears on the Asylum Demon's and Stray Demon's behaviour cards. If it appears on any other behaviour card, resolve it in the same way." Add the Glossary entry "Wind Up" (CMP-0002).
+- Design rationale: The rule is written as an icon rule and is harmless if generalised; the added sentence keeps it findable under the only bosses known to use it while covering any other card.
+- Mechanical impact: None.
+- Follow-on changes required: None. BLOCKED only for confirming other users of the icon (Asylum Demon booklet).
+- Status: awaiting-approval
+
+---
+
+### [CMP-0018] SUMMONS › Phantoms — Summoning procedure and summon icons — Proposed Completion
+- Current state: Steps 1–3 (lines 1973–1981) say each *embered* character "may elect to pay two *souls* to draw a phantom card", then "Draw a random phantom card of appropriate level", then "Players must agree on only one of the drawn phantoms to summon" — the number of cards drawn and the fate of the unused cards are unclear. Step 5 (line 1985) places the phantom "on the boss tile's entrance node" (one node). Steps 7–8 (lines 1989–1991) contain the defects fixed in CMP-0007. No rule states how a phantom defends, how it attacks a boss's weak arc, what its special ability is, or the two summon-only icons the Phantoms booklet defines (Shift, Distract). Line 1993 is truncated (CMP-0007).
+- Proposed completion (replacement for lines 1969–1993):
+
+  > ## Phantoms
+  >
+  > *Embered* characters may summon one friendly phantom at the fog gate before a mini-boss or main-boss encounter (or a mega-boss encounter, using advanced phantoms).
+  >
+  > 1. Each *embered* character may pay two *souls* to draw one random phantom data card of the appropriate kind: standard phantoms before a mini-boss, advanced phantoms before a main-boss or mega-boss. *Souls* paid are not returned.
+  > 2. From the cards drawn, the players choose one phantom to summon. Return the other drawn cards to the supply.
+  > 3. Shuffle all four of the phantom's behaviour cards to form its behaviour deck. Set the phantom health dial to the phantom's starting health.
+  > 4. After the characters have been placed on their entry nodes, place the phantom model on any entry node that holds fewer than three models.
+  > 5. The phantom takes its turn after the last character in *threat* order has taken their turn and before the boss's next turn. On its turn, draw and resolve the top card of its behaviour deck, resolving each icon left to right; its turn then ends. When the deck is empty at the start of its turn, turn the discard pile face down without shuffling to form the new deck.
+  > 6. The phantom's data card gives its *threat*, starting health, block, resist and dodge values and a special ability. Enemy behaviours that target the nearest character or compare *threat* treat the phantom as a character. When the phantom is attacked, the players roll its block, resist or dodge dice exactly as for a character, using the defence total of the two highest dice; a *dodge* costs the phantom nothing and moves it to an adjacent node. Damage reduces its health dial.
+  > 7. A phantom attacking a boss from a weak arc adds one black die. A phantom's special ability that is "once per encounter" is marked as used by placing a wound token on the card.
+  > 8. Two icons appear only on phantom behaviour cards. *Shift*: the phantom may move up to the number of nodes shown, before or after its dice are rolled according to the icon's position. *Distract*: during the boss's next turn the phantom is treated as holding the *aggro* token; do not move the token itself.
+  > 9. Phantoms are removed from play when their health dial is reduced to zero or when the encounter ends. A phantom's death does not *fail* the encounter and places no *hollow* markers on anyone.
+- Design rationale: The procedure keeps the manuscript's cost (two *souls* per draw, paid by *embered* characters) and its choice among drawn cards, and states what was implied: one card per paying character, unused cards returned. Defence by dice follows the Phantoms booklet, which gives summons character-style block, resist and dodge values; the two-highest-dice rule is the manuscript's. The free *dodge* reflects that phantoms have no endurance bar. The Shift and Distract icons are taken from the booklet; Distract is reworded so it works with the manuscript's boss-aggro rule (aggro moves to whoever damages the boss) by applying only to the boss's next turn. Timing "after the last character" follows the manuscript's step 6 rather than the official after-each-character rule.
+- Mechanical impact: Summoning now has a defined draw count; phantoms defend with dice; Distract and Shift become usable. No change to cost.
+- Follow-on changes required: Add phantom components to Game Components (CMP-0012). Glossary entries Summon, Phantom, Shift (CMP-0002). F.A.Q. entry on phantom timing (CMP-0003).
+- Status: awaiting-approval
+
+---
+
+### [CMP-0019] Gameplay › Encounter Resolution / Returning to the Bonfire › Resuming Exploration — Reset and skip reconciliation — Proposed Completion
+- Current state: Encounter Resolution (lines 1315–1319) marks a *cleared* encounter card with a black cube, says *cleared* encounters "are reset when characters rest at the *bonfire*" and "may be skipped thereafter"; *failed* encounters "flip their encounter card face-down", "are reset when characters rest" and "may not be skipped once reset" (lines 1335–1339). Resuming Exploration (line 1963) says "flip all cleared and failed encounter tiles face-down to reset them… If the encounter card on the tile is face-down (*cleared* or *failed*), they must flip the card face-up and proceed with fighting the enemies of that encounter." Read together, a *cleared* encounter after a rest both may be skipped and must be fought. Encounter Start step 2 (line 1261) allows skipping *cleared* encounters for two stamina each.
+- Proposed completion (replacement for Resuming Exploration, line 1963):
+
+  > ## Resuming Exploration
+  >
+  > When the characters have finished resting at the *bonfire*, reset the encounter tiles before setting out: turn every face-up encounter card face down; leave the black cube on each card that was marked *cleared*; remove any enemy models left on the tiles; do not move terrain tokens (chests, gravestones, barrels, pillars, traps), but turn trap tokens face down and restore barrels.
+  >
+  > The characters then move to the encounter tile nearest the *bonfire* tile and advance one tile at a time. On entering a tile, turn its encounter card face up. If the card carries a black cube, the encounter was *cleared* earlier: the characters may either skip it, paying two stamina each as Encounter Start describes, or fight it again for the reduced *soul* reward and no treasure. If the card carries no black cube, the encounter was *failed* or never fought and must be fought. After each tile is resolved the characters continue towards the boss tile, or use the fog gate shortcut if it has been placed on the *bonfire* tile.
+
+  Replacement for Encounter Resolution bullet at line 1335: "*Failed* encounters have their encounter card turned face down and any black cube removed."
+- Design rationale: The two passages are made to say one thing: resting resets every encounter's enemies, but the *cleared* mark survives and keeps the skip option open; failing an encounter strips the mark. This is the reading under which both Encounter Resolution bullets and the Encounter Start skip rule remain true, and it matches the manuscript's anti-grinding design (a cleared tile is a toll, not a wall).
+- Mechanical impact: *Failed* encounters lose their *cleared* status (previously undefined). Otherwise none.
+- Follow-on changes required: F.A.Q. entry on skipping after a rest (CMP-0003) matches. Delete the empty heading at line 1959.
+- Status: awaiting-approval
+
+---
+
+### [CMP-0020] Gameplay › Encounter Recovery / Objective & Loss Conditions — Forced rest with no sparks — Proposed Completion
+- Current state: Encounter Recovery (lines 1369–1381) requires every *failed* encounter to end with "Spend one *spark*" and a rest. Sparks (line 1253) and The Bonfire (line 1890) require a *spark* to rest. Objective & Loss Conditions (line 1201) defines loss only as "all characters are dead and there are no remaining sparks". No rule covers a forced rest when the *spark* dial shows zero while some characters live (a *hollow* death).
+- Proposed completion: Insert as the first bullet under "All characters must rest at the bonfire if an encounter is *failed*" (before line 1371): "If the *spark* dial shows zero, the characters cannot rest: the players lose the game." Add to Objective & Loss Conditions, as drafted in CMP-0006: "The players also lose if the characters are required to rest at the *bonfire* when the *spark* dial shows zero."
+- Design rationale: The manuscript's loss condition and its forced-rest rule otherwise contradict each other in the *hollow*-death case. The Core rulebook resolves the same case by ending the game when a character dies at zero sparks; this edition's version is narrower (only a forced rest triggers it), which preserves the manuscript's rule that surviving characters may still win if no rest is forced.
+- Mechanical impact: Defines a previously undefined end state. With the voluntary rest already impossible at zero sparks, play is otherwise unchanged.
+- Follow-on changes required: Coordinated with CMP-0006 (Lost) and the F.A.Q. (CMP-0003).
+- Status: awaiting-approval
+
+---
+
+### [CMP-0021] CAMPAIGNS › The First Journey — Section Four "Bathed in Flame" (Black Dragon Kalameet) — Proposed Completion
+- Current state: Black Dragon Kalameet is listed in Game Components › Mega-bosses (line 527) and its *calamity* condition is in Combat Basics, but no campaign uses it. The Kalameet booklet (pp. 14–15) defines "Bathed in Flame": a fourth section appended to The First Journey.
+- Proposed completion (insert after The First Journey, Section Three, line 2398):
+
+  > - Section Four - Royal Wood (optional; requires the Black Dragon Kalameet expansion)
+  >
+  >   - Bonfire Tile
+  >
+  >   - Level 3 Encounter
+  >
+  >   - Level 3 Encounter
+  >
+  >   - Level 4 Encounter
+  >
+  >   - Black Dragon Kalameet (mega-boss)
+  >
+  > Section Four is played only if the players agreed during setup to add a mega-boss. Lay the mega-boss game board with its Level 4 side face up and its doorway aligned with the doorway of the second Level 3 encounter tile, not with the *bonfire* tile. When the Level 4 encounter is *cleared*, flip the game board to its mega-boss side. The Level 4 encounter does not reset when the characters rest at the *bonfire*; once *cleared* it stays *cleared*. Use Darkroot expansion encounter cards for the two Level 3 encounters if the expansion is available; otherwise use core set cards.
+- Design rationale: Direct adaptation of the supplied booklet's campaign section to the manuscript's list format and boss-rank labels. The Darkroot encounter note is added because the section is set in the Royal Wood and the Darkroot campaign already uses that location; it is optional so the section stays playable with core and Kalameet only.
+- Mechanical impact: Adds one optional section; no rules change.
+- Follow-on changes required: The Setup paragraph's "thirteen campaigns" count is unchanged (the section is an extension). Boss Special Rules › Black Dragon Kalameet (CMP-0005) and Level 4 rules (CMP-0023) apply.
+- Status: awaiting-approval
+
+---
+
+### [CMP-0022] CAMPAIGNS › The Undead Colosseum — Campaign special rules — Proposed Completion
+- Current state: The entry (lines 2810–2880) lists requirements and sections only. The Executioner's Chariot booklet (p. 18) gives the campaign three special rules that the manuscript omits: encounter cards are never turned face down when the characters rest; a defeated encounter can never be fought again; every defeated encounter awards a flat *soul* reward regardless of level; Level 1–3 encounters are drawn from a shared core, Explorers and Darkroot deck and Level 4 encounters from a shared Vordt and Chariot deck; each section's named encounter comes from the Chariot expansion's six encounter cards.
+- Proposed completion (replacement for the preamble at line 2812):
+
+  > This campaign requires the core set and the Darkroot, Vordt of the Boreal Valley and Executioner's Chariot expansions; players may add the Explorers and Characters expansions if available. Build the Level 1–3 encounter decks from the core set, Darkroot and Explorers together, and the Level 4 encounter deck from the Vordt and Executioner's Chariot expansions together. Named encounters are the Executioner's Chariot expansion's encounter cards; use the named card for that tile.
+  >
+  > In the Undead Colosseum there is no turning back. When the characters rest at the *bonfire*, encounter cards are not turned face down and no encounter resets. A *cleared* encounter is never fought again; the characters pass through its tile freely, without paying the skipping cost. A *failed* encounter resets as usual. Because encounters cannot be repeated, every encounter *cleared* awards each character the campaign *soul* reward for its level plus two *souls*. [PROPOSED — the booklet awards a flat four *souls* per character in a system whose base reward is two; "plus two" carries the same uplift into this edition's levelled table]
+- Design rationale: The three rules are the campaign's identity in the supplied booklet and are adapted to the manuscript's terms (*cleared*/*failed*, skipping cost, campaign table). The soul uplift is expressed relative to this edition's table rather than as the booklet's flat number, so that Level 4 encounters are not paid less than ordinary ones; the choice is tagged for decision.
+- Mechanical impact: No grinding is possible in this campaign; soul income per encounter rises by two.
+- Follow-on changes required: Section Six list fix (CMP-0008). Vordt's special rules remain BLOCKED (CMP-0005).
+- Status: awaiting-approval
+
+---
+
+### [CMP-0023] Setup › Setup After the main-boss — Level 4 encounter rules — Proposed Completion
+- Current state: Steps 3–11 (lines 1179–1195) set up and resolve the Level 4 encounter but omit rules the Kalameet and Chariot booklets define for Level 4 encounters: four entry nodes along the doorway wall; what to do when a revealed Level 4 card needs components the players lack; that a *cleared* Level 4 encounter is not fought again; and that the mega-boss encounter is set up directly from the game board. Step 9 implies a *spark* must be spent to rest after the Level 4 encounter but does not say whether the encounter resets.
+- Proposed completion (insert as a sub-section after step 11, line 1195):
+
+  > ### Level 4 Encounters
+  >
+  > Level 4 encounters are fought on the Level 4 side of the mega-boss game board. All four basic nodes along the wall beside the doorway are entry nodes. Level 4 encounter cards place roughly twice as many enemies and terrain features as Level 1–3 cards, and trapped Level 4 encounters place more trap tokens; follow the card. If a revealed Level 4 encounter card lists a set the players do not own, return it to the box and reveal another.
+  >
+  > A Level 4 encounter is resolved as any other encounter, with the rewards for Level 4 in the Soul Reward Table and the mega-boss item dealt to the tile. Once *cleared*, a Level 4 encounter is not fought again and does not reset when the characters rest at the *bonfire*; flip the game board to its mega-boss side as step 10 describes. A *failed* Level 4 encounter resets as any other. No event card is used.
+- Design rationale: Taken from the two supplied mega-boss booklets, which state these rules identically, and limited to what the manuscript's setup steps do not already say. The "not fought again" rule is the one that matters most in play: without it the Level 4 encounter would be a repeatable 6-soul farm immediately before the final boss.
+- Mechanical impact: Level 4 encounters cannot be grinded; four entry nodes instead of three.
+- Follow-on changes required: Glossary entry Encounter level (CMP-0002); F.A.Q. entry on Level 4 reset (CMP-0003) loses its [PROPOSED] tag on approval; CMP-0012 (e) defines the game board placement.
+- Status: awaiting-approval

@@ -375,3 +375,92 @@ Identical stat lines (nine pairs): Avelyn = Spotted Whip (23/30); Black Knight H
 | East-West Shield 28/0 | A shield inside a weapons table; see §9 on whether "shield" is a card type. | Move to an armour/shield table. |
 | Black Knight Halberd, Gravelord Sword, Lifehunt Scythe, Priscilla's Dagger, Vordt's Great Hammer | Also appear in the boss-treasure lists (L3156–3176) yet are revised as if common; boss treasure is excluded from both tier decks (L1059). | Mark as boss treasure in the table or remove. |
 
+## 9. Shop stock (L1065–1089)
+
+Stock per tier: 3 weapons + 3 armour + 2 shields + 2 upgrades + 2 spells = **12 cards**, plus ember cards equal to the number of characters (tier one only, L1071). After the mini-boss both shops are (re)stocked: 24 cards + N embers on the table.
+
+### 9.1 Is "shield" a card type?
+Equipment Cards (L823) lists "weapons, spells, shields, armour, and items" as kinds of equipment, but the typing rules that follow (L823–825) recognise only three slot icons: one-handed weapon, two-handed weapon, armour; spells are identified by a scroll in the art (L879). Equipment Slots (L747–753) know only weapon slots and an armour slot. Nothing defines how a "shield" is recognised on a card, and shields in 1E are one-handed weapon cards. The parry rule (L1769, "a shield as their left weapon") and the shop list both rely on an undefined category (B-022). The East-West Shield's presence in the weapons table (L3244) confirms shields are weapon-typed cards. Define: "A shield is a one-handed weapon card that provides at least one block die and has no attack option" — or whatever the author intends — before the stock list can be executed.
+
+### 9.2 Draws needed
+Deck sizes (manuscript counts): common 60 + 145 = 205; class-specific 40 + 120 = 160 of which, by Core p.6/p.9 and Characters p.4, half are transposed (all tier two) → 80 class-specific tier-one candidates, 80 transposed. **ASSUMED** composition of the tier-one pool after the ≥ 25 split (no card-type breakdown exists in any supplied source): roughly 45 % weapons, 20 % armour, 10 % shields, 12 % upgrades, 13 % spells. Expected draws to collect quota q of a type with proportion p is q/p (negative-binomial mean, large deck):
+
+| Quota | Assumed share p | Expected draws to fill it |
+|---|---|---|
+| 3 weapons | 0.45 | 6.7 |
+| 3 armour | 0.20 | 15 |
+| 2 shields | 0.10 | 20 |
+| 2 upgrades | 0.12 | 16.7 |
+| 2 spells | 0.13 | 15.4 |
+
+All five quotas are filled only when the slowest is; with these shares the expected total is in the order of **22–28 draws** from the tier-one deck, with the shield quota the usual bottleneck (P(fewer than 2 shields in 20 draws at p = 0.10) ≈ 0.39). The procedure works but is slow at the table; it is also distorted by the "Reshuffle extra treasures back" step (L1073), which discards perhaps 15 drawn cards per stocking. For the tier-two deck the upgrade share is lower (Titanite Shards are < 25, L3126–3128; only Chunk/Slab/gems are ≥ 25), so "2 upgrades" may require 30+ draws or be unfillable in games with few expansions (B-023). Recommend: "draw until each category is filled or twelve cards have been drawn; leave unfilled categories empty", or stock from pre-sorted type piles (Hollowed Edition p.3 uses three typed decks).
+
+Reliability of the tier-one deck supplying 2 upgrades + 2 spells: with 60 Core common cards and 20 Core class tier-one cards only (no expansions), and perhaps 6–8 upgrades/spells among them, the quota is fillable but consumes a third of the deck's upgrade supply at the first stocking. OK with expansions; fragile with the core set alone.
+
+### 9.3 Price check
+At 2 souls a tier-one card is 10 % of a character's pre-mini-boss income (2 of 20); the Extended Rules deck 1 setup deals 3 weapons + 2 armours + 1 shield + 2 items **per player** free (p.3), and 1E sells random cards at 1 soul. The 2E shop is a known-stock shop at double the 1E price; with 12 visible cards and ~20 souls per character it is reasonable. **OK.**
+
+## 10. Dodge (L1736–1760) and the PvP dodge table (L3082–3094)
+
+Rules: dodge costs 1 stamina; +2 stamina (3 total) buys one extra die, maximum four dice (L1742); difficulty 0 auto-succeeds (L1740); on failure, block with armour dice only (L1752). Printed difficulties: Hollow Soldier 2 (Core p.20), Skeleton Soldier 1 (V2 p.24), icon-key boss card examples 1–3 (Core p.27). Green die p = 0.5 (§1).
+
+| Dodge dice | d = 0 | d = 1 | d = 2 | d = 3 | d = 4 |
+|---|---|---|---|---|---|
+| 0 | 1.000 | 0 | 0 | 0 | 0 |
+| 1 | 1.000 | 0.500 | 0 | 0 | 0 |
+| 2 | 1.000 | 0.750 | 0.250 | 0 | 0 |
+| 3 | 1.000 | 0.875 | 0.500 | 0.125 | 0 |
+| 4 | 1.000 | 0.938 | 0.688 | 0.312 | 0.062 |
+
+Arithmetic: P(≥ d successes on n dice) = Σ_{k≥d} C(n,k) / 2ⁿ; e.g. 2 dice vs 2 = 1/4; 3 dice vs 2 = (3 + 1)/8 = 0.5. (If the green die is 0,0,1,1,1,1: 1 die vs 1 = 0.667; 2 dice vs 2 = 0.444; 4 dice vs 4 = 0.198.)
+
+Value of the 3-stamina extra die: against a Hollow Soldier (d = 2) a 2-dice character goes from 0.25 to 0.50 for 2 more stamina; the expected damage avoided is 0.25 × 1.67 = 0.42 — poor value compared with the 2 stamina of attack it costs, unless the hit would kill. Against d = 1 the gain is 0.75 → 0.875. **Tune:** make the extra die cost 1 stamina (2 total) so the option is used.
+
+### 10.1 PvP table ([0]→4, [1]→3, [2]→2, [3]→1, [4]→1, [5+]→0)
+Monotone: yes (non-increasing in stamina cost). Sensible: only partly.
+- A **free** attack ([0]) has difficulty 4: undodgeable with fewer than four dice and 6 % with four. Because 0-stamina options are the weakest attacks on most cards (Shortsword 2 black, Core p.22), the table makes the weakest attacks the hardest to avoid and the strongest ([5+]) automatic to avoid.
+- [3] and [4] share the value 1 — a flat step — then [5+] drops to 0 (auto-dodge even with no dice).
+- With difficulty 3 ([1]) a 2-dice character cannot dodge at all; the cheap 1-stamina attacks that make up most of a character's turn are effectively unavoidable.
+Proposed values that keep the inversion but stay inside the dice range: **[0]→3, [1]→2, [2]→2, [3]→1, [4]→1, [5+]→1** (nothing is ever automatic) — see B-024. With that table a 2-dice defender dodges a free attack 25 % of the time and a 2-stamina attack 25 %, a 4-dice defender 31 % and 69 %.
+
+## 11. Conditions (L1595–1656)
+
+| Condition | Manuscript | Official 1E (Core p.21) / V2 (p.21) | Quantified effect (2 black block dice unless stated) |
+|---|---|---|---|
+| Bleed | second token → **3 damage**, unblockable, tokens removed (Hollowed p.8) | +2 damage when the bleeding model next suffers damage, then remove | 3 direct damage = 37.5 % of an 8-box bar in one trigger; vs an enemy it is 3 wounds, more than a scaled Hollow Soldier's whole 2-player health (2). Two bleed hits on a 4-health (4p) Hollow Soldier kill it outright. |
+| Poison | 1 damage **per token** at end of activation, remove one (stacks) | 1 damage, remove token (V2) / 1 damage per activation while token held (1E) | n tokens → n + (n−1) + … + 1 total damage: 2 tokens = 3, 3 tokens = 6 damage over three turns — triangular stacking is far stronger than official. |
+| Stagger | −1 to attack, block, resist **and dodge** for both sides | character: +1 stamina per attack; enemy: −1 attack damage | Character blocking with 2 black dice: +0.97 expected damage per hit at attack 4–6 (table below); attacking: 2 black 2.33 → 1.33 (−43 %), net vs block-1 enemy 1.36 → 0.56 (−59 %). Enemy staggered (attack 4 → 3): 1.67 → 0.78. |
+| Frostbite | no stamina recovery; enemy move −1 | character +1 stamina to move/dodge; enemy move −1 | Blocks the 1-per-turn recovery (L1802) — equivalent to −1 stamina per turn. Comparable to official. |
+| Calamity | −1 to block/resist/dodge **results**; persists to encounter end | −1 success on block/resist/dodge; removed when the character suffers damage (BDK text 452–458) | Same per-hit effect as Corrosion (+0.97 expected damage per hit) but never removed → over a 5-hit encounter +4.9 damage vs official ~+1 (one hit). |
+| Corrosion | −1 block; removed on taking damage | (Gaping Dragon rules not supplied; Hollowed p.8: −1 to attack, block, resist) | +0.97 expected damage on the first hit only. |
+
+Condition delta table (E[damage] per hit, block pool −1):
+
+| Attack | 2 black normal | 2 black with −1 | Δ | 3 black (best 2) normal | with −1 | Δ |
+|---|---|---|---|---|---|---|
+| 3 | 0.78 | 1.64 | +0.86 | 0.38 | 1.11 | +0.74 |
+| 4 | 1.67 | 2.64 | +0.97 | 1.12 | 2.11 | +1.00 |
+| 5 | 2.67 | 3.64 | +0.97 | 2.12 | 3.11 | +1.00 |
+| 6 | 3.67 | 4.64 | +0.97 | 3.12 | 4.11 | +1.00 |
+
+Findings: Bleed at 3 is 50 % above official and lands as a lump; acceptable as a deliberate change (Hollowed origin) but note that enemy bleed weapons become the best anti-boss tool only if bosses can hold bleed tokens (undefined). Poison stacking is the outlier — define it as official (1 damage, remove one token) or cap tokens at three (B-025). Stagger applying −1 to **dodge** turns a 1-die dodger into a 0-die dodger (auto-fail) — harsh but consistent. Calamity persisting all encounter is a ×5 effect against a four-arc mega-boss that spams it; adopt the official removal clause (B-026).
+
+## 12. Components arithmetic (L583–716)
+
+| Item | Manuscript | Check | Result |
+|---|---|---|---|
+| Treasure cards | 13+45+40+120+60+145+10+20+18+63 = 534 | 534 | **correct** |
+| Encounter cards | 12+31+12+31+12+31+40 = 169 | 169 | **correct** |
+| Condition tokens | "35x" then 7×4 + 4×2 | 28 + 8 = **36** | **wrong** (B-027); Core set has 5 × 4 = 20 (Core p.7) + 4 Calamity (BDK) |
+| Dice | 5 black, 4 blue, 2 orange, 4 green | Core p.7: 5/4/2/4 | correct; "2X" → "2x" |
+| Soul tokens | 10×1, 5×3, 3×5, 1×8 | Core p.7 identical | correct as a component count, but total face value = 48 and the manuscript makes souls **individual** (L1383). Four characters each holding ~20 souls (§4) need ~80 → supply runs out; 1E used one shared cache. Add "use any counters if soul tokens run out" (B-028). |
+| Wound tokens | 6×1, 3×3, 1×5 = 20 | Core p.7 identical | correct count; capacity 20 wounds vs 4-player scaled encounters (3 Hollow Soldiers × 4 health = 12; heavy archetype 3 × 6 = 18) — tight at 4 players with health scaling. Note. |
+| Stat tier cubes | 16 | Core p.7 "16x Level Up Tokens" | correct, but all 16 sit on dashboards in a 4-character game; the hollow markers "such as white cubes" (L781, L1215, L1367) then have **no** white cubes available. Specify a different marker (B-029). |
+| Damage/stamina cubes | 32 red, 32 black | Core p.7 identical | 4 characters × 8 boxes = 32 — exactly enough for an 8-box bar; a 10-box bar would need 40. |
+| Aggro / Luck / Heroic / Estus / Ember tokens | 1 / 4 / 4 / 4 / 4 | Core p.7 identical | correct. "First player token" (L1277) is not listed; Core p.7 lists a "First Activation Token" (B-030). |
+| Terrain | 4 chests, 5 gravestones, 8 barrels, 20 traps, 1 fog gate | Core p.7 identical | correct |
+| Tiles | 6 double-sided encounter, 2 boss, 1 bonfire | Core p.7: 6 exploration, mini-boss, main-boss, bonfire | correct |
+| Event cards | 10 / 10 / 10 + 5 trap | not in Core 1E (none); V2 has 30 event cards of a different system (V2 p.6) | source undefined — the manuscript's event decks appear to be new content; state so (Note) |
+| Enemies | Core six types 2/3/3/2/3/3 | Core p.4 identical | correct. Tomb of Giants: manuscript 3/3/2/2/1/2; V2 p.6 tokens 4/4/2/2/2/2 (Note) |
+| Spark dial | 1 | Core p.7 | correct |
+
