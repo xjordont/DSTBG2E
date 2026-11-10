@@ -40,7 +40,7 @@ The book cannot be played from the text as it stands because of a small number o
 
 Voice and style are tractable: the manuscript is already British-spelled, carries 44 hedge words and one second-person passage, and has 24 meta-commentary passages and 16 external references, almost all in the Second Edition Notes and the Update Pack. Both the voice audit and the completion audit recommend replacing the Notes with a 165–171-word in-voice Foreword (OQ-01, Option A).
 
-**Gate 1 verdict: ready for approval.** Every Blocker and Major has a proposed fix; every stub has a draft; the clean-up list is complete; asset reconnaissance is logged in `22_asset_extraction_log.md`; the open questions in §7 each carry a recommended answer so that approval can be given wholesale or by exception.
+**Gate 1 verdict: ready for approval.** Every Blocker and Major has a proposed fix; every stub has a draft; the clean-up list is complete; asset reconnaissance is complete (155 assets catalogued, 114 extracted) in `22_asset_extraction_log.md`; the open questions in §7 each carry a recommended answer so that approval can be given wholesale or by exception.
 
 ## 2. Coverage tracker snapshot
 
@@ -140,7 +140,8 @@ Approval may be given wholesale ("approve all recommendations") or by exception.
 
 - **OQ-01 Second Edition Notes.** Rewrite as an in-voice Foreword (Option A) or cut entirely (Option B)? *Recommended:* A — the 165-word Foreword in `F_report.md` §9.1 (or E's 171-word variant), credits to a colophon line.
 - **OQ-02 Content completions.** Approve, revise or reject each of CMP-0001…CMP-0023 (§4). *Recommended:* approve all; for CMP-0005 approve the drafted bosses now and leave the nine BLOCKED bosses as "apply the special rules supplied with that expansion" placeholders until booklets arrive (OQ-20).
-- **OQ-03 Asset priorities.** Which extracted assets lead the cover, chapter openers and component pages? See `22_asset_extraction_log.md` and `21_asset_manifest.csv`. *Recommended:* official wordmark + crest for the cover, the 2022 icon key as the book's icon set, chapter-opener art drawn from the expansion booklets' title plates, SFG frame/ornament language for sidebars; Bandai Namco character key art only where the owner confirms provenance.
+- **OQ-03 Asset priorities.** Which extracted assets lead the cover, chapter openers and component pages? 155 assets are catalogued and 114 extracted (`22_asset_extraction_log.md`, `21_asset_manifest.csv`, `assets/`). *Recommended:* the vector wordmark (AST-0001/0004) and the lava-scale cover texture for the cover; the complete 2022 symbol key (61 icons) as the book's icon set; the knot, compass-corner and title-rule ornaments for chapter openers and folios; the anatomy diagrams redrawn over the extracted plates; component photography (28 TO EXTRACT items) in Phase 2B.
+- **OQ-33 Asset rights and fonts.** (a) Does the rights assertion extend to the FromSoftware / Bandai Namco key art reproduced in the SFG books (both cover paintings and ten character/boss plates, held under Provenance Review)? (b) Is the DARK SOULS wordmark to be used titularly on the cover or only nominatively? (c) Approve the open-font substitutions — Cinzel for OptimusPrinceps (display), Libre Caslon Text or EB Garamond for Adobe Caslon Pro (body), Liberation Sans for utility text — or supply licensed font files. *Recommended:* hold the key art until (a) is confirmed; nominative wordmark use with the book's own title set in the display face; approve Cinzel + Libre Caslon Text.
 - **OQ-04 "Combat Cards".** The brief names a truncated Combat Cards section; this DOCX revision has none. Is there a newer manuscript revision? *Recommended:* treat as out of scope unless supplied.
 - **OQ-05 Reduced soul reward.** Half rounded down (1/2/2/3; campaign 1/1/2/2) or half rounded up or "full − 2, min 1"? *Recommended:* half rounded down.
 - **OQ-06 Event cards.** Supply the 35 card texts and adopt the CMP-0012 rule paragraph, or delete every reference (components, setup, scrying, Special Trap cards)? *Recommended:* delete unless the cards exist as a designed set.
@@ -205,8 +206,8 @@ Approval may be given wholesale ("approve all recommendations") or by exception.
 | Every Blocker/Major has a proposed fix | ✔ ({sev['Blocker']} Blockers, {sev['Major']} Majors; all rows carry a Proposed fix) |
 | Every stub/truncated section has a [PROPOSED] completion | ✔ (23 CMP entries) |
 | Clean-up list complete | ✔ (§6) |
-| Asset reconnaissance complete | see `22_asset_extraction_log.md` / `21_asset_manifest.csv` |
-| Open questions enumerated | ✔ (OQ-01…OQ-32) |
+| Asset reconnaissance complete | ✔ (155 catalogued, 114 extracted, 12 under Provenance Review, 3 font substitutions logged) |
+| Open questions enumerated | ✔ (OQ-01…OQ-33) |
 | Every [PROPOSED] completion has a visible draft | ✔ (`04_completion_backlog.md`) |
 
 **Halt.** Phase 2A begins only on explicit approval of this report and of the completion backlog.

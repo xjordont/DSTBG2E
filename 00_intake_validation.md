@@ -101,9 +101,13 @@ Prose cross-references only ("explained in detail later on in the section title 
 | Typesetting to PDF | **none of LaTeX / WeasyPrint / InDesign present**; reportlab is installed; LibreOffice can print ODT/HTML → PDF | Phase 2C will attempt `pip install weasyprint` (needs libpango) and fall back to pandoc → HTML → LibreOffice → PDF or reportlab; recorded in `30_pdf_production_notes.md` |
 | Fonts | fc-list available; inventory pending asset agent | open-font substitutes to be logged in `22_asset_extraction_log.md` |
 
-## 5. Asset reconnaissance
-Running as a sub-agent (Phase 0 step 4). Outputs: `22_asset_extraction_log.md`, `21_asset_manifest.csv`, `assets/`. Summary appended below on completion.
+## 5. Asset reconnaissance (complete)
+Sub-agent output: `22_asset_extraction_log.md` (155 catalogued assets AST-0001…AST-0155 with Font Inventory, Embedded Image Inventory, Colour Palette, Provenance Review and Font Substitution sections), `21_asset_manifest.csv` (146 rows: 113 extracted, 28 to extract, 2 blocked, 3 font substitutions), `assets/` (114 cleaned files, 42 MB: 61 icons from the 2022 symbol key, 5 logo files incl. vector SVG, 9 ornaments, 2 vector frames, 21 anatomy and worked-example diagrams, 6 textures incl. a 5174 × 3378 px open-book background, 8 type specimens, 2 cover items). Every extraction is reproducible from the bounding boxes recorded in `work/extraction_records_*.json` and `work/asset_catalogue_final.json` with the scripts in `tools/`.
+
+Fonts found in the official PDFs: OptimusPrinceps / OptimusPrinceps SemiBold (display; freeware), Adobe Caslon Pro Regular/Italic/Bold/Semibold (body and tables; commercial), Arimo and Helvetica (utility). None is installed locally; proposed substitutes are Cinzel (display) and Libre Caslon Text or EB Garamond (body), with Liberation Sans for utility text — recorded under Font Substitution and raised as OQ-33.
+
+Provenance review: twelve catalogue entries (all FromSoftware / Bandai Namco key art reproduced in the SFG books, including both cover paintings) are held pending the owner's ruling on the scope of the rights assertion; one card-frame source is too low-resolution (≤372 px) and is BLOCKED. Sampled palette: parchment #f4f2ea, ink #231f20, cover black #110f0e, gold accents #9c8141 / #b77e2e, endurance-bar red #682b35, plus the functional node, dice, arc and condition colours (full hex + CMYK table in the log).
 
 ## 6. Verdict
 
-**READY_FOR_PHASE_1.** All inputs are present and readable; no truncation; the manuscript's defects are editorial, not blocking. Open question raised at intake: OQ-04 — the brief's "Combat Cards" section does not exist in this DOCX revision; confirm whether a newer manuscript revision exists.
+**READY_FOR_PHASE_1.** All inputs are present and readable; no truncation; the manuscript's defects are editorial, not blocking. Open questions raised at intake: OQ-04 — the brief's "Combat Cards" section does not exist in this DOCX revision; OQ-33 — scope of the rights assertion over FromSoftware / Bandai Namco key art and approval of the open-font substitutions.
