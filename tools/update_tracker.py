@@ -29,19 +29,23 @@ def linenums(s):
     'manuscript.md:945', 'manuscript.md 945 (Gravestones)', 'manuscript.md:1203–1223'."""
     out=[]
     prefixed = re.compile(r'(?:\bL|\bline[s]?\s*|manuscript\.md\s*:?\s*|:)(\d{3,4})(?:\s*[–-]\s*(\d{3,4}))?')
+    def add_range(a, b):
+        """Add both endpoints and the line of every heading the range spans, so a finding
+        on 'lines 2352–3034' lands on every campaign section, not only the first and last."""
+        for v in (a, b):
+            if v is not None and 361<=v<=len(lines) and v not in out: out.append(v)
+        if a is not None and b is not None and b > a:
+            for (ln,lvl,txt) in heads:
+                if a < ln <= b and ln not in out: out.append(ln)
     for m in prefixed.finditer(s):
-        for g in (m.group(1), m.group(2)):
-            if g:
-                v=int(g)
-                if 361<=v<=len(lines): out.append(v)
+        a = int(m.group(1)); b = int(m.group(2)) if m.group(2) else None
+        add_range(a, b)
     if out:
         # A reference list such as "manuscript.md 661–667 (components), 1133, 1161 (setup), 939 (scrying)"
         # continues with bare numbers after commas; take those too (years excluded).
         for m in re.finditer(r'(?:,|;)\s*(?:L)?(\d{3,4})(?:\s*[–-]\s*(\d{3,4}))?', s):
-            for g in (m.group(1), m.group(2)):
-                if g and g not in ('2017','2022'):
-                    v=int(g)
-                    if 361<=v<=len(lines) and v not in out: out.append(v)
+            if m.group(1) in ('2017','2022'): continue
+            add_range(int(m.group(1)), int(m.group(2)) if m.group(2) else None)
     return out
 audit=collections.defaultdict(set); comp=collections.defaultdict(set)
 def ingest(path, bucket):

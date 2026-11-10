@@ -10,3 +10,4 @@ __pycache__/
 work/text/
 # Raw pdfimages dumps (scratch for asset extraction; cleaned assets live in assets/)
 work/pdfimages/
+work/scratch/

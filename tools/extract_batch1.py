@@ -6,7 +6,7 @@ import numpy as np
 from PIL import Image
 import pdfplumber
 Image.MAX_IMAGE_PIXELS=None
-ROOT='/home/user/DSTBG2E'; os.chdir(ROOT)
+ROOT=os.path.dirname(os.path.dirname(os.path.abspath(__file__))); os.chdir(ROOT)  # repo root, checkout-independent
 TG='work/pdf_decrypted/DS-TG-Rulebook-Compressed_compressed.pdf'
 FAQ='work/pdf_decrypted/Dark_Souls_The_Board_Game_FAQ.pdf'
 CORE='sources/DS-Core-Rules-lores.pdf'
@@ -41,7 +41,7 @@ def trim(im,pad=0):
     return im.crop(bb)
 def svgcrop(src,out,bbox,extra=()):
     subprocess.run(['python3','tools/svg_crop.py',src,out,*map(str,bbox),*extra],check=True)
-SP='/tmp/claude-0/-home-user-DSTBG2E/ff710c3a-8948-5673-b38b-8c94b4dc4aee/scratchpad/b1'; os.makedirs(SP,exist_ok=True)
+SP=os.path.join(ROOT,'work','scratch','b1'); os.makedirs(SP,exist_ok=True)  # intermediate crops (git-ignored)
 
 # ---------------- LOGOS ----------------
 A='assets/logos/'
