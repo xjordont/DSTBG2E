@@ -28,11 +28,20 @@ def linenums(s):
     """Line references in any of the agents' formats: 'L945', 'line 945', 'lines 945-950',
     'manuscript.md:945', 'manuscript.md 945 (Gravestones)', 'manuscript.md:1203–1223'."""
     out=[]
-    for m in re.finditer(r'(?:\bL|\bline[s]?\s*|manuscript\.md\s*:?\s*|:)(\d{3,4})(?:\s*[–-]\s*(\d{3,4}))?', s):
+    prefixed = re.compile(r'(?:\bL|\bline[s]?\s*|manuscript\.md\s*:?\s*|:)(\d{3,4})(?:\s*[–-]\s*(\d{3,4}))?')
+    for m in prefixed.finditer(s):
         for g in (m.group(1), m.group(2)):
             if g:
                 v=int(g)
                 if 361<=v<=len(lines): out.append(v)
+    if out:
+        # A reference list such as "manuscript.md 661–667 (components), 1133, 1161 (setup), 939 (scrying)"
+        # continues with bare numbers after commas; take those too (years excluded).
+        for m in re.finditer(r'(?:,|;)\s*(?:L)?(\d{3,4})(?:\s*[–-]\s*(\d{3,4}))?', s):
+            for g in (m.group(1), m.group(2)):
+                if g and g not in ('2017','2022'):
+                    v=int(g)
+                    if 361<=v<=len(lines) and v not in out: out.append(v)
     return out
 audit=collections.defaultdict(set); comp=collections.defaultdict(set)
 def ingest(path, bucket):

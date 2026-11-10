@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Crop a pdftocairo page SVG to a bbox (pt), dropping raster <image>, text glyph <use>,
-and any <path> whose coordinate extent lies wholly outside the bbox.
+and any <path> whose transformed (page-coordinate) extent lies wholly outside the bbox.
 usage: svg_crop.py in.svg out.svg x0 y0 x1 y1 [--keep-text] [--fill COLOUR]
 Writes a standalone SVG whose viewBox is the bbox (width/height in pt)."""
 import sys, re, xml.etree.ElementTree as ET
@@ -23,10 +23,32 @@ def path_extent(d):
 tree=ET.parse(inp); root=tree.getroot()
 SVG='{%s}'%NS['svg']; XL='{%s}'%NS['xlink']
 kept=0; dropped=0
-def prune(el, in_defs=False):
+# --- affine transforms: path coordinates are local; compose the element's and its ancestors'
+# transform attributes (matrix / translate / scale, as pdftocairo emits them) before testing bounds.
+tf_re=re.compile(r'(matrix|translate|scale)\s*\(([^)]*)\)')
+def parse_transform(t):
+    m=(1,0,0,1,0,0)
+    for kind,args in tf_re.findall(t or ''):
+        v=list(map(float,num.findall(args)))
+        if kind=='matrix' and len(v)==6: n=tuple(v)
+        elif kind=='translate': n=(1,0,0,1,v[0],v[1] if len(v)>1 else 0)
+        elif kind=='scale': n=(v[0],0,0,v[1] if len(v)>1 else v[0],0,0)
+        else: continue
+        a,b,c,d,e,f=m; a2,b2,c2,d2,e2,f2=n
+        m=(a*a2+c*b2, b*a2+d*b2, a*c2+c*d2, b*c2+d*d2, a*e2+c*f2+e, b*e2+d*f2+f)
+    return m
+def compose(m,n):
+    a,b,c,d,e,f=m; a2,b2,c2,d2,e2,f2=n
+    return (a*a2+c*b2, b*a2+d*b2, a*c2+c*d2, b*c2+d*d2, a*e2+c*f2+e, b*e2+d*f2+f)
+def transform_extent(ext,m):
+    a,b,c,d,e,f=m
+    pts=[(a*x+c*y+e, b*x+d*y+f) for x in (ext[0],ext[2]) for y in (ext[1],ext[3])]
+    return min(p[0] for p in pts),min(p[1] for p in pts),max(p[0] for p in pts),max(p[1] for p in pts)
+def prune(el, in_defs=False, ctm=(1,0,0,1,0,0)):
     global kept,dropped
     for ch in list(el):
         tag=ch.tag.replace(SVG,'')
+        m=compose(ctm, parse_transform(ch.get('transform')))
         if tag=='image': el.remove(ch); continue
         if tag=='use':
             href=ch.get(XL+'href','')
@@ -40,11 +62,12 @@ def prune(el, in_defs=False):
             continue
         if tag=='path' and not in_defs:
             ext=path_extent(ch.get('d',''))
+            if ext is not None: ext=transform_extent(ext,m)   # page coordinates
             if ext is None or ext[2]<x0 or ext[0]>x1 or ext[3]<y0 or ext[1]>y1:
                 el.remove(ch); dropped+=1; continue
             kept+=1
             if fill and ch.get('fill','none')!='none': ch.set('fill',fill)
-        prune(ch, in_defs or tag=='defs')
+        prune(ch, in_defs or tag=='defs', m)
 prune(root)
 # remove now-empty groups
 def strip_empty(el):
