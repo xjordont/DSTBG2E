@@ -22,10 +22,14 @@ def locate(n):
         else: sec = txt
     return ch, sec
 def linenums(s):
+    """Line references in any of the agents' formats: 'L945', 'line 945', 'lines 945-950',
+    'manuscript.md:945', 'manuscript.md 945 (Gravestones)', 'manuscript.md:1203–1223'."""
     out=[]
-    for m in re.finditer(r'(?:\bL|\bline[s]?\s*|:)(\d{3,4})', s):
-        v=int(m.group(1))
-        if 361<=v<=len(lines): out.append(v)
+    for m in re.finditer(r'(?:\bL|\bline[s]?\s*|manuscript\.md\s*:?\s*|:)(\d{3,4})(?:\s*[–-]\s*(\d{3,4}))?', s):
+        for g in (m.group(1), m.group(2)):
+            if g:
+                v=int(g)
+                if 361<=v<=len(lines): out.append(v)
     return out
 audit=collections.defaultdict(set); comp=collections.defaultdict(set)
 def ingest(path, bucket):
@@ -41,8 +45,12 @@ def ingest(path, bucket):
             ch,sec=locate(v)
             if ch: keys.add((ch,sec)); keys.add((ch,None))
         if not keys:
-            # fall back to chapter-name match in Location
+            # fall back to section-name, then chapter-name, match in Location
             loc=row.get('Location','').lower()
+            ch=None
+            for (ln,lvl,txt) in heads:
+                if lvl==1: ch=txt
+                elif len(txt)>3 and txt.lower() in loc: keys.add((ch,txt)); keys.add((ch,None))
             for (ln,lvl,txt) in heads:
                 if lvl==1 and txt.lower() in loc: keys.add((txt,None))
         for k in keys: bucket[k].add(row['ID'])

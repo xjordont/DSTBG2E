@@ -464,3 +464,81 @@ Findings: Bleed at 3 is 50 % above official and lands as a lump; acceptable as a
 | Enemies | Core six types 2/3/3/2/3/3 | Core p.4 identical | correct. Tomb of Giants: manuscript 3/3/2/2/1/2; V2 p.6 tokens 4/4/2/2/2/2 (Note) |
 | Spark dial | 1 | Core p.7 | correct |
 
+## 13. Boss encounter numbers (L2070–2300)
+
+Data available in the sources: unnamed example boss card — threat 6, deck size 4, block 2, resist 1, health 24, heat-up 12 (Core p.40 / V2 p.32); Hungry Mimic health 18, heat-up 8, deck 4, block 1 (Explorers text); Voracious Mimic health 22; Kalameet health 38, heat-up 22, deck 6, block 4 (BDK text; block/resist digits read from the text dump, order partly inferred); Black Knight has 9 behaviour cards in total, Gravelord Nito 13 (V2 p.5). The manuscript keeps the official heat-up mechanism (L2126–2128), the official deck-building step (L2130) and the official weak-arc bonus of one black die (L2149; Core p.28, V2 p.29).
+
+### 13.1 Weak-arc bonus
++1 black die = **+1.17 expected raw damage**; against block 2 the net gain is +0.99 for a Shortsword [0] (0.56 → 1.55) and +1.13 for a Shortsword [2] (1.55 → 2.68). Unchanged from official; **OK**.
+
+### 13.2 Character damage per attack (official example cards)
+| Attack option | Dice | E[raw] | E[net] vs block 2 | with weak arc | E[net] vs block 1 |
+|---|---|---|---|---|---|
+| Shortsword [0] (Core p.22) | 2 black | 2.33 | 0.56 | 1.55 | 1.36 |
+| Shortsword [2] (Core p.22) | 3 black | 3.50 | 1.55 | 2.68 | 2.50 |
+| Estoc [3], 3 black −1 (Core p.12) | 3 black | 2.50 | 0.75 | 1.74 | 1.55 |
+| Dragonslayer Spear [4], 1 black 2 blue, magical (Core p.23) | 3 dice | 4.83 | 2.83 (vs resist 2) | 4.00 | 3.83 |
+| Generic tier-two: 2 orange | 2 orange | 5.00 | 3.00 | 4.17 | 4.00 |
+| Generic tier-two: 3 blue | 3 blue | 5.50 | 3.50 | 4.67 | 4.50 |
+
+Note: with 1 stamina recovered per turn (L1802) a starting character cannot use the [2] option every turn without a Rest action; a realistic average is between the [0] and [2] rows.
+
+### 13.3 Rounds to kill (one attack per character turn, weak arc half the time)
+Boss turns = character turns (the boss acts after every character, L2184), so the number of boss activations needed is independent of player count; what changes is how many hits each character absorbs.
+
+| Boss | Health / block | Starting weapons (Shortsword [2]) | Tier-two weapons (3 blue) |
+|---|---|---|---|
+| Example boss (Core p.40) | 24 / 2 | 2.11 per turn → **11 character turns** (heat-up after 6) | 4.08 → 6 turns (heat-up after 3) |
+| Hungry Mimic | 18 / 1 | 3.09 → 6 turns | 5.08 → 4 turns |
+| Voracious Mimic | 22 / 1 | 3.09 → 7 turns | 5.08 → 4 turns |
+| Kalameet (mega) | 38 / 4 | 0.59 → 65 turns | 2.10 → 18 turns (heat-up after 8) |
+
+At 1 player the example boss gets 11 activations against one 8-box character (an icon-key boss attack of 5 vs 2 black dice = 2.67 expected per hit → the solo character dies in 3 hits and must dodge or use Estus/Ember); at 4 players the same 11 activations are shared, roughly 3 per character (about 8 expected damage each — survivable with one Estus). **Bosses are therefore markedly easier for larger parties, exactly as in official 1E/V2, which also leave boss health fixed.** The manuscript's decision not to scale bosses is consistent with both official editions; but because the manuscript scales ordinary encounters so hard at 3–4 players (§2) the difficulty curve inverts — the route is harder than the boss at 4 players and easier than the boss at 1 player. The Kalameet row shows that mega-bosses are unapproachable with starting equipment, which matches the official intent (BDK/EC grant +8 souls per character before the mega-boss; the manuscript grants a Level 4 encounter at 6 souls instead, L1181–1191).
+
+Verdict: boss mechanics **OK**; the player-count curve problem belongs to §2.
+
+## 14. Expansion interactions
+
+| Interaction | Manuscript | Quantified | Verdict |
+|---|---|---|---|
+| Bonfire Ascetic +1 attack (L2342) **cumulative** with +1 at 3+ characters and Repeat 2 at 4 | Hollow Soldier at 4p after Ascetic: attack 6, Repeat 2, health 4 | E[dmg] per activation vs 2 black dice = 7.33; P(kill a full 8-box character in one activation) = 0.444; P(kill a hollow character) = 0.914 (§2.3). An icon-key 5-attack enemy becomes 7 ×2 = 9.33 expected: lethal to a full bar on average. | **Broken** (B-031). Make the Ascetic +1 **replace** the player-count +1, or add health instead of attack. |
+| Ascetic also unlocks tier-two shop; cost 16 shared | 3 characters × 5.3 souls = 10 % of campaign income | Affordable in section 1 → the party can trigger +1 attack before their equipment improves | Tune: minimum "after the first section" or cost 8 per character. |
+| Calamity (Kalameet) persistent all encounter (L1646) | +0.97 expected per hit, every hit | ≈ +5 damage over a five-hit fight vs ≈ +1 official | Tune (B-026). |
+| Corrosion −1 block, removed on damage (L1654) | +0.97 on the first hit only | Minor | OK. |
+| Invader health not scaled (L2019) | Fencer Sharron 20 health; takes a turn after **every** character turn (L2027) | At 4p the invader gets 4 activations per round against 4 characters' damage (≈ 4 × 2.1 = 8.4 per round with starting weapons) → ~2.5 rounds; at 1p 1 activation per round vs 2.1 damage → ~10 rounds. Reward is per character (3–4) so 4p also earns 4× the official 3-souls-to-cache. | OK as written (official invaders are also unscaled, Phantoms p.14); note the reward multiplier (B-009). |
+| Crystal lizards not scaled (L2057) | Flee; reward 1 Titanite Scale (L2057) vs "Titanite Chunk" (L1477) | Inconsistent reward name between the two sections | Fix text (B-032). |
+| Phantom (summon) health | Not stated; phantoms "removed if their health dial is reduced to [zero]" (L1993) | Phantoms rules give each summon a fixed starting health (Phantoms p.? text 243–246); no scaling in either edition | OK; add the missing word "zero" (editorial). |
+| Mimic as a mini-boss after a cleared encounter (L2047–2049) | Hungry Mimic 18 health, heat-up 8; players start on their end-of-encounter nodes with whatever stamina/damage they carry | A party that has just cleared a 4p-scaled encounter faces 6 mimic activations without recovery | OK but harsh; recommend recovering stamina (not damage) before the mimic acts. |
+| Mega-boss Level 4 encounter reward 6 souls (L1434) vs official +8 souls per character (BDK/EC) | 6 vs 8 | Minor | OK. |
+
+## 15. Balance verdict by subsystem
+
+| Subsystem | Verdict | Recommended number(s) |
+|---|---|---|
+| Dice | OK (must be printed) | Black 0,1,1,1,2,2; Blue 1,1,2,2,2,3; Orange 1,2,2,3,3,4; Green 3 blank / 3 success — confirm with the physical dice |
+| Block (two highest dice) | tune | Keep, but cap enemy attack scaling (below); or allow a shield to add a third die |
+| Enemy scaling 1–2 players | OK | as written |
+| Enemy scaling 3 players | tune | drop the +1 attack at 3 (move to 4) |
+| Enemy scaling 4 players | **broken** | delete Repeat 2; use Base + 4 health and +1 attack |
+| Campaign Ascetic | **broken** at 3–4 players | Ascetic +1 attack replaces (does not stack with) the player-count +1 |
+| Stat tier costs (basic) | tune | Tier Four = 10 |
+| Stat tier costs (campaign) | tune | rewards 3/4/5/6 or Tier Three 12 / Tier Four 16 |
+| Tier Four value | tune | max(40, Tier Three + 5) |
+| Stat scaling threshold | tune | +5 instead of +10 |
+| Souls (basic) | OK | define reduced reward = half rounded down (1/2/2/3) |
+| Souls (campaign) | tune | see above |
+| Sparks (basic) | OK 1–3p; tune 4p via scaling | — |
+| Sparks (campaign) | tune | max = start + 1; buy-back 4 souls per character; no joining below 2 sparks; define loss at a forced rest with 0 sparks |
+| Hollow −2 | OK | — (confirm 8 vs 10 boxes) |
+| Encounter skip cost | **broken** | 1 stamina per skipped encounter, max 3 |
+| Dodge | OK; extra die tune | extra die for 1 stamina (2 total) |
+| PvP dodge table | tune | 3/2/2/1/1/1 |
+| Bleed 3 | OK (deliberate) | — |
+| Poison stacking | **broken** | n damage then remove all tokens |
+| Stagger −1 to dodge | OK (harsh) | — |
+| Calamity persistent | tune | remove on damage |
+| Components | OK except arithmetic | 36 condition tokens; add hollow markers, first player token; soul tokens unlimited |
+| Shop | OK; stocking tune | 12-draw cap; define shield |
+| Bosses | OK | — |
+| Weapon table | tune | Falchion 17/30; swap the Carthus pair; decide the three on-split rows |
+

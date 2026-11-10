@@ -591,7 +591,7 @@ Index: CMP-0001 Estus Flask · CMP-0002 Glossary · CMP-0003 F.A.Q. · CMP-0004 
   >
   > **Twin Gargoyles.** Some campaign sections list the Gargoyle twice. The two Gargoyle encounters form one boss encounter in two parts. When the first Gargoyle is slain, the encounter does not end: at once place the second Gargoyle on the boss spawn node facing the centre of the tile, set its health dial to its starting health, and build a new behaviour deck for it. The characters remain where they are, recover nothing, and characters who died remain dead. *Souls*, boss treasure, the *spark* and the *ember* tokens are awarded once, when the second Gargoyle is slain. If the characters are defeated by either Gargoyle, the boss encounter is *failed* and both Gargoyles must be fought again. [PROPOSED adaptation of the Core campaign footnote]
   >
-  > **Dragonslayer Ornstein & Executioner Smough.** Ornstein & Smough are one boss: one data card, one health dial, one behaviour deck, one heat-up. Place both models on the main-boss tile as the data card directs; each behaviour card states which model acts and which model's arcs its attack uses. A character attacking either model attacks the boss; the weak-arc bonus is judged against the arcs of the model attacked. The rule for two boss models in one encounter applies. *The placement of the second model, the behaviour cards' model markings and the effect of heat-up on the pair are printed on the data card and behaviour cards; this chapter adds nothing to them.* BLOCKED — the Core rulebook prose contains no dual-boss rule; the data card is the only source and is not supplied.
+  > **Dragonslayer Ornstein & Executioner Smough.** Ornstein & Smough are one boss: one data card, one health dial, one behaviour deck, one heat-up. Place both models on the main-boss tile as the data card directs; each behaviour card states which model acts and which model's arcs its attack uses. A character attacking either model attacks the boss; the weak-arc bonus is judged against the arcs of the model attacked. The rule for two boss models in one encounter applies. The placement of the second model, the behaviour cards' model markings and the effect of heat-up on the pair are printed on the data card and behaviour cards. [Editor: BLOCKED — the data card is the only source for the pairing and is not supplied; the Core rulebook prose contains no dual-boss rule.]
   >
   > ## Asylum Demon Expansion — Asylum Demon and Stray Demon
   >
@@ -607,7 +607,7 @@ Index: CMP-0001 Estus Flask · CMP-0002 Glossary · CMP-0003 F.A.Q. · CMP-0004 
   >
   > When a Wind Up behaviour icon is resolved, each character may spend one stamina to move their model to an adjacent node. This movement counts as a *Run*.
   >
-  > *The Asylum Demon booklet was not supplied; the two rules above are the manuscript's own text and are retained unchanged.* BLOCKED for any further rule the booklet defines (mega-boss game board layout, Level 4 encounter cards, treasure).
+  > [Editor: BLOCKED — Asylum Demon booklet not supplied. The two rules above are the manuscript's own text, retained unchanged; any further rule the booklet defines (game board layout, Level 4 encounter cards, treasure) cannot be drafted.]
   >
   > ## Darkroot Expansion
   >
@@ -663,7 +663,7 @@ Index: CMP-0001 Estus Flask · CMP-0002 Glossary · CMP-0003 F.A.Q. · CMP-0004 
   >
   > ## Mega-bosses Without Supplied Rules
   >
-  > The following entries are BLOCKED — source booklet not supplied. Each is to be drafted in the structure used above (Components · Setup · Special ability · Heat-up · Unique icons) once its booklet is available. Until then the boss is played from its data card and the general boss rules.
+  > [Editor: the following entries are BLOCKED — source booklet not supplied. Each is to be drafted in the structure used above (Components · Setup · Special ability · Heat-up · Unique icons) once its booklet is available.] A boss whose rules are not yet given here is played from its data card and the general boss rules.
   >
   > **The Four Kings (mega-boss, The Four Kings expansion).** BLOCKED. Known requirement: multiple boss models; the rule for two boss models in one encounter applies.
   >
@@ -1016,7 +1016,7 @@ Index: CMP-0001 Estus Flask · CMP-0002 Glossary · CMP-0003 F.A.Q. · CMP-0004 
   >
   > To succeed the characters must learn their enemies' behaviours, raise their stats, seek out powerful weapons and work together through increasingly dangerous encounters. When a character dies they rise again hollow, weaker until they rest at the bonfire or consume an ember. The bonfire's sparks are few, and every rest spends one.
   >
-  > This edition collects the rules of the original game and its expansions into one revised, self-contained book. Terms set in italics are defined in the Glossary.
+  > This edition collects the rules of the game and its expansions into one revised, self-contained book. Terms set in italics are defined in the Glossary.
   >
   > Nameless accursed undead, seek strength, and prepare to die.
 
@@ -1070,7 +1070,7 @@ Index: CMP-0001 Estus Flask · CMP-0002 Glossary · CMP-0003 F.A.Q. · CMP-0004 
 ### [CMP-0015] CRYSTAL LIZARDS / Treasure Rewards — Reward card name — Proposed Completion
 - Current state: Treasure Rewards (line 1477) awards "a Titanite Chunk card" for killing a *crystal lizard*; Crystal Lizards (line 2055) awards "one Titanite Scale card". The Iron Keep expansion contains three Titanite Scale cards; Titanite Chunk is a Community Update Pack card with STR 25 / DEX 25 requirements (CMP-0004).
 - Proposed completion: Titanite Scale is the reward. Replacement for line 1477: "If playing with the option of *crystal lizards*, award a Titanite Scale card to each character who killed a *crystal lizard* during the encounter, as the Crystal Lizards chapter describes." Addition to the Crystal Lizards chapter after line 2055: "The Iron Keep expansion supplies three Titanite Scale cards. When none remains, ignore the crystal lizard symbol on encounter cards; no further *crystal lizards* are placed."
-- Design rationale: Titanite Scale is the physical card in the Iron Keep box and the name the chapter that owns the rule uses. Titanite Chunk carries tier two requirements that a low-stat character who killed the lizard might never meet, and the Community Update Pack defines it as a shop-sorted upgrade, not a reward. The three-card limit follows the Iron Keep booklet and prevents an undefined state when the supply runs out.
+- Design rationale: Titanite Scale is the physical card in the Iron Keep box and the name the chapter that owns the rule uses. Titanite Chunk carries tier two requirements that a low-stat character who killed the lizard does not necessarily meet, and the Community Update Pack defines it as a shop-sorted upgrade, not a reward. The three-card limit follows the Iron Keep booklet and prevents an undefined state when the supply runs out.
 - Mechanical impact: Lizard rewards are capped at three per game.
 - Follow-on changes required: Glossary entry Crystal lizard and Titanite (CMP-0002) name Titanite Scale. Delete the empty heading at line 2059.
 - Status: awaiting-approval
