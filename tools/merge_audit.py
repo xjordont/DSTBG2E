@@ -8,7 +8,11 @@ HEADER = ["ID","Location","Issue type","Severity","Evidence","Current text","Pro
 SEV = {"blocker":"Blocker","major":"Major","minor":"Minor","note":"Note"}
 TAG = {"required":"REQUIRED","optional":"OPTIONAL","proposed":"PROPOSED","clean-up":"CLEAN-UP","cleanup":"CLEAN-UP","proposed-systemic":"PROPOSED"}
 rows, seen, problems = [], set(), []
-for f in sorted(glob.glob(str(ROOT/"work/audit/*_rows.csv"))):
+inputs = sorted(glob.glob(str(ROOT/"work/audit/*_rows.csv")))
+if not inputs:
+    print("ABORT: no work/audit/*_rows.csv inputs found; 02_audit_table.csv left untouched.")
+    sys.exit(1)
+for f in inputs:
     with open(f, newline="", encoding="utf-8") as fh:
         r = csv.reader(fh); hdr = next(r)
         if [h.strip() for h in hdr] != HEADER:

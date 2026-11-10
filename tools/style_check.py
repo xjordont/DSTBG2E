@@ -27,7 +27,7 @@ def check(path):
             out.append((path, n, "americanism", w, line.strip()))
         if not in_example and not line.lstrip().startswith(">"):
             for m in re.finditer(YOU, low): out.append((path, n, "second-person", m.group(0), line.strip()))
-        for m in re.finditer(EXT, line): out.append((path, n, "external-ref", m.group(0), line.strip()))
+        for m in re.finditer(EXT, line, re.IGNORECASE): out.append((path, n, "external-ref", m.group(0), line.strip()))
         for m in re.finditer(META, line): out.append((path, n, "meta-tag", m.group(0), line.strip()))
     return out
 def main(argv):
