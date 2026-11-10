@@ -542,3 +542,12 @@ Verdict: boss mechanics **OK**; the player-count curve problem belongs to §2.
 | Bosses | OK | — |
 | Weapon table | tune | Falchion 17/30; swap the Carthus pair; decide the three on-split rows |
 
+## 16. Five most consequential numeric findings
+
+1. **4-player enemy scaling (Repeat 2 + +1 attack) is lethal** — a Hollow Soldier (attack 4, Core p.20) deals 5.33 expected damage per activation against 2 black block dice (vs 1.67 at 1–2 players), with a 5.8 % chance of killing a full-health character and 44 % of killing a hollow one in a single activation; after the campaign Bonfire Ascetic (attack 6 ×2) the figures are 7.33 expected, 44 % / 91 %. Fix: delete Repeat, scale health instead (B-003, B-031).
+2. **Encounter skipping kills hollow characters** — three skips = 6 stamina on a 6-space hollow bar = zero free boxes: any damage kills and no stamina action is legal; a healthy character with three skips dies to one Hollow Soldier hit 56 % of the time (B-014). Fix: 1 stamina per skip, max 3.
+3. **Two undefined or wrong economy numbers** — "reduced soul reward" for re-cleared encounters is never defined (B-008; propose half rounded down, 1/2/2/3) and basic Tier Four = 8 duplicates Tier Three (B-007; propose 10, matching the campaign table's 1:2:4:5 ratio). Whole-game basic income ≈ 44 souls per character, so Tier Four at 22–24 cumulative is half of everything a character earns.
+4. **Stat scaling can never reach tier-two weapons** — the +10 margin needs stat ≥ 35 for any ≥ 25 requirement, while Tier Four is 40 (official) or Tier Three + 5 (manuscript: Herald INT 34); only tier-one weapons ever scale (B-016, B-017).
+5. **Endurance bar 8 vs official 10, and the weapon table** — the manuscript's eight-box bar contradicts the ten-box official dashboards (Core p.20) and all survivability figures hinge on it (B-015); the 60-row weapon table has 38 tier-two rows, a probable transposition (Falchion 37/30) and an inverted Carthus pair (B-018, B-019).
+
+CSV cross-reference: B-001…B-002 dice/block; B-003…B-006 scaling; B-007…B-013 economy and sparks; B-014…B-015 hollow and bar length; B-016…B-017 stat scaling; B-018…B-021 weapon table; B-022…B-023 shop; B-024 PvP dodge; B-025…B-026 conditions; B-027…B-030 components; B-031…B-038 expansions and notes. Totals: 4 Blocker, 15 Major, 15 Minor, 4 Note (38 rows).
