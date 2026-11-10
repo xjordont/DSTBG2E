@@ -257,3 +257,81 @@ Rule statements that exist in two places with different content (treated as cros
 | 2141 | "(i.e.: *Run*) … (for example) to move to a side-arc" | moving between boss arcs | Run is one of several multi-node moves (also *shift*) | "e.g." (C-098) |
 | 1872 | "such as from an agile sword or a repeating crossbow" | *repeat* icon | flavour, no arithmetic | OK (move to flavour) |
 | 1840 | "terrain that would block movement such as a gravestone or chest" | §Terrain | consistent with L931/L959, but barrels and *shift* differ between sections | see C-088 |
+
+## 10. Task 8 — Heading hygiene
+
+**Empty headings (20) — delete:** L893, 983, 1059, 1441, 1842, 1882, 1910, 1925, 1959, 1965, 2049, 2059, 2215, 2308, 2324, 2336, 2400, 3036, 3096, 3100 (matches `00_intake_validation.md` §3.3).
+
+**Duplicate / structural:**
+- L855 `## Spells` followed by L857 `### Spells` → one H2.
+- L2548 "Facing the Abyss - Dark Souls (Darkroot Basin)" and L2764 "Facing the Abyss - Dark Souls (Darkroot)": identical section lists, different preambles → delete one (decision on preamble).
+- L2350 `# CAMPAIGNS` jumps to H3 campaign headings with no H2 → promote campaigns to H2.
+- L1967 `# SUMMONS` contains `## Invaders` → rename chapter PHANTOMS.
+- L1662 `## Overview` (Enemy Turn) → "Enemy Turn Overview".
+- L3098 `# F.A.Q.` is an empty stub; L3102 `# COMMUNITY UPDATE PACK` uses bold paragraphs as sub-headings (L3104, 3176, 3206, 3332, 3358) → real H2s.
+
+**Trailing punctuation / sentences as headings:** L1075 "After Boss is Defeated:"; L1802 "Recover one stamina."; L1804 "Minor Actions:"; L1820 "Major Action:" (the last three are turn-sequence steps followed by blockquoted actions joined by bold AND/OR, L1806–1834) → rewrite as a numbered procedure under "Character Turn Sequence".
+
+**Case:** H1 = ALL CAPS throughout (consistent). H2 = Title Case except none. H3 = mixed: sentence case at L1111 "Encounter tiles", L1119 "Encounter cards", L1680 "Towards aggro", L1684 "Away from aggro", L1688 "Towards nearest", L1692 "Away from nearest", L1696 "Push-move", L1700 "Push-attack"; mixed at L1143/1173 "Setup After the mini-boss/main-boss"; L523 "Mega-bosses" vs L483 "Mini-Bosses", L501 "Main-Bosses"; L1015 "Class-specific Treasure". Policy: Title Case for H2/H3; keyword italics allowed in headings; hyphenated compounds capitalise both parts ("Mini-Boss", "Push-Move").
+
+**Whitespace:** trailing spaces at L1041, 1091, 2454, 2502, 2548, 2594, 2662, 2718, 2764, 2810, 2882, 2946, 2992; double space after `#` at L361, L2217.
+
+**Duplicate titles across chapters (need qualification for §-references):** Stat Tier Costs (1916, 2299); Shop Price Table (1951, 2326); The Fog Gate (2063, 2227); Sparks (1245, 2231); Encounter cards (633, 1119); Phantoms (543, 1969); Characters (385 H2, 725 H1); Setup (985 H1, 2219 H2).
+
+**"&" in headings (9):** L679, 895, 1199, 1203, 1710, 1766, 2161, 2201, 2237 → "and".
+
+**Campaign list formatting (C-108):** "Section Four- Haunting Warrior" (2854); "Section Five Dark Champion" (2864); "Gaping Dragon(Mega Boss)" (2944); trailing stops at 2692, 2794; "Bonfire Tiles" (2830); "set-up.." (2748); inconsistent terminal stops on invader lines (2478–2546 vs 2526–2532); Section Three of The Coiled Sword repeats "High Wall of Lothric" (2438); "Gargoyle (Mini-Boss)" listed twice in three campaigns (2366–2368, 2468–2470, 2616–2618) — confirm intentional (two Bell Gargoyles) and label "×2, fought together".
+
+## 11. Task 9 — Punctuation and typography
+
+| Class | Count (body) | Lines / examples | Policy |
+|---|---|---|---|
+| Double full stop | 4 | 793, 2221, 2748, 2047 (`*cleared.*.`) | single stop |
+| Stray "i" | 2 | 1412 "per characteri", 1989 "deck.i" | delete |
+| Quantity format | 4 | 447, 675 "2X"; 621 "20 (Expansions)"; 681 "6x1 , 3x3" | "Nx Name", lower-case x, no space before comma |
+| `=\>` for ≥ | 4 | 1033, 1035, 1043, 1045 | prose: "25 or more"; tables: "≥ 25" |
+| ASCII arrows | 3 + 6 | 1563–1577 `-&gt;`; 3084–3094 `-\>` | "→" in tables, or "becomes" in prose |
+| Escaped brackets | 8 | 3084–3094, 3182, 3184 | tables / plain brackets |
+| Ligature glyphs (U+FB00/01) | 4 | 921 "ﬁrst"; 925 "eﬀects", "inﬁnity", "aﬀect" | plain letters |
+| Straight vs curly quotes | ’ ×146 vs ' in ~20 lines; “ ” ×3 pairs (837, 839, 2047); L529 mixes both in one line | 375, 529, 805, 835, 853, 1025, 1529, 1726, 1826, 1904, 1929, 1985, 2310, 2312, 2314 | straight in source, typesetter converts (or curly throughout — pick one) |
+| "&" outside names | 9 headings + 449, 2398, 2500, 2660, 2934 | | "and"; "&" only inside an official product/card name |
+| "etc." | 2 | 925 (rules), 377 (front matter) | never in rules; complete the statement |
+| i.e. / e.g. | i.e. ×5 ("i.e.," ×2 correct at 771, 853; "i.e.:" ×3 misused at 1943, 1945, 2141); e.g. ×0 | | avoid both; write "for example" / "that is" |
+| Lower-case sentence start "characters" | 6 | 919, 1931, 2069, 2157, 2185, 2207 | capitalise |
+| Serial (Oxford) comma | 20 with / 0 without | — | always use it (already consistent) |
+| Pandoc artefacts | 2 + 14 | `<!-- -->` at 875, 3154; blockquote `>` lines 1806–1834 | remove |
+| Hyphenation | set-up/setup/set up; re-roll/reroll; back-up/backup; fog-gate/fog gate; face-up/face up; tile-by-tile; one-by-one | | see Style Sheet §8 |
+
+**Numerals policy (recommended, decision C-120).** Words for zero to nine in running prose; numerals for 10 and above; numerals always in tables, with signs or symbols (+1, ≥ 25, 90°), beside dice icons, and in printed labels ("Level 1", "Range 0", "Tier 2 shop" if the card says so — the manuscript's "tier one/two" is retained because it is not a printed label). Counts in the body: one ×155, two ×79, four ×30, three ×27, six ×6, five ×5, ten ×3, sixteen ×1, eight ×1; digits in prose lines ≈ 15. Violations under the policy (by line, not exhaustive per instance): 1069/1079/1085 ("3 weapons, 3 armour, 2 shields, 2 upgrades, and 2 spells" → words), 1263 ("6 stamina" → six), 1860 ("0 Stamina" → no stamina), 1914 ("5 greater" → five), 2340 ("sixteen souls" → 16 souls, to match 2293/2316); 925 "Range 0/1/2" and 2177/2179 "90/180 degrees" are compliant.
+
+## 12. Task 10 — Voice and tense
+
+Current form by chapter:
+
+| Chapter | Current form | Target form |
+|---|---|---|
+| INTRODUCTION / SECOND EDITION NOTES (361–381) | first-person essay, reader address, "you" ×1 | Foreword outside the rules; "How to read this book" note |
+| GAME COMPONENTS (383–723) | component bullet lists | bullets (lists) — keep; fix quantity format |
+| CHARACTERS (725–805) | prose + numbered dashboard anatomy | short declarative paragraphs; anatomy stays numbered |
+| EQUIPMENT (807–891) | prose; Spells (859–887) bullet fragments | prose; Spells → definition bullets of full sentences |
+| TILES & NODES (895–981) | prose; Terrain (929–981) bullets | prose; terrain entries → definition bullets with one verb set |
+| SETUP (985–1195) | numbered procedures (good); Treasure Deck Setup prose; Tier deck criteria numbered | numbered steps throughout; add the missing fog-gate step |
+| GAMEPLAY (1197–1479) | Objective prose; Death/Embering/Sparks/Resolution/Recovery/Souls/Treasure Rewards as bullet fragments; Encounter Start/Turn Order numbered | rules → declarative paragraphs; Encounter Start/Recovery → numbered; Soul table |
+| COMBAT BASICS (1481–1658) | prose; Scaling bullets + table; Conditions bullets | prose; scaling table only (one source); condition entries as definition bullets |
+| ENEMY TURN (1660–1796) | prose; Block/Dodge/Parry numbered (good) | keep; cut filler |
+| CHARACTER TURN (1798–1880) | headings-as-steps + blockquote AND/OR; prose | numbered turn sequence; prose for Movement/Attacks/icons |
+| RETURNING TO THE BONFIRE (1884–1963) | flavour prose + bullets + tables; Resuming Exploration prose procedure | flavour to sidebar; Resting → numbered; Shop Rules → paragraphs; Resuming → numbered |
+| SUMMONS (1967–2037) | numbered (good) with wrong card names | keep; fix L1991/2031 |
+| MIMICS, CRYSTAL LIZARDS (2039–2057) | long prose paragraphs mixing option, flavour and procedure | optional-rule box; numbered procedure; one paragraph of rules |
+| BOSS ENCOUNTERS / BOSS TURNS (2061–2197) | prose; anatomies numbered | prose; deck construction (2125) → numbered |
+| BOSS SPECIAL RULES (2199–2213) | prose | prose; extend to all mega-bosses or cite expansion rules |
+| CAMPAIGN PLAY (2217–2348) | prose + bullets + tables; Transposition "First … Fourth" prose | paragraphs; transposition → numbered; tables qualified "(Campaign)" |
+| CAMPAIGNS (2350–3034) | nested bullets | keep as structured lists; "Requires / Recommended / Encounters" header per campaign |
+| PLAYER VS PLAYER (3038–3094) | 27 bullet fragments | declarative paragraphs + dodge table |
+| COMMUNITY UPDATE PACK (3102–3366) | lists; plain-text table | real tables; prose only at 3208 |
+
+**Recommended form per content type (Style Sheet §10):** procedures = numbered steps, one action per step, imperative mood; definitions and component anatomies = bulleted full sentences; rules = short declarative paragraphs, each sentence of the form "When [trigger], [subject] must/may [action]."; options = boxed "Optional rule" with a fixed opening sentence; flavour = sidebars only.
+
+**"Players should…" and other advisory sentences that must become rules or be cut** (all rewritten in §4 above): 765, 805, 845, 979, 1057, 1141, 1201, 1596, 2041 (×2), 2053, 2596, 2664, 2720, 2766, 2812, 2884, 2948, 2994. Related advisory/flavour that is not a rule: 1107 "if they wish … if they like"; 1109 "For added challenge"; 1141 "if they prefer more variety"; 1888 (Firekeeper/Andre description); 1890 "players must carefully weigh the timing"; 2069 "bloodlust … can expect to die often"; 2159 "Players can gain an advantage … by memorising"; 2197 session break; 1872, 1876, 2053 flavour adjectives.
+
+**Tense:** present indicative for all rules. Future "will" at 1115, 1141, 1241, 1461, 1479, 2027, 2047, 2055, 2057 → present. Filler to delete: "simply" (979, 1674, 1676, 2191), "Of course" (1596), "and so-on" (2157), "one can assume" (2191), "it is possible" (2207), "nearly ready" (1963).
