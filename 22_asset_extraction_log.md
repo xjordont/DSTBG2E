@@ -490,8 +490,8 @@ Groups: logos (AST-0001–0005), icon set from the 2022 reference page (AST-0006
 ### [AST-0033] Enemy Movement composite symbol (Move icon with push, aggro and leap satellites)
 - Source: DS-TG-Rulebook-Compressed_compressed.pdf, p.32
 - Type: icon
-- Region: back-cover key panel, section “Enemy Movement”, bbox (pt) x 172.0–235.0, y 342.2–407.8 (re-cut with explicit parchment key)
-- Dimensions: 505×546 px
+- Region: back-cover key panel, section “Enemy Movement”, bbox (pt) x 174.5–235.1, y 344.7–405.3
+- Dimensions: 505×506 px
 - Format: png
 - Method: pdftoppm 600 dpi render crop → parchment-key alpha (bg (246, 244, 240)); vector artwork in PDF (also croppable from work/svg/tg_p32.svg)
 - Cleaned file: assets/icons/ast-0033-enemy-movement-composite-symbol.png
@@ -718,10 +718,10 @@ Groups: logos (AST-0001–0005), icon set from the 2022 reference page (AST-0006
 ### [AST-0052] Deal magical damage (character attack orb)
 - Source: DS-TG-Rulebook-Compressed_compressed.pdf, p.32
 - Type: icon
-- Region: back-cover key panel, section “Character Attacks”, bbox (pt) x 423.3–455.5, y 518.2–549.9 (re-cut with explicit parchment key)
-- Dimensions: 209×264 px
+- Region: back-cover key panel, section “Character Attacks”, bbox (pt) x 423.6–457.6, y 518.5–549.6
+- Dimensions: 234×259 px
 - Format: png
-- Method: pdftoppm 600 dpi render crop → explicit parchment key bg (245,243,237), soft 26–80 (panel vignette and bottom rule excluded); raster XObject with soft mask in PDF (srcsize small; 600 dpi render used instead)
+- Method: pdftoppm 600 dpi render crop → parchment-key alpha (bg (245, 243, 238)); raster XObject with soft mask in PDF (srcsize small; 600 dpi render used instead)
 - Cleaned file: assets/icons/ast-0052-deal-magical-damage.png
 - Proposed placement: icon set — Character Turns chapter
 - Licensing: authorised under owner's rights assertion
@@ -848,48 +848,48 @@ Groups: logos (AST-0001–0005), icon set from the 2022 reference page (AST-0006
 - Notes: Raster XObject with soft mask in the PDF (native size only 37–66 px), so the 600 dpi render crop was used instead.
 
 ### [AST-0063] Bleed
-- Source: DS-TG-Rulebook-Compressed_compressed.pdf, p.21
+- Source: DS-TG-Rulebook-Compressed_compressed.pdf, p.32
 - Type: icon
-- Region: Conditions section, right column beside the “Bleed” head, bbox (pt) x 476.9–534.9, y 241.0–299.0
-- Dimensions: 484×382 px
+- Region: back-cover key panel, section “Conditions”, bbox (pt) x 101.7–132.3, y 710.7–741.3
+- Dimensions: 255×255 px
 - Format: png
-- Method: pdftoppm 600 dpi render of p.21 (large 112 px-source version on clean parchment) → parchment-key alpha (bg (244, 242, 234)); the p.32 key-page copies sit on a grey gradient strip and keyed badly
+- Method: pdftoppm 600 dpi render crop → parchment-key alpha (bg (119, 125, 127)); raster XObject with soft mask in PDF (srcsize small; 600 dpi render used instead)
 - Cleaned file: assets/icons/ast-0063-bleed.png
 - Proposed placement: icon set — Conditions section
 - Licensing: authorised under owner's rights assertion
 - Notes: Raster XObject with soft mask in the PDF (native size only 37–66 px), so the 600 dpi render crop was used instead.
 
 ### [AST-0064] Frostbite
-- Source: DS-TG-Rulebook-Compressed_compressed.pdf, p.21
+- Source: DS-TG-Rulebook-Compressed_compressed.pdf, p.32
 - Type: icon
-- Region: Conditions section, right column beside the “Frostbite” head, bbox (pt) x 476.9–534.9, y 397.0–455.0
-- Dimensions: 461×402 px
+- Region: back-cover key panel, section “Conditions”, bbox (pt) x 211.6–242.2, y 710.7–741.3
+- Dimensions: 255×255 px
 - Format: png
-- Method: pdftoppm 600 dpi render of p.21 (large 112 px-source version on clean parchment) → parchment-key alpha (bg (241, 238, 230)); the p.32 key-page copies sit on a grey gradient strip and keyed badly
+- Method: pdftoppm 600 dpi render crop → parchment-key alpha (bg (178, 181, 180)); raster XObject with soft mask in PDF (srcsize small; 600 dpi render used instead)
 - Cleaned file: assets/icons/ast-0064-frostbite.png
 - Proposed placement: icon set — Conditions section
 - Licensing: authorised under owner's rights assertion
 - Notes: Raster XObject with soft mask in the PDF (native size only 37–66 px), so the 600 dpi render crop was used instead.
 
 ### [AST-0065] Poison
-- Source: DS-TG-Rulebook-Compressed_compressed.pdf, p.21
+- Source: DS-TG-Rulebook-Compressed_compressed.pdf, p.32
 - Type: icon
-- Region: Conditions section, right column beside the “Poison” head, bbox (pt) x 476.9–534.9, y 319.0–377.0
-- Dimensions: 252×328 px
+- Region: back-cover key panel, section “Conditions”, bbox (pt) x 321.4–352.0, y 710.7–741.3
+- Dimensions: 255×255 px
 - Format: png
-- Method: pdftoppm 600 dpi render of p.21 (large 112 px-source version on clean parchment) → parchment-key alpha (bg (244, 242, 234)); the p.32 key-page copies sit on a grey gradient strip and keyed badly
+- Method: pdftoppm 600 dpi render crop → parchment-key alpha (bg (171, 176, 176)); raster XObject with soft mask in PDF (srcsize small; 600 dpi render used instead)
 - Cleaned file: assets/icons/ast-0065-poison.png
 - Proposed placement: icon set — Conditions section
 - Licensing: authorised under owner's rights assertion
 - Notes: Raster XObject with soft mask in the PDF (native size only 37–66 px), so the 600 dpi render crop was used instead.
 
 ### [AST-0066] Stagger
-- Source: DS-TG-Rulebook-Compressed_compressed.pdf, p.21
+- Source: DS-TG-Rulebook-Compressed_compressed.pdf, p.32
 - Type: icon
-- Region: Conditions section, right column beside the “Stagger” head, bbox (pt) x 476.9–534.9, y 523.0–581.0
-- Dimensions: 442×461 px
+- Region: back-cover key panel, section “Conditions”, bbox (pt) x 431.3–461.9, y 710.7–741.3
+- Dimensions: 255×255 px
 - Format: png
-- Method: pdftoppm 600 dpi render of p.21 (large 112 px-source version on clean parchment) → parchment-key alpha (bg (244, 242, 234)); the p.32 key-page copies sit on a grey gradient strip and keyed badly
+- Method: pdftoppm 600 dpi render crop → parchment-key alpha (bg (144, 153, 155)); raster XObject with soft mask in PDF (srcsize small; 600 dpi render used instead)
 - Cleaned file: assets/icons/ast-0066-stagger.png
 - Proposed placement: icon set — Conditions section
 - Licensing: authorised under owner's rights assertion
@@ -1986,7 +1986,7 @@ Groups: logos (AST-0001–0005), icon set from the 2022 reference page (AST-0006
 
 ## Provenance Review
 
-Items below are **not** designated for reuse until the project lead rules on them. Nothing in this section has been extracted into `assets/` except AST-0119 (TG cover art), which was pulled because the brief asked for one cover art and is held as `BLOCKED`.
+Items below are **not** designated for reuse until the project lead rules on them. Nothing in this section has been extracted into `assets/` except AST-0122 (TG cover art), which was pulled because the brief asked for one cover art and is held as `BLOCKED`.
 
 ### A. Third-party (FromSoftware / Bandai Namco) artwork inside the SFG PDFs
 The owner's rights assertion covers the SFG publications. The paintings, screenshots and key art below are, however, FromSoftware/Bandai Namco intellectual property that SFG reproduced under licence (every credits block reads "Dark Souls™ & ©BANDAI NAMCO Entertainment Inc. / ©FromSoftware, Inc."). The lead must decide whether the assertion extends to this licensed art.

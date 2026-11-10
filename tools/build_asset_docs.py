@@ -148,8 +148,13 @@ for e in entries:
     n+=1; new=f'AST-{n:04d}'
     if e.get('file'):
         d,fn=os.path.split(e['file']); fn2=re.sub(r'^(ast-\d{4}|ico-\d{3})-',new.lower()+'-',fn)
+        dst=os.path.join(d,fn2)
         if fn2!=fn:
-            os.rename(e['file'],os.path.join(d,fn2)); e['file']=os.path.join(d,fn2)
+            if os.path.exists(e['file']):
+                os.rename(e['file'],dst)          # first run: rename the extracted file
+            # already renamed by a previous run: record the destination; the existence
+            # check below still fails loudly if neither path exists
+            e['file']=dst
     e['old_id']=e.get('id'); e['id']=new
 missing=[e['file'] for e in entries if e.get('file') and not os.path.exists(e['file'])]
 assert not missing, missing

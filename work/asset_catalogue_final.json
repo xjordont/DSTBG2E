@@ -845,14 +845,14 @@
   "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
   "page": 32,
   "bbox_pt": [
-   172.0,
-   342.2,
-   235.0,
-   407.8
+   174.5,
+   344.7,
+   235.1,
+   405.3
   ],
-  "method": "pdftoppm 600 dpi render crop \u2192 explicit parchment key (bg (245, 243, 237); border-median key failed near panel rule) (orig bg (246, 244, 240)); vector artwork in PDF (also croppable from work/svg/tg_p32.svg)",
+  "method": "pdftoppm 600 dpi render crop \u2192 parchment-key alpha (bg (246, 244, 240)); vector artwork in PDF (also croppable from work/svg/tg_p32.svg)",
   "file": "assets/icons/ast-0033-enemy-movement-composite-symbol.png",
-  "dims": "505\u00d7546 px",
+  "dims": "505\u00d7506 px",
   "format": "png",
   "parchment_crop": "work/icons_parchment/ICO-028-enemy-movement-composite-symbol.png",
   "note": "",
@@ -1358,14 +1358,14 @@
   "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
   "page": 32,
   "bbox_pt": [
-   423.3,
-   518.2,
-   455.5,
-   549.9
+   423.6,
+   518.5,
+   457.6,
+   549.6
   ],
-  "method": "pdftoppm 600 dpi render crop \u2192 explicit parchment key bg (245,243,237), soft 26\u201380 (panel vignette and bottom rule excluded); raster XObject with soft mask in PDF (srcsize small; 600 dpi render used instead)",
+  "method": "pdftoppm 600 dpi render crop \u2192 parchment-key alpha (bg (245, 243, 238)); raster XObject with soft mask in PDF (srcsize small; 600 dpi render used instead)",
   "file": "assets/icons/ast-0052-deal-magical-damage.png",
-  "dims": "209\u00d7264 px",
+  "dims": "234\u00d7259 px",
   "format": "png",
   "parchment_crop": "work/icons_parchment/ICO-047-deal-magical-damage.png",
   "note": "",
@@ -1653,16 +1653,16 @@
   "kind": "raster",
   "type": "icon",
   "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
-  "page": 21,
+  "page": 32,
   "bbox_pt": [
-   476.9,
-   241.0,
-   534.9,
-   299.0
+   101.7,
+   710.7,
+   132.3,
+   741.3
   ],
-  "method": "pdftoppm 600 dpi render of p.21 (large 112 px-source version on clean parchment) \u2192 parchment-key alpha (bg (244, 242, 234)); the p.32 key-page copies sit on a grey gradient strip and keyed badly",
+  "method": "pdftoppm 600 dpi render crop \u2192 parchment-key alpha (bg (119, 125, 127)); raster XObject with soft mask in PDF (srcsize small; 600 dpi render used instead)",
   "file": "assets/icons/ast-0063-bleed.png",
-  "dims": "484\u00d7382 px",
+  "dims": "255\u00d7255 px",
   "format": "png",
   "parchment_crop": "work/icons_parchment/ICO-058-bleed.png",
   "note": "",
@@ -1670,7 +1670,7 @@
   "notes": "Raster XObject with soft mask in the PDF (native size only 37\u201366 px), so the 600 dpi render crop was used instead.",
   "lic": "authorised under owner's rights assertion",
   "status": "extracted",
-  "region": "Conditions section, right column beside the \u201cBleed\u201d head, bbox (pt) x 476.9\u2013534.9, y 241.0\u2013299.0",
+  "region": "back-cover key panel, section \u201cConditions\u201d, bbox (pt) x 101.7\u2013132.3, y 710.7\u2013741.3",
   "old_id": "ICO-058"
  },
  {
@@ -1680,16 +1680,16 @@
   "kind": "raster",
   "type": "icon",
   "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
-  "page": 21,
+  "page": 32,
   "bbox_pt": [
-   476.9,
-   397.0,
-   534.9,
-   455.0
+   211.6,
+   710.7,
+   242.2,
+   741.3
   ],
-  "method": "pdftoppm 600 dpi render of p.21 (large 112 px-source version on clean parchment) \u2192 parchment-key alpha (bg (241, 238, 230)); the p.32 key-page copies sit on a grey gradient strip and keyed badly",
+  "method": "pdftoppm 600 dpi render crop \u2192 parchment-key alpha (bg (178, 181, 180)); raster XObject with soft mask in PDF (srcsize small; 600 dpi render used instead)",
   "file": "assets/icons/ast-0064-frostbite.png",
-  "dims": "461\u00d7402 px",
+  "dims": "255\u00d7255 px",
   "format": "png",
   "parchment_crop": "work/icons_parchment/ICO-059-frostbite.png",
   "note": "",
@@ -1697,7 +1697,7 @@
   "notes": "Raster XObject with soft mask in the PDF (native size only 37\u201366 px), so the 600 dpi render crop was used instead.",
   "lic": "authorised under owner's rights assertion",
   "status": "extracted",
-  "region": "Conditions section, right column beside the \u201cFrostbite\u201d head, bbox (pt) x 476.9\u2013534.9, y 397.0\u2013455.0",
+  "region": "back-cover key panel, section \u201cConditions\u201d, bbox (pt) x 211.6\u2013242.2, y 710.7\u2013741.3",
   "old_id": "ICO-059"
  },
  {
@@ -1707,16 +1707,16 @@
   "kind": "raster",
   "type": "icon",
   "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
-  "page": 21,
+  "page": 32,
   "bbox_pt": [
-   476.9,
-   319.0,
-   534.9,
-   377.0
+   321.4,
+   710.7,
+   352.0,
+   741.3
   ],
-  "method": "pdftoppm 600 dpi render of p.21 (large 112 px-source version on clean parchment) \u2192 parchment-key alpha (bg (244, 242, 234)); the p.32 key-page copies sit on a grey gradient strip and keyed badly",
+  "method": "pdftoppm 600 dpi render crop \u2192 parchment-key alpha (bg (171, 176, 176)); raster XObject with soft mask in PDF (srcsize small; 600 dpi render used instead)",
   "file": "assets/icons/ast-0065-poison.png",
-  "dims": "252\u00d7328 px",
+  "dims": "255\u00d7255 px",
   "format": "png",
   "parchment_crop": "work/icons_parchment/ICO-060-poison.png",
   "note": "",
@@ -1724,7 +1724,7 @@
   "notes": "Raster XObject with soft mask in the PDF (native size only 37\u201366 px), so the 600 dpi render crop was used instead.",
   "lic": "authorised under owner's rights assertion",
   "status": "extracted",
-  "region": "Conditions section, right column beside the \u201cPoison\u201d head, bbox (pt) x 476.9\u2013534.9, y 319.0\u2013377.0",
+  "region": "back-cover key panel, section \u201cConditions\u201d, bbox (pt) x 321.4\u2013352.0, y 710.7\u2013741.3",
   "old_id": "ICO-060"
  },
  {
@@ -1734,16 +1734,16 @@
   "kind": "raster",
   "type": "icon",
   "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
-  "page": 21,
+  "page": 32,
   "bbox_pt": [
-   476.9,
-   523.0,
-   534.9,
-   581.0
+   431.3,
+   710.7,
+   461.9,
+   741.3
   ],
-  "method": "pdftoppm 600 dpi render of p.21 (large 112 px-source version on clean parchment) \u2192 parchment-key alpha (bg (244, 242, 234)); the p.32 key-page copies sit on a grey gradient strip and keyed badly",
+  "method": "pdftoppm 600 dpi render crop \u2192 parchment-key alpha (bg (144, 153, 155)); raster XObject with soft mask in PDF (srcsize small; 600 dpi render used instead)",
   "file": "assets/icons/ast-0066-stagger.png",
-  "dims": "442\u00d7461 px",
+  "dims": "255\u00d7255 px",
   "format": "png",
   "parchment_crop": "work/icons_parchment/ICO-061-stagger.png",
   "note": "",
@@ -1751,7 +1751,7 @@
   "notes": "Raster XObject with soft mask in the PDF (native size only 37\u201366 px), so the 600 dpi render crop was used instead.",
   "lic": "authorised under owner's rights assertion",
   "status": "extracted",
-  "region": "Conditions section, right column beside the \u201cStagger\u201d head, bbox (pt) x 476.9\u2013534.9, y 523.0\u2013581.0",
+  "region": "back-cover key panel, section \u201cConditions\u201d, bbox (pt) x 431.3\u2013461.9, y 710.7\u2013741.3",
   "old_id": "ICO-061"
  },
  {
