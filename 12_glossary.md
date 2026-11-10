@@ -18,6 +18,8 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Armour slot.** The dashboard slot that holds one equipped *armour* card (see §3.2).
 
+**Attack (major action).** The major action in which a character makes up to one attack with each weapon or spell equipped in a weapon slot, each attack using one attack option and paying its stamina cost (see §10.3).
+
 **Attack option.** One line of a weapon or spell card, showing a stamina cost, dice and modifiers. Using an attack option is the *Attack* major action.
 
 **Attack value.** The number of sword icons rolled on an attack, after modifiers and rerolls. For enemies the attack value is the fixed number printed in the attack icon.
@@ -52,7 +54,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Calamity.** A condition from the Black Dragon Kalameet expansion. A model may hold one calamity token, which reduces its block, resist and dodge roll results by one. Calamity tokens are removed only when the encounter ends.
 
-**Catalyst.** A weapon card that stores spells of a matching school: pyromancer flames store pyromancies, staves and catalysts store sorceries, talismans and chimes store miracles. Up to three spells may be stored in a catalyst and their attack options are used as if equipped.
+**Catalyst.** A weapon card that stores up to three spells of a matching school: a pyromancer flame stores pyromancies, a staff or catalyst stores sorceries, and a talisman or chime stores miracles. A stored spell occupies no equipment slot; its attack options are used as if it were equipped, and its block, resist, and dodge dice are ignored (see §4.3).
 
 **Character dashboard.** The board that records a character's class: the heroic action, the four equipment slots, the stat progression track, the endurance bar, the threat value, and the four token slots (see §3.1).
 
@@ -104,7 +106,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Equip.** A minor action that swaps cards between the back-up slot and the weapon and armour slots. The inventory may not be used during an encounter.
 
-**Equipment card.** A treasure card that may be equipped to a weapon or armour slot of the dashboard (see §4.1).
+**Equipment card.** A treasure card that a character equips in a weapon or armour slot, stores in a catalyst, or attaches to an equipped card: weapon, shield, catalyst, spell, armour, and upgrade cards (see §4.1).
 
 **Equipped.** The state of a card in the armour slot or a weapon slot of the dashboard. Cards in the back-up slot and the inventory are not equipped (see §3.2).
 
@@ -202,6 +204,8 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Shaft.** A weapon icon. Attack options with the shaft icon may not target models on the attacker's own node.
 
+**Shield.** A one-handed weapon card that shows block or resist dice and has no attack option. A shield is a weapon for equipment slots and for two-handed attacks, and a shield for stocking the shop and for parrying (see §4.1).
+
 **Shift.** A weapon or phantom behaviour icon allowing movement of the number of nodes shown, before or after the dice are rolled according to its position on the line. *Shift* movement costs no stamina.
 
 **Shop.** Blacksmith Andre's stock of face-up treasure cards, in tier one and tier two piles. Shops are stocked at setup and restocked only after a boss is defeated (in campaign play, after a section is completed).
@@ -212,6 +216,8 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Spawn node.** A node on which enemy models are placed at the start of an encounter. Boss tiles have a boss spawn node.
 
+**Spell.** An equipment card or upgrade card whose art shows a scroll: a pyromancy, a sorcery, or a miracle. A character may use at most one spell attack option per turn, and spells are never scaled or two-handed (see §4.3).
+
 **Stagger.** A condition. A staggered model subtracts one from its attack, block, resist and dodge totals. The token is removed at the end of the model's next complete turn. A character who must place a stamina cube with no space available is staggered instead.
 
 **Stamina cube.** A black cube. Each point of stamina a character spends places one stamina cube on the endurance bar, filling from the left.
@@ -219,6 +225,8 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 **Starting equipment.** The three or four equipment cards a character begins with. Starting equipment may not be sold.
 
 **Stat cube.** A white cube that marks a character's *stat tier* on a stat progression track (see §3.3).
+
+**Stat requirement.** One of the four values (STR, DEX, INT, FTH) printed on an equipment card or upgrade card. A character may equip a card only if each of their stats equals or exceeds the matching requirement of the card and of every upgrade attached to it (see §4.1).
 
 **Stat tier.** A character's position on each stat progression track: the base tier, or stat tier one, two, three, or four. It is marked with a *stat cube* or, at stat tier four, with a red cube in the stat tier three space. A stat at stat tier four has the value 40 or the stat tier three value plus five, whichever is higher. Tiers are bought in sequence from the Firekeeper (see §3.3, §11.3).
 
@@ -236,7 +244,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Tier two treasure.** The treasure deck that holds every treasure card with a stat requirement of 25 or more, the transposed treasure and the five legendary cards. Encounter rewards and chests draw from tier two once the mini-boss is defeated (in campaign play, once the *bonfire ascetic* is burnt) (see §6.2).
 
-**Titanite.** A weapon upgrade (Titanite Shard, Chunk or Slab, and Titanite Scale) that is fused permanently to the weapon it is attached to and is returned to the bottom of the tier one treasure deck with that weapon when it is sold.
+**Titanite.** A weapon upgrade (Titanite Shard, Titanite Chunk, Titanite Slab, or Titanite Scale) that is fused permanently to the weapon it is attached to. When that weapon is sold, the Titanite is returned with it to the bottom of the treasure deck of the weapon's tier (see §4.2).
 
 **Track behaviour card.** A numbered card from the Executioner's Chariot expansion used, in fixed order, for the Chariot's turns before it heats up.
 
@@ -246,17 +254,23 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Trap token.** A face-down token dealt to basic nodes when an encounter card shows the trap symbol. It is flipped and resolved against every model on its node when a character enters or is pushed onto the node.
 
-**Treasure card.** Any card from a treasure deck: *starting equipment*, *class-specific treasure*, *common treasure*, *legendary treasure*, or *boss treasure* (see §2.5). A treasure card that may be equipped to a dashboard slot is an *equipment card*.
+**Treasure card.** Any card drawn from a treasure deck or bought from Blacksmith Andre's shop: an equipment card or an ember card (see §2.5, §4.1).
 
 **Turn.** One model's activation. Enemies take their turns, then characters take theirs; in boss encounters the boss takes a turn after each character.
 
 **Two-handed.** A weapon bearing the two-handed icon, or a one-handed weapon equipped with the other weapon slot empty. Two-handed attacks may reroll one die. Spells are never two-handed.
 
-**Upgrade card.** A card attached beneath a weapon or armour card by Blacksmith Andre, up to the equipment's upgrade limit. Upgrade spells are instead attached as a major action during an encounter and return to the inventory afterwards.
+**Upgrade card.** A card that enhances a weapon or armour card. Blacksmith Andre attaches it beneath the card, up to the card's upgrade slots, and the character must meet its stat requirements to equip the card. Upgrade spells are instead attached as the *Attack* major action during an encounter and return to the inventory afterwards (see §4.2).
+
+**Upgrade slot.** A space shown by the upgrade slots icon on a weapon or armour card; a card has zero, one, or two. Each attached upgrade card other than an upgrade spell occupies one slot (see §4.2).
+
+**Upgrade spell.** An upgrade card whose art shows a scroll. It is attached to a weapon or armour card equipped to the same character as the *Attack* major action during an encounter, occupies no upgrade slot, and returns to the inventory when the encounter ends (see §4.2).
 
 **Walk.** A minor action, once per turn: move one node for no stamina.
 
 **Weak arc.** A boss arc shown in red on the most recently resolved behaviour card. A character attacking a boss from a weak arc adds one black die.
+
+**Weapon.** An equipment card that bears the one-handed or two-handed weapon icon and whose art does not show a scroll. Shields, catalysts, bows, crossbows, and throwable weapons are weapons (see §4.1).
 
 **Weapon slot.** One of the two dashboard slots, the left weapon slot and the right weapon slot, that each hold one equipped weapon card. A two-handed weapon requires the other weapon slot to be empty (see §3.2).
 

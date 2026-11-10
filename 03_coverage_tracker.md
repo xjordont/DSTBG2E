@@ -35,13 +35,13 @@ Totals: 24 chapters, 166 sections, 20 orphan empty headings.
 | CHARACTERS | Heroic Action | present — to audit | B-014, C-030, C-051, C-104, F-095 |  | yes (§3) | line 795. |
 | CHARACTERS | Luck | present — to audit | C-030, C-051, C-060, C-104, F-096 |  | yes (§3) | line 799. |
 | CHARACTERS | Ember | present — to audit | A-006, C-021, C-030, C-048, C-050, C-060, C-064, C-104, C-111, F-097 |  | yes (§3) | line 803. |
-| EQUIPMENT | (chapter) | present — to audit | A-006, A-046, A-069, A-070, A-071, A-074, A-120, B-022, C-002, C-015, C-018, C-022, C-030, C-038, C-042, C-043, C-047, C-048, C-054, C-060, C-084, C-092, C-096, C-098, C-099, C-104, C-111, C-117, C-119, CMP-0016, D-033, D-034, F-009, F-058, F-059, F-060, F-061, F-083, F-090, F-098, F-099, F-100 | CMP-0016 | no | line 807. |
-| EQUIPMENT | Equipment Cards | present — to audit | A-069, A-071, A-120, B-022, C-018, C-030, C-038, C-043, C-047, C-054, C-084, C-104, C-111, D-033, F-009, F-058, F-059, F-060, F-098, F-099 |  | no | line 809. |
-| EQUIPMENT | Upgrades | present — to audit | A-071, A-074, C-002, C-015, C-022, C-030, C-038, C-042, C-092, C-096, C-104, C-111, D-034, F-083, F-100 |  | no | line 847. |
-| EQUIPMENT | Spells | present — structural | A-070, A-071, C-015, C-030, C-099, C-104, C-117, C-119, CMP-0016, F-090 | CMP-0016 | no | line 855. Duplicate heading "Spells" (H2 then H3). |
-| EQUIPMENT | Spells | present — structural | A-070, A-071, C-015, C-030, C-099, C-104, C-117, C-119, CMP-0016, F-090 | CMP-0016 | no | line 857. Duplicate heading "Spells" (H2 then H3). |
-| EQUIPMENT | Embers | present — to audit | A-006, A-046, C-030, C-048, C-060, C-084, C-098, C-104, F-061 |  | no | line 889. |
-| EQUIPMENT | (empty heading) | ORPHAN — delete |  | CMP-0016 | no | line 893: empty H1 used as page break |
+| EQUIPMENT | (chapter) | present — to audit | A-006, A-046, A-069, A-070, A-071, A-074, A-120, B-022, C-002, C-015, C-018, C-022, C-030, C-038, C-042, C-043, C-047, C-048, C-054, C-060, C-084, C-092, C-096, C-098, C-099, C-104, C-111, C-117, C-119, CMP-0016, D-033, D-034, F-009, F-058, F-059, F-060, F-061, F-083, F-090, F-098, F-099, F-100 | CMP-0016 | yes (§4) | line 807. |
+| EQUIPMENT | Equipment Cards | present — to audit | A-069, A-071, A-120, B-022, C-018, C-030, C-038, C-043, C-047, C-054, C-084, C-104, C-111, D-033, F-009, F-058, F-059, F-060, F-098, F-099 |  | yes (§4) | line 809. |
+| EQUIPMENT | Upgrades | present — to audit | A-071, A-074, C-002, C-015, C-022, C-030, C-038, C-042, C-092, C-096, C-104, C-111, D-034, F-083, F-100 |  | yes (§4) | line 847. |
+| EQUIPMENT | Spells | present — structural | A-070, A-071, C-015, C-030, C-099, C-104, C-117, C-119, CMP-0016, F-090 | CMP-0016 | yes (§4) | line 855. Duplicate heading "Spells" (H2 then H3). |
+| EQUIPMENT | Spells | present — structural | A-070, A-071, C-015, C-030, C-099, C-104, C-117, C-119, CMP-0016, F-090 | CMP-0016 | yes (§4) | line 857. Duplicate heading "Spells" (H2 then H3). |
+| EQUIPMENT | Embers | present — to audit | A-006, A-046, C-030, C-048, C-060, C-084, C-098, C-104, F-061 |  | yes (§4) | line 889. |
+| EQUIPMENT | (empty heading) | ORPHAN — delete |  | CMP-0016 | yes (§4) | line 893: empty H1 used as page break |
 | TILES & NODES | (chapter) | present — to audit | A-033, A-039, A-043, A-056, A-058, A-059, A-082, A-083, A-084, A-085, A-086, A-090, A-122, C-015, C-019, C-020, C-030, C-048, C-049, C-051, C-057, C-059, C-062, C-086, C-087, C-094, C-098, C-104, C-109, C-110, C-112, C-113, C-114, C-116, C-119, C-123, CMP-0012, CMP-0014, D-001, D-003, D-009, D-037, F-086, F-089, F-090, F-101, F-102, F-103, F-104, F-105, F-106, F-107 | CMP-0012, CMP-0014 | no | line 895. |
 | TILES & NODES | The Basics | present — to audit | A-084, A-122, C-030, C-062, C-104, F-101, F-102 |  | no | line 897. |
 | TILES & NODES | Movement | present — to audit | C-030, C-049, C-104, F-103 |  | no | line 913. |
