@@ -416,3 +416,155 @@ Index: CMP-0001 Estus Flask · CMP-0002 Glossary · CMP-0003 F.A.Q. · CMP-0004 
 - Status: awaiting-approval
 
 ---
+
+### [CMP-0004] COMMUNITY UPDATE PACK (appendix) — Proposed Completion
+- Current state: Lines 3102–3366. A skeleton: a bold label "Treasure - Official" over 33 bare card names split by a stray comment marker (line 3154); "Treasure - Errata/Updated" over 13 one-line notes (Chloranthy Ring listed twice, lines 3188 and 3200; Demon Titanite with no note); one paragraph of prose (line 3208); a 60-row weapon stat table set as plain text with a bold header line (lines 3210–3330); "Enemy Data" (12 bare names, "Skeleton Beast" vs the component list's "Skeletal Beast", line 469) and "Boss Data & Behaviours" (4 bare names). No introduction, no card texts, no table formatting. SKELETON.
+- Proposed completion (full appendix):
+
+  > # COMMUNITY UPDATE PACK
+  >
+  > ## What the Pack Is
+  >
+  > The Community Update Pack is a set of print-and-play cards that accompanies this edition. It supplies three things that the published sets do not: additional treasure cards that bring equipment from the Tomb of Giants and Painted World of Ariamis sets into the shared treasure decks; revised treasure cards whose rules or requirements have changed in this edition; and replacement enemy and boss cards for the Tomb of Giants and Painted World of Ariamis sets, so that those enemies use the data card, behaviour card and health formats described in this book.
+  >
+  > Every card in the pack is used in place of, or in addition to, the card of the same name in the published sets, as stated in each list below. Where a card in the pack and a published card disagree, the pack card governs. Cards are sorted into the treasure decks by the rules in Setup › Treasure Deck Setup, using the requirements printed on the pack card.
+  >
+  > ## Additional Treasure
+  >
+  > The following treasure cards are added to the treasure decks. Each is sorted by its printed requirements and type.
+  >
+  > Weapons and shields: Throwing Knives · Velka's Rapier · Soul Spear · Pike · Lothric Knight Greatsword · Exile Greatsword · Bloodshield · Sunlight Shield · Black Knight Sword · Crescent Axe · Thorolund Talisman · Carthus Curved Greatsword · Black Knight Greataxe · Bonewheel Shield · Red and White Round Shield · Hollow Soldier Shield · Greatsword · Tower Shield · Priscilla's Dagger · Lifehunt Scythe · Black Knight Halberd · Black Knight Shield · Gravelord Sword.
+  >
+  > Armour: Xanthous Robes · Painting Guardian Armour · Paladin Armour · Cleric Armour · Steel Armour.
+  >
+  > Items, upgrades and spells: Red Tearstone Ring · Skull Lantern · Mask of the Child · Divine Blessing · Blue Titanite · Gravelord Sword Dance.
+  >
+  > ## Revised Treasure
+  >
+  > The following cards replace the published card of the same name. The rule text below is the text printed on the pack card. Where only part of a card changes, the unchanged parts are as printed on the published card.
+  >
+  > **Demon Titanite.** Weapon upgrade (Titanite). *Rule text, requirements and type as the published card; included in the pack so that the Titanite family is printed in one format.* [PROPOSED — the manuscript lists this card with no note; confirm whether a rule change is intended]
+  >
+  > **Blue Titanite.** Weapon upgrade (Titanite). Rule text as the published card. Requirements: INT 25. Legendary. *Changed from boss treasure to legendary treasure; INT requirement raised to 25.*
+  >
+  > **Titanite Chunk.** Weapon upgrade (Titanite). +2 to the attack value of every attack option. May be attached only to a weapon that has a Titanite Shard attached; the Titanite Shard is returned to the bottom of the tier one treasure deck. Requirements: STR 25, DEX 25. Common (tier two).
+  >
+  > **Titanite Slab.** Weapon upgrade (Titanite). +3 to the attack value of every attack option. May be attached only to a weapon that has a Titanite Chunk attached; the Titanite Chunk is returned to the bottom of the tier two treasure deck. Requirements: STR 25, DEX 25. Legendary.
+  >
+  > **Tiny Being's Ring.** Armour upgrade. At the start of the equipped character's turn, remove one damage cube from their endurance bar.
+  >
+  > **Chloranthy Ring.** Armour upgrade. At the start of the equipped character's turn, that character and every other character on the same node recover one additional stamina. *(The two manuscript notes on this card are merged into this single text.)*
+  >
+  > **Sellsword Twinblades.** Weapon. The one-handed version is used; the later two-handed version is not. Rule text as the one-handed published card.
+  >
+  > **Black Leather Armour.** Armour. The equipped character pays no stamina to attempt a *dodge*. Dice and requirements as the first published version.
+  >
+  > **Wolf Ring.** Armour upgrade. After rolling dodge dice, the equipped character may pay one stamina to reroll any or all of those dice. The reroll may be used once per dodge.
+  >
+  > **Eastern Armour.** Armour. The equipped character pays one additional stamina to attempt a *dodge*. Dice and requirements as the first published version.
+  >
+  > **Carthus Milkring.** Armour upgrade. +1 to the equipped character's dodge roll total.
+  >
+  > **Covetous Silver Serpent Ring.** Armour upgrade. When the equipped character receives a *soul* reward for *clearing* an encounter, they receive one additional *soul*.
+  >
+  > **Mon Ring.** Item. The printed effect may be used once between rests: flip the card face down when it is used and face up when the characters rest at the *bonfire*. [PROPOSED — the manuscript says "one use per floor"; "floor" is not a term of this edition and is read as the exploration between two rests]
+  >
+  > ## Revised Weapon Requirements
+  >
+  > Many published weapons carry intelligence or faith requirements although their attacks deal physical damage. This edition removes those requirements and, where a weapon then had no strength or dexterity requirement, adds one; where a weapon already had both, its primary requirement is raised so that its overall difficulty to equip is unchanged. The requirements below replace those printed on the published cards. A weapon is tier one if every requirement is below 25 and tier two otherwise.
+  >
+  > | Weapon | STR | DEX | INT | FTH | Tier |
+  > |---|---|---|---|---|---|
+  > | Avelyn | 23 | 30 | 0 | 0 | Two |
+  > | Bewitched Alonne Sword | 18 | 24 | 0 | 0 | One |
+  > | Black Knight Greataxe | 32 | 20 | 0 | 0 | Two |
+  > | Black Knight Halberd | 32 | 18 | 0 | 0 | Two |
+  > | Brigand Axe | 19 | 16 | 0 | 0 | One |
+  > | Butcher Knife | 25 | 0 | 0 | 0 | Two |
+  > | Caestus | 0 | 15 | 0 | 0 | One |
+  > | Carthus Curved Greatsword | 19 | 30 | 0 | 0 | Two |
+  > | Carthus Curved Sword | 25 | 35 | 0 | 0 | Two |
+  > | Chariot Lance | 22 | 33 | 0 | 0 | Two |
+  > | Claws | 0 | 20 | 0 | 0 | One |
+  > | Crystal Straight Sword | 21 | 30 | 0 | 0 | Two |
+  > | Dark Silver Tracer | 0 | 25 | 0 | 0 | Two |
+  > | Dragon Tooth | 40 | 25 | 0 | 0 | Two |
+  > | Drake Sword | 27 | 17 | 0 | 0 | Two |
+  > | Drakewing Ultra Greatsword | 33 | 23 | 0 | 0 | Two |
+  > | East-West Shield | 28 | 0 | 0 | 0 | Two |
+  > | Falchion | 37 | 30 | 0 | 0 | Two |
+  > | Four-Pronged Plough | 23 | 18 | 0 | 0 | One |
+  > | Giant's Halberd | 27 | 16 | 0 | 0 | Two |
+  > | Gold Tracer | 25 | 35 | 0 | 0 | Two |
+  > | Gravelord Sword | 32 | 18 | 0 | 0 | Two |
+  > | Great Mace | 28 | 0 | 0 | 0 | Two |
+  > | Halberd | 31 | 18 | 0 | 0 | Two |
+  > | Irithyll Rapier | 24 | 24 | 0 | 0 | One |
+  > | Irithyll Straight Sword | 23 | 23 | 0 | 0 | One |
+  > | Lifehunt Scythe | 32 | 23 | 0 | 0 | Two |
+  > | Lucerne | 22 | 31 | 0 | 0 | Two |
+  > | Mace | 16 | 0 | 0 | 0 | One |
+  > | Manikin Claws | 24 | 24 | 0 | 0 | One |
+  > | Morning Star | 16 | 0 | 0 | 0 | One |
+  > | Murakumo | 27 | 17 | 0 | 0 | Two |
+  > | Onikiri and Ubadachi | 26 | 36 | 0 | 0 | Two |
+  > | Painting Guardian Curved Sword | 18 | 26 | 0 | 0 | Two |
+  > | Parrying Dagger | 14 | 21 | 0 | 0 | One |
+  > | Partizan | 28 | 17 | 0 | 0 | Two |
+  > | Pike | 23 | 16 | 0 | 0 | One |
+  > | Poison Throwing Knives | 0 | 14 | 0 | 0 | One |
+  > | Priscilla's Dagger | 0 | 31 | 0 | 0 | Two |
+  > | Rapier | 14 | 21 | 0 | 0 | One |
+  > | Reinforced Club | 23 | 0 | 0 | 0 | One |
+  > | Rotten Ghru Dagger | 17 | 17 | 0 | 0 | One |
+  > | Rotten Ghru Spear | 12 | 21 | 0 | 0 | One |
+  > | Royal Dirk | 18 | 31 | 0 | 0 | Two |
+  > | Scimitar | 18 | 20 | 0 | 0 | One |
+  > | Shield Crossbow | 33 | 20 | 0 | 0 | Two |
+  > | Shotel | 26 | 29 | 0 | 0 | Two |
+  > | Silver Knight Spear | 22 | 26 | 0 | 0 | Two |
+  > | Silver Knight Straight Sword | 16 | 22 | 0 | 0 | One |
+  > | Spiked Mace | 32 | 22 | 0 | 0 | Two |
+  > | Spotted Whip | 23 | 30 | 0 | 0 | Two |
+  > | Sunlight Straight Sword | 15 | 15 | 0 | 0 | One |
+  > | Throwing Knives | 0 | 14 | 0 | 0 | One |
+  > | Uchigatana | 14 | 32 | 0 | 0 | Two |
+  > | Umbral Dagger | 18 | 35 | 0 | 0 | Two |
+  > | Vordt's Great Hammer | 33 | 0 | 0 | 0 | Two |
+  > | Warden Twinblades | 17 | 25 | 0 | 0 | Two |
+  > | Washing Pole | 37 | 21 | 0 | 0 | Two |
+  > | Winged Knight Halberd | 32 | 16 | 0 | 0 | Two |
+  > | Winged Spear | 20 | 22 | 0 | 0 | One |
+  >
+  > ## Enemy Data Cards
+  >
+  > The pack supplies one replacement data card for each enemy below, in the format described in Combat Basics › Enemy Data Cards (threat, attack range, dodge difficulty, block and resist, behaviour icons, base health). The replacement card is used with the published miniature and in place of the published card or token.
+  >
+  > - Bonewheel Skeleton (Painted World of Ariamis) — replacement data card.
+  > - Crow Demon (Painted World of Ariamis) — replacement data card.
+  > - Engorged Zombie (Painted World of Ariamis) — replacement data card.
+  > - Phalanx (Painted World of Ariamis) — replacement data card.
+  > - Phalanx Hollow (Painted World of Ariamis) — replacement data card.
+  > - Snow Rat (Painted World of Ariamis) — replacement data card.
+  > - Giant Skeleton Archer (Tomb of Giants) — replacement data card.
+  > - Giant Skeleton Soldier (Tomb of Giants) — replacement data card.
+  > - Necromancer (Tomb of Giants) — replacement data card.
+  > - Skeleton Archer (Tomb of Giants) — replacement data card.
+  > - Skeleton Beast (Tomb of Giants) — replacement data card.
+  > - Skeleton Soldier (Tomb of Giants) — replacement data card.
+  >
+  > ## Boss Data and Behaviour Cards
+  >
+  > The pack supplies, for each boss below, one replacement data card in the format described in Boss Encounters › Boss Data Cards (threat, behaviour deck size, heat-up point, block and resist, special ability, encounter levels, starting health, boss type) and a full set of behaviour cards in the format described in Boss Encounters › Boss Behaviour Cards. These are used with the published miniature and health dial in place of the published cards.
+  >
+  > - Black Knight (Tomb of Giants) — mini-boss; replacement data card and behaviour deck.
+  > - Crossbreed Priscilla (Painted World of Ariamis) — main-boss; replacement data card and behaviour deck.
+  > - Gravelord Nito (Tomb of Giants) — main-boss; replacement data card and behaviour deck.
+  > - Heavy Knight (Painted World of Ariamis) — mini-boss; replacement data card and behaviour deck.
+
+- Design rationale: The appendix is written so that a reader who owns the pack knows exactly which published card each pack card displaces and how to sort it, using only this book's vocabulary. Card texts are drafted from the manuscript's notes and follow the book's action grammar (start-of-turn triggers, stamina costs, deck returns). The two unexplained notes (Demon Titanite; "per floor") are translated and tagged rather than silently invented. The weapon list is unchanged except for one typographical normalisation ("Onikiri And Ubadachi" → "and"); tiers are computed from the ≥25 rule in Setup. "Skeleton Beast" follows the Tomb of Giants rulebook's component name; the component list (line 469, "Skeletal Beast") is to be aligned.
+- Mechanical impact: Titanite Chunk/Slab chaining (Shard → Chunk → Slab) is now explicit; Wolf Ring reroll is limited to once per dodge; Covetous Silver Serpent Ring is tied to encounter clear rewards; Mon Ring is limited to once per rest. Tier assignments move nineteen revised weapons into tier one and forty-one into tier two.
+- Follow-on changes required: Align Game Components › Enemies line 469 ("Skeletal Beast" → "Skeleton Beast"). Delete the stray comment marker at line 3154 and the duplicate Chloranthy entry. Confirm Demon Titanite and Mon Ring intent with the author. Confirm the "Painted World of Ariamis" and "Tomb of Giants" set names for the pack cards. Layout: set the table as a true table; consider landscape or two-column.
+- Status: awaiting-approval
+
+---
