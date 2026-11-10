@@ -20,7 +20,10 @@ for ln in mapblock.splitlines():
 EXTENSIBLE = {'13', '14', '22'}
 bad, warn = [], []
 present = {}
-files = sorted(glob.glob(str(ROOT / '10_manuscript_chapter_*.md'))) + [str(ROOT / '12_glossary.md')]
+if '--files' in sys.argv:   # explicit list (paths relative to the repo root); default: every chapter file on disk
+    files = [str(ROOT / f) for f in sys.argv[sys.argv.index('--files') + 1:]]
+else:
+    files = sorted(glob.glob(str(ROOT / '10_manuscript_chapter_*.md'))) + [str(ROOT / '12_glossary.md')]
 for f in files:   # pass 1: collect the headings actually drafted
     txt = pathlib.Path(f).read_text(encoding='utf-8'); name = pathlib.Path(f).name
     for m in re.finditer(r'^## (\d+\.\d+) (.+)$', txt, re.M):
@@ -38,7 +41,7 @@ for f in files:   # pass 2: check every reference against the map plus the exten
         if re.search(r'\b(see|refer to)\s+(?:the\s+)?["“]', line, re.I): bad.append(f'{name}:{n}: quoted-name cross-reference')
         if re.search(r'\b(described|explained|detailed|discussed|mentioned)\s+(later|earlier|previously|above|below|elsewhere)\b|\baforementioned\b', line, re.I): bad.append(f'{name}:{n}: vague cross-reference')
 # chapters drafted so far: do their H2 sets match the map exactly?
-drafted = {re.match(r'10_manuscript_chapter_(\d\d)_', pathlib.Path(f).name).group(1) for f in glob.glob(str(ROOT / '10_manuscript_chapter_*.md'))}
+drafted = {m.group(1) for m in (re.match(r'10_manuscript_chapter_(\d\d)_', pathlib.Path(f).name) for f in files) if m}
 for ch in sorted(drafted):
     if ch in EXTENSIBLE: continue
     want = {s for s in mapped if s.split('.')[0] == str(int(ch)) and '.' in s}

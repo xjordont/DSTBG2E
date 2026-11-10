@@ -82,10 +82,14 @@ def main():
     c = merge_changelog(num)
     t = mark_tracker(num)
     print(f'chapter {num}: glossary +{a} / amended {b} (now {total} headwords); change-log entries {c}; tracker rows marked {t}')
-    files = sorted(glob.glob(str(ROOT / '10_manuscript_chapter_*.md'))) + [str(ROOT / '12_glossary.md')]
-    r = subprocess.run([sys.executable, str(ROOT / 'tools/style_check.py'), *files, '--report', str(ROOT / '13_style_enforcement_report.md')], capture_output=True, text=True)
+    # Check only chapters already tracked by git plus the chapter being integrated: other agents'
+    # half-written drafts in the working tree are not graded here.
+    tracked = subprocess.run(['git', 'ls-files', '10_manuscript_chapter_*.md'], cwd=ROOT, capture_output=True, text=True).stdout.split()
+    this = [pathlib.Path(f).name for f in glob.glob(str(ROOT / f'10_manuscript_chapter_{num}_*.md'))]
+    files = sorted(set(tracked) | set(this)) + ['12_glossary.md']
+    r = subprocess.run([sys.executable, str(ROOT / 'tools/style_check.py'), *files, '--report', str(ROOT / '13_style_enforcement_report.md')], cwd=ROOT, capture_output=True, text=True)
     print(r.stdout.strip().splitlines()[-1] if r.stdout.strip() else r.stderr)
-    x = subprocess.run([sys.executable, str(ROOT / 'tools/xref_check.py')])
+    x = subprocess.run([sys.executable, str(ROOT / 'tools/xref_check.py'), '--files', *files], cwd=ROOT)
     if r.returncode or x.returncode:
         print(f'INTEGRATION FAILED for chapter {num}: style_check={r.returncode} xref_check={x.returncode} — fix the chapter and rerun')
         return 1
