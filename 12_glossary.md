@@ -98,11 +98,11 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Encounter card.** The card dealt face down to each tile that lists the encounter's level, enemies, terrain and traps. It is revealed when the characters enter the tile.
 
-**Encounter level.** The difficulty of an encounter, from 1 to 4. The levels of the encounters leading to a boss are printed on that boss's data card. Level 4 encounters precede mega-bosses only.
+**Encounter level.** The difficulty of an encounter, from 1 to 4. The levels of the encounters leading to a boss are printed on that boss's data card and increase from the tile adjacent to the bonfire tile towards the boss tile (see §6.5). Level 4 encounters precede mega-bosses only (see §6.7).
 
 **Endurance bar.** The track of 10 spaces on the dashboard that holds both stamina cubes (filling from the left) and damage cubes (filling from the right). A *hollow* character's two hollow cubes block the two rightmost spaces, leaving eight (see §3.4).
 
-**Entry node.** A basic node beside the doorway through which the characters entered the tile. Characters are placed on entry nodes at the start of an encounter, no more than three to a node.
+**Entry node.** A basic node beside the doorway through which the characters entered the tile. Characters are placed on entry nodes at the start of an encounter, no more than three to a node. In a Level 4 encounter all four nodes along the wall beside the doorway are entry nodes (see §6.7).
 
 **Equip.** A minor action that swaps cards between the back-up slot and the weapon and armour slots. The inventory may not be used during an encounter.
 
@@ -144,7 +144,9 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Inventory.** A character's unlimited stack of unequipped treasure cards, kept face down beside the dashboard. Outside an encounter it may be rearranged freely and cards may be traded one for one between inventories; during an encounter it cannot be accessed (see §3.2).
 
-**Legendary treasure.** A rare treasure card marked with an orange light under a chest. Five are shuffled into the tier two deck when the tier two shop is first stocked; in campaign play legendary treasure is obtained only by *transposition*.
+**Legendary treasure.** A rare treasure card marked with an orange light under a chest. It cannot be purchased; five are shuffled into the tier two deck when the tier two shop is first stocked, and one drawn while stocking a shop is shuffled back (see §6.2, §6.3). In campaign play legendary treasure is obtained only by *transposition*.
+
+**Level 4 encounter.** The single encounter fought on the Level 4 encounter side of a *mega-boss game board* after the main-boss is defeated and before the mega-boss encounter. All four nodes along the wall beside the doorway are entry nodes; once *cleared* it is not fought again and does not reset (see §6.7).
 
 **Lost.** The state of a *hollow* character who has died (see §7.2). A *lost* character is removed from play and is revived only when the characters rest at the *bonfire*.
 
@@ -210,9 +212,9 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Shift.** A weapon or phantom behaviour icon allowing movement of the number of nodes shown, before or after the dice are rolled according to its position on the line. *Shift* movement costs no stamina.
 
-**Shop.** Blacksmith Andre's stock of face-up treasure cards, in tier one and tier two piles. Shops are stocked at setup and restocked only after a boss is defeated (in campaign play, after a section is completed).
+**Shop.** Blacksmith Andre's stock of face-up treasure cards, in tier one and tier two piles. The tier one shop is stocked at setup and the tier two shop when the mini-boss is defeated; both are restocked only after a boss is defeated (in campaign play, after a section is completed), unsold cards going to the bottom of their deck first (see §6.3).
 
-**Souls.** The currency of the game, tracked by soul tokens on each character's dashboard. *Souls* are gained by *clearing* encounters and killing invaders, dropped on death, and spent at the *bonfire*. *Souls* may not be transferred between characters.
+**Souls.** The currency of the game, tracked by soul tokens on each character's dashboard. *Souls* are gained by *clearing* encounters and killing invaders, dropped on death, and spent at the *bonfire*. *Souls* may not be transferred between characters. A character adventuring alone begins with six *souls* (see §6.1).
 
 **Spark.** The *bonfire*'s charges, tracked on the spark dial. The characters begin with six minus the number of characters, gain one for each boss defeated, and spend one each time they rest at the *bonfire*. In campaign play the dial's maximum is one more than its starting value and a *spark* may be bought back for *souls* (see §18.3).
 
@@ -258,7 +260,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Trap token.** A token, blank or showing a dodge difficulty and a damage value, dealt face down to the basic nodes of a trapped encounter. It is turned face up when a character moves into or is pushed onto its node, and each character there must suffer the damage or *dodge* it; enemies neither trigger traps nor suffer them (see §5.5, Traps).
 
-**Treasure card.** Any card drawn from a treasure deck or bought from Blacksmith Andre's shop: an equipment card or an ember card (see §2.5, §4.1).
+**Treasure card.** Any card from a treasure deck: *starting equipment*, *class-specific treasure*, *common treasure*, *legendary treasure*, or *boss treasure* (see §2.5). A treasure card that may be equipped to a dashboard slot is an *equipment card*.
 
 **Turn.** One model's activation. Enemies take their turns, then characters take theirs; in boss encounters the boss takes a turn after each character.
 
