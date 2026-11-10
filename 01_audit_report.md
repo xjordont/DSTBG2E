@@ -161,12 +161,13 @@ Approval may be given wholesale ("approve all recommendations") or by exception.
 - **OQ-22 Campaign sparks.** Maximum = start + 1 and a 4-souls-per-character buy-back (B-013), or the manuscript's hard cap with no purchase? *Recommended:* B-013.
 - **OQ-23 Dice faces.** Confirm the physical faces (Black 0,1,1,1,2,2; Blue 1,1,2,2,2,3; Orange 1,2,2,3,3,4; Green 3 blank / 3 success) so they can be printed (B-001).
 - **OQ-24 Calamity.** Keep "lasts the encounter" or adopt removal on damage (B-026, official)? *Recommended:* keep the manuscript's version.
-- **OQ-25 Ornstein & Smough / Gargoyle ×2.** Separate decks and dials per boss with alternation A-character-B-character (A-039), and back-to-back Gargoyle fights with the treasure only after both (A-040, CMP-0005 Twin Gargoyles)? *Recommended:* yes.
+- **OQ-25 Ornstein & Smough / Gargoyle ×2.** Separate decks and dials per boss with alternation A-character-B-character (A-039), or one boss with a shared dial and deck whose cards name the acting model (CMP-0003 F.A.Q. and CMP-0005 as drafted)? Back-to-back Gargoyle fights with the treasure only after both (A-040, CMP-0005 Twin Gargoyles)? *Recommended:* the shared-deck reading (it matches the printed single data card and health dial) and yes to Twin Gargoyles; the F.A.Q. and Boss Special Rules drafts are aligned to whichever is chosen.
 - **OQ-26 Minor/major action order.** Any order (D-017/A-073) or move-before-or-after-attack only? *Recommended:* any order, each minor action once.
 - **OQ-27 Shop restock.** Sweep unsold cards to the bottom of the deck before restocking (A-046) or top up to quota? *Recommended:* sweep.
 - **OQ-28 Invasion limit.** One invasion per leg (before and after the mini-boss) or one per game (A-045)? *Recommended:* one per leg.
 - **OQ-29 Contested treasure.** Tie-break to the aggro holder everywhere (C-087, D-037)? *Recommended:* yes.
 - **OQ-30 Embering heals?** Keep "remove all damage cubes" on embering (manuscript) or remove hollow only (A-006 alternative)? *Recommended:* keep the manuscript (heal + un-hollow).
+- **OQ-32 Phantom (summon) cadence.** In boss encounters the summon acts after each character's turn (A-020, D-002, official Phantoms booklet) or once per round after the last character (manuscript step 6; CMP-0003 F.A.Q. and CMP-0018 as drafted)? *Recommended:* after each character's turn; the F.A.Q. and CMP-0018 drafts are aligned to the decision.
 - **OQ-31 Chapter names.** Rename SUMMONS → PHANTOMS and give the Update Pack and weapon table appendix status (C-065, F-047)? *Recommended:* yes.
 
 ## 8. Recommended cut / simplify list
@@ -204,7 +205,7 @@ Approval may be given wholesale ("approve all recommendations") or by exception.
 | Every stub/truncated section has a [PROPOSED] completion | ✔ (23 CMP entries) |
 | Clean-up list complete | ✔ (§6) |
 | Asset reconnaissance complete | see `22_asset_extraction_log.md` / `21_asset_manifest.csv` |
-| Open questions enumerated | ✔ (OQ-01…OQ-31) |
+| Open questions enumerated | ✔ (OQ-01…OQ-32) |
 | Every [PROPOSED] completion has a visible draft | ✔ (`04_completion_backlog.md`) |
 
 **Halt.** Phase 2A begins only on explicit approval of this report and of the completion backlog.
