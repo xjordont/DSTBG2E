@@ -1653,16 +1653,16 @@
   "kind": "raster",
   "type": "icon",
   "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
-  "page": 32,
+  "page": 21,
   "bbox_pt": [
-   99.5,
-   708.5,
-   134.5,
-   740.5
+   476.9,
+   241.0,
+   534.9,
+   299.0
   ],
-  "method": "pdftoppm 600 dpi render crop \u2192 explicit parchment key bg (245,243,237), soft 26\u201380 (panel vignette and bottom rule excluded); border-median key failed near panel rule) (orig bg (119, 125, 127)); raster XObject with soft mask in PDF (srcsize small; 600 dpi render used instead)",
+  "method": "pdftoppm 600 dpi render of p.21 (large 112 px-source version on clean parchment) \u2192 parchment-key alpha (bg (244, 242, 234)); the p.32 key-page copies sit on a grey gradient strip and keyed badly",
   "file": "assets/icons/ast-0063-bleed.png",
-  "dims": "292\u00d7267 px",
+  "dims": "484\u00d7382 px",
   "format": "png",
   "parchment_crop": "work/icons_parchment/ICO-058-bleed.png",
   "note": "",
@@ -1670,7 +1670,7 @@
   "notes": "Raster XObject with soft mask in the PDF (native size only 37\u201366 px), so the 600 dpi render crop was used instead.",
   "lic": "authorised under owner's rights assertion",
   "status": "extracted",
-  "region": "back-cover key panel, section \u201cConditions\u201d, bbox (pt) x 101.7\u2013132.3, y 710.7\u2013741.3",
+  "region": "Conditions section, right column beside the \u201cBleed\u201d head, bbox (pt) x 476.9\u2013534.9, y 241.0\u2013299.0",
   "old_id": "ICO-058"
  },
  {
@@ -1707,16 +1707,16 @@
   "kind": "raster",
   "type": "icon",
   "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
-  "page": 32,
+  "page": 21,
   "bbox_pt": [
-   319.2,
-   708.5,
-   354.2,
-   740.5
+   476.9,
+   319.0,
+   534.9,
+   377.0
   ],
-  "method": "pdftoppm 600 dpi render crop \u2192 explicit parchment key bg (245,243,237), soft 26\u201380 (panel vignette and bottom rule excluded); border-median key failed near panel rule) (orig bg (171, 176, 176)); raster XObject with soft mask in PDF (srcsize small; 600 dpi render used instead)",
+  "method": "pdftoppm 600 dpi render of p.21 (large 112 px-source version on clean parchment) \u2192 parchment-key alpha (bg (244, 242, 234)); the p.32 key-page copies sit on a grey gradient strip and keyed badly",
   "file": "assets/icons/ast-0065-poison.png",
-  "dims": "292\u00d7267 px",
+  "dims": "252\u00d7328 px",
   "format": "png",
   "parchment_crop": "work/icons_parchment/ICO-060-poison.png",
   "note": "",
@@ -1724,7 +1724,7 @@
   "notes": "Raster XObject with soft mask in the PDF (native size only 37\u201366 px), so the 600 dpi render crop was used instead.",
   "lic": "authorised under owner's rights assertion",
   "status": "extracted",
-  "region": "back-cover key panel, section \u201cConditions\u201d, bbox (pt) x 321.4\u2013352.0, y 710.7\u2013741.3",
+  "region": "Conditions section, right column beside the \u201cPoison\u201d head, bbox (pt) x 476.9\u2013534.9, y 319.0\u2013377.0",
   "old_id": "ICO-060"
  },
  {
@@ -1734,16 +1734,16 @@
   "kind": "raster",
   "type": "icon",
   "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
-  "page": 32,
+  "page": 21,
   "bbox_pt": [
-   429.1,
-   708.5,
-   464.1,
-   740.5
+   476.9,
+   523.0,
+   534.9,
+   581.0
   ],
-  "method": "pdftoppm 600 dpi render crop \u2192 explicit parchment key bg (245,243,237), soft 26\u201380 (panel vignette and bottom rule excluded); border-median key failed near panel rule) (orig bg (144, 153, 155)); raster XObject with soft mask in PDF (srcsize small; 600 dpi render used instead)",
+  "method": "pdftoppm 600 dpi render of p.21 (large 112 px-source version on clean parchment) \u2192 parchment-key alpha (bg (244, 242, 234)); the p.32 key-page copies sit on a grey gradient strip and keyed badly",
   "file": "assets/icons/ast-0066-stagger.png",
-  "dims": "292\u00d7267 px",
+  "dims": "442\u00d7460 px",
   "format": "png",
   "parchment_crop": "work/icons_parchment/ICO-061-stagger.png",
   "note": "",
@@ -1751,7 +1751,7 @@
   "notes": "Raster XObject with soft mask in the PDF (native size only 37\u201366 px), so the 600 dpi render crop was used instead.",
   "lic": "authorised under owner's rights assertion",
   "status": "extracted",
-  "region": "back-cover key panel, section \u201cConditions\u201d, bbox (pt) x 431.3\u2013461.9, y 710.7\u2013741.3",
+  "region": "Conditions section, right column beside the \u201cStagger\u201d head, bbox (pt) x 476.9\u2013534.9, y 523.0\u2013581.0",
   "old_id": "ICO-061"
  },
  {

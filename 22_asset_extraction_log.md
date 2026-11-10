@@ -848,12 +848,12 @@ Groups: logos (AST-0001–0005), icon set from the 2022 reference page (AST-0006
 - Notes: Raster XObject with soft mask in the PDF (native size only 37–66 px), so the 600 dpi render crop was used instead.
 
 ### [AST-0063] Bleed
-- Source: DS-TG-Rulebook-Compressed_compressed.pdf, p.32
+- Source: DS-TG-Rulebook-Compressed_compressed.pdf, p.21
 - Type: icon
-- Region: back-cover key panel, section “Conditions”, bbox (pt) x 99.5–134.5, y 708.5–740.5 (re-cut with explicit parchment key)
-- Dimensions: 292×267 px
+- Region: Conditions section, right column beside the “Bleed” head, bbox (pt) x 476.9–534.9, y 241.0–299.0
+- Dimensions: 484×382 px
 - Format: png
-- Method: pdftoppm 600 dpi render crop → explicit parchment key bg (245,243,237), soft 26–80 (panel vignette and bottom rule excluded); border-median key failed near panel rule) (orig bg (119, 125, 127)); raster XObject with soft mask in PDF (srcsize small; 600 dpi render used instead)
+- Method: pdftoppm 600 dpi render of p.21 (large 112 px-source version on clean parchment) → parchment-key alpha (bg (244, 242, 234)); the p.32 key-page copies sit on a grey gradient strip and keyed badly
 - Cleaned file: assets/icons/ast-0063-bleed.png
 - Proposed placement: icon set — Conditions section
 - Licensing: authorised under owner's rights assertion
@@ -872,24 +872,24 @@ Groups: logos (AST-0001–0005), icon set from the 2022 reference page (AST-0006
 - Notes: Raster XObject with soft mask in the PDF (native size only 37–66 px), so the 600 dpi render crop was used instead.
 
 ### [AST-0065] Poison
-- Source: DS-TG-Rulebook-Compressed_compressed.pdf, p.32
+- Source: DS-TG-Rulebook-Compressed_compressed.pdf, p.21
 - Type: icon
-- Region: back-cover key panel, section “Conditions”, bbox (pt) x 319.2–354.2, y 708.5–740.5 (re-cut with explicit parchment key)
-- Dimensions: 292×267 px
+- Region: Conditions section, right column beside the “Poison” head, bbox (pt) x 476.9–534.9, y 319.0–377.0
+- Dimensions: 252×328 px
 - Format: png
-- Method: pdftoppm 600 dpi render crop → explicit parchment key bg (245,243,237), soft 26–80 (panel vignette and bottom rule excluded); border-median key failed near panel rule) (orig bg (171, 176, 176)); raster XObject with soft mask in PDF (srcsize small; 600 dpi render used instead)
+- Method: pdftoppm 600 dpi render of p.21 (large 112 px-source version on clean parchment) → parchment-key alpha (bg (244, 242, 234)); the p.32 key-page copies sit on a grey gradient strip and keyed badly
 - Cleaned file: assets/icons/ast-0065-poison.png
 - Proposed placement: icon set — Conditions section
 - Licensing: authorised under owner's rights assertion
 - Notes: Raster XObject with soft mask in the PDF (native size only 37–66 px), so the 600 dpi render crop was used instead.
 
 ### [AST-0066] Stagger
-- Source: DS-TG-Rulebook-Compressed_compressed.pdf, p.32
+- Source: DS-TG-Rulebook-Compressed_compressed.pdf, p.21
 - Type: icon
-- Region: back-cover key panel, section “Conditions”, bbox (pt) x 429.1–464.1, y 708.5–740.5 (re-cut with explicit parchment key)
-- Dimensions: 292×267 px
+- Region: Conditions section, right column beside the “Stagger” head, bbox (pt) x 476.9–534.9, y 523.0–581.0
+- Dimensions: 442×460 px
 - Format: png
-- Method: pdftoppm 600 dpi render crop → explicit parchment key bg (245,243,237), soft 26–80 (panel vignette and bottom rule excluded); border-median key failed near panel rule) (orig bg (144, 153, 155)); raster XObject with soft mask in PDF (srcsize small; 600 dpi render used instead)
+- Method: pdftoppm 600 dpi render of p.21 (large 112 px-source version on clean parchment) → parchment-key alpha (bg (244, 242, 234)); the p.32 key-page copies sit on a grey gradient strip and keyed badly
 - Cleaned file: assets/icons/ast-0066-stagger.png
 - Proposed placement: icon set — Conditions section
 - Licensing: authorised under owner's rights assertion
