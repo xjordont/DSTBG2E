@@ -36,11 +36,13 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Behaviour icon.** A movement or attack icon on an enemy data card or a behaviour card. Icons are resolved left to right; an icon with no valid target is skipped.
 
+**Blacksmith Andre.** The smith at the *bonfire* who keeps the *shop*, buying and selling treasure cards for *souls*, and who attaches and removes *upgrade cards* at no cost. He is visited only while the party rests at the bonfire (see §11.4).
+
 **Bleed.** A condition. A model may hold one bleed token. If a second bleed token would be placed, the model suffers three damage that ignores block and resist and all bleed tokens are removed. Bleed tokens are removed only when the encounter ends.
 
 **Block.** The defence rolled against a physical attack. The defence total is the sum of the sword icons on the two highest block dice rolled from all equipped cards. For enemies, block is the fixed value subtracted from a physical attack value.
 
-**Bonfire.** The characters' safe haven, represented by the *bonfire* tile. Resting at the *bonfire* costs one *spark* and fully restores the characters, resets every encounter and allows visits to the Firekeeper and Blacksmith Andre.
+**Bonfire.** The characters' safe haven, represented by the *bonfire* tile, which has no nodes. The Firekeeper and Blacksmith Andre wait there and are visited only while the party rests. Returning to the bonfire tile costs nothing; resting there costs one *spark* (see §11.1, §11.2).
 
 **Bonfire ascetic.** In campaign play, a one-time communal payment of sixteen *souls* made while resting at the *bonfire* that unlocks tier two treasure and increases every non-boss enemy's base health by two for the rest of the campaign, cumulative with the health scaling for character count (see §18.7).
 
@@ -50,7 +52,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Boss tile.** The mini-boss tile or main-boss tile on which a boss encounter is fought. A main-boss encounter uses both boss tiles joined as one large tile. Mega-bosses use the mega-boss game board supplied with their expansion.
 
-**Boss treasure.** A treasure card supplied with a boss. One of a boss's treasure cards is awarded at random when the boss is defeated (see §16.5).
+**Boss treasure.** A treasure card supplied with a boss. One of a boss's treasure cards is awarded at random when the boss is defeated (see §16.5). Boss treasure cannot be bought; it sells for six *souls* and is returned to the game box when sold (see §11.4; for campaign play, see §18.6).
 
 **Calamity.** A condition from the Black Dragon Kalameet expansion. A model may hold one calamity token, which reduces its block, resist and dodge roll results by one. Calamity tokens are removed only when the encounter ends.
 
@@ -116,7 +118,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Final boss.** The last boss of the game: the main-boss, or the mega-boss if the players chose to add one. Defeating the final boss wins the game.
 
-**Firekeeper.** The figure at the *bonfire* who raises character stats in exchange for *souls*.
+**Firekeeper.** The figure at the *bonfire* who raises a character's stats, one *stat tier* per purchase, in exchange for that character's *souls*. Stat tiers one to four cost 2, 4, 8, and 10 souls (see §11.3; for campaign play, see §18.6).
 
 **Fog gate.** The token marking the entrance to a boss encounter. In the standard game it moves to the *bonfire* tile after the first boss attempt and provides a shortcut back to the boss. In campaign play it has no effect.
 
@@ -198,7 +200,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Rest (major action).** The character removes all stamina cubes from their endurance bar. *Rest* may not be taken in a turn in which the character took the *Run* minor action.
 
-**Resting at the bonfire.** The party action, costing one *spark*, that restores every character, readies all character tokens, removes the hollow cube, revives *lost* characters, and resets every encounter.
+**Resting at the bonfire.** The party action, costing one *spark* unless it follows the defeat of a boss, that revives dead and *lost* characters, removes every damage cube, stamina cube, hollow cube, and condition token, readies the heroic action, luck, and estus flask tokens, allows visits to the Firekeeper and Blacksmith Andre, and resets every encounter. It neither places nor removes an *ember token* (see §11.2).
 
 **Riposte.** The out-of-turn attack a character makes against an attacker after a successful *parry*, using any attack option of the weapon in the right weapon slot and paying its stamina cost. A *riposte* may not be *parried*.
 
@@ -218,7 +220,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Shift.** A weapon or phantom behaviour icon allowing movement of the number of nodes shown, before or after the dice are rolled according to its position on the line. *Shift* movement costs no stamina.
 
-**Shop.** Blacksmith Andre's stock of face-up treasure cards, in tier one and tier two piles. The tier one shop is stocked at setup and the tier two shop when the mini-boss is defeated; both are restocked only after a boss is defeated (in campaign play, after a section is completed), unsold cards going to the bottom of their deck first (see §6.3).
+**Shop.** Blacksmith Andre's stock of face-up treasure cards, in a tier one shop and a tier two shop. A tier one card costs two *souls* and a tier two card four; a treasure card other than starting equipment sells for one soul (see §11.4). The tier one shop is stocked at setup and the tier two shop when the mini-boss is defeated; both are restocked only after a boss is defeated (in campaign play, after a section is completed), unsold cards going to the bottom of their deck first (see §6.3).
 
 **Souls.** The currency of the game, tracked by soul tokens on each character's dashboard. *Souls* are gained by *clearing* encounters and killing invaders, dropped on death, and spent at the *bonfire*. *Souls* may not be transferred between characters. A character adventuring alone begins with six *souls* (see §6.1).
 
@@ -232,7 +234,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Stamina cube.** A black cube. Each point of stamina a character spends places one stamina cube on the endurance bar, filling from the left.
 
-**Starting equipment.** The three or four equipment cards a character begins with. Starting equipment may not be sold.
+**Starting equipment.** The three or four equipment cards a character begins with, marked with that character's class icon (see §6.2). Starting equipment cannot be sold (see §11.4).
 
 **Stat cube.** A white cube that marks a character's *stat tier* on a stat progression track (see §3.3).
 
