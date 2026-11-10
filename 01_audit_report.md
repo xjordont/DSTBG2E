@@ -4,7 +4,7 @@ Project: Dark Souls: The Board Game — Second Edition (homebrew) editorial, com
 
 ## 1. Executive summary
 
-The manuscript is a coherent, playable design whose mechanical skeleton is sound and whose text is unfinished. Six parallel audits read all ten reference documents (plus the two supplementary mega-boss booklets) against the 3,006-line body and raised **485 findings**: **24 Blockers, 148 Majors, 245 Minors and 68 Notes**, of which 184 are REQUIRED, 102 OPTIONAL, 155 CLEAN-UP and 44 PROPOSED. Every stub, truncation and missing chapter has a fully drafted completion in `04_completion_backlog.md` (23 entries, about 15,000 words of lift-ready rules text). Coverage of the manuscript's chapters and sections is **95%**.
+The manuscript is a coherent, playable design whose mechanical skeleton is sound and whose text is unfinished. Six parallel audits read all ten reference documents (plus the two supplementary mega-boss booklets) against the 3,006-line body and raised **485 findings**: **24 Blockers, 148 Majors, 245 Minors and 68 Notes**, of which 184 are REQUIRED, 102 OPTIONAL, 155 CLEAN-UP and 44 PROPOSED. Every stub, truncation and missing chapter has a fully drafted completion in `04_completion_backlog.md` (23 entries, about 15,000 words of lift-ready rules text). Coverage of the manuscript's chapters and sections is **99%**.
 
 The design must be preserved, not "corrected": the lineage audit finds 44% of rule topics inherited from the 2017 core, 25% original to the author, 11% from the Hollowed Edition, 11% from the official expansions, 7% from the 2022 edition and 2% from Extended Rules. The deliberate departures (enemies act first in a round; aggro follows damage; block uses the two highest dice; one-stage hollowing with dropped souls; a stocked two-tier shop that restocks only after a boss; stamina-cost skipping; parry and riposte; the campaign ascetic and transposition) are complete and internally consistent. They are recorded in the Preserve list (§5) and are off-limits to later passes.
 
@@ -19,7 +19,7 @@ Voice and style are tractable: the manuscript is already British-spelled, carrie
 | Measure | Value |
 |---|---|
 | Chapters + sections tracked (excluding 20 empty headings) | 190 |
-| With at least one audit finding or completion | 180 (95%) |
+| With at least one audit finding or completion | 189 (99%) |
 | Findings by agent | see table below |
 | Findings needing a user decision | 143 |
 
@@ -199,7 +199,7 @@ Approval may be given wholesale ("approve all recommendations") or by exception.
 | Criterion | Status |
 |---|---|
 | All inputs audited (11 manifest + 2 supplementary) | ✔ |
-| Coverage ≥ 95% | ✘ (95%) |
+| Coverage ≥ 95% | ✔ (99%) |
 | Every Blocker/Major has a proposed fix | ✔ (24 Blockers, 148 Majors; all rows carry a Proposed fix) |
 | Every stub/truncated section has a [PROPOSED] completion | ✔ (23 CMP entries) |
 | Clean-up list complete | ✔ (§6) |

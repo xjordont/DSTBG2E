@@ -15,12 +15,15 @@ for i,l in enumerate(lines,1):
         if txt.upper()=='INTRODUCTION': started=True
         if started and txt: heads.append((i,len(m.group(1)),txt))
 def locate(n):
-    ch=sec=None
+    """Return (chapter, [enclosing H2, enclosing H3]) for manuscript line n, so a finding
+    rolls up to every heading level that contains it."""
+    ch=h2=h3=None
     for (ln,lvl,txt) in heads:
         if ln>n: break
-        if lvl==1: ch, sec = txt, None
-        else: sec = txt
-    return ch, sec
+        if lvl==1: ch, h2, h3 = txt, None, None
+        elif lvl==2: h2, h3 = txt, None
+        else: h3 = txt
+    return ch, [x for x in (h2,h3) if x]
 def linenums(s):
     """Line references in any of the agents' formats: 'L945', 'line 945', 'lines 945-950',
     'manuscript.md:945', 'manuscript.md 945 (Gravestones)', 'manuscript.md:1203–1223'."""
@@ -42,8 +45,10 @@ def ingest(path, bucket):
         nums=linenums(row.get('Location','')+' '+row.get('Evidence',''))
         keys=set()
         for v in nums:
-            ch,sec=locate(v)
-            if ch: keys.add((ch,sec)); keys.add((ch,None))
+            ch,secs=locate(v)
+            if ch:
+                keys.add((ch,None))
+                for sec in secs: keys.add((ch,sec))
         if not keys:
             # fall back to section-name, then chapter-name, match in Location
             loc=row.get('Location','').lower()
@@ -60,6 +65,11 @@ na=ingest("02_audit_table.csv", audit); ne=ingest("work/audit/E_rows.csv", comp)
 if na is None and ne is None:
     print("ABORT: neither 02_audit_table.csv nor work/audit/E_rows.csv exists; tracker left untouched.")
     raise SystemExit(1)
+VIRTUAL = {("CHARACTERS","Estus Flask"): (["A-012"], ["CMP-0001"]),
+           ("GLOSSARY","(chapter)"): ([], ["CMP-0002"]),
+           ("—","Combat Cards"): (["OQ-04 (not in this revision)"], [])}
+for k,(a,c) in VIRTUAL.items():
+    audit[k].update(a); comp[k].update(c)
 tr=(ROOT/"03_coverage_tracker.md").read_text(encoding="utf-8").split("\n")
 out=[]; filled=0
 for l in tr:
@@ -68,6 +78,7 @@ for l in tr:
         if len(cells)==7:
             ch,sec=cells[0],cells[1]
             key=(ch,None) if sec in ('(chapter)','(empty heading)') else (ch,sec)
+            if (ch,sec) in VIRTUAL: key=(ch,sec)
             ids=sorted(audit.get(key,set()), key=lambda s:(s.split('-')[0], int(re.sub(r'\D','',s.split('-')[-1]) or 0)))
             cids=sorted(comp.get(key,set()))
             if sec=='(empty heading)': ids=[]
