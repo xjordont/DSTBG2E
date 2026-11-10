@@ -16,11 +16,13 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Armour.** An equipment card bearing the armour icon. One armour card may be equipped in the armour slot. Only the armour card's block or resist dice are rolled after a failed dodge.
 
+**Armour slot.** The dashboard slot that holds one equipped *armour* card (see §3.2).
+
 **Attack option.** One line of a weapon or spell card, showing a stamina cost, dice and modifiers. Using an attack option is the *Attack* major action.
 
 **Attack value.** The number of sword icons rolled on an attack, after modifiers and rerolls. For enemies the attack value is the fixed number printed in the attack icon.
 
-**Back-up slot.** The dashboard slot that holds up to two treasure cards that are carried but not equipped. Cards in the back-up slot may be swapped into the weapon or armour slots with the *Equip* minor action; an *ember* card must be in the back-up slot to be used.
+**Back-up slot.** The dashboard slot that holds up to two treasure cards of any kind, carried but not equipped (see §3.2). During an encounter, cards in the back-up slot may be exchanged with the weapon and armour slots only by the *Equip* minor action; an *ember card* must be in the back-up slot to be used.
 
 **Barrel.** A terrain token or model. Models may not *walk*, *run* or *shift* into a node containing a barrel; a model that *dodges* or is pushed into the node destroys the barrel. Barrels are restored when the characters rest at the *bonfire*.
 
@@ -51,6 +53,8 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 **Calamity.** A condition from the Black Dragon Kalameet expansion. A model may hold one calamity token, which reduces its block, resist and dodge roll results by one. Calamity tokens are removed only when the encounter ends.
 
 **Catalyst.** A weapon card that stores spells of a matching school: pyromancer flames store pyromancies, staves and catalysts store sorceries, talismans and chimes store miracles. Up to three spells may be stored in a catalyst and their attack options are used as if equipped.
+
+**Character dashboard.** The board that records a character's class: the heroic action, the four equipment slots, the stat progression track, the endurance bar, the threat value, and the four token slots (see §3.1).
 
 **Chest.** A terrain token or model that blocks movement, dodging and pushes. A chest holds one face-down treasure card of the current tier, revealed when the encounter is *cleared*. With mimics in play, opening a chest requires revealing the tile's *ambush card*.
 
@@ -84,7 +88,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Ember card.** A tier one shop card. Discarding an *ember* card from the back-up slot (the *Ember* major action, or outside an encounter) makes the character *embered*. A character may carry only one *ember* card and may not carry one while *embered*.
 
-**Ember token.** The token placed in the dashboard's ember slot when a character becomes *embered*. It is discarded when the character dies.
+**Ember token.** The token that marks an *embered* character. It begins the game beside the dashboard, is placed in the dashboard's ember slot when the character becomes embered, and is removed when the character dies (see §3.5, Ember; §7.3).
 
 **Embered.** The state of a character with an *ember* token. An *embered* character is not *hollow*, reduces any single attack's damage of three or more by one, may summon a phantom before a boss encounter, and provokes invaders.
 
@@ -94,7 +98,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Encounter level.** The difficulty of an encounter, from 1 to 4. The levels of the encounters leading to a boss are printed on that boss's data card. Level 4 encounters precede mega-bosses only.
 
-**Endurance bar.** The ten-space track on the dashboard that holds both stamina cubes (filling from the left) and damage cubes (filling from the right). A *hollow* character's two hollow cubes block the two rightmost spaces, leaving eight (see §3.4).
+**Endurance bar.** The track of 10 spaces on the dashboard that holds both stamina cubes (filling from the left) and damage cubes (filling from the right). A *hollow* character's two hollow cubes block the two rightmost spaces, leaving eight (see §3.4).
 
 **Entry node.** A basic node beside the doorway through which the characters entered the tile. Characters are placed on entry nodes at the start of an encounter, no more than three to a node.
 
@@ -102,7 +106,9 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Equipment card.** A treasure card that may be equipped to a weapon or armour slot of the dashboard (see §4.1).
 
-**Estus flask.** A character token. Flipping it as a major action (*Drink Estus*) removes all damage cubes from the endurance bar. It is readied only by resting at the *bonfire*.
+**Equipped.** The state of a card in the armour slot or a weapon slot of the dashboard. Cards in the back-up slot and the inventory are not equipped (see §3.2).
+
+**Estus flask.** A character token. Flipping it as the Drink Estus major action removes all damage cubes from the endurance bar; stamina cubes, hollow cubes, and condition tokens are not removed. It is readied only by resting at the *bonfire* (see §3.5, Estus Flask).
 
 **Failed.** The result of an encounter in which every character dies, or in which any *hollow* character dies. A *failed* encounter awards nothing, its card is turned face down, and the characters must rest at the *bonfire*.
 
@@ -122,7 +128,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Heat-up card.** A behaviour card marked with the heat-up symbol. Heat-up cards are set aside when the behaviour deck is built and enter play only at heat-up.
 
-**Heroic action.** A once-per-rest ability printed on the dashboard, used as a minor action by flipping the *heroic action* token. Its wording overrides other rules.
+**Heroic action.** The once-per-rest ability printed on the dashboard, resolved as a minor action by flipping the *heroic action* token to its used side. Its printed wording overrides other rules. The token is readied only by resting at the *bonfire* (see §3.5, Heroic Action).
 
 **Hit.** A model is hit by an attack that was in range and that it did not successfully *dodge* or *parry*, even if the attack dealt no damage. Pushes and conditions apply only to models that are hit.
 
@@ -134,13 +140,13 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Invader token.** A token from the Phantoms expansion that shows an invader icon or is blank. When invaders are in play, one is placed face down on each face-down encounter card and is revealed when the characters enter that tile (see §12.2).
 
-**Inventory.** A character's face-down stack of unequipped treasure cards. It may be rearranged or traded with only outside encounters.
+**Inventory.** A character's unlimited stack of unequipped treasure cards, kept face down beside the dashboard. Outside an encounter it may be rearranged freely and cards may be traded one for one between inventories; during an encounter it cannot be accessed (see §3.2).
 
 **Legendary treasure.** A rare treasure card marked with an orange light under a chest. Five are shuffled into the tier two deck when the tier two shop is first stocked; in campaign play legendary treasure is obtained only by *transposition*.
 
 **Lost.** The state of a *hollow* character who has died (see §7.2). A *lost* character is removed from play and is revived only when the characters rest at the *bonfire*.
 
-**Luck.** A character token. Flipping it allows the character to reroll any or all dice of one attack or defence roll; the new results stand. It is readied only by resting at the *bonfire*.
+**Luck.** A character token. Flipping it allows the character to reroll any or all dice of one of their own attack or defence rolls; the dice are chosen together and the new results stand. It is readied only by resting at the *bonfire* (see §3.5, Luck).
 
 **Magical damage.** Damage from an attack marked with the white circle icon. Magical damage is reduced by resist.
 
@@ -214,7 +220,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Stat cube.** A white cube that marks a character's *stat tier* on a stat progression track (see §3.3).
 
-**Stat tier.** A character's position on each stat track (base, tier one, two, three or four), marked with a white cube or, at tier four, a red cube. Tiers are bought in sequence from the Firekeeper.
+**Stat tier.** A character's position on each stat progression track: the base tier, or stat tier one, two, three, or four. It is marked with a *stat cube* or, at stat tier four, with a red cube in the stat tier three space. A stat at stat tier four has the value 40 or the stat tier three value plus five, whichever is higher. Tiers are bought in sequence from the Firekeeper (see §3.3, §11.3).
 
 **Strafe card.** A card from the Black Dragon Kalameet expansion drawn when a strafe icon is resolved; it shows the nodes attacked and the node on which Kalameet lands.
 
@@ -224,7 +230,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Terrain.** Gravestones, barrels, chests, pillars and traps. Terrain tokens are placed on terrain nodes at encounter setup and are not moved when encounters reset.
 
-**Threat.** The value that fixes turn order. Enemies act in descending threat before the characters, who then act in descending threat. The character with the highest threat takes the aggro token at the start of each encounter.
+**Threat.** The value that fixes turn order, printed on the character dashboard as Taunt Level and on enemy and phantom data cards. Enemies act in descending threat before the characters, who then act in descending threat. The character with the highest threat takes the aggro token at the start of each encounter (see §3.1, §7.5).
 
 **Tier one treasure.** The treasure deck that holds common and class-specific treasure with every stat requirement below 25. Encounter rewards and chests draw from tier one until the mini-boss is defeated (in campaign play, until the *bonfire ascetic* is burnt) (see §6.2).
 
@@ -251,6 +257,8 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 **Walk.** A minor action, once per turn: move one node for no stamina.
 
 **Weak arc.** A boss arc shown in red on the most recently resolved behaviour card. A character attacking a boss from a weak arc adds one black die.
+
+**Weapon slot.** One of the two dashboard slots, the left weapon slot and the right weapon slot, that each hold one equipped weapon card. A two-handed weapon requires the other weapon slot to be empty (see §3.2).
 
 **Wind Up.** A behaviour icon. When it is resolved, each character may spend one stamina to move to an adjacent node; the movement counts as a *Run*.
 

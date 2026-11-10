@@ -26,15 +26,15 @@ Totals: 24 chapters, 166 sections, 20 orphan empty headings.
 | GAME COMPONENTS | Event cards | present — to audit | A-090, A-091, A-092, B-037, C-030, CMP-0012, D-001 | CMP-0012 | yes (§2) | line 659. |
 | GAME COMPONENTS | Dice | present — to audit | B-001, C-030, C-108, CMP-0012 | CMP-0012 | yes (§2) | line 669. |
 | GAME COMPONENTS | Tokens & Terrain Elements | present — defect | A-017, A-033, A-047, A-081, A-083, A-088, A-089, A-113, A-114, A-117, B-027, B-028, B-029, B-030, C-029, C-030, C-045, C-050, C-058, C-063, C-073, C-077, C-104, C-108, C-112, CMP-0011, CMP-0012, D-018, D-020, D-024, F-054 | CMP-0011, CMP-0012 | yes (§2) | line 679. Condition token arithmetic: 7×4 + 4×2 = 36, text says 35. "first player token" used later but absent here. |
-| CHARACTERS | (chapter) | present — to audit | A-006, A-008, A-009, A-012, A-052, A-068, A-072, A-105, A-125, B-014, B-015, B-022, B-029, C-015, C-019, C-021, C-027, C-028, C-030, C-035, C-042, C-045, C-048, C-049, C-050, C-051, C-060, C-063, C-064, C-092, C-096, C-103, C-104, C-106, C-111, CMP-0001, D-021, D-030, D-039, F-057, F-087, F-089, F-094, F-095, F-096, F-097 | CMP-0001 | no | line 725. |
-| CHARACTERS | Character Dashboards | present — to audit | A-125, B-022, C-030, C-049, C-104, D-039 |  | no | line 727. |
-| CHARACTERS | Equipment Slots | present — to audit | A-068, A-072, A-105, C-019, C-030, C-060, C-104, D-030, F-057, F-089 |  | no | line 755. |
-| CHARACTERS | Stat Progression Track | present — to audit | B-029, C-030, C-042, C-045, C-050, C-092, C-096, C-104, F-087 |  | no | line 767. |
-| CHARACTERS | Endurance Bar | present — to audit | A-008, A-009, B-014, B-015, B-029, C-028, C-030, C-035, C-050, C-063, C-104, D-021, F-094 |  | no | line 773. |
-| CHARACTERS | Character Tokens | present — defect | A-006, A-012, A-052, B-014, C-015, C-019, C-021, C-027, C-030, C-048, C-050, C-051, C-060, C-063, C-064, C-104, C-106, C-111, CMP-0001, F-095, F-096, F-097 | CMP-0001 | no | line 791. Says "three types" then "four following tokens"; Estus Flask subsection MISSING (text survives only in DOCX footer). |
-| CHARACTERS | Heroic Action | present — to audit | B-014, C-030, C-051, C-104, F-095 |  | no | line 795. |
-| CHARACTERS | Luck | present — to audit | C-030, C-051, C-060, C-104, F-096 |  | no | line 799. |
-| CHARACTERS | Ember | present — to audit | A-006, C-021, C-030, C-048, C-050, C-060, C-064, C-104, C-111, F-097 |  | no | line 803. |
+| CHARACTERS | (chapter) | present — to audit | A-006, A-008, A-009, A-012, A-052, A-068, A-072, A-105, A-125, B-014, B-015, B-022, B-029, C-015, C-019, C-021, C-027, C-028, C-030, C-035, C-042, C-045, C-048, C-049, C-050, C-051, C-060, C-063, C-064, C-092, C-096, C-103, C-104, C-106, C-111, CMP-0001, D-021, D-030, D-039, F-057, F-087, F-089, F-094, F-095, F-096, F-097 | CMP-0001 | yes (§3) | line 725. |
+| CHARACTERS | Character Dashboards | present — to audit | A-125, B-022, C-030, C-049, C-104, D-039 |  | yes (§3) | line 727. |
+| CHARACTERS | Equipment Slots | present — to audit | A-068, A-072, A-105, C-019, C-030, C-060, C-104, D-030, F-057, F-089 |  | yes (§3) | line 755. |
+| CHARACTERS | Stat Progression Track | present — to audit | B-029, C-030, C-042, C-045, C-050, C-092, C-096, C-104, F-087 |  | yes (§3) | line 767. |
+| CHARACTERS | Endurance Bar | present — to audit | A-008, A-009, B-014, B-015, B-029, C-028, C-030, C-035, C-050, C-063, C-104, D-021, F-094 |  | yes (§3) | line 773. |
+| CHARACTERS | Character Tokens | present — defect | A-006, A-012, A-052, B-014, C-015, C-019, C-021, C-027, C-030, C-048, C-050, C-051, C-060, C-063, C-064, C-104, C-106, C-111, CMP-0001, F-095, F-096, F-097 | CMP-0001 | yes (§3) | line 791. Says "three types" then "four following tokens"; Estus Flask subsection MISSING (text survives only in DOCX footer). |
+| CHARACTERS | Heroic Action | present — to audit | B-014, C-030, C-051, C-104, F-095 |  | yes (§3) | line 795. |
+| CHARACTERS | Luck | present — to audit | C-030, C-051, C-060, C-104, F-096 |  | yes (§3) | line 799. |
+| CHARACTERS | Ember | present — to audit | A-006, C-021, C-030, C-048, C-050, C-060, C-064, C-104, C-111, F-097 |  | yes (§3) | line 803. |
 | EQUIPMENT | (chapter) | present — to audit | A-006, A-046, A-069, A-070, A-071, A-074, A-120, B-022, C-002, C-015, C-018, C-022, C-030, C-038, C-042, C-043, C-047, C-048, C-054, C-060, C-084, C-092, C-096, C-098, C-099, C-104, C-111, C-117, C-119, CMP-0016, D-033, D-034, F-009, F-058, F-059, F-060, F-061, F-083, F-090, F-098, F-099, F-100 | CMP-0016 | no | line 807. |
 | EQUIPMENT | Equipment Cards | present — to audit | A-069, A-071, A-120, B-022, C-018, C-030, C-038, C-043, C-047, C-054, C-084, C-104, C-111, D-033, F-009, F-058, F-059, F-060, F-098, F-099 |  | no | line 809. |
 | EQUIPMENT | Upgrades | present — to audit | A-071, A-074, C-002, C-015, C-022, C-030, C-038, C-042, C-092, C-096, C-104, C-111, D-034, F-083, F-100 |  | no | line 847. |
@@ -213,7 +213,7 @@ Totals: 24 chapters, 166 sections, 20 orphan empty headings.
 | F.A.Q. | (chapter) | STUB — empty | C-030, C-098, C-104, CMP-0003, F-046 | CMP-0003 | no | line 3098. Heading only. Completion required (CMP). |
 | F.A.Q. | (empty heading) | ORPHAN — delete |  | CMP-0003 | no | line 3100: empty H1 used as page break |
 | COMMUNITY UPDATE PACK | (chapter) | SKELETON | A-066, A-074, A-096, B-018, B-019, B-020, B-021, B-022, B-032, C-007, C-056, C-060, C-072, C-109, C-117, CMP-0004, F-047, F-048 | CMP-0004 | no | line 3102. Lists of card names + terse errata notes + weapon stat table; no rules prose. Completion required (CMP). |
-| CHARACTERS | Estus Flask | MISSING — in TOC only | A-012 | CMP-0001 | no | Rule text only in DOCX footer: "flip estus flask token as a major action to remove all damage cubes; stamina cubes are not removed." |
+| CHARACTERS | Estus Flask | MISSING — in TOC only | A-012 | CMP-0001 | yes (§3) | Rule text only in DOCX footer: "flip estus flask token as a major action to remove all damage cubes; stamina cubes are not removed." |
 | GLOSSARY | (chapter) | MISSING — promised |  | CMP-0002 | no | TOC lists GLOSSARY (p.74) and Introduction promises italic-term definitions; no glossary exists in body. |
 | — | Combat Cards | NOT PRESENT | OQ-04 (not in this revision) |  | no | Named in the project brief as a truncated section; no section by this name exists in this DOCX revision. Treated as not-in-scope unless the user supplies the text. |
 
