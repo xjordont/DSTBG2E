@@ -560,116 +560,17 @@ Columns: ID · Issue type · Severity · Tag · Location · Current text · Prop
 ## Completion entries that apply (3) — approved at Gate 1
 
 ### [CMP-0006] Gameplay › Death & Hollowing — "Lost" state — Proposed Completion
-- Current state: "Lost" is used but never defined: "keeping them from being *lost* to the *hollow*" (line 1890); "Resting at the *bonfire* also revives *lost* characters who have been removed from play due to dying while *hollow*" (line 1906); "The players lose the campaign if all characters are lost to the hollow without a *spark* to revive them" (line 2235). Death & Hollowing (line 1223) and Encounter Resolution (line 1305) say that when a *hollow* character dies the encounter is *failed* and the characters must spend a *spark* and rest. Setup After the main-boss step 11 (line 1195) says that in the mega-boss encounter "If a character dies they are permanently removed from play." Objective & Loss Conditions (line 1201) defines loss only as "all characters are dead and there are no remaining sparks".
-- Proposed completion:
-
-  New bullet group appended to Death & Hollowing (after line 1223):
-
-  > - A *hollow* character who dies is *lost*.
-  >
-  >   - A *lost* character is removed from play: place the model on its side beside the *bonfire* tile, drop its *souls* on the encounter tile and discard its *ember* token as for any death.
-  >
-  >   - A *lost* character is not revived by *clearing* an encounter. A *lost* character is revived only when the characters rest at the *bonfire*; resting removes the *hollow* markers as usual.
-  >
-  >   - When a character becomes *lost*, the current encounter is *failed* at once and the characters must rest at the *bonfire* (see Encounter Resolution). If the *spark* dial shows zero, the players lose the game (see Objective & Loss Conditions).
-  >
-  >   - In a mega-boss encounter no rest follows: a character who dies or is *lost* in a mega-boss encounter is removed from play for the rest of the game.
-
-  Replacement for the Encounter Resolution bullet at line 1305: "Encounters are *failed* if any *hollow* character dies; that character is *lost*."
-
-  Replacement sentence for Returning to the Bonfire line 1906: "Resting at the *bonfire* also revives *lost* characters: characters who died while *hollow* and were removed from play."
-
-  Addition to Objective & Loss Conditions (line 1201), as a second paragraph: "The players also lose if the characters are required to rest at the *bonfire* when the *spark* dial shows zero, and if every character is removed from play during a mega-boss encounter."
-- Design rationale: The definition takes the three uses of "lost" as given and makes them one state. It keeps the manuscript's rule that a *hollow* death fails the encounter, so "lost" is a label for the interval between that death and the forced rest, and for permanent removal in the mega-boss fight. The zero-spark case is the one gap the body leaves (the forced rest cannot be paid); the ruling follows the manuscript's own loss condition rather than letting survivors continue without the lost character.
-- Mechanical impact: None where sparks remain. With zero sparks, a hollow death now ends the game explicitly; previously the outcome was undefined.
-- Follow-on changes required: Glossary entry "Lost" (CMP-0002) loses its [PROPOSED] tag on approval. F.A.Q. entries on forced rest and mega-boss death (CMP-0003) align. CMP-0020 carries the zero-spark rule into Encounter Recovery.
-- Status: approved (Gate 1, 2026-11-10 — see 05_gate1_decisions.md)
-
----
+- Read `04_completion_backlog.md` lines 683–710 (approved at Gate 1; apply untagged, subject to 05_gate1_decisions.md).
 
 ---
 
 ### [CMP-0008] Campaign Play › Setup and CAMPAIGNS list corrections — Proposed Completion
-- Current state: Campaign Play › Setup (lines 2221–2225) says "the included campaigns are all three sections long" and "This rule-set includes three campaigns which require only the components available in the core set"; CAMPAIGNS (lines 2352–3034) lists thirteen campaigns of three to six sections, two of which need only the core set. "Facing the Abyss" appears twice (lines 2548 and 2764) with different preambles and a different Section Two (the first copy matches the Darkroot booklet; the second has Level 2 where Level 3 belongs). "A Hollow Pursuit" (line 2720) repeats Demon Hunting's requirements line ("core set and Asylum Demon expansion") although it is the Explorers campaign. Spellings: "Andor Londo" (2384, 2486, 2646; official: Anor Londo), "Earthern" (2736; the game location is Earthen Peak), "Jeramiah" (557) against "Jeremiah" (2492, 2528; the Phantoms booklet uses Jeremiah), "Do no place" (2456, 2504), "Old Dragon Slayer" (2734), "Bonfire Tiles" (2830), "Gaping Dragon(Mega Boss)" (2944), "Section Four- " and "Section Five Dark Champion" (2854, 2864). The Gauntlet's Section Three is titled "Invader Ruins" (2534) but the Phantoms booklet names it "Invader Spire". "Gargoyle (Mini-Boss)" is listed twice in three campaigns (2366–2368, 2468–2470, 2616–2618): the Core rulebook (p. 35) and the Phantoms booklet (p. 17) list the Gargoyle twice deliberately, with a footnote rule. "The Last Giant (Mega Boss)" (line 3018) is not in Game Components › Mega-bosses; The Last Giant is a published mega-boss expansion whose booklet was not supplied. The Undead Colosseum's Section Six (lines 2874–2880) omits the "Level 4 Encounter" that the Executioner's Chariot booklet (p. 19) lists before Vordt. "Ornstein & Smough (main-boss)" is listed as one boss (correct; see CMP-0005). Boss-rank labels vary ("Mini-Boss", "Mini Boss", "main-boss", "Main Boss", "Mega Boss").
-- Proposed completion:
-
-  Replacement for Campaign Play › Setup (lines 2219–2225):
-
-  > ## Setup
-  >
-  > The setup for a campaign is the same as for the basic game except as stated in this chapter. A campaign is divided into sections. Each section lists, in order outward from the *bonfire* tile, the tiles to lay out: the *bonfire* tile, a number of encounter tiles with their encounter levels, and one or more bosses. Sections vary in length. The campaigns in this book are between three and six sections long, and some sections contain more than one boss or an encounter with special rules.
-  >
-  > When starting a campaign, the players choose one of the thirteen campaigns in CAMPAIGNS. Two of them, The First Journey and The Coiled Sword, require only the core set; each of the others states the expansions it requires.
-  >
-  > Lay out each section as Encounter Setup describes, using the number of encounter tiles the section lists and dealing encounter cards of the levels listed, in order from the *bonfire* tile. Where a section names an encounter, use that encounter card for that tile. Where a section lists a boss twice, see Boss Special Rules › Twin Gargoyles.
-  >
-  > A section is completed when its final boss is defeated or, for a section that ends in a named encounter instead of a boss, when that encounter is *cleared*. Completing a section restocks the shops and allows the characters to rest at the *bonfire* without spending a *spark*. A *spark* is gained only for a boss defeated. When a section is completed, perform Setup After the mini-boss for the next section, taking the next section's list in place of steps 4 and 6; for a section ending in a mega-boss, perform Setup After the main-boss instead. [PROPOSED — the section-completion sentence is inferred from Campaign Play › Sparks and › Blacksmith Andre's Shop]
-  >
-  > Players may expect to meet over several play sessions. One section is a convenient amount of play for a session.
-
-  Merged entry replacing both "Facing the Abyss" entries (delete lines 2764–2808; replace lines 2548–2550 with):
-
-  > ### Facing the Abyss - Dark Souls (Darkroot)
-  >
-  > This campaign requires the core set and the Darkroot expansion. Use encounters from the Darkroot expansion when setting up each section; players may add the Explorers and Characters expansions if available. Section One ends with the named Level 3 encounter Hydra Lake; the section is completed when that encounter is *cleared*.
-
-  (Section lists as at lines 2552–2592: Section Two is Bonfire Tile, Level 1, Level 2, Level 3, Level 3, Great Grey Wolf Sif (main-boss).)
-
-  Replacement for A Hollow Pursuit requirements (line 2720): "This campaign requires the core set and the Explorers expansion; players may add the Characters expansion if available." Replacement for line 2748: "Gallery of the Hidden Warrior — do not place an *ambush* card beside this tile; its chest is a Voracious Mimic. The section is completed when the mimic is slain."
-
-  Footnote to attach to each doubled Gargoyle line (The First Journey, Ambush Lies Ahead, Demon Hunting): "* The two Gargoyle encounters are fought back-to-back as one boss encounter; see Boss Special Rules › Twin Gargoyles."
-
-  The Undead Colosseum, Section Six (lines 2874–2880), corrected list: Bonfire Tile · Level 3 Encounter - Desolate Cemetery · Level 4 Encounter · Vordt of the Boreal Valley (mega-boss). Section Two, line 2830: "Bonfire Tile".
-
-  Big Game Hunting, line 3018: retain "The Last Giant (mega-boss)" and add "The Last Giant (The Last Giant)" to Game Components › Mega-bosses (after line 535). Boss Special Rules entry for The Last Giant: BLOCKED — source booklet not supplied (CMP-0005).
-
-  Spelling and label corrections, applied throughout CAMPAIGNS and Game Components: Anor Londo; Lower Earthen Peak; Xanthous King Jeremiah (line 557 and all campaign lines); "Do not place invader tokens"; Old Dragonslayer; Invader Spire (The Gauntlet, Section Three); "Section Four - Haunting Warrior"; "Section Five - Dark Champion"; "Gaping Dragon (mega-boss)"; boss-rank labels normalised to "(mini-boss)", "(main-boss)", "(mega-boss)" in every list; "Great Grey Wolf Sif" used in every list.
-- Design rationale: The Setup paragraph is rewritten to describe what the CAMPAIGNS chapter actually contains and to state the one procedure the chapter never gives: how a section is laid out and ended. The first Facing the Abyss copy is kept because its section lists match the Darkroot booklet; the two preambles are merged so neither requirement nor encounter-source statement is lost. The doubled Gargoyle is confirmed deliberate by the Core rulebook and is kept, with the back-to-back rule made explicit in CMP-0005. The Last Giant is a published mega-boss and is kept in the campaign; adding it to the component list is the smaller change. Official spellings are taken from the Core and Phantoms booklets; "Earthen" follows the game location, since the Explorers booklet itself prints the typo.
-- Mechanical impact: Section completion now explicitly grants a free rest and restock but no spark when a section ends in a named encounter (Facing the Abyss Section One, Playing with Fire Section One, A Hollow Pursuit Section Two). The Undead Colosseum gains its missing Level 4 encounter before Vordt.
-- Follow-on changes required: Delete the empty headings at lines 2400 and 3036. Regenerate TOC (seven campaigns are missing from it). CMP-0022 adds The Undead Colosseum's special rules; CMP-0021 adds Kalameet's campaign section. Demon Hunting Section One deliberately has no Bonfire Tile (line 2608 explains); confirm with the author.
-- Status: approved (Gate 1, 2026-11-10 — see 05_gate1_decisions.md)
-
----
+- Read `04_completion_backlog.md` lines 750–791 (approved at Gate 1; apply untagged, subject to 05_gate1_decisions.md).
 
 ---
 
 ### [CMP-0010] Gameplay › Souls / Campaign Play › Encounter Soul Rewards — Reduced soul reward — Proposed Completion
-- Current state: Souls (line 1391): "Upon successfully *clearing* an encounter that has been previously *cleared*, reward the reduced *soul* reward to each character." Encounter Resolution (line 1327): "Characters gain *soul* rewards but not treasure." Campaign Play (line 2245): "repeated for *souls* rewards but not treasure rewards, just as in the basic game." Neither Soul Reward Table (lines 1401–1439) nor the Campaign Soul Reward Table (lines 2247–2285) has a reduced column; no value is ever given.
-- Proposed completion:
-
-  Replacement for line 1391: "Upon successfully *clearing* an encounter that has been previously *cleared*, reward the reduced *soul* reward to each character. The reduced reward is half the full reward, rounded down."
-
-  Replacement for the Soul Reward Table:
-
-  > ### Soul Reward Table
-  >
-  > | Encounter | Full reward per character | Reduced reward per character (already *cleared*) |
-  > |---|---|---|
-  > | Level 1 Encounter and Standard Invaders | 3 | 1 |
-  > | Level 2 Encounter and Advanced Invaders | 4 | 2 |
-  > | Level 3 Encounter | 5 | 2 |
-  > | Level 4 Encounter and Bosses | 6 | 3 |
-  >
-  > Invaders and bosses are never *cleared* twice; their reduced reward is never used.
-
-  Replacement for the Campaign Soul Reward Table:
-
-  > ### Campaign Soul Reward Table
-  >
-  > | Encounter | Full reward per character | Reduced reward per character (already *cleared*) |
-  > |---|---|---|
-  > | Level 1 Encounter and Standard Invaders | 2 | 1 |
-  > | Level 2 Encounter and Advanced Invaders | 3 | 1 |
-  > | Level 3 Encounter | 4 | 2 |
-  > | Level 4 Encounter and Bosses | 5 | 2 |
-
-  Replacement for Encounter Resolution line 1327: "Characters gain the reduced *soul* reward but no treasure."
-- Design rationale: Half rounded down is chosen over "one fewer" because the manuscript's stated aim is to remove grinding: at one fewer, repeating a Level 3 encounter would pay 4 souls per character, barely less than clearing it. Half makes repeats worth taking only when a character must retrieve dropped souls or wants a safe route to the boss. Rounding down keeps every value a whole number and never reduces a reward to zero. The alternative (one fewer: 2/3/4/5 and 1/2/3/4) is recorded here for the editor's decision.
-- Mechanical impact: Repeat clears pay 1–3 souls (basic) or 1–2 souls (campaign) per character. Dropped-soul recovery is unaffected.
-- Follow-on changes required: F.A.Q. answer on reduced rewards (CMP-0003) matches. Line 2243 ("reduced by one compared to the basic game") stands and refers to the full reward only; add "The reduced reward is half the campaign full reward, rounded down" after it.
-- Status: approved (Gate 1, 2026-11-10 — see 05_gate1_decisions.md)
-
----
+- Read `04_completion_backlog.md` lines 877–914 (approved at Gate 1; apply untagged, subject to 05_gate1_decisions.md).
 
 ---
 

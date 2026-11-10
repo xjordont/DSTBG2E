@@ -550,32 +550,7 @@ Columns: ID · Issue type · Severity · Tag · Location · Current text · Prop
 ## Completion entries that apply (1) — approved at Gate 1
 
 ### [CMP-0001] Characters › Character Tokens › Estus Flask — Proposed Completion
-- Current state: The TOC (line 65) lists an "Estus Flask" sub-heading under Character Tokens; no such sub-section exists in the body. The rule survives only in the DOCX page footer ("The character may flip their estus flask token to the used side as a major action to remove all damage cubes from their endurance bar. Stamina cubes are not removed."). The Character Tokens paragraph (line 793) says "There are three different types of character tokens: heroic actions, luck, and estus flask", then "Each character has one of each of the four following tokens", then lists Heroic Action, Luck and Ember; it also says ember tokens "should be placed in the condition token supply", while Character Setup step 5 (line 997) says "Place an ember token beside the character's board". The Character Turn (line 1830) calls the action "Drink Estus: Restore all of the character's health".
-- Proposed completion:
-
-  Replacement for the Character Tokens paragraph (line 793):
-
-  > ## Character Tokens
-  >
-  > There are four types of character token: *heroic action*, *luck*, *estus flask* and *ember*. Each token has a ready side and a used side. The ready side is printed in brighter colours than the used side. A token's effect is available only while its ready side is face up. When a character uses a token's effect, the token must be flipped to its used side.
-  >
-  > Each character has one token of each type. The *heroic action*, *luck* and *estus flask* tokens begin the game ready, in their slots on the character dashboard. The *ember* token begins the game beside the dashboard and is placed in its slot only when the character becomes *embered* (see Embering).
-
-  New sub-section, inserted after *Luck* and before *Ember* (after line 801):
-
-  > ### *Estus Flask*
-  >
-  > A character may flip their *estus flask* token to the used side as a major action (*Drink Estus*) to remove all damage cubes from their endurance bar. Stamina cubes are not removed. *Hollow* markers are not removed. Condition tokens are not removed.
-  >
-  > The *estus flask* token is not restored when an encounter is *cleared*. It is flipped to the ready side only when the characters rest at the *bonfire*.
-
-  Consequential edit to Character Turn › Major Action (line 1830): "*Drink Estus*: Remove all damage cubes from the endurance bar; flip *estus flask* face-down."
-- Design rationale: The footer text is the only surviving source and already matches the manuscript's terminology (damage cubes, endurance bar, major action). Making the Ember token the fourth type resolves the "three types / four tokens" contradiction without changing play. "Health" in the Major Action list is replaced by the manuscript's own unit (damage cubes) so the action text and the token text agree.
-- Mechanical impact: None on play. Clarifies that Estus does not clear hollow markers or conditions (both already stated indirectly in Death & Hollowing and Conditions).
-- Follow-on changes required: Delete the DOCX footer paragraph. Character Setup step 5 (line 997) stands. Add "Estus flask" to the Glossary (CMP-0002). Regenerate TOC.
-- Status: approved (Gate 1, 2026-11-10 — see 05_gate1_decisions.md)
-
----
+- Read `04_completion_backlog.md` lines 8–35 (approved at Gate 1; apply untagged, subject to 05_gate1_decisions.md).
 
 ---
 

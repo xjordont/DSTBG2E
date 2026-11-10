@@ -502,52 +502,12 @@ Columns: ID · Issue type · Severity · Tag · Location · Current text · Prop
 ## Completion entries that apply (2) — approved at Gate 1
 
 ### [CMP-0006] Gameplay › Death & Hollowing — "Lost" state — Proposed Completion
-- Current state: "Lost" is used but never defined: "keeping them from being *lost* to the *hollow*" (line 1890); "Resting at the *bonfire* also revives *lost* characters who have been removed from play due to dying while *hollow*" (line 1906); "The players lose the campaign if all characters are lost to the hollow without a *spark* to revive them" (line 2235). Death & Hollowing (line 1223) and Encounter Resolution (line 1305) say that when a *hollow* character dies the encounter is *failed* and the characters must spend a *spark* and rest. Setup After the main-boss step 11 (line 1195) says that in the mega-boss encounter "If a character dies they are permanently removed from play." Objective & Loss Conditions (line 1201) defines loss only as "all characters are dead and there are no remaining sparks".
-- Proposed completion:
-
-  New bullet group appended to Death & Hollowing (after line 1223):
-
-  > - A *hollow* character who dies is *lost*.
-  >
-  >   - A *lost* character is removed from play: place the model on its side beside the *bonfire* tile, drop its *souls* on the encounter tile and discard its *ember* token as for any death.
-  >
-  >   - A *lost* character is not revived by *clearing* an encounter. A *lost* character is revived only when the characters rest at the *bonfire*; resting removes the *hollow* markers as usual.
-  >
-  >   - When a character becomes *lost*, the current encounter is *failed* at once and the characters must rest at the *bonfire* (see Encounter Resolution). If the *spark* dial shows zero, the players lose the game (see Objective & Loss Conditions).
-  >
-  >   - In a mega-boss encounter no rest follows: a character who dies or is *lost* in a mega-boss encounter is removed from play for the rest of the game.
-
-  Replacement for the Encounter Resolution bullet at line 1305: "Encounters are *failed* if any *hollow* character dies; that character is *lost*."
-
-  Replacement sentence for Returning to the Bonfire line 1906: "Resting at the *bonfire* also revives *lost* characters: characters who died while *hollow* and were removed from play."
-
-  Addition to Objective & Loss Conditions (line 1201), as a second paragraph: "The players also lose if the characters are required to rest at the *bonfire* when the *spark* dial shows zero, and if every character is removed from play during a mega-boss encounter."
-- Design rationale: The definition takes the three uses of "lost" as given and makes them one state. It keeps the manuscript's rule that a *hollow* death fails the encounter, so "lost" is a label for the interval between that death and the forced rest, and for permanent removal in the mega-boss fight. The zero-spark case is the one gap the body leaves (the forced rest cannot be paid); the ruling follows the manuscript's own loss condition rather than letting survivors continue without the lost character.
-- Mechanical impact: None where sparks remain. With zero sparks, a hollow death now ends the game explicitly; previously the outcome was undefined.
-- Follow-on changes required: Glossary entry "Lost" (CMP-0002) loses its [PROPOSED] tag on approval. F.A.Q. entries on forced rest and mega-boss death (CMP-0003) align. CMP-0020 carries the zero-spark rule into Encounter Recovery.
-- Status: approved (Gate 1, 2026-11-10 — see 05_gate1_decisions.md)
-
----
+- Read `04_completion_backlog.md` lines 683–710 (approved at Gate 1; apply untagged, subject to 05_gate1_decisions.md).
 
 ---
 
 ### [CMP-0019] Gameplay › Encounter Resolution / Returning to the Bonfire › Resuming Exploration — Reset and skip reconciliation — Proposed Completion
-- Current state: Encounter Resolution (lines 1315–1319) marks a *cleared* encounter card with a black cube, says *cleared* encounters "are reset when characters rest at the *bonfire*" and "may be skipped thereafter"; *failed* encounters "flip their encounter card face-down", "are reset when characters rest" and "may not be skipped once reset" (lines 1335–1339). Resuming Exploration (line 1963) says "flip all cleared and failed encounter tiles face-down to reset them… If the encounter card on the tile is face-down (*cleared* or *failed*), they must flip the card face-up and proceed with fighting the enemies of that encounter." Read together, a *cleared* encounter after a rest both may be skipped and must be fought. Encounter Start step 2 (line 1261) allows skipping *cleared* encounters for two stamina each.
-- Proposed completion (replacement for Resuming Exploration, line 1963):
-
-  > ## Resuming Exploration
-  >
-  > When the characters have finished resting at the *bonfire*, reset the encounter tiles before setting out: turn every face-up encounter card face down; leave the black cube on each card that was marked *cleared*; remove any enemy models left on the tiles; do not move terrain tokens (chests, gravestones, barrels, pillars, traps), but turn trap tokens face down and restore barrels.
-  >
-  > The characters then move to the encounter tile nearest the *bonfire* tile and advance one tile at a time. On entering a tile, turn its encounter card face up. If the card carries a black cube, the encounter was *cleared* earlier: the characters may either skip it, paying two stamina each as Encounter Start describes, or fight it again for the reduced *soul* reward and no treasure. If the card carries no black cube, the encounter was *failed* or never fought and must be fought. After each tile is resolved the characters continue towards the boss tile, or use the fog gate shortcut if it has been placed on the *bonfire* tile.
-
-  Replacement for Encounter Resolution bullet at line 1335: "*Failed* encounters have their encounter card turned face down and any black cube removed."
-- Design rationale: The two passages are made to say one thing: resting resets every encounter's enemies, but the *cleared* mark survives and keeps the skip option open; failing an encounter strips the mark. This is the reading under which both Encounter Resolution bullets and the Encounter Start skip rule remain true, and it matches the manuscript's anti-grinding design (a cleared tile is a toll, not a wall).
-- Mechanical impact: *Failed* encounters lose their *cleared* status (previously undefined). Otherwise none.
-- Follow-on changes required: F.A.Q. entry on skipping after a rest (CMP-0003) matches. Delete the empty heading at line 1959.
-- Status: approved (Gate 1, 2026-11-10 — see 05_gate1_decisions.md)
-
----
+- Read `04_completion_backlog.md` lines 1128–1145 (approved at Gate 1; apply untagged, subject to 05_gate1_decisions.md).
 
 ---
 

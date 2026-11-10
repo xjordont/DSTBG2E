@@ -285,105 +285,12 @@ Columns: ID · Issue type · Severity · Tag · Location · Current text · Prop
 ## Completion entries that apply (2) — approved at Gate 1
 
 ### [CMP-0009] PLAYER VS PLAYER (chapter) — Proposed Completion
-- Current state: Lines 3038–3094: twenty-seven bullets and a six-line dodge-difficulty list. No prose. Gaps: how a character attacks a character (which defence rolls, which dodge difficulty, how damage is placed); parry and riposte; pushes; conditions; what "outermost available node" means; what a trap token does in PvP; simultaneous death; how the "+1 attack damage" carry-over is tracked; ties in threat; what the champion is; "intimate victor" (line 1201) for "ultimate". The bullet "First turn token is given to the character with the highest threat value" (line 3056) duplicates the turn-order bullet (see CMP-0011).
-- Proposed completion (full chapter; the manuscript's bullets are the skeleton):
-
-  > # PLAYER VS PLAYER
-  >
-  > Player versus player (PvP) is an optional contest fought between the characters after each boss is defeated. The players must agree during setup whether PvP encounters will be played. If they are, a PvP encounter is fought after every mini-boss, main-boss and mega-boss encounter that is won.
-  >
-  > ## Setup
-  >
-  > 1. Remove every enemy model, wound token and trap token from the boss encounter tile(s). Terrain tokens remain.
-  > 2. Restore every surviving character as if they had rested at the *bonfire*: remove all damage cubes, stamina cubes, *hollow* markers and condition tokens, and flip *luck*, *estus flask* and *heroic action* tokens to the ready side. *Ember* tokens are kept.
-  > 3. Characters who died in the boss encounter take no part in the PvP encounter. Summons and invaders take no part.
-  > 4. Place each character on a different corner node of the boss encounter tile(s). The character with the highest *threat* chooses first, then the next highest, and so on.
-  > 5. The *aggro* token is not used.
-  > 6. Set the trap tokens face down beside the tile, shuffled.
-  >
-  > ## Turn Order
-  >
-  > Characters take turns one at a time in descending *threat* order. If two characters share a *threat* value, the players decide their order before the first turn; if they cannot agree, decide at random. The order is kept for the whole PvP encounter. After the last character has taken a turn, the first takes the next, and so on until one character remains.
-  >
-  > ## Character Turns
-  >
-  > A character's turn is unchanged from the basic rules: recover one stamina; take any minor actions (*Walk*, *Run*, *Equip*, *Heroic Action*); take one major action (*Attack*, *Rest*, *Drink Estus* or *Ember*). A character may not leave the tile(s). The limit of one spell attack option per turn applies.
-  >
-  > After a character's major action, that character's player draws one trap token and places it face down on an outermost available node. The outermost available nodes are the nodes along the tile's edges that contain no model, no terrain token and no trap token; when every edge node is occupied, the next ring of nodes inward is the outermost. If no trap token remains, none is placed.
-  >
-  > ## Attacking a Character
-  >
-  > A character attacks another character exactly as they would attack an enemy: choose an attack option, pay its stamina cost, nominate a character within the attack's range as the target, roll the dice, apply modifiers, and use any rerolls (two-handed, *luck*, equipment). The result is the attack value. Attack options with the *shaft* icon may not target a character on the attacker's node. An *AoE* attack option targets every other character on the chosen node; roll once and resolve each defence separately. A *scaled* weapon's +1 and any PvP victory bonus (below) apply.
-  >
-  > The target then defends as against an enemy attack, choosing one of the following before any dice are rolled.
-  >
-  > - *Block* or *resist*: roll the block dice (against a physical attack option) or resist dice (against a magical attack option) of every equipped card; the defence total is the sum of the two highest dice. The defender suffers damage equal to the attack value minus the defence total, to a minimum of zero. The defender is hit.
-  > - *Dodge*: pay one stamina (or three stamina for one additional die) and roll dodge dice against the dodge difficulty given by the table below. On a success the attack misses entirely and the defender must move to an adjacent node. On a failure the defender is hit and rolls only their armour card's block or resist dice.
-  > - *Parry*: pay one stamina. A *parry* is allowed only if the defender has a shield in the left weapon slot, shares a node with the attacker, and the attack option has no push icon and is not *AoE*. Roll dodge dice against the table below. On a success the attack misses, the attacker receives a *stagger* token and the defender may at once make one *riposte* with any attack option of the weapon in their right weapon slot, paying its stamina cost; the attacker defends against the *riposte* by blocking, resisting or dodging but may not *parry* it. On a failure the defender suffers the full attack value, with no defence roll, and receives a *stagger* token.
-  > - Do nothing: the defender suffers the full attack value and is hit.
-  >
-  > Damage suffered is placed as damage cubes on the defender's endurance bar. An *embered* defender reduces damage of three or more from a single attack by one, as usual.
-  >
-  > **Dodge difficulty in PvP.** The dodge difficulty of a character's attack option is set by its stamina cost:
-  >
-  > | Stamina cost of the attack option | Dodge difficulty |
-  > |---|---|
-  > | 0 | 4 |
-  > | 1 | 3 |
-  > | 2 | 2 |
-  > | 3 | 1 |
-  > | 4 | 1 |
-  > | 5 or more | 0 |
-  >
-  > A *riposte* uses the dodge difficulty of the attack option chosen for it.
-  >
-  > ## Pushes and Conditions
-  >
-  > An attack option with the push icon pushes each character it hits one node directly away from the attacker, as Pushing describes; a character is not pushed into a node containing a gravestone or chest, and a barrel in the destination node is destroyed. Condition icons on attack options place the matching condition token on each character hit. Conditions on characters are resolved as Combat Basics › Conditions describes: *bleed* deals three damage when a second token would be placed; *poison* deals damage at the end of the character's turn; *frostbite* stops stamina recovery; *stagger* subtracts one from every roll total.
-  >
-  > ## Traps
-  >
-  > When a character moves onto, dodges onto, shifts onto or is pushed onto a node containing a face-down trap token, flip the token. If it shows a trap, the character must attempt to *dodge* against the trap's printed dodge difficulty, paying one stamina as usual; a character who fails, or who cannot pay, dies. A trap token showing nothing has no effect. A flipped trap token stays on its node and does not trigger again.
-  >
-  > ## Death
-  >
-  > A character whose endurance bar is full of damage cubes, or who fails to dodge a trap, dies and is removed from the tile. Death in PvP has no cost: *souls* are not dropped, the *ember* token is not removed, and no *hollow* markers are placed. The character is restored with the others at the end of the PvP encounter.
-  >
-  > ## Victory
-  >
-  > The last character on the tile wins the PvP encounter. If the last two or more characters die at the same time, no character wins.
-  >
-  > The winner of a PvP encounter fought after a mini-boss or a non-final main-boss gains a PvP victory bonus: place one wound token beside the winner's dashboard. In every later PvP encounter the character adds one to the attack value of each attack option per wound token beside their dashboard. The bonus has no effect outside PvP and is cumulative.
-  >
-  > The winner of the PvP encounter fought after the final boss is the champion of the game. The players still share the victory over the final boss.
-  >
-  > ## After the PvP Encounter
-  >
-  > Return all trap tokens to the supply. Place every character, including those who died, on the *bonfire* tile and rest there without spending a *spark*, as after a boss. Remove the wound tokens used to mark PvP victory bonuses only when the game ends.
-
-  Consequential edit to Gameplay › Objective & Loss Conditions (line 1201): "…to determine a single ultimate victor." Delete the bullet "*First* *turn* token is given to the character with the highest threat value" (line 3056; see CMP-0011).
-- Design rationale: Every mechanic is the manuscript's own, applied symmetrically: the defender rolls exactly as against an enemy (two highest dice; armour-only after a failed dodge; parry conditions and stagger results from Enemy Turn › Parry & Riposte), and the attacker's fixed enemy-style dodge difficulty is replaced by the manuscript's stamina-cost table. The outermost-node ring rule gives the trap bullet a definite meaning that shrinks the arena and ends stalemates. Simultaneous death yields no winner so the carry-over bonus cannot be awarded twice. The bonus is tracked with a wound token because wound tokens are otherwise unused on characters and no new component is needed. "A riposte may not be parried" prevents an endless chain of parries between two shield-bearers.
-- Mechanical impact: PvP becomes fully playable. The only numeric additions are the trap death rule (already in the bullets) and the cumulative +1 bonus tracking. Terrain is kept on the tile (the bullets remove only enemies and traps), which keeps gravestones and chests as cover.
-- Follow-on changes required: Delete the empty heading at line 3096. Add "Resting at the *bonfire*" after PvP to Returning to the Bonfire line 1908 (already states it). Glossary entries Dodge difficulty and Riposte (CMP-0002) reference this chapter. If the editor prefers a dedicated marker to the wound token, add "4x PvP victory tokens" to Game Components.
-- Status: approved (Gate 1, 2026-11-10 — see 05_gate1_decisions.md)
-
----
+- Read `04_completion_backlog.md` lines 792–876 (approved at Gate 1; apply untagged, subject to 05_gate1_decisions.md).
 
 ---
 
 ### [CMP-0011] Gameplay › Encounter Start step 9 and Player vs Player — "First player token" — Proposed Completion
-- Current state: Encounter Start step 9 (line 1277): "Place the *first player* token on the character with the highest threat value." Player vs Player (line 3056): "*First* *turn* token is given to the character with the highest threat value." No such token is listed in Game Components › Tokens & Terrain Elements (lines 679–723). Turn order is fixed by *threat* in both places (lines 1289, 3058), so the token has no function.
-- Proposed completion: Remove the token. Delete Encounter Start step 9 and the PvP bullet at line 3056, and replace Encounter Start step 8 (line 1275) with:
-
-  > 8. Place the *aggro* token on the character with the highest *threat* value. That character takes the first character turn of the encounter; ties in *threat* are settled by the players before the first turn and the order is kept for the encounter.
-
-  Replacement for PvP turn-order bullet (line 3058), as drafted in CMP-0009: "Characters take turns one at a time in descending *threat* order. If two characters share a *threat* value, the players decide their order before the first turn; if they cannot agree, decide at random."
-- Design rationale: Removal is recommended over definition. Threat order already fixes the first character, so a first-player token would duplicate information the dashboards carry; the Core rulebook's First Activation token existed only because its turn order went clockwise, which this edition has abandoned. Defining the token would also require adding a component. The tie rule supplies the one thing the token's position would have recorded.
-- Mechanical impact: None.
-- Follow-on changes required: Remove "first player" from the italicised-term inventory; no Glossary entry. Renumber Encounter Start.
-- Status: approved (Gate 1, 2026-11-10 — see 05_gate1_decisions.md)
-
----
+- Read `04_completion_backlog.md` lines 915–928 (approved at Gate 1; apply untagged, subject to 05_gate1_decisions.md).
 
 ---
 

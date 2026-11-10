@@ -212,14 +212,7 @@ Columns: ID · Issue type · Severity · Tag · Location · Current text · Prop
 ## Completion entries that apply (1) — approved at Gate 1
 
 ### [CMP-0015] CRYSTAL LIZARDS / Treasure Rewards — Reward card name — Proposed Completion
-- Current state: Treasure Rewards (line 1477) awards "a Titanite Chunk card" for killing a *crystal lizard*; Crystal Lizards (line 2055) awards "one Titanite Scale card". The Iron Keep expansion contains three Titanite Scale cards; Titanite Chunk is a Community Update Pack card with STR 25 / DEX 25 requirements (CMP-0004).
-- Proposed completion: Titanite Scale is the reward. Replacement for line 1477: "If playing with the option of *crystal lizards*, award a Titanite Scale card to each character who killed a *crystal lizard* during the encounter, as the Crystal Lizards chapter describes." Addition to the Crystal Lizards chapter after line 2055: "The Iron Keep expansion supplies three Titanite Scale cards. When none remains, ignore the crystal lizard symbol on encounter cards; no further *crystal lizards* are placed."
-- Design rationale: Titanite Scale is the physical card in the Iron Keep box and the name the chapter that owns the rule uses. Titanite Chunk carries tier two requirements that a low-stat character who killed the lizard does not necessarily meet, and the Community Update Pack defines it as a shop-sorted upgrade, not a reward. The three-card limit follows the Iron Keep booklet and prevents an undefined state when the supply runs out.
-- Mechanical impact: Lizard rewards are capped at three per game.
-- Follow-on changes required: Glossary entry Crystal lizard and Titanite (CMP-0002) name Titanite Scale. Delete the empty heading at line 2059.
-- Status: approved (Gate 1, 2026-11-10 — see 05_gate1_decisions.md)
-
----
+- Read `04_completion_backlog.md` lines 1061–1070 (approved at Gate 1; apply untagged, subject to 05_gate1_decisions.md).
 
 ---
 

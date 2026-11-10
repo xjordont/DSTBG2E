@@ -424,88 +424,17 @@ Columns: ID · Issue type · Severity · Tag · Location · Current text · Prop
 ## Completion entries that apply (3) — approved at Gate 1
 
 ### [CMP-0008] Campaign Play › Setup and CAMPAIGNS list corrections — Proposed Completion
-- Current state: Campaign Play › Setup (lines 2221–2225) says "the included campaigns are all three sections long" and "This rule-set includes three campaigns which require only the components available in the core set"; CAMPAIGNS (lines 2352–3034) lists thirteen campaigns of three to six sections, two of which need only the core set. "Facing the Abyss" appears twice (lines 2548 and 2764) with different preambles and a different Section Two (the first copy matches the Darkroot booklet; the second has Level 2 where Level 3 belongs). "A Hollow Pursuit" (line 2720) repeats Demon Hunting's requirements line ("core set and Asylum Demon expansion") although it is the Explorers campaign. Spellings: "Andor Londo" (2384, 2486, 2646; official: Anor Londo), "Earthern" (2736; the game location is Earthen Peak), "Jeramiah" (557) against "Jeremiah" (2492, 2528; the Phantoms booklet uses Jeremiah), "Do no place" (2456, 2504), "Old Dragon Slayer" (2734), "Bonfire Tiles" (2830), "Gaping Dragon(Mega Boss)" (2944), "Section Four- " and "Section Five Dark Champion" (2854, 2864). The Gauntlet's Section Three is titled "Invader Ruins" (2534) but the Phantoms booklet names it "Invader Spire". "Gargoyle (Mini-Boss)" is listed twice in three campaigns (2366–2368, 2468–2470, 2616–2618): the Core rulebook (p. 35) and the Phantoms booklet (p. 17) list the Gargoyle twice deliberately, with a footnote rule. "The Last Giant (Mega Boss)" (line 3018) is not in Game Components › Mega-bosses; The Last Giant is a published mega-boss expansion whose booklet was not supplied. The Undead Colosseum's Section Six (lines 2874–2880) omits the "Level 4 Encounter" that the Executioner's Chariot booklet (p. 19) lists before Vordt. "Ornstein & Smough (main-boss)" is listed as one boss (correct; see CMP-0005). Boss-rank labels vary ("Mini-Boss", "Mini Boss", "main-boss", "Main Boss", "Mega Boss").
-- Proposed completion:
-
-  Replacement for Campaign Play › Setup (lines 2219–2225):
-
-  > ## Setup
-  >
-  > The setup for a campaign is the same as for the basic game except as stated in this chapter. A campaign is divided into sections. Each section lists, in order outward from the *bonfire* tile, the tiles to lay out: the *bonfire* tile, a number of encounter tiles with their encounter levels, and one or more bosses. Sections vary in length. The campaigns in this book are between three and six sections long, and some sections contain more than one boss or an encounter with special rules.
-  >
-  > When starting a campaign, the players choose one of the thirteen campaigns in CAMPAIGNS. Two of them, The First Journey and The Coiled Sword, require only the core set; each of the others states the expansions it requires.
-  >
-  > Lay out each section as Encounter Setup describes, using the number of encounter tiles the section lists and dealing encounter cards of the levels listed, in order from the *bonfire* tile. Where a section names an encounter, use that encounter card for that tile. Where a section lists a boss twice, see Boss Special Rules › Twin Gargoyles.
-  >
-  > A section is completed when its final boss is defeated or, for a section that ends in a named encounter instead of a boss, when that encounter is *cleared*. Completing a section restocks the shops and allows the characters to rest at the *bonfire* without spending a *spark*. A *spark* is gained only for a boss defeated. When a section is completed, perform Setup After the mini-boss for the next section, taking the next section's list in place of steps 4 and 6; for a section ending in a mega-boss, perform Setup After the main-boss instead. [PROPOSED — the section-completion sentence is inferred from Campaign Play › Sparks and › Blacksmith Andre's Shop]
-  >
-  > Players may expect to meet over several play sessions. One section is a convenient amount of play for a session.
-
-  Merged entry replacing both "Facing the Abyss" entries (delete lines 2764–2808; replace lines 2548–2550 with):
-
-  > ### Facing the Abyss - Dark Souls (Darkroot)
-  >
-  > This campaign requires the core set and the Darkroot expansion. Use encounters from the Darkroot expansion when setting up each section; players may add the Explorers and Characters expansions if available. Section One ends with the named Level 3 encounter Hydra Lake; the section is completed when that encounter is *cleared*.
-
-  (Section lists as at lines 2552–2592: Section Two is Bonfire Tile, Level 1, Level 2, Level 3, Level 3, Great Grey Wolf Sif (main-boss).)
-
-  Replacement for A Hollow Pursuit requirements (line 2720): "This campaign requires the core set and the Explorers expansion; players may add the Characters expansion if available." Replacement for line 2748: "Gallery of the Hidden Warrior — do not place an *ambush* card beside this tile; its chest is a Voracious Mimic. The section is completed when the mimic is slain."
-
-  Footnote to attach to each doubled Gargoyle line (The First Journey, Ambush Lies Ahead, Demon Hunting): "* The two Gargoyle encounters are fought back-to-back as one boss encounter; see Boss Special Rules › Twin Gargoyles."
-
-  The Undead Colosseum, Section Six (lines 2874–2880), corrected list: Bonfire Tile · Level 3 Encounter - Desolate Cemetery · Level 4 Encounter · Vordt of the Boreal Valley (mega-boss). Section Two, line 2830: "Bonfire Tile".
-
-  Big Game Hunting, line 3018: retain "The Last Giant (mega-boss)" and add "The Last Giant (The Last Giant)" to Game Components › Mega-bosses (after line 535). Boss Special Rules entry for The Last Giant: BLOCKED — source booklet not supplied (CMP-0005).
-
-  Spelling and label corrections, applied throughout CAMPAIGNS and Game Components: Anor Londo; Lower Earthen Peak; Xanthous King Jeremiah (line 557 and all campaign lines); "Do not place invader tokens"; Old Dragonslayer; Invader Spire (The Gauntlet, Section Three); "Section Four - Haunting Warrior"; "Section Five - Dark Champion"; "Gaping Dragon (mega-boss)"; boss-rank labels normalised to "(mini-boss)", "(main-boss)", "(mega-boss)" in every list; "Great Grey Wolf Sif" used in every list.
-- Design rationale: The Setup paragraph is rewritten to describe what the CAMPAIGNS chapter actually contains and to state the one procedure the chapter never gives: how a section is laid out and ended. The first Facing the Abyss copy is kept because its section lists match the Darkroot booklet; the two preambles are merged so neither requirement nor encounter-source statement is lost. The doubled Gargoyle is confirmed deliberate by the Core rulebook and is kept, with the back-to-back rule made explicit in CMP-0005. The Last Giant is a published mega-boss and is kept in the campaign; adding it to the component list is the smaller change. Official spellings are taken from the Core and Phantoms booklets; "Earthen" follows the game location, since the Explorers booklet itself prints the typo.
-- Mechanical impact: Section completion now explicitly grants a free rest and restock but no spark when a section ends in a named encounter (Facing the Abyss Section One, Playing with Fire Section One, A Hollow Pursuit Section Two). The Undead Colosseum gains its missing Level 4 encounter before Vordt.
-- Follow-on changes required: Delete the empty headings at lines 2400 and 3036. Regenerate TOC (seven campaigns are missing from it). CMP-0022 adds The Undead Colosseum's special rules; CMP-0021 adds Kalameet's campaign section. Demon Hunting Section One deliberately has no Bonfire Tile (line 2608 explains); confirm with the author.
-- Status: approved (Gate 1, 2026-11-10 — see 05_gate1_decisions.md)
-
----
+- Read `04_completion_backlog.md` lines 750–791 (approved at Gate 1; apply untagged, subject to 05_gate1_decisions.md).
 
 ---
 
 ### [CMP-0021] CAMPAIGNS › The First Journey — Section Four "Bathed in Flame" (Black Dragon Kalameet) — Proposed Completion
-- Current state: Black Dragon Kalameet is listed in Game Components › Mega-bosses (line 527) and its *calamity* condition is in Combat Basics, but no campaign uses it. The Kalameet booklet (pp. 14–15) defines "Bathed in Flame": a fourth section appended to The First Journey.
-- Proposed completion (insert after The First Journey, Section Three, line 2398):
-
-  > - Section Four - Royal Wood (optional; requires the Black Dragon Kalameet expansion)
-  >
-  >   - Bonfire Tile
-  >
-  >   - Level 3 Encounter
-  >
-  >   - Level 3 Encounter
-  >
-  >   - Level 4 Encounter
-  >
-  >   - Black Dragon Kalameet (mega-boss)
-  >
-  > Section Four is played only if the players agreed during setup to add a mega-boss. Lay the mega-boss game board with its Level 4 side face up and its doorway aligned with the doorway of the second Level 3 encounter tile, not with the *bonfire* tile. When the Level 4 encounter is *cleared*, flip the game board to its mega-boss side. The Level 4 encounter does not reset when the characters rest at the *bonfire*; once *cleared* it stays *cleared*. Use Darkroot expansion encounter cards for the two Level 3 encounters if the expansion is available; otherwise use core set cards.
-- Design rationale: Direct adaptation of the supplied booklet's campaign section to the manuscript's list format and boss-rank labels. The Darkroot encounter note is added because the section is set in the Royal Wood and the Darkroot campaign already uses that location; it is optional so the section stays playable with core and Kalameet only.
-- Mechanical impact: Adds one optional section; no rules change.
-- Follow-on changes required: The Setup paragraph's "thirteen campaigns" count is unchanged (the section is an extension). Boss Special Rules › Black Dragon Kalameet (CMP-0005) and Level 4 rules (CMP-0023) apply.
-- Status: approved (Gate 1, 2026-11-10 — see 05_gate1_decisions.md)
-
----
+- Read `04_completion_backlog.md` lines 1156–1179 (approved at Gate 1; apply untagged, subject to 05_gate1_decisions.md).
 
 ---
 
 ### [CMP-0022] CAMPAIGNS › The Undead Colosseum — Campaign special rules — Proposed Completion
-- Current state: The entry (lines 2810–2880) lists requirements and sections only. The Executioner's Chariot booklet (p. 18) gives the campaign three special rules that the manuscript omits: encounter cards are never turned face down when the characters rest; a defeated encounter can never be fought again; every defeated encounter awards a flat *soul* reward regardless of level; Level 1–3 encounters are drawn from a shared core, Explorers and Darkroot deck and Level 4 encounters from a shared Vordt and Chariot deck; each section's named encounter comes from the Chariot expansion's six encounter cards.
-- Proposed completion (replacement for the preamble at line 2812):
-
-  > This campaign requires the core set and the Darkroot, Vordt of the Boreal Valley and Executioner's Chariot expansions; players may add the Explorers and Characters expansions if available. Build the Level 1–3 encounter decks from the core set, Darkroot and Explorers together, and the Level 4 encounter deck from the Vordt and Executioner's Chariot expansions together. Named encounters are the Executioner's Chariot expansion's encounter cards; use the named card for that tile.
-  >
-  > In the Undead Colosseum there is no turning back. When the characters rest at the *bonfire*, encounter cards are not turned face down and no encounter resets. A *cleared* encounter is never fought again; the characters pass through its tile freely, without paying the skipping cost. A *failed* encounter resets as usual. Because encounters cannot be repeated, every encounter *cleared* awards each character the campaign *soul* reward for its level plus two *souls*. [PROPOSED — the booklet awards a flat four *souls* per character in a system whose base reward is two; "plus two" carries the same uplift into this edition's levelled table]
-- Design rationale: The three rules are the campaign's identity in the supplied booklet and are adapted to the manuscript's terms (*cleared*/*failed*, skipping cost, campaign table). The soul uplift is expressed relative to this edition's table rather than as the booklet's flat number, so that Level 4 encounters are not paid less than ordinary ones; the choice is tagged for decision.
-- Mechanical impact: No grinding is possible in this campaign; soul income per encounter rises by two.
-- Follow-on changes required: Section Six list fix (CMP-0008). Vordt's special rules remain BLOCKED (CMP-0005).
-- Status: approved (Gate 1, 2026-11-10 — see 05_gate1_decisions.md)
-
----
+- Read `04_completion_backlog.md` lines 1180–1193 (approved at Gate 1; apply untagged, subject to 05_gate1_decisions.md).
 
 ---
 

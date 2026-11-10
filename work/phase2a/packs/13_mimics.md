@@ -347,78 +347,12 @@ Columns: ID · Issue type · Severity · Tag · Location · Current text · Prop
 ## Completion entries that apply (2) — approved at Gate 1
 
 ### [CMP-0007] Truncated and defective sentences (several chapters) — Proposed Completion
-- Current state: Six sentences are cut short or carry a wrong word.
-  1. Summons › Phantoms, line 1993: "Phantoms are removed from play if their health dial is reduced to or the encounter ends."
-  2. Setup › Setup After the mini-boss step 11, line 1169: "Place all character models on the *bonfire* tile where they may now without spending a spark."
-  3. Setup › Shop Setup › After Boss is Defeated step 2.3, line 1089: "Shuffle five random legendary treasure cards."
-  4. Summons › Invader Encounter Setup step 2, line 2017: "deal a number equal to their starting decks deck size".
-  5. Summons › Invader Encounter Setup step 4, line 2021: "If the central node is blocked by train".
-  6. Mimics, line 2045: "they must reveal one an *ambush* card".
-  Also: Summons › Phantoms step 7, line 1989, stray "i" after "behaviour deck."; steps 8 (line 1991) and Invader Combat step 4 (line 2031) say "each icon on the encounter card" where the behaviour card is meant; Soul Reward Table header, line 1412, "per characteri"; Mimics line 2047 "*cleared.*."; Game Components line 443 "1x HungryVoracious Mimic".
-- Proposed completion (completed sentences, to be substituted in place):
-
-  > 1. Phantoms are removed from play when their health dial is reduced to zero or when the encounter ends.
-  >
-  > 2. Place all character models on the *bonfire* tile, where they may now rest without spending a *spark*. They may visit the Firekeeper and Andre's Shop as usual after resting at the *bonfire*.
-  >
-  > 3. Shuffle five random legendary treasure cards into the tier two treasure deck. Return the remaining legendary treasure cards to the game box.
-  >
-  > 4. Shuffle the invader's behaviour cards and deal a number of them equal to the behaviour deck size on the invader's data card, face down, to create the invader behaviour deck. When the invader's health is reduced to or below its heat-up point, shuffle one unused invader behaviour card into the behaviour deck.
-  >
-  > 5. After the encounter card setup is complete, place the invader model on the encounter tile's central node. If the central node is blocked by terrain, place the invader model on a node adjacent to the central node, chosen by the players.
-  >
-  > 6. If the characters wish to open the chest, they must reveal the *ambush* card beside that encounter tile to determine whether the chest is a lurking mimic.
-  >
-  > Step 7 (line 1989): Each phantom turn, draw and resolve the top card of the phantom behaviour deck.
-  >
-  > Step 8 (line 1991) and Invader Combat step 4 (line 2031): After each icon on the behaviour card is resolved in left-to-right order, the phantom's [invader's] turn ends.
-  >
-  > Soul Reward Table header: "*Soul* reward per character".
-  >
-  > Mimics line 2047: "…and may mark the encounter *cleared*."
-  >
-  > Game Components line 443: "1x Hungry Mimic and 1x Voracious Mimic (Explorers)" — two data cards sharing two miniatures and one health dial.
-- Design rationale: Each completion supplies the word the sentence's structure demands and that the surrounding rules confirm (zero health; rest; the tier two deck, as Legendary Treasure line 1025 already states; deck size; terrain; one ambush card). "Encounter card" in the phantom and invader turn steps is corrected to "behaviour card" because the phantom and invader rules draw from behaviour decks, not encounter cards.
-- Mechanical impact: None; restores intended text.
-- Follow-on changes required: None beyond substitution. Glossary (CMP-0002) and CMP-0018 reference the corrected phantom steps.
-- Status: approved (Gate 1, 2026-11-10 — see 05_gate1_decisions.md)
-
----
+- Read `04_completion_backlog.md` lines 711–749 (approved at Gate 1; apply untagged, subject to 05_gate1_decisions.md).
 
 ---
 
 ### [CMP-0014] MIMICS / Gameplay › Treasure Rewards / Tiles & Nodes › Chests — Mimic and chest procedure reconciliation — Proposed Completion
-- Current state: Three passages state the chest-and-mimic procedure with differences. Chests (line 963): undecided treasure goes to "a randomly selected character". Treasure Rewards (lines 1453–1475): undecided treasure goes to the character who ended the encounter with the aggro token; no recovery "until a decision is made"; one treasure if the ambush card shows treasure; mimic encounter set up immediately. Mimics (lines 2041–2047): the expansion is called "Encounters" then "Explorers"; the aggro holder makes the open/leave decision; after leaving the chest the characters "recover all stamina and two damage" (Encounter Recovery, line 1347, removes one damage cube); "min-boss"; killing the mimic gives two treasures and marks the encounter *cleared*; a mimic that defeats the characters is fought again "next time they complete the normal encounter"; "once the mimic has been fought once, it must be fought again at the end of the encounter until it is killed".
-- Proposed completion: The Mimics chapter owns the procedure. Treasure Rewards and Chests keep one pointer each.
-
-  Replacement for Tiles & Nodes › Chests bullet at line 963: "Upon *clearing* an encounter containing a chest, the players flip the chest to its open side and decide which character takes the revealed treasure. If they cannot decide, the character who ended the encounter with the *aggro* token takes it. When playing with mimics, see Mimics before opening a chest."
-
-  Replacement for Treasure Rewards lines 1463–1475 (the five mimic bullets): "- If playing with mimics, a chest is opened only as the Mimics chapter describes; the encounter is not resolved until the characters have decided whether to open it."
-
-  Replacement for the MIMICS chapter (lines 2039–2047):
-
-  > # MIMICS
-  >
-  > Mimics are an optional challenge from the Explorers expansion. The players decide during setup whether to include them. Groups with new players are advised to leave mimics out; experienced groups are advised to include them. When mimics are in play, one face-down *ambush* card is dealt beside each encounter tile at setup.
-  >
-  > When an encounter containing an unopened chest is *cleared*, the characters do not recover at once. They remain on their nodes and decide collectively whether to open the chest. If they cannot agree, the character holding the *aggro* token decides.
-  >
-  > If the characters leave the chest closed, they recover as Encounter Recovery describes and collect their *soul* and treasure rewards. The chest stays closed and may be opened after a later clearing of the same encounter.
-  >
-  > If the characters open the chest, reveal the *ambush* card beside the tile. If it shows Treasure, the characters receive the treasure card beneath the chest and assign it as the Chests rules describe; then they recover and collect their rewards. If it shows Mimic, a mimic encounter begins at once, before any recovery or reward.
-  >
-  > The mimic encounter is a mini-boss encounter fought on the same tile. Use the Hungry Mimic's data and behaviour cards if the mini-boss has not yet been defeated, and the Voracious Mimic's if it has. Replace the chest token with the mimic model on the chest's node. The characters keep their damage cubes, stamina cubes and condition tokens and remain on the nodes they occupied. Build the mimic's behaviour deck from random behaviour cards equal to its deck size. The mimic takes the first turn, then the characters and the mimic alternate as in any boss encounter. Mimics have no arcs and no heat-up cards; see Boss Special Rules › Explorers Expansion.
-  >
-  > If the mimic is slain, the characters receive two treasure cards of the current tier in place of the chest's one, assign them as the Chests rules describe, recover as Encounter Recovery describes, and collect the rewards of the encounter that contained the chest. Mark that encounter *cleared*. The mimic does not return; the chest's node is a basic node for the rest of the game.
-  >
-  > If every character dies, the mimic encounter is *failed*: the characters drop their *souls*, the encounter card is turned face down and the characters must rest at the *bonfire*. The mimic returns to its chest. Each later time the characters *clear* that encounter, they may again choose to open the chest, and the mimic must be fought again until it is slain.
-
-- Design rationale: One procedure, in one chapter, with the other two passages reduced to pointers so no second version can drift. The aggro holder is chosen as tie-breaker in every case because Treasure Rewards and Mimics both already use it and a random draw adds a step. Recovery after leaving the chest follows Encounter Recovery (one damage cube) rather than the Mimics chapter's "two damage". The mimic replacing the chest token on its node follows the Explorers booklet ("the mimic returns to its terrain node") and gives the mimic a defined starting node, which the manuscript never states. "Each later time… they may again choose" resolves the manuscript's two incompatible sentences (fought "next time they complete the encounter" versus "must be fought again until it is killed") in favour of choice, since the characters can always decline to open the chest.
-- Mechanical impact: Recovery after declining a chest is one damage cube, not two. The mimic starts on the chest node (previously undefined). Everything else is unchanged.
-- Follow-on changes required: Delete the empty heading at line 2049. Glossary entries Chest, Mimic, Ambush card (CMP-0002) align. CMP-0005 holds the mimic's special rules.
-- Status: approved (Gate 1, 2026-11-10 — see 05_gate1_decisions.md)
-
----
+- Read `04_completion_backlog.md` lines 1028–1060 (approved at Gate 1; apply untagged, subject to 05_gate1_decisions.md).
 
 ---
 

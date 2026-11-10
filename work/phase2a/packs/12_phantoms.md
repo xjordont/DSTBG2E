@@ -315,69 +315,12 @@ Columns: ID · Issue type · Severity · Tag · Location · Current text · Prop
 ## Completion entries that apply (2) — approved at Gate 1
 
 ### [CMP-0007] Truncated and defective sentences (several chapters) — Proposed Completion
-- Current state: Six sentences are cut short or carry a wrong word.
-  1. Summons › Phantoms, line 1993: "Phantoms are removed from play if their health dial is reduced to or the encounter ends."
-  2. Setup › Setup After the mini-boss step 11, line 1169: "Place all character models on the *bonfire* tile where they may now without spending a spark."
-  3. Setup › Shop Setup › After Boss is Defeated step 2.3, line 1089: "Shuffle five random legendary treasure cards."
-  4. Summons › Invader Encounter Setup step 2, line 2017: "deal a number equal to their starting decks deck size".
-  5. Summons › Invader Encounter Setup step 4, line 2021: "If the central node is blocked by train".
-  6. Mimics, line 2045: "they must reveal one an *ambush* card".
-  Also: Summons › Phantoms step 7, line 1989, stray "i" after "behaviour deck."; steps 8 (line 1991) and Invader Combat step 4 (line 2031) say "each icon on the encounter card" where the behaviour card is meant; Soul Reward Table header, line 1412, "per characteri"; Mimics line 2047 "*cleared.*."; Game Components line 443 "1x HungryVoracious Mimic".
-- Proposed completion (completed sentences, to be substituted in place):
-
-  > 1. Phantoms are removed from play when their health dial is reduced to zero or when the encounter ends.
-  >
-  > 2. Place all character models on the *bonfire* tile, where they may now rest without spending a *spark*. They may visit the Firekeeper and Andre's Shop as usual after resting at the *bonfire*.
-  >
-  > 3. Shuffle five random legendary treasure cards into the tier two treasure deck. Return the remaining legendary treasure cards to the game box.
-  >
-  > 4. Shuffle the invader's behaviour cards and deal a number of them equal to the behaviour deck size on the invader's data card, face down, to create the invader behaviour deck. When the invader's health is reduced to or below its heat-up point, shuffle one unused invader behaviour card into the behaviour deck.
-  >
-  > 5. After the encounter card setup is complete, place the invader model on the encounter tile's central node. If the central node is blocked by terrain, place the invader model on a node adjacent to the central node, chosen by the players.
-  >
-  > 6. If the characters wish to open the chest, they must reveal the *ambush* card beside that encounter tile to determine whether the chest is a lurking mimic.
-  >
-  > Step 7 (line 1989): Each phantom turn, draw and resolve the top card of the phantom behaviour deck.
-  >
-  > Step 8 (line 1991) and Invader Combat step 4 (line 2031): After each icon on the behaviour card is resolved in left-to-right order, the phantom's [invader's] turn ends.
-  >
-  > Soul Reward Table header: "*Soul* reward per character".
-  >
-  > Mimics line 2047: "…and may mark the encounter *cleared*."
-  >
-  > Game Components line 443: "1x Hungry Mimic and 1x Voracious Mimic (Explorers)" — two data cards sharing two miniatures and one health dial.
-- Design rationale: Each completion supplies the word the sentence's structure demands and that the surrounding rules confirm (zero health; rest; the tier two deck, as Legendary Treasure line 1025 already states; deck size; terrain; one ambush card). "Encounter card" in the phantom and invader turn steps is corrected to "behaviour card" because the phantom and invader rules draw from behaviour decks, not encounter cards.
-- Mechanical impact: None; restores intended text.
-- Follow-on changes required: None beyond substitution. Glossary (CMP-0002) and CMP-0018 reference the corrected phantom steps.
-- Status: approved (Gate 1, 2026-11-10 — see 05_gate1_decisions.md)
-
----
+- Read `04_completion_backlog.md` lines 711–749 (approved at Gate 1; apply untagged, subject to 05_gate1_decisions.md).
 
 ---
 
 ### [CMP-0018] SUMMONS › Phantoms — Summoning procedure and summon icons — Proposed Completion
-- Current state: Steps 1–3 (lines 1973–1981) say each *embered* character "may elect to pay two *souls* to draw a phantom card", then "Draw a random phantom card of appropriate level", then "Players must agree on only one of the drawn phantoms to summon" — the number of cards drawn and the fate of the unused cards are unclear. Step 5 (line 1985) places the phantom "on the boss tile's entrance node" (one node). Steps 7–8 (lines 1989–1991) contain the defects fixed in CMP-0007. No rule states how a phantom defends, how it attacks a boss's weak arc, what its special ability is, or the two summon-only icons the Phantoms booklet defines (Shift, Distract). Line 1993 is truncated (CMP-0007).
-- Proposed completion (replacement for lines 1969–1993):
-
-  > ## Phantoms
-  >
-  > *Embered* characters may summon one friendly phantom at the fog gate before a mini-boss or main-boss encounter (or a mega-boss encounter, using advanced phantoms).
-  >
-  > 1. Each *embered* character may pay two *souls* to draw one random phantom data card of the appropriate kind: standard phantoms before a mini-boss, advanced phantoms before a main-boss or mega-boss. *Souls* paid are not returned.
-  > 2. From the cards drawn, the players choose one phantom to summon. Return the other drawn cards to the supply.
-  > 3. Shuffle all four of the phantom's behaviour cards to form its behaviour deck. Set the phantom health dial to the phantom's starting health.
-  > 4. After the characters have been placed on their entry nodes, place the phantom model on any entry node that holds fewer than three models.
-  > 5. The phantom takes its turn after the last character in *threat* order has taken their turn and before the boss's next turn. On its turn, draw and resolve the top card of its behaviour deck, resolving each icon left to right; its turn then ends. When the deck is empty at the start of its turn, turn the discard pile face down without shuffling to form the new deck.
-  > 6. The phantom's data card gives its *threat*, starting health, block, resist and dodge values and a special ability. Enemy behaviours that target the nearest character or compare *threat* treat the phantom as a character. When the phantom is attacked, the players roll its block, resist or dodge dice exactly as for a character, using the defence total of the two highest dice; a *dodge* costs the phantom nothing and moves it to an adjacent node. Damage reduces its health dial.
-  > 7. A phantom attacking a boss from a weak arc adds one black die. A phantom's special ability that is "once per encounter" is marked as used by placing a wound token on the card.
-  > 8. Two icons appear only on phantom behaviour cards. *Shift*: the phantom may move up to the number of nodes shown, before or after its dice are rolled according to the icon's position. *Distract*: during the boss's next turn the phantom is treated as holding the *aggro* token; do not move the token itself.
-  > 9. Phantoms are removed from play when their health dial is reduced to zero or when the encounter ends. A phantom's death does not *fail* the encounter and places no *hollow* markers on anyone.
-- Design rationale: The procedure keeps the manuscript's cost (two *souls* per draw, paid by *embered* characters) and its choice among drawn cards, and states what was implied: one card per paying character, unused cards returned. Defence by dice follows the Phantoms booklet, which gives summons character-style block, resist and dodge values; the two-highest-dice rule is the manuscript's. The free *dodge* reflects that phantoms have no endurance bar. The Shift and Distract icons are taken from the booklet; Distract is reworded so it works with the manuscript's boss-aggro rule (aggro moves to whoever damages the boss) by applying only to the boss's next turn. Timing "after the last character" follows the manuscript's step 6 rather than the official after-each-character rule.
-- Mechanical impact: Summoning now has a defined draw count; phantoms defend with dice; Distract and Shift become usable. No change to cost.
-- Follow-on changes required: Add phantom components to Game Components (CMP-0012). Glossary entries Summon, Phantom, Shift (CMP-0002). F.A.Q. entry on phantom timing (CMP-0003).
-- Status: approved (Gate 1, 2026-11-10 — see 05_gate1_decisions.md)
-
----
+- Read `04_completion_backlog.md` lines 1104–1127 (approved at Gate 1; apply untagged, subject to 05_gate1_decisions.md).
 
 ---
 

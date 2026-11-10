@@ -61,9 +61,15 @@ for i, (ln, chap) in enumerate(starts):
     end = starts[i + 1][0] - 1 if i + 1 < len(starts) else len(MS)
     spans[chap] = (ln, end)
 
+BL_LINES = BACKLOG.splitlines()
 def cmp_entry(cid):
-    m = re.search(r'^### \[%s\].*?(?=^### \[CMP-|\Z)' % re.escape(cid), BACKLOG, re.S | re.M)
-    return m.group(0).rstrip() if m else f'(entry {cid} not found)'
+    """Pointer to the entry in 04_completion_backlog.md (heading + line range) rather than the full text,
+    so that a chapter agent reads only the parts it needs."""
+    start = next((i for i, ln in enumerate(BL_LINES, 1) if ln.startswith(f'### [{cid}]')), None)
+    if start is None: return f'(entry {cid} not found)'
+    end = next((i - 1 for i in range(start + 1, len(BL_LINES) + 1) if BL_LINES[i - 1].startswith('### [CMP-')), len(BL_LINES))
+    head = BL_LINES[start - 1]
+    return f"{head}\n- Read `04_completion_backlog.md` lines {start}–{end} (approved at Gate 1; apply untagged, subject to 05_gate1_decisions.md)."
 
 def ids_in(s):
     return [x.strip() for x in re.split(r'[,;]\s*', s) if x.strip()]

@@ -625,116 +625,17 @@ Columns: ID · Issue type · Severity · Tag · Location · Current text · Prop
 ## Completion entries that apply (3) — approved at Gate 1
 
 ### [CMP-0007] Truncated and defective sentences (several chapters) — Proposed Completion
-- Current state: Six sentences are cut short or carry a wrong word.
-  1. Summons › Phantoms, line 1993: "Phantoms are removed from play if their health dial is reduced to or the encounter ends."
-  2. Setup › Setup After the mini-boss step 11, line 1169: "Place all character models on the *bonfire* tile where they may now without spending a spark."
-  3. Setup › Shop Setup › After Boss is Defeated step 2.3, line 1089: "Shuffle five random legendary treasure cards."
-  4. Summons › Invader Encounter Setup step 2, line 2017: "deal a number equal to their starting decks deck size".
-  5. Summons › Invader Encounter Setup step 4, line 2021: "If the central node is blocked by train".
-  6. Mimics, line 2045: "they must reveal one an *ambush* card".
-  Also: Summons › Phantoms step 7, line 1989, stray "i" after "behaviour deck."; steps 8 (line 1991) and Invader Combat step 4 (line 2031) say "each icon on the encounter card" where the behaviour card is meant; Soul Reward Table header, line 1412, "per characteri"; Mimics line 2047 "*cleared.*."; Game Components line 443 "1x HungryVoracious Mimic".
-- Proposed completion (completed sentences, to be substituted in place):
-
-  > 1. Phantoms are removed from play when their health dial is reduced to zero or when the encounter ends.
-  >
-  > 2. Place all character models on the *bonfire* tile, where they may now rest without spending a *spark*. They may visit the Firekeeper and Andre's Shop as usual after resting at the *bonfire*.
-  >
-  > 3. Shuffle five random legendary treasure cards into the tier two treasure deck. Return the remaining legendary treasure cards to the game box.
-  >
-  > 4. Shuffle the invader's behaviour cards and deal a number of them equal to the behaviour deck size on the invader's data card, face down, to create the invader behaviour deck. When the invader's health is reduced to or below its heat-up point, shuffle one unused invader behaviour card into the behaviour deck.
-  >
-  > 5. After the encounter card setup is complete, place the invader model on the encounter tile's central node. If the central node is blocked by terrain, place the invader model on a node adjacent to the central node, chosen by the players.
-  >
-  > 6. If the characters wish to open the chest, they must reveal the *ambush* card beside that encounter tile to determine whether the chest is a lurking mimic.
-  >
-  > Step 7 (line 1989): Each phantom turn, draw and resolve the top card of the phantom behaviour deck.
-  >
-  > Step 8 (line 1991) and Invader Combat step 4 (line 2031): After each icon on the behaviour card is resolved in left-to-right order, the phantom's [invader's] turn ends.
-  >
-  > Soul Reward Table header: "*Soul* reward per character".
-  >
-  > Mimics line 2047: "…and may mark the encounter *cleared*."
-  >
-  > Game Components line 443: "1x Hungry Mimic and 1x Voracious Mimic (Explorers)" — two data cards sharing two miniatures and one health dial.
-- Design rationale: Each completion supplies the word the sentence's structure demands and that the surrounding rules confirm (zero health; rest; the tier two deck, as Legendary Treasure line 1025 already states; deck size; terrain; one ambush card). "Encounter card" in the phantom and invader turn steps is corrected to "behaviour card" because the phantom and invader rules draw from behaviour decks, not encounter cards.
-- Mechanical impact: None; restores intended text.
-- Follow-on changes required: None beyond substitution. Glossary (CMP-0002) and CMP-0018 reference the corrected phantom steps.
-- Status: approved (Gate 1, 2026-11-10 — see 05_gate1_decisions.md)
-
----
+- Read `04_completion_backlog.md` lines 711–749 (approved at Gate 1; apply untagged, subject to 05_gate1_decisions.md).
 
 ---
 
 ### [CMP-0011] Gameplay › Encounter Start step 9 and Player vs Player — "First player token" — Proposed Completion
-- Current state: Encounter Start step 9 (line 1277): "Place the *first player* token on the character with the highest threat value." Player vs Player (line 3056): "*First* *turn* token is given to the character with the highest threat value." No such token is listed in Game Components › Tokens & Terrain Elements (lines 679–723). Turn order is fixed by *threat* in both places (lines 1289, 3058), so the token has no function.
-- Proposed completion: Remove the token. Delete Encounter Start step 9 and the PvP bullet at line 3056, and replace Encounter Start step 8 (line 1275) with:
-
-  > 8. Place the *aggro* token on the character with the highest *threat* value. That character takes the first character turn of the encounter; ties in *threat* are settled by the players before the first turn and the order is kept for the encounter.
-
-  Replacement for PvP turn-order bullet (line 3058), as drafted in CMP-0009: "Characters take turns one at a time in descending *threat* order. If two characters share a *threat* value, the players decide their order before the first turn; if they cannot agree, decide at random."
-- Design rationale: Removal is recommended over definition. Threat order already fixes the first character, so a first-player token would duplicate information the dashboards carry; the Core rulebook's First Activation token existed only because its turn order went clockwise, which this edition has abandoned. Defining the token would also require adding a component. The tie rule supplies the one thing the token's position would have recorded.
-- Mechanical impact: None.
-- Follow-on changes required: Remove "first player" from the italicised-term inventory; no Glossary entry. Renumber Encounter Start.
-- Status: approved (Gate 1, 2026-11-10 — see 05_gate1_decisions.md)
-
----
+- Read `04_completion_backlog.md` lines 915–928 (approved at Gate 1; apply untagged, subject to 05_gate1_decisions.md).
 
 ---
 
 ### [CMP-0012] Game Components and owning chapters — Undefined components (event cards, ambush cards, mega-boss items, Level 4 tiles, pillar tokens, strafe and track cards) — Proposed Completion [PROPOSED-SYSTEMIC for event cards]
-- Current state: Game Components lists "Event cards" (lines 659–667: 10 per level and 5 Special Trap cards) and "Level 4 encounter cards" (line 653) but no ambush cards, pillar tokens, mega-boss items, strafe cards, track behaviour cards, mega-boss setup card, phantom or invader components, or mega-boss game boards. Event cards are used at Setup (lines 1133, 1161), Encounter Start (line 1269), Gravestones (line 939) and Setup After the main-boss (line 1181, "No event card is used"), but no rule says what an event card does; the Tomb of Giants set's event cards (immediate/consumable/rendezvous, drawn as rewards) are a different component and its rules do not match the manuscript's levelled, tile-dealt deck. "Ambush card" is used (lines 1137, 1469–1473, 2045) and defined only by use. "Mega-boss Items" (line 1183) are never defined. "Level 4 encounter tile associated with the chosen mega-boss" (line 1179) is the double-sided mega-boss game board. "Pillar token" (line 2205) and "pillar nodes" are used only in Boss Special Rules.
-- Proposed completion:
-
-  (a) Additions to Game Components (insert after line 667 and within Tokens & Terrain Elements as marked):
-
-  > ### Phantom cards and tokens (Phantoms)
-  >
-  > - 10x Summon data cards (5 standard, 5 advanced), 40x Summon behaviour cards, 1x Summon health dial
-  > - 12x Invader data cards (6 standard, 6 advanced), 64x Invader behaviour cards, 12x Invader treasure cards, 1x Invader health dial
-  > - 6x Standard invader tokens, 6x Advanced invader tokens, 3x Blank invader tokens
-  >
-  > ### Mimic cards (Explorers)
-  >
-  > - 2x Mimic data cards (Hungry, Voracious), 14x Mimic behaviour cards, 1x Mimic health dial, 5x Ambush cards
-  >
-  > ### Mega-boss components (one set per mega-boss expansion)
-  >
-  > - 1x Mega-boss game board (double-sided: Level 4 encounter side and mega-boss side)
-  > - 4x Level 4 encounter cards
-  > - 1x Mega-boss data card, 1x Health dial, behaviour cards as listed on the data card, 2x Mega-boss treasure cards
-  > - Black Dragon Kalameet only: 8x Strafe cards, 4x *Calamity* tokens
-  > - Executioner's Chariot only: 4x Track behaviour cards, 1x Mega-boss setup card
-  > - Asylum Demon only: 4x Pillar tokens
-  >
-  > (Tokens & Terrain Elements, after line 713) - 4x Pillar tokens (Asylum Demon)
-
-  (b) New sub-section in Game Components › Cards, after Event cards (line 667):
-
-  > ### Ambush cards
-  >
-  > Five cards from the Explorers expansion, each showing Treasure or Mimic on its face. One is dealt face down beside each encounter tile when mimics are in play and is revealed only when the characters choose to open that tile's chest. See Mimics.
-
-  (c) Rule paragraph for event cards, as a new sub-section Gameplay › Encounters › Event Cards (insert after Encounter Start, line 1277) [PROPOSED-SYSTEMIC]:
-
-  > ### Event Cards
-  >
-  > Each encounter tile carries one face-down event card of the same level as its encounter card, dealt at setup. When the characters enter the tile, reveal the event card after the encounter card and before enemies and terrain are placed. The event card's text modifies that encounter and applies until the encounter ends, unless the card states otherwise. An event card that cannot be applied to its encounter (for example, one that refers to a terrain type the encounter does not place) has no effect. Event cards stay on their tiles, face up, after the encounter; when the characters rest at the *bonfire*, event cards are turned face down with their encounter cards and apply again when the encounter is next fought. Special Trap cards are event cards that replace the standard trap tokens of a trapped encounter with the trap layout printed on the card; if the encounter is not trapped, the Special Trap card has no effect. Level 4 encounters and boss encounters use no event card.
-
-  (d) Definition of mega-boss items, replacing Setup After the main-boss step 5 (line 1183):
-
-  > 5. Shuffle the mega-boss's treasure cards (its *mega-boss items*) and deal one face down to the Level 4 encounter tile. This card is the Level 4 encounter's treasure reward and is awarded, when the encounter is *cleared*, as a chest treasure is: the players decide which character receives it. No tier two treasure cards are dealt to the Level 4 tile. [PROPOSED]
-
-  (e) Definition of the Level 4 tile, replacing Setup After the main-boss step 3 (line 1179):
-
-  > 3. Place the mega-boss game board supplied with the chosen mega-boss adjacent to the *bonfire* tile, with its Level 4 encounter side (enemy spawn and terrain nodes) face up and a doorway aligned with the *bonfire* tile. Place the fog gate on that doorway. The game board's other side shows the mega-boss spawn node and is used for the mega-boss encounter.
-
-  (f) Pillar tokens: the definition in Boss Special Rules › Pillar Smasher (line 2205) stands; add to Tiles & Nodes › Terrain, after Traps (line 981): "**Pillars.** Pillar tokens are placed only on the pillar nodes of the Asylum Demon mega-boss game board. Pillars block movement, dodging and pushes until destroyed; see Boss Special Rules."
-- Design rationale: Items (a), (b), (e) and (f) are inventories and descriptions drawn from the supplied booklets, matched to the manuscript's existing lists. Item (d) resolves "mega-boss Items" as the mega-boss's own treasure cards, the only cards an expansion supplies that fit the phrase, and gives the Level 4 tile a reward in place of the per-character tier two cards the generic setup would otherwise deal. Item (c) is a new subsystem: the manuscript dealt, revealed and scried event cards without ever stating their effect, and the only published event cards (Tomb of Giants) work differently; the paragraph is the minimum needed for the component to function (when revealed, duration, reset, what a Special Trap card is, where no event is used) and does not design any card.
-- Mechanical impact: Event cards gain a definite timing and reset. Level 4 encounters award one mega-boss treasure card instead of one tier two card per character (a reduction of up to three cards). Component counts allow the Game Components chapter to be checked against the boxes.
-- Follow-on changes required: Decision needed on (c): confirm that the author's event deck exists (print-and-play in the Community Update Pack?) and supply card texts, or delete every event-card reference (lines 659–667, 939, 1133, 1161, 1181, 1269). Confirm (d) with the author. Glossary entries Event card and Ambush card (CMP-0002). Campaign Play: state whether campaign Level 4 encounters also receive a mega-boss item.
-- Status: approved (Gate 1, 2026-11-10 — see 05_gate1_decisions.md)
-
----
+- Read `04_completion_backlog.md` lines 929–983 (approved at Gate 1; apply untagged, subject to 05_gate1_decisions.md).
 
 ---
 

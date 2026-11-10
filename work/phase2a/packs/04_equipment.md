@@ -388,27 +388,7 @@ Columns: ID · Issue type · Severity · Tag · Location · Current text · Prop
 ## Completion entries that apply (1) — approved at Gate 1
 
 ### [CMP-0016] EQUIPMENT › Spells — Duplicate heading — Proposed Completion
-- Current state: "## Spells" (line 855) is followed at once by "### Spells" (line 857); the bullet list is split by a stray comment marker (line 875). The second group of bullets concerns catalysts, not spells in general.
-- Proposed completion: Delete line 857 and line 875. Retitle the two bullet groups as sub-sections:
-
-  > ## Spells
-  >
-  > ### Spell Cards
-  >
-  > (bullets at lines 859–873 unchanged)
-  >
-  > ### Catalysts
-  >
-  > - Spells stored in a matching *catalyst* may use their *attack options* as if equipped.
-  > - A pyromancer flame stores up to three pyromancies; a staff or catalyst stores up to three sorceries; a talisman or chime stores up to three miracles.
-  > - A spell card is stored in the *catalyst* card it is attached to and occupies no equipment slot of its own.
-  > - Spells may be transferred between a character's *catalyst* and inventory only between encounters.
-- Design rationale: Structural fix with no rule change; the second heading names what the bullets define. "Occupies no equipment slot of its own" states what "as if equipped" implies and answers a question the Equipment Slots section otherwise leaves open.
-- Mechanical impact: None.
-- Follow-on changes required: Glossary entry Catalyst (CMP-0002). Regenerate TOC.
-- Status: approved (Gate 1, 2026-11-10 — see 05_gate1_decisions.md)
-
----
+- Read `04_completion_backlog.md` lines 1071–1093 (approved at Gate 1; apply untagged, subject to 05_gate1_decisions.md).
 
 ---
 

@@ -473,94 +473,12 @@ Columns: ID · Issue type · Severity · Tag · Location · Current text · Prop
 ## Completion entries that apply (2) — approved at Gate 1
 
 ### [CMP-0012] Game Components and owning chapters — Undefined components (event cards, ambush cards, mega-boss items, Level 4 tiles, pillar tokens, strafe and track cards) — Proposed Completion [PROPOSED-SYSTEMIC for event cards]
-- Current state: Game Components lists "Event cards" (lines 659–667: 10 per level and 5 Special Trap cards) and "Level 4 encounter cards" (line 653) but no ambush cards, pillar tokens, mega-boss items, strafe cards, track behaviour cards, mega-boss setup card, phantom or invader components, or mega-boss game boards. Event cards are used at Setup (lines 1133, 1161), Encounter Start (line 1269), Gravestones (line 939) and Setup After the main-boss (line 1181, "No event card is used"), but no rule says what an event card does; the Tomb of Giants set's event cards (immediate/consumable/rendezvous, drawn as rewards) are a different component and its rules do not match the manuscript's levelled, tile-dealt deck. "Ambush card" is used (lines 1137, 1469–1473, 2045) and defined only by use. "Mega-boss Items" (line 1183) are never defined. "Level 4 encounter tile associated with the chosen mega-boss" (line 1179) is the double-sided mega-boss game board. "Pillar token" (line 2205) and "pillar nodes" are used only in Boss Special Rules.
-- Proposed completion:
-
-  (a) Additions to Game Components (insert after line 667 and within Tokens & Terrain Elements as marked):
-
-  > ### Phantom cards and tokens (Phantoms)
-  >
-  > - 10x Summon data cards (5 standard, 5 advanced), 40x Summon behaviour cards, 1x Summon health dial
-  > - 12x Invader data cards (6 standard, 6 advanced), 64x Invader behaviour cards, 12x Invader treasure cards, 1x Invader health dial
-  > - 6x Standard invader tokens, 6x Advanced invader tokens, 3x Blank invader tokens
-  >
-  > ### Mimic cards (Explorers)
-  >
-  > - 2x Mimic data cards (Hungry, Voracious), 14x Mimic behaviour cards, 1x Mimic health dial, 5x Ambush cards
-  >
-  > ### Mega-boss components (one set per mega-boss expansion)
-  >
-  > - 1x Mega-boss game board (double-sided: Level 4 encounter side and mega-boss side)
-  > - 4x Level 4 encounter cards
-  > - 1x Mega-boss data card, 1x Health dial, behaviour cards as listed on the data card, 2x Mega-boss treasure cards
-  > - Black Dragon Kalameet only: 8x Strafe cards, 4x *Calamity* tokens
-  > - Executioner's Chariot only: 4x Track behaviour cards, 1x Mega-boss setup card
-  > - Asylum Demon only: 4x Pillar tokens
-  >
-  > (Tokens & Terrain Elements, after line 713) - 4x Pillar tokens (Asylum Demon)
-
-  (b) New sub-section in Game Components › Cards, after Event cards (line 667):
-
-  > ### Ambush cards
-  >
-  > Five cards from the Explorers expansion, each showing Treasure or Mimic on its face. One is dealt face down beside each encounter tile when mimics are in play and is revealed only when the characters choose to open that tile's chest. See Mimics.
-
-  (c) Rule paragraph for event cards, as a new sub-section Gameplay › Encounters › Event Cards (insert after Encounter Start, line 1277) [PROPOSED-SYSTEMIC]:
-
-  > ### Event Cards
-  >
-  > Each encounter tile carries one face-down event card of the same level as its encounter card, dealt at setup. When the characters enter the tile, reveal the event card after the encounter card and before enemies and terrain are placed. The event card's text modifies that encounter and applies until the encounter ends, unless the card states otherwise. An event card that cannot be applied to its encounter (for example, one that refers to a terrain type the encounter does not place) has no effect. Event cards stay on their tiles, face up, after the encounter; when the characters rest at the *bonfire*, event cards are turned face down with their encounter cards and apply again when the encounter is next fought. Special Trap cards are event cards that replace the standard trap tokens of a trapped encounter with the trap layout printed on the card; if the encounter is not trapped, the Special Trap card has no effect. Level 4 encounters and boss encounters use no event card.
-
-  (d) Definition of mega-boss items, replacing Setup After the main-boss step 5 (line 1183):
-
-  > 5. Shuffle the mega-boss's treasure cards (its *mega-boss items*) and deal one face down to the Level 4 encounter tile. This card is the Level 4 encounter's treasure reward and is awarded, when the encounter is *cleared*, as a chest treasure is: the players decide which character receives it. No tier two treasure cards are dealt to the Level 4 tile. [PROPOSED]
-
-  (e) Definition of the Level 4 tile, replacing Setup After the main-boss step 3 (line 1179):
-
-  > 3. Place the mega-boss game board supplied with the chosen mega-boss adjacent to the *bonfire* tile, with its Level 4 encounter side (enemy spawn and terrain nodes) face up and a doorway aligned with the *bonfire* tile. Place the fog gate on that doorway. The game board's other side shows the mega-boss spawn node and is used for the mega-boss encounter.
-
-  (f) Pillar tokens: the definition in Boss Special Rules › Pillar Smasher (line 2205) stands; add to Tiles & Nodes › Terrain, after Traps (line 981): "**Pillars.** Pillar tokens are placed only on the pillar nodes of the Asylum Demon mega-boss game board. Pillars block movement, dodging and pushes until destroyed; see Boss Special Rules."
-- Design rationale: Items (a), (b), (e) and (f) are inventories and descriptions drawn from the supplied booklets, matched to the manuscript's existing lists. Item (d) resolves "mega-boss Items" as the mega-boss's own treasure cards, the only cards an expansion supplies that fit the phrase, and gives the Level 4 tile a reward in place of the per-character tier two cards the generic setup would otherwise deal. Item (c) is a new subsystem: the manuscript dealt, revealed and scried event cards without ever stating their effect, and the only published event cards (Tomb of Giants) work differently; the paragraph is the minimum needed for the component to function (when revealed, duration, reset, what a Special Trap card is, where no event is used) and does not design any card.
-- Mechanical impact: Event cards gain a definite timing and reset. Level 4 encounters award one mega-boss treasure card instead of one tier two card per character (a reduction of up to three cards). Component counts allow the Game Components chapter to be checked against the boxes.
-- Follow-on changes required: Decision needed on (c): confirm that the author's event deck exists (print-and-play in the Community Update Pack?) and supply card texts, or delete every event-card reference (lines 659–667, 939, 1133, 1161, 1181, 1269). Confirm (d) with the author. Glossary entries Event card and Ambush card (CMP-0002). Campaign Play: state whether campaign Level 4 encounters also receive a mega-boss item.
-- Status: approved (Gate 1, 2026-11-10 — see 05_gate1_decisions.md)
-
----
+- Read `04_completion_backlog.md` lines 929–983 (approved at Gate 1; apply untagged, subject to 05_gate1_decisions.md).
 
 ---
 
 ### [CMP-0014] MIMICS / Gameplay › Treasure Rewards / Tiles & Nodes › Chests — Mimic and chest procedure reconciliation — Proposed Completion
-- Current state: Three passages state the chest-and-mimic procedure with differences. Chests (line 963): undecided treasure goes to "a randomly selected character". Treasure Rewards (lines 1453–1475): undecided treasure goes to the character who ended the encounter with the aggro token; no recovery "until a decision is made"; one treasure if the ambush card shows treasure; mimic encounter set up immediately. Mimics (lines 2041–2047): the expansion is called "Encounters" then "Explorers"; the aggro holder makes the open/leave decision; after leaving the chest the characters "recover all stamina and two damage" (Encounter Recovery, line 1347, removes one damage cube); "min-boss"; killing the mimic gives two treasures and marks the encounter *cleared*; a mimic that defeats the characters is fought again "next time they complete the normal encounter"; "once the mimic has been fought once, it must be fought again at the end of the encounter until it is killed".
-- Proposed completion: The Mimics chapter owns the procedure. Treasure Rewards and Chests keep one pointer each.
-
-  Replacement for Tiles & Nodes › Chests bullet at line 963: "Upon *clearing* an encounter containing a chest, the players flip the chest to its open side and decide which character takes the revealed treasure. If they cannot decide, the character who ended the encounter with the *aggro* token takes it. When playing with mimics, see Mimics before opening a chest."
-
-  Replacement for Treasure Rewards lines 1463–1475 (the five mimic bullets): "- If playing with mimics, a chest is opened only as the Mimics chapter describes; the encounter is not resolved until the characters have decided whether to open it."
-
-  Replacement for the MIMICS chapter (lines 2039–2047):
-
-  > # MIMICS
-  >
-  > Mimics are an optional challenge from the Explorers expansion. The players decide during setup whether to include them. Groups with new players are advised to leave mimics out; experienced groups are advised to include them. When mimics are in play, one face-down *ambush* card is dealt beside each encounter tile at setup.
-  >
-  > When an encounter containing an unopened chest is *cleared*, the characters do not recover at once. They remain on their nodes and decide collectively whether to open the chest. If they cannot agree, the character holding the *aggro* token decides.
-  >
-  > If the characters leave the chest closed, they recover as Encounter Recovery describes and collect their *soul* and treasure rewards. The chest stays closed and may be opened after a later clearing of the same encounter.
-  >
-  > If the characters open the chest, reveal the *ambush* card beside the tile. If it shows Treasure, the characters receive the treasure card beneath the chest and assign it as the Chests rules describe; then they recover and collect their rewards. If it shows Mimic, a mimic encounter begins at once, before any recovery or reward.
-  >
-  > The mimic encounter is a mini-boss encounter fought on the same tile. Use the Hungry Mimic's data and behaviour cards if the mini-boss has not yet been defeated, and the Voracious Mimic's if it has. Replace the chest token with the mimic model on the chest's node. The characters keep their damage cubes, stamina cubes and condition tokens and remain on the nodes they occupied. Build the mimic's behaviour deck from random behaviour cards equal to its deck size. The mimic takes the first turn, then the characters and the mimic alternate as in any boss encounter. Mimics have no arcs and no heat-up cards; see Boss Special Rules › Explorers Expansion.
-  >
-  > If the mimic is slain, the characters receive two treasure cards of the current tier in place of the chest's one, assign them as the Chests rules describe, recover as Encounter Recovery describes, and collect the rewards of the encounter that contained the chest. Mark that encounter *cleared*. The mimic does not return; the chest's node is a basic node for the rest of the game.
-  >
-  > If every character dies, the mimic encounter is *failed*: the characters drop their *souls*, the encounter card is turned face down and the characters must rest at the *bonfire*. The mimic returns to its chest. Each later time the characters *clear* that encounter, they may again choose to open the chest, and the mimic must be fought again until it is slain.
-
-- Design rationale: One procedure, in one chapter, with the other two passages reduced to pointers so no second version can drift. The aggro holder is chosen as tie-breaker in every case because Treasure Rewards and Mimics both already use it and a random draw adds a step. Recovery after leaving the chest follows Encounter Recovery (one damage cube) rather than the Mimics chapter's "two damage". The mimic replacing the chest token on its node follows the Explorers booklet ("the mimic returns to its terrain node") and gives the mimic a defined starting node, which the manuscript never states. "Each later time… they may again choose" resolves the manuscript's two incompatible sentences (fought "next time they complete the encounter" versus "must be fought again until it is killed") in favour of choice, since the characters can always decline to open the chest.
-- Mechanical impact: Recovery after declining a chest is one damage cube, not two. The mimic starts on the chest node (previously undefined). Everything else is unchanged.
-- Follow-on changes required: Delete the empty heading at line 2049. Glossary entries Chest, Mimic, Ambush card (CMP-0002) align. CMP-0005 holds the mimic's special rules.
-- Status: approved (Gate 1, 2026-11-10 — see 05_gate1_decisions.md)
-
----
+- Read `04_completion_backlog.md` lines 1028–1060 (approved at Gate 1; apply untagged, subject to 05_gate1_decisions.md).
 
 ---
 
