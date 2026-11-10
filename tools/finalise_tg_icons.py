@@ -94,6 +94,7 @@ def cmyk(c):
     if k>=0.999: return 'C0 M0 Y0 K100'
     return 'C%d M%d Y%d K%d'%tuple(round(v*100) for v in ((1-r-k)/(1-k),(1-g-k)/(1-k),(1-b-k)/(1-k),k))
 def sat_median(path,smin=0.35,vmin=0.25,hue=None):
+    if not path or not os.path.exists(path): return None   # missing crop -> let callers fall back
     a=np.asarray(Image.open(path).convert('RGB')).reshape(-1,3)/255
     hsv=np.array([colorsys.rgb_to_hsv(*p) for p in a[::3]])
     m=(hsv[:,1]>smin)&(hsv[:,2]>vmin)
@@ -119,8 +120,11 @@ put('heading_ink',region_median('work/renders/hires/DS-TG-Rulebook-Compressed_co
 put('body_ink',region_median('work/renders/hires/DS-TG-Rulebook-Compressed_compressed_p13_400dpi-13.png',(int(60*s4),int(440*s4),int(300*s4),int(600*s4)),2),'body text ink (darkest 2% of body zone)')
 put('cover_black',region_median('work/renders/hires/DS-TG-Rulebook-Compressed_compressed_p01_600dpi-01.png',(0,int(650*s6),int(629*s6),int(811*s6))),'cover / back-cover ground')
 put('gutter_leather_dark',region_median('work/renders/hires/DS-TG-Rulebook-Compressed_compressed_p13_400dpi-13.png',(int(600*s4),0,int(629*s4),int(811*s4))),'outer page-edge shadow of the open-book background')
-def pc(name): 
-    g=glob.glob(f'work/icons_parchment/*-{name}*.png'); return g[0] if g else None
+def pc(name):
+    # match the slugged crop filename; a trailing hyphen in the requested name must not defeat the glob
+    name=name.strip('-')
+    g=sorted(glob.glob(f'work/icons_parchment/*-{name}*.png')) or sorted(glob.glob(f'work/icons_parchment/*{name}*.png'))
+    return g[0] if g else None
 put('node_gold_ring',sat_median(pc('taunt'),0.3,0.4,(30,60)) or sat_median(pc('attack-range'),0.3,0.4,(30,60)),'gold ring / node outline / dashboard lettering accent')
 put('spawn_node_red',sat_median(pc('primary-spawn-node'),0.45,0.4,(340,20)),'enemy spawn nodes, Attack boss arc, bleed')
 put('terrain_node_magenta',sat_median(pc('primary-terrain-node'),0.35,0.4,(270,330)),'terrain nodes')
