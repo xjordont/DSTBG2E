@@ -13,3 +13,5 @@ work/pdfimages/
 work/scratch/
 # Intermediate icon crops (finals live in assets/icons)
 work/icons_parchment/
+# Vector page dumps (pdftocairo -svg) and hi-res crop renders are regenerable
+work/svg/
