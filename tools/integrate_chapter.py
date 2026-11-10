@@ -85,6 +85,10 @@ def main():
     files = sorted(glob.glob(str(ROOT / '10_manuscript_chapter_*.md'))) + [str(ROOT / '12_glossary.md')]
     r = subprocess.run([sys.executable, str(ROOT / 'tools/style_check.py'), *files, '--report', str(ROOT / '13_style_enforcement_report.md')], capture_output=True, text=True)
     print(r.stdout.strip().splitlines()[-1] if r.stdout.strip() else r.stderr)
-    subprocess.run([sys.executable, str(ROOT / 'tools/xref_check.py')])
+    x = subprocess.run([sys.executable, str(ROOT / 'tools/xref_check.py')])
+    if r.returncode or x.returncode:
+        print(f'INTEGRATION FAILED for chapter {num}: style_check={r.returncode} xref_check={x.returncode} — fix the chapter and rerun')
+        return 1
+    return 0
 
-if __name__ == '__main__': main()
+if __name__ == '__main__': sys.exit(main())

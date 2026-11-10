@@ -6,7 +6,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Aggro.** The state of being the enemies' preferred target. Enemy behaviours marked with the skull icon target the character who holds the aggro token.
 
-**Aggro token.** The single token that marks the character with aggro. It is placed on the character with the highest threat at the start of each encounter and moves to the character who placed the most wound tokens on enemies during the preceding round of character turns; in boss encounters it moves to any character who damages the boss during their turn.
+**Aggro token.** The single token that marks the character with aggro. It is placed on the character with the highest threat at the start of each encounter and moves to the character who placed the most wound tokens on enemies during the preceding round of character turns (on a tie the current holder keeps it); in boss encounters it moves to any character who damages the boss during their turn.
 
 **Ambush card.** A face-down card dealt beside each encounter tile when playing with mimics. It is revealed when the characters choose to open that tile's chest and shows either Treasure or Mimic.
 
@@ -38,7 +38,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Bonfire.** The characters' safe haven, represented by the *bonfire* tile. Resting at the *bonfire* costs one *spark* and fully restores the characters, resets every encounter and allows visits to the Firekeeper and Blacksmith Andre.
 
-**Bonfire ascetic.** In campaign play, a one-time communal payment of sixteen *souls* made while resting at the *bonfire* that unlocks tier two treasure and increases every non-boss enemy's attack value by one for the rest of the campaign.
+**Bonfire ascetic.** In campaign play, a one-time communal payment of sixteen *souls* made while resting at the *bonfire* that unlocks tier two treasure and increases every non-boss enemy's base health by two for the rest of the campaign, cumulative with the health scaling for character count (see §18.7).
 
 **Boss.** A single powerful enemy whose turns are driven by a behaviour deck and whose base is divided into four arcs. There are three ranks: *mini-boss*, *main-boss* and *mega-boss*. Bosses do not scale with the number of characters and may not be pushed by characters.
 
@@ -62,7 +62,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Corrosion.** A condition from the Gaping Dragon expansion. A model may hold one corrosion token, which reduces its block roll results by one. The token is removed when the affected character suffers damage.
 
-**Crystal lizard.** An optional enemy from the Iron Keep expansion placed on a terrain node. It flees rather than fights, does not scale its health, does not count towards clearing the encounter, and awards a Titanite card to the character who kills it.
+**Crystal lizard.** An optional enemy from the Iron Keep expansion placed on a terrain node. It flees rather than fights, does not scale its health, does not count towards clearing the encounter, and awards a Titanite Scale card to the character who kills it (see §14).
 
 **Damage cube.** A red cube. Each point of damage a character suffers places one damage cube on the endurance bar, filling from the right. A character who must place a damage cube and has no space dies.
 
@@ -84,7 +84,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Ember token.** The token placed in the dashboard's ember slot when a character becomes *embered*. It is discarded when the character dies.
 
-**Embered.** The state of a character with an *ember* token. An *embered* character has no *hollow* markers, reduces any single attack's damage of three or more by one, may summon a phantom before a boss encounter, and provokes invaders.
+**Embered.** The state of a character with an *ember* token. An *embered* character is not *hollow*, reduces any single attack's damage of three or more by one, may summon a phantom before a boss encounter, and provokes invaders.
 
 **Encounter.** A battle fought on one or more tiles against the enemies set out by an encounter card. An encounter ends *cleared* or *failed*.
 
@@ -92,7 +92,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Encounter level.** The difficulty of an encounter, from 1 to 4. The levels of the encounters leading to a boss are printed on that boss's data card. Level 4 encounters precede mega-bosses only.
 
-**Endurance bar.** The eight-space track on the dashboard that holds both stamina cubes (filling from the left) and damage cubes (filling from the right). *Hollow* markers reduce it to six usable spaces.
+**Endurance bar.** The ten-space track on the dashboard that holds both stamina cubes (filling from the left) and damage cubes (filling from the right). A *hollow* character's hollow cube blocks the two rightmost spaces, leaving eight (see §3.4).
 
 **Entry node.** A basic node beside the doorway through which the characters entered the tile. Characters are placed on entry nodes at the start of an encounter, no more than three to a node.
 
@@ -106,7 +106,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Firekeeper.** The figure at the *bonfire* who raises character stats in exchange for *souls*.
 
-**Fog gate.** The token marking the entrance to a boss encounter. In the basic game it moves to the *bonfire* tile after the first boss attempt and provides a shortcut back to the boss. In campaign play it has no effect.
+**Fog gate.** The token marking the entrance to a boss encounter. In the standard game it moves to the *bonfire* tile after the first boss attempt and provides a shortcut back to the boss. In campaign play it has no effect.
 
 **Frostbite.** A condition. A frostbitten character cannot recover stamina; a frostbitten enemy reduces its movement values by one. The token is removed at the end of the model's turn.
 
@@ -120,7 +120,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Hit.** A model is hit by an attack that was in range and that it did not successfully *dodge* or *parry*, even if the attack dealt no damage. Pushes and conditions apply only to models that are hit.
 
-**Hollow.** The state of a character revived after dying. Two white cubes block the two rightmost spaces of the endurance bar. *Hollow* is removed only by resting at the *bonfire* or by becoming *embered*. A *hollow* character who dies is *lost* and the encounter is *failed*.
+**Hollow.** The state of a character revived after dying. The hollow cube blocks the two rightmost spaces of the endurance bar, leaving eight usable spaces. *Hollow* is removed only by resting at the *bonfire* or by becoming *embered*. A *hollow* character who dies is *lost* and the encounter is *failed*.
 
 **Inventory.** A character's face-down stack of unequipped treasure cards. It may be rearranged or traded with only outside encounters.
 
@@ -128,23 +128,23 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Legendary treasure.** A rare treasure card marked with an orange light under a chest. Five are shuffled into the tier two deck when the tier two shop is first stocked; in campaign play legendary treasure is obtained only by *transposition*.
 
-**Lost.** The state of a *hollow* character who has died. A *lost* character is removed from play and is revived only when the characters rest at the *bonfire*.
+**Lost.** The state of a *hollow* character who has died (see §7.2). A *lost* character is removed from play and is revived only when the characters rest at the *bonfire*.
 
 **Luck.** A character token. Flipping it allows the character to reroll any or all dice of one attack or defence roll; the new results stand. It is readied only by resting at the *bonfire*.
 
 **Magical damage.** Damage from an attack marked with the white circle icon. Magical damage is reduced by resist.
 
-**Main-boss.** The second boss of the basic game, fought on both boss tiles after the mini-boss. Its defeat wins the basic game unless a mega-boss follows.
+**Main-boss.** The second boss of the standard game, fought on both boss tiles after the mini-boss. Its defeat wins the standard game unless a mega-boss follows.
 
 **Major action.** The one principal action of a character's turn: *Attack*, *Rest*, *Drink Estus* or *Ember*.
 
-**Mega-boss.** An optional final boss from a mega-boss expansion, fought on its own game board after a Level 4 encounter. Characters who die in a mega-boss encounter are permanently removed from play.
+**Mega-boss.** An optional final boss from a mega-boss expansion, fought on its own game board after a Level 4 encounter. Death and hollowing in a mega-boss encounter follow the usual rules (see §7.2).
 
 **Mimic.** An optional enemy from the Explorers expansion that masquerades as a chest. The Hungry Mimic is fought before the mini-boss is defeated and the Voracious Mimic afterwards; both are fought as mini-boss encounters without arcs.
 
-**Mini-boss.** The first boss of the basic game, fought on the mini-boss tile.
+**Mini-boss.** The first boss of the standard game, fought on the mini-boss tile.
 
-**Minor action.** An action a character may take any number of times during their turn, subject to its own limits: *Walk* (once), *Run*, *Equip* and *Heroic Action*.
+**Minor action.** An action a character may take during their turn, before or after the major action: *Walk*, *Equip* and *Heroic Action* once each per turn, and *Run* any number of times.
 
 **Node.** A circular space on a tile. Every model occupies exactly one node. Nodes are basic, spawn or terrain.
 
@@ -158,7 +158,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Pillar token.** A terrain token placed on each pillar node of the mega-boss game board in the Asylum Demon expansion. Pillars block movement until destroyed.
 
-**Poison.** A condition. At the end of its turn a model suffers one damage per poison token it holds, ignoring block and resist, then removes one poison token.
+**Poison.** A condition. At the end of its turn a model suffers one damage per poison token it holds, ignoring block and resist, then removes all of its poison tokens.
 
 **Push.** Forced movement of a model to an adjacent node, caused by a push-attack (the hit model moves directly away from the attacker) or a push-move (characters on nodes the enemy enters move away from it). Pushes cost no stamina and may not move a model into a gravestone or chest.
 
@@ -170,17 +170,17 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Rest (major action).** The character removes all stamina cubes from their endurance bar. *Rest* may not be taken in a turn in which the character took the *Run* minor action.
 
-**Resting at the bonfire.** The party action, costing one *spark*, that restores every character, readies all character tokens, removes *hollow* markers, revives *lost* characters, and resets every encounter.
+**Resting at the bonfire.** The party action, costing one *spark*, that restores every character, readies all character tokens, removes the hollow cube, revives *lost* characters, and resets every encounter.
 
 **Riposte.** The out-of-turn attack a character makes against an attacker after a successful *parry*, using any attack option of the weapon in the right weapon slot and paying its stamina cost. A *riposte* may not be *parried*.
 
 **Run.** A minor action: move one node for one stamina. It may be repeated. A character who *runs* may not *Rest* that turn.
 
-**Scaled (weapon).** A weapon equipped by a character whose relevant stat exceeds the weapon's highest requirement by ten or more. It is marked with a red cube and all its attack options gain +1 attack value. Spells are never scaled.
+**Scaled (weapon).** A weapon equipped by a character whose relevant stat exceeds the weapon's highest requirement by five or more. It is marked with a red cube and all its attack options gain +1 attack value. Spells are never scaled.
 
-**Scry.** To reveal one hidden card (top card of a treasure deck, a face-down event or encounter card, or the top card of the next boss's behaviour deck) and either return it or send it away as the Gravestones rules describe.
+**Scry.** To reveal one hidden card (the top card of a treasure deck, a face-down encounter card, or the top card of the next boss's behaviour deck) and either return it or send it away as the Gravestones rules describe.
 
-**Section.** In campaign play, one list of tiles ending in one or more bosses. The shop restocks and a free rest is granted only when a section's final boss is defeated.
+**Section.** In campaign play, one list of tiles ending in one or more bosses. The shop restocks and a free rest is granted only when a section is completed: when its final boss is defeated or, for a section that ends in a named encounter, when that encounter is *cleared*.
 
 **Shaft.** A weapon icon. Attack options with the shaft icon may not target models on the attacker's own node.
 
@@ -190,11 +190,11 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Souls.** The currency of the game, tracked by soul tokens on each character's dashboard. *Souls* are gained by *clearing* encounters and killing invaders, dropped on death, and spent at the *bonfire*. *Souls* may not be transferred between characters.
 
-**Spark.** The *bonfire*'s charges, tracked on the spark dial. The characters begin with six minus the number of characters, gain one for each boss defeated, and spend one each time they rest at the *bonfire*.
+**Spark.** The *bonfire*'s charges, tracked on the spark dial. The characters begin with six minus the number of characters, gain one for each boss defeated, and spend one each time they rest at the *bonfire*. In campaign play the dial's maximum is one more than its starting value and a *spark* may be bought back for *souls* (see §18.3).
 
 **Spawn node.** A node on which enemy models are placed at the start of an encounter. Boss tiles have a boss spawn node.
 
-**Stagger.** A condition. A staggered model subtracts one from its attack, block, resist and dodge totals. The token is removed at the end of the model's turn. A character who must place a stamina cube with no space available is staggered instead.
+**Stagger.** A condition. A staggered model subtracts one from its attack, block, resist and dodge totals. The token is removed at the end of the model's next complete turn. A character who must place a stamina cube with no space available is staggered instead.
 
 **Stamina cube.** A black cube. Each point of stamina a character spends places one stamina cube on the endurance bar, filling from the left.
 
@@ -204,7 +204,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Strafe card.** A card from the Black Dragon Kalameet expansion drawn when a strafe icon is resolved; it shows the nodes attacked and the node on which Kalameet lands.
 
-**Summon.** A friendly phantom that an *embered* character may call at the fog gate before a boss encounter by paying two *souls*. A summon acts after the characters each round and leaves play when its health reaches zero or the encounter ends.
+**Summon.** A friendly phantom that an *embered* character may call at the fog gate before a boss encounter by paying two *souls* per drawing character. In a boss encounter the summon acts after each character's turn. It leaves play when its health reaches zero or the encounter ends.
 
 **Target.** The model an attack is directed at. Enemies never target enemies; characters target characters only in player versus player.
 
@@ -230,7 +230,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Two-handed.** A weapon bearing the two-handed icon, or a one-handed weapon equipped with the other weapon slot empty. Two-handed attacks may reroll one die. Spells are never two-handed.
 
-**Upgrade card.** A card attached beneath a weapon or armour card by Blacksmith Andre, up to the equipment's upgrade limit. Upgrade spells are instead attached as a main action during an encounter and return to the inventory afterwards.
+**Upgrade card.** A card attached beneath a weapon or armour card by Blacksmith Andre, up to the equipment's upgrade limit. Upgrade spells are instead attached as a major action during an encounter and return to the inventory afterwards.
 
 **Walk.** A minor action, once per turn: move one node for no stamina.
 
