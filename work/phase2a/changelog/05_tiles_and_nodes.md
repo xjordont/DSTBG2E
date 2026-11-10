@@ -223,3 +223,10 @@
 - After: not applied here
 - Rationale: A-033 (PvP trap placement) is owned by §20.6; A-122 (boss facing at placement) by §15.3 and §16.2; A-085 (push fallback) by §8.4, which now has the term "valid node" to rely on; A-039 (two-boss encounters) by §17.1. OPTIONAL findings skipped: none (A-086 and F-101 to F-107 all applied).
 - Source: brief §4 section map
+
+### CH-05-033 · §5.5 Terrain (Gravestones)
+- Type: restructure
+- Before: "**Scry.** To reveal one hidden card to every player and then either return it to its place or send it away. The players choose one of the following: …" (full procedure under Gravestones)
+- After: "The scry is resolved during Encounter Resolution, which states the cards that may be scried and what is done with them (see §7.5, Encounter Resolution)."
+- Rationale: A rule is stated once. The scry is executed during Encounter Resolution, so §7.5 owns the procedure and §5.5 keeps the trigger (lead editor, at integration of chapter 07).
+- Source: C-088 (duplicated rules), chapter 07 issues list

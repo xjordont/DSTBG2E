@@ -70,13 +70,7 @@ When the characters rest at the *bonfire* and the encounters are reset (see §11
 
 A gravestone {{icon:ast-0017-gravestone}} blocks its node completely. No model may *move*, *dodge*, or be *pushed* into a node containing a gravestone.
 
-When an encounter that contains one or more gravestones is *cleared*, the players may *scry* one card, however many gravestones the tile holds. The scry is resolved during Encounter Resolution (see §7.5, Encounter Resolution).
-
-**Scry.** To reveal one hidden card to every player and then either return it to its place or send it away. The players choose one of the following:
-
-- Treasure: reveal the top card of the *tier one treasure* deck or the *tier two treasure* deck. Return it face down to the top of that deck, or place it face down at the bottom of that deck.
-- Encounter: reveal one face-down encounter card on a tile. Return it face down to its tile, or replace it with the top card of the encounter deck of the same level and place the revealed card face down at the bottom of that deck.
-- Boss behaviour: reveal the top card of the *behaviour deck* of the boss the party must face next; the deck is built at setup and kept face down on that boss's tile (see §6.5; §15.5). Return it face down to the top of that deck, or place it face down at the bottom of that deck.
+When an encounter that contains one or more gravestones is *cleared*, the players may *scry* one card, however many gravestones the tile holds. The scry is resolved during Encounter Resolution, which states the cards that may be scried and what is done with them (see §7.5, Encounter Resolution).
 
 When the characters rest at the bonfire, a gravestone stays on its node.
 

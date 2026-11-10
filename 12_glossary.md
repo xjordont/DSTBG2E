@@ -6,7 +6,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Aggro.** The state of being the enemies' preferred target. Enemy behaviours marked with the skull icon target the character who holds the aggro token.
 
-**Aggro token.** The single token that marks the character with aggro. It is placed on the character with the highest threat at the start of each encounter and moves to the character who placed the most wound tokens on enemies during the preceding round of character turns (on a tie the current holder keeps it); in boss encounters it moves to any character who damages the boss during their turn.
+**Aggro token.** The single token that marks the character with aggro. It is placed on the character with the highest threat at the start of each encounter and, after each round of character turns, moves to the character who inflicted the most damage on enemy models during that round (on a tie, or if no damage was inflicted, the holder keeps it). If the holder dies it moves to the living character with the highest threat. In boss encounters it moves to any character who damages the boss during their turn (see §7.5, Encounter Turn Order; §16.4).
 
 **Ambush card.** A face-down card dealt beside each encounter tile when playing with mimics. It is revealed when the characters choose to open that tile's chest and shows either Treasure or Mimic.
 
@@ -58,11 +58,11 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Character dashboard.** The board that records a character's class: the heroic action, the four equipment slots, the stat progression track, the endurance bar, the threat value, and the four token slots (see §3.1).
 
-**Chest.** A terrain token or model with a closed side and an open side; no model may *move*, *dodge*, or be pushed into its node. A chest holds one face-down treasure card of the current tier, revealed and awarded when the encounter is *cleared* (see §5.5, Chests; §7.7). With mimics in play, a chest is opened only as §13 describes.
+**Chest.** A terrain token or model that blocks movement, dodging, and pushes. A chest holds one face-down treasure card of the current tier, revealed when the encounter is *cleared* and awarded to the party (see §7.7). With mimics in play, opening a chest requires revealing the tile's *ambush card* (see §13).
 
 **Class-specific treasure.** A treasure card marked with a small white class emblem. It is sorted into the tier one or tier two deck by its stat requirements exactly as common treasure is.
 
-**Cleared.** The result of an encounter in which every enemy model is defeated and at least one character survives. A *cleared* encounter card is marked with a black cube, rewards *souls* and (the first time only) treasure, and may thereafter be skipped.
+**Cleared.** The result of an encounter in which every enemy model is killed and at least one character survives. A *cleared* encounter card is marked with a black cube, rewards *souls* and (the first time only) treasure, keeps its black cube through a *reset*, and may thereafter be skipped (see §7.5, Encounter Resolution).
 
 **Common treasure.** A treasure card that is not starting, class-specific, transposed, legendary or boss treasure. Common treasure with any stat requirement of 25 or more is tier two; all other common treasure is tier one.
 
@@ -84,11 +84,11 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Doorway.** A gap in a tile's wall through which characters pass between tiles. Basic nodes beside a doorway are entry nodes.
 
-**Dropped souls.** *Souls* placed on an encounter tile by a character who died there. Only that character may reclaim them, by surviving to *clear* that encounter. They are lost if the character dies again first.
+**Dropped souls.** *Souls* placed on an encounter tile by a character who died there or, when an encounter was *failed*, by a living character. Only the character who dropped them may reclaim them, by surviving to clear that encounter. They are returned to the supply if that character dies first (see §7.6).
 
 **Ember.** An *ember card* consumed by a character as the *Ember* major action, or the state of being *embered* that results (see §4.4, §7.3).
 
-**Ember card.** A tier one shop card. Discarding an *ember* card from the back-up slot (the *Ember* major action, or outside an encounter) makes the character *embered*. A character may carry only one *ember* card and may not carry one while *embered*.
+**Ember card.** A tier one shop card. Discarding an *ember* card from the back-up slot (the *Ember* major action, or outside an encounter) makes the character *embered* (see §7.3). A character may carry only one *ember* card and cannot carry one while *embered*; a card held when the character becomes *embered* passes to another character (see §7.3).
 
 **Ember token.** The token that marks an *embered* character. It begins the game beside the dashboard, is placed in the dashboard's ember slot when the character becomes embered, and is removed when the character dies (see §3.5, Ember; §7.3).
 
@@ -112,7 +112,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Estus flask.** A character token. Flipping it as the Drink Estus major action removes all damage cubes from the endurance bar; stamina cubes, hollow cubes, and condition tokens are not removed. It is readied only by resting at the *bonfire* (see §3.5, Estus Flask).
 
-**Failed.** The result of an encounter in which every character dies, or in which any *hollow* character dies. A *failed* encounter awards nothing, its card is turned face down, and the characters must rest at the *bonfire*.
+**Failed.** The result of an encounter in which every character dies, or in which any *hollow* character dies. A *failed* encounter awards nothing; every living character drops their *souls* on the tile, its card is turned face down and its black cube removed, and the characters must rest at the *bonfire* (see §7.5, Encounter Resolution).
 
 **Final boss.** The last boss of the game: the main-boss, or the mega-boss if the players chose to add one. Defeating the final boss wins the game.
 
@@ -122,7 +122,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Frostbite.** A condition. A frostbitten character cannot recover stamina; a frostbitten enemy reduces its movement values by one. The token is removed at the end of the model's turn.
 
-**Gravestone.** A terrain token or model. No model may *move*, *dodge*, or be pushed into a node containing a gravestone. When an encounter that contains a gravestone is *cleared*, the players may *scry* one card (see §5.5, Gravestones).
+**Gravestone.** A terrain token or model. No model may *move*, *dodge*, or be pushed into a node containing a gravestone. When an encounter that contains a gravestone is *cleared*, the players may *scry* one card (see §5.5, Gravestones; §7.5, Encounter Resolution).
 
 **Health dial.** The dial that records the health of a boss, summon, invader, or mimic. Enemies record damage with wound tokens instead (see §15.4).
 
@@ -148,7 +148,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Level 4 encounter.** The single encounter fought on the Level 4 encounter side of a *mega-boss game board* after the main-boss is defeated and before the mega-boss encounter. All four nodes along the wall beside the doorway are entry nodes; once *cleared* it is not fought again and does not reset (see §6.7).
 
-**Lost.** The state of a *hollow* character who has died (see §7.2). A *lost* character is removed from play and is revived only when the characters rest at the *bonfire*.
+**Lost.** The state of a *hollow* character who has died (see §7.2). A *lost* character is removed from play, the encounter is *failed* at once, and the character is revived only when the characters rest at the *bonfire*.
 
 **Luck.** A character token. Flipping it allows the character to reroll any or all dice of one of their own attack or defence rolls; the dice are chosen together and the new results stand. It is readied only by resting at the *bonfire* (see §3.5, Luck).
 
@@ -188,7 +188,11 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Range.** The maximum distance between an attacker and its target, counted in nodes along the shortest chain of adjacent nodes. Range 0 is the same node; range 1 is an adjacent node; range ∞ is unlimited. Range is never blocked by terrain or models (see §5.4).
 
+**Reduced reward.** Half the full soul reward, rounded down, gained by every character when an encounter already marked *cleared* is cleared again (see §7.6).
+
 **Repeat.** An icon that causes an entire attack option or behaviour card to be resolved the number of times shown.
+
+**Reset.** The state of an encounter after the characters have rested at the *bonfire*: its encounter card is face down, its enemy models have been removed, and its terrain tokens remain in place. A *cleared* encounter keeps its black cube through a reset; a *failed* encounter has none (see §7.5, Encounter Resolution; §11.5).
 
 **Resist.** The defence rolled against a magical attack, resolved as block is. For enemies, resist is the fixed value subtracted from a magical attack value.
 
@@ -198,11 +202,13 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Riposte.** The out-of-turn attack a character makes against an attacker after a successful *parry*, using any attack option of the weapon in the right weapon slot and paying its stamina cost. A *riposte* may not be *parried*.
 
+**Round.** One pass of the encounter turn order: every enemy model takes a turn in descending threat order, then every character takes a turn in descending threat order (see §7.5, Encounter Turn Order).
+
 **Run.** A minor action: move one node for one stamina. It may be repeated. A character who *runs* may not *Rest* that turn.
 
 **Scaled (weapon).** A weapon equipped by a character whose relevant stat exceeds the weapon's highest requirement by five or more. It is marked with a red cube and all its attack options gain +1 attack value. Spells are never scaled.
 
-**Scry.** To reveal one hidden card (the top card of a treasure deck, a face-down encounter card, or the top card of the next boss's behaviour deck) and either return it or send it away (see §5.5, Gravestones).
+**Scry.** To reveal one hidden card (the top card of a treasure deck, a face-down encounter card, or the top card of the next boss's behaviour deck) and either return it or send it away (see §7.5, Encounter Resolution).
 
 **Section.** In campaign play, one list of tiles ending in one or more bosses. The shop restocks and a free rest is granted only when a section is completed: when its final boss is defeated or, for a section that ends in a named encounter, when that encounter is *cleared*.
 
@@ -216,7 +222,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Souls.** The currency of the game, tracked by soul tokens on each character's dashboard. *Souls* are gained by *clearing* encounters and killing invaders, dropped on death, and spent at the *bonfire*. *Souls* may not be transferred between characters. A character adventuring alone begins with six *souls* (see §6.1).
 
-**Spark.** The *bonfire*'s charges, tracked on the spark dial. The characters begin with six minus the number of characters, gain one for each boss defeated, and spend one each time they rest at the *bonfire*. In campaign play the dial's maximum is one more than its starting value and a *spark* may be bought back for *souls* (see §18.3).
+**Spark.** The *bonfire*'s charges, tracked on the spark dial. The party begins with six minus the number of characters, gains one for each boss defeated, and spends one each time the characters rest at the *bonfire* (see §7.4). If the characters are required to rest while the dial shows zero, the players lose the game (see §7.1). In campaign play the dial's maximum is one more than its starting value and a *spark* may be bought back for *souls* (see §18.3).
 
 **Spawn node.** A node on which enemy models are placed at the start of an encounter. Boss tiles have a boss spawn node.
 
@@ -244,7 +250,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Terrain node.** A node on which a terrain token or model is placed at the start of an encounter, as the encounter card directs. A terrain node that holds no terrain is used as a basic node (see §5.1).
 
-**Threat.** The value that fixes turn order, printed on the character dashboard as Taunt Level and on enemy and phantom data cards. Enemies act in descending threat before the characters, who then act in descending threat. The character with the highest threat takes the aggro token at the start of each encounter (see §3.1, §7.5).
+**Threat.** The value that fixes turn order. Enemies act in descending threat before the characters, who then act in descending threat. The character with the highest threat takes the aggro token at the start of each encounter; the players settle ties (see §7.5, Encounter Turn Order).
 
 **Tier one treasure.** The treasure deck that holds common and class-specific treasure with every stat requirement below 25. Encounter rewards and chests draw from tier one until the mini-boss is defeated (in campaign play, until the *bonfire ascetic* is burnt) (see §6.2).
 
