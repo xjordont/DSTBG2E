@@ -860,12 +860,12 @@ Groups: logos (AST-0001–0005), icon set from the 2022 reference page (AST-0006
 - Notes: Raster XObject with soft mask in the PDF (native size only 37–66 px), so the 600 dpi render crop was used instead.
 
 ### [AST-0064] Frostbite
-- Source: DS-TG-Rulebook-Compressed_compressed.pdf, p.32
+- Source: DS-TG-Rulebook-Compressed_compressed.pdf, p.21
 - Type: icon
-- Region: back-cover key panel, section “Conditions”, bbox (pt) x 209.4–244.4, y 708.5–740.5 (re-cut with explicit parchment key)
-- Dimensions: 292×267 px
+- Region: Conditions section, right column beside the “Frostbite” head, bbox (pt) x 476.9–534.9, y 397.0–455.0
+- Dimensions: 461×402 px
 - Format: png
-- Method: pdftoppm 600 dpi render crop → explicit parchment key bg (245,243,237), soft 26–80 (panel vignette and bottom rule excluded); border-median key failed near panel rule) (orig bg (178, 181, 180)); raster XObject with soft mask in PDF (srcsize small; 600 dpi render used instead)
+- Method: pdftoppm 600 dpi render of p.21 (large 112 px-source version on clean parchment) → parchment-key alpha (bg (241, 238, 230)); the p.32 key-page copies sit on a grey gradient strip and keyed badly
 - Cleaned file: assets/icons/ast-0064-frostbite.png
 - Proposed placement: icon set — Conditions section
 - Licensing: authorised under owner's rights assertion
@@ -887,7 +887,7 @@ Groups: logos (AST-0001–0005), icon set from the 2022 reference page (AST-0006
 - Source: DS-TG-Rulebook-Compressed_compressed.pdf, p.21
 - Type: icon
 - Region: Conditions section, right column beside the “Stagger” head, bbox (pt) x 476.9–534.9, y 523.0–581.0
-- Dimensions: 442×460 px
+- Dimensions: 442×461 px
 - Format: png
 - Method: pdftoppm 600 dpi render of p.21 (large 112 px-source version on clean parchment) → parchment-key alpha (bg (244, 242, 234)); the p.32 key-page copies sit on a grey gradient strip and keyed badly
 - Cleaned file: assets/icons/ast-0066-stagger.png
