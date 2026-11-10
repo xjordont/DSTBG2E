@@ -85,7 +85,7 @@ The shops are restocked when a boss is defeated (see §6.6, §6.7) and at no oth
 2. Stock the tier one shop from the tier one treasure deck by steps 1 to 4 of Stocking at the Start of the Game, without adding ember cards.
 3. If the tier two shop has been stocked before, place every card remaining in it on the bottom of the tier two treasure deck.
 4. Stock the tier two shop from the tier two treasure deck in the same way.
-    4.1. If a *legendary treasure* card is drawn, shuffle it back into the tier two treasure deck and draw again.
+    4.1. If a *legendary treasure* card is drawn, set it aside with the other set-aside cards. It is shuffled back into the tier two treasure deck with them when stocking ends.
 5. If the tier two shop has been stocked for the first time, draw five legendary treasure cards at random without revealing them, shuffle them into the tier two treasure deck, and return the remaining legendary treasure cards to the game box.
 
 ## 6.4 Bonfire Setup

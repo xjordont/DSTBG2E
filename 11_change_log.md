@@ -847,6 +847,13 @@ Every substantive change made in Phase 2A between the manuscript (`work/docx/man
 - Rationale: A rule is stated once. The scry is executed during Encounter Resolution, so §7.5 owns the procedure and §5.5 keeps the trigger (lead editor, at integration of chapter 07).
 - Source: C-088 (duplicated rules), chapter 07 issues list
 
+### CH-05-034 · §5.5 Terrain (Traps)
+- Type: correction
+- Before: "When a character moves into or is pushed onto a node holding a face-down trap token, the token is turned face up at once"
+- After: "When a character enters a node holding a face-down trap token, whether by a move, by the movement that follows a successful dodge, or by a push, the token is turned face up at once"
+- Rationale: §5.2 defines a move so as to exclude dodge movement, which left a dodge onto a trap node untriggered. The approved F.A.Q. ruling is that any character movement onto the node, including a dodge, triggers the trap.
+- Source: CMP-0003 (F.A.Q., traps), review of PR #2
+
 ## Chapter 06 — Setup
 
 ### CH-06-001 · §6 Setup
@@ -1233,6 +1240,13 @@ Every substantive change made in Phase 2A between the manuscript (`work/docx/man
 - After: not applied
 - Rationale: A-004 (solo character never hollows): owned by §7.2. A-047 (spark maximum in the standard game): owned by §7.4. A-014 (threat tie-break): applied by cross-reference to §7.5 only. B-010 (raise solo souls to ten): no change recommended. A-095, D-014, D-041, F-044, F-045, and C-121 were applied.
 - Source: as listed
+
+### CH-06-056 · §6.3 Shop Setup (Restocking After a Boss)
+- Type: correction
+- Before: "If a legendary treasure card is drawn, shuffle it back into the tier two treasure deck and draw again."
+- After: "If a legendary treasure card is drawn, set it aside with the other set-aside cards. It is shuffled back into the tier two treasure deck with them when stocking ends."
+- Rationale: Shuffling a legendary card straight back made a later restock unable to finish once only legendary cards remained in the deck; setting it aside lets the deck-exhaustion exit apply and keeps legendary cards out of the shop.
+- Source: A-075 (legendary cards cannot be purchased), review of PR #2
 
 ## Chapter 07 — Gameplay
 

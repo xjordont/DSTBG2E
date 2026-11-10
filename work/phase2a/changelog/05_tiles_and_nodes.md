@@ -230,3 +230,10 @@
 - After: "The scry is resolved during Encounter Resolution, which states the cards that may be scried and what is done with them (see §7.5, Encounter Resolution)."
 - Rationale: A rule is stated once. The scry is executed during Encounter Resolution, so §7.5 owns the procedure and §5.5 keeps the trigger (lead editor, at integration of chapter 07).
 - Source: C-088 (duplicated rules), chapter 07 issues list
+
+### CH-05-034 · §5.5 Terrain (Traps)
+- Type: correction
+- Before: "When a character moves into or is pushed onto a node holding a face-down trap token, the token is turned face up at once"
+- After: "When a character enters a node holding a face-down trap token, whether by a move, by the movement that follows a successful dodge, or by a push, the token is turned face up at once"
+- Rationale: §5.2 defines a move so as to exclude dodge movement, which left a dodge onto a trap node untriggered. The approved F.A.Q. ruling is that any character movement onto the node, including a dodge, triggers the trap.
+- Source: CMP-0003 (F.A.Q., traps), review of PR #2

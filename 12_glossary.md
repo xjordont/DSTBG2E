@@ -58,7 +58,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Character dashboard.** The board that records a character's class: the heroic action, the four equipment slots, the stat progression track, the endurance bar, the threat value, and the four token slots (see §3.1).
 
-**Chest.** A terrain token or model that blocks movement, dodging, and pushes. A chest holds one face-down treasure card of the current tier, revealed when the encounter is *cleared* and awarded to the party (see §7.7). With mimics in play, opening a chest requires revealing the tile's *ambush card* (see §13).
+**Chest.** A terrain token or model with a closed side and an open side; no model may *move*, *dodge*, or be pushed into its node. A chest holds one face-down treasure card of the current tier, revealed and awarded when the encounter is *cleared* (see §5.5, Chests; §7.7). With mimics in play, a chest is opened only as §13 describes.
 
 **Class-specific treasure.** A treasure card marked with a small white class emblem. It is sorted into the tier one or tier two deck by its stat requirements exactly as common treasure is.
 
@@ -264,7 +264,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Transposition.** In campaign play, exchanging one boss treasure card and four *souls* for one of the five face-up legendary treasure cards while resting at the *bonfire* after the first section's final boss.
 
-**Trap token.** A token, blank or showing a dodge difficulty and a damage value, dealt face down to the basic nodes of a trapped encounter. It is turned face up when a character moves into or is pushed onto its node, and each character there must suffer the damage or *dodge* it; enemies neither trigger traps nor suffer them (see §5.5, Traps).
+**Trap token.** A token, blank or showing a dodge difficulty and a damage value, dealt face down to the basic nodes of a trapped encounter. It is turned face up when a character enters its node by a move, a dodge, or a push, and each character there must suffer the damage or *dodge* it; enemies neither trigger traps nor suffer them (see §5.5, Traps).
 
 **Treasure card.** Any card from a treasure deck: *starting equipment*, *class-specific treasure*, *common treasure*, *legendary treasure*, or *boss treasure* (see §2.5). A treasure card that may be equipped to a dashboard slot is an *equipment card*.
 

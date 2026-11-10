@@ -384,3 +384,10 @@
 - After: not applied
 - Rationale: A-004 (solo character never hollows): owned by §7.2. A-047 (spark maximum in the standard game): owned by §7.4. A-014 (threat tie-break): applied by cross-reference to §7.5 only. B-010 (raise solo souls to ten): no change recommended. A-095, D-014, D-041, F-044, F-045, and C-121 were applied.
 - Source: as listed
+
+### CH-06-056 · §6.3 Shop Setup (Restocking After a Boss)
+- Type: correction
+- Before: "If a legendary treasure card is drawn, shuffle it back into the tier two treasure deck and draw again."
+- After: "If a legendary treasure card is drawn, set it aside with the other set-aside cards. It is shuffled back into the tier two treasure deck with them when stocking ends."
+- Rationale: Shuffling a legendary card straight back made a later restock unable to finish once only legendary cards remained in the deck; setting it aside lets the deck-exhaustion exit apply and keeps legendary cards out of the shop.
+- Source: A-075 (legendary cards cannot be purchased), review of PR #2
