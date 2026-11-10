@@ -1,0 +1,12 @@
+name                                 type              encoding         emb sub uni object ID
+------------------------------------ ----------------- ---------------- --- --- --- ---------
+DJESRF+ACaslonPro-Regular            Type 1C           Custom           yes yes no    1786  0
+DJESRF+ACaslonPro-Italic             Type 1C           Custom           yes yes no    1620  0
+DJESRF+ACaslonPro-Bold               Type 1C           Custom           yes yes no    1612  0
+DJESRF+OptimusPrinceps               TrueType          WinAnsi          yes yes no    1613  0
+DJESRF+ACaslonPro-Regular            Type 1C           Custom           yes yes no    1714  0
+DJESRF+ACaslonPro-Regular            Type 1C           Custom           yes yes no    1712  0
+DJESRF+ACaslonPro-Semibold           Type 1C           Custom           yes yes no    1709  0
+TUYMLZ+Symbol                        CID TrueType      Identity-H       yes yes yes   1729  0
+DJESRF+ACaslonPro-BoldItalic         Type 1C           WinAnsi          yes yes no    1732  0
+DJESRF+ACaslonPro-Regular            Type 1C           Custom           yes yes no    1746  0

@@ -1,0 +1,17 @@
+# User-supplied reference material is not committed (rights-holder keeps originals; SHA-256 recorded in 00_intake_validation.md)
+sources/
+# Scratch renders and decrypted working copies
+work/renders/
+work/pdf_decrypted/
+work/docx/media/
+*.err
+__pycache__/
+# Derived text extracts of the reference PDFs (regenerable with pdftotext -layout; not committed)
+work/text/
+# Raw pdfimages dumps (scratch for asset extraction; cleaned assets live in assets/)
+work/pdfimages/
+work/scratch/
+# Intermediate icon crops (finals live in assets/icons)
+work/icons_parchment/
+# Vector page dumps (pdftocairo -svg) and hi-res crop renders are regenerable
+work/svg/

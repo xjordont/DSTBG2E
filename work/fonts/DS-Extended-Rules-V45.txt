@@ -1,0 +1,10 @@
+name                                 type              encoding         emb sub uni object ID
+------------------------------------ ----------------- ---------------- --- --- --- ---------
+BJJEXE+ACaslonPro-Regular            Type 1C           MacRoman         yes yes no      48  0
+LMXIED+OptimusPrinceps               TrueType          MacRoman         yes yes no      47  0
+BVAAHN+ACaslonPro-Italic             Type 1C           MacRoman         yes yes no      49  0
+HUPBVW+ArialMT                       TrueType          WinAnsi          yes yes yes     74  0
+ERSMUB+SymbolMT                      TrueType          MacRoman         yes yes no      75  0
+IUWVAQ+TimesNewRomanPSMT             TrueType          WinAnsi          yes yes yes    108  0
+OBKBME+Times-Roman                   TrueType          MacRoman         yes yes no      97  0
+ZAQGIZ+TimesNewRomanPS-ItalicMT      TrueType          WinAnsi          yes yes yes     68  0

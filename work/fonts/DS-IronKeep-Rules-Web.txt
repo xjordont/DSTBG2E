@@ -1,0 +1,7 @@
+name                                 type              encoding         emb sub uni object ID
+------------------------------------ ----------------- ---------------- --- --- --- ---------
+GUUCWP+OptimusPrinceps               TrueType          WinAnsi          yes yes yes    348  0
+VORKWB+Arimo-Regular                 CID TrueType      Identity-H       yes yes yes    358  0
+GUUCWP+ACaslonPro-Regular            Type 1C           Custom           yes yes yes    323  0
+GUUCWP+ACaslonPro-Italic             Type 1C           Custom           yes yes yes    306  0
+GUUCWP+ACaslonPro-Bold               Type 1C           Custom           yes yes yes    312  0

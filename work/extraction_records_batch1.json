@@ -1,0 +1,907 @@
+[
+ {
+  "id": "AST-0001",
+  "name": "Dark Souls: The Board Game logo lock-up (vector, black)",
+  "type": "logo",
+  "src": "Dark_Souls_The_Board_Game_FAQ.pdf",
+  "page": 1,
+  "bbox_pt": [
+   176,
+   41,
+   392,
+   134
+  ],
+  "method": "pdftocairo -svg p.1 \u2192 tools/svg_crop.py (image/text removed, 1 compound path kept)",
+  "file": "assets/logos/ast-0001-ds-tbg-logo-black.svg",
+  "format": "svg",
+  "bytes": 404248
+ },
+ {
+  "id": "AST-0002",
+  "name": "Dark Souls: The Board Game logo lock-up (raster, black on transparent)",
+  "type": "logo",
+  "src": "Dark_Souls_The_Board_Game_FAQ.pdf",
+  "page": 1,
+  "bbox_pt": [
+   176,
+   41,
+   392,
+   134
+  ],
+  "method": "pdftoppm 1200 dpi crop \u2192 parchment-key alpha (bg (244, 241, 236)) \u2192 trim",
+  "file": "assets/logos/ast-0002-ds-tbg-logo-black.png",
+  "format": "png",
+  "dims": "3585\u00d71517 px",
+  "bytes": 124020
+ },
+ {
+  "id": "AST-0003",
+  "name": "Dark Souls: The Board Game logo lock-up (raster, white on transparent)",
+  "type": "logo",
+  "src": "Dark_Souls_The_Board_Game_FAQ.pdf",
+  "page": 1,
+  "bbox_pt": [
+   176,
+   41,
+   392,
+   134
+  ],
+  "method": "AST-0002 alpha with RGB forced to white (matches cover usage)",
+  "file": "assets/logos/ast-0003-ds-tbg-logo-white.png",
+  "format": "png",
+  "dims": "3585\u00d71517 px",
+  "bytes": 130639
+ },
+ {
+  "id": "AST-0004",
+  "name": "Logo lock-up as used on covers (vector, white fill)",
+  "type": "logo",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 1,
+  "bbox_pt": [
+   113,
+   475,
+   518,
+   647
+  ],
+  "method": "pdftocairo -svg p.1 \u2192 svg_crop (cover raster removed)",
+  "file": "assets/logos/ast-0004-ds-tbg-logo-white-cover.svg",
+  "format": "svg",
+  "bytes": 414372
+ },
+ {
+  "id": "AST-0005",
+  "name": "Logo glow (soft white halo raster placed behind cover logo)",
+  "type": "logo",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 1,
+  "bbox_pt": null,
+  "method": "pdfimages -png p.1 image #1 (1276\u00d7629 grey, 200 ppi)",
+  "file": "assets/logos/ast-0005-logo-glow-mask.png",
+  "format": "png",
+  "dims": "1276\u00d7629 px",
+  "bytes": 264215
+ },
+ {
+  "id": "AST-0010",
+  "name": "Celtic-knot square ornament (rule terminal / corner)",
+  "type": "ornament",
+  "src": "Dark_Souls_The_Board_Game_FAQ.pdf",
+  "page": 1,
+  "bbox_pt": [
+   42,
+   168,
+   55,
+   181
+  ],
+  "method": "pdftocairo -svg \u2192 svg_crop (12 paths)",
+  "file": "assets/ornaments/ast-0010-knot-square.svg",
+  "format": "svg",
+  "bytes": 17502
+ },
+ {
+  "id": "AST-0011",
+  "name": "Celtic-knot square ornament (raster, black on transparent)",
+  "type": "ornament",
+  "src": "Dark_Souls_The_Board_Game_FAQ.pdf",
+  "page": 1,
+  "bbox_pt": [
+   42,
+   168,
+   55,
+   181
+  ],
+  "method": "pdftoppm 2400 dpi crop \u2192 parchment-key alpha (bg (255, 255, 255))",
+  "file": "assets/ornaments/ast-0011-knot-square.png",
+  "format": "png",
+  "dims": "404\u00d7404 px",
+  "bytes": 8259
+ },
+ {
+  "id": "AST-0012",
+  "name": "Compass/diamond corner ornament (example-box and art-frame corners)",
+  "type": "ornament",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 30,
+  "bbox_pt": [
+   344,
+   440.5,
+   356.5,
+   453.5
+  ],
+  "method": "pdftocairo -svg \u2192 svg_crop",
+  "file": "assets/ornaments/ast-0012-compass-corner.svg",
+  "format": "svg",
+  "bytes": 15610
+ },
+ {
+  "id": "AST-0013",
+  "name": "Compass/diamond corner ornament (raster)",
+  "type": "ornament",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 30,
+  "bbox_pt": [
+   344,
+   440.5,
+   356.5,
+   453.5
+  ],
+  "method": "pdftoppm 2400 dpi crop \u2192 parchment-key alpha (bg (255, 255, 255))",
+  "file": "assets/ornaments/ast-0013-compass-corner.png",
+  "format": "png",
+  "dims": "389\u00d7408 px",
+  "bytes": 2988
+ },
+ {
+  "id": "AST-0014",
+  "name": "Chapter/section title rule lock-up: knot \u2013 rule \u2013 [title] \u2013 rule \u2013 knot (vector, title text removed)",
+  "type": "ornament",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 30,
+  "bbox_pt": [
+   95,
+   61,
+   580,
+   77
+  ],
+  "method": "pdftocairo -svg \u2192 svg_crop (text glyphs dropped)",
+  "file": "assets/ornaments/ast-0014-chapter-title-rule-lockup.svg",
+  "format": "svg",
+  "bytes": 33046
+ },
+ {
+  "id": "AST-0015",
+  "name": "Title rule, left half (knot + hairline), raster",
+  "type": "ornament",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 30,
+  "bbox_pt": [
+   95,
+   61,
+   249,
+   77
+  ],
+  "method": "pdftoppm 1200 dpi crop \u2192 parchment-key alpha (bg (244, 242, 234)); mirror for right half",
+  "file": "assets/ornaments/ast-0015-title-rule-left-half.png",
+  "format": "png",
+  "dims": "2528\u00d7232 px",
+  "bytes": 6336
+ },
+ {
+  "id": "AST-0016",
+  "name": "Folio footer lock-up: knot \u2013 rule \u2013 [page number] \u2013 rule (vector, number removed)",
+  "type": "ornament",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 30,
+  "bbox_pt": [
+   95,
+   760,
+   580,
+   776
+  ],
+  "method": "pdftocairo -svg \u2192 svg_crop",
+  "file": "assets/ornaments/ast-0016-folio-footer-rule-lockup.svg",
+  "format": "svg",
+  "bytes": 23034
+ },
+ {
+  "id": "AST-0020",
+  "name": "Example/sidebar box frame: compass corners + hairline rules (vector template, content removed)",
+  "type": "frame",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 30,
+  "bbox_pt": [
+   343,
+   439,
+   580,
+   521
+  ],
+  "method": "pdftocairo -svg \u2192 svg_crop (icons inside are rasters, dropped automatically)",
+  "file": "assets/frames/ast-0020-example-box-frame-small.svg",
+  "format": "svg",
+  "bytes": 25697
+ },
+ {
+  "id": "AST-0017",
+  "name": "Mid-page section divider: knot \u2013 rule \u2013 knot",
+  "type": "ornament",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 3,
+  "bbox_pt": [
+   131.4,
+   367.0,
+   452.5,
+   383.0
+  ],
+  "method": "pdftocairo -svg \u2192 svg_crop",
+  "file": "assets/ornaments/ast-0017-section-divider-knot-rule-knot.svg",
+  "format": "svg",
+  "bytes": 27812
+ },
+ {
+  "id": "AST-0018",
+  "name": "Mid-page section divider (raster)",
+  "type": "ornament",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 3,
+  "bbox_pt": [
+   131.4,
+   367.0,
+   452.5,
+   383.0
+  ],
+  "method": "pdftoppm 1200 dpi crop \u2192 parchment-key alpha (bg (244, 242, 234))",
+  "file": "assets/ornaments/ast-0018-section-divider-knot-rule-knot.png",
+  "format": "png",
+  "dims": "5282\u00d7207 px",
+  "bytes": 11676
+ },
+ {
+  "id": "AST-0021",
+  "name": "Table frame: knot corners + horizontal rules (vector template, text removed)",
+  "type": "frame",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 26,
+  "bbox_pt": [
+   336.1,
+   291.0,
+   586.5,
+   429.0
+  ],
+  "method": "pdftocairo -svg \u2192 svg_crop",
+  "file": "assets/frames/ast-0021-table-frame-knot-corners.svg",
+  "format": "svg",
+  "bytes": 41092
+ },
+ {
+  "id": "AST-0070",
+  "name": "Table styling specimen (Firekeeper upgrade costs): knot corners, hairline rules, Caslon body",
+  "type": "typographic specimen",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 26,
+  "bbox_pt": [
+   336.1,
+   291.0,
+   586.5,
+   429.0
+  ],
+  "method": "pdftoppm 600 dpi crop",
+  "file": "assets/type-specimens/ast-0070-table-specimen-firekeeper-costs.png",
+  "format": "png",
+  "dims": "2087\u00d71150 px",
+  "bytes": 188810
+ },
+ {
+  "id": "AST-0030",
+  "name": "Open-book parchment page background, full spread (2022 print master)",
+  "type": "texture",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 2,
+  "bbox_pt": null,
+  "method": "pdfimages -png p.2 image #0 (5174\u00d73378 CMYK JPEG @300 ppi \u2192 sRGB)",
+  "file": "assets/textures/ast-0030-parchment-book-spread-bg.png",
+  "format": "png",
+  "dims": "5174\u00d73378 px",
+  "bytes": 1681632
+ },
+ {
+  "id": "AST-0031",
+  "name": "Open-book parchment background, right-hand page only",
+  "type": "texture",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 2,
+  "bbox_pt": null,
+  "method": "AST-0030 cropped to right half (x 2587\u20135174 px)",
+  "file": "assets/textures/ast-0031-parchment-right-page-bg.png",
+  "format": "png",
+  "dims": "2587\u00d73378 px",
+  "bytes": 875538
+ },
+ {
+  "id": "AST-0032",
+  "name": "Open-book parchment background, left-hand page only",
+  "type": "texture",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 2,
+  "bbox_pt": null,
+  "method": "AST-0030 cropped to left half (x 0\u20132587 px)",
+  "file": "assets/textures/ast-0032-parchment-left-page-bg.png",
+  "format": "png",
+  "dims": "2587\u00d73378 px",
+  "bytes": 876874
+ },
+ {
+  "id": "AST-0033",
+  "name": "Cracked lava-scale cover texture (2017 box-lid artwork; SFG \"Texture Design\" credit)",
+  "type": "texture",
+  "src": "DS-Core-Rules-lores.pdf",
+  "page": 1,
+  "bbox_pt": null,
+  "method": "pdfimages -png p.1 image #1 (1245\u00d71688 RGB JPEG @150 ppi)",
+  "file": "assets/textures/ast-0033-lava-scale-cover-texture.png",
+  "format": "png",
+  "dims": "1245\u00d71688 px",
+  "bytes": 1050836
+ },
+ {
+  "id": "AST-0034",
+  "name": "Back-cover dark stone/leather background (includes baked-in parchment panel)",
+  "type": "texture",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 32,
+  "bbox_pt": null,
+  "method": "pdfimages -png p.32 image #0 (1312\u00d71690 CMYK @150 ppi); centre luminance 245, edge 21",
+  "file": "assets/textures/ast-0034-back-cover-dark-stone-bg.png",
+  "format": "png",
+  "dims": "1312\u00d71690 px",
+  "bytes": 1078779
+ },
+ {
+  "id": "AST-0035",
+  "name": "Open-book parchment spread background, 2017 web edition (RGB, lower res)",
+  "type": "texture",
+  "src": "DS-Core-Rules-lores.pdf",
+  "page": 1,
+  "bbox_pt": null,
+  "method": "pdfimages -png p.1 image #0 (2516\u00d71719 RGB @150 ppi)",
+  "file": "assets/textures/ast-0035-parchment-spread-bg-2017.png",
+  "format": "png",
+  "dims": "2516\u00d71719 px",
+  "bytes": 1318436
+ },
+ {
+  "id": "AST-0040",
+  "name": "Character dashboard anatomy (Cleric) with numbered call-outs 1\u201310",
+  "type": "diagram",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 8,
+  "bbox_pt": [
+   78,
+   330,
+   600,
+   748
+  ],
+  "method": "pdftoppm 400 dpi crop",
+  "file": "assets/diagrams/ast-0040-character-dashboard-anatomy-2022.png",
+  "format": "png",
+  "dims": "2900\u00d72323 px",
+  "bytes": 4082580
+ },
+ {
+  "id": "AST-0041",
+  "name": "Equipment card anatomy (Shortbow) with call-outs 1\u201311",
+  "type": "diagram",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 10,
+  "bbox_pt": [
+   136,
+   335,
+   292,
+   548
+  ],
+  "method": "pdftoppm 600 dpi crop",
+  "file": "assets/diagrams/ast-0041-equipment-card-anatomy-2022.png",
+  "format": "png",
+  "dims": "1300\u00d71775 px",
+  "bytes": 474468
+ },
+ {
+  "id": "AST-0042",
+  "name": "Campaign dashboard anatomy (two strips) with call-outs 1\u20139",
+  "type": "diagram",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 13,
+  "bbox_pt": [
+   45,
+   113,
+   540,
+   400
+  ],
+  "method": "pdftoppm 400 dpi crop",
+  "file": "assets/diagrams/ast-0042-campaign-dashboard-anatomy-2022.png",
+  "format": "png",
+  "dims": "2750\u00d71594 px",
+  "bytes": 3247043
+ },
+ {
+  "id": "AST-0043",
+  "name": "Encounter card anatomy (Grave Matters) with call-outs 1\u20138",
+  "type": "diagram",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 16,
+  "bbox_pt": [
+   375,
+   335,
+   548,
+   605
+  ],
+  "method": "pdftoppm 600 dpi crop",
+  "file": "assets/diagrams/ast-0043-encounter-card-anatomy-2022.png",
+  "format": "png",
+  "dims": "1442\u00d72250 px",
+  "bytes": 1241468
+ },
+ {
+  "id": "AST-0044",
+  "name": "Enemy data card anatomy (Skeleton Soldier) with call-outs 1\u201310",
+  "type": "diagram",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 24,
+  "bbox_pt": [
+   102.0,
+   291.0,
+   324.6,
+   572.4
+  ],
+  "method": "pdftoppm 600 dpi crop",
+  "file": "assets/diagrams/ast-0044-enemy-data-card-anatomy-2022.png",
+  "format": "png",
+  "dims": "1855\u00d72345 px",
+  "bytes": 623497
+ },
+ {
+  "id": "AST-0045",
+  "name": "Enemy movement symbol anatomy (Move icon with call-outs 1\u20135)",
+  "type": "diagram",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 24,
+  "bbox_pt": [
+   403.3,
+   170.0,
+   520.1,
+   286.1
+  ],
+  "method": "pdftoppm 600 dpi crop",
+  "file": "assets/diagrams/ast-0045-enemy-movement-symbol-anatomy.png",
+  "format": "png",
+  "dims": "973\u00d7967 px",
+  "bytes": 150914
+ },
+ {
+  "id": "AST-0046",
+  "name": "Enemy attack symbol anatomy (Attack icon with call-outs 1\u20134)",
+  "type": "diagram",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 25,
+  "bbox_pt": [
+   58.2,
+   216.7,
+   227.5,
+   354.8
+  ],
+  "method": "pdftoppm 600 dpi crop",
+  "file": "assets/diagrams/ast-0046-enemy-attack-symbol-anatomy.png",
+  "format": "png",
+  "dims": "1410\u00d71151 px",
+  "bytes": 240917
+ },
+ {
+  "id": "AST-0048",
+  "name": "Boss behaviour card anatomy (Death's Embrace) with call-outs 1\u20135",
+  "type": "diagram",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 28,
+  "bbox_pt": [
+   337.6,
+   168.0,
+   583.8,
+   302.1
+  ],
+  "method": "pdftoppm 600 dpi crop",
+  "file": "assets/diagrams/ast-0048-boss-behaviour-card-anatomy-2022.png",
+  "format": "png",
+  "dims": "2052\u00d71117 px",
+  "bytes": 220168
+ },
+ {
+  "id": "AST-0047",
+  "name": "Boss data card anatomy (Gravelord Nito) with call-outs 1\u201310",
+  "type": "diagram",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 28,
+  "bbox_pt": [
+   116.7,
+   468.0,
+   317.5,
+   719.0
+  ],
+  "method": "pdftoppm 600 dpi crop",
+  "file": "assets/diagrams/ast-0047-boss-data-card-anatomy-2022.png",
+  "format": "png",
+  "dims": "1673\u00d72091 px",
+  "bytes": 1569497
+ },
+ {
+  "id": "AST-0049",
+  "name": "Boss arcs diagram A: boss base with four arcs on tile (front/left/right/back)",
+  "type": "diagram",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 29,
+  "bbox_pt": [
+   53,
+   412,
+   283,
+   626
+  ],
+  "method": "pdftoppm 400 dpi crop",
+  "file": "assets/diagrams/ast-0049-boss-arcs-tile-diagram-a.png",
+  "format": "png",
+  "dims": "1278\u00d71189 px",
+  "bytes": 978550
+ },
+ {
+  "id": "AST-0050",
+  "name": "Boss arcs diagram B: arcs with highlighted node sets",
+  "type": "diagram",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 29,
+  "bbox_pt": [
+   301,
+   376,
+   531,
+   596
+  ],
+  "method": "pdftoppm 400 dpi crop",
+  "file": "assets/diagrams/ast-0050-boss-arcs-tile-diagram-b.png",
+  "format": "png",
+  "dims": "1278\u00d71222 px",
+  "bytes": 1020345
+ },
+ {
+  "id": "AST-0051",
+  "name": "Boss base photo showing arc markings (X on base)",
+  "type": "diagram",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 29,
+  "bbox_pt": [
+   106,
+   95,
+   258,
+   202
+  ],
+  "method": "pdftoppm 400 dpi crop",
+  "file": "assets/diagrams/ast-0051-boss-base-arc-markings.png",
+  "format": "png",
+  "dims": "844\u00d7594 px",
+  "bytes": 195902
+ },
+ {
+  "id": "AST-0052",
+  "name": "Boss activation worked example, six stages (full-page diagram)",
+  "type": "diagram",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 30,
+  "bbox_pt": [
+   55,
+   40,
+   585,
+   790
+  ],
+  "method": "pdftoppm 300 dpi crop",
+  "file": "assets/diagrams/ast-0052-boss-activation-example-6-stages.png",
+  "format": "png",
+  "dims": "2209\u00d73125 px",
+  "bytes": 1379311
+ },
+ {
+  "id": "AST-0053",
+  "name": "Movement example: walk + three runs on a tile (arrows over tile)",
+  "type": "diagram",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 20,
+  "bbox_pt": [
+   300,
+   560,
+   590,
+   780
+  ],
+  "method": "pdftoppm 400 dpi crop",
+  "file": "assets/diagrams/ast-0053-movement-example-tile.png",
+  "format": "png",
+  "dims": "1611\u00d71222 px",
+  "bytes": 100298
+ },
+ {
+  "id": "AST-0054",
+  "name": "Getting Underway: encounter track + card draw diagram",
+  "type": "diagram",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 16,
+  "bbox_pt": [
+   55,
+   440,
+   335,
+   790
+  ],
+  "method": "pdftoppm 400 dpi crop",
+  "file": "assets/diagrams/ast-0054-encounter-track-getting-underway.png",
+  "format": "png",
+  "dims": "1555\u00d71945 px",
+  "bytes": 1208189
+ },
+ {
+  "id": "AST-0055",
+  "name": "Character board anatomy (Herald, 2017) call-outs 1\u201311",
+  "type": "diagram",
+  "src": "DS-Core-Rules-lores.pdf",
+  "page": 11,
+  "bbox_pt": [
+   151.7,
+   74.0,
+   415.2,
+   273.0
+  ],
+  "method": "pdftoppm 400 dpi crop",
+  "file": "assets/diagrams/ast-0055-character-board-anatomy-2017.png",
+  "format": "png",
+  "dims": "1464\u00d71106 px",
+  "bytes": 931053
+ },
+ {
+  "id": "AST-0056",
+  "name": "Bonfire tile anatomy (2017) call-outs 1\u20136",
+  "type": "diagram",
+  "src": "DS-Core-Rules-lores.pdf",
+  "page": 13,
+  "bbox_pt": [
+   67.4,
+   86.6,
+   485.4,
+   494.6
+  ],
+  "method": "pdftoppm 400 dpi crop",
+  "file": "assets/diagrams/ast-0056-bonfire-tile-anatomy-2017.png",
+  "format": "png",
+  "dims": "2323\u00d72267 px",
+  "bytes": 3300685
+ },
+ {
+  "id": "AST-0057",
+  "name": "Equipment card anatomy (Greataxe, 2017) call-outs 1\u201312",
+  "type": "diagram",
+  "src": "DS-Core-Rules-lores.pdf",
+  "page": 12,
+  "bbox_pt": [
+   150,
+   165,
+   315,
+   352
+  ],
+  "method": "pdftoppm 600 dpi crop \u2014 fallback bbox from contact-sheet estimate",
+  "file": "assets/diagrams/ast-0057-equipment-card-anatomy-2017.png",
+  "format": "png",
+  "dims": "1375\u00d71558 px",
+  "bytes": 676781
+ },
+ {
+  "id": "AST-0058",
+  "name": "Boss arcs diagram (Dancer, 2017): arcs and node colours",
+  "type": "diagram",
+  "src": "DS-Core-Rules-lores.pdf",
+  "page": 27,
+  "bbox_pt": [
+   282.6,
+   529.4,
+   532.3,
+   753.6
+  ],
+  "method": "pdftoppm 400 dpi crop",
+  "file": "assets/diagrams/ast-0058-boss-arcs-diagram-2017.png",
+  "format": "png",
+  "dims": "1387\u00d71246 px",
+  "bytes": 1153439
+ },
+ {
+  "id": "AST-0059",
+  "name": "Icon key / reference page panel (2022 back cover) \u2014 complete symbol legend",
+  "type": "diagram",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 32,
+  "bbox_pt": [
+   99.6,
+   30.0,
+   629.3,
+   810.6
+  ],
+  "method": "600 dpi render; panel bbox auto-detected as bright region (L>200) excluding top 30 pt",
+  "file": "assets/diagrams/ast-0059-icon-key-reference-page-2022.png",
+  "format": "png",
+  "dims": "4414\u00d76505 px",
+  "bytes": 3763549
+ },
+ {
+  "id": "AST-0060",
+  "name": "Icon key / reference page (2017 back cover)",
+  "type": "diagram",
+  "src": "DS-Core-Rules-lores.pdf",
+  "page": 40,
+  "bbox_pt": [
+   40,
+   38,
+   555,
+   770
+  ],
+  "method": "pdftoppm 400 dpi crop",
+  "file": "assets/diagrams/ast-0060-icon-key-reference-page-2017.png",
+  "format": "png",
+  "dims": "2861\u00d74067 px",
+  "bytes": 2529327
+ },
+ {
+  "id": "AST-0071",
+  "name": "Chapter title specimen: OptimusPrinceps caps with rule + knot terminals (\"The Campaign Dashboard\")",
+  "type": "typographic specimen",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 13,
+  "bbox_pt": [
+   48.3,
+   50.4,
+   535.6,
+   96.4
+  ],
+  "method": "pdftoppm 600 dpi crop \u2014 title size 30.0 pt",
+  "file": "assets/type-specimens/ast-0071-chapter-title-optimusprinceps.png",
+  "format": "png",
+  "dims": "4060\u00d7383 px",
+  "bytes": 118834
+ },
+ {
+  "id": "AST-0072",
+  "name": "Body text specimen: Adobe Caslon Pro Regular + Bold run-in heads, numbered list",
+  "type": "typographic specimen",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 13,
+  "bbox_pt": [
+   45.0,
+   462.3,
+   307.3,
+   543.3
+  ],
+  "method": "pdftoppm 600 dpi crop \u2014 sizes [9.0] pt",
+  "file": "assets/type-specimens/ast-0072-body-text-caslon.png",
+  "format": "png",
+  "dims": "2186\u00d7675 px",
+  "bytes": 150226
+ },
+ {
+  "id": "AST-0073",
+  "name": "Sub-head specimen: OptimusPrinceps small caps (\"Exploration Basics / Encounter Cards\")",
+  "type": "typographic specimen",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 16,
+  "bbox_pt": [
+   128.2,
+   97.5,
+   543.5,
+   127.5
+  ],
+  "method": "pdftoppm 600 dpi crop \u2014 size [18.0] pt",
+  "file": "assets/type-specimens/ast-0073-subhead-optimusprinceps.png",
+  "format": "png",
+  "dims": "3461\u00d7250 px",
+  "bytes": 66340
+ },
+ {
+  "id": "AST-0074",
+  "name": "Caption / flavour specimen: Adobe Caslon Pro Italic",
+  "type": "typographic specimen",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 26,
+  "bbox_pt": [
+   350.4,
+   600.3,
+   573.3,
+   669.3
+  ],
+  "method": "pdftoppm 600 dpi crop \u2014 size [9.0] pt",
+  "file": "assets/type-specimens/ast-0074-caption-caslon-italic.png",
+  "format": "png",
+  "dims": "1857\u00d7575 px",
+  "bytes": 161342
+ },
+ {
+  "id": "AST-0075",
+  "name": "Folio specimen: footer rule with knot and page number",
+  "type": "typographic specimen",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 13,
+  "bbox_pt": [
+   90,
+   757,
+   585,
+   781
+  ],
+  "method": "pdftoppm 600 dpi crop",
+  "file": "assets/type-specimens/ast-0075-folio-footer.png",
+  "format": "png",
+  "dims": "4125\u00d7200 px",
+  "bytes": 88249
+ },
+ {
+  "id": "AST-0076",
+  "name": "Cover subtitle specimen: \"Tomb of Giants\" in OptimusPrinceps SemiBold, white",
+  "type": "typographic specimen",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 1,
+  "bbox_pt": [
+   144.1,
+   698.1,
+   485.1,
+   761.8
+  ],
+  "method": "pdftoppm 600 dpi crop \u2014 size [43.6] pt",
+  "file": "assets/type-specimens/ast-0076-cover-subtitle-optimusprinceps-semibold.png",
+  "format": "png",
+  "dims": "2842\u00d7530 px",
+  "bytes": 65542
+ },
+ {
+  "id": "AST-0077",
+  "name": "Introduction / lore block specimen: Caslon Italic paragraphs",
+  "type": "typographic specimen",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 3,
+  "bbox_pt": [
+   127.7,
+   102.3,
+   456.0,
+   303.3
+  ],
+  "method": "pdftoppm 400 dpi crop",
+  "file": "assets/type-specimens/ast-0077-lore-block-caslon-italic.png",
+  "format": "png",
+  "dims": "1824\u00d71117 px",
+  "bytes": 601342
+ },
+ {
+  "id": "AST-0080",
+  "name": "2017 core rulebook front cover composition (lava-scale texture + white logo lock-up)",
+  "type": "art",
+  "src": "DS-Core-Rules-lores.pdf",
+  "page": 1,
+  "bbox_pt": [
+   0,
+   0,
+   595.3,
+   807.9
+  ],
+  "method": "pdftoppm 300 dpi full page",
+  "file": "assets/art/ast-0080-core-2017-front-cover-composition.png",
+  "format": "png",
+  "dims": "2480\u00d73366 px",
+  "bytes": 2693632
+ },
+ {
+  "id": "AST-0081",
+  "name": "2022 Tomb of Giants cover art (Gravelord Nito on black) \u2014 PROVENANCE REVIEW",
+  "type": "art",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 1,
+  "bbox_pt": null,
+  "method": "pdfimages -png p.1 image #0 (1312\u00d71690 CMYK @150 ppi)",
+  "file": "assets/art/ast-0081-tg-2022-cover-art-gravelord-nito.png",
+  "format": "png",
+  "dims": "1312\u00d71690 px",
+  "bytes": 889509
+ }
+]

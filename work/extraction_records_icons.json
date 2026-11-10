@@ -1,0 +1,1740 @@
+[
+ {
+  "id": "ICO-001",
+  "name": "Secondary spawn node",
+  "section": "Encounter Cards",
+  "label_how": "right",
+  "kind": "raster",
+  "srcsize": [
+   50,
+   50
+  ],
+  "type": "icon",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 32,
+  "bbox_pt": [
+   96.0,
+   96.5,
+   125.0,
+   197.5
+  ],
+  "method": "pdftoppm 600 dpi crop \u2192 parchment-key alpha (bg (181, 182, 181))",
+  "file": "assets/icons/ico-001-secondary-spawn-node.png",
+  "dims": "242\u00d7842 px",
+  "format": "png",
+  "parchment_crop": "work/icons_parchment/ICO-001-secondary-spawn-node.png"
+ },
+ {
+  "id": "ICO-002",
+  "name": "Encounter level 1",
+  "section": "Encounter Cards",
+  "label_how": "right",
+  "kind": "raster",
+  "srcsize": [
+   37,
+   37
+  ],
+  "type": "icon",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 32,
+  "bbox_pt": [
+   209.4,
+   96.5,
+   232.4,
+   119.5
+  ],
+  "method": "pdftoppm 600 dpi crop \u2192 parchment-key alpha (bg (225, 224, 220))",
+  "file": "assets/icons/ico-002-encounter-level-1.png",
+  "dims": "192\u00d7170 px",
+  "format": "png",
+  "parchment_crop": "work/icons_parchment/ICO-002-encounter-level-1.png"
+ },
+ {
+  "id": "ICO-003",
+  "name": "Skeleton Soldier",
+  "section": "Encounter Cards",
+  "label_how": "right",
+  "kind": "raster",
+  "srcsize": [
+   37,
+   37
+  ],
+  "type": "icon",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 32,
+  "bbox_pt": [
+   319.2,
+   96.5,
+   342.2,
+   119.5
+  ],
+  "method": "pdftoppm 600 dpi crop \u2192 parchment-key alpha (bg (224, 225, 220))",
+  "file": "assets/icons/ico-003-skeleton-soldier.png",
+  "dims": "147\u00d7164 px",
+  "format": "png",
+  "parchment_crop": "work/icons_parchment/ICO-003-skeleton-soldier.png"
+ },
+ {
+  "id": "ICO-004",
+  "name": "Treasure Chest",
+  "section": "Encounter Cards",
+  "label_how": "right",
+  "kind": "raster",
+  "srcsize": [
+   84,
+   84
+  ],
+  "type": "icon",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 32,
+  "bbox_pt": [
+   428.0,
+   95.5,
+   453.1,
+   120.6
+  ],
+  "method": "pdftoppm 600 dpi crop \u2192 parchment-key alpha (bg (218, 218, 213))",
+  "file": "assets/icons/ico-004-treasure-chest.png",
+  "dims": "178\u00d7197 px",
+  "format": "png",
+  "parchment_crop": "work/icons_parchment/ICO-004-treasure-chest.png"
+ },
+ {
+  "id": "ICO-005",
+  "name": "Encounter level 2",
+  "section": "Encounter Cards",
+  "label_how": "right",
+  "kind": "raster",
+  "srcsize": [
+   37,
+   37
+  ],
+  "type": "icon",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 32,
+  "bbox_pt": [
+   209.4,
+   120.5,
+   232.4,
+   143.5
+  ],
+  "method": "pdftoppm 600 dpi crop \u2192 parchment-key alpha (bg (236, 235, 230))",
+  "file": "assets/icons/ico-005-encounter-level-2.png",
+  "dims": "144\u00d7149 px",
+  "format": "png",
+  "parchment_crop": "work/icons_parchment/ICO-005-encounter-level-2.png"
+ },
+ {
+  "id": "ICO-006",
+  "name": "Skeleton Archer",
+  "section": "Encounter Cards",
+  "label_how": "right",
+  "kind": "raster",
+  "srcsize": [
+   37,
+   37
+  ],
+  "type": "icon",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 32,
+  "bbox_pt": [
+   319.2,
+   120.5,
+   342.2,
+   143.5
+  ],
+  "method": "pdftoppm 600 dpi crop \u2192 parchment-key alpha (bg (238, 238, 233))",
+  "file": "assets/icons/ico-006-skeleton-archer.png",
+  "dims": "147\u00d7151 px",
+  "format": "png",
+  "parchment_crop": "work/icons_parchment/ICO-006-skeleton-archer.png"
+ },
+ {
+  "id": "ICO-007",
+  "name": "Barrel",
+  "section": "Encounter Cards",
+  "label_how": "right",
+  "kind": "raster",
+  "srcsize": [
+   42,
+   42
+  ],
+  "type": "icon",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 32,
+  "bbox_pt": [
+   428.0,
+   119.5,
+   453.1,
+   144.6
+  ],
+  "method": "pdftoppm 600 dpi crop \u2192 parchment-key alpha (bg (230, 230, 225))",
+  "file": "assets/icons/ico-007-barrel.png",
+  "dims": "178\u00d7156 px",
+  "format": "png",
+  "parchment_crop": "work/icons_parchment/ICO-007-barrel.png"
+ },
+ {
+  "id": "ICO-008",
+  "name": "Encounter level 3",
+  "section": "Encounter Cards",
+  "label_how": "right",
+  "kind": "raster",
+  "srcsize": [
+   37,
+   37
+  ],
+  "type": "icon",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 32,
+  "bbox_pt": [
+   209.4,
+   144.5,
+   232.4,
+   167.5
+  ],
+  "method": "pdftoppm 600 dpi crop \u2192 parchment-key alpha (bg (241, 239, 235))",
+  "file": "assets/icons/ico-008-encounter-level-3.png",
+  "dims": "144\u00d7149 px",
+  "format": "png",
+  "parchment_crop": "work/icons_parchment/ICO-008-encounter-level-3.png"
+ },
+ {
+  "id": "ICO-009",
+  "name": "Giant Skeleton Soldier",
+  "section": "Encounter Cards",
+  "label_how": "right",
+  "kind": "raster",
+  "srcsize": [
+   37,
+   37
+  ],
+  "type": "icon",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 32,
+  "bbox_pt": [
+   319.2,
+   144.5,
+   342.2,
+   167.5
+  ],
+  "method": "pdftoppm 600 dpi crop \u2192 parchment-key alpha (bg (244, 242, 237))",
+  "file": "assets/icons/ico-009-giant-skeleton-soldier.png",
+  "dims": "147\u00d7151 px",
+  "format": "png",
+  "parchment_crop": "work/icons_parchment/ICO-009-giant-skeleton-soldier.png"
+ },
+ {
+  "id": "ICO-010",
+  "name": "Gravestone",
+  "section": "Encounter Cards",
+  "label_how": "right",
+  "kind": "raster",
+  "srcsize": [
+   84,
+   84
+  ],
+  "type": "icon",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 32,
+  "bbox_pt": [
+   428.0,
+   143.5,
+   453.1,
+   168.6
+  ],
+  "method": "pdftoppm 600 dpi crop \u2192 parchment-key alpha (bg (235, 234, 229))",
+  "file": "assets/icons/ico-010-gravestone.png",
+  "dims": "147\u00d7151 px",
+  "format": "png",
+  "parchment_crop": "work/icons_parchment/ICO-010-gravestone.png"
+ },
+ {
+  "id": "ICO-011",
+  "name": "Giant Skeleton Archer",
+  "section": "Encounter Cards",
+  "label_how": "right",
+  "kind": "raster",
+  "srcsize": [
+   37,
+   37
+  ],
+  "type": "icon",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 32,
+  "bbox_pt": [
+   319.2,
+   168.5,
+   342.2,
+   191.5
+  ],
+  "method": "pdftoppm 600 dpi crop \u2192 parchment-key alpha (bg (246, 245, 240))",
+  "file": "assets/icons/ico-011-giant-skeleton-archer.png",
+  "dims": "147\u00d7151 px",
+  "format": "png",
+  "parchment_crop": "work/icons_parchment/ICO-011-giant-skeleton-archer.png"
+ },
+ {
+  "id": "ICO-012",
+  "name": "Lever",
+  "section": "Encounter Cards",
+  "label_how": "right",
+  "kind": "raster",
+  "srcsize": [
+   75,
+   75
+  ],
+  "type": "icon",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 32,
+  "bbox_pt": [
+   429.1,
+   168.5,
+   452.1,
+   191.5
+  ],
+  "method": "pdftoppm 600 dpi crop \u2192 parchment-key alpha (bg (241, 241, 235))",
+  "file": "assets/icons/ico-012-lever.png",
+  "dims": "147\u00d7151 px",
+  "format": "png",
+  "parchment_crop": "work/icons_parchment/ICO-012-lever.png"
+ },
+ {
+  "id": "ICO-013",
+  "name": "Trapped encounter",
+  "section": "Encounter Cards",
+  "label_how": "right",
+  "kind": "raster",
+  "srcsize": [
+   127,
+   27
+  ],
+  "type": "icon",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 32,
+  "bbox_pt": [
+   96.4,
+   193.2,
+   107.7,
+   228.6
+  ],
+  "method": "pdftoppm 600 dpi crop \u2192 parchment-key alpha (bg (182, 187, 186))",
+  "file": "assets/icons/ico-013-trapped-encounter.png",
+  "dims": "94\u00d7295 px",
+  "format": "png",
+  "parchment_crop": "work/icons_parchment/ICO-013-trapped-encounter.png"
+ },
+ {
+  "id": "ICO-014",
+  "name": "Trapped encounter",
+  "section": "Encounter Cards",
+  "label_how": "right",
+  "kind": "raster",
+  "srcsize": [
+   127,
+   27
+  ],
+  "type": "icon",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 32,
+  "bbox_pt": [
+   104.8,
+   193.2,
+   116.2,
+   228.6
+  ],
+  "method": "pdftoppm 600 dpi crop \u2192 parchment-key alpha (bg (197, 198, 198))",
+  "file": "assets/icons/ico-014-trapped-encounter.png",
+  "dims": "94\u00d7295 px",
+  "format": "png",
+  "parchment_crop": "work/icons_parchment/ICO-014-trapped-encounter.png"
+ },
+ {
+  "id": "ICO-015",
+  "name": "Trapped encounter",
+  "section": "Encounter Cards",
+  "label_how": "right",
+  "kind": "raster",
+  "srcsize": [
+   127,
+   27
+  ],
+  "type": "icon",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 32,
+  "bbox_pt": [
+   113.3,
+   193.2,
+   124.6,
+   228.6
+  ],
+  "method": "pdftoppm 600 dpi crop \u2192 parchment-key alpha (bg (213, 214, 211))",
+  "file": "assets/icons/ico-015-trapped-encounter.png",
+  "dims": "95\u00d7277 px",
+  "format": "png",
+  "parchment_crop": "work/icons_parchment/ICO-015-trapped-encounter.png"
+ },
+ {
+  "id": "ICO-016",
+  "name": "Skeleton Beast",
+  "section": "Encounter Cards",
+  "label_how": "right",
+  "kind": "raster",
+  "srcsize": [
+   37,
+   37
+  ],
+  "type": "icon",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 32,
+  "bbox_pt": [
+   319.2,
+   192.5,
+   342.2,
+   215.5
+  ],
+  "method": "pdftoppm 600 dpi crop \u2192 parchment-key alpha (bg (246, 246, 241))",
+  "file": "assets/icons/ico-016-skeleton-beast.png",
+  "dims": "147\u00d7151 px",
+  "format": "png",
+  "parchment_crop": "work/icons_parchment/ICO-016-skeleton-beast.png"
+ },
+ {
+  "id": "ICO-017",
+  "name": "Shrine",
+  "section": "Encounter Cards",
+  "label_how": "right",
+  "kind": "raster",
+  "srcsize": [
+   37,
+   37
+  ],
+  "type": "icon",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 32,
+  "bbox_pt": [
+   429.1,
+   192.5,
+   452.1,
+   215.5
+  ],
+  "method": "pdftoppm 600 dpi crop \u2192 parchment-key alpha (bg (245, 243, 239))",
+  "file": "assets/icons/ico-017-shrine.png",
+  "dims": "147\u00d7151 px",
+  "format": "png",
+  "parchment_crop": "work/icons_parchment/ICO-017-shrine.png"
+ },
+ {
+  "id": "ICO-018",
+  "name": "Necromancer",
+  "section": "Encounter Cards",
+  "label_how": "right",
+  "kind": "raster",
+  "srcsize": [
+   37,
+   37
+  ],
+  "type": "icon",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 32,
+  "bbox_pt": [
+   319.2,
+   216.5,
+   342.2,
+   239.5
+  ],
+  "method": "pdftoppm 600 dpi crop \u2192 parchment-key alpha (bg (248, 246, 241))",
+  "file": "assets/icons/ico-018-necromancer.png",
+  "dims": "147\u00d7151 px",
+  "format": "png",
+  "parchment_crop": "work/icons_parchment/ICO-018-necromancer.png"
+ },
+ {
+  "id": "ICO-019",
+  "name": "Torch",
+  "section": "Encounter Cards",
+  "label_how": "right",
+  "kind": "raster",
+  "srcsize": [
+   75,
+   75
+  ],
+  "type": "icon",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 32,
+  "bbox_pt": [
+   429.1,
+   216.5,
+   452.1,
+   239.5
+  ],
+  "method": "pdftoppm 600 dpi crop \u2192 parchment-key alpha (bg (246, 244, 240))",
+  "file": "assets/icons/ico-019-torch.png",
+  "dims": "148\u00d7151 px",
+  "format": "png",
+  "parchment_crop": "work/icons_parchment/ICO-019-torch.png"
+ },
+ {
+  "id": "ICO-020",
+  "name": "(unlabelled icon 20)",
+  "section": "Encounter Cards",
+  "label_how": "none",
+  "kind": "vector",
+  "srcsize": null,
+  "type": "icon",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 32,
+  "bbox_pt": [
+   99.5,
+   234.5,
+   116.4,
+   251.4
+  ],
+  "method": "pdftoppm 600 dpi crop \u2192 parchment-key alpha (bg (185, 189, 188))",
+  "file": "assets/icons/ico-020-unlabelled-20.png",
+  "dims": "140\u00d7141 px",
+  "format": "png",
+  "parchment_crop": "work/icons_parchment/ICO-020-unlabelled-20.png"
+ },
+ {
+  "id": "ICO-021",
+  "name": "(unlabelled icon 21)",
+  "section": "Encounter Cards",
+  "label_how": "none",
+  "kind": "vector",
+  "srcsize": null,
+  "type": "icon",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 32,
+  "bbox_pt": [
+   512.9,
+   234.5,
+   529.7,
+   251.4
+  ],
+  "method": "pdftoppm 600 dpi crop \u2192 parchment-key alpha (bg (201, 203, 200))",
+  "file": "assets/icons/ico-021-unlabelled-21.png",
+  "dims": "141\u00d7141 px",
+  "format": "png",
+  "parchment_crop": "work/icons_parchment/ICO-021-unlabelled-21.png"
+ },
+ {
+  "id": "ICO-022",
+  "name": "(unlabelled icon 22)",
+  "section": "Encounter Cards",
+  "label_how": "none",
+  "kind": "raster",
+  "srcsize": [
+   64,
+   64
+  ],
+  "type": "icon",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 32,
+  "bbox_pt": [
+   94.6,
+   258.4,
+   130.1,
+   293.9
+  ],
+  "method": "pdftoppm 600 dpi crop \u2192 parchment-key alpha (bg (191, 195, 194))",
+  "file": "assets/icons/ico-022-unlabelled-22.png",
+  "dims": "296\u00d7296 px",
+  "format": "png",
+  "parchment_crop": "work/icons_parchment/ICO-022-unlabelled-22.png"
+ },
+ {
+  "id": "ICO-023",
+  "name": "Behaviour deck size",
+  "section": "Enemy Statistics",
+  "label_how": "right",
+  "kind": "raster",
+  "srcsize": [
+   47,
+   47
+  ],
+  "type": "icon",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 32,
+  "bbox_pt": [
+   160.5,
+   262.5,
+   187.9,
+   289.9
+  ],
+  "method": "pdftoppm 600 dpi crop \u2192 parchment-key alpha (bg (241, 239, 235))",
+  "file": "assets/icons/ico-023-behaviour-deck-size.png",
+  "dims": "186\u00d7182 px",
+  "format": "png",
+  "parchment_crop": "work/icons_parchment/ICO-023-behaviour-deck-size.png"
+ },
+ {
+  "id": "ICO-024",
+  "name": "Resist (vs magic) 4",
+  "section": "Encounter Cards",
+  "label_how": "right",
+  "kind": "raster",
+  "srcsize": [
+   61,
+   61
+  ],
+  "type": "icon",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 32,
+  "bbox_pt": [
+   297.3,
+   259.1,
+   331.5,
+   293.2
+  ],
+  "method": "pdftoppm 600 dpi crop \u2192 parchment-key alpha (bg (246, 245, 240))",
+  "file": "assets/icons/ico-024-resist-4.png",
+  "dims": "284\u00d7255 px",
+  "format": "png",
+  "parchment_crop": "work/icons_parchment/ICO-024-resist-4.png"
+ },
+ {
+  "id": "ICO-025",
+  "name": "(unlabelled icon 25)",
+  "section": "Enemy Statistics",
+  "label_how": "none",
+  "kind": "raster",
+  "srcsize": [
+   47,
+   47
+  ],
+  "type": "icon",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 32,
+  "bbox_pt": [
+   369.9,
+   262.5,
+   397.4,
+   289.9
+  ],
+  "method": "pdftoppm 600 dpi crop \u2192 parchment-key alpha (bg (248, 246, 242))",
+  "file": "assets/icons/ico-025-unlabelled-25.png",
+  "dims": "186\u00d7186 px",
+  "format": "png",
+  "parchment_crop": "work/icons_parchment/ICO-025-unlabelled-25.png"
+ },
+ {
+  "id": "ICO-026",
+  "name": "Heat Up Point",
+  "section": "Enemy Statistics",
+  "label_how": "right",
+  "kind": "raster",
+  "srcsize": [
+   47,
+   47
+  ],
+  "type": "icon",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 32,
+  "bbox_pt": [
+   452.4,
+   262.5,
+   479.9,
+   289.9
+  ],
+  "method": "pdftoppm 600 dpi crop \u2192 parchment-key alpha (bg (243, 242, 236))",
+  "file": "assets/icons/ico-026-heat-up-point.png",
+  "dims": "208\u00d7186 px",
+  "format": "png",
+  "parchment_crop": "work/icons_parchment/ICO-026-heat-up-point.png"
+ },
+ {
+  "id": "ICO-027",
+  "name": "(unlabelled icon 27)",
+  "section": "Enemy Statistics",
+  "label_how": "none",
+  "kind": "vector",
+  "srcsize": null,
+  "type": "icon",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 32,
+  "bbox_pt": [
+   99.5,
+   294.6,
+   116.4,
+   311.4
+  ],
+  "method": "pdftoppm 600 dpi crop \u2192 parchment-key alpha (bg (174, 180, 181))",
+  "file": "assets/icons/ico-027-unlabelled-27.png",
+  "dims": "140\u00d7140 px",
+  "format": "png",
+  "parchment_crop": "work/icons_parchment/ICO-027-unlabelled-27.png"
+ },
+ {
+  "id": "ICO-028",
+  "name": "(unlabelled icon 28)",
+  "section": "Enemy Statistics",
+  "label_how": "none",
+  "kind": "vector",
+  "srcsize": null,
+  "type": "icon",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 32,
+  "bbox_pt": [
+   306.1,
+   294.6,
+   323.0,
+   311.4
+  ],
+  "method": "pdftoppm 600 dpi crop \u2192 parchment-key alpha (bg (245, 243, 238))",
+  "file": "assets/icons/ico-028-unlabelled-28.png",
+  "dims": "105\u00d7106 px",
+  "format": "png",
+  "parchment_crop": "work/icons_parchment/ICO-028-unlabelled-28.png"
+ },
+ {
+  "id": "ICO-029",
+  "name": "(unlabelled icon 29)",
+  "section": "Enemy Statistics",
+  "label_how": "none",
+  "kind": "vector",
+  "srcsize": null,
+  "type": "icon",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 32,
+  "bbox_pt": [
+   512.9,
+   294.6,
+   529.7,
+   311.4
+  ],
+  "method": "pdftoppm 600 dpi crop \u2192 parchment-key alpha (bg (196, 198, 198))",
+  "file": "assets/icons/ico-029-unlabelled-29.png",
+  "dims": "141\u00d7140 px",
+  "format": "png",
+  "parchment_crop": "work/icons_parchment/ICO-029-unlabelled-29.png"
+ },
+ {
+  "id": "ICO-030",
+  "name": "(unlabelled icon 30)",
+  "section": "Enemy Movement",
+  "label_how": "none",
+  "kind": "vector",
+  "srcsize": null,
+  "type": "icon",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 32,
+  "bbox_pt": [
+   176.9,
+   324.5,
+   193.8,
+   345.0
+  ],
+  "method": "pdftoppm 600 dpi crop \u2192 parchment-key alpha (bg (246, 244, 241))",
+  "file": "assets/icons/ico-030-unlabelled-30.png",
+  "dims": "105\u00d7136 px",
+  "format": "png",
+  "parchment_crop": "work/icons_parchment/ICO-030-unlabelled-30.png"
+ },
+ {
+  "id": "ICO-031",
+  "name": "Move towards the nearest character",
+  "section": "Enemy Movement",
+  "label_how": "right",
+  "kind": "vector",
+  "srcsize": null,
+  "type": "icon",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 32,
+  "bbox_pt": [
+   214.4,
+   323.2,
+   234.1,
+   342.9
+  ],
+  "method": "pdftoppm 600 dpi crop \u2192 parchment-key alpha (bg (246, 246, 241))",
+  "file": "assets/icons/ico-031-move-towards-the-nearest-character.png",
+  "dims": "146\u00d7130 px",
+  "format": "png",
+  "parchment_crop": "work/icons_parchment/ICO-031-move-towards-the-nearest-character.png"
+ },
+ {
+  "id": "ICO-032",
+  "name": "Attack the nearest character",
+  "section": "Enemy Movement",
+  "label_how": "right",
+  "kind": "vector",
+  "srcsize": null,
+  "type": "icon",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 32,
+  "bbox_pt": [
+   434.1,
+   323.2,
+   453.8,
+   342.9
+  ],
+  "method": "pdftoppm 600 dpi crop \u2192 parchment-key alpha (bg (243, 242, 238))",
+  "file": "assets/icons/ico-032-attack-the-nearest-character.png",
+  "dims": "129\u00d7130 px",
+  "format": "png",
+  "parchment_crop": "work/icons_parchment/ICO-032-attack-the-nearest-character.png"
+ },
+ {
+  "id": "ICO-033",
+  "name": "Aggro token",
+  "section": "Enemy Movement",
+  "label_how": "right",
+  "kind": "vector",
+  "srcsize": null,
+  "type": "icon",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 32,
+  "bbox_pt": [
+   172.3,
+   342.5,
+   237.3,
+   407.5
+  ],
+  "method": "pdftoppm 600 dpi crop \u2192 parchment-key alpha (bg (246, 244, 240))",
+  "file": "assets/icons/ico-033-aggro-token.png",
+  "dims": "525\u00d7542 px",
+  "format": "png",
+  "parchment_crop": "work/icons_parchment/ICO-033-aggro-token.png"
+ },
+ {
+  "id": "ICO-034",
+  "name": "with the Aggro token",
+  "section": "Enemy Movement",
+  "label_how": "right",
+  "kind": "vector",
+  "srcsize": null,
+  "type": "icon",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 32,
+  "bbox_pt": [
+   392.0,
+   342.5,
+   457.0,
+   410.7
+  ],
+  "method": "pdftoppm 600 dpi crop \u2192 parchment-key alpha (bg (245, 243, 239))",
+  "file": "assets/icons/ico-034-with-the-aggro-token.png",
+  "dims": "524\u00d7533 px",
+  "format": "png",
+  "parchment_crop": "work/icons_parchment/ICO-034-with-the-aggro-token.png"
+ },
+ {
+  "id": "ICO-035",
+  "name": "(unlabelled icon 35)",
+  "section": "Enemy Movement",
+  "label_how": "none",
+  "kind": "vector",
+  "srcsize": null,
+  "type": "icon",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 32,
+  "bbox_pt": [
+   394.3,
+   408.5,
+   416.1,
+   430.4
+  ],
+  "method": "pdftoppm 600 dpi crop \u2192 parchment-key alpha (bg (246, 246, 241))",
+  "file": "assets/icons/ico-035-unlabelled-35.png",
+  "dims": "146\u00d7147 px",
+  "format": "png",
+  "parchment_crop": "work/icons_parchment/ICO-035-unlabelled-35.png"
+ },
+ {
+  "id": "ICO-036",
+  "name": "Turn 90\u00b0 right",
+  "section": "Enemy Movement",
+  "label_how": "below",
+  "kind": "vector",
+  "srcsize": null,
+  "type": "icon",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 32,
+  "bbox_pt": [
+   99.5,
+   426.3,
+   150.5,
+   473.5
+  ],
+  "method": "pdftoppm 600 dpi crop \u2192 parchment-key alpha (bg (231, 234, 231))",
+  "file": "assets/icons/ico-036-turn-90-right.png",
+  "dims": "406\u00d7393 px",
+  "format": "png",
+  "parchment_crop": "work/icons_parchment/ICO-036-turn-90-right.png"
+ },
+ {
+  "id": "ICO-037",
+  "name": "Turn 90\u00b0 left",
+  "section": "Enemy Movement",
+  "label_how": "below",
+  "kind": "vector",
+  "srcsize": null,
+  "type": "icon",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 32,
+  "bbox_pt": [
+   174.7,
+   426.3,
+   225.6,
+   473.5
+  ],
+  "method": "pdftoppm 600 dpi crop \u2192 parchment-key alpha (bg (246, 244, 240))",
+  "file": "assets/icons/ico-037-turn-90-left.png",
+  "dims": "390\u00d7359 px",
+  "format": "png",
+  "parchment_crop": "work/icons_parchment/ICO-037-turn-90-left.png"
+ },
+ {
+  "id": "ICO-038",
+  "name": "range in specified arcs",
+  "section": "Enemy Movement",
+  "label_how": "right",
+  "kind": "vector",
+  "srcsize": null,
+  "type": "icon",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 32,
+  "bbox_pt": [
+   240.4,
+   431.1,
+   310.1,
+   473.5
+  ],
+  "method": "pdftoppm 600 dpi crop \u2192 parchment-key alpha (bg (246, 244, 241))",
+  "file": "assets/icons/ico-038-range-in-specified-arcs.png",
+  "dims": "545\u00d7319 px",
+  "format": "png",
+  "parchment_crop": "work/icons_parchment/ICO-038-range-in-specified-arcs.png"
+ },
+ {
+  "id": "ICO-039",
+  "name": "Neutral boss arc",
+  "section": "Enemy Movement",
+  "label_how": "below",
+  "kind": "raster",
+  "srcsize": [
+   62,
+   66
+  ],
+  "type": "icon",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 32,
+  "bbox_pt": [
+   323.8,
+   434.7,
+   360.4,
+   471.3
+  ],
+  "method": "pdftoppm 600 dpi crop \u2192 parchment-key alpha (bg (246, 246, 241))",
+  "file": "assets/icons/ico-039-neutral-boss-arc.png",
+  "dims": "217\u00d7219 px",
+  "format": "png",
+  "parchment_crop": "work/icons_parchment/ICO-039-neutral-boss-arc.png"
+ },
+ {
+  "id": "ICO-040",
+  "name": "Attack boss arc",
+  "section": "Enemy Movement",
+  "label_how": "below",
+  "kind": "raster",
+  "srcsize": [
+   62,
+   66
+  ],
+  "type": "icon",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 32,
+  "bbox_pt": [
+   378.7,
+   434.7,
+   415.3,
+   471.3
+  ],
+  "method": "pdftoppm 600 dpi crop \u2192 parchment-key alpha (bg (246, 246, 241))",
+  "file": "assets/icons/ico-040-attack-boss-arc.png",
+  "dims": "243\u00d7244 px",
+  "format": "png",
+  "parchment_crop": "work/icons_parchment/ICO-040-attack-boss-arc.png"
+ },
+ {
+  "id": "ICO-041",
+  "name": "6",
+  "section": "Enemy Movement",
+  "label_how": "right",
+  "kind": "raster",
+  "srcsize": [
+   62,
+   66
+  ],
+  "type": "icon",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 32,
+  "bbox_pt": [
+   433.7,
+   434.7,
+   470.2,
+   471.3
+  ],
+  "method": "pdftoppm 600 dpi crop \u2192 parchment-key alpha (bg (243, 242, 237))",
+  "file": "assets/icons/ico-041-6.png",
+  "dims": "215\u00d7219 px",
+  "format": "png",
+  "parchment_crop": "work/icons_parchment/ICO-041-6.png"
+ },
+ {
+  "id": "ICO-042",
+  "name": "Deal magical damage",
+  "section": "Enemy Movement",
+  "label_how": "below",
+  "kind": "vector",
+  "srcsize": null,
+  "type": "icon",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 32,
+  "bbox_pt": [
+   487.3,
+   432.9,
+   526.5,
+   473.1
+  ],
+  "method": "pdftoppm 600 dpi crop \u2192 parchment-key alpha (bg (226, 226, 223))",
+  "file": "assets/icons/ico-042-deal-magical-damage.png",
+  "dims": "309\u00d7336 px",
+  "format": "png",
+  "parchment_crop": "work/icons_parchment/ICO-042-deal-magical-damage.png"
+ },
+ {
+  "id": "ICO-043",
+  "name": "(unlabelled icon 43)",
+  "section": "Enemy Movement",
+  "label_how": "none",
+  "kind": "vector",
+  "srcsize": null,
+  "type": "icon",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 32,
+  "bbox_pt": [
+   99.5,
+   492.6,
+   116.4,
+   509.4
+  ],
+  "method": "pdftoppm 600 dpi crop \u2192 parchment-key alpha (bg (195, 197, 196))",
+  "file": "assets/icons/ico-043-unlabelled-43.png",
+  "dims": "140\u00d7140 px",
+  "format": "png",
+  "parchment_crop": "work/icons_parchment/ICO-043-unlabelled-43.png"
+ },
+ {
+  "id": "ICO-044",
+  "name": "boss arc",
+  "section": "Enemy Movement",
+  "label_how": "right",
+  "kind": "vector",
+  "srcsize": null,
+  "type": "icon",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 32,
+  "bbox_pt": [
+   306.1,
+   492.6,
+   323.0,
+   509.4
+  ],
+  "method": "pdftoppm 600 dpi crop \u2192 parchment-key alpha (bg (247, 246, 241))",
+  "file": "assets/icons/ico-044-boss-arc.png",
+  "dims": "105\u00d7106 px",
+  "format": "png",
+  "parchment_crop": "work/icons_parchment/ICO-044-boss-arc.png"
+ },
+ {
+  "id": "ICO-045",
+  "name": "(unlabelled icon 45)",
+  "section": "Enemy Movement",
+  "label_how": "none",
+  "kind": "vector",
+  "srcsize": null,
+  "type": "icon",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 32,
+  "bbox_pt": [
+   512.9,
+   492.6,
+   529.7,
+   509.4
+  ],
+  "method": "pdftoppm 600 dpi crop \u2192 parchment-key alpha (bg (198, 201, 199))",
+  "file": "assets/icons/ico-045-unlabelled-45.png",
+  "dims": "141\u00d7140 px",
+  "format": "png",
+  "parchment_crop": "work/icons_parchment/ICO-045-unlabelled-45.png"
+ },
+ {
+  "id": "ICO-046",
+  "name": "Deal magical damage",
+  "section": "Equipment Icons",
+  "label_how": "right",
+  "kind": "raster",
+  "srcsize": [
+   60,
+   54
+  ],
+  "type": "icon",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 32,
+  "bbox_pt": [
+   423.6,
+   518.5,
+   457.6,
+   549.6
+  ],
+  "method": "pdftoppm 600 dpi crop \u2192 parchment-key alpha (bg (245, 243, 238))",
+  "file": "assets/icons/ico-046-deal-magical-damage.png",
+  "dims": "234\u00d7259 px",
+  "format": "png",
+  "parchment_crop": "work/icons_parchment/ICO-046-deal-magical-damage.png"
+ },
+ {
+  "id": "ICO-047",
+  "name": "(unlabelled icon 47)",
+  "section": "Equipment Icons",
+  "label_how": "none",
+  "kind": "raster",
+  "srcsize": [
+   37,
+   37
+  ],
+  "type": "icon",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 32,
+  "bbox_pt": [
+   99.6,
+   522.5,
+   122.5,
+   545.5
+  ],
+  "method": "pdftoppm 600 dpi crop \u2192 parchment-key alpha (bg (206, 207, 204))",
+  "file": "assets/icons/ico-047-unlabelled-47.png",
+  "dims": "191\u00d7192 px",
+  "format": "png",
+  "parchment_crop": "work/icons_parchment/ICO-047-unlabelled-47.png"
+ },
+ {
+  "id": "ICO-048",
+  "name": "Weapon upgrade",
+  "section": "Equipment Icons",
+  "label_how": "right",
+  "kind": "raster",
+  "srcsize": [
+   37,
+   37
+  ],
+  "type": "icon",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 32,
+  "bbox_pt": [
+   209.4,
+   522.5,
+   232.4,
+   545.5
+  ],
+  "method": "pdftoppm 600 dpi crop \u2192 parchment-key alpha (bg (246, 245, 241))",
+  "file": "assets/icons/ico-048-weapon-upgrade.png",
+  "dims": "148\u00d7149 px",
+  "format": "png",
+  "parchment_crop": "work/icons_parchment/ICO-048-weapon-upgrade.png"
+ },
+ {
+  "id": "ICO-049",
+  "name": "Black dice",
+  "section": "Equipment Icons",
+  "label_how": "right",
+  "kind": "vector",
+  "srcsize": null,
+  "type": "icon",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 32,
+  "bbox_pt": [
+   319.6,
+   522.5,
+   341.9,
+   545.5
+  ],
+  "method": "pdftoppm 600 dpi crop \u2192 parchment-key alpha (bg (246, 245, 241))",
+  "file": "assets/icons/ico-049-black-dice.png",
+  "dims": "152\u00d7156 px",
+  "format": "png",
+  "parchment_crop": "work/icons_parchment/ICO-049-black-dice.png"
+ },
+ {
+  "id": "ICO-050",
+  "name": "(unlabelled icon 50)",
+  "section": "Equipment Icons",
+  "label_how": "none",
+  "kind": "raster",
+  "srcsize": [
+   37,
+   37
+  ],
+  "type": "icon",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 32,
+  "bbox_pt": [
+   99.6,
+   546.5,
+   122.5,
+   569.5
+  ],
+  "method": "pdftoppm 600 dpi crop \u2192 parchment-key alpha (bg (202, 204, 201))",
+  "file": "assets/icons/ico-050-unlabelled-50.png",
+  "dims": "191\u00d7192 px",
+  "format": "png",
+  "parchment_crop": "work/icons_parchment/ICO-050-unlabelled-50.png"
+ },
+ {
+  "id": "ICO-051",
+  "name": "Armour upgrade",
+  "section": "Equipment Icons",
+  "label_how": "right",
+  "kind": "raster",
+  "srcsize": [
+   37,
+   37
+  ],
+  "type": "icon",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 32,
+  "bbox_pt": [
+   209.4,
+   546.5,
+   232.4,
+   569.5
+  ],
+  "method": "pdftoppm 600 dpi crop \u2192 parchment-key alpha (bg (246, 244, 241))",
+  "file": "assets/icons/ico-051-armour-upgrade.png",
+  "dims": "148\u00d7149 px",
+  "format": "png",
+  "parchment_crop": "work/icons_parchment/ICO-051-armour-upgrade.png"
+ },
+ {
+  "id": "ICO-052",
+  "name": "Blue dice",
+  "section": "Equipment Icons",
+  "label_how": "right",
+  "kind": "vector",
+  "srcsize": null,
+  "type": "icon",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 32,
+  "bbox_pt": [
+   319.6,
+   546.5,
+   341.9,
+   569.5
+  ],
+  "method": "pdftoppm 600 dpi crop \u2192 parchment-key alpha (bg (246, 245, 240))",
+  "file": "assets/icons/ico-052-blue-dice.png",
+  "dims": "152\u00d7156 px",
+  "format": "png",
+  "parchment_crop": "work/icons_parchment/ICO-052-blue-dice.png"
+ },
+ {
+  "id": "ICO-053",
+  "name": "Damage all enemies on target node",
+  "section": "Equipment Icons",
+  "label_how": "right",
+  "kind": "vector",
+  "srcsize": null,
+  "type": "icon",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 32,
+  "bbox_pt": [
+   429.1,
+   547.9,
+   452.1,
+   568.1
+  ],
+  "method": "pdftoppm 600 dpi crop \u2192 parchment-key alpha (bg (246, 244, 240))",
+  "file": "assets/icons/ico-053-damage-all-enemies-on-target-node.png",
+  "dims": "157\u00d7134 px",
+  "format": "png",
+  "parchment_crop": "work/icons_parchment/ICO-053-damage-all-enemies-on-target-node.png"
+ },
+ {
+  "id": "ICO-054",
+  "name": "(unlabelled icon 54)",
+  "section": "Equipment Icons",
+  "label_how": "none",
+  "kind": "raster",
+  "srcsize": [
+   37,
+   37
+  ],
+  "type": "icon",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 32,
+  "bbox_pt": [
+   99.6,
+   570.5,
+   122.5,
+   593.5
+  ],
+  "method": "pdftoppm 600 dpi crop \u2192 parchment-key alpha (bg (201, 204, 201))",
+  "file": "assets/icons/ico-054-unlabelled-54.png",
+  "dims": "191\u00d7192 px",
+  "format": "png",
+  "parchment_crop": "work/icons_parchment/ICO-054-unlabelled-54.png"
+ },
+ {
+  "id": "ICO-055",
+  "name": "Block (vs physical)",
+  "section": "Equipment Icons",
+  "label_how": "right",
+  "kind": "raster",
+  "srcsize": [
+   37,
+   37
+  ],
+  "type": "icon",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 32,
+  "bbox_pt": [
+   209.4,
+   570.5,
+   232.4,
+   593.5
+  ],
+  "method": "pdftoppm 600 dpi crop \u2192 parchment-key alpha (bg (246, 246, 242))",
+  "file": "assets/icons/ico-055-block.png",
+  "dims": "144\u00d7144 px",
+  "format": "png",
+  "parchment_crop": "work/icons_parchment/ICO-055-block.png"
+ },
+ {
+  "id": "ICO-056",
+  "name": "Orange dice",
+  "section": "Equipment Icons",
+  "label_how": "right",
+  "kind": "vector",
+  "srcsize": null,
+  "type": "icon",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 32,
+  "bbox_pt": [
+   319.6,
+   570.5,
+   341.9,
+   593.5
+  ],
+  "method": "pdftoppm 600 dpi crop \u2192 parchment-key alpha (bg (246, 246, 241))",
+  "file": "assets/icons/ico-056-orange-dice.png",
+  "dims": "152\u00d7156 px",
+  "format": "png",
+  "parchment_crop": "work/icons_parchment/ICO-056-orange-dice.png"
+ },
+ {
+  "id": "ICO-057",
+  "name": "Shaft (can\u2019t attack at Range 0)",
+  "section": "Equipment Icons",
+  "label_how": "right",
+  "kind": "vector",
+  "srcsize": null,
+  "type": "icon",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 32,
+  "bbox_pt": [
+   429.1,
+   571.5,
+   452.1,
+   592.6
+  ],
+  "method": "pdftoppm 600 dpi crop \u2192 parchment-key alpha (bg (245, 243, 239))",
+  "file": "assets/icons/ico-057-shaft.png",
+  "dims": "157\u00d7141 px",
+  "format": "png",
+  "parchment_crop": "work/icons_parchment/ICO-057-shaft.png"
+ },
+ {
+  "id": "ICO-058",
+  "name": "(unlabelled icon 58)",
+  "section": "Equipment Icons",
+  "label_how": "none",
+  "kind": "raster",
+  "srcsize": [
+   37,
+   37
+  ],
+  "type": "icon",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 32,
+  "bbox_pt": [
+   99.5,
+   594.5,
+   122.5,
+   617.5
+  ],
+  "method": "pdftoppm 600 dpi crop \u2192 parchment-key alpha (bg (191, 195, 193))",
+  "file": "assets/icons/ico-058-unlabelled-58.png",
+  "dims": "191\u00d7192 px",
+  "format": "png",
+  "parchment_crop": "work/icons_parchment/ICO-058-unlabelled-58.png"
+ },
+ {
+  "id": "ICO-059",
+  "name": "Resist (vs magic)",
+  "section": "Equipment Icons",
+  "label_how": "right",
+  "kind": "raster",
+  "srcsize": [
+   37,
+   37
+  ],
+  "type": "icon",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 32,
+  "bbox_pt": [
+   209.4,
+   594.5,
+   232.4,
+   617.5
+  ],
+  "method": "pdftoppm 600 dpi crop \u2192 parchment-key alpha (bg (246, 246, 241))",
+  "file": "assets/icons/ico-059-resist.png",
+  "dims": "151\u00d7149 px",
+  "format": "png",
+  "parchment_crop": "work/icons_parchment/ICO-059-resist.png"
+ },
+ {
+  "id": "ICO-060",
+  "name": "Move indicated number of nodes in any direction",
+  "section": "Equipment Icons",
+  "label_how": "right",
+  "kind": "vector",
+  "srcsize": null,
+  "type": "icon",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 32,
+  "bbox_pt": [
+   319.2,
+   594.5,
+   342.2,
+   617.5
+  ],
+  "method": "pdftoppm 600 dpi crop \u2192 parchment-key alpha (bg (247, 246, 241))",
+  "file": "assets/icons/ico-060-move-indicated-number-of-nodes-in-any-direction.png",
+  "dims": "156\u00d7156 px",
+  "format": "png",
+  "parchment_crop": "work/icons_parchment/ICO-060-move-indicated-number-of-nodes-in-any-direction.png"
+ },
+ {
+  "id": "ICO-061",
+  "name": "Push affected enemies",
+  "section": "Equipment Icons",
+  "label_how": "right",
+  "kind": "vector",
+  "srcsize": null,
+  "type": "icon",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 32,
+  "bbox_pt": [
+   431.2,
+   594.5,
+   450.0,
+   617.5
+  ],
+  "method": "pdftoppm 600 dpi crop \u2192 parchment-key alpha (bg (245, 242, 236))",
+  "file": "assets/icons/ico-061-push-affected-enemies.png",
+  "dims": "121\u00d7157 px",
+  "format": "png",
+  "parchment_crop": "work/icons_parchment/ICO-061-push-affected-enemies.png"
+ },
+ {
+  "id": "ICO-062",
+  "name": "(unlabelled icon 62)",
+  "section": "Equipment Icons",
+  "label_how": "none",
+  "kind": "vector",
+  "srcsize": null,
+  "type": "icon",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 32,
+  "bbox_pt": [
+   99.5,
+   624.6,
+   116.4,
+   641.4
+  ],
+  "method": "pdftoppm 600 dpi crop \u2192 parchment-key alpha (bg (182, 185, 183))",
+  "file": "assets/icons/ico-062-unlabelled-62.png",
+  "dims": "140\u00d7140 px",
+  "format": "png",
+  "parchment_crop": "work/icons_parchment/ICO-062-unlabelled-62.png"
+ },
+ {
+  "id": "ICO-063",
+  "name": "(unlabelled icon 63)",
+  "section": "Equipment Icons",
+  "label_how": "none",
+  "kind": "vector",
+  "srcsize": null,
+  "type": "icon",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 32,
+  "bbox_pt": [
+   512.9,
+   624.6,
+   529.7,
+   641.4
+  ],
+  "method": "pdftoppm 600 dpi crop \u2192 parchment-key alpha (bg (192, 196, 194))",
+  "file": "assets/icons/ico-063-unlabelled-63.png",
+  "dims": "132\u00d7140 px",
+  "format": "png",
+  "parchment_crop": "work/icons_parchment/ICO-063-unlabelled-63.png"
+ },
+ {
+  "id": "ICO-064",
+  "name": "(unlabelled icon 64)",
+  "section": "Other Icons",
+  "label_how": "none",
+  "kind": "raster",
+  "srcsize": [
+   51,
+   51
+  ],
+  "type": "icon",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 32,
+  "bbox_pt": [
+   98.5,
+   653.5,
+   128.0,
+   683.0
+  ],
+  "method": "pdftoppm 600 dpi crop \u2192 parchment-key alpha (bg (185, 189, 190))",
+  "file": "assets/icons/ico-064-unlabelled-64.png",
+  "dims": "246\u00d7246 px",
+  "format": "png",
+  "parchment_crop": "work/icons_parchment/ICO-064-unlabelled-64.png"
+ },
+ {
+  "id": "ICO-065",
+  "name": "Attack range",
+  "section": "Other Icons",
+  "label_how": "right",
+  "kind": "raster",
+  "srcsize": [
+   47,
+   47
+  ],
+  "type": "icon",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 32,
+  "bbox_pt": [
+   179.8,
+   654.5,
+   207.3,
+   682.0
+  ],
+  "method": "pdftoppm 600 dpi crop \u2192 parchment-key alpha (bg (238, 237, 232))",
+  "file": "assets/icons/ico-065-attack-range.png",
+  "dims": "186\u00d7186 px",
+  "format": "png",
+  "parchment_crop": "work/icons_parchment/ICO-065-attack-range.png"
+ },
+ {
+  "id": "ICO-066",
+  "name": "Repeat behaviour or attack",
+  "section": "Other Icons",
+  "label_how": "right",
+  "kind": "raster",
+  "srcsize": [
+   47,
+   47
+  ],
+  "type": "icon",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 32,
+  "bbox_pt": [
+   275.7,
+   654.5,
+   303.2,
+   682.0
+  ],
+  "method": "pdftoppm 600 dpi crop \u2192 parchment-key alpha (bg (238, 238, 233))",
+  "file": "assets/icons/ico-066-repeat-behaviour-or-attack.png",
+  "dims": "186\u00d7186 px",
+  "format": "png",
+  "parchment_crop": "work/icons_parchment/ICO-066-repeat-behaviour-or-attack.png"
+ },
+ {
+  "id": "ICO-067",
+  "name": "Dodge 6",
+  "section": "Other Icons",
+  "label_how": "right",
+  "kind": "raster",
+  "srcsize": [
+   47,
+   47
+  ],
+  "type": "icon",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 32,
+  "bbox_pt": [
+   421.3,
+   654.5,
+   448.7,
+   682.0
+  ],
+  "method": "pdftoppm 600 dpi crop \u2192 parchment-key alpha (bg (224, 224, 220))",
+  "file": "assets/icons/ico-067-dodge-6.png",
+  "dims": "186\u00d7186 px",
+  "format": "png",
+  "parchment_crop": "work/icons_parchment/ICO-067-dodge-6.png"
+ },
+ {
+  "id": "ICO-068",
+  "name": "(unlabelled icon 68)",
+  "section": "Other Icons",
+  "label_how": "none",
+  "kind": "vector",
+  "srcsize": null,
+  "type": "icon",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 32,
+  "bbox_pt": [
+   99.5,
+   684.6,
+   116.4,
+   701.5
+  ],
+  "method": "pdftoppm 600 dpi crop \u2192 parchment-key alpha (bg (163, 169, 170))",
+  "file": "assets/icons/ico-068-unlabelled-68.png",
+  "dims": "140\u00d7140 px",
+  "format": "png",
+  "parchment_crop": "work/icons_parchment/ICO-068-unlabelled-68.png"
+ },
+ {
+  "id": "ICO-069",
+  "name": "(unlabelled icon 69)",
+  "section": "Other Icons",
+  "label_how": "none",
+  "kind": "vector",
+  "srcsize": null,
+  "type": "icon",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 32,
+  "bbox_pt": [
+   512.9,
+   684.6,
+   529.7,
+   701.4
+  ],
+  "method": "pdftoppm 600 dpi crop \u2192 parchment-key alpha (bg (146, 154, 157))",
+  "file": "assets/icons/ico-069-unlabelled-69.png",
+  "dims": "141\u00d7140 px",
+  "format": "png",
+  "parchment_crop": "work/icons_parchment/ICO-069-unlabelled-69.png"
+ },
+ {
+  "id": "ICO-070",
+  "name": "Bleed",
+  "section": "Other Icons",
+  "label_how": "right",
+  "kind": "raster",
+  "srcsize": [
+   63,
+   63
+  ],
+  "type": "icon",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 32,
+  "bbox_pt": [
+   99.5,
+   708.5,
+   134.5,
+   743.5
+  ],
+  "method": "pdftoppm 600 dpi crop \u2192 parchment-key alpha (bg (122, 126, 128))",
+  "file": "assets/icons/ico-070-bleed.png",
+  "dims": "291\u00d7292 px",
+  "format": "png",
+  "parchment_crop": "work/icons_parchment/ICO-070-bleed.png"
+ },
+ {
+  "id": "ICO-071",
+  "name": "Frostbite",
+  "section": "Other Icons",
+  "label_how": "right",
+  "kind": "raster",
+  "srcsize": [
+   63,
+   63
+  ],
+  "type": "icon",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 32,
+  "bbox_pt": [
+   209.4,
+   708.5,
+   244.4,
+   743.5
+  ],
+  "method": "pdftoppm 600 dpi crop \u2192 parchment-key alpha (bg (179, 183, 183))",
+  "file": "assets/icons/ico-071-frostbite.png",
+  "dims": "292\u00d7292 px",
+  "format": "png",
+  "parchment_crop": "work/icons_parchment/ICO-071-frostbite.png"
+ },
+ {
+  "id": "ICO-072",
+  "name": "Poison",
+  "section": "Other Icons",
+  "label_how": "right",
+  "kind": "raster",
+  "srcsize": [
+   63,
+   63
+  ],
+  "type": "icon",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 32,
+  "bbox_pt": [
+   319.2,
+   708.5,
+   354.2,
+   743.5
+  ],
+  "method": "pdftoppm 600 dpi crop \u2192 parchment-key alpha (bg (162, 168, 169))",
+  "file": "assets/icons/ico-072-poison.png",
+  "dims": "292\u00d7292 px",
+  "format": "png",
+  "parchment_crop": "work/icons_parchment/ICO-072-poison.png"
+ },
+ {
+  "id": "ICO-073",
+  "name": "Stagger",
+  "section": "Other Icons",
+  "label_how": "right",
+  "kind": "raster",
+  "srcsize": [
+   63,
+   63
+  ],
+  "type": "icon",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 32,
+  "bbox_pt": [
+   429.1,
+   708.5,
+   464.1,
+   743.5
+  ],
+  "method": "pdftoppm 600 dpi crop \u2192 parchment-key alpha (bg (142, 151, 153))",
+  "file": "assets/icons/ico-073-stagger.png",
+  "dims": "291\u00d7292 px",
+  "format": "png",
+  "parchment_crop": "work/icons_parchment/ICO-073-stagger.png"
+ }
+]

@@ -1,0 +1,134 @@
+{
+ "parchment_page_2022": {
+  "hex": "#f4f2ea",
+  "cmyk": "C0 M1 Y4 K4",
+  "use": "page background, 2022 book (text-free parchment, p.13 right column)",
+  "src": "TG p.13 render 400 dpi"
+ },
+ "parchment_page_2017": {
+  "hex": "#f5f2ed",
+  "cmyk": "C0 M1 Y3 K4",
+  "use": "page background, 2017 book (brightest 60% of token column)",
+  "src": "Core p.7 render 400 dpi"
+ },
+ "parchment_panel_backcover": {
+  "hex": "#f5f3ed",
+  "cmyk": "C0 M1 Y3 K4",
+  "use": "reference-panel fill on back cover (brightest parchment)",
+  "src": "TG p.32 render 600 dpi"
+ },
+ "page_edge_shadow": {
+  "hex": "#141312",
+  "cmyk": "C0 M5 Y10 K92",
+  "use": "outer page-edge / gutter shadow of the open-book background",
+  "src": "TG p.13 render"
+ },
+ "heading_ink": {
+  "hex": "#231f20",
+  "cmyk": "C0 M11 Y9 K86",
+  "use": "chapter-title ink (darkest 3 % of title zone) \u2014 effectively rich black/charcoal",
+  "src": "TG p.13 render"
+ },
+ "body_ink": {
+  "hex": "#231f20",
+  "cmyk": "C0 M11 Y9 K86",
+  "use": "body-text ink (darkest 2 % of body zone)",
+  "src": "TG p.13 render"
+ },
+ "cover_black": {
+  "hex": "#110f0e",
+  "cmyk": "C0 M12 Y18 K93",
+  "use": "cover and back-cover ground (warm near-black)",
+  "src": "TG p.1 render"
+ },
+ "node_gold": {
+  "hex": "#9c8141",
+  "cmyk": "C0 M17 Y58 K39",
+  "use": "gold rings on icons, node outlines on tiles, dashboard lettering",
+  "src": "icon crop: Taunt"
+ },
+ "spawn_node_red": {
+  "hex": "#ce4c4a",
+  "cmyk": "C0 M63 Y64 K19",
+  "use": "enemy spawn nodes, Weak boss arc, Bleed",
+  "src": "icon crop: Primary spawn node"
+ },
+ "terrain_node_magenta": {
+  "hex": "#b556a7",
+  "cmyk": "C0 M52 Y8 K29",
+  "use": "terrain nodes",
+  "src": "icon crop: Primary terrain node"
+ },
+ "encounter_level1_blue": {
+  "hex": "#7a9ab7",
+  "cmyk": "C33 M16 Y0 K28",
+  "use": "Encounter level 1 orb",
+  "src": "icon crop"
+ },
+ "encounter_level3_purple": {
+  "hex": "#6a59ab",
+  "cmyk": "C38 M48 Y0 K33",
+  "use": "Encounter level 3 orb",
+  "src": "icon crop"
+ },
+ "dice_blue": {
+  "hex": "#3ca2e0",
+  "cmyk": "C73 M28 Y0 K12",
+  "use": "blue die icon",
+  "src": "icon crop"
+ },
+ "dice_orange": {
+  "hex": "#f89a0f",
+  "cmyk": "C0 M38 Y94 K3",
+  "use": "orange die icon",
+  "src": "icon crop"
+ },
+ "attack_arc_green": {
+  "hex": "#36b876",
+  "cmyk": "C71 M0 Y36 K28",
+  "use": "Attack boss arc, adjacency highlight",
+  "src": "icon crop"
+ },
+ "weak_arc_red": {
+  "hex": "#f14e1e",
+  "cmyk": "C0 M68 Y88 K5",
+  "use": "Weak boss arc",
+  "src": "icon crop"
+ },
+ "poison_green": {
+  "hex": "#3d9750",
+  "cmyk": "C60 M0 Y47 K41",
+  "use": "Poison condition",
+  "src": "icon crop"
+ },
+ "frostbite_blue": {
+  "hex": "#74a3c1",
+  "cmyk": "C40 M16 Y0 K24",
+  "use": "Frostbite condition",
+  "src": "icon crop"
+ },
+ "endurance_bar_red": {
+  "hex": "#682b35",
+  "cmyk": "C0 M59 Y49 K59",
+  "use": "character dashboard endurance bar (deep red)",
+  "src": "TG p.8 render"
+ },
+ "dashboard_gold": {
+  "hex": "#b77e2e",
+  "cmyk": "C0 M31 Y75 K28",
+  "use": "dashboard slot lettering (ARMOUR / BACKUP / LEFT HAND) gold",
+  "src": "TG p.8 render"
+ },
+ "card_frame_charcoal": {
+  "hex": "#1b1c1c",
+  "cmyk": "C4 M0 Y0 K89",
+  "use": "card frame ground (equipment / enemy / behaviour cards)",
+  "src": "TG p.10 render"
+ },
+ "card_textbox_parchment": {
+  "hex": "#e1ddc5",
+  "cmyk": "C0 M2 Y12 K12",
+  "use": "card text-box parchment fill",
+  "src": "TG p.10 render"
+ }
+}

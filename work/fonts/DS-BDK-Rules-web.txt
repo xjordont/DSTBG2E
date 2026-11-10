@@ -1,0 +1,33 @@
+name                                 type              encoding         emb sub uni object ID
+------------------------------------ ----------------- ---------------- --- --- --- ---------
+NKMIAG+OptimusPrinceps               TrueType          WinAnsi          yes yes yes   2033  0
+AUWLQL+Arimo-Regular                 CID TrueType      Identity-H       yes yes yes   2038  0
+NKMIAG+ACaslonPro-Regular            Type 1C           Custom           yes yes yes   1980  0
+NKMIAG+ACaslonPro-Italic             Type 1C           Custom           yes yes yes   1982  0
+NKMIAG+ACaslonPro-Bold               Type 1C           Custom           yes yes yes   1986  0
+NKMIAG+ACaslonPro-Regular            Type 1C           Custom           yes yes yes   1991  0
+NKMIAG+ACaslonPro-Regular            Type 1C           Custom           yes yes yes   1990  0
+NKMIAG+ACaslonPro-Regular            Type 1C           Custom           yes yes yes   2001  0
+NKMIAG+ACaslonPro-Regular            Type 1C           Custom           yes yes yes   2006  0
+NKMIAG+ACaslonPro-Semibold           Type 1C           Custom           yes yes yes   2003  0
+NKMIAG+ACaslonPro-Regular            Type 1C           Custom           yes yes yes   2002  0
+NKMIAG+OptimusPrinceps               TrueType          WinAnsi          yes yes yes   1999  0
+NKMIAG+OptimusPrinceps               TrueType          WinAnsi          yes yes yes   2010  0
+NKMIAG+OptimusPrincepsSemiBold       TrueType          WinAnsi          yes yes yes   2004  0
+NKMIAG+OptimusPrinceps               TrueType          WinAnsi          yes yes yes   2000  0
+NKMIAG+ACaslonPro-Regular            Type 1C           WinAnsi          yes yes yes    972  0
+NKMIAG+OptimusPrinceps               TrueType          WinAnsi          yes yes yes    973  0
+NKMIAG+ACaslonPro-Regular            Type 1C           WinAnsi          yes yes yes   2012  0
+NKMIAG+OptimusPrinceps               TrueType          WinAnsi          yes yes yes   2013  0
+NKMIAG+ACaslonPro-Regular            Type 1C           WinAnsi          yes yes yes   1538  0
+NKMIAG+OptimusPrinceps               TrueType          WinAnsi          yes yes yes   1539  0
+NKMIAG+ACaslonPro-Regular            Type 1C           Custom           yes yes yes   1753  0
+NKMIAG+OptimusPrinceps               TrueType          WinAnsi          yes yes yes   1754  0
+NKMIAG+ACaslonPro-Regular            Type 1C           Custom           yes yes yes   1818  0
+NKMIAG+OptimusPrinceps               TrueType          WinAnsi          yes yes yes   1819  0
+NKMIAG+ACaslonPro-Regular            Type 1C           WinAnsi          yes yes yes   1846  0
+NKMIAG+OptimusPrinceps               TrueType          WinAnsi          yes yes yes   1847  0
+NKMIAG+ACaslonPro-Regular            Type 1C           Custom           yes yes yes   1911  0
+NKMIAG+OptimusPrinceps               TrueType          WinAnsi          yes yes yes   1912  0
+NKMIAG+ACaslonPro-Regular            Type 1C           WinAnsi          yes yes yes   1947  0
+NKMIAG+OptimusPrinceps               TrueType          WinAnsi          yes yes yes   1948  0

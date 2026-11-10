@@ -1,0 +1,8 @@
+name                                 type              encoding         emb sub uni object ID
+------------------------------------ ----------------- ---------------- --- --- --- ---------
+KRPTLR+ACaslonPro-Bold               Type 1C           Custom           yes yes yes     15  0
+KRPTLR+ACaslonPro-Regular            Type 1C           Custom           yes yes yes     16  0
+KRPTLR+ACaslonPro-Italic             Type 1C           Custom           yes yes yes     17  0
+KRPTLR+OptimusPrinceps               TrueType          WinAnsi          yes yes yes      8  0
+KRPTLR+OptimusPrincepsSemiBold       TrueType          WinAnsi          yes yes yes     18  0
+PSQLDC+Arimo-Regular                 CID TrueType      Identity-H       yes yes yes     61  0
