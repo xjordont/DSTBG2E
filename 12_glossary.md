@@ -12,7 +12,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Area attack.** A boss attack marked with the area icon. It targets every character within range who occupies a node in one of the arcs marked on the behaviour card.
 
-**Area-of-effect (AoE).** A character attack option marked with the AoE icon. One attack roll is compared against the block or resist value of every enemy on the targeted node.
+**Area-of-effect (AoE).** A character attack option marked with the area-of-effect icon. It targets one node within range: one attack roll is compared with the block or resist of every enemy on that node, and every enemy there is hit (see §10.3, Area-of-Effect).
 
 **Armour.** An equipment card bearing the armour icon. One armour card may be equipped in the armour slot. Only the armour card's block or resist dice are rolled after a failed dodge.
 
@@ -22,7 +22,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Attack option.** One line of a weapon or spell card, showing a stamina cost, dice and modifiers. Using an attack option is the *Attack* major action.
 
-**Attack value.** The number of sword icons rolled on an attack, after modifiers and rerolls. For enemies the attack value is the fixed number printed in the attack icon.
+**Attack value.** The total of the values rolled on an attack's dice after rerolls, with any fixed modifier applied once to the total, plus one for a *scaled* weapon and minus one for a *staggered* attacker, to a minimum of zero (see §10.3). For enemies the attack value is the fixed number printed in the attack icon, scaled for the number of characters (see §9.3).
 
 **Back-up slot.** The dashboard slot that holds up to two treasure cards of any kind, carried but not equipped (see §3.2). During an encounter, cards in the back-up slot may be exchanged with the weapon and armour slots only by the *Equip* minor action; an *ember card* must be in the back-up slot to be used.
 
@@ -86,6 +86,8 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Doorway.** A gap in a tile's wall through which characters pass between tiles. Basic nodes beside a doorway are entry nodes.
 
+**Drink Estus (major action).** The major action in which a character flips the *estus flask* token to its used side and removes every damage cube from their endurance bar. It may be taken only while the token shows its ready side (see §3.5, Estus Flask; §10.1).
+
 **Dropped souls.** *Souls* placed on an encounter tile by a character who died there or, when an encounter was *failed*, by a living character. Only the character who dropped them may reclaim them, by surviving to clear that encounter. They are returned to the supply if that character dies first (see §7.6).
 
 **Ember.** An *ember card* consumed by a character as the *Ember* major action, or the state of being *embered* that results (see §4.4, §7.3).
@@ -106,7 +108,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Entry node.** A basic node beside the doorway through which the characters entered the tile. Characters are placed on entry nodes at the start of an encounter, no more than three to a node. In a Level 4 encounter all four nodes along the wall beside the doorway are entry nodes (see §6.7).
 
-**Equip.** A minor action that swaps cards between the back-up slot and the weapon and armour slots. The inventory may not be used during an encounter.
+**Equip.** A minor action, once per turn, in which a character exchanges any number of cards among the back-up slot, the two weapon slots, and the armour slot. It is the only way to change equipped cards during an encounter; the inventory cannot be accessed (see §10.1).
 
 **Equipment card.** A treasure card that a character equips in a weapon or armour slot, stores in a catalyst, or attaches to an equipped card: weapon, shield, catalyst, spell, armour, and upgrade cards (see §4.1).
 
@@ -158,7 +160,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Main-boss.** The second boss of the standard game, fought on both boss tiles after the mini-boss. Its defeat wins the standard game unless a mega-boss follows.
 
-**Major action.** The one principal action of a character's turn: *Attack*, *Rest*, *Drink Estus* or *Ember*.
+**Major action.** The one principal action of a character's turn: *Attack*, *Rest*, *Drink Estus*, or *Ember*. A character may take one major action per turn (see §10.1).
 
 **Mega-boss.** An optional final boss from a mega-boss expansion, fought on its own game board after a Level 4 encounter. Death and hollowing in a mega-boss encounter follow the usual rules (see §7.2).
 
@@ -168,7 +170,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Mini-boss.** The first boss of the standard game, fought on the mini-boss tile.
 
-**Minor action.** An action a character may take during their turn, before or after the major action: *Walk*, *Equip* and *Heroic Action* once each per turn, and *Run* any number of times.
+**Minor action.** An action a character may take during their turn before the major action, after it, or both: *Walk*, *Equip*, and *Heroic Action* once each per turn, and *Run* any number of times (see §10.1).
 
 **Move.** A change of node made by a model through the *Walk* or *Run* minor action, a *shift* icon, or an enemy or boss movement icon. The movement after a successful *dodge* and the movement of a *push* are not moves (see §5.2).
 
@@ -192,13 +194,15 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Reduced reward.** Half the full soul reward, rounded down, gained by every character when an encounter already marked *cleared* is cleared again (see §7.6).
 
-**Repeat.** An icon that causes an entire attack option or behaviour card to be resolved the number of times shown.
+**Relevant stat.** The stat whose requirement is the highest of the four stat requirements printed on a weapon card; if two or more requirements are tied for the highest, the character chooses one of the tied stats. A weapon is *scaled* by comparing the character's relevant stat with that requirement (see §10.5).
+
+**Repeat.** An icon that causes an entire attack option or behaviour card to be resolved the number of times shown. For a character's attack option the stamina cost is paid once and each resolution is a separate attack roll with its own target (see §10.3, Repeat).
 
 **Reset.** The state of an encounter after the characters have rested at the *bonfire*: its encounter card is face down, its enemy models have been removed, and its terrain tokens remain in place. A *cleared* encounter keeps its black cube through a reset; a *failed* encounter has none (see §7.5, Encounter Resolution; §11.5).
 
 **Resist.** The defence rolled against a magical attack, resolved as block is. For enemies, resist is the fixed value subtracted from a magical attack value.
 
-**Rest (major action).** The character removes all stamina cubes from their endurance bar. *Rest* may not be taken in a turn in which the character took the *Run* minor action.
+**Rest (major action).** The character removes every stamina cube from their endurance bar; damage cubes, hollow cubes, and condition tokens stay. A character cannot *Rest* in a turn in which they have *run*, cannot *run* after resting in the same turn, and cannot *Rest* while holding a *frostbite* token (see §10.1).
 
 **Resting at the bonfire.** The party action, costing one *spark* unless it follows the defeat of a boss, that revives dead and *lost* characters, removes every damage cube, stamina cube, hollow cube, and condition token, readies the heroic action, luck, and estus flask tokens, allows visits to the Firekeeper and Blacksmith Andre, and resets every encounter. It neither places nor removes an *ember token* (see §11.2).
 
@@ -206,19 +210,19 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Round.** One pass of the encounter turn order: every enemy model takes a turn in descending threat order, then every character takes a turn in descending threat order (see §7.5, Encounter Turn Order).
 
-**Run.** A minor action: move one node for one stamina. It may be repeated. A character who *runs* may not *Rest* that turn.
+**Run.** A minor action: the character spends one stamina and moves one node. It may be taken any number of times per turn. A character who has *run* cannot *Rest* in that turn (see §10.2).
 
-**Scaled (weapon).** A weapon equipped by a character whose relevant stat exceeds the weapon's highest requirement by five or more. It is marked with a red cube and all its attack options gain +1 attack value. Spells are never scaled.
+**Scaled (weapon).** A weapon equipped by a character whose *relevant stat* exceeds the weapon's highest printed stat requirement by five or more. It is marked with a red cube and each of its attack options adds one to its attack value. Spells are never scaled (see §10.5).
 
 **Scry.** To reveal one hidden card (the top card of a treasure deck, a face-down encounter card, or the top card of the next boss's behaviour deck) and either return it or send it away (see §7.5, Encounter Resolution).
 
 **Section.** In campaign play, one list of tiles ending in one or more bosses. The shop restocks and a free rest is granted only when a section is completed: when its final boss is defeated or, for a section that ends in a named encounter, when that encounter is *cleared*.
 
-**Shaft.** A weapon icon. Attack options with the shaft icon may not target models on the attacker's own node.
+**Shaft.** A weapon icon. An attack option with the shaft icon cannot target a model on the attacker's own node (see §10.3, Shaft).
 
 **Shield.** A one-handed weapon card that shows block or resist dice and has no attack option. A shield is a weapon for equipment slots and for two-handed attacks, and a shield for stocking the shop and for parrying (see §4.1).
 
-**Shift.** A weapon or phantom behaviour icon allowing movement of the number of nodes shown, before or after the dice are rolled according to its position on the line. *Shift* movement costs no stamina.
+**Shift.** A weapon or phantom behaviour icon. A character whose attack option bears it may move up to the number of nodes shown, before the target is chosen if the icon precedes the dice and after the attack's damage and effects if it follows them. A *shift* is a *move*, costs no stamina, and does not use the *Walk* or *Run* minor action (see §10.3, Shift).
 
 **Shop.** Blacksmith Andre's stock of face-up treasure cards, in a tier one shop and a tier two shop. A tier one card costs two *souls* and a tier two card four; a treasure card other than starting equipment sells for one soul (see §11.4). The tier one shop is stocked at setup and the tier two shop when the mini-boss is defeated; both are restocked only after a boss is defeated (in campaign play, after a section is completed), unsold cards going to the bottom of their deck first (see §6.3).
 
@@ -270,9 +274,9 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Treasure card.** Any card from a treasure deck: *starting equipment*, *class-specific treasure*, *common treasure*, *legendary treasure*, or *boss treasure* (see §2.5). A treasure card that may be equipped to a dashboard slot is an *equipment card*.
 
-**Turn.** One model's activation. Enemies take their turns, then characters take theirs; in boss encounters the boss takes a turn after each character.
+**Turn.** One model's opportunity to act. In each round the enemies take their turns, then the characters take theirs in descending threat order; in boss encounters the boss and the characters alternate turns (see §7.5, Encounter Turn Order; §10.1).
 
-**Two-handed.** A weapon bearing the two-handed icon, or a one-handed weapon equipped with the other weapon slot empty. Two-handed attacks may reroll one die. Spells are never two-handed.
+**Two-handed.** A weapon bearing the two-handed icon, or a one-handed weapon equipped while the other weapon slot holds no card; a shield in the other weapon slot is equipment in the other hand. A weapon wielded two-handed may reroll one die of each attack roll. Spells are never two-handed (see §10.4).
 
 **Upgrade card.** A card that enhances a weapon or armour card. Blacksmith Andre attaches it beneath the card, up to the card's upgrade slots, and the character must meet its stat requirements to equip the card. Upgrade spells are instead attached as the *Attack* major action during an encounter and return to the inventory afterwards (see §4.2).
 
@@ -282,7 +286,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Valid node.** A node that a model may enter by a given form of movement: an adjacent node not separated from the model's node by a wall and holding no terrain that blocks that form of entry. A node at its node model limit is a valid node (see §5.2).
 
-**Walk.** A minor action, once per turn: move one node for no stamina.
+**Walk.** A minor action, once per turn: the character moves one node without spending stamina (see §10.2).
 
 **Weak arc.** A boss arc shown in red on the most recently resolved behaviour card. A character attacking a boss from a weak arc adds one black die.
 

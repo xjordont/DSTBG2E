@@ -116,22 +116,22 @@ Totals: 24 chapters, 166 sections, 20 orphan empty headings.
 | ENEMY TURN | Block & Resist | present — to audit | A-032, A-070, A-120, B-002, C-030, C-060, C-104, C-111, C-112, D-033 |  | no | line 1710. |
 | ENEMY TURN | Dodge | present — to audit | A-032, A-087, B-033, C-030, C-047, C-060, C-084, C-095, C-104, F-072 |  | no | line 1734. |
 | ENEMY TURN | Parry & Riposte | present — to audit | A-018, A-032, A-042, A-068, A-078, A-119, B-022, C-027, C-028, C-030, C-060, C-104, C-112, D-030 |  | no | line 1766. |
-| CHARACTER TURN | (chapter) | present — to audit | A-006, A-010, A-011, A-012, A-024, A-032, A-037, A-064, A-066, A-068, A-069, A-070, A-072, A-073, A-082, A-086, A-087, A-113, A-119, B-016, C-015, C-019, C-027, C-028, C-029, C-030, C-034, C-036, C-038, C-039, C-054, C-055, C-060, C-061, C-084, C-086, C-098, C-100, C-104, C-111, C-116, C-117, C-121, CMP-0001, D-017, D-030, F-016, F-017, F-018, F-073, F-084, F-088, F-089, F-090, F-118, F-119, F-120, F-121, F-122 | CMP-0001 | no | line 1798. |
-| CHARACTER TURN | Character Turn Order | present — TOC mismatch | A-006, A-010, A-011, A-012, A-068, A-072, A-073, C-029, C-030, C-034, C-038, C-060, C-100, C-104, C-111, C-117, CMP-0001, D-017, D-030, F-084 | CMP-0001 | no | line 1800. TOC lists Overview / Character Actions / Character Movement; body uses Turn Order / Minor / Major. |
-| CHARACTER TURN | Recover one stamina. | present — structural | A-010, A-073, C-030, C-100, C-104, D-017, F-084 |  | no | line 1802. Procedural step rendered as an H3 heading. |
-| CHARACTER TURN | Minor Actions: | present — structural | A-011, A-072, A-073, C-029, C-030, C-060, C-100, C-104, C-117, D-017, F-084 |  | no | line 1804. Heading with trailing colon; list body in blockquote. |
-| CHARACTER TURN | Major Action: | present — structural | A-006, A-010, A-011, A-012, A-068, A-073, C-029, C-030, C-034, C-038, C-100, C-104, C-111, C-117, CMP-0001, D-017, D-030, F-084 | CMP-0001 | no | line 1820. Heading with trailing colon. |
-| CHARACTER TURN | Character Movement | present — to audit | A-011, A-073, A-082, A-086, A-087, C-027, C-030, C-038, C-055, C-086, C-098, C-104, F-118 |  | no | line 1836. |
-| CHARACTER TURN | (empty heading) | ORPHAN — delete |  | CMP-0001 | no | line 1842: empty H2 used as page break |
-| CHARACTER TURN | Character Attacks | present — to audit | A-024, A-032, A-037, A-070, A-113, A-119, C-030, C-036, C-039, C-055, C-060, C-061, C-084, C-104, C-116, C-121, F-016, F-017, F-073, F-088, F-090, F-118, F-119, F-120, F-121, F-122 |  | no | line 1844. |
-| CHARACTER TURN | Range | present — to audit | A-032, C-030, C-055, C-104, F-119 |  | no | line 1854. |
-| CHARACTER TURN | Shift | present — to audit | A-032, C-030, C-039, C-104, C-116, F-120 |  | no | line 1858. |
-| CHARACTER TURN | Area-of-Effect (AoE) | present — TOC mismatch | A-032, A-037, C-030, C-104, F-121 |  | no | line 1862. TOC calls it "Node". |
-| CHARACTER TURN | Shaft | present — to audit | A-032, C-030, C-104, F-016, F-122 |  | no | line 1866. |
-| CHARACTER TURN | Repeat | present — to audit | A-024, A-032, A-037, C-030, C-055, C-104, C-121, F-017, F-122 |  | no | line 1870. |
-| CHARACTER TURN | Two-Handed Attacks | present — to audit | A-069, A-119, C-030, C-055, C-060, C-104, C-121, F-018 |  | no | line 1874. |
-| CHARACTER TURN | Stat Scaling | present — to audit | A-064, A-066, B-016, C-015, C-019, C-028, C-030, C-054, C-098, C-104, C-116, F-089 |  | no | line 1878. |
-| CHARACTER TURN | (empty heading) | ORPHAN — delete |  | CMP-0001 | no | line 1882: empty H1 used as page break |
+| CHARACTER TURN | (chapter) | present — to audit | A-006, A-010, A-011, A-012, A-024, A-032, A-037, A-064, A-066, A-068, A-069, A-070, A-072, A-073, A-082, A-086, A-087, A-113, A-119, B-016, C-015, C-019, C-027, C-028, C-029, C-030, C-034, C-036, C-038, C-039, C-054, C-055, C-060, C-061, C-084, C-086, C-098, C-100, C-104, C-111, C-116, C-117, C-121, CMP-0001, D-017, D-030, F-016, F-017, F-018, F-073, F-084, F-088, F-089, F-090, F-118, F-119, F-120, F-121, F-122 | CMP-0001 | yes (§10) | line 1798. |
+| CHARACTER TURN | Character Turn Order | present — TOC mismatch | A-006, A-010, A-011, A-012, A-068, A-072, A-073, C-029, C-030, C-034, C-038, C-060, C-100, C-104, C-111, C-117, CMP-0001, D-017, D-030, F-084 | CMP-0001 | yes (§10) | line 1800. TOC lists Overview / Character Actions / Character Movement; body uses Turn Order / Minor / Major. |
+| CHARACTER TURN | Recover one stamina. | present — structural | A-010, A-073, C-030, C-100, C-104, D-017, F-084 |  | yes (§10) | line 1802. Procedural step rendered as an H3 heading. |
+| CHARACTER TURN | Minor Actions: | present — structural | A-011, A-072, A-073, C-029, C-030, C-060, C-100, C-104, C-117, D-017, F-084 |  | yes (§10) | line 1804. Heading with trailing colon; list body in blockquote. |
+| CHARACTER TURN | Major Action: | present — structural | A-006, A-010, A-011, A-012, A-068, A-073, C-029, C-030, C-034, C-038, C-100, C-104, C-111, C-117, CMP-0001, D-017, D-030, F-084 | CMP-0001 | yes (§10) | line 1820. Heading with trailing colon. |
+| CHARACTER TURN | Character Movement | present — to audit | A-011, A-073, A-082, A-086, A-087, C-027, C-030, C-038, C-055, C-086, C-098, C-104, F-118 |  | yes (§10) | line 1836. |
+| CHARACTER TURN | (empty heading) | ORPHAN — delete |  | CMP-0001 | yes (§10) | line 1842: empty H2 used as page break |
+| CHARACTER TURN | Character Attacks | present — to audit | A-024, A-032, A-037, A-070, A-113, A-119, C-030, C-036, C-039, C-055, C-060, C-061, C-084, C-104, C-116, C-121, F-016, F-017, F-073, F-088, F-090, F-118, F-119, F-120, F-121, F-122 |  | yes (§10) | line 1844. |
+| CHARACTER TURN | Range | present — to audit | A-032, C-030, C-055, C-104, F-119 |  | yes (§10) | line 1854. |
+| CHARACTER TURN | Shift | present — to audit | A-032, C-030, C-039, C-104, C-116, F-120 |  | yes (§10) | line 1858. |
+| CHARACTER TURN | Area-of-Effect (AoE) | present — TOC mismatch | A-032, A-037, C-030, C-104, F-121 |  | yes (§10) | line 1862. TOC calls it "Node". |
+| CHARACTER TURN | Shaft | present — to audit | A-032, C-030, C-104, F-016, F-122 |  | yes (§10) | line 1866. |
+| CHARACTER TURN | Repeat | present — to audit | A-024, A-032, A-037, C-030, C-055, C-104, C-121, F-017, F-122 |  | yes (§10) | line 1870. |
+| CHARACTER TURN | Two-Handed Attacks | present — to audit | A-069, A-119, C-030, C-055, C-060, C-104, C-121, F-018 |  | yes (§10) | line 1874. |
+| CHARACTER TURN | Stat Scaling | present — to audit | A-064, A-066, B-016, C-015, C-019, C-028, C-030, C-054, C-098, C-104, C-116, F-089 |  | yes (§10) | line 1878. |
+| CHARACTER TURN | (empty heading) | ORPHAN — delete |  | CMP-0001 | yes (§10) | line 1882: empty H1 used as page break |
 | RETURNING TO THE BONFIRE | (chapter) | present — to audit | A-001, A-005, A-007, A-046, A-054, A-056, A-063, A-067, A-074, A-076, A-077, A-100, A-104, B-007, B-016, B-017, C-019, C-027, C-029, C-030, C-033, C-042, C-043, C-044, C-045, C-050, C-051, C-054, C-060, C-070, C-071, C-088, C-092, C-096, C-098, C-103, C-104, C-111, C-114, C-116, C-119, C-120, C-121, C-123, CMP-0006, CMP-0019, D-005, D-011, D-038, F-019, F-020, F-021, F-083, F-123, F-124 | CMP-0006, CMP-0019 | yes (§11) | line 1884. |
 | RETURNING TO THE BONFIRE | The Bonfire | present — to audit | A-001, A-063, A-100, C-027, C-029, C-030, C-033, C-042, C-043, C-044, C-104, C-121, CMP-0006, F-019, F-020, F-123 | CMP-0006 | yes (§11) | line 1886. |
 | RETURNING TO THE BONFIRE | Resting at The Bonfire | present — to audit | A-001, A-005, A-104, C-027, C-030, C-033, C-042, C-043, C-044, C-050, C-051, C-060, C-088, C-098, C-104, C-111, CMP-0006, D-038 | CMP-0006 | yes (§11) | line 1892. |
