@@ -31,7 +31,7 @@ Date: 2026-11-10. Decision: **"Approve all"** — the user approved every recomm
 | OQ-23 | Dice faces | Printed as listed (Black 0,1,1,1,2,2; Blue 1,1,2,2,2,3; Orange 1,2,2,3,3,4; Green three blank / three success). |
 | OQ-24 | Calamity | Manuscript version kept: lasts the encounter. |
 | OQ-25 | Ornstein & Smough / Gargoyle ×2 | Shared-deck reading (one boss, one dial, one deck; each card names the acting model). Twin Gargoyles fought back to back; boss treasure after both. |
-| OQ-26 | Minor/major action order | Any order; each minor action at most once per turn. |
+| OQ-26 | Minor/major action order | Minor actions and the major action may be taken in any order. Walk, Equip and Heroic Action may each be taken once per turn; Run may be repeated, one stamina per node (A-073, D-017; the manuscript's Run rule is preserved). |
 | OQ-27 | Shop restock | Unsold cards are swept to the bottom of the deck before restocking. |
 | OQ-28 | Invasion limit | One invasion per leg (one before the mini-boss, one after). |
 | OQ-29 | Contested treasure | Tie-break to the aggro holder everywhere. |
