@@ -15,14 +15,22 @@ for ln in mapblock.splitlines():
         valid.add(m.group(1)); mapped[m.group(1)] = m.group(2).strip()
         for s, t in re.findall(r'(\d+\.\d+) ([^·()\n]+?)(?= ·| \(|$)', ln):
             valid.add(s); mapped[s] = t.strip()
+# Chapters whose H2s the brief leaves to the author ("numbered H2s of your choosing" / "unless needed"):
+# their drafted headings extend the map instead of being checked against it.
+EXTENSIBLE = {'13', '14', '22'}
 bad, warn = [], []
 present = {}
-for f in sorted(glob.glob(str(ROOT / '10_manuscript_chapter_*.md'))) + [str(ROOT / '12_glossary.md')]:
+files = sorted(glob.glob(str(ROOT / '10_manuscript_chapter_*.md'))) + [str(ROOT / '12_glossary.md')]
+for f in files:   # pass 1: collect the headings actually drafted
     txt = pathlib.Path(f).read_text(encoding='utf-8'); name = pathlib.Path(f).name
     for m in re.finditer(r'^## (\d+\.\d+) (.+)$', txt, re.M):
-        present[m.group(1)] = m.group(2).strip()
-        if m.group(1) not in mapped: warn.append(f'{name}: H2 "{m.group(1)} {m.group(2)}" is not in the section map')
-        elif mapped[m.group(1)].lower() != m.group(2).strip().lower(): warn.append(f'{name}: H2 {m.group(1)} titled "{m.group(2)}" but map says "{mapped[m.group(1)]}"')
+        sec, title = m.group(1), m.group(2).strip()
+        present[sec] = title
+        if sec.split('.')[0] in EXTENSIBLE: valid.add(sec); mapped.setdefault(sec, title); continue
+        if sec not in mapped: warn.append(f'{name}: H2 "{sec} {title}" is not in the section map')
+        elif mapped[sec].lower() != title.lower(): warn.append(f'{name}: H2 {sec} titled "{title}" but map says "{mapped[sec]}"')
+for f in files:   # pass 2: check every reference against the map plus the extensible chapters' headings
+    txt = pathlib.Path(f).read_text(encoding='utf-8'); name = pathlib.Path(f).name
     for n, line in enumerate(txt.splitlines(), 1):
         for m in re.finditer(r'§(\d+(?:\.\d+)?)|Appendix ([AB])\b', line):
             ref = m.group(1) or f'Appendix {m.group(2)}'
@@ -32,6 +40,7 @@ for f in sorted(glob.glob(str(ROOT / '10_manuscript_chapter_*.md'))) + [str(ROOT
 # chapters drafted so far: do their H2 sets match the map exactly?
 drafted = {re.match(r'10_manuscript_chapter_(\d\d)_', pathlib.Path(f).name).group(1) for f in glob.glob(str(ROOT / '10_manuscript_chapter_*.md'))}
 for ch in sorted(drafted):
+    if ch in EXTENSIBLE: continue
     want = {s for s in mapped if s.split('.')[0] == str(int(ch)) and '.' in s}
     have = {s for s in present if s.split('.')[0] == str(int(ch))}
     if want and want != have:
