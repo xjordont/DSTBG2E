@@ -568,3 +568,232 @@ Index: CMP-0001 Estus Flask · CMP-0002 Glossary · CMP-0003 F.A.Q. · CMP-0004 
 - Status: awaiting-approval
 
 ---
+
+### [CMP-0005] BOSS SPECIAL RULES (chapter) — Proposed Completion (partly BLOCKED — source booklet not supplied)
+- Current state: Lines 2199–2213 cover only "Asylum Demon & Stray Demon" (Pillar Smasher, Wind Up). Setup After the main-boss step 11 (line 1195) defers to "any special rules described in the mega-boss rule booklet" — an external reference. No rules exist for the Core bosses, Darkroot, Iron Keep, Explorers, Tomb of Giants or any other mega-boss, although all are listed in Game Components and used in CAMPAIGNS. Booklets supplied: Core, Tomb of Giants (V2), Darkroot, Iron Keep, Explorers, Phantoms, Black Dragon Kalameet, Executioner's Chariot. Not supplied: Asylum Demon, Four Kings, Gaping Dragon, Guardian Dragon, Manus, Old Iron King, Vordt, The Last Giant, Painted World of Ariamis.
+- Proposed completion (full chapter replacement; the existing Asylum/Stray Demon text is retained and re-ordered; BLOCKED placeholders are given in the structure the finished entries use):
+
+  > # BOSS SPECIAL RULES
+  >
+  > Every boss's data card carries a special ability that applies throughout its encounter. This chapter gives the further rules that particular bosses require. A boss that is not listed here has no rules beyond its data card and the general boss rules.
+  >
+  > Where this chapter and a data card disagree, this chapter governs.
+  >
+  > ## Rules Common to Several Bosses
+  >
+  > **Zero dodge difficulty.** When a behaviour card shows a dodge difficulty of 0, a character may pay one stamina to *dodge* the attack without rolling, even with no dodge dice, as the Dodge rules describe. The character may instead block or resist as usual.
+  >
+  > **Two boss models in one encounter.** When an encounter contains two boss models, the boss node limit applies to each model separately: a node may hold one boss model, and a boss model that moves onto a node containing the other pushes it. Characters sharing a node with a boss model are placed in that model's arcs.
+  >
+  > ## Core Set
+  >
+  > **Gargoyle, Titanite Demon, Boreal Outrider Knight, Winged Knight, Dancer of the Boreal Valley.** No rules beyond the data card.
+  >
+  > **Twin Gargoyles.** Some campaign sections list the Gargoyle twice. The two Gargoyle encounters form one boss encounter in two parts. When the first Gargoyle is slain, the encounter does not end: at once place the second Gargoyle on the boss spawn node facing the centre of the tile, set its health dial to its starting health, and build a new behaviour deck for it. The characters remain where they are, recover nothing, and characters who died remain dead. *Souls*, boss treasure, the *spark* and the *ember* tokens are awarded once, when the second Gargoyle is slain. If the characters are defeated by either Gargoyle, the boss encounter is *failed* and both Gargoyles must be fought again. [PROPOSED adaptation of the Core campaign footnote]
+  >
+  > **Dragonslayer Ornstein & Executioner Smough.** Ornstein & Smough are one boss: one data card, one health dial, one behaviour deck, one heat-up. Place both models on the main-boss tile as the data card directs; each behaviour card states which model acts and which model's arcs its attack uses. A character attacking either model attacks the boss; the weak-arc bonus is judged against the arcs of the model attacked. The rule for two boss models in one encounter applies. *The placement of the second model, the behaviour cards' model markings and the effect of heat-up on the pair are printed on the data card and behaviour cards; this chapter adds nothing to them.* BLOCKED — the Core rulebook prose contains no dual-boss rule; the data card is the only source and is not supplied.
+  >
+  > ## Asylum Demon Expansion — Asylum Demon and Stray Demon
+  >
+  > ### Pillar Smasher
+  >
+  > During the boss encounter setup, place one pillar token on each of the four pillar nodes found on the mega-boss game board. Pillars block movement.
+  >
+  > When the Asylum Demon or Stray Demon makes a physical attack with an *area* icon, check whether any pillar token lies within the affected arcs and range. Each character within one node of such a pillar token immediately suffers one damage and the *stagger* condition; then remove that pillar token from the tile. Resolve the *area* attack itself (including any pushes or dodges) after every pillar's destruction is resolved. A single attack may destroy several pillars, and a model may be hit by several shattering pillars at once.
+  >
+  > Once a pillar is destroyed, its node is a basic node for the rest of the encounter. When the characters rest at the *bonfire*, return every destroyed pillar to its pillar node.
+  >
+  > ### Wind Up
+  >
+  > When a Wind Up behaviour icon is resolved, each character may spend one stamina to move their model to an adjacent node. This movement counts as a *Run*.
+  >
+  > *The Asylum Demon booklet was not supplied; the two rules above are the manuscript's own text and are retained unchanged.* BLOCKED for any further rule the booklet defines (mega-boss game board layout, Level 4 encounter cards, treasure).
+  >
+  > ## Darkroot Expansion
+  >
+  > **Great Grey Wolf Sif (main-boss).** Several of Sif's behaviour cards have dodge difficulty 0. Sif's behaviour deck includes cool-down cards that show Sif weakened near death; they are used exactly as the data card directs. No other rules beyond the data card.
+  >
+  > **Artorias (main-boss).** Several of Artorias's behaviour cards have dodge difficulty 0. *Heat-up:* when Artorias's health is reduced to or below his heat-up point, do not shuffle in one heat-up card. Instead remove two random cards from his behaviour deck and return them to the box, then shuffle all three of his heat-up cards into the behaviour deck.
+  >
+  > ## Iron Keep Expansion
+  >
+  > **Smelter Demon (main-boss).** *Heat-up:* when the Smelter Demon's health is reduced to or below its heat-up point, do not shuffle in one heat-up card. Instead return the whole five-card behaviour deck and its discard pile to the box, and replace them with a new behaviour deck of five random heat-up cards, shuffled.
+  >
+  > **Sir Alonne (main-boss).** No rules beyond the data card.
+  >
+  > ## Explorers Expansion
+  >
+  > **Old Dragonslayer (mini-boss).** The Old Dragonslayer uses the Ornstein miniature with its own health dial, data card, eight behaviour cards and treasure cards. *Corrupted Dragonslayer:* the first three times the Old Dragonslayer loses four or more health from a single attack, place one random heat-up card face down on top of his behaviour deck. This is in addition to the ordinary heat-up at his heat-up point.
+  >
+  > **Pursuer (main-boss).** Several of the Pursuer's behaviour cards have dodge difficulty 0. *Ceaseless Pursuit:* on each of his turns the Pursuer draws and resolves two behaviour cards, one after the other; the second card's weak arcs apply to character attacks until his next turn. *Heat-up:* shuffle one random heat-up card into his behaviour deck as usual; from then on every attack value on his behaviour cards is increased by one.
+  >
+  > **Hungry Mimic and Voracious Mimic (mini-boss).** Mimics are fought as mini-boss encounters with these differences. Mimics have no arcs; their behaviour cards show no attack arcs or weak arcs and the weak-arc bonus is never gained. Mimics have no heat-up cards; when a mimic's health is reduced to or below its heat-up point, shuffle one random unused behaviour card into its behaviour deck. *Loot the Body:* when a mimic is slain, the characters receive two treasure cards of the current tier instead of the single card the chest held. See Mimics.
+  >
+  > ## Tomb of Giants Set
+  >
+  > **Black Knight (mini-boss) and Gravelord Nito (main-boss).** Use the data and behaviour cards from the Community Update Pack. No rules beyond the data card.
+  >
+  > ## Black Dragon Kalameet Expansion (mega-boss)
+  >
+  > **Components.** Kalameet's data card, health dial, thirteen behaviour cards (ten standard, two signature — *Mark of Calamity* and *Hellfire Blast* — and one heat-up card, *Hellfire Barrage*), eight strafe cards, two treasure cards, four *calamity* tokens, four Level 4 encounter cards and the mega-boss game board.
+  >
+  > **Setup.** Place the characters on the entry nodes beside the doorway, no more than three to a node, and give the aggro token to the character with the highest *threat*. Place Kalameet on the mega-boss spawn node with its front arc facing the centre of the game board. Build the behaviour deck: take four random standard behaviour cards, add the two signature cards, and shuffle these six together face down. Set the heat-up card aside. Shuffle the eight strafe cards and place them face down beside the behaviour deck.
+  >
+  > **Special ability — Calamity & Ruin.** Kalameet's behaviour deck always contains *Mark of Calamity* and *Hellfire Blast*. Attacks marked with the *calamity* icon place a *calamity* token on each character hit; the token's effect is given in Combat Basics › Conditions.
+  >
+  > **Heat-up.** When Kalameet's health is reduced to or below its heat-up point, shuffle *Hellfire Barrage* into the behaviour deck.
+  >
+  > **Strafe attacks.** The strafe icon is a magical attack that targets particular nodes instead of arcs. To resolve it: remove Kalameet from the game board, leaving any models that shared its node where they are; reveal the top strafe card; resolve the attack, at the value shown on the behaviour card, against every character on the nodes marked on the strafe card, each defending separately; discard the strafe card; then place Kalameet on the landing node shown on the strafe card, keeping its previous facing. Any character on the landing node is pushed to an adjacent node of that player's choice. If the strafe deck is empty when a strafe icon is resolved, turn its discard pile face down without shuffling to form the new strafe deck, then continue.
+  >
+  > ## Executioner's Chariot Expansion (mega-boss)
+  >
+  > **Components.** The Chariot's data card (two-sided), health dial, two models (the skeletal horse and the chariot), four track behaviour cards numbered 1 to 4, nine standard behaviour cards, three heat-up cards, a mega-boss setup card, two treasure cards, two Black Hollow Mages and four Falchion Skeletons with their data cards, four Level 4 encounter cards, six Level 1–3 encounter cards and the mega-boss game board.
+  >
+  > **The game board.** The centre of the Chariot's game board is not a node, and nodes are not adjacent across it. Treat the centre as a node containing a gravestone.
+  >
+  > **Setup.** Place the characters on the entry nodes beside the doorway, no more than three to a node, and give the aggro token to the character with the highest *threat*. Place both Chariot models together on the mega-boss spawn node and place the Black Hollow Mages and Falchion Skeletons on the enemy spawn nodes shown on the mega-boss setup card. Build two decks. The track deck: the four track behaviour cards in numerical order, card 1 on top, face down, not shuffled. The heat-up deck: four random standard behaviour cards and one random heat-up card, shuffled together face down and set aside.
+  >
+  > **Before heat-up — Death Race.** The Chariot's data card shows no starting health, block or resist on its front side. The Chariot cannot be attacked or damaged. After each character's turn, the Chariot and every other enemy on the board take a turn in descending *threat* order; the Chariot's turn is the top card of the track deck. To resolve a track behaviour card: move both Chariot models to the node shown, with the front arc facing away from the node they left; then make the card's physical attack against every character on the nodes marked on the card, including the node the Chariot left and the node it moved to, each defending separately; then push each character hit onto an adjacent node that is not marked on the card. Enemy models on marked nodes are pushed in the same way but suffer no damage. When the track deck is empty at the start of the Chariot's turn, turn its discard pile face down without shuffling to form the new track deck.
+  >
+  > **Raise Skeleton.** When a Black Hollow Mage resolves the Raise Skeleton icon, if fewer enemies with "Skeleton" in their name are on the board than there were at the start of the encounter, choose one defeated skeleton and place it, with no wound tokens, on the enemy spawn node closest to the Mage; if several spawn nodes are equally close, the players choose.
+  >
+  > **Heat-up — Chariot Crash.** When every Black Hollow Mage and Falchion Skeleton has been defeated, the Chariot heats up at once: remove the chariot model from the board, leaving the skeletal horse; flip the data card to its heat-up side, which shows the horse's starting health, block and resist; set the health dial to that starting health; and replace the track deck and its discard pile with the heat-up deck. The encounter continues as an ordinary boss encounter against the skeletal horse. The horse does not heat up again.
+  >
+  > **Special ability after heat-up — Crush.** When a character's block or resist roll prevents all of the damage of an attack from one of the horse's behaviour cards, that character suffers one damage.
+  >
+  > ## Mega-bosses Without Supplied Rules
+  >
+  > The following entries are BLOCKED — source booklet not supplied. Each is to be drafted in the structure used above (Components · Setup · Special ability · Heat-up · Unique icons) once its booklet is available. Until then the boss is played from its data card and the general boss rules.
+  >
+  > **The Four Kings (mega-boss, The Four Kings expansion).** BLOCKED. Known requirement: multiple boss models; the rule for two boss models in one encounter applies.
+  >
+  > **Gaping Dragon (mega-boss, Gaping Dragon expansion).** BLOCKED. Known requirement: *corrosion* condition (Combat Basics › Conditions).
+  >
+  > **Guardian Dragon (mega-boss, Guardian Dragon expansion).** BLOCKED.
+  >
+  > **Manus, Father of the Abyss (mega-boss, Manus expansion).** BLOCKED.
+  >
+  > **Old Iron King (mega-boss, Old Iron King expansion).** BLOCKED.
+  >
+  > **Vordt of the Boreal Valley (mega-boss, Vordt expansion).** BLOCKED. Known requirement: *frostbite* condition.
+  >
+  > **The Last Giant (mega-boss, The Last Giant expansion).** BLOCKED. Not listed in Game Components › Mega-bosses; see CMP-0008.
+  >
+  > **Crossbreed Priscilla (main-boss) and Heavy Knight (mini-boss), Painted World of Ariamis.** BLOCKED. Use the data and behaviour cards from the Community Update Pack; no further rules are available.
+
+  Consequential edit to Setup › Setup After the main-boss step 11 (line 1195): replace "employing any special rules described in the mega-boss rule booklet" with "employing the rules for that mega-boss given in Boss Special Rules".
+- Design rationale: Every drafted rule is taken from a supplied booklet and recast in the manuscript's turn structure (the Chariot's "enemy activation" becomes the enemy turn that follows each character's turn; the aggro token goes to the highest-threat character as the manuscript requires rather than to "one of the characters"). Two official steps are deliberately dropped because the manuscript's own design supersedes them: the per-gravestone reveal of behaviour cards at boss setup (the manuscript's Gravestones rule awards a scry on clearing instead) and the official Calamity removal-on-damage (the manuscript's Conditions chapter keeps Calamity to the end of the encounter). Artorias, Smelter Demon, Old Dragonslayer, Pursuer and the Mimics are drafted from explicit booklet or card text. Sif's cool-down and O&S's pairing live on data cards that were not supplied, so the entries state the boundary rather than invent. The Twin Gargoyles rule is an adaptation of the Core campaign footnote to the manuscript's boss-death sequence and is tagged.
+- Mechanical impact: Kalameet and the Chariot become playable from this book alone. The Pursuer's double activation and the Chariot's unattackable first phase are significant difficulty rules now stated. The "two boss models" rule generalises the manuscript's existing boss-pushes-boss text.
+- Follow-on changes required: Add strafe cards, track behaviour cards, mega-boss setup card, pillar tokens and Level 4 encounter cards to Game Components (CMP-0012). Add "The Last Giant" to Game Components › Mega-bosses or remove it from Big Game Hunting (CMP-0008). Obtain the missing booklets to unblock nine entries. Delete the empty heading at line 2215.
+- Status: awaiting-approval
+
+---
+
+### [CMP-0006] Gameplay › Death & Hollowing — "Lost" state — Proposed Completion
+- Current state: "Lost" is used but never defined: "keeping them from being *lost* to the *hollow*" (line 1890); "Resting at the *bonfire* also revives *lost* characters who have been removed from play due to dying while *hollow*" (line 1906); "The players lose the campaign if all characters are lost to the hollow without a *spark* to revive them" (line 2235). Death & Hollowing (line 1223) and Encounter Resolution (line 1305) say that when a *hollow* character dies the encounter is *failed* and the characters must spend a *spark* and rest. Setup After the main-boss step 11 (line 1195) says that in the mega-boss encounter "If a character dies they are permanently removed from play." Objective & Loss Conditions (line 1201) defines loss only as "all characters are dead and there are no remaining sparks".
+- Proposed completion:
+
+  New bullet group appended to Death & Hollowing (after line 1223):
+
+  > - A *hollow* character who dies is *lost*.
+  >
+  >   - A *lost* character is removed from play: place the model on its side beside the *bonfire* tile, drop its *souls* on the encounter tile and discard its *ember* token as for any death.
+  >
+  >   - A *lost* character is not revived by *clearing* an encounter. A *lost* character is revived only when the characters rest at the *bonfire*; resting removes the *hollow* markers as usual.
+  >
+  >   - When a character becomes *lost*, the current encounter is *failed* at once and the characters must rest at the *bonfire* (see Encounter Resolution). If the *spark* dial shows zero, the players lose the game (see Objective & Loss Conditions).
+  >
+  >   - In a mega-boss encounter no rest follows: a character who dies or is *lost* in a mega-boss encounter is removed from play for the rest of the game.
+
+  Replacement for the Encounter Resolution bullet at line 1305: "Encounters are *failed* if any *hollow* character dies; that character is *lost*."
+
+  Replacement sentence for Returning to the Bonfire line 1906: "Resting at the *bonfire* also revives *lost* characters: characters who died while *hollow* and were removed from play."
+
+  Addition to Objective & Loss Conditions (line 1201), as a second paragraph: "The players also lose if the characters are required to rest at the *bonfire* when the *spark* dial shows zero, and if every character is removed from play during a mega-boss encounter."
+- Design rationale: The definition takes the three uses of "lost" as given and makes them one state. It keeps the manuscript's rule that a *hollow* death fails the encounter, so "lost" is a label for the interval between that death and the forced rest, and for permanent removal in the mega-boss fight. The zero-spark case is the one gap the body leaves (the forced rest cannot be paid); the ruling follows the manuscript's own loss condition rather than letting survivors continue without the lost character.
+- Mechanical impact: None where sparks remain. With zero sparks, a hollow death now ends the game explicitly; previously the outcome was undefined.
+- Follow-on changes required: Glossary entry "Lost" (CMP-0002) loses its [PROPOSED] tag on approval. F.A.Q. entries on forced rest and mega-boss death (CMP-0003) align. CMP-0020 carries the zero-spark rule into Encounter Recovery.
+- Status: awaiting-approval
+
+---
+
+### [CMP-0007] Truncated and defective sentences (several chapters) — Proposed Completion
+- Current state: Six sentences are cut short or carry a wrong word.
+  1. Summons › Phantoms, line 1993: "Phantoms are removed from play if their health dial is reduced to or the encounter ends."
+  2. Setup › Setup After the mini-boss step 11, line 1169: "Place all character models on the *bonfire* tile where they may now without spending a spark."
+  3. Setup › Shop Setup › After Boss is Defeated step 2.3, line 1089: "Shuffle five random legendary treasure cards."
+  4. Summons › Invader Encounter Setup step 2, line 2017: "deal a number equal to their starting decks deck size".
+  5. Summons › Invader Encounter Setup step 4, line 2021: "If the central node is blocked by train".
+  6. Mimics, line 2045: "they must reveal one an *ambush* card".
+  Also: Summons › Phantoms step 7, line 1989, stray "i" after "behaviour deck."; steps 8 (line 1991) and Invader Combat step 4 (line 2031) say "each icon on the encounter card" where the behaviour card is meant; Soul Reward Table header, line 1412, "per characteri"; Mimics line 2047 "*cleared.*."; Game Components line 443 "1x HungryVoracious Mimic".
+- Proposed completion (completed sentences, to be substituted in place):
+
+  > 1. Phantoms are removed from play when their health dial is reduced to zero or when the encounter ends.
+  >
+  > 2. Place all character models on the *bonfire* tile, where they may now rest without spending a *spark*. They may visit the Firekeeper and Andre's Shop as usual after resting at the *bonfire*.
+  >
+  > 3. Shuffle five random legendary treasure cards into the tier two treasure deck. Return the remaining legendary treasure cards to the game box.
+  >
+  > 4. Shuffle the invader's behaviour cards and deal a number of them equal to the behaviour deck size on the invader's data card, face down, to create the invader behaviour deck. When the invader's health is reduced to or below its heat-up point, shuffle one unused invader behaviour card into the behaviour deck.
+  >
+  > 5. After the encounter card setup is complete, place the invader model on the encounter tile's central node. If the central node is blocked by terrain, place the invader model on a node adjacent to the central node, chosen by the players.
+  >
+  > 6. If the characters wish to open the chest, they must reveal the *ambush* card beside that encounter tile to determine whether the chest is a lurking mimic.
+  >
+  > Step 7 (line 1989): Each phantom turn, draw and resolve the top card of the phantom behaviour deck.
+  >
+  > Step 8 (line 1991) and Invader Combat step 4 (line 2031): After each icon on the behaviour card is resolved in left-to-right order, the phantom's [invader's] turn ends.
+  >
+  > Soul Reward Table header: "*Soul* reward per character".
+  >
+  > Mimics line 2047: "…and may mark the encounter *cleared*."
+  >
+  > Game Components line 443: "1x Hungry Mimic and 1x Voracious Mimic (Explorers)" — two data cards sharing two miniatures and one health dial.
+- Design rationale: Each completion supplies the word the sentence's structure demands and that the surrounding rules confirm (zero health; rest; the tier two deck, as Legendary Treasure line 1025 already states; deck size; terrain; one ambush card). "Encounter card" in the phantom and invader turn steps is corrected to "behaviour card" because the phantom and invader rules draw from behaviour decks, not encounter cards.
+- Mechanical impact: None; restores intended text.
+- Follow-on changes required: None beyond substitution. Glossary (CMP-0002) and CMP-0018 reference the corrected phantom steps.
+- Status: awaiting-approval
+
+---
+
+### [CMP-0008] Campaign Play › Setup and CAMPAIGNS list corrections — Proposed Completion
+- Current state: Campaign Play › Setup (lines 2221–2225) says "the included campaigns are all three sections long" and "This rule-set includes three campaigns which require only the components available in the core set"; CAMPAIGNS (lines 2352–3034) lists thirteen campaigns of three to six sections, two of which need only the core set. "Facing the Abyss" appears twice (lines 2548 and 2764) with different preambles and a different Section Two (the first copy matches the Darkroot booklet; the second has Level 2 where Level 3 belongs). "A Hollow Pursuit" (line 2720) repeats Demon Hunting's requirements line ("core set and Asylum Demon expansion") although it is the Explorers campaign. Spellings: "Andor Londo" (2384, 2486, 2646; official: Anor Londo), "Earthern" (2736; the game location is Earthen Peak), "Jeramiah" (557) against "Jeremiah" (2492, 2528; the Phantoms booklet uses Jeremiah), "Do no place" (2456, 2504), "Old Dragon Slayer" (2734), "Bonfire Tiles" (2830), "Gaping Dragon(Mega Boss)" (2944), "Section Four- " and "Section Five Dark Champion" (2854, 2864). The Gauntlet's Section Three is titled "Invader Ruins" (2534) but the Phantoms booklet names it "Invader Spire". "Gargoyle (Mini-Boss)" is listed twice in three campaigns (2366–2368, 2468–2470, 2616–2618): the Core rulebook (p. 35) and the Phantoms booklet (p. 17) list the Gargoyle twice deliberately, with a footnote rule. "The Last Giant (Mega Boss)" (line 3018) is not in Game Components › Mega-bosses; The Last Giant is a published mega-boss expansion whose booklet was not supplied. The Undead Colosseum's Section Six (lines 2874–2880) omits the "Level 4 Encounter" that the Executioner's Chariot booklet (p. 19) lists before Vordt. "Ornstein & Smough (main-boss)" is listed as one boss (correct; see CMP-0005). Boss-rank labels vary ("Mini-Boss", "Mini Boss", "main-boss", "Main Boss", "Mega Boss").
+- Proposed completion:
+
+  Replacement for Campaign Play › Setup (lines 2219–2225):
+
+  > ## Setup
+  >
+  > The setup for a campaign is the same as for the basic game except as stated in this chapter. A campaign is divided into sections. Each section lists, in order outward from the *bonfire* tile, the tiles to lay out: the *bonfire* tile, a number of encounter tiles with their encounter levels, and one or more bosses. Sections vary in length. The campaigns in this book are between three and six sections long, and some sections contain more than one boss or an encounter with special rules.
+  >
+  > When starting a campaign, the players choose one of the thirteen campaigns in CAMPAIGNS. Two of them, The First Journey and The Coiled Sword, require only the core set; each of the others states the expansions it requires.
+  >
+  > Lay out each section as Encounter Setup describes, using the number of encounter tiles the section lists and dealing encounter cards of the levels listed, in order from the *bonfire* tile. Where a section names an encounter, use that encounter card for that tile. Where a section lists a boss twice, see Boss Special Rules › Twin Gargoyles.
+  >
+  > A section is completed when its final boss is defeated or, for a section that ends in a named encounter instead of a boss, when that encounter is *cleared*. Completing a section restocks the shops and allows the characters to rest at the *bonfire* without spending a *spark*. A *spark* is gained only for a boss defeated. When a section is completed, perform Setup After the mini-boss for the next section, taking the next section's list in place of steps 4 and 6; for a section ending in a mega-boss, perform Setup After the main-boss instead. [PROPOSED — the section-completion sentence is inferred from Campaign Play › Sparks and › Blacksmith Andre's Shop]
+  >
+  > Players may expect to meet over several play sessions. One section is a convenient amount of play for a session.
+
+  Merged entry replacing both "Facing the Abyss" entries (delete lines 2764–2808; replace lines 2548–2550 with):
+
+  > ### Facing the Abyss - Dark Souls (Darkroot)
+  >
+  > This campaign requires the core set and the Darkroot expansion. Use encounters from the Darkroot expansion when setting up each section; players may add the Explorers and Characters expansions if available. Section One ends with the named Level 3 encounter Hydra Lake; the section is completed when that encounter is *cleared*.
+
+  (Section lists as at lines 2552–2592: Section Two is Bonfire Tile, Level 1, Level 2, Level 3, Level 3, Great Grey Wolf Sif (main-boss).)
+
+  Replacement for A Hollow Pursuit requirements (line 2720): "This campaign requires the core set and the Explorers expansion; players may add the Characters expansion if available." Replacement for line 2748: "Gallery of the Hidden Warrior — do not place an *ambush* card beside this tile; its chest is a Voracious Mimic. The section is completed when the mimic is slain."
+
+  Footnote to attach to each doubled Gargoyle line (The First Journey, Ambush Lies Ahead, Demon Hunting): "* The two Gargoyle encounters are fought back-to-back as one boss encounter; see Boss Special Rules › Twin Gargoyles."
+
+  The Undead Colosseum, Section Six (lines 2874–2880), corrected list: Bonfire Tile · Level 3 Encounter - Desolate Cemetery · Level 4 Encounter · Vordt of the Boreal Valley (mega-boss). Section Two, line 2830: "Bonfire Tile".
+
+  Big Game Hunting, line 3018: retain "The Last Giant (mega-boss)" and add "The Last Giant (The Last Giant)" to Game Components › Mega-bosses (after line 535). Boss Special Rules entry for The Last Giant: BLOCKED — source booklet not supplied (CMP-0005).
+
+  Spelling and label corrections, applied throughout CAMPAIGNS and Game Components: Anor Londo; Lower Earthen Peak; Xanthous King Jeremiah (line 557 and all campaign lines); "Do not place invader tokens"; Old Dragonslayer; Invader Spire (The Gauntlet, Section Three); "Section Four - Haunting Warrior"; "Section Five - Dark Champion"; "Gaping Dragon (mega-boss)"; boss-rank labels normalised to "(mini-boss)", "(main-boss)", "(mega-boss)" in every list; "Great Grey Wolf Sif" used in every list.
+- Design rationale: The Setup paragraph is rewritten to describe what the CAMPAIGNS chapter actually contains and to state the one procedure the chapter never gives: how a section is laid out and ended. The first Facing the Abyss copy is kept because its section lists match the Darkroot booklet; the two preambles are merged so neither requirement nor encounter-source statement is lost. The doubled Gargoyle is confirmed deliberate by the Core rulebook and is kept, with the back-to-back rule made explicit in CMP-0005. The Last Giant is a published mega-boss and is kept in the campaign; adding it to the component list is the smaller change. Official spellings are taken from the Core and Phantoms booklets; "Earthen" follows the game location, since the Explorers booklet itself prints the typo.
+- Mechanical impact: Section completion now explicitly grants a free rest and restock but no spark when a section ends in a named encounter (Facing the Abyss Section One, Playing with Fire Section One, A Hollow Pursuit Section Two). The Undead Colosseum gains its missing Level 4 encounter before Vordt.
+- Follow-on changes required: Delete the empty headings at lines 2400 and 3036. Regenerate TOC (seven campaigns are missing from it). CMP-0022 adds The Undead Colosseum's special rules; CMP-0021 adds Kalameet's campaign section. Demon Hunting Section One deliberately has no Bonfire Tile (line 2608 explains); confirm with the author.
+- Status: awaiting-approval
+
+---

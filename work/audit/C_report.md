@@ -109,3 +109,151 @@ Decision key: **must** = mandatory rule; **may** = permission/optional rule; **s
 | 45 | 2994 | should | Players should add the Explorers and Characters expansions if available. | Requires: Core set, Manus, Asylum Demon, The Last Giant. Recommended: Explorers, Characters. | may |
 
 Tally: 34 should (10 → must, 8 → may/labelled, 9 → state, 7 → cut), 4 could, 4 might, 1 reasonably, 1 likely, 1 reasonable. No "probably", "perhaps" or "maybe" in the manuscript.
+
+## 5. Task 3 — Keyword / italics audit (summary; full table in `C_glossary_candidates.md`)
+
+Raw extraction: 601 italic spans in the body, ~45 distinct terms. The most-used keywords are italicised inconsistently (italic / plain counts in rules text L361–3100):
+
+| Term | Italic | Plain | Term | Italic | Plain |
+|---|---|---|---|---|---|
+| bonfire | 39 | 79 | threat | 10 | 14 |
+| soul | 35 | 33 | stamina | 8 | 34 |
+| dodge | 27 | 17 | walk | 8 | 0 |
+| cleared | 27 | 5 | shift | 8 | 1 |
+| spark | 25 | 16 | parry | 7 | 0 |
+| ember | 23 | 10 | push | 2 | 49 |
+| hollow | 19 | 8 | heat-up | 2 | 15 |
+| block | 17 | 8 | endurance bar | 1 | 16 |
+| resist | 15 | 6 | aggro token | 3 | 18 |
+| aggro | 14 | 10 | behaviour card | 2 | 28 |
+| luck | 12 | 4 | node | 8 | 151 |
+| heroic action | 11 | 5 | model | 5 | 140 |
+| attack option | 10 | 5 | mini-boss | 0 | 53 |
+
+Malformed italics (C-027…C-029):
+- Punctuation inside the span: L793 `*heroic actions, luck, and estus flask.*`; L1369 `*failed:*`; L1445 `*cleared.*`; L1776 `*Push, area-of-effect,*`; L1840 `*dodge,*`, `*walk, run,*`; L1890, L1906 `*hollow.*`; L1963 `*failed),*`; L2043 `*spark.*`; L2047 `*cleared.*.`; L2099 `*threat, block,*`; L2185 `*, resist,*`; L2195 `*embered.*`.
+- Split words: L787 `stagger*ed*` ×2; L1341 `*C*haracters`; L1794 `block*/*resist`; L1880 `attack option*s*`; L2145 `dodge*s*`; L3082 `attack option*'s*`.
+- Fragments / non-terms: L705 `*4x Corrosion*`; L1529 `*repeat to*`; L1890 `*spark to*`; L1345 `*clear an*`; L3056 `*First* *turn*`; headings L1640 `*Calamity (*Kalameet Expansion*)*` and L1650 `*Corrosion (*Gaping Dragon Expansion*)*`; bold `**AND**`/`**OR**` connectors L1808–1832. (The regex also returns `*8*`, `*4*`, `*|*` etc.; these are bold table cells, not defects.)
+
+Definitions missing or contradictory (C-033, C-034): *lost* (L1399, 1890, 1906, 2235 — partial definition at 1906 conflicts with L1223 and L1195); "mastering" (L1397); *first player* token (L1277, never used; "First turn token" at L3056); boss *leaps* (L2175); invader "Heat Up value" (L2017); "health" used for characters (L1830). The glossary promised at L381 does not exist.
+
+Recommended italics policy (see Style Sheet §14): italicise a glossary keyword at its first use in each H2 section, in its own definition, and in headings and table labels; plain thereafter. Never italicise inflections separately, punctuation, quantities or connectors. 118 headwords are proposed in `C_glossary_candidates.md`.
+
+## 6. Task 4 — Canonical terminology table
+
+| # | Variants found (count; evidence lines) | Canonical | Rule / note | Row |
+|---|---|---|---|---|
+| 1 | stamina bar (2; 775, 1215) · endurance tracker (1; 1205) · endurance bar (14; 741–789, 1261, 1367) | **endurance bar** | Tracks both stamina and damage; official term. | C-035 |
+| 2 | damage tokens (4; 1285, 1291, 1293, 1850) · wound tokens (5; 681, 1517, 1664, 2099) · damage cubes (16; 685, 775–789, 999, 1205, 1229, 1347, 1726, 1880) | **wound token** (enemies) / **damage cube** (characters) | Confirmed: enemies take wound tokens on the base (L1517); characters add red damage cubes (L779). "Damage token" is neither — change all four. | C-036 |
+| 3 | heal dial (1; 2019) · health tracker dial (1; 2099) · health dial (4; 1105, 1993, 2035, 2195) | **health dial** | | C-037 |
+| 4 | main action (2; 837, 851) · major action (2; 1820, 1838) | **major action** | "Main action" never defined; turn structure defines minor/major. | C-038 |
+| 5 | minor action (4; 797, 1804, 1838) | **minor action** | consistent | — |
+| 6 | activation (4; 1606, 1618, 1860, 2191) · turn (65) | **turn** | | C-039 |
+| 7 | Encounters expansion (1; 2041) · Explorers (15) | **Explorers** | | C-040 |
+| 8 | mini-boss 47 · Mini-Boss 15 · Mini Boss 5 · mini boss 1 · mini bosses 1; main-boss 31 · Main-Boss 1 · Main Boss 11; mega-boss 28 · Mega-boss 2 · Mega Boss 7 · mega boss 1 (campaign lists 2366–3034; 2996) | **mini-boss / main-boss / mega-boss** (lower-case, hyphenated); Title Case only in headings | | C-041 |
+| 9 | The Bonfire (10; 771, 849, 1131, 1171, 1179, 1886, 1892, 2195, 2295) · *bonfire* (35) · the bonfire (27) · Bonfire Tile (48, campaign lists) | **the *bonfire*** ; component = **bonfire tile** | Headings may read "The Bonfire". | C-042 |
+| 10 | Andre's Shop (9) · the shop (3; 2312, 2314, 2340) · Blacksmith Andre (7) · Andre (11) | **Blacksmith Andre** (first mention per section) → **Andre**; **Andre's shop** / **the shop** | Lower-case "shop" recommended (decision). | C-043 |
+| 11 | Firekeeper (8) | **Firekeeper** | consistent; matches official. | C-044 |
+| 12 | tier one/two (60, prose) · Tier One/Two (10, tables/headings) · Tier one/two mid-sentence (3; 1451, 2314, 2316) · stat sense unqualified (771 "tier two", 1914) | **tier one / tier two** (treasure); **stat tier one…four** (stats); Title Case only in headings/table labels | Two senses of "tier" must always be distinguishable. | C-045 |
+| 13 | Level 1–4 (194) · level one, two, and three (1; 1121) | **Level 1 / 2 / 3 / 4** | Printed card label. | C-046 |
+| 14 | *dodge* 22 · dodge 16 · Dodge 2 (2115, 3082) · *Dodge* 3 (831, 1501, 1734) | ***dodge*** | | C-047 |
+| 15 | players (102) · characters (484) · models (140); misuse at 1393 "per player", 805, 891, 919, 2239 | **players** decide/agree/roll; **characters** act, own tokens and cards, gain souls, die; **models** occupy nodes, move, are pushed | One player may run two characters (L989, L1095), so "per player" ≠ "per character". | C-048 |
+| 16 | miniature (2; 387, 411) · model (140) | **model** | | C-049 |
+| 17 | hollow markers (1; 781) · hollow tokens (2; 805, 1379) · hollow cubes (3; 1231, 1898, 3074) · white cubes (781, 1215, 1367) — also stat cubes (771, 993, 1914) | **hollow cube** | Component not in the list; "white cube" ambiguous with stat cubes. | C-050 |
+| 18 | ready side / used side (793–801) · face-up (10) · face up (3) · face-down (37) · face down (1) | tokens: **ready side / used side**; cards & tiles: **face up / face down** (predicate), **face-up / face-down** (attributive only) | | C-051 |
+| 19 | sparks dial (1; 1093) · spark dial (4) | **spark dial** | | C-052 |
+| 20 | exploration tiles (1; 2221) · encounter tile (47) | **encounter tile** | | C-053 |
+| 21 | treasure card (40) · equipment card (24) · item(s) (1183, 1880, 1941) · bare "treasure" (68) · bare "equipment" (32) | **treasure card** (any card from a treasure deck) ⊃ **equipment card** (can be equipped); no bare "item" | Define the relation once. | C-054 |
+| 22 | attack option (15) · weapon option (1; 1872) · attack action (2; 1856, 1876) · attack major action (1838) | **attack option** (card line); **attack** (the major action) | | C-055 |
+| 23 | Titanite Chunk (1477) · Titanite Scale (2055) for the crystal-lizard reward | **Titanite Scale** | Iron Keep booklet; Chunk is a different (common) card in the Update Pack. | C-056 |
+| 24 | heat-up 5 · Heat Up 11 · Heat-up 2 · heats-up 1 · Behaviour Deck (943) | **heat-up** (n./adj.), **heats up** (v.); **behaviour deck** | | C-057 |
+| 25 | fog gate 11 · fog-gate 2 (1151, 1179) · Fog Gate 3 · "fog gate tile" (2065) vs "token" (719, 2229) | **fog gate**; component **fog gate token** | | C-058 |
+| 26 | set-up 8 · setup 21 · set up 1 | noun **setup**, verb **set up** | | C-059 |
+| 27 | reroll 8 · re-roll 2; back-up slot 2 · backup slot 1; PvP 10 · player versus player 1 · player-versus-player 1; rule set/ruleset/rule-set; rule book/rulebook/rule-book | **reroll**; **back-up slot**; "player versus player (PvP)" once, then **PvP**; **ruleset**; **rulebook** | | C-060 |
+| 28 | killed (1517) · dies (1850) · defeated (1295, 1301) · slain (2053, 2195) for enemies; characters die (1223, 1305) | characters **die**; enemy models are **killed**; bosses and encounters are **defeated** / **cleared** | decision | C-061 |
+| 29 | entrance node (1985) · entryway (2065) · entrance (1179) · entry node (903, 1265) | **entry node** | | C-063 |
+| 30 | condition marker (787) · condition token (10) | **condition token** | | C-064 |
+| 31 | phantom = umbrella (543, 3052, 805) and = summon only (1969–1993, 1971); chapter "SUMMONS" contains Invaders | ***phantom*** (umbrella) ⊃ ***summon*** (friendly) + ***invader*** (hostile); chapter **PHANTOMS** | | C-065 |
+| 32 | "encounter card" for the card whose icons the phantom/invader resolves (1991, 2031) | **behaviour card** | wrong card named | C-066 |
+| 33 | health (characters, 1830) vs damage cubes | characters have **damage** (cubes) and **stamina**; **health** is for enemies/bosses only | | C-034 |
+
+Also confirmed consistent (no change): *souls* spelt the same throughout; Firekeeper; "Blacksmith Andre"; "dashboard"; "data card"; "behaviour card".
+
+## 7. Task 5 — Table-vs-text consistency
+
+| # | Table | Governing prose | Finding | Severity / row |
+|---|---|---|---|---|
+| 1 | Enemy Scaling table (L1533–1584): 2→Base+1, 3→Base+2, 4→Base+3 | L1523 "beyond one" (agrees); **L1517 "adding one health for each character (including dead characters) in play"** (two characters → Base+2) | Prose at L1517 contradicts bullet and table. | Major, C-068 |
+| 2 | Enemy Scaling table: 4 characters "*Repeat* 2"; column "Enemy Damage +1" | L1529 "add *repeat to* each non-boss enemy's attack behaviour" (no value); L1527 "increase all non-boss attack values by one" | Bullet omits the repeat value; column header uses "Damage" where bullets say "attack value". | Major, C-069 |
+| 3 | Soul Reward Table (L1401–1439): single column 3 / 4 / 5 / 6 | L1389 "full *soul* reward"; **L1391 "reduced *soul* reward"** for repeat clears | No reduced value exists anywhere; rule cannot be applied. | **Blocker**, C-070 |
+| 4 | Campaign Soul Reward Table (L2247–2285): 2 / 3 / 4 / 5 | L2243 "reduced by one compared to the basic game" | Consistent (3/4/5/6 − 1). Header "per characteri" (L1412) vs "per character" (L2258): stray i. | Note, C-071 |
+| 5 | Shop Price Table basic (L1951–1957): Tier One 2/1, Tier Two 4/1, Boss Treasure N/A/**6** | — | — | — |
+| 6 | Shop Price Table campaign (L2326–2334): Boss Treasure −/**4**; Legendary Shop "4 + Boss Treasure"/4; Bonfire Ascetic 16/− | L2348 transposition = boss treasure + four souls (agrees); L2293/2316/2340 bonfire ascetic 16 (agrees); L2322 legendary "only available through transposition" (row is called a "Shop"); legendary sell value 4 never in prose; boss-treasure sell 6→4 unexplained | Boss-treasure sell value differs between modes with no stated rule; null marker N/A vs −; legendary row name and sell value unsupported. | Major, C-072 |
+| 7 | Stat Tier Costs basic (L1918–1923): 2 / 4 / 8 / **8** | L1914 example "two souls … then four additional souls" (agrees for tiers one–two) | Tier Four repeats Tier Three; campaign table is 4/8/16/20 (doubling then +4). Probable error (expected 16). | Major, C-073 |
+| 8 | Stat Tier Costs campaign (L2301–2306): 4 / 8 / 16 / 20 | L2297 "cost to level up stats … is increased in Campaign play" (agrees) | Consistent. | — |
+| 9 | Weapon stat table (L3210–3330): 60 rows as plain text, header "**Weapon Name STR DEX INT FTH**" | L3208 explains INT/FTH removal; all 60 rows show INT 0, FTH 0 (agrees) | Needs a real 5-column table. | Minor, C-074 |
+| 10 | Tokens list (L701–705): "35x Condition tokens" | itemised 7×4 + 4×2 = 36 | Sum mismatch. | Minor, C-075 |
+| 11 | Treasure Cards (L597–629): total 534 | 13+45+40+120+60+145+10+20+18+63 = 534 | Verified. L621 "20 (Expansions)" lacks "x". | Note, C-080 |
+| 12 | Encounter cards (L633–657): total 169 | 12+31+12+31+12+31+40 = 169 | Verified. | Note, C-080 |
+| 13 | Campaign Play prose (L2223, L2225): "all three sections long"; "three campaigns which require only … the core set" | CAMPAIGNS chapter: 13 campaigns, 3–6 sections; 2 core-only | Prose contradicts chapter. | Major, C-076 |
+| 14 | Mega-bosses component list (L523–541) | L3018 "The Last Giant (Mega Boss)"; L2994 requirements omit it | Boss used but not listed. | Major, C-077 |
+| 15 | Campaign requirement lines vs section lists | A Hollow Pursuit (L2720) copies Demon Hunting's line; Undead Colosseum (L2812) omits Explorers; Into the Depths (L2884) lists Darkroot as optional though Artorias is a section boss | Requirements wrong or incomplete. | Major, C-078 |
+| 16 | PvP dodge list (L3084–3094) as escaped brackets and ASCII arrows | L3082 | Should be a two-column table. | Minor, C-081 |
+
+## 8. Task 6 — Cross-reference resolution
+
+| Line | Reference text | Resolves to | Status |
+|---|---|---|---|
+| 757 | "of the appropriate equipment type as described" | the three paragraphs that follow (759–763) | OK — change to "as described below" |
+| 837 | "explained in detail later on in the section title 'Character Attacks'" | ## Character Attacks (L1844) | OK — typo "title" → "titled"; convert to §-ref |
+| 839 | "explained in detail later on in the section titled 'Enemy Attacks'" | ## Enemy Attacks (L1704) | OK |
+| 841 | "upgrade cards at Blacksmith Andre which is described later in more detail" | ## Upgrades (L847) and ## Blacksmith Andre (L1927) | OK — two targets; cite both |
+| 891 | "with the aforementioned effects" | ### *Ember* (L803) | OK (backward) |
+| 1057 | "as above" | ## Treasure Deck Setup (L1005–1053) | OK |
+| 1151 | "Place the fog-gate as before." | **no earlier step places the fog gate** (Encounter tiles L1111–1117 silent); only L1179 and L2063–2065 | **BROKEN** — add a placement step to Encounter tiles (C-082) |
+| 1165 | "stocked as previously described" | ### After Boss is Defeated (L1075–1089) | OK |
+| 1169, 1187 | "visit the Firekeeper and Andre's Shop as usual after resting" | ## Resting at The Bonfire (L1892) — **forward** | Inexact — "as usual" precedes the rule; use §-ref (C-087) |
+| 1171 | "Resume encounters in the same way as before" | ### Encounter Start (L1257) — **forward** | Inexact (C-087) |
+| 1195 | "special rules described in the mega-boss rule booklet" | **external document**; # BOSS SPECIAL RULES (L2199) covers Asylum/Stray Demon only | **BROKEN / external** (C-083) |
+| 1261 | "previously *cleared* encounters" | ### Encounter Resolution (L1301) | OK |
+| 1273 | "Draw from the tier one treasure deck before the mini-boss is defeated and tier two thereafter" | duplicates L1451 | OK — keep one |
+| 1475 | "See the detailed rules on mimics later in these rules" | # MIMICS (L2039) | OK |
+| 1485 | "per the optional rules detailed later" | # PLAYER VS PLAYER (L3038) | OK |
+| 1600 | "listed below" | ### Bleed … Corrosion (L1602–1658) | OK |
+| 1706 | "special rules detailed later" | ## Pushing (L1586, **earlier**), ## Conditions (L1598, **earlier**), ## Boss Attacks (L2181) | Wrong direction for two of three (C-085) |
+| 1708 | "listed below" | ### Block & Resist / Dodge / Parry (L1710–1796) | OK |
+| 1760 | "as above" | ### Block & Resist step 5 (L1724–1728) | OK |
+| 1852 | "explained above … explained previously … the following weapon icons" | L1848; ## Conditions (L1598); L1854–1872 | OK |
+| 1963 | "(*cleared* or *failed*)" | ### Encounter Resolution (L1297) | OK |
+| 2045 | "per normal treasure chest rules" | ## Treasure Rewards (L1453–1461) / ### Chests (L963) | OK (two statements — see C-089) |
+| 2047 | "Refer to 'Boss Encounter' rules for more details on how to manage the mimic's behaviour cards" | ## Boss Behaviour Cards (L2107) and ## Boss Turn Overview (L2155); no heading "Boss Encounter" | Inexact title (C-084) |
+| 2069 | "as described previously" | # COMBAT BASICS / # ENEMY TURN | OK |
+| 2077 | "information about boss behaviour cards will follow" | ## Boss Behaviour Cards (L2107) | OK |
+| 2099 | "previously described enemy data cards" | ## Enemy Data Cards (L1489) | OK |
+| 2105 | "as detailed during the setup chapter" | ### Encounter cards (L1119–1131) | OK |
+| 2135 | "the following rules" | L2137–2145 | OK |
+| 2163 | "previously described" | ## Enemy Movement / ## Enemy Attacks (L1668–1796) | OK |
+| 2195 | "as previously described" | ## Treasure Rewards (L1479); ## Souls (L1383) | OK |
+| 2197 | "post-boss setup rules as described earlier" | ## Setup After the mini-boss / main-boss (L1143, L1173) | OK |
+| 2289, 2297, 2312 | "as in the basic rules" / "unchanged from the basic rules" / "Use the basic rules for Andre's Shop" | ## Treasure Rewards, # RETURNING TO THE BONFIRE, ### Shop Rules | OK |
+| 2235 | "as in the rules for the basic game" | ## Sparks (L1245) | OK |
+
+Rule statements that exist in two places with different content (treated as cross-reference defects): terrain movement verbs (§Terrain L931–959 vs §Character Movement L1840 — C-088); contested-treasure tie-break (L963 random vs L1461/1479 aggro — C-089); hollow death consequences (L1223 forced rest vs L1906 "lost … removed from play" vs L1195 permanent — C-090); mimic procedure duplicated in §Treasure Rewards and §Mimics (consistent — C-091).
+
+## 9. Task 7 — Example verification
+
+| Line | Example | Rule it illustrates | Check | Result |
+|---|---|---|---|---|
+| 1113 | "arrange them so they are connected in a two by six tile grid" (4 encounter tiles + bonfire + mini-boss) | L1115 "linear route along four sequential encounter tiles between *bonfire* and *boss* tiles" | 4 + 1 + 1 = 6 tiles = 2 × 3 | **ERROR** — "two by three" (C-092) |
+| 1263 | skip 3 cleared encounters → "6 stamina expended" | L1261 two stamina cubes per skipped encounter per character | 3 × 2 = 6 | OK (voice/numeral fix only) |
+| 849 | upgrade limit two → "up to two weapon upgrade cards" | L849 upgrade slots limit | OK | OK |
+| 771 | base → tier two: pay tier one then tier two | L771 sequential payment | OK | OK |
+| 1914 | STR base → tier two: 2 souls then 4 | Stat Tier Costs basic 2 / 4 | OK (campaign would be 4 / 8 — add note) | OK |
+| 1141 | Gargoyle (core) then Darkroot Basin encounters for Sif | component sets L491, L515 | OK; name "Grey Wolf Sif" | OK (C-012) |
+| 921 | "one boss and three characters" on a node | L919 three-model limit; L921 boss does not count | OK | OK |
+| 1742 | two extra stamina (total three) for one extra dodge die, max four dice | L1736 one stamina to dodge | 1 + 2 = 3 | OK |
+| 853 / 1943 | "(i.e., Titanite Shard)" / "(i.e.: Titanite Shards)" | Titanite upgrades fused to weapon | Shard is an example, not the whole class (Chunk, Slab exist at L3182–3184) | "e.g." / "for example" (C-098) |
+| 1945 | "(i.e.: gems)" | non-Titanite upgrades returned on sale | gems are an example ("gems and relics", L853) | "e.g." (C-098) |
+| 2141 | "(i.e.: *Run*) … (for example) to move to a side-arc" | moving between boss arcs | Run is one of several multi-node moves (also *shift*) | "e.g." (C-098) |
+| 1872 | "such as from an agile sword or a repeating crossbow" | *repeat* icon | flavour, no arithmetic | OK (move to flavour) |
+| 1840 | "terrain that would block movement such as a gravestone or chest" | §Terrain | consistent with L931/L959, but barrels and *shift* differ between sections | see C-088 |
