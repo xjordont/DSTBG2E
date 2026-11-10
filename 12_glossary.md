@@ -2,7 +2,7 @@
 
 Terms set in *italics* in this book are defined here. Where a definition and a chapter disagree, the chapter governs.
 
-**Adjacent node.** A node directly next to another node horizontally, vertically or diagonally. Nodes separated by a wall or by the central wall of a mega-boss game board are not adjacent.
+**Adjacent node.** A node directly next to another node horizontally, vertically, or diagonally. Nodes separated by a wall, including a wall printed across a tile or a mega-boss game board, are not adjacent, and nodes on different tiles are not adjacent (see §5.1).
 
 **Aggro.** The state of being the enemies' preferred target. Enemy behaviours marked with the skull icon target the character who holds the aggro token.
 
@@ -26,7 +26,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Back-up slot.** The dashboard slot that holds up to two treasure cards of any kind, carried but not equipped (see §3.2). During an encounter, cards in the back-up slot may be exchanged with the weapon and armour slots only by the *Equip* minor action; an *ember card* must be in the back-up slot to be used.
 
-**Barrel.** A terrain token or model. Models may not *walk*, *run* or *shift* into a node containing a barrel; a model that *dodges* or is pushed into the node destroys the barrel. Barrels are restored when the characters rest at the *bonfire*.
+**Barrel.** A terrain token or model with an intact side and a destroyed side. No model may *move* into a node containing an intact barrel; a model that *dodges* or is pushed into the node destroys the barrel. Barrels are restored when the characters rest at the *bonfire* (see §5.5, Barrels).
 
 **Basic node.** The most common node type. Basic nodes adjacent to a doorway are also entry nodes.
 
@@ -58,7 +58,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Character dashboard.** The board that records a character's class: the heroic action, the four equipment slots, the stat progression track, the endurance bar, the threat value, and the four token slots (see §3.1).
 
-**Chest.** A terrain token or model that blocks movement, dodging and pushes. A chest holds one face-down treasure card of the current tier, revealed when the encounter is *cleared*. With mimics in play, opening a chest requires revealing the tile's *ambush card*.
+**Chest.** A terrain token or model with a closed side and an open side; no model may *move*, *dodge*, or be pushed into its node. A chest holds one face-down treasure card of the current tier, revealed and awarded when the encounter is *cleared* (see §5.5, Chests; §7.7). With mimics in play, a chest is opened only as §13 describes.
 
 **Class-specific treasure.** A treasure card marked with a small white class emblem. It is sorted into the tier one or tier two deck by its stat requirements exactly as common treasure is.
 
@@ -122,7 +122,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Frostbite.** A condition. A frostbitten character cannot recover stamina; a frostbitten enemy reduces its movement values by one. The token is removed at the end of the model's turn.
 
-**Gravestone.** A terrain token or model that blocks all movement and pushes. *Clearing* an encounter that contains a gravestone allows the players to *scry* one card.
+**Gravestone.** A terrain token or model. No model may *move*, *dodge*, or be pushed into a node containing a gravestone. When an encounter that contains a gravestone is *cleared*, the players may *scry* one card (see §5.5, Gravestones).
 
 **Health dial.** The dial that records the health of a boss, summon, invader, or mimic. Enemies record damage with wound tokens instead (see §15.4).
 
@@ -166,9 +166,11 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Minor action.** An action a character may take during their turn, before or after the major action: *Walk*, *Equip* and *Heroic Action* once each per turn, and *Run* any number of times.
 
+**Move.** A change of node made by a model through the *Walk* or *Run* minor action, a *shift* icon, or an enemy or boss movement icon. The movement after a successful *dodge* and the movement of a *push* are not moves (see §5.2).
+
 **Node.** A circular space on a tile. Every model occupies exactly one node. Nodes are basic, spawn or terrain.
 
-**Node model limit.** At most three non-boss models and one boss model may occupy a node. A model entering a full node forces one occupant to be pushed.
+**Node model limit.** At most three non-boss models and one boss model may occupy a node. A model entering a full node forces one occupant to be pushed to a valid node chosen by the players (see §5.3).
 
 **Parry.** A defence available to a character with a shield in the left weapon slot who shares a node with the attacker. The character pays one stamina and rolls dodge dice against the attack's dodge difficulty. Success staggers the attacker and allows a *riposte*; failure deals full damage and staggers the character.
 
@@ -176,13 +178,13 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Physical damage.** Damage from an attack marked with the crossed swords icon. Physical damage is reduced by block.
 
-**Pillar token.** A terrain token placed on each pillar node of the mega-boss game board in the Asylum Demon expansion. Pillars block movement until destroyed.
+**Pillar token.** A terrain token placed on each of the four pillar nodes of the Asylum Demon mega-boss game board. No model may *move*, *dodge*, or be pushed into its node until the pillar is destroyed (see §5.5, Pillars; §17.3).
 
 **Poison.** A condition. At the end of its turn a model suffers one damage per poison token it holds, ignoring block and resist, then removes all of its poison tokens.
 
 **Push.** Forced movement of a model to an adjacent node, caused by a push-attack (the hit model moves directly away from the attacker) or a push-move (characters on nodes the enemy enters move away from it). Pushes cost no stamina and may not move a model into a gravestone or chest.
 
-**Range.** The maximum distance, counted in nodes, between an attacker and its target. Range 0 is the same node; range 1 is an adjacent node; range ∞ is unlimited.
+**Range.** The maximum distance between an attacker and its target, counted in nodes along the shortest chain of adjacent nodes. Range 0 is the same node; range 1 is an adjacent node; range ∞ is unlimited. Range is never blocked by terrain or models (see §5.4).
 
 **Repeat.** An icon that causes an entire attack option or behaviour card to be resolved the number of times shown.
 
@@ -236,7 +238,9 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Target.** The model an attack is directed at. Enemies never target enemies; characters target characters only in player versus player.
 
-**Terrain.** Gravestones, barrels, chests, pillars and traps. Terrain tokens are placed on terrain nodes at encounter setup and are not moved when encounters reset.
+**Terrain.** Gravestones, barrels, chests, and pillars, placed on terrain nodes, and trap tokens, dealt to basic nodes. Terrain stays on its nodes when encounters are reset (see §5.5).
+
+**Terrain node.** A node on which a terrain token or model is placed at the start of an encounter, as the encounter card directs. A terrain node that holds no terrain is used as a basic node (see §5.1).
 
 **Threat.** The value that fixes turn order, printed on the character dashboard as Taunt Level and on enemy and phantom data cards. Enemies act in descending threat before the characters, who then act in descending threat. The character with the highest threat takes the aggro token at the start of each encounter (see §3.1, §7.5).
 
@@ -252,7 +256,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Transposition.** In campaign play, exchanging one boss treasure card and four *souls* for one of the five face-up legendary treasure cards while resting at the *bonfire* after the first section's final boss.
 
-**Trap token.** A face-down token dealt to basic nodes when an encounter card shows the trap symbol. It is flipped and resolved against every model on its node when a character enters or is pushed onto the node.
+**Trap token.** A token, blank or showing a dodge difficulty and a damage value, dealt face down to the basic nodes of a trapped encounter. It is turned face up when a character moves into or is pushed onto its node, and each character there must suffer the damage or *dodge* it; enemies neither trigger traps nor suffer them (see §5.5, Traps).
 
 **Treasure card.** Any card drawn from a treasure deck or bought from Blacksmith Andre's shop: an equipment card or an ember card (see §2.5, §4.1).
 
@@ -265,6 +269,8 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 **Upgrade slot.** A space shown by the upgrade slots icon on a weapon or armour card; a card has zero, one, or two. Each attached upgrade card other than an upgrade spell occupies one slot (see §4.2).
 
 **Upgrade spell.** An upgrade card whose art shows a scroll. It is attached to a weapon or armour card equipped to the same character as the *Attack* major action during an encounter, occupies no upgrade slot, and returns to the inventory when the encounter ends (see §4.2).
+
+**Valid node.** A node that a model may enter by a given form of movement: an adjacent node not separated from the model's node by a wall and holding no terrain that blocks that form of entry. A node at its node model limit is a valid node (see §5.2).
 
 **Walk.** A minor action, once per turn: move one node for no stamina.
 
