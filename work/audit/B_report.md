@@ -289,3 +289,89 @@ Arithmetic: Mace highest requirement 16; 16 + 10 = 26; Herald STR Tier Two = 28 
 - Scaling is only ever reachable for tier-one weapons (highest requirement ≤ 24 → threshold ≤ 34, within Tier Three for STR/DEX/FTH on these boards). **No tier-two weapon (requirement ≥ 25) can ever scale**, because the threshold would be ≥ 35 and the highest Tier Four value is 40–45. The rule therefore rewards keeping a starting or tier-one weapon into the end-game — the opposite of the "seek out powerful weapons" goal (L365). Tune: lower the margin to **five** (tier-two weapons with requirement ≤ 35 then scale at Tier Four; the Mace still scales at Tier Two) or make scaling +1 per full ten points over the *lowest non-zero* requirement (B-016).
 - Tier Four "+5 over Tier Three" (L1914) produces class-dependent Tier Four values (Herald FTH 45, INT 34) and contradicts both the official campaign rule and Hollowed Edition (both: Tier Four = 40). With "+5", a Herald's FTH Tier Four (45) exceeds the highest printed requirement in the manuscript (40); with "= 40" the Herald's FTH Tier Four is identical to Tier Three (40) and worth nothing. Recommend: **"Tier Four is treated as 40, or Tier Three + 5 if that is higher"** — i.e. max(40, T3 + 5) — which is a strict improvement for every stat and keeps the official number (B-017).
 
+## 8. Tier split at ≥ 25 applied to "Weapons — Updated Stat Requirements" (L3208–3330)
+
+Rule (L1013, L1045–1057): any card with a requirement ≥ 25 in any stat is tier two; everything below is tier one. Applied to the 60 revised rows: **22 tier one, 38 tier two** (63 % of the revised weapons are pushed into the post-mini-boss deck). Original official requirements are **not in any supplied source** (the Extended Rules PDF has no stat tables; the Core rulebook shows only Battle Axe STR 14, Fume Ultra Greatsword STR 37 and Faraam Armour STR 20 as card images), so "flips tier" cannot be verified here; rows that sit within ±1 of the split are marked because a one-point revision moves them between decks.
+
+### 8.1 Clean table
+| Weapon | STR | DEX | INT | FTH | Highest req. | Tier (>=25) | Notes |
+|---|---|---|---|---|---|---|---|
+| Avelyn | 23 | 30 | 0 | 0 | 30 | Two | Crossbow; STR 23 raised to balance (DS1: 16 STR/8 DEX). |
+| Bewitched Alonne Sword | 18 | 24 | 0 | 0 | 24 | One | 18/24 tier one; DEX 24 one under the split. |
+| Black Knight Greataxe | 32 | 20 | 0 | 0 | 32 | Two | Tier two; consistent with Black Knight Halberd 32. |
+| Black Knight Halberd | 32 | 18 | 0 | 0 | 32 | Two | Boss treasure in the Community Update list (L3156) yet also in the common revision table. |
+| Brigand Axe | 19 | 16 | 0 | 0 | 19 | One |  |
+| Butcher Knife | 25 | 0 | 0 | 0 | 25 | Two | STR 25 exactly: falls into tier two by one point with no secondary requirement. Suspicious: a basic DS1 weapon. |
+| Caestus | 0 | 15 | 0 | 0 | 15 | One | STR 0 for a fist weapon contradicts the stated method (add STR or DEX if previously zero). |
+| Carthus Curved Greatsword | 19 | 30 | 0 | 0 | 30 | Two | 19/30: the greatsword requires LESS STR than the Carthus Curved Sword (25/35). Inverted pair. |
+| Carthus Curved Sword | 25 | 35 | 0 | 0 | 35 | Two | 25/35: heavier than its greatsword; STR 25 puts a one-handed curved sword in tier two. |
+| Chariot Lance | 22 | 33 | 0 | 0 | 33 | Two | 22/33 tier two on DEX. |
+| Claws | 0 | 20 | 0 | 0 | 20 | One | 0/20 vs Manikin Claws 24/24: same weapon class, 24 STR difference. Suspicious. |
+| Crystal Straight Sword | 21 | 30 | 0 | 0 | 30 | Two | Tier two on DEX 30. |
+| Dark Silver Tracer | 0 | 25 | 0 | 0 | 25 | Two | DEX 25 exactly: tier two by one point; STR 0. |
+| Dragon Tooth | 40 | 25 | 0 | 0 | 40 | Two | STR 40 is reachable only at Tier Four (Herald STR T3 37, T4 42 under L1914 or 40 under Core p.33). |
+| Drake Sword | 27 | 17 | 0 | 0 | 27 | Two | Tier two on STR 27. |
+| Drakewing Ultra Greatsword | 33 | 23 | 0 | 0 | 33 | Two | Tier two. |
+| East-West Shield | 28 | 0 | 0 | 0 | 28 | Two | A shield inside the weapons table; STR 28 puts a basic shield in tier two. |
+| Falchion | 37 | 30 | 0 | 0 | 37 | Two | 37/30: a basic DS1 curved sword with a higher STR requirement than the Black Knight Greataxe (32). Almost certainly a transposition (e.g. 17/30 or 13/37). |
+| Four-Pronged Plough | 23 | 18 | 0 | 0 | 23 | One |  |
+| Giant's Halberd | 27 | 16 | 0 | 0 | 27 | Two |  |
+| Gold Tracer | 25 | 35 | 0 | 0 | 35 | Two | 25/35: both stats high for a DEX dagger-class weapon; STR 25 is one point over the split. |
+| Gravelord Sword | 32 | 18 | 0 | 0 | 32 | Two | 32/18 tier two; boss treasure listed at L3176 as well. |
+| Great Mace | 28 | 0 | 0 | 0 | 28 | Two | 28/0 vs Mace 16/0: +12 STR is plausible; tier two. |
+| Halberd | 31 | 18 | 0 | 0 | 31 | Two | Tier two on STR 31. |
+| Irithyll Rapier | 24 | 24 | 0 | 0 | 24 | One | 24/24: one point under the split on both stats; tier one. |
+| Irithyll Straight Sword | 23 | 23 | 0 | 0 | 23 | One | 23/23: tier one. |
+| Lifehunt Scythe | 32 | 23 | 0 | 0 | 32 | Two | 32/23 tier two; boss treasure listed at L3168 as well. |
+| Lucerne | 22 | 31 | 0 | 0 | 31 | Two | 22/31: tier two on DEX for a polearm; check against Halberd 31/18 (STR-weighted). |
+| Mace | 16 | 0 | 0 | 0 | 16 | One | 16/0 tier one; compare Morning Star 16/0 identical. |
+| Manikin Claws | 24 | 24 | 0 | 0 | 24 | One | 24/24 vs Claws 0/20; one point under tier two on both stats. |
+| Morning Star | 16 | 0 | 0 | 0 | 16 | One | Identical to Mace (16/0). |
+| Murakumo | 27 | 17 | 0 | 0 | 27 | Two |  |
+| Onikiri And Ubadachi | 26 | 36 | 0 | 0 | 36 | Two | 26/36 tier two. |
+| Painting Guardian Curved Sword | 18 | 26 | 0 | 0 | 26 | Two |  |
+| Parrying Dagger | 14 | 21 | 0 | 0 | 21 | One | 14/21 identical to Rapier 14/21. |
+| Partizan | 28 | 17 | 0 | 0 | 28 | Two |  |
+| Pike | 23 | 16 | 0 | 0 | 23 | One |  |
+| Poison Throwing Knives | 0 | 14 | 0 | 0 | 14 | One | Identical to Throwing Knives (0/14). |
+| Priscilla's Dagger | 0 | 31 | 0 | 0 | 31 | Two | 0/31 tier two; boss treasure listed at L3166 as well. |
+| Rapier | 14 | 21 | 0 | 0 | 21 | One | 14/21 identical to Parrying Dagger; both tier one. |
+| Reinforced Club | 23 | 0 | 0 | 0 | 23 | One |  |
+| Rotten Ghru Dagger | 17 | 17 | 0 | 0 | 17 | One |  |
+| Rotten Ghru Spear | 12 | 21 | 0 | 0 | 21 | One | 12/21: lowest STR of any polearm; tier one. |
+| Royal Dirk | 18 | 31 | 0 | 0 | 31 | Two | 18/31 tier two on DEX for a dagger. |
+| Scimitar | 18 | 20 | 0 | 0 | 20 | One |  |
+| Shield Crossbow | 33 | 20 | 0 | 0 | 33 | Two | 33/20: STR 33 for a crossbow; tier two. |
+| Shotel | 26 | 29 | 0 | 0 | 29 | Two |  |
+| Silver Knight Spear | 22 | 26 | 0 | 0 | 26 | Two |  |
+| Silver Knight Straight Sword | 16 | 22 | 0 | 0 | 22 | One |  |
+| Spiked Mace | 32 | 22 | 0 | 0 | 32 | Two |  |
+| Spotted Whip | 23 | 30 | 0 | 0 | 30 | Two | 23/30 tier two on DEX. |
+| Sunlight Straight Sword | 15 | 15 | 0 | 0 | 15 | One | 15/15 tier one. |
+| Throwing Knives | 0 | 14 | 0 | 0 | 14 | One | 0/14: items in a weapons table; identical to Poison Throwing Knives. |
+| Uchigatana | 14 | 32 | 0 | 0 | 32 | Two | 14/32: an early DS1 weapon placed in tier two by DEX 32. |
+| Umbral Dagger | 18 | 35 | 0 | 0 | 35 | Two | 18/35 tier two on DEX. |
+| Vordt's Great Hammer | 33 | 0 | 0 | 0 | 33 | Two | 33/0 tier two; boss weapon in the common table. |
+| Warden Twinblades | 17 | 25 | 0 | 0 | 25 | Two |  |
+| Washing Pole | 37 | 21 | 0 | 0 | 37 | Two | 37/21: STR 37 for a katana (DEX weapon in source); tier two on STR. |
+| Winged Knight Halberd | 32 | 16 | 0 | 0 | 32 | Two | 32/16 tier two. |
+| Winged Spear | 20 | 22 | 0 | 0 | 22 | One |  |
+
+Rows within ±1–2 of the split (a one-point edit changes deck): Bewitched Alonne Sword 18/24, Butcher Knife 25/0, Dark Silver Tracer 0/25, Four-Pronged Plough 23/18, Irithyll Rapier 24/24, Irithyll Straight Sword 23/23, Manikin Claws 24/24, Painting Guardian Curved Sword 18/26, Pike 23/16, Reinforced Club 23/0, Silver Knight Spear 22/26, Warden Twinblades 17/25.
+
+Identical stat lines (nine pairs): Avelyn = Spotted Whip (23/30); Black Knight Halberd = Gravelord Sword (32/18); Carthus Curved Sword = Gold Tracer (25/35); Drake Sword = Murakumo (27/17); East-West Shield = Great Mace (28/0); Irithyll Rapier = Manikin Claws (24/24); Mace = Morning Star (16/0); Parrying Dagger = Rapier (14/21); Poison Throwing Knives = Throwing Knives (0/14). Duplicates are not errors in themselves, but Parrying Dagger = Rapier and Claws (0/20) ≠ Manikin Claws (24/24) suggest rows were filled by analogy rather than from the source material the rationale (L3210) cites.
+
+### 8.2 Suspicious rows (B-018 … B-021)
+| Row | Why suspicious | Suggested check |
+|---|---|---|
+| Falchion 37/30 | A basic curved sword with the highest STR requirement in the table bar Dragon Tooth; higher than Black Knight Greataxe (32) and Vordt's Great Hammer (33). | Probable digit transposition: 17/30 (tier two on DEX) or 13/27. |
+| Carthus Curved Sword 25/35 vs Carthus Curved Greatsword 19/30 | The greatsword is lighter in both stats than the one-handed sword. | Swap the two lines, or set the sword to 19/30 and the greatsword to 25/35. |
+| Butcher Knife 25/0 | Exactly on the split with no second stat; a basic DS1 weapon lands in the post-mini-boss deck. | 24/0 (tier one) or 28/0 if intended as a heavy weapon. |
+| Rapier 14/21 = Parrying Dagger 14/21 | Identical lines for a main-hand thrusting sword and an off-hand parry tool. | Parrying Dagger 10/18 or similar. |
+| Great Mace 28/0 vs Mace 16/0 | Plausible (+12), but Great Mace = East-West Shield (28/0) exactly. | None required. |
+| Claws 0/20 vs Manikin Claws 24/24 | Same weapon class; 24 STR added to one and 0 left on the other contradicts the stated method ("adding a strength or dexterity requirement if previously zero"). | Claws 12/20; Manikin Claws 14/24. |
+| Caestus 0/15; Throwing Knives 0/14; Dark Silver Tracer 0/25; Priscilla's Dagger 0/31 | STR 0 remains after a revision whose stated purpose was to remove zero requirements. | Give each a STR value or state that 0 is intentional. |
+| Washing Pole 37/21; Shield Crossbow 33/20; Avelyn 23/30 | STR-heavy requirements on DEX weapons/crossbows. | Confirm against the author's balance notes. |
+| East-West Shield 28/0 | A shield inside a weapons table; see §9 on whether "shield" is a card type. | Move to an armour/shield table. |
+| Black Knight Halberd, Gravelord Sword, Lifehunt Scythe, Priscilla's Dagger, Vordt's Great Hammer | Also appear in the boss-treasure lists (L3156–3176) yet are revised as if common; boss treasure is excluded from both tier decks (L1059). | Mark as boss treasure in the table or remove. |
+
