@@ -5,7 +5,7 @@ import os, json, re, glob, colorsys
 import numpy as np
 from PIL import Image
 Image.MAX_IMAGE_PIXELS=None
-os.chdir('/home/user/DSTBG2E')
+os.chdir(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))  # repo root, checkout-independent
 TGN='DS-TG-Rulebook-Compressed_compressed.pdf'
 REND='work/renders/hires/DS-TG-Rulebook-Compressed_compressed_p32_600dpi-32.png'; S=600/72
 page=Image.open(REND).convert('RGB')
