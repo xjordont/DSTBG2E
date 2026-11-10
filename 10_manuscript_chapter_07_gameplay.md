@@ -155,7 +155,7 @@ After recovery the party chooses either to advance to the next encounter tile (s
 
 ## 7.6 Souls
 
-*Souls* are the game's currency. Each character keeps their own souls as soul tokens on their dashboard. Souls cannot be transferred between characters and are spent only while resting at the *bonfire* (see §11.3 and §11.4).
+*Souls* are the game's currency. Each character keeps their own souls as soul tokens on their dashboard. Souls cannot be transferred between characters. Souls are spent while resting at the *bonfire* (see §11.3 and §11.4). The one exception is the cost of calling a *summon* at the *fog gate*, which is paid before a boss encounter (see §12.1).
 
 When an *encounter* is *cleared* for the first time, every character, including each character who died in it, gains the full soul reward for the encounter's level. When an encounter already marked cleared is cleared again, every character gains the *reduced reward* instead.
 

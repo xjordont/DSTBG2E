@@ -60,7 +60,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Character dashboard.** The board that records a character's class: the heroic action, the four equipment slots, the stat progression track, the endurance bar, the threat value, and the four token slots (see §3.1).
 
-**Chest.** A terrain token or model with a closed side and an open side; no model may *move*, *dodge*, or be pushed into its node. A chest holds one face-down treasure card of the current tier, revealed and awarded when the encounter is *cleared* (see §5.5, Chests; §7.7). With mimics in play, a chest is opened only as §13 describes.
+**Chest.** A terrain token or model that blocks movement, dodging, and pushes. A chest holds one face-down treasure card of the current tier, revealed when the encounter is *cleared* and awarded to the party (see §7.7). With mimics in play, opening a chest requires revealing the tile's *ambush card* (see §13).
 
 **Class-specific treasure.** A treasure card marked with a small white class emblem. It is sorted into the tier one or tier two deck by its stat requirements exactly as common treasure is.
 
@@ -222,7 +222,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Shop.** Blacksmith Andre's stock of face-up treasure cards, in a tier one shop and a tier two shop. A tier one card costs two *souls* and a tier two card four; a treasure card other than starting equipment sells for one soul (see §11.4). The tier one shop is stocked at setup and the tier two shop when the mini-boss is defeated; both are restocked only after a boss is defeated (in campaign play, after a section is completed), unsold cards going to the bottom of their deck first (see §6.3).
 
-**Souls.** The currency of the game, tracked by soul tokens on each character's dashboard. *Souls* are gained by *clearing* encounters and killing invaders, dropped on death, and spent at the *bonfire*. *Souls* may not be transferred between characters. A character adventuring alone begins with six *souls* (see §6.1).
+**Souls.** The currency of the game, tracked by soul tokens on each character's dashboard. *Souls* are gained by *clearing* encounters, defeating bosses, and killing invaders, and are dropped on death. They are spent while resting at the *bonfire* and, as the one exception, to call a *summon* at the fog gate (see §7.6, §12.1). *Souls* cannot be transferred between characters. A character adventuring alone begins with six *souls* (see §6.1).
 
 **Spark.** The *bonfire*'s charges, tracked on the spark dial. The party begins with six minus the number of characters, gains one for each boss defeated, and spends one each time the characters rest at the *bonfire* (see §7.4). If the characters are required to rest while the dial shows zero, the players lose the game (see §7.1). In campaign play the dial's maximum is one more than its starting value and a *spark* may be bought back for *souls* (see §18.3).
 

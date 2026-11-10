@@ -342,3 +342,10 @@
 - After: "… every encounter is reset (see §11.5), except a cleared Level 4 encounter, which is not fought again (see §6.7)."
 - Rationale: CMP-0023 (approved) and the F.A.Q. state that a cleared Level 4 encounter does not reset; A-123's alternative is not adopted. Aligns §7.5 with §6.7 (lead editor, at integration).
 - Source: CMP-0023, A-123
+
+### CH-07-050 · §7.6 Souls
+- Type: correction
+- Before: "Souls cannot be transferred between characters and are spent only while resting at the bonfire (see §11.3 and §11.4)."
+- After: "Souls are spent while resting at the bonfire (see §11.3 and §11.4). The one exception is the cost of calling a summon at the fog gate, which is paid before a boss encounter (see §12.1)."
+- Rationale: The unconditional restriction forbade the summon cost that §11.3 and §12.1 allow; A-100 resolves the manuscript's conflict by naming the fog-gate summon as the one exception.
+- Source: A-100, review of PR #2
