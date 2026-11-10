@@ -190,6 +190,8 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Push.** Forced movement of a model to an adjacent node, caused by a push-attack (the hit model moves directly away from the attacker) or a push-move (characters on nodes the enemy enters move away from it). Pushes cost no stamina and may not move a model into a gravestone or chest.
 
+**PvP encounter.** An optional contest fought between the characters alone, without enemies, on the tile on which a boss has been defeated, after each boss's defeat and before the rest that follows it. It has no enemy turns and no aggro token, is neither *cleared* nor *failed*, awards no *souls* and no treasure, and death in it costs nothing (see §20.1).
+
 **Range.** The maximum distance between an attacker and its target, counted in nodes along the shortest chain of adjacent nodes. Range 0 is the same node; range 1 is an adjacent node; range ∞ is unlimited. Range is never blocked by terrain or models (see §5.4).
 
 **Reduced reward.** Half the full soul reward, rounded down, gained by every character when an encounter already marked *cleared* is cleared again (see §7.6).
@@ -208,7 +210,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Riposte.** The out-of-turn attack a character makes against an attacker after a successful *parry*, using any attack option of the weapon in the right weapon slot and paying its stamina cost. A *riposte* may not be *parried*.
 
-**Round.** One pass of the encounter turn order: every enemy model takes a turn in descending threat order, then every character takes a turn in descending threat order (see §7.5, Encounter Turn Order).
+**Round.** One pass of the encounter turn order: every enemy model takes a turn in descending threat order, then every character takes a turn in descending threat order (see §7.5, Encounter Turn Order). In a *PvP encounter* a round is one turn by each character still in play (see §20.2).
 
 **Run.** A minor action: the character spends one stamina and moves one node. It may be taken any number of times per turn. A character who has *run* cannot *Rest* in that turn (see §10.2).
 
@@ -270,13 +272,15 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Transposition.** In campaign play, exchanging one boss treasure card and four *souls* for one of the five face-up legendary treasure cards while resting at the *bonfire* after the first section's final boss.
 
-**Trap token.** A token, blank or showing a dodge difficulty and a damage value, dealt face down to the basic nodes of a trapped encounter. It is turned face up when a character enters its node by a move, a dodge, or a push, and each character there must suffer the damage or *dodge* it; enemies neither trigger traps nor suffer them (see §5.5, Traps).
+**Trap token.** A token, blank or showing a dodge difficulty and a damage value, dealt face down to the basic nodes of a trapped encounter. It is turned face up when a character enters its node by a move, a dodge, or a push, and each character there must suffer the damage or *dodge* it; enemies neither trigger traps nor suffer them (see §5.5, Traps). In a *PvP encounter* one trap token is placed at the end of each character's turn, and a character who fails to dodge it dies (see §20.6).
 
 **Treasure card.** Any card from a treasure deck: *starting equipment*, *class-specific treasure*, *common treasure*, *legendary treasure*, or *boss treasure* (see §2.5). A treasure card that may be equipped to a dashboard slot is an *equipment card*.
 
 **Turn.** One model's opportunity to act. In each round the enemies take their turns, then the characters take theirs in descending threat order; in boss encounters the boss and the characters alternate turns (see §7.5, Encounter Turn Order; §10.1).
 
 **Two-handed.** A weapon bearing the two-handed icon, or a one-handed weapon equipped while the other weapon slot holds no card; a shield in the other weapon slot is equipment in the other hand. A weapon wielded two-handed may reroll one die of each attack roll. Spells are never two-handed (see §10.4).
+
+**Ultimate victor.** The character who wins the *PvP encounter* that follows the defeat of the final boss (see §20.8).
 
 **Upgrade card.** A card that enhances a weapon or armour card. Blacksmith Andre attaches it beneath the card, up to the card's upgrade slots, and the character must meet its stat requirements to equip the card. Upgrade spells are instead attached as the *Attack* major action during an encounter and return to the inventory afterwards (see §4.2).
 
@@ -285,6 +289,8 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 **Upgrade spell.** An upgrade card whose art shows a scroll. It is attached to a weapon or armour card equipped to the same character as the *Attack* major action during an encounter, occupies no upgrade slot, and returns to the inventory when the encounter ends (see §4.2).
 
 **Valid node.** A node that a model may enter by a given form of movement: an adjacent node not separated from the model's node by a wall and holding no terrain that blocks that form of entry. A node at its node model limit is a valid node (see §5.2).
+
+**Victory bonus.** The reward for winning a *PvP encounter* that follows the defeat of a boss other than the final boss, marked by one wound token of value 1 placed beside the winner's dashboard. Each victory bonus adds one to the attack value of each of the character's attacks in every subsequent PvP encounter; victory bonuses are cumulative and are kept until the game ends (see §20.8).
 
 **Walk.** A minor action, once per turn: the character moves one node without spending stamina (see §10.2).
 
