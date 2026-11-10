@@ -1,6 +1,6 @@
 # Audit C — Style & Consistency Report
 
-Project: Dark Souls: The Board Game — Second Edition (homebrew). Manuscript: `work/docx/manuscript.md` (pandoc GFM conversion of `DarkSoulsTBG2E.docx`). Lines 1–360 are a stale TOC; the body runs from line 361 to 3366. All line references below cite the body. Companion files: `C_rows.csv` (124 rows, C-001…C-124) and `C_glossary_candidates.md` (118 headwords).
+Project: Dark Souls: The Board Game — Second Edition (homebrew). Manuscript: `work/docx/manuscript.md` (pandoc GFM conversion of `DarkSoulsTBG2E.docx`). Lines 1–360 are a stale TOC; the body runs from line 361 to 3366. All line references below cite the body. Companion files: `C_rows.csv` (124 rows, C-001…C-124) and `C_glossary_candidates.md` (139 candidate rows, 135 distinct headwords, with 27 marked for demotion to reach ~110).
 
 Target voice: lawbook clarity — strict conditional syntax ("When [trigger], [subject] must/may [action]."), terse, British English, no hedge words, no second person outside worked examples, every keyword italicised consistently and defined once in a glossary.
 
@@ -24,7 +24,7 @@ Target voice: lawbook clarity — strict conditional syntax ("When [trigger], [s
 | Second person "you" | 1 (L377, front matter); 0 in rules text |
 | Italic spans (raw, body) | 601 spans, ~45 distinct terms; 13 spans with punctuation inside, 6 split-word spans, 8 non-term fragments |
 | Keywords never italicised | ≈ 40 (endurance bar, node, tier, heat-up, weak arc, scry, push, wound token, damage cube, behaviour deck, data card, fog gate, bonfire ascetic, transposition, legendary, catalyst, two-handed, AoE, range, riposte, lost, model, PvP …) |
-| Glossary headwords proposed | 118 (6 where the manuscript is silent or self-contradictory) |
+| Glossary headwords proposed | 135 distinct (139 rows; 27 marked for demotion to index-only to reach ~110); 6 where the manuscript is silent or self-contradictory |
 | Terminology variant groups | 33 (Task 4 table) |
 | Table-vs-text mismatches | 9 real mismatches, 3 verified consistent |
 | Cross-references | 33 resolved; 2 broken (fog gate "as before"; external mega-boss booklet); 2 inexact targets; 3 forward references phrased as "as usual/as before" |
@@ -137,7 +137,7 @@ Malformed italics (C-027…C-029):
 
 Definitions missing or contradictory (C-033, C-034): *lost* (L1399, 1890, 1906, 2235 — partial definition at 1906 conflicts with L1223 and L1195); "mastering" (L1397); *first player* token (L1277, never used; "First turn token" at L3056); boss *leaps* (L2175); invader "Heat Up value" (L2017); "health" used for characters (L1830). The glossary promised at L381 does not exist.
 
-Recommended italics policy (see Style Sheet §14): italicise a glossary keyword at its first use in each H2 section, in its own definition, and in headings and table labels; plain thereafter. Never italicise inflections separately, punctuation, quantities or connectors. 118 headwords are proposed in `C_glossary_candidates.md`.
+Recommended italics policy (see Style Sheet §14): italicise a glossary keyword at its first use in each H2 section, in its own definition, and in headings and table labels; plain thereafter. Never italicise inflections separately, punctuation, quantities or connectors. 135 headwords are proposed in `C_glossary_candidates.md` (27 marked as demotable).
 
 ## 6. Task 4 — Canonical terminology table
 
@@ -335,3 +335,44 @@ Current form by chapter:
 **"Players should…" and other advisory sentences that must become rules or be cut** (all rewritten in §4 above): 765, 805, 845, 979, 1057, 1141, 1201, 1596, 2041 (×2), 2053, 2596, 2664, 2720, 2766, 2812, 2884, 2948, 2994. Related advisory/flavour that is not a rule: 1107 "if they wish … if they like"; 1109 "For added challenge"; 1141 "if they prefer more variety"; 1888 (Firekeeper/Andre description); 1890 "players must carefully weigh the timing"; 2069 "bloodlust … can expect to die often"; 2159 "Players can gain an advantage … by memorising"; 2197 session break; 1872, 1876, 2053 flavour adjectives.
 
 **Tense:** present indicative for all rules. Future "will" at 1115, 1141, 1241, 1461, 1479, 2027, 2047, 2055, 2057 → present. Filler to delete: "simply" (979, 1674, 1676, 2191), "Of course" (1596), "and so-on" (2157), "one can assume" (2191), "it is possible" (2207), "nearly ready" (1963).
+
+## 13. Top 10 terminology decisions (for the coordinator)
+
+1. **Reduced soul reward (Blocker, C-070).** L1391 pays a "reduced" reward for repeat clears; no such value exists. Add a repeat-clear column to both soul tables or delete the distinction.
+2. **Wound token / damage cube (C-036).** Enemies take *wound tokens*; characters take *damage cubes*. Replace the four "damage tokens" (1285, 1291, 1293, 1850). No "damage token" exists.
+3. **Endurance bar (C-035).** Replace "stamina bar" (775, 1215) and "endurance tracker" (1205).
+4. **Major action (C-038).** Replace "main action" (837, 851); the turn structure defines minor/major.
+5. **Players / characters / models (C-048).** Players decide; characters act and own; models occupy nodes. L1393 "souls per player" must become "per character" because one player may control two characters (L989).
+6. **Phantom ⊃ summon + invader (C-065).** Rename chapter SUMMONS → PHANTOMS; "phantom" is the umbrella term only.
+7. **Hollow cube (C-050).** One name for the hollow marker; add it to the component list (16 stat cubes leave none spare); never call it "white cube" (that is the stat cube).
+8. **Titanite Scale (C-056).** The crystal-lizard reward is the Titanite Scale (Iron Keep), not the Titanite Chunk (a common upgrade in the Update Pack).
+9. **Lost (C-033 / C-090).** Define once and reconcile L1223 (hollow death forces a rest), L1906 (lost characters revived by resting) and L1195 (mega-boss death permanent).
+10. **Case and hyphenation of boss ranks and locations (C-041, C-042, C-043).** *mini-boss / main-boss / mega-boss*, the *bonfire*, Blacksmith Andre / Andre's shop, *fog gate* — lower-case hyphenated in prose, Title Case only in headings.
+
+Also requiring an author decision: card-name spellings that are American on the printed cards (Armorer Dennis, Marvelous Chester, Plow Scarecrow; "Sword Master" without "Sabre") — C-010/C-011; Stat Tier Four cost 8 vs 16 — C-073; campaign boss-treasure sell value 4 vs 6 — C-072; contested-treasure tie-break (random vs aggro holder) — C-089; which "Facing the Abyss" preamble survives — C-105; numerals policy — C-120; treasure card vs equipment card vs item — C-054; enemy death verbs — C-061.
+
+## 14. Proposed STYLE SHEET for Phase 2A drafting (one page)
+
+**1. Voice.** Rules are written as timeless statements in the present indicative. Preferred shape: "When [trigger], [subject] must/may [action]." Use *must* for obligations and prohibitions ("may not"), *may* for permissions, *cannot* only for physical impossibility. Never: should, might, could, reasonably, probably, perhaps, maybe, likely, simply, of course, will (future), "it is possible". No first or second person outside the Foreword and worked examples ("Example: …" paragraphs may address the reader).
+
+**2. Agents.** *Players* decide, agree, choose and roll. *Characters* act, hold tokens, own cards and souls, and die. *Models* occupy nodes, move and are pushed. *Enemies* (non-boss), *bosses* and *phantoms* (summons and invaders) are the hostile or allied model classes.
+
+**3. Spelling.** British (Oxford -ise): armour, behaviour, centre, colour, defence, favour, grey, plough, randomise, levelling, licence (noun). Official card and boss names are reproduced exactly as printed on the card (decision pending C-010); place names follow the video-game canon (Anor Londo, Earthen Peak).
+
+**4. Capitalisation.** Game terms are common nouns in lower case: the bonfire, the fog gate, the shop, mini-boss, main-boss, mega-boss, tier one, stat tier two, heat-up, aggro token, endurance bar, behaviour deck. Capitals only for proper nouns (Firekeeper, Blacksmith Andre, Titanite, boss and character names, expansion names), for printed labels (Level 1, STR/DEX/INT/FTH), and in headings. Headings: H1 ALL CAPS, H2/H3 Title Case (both halves of hyphenated words: Mini-Boss, Push-Move). No trailing punctuation, no "&", no empty headings.
+
+**5. Italics (keywords).** A glossary headword is italicised at its first use in each H2 section, wherever it is defined, and in headings and table labels; plain thereafter. Italicise the whole word including inflections (*staggered*, *cleared*), never punctuation, quantities, connectors or fragments. Every italicised term has a glossary entry; every glossary entry is italicised somewhere.
+
+**6. Numerals.** Words for zero to nine in prose; numerals from 10; numerals always in tables, with signs and symbols (+1, −1, ≥ 25, 90°, ∞), beside dice icons, and in printed labels (Level 1, Range 0). Quantities in component lists as "Nx Name" (lower-case x).
+
+**7. Lists and structure.** Procedures = numbered steps, one action per step, imperative mood, sub-steps numbered 1.1, 1.2. Definitions and component anatomies = bulleted full sentences. Rules = short paragraphs (≤ 4 sentences). Optional rules = boxed "Optional rule: Name", opening "If the players choose this option during setup, …". Flavour = shaded sidebars only. Worked examples = paragraph headed "Example:" in a distinct style.
+
+**8. Hyphenation and compounds.** setup (noun) / set up (verb); reroll; back-up slot; two-handed, one-handed; face up / face down (predicate), face-down card (attributive); heat-up (noun/adj.) / heats up (verb); fog gate; push-attack, push-move; tile-by-tile only as an adverb. Tokens have a *ready side* and a *used side*; cards are face up or face down.
+
+**9. Punctuation.** Serial comma always. Straight quotes in the Markdown source (typesetter smartens). No "etc.", "i.e.", "e.g." in rules; write "for example" / "that is". No ampersands outside official names. Parentheses for icon names: "the *repeat* icon (circle with a number)". Degree sign for rotation (90°, 180°).
+
+**10. Cross-references.** Every reference is "(see §N.N Heading)" — never "later", "earlier", "previously", "above", "below", "as usual", "aforementioned". A rule is stated once; every other mention cites it. Duplicate heading titles are qualified ("Shop Price Table (Campaign)"). No references to external booklets; expansion-specific rules are either reproduced or explicitly delegated: "Apply the special rules printed in that boss's expansion."
+
+**11. Death and state verbs.** Characters *die*; enemy models are *killed* and removed; bosses and encounters are *defeated* or *cleared*; a character removed from play is *lost* (definition pending C-033).
+
+**12. Components named once.** endurance bar, damage cube (red), stamina cube (black), wound token, hollow cube, stat cube (white), soul token, spark dial, health dial, aggro token, estus flask / luck / heroic action / ember tokens, condition token, trap token, fog gate token, invader token, ambush card, data card, behaviour card/deck, encounter card, event card, treasure card (⊃ equipment card), encounter tile, boss tile, bonfire tile.

@@ -239,3 +239,53 @@ Degenerate states:
 - Dropping from 4 to 3 players at 2 sparks gives 3 with a new maximum of 3 — fine; adding a 4th player to a 3-player party at 1 spark leaves **0** sparks with a maximum of 2 — the rule should forbid joining when the dial is at 1 or lower, or set the dial to at least 1 (B-013).
 - The free post-boss rest of the basic game is withdrawn in campaign except for section finals (L2235), yet the "Setup After the mini-boss" step 11 (L1169) that grants it is the only place the free rest is written as procedure; the campaign chapter should state the replacement procedure explicitly (editorial, not numeric).
 
+## 6. Hollow penalty (L781, L1215–1219, L1367) and encounter skipping (L1261–1263)
+
+Rules: hollow = two right-hand spaces blocked, bar "from a total of eight stamina/damage cubes to only six" (L781); skipping a cleared encounter costs **2 stamina per skipped encounter per character**, so three skips = 6 stamina placed (L1263, the manuscript's own example); recovery is 1 stamina per turn (L1802) or a Rest major action; "If a character is ever forced to place a stamina cube … but there is no space … the character is instead marked staggered. A character may never elect to spend excess stamina" (L791–793); a damage cube with no space = death (L795).
+
+### 6.1 Survivable hits
+Free boxes K after setup, and P(death) from one Hollow Soldier activation (2 black block dice; from §2.3):
+
+| State | K | A4 (1–2p) | A5 (3p) | A5 ×2 (4p) | Expected hits (A4) to die |
+|---|---|---|---|---|---|
+| Healthy, no skips | 8 | 0 | 0 | 0.058 | 4.8 |
+| Hollow, no skips | 6 | 0 | 0 | 0.444 | 3.6 |
+| Healthy, 2 skips (4 stamina) | 4 | 0.028 | 0.194 | 0.914 | 2.4 |
+| Hollow, 1 skip (2 stamina) | 4 | 0.028 | 0.194 | 0.914 | 2.4 |
+| Healthy, 3 skips (6 stamina) | 2 | **0.556** | **0.889** | 1.000 | 1.2 |
+| Hollow, 2 skips (4 stamina) | 2 | **0.556** | **0.889** | 1.000 | 1.2 |
+| **Hollow, 3 skips (6 stamina)** | **0** | **1.000** | **1.000** | **1.000** | 0 — any damage kills |
+
+Worked line (healthy, 3 skips, A4): P(block ≤ 2) = 0.028 + 0.167 + 0.361 = 0.556 → the character dies from the first hit 56 % of the time.
+
+### 6.2 Findings
+- **Blocker (B-014):** a hollow character who skips three cleared encounters starts the fourth encounter with 6 stamina on a 6-space bar: zero free space. Any damage kills; any stamina-costing action is impossible (the stamina rule converts it to Stagger and forbids electing to overspend), so the character cannot run, dodge, or use most attack options, and the Rest action (restore all stamina) is the only legal major action. The manuscript's own example (L1263) therefore describes a state that is lethal to every hollow character in the party — and any hollow death fails the encounter and costs a spark (L1223). Even a healthy character with three skips has 2 free boxes and a 56 % chance of dying to one Hollow Soldier hit at 1–2 players (89 % at 3 players).
+- The skip is meant to replace the ten minutes of re-fighting a cleared tile with a stamina tax; the tax is too high relative to an 8-box bar. Recommended value: **1 stamina per skipped encounter**, maximum 3 (hollow 3 skips → 3 free boxes, healthy → 5); or 2 per skip with a cap of 4 in total. Alternatively, hollow characters may not skip (clumsy).
+- The hollow penalty alone (−2 of 8 = −25 % capacity) is sharper than Hollowed Edition's, which applies the same −2 cubes to a **ten**-box bar (Hollowed p.5 with the official board) = −20 %. If the 2E intends to use official dashboards (ten boxes, Core p.20) the manuscript's "eight" is simply wrong and every figure in this report shifts two boxes in the player's favour (B-015).
+- Interaction with the Ember reduction (L1237: damage > 2 reduced by 1): against A4 with 2 black dice, P(dmg ≥ 3) = 0.194, so the ember saves 0.19 expected damage per hit (12 % of 1.67). Minor.
+
+Verdict: hollow −2 **OK**; skip cost **broken** as written (fix to 1 per skip).
+
+## 7. Stat scaling threshold (L1880) and Tier Four value (L1914)
+
+Rule: +1 attack on every option of a weapon when the character's stat **exceeds the weapon's highest requirement by ten or more**; Tier Four = Tier Three + 5.
+
+### 7.1 Dashboard tiers available
+Herald (Core p.11 image): STR 12/19/28/37, DEX 11/17/26/34, INT 8/12/20/29, FTH 13/22/31/40. Cleric (V2 p.26): STR 12/18/27/37, DEX 8/15/24/33, INT 7/14/22/30, FTH 16/23/32/40. Tier Four under the manuscript rule: Herald STR 42, DEX 39, INT 34, FTH 45; under Core p.33 / Hollowed p.3: 40 for all.
+
+### 7.2 Worked examples (weapons from the manuscript table L3212–3330)
+| Weapon | Req. (STR/DEX) | Highest | Stat needed for +1 (≥ highest + 10) | Herald reaches it at | Cleric reaches it at |
+|---|---|---|---|---|---|
+| Sunlight Straight Sword | 15/15 | 15 | 25 (STR or DEX) | STR Tier Two (28) | STR Tier Two (27) |
+| Mace | 16/0 | 16 | STR 26 | STR Tier Two (28) | STR Tier Two (27) |
+| Rapier | 14/21 | 21 | DEX 31 | DEX Tier Three (34) | DEX Tier Three (33) |
+| Uchigatana | 14/32 | 32 | DEX 42 | never (DEX T4 = 39 by L1914; 40 by Core p.33) | never (38 / 40) |
+| Falchion (as printed) | 37/30 | 37 | STR 47 | never (STR T4 = 42 / 40) | never |
+| Dragon Tooth | 40/25 | 40 | STR 50 | never | never |
+
+Arithmetic: Mace highest requirement 16; 16 + 10 = 26; Herald STR Tier Two = 28 ≥ 26 → scaled. Rapier 21 + 10 = 31; Herald DEX Tier Two 26 < 31, Tier Three 34 ≥ 31 → scaled at Tier Three.
+
+### 7.3 Findings
+- Scaling is only ever reachable for tier-one weapons (highest requirement ≤ 24 → threshold ≤ 34, within Tier Three for STR/DEX/FTH on these boards). **No tier-two weapon (requirement ≥ 25) can ever scale**, because the threshold would be ≥ 35 and the highest Tier Four value is 40–45. The rule therefore rewards keeping a starting or tier-one weapon into the end-game — the opposite of the "seek out powerful weapons" goal (L365). Tune: lower the margin to **five** (tier-two weapons with requirement ≤ 35 then scale at Tier Four; the Mace still scales at Tier Two) or make scaling +1 per full ten points over the *lowest non-zero* requirement (B-016).
+- Tier Four "+5 over Tier Three" (L1914) produces class-dependent Tier Four values (Herald FTH 45, INT 34) and contradicts both the official campaign rule and Hollowed Edition (both: Tier Four = 40). With "+5", a Herald's FTH Tier Four (45) exceeds the highest printed requirement in the manuscript (40); with "= 40" the Herald's FTH Tier Four is identical to Tier Three (40) and worth nothing. Recommend: **"Tier Four is treated as 40, or Tier Three + 5 if that is higher"** — i.e. max(40, T3 + 5) — which is a strict improvement for every stat and keeps the official number (B-017).
+

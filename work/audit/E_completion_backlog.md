@@ -882,3 +882,154 @@ Index: CMP-0001 Estus Flask · CMP-0002 Glossary · CMP-0003 F.A.Q. · CMP-0004 
 - Status: awaiting-approval
 
 ---
+
+### [CMP-0010] Gameplay › Souls / Campaign Play › Encounter Soul Rewards — Reduced soul reward — Proposed Completion
+- Current state: Souls (line 1391): "Upon successfully *clearing* an encounter that has been previously *cleared*, reward the reduced *soul* reward to each character." Encounter Resolution (line 1327): "Characters gain *soul* rewards but not treasure." Campaign Play (line 2245): "repeated for *souls* rewards but not treasure rewards, just as in the basic game." Neither Soul Reward Table (lines 1401–1439) nor the Campaign Soul Reward Table (lines 2247–2285) has a reduced column; no value is ever given.
+- Proposed completion:
+
+  Replacement for line 1391: "Upon successfully *clearing* an encounter that has been previously *cleared*, reward the reduced *soul* reward to each character. The reduced reward is half the full reward, rounded down."
+
+  Replacement for the Soul Reward Table:
+
+  > ### Soul Reward Table
+  >
+  > | Encounter | Full reward per character | Reduced reward per character (already *cleared*) |
+  > |---|---|---|
+  > | Level 1 Encounter and Standard Invaders | 3 | 1 |
+  > | Level 2 Encounter and Advanced Invaders | 4 | 2 |
+  > | Level 3 Encounter | 5 | 2 |
+  > | Level 4 Encounter and Bosses | 6 | 3 |
+  >
+  > Invaders and bosses are never *cleared* twice; their reduced reward is never used.
+
+  Replacement for the Campaign Soul Reward Table:
+
+  > ### Campaign Soul Reward Table
+  >
+  > | Encounter | Full reward per character | Reduced reward per character (already *cleared*) |
+  > |---|---|---|
+  > | Level 1 Encounter and Standard Invaders | 2 | 1 |
+  > | Level 2 Encounter and Advanced Invaders | 3 | 1 |
+  > | Level 3 Encounter | 4 | 2 |
+  > | Level 4 Encounter and Bosses | 5 | 2 |
+
+  Replacement for Encounter Resolution line 1327: "Characters gain the reduced *soul* reward but no treasure."
+- Design rationale: Half rounded down is chosen over "one fewer" because the manuscript's stated aim is to remove grinding: at one fewer, repeating a Level 3 encounter would pay 4 souls per character, barely less than clearing it. Half makes repeats worth taking only when a character must retrieve dropped souls or wants a safe route to the boss. Rounding down keeps every value a whole number and never reduces a reward to zero. The alternative (one fewer: 2/3/4/5 and 1/2/3/4) is recorded here for the editor's decision.
+- Mechanical impact: Repeat clears pay 1–3 souls (basic) or 1–2 souls (campaign) per character. Dropped-soul recovery is unaffected.
+- Follow-on changes required: F.A.Q. answer on reduced rewards (CMP-0003) matches. Line 2243 ("reduced by one compared to the basic game") stands and refers to the full reward only; add "The reduced reward is half the campaign full reward, rounded down" after it.
+- Status: awaiting-approval
+
+---
+
+### [CMP-0011] Gameplay › Encounter Start step 9 and Player vs Player — "First player token" — Proposed Completion
+- Current state: Encounter Start step 9 (line 1277): "Place the *first player* token on the character with the highest threat value." Player vs Player (line 3056): "*First* *turn* token is given to the character with the highest threat value." No such token is listed in Game Components › Tokens & Terrain Elements (lines 679–723). Turn order is fixed by *threat* in both places (lines 1289, 3058), so the token has no function.
+- Proposed completion: Remove the token. Delete Encounter Start step 9 and the PvP bullet at line 3056, and replace Encounter Start step 8 (line 1275) with:
+
+  > 8. Place the *aggro* token on the character with the highest *threat* value. That character takes the first character turn of the encounter; ties in *threat* are settled by the players before the first turn and the order is kept for the encounter.
+
+  Replacement for PvP turn-order bullet (line 3058), as drafted in CMP-0009: "Characters take turns one at a time in descending *threat* order. If two characters share a *threat* value, the players decide their order before the first turn; if they cannot agree, decide at random."
+- Design rationale: Removal is recommended over definition. Threat order already fixes the first character, so a first-player token would duplicate information the dashboards carry; the Core rulebook's First Activation token existed only because its turn order went clockwise, which this edition has abandoned. Defining the token would also require adding a component. The tie rule supplies the one thing the token's position would have recorded.
+- Mechanical impact: None.
+- Follow-on changes required: Remove "first player" from the italicised-term inventory; no Glossary entry. Renumber Encounter Start.
+- Status: awaiting-approval
+
+---
+
+### [CMP-0012] Game Components and owning chapters — Undefined components (event cards, ambush cards, mega-boss items, Level 4 tiles, pillar tokens, strafe and track cards) — Proposed Completion [PROPOSED-SYSTEMIC for event cards]
+- Current state: Game Components lists "Event cards" (lines 659–667: 10 per level and 5 Special Trap cards) and "Level 4 encounter cards" (line 653) but no ambush cards, pillar tokens, mega-boss items, strafe cards, track behaviour cards, mega-boss setup card, phantom or invader components, or mega-boss game boards. Event cards are used at Setup (lines 1133, 1161), Encounter Start (line 1269), Gravestones (line 939) and Setup After the main-boss (line 1181, "No event card is used"), but no rule says what an event card does; the Tomb of Giants set's event cards (immediate/consumable/rendezvous, drawn as rewards) are a different component and its rules do not match the manuscript's levelled, tile-dealt deck. "Ambush card" is used (lines 1137, 1469–1473, 2045) and defined only by use. "Mega-boss Items" (line 1183) are never defined. "Level 4 encounter tile associated with the chosen mega-boss" (line 1179) is the double-sided mega-boss game board. "Pillar token" (line 2205) and "pillar nodes" are used only in Boss Special Rules.
+- Proposed completion:
+
+  (a) Additions to Game Components (insert after line 667 and within Tokens & Terrain Elements as marked):
+
+  > ### Phantom cards and tokens (Phantoms)
+  >
+  > - 10x Summon data cards (5 standard, 5 advanced), 40x Summon behaviour cards, 1x Summon health dial
+  > - 12x Invader data cards (6 standard, 6 advanced), 64x Invader behaviour cards, 12x Invader treasure cards, 1x Invader health dial
+  > - 6x Standard invader tokens, 6x Advanced invader tokens, 3x Blank invader tokens
+  >
+  > ### Mimic cards (Explorers)
+  >
+  > - 2x Mimic data cards (Hungry, Voracious), 14x Mimic behaviour cards, 1x Mimic health dial, 5x Ambush cards
+  >
+  > ### Mega-boss components (one set per mega-boss expansion)
+  >
+  > - 1x Mega-boss game board (double-sided: Level 4 encounter side and mega-boss side)
+  > - 4x Level 4 encounter cards
+  > - 1x Mega-boss data card, 1x Health dial, behaviour cards as listed on the data card, 2x Mega-boss treasure cards
+  > - Black Dragon Kalameet only: 8x Strafe cards, 4x *Calamity* tokens
+  > - Executioner's Chariot only: 4x Track behaviour cards, 1x Mega-boss setup card
+  > - Asylum Demon only: 4x Pillar tokens
+  >
+  > (Tokens & Terrain Elements, after line 713) - 4x Pillar tokens (Asylum Demon)
+
+  (b) New sub-section in Game Components › Cards, after Event cards (line 667):
+
+  > ### Ambush cards
+  >
+  > Five cards from the Explorers expansion, each showing Treasure or Mimic on its face. One is dealt face down beside each encounter tile when mimics are in play and is revealed only when the characters choose to open that tile's chest. See Mimics.
+
+  (c) Rule paragraph for event cards, as a new sub-section Gameplay › Encounters › Event Cards (insert after Encounter Start, line 1277) [PROPOSED-SYSTEMIC]:
+
+  > ### Event Cards
+  >
+  > Each encounter tile carries one face-down event card of the same level as its encounter card, dealt at setup. When the characters enter the tile, reveal the event card after the encounter card and before enemies and terrain are placed. The event card's text modifies that encounter and applies until the encounter ends, unless the card states otherwise. An event card that cannot be applied to its encounter (for example, one that refers to a terrain type the encounter does not place) has no effect. Event cards stay on their tiles, face up, after the encounter; when the characters rest at the *bonfire*, event cards are turned face down with their encounter cards and apply again when the encounter is next fought. Special Trap cards are event cards that replace the standard trap tokens of a trapped encounter with the trap layout printed on the card; if the encounter is not trapped, the Special Trap card has no effect. Level 4 encounters and boss encounters use no event card.
+
+  (d) Definition of mega-boss items, replacing Setup After the main-boss step 5 (line 1183):
+
+  > 5. Shuffle the mega-boss's treasure cards (its *mega-boss items*) and deal one face down to the Level 4 encounter tile. This card is the Level 4 encounter's treasure reward and is awarded, when the encounter is *cleared*, as a chest treasure is: the players decide which character receives it. No tier two treasure cards are dealt to the Level 4 tile. [PROPOSED]
+
+  (e) Definition of the Level 4 tile, replacing Setup After the main-boss step 3 (line 1179):
+
+  > 3. Place the mega-boss game board supplied with the chosen mega-boss adjacent to the *bonfire* tile, with its Level 4 encounter side (enemy spawn and terrain nodes) face up and a doorway aligned with the *bonfire* tile. Place the fog gate on that doorway. The game board's other side shows the mega-boss spawn node and is used for the mega-boss encounter.
+
+  (f) Pillar tokens: the definition in Boss Special Rules › Pillar Smasher (line 2205) stands; add to Tiles & Nodes › Terrain, after Traps (line 981): "**Pillars.** Pillar tokens are placed only on the pillar nodes of the Asylum Demon mega-boss game board. Pillars block movement, dodging and pushes until destroyed; see Boss Special Rules."
+- Design rationale: Items (a), (b), (e) and (f) are inventories and descriptions drawn from the supplied booklets, matched to the manuscript's existing lists. Item (d) resolves "mega-boss Items" as the mega-boss's own treasure cards, the only cards an expansion supplies that fit the phrase, and gives the Level 4 tile a reward in place of the per-character tier two cards the generic setup would otherwise deal. Item (c) is a new subsystem: the manuscript dealt, revealed and scried event cards without ever stating their effect, and the only published event cards (Tomb of Giants) work differently; the paragraph is the minimum needed for the component to function (when revealed, duration, reset, what a Special Trap card is, where no event is used) and does not design any card.
+- Mechanical impact: Event cards gain a definite timing and reset. Level 4 encounters award one mega-boss treasure card instead of one tier two card per character (a reduction of up to three cards). Component counts allow the Game Components chapter to be checked against the boxes.
+- Follow-on changes required: Decision needed on (c): confirm that the author's event deck exists (print-and-play in the Community Update Pack?) and supply card texts, or delete every event-card reference (lines 659–667, 939, 1133, 1161, 1181, 1269). Confirm (d) with the author. Glossary entries Event card and Ambush card (CMP-0002). Campaign Play: state whether campaign Level 4 encounters also receive a mega-boss item.
+- Status: awaiting-approval
+
+---
+
+### [CMP-0013] INTRODUCTION / SECOND EDITION NOTES — Foreword options (OQ-01) and colophon credits — Proposed Completion
+- Current state: SECOND EDITION NOTES (lines 371–381) is design-process commentary in the first person, with complaints about the publisher ("SFG had lied"), requests for comment, and a note about diagrams and copyright. The Introduction (lines 361–369) is four short paragraphs. The front matter byline (lines 1–3) reads "By PittedPanda / Based on related works by Steam Forged Games (SFG), Konami, Santuric, Wilhelm, Astray, Manuel, Chud, Winston, Jyace, Absolute Disgrace, Zed, Gorus, and the rest of the DStBG Community." Line 381 (the glossary promise) is the one sentence in the chapter that belongs in the book.
+- Proposed completion:
+
+  **Option A — Foreword (≤200 words), replacing SECOND EDITION NOTES in full:**
+
+  > # FOREWORD
+  >
+  > Dark Souls: The Board Game was published in 2017 and grew, expansion by expansion, into a large and uneven body of rules. This Second Edition gathers those rules into one book, revises the mechanics that long play exposed as weak, and states every rule once, in one place, so that a table needs no other text.
+  >
+  > The core of the game is unchanged: a party of one to four characters explores a string of encounters, learns the patterns of its enemies, returns to the bonfire to rest and grow stronger, and at last faces a boss. What has changed is the pace and the balance. Enemies act first and in threat order. Blocking, resisting, dodging and parrying each cost something and each reward a different kind of equipment. The shop restocks only when a boss falls. Death drops souls, and the hollow fight with less endurance until they rest or find an ember.
+  >
+  > These rules were shaped by the community that kept the game alive. Every mechanic in this book has been played, argued over and played again. Where a term is set in italics, its definition is in the Glossary.
+  >
+  > Prepare to die.
+
+  (171 words.)
+
+  **Option B — Expanded Introduction (≤120 words), replacing INTRODUCTION in full, with SECOND EDITION NOTES cut entirely:**
+
+  > # INTRODUCTION
+  >
+  > Dark Souls: The Board Game Second Edition is a cooperative dungeon crawl for one to four players. Each player controls one character. The characters explore a chain of encounters, defeat a mini-boss and then a main-boss, and, if the players choose, a mega-boss after that.
+  >
+  > To succeed the characters must learn their enemies' behaviours, raise their stats, seek out powerful weapons and work together through increasingly dangerous encounters. When a character dies they rise again hollow, weaker until they rest at the bonfire or consume an ember. The bonfire's sparks are few, and every rest spends one.
+  >
+  > This edition collects the rules of the original game and its expansions into one revised, self-contained book. Terms set in italics are defined in the Glossary.
+  >
+  > Nameless accursed undead, seek strength, and prepare to die.
+
+  (119 words.)
+
+  **Colophon credits block (two lines), replacing the byline at lines 1–3:**
+
+  > Second Edition rules by PittedPanda, with the Dark Souls: The Board Game community: Santuric, Wilhelm, Astray, Manuel, Chud, Winston, Jyace, Absolute Disgrace, Zed and Gorus.
+  > Based on Dark Souls: The Board Game by Steamforged Games Ltd. Dark Souls is a trademark of Bandai Namco Entertainment Inc. and FromSoftware, Inc. This is an unofficial, non-commercial fan work.
+
+- Design rationale: Option A keeps a foreword's function (why the edition exists, what changed) without first person, process notes or grievance; its description of the changes is drawn from the manuscript's own chapters. Option B assumes the Notes chapter is cut and folds the one necessary sentence (the glossary promise) into the Introduction, preserving the original closing line. The credits block names the same contributors, drops "Konami" (the Dark Souls rights-holders are Bandai Namco and FromSoftware, as every supplied booklet states) and adds the fan-work disclaimer the original front matter lacks.
+- Mechanical impact: None.
+- Follow-on changes required: Editor decision on OQ-01 (A or B). Whichever is chosen, delete lines 371–381. Confirm the contributor list and the handle "PittedPanda" with the author. Regenerate TOC.
+- Status: awaiting-approval
+
+---
