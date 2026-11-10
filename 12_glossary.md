@@ -46,6 +46,8 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Boss tile.** The mini-boss tile or main-boss tile on which a boss encounter is fought. A main-boss encounter uses both boss tiles joined as one large tile. Mega-bosses use the mega-boss game board supplied with their expansion.
 
+**Boss treasure.** A treasure card supplied with a boss. One of a boss's treasure cards is awarded at random when the boss is defeated (see §16.5).
+
 **Calamity.** A condition from the Black Dragon Kalameet expansion. A model may hold one calamity token, which reduces its block, resist and dodge roll results by one. Calamity tokens are removed only when the encounter ends.
 
 **Catalyst.** A weapon card that stores spells of a matching school: pyromancer flames store pyromancies, staves and catalysts store sorceries, talismans and chimes store miracles. Up to three spells may be stored in a catalyst and their attack options are used as if equipped.
@@ -92,11 +94,13 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Encounter level.** The difficulty of an encounter, from 1 to 4. The levels of the encounters leading to a boss are printed on that boss's data card. Level 4 encounters precede mega-bosses only.
 
-**Endurance bar.** The ten-space track on the dashboard that holds both stamina cubes (filling from the left) and damage cubes (filling from the right). A *hollow* character's hollow cube blocks the two rightmost spaces, leaving eight (see §3.4).
+**Endurance bar.** The ten-space track on the dashboard that holds both stamina cubes (filling from the left) and damage cubes (filling from the right). A *hollow* character's two hollow cubes block the two rightmost spaces, leaving eight (see §3.4).
 
 **Entry node.** A basic node beside the doorway through which the characters entered the tile. Characters are placed on entry nodes at the start of an encounter, no more than three to a node.
 
 **Equip.** A minor action that swaps cards between the back-up slot and the weapon and armour slots. The inventory may not be used during an encounter.
+
+**Equipment card.** A treasure card that may be equipped to a weapon or armour slot of the dashboard (see §4.1).
 
 **Estus flask.** A character token. Flipping it as a major action (*Drink Estus*) removes all damage cubes from the endurance bar. It is readied only by resting at the *bonfire*.
 
@@ -112,6 +116,8 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Gravestone.** A terrain token or model that blocks all movement and pushes. *Clearing* an encounter that contains a gravestone allows the players to *scry* one card.
 
+**Health dial.** The dial that records the health of a boss, summon, invader, or mimic. Enemies record damage with wound tokens instead (see §15.4).
+
 **Heat-up.** The point at which a boss, mimic or invader becomes more dangerous. When its health is reduced to or below its heat-up point, a heat-up card (or, for mimics and invaders, an unused standard card) is shuffled into its behaviour deck. Some bosses heat up differently; see Boss Special Rules.
 
 **Heat-up card.** A behaviour card marked with the heat-up symbol. Heat-up cards are set aside when the behaviour deck is built and enter play only at heat-up.
@@ -120,11 +126,15 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Hit.** A model is hit by an attack that was in range and that it did not successfully *dodge* or *parry*, even if the attack dealt no damage. Pushes and conditions apply only to models that are hit.
 
-**Hollow.** The state of a character revived after dying. The hollow cube blocks the two rightmost spaces of the endurance bar, leaving eight usable spaces. *Hollow* is removed only by resting at the *bonfire* or by becoming *embered*. A *hollow* character who dies is *lost* and the encounter is *failed*.
+**Hollow.** The state of a character revived after dying. Two *hollow cubes* block the two rightmost spaces of the endurance bar. *Hollow* is removed only by resting at the *bonfire* or by becoming *embered*. A *hollow* character who dies is *lost* and the encounter is *failed*.
 
-**Inventory.** A character's face-down stack of unequipped treasure cards. It may be rearranged or traded with only outside encounters.
+**Hollow cube.** One of eight cubes of a colour distinct from the damage, stamina, and stat cubes. Two hollow cubes block the two rightmost spaces of a *hollow* character's endurance bar (see §7.2).
 
 **Invader.** A hostile phantom drawn by *embered* characters. An invader joins a standard encounter, acts after every character's turn using its own behaviour deck, and awards *souls* and its treasure when killed.
+
+**Invader token.** A token from the Phantoms expansion that shows an invader icon or is blank. When invaders are in play, one is placed face down on each face-down encounter card and is revealed when the characters enter that tile (see §12.2).
+
+**Inventory.** A character's face-down stack of unequipped treasure cards. It may be rearranged or traded with only outside encounters.
 
 **Legendary treasure.** A rare treasure card marked with an orange light under a chest. Five are shuffled into the tier two deck when the tier two shop is first stocked; in campaign play legendary treasure is obtained only by *transposition*.
 
@@ -139,6 +149,8 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 **Major action.** The one principal action of a character's turn: *Attack*, *Rest*, *Drink Estus* or *Ember*.
 
 **Mega-boss.** An optional final boss from a mega-boss expansion, fought on its own game board after a Level 4 encounter. Death and hollowing in a mega-boss encounter follow the usual rules (see §7.2).
+
+**Mega-boss game board.** The double-sided board supplied with a mega-boss expansion. Its Level 4 encounter side is the tile of the Level 4 encounter and its mega-boss side is the tile of the mega-boss encounter (see §6.7, §15.3).
 
 **Mimic.** An optional enemy from the Explorers expansion that masquerades as a chest. The Hungry Mimic is fought before the mini-boss is defeated and the Voracious Mimic afterwards; both are fought as mini-boss encounters without arcs.
 
@@ -178,7 +190,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Scaled (weapon).** A weapon equipped by a character whose relevant stat exceeds the weapon's highest requirement by five or more. It is marked with a red cube and all its attack options gain +1 attack value. Spells are never scaled.
 
-**Scry.** To reveal one hidden card (the top card of a treasure deck, a face-down encounter card, or the top card of the next boss's behaviour deck) and either return it or send it away as the Gravestones rules describe.
+**Scry.** To reveal one hidden card (the top card of a treasure deck, a face-down encounter card, or the top card of the next boss's behaviour deck) and either return it or send it away (see §5.5, Gravestones).
 
 **Section.** In campaign play, one list of tiles ending in one or more bosses. The shop restocks and a free rest is granted only when a section is completed: when its final boss is defeated or, for a section that ends in a named encounter, when that encounter is *cleared*.
 
@@ -199,6 +211,8 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 **Stamina cube.** A black cube. Each point of stamina a character spends places one stamina cube on the endurance bar, filling from the left.
 
 **Starting equipment.** The three or four equipment cards a character begins with. Starting equipment may not be sold.
+
+**Stat cube.** A white cube that marks a character's *stat tier* on a stat progression track (see §3.3).
 
 **Stat tier.** A character's position on each stat track (base, tier one, two, three or four), marked with a white cube or, at tier four, a red cube. Tiers are bought in sequence from the Firekeeper.
 
@@ -225,6 +239,8 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 **Transposition.** In campaign play, exchanging one boss treasure card and four *souls* for one of the five face-up legendary treasure cards while resting at the *bonfire* after the first section's final boss.
 
 **Trap token.** A face-down token dealt to basic nodes when an encounter card shows the trap symbol. It is flipped and resolved against every model on its node when a character enters or is pushed onto the node.
+
+**Treasure card.** Any card from a treasure deck: *starting equipment*, *class-specific treasure*, *common treasure*, *legendary treasure*, or *boss treasure* (see §2.5). A treasure card that may be equipped to a dashboard slot is an *equipment card*.
 
 **Turn.** One model's activation. Enemies take their turns, then characters take theirs; in boss encounters the boss takes a turn after each character.
 

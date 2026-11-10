@@ -6,26 +6,26 @@ Totals: 24 chapters, 166 sections, 20 orphan empty headings.
 
 | Chapter | Section | Status | Audit IDs | Completion ID | Drafted | Notes |
 |---|---|---|---|---|---|---|
-| INTRODUCTION | (chapter) | present — to audit | C-030, C-101, CMP-0013, F-007, F-008 | CMP-0013 | no | line 361. |
-| SECOND EDITION NOTES | (chapter) | META — OQ-01 (rewrite as Foreword or cut) | C-001, C-015, C-022, C-025, C-026, C-030, C-032, C-060, C-111, C-113, C-118, CMP-0002, CMP-0013, F-002, F-003, F-004, F-005, F-006, F-055, F-082 | CMP-0002, CMP-0013 | no | line 371. Entire chapter is design-process commentary; Class B forbids it. |
-| GAME COMPONENTS | (chapter) | present — to audit | A-017, A-033, A-039, A-047, A-081, A-083, A-088, A-089, A-090, A-091, A-092, A-101, A-108, A-113, A-114, A-117, B-001, B-026, B-027, B-028, B-029, B-030, B-037, C-005, C-006, C-007, C-008, C-009, C-010, C-011, C-013, C-014, C-029, C-030, C-041, C-045, C-049, C-050, C-054, C-058, C-063, C-064, C-073, C-075, C-077, C-078, C-093, C-101, C-103, C-104, C-108, C-111, C-112, CMP-0007, CMP-0011, CMP-0012, D-001, D-018, D-019, D-020, D-022, D-023, D-024, D-025, D-026, D-027, F-054, F-093 | CMP-0007, CMP-0011, CMP-0012 | no | line 383. |
-| GAME COMPONENTS | Characters | present — to audit | C-030, C-049, C-103, F-054, F-093 |  | no | line 385. |
-| GAME COMPONENTS | Enemies | present — defect | A-101, B-026, C-006, C-007, C-010, C-014, C-030, C-049, C-108, C-112, CMP-0007, D-019, D-026 | CMP-0007 | no | line 409. "1x HungryVoracious Mimic" typo; "2X" capitalisation; counts to verify vs official. |
-| GAME COMPONENTS | Bosses | present — to audit | A-039, A-108, B-037, C-009, C-013, C-030, C-041, C-075, C-093, C-101, C-111, D-022, D-023 |  | no | line 481. |
-| GAME COMPONENTS | Mini-Bosses | present — to audit | B-037, C-009, C-030, C-041, C-093 |  | no | line 483. |
-| GAME COMPONENTS | Main-Bosses | present — to audit | A-039, B-037, C-013, C-030, C-041, C-093, D-022 |  | no | line 501. |
-| GAME COMPONENTS | Mega-bosses | present — to audit | A-108, C-030, C-041, C-075, C-101, C-111, D-023 |  | no | line 523. |
-| GAME COMPONENTS | Phantoms | present — to audit | C-005, C-008, C-010, C-011, C-030, C-064, C-103, D-027 |  | no | line 543. |
-| GAME COMPONENTS | Invaders (Standard) | present — to audit | C-005, C-030, D-027 |  | no | line 545. |
-| GAME COMPONENTS | Invaders (Advanced) | present — to audit | C-010, C-030, D-027 |  | no | line 559. |
-| GAME COMPONENTS | Summons (Standard) | present — to audit | C-011, C-030 |  | no | line 573. |
-| GAME COMPONENTS | Summons (Advanced) | present — to audit | C-008, C-030 |  | no | line 585. |
-| GAME COMPONENTS | Treasure Cards | present — to audit | C-030, C-054, C-078, C-108 |  | no | line 597. |
-| GAME COMPONENTS | Cards | present — to audit | A-090, A-091, A-092, B-037, C-030, C-078, C-103, CMP-0012, D-001, D-025 | CMP-0012 | no | line 631. |
-| GAME COMPONENTS | Encounter cards | present — to audit | A-092, C-030, C-078, C-103, CMP-0012, D-025 | CMP-0012 | no | line 633. |
-| GAME COMPONENTS | Event cards | present — to audit | A-090, A-091, A-092, B-037, C-030, CMP-0012, D-001 | CMP-0012 | no | line 659. |
-| GAME COMPONENTS | Dice | present — to audit | B-001, C-030, C-108, CMP-0012 | CMP-0012 | no | line 669. |
-| GAME COMPONENTS | Tokens & Terrain Elements | present — defect | A-017, A-033, A-047, A-081, A-083, A-088, A-089, A-113, A-114, A-117, B-027, B-028, B-029, B-030, C-029, C-030, C-045, C-050, C-058, C-063, C-073, C-077, C-104, C-108, C-112, CMP-0011, CMP-0012, D-018, D-020, D-024, F-054 | CMP-0011, CMP-0012 | no | line 679. Condition token arithmetic: 7×4 + 4×2 = 36, text says 35. "first player token" used later but absent here. |
+| INTRODUCTION | (chapter) | present — to audit | C-030, C-101, CMP-0013, F-007, F-008 | CMP-0013 | yes (§1) | line 361. |
+| SECOND EDITION NOTES | (chapter) | META — OQ-01 (rewrite as Foreword or cut) | C-001, C-015, C-022, C-025, C-026, C-030, C-032, C-060, C-111, C-113, C-118, CMP-0002, CMP-0013, F-002, F-003, F-004, F-005, F-006, F-055, F-082 | CMP-0002, CMP-0013 | yes (Foreword) | line 371. Entire chapter is design-process commentary; Class B forbids it. |
+| GAME COMPONENTS | (chapter) | present — to audit | A-017, A-033, A-039, A-047, A-081, A-083, A-088, A-089, A-090, A-091, A-092, A-101, A-108, A-113, A-114, A-117, B-001, B-026, B-027, B-028, B-029, B-030, B-037, C-005, C-006, C-007, C-008, C-009, C-010, C-011, C-013, C-014, C-029, C-030, C-041, C-045, C-049, C-050, C-054, C-058, C-063, C-064, C-073, C-075, C-077, C-078, C-093, C-101, C-103, C-104, C-108, C-111, C-112, CMP-0007, CMP-0011, CMP-0012, D-001, D-018, D-019, D-020, D-022, D-023, D-024, D-025, D-026, D-027, F-054, F-093 | CMP-0007, CMP-0011, CMP-0012 | yes (§2) | line 383. |
+| GAME COMPONENTS | Characters | present — to audit | C-030, C-049, C-103, F-054, F-093 |  | yes (§2) | line 385. |
+| GAME COMPONENTS | Enemies | present — defect | A-101, B-026, C-006, C-007, C-010, C-014, C-030, C-049, C-108, C-112, CMP-0007, D-019, D-026 | CMP-0007 | yes (§2) | line 409. "1x HungryVoracious Mimic" typo; "2X" capitalisation; counts to verify vs official. |
+| GAME COMPONENTS | Bosses | present — to audit | A-039, A-108, B-037, C-009, C-013, C-030, C-041, C-075, C-093, C-101, C-111, D-022, D-023 |  | yes (§2) | line 481. |
+| GAME COMPONENTS | Mini-Bosses | present — to audit | B-037, C-009, C-030, C-041, C-093 |  | yes (§2) | line 483. |
+| GAME COMPONENTS | Main-Bosses | present — to audit | A-039, B-037, C-013, C-030, C-041, C-093, D-022 |  | yes (§2) | line 501. |
+| GAME COMPONENTS | Mega-bosses | present — to audit | A-108, C-030, C-041, C-075, C-101, C-111, D-023 |  | yes (§2) | line 523. |
+| GAME COMPONENTS | Phantoms | present — to audit | C-005, C-008, C-010, C-011, C-030, C-064, C-103, D-027 |  | yes (§2) | line 543. |
+| GAME COMPONENTS | Invaders (Standard) | present — to audit | C-005, C-030, D-027 |  | yes (§2) | line 545. |
+| GAME COMPONENTS | Invaders (Advanced) | present — to audit | C-010, C-030, D-027 |  | yes (§2) | line 559. |
+| GAME COMPONENTS | Summons (Standard) | present — to audit | C-011, C-030 |  | yes (§2) | line 573. |
+| GAME COMPONENTS | Summons (Advanced) | present — to audit | C-008, C-030 |  | yes (§2) | line 585. |
+| GAME COMPONENTS | Treasure Cards | present — to audit | C-030, C-054, C-078, C-108 |  | yes (§2) | line 597. |
+| GAME COMPONENTS | Cards | present — to audit | A-090, A-091, A-092, B-037, C-030, C-078, C-103, CMP-0012, D-001, D-025 | CMP-0012 | yes (§2) | line 631. |
+| GAME COMPONENTS | Encounter cards | present — to audit | A-092, C-030, C-078, C-103, CMP-0012, D-025 | CMP-0012 | yes (§2) | line 633. |
+| GAME COMPONENTS | Event cards | present — to audit | A-090, A-091, A-092, B-037, C-030, CMP-0012, D-001 | CMP-0012 | yes (§2) | line 659. |
+| GAME COMPONENTS | Dice | present — to audit | B-001, C-030, C-108, CMP-0012 | CMP-0012 | yes (§2) | line 669. |
+| GAME COMPONENTS | Tokens & Terrain Elements | present — defect | A-017, A-033, A-047, A-081, A-083, A-088, A-089, A-113, A-114, A-117, B-027, B-028, B-029, B-030, C-029, C-030, C-045, C-050, C-058, C-063, C-073, C-077, C-104, C-108, C-112, CMP-0011, CMP-0012, D-018, D-020, D-024, F-054 | CMP-0011, CMP-0012 | yes (§2) | line 679. Condition token arithmetic: 7×4 + 4×2 = 36, text says 35. "first player token" used later but absent here. |
 | CHARACTERS | (chapter) | present — to audit | A-006, A-008, A-009, A-012, A-052, A-068, A-072, A-105, A-125, B-014, B-015, B-022, B-029, C-015, C-019, C-021, C-027, C-028, C-030, C-035, C-042, C-045, C-048, C-049, C-050, C-051, C-060, C-063, C-064, C-092, C-096, C-103, C-104, C-106, C-111, CMP-0001, D-021, D-030, D-039, F-057, F-087, F-089, F-094, F-095, F-096, F-097 | CMP-0001 | no | line 725. |
 | CHARACTERS | Character Dashboards | present — to audit | A-125, B-022, C-030, C-049, C-104, D-039 |  | no | line 727. |
 | CHARACTERS | Equipment Slots | present — to audit | A-068, A-072, A-105, C-019, C-030, C-060, C-104, D-030, F-057, F-089 |  | no | line 755. |
