@@ -6,11 +6,11 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Aggro.** The state of being the enemies' preferred target. Enemy movement icons and attack icons marked with the skull icon target the character who holds the aggro token (see §9.2, §9.3).
 
-**Aggro token.** The single token that marks the character with aggro. It is placed on the character with the highest threat at the start of each encounter and, after each round of character turns, moves to the character who inflicted the most damage on enemy models during that round (on a tie, or if no damage was inflicted, the holder keeps it). If the holder dies it moves to the living character with the highest threat. In boss encounters it moves to any character who damages the boss during their turn (see §7.5, Encounter Turn Order; §16.4).
+**Aggro token.** The single token that marks the character with aggro. It is placed on the character with the highest threat at the start of each encounter and, after each round of character turns, moves to the character who inflicted the most damage on enemy models during that round (on a tie, or if no damage was inflicted, the holder keeps it). If the holder dies it moves to the living character with the highest threat. In a boss encounter it moves, at the end of a character's turn, to that character if they damaged the boss during the turn, and a damaging riposte moves it at the end of the boss's turn (see §7.5, Encounter Turn Order; §16.4).
 
 **Ambush card.** A card from the Explorers expansion that shows Treasure or Mimic. When mimics are in play, one is dealt face down beside each encounter tile and is turned face up only when the party chooses to open that tile's chest (see §13.1).
 
-**Area attack.** A boss attack marked with the area icon. It targets every character within range who occupies a node in one of the arcs marked on the behaviour card.
+**Area attack.** A boss attack whose icon bears the area icon. It is made into the attack arcs of the arc diagram beneath it and targets every character within the card's range who is in one of those arcs. Each targeted character defends separately, and an area attack cannot be parried (see §16.3; §15.6).
 
 **Area-of-effect (AoE).** A character attack option marked with the area-of-effect icon. It targets one node within range: one attack roll is compared with the block or resist of every enemy on that node, and every enemy there is hit (see §10.3, Area-of-Effect).
 
@@ -242,7 +242,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Riposte.** The attack a character may make at once against the attacker after a successful *parry*, using one attack option of the weapon in the right weapon slot and paying its stamina cost. A riposte cannot be parried, and it does not count against the attacks of the character's own turn (see §9.6).
 
-**Round.** One pass of the encounter turn order: every enemy model takes a turn in descending threat order, then every character takes a turn in descending threat order (see §7.5, Encounter Turn Order).
+**Round.** One pass of the encounter turn order: every enemy model takes a turn in descending threat order, then every character takes a turn in descending threat order (see §7.5, Encounter Turn Order). In a boss encounter a round is one turn by each living character, each preceded by a turn of the boss (see §16.1). In a *PvP encounter* a round is one turn by each character still in play (see §20.2).
 
 **Run.** A minor action: the character spends one stamina and moves one node. It may be taken any number of times per turn. A character who has *run* cannot *Rest* in that turn (see §10.2).
 
@@ -312,7 +312,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Treasure card.** Any card from a treasure deck: *starting equipment*, *class-specific treasure*, *common treasure*, *legendary treasure*, or *boss treasure* (see §2.5). A treasure card that may be equipped to a dashboard slot is an *equipment card*.
 
-**Turn.** One model's opportunity to act. In each round the enemies take their turns, then the characters take theirs in descending threat order; in boss encounters the boss and the characters alternate turns (see §7.5, Encounter Turn Order; §10.1).
+**Turn.** One model's opportunity to act. In each round the enemies take their turns, then the characters take theirs in descending threat order (see §7.5, Encounter Turn Order; §10.1). In a boss encounter the boss takes a turn before each character's turn, and the players choose the order of the characters (see §16.1).
 
 **Twin Gargoyles.** The boss encounter set by a campaign *section* that lists the Gargoyle twice in succession: one mini-boss encounter in two parts, fought against one Gargoyle and then at once against a second, with no rest or reward between them. The rewards of a defeated boss follow only when the second Gargoyle is defeated, and a failure against either Gargoyle means both are fought again (see §17.1, Twin Gargoyles).
 
