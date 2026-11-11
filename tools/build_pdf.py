@@ -350,9 +350,11 @@ def build(edition='screen', only=None, out=None, html_only=False, _retry=False):
     html = f'''<!DOCTYPE html><html lang="en-GB"><head><meta charset="utf-8"><title>{TITLE}</title>
 <link rel="stylesheet" href="layout/book.css"></head><body class="{edition}">{body}</body></html>'''
     (ROOT / 'build').mkdir(exist_ok=True)
-    # The saved copy sits in build/, one level below the repository root that every asset URL is relative to:
-    # a <base> element makes it open correctly in a browser. WeasyPrint is given the root as base_url instead.
-    hp = ROOT / f'build/book_{edition}.html'; hp.write_text(html.replace('<head>', '<head><base href="../">', 1), encoding='utf-8')
+    # The saved copy sits in build/, one level below the repository root that every asset URL is relative to.
+    # Asset URLs are rewritten for it (fragment-only links are left alone, so the contents, cross-references
+    # and glossary links still work in a browser). WeasyPrint is given the root as base_url instead.
+    saved = re.sub(r'\b(src|href)="(?!#|[a-z]+:|/|\.\./)([^"]+)"', r'\1="../\2"', html)
+    hp = ROOT / f'build/book_{edition}.html'; hp.write_text(saved, encoding='utf-8')
     report = {'edition': edition, 'chapters': len(chapters), 'unresolved_refs': sorted(missing), 'missing_icons': sorted(MISSING_ICONS)}
     if html_only:
         print(json.dumps(report, ensure_ascii=False)); return report

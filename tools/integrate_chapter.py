@@ -80,8 +80,10 @@ def main():
     num = sys.argv[1]
     if num not in TITLES:
         print(f'unknown chapter number {num!r}; expected one of {", ".join(TITLES)}'); return 2
-    if not glob.glob(str(ROOT / f'10_manuscript_chapter_{num}_*.md')):
-        print(f'no chapter file 10_manuscript_chapter_{num}_*.md on disk; nothing integrated or marked'); return 2
+    # chapter 21 is the glossary, which lives in 12_glossary.md rather than in a 10_manuscript_chapter file
+    present = (ROOT / '12_glossary.md').exists() if num == '21' else bool(glob.glob(str(ROOT / f'10_manuscript_chapter_{num}_*.md')))
+    if not present:
+        print(f'no file on disk for chapter {num}; nothing integrated or marked'); return 2
     a, b, total = merge_glossary(num)
     c = merge_changelog(num)
     t = mark_tracker(num)
