@@ -2,9 +2,11 @@
 
 **Project:** Dark Souls: The Board Game — homebrew "Second Edition" rulebook (DSTBG2E)
 **Phase:** Reconnaissance, cataloguing and initial extraction of reusable design assets
-**Date:** 2026-11-09 / 2026-11-10
+**Date:** 2026-11-09 / 2026-11-10; Phase 2B and Phase 3 extraction 2026-11-11
 
 ## Introduction
+
+**Later additions (2026-11-11).** On this date the author confirmed ownership of the rights in all source artwork, which closed the Provenance Review, and supplied eight further official booklets (The Four Kings, Gaping Dragon, Guardian Dragon, The Last Giant, Manus Father of the Abyss, Old Iron King, Vordt of the Boreal Valley, Asylum Demon; catalogue AST-0156 to AST-0163). The paintings, whole card faces, and dashboards that had been held were then extracted from embedded image objects (Phase 3; records in `work/extraction_records_phase3.json`, tool `tools/extract_phase3.py`). The paragraphs below describe the first reconnaissance pass and are kept as written.
 
 This log records the reconnaissance pass over the reference PDFs in `sources/`. Twelve PDFs were scanned: ten official Steamforged Games (SFG) publications — the 2017 core rulebook (`DS-Core-Rules-lores.pdf`, 40 pp, 595×808 pt), the 2022 *Tomb of Giants* / V2 core rulebook (`DS-TG-Rulebook-Compressed_compressed.pdf`, 32 pp, 629×811 pt, InDesign 17.2 export re-compressed by iLovePDF), the one-page FAQ, and the seven expansion rulebooks (Characters, Phantoms, Darkroot, Iron Keep, Explorers, Black Dragon Kalameet, Executioner's Chariot) — plus two community homebrews (`Hollowed_Edition_v1.3.pdf`, Affinity Publisher; `DS-Extended-Rules-V45.pdf`, Word/Quartz) which were surveyed for layout language only and whose art is **not** designated for reuse.
 
