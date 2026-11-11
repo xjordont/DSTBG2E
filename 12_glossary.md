@@ -82,6 +82,8 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Defence total.** The sum of the two highest block or resist dice rolled, to which the fixed modifiers of the equipped cards are then applied; a single die counts alone, no dice count as zero, and a total of less than zero is zero. Damage suffered equals the attack value minus the defence total, to a minimum of zero (see §9.4).
 
+**Distract.** An icon found only on summon behaviour cards. During the boss's next turn the summon is treated as holding the aggro token; the token itself is not moved (see §12.1).
+
 **Dodge.** A defence against an attack that targets the character. The character pays one stamina, may pay two further stamina for one extra green die to a maximum of four dice, and succeeds if the dodge icons rolled equal or exceed the attack's dodge difficulty. A successful dodge avoids the hit and the character must move to an adjacent valid node; after a failed dodge only the armour card's block or resist dice are rolled (see §9.5).
 
 **Dodge difficulty.** The number of dodge icons a dodge or parry roll must equal or exceed. It is printed on an enemy data card, a boss behaviour card, or a trap token (see §9.5). In player versus player it is derived from the stamina cost of the attacker's attack option.
@@ -146,9 +148,11 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Hollow cube.** One of eight cubes of a colour distinct from the damage, stamina, and stat cubes. Two hollow cubes block the two rightmost spaces of a *hollow* character's endurance bar (see §7.2).
 
-**Invader.** A hostile phantom drawn by *embered* characters. An invader joins a standard encounter, acts after every character's turn using its own behaviour deck, and awards *souls* and its treasure when killed.
+**Invader.** A hostile phantom brought into one encounter by an *invasion*. An invader acts after each character's turn using its own behaviour deck, is not scaled, does not count towards clearing the encounter, vanishes without award if a character dies, and awards *souls* and its treasure card when killed (see §12.2).
 
-**Invader token.** A token from the Phantoms expansion that shows an invader icon or is blank. When invaders are in play, one is placed face down on each face-down encounter card and is revealed when the characters enter that tile (see §12.2).
+**Invader token.** A token from the Phantoms expansion that shows an invader or is blank. When an *invasion* is provoked, one token is placed face down on each face-down encounter card, one of them showing an invader; a token is revealed when the characters fight that encounter (see §12.2).
+
+**Invasion.** The placing of invader tokens that brings one invader into the game. An invasion is provoked when the encounter cards are dealt while a character is *embered*, or when a character becomes embered by discarding an *ember card* while a face-down encounter card lies on a tile; no more than one is provoked before the mini-boss is defeated and no more than one after it (see §12.2).
 
 **Inventory.** A character's unlimited stack of unequipped treasure cards, kept face down beside the dashboard. Outside an encounter it may be rearranged freely and cards may be traded one for one between inventories; during an encounter it cannot be accessed (see §3.2).
 
@@ -188,7 +192,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Parry.** A defence available to a character with a shield equipped in the left weapon slot when the attacker is on the character's node; an attack that pushes, a node attack, and a boss attack outside §15.6 cannot be parried. The character pays one stamina and rolls dodge dice against the attack's dodge difficulty. Success makes the attack miss, staggers the attacker, and allows a *riposte*; failure deals the full attack value with no block or resist roll and staggers the character (see §9.6).
 
-**Phantom.** A summoned ally (summon) or a hostile intruder (invader) from the Phantoms expansion.
+**Phantom.** A *summon* or an *invader*: a model of the Phantoms expansion with a data card and behaviour cards. A summon is friendly and an invader hostile; a phantom is neither a character nor a boss (see §12).
 
 **Physical damage.** Damage from an attack marked with the crossed swords icon. Physical damage is reduced by block.
 
@@ -264,7 +268,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Strafe card.** A card from the Black Dragon Kalameet expansion drawn when a strafe icon is resolved; it shows the nodes attacked and the node on which Kalameet lands.
 
-**Summon.** A friendly phantom that an *embered* character may call at the fog gate before a boss encounter by paying two *souls* per drawing character. In a boss encounter the summon acts after each character's turn. It leaves play when its health reaches zero or the encounter ends.
+**Summon.** A friendly phantom called before a boss encounter. Each *embered* character may pay two *souls* to draw one summon data card at random, and the players choose one of the drawn summons. The summon acts after each character's turn, defends with the dice on its data card, and is removed when its health dial is reduced to zero or the encounter ends (see §12.1).
 
 **Target.** The model at which an attack is directed. An enemy never targets another enemy; a character targets another character only in player versus player (see §8.1).
 
