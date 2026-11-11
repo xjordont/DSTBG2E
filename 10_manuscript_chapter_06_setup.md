@@ -12,7 +12,7 @@ Each player chooses one character (see §2.1). The number of characters in the p
 4. Place the character's *luck*, *heroic action*, and *estus flask* tokens on the dashboard, ready side up, and the character's *ember* token beside the dashboard (see §3.5).
 5. Place the *damage cubes*, *stamina cubes*, remaining white cubes, soul tokens, *condition* tokens, *trap tokens*, and *wound tokens* in a supply within reach of every player (see §2.8). The remaining white cubes serve as *hollow cubes* (see §7.2).
 6. Place the *aggro token* on the character with the highest *threat* value (see §7.5, Encounter Start).
-7. If the party consists of one character, place six *souls* on that character's dashboard (see §7.6). Before leaving the bonfire tile for the first time, that character may visit the *Firekeeper* and Blacksmith Andre as during a rest (see §11.3; §11.4).
+7. If the party consists of one character, place six *souls* on that character's dashboard (see §7.6).
 
 ## 6.2 Treasure Deck Setup
 

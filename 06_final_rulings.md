@@ -10,7 +10,7 @@ Date: 2026-11-11. Authority: the author delegated every open rules question to t
 4. `tools/apply_rulings.py` applied the accepted changes; each is an entry in `11_change_log.md` that cites its ruling, marked `[MECHANICAL CHANGE]` where play changes.
 5. Online evidence was thin: several forums refuse automated reading. No ruling rests on an online source alone; the memos say which sources were reached.
 
-Totals: 334 questions answered (add 22, change 71, confirm 177, delete 4, not a rules question 60); 224 text changes applied, 97 of them changes to play.
+Totals: 334 questions answered (add 22, change 71, confirm 177, delete 4, not a rules question 60); 225 text changes applied, 98 of them changes to play.
 
 ## 2. The 22 lead questions
 
@@ -137,6 +137,7 @@ Totals: 334 questions answered (add 22, change 71, confirm 177, delete 4, not a 
 | lead-E18 | §13.2 | As lead-E17, for the mimic. |
 | lead-E20 | §8.5, Stagger | A summon rolls dice to attack and to defend, as a character does (§12.1), and has no fixed block, resist, or dodge value for the token to reduce. |
 | lead-E21 | Glossary, Stagger | Glossary follows §8.5 (lead-E20). |
+| lead-E22 | §6.1 | lead-E10 is withdrawn. Letting a lone character spend before setting out made an exception to the one rule that souls are spent at a rest (§7.6, §11.3, §11.4, and three glossary entries); the author's rule stands as written, and the six souls are spent at the … |
 
 ## 4. Where a Gate 1 answer is revised
 
@@ -179,6 +180,7 @@ Follow-up changes across areas:
 - lead-E19 (§15 (introduction)): Two bosses are fought with more than one model.
 - lead-E20 (§8.5, Stagger): A summon rolls dice to attack and to defend, as a character does (§12.1), and has no fixed block, resist, or dodge value for the token to reduce.
 - lead-E21 (Glossary, Stagger): Glossary follows §8.5 (lead-E20).
+- lead-E22 (§6.1): lead-E10 is withdrawn. Letting a lone character spend before setting out made an exception to the one rule that souls are spent at a rest (§7.6, §11.3, §11.4, and three glossary entries); the author's rule stands as written, and the six souls are spent at the first rest, which leaves the lone character a real choice between resting early and pressing on.
 
 ## 6. Every question, by area
 

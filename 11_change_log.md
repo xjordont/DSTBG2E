@@ -1677,6 +1677,13 @@ A spawn node or terrain node that holds no enemy or terrain is entered, left, an
 - Rationale: The Asylum Demon mini-boss is fought on its expansion's game board (boss-E11); the setup now points to it.
 - Source: final rulings, lead-E15 (`06_final_rulings.md`); boss memo, cross-cluster effects
 
+### CH-06-071 · §6.1
+- Type: ruling
+- Before: "7. If the party consists of one character, place six *souls* on that character's dashboard (see §7.6). Before leaving the bonfire tile for the first time, that character may visit the *Firekeeper* and Blacksmith Andre as during a rest (see §11.3; §11.4)."
+- After: "7. If the party consists of one character, place six *souls* on that character's dashboard (see §7.6)."
+- Rationale: [MECHANICAL CHANGE] lead-E10 is withdrawn. Letting a lone character spend before setting out made an exception to the one rule that souls are spent at a rest (§7.6, §11.3, §11.4, and three glossary entries); the author's rule stands as written, and the six souls are spent at the first rest, which leaves the lone character a real choice between resting early and pressing on.
+- Source: final rulings, lead-E22 (`06_final_rulings.md`); review finding on the pull request; the author's manuscript says only that a character adventuring alone starts with six souls
+
 ## Chapter 07 — Gameplay
 
 ### CH-07-001 · §7 Gameplay
