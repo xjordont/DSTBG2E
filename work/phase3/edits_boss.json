@@ -41,7 +41,7 @@
   "file": "10_manuscript_chapter_16_boss_turns.md",
   "section": "§16.1",
   "old": "A boss's turn is resolved as follows.",
-  "new": "A boss's turn is resolved as follows. If the boss's health has been reduced to or below its *heat-up point* and its heat-up has not yet been carried out, the heat-up is carried out before step 1 (see §15.5, Heat-Up).",
+  "new": "A boss's turn is resolved as follows. If the boss is due to heat up, its heat-up is carried out before step 1 (see §15.5, Heat-Up).",
   "type": "ruling",
   "mechanical": true,
   "rationale": "States in the boss turn where the heat-up of boss-E01 is carried out, without renumbering the steps.",
@@ -454,6 +454,18 @@
   "mechanical": true,
   "rationale": "Keeps the F.A.Q. in step with boss-E10.",
   "evidence": "follows boss-E10"
+ },
+ {
+  "id": "boss-E48",
+  "item": "boss-018",
+  "file": "10_manuscript_chapter_22_faq.md",
+  "section": "§22.5",
+  "old": "**Q.** A campaign section lists the Gargoyle twice. Are the two fights separate encounters?",
+  "new": "**Q.** When a boss heats up, is its discard pile shuffled as well?\n\n**A.** Yes. At the start of the boss's next turn the behaviour deck and the discard pile are gathered, one heat-up card taken at random is added, and all the cards are shuffled to form a new behaviour deck. The order learned before the heat-up is lost (see §15.5, Heat-Up).\n\n**Q.** A campaign section lists the Gargoyle twice. Are the two fights separate encounters?",
+  "type": "clarification",
+  "mechanical": false,
+  "rationale": "The most asked question about boss fights now has its answer in the F.A.Q.; the rule itself is boss-E01.",
+  "evidence": "BoardGameGeek thread 1819893 (search summary); follows boss-E01"
  },
  {
   "id": "boss-E47",

@@ -22,7 +22,7 @@ Scope: lead items 4, 5 and 13 of `14_open_issues.md`; every item of the per-chap
 - Ruling: CHANGE (seven full entries, boss-002 to boss-008); the two Painted World bosses are handled in boss-009 and boss-010.
 - Why: The book promised a definite rule for every boss and delegated nine. The official rules exist, are short, and fit the book's existing forms (deck built by procedure, node-targeting attack decks, special heat-ups), so they are brought in, restated in this book's terms.
 - Mechanical: yes (rules where there were none)
-- Edits: boss-E20 to boss-E28 (entries), boss-E30 to boss-E36 (glossary), boss-E37 (§2.9 components)
+- Edits: boss-E20 to boss-E28 (entries); boss-E14, boss-E32 to boss-E34 and boss-E38 to boss-E41 (defined terms and glossary); boss-E44 (§2.9)
 
 ### boss-002 · lead item 4, The Four Kings
 - Question: What are the special rules of the Four Kings?
@@ -109,7 +109,7 @@ Scope: lead items 4, 5 and 13 of `14_open_issues.md`; every item of the per-chap
 - Question: Do §6.7, §15 and §16 agree with the framework that every mega-boss booklet repeats, and are mega-boss game board rules stated once?
 - This book now: §6.7 owns the setup after the main-boss, the Level 4 encounter and the flip to the mega-boss side; §15 owns the encounter; §17.8 and §17.9 each open by citing §6.7.
 - Evidence: the framework pages are the same in all eight booklets (for example `DS-Four-Kings-Rules-web.txt` lines 135–330): game board beside the bonfire tile, encounter side up; one random Level 4 card, replaced if its sets are missing; four entry nodes; a cleared Level 4 encounter is not fought again; no free rest after it, a spark to rest; flip the board, fog gate on its doorway; boss on the mega-boss spawn node; data and behaviour cards as for any boss; the mega-boss's defeat wins the game. No booklet states a Level 4 rule peculiar to its boss.
-- Ruling: CONFIRM as written, and ADD one sentence at the head of §17.10
+- Ruling: CONFIRM as written (one introductory sentence is added at the head of §17.10, with boss-002)
 - Why: The book agrees with the framework and states it once, in §6.7 and §15. Where it differs it does so on purpose, through the author's systems, and none of these is reopened here: one spark is added after the main-boss where the booklets reset the dial (§6.7 step 8, §7.4); the Level 4 soul reward follows the book's table, not "8 souls per character" (§7.6); the Level 4 encounter awards one mega-boss treasure card (lead item 19); the aggro token starts on the highest threat where the booklets let the players choose (§15.2); the behaviour deck is built at setup and the scry takes the place of "reveal a card for each gravestone" (§15.5); the model faces the entry nodes (boss-014). The new sentence at the head of §17.10 says once, for all seven new entries, that the board and the Level 4 encounter are §6.7's and that an entry's deck procedure replaces the general one.
 - Mechanical: no
 - Edits: boss-E20 (opening paragraph)
@@ -124,7 +124,7 @@ Scope: lead items 4, 5 and 13 of `14_open_issues.md`; every item of the per-chap
   - Explorers booklet: the Old Dragonslayer "uses the miniature for Ornstein, half of the Ornstein & Smough main boss … alongside this new boss's health dial" (`DS-Explorers-Rules-Web.txt` lines 352–357).
   - Extended Rules, Hollowed Edition: silent on how the pair is fought.
   - Online: publisher forum thread 37344 and BoardGameGeek threads 2350492 and 1789313 (search summaries only): the pair share a five-card deck showing both bosses; when one dies the survivor's heat-up cards become the deck and the survivor gains health; one starts on the main-boss node and one on the mini-boss node; players debate which to kill first.
-- Ruling: CHANGE. Adopt the official structure, and revise Gate 1 OQ-25 for Ornstein & Smough (its Twin Gargoyles half stands).
+- Ruling: CHANGE: adopt the official structure, and revise Gate 1 OQ-25 for Ornstein & Smough (its Twin Gargoyles half stands).
 - Why: OQ-25 rested on a premise that the evidence contradicts: the pair has two data cards and two health dials, and every paired card gives both models a behaviour, so "each card names the model that acts" cannot be played with the printed cards. The official fight is also the better design. It asks one clear question, which of the two to bring down first, and answers it with a second phase that differs by the choice (five different heat-up cards, a different survivor, a different heal); the shared-dial version has no such decision and no second act. It costs no extra rules, because the Four Kings need the same several-models framework (own dial per model, every model acts on each card), so one sub-section of §17.1 now serves both.
 - Designer's calls inside the ruling, each to be checked against the printed cards: (a) Ornstein acts before Smough on each card, the order in which every card names them; (b) Ornstein starts on the main-boss spawn node and Smough on the mini-boss spawn node (the transcription of Smough's card also says "Main Boss node", which cannot be right with one boss model to a node; the forum summary gives one on each); (c) the survivor's health gain stops at its starting health, which the card leaves open and a BoardGameGeek thread asks without a visible answer; the cap rewards concentrating on one target and matches the meaning of healing everywhere else in this book; (d) the heat-up (deck change and heal) is carried out at the start of the next boss turn, the one timing this book now uses for every heat-up (boss-018).
 - Mechanical: yes
@@ -181,10 +181,10 @@ Scope: lead items 4, 5 and 13 of `14_open_issues.md`; every item of the per-chap
 - Question: When a boss heats up, is the heat-up card shuffled into the remaining draw pile only, or are the deck and the discard pile reshuffled together; and when exactly is it done?
 - This book now: §15.5: the card is shuffled into the cards that remain in the deck; the discard pile keeps its order; if no cards remain the heat-up card alone is the deck. Timing has two cases: after the attack that caused it (character's turn), or after the current card is resolved and discarded (boss's own turn).
 - Evidence: official 2017: "Take one random Heat Up behaviour card and shuffle it into the behaviour deck. Note that players will now need to relearn the boss's attack pattern as well as having to face a powerful Heat Up card" (`DS-Core-Rules-lores.txt` lines 1392–1396). Official 2022: the same sentence, "relearn the boss's attack pattern" (lines 2146–2153). Booklets: the Last Giant's heat-up removes Arm cards from the whole deck and "shuffle[s] the new behaviour deck" (`DS-TLG-Rules.txt` lines 384–395); Manus's is marked as the exception, "Do not shuffle the behaviour deck!" (`DS-MFA-Rules.txt` lines 384–396); Vordt's Frostbreath is timed "at the start of his activation" after the heat-up (`DS-VotBV-Rules-web.txt` lines 475–490). Extended, Hollowed: silent. Online: BoardGameGeek thread 1819893 (search summary): consensus is to shuffle deck and discard pile together with the heat-up card; one poster notes that otherwise "you can 100% predict where the Heat Up card will go by getting the boss to Heat Up when the deck is empty"; a suggested fix for mid-turn cases is to shuffle "before the boss's next draw". The DSBG-Shuffle program reshuffles the whole deck.
-- Ruling: CHANGE. On heat-up the behaviour deck and the discard pile are gathered, one random heat-up card is added, and all are shuffled into a new deck; this is done at the start of the boss's next turn, before it draws.
+- Ruling: CHANGE: on heat-up the behaviour deck and the discard pile are gathered, one random heat-up card is added, and all are shuffled into a new deck; this is done at the start of the boss's next turn, before it draws.
 - Why: Both official rulebooks say what the heat-up is for: the party must learn the boss again. The drafted reading keeps most of the learned order and, timed well, tells the players exactly where the new card lies, so the fight's turning point becomes its most predictable moment. The full reshuffle is also the simpler procedure: three steps, no special case for an empty deck, and the same "gather, change, shuffle" shape that Artorias, the Last Giant and the Guardian Dragon already use. One timing replaces two: the reshuffle is invisible until the boss draws, so doing it at the start of the boss's next turn changes nothing except that the last card's weak arcs stay in force until then, which removes the only awkward question (what are the weak arcs after the discard pile has gone).
 - Mechanical: yes
-- Edits: boss-E01, boss-E02 (§15.5), boss-E04, boss-E05 (§16.1), boss-E31 (glossary, Heat-up)
+- Edits: boss-E01, boss-E02 (§15.5), boss-E04, boss-E05 (§16.1), boss-E31 (glossary, Heat-up), boss-E48 (F.A.Q. §22.5)
 
 ### boss-019 · ch. 15, deck reset between attempts (§15.5, Deck Reset)
 - Question: Is a boss's behaviour deck rebuilt from all its cards before each new attempt?
@@ -235,10 +235,10 @@ Scope: lead items 4, 5 and 13 of `14_open_issues.md`; every item of the per-chap
 - Question: How are the two boss tiles joined, and is terrain ever placed on a boss tile?
 - This book now: joined along one edge into one rectangular tile; no encounter card, traps, or terrain unless a boss's special rules place some.
 - Evidence: official 2017: "place both the mini boss and main boss tiles down to create one large rectangular room" (lines 1361–1364); 2022: "as though they were a single large tile" (lines 2100–2103).
-- Ruling: CONFIRM as written; ADD the one exception that the Asylum Demon mini-boss is fought on its expansion's game board (see boss-052)
+- Ruling: CONFIRM as written (the one exception, the Asylum Demon mini-boss fought on its expansion's game board, is made under boss-052)
 - Why: The text matches both editions. Whether a boss tile is printed with terrain nodes does not matter, since nothing is placed without an encounter card.
-- Mechanical: yes (the exception only)
-- Edits: boss-E03
+- Mechanical: no
+- Edits: none (boss-E03 is listed under boss-052)
 
 ### boss-025 · ch. 15, worked examples use an unnamed boss
 - Question: May the examples keep illustrative values?
@@ -345,10 +345,10 @@ Scope: lead items 4, 5 and 13 of `14_open_issues.md`; every item of the per-chap
 - Question: How does the aggro token move in a boss fight?
 - This book now: it starts on the highest threat; at the end of a character's turn it moves to that character if they lowered the boss's health dial; a riposte moves it at the end of that boss turn; an attack reduced to nothing does not move it; a summon never holds it, though a Distract icon makes the boss treat the summon as the holder for one turn.
 - Evidence: author's manuscript: "simply move the aggro token to a character's dashboard if they deal any damage to the boss during their turn. If no damage is dealt, the aggro token remains stationary" (`work/phase2a/source/16_boss_turns.md`). Official 2017 and 2022: a character gains the token at the start of each of their own turns, whatever they do (2017 lines 1018–1021; 2022 line 1415); it starts with a character of the players' choice. Phantoms booklet: Distract (lines 293–297). Extended, Hollowed: no boss-specific rule.
-- Ruling: CONFIRM as written, with one ADD: damage to another enemy model that a boss's special rules place in the encounter moves the token in the same way (see boss-059)
+- Ruling: CONFIRM as written (the one addition, for other enemy models in a boss encounter, is made under boss-059)
 - Why: The author's rule is the better one. Under the official rule the boss attacks whoever acted last, full stop; here a character can act without drawing the boss (heal, reposition, miss) and a damaging blow is also a decision to take the next attack. Combined with free turn order (boss-015) it is the tactical core of the fight, and it costs one sentence.
-- Mechanical: yes (the addition only)
-- Edits: boss-E06, boss-E35
+- Mechanical: no
+- Edits: none (boss-E06 and boss-E35 are listed under boss-059)
 
 ### boss-037 · ch. 16, dead characters when a boss is defeated (§16.5)
 - Question: Does a character who died in the boss encounter receive the soul reward and an ember token, and stay out of play (and out of the PvP encounter) until the free rest?
@@ -455,10 +455,10 @@ Scope: lead items 4, 5 and 13 of `14_open_issues.md`; every item of the per-chap
 - Question: Are the components that §17 rules on listed in §2.9?
 - This book now: yes; §2.9 already lists the Four Kings' models, dials and identifier tokens, the Gaping Dragon's corrosion tokens, the Guardian Dragon's Fiery Breath cards and the Old Iron King's "Fire Beam cards".
 - Evidence: `10_manuscript_chapter_02_game_components.md` §2.9 as it stands; booklet contents pages.
-- Ruling: CONFIRM as written, with one name aligned
+- Ruling: CONFIRM as written (one component name is aligned under boss-007)
 - Why: Only the Old Iron King's six cards need their name changed to "Beam cards", the name the rules use, so that they are not confused with the three Fire Beam behaviour cards (boss-007).
 - Mechanical: no
-- Edits: boss-E44
+- Edits: none (boss-E44 is listed under boss-007)
 
 ### boss-049 · ch. 17, dependency from §20.1 (PvP after the Twin Gargoyles)
 - Question: Does a PvP encounter follow each Gargoyle or only the second?
@@ -536,7 +536,7 @@ Scope: lead items 4, 5 and 13 of `14_open_issues.md`; every item of the per-chap
 - Question: Does the Old Dragonslayer also heat up at a heat-up point?
 - This book now: the sentence saying so was left out because the card could not be read.
 - Evidence: Explorers booklet data card: "Corrupted Dragonslayer: The first three times the Old Dragonslayer loses 4 or more HP from one attack, add one random heat up card to the top of the behaviour deck", with a dash where the heat-up point is printed (`DS-Explorers-Rules-Web.txt` lines 158–171). DSBG-Shuffle records no heat-up value for this boss.
-- Ruling: CONFIRM as written, and ADD one sentence saying that the card shows no heat-up point
+- Ruling: ADD (one sentence saying that the data card shows no heat-up point; the entry is otherwise confirmed as written)
 - Why: The omission was right. Saying so in the entry stops a reader looking for a heat-up that does not exist.
 - Mechanical: no
 - Edits: boss-E15
@@ -554,7 +554,7 @@ Scope: lead items 4, 5 and 13 of `14_open_issues.md`; every item of the per-chap
 - Question: Are points (a) to (g) sound: the two models; every enemy acting before each character; aggro before the heat-up; scaling of the Mages and Skeletons; starting facing; no heat-up point and no second heat-up; Crush not applying to a dodge?
 - This book now: as listed in the issue; (c) is not ruled on, so before the heat-up the token cannot move unless its holder dies.
 - Evidence: Chariot booklet `DS-EC-Rules-Web.txt`: "the skeletal horse and the chariot" (lines 437–441); "other enemies will also activate during the enemy activation using their threat level to determine activation order as usual" (lines 455–462); data card front has no health, block or resist (lines 524–531); heat-up when the Chariot "is the only enemy model remaining" (lines 460–462); "Crush: If a character's armour roll or resistance roll prevents all of a behaviour card's damage, the character suffers 1 damage" (lines 383–387).
-- Ruling: CONFIRM as written for (a), (b), (d), (e), (f), (g); ADD for (c): damage to another enemy model in a boss encounter moves the aggro token as damage to the boss does
+- Ruling: ADD for (c): damage to another enemy model in a boss encounter moves the aggro token as damage to the boss does. Points (a), (b), (d), (e), (f) and (g) are confirmed as written
 - Why: (b) is official, hard as it is. (c) is a real gap: for the whole first part the Mages and Skeletons would attack one fixed character whatever the party did. The general clause in §16.4 fixes it without a Chariot-only rule and is what players would do unprompted. (g) follows from the card: a dodge is not a block or resist roll.
 - Mechanical: yes ((c) only)
 - Edits: boss-E06, boss-E35
@@ -667,3 +667,57 @@ Scope: lead items 4, 5 and 13 of `14_open_issues.md`; every item of the per-chap
 - Mechanical: no
 - Edits: none
 
+## (a) Every CHANGE and ADD (there is no DELETE)
+
+| Item | Ruling | What changes | Mechanical | Edits |
+|---|---|---|---|---|
+| boss-001 | CHANGE | §17.10: seven placeholders replaced by full entries; one introductory sentence | yes | boss-E20 to boss-E28, boss-E44 |
+| boss-002 | CHANGE | The Four Kings: four kings with their own dials, royal summons, the turn with no king in play | yes | boss-E20 |
+| boss-003 | CHANGE | Gaping Dragon: six-card deck with two signature cards and a heat-up card, corrosion, Crawling Charge | yes | boss-E21, boss-E14, boss-E32 |
+| boss-004 | CHANGE | Guardian Dragon: cage nodes, Fiery Breath deck, Inferno attack, Bonus Behaviour, two heat-up cards | yes | boss-E22, boss-E39, boss-E40 |
+| boss-005 | CHANGE | The Last Giant: standard and Arm cards, heat-up swaps Arm cards for heat-up cards and adds Falling Slam, Wind Up | yes | boss-E23, boss-E33 |
+| boss-006 | CHANGE | Manus: Overextended, shaft icon on attacks, heat-up that places two cards and does not shuffle | yes | boss-E24, boss-E34 |
+| boss-007 | CHANGE | Old Iron King: Iron King nodes, lava, Beam deck and Beam attack, Old Iron Rage | yes | boss-E25, boss-E38, boss-E41, boss-E44 |
+| boss-008 | CHANGE | Vordt: movement and attack decks, Icy Blows, two heat-ups, Frostbreath | yes | boss-E26 |
+| boss-010 | CHANGE | Heavy Knight: delegation sentence replaced by "no rules beyond its data card" | no | boss-E28 |
+| boss-012 | CHANGE | Ornstein & Smough: official structure (two models with their own health, both act, heat-up when the first falls); Gate 1 OQ-25 revised | yes | boss-E08, boss-E10, boss-E07, boss-E42, boss-E46, boss-E30 |
+| boss-018 | CHANGE | Heat-up: deck and discard pile reshuffled together with the heat-up card, at the start of the boss's next turn | yes | boss-E01, boss-E02, boss-E04, boss-E05, boss-E31, boss-E48 |
+| boss-044 | CHANGE | §2.3 follows boss-012 | yes | boss-E42 |
+| boss-046 | CHANGE | §5.5: pillars placed for every boss encounter on that board | no | boss-E45 |
+| boss-047 | CHANGE | §6.7 step 5 now finds rules for every mega-boss | yes | boss-E20 to boss-E26 |
+| boss-050 | CHANGE | Ornstein & Smough inferences replaced (see boss-012) | yes | boss-E08, boss-E10 |
+| boss-052 | CHANGE | Asylum Demon mini-boss fought on the mega-boss game board; ability named Pillars of Woe | yes | boss-E11, boss-E12, boss-E03, boss-E45, boss-E47, boss-E36 |
+| boss-055 | CHANGE | Sif: at three health or less the deck is replaced by Limping Strike | yes | boss-E13 |
+| boss-057 | ADD | Old Dragonslayer: one sentence, no heat-up point | no | boss-E15 |
+| boss-059 | ADD | Aggro: damage to another enemy model in a boss encounter moves the token (Executioner's Chariot, first part) | yes | boss-E06, boss-E35 |
+| boss-069 | CHANGE | Glossary, Heat-up follows boss-018 | yes | boss-E31 |
+| boss-070 | CHANGE | Glossary, Boss: no longer "a single" enemy | no | boss-E30 |
+
+boss-E27 (Crossbreed Priscilla) changes only the form of a kept placeholder and belongs to a CONFIRM (boss-009).
+
+## (b) What could not be settled, and why
+
+1. Crossbreed Priscilla's invisibility. Her printed ability (Snowblind) was found, but no source read states when she is invisible or how that ends. The Painted World set has no rulebook text for it in the 2022 rulebook supplied, the publisher's errata file for the 2022 sets sits behind a checkout page, and BoardGameGeek, Reddit and the Fextralife wiki could not be read. Her placeholder stays. The fastest fix is a look at her printed behaviour cards and boss encounter card, or at the replacement cards that Appendix B names.
+2. The replacement data cards of Appendix B for Crossbreed Priscilla and the Heavy Knight were not supplied. The printed abilities found (Snowblind, Brutal Impact) are therefore reported in this memo and not written into §17.10, because the replacement cards govern.
+3. Ornstein & Smough: the cards were read in a community transcription, not from the printed cards. Four points in boss-012 are designer's calls to be checked against the cards: Ornstein acts first; Ornstein on the main-boss spawn node and Smough on the mini-boss spawn node; the health gain (10 and 15) stops at the starting health; five heat-up cards each.
+4. Great Grey Wolf Sif: the threshold of three health comes from the same transcription.
+5. Vordt's Icy Blows: "blocks or resists 4 or more damage" is read as four or more damage prevented. The other reading (a defence total of four or more) differs only when the attack value is below four. Frostbreath after a blow that crosses both heat-up points is ruled as resolved once.
+6. Old Iron King: the booklet says models "can never move into the Old Iron King's back arc". The entry forbids the back arc of his base and treats the lava as a wall; whether a printed node beside him lies on the line of his back arc could not be judged from the Beam card diagram, and such a node, being printed, is treated as open.
+7. Guardian Dragon and Old Iron King node cards were read from two page images; the targeted nodes of each individual card were not, and do not need to be, written into the book.
+
+## (c) Cross-cluster effects for the lead editor
+
+- Gate 1: OQ-25 is revised for Ornstein & Smough (not for the Twin Gargoyles). `05_gate1_decisions.md` and `11_change_log.md` need the note; the brief's summary line "Ornstein & Smough one boss, shared dial and deck" no longer holds.
+- §2.3, first paragraph: "Each boss has a model, a health dial, a data card" is no longer true of Ornstein & Smough (two of each) or the Four Kings (four models and dials); the components owner may add "or more than one". §2.9 still says "the behaviour cards listed on the data card"; a data card lists a deck size, not cards.
+- §6.5 (setup) and §18.1 (campaign play, "A mini-boss is fought on the mini-boss tile"): when the Asylum Demon is the mini-boss its expansion's game board takes the place of the mini-boss tile (boss-052). §17.3 and §15.3 now say so; §6.5 step 3 and §18.1 want a pointer, and §6.5's two-by-three grid does not fit the larger board, so the setup owner may wish to say that the board is placed at the end of the route.
+- §12.2 (invader heat-up) and §13 (mimic heat-up) cite §15.5 and so take the new procedure and timing: the unused card is shuffled with the deck and the discard pile at the start of the model's next turn. Their sentences still read correctly; the owners may add "and its discard pile" for clarity.
+- §8.5 and the glossary entry Condition: Vordt's Icy Blows places a frostbite token without an attack icon. The Frostbite text may add "or by Vordt's Icy Blows (see §17.10)" as Stagger lists its other sources. §8.5, Corrosion may cite "(see §17.10, Gaping Dragon)".
+- §10.3, Shaft: the icon now also appears on Manus's behaviour cards; the glossary is amended here (boss-E34) and §10.3 needs no change.
+- §9 (combat owner): Raise Skeleton stays in §17.9 (boss-060); a one-line pointer from §9 is optional.
+- §20.1: "follows the rewards for the boss's defeat" has nothing to follow after the final boss (boss-038). One PvP encounter follows Ornstein & Smough and one follows the Four Kings, since each is one boss.
+- §19: no change needed. Call of the Abyss, Into the Depths, Big Game Hunting and the Vordt campaign now reach bosses with full rules. The Vordt booklet names particular Level 4 cards for its campaign sections (campaign owner).
+- F.A.Q. §22.5: the Ornstein & Smough answer is rewritten (boss-E46) and one question on the heat-up shuffle is added (boss-E48).
+- Chapter 15 introduction: "A boss is a single model" is flavour and now loose; a neutral phrase would be safer.
+- Layout: §17.10 grows by roughly 3,400 words and nine sub-headings. The new icons (crawl, corrosion, Inferno, Bonus Behaviour, Beam) are named in words because no extracted asset exists; if assets are cut from the newly supplied booklets, tokens can follow the first mention of each.
+- Italics: the new §17.10 entries italicise each glossary term at its first use in the section, counted from the Four Kings entry downward; if the lead editor applies only some entries, the first-use italics need a pass.
+- Tools: the style checker reports no violation on copies of the seven files with all 40 edits applied. It flags the printed ability name of Smough's data card ("Divided You Fall") as second person, so §17.2 does not print the two ability names.

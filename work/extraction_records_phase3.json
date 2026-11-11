@@ -7846,5 +7846,222 @@
    "baked": null,
    "kind": "painting"
   }
+ },
+ {
+  "id": "AST-0156.7",
+  "parent": "AST-0156",
+  "name": "The Four Kings booklet p.15: sunken ruins in blue haze",
+  "type": "art",
+  "src": "DS-Four-Kings-Rules-web.pdf",
+  "page": 15,
+  "bbox_pt": [
+   220.1,
+   425.8,
+   356.8,
+   559.1
+  ],
+  "image_object": {
+   "xref": 2523,
+   "pdfimages_num": 1,
+   "colour": "cmyk",
+   "native": "570×556",
+   "has_mask": false,
+   "ppi_as_placed": 300
+  },
+  "method": "pdfimages -png p.15 image #1 (object 2523, 570×556 cmyk, no soft mask); native resolution, no resampling",
+  "file": "assets/art/ast-0156-four-kings-art-sunken-ruins-blue.png",
+  "format": "png",
+  "dims": "570×556 px",
+  "has_alpha": false,
+  "bytes": 340698,
+  "notes": "",
+  "phase": 3,
+  "design": {
+   "subject": "Sunken ruins in blue haze",
+   "mood": "sunken, blue, silent",
+   "suggested_use": "spot",
+   "also_suits": [],
+   "suggested_for": "19 Campaigns",
+   "hdr": null,
+   "baked": null,
+   "kind": "painting"
+  }
+ },
+ {
+  "id": "AST-0156.8",
+  "parent": "AST-0156",
+  "name": "The Four Kings miniature render (one king, full figure)",
+  "type": "photography",
+  "src": "DS-Four-Kings-Rules-web.pdf",
+  "page": 4,
+  "bbox_pt": [
+   84.8,
+   260.5,
+   334.5,
+   474.8
+  ],
+  "image_object": {
+   "xref": 65,
+   "pdfimages_num": 1,
+   "colour": "cmyk",
+   "native": "1041×894",
+   "has_mask": true,
+   "smask_pdfimages_num": 2,
+   "ppi_as_placed": 300
+  },
+  "method": "pdfimages -png p.4 image #1 (object 65, 1041×894 cmyk + soft mask #2 composited to RGBA); trimmed to alpha bounds; native resolution, no resampling",
+  "file": "assets/photography/ast-0156-four-kings-miniature.png",
+  "format": "png",
+  "dims": "1041×894 px",
+  "has_alpha": true,
+  "bytes": 559517,
+  "notes": "SFG miniature render, cut out by its own soft mask. Largest copy in the booklet.",
+  "phase": 3,
+  "design": {
+   "subject": "The Four Kings miniature (one king, full figure), grey resin render cut out by its own mask",
+   "mood": "miniature, grey, imposing",
+   "suggested_use": "column plate",
+   "also_suits": [
+    "spot",
+    "full-page plate"
+   ],
+   "suggested_for": "17 Boss Special Rules",
+   "hdr": null,
+   "baked": null,
+   "kind": "miniature render"
+  }
+ },
+ {
+  "id": "AST-0156.9",
+  "parent": "AST-0156",
+  "name": "The Four Kings miniature render (second copy as placed behind the first)",
+  "type": "photography",
+  "src": "DS-Four-Kings-Rules-web.pdf",
+  "page": 4,
+  "bbox_pt": [
+   -1.1,
+   260.5,
+   189.2,
+   474.8
+  ],
+  "image_object": {
+   "xref": 81,
+   "pdfimages_num": 19,
+   "colour": "cmyk",
+   "native": "793×894",
+   "has_mask": true,
+   "smask_pdfimages_num": 20,
+   "ppi_as_placed": 300
+  },
+  "method": "pdfimages -png p.4 image #19 (object 81, 793×894 cmyk + soft mask #20 composited to RGBA); trimmed to alpha bounds; native resolution, no resampling",
+  "file": "assets/photography/ast-0156-four-kings-miniature-second-pose.png",
+  "format": "png",
+  "dims": "793×681 px",
+  "has_alpha": true,
+  "bytes": 482449,
+  "notes": "SFG miniature render, cut out by its own soft mask. Largest copy in the booklet.",
+  "phase": 3,
+  "design": {
+   "subject": "The Four Kings miniature (second copy as placed behind the first), grey resin render cut out by its own mask",
+   "mood": "miniature, grey, imposing",
+   "suggested_use": "column plate",
+   "also_suits": [
+    "spot",
+    "full-page plate"
+   ],
+   "suggested_for": "17 Boss Special Rules",
+   "hdr": null,
+   "baked": null,
+   "kind": "miniature render"
+  }
+ },
+ {
+  "id": "AST-0156.10",
+  "parent": "AST-0156",
+  "name": "The Four Kings mega-boss game board, boss side (p.5)",
+  "type": "photography",
+  "src": "DS-Four-Kings-Rules-web.pdf",
+  "page": 5,
+  "bbox_pt": [
+   50.0,
+   47.8,
+   363.6,
+   361.4
+  ],
+  "image_object": {
+   "xref": 626,
+   "pdfimages_num": 99,
+   "colour": "cmyk",
+   "native": "1307×1307",
+   "has_mask": true,
+   "smask_pdfimages_num": 100,
+   "mask_opaque": true,
+   "ppi_as_placed": 300
+  },
+  "method": "pdfimages -png p.5 image #99 (object 626, 1307×1307 cmyk + soft mask #100 (opaque everywhere, dropped)); native resolution, no resampling",
+  "file": "assets/photography/ast-0156-four-kings-game-board-boss-side.png",
+  "format": "png",
+  "dims": "1307×1307 px",
+  "has_alpha": false,
+  "bytes": 442568,
+  "notes": "Node markers are printed on the board. Use this side to show where the special rule plays out.",
+  "phase": 3,
+  "design": {
+   "subject": "The Four Kings mega-boss game board, boss side, with its node markings",
+   "mood": "component, top-down, arena",
+   "suggested_use": "column plate",
+   "also_suits": [
+    "full-page plate",
+    "spot"
+   ],
+   "suggested_for": "17 Boss Special Rules",
+   "hdr": null,
+   "baked": null,
+   "kind": "game board"
+  }
+ },
+ {
+  "id": "AST-0156.11",
+  "parent": "AST-0156",
+  "name": "The Four Kings mega-boss game board, encounter side (p.9, larger of the two copies)",
+  "type": "photography",
+  "src": "DS-Four-Kings-Rules-web.pdf",
+  "page": 9,
+  "bbox_pt": [
+   62.0,
+   83.8,
+   351.9,
+   373.7
+  ],
+  "image_object": {
+   "xref": 1299,
+   "pdfimages_num": 1,
+   "colour": "cmyk",
+   "native": "1208×1208",
+   "has_mask": true,
+   "smask_pdfimages_num": 2,
+   "mask_opaque": true,
+   "ppi_as_placed": 300
+  },
+  "method": "pdfimages -png p.9 image #1 (object 1299, 1208×1208 cmyk + soft mask #2 (opaque everywhere, dropped)); native resolution, no resampling",
+  "file": "assets/photography/ast-0156-four-kings-game-board-encounter-side.png",
+  "format": "png",
+  "dims": "1208×1208 px",
+  "has_alpha": false,
+  "bytes": 3175397,
+  "notes": "The tokens and the card that lie on it on p.9 are separate objects and are not in this image.",
+  "phase": 3,
+  "design": {
+   "subject": "The Four Kings game board, level 4 encounter side",
+   "mood": "component, top-down, tile",
+   "suggested_use": "column plate",
+   "also_suits": [
+    "spot"
+   ],
+   "suggested_for": "19 Campaigns",
+   "hdr": null,
+   "baked": null,
+   "kind": "game board"
+  }
  }
 ]
