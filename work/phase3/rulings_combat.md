@@ -534,7 +534,7 @@ One structural fact governs most of this cluster. In both official rulebooks eve
 ### combat-057 · Ch 10 · two rerolls on one roll
 - Question: May the two-handed reroll and the luck token both be used on one attack roll, and may one die be rerolled twice?
 - This book now: Yes to both, in either order (§10.3; §10.4; §22.2).
-- Evidence: official 2017: the luck token rerolls (Core 525–530); no two-handed reroll / Src 10: "any re-rolls available to them by their luck token or otherwise" / others: silent.
+- Evidence: official 2017: the luck token rerolls "one die in their attack, block, or dodge roll" (Core 525–531); no two-handed reroll / Src 10: "any re-rolls available to them by their luck token or otherwise" / others: silent.
 - Ruling: CONFIRM as written
 - Why: Each reroll is used once per roll, and nothing more needs saying. A ban on rerolling the same die twice would make players track which die had been touched, for the sake of a token that is spent once per rest.
 - Mechanical: no
@@ -746,7 +746,7 @@ One structural fact governs most of this cluster. In both official rulebooks eve
 ### combat-078 · Enemy scaling · by number of characters
 - Question: Is the enemy scaling table a sound and simple answer to party size?
 - This book now: One character: base. Two: +1 health, movement of 1 becomes 2. Three: +2 health, the same movement. Four: +4 health, the same movement, +1 to attack values. Fixed at setup; dead characters still count; bosses, mimics, phantoms and crystal lizards are exempt (§8.3; Gate 1 OQ-07).
-- Evidence: official 2017 and 2022: no stat scaling; every enemy acts before each character's turn, so pressure grows with the party by itself (Core 875–894; TG 1638–1653) / Extended: scales the soul rewards by party size, not the enemies (Ext 100–110) / Hollowed: keeps the official alternation (Hol 400–425) / Src 08: +1 health per character beyond the first, 1 becomes 2 at two, +1 attack at three, Repeat 2 at four / online: reviews: more players means "more activations between each character's turn" and a longer, harder game (GamesRadar, Tabletop Gaming, search summaries).
+- Evidence: official 2017 and 2022: no stat scaling; every enemy acts before each character's turn, so pressure grows with the party by itself (Core 875–894; TG 1638–1653) / Extended: scales the soul rewards by party size, not the enemies (Ext 99–107) / Hollowed: keeps the official alternation (Hol 400–425) / Src 08: +1 health per character beyond the first, 1 becomes 2 at two, +1 attack at three, Repeat 2 at four / online: reviews: more players means "more activations between each character's turn" and a longer, harder game (GamesRadar, Tabletop Gaming, search summaries).
 - Ruling: CONFIRM as written
 - Why: The single enemy phase is this book's best structural change (it removes the official game's worst downtime), and it needs an explicit table to replace the pressure it removes. The table does that with three levers, each read straight off the data card, and the Gate 1 numbers are defensible: health rises roughly with the party's damage for the one-health enemies that fill most encounters, movement keeps enemies in reach of a larger party, and attack rises only where four characters share the blows. Two limits are worth knowing but do not justify more rules: a flat health increase does little for enemies with high base health, and the step from three to four characters is the steepest. Fixing the number at setup avoids rescaling in the middle of a fight.
 - Mechanical: no
@@ -760,3 +760,52 @@ One structural fact governs most of this cluster. In both official rulebooks eve
 - Why: An index; each pair is ruled on in its own entry. (1) Repeat icon: whole row for a boss, one attack for an enemy; the whole row stays (combat-023). (2) Push before condition in §8.5 and §10.3, condition before push in §9.4; push first stays (combat-073). (3) Three defences in §9.3, four in §20.4; three stay (combat-044). (4) Four wordings of "entry node"; one stays (combat-010). (5) Two lists of what a character may target; the longer stays (combat-062). (6) Wound tokens counted by number in §7.5 and by value in §8.2; value stays (combat-028). (7) "Move" and "the movement that follows a dodge" for the same thing in §5.5; the second stays (combat-076). (8) Left slot and right slot as a condition of the parry beside the general rule that a one-handed card goes in either slot; the general rule stays (combat-035). Two overlaps were looked at and left: §8.4 and §9.2 both describe the push-move, but one owns the steps and the other cites it; and Heroic Action is limited both "once per turn" and by a token readied only at the bonfire, which is harmless.
 - Mechanical: no
 - Edits: none
+
+## (a) Every CHANGE, ADD and DELETE
+
+| Entry | Ruling | What changes | Mechanical | Edits |
+|---|---|---|---|---|
+| combat-005 | CHANGE | One scry for each gravestone on a cleared tile, in place of one per encounter | yes | E01, E02, E03, E04 |
+| combat-010 | CHANGE | Entry node defined once: a basic node along the edge of the doorway the characters entered by | no | E05, E06, E07, E08 |
+| combat-016 | ADD | Primary and secondary spawn and terrain nodes named; the difference has no rules effect | no | E09 |
+| combat-020 | ADD | For the aggro token, bleed damage counts for the character who triggered it; poison damage counts for nobody | no | E17 |
+| combat-023, combat-039 | CHANGE | A repeat icon on an enemy data card repeats the whole row of icons, as on a boss's behaviour card | yes | E12, E18, E19, E36 |
+| combat-028 | CHANGE | §7.5 counts the total value of wound tokens, not their number | no | E31, E32 |
+| combat-029 | CHANGE | Glossary Attack value covers the push-move damage value and stagger | no | E42 |
+| combat-035 | CHANGE | A shield in either weapon slot permits a parry; the riposte uses the weapon in the other slot, never a spell | yes | E22, E23, E24, E25, E30, E34, E39, E40 |
+| combat-037 | CHANGE | §8.4 says outright that the attack of a push-move cannot be parried | no | E15 |
+| combat-044 | DELETE | "The defender may decline to defend" removed from §20.4 | no | E33 |
+| combat-049 | CHANGE | Glossary names the magical damage icon as the chapters do; physical damage is the default of a character's attack | no | E43, E44 |
+| combat-054 | ADD | A weapon whose four requirements are all zero is never scaled | yes | E29, E35, E41 |
+| combat-059 | CHANGE | A repeated attack option is resolved up to the number of times shown; the character may stop | yes | E27, E36 |
+| combat-060 | ADD | An attack whose shift leaves no target in range ends without a roll; the stamina is spent | no | E26 |
+| combat-062 | CHANGE | §8.1 lists the same targets as §10.3 | no | E11 |
+| combat-070 | ADD | A catalyst's own printed attack option gains the two-handed reroll | no | E28 |
+| combat-072 | ADD | One sentence in §8.5: the end of the model's own turn is the only moment a turn acts on a condition | no | E16 |
+| combat-073 | CHANGE | §9.4 step 7 resolves the push before the condition; a seven-step Attack Sequence is added to §9.3; glossary Condition follows | no | E20, E21, E38 |
+| combat-074 | CHANGE | §8.4's list of the causes of a push is opened to include a leap and other boss rules | no | E13, E14, E37 |
+| combat-076 | CHANGE | "the move that follows a successful dodge" becomes "the movement" in §5.5 | no | E10 |
+
+Five rulings change play: combat-005, combat-023 (with combat-039), combat-035, combat-054 and combat-059. All five are small and each is reversible by dropping its edits. None revises a Gate 1 decision; combat-023 removes a special case that Gate 1 OQ-07 left without a purpose.
+
+## (b) Not settled, and why
+
+- Printed card values. The examples in §8.2, §8.3, §8.5, §9.4 to §9.6 and §10.3 use values for the Hollow Soldier and the Silver Knight Swordsman, and requirement values for three weapons, that cannot be read from the supplied texts (the data cards are images). They must be checked against the cards at proof (combat-030, combat-052, combat-069). A resist of 4 for the Silver Knight Swordsman in the §10.3 area-of-effect example looks high and deserves the first look.
+- Trap token mix. The publisher's backer update gives 11 blank tokens and 9 with values out of 20, but it was seen only as a search summary and not against the components (combat-009).
+- Whether any enemy data card in any set prints a repeat icon, and whether any catalyst prints an attack option of its own. Neither could be checked without the cards. Both rulings (combat-023, combat-070) are written so that they are right whichever is true.
+- How many encounter cards place two gravestones. This fixes how often combat-005 matters, not whether it is right.
+- A shift that is taken away from every target on purpose. Combat-E26 gives it the same outcome as a shift cut short by a trap (the attack ends, the stamina and that weapon's attack are spent). If the lead editor prefers to forbid it, the sentence needs the words "if a trap moved the character" in place of the general condition; the cost is a special case.
+- Online discussion was thinner than the brief hoped: the Reddit mirrors refused and no BoardGameGeek thread could be opened, so house-rule evidence rests on the two community rulesets, the community Guide, and search summaries.
+
+## (c) Cross-cluster effects for the lead editor
+
+1. Chapter 07 (§7.5) is edited four times from this cluster: the scry step and the scry paragraph (E02, E03) and the two wound-token sentences (E31, E32). If another cluster rewrites the same sentences, the rulings to carry over are "one scry for each gravestone" and "total value of wound tokens".
+2. Chapter 03 (§3.2), chapter 20 (§20.4) and the F.A.Q. (§22.2, two answers) each take one edit that follows a ruling here (E30, E33, E34, E35).
+3. F.A.Q. §22.1, first question ("Which weapon slot is the left weapon slot, and which is the right?"): after combat-035 no rule depends on the answer. It is harmless and may stay; deleting it is tidier.
+4. §16.4 defines damage to a boss as "an attack lowers the boss's health dial". With combat-E17, bleed triggered by a character's attack counts for the aggro token, and bleed is not an attack (§8.5). §16.4 needs the words "or a bleed that the attack triggers" in that sentence. No edit is supplied, because the sentence belongs to the boss cluster.
+5. §6.7 ("All four basic nodes along the wall beside the doorway are entry nodes") and §15.3 ("the basic nodes adjacent to the doorway on which the fog gate token is placed") still use the older wordings of an entry node. Both agree in substance with the new definition (combat-010); §15.3 should say "along the edge that holds the doorway", and the §6.7 sentence becomes a statement of number, not an exception.
+6. §16.3, Damage, Pushes, and Conditions already gives push after damage and then the condition; it may cite "(see §9.3, Attack Sequence)". §15.5's card anatomy and §16.1 step 4 already state the whole-row repeat that §9.1 now shares.
+7. Glossary entries edited here that another cluster may also touch: Gravestone, Entry node, Basic node, Doorway, Repeat, Push, Condition, Parry, Riposte, Scaled (weapon), Attack value, Magical damage, Physical damage. Each `new` is the whole line; merge by hand if two clusters meet on one entry. The entries Dodge, Frostbite, Stagger, Poison, Bleed, Trap token, Valid node, Move, Node model limit, Nearest character and Enemy scaling were checked against the rulings and need no change.
+8. Two F.A.Q. entries would now be worth adding, each restating a rule this cluster owns: the order of damage, push and condition (§9.3, Attack Sequence), and that a boss holds condition tokens as any model does (§8.5; §16.1). No edit is supplied; the F.A.Q. belongs to another cluster.
+9. `14_open_issues.md`: lead items 8 and 16 are confirmed as written. Finding A-068 moves from "not adopted" to adopted (combat-035); findings B-002 and B-033 stay unapplied by decision (combat-034); A-066 is applied (combat-054); A-081 stays unapplied by decision (combat-032). The change log needs entries for the five mechanical rulings.
+10. Layout: combat-E09 uses two icon tokens new to chapter 05 (`ast-0010-secondary-spawn-node`, `ast-0018-secondary-terrain-node`), and combat-E18 adds the repeat icon token to §9.1. The new H3 "Attack Sequence" in §9.3 is a citable sub-heading.

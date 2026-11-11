@@ -354,10 +354,10 @@
   "section": "§6.7",
   "old": "6. Place the mega-boss's model, *data card*, *health dial*, *behaviour cards*, and remaining boss treasure cards beside the game board.",
   "new": "6. Place the mega-boss's model, *data card*, *health dial*, and remaining boss treasure cards beside the game board, build its *behaviour deck* as its rules direct (see §15.5; §17), and place the deck face down beside them.",
-  "type": "clarification",
+  "type": "correction",
   "mechanical": false,
-  "rationale": "A gravestone in the Level 4 encounter allows a scry of the next boss's behaviour deck, so the mega-boss's deck is built at setup as the other bosses' decks are (§6.5 step 7, §6.6 step 10).",
-  "evidence": "§7.5, Encounter Resolution (scry); chapter 07 issues list, item 2."
+  "rationale": "§15.5 says every boss's deck is built at the setup step that places its components; §6.7 placed the cards without building the deck, so a gravestone in the Level 4 encounter granted a scry of a deck that did not exist.",
+  "evidence": "§15.5 ('built during setup ... see §6.5, §6.6, §6.7'); §6.5 Encounter Tiles step 7; §6.6 step 10; §7.5, Encounter Resolution (scry)."
  },
  {
   "id": "core-E31",

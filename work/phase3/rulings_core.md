@@ -94,7 +94,7 @@ The official F.A.Q. (FAQ17) covers only dodging, pushes and one condition intera
 - Evidence: Core17 l.295-300: "lay out four of the tiles around the Bonfire tile in any way you wish, aligning their doorways as you go". Core17 l.835-850 shows a tile with doorways on two adjoining walls only, so tiles differ in where their doorways are. TG22: encounters are set up from cards; no route of tiles. Ext l.31-35 and Holl l.254-264: free or procedural layouts. Src 06: "a two by six tile grid ... opposite corners" for the first leg and "a straight line" for the second. Audit A-088 and C-090 corrected the arithmetic to two by three; D-031 read the intent as a line. Online: summaries repeat the official free layout; no discussion of a fixed shape.
 - Ruling: CHANGE
 - Why: In this book the route is a fixed chain of four encounters, so the shape on the table has no effect on play. Two different shapes for one function is one rule too many. A straight line of seven tile widths does not fit most tables. And "exactly two doorways open on to adjacent tiles" cannot be met by a tile with three or four doorways sitting in a grid, where a third doorway faces a tile that is not next on the route. One rule covers both legs: lay a chain, bend it as the table allows, use the two doorways that join the chain and ignore the rest. The author's grid is kept by name as one permitted chain.
-- Mechanical: no
+- Mechanical: no, with one condition. §5.5, Traps deals no trap token to nodes "along a tile edge that adjoins another tile". As drafted (and already in the book's own grid) an edge that touches a tile off the route also loses its traps, so the shape of the layout changes the number of traps. That sentence belongs to another cluster; a wording keyed to the route is given under cross-cluster effects.
 - Edits: core-E05, core-E06, core-E07
 
 ---
@@ -105,7 +105,7 @@ The official F.A.Q. (FAQ17) covers only dodging, pushes and one condition intera
 - Question: Do the rewards (3/4/5/6), stat tier costs (2/4/8/10), shop prices (2 and 4), sell values (1 and 6) and the summon cost (2) fit one another across a standard game?
 - This book now: §7.6 (rewards, reduced reward half rounded down), §11.3 (tiers), §11.4 (prices), §12.1 (summon), §6.1 (a lone character starts with six souls).
 - Evidence: Core17 l.867: two souls per character per encounter into a shared cache; l.647: one soul per blind draw; l.697-705: tiers cost 2/4/8. TG22 l.1929-1933 and l.2034-2039: tiers 2/4/8, one soul a card. Ext l.26-28 and l.44-47: encounter souls doubled; a summon costs two souls per player. Holl l.29-33 and l.6-12: level plus one soul per character, tiers 2/4/6/8, one soul a card. Online: the commonest complaint is grinding, and the commonest fix is doubled souls with halved sparks (gamerant article; Reddit megathread summary).
-- Estimate, per character, with no encounter fought twice: a first leg of two Level 1 and two Level 2 encounters pays 14 souls; the mini-boss pays 6; a second leg of two Level 2 and two Level 3 encounters pays 18. That is 20 souls in hand at the free rest after the mini-boss and 38 before the main-boss, against about 8 in the official game over the same eight encounters. Each character also receives eight treasure cards free (four tier one, four tier two).
+- Estimate, per character, with no encounter fought twice: a first leg of two Level 1 and two Level 2 encounters pays 14 souls; the mini-boss pays 6; a second leg of two Level 2 and two Level 3 encounters pays 18. That is 20 souls in hand at the free rest after the mini-boss and 38 before the main-boss, against 16 in the official game over the same eight encounters (two per character per encounter, into a shared cache), where every treasure card must also be bought. Each character also receives eight treasure cards free (four tier one, four tier two).
 - Needs, per character: one stat to tier three costs 14; a second stat to tier two costs 6; a third to tier one costs 2 (22 in all). Two tier one cards cost 4 and one or two tier two cards cost 4 to 8. A summon costs 2. A focused build therefore costs 30 to 36 of the 38 souls. Tier four (10 more) is out of reach without a mega-boss (which adds 6 for the main-boss and 6 for the Level 4 encounter) or repeated clears. Selling the four or five unusable free cards adds 4 or 5 souls.
 - Ruling: CONFIRM as written
 - Why: The numbers hang together. A character can afford one complete build and not two, so every purchase is a choice, and nothing has to be ground out. The prices are easy to hold in the head: a tier one card costs what stat tier one costs (2) and a tier two card what stat tier two costs (4). The flat sell value of 1 turns two unwanted tier one cards into one chosen card and four unwanted tier two cards into one chosen card, with no loop to exploit. A boss treasure card sells for the boss reward (6). No price in these chapters is out of line.
@@ -118,7 +118,7 @@ The official F.A.Q. (FAQ17) covers only dodging, pushes and one condition intera
 - This book now: §6.3 (stocking by category, restock after a boss, legendary handling), §6.6 steps 13 to 16, §11.2 step 7, §11.4 (prices, sales).
 - Evidence: as core-002 and core-003. Core17 l.371-381: when the mini-boss falls the transposed and five legendary cards are shuffled into the deck, and every later draw can find them. Src 06: legendary treasure "do not appear in every game and cannot be purchased".
 - Ruling: CHANGE
-- Why: The rules are already close to minimal: two prices, one sell value, one stocking procedure used every time. Three trims remain. First, §11.2 step 7 restocks "if the shop has not been restocked since a boss was last defeated", which is never true, because the setup after a boss always restocks before the rest; it is deleted in core-052. Second, sold Titanite gets the same destination rule as every other sold card (core-048). Third, the second setup deals the tier two rewards before it stocks the tier two shop and adds the legendary cards, the reverse of the first setup (shop in §6.3, rewards in §6.5). As drafted, no legendary card can ever be dealt as an encounter reward; they could be found only beneath chests. Stocking first makes the two setups run in the same order and lets the five legendary cards turn up among the second leg's rewards, as they can in the official game.
+- Why: The rules are already close to minimal: two prices, one sell value, one stocking procedure used every time. Three trims remain. First, §11.2 step 7 restocks "if the shop has not been restocked since a boss was last defeated", which is never true, because the setup after a boss always restocks before the rest; it is deleted in core-052. Second, sold Titanite gets the same destination rule as every other sold card (core-048). Third, the second setup deals the tier two rewards before it stocks the tier two shop and adds the legendary cards, the reverse of the first setup (shop in §6.3, rewards in §6.5). As drafted, no legendary card can ever be dealt as an encounter reward; they could be found only beneath a chest or from a mimic. Stocking first makes the two setups run in the same order and lets the five legendary cards turn up among the second leg's rewards, as they can in the official game.
 - Mechanical: yes (a legendary card can now be dealt as a second-leg reward)
 - Edits: core-E08 (and core-E09 to core-E11 under core-052; core-E31 to core-E33 under core-048)
 
@@ -375,7 +375,7 @@ The official F.A.Q. (FAQ17) covers only dodging, pushes and one condition intera
 ### core-037 · Ch 07 — boss-behaviour scry: is there a deck to look at?
 - Question: Is the next boss's behaviour deck built before a gravestone encounter can scry it?
 - This book now: the mini-boss's deck is built at §6.5, Encounter Tiles step 7 and the main-boss's at §6.6 step 10. The mega-boss's deck is not built until the game board is flipped (§6.7, The Mega-Boss Encounter step 4), after the Level 4 encounter has been resolved.
-- Evidence: §7.5, Encounter Resolution step 5; BDK and EC: Level 4 cards place terrain, gravestones included. Core17 l.756-759: gravestones reveal boss behaviour at the start of the boss encounter. Ext, Holl: silent. Online: nothing found.
+- Evidence: §15.5 already says that each boss's behaviour deck "is built during setup, at the step that places the boss's components on its tile (see §6.5, §6.6, §6.7)"; §6.7 step 6 places the cards and does not build the deck. §7.5, Encounter Resolution step 5; BDK and EC: Level 4 cards place terrain, gravestones included. Core17 l.756-759: gravestones reveal boss behaviour at the start of the boss encounter. Ext, Holl: silent. Online: nothing found.
 - Ruling: ADD
 - Why: The item is settled for the first two bosses. It is still open for the third: a Level 4 encounter with a gravestone grants a scry of a deck that does not yet exist. Building the mega-boss's deck during the setup after the main-boss, as the other two decks are built during their setups, closes the gap with a clause and makes the three setups alike.
 - Mechanical: no
@@ -505,7 +505,7 @@ The official F.A.Q. (FAQ17) covers only dodging, pushes and one condition intera
 ### core-051 · Ch 11 — the free rest and PvP
 - Question: In what order do a boss's defeat, the PvP encounter, the setup and the free rest fall?
 - This book now: boss, PvP encounter, setup, free rest (§11.2; §16.5 steps 6 and 7; §6.6 step 18; §6.7 step 9; §20.9).
-- Evidence: Core17 l.707-710: after the mini-boss the tiles are set up and the characters "rest at the bonfire (without using a spark)". TG22 l.2299-2300: the same. No official PvP. Src 11 and Src 20. Online: nothing found.
+- Evidence: Core17 l.708-711: after the mini-boss the tiles are set up and the characters "rest at the bonfire (without using a spark)". TG22 l.2299-2300: the same. No official PvP. Src 11 and Src 20. Online: nothing found.
 - Ruling: CONFIRM as written
 - Why: The four sections agree, and the order is the natural one: the PvP encounter is fought on the boss's tile before that tile is cleared away, and the rest comes last so that it heals whatever the PvP encounter did.
 - Mechanical: no
@@ -635,7 +635,7 @@ The official F.A.Q. (FAQ17) covers only dodging, pushes and one condition intera
 ### core-065 · Ch 23 — Chloranthy Ring
 - Question: Does the ring give one stamina to everyone on the wearer's node at the start of the wearer's turn, or one more to each of them at the start of their own turns?
 - This book now: at the start of each of the wearer's turns, the wearer and every other character on the wearer's node each recover one stamina.
-- Evidence: Core17 l.660-664 (caption): the ring helps "characters on the same node gain extra stamina every turn". Holl l.475-478: the ring raises the gain "to 2 instead of 1 at the beginning of activation for all players on that node". Src 23: two notes, merged by CMP-0004. Ext: silent. Online: nothing found.
+- Evidence: Core17 l.661-667 (caption): the ring helps "characters on the same node gain extra stamina every turn". Holl l.475-478: the ring raises the gain "to 2 instead of 1 at the beginning of activation for all players on that node". Src 23: two notes, merged by CMP-0004. Ext: silent. Online: nothing found.
 - Ruling: CONFIRM as written
 - Why: One trigger at one moment is easier to run than a check at the start of every character's turn, and the wearer still gains two, as both sources say. The frostbite question the item raises is already answered by §8.5 and §22.3: a character with a frostbite token recovers no stamina by any means, the ring included.
 - Mechanical: no
@@ -681,7 +681,84 @@ The official F.A.Q. (FAQ17) covers only dodging, pushes and one condition intera
 - Question: Should a weapon whose highest requirement is zero be barred from scaling?
 - This book now: §10.5 has no such bar, so a weapon with no requirement is scaled for any character whose stat is five or more. No weapon in Appendix A has a highest requirement of zero.
 - Evidence: Core17, TG22: no scaling. Ext, Holl: no scaling. Audit A-066. Online: nothing found.
-- Ruling: ADD
-- Why: For the appendix there is nothing to do. For §10.5, a view for its owner: scaling rewards a character for growing past a weapon's demand, and a weapon that demands nothing gives every character that reward from the first turn, which turns a bonus into a flat +1 on the weakest cards. One short sentence ("A weapon whose stat requirements are all zero is never scaled") closes it. The edit belongs to the cluster that owns chapter 10.
-- Mechanical: yes, if the owner of §10.5 adopts it
-- Edits: none (cross-cluster)
+- Ruling: CONFIRM as written
+- Why: For the appendix, which is what this item concerns in this cluster, there is nothing to change. The rule itself belongs to §10.5 and to the cluster that owns chapter 10; a view for that owner, with a draft sentence, is under cross-cluster effects.
+- Mechanical: no
+- Edits: none
+
+---
+
+## Closing (a) — every CHANGE, ADD and DELETE
+
+Entries core-030 and core-045 repeat core-008 and core-001 for the chapter lists and are not listed again.
+
+| Entry | Ruling | What changes | Mechanical | Edits |
+|---|---|---|---|---|
+| core-001 | CHANGE | Hollow cubes are the core set's white cubes that are not marking a stat; a stated fallback covers a party of four. The unsourced "8x Hollow cubes" line goes. | no | E01, E02, E03, E04 |
+| core-008 | CHANGE | One layout rule for both legs: a chain of tiles of any shape, joined by two doorways each; the two-by-three grid is kept as a permitted chain; the straight line is no longer required. | no (see the condition in the entry) | E05, E06, E07 |
+| core-010 | CHANGE | After the mini-boss the shops are stocked before the tier two rewards are dealt, as in the first setup, so legendary cards can be dealt as rewards. | yes | E08 |
+| core-011 | DELETE | Two repeats of the token refresh rule (under Heroic Action and Estus Flask); the rule is stated once for all three tokens. | no | E12, E13, E14 |
+| core-012 | CHANGE | §7.5 step 3 reworded so that it also fits the single card of a Level 4 encounter; one cross-reference corrected. | no | E15, E17 |
+| core-019 | CHANGE | The ember token starts beside its character's dashboard, not in the common supply; §7.2 uses the same wording as §3.5. | no | E19, E20, E21, E22 |
+| core-021 | ADD | A consumed ember card is returned to the game box. | no | E23, E24, E25 |
+| core-026 | ADD | A spell card that bears the two-handed icon needs the other weapon slot empty; it still gains no reroll. | no | E26 |
+| core-037 | ADD | The mega-boss's behaviour deck is built during the setup after the main-boss, as §15.5 already says. | no | E30 |
+| core-048 | CHANGE | Titanite on a sold weapon is parted from it; each card goes to the place of its own kind. The sell value is unchanged. | yes | E31, E32, E33 |
+| core-050 | CHANGE | The party returns to the bonfire tile only to rest. The free return without a rest is removed. | yes | E35, E36, E37 |
+| core-052 | DELETE | Step 7 of the rest (a conditional restock that never applies) and the three sentences that explain it. | no | E09, E10, E11 |
+| core-063 | CHANGE | Titanite is any weapon upgrade card whose name includes the word; Demon Titanite and Blue Titanite fuse permanently. | yes | E34 (and E33) |
+| core-068 | ADD | §4.1 points to Appendix A and §6.2 to Appendix B. | no | E27, E28 |
+
+Clarifications attached to entries that are otherwise confirmed: core-004 (E18, the parry roll joins the list of rolls that luck rerolls), core-036 (E29, the encounter decks stay beside the bonfire tile), core-041 (E16, the dealt cards are turned face up before they are shared out).
+
+Two edits carry two rulings each. If the lead editor accepts only one ruling of a pair, the edit needs trimming by hand:
+
+- core-E20 (§6.1 step 5) removes the ember tokens from the supply (core-019) and names the hollow cubes as the remaining white cubes (core-001).
+- core-E33 (glossary Titanite) carries the test by name (core-063) and the destination of sold Titanite (core-048).
+
+Mechanical changes proposed, four in all: core-010, core-048, core-050, core-063. None alters a Gate 1 decision. No Gate 1 answer is revised by this memo. One approved completion is corrected in a detail: CMP-0001's statement that every character token has a ready side and a used side does not hold for the ember token (core-016), which the book already reflects.
+
+## Closing (b) — not settled, and why
+
+1. A lone character's six starting souls. They sit on the dashboard at setup (§6.1 step 7) but can be spent only during a rest, and the first rest costs one of the five sparks. In the official game the lone player's larger cache is meant to be spent before setting out (Core17 l.632-636: "purchase some treasure and level up your character a bit before facing the dangers that await"). The rules here are definite, so this is not a hole, and no edit is filed. If the author wants the head start to be usable, the clean way is to end the first setup as the two later setups end, with a rest that costs no spark; for a party of two or more that rest does nothing. It would touch §6.4, §7.4, §11.2 and the glossary entry Resting at the bonfire.
+2. Printed card names (core-067). "Four-Pronged Plough" is very probably printed "Four-Pronged Plow": the same expansion's enemy is printed "Plow Scarecrow" (§2.2), and Gate 1 OQ-17 keeps printed spellings. It was not changed because the card could not be seen, and `tools/style_check.py` needs the name on its whitelist first. "Sellsword Twinblades" and "Onikiri and Ubadachi" also need a look at the cards.
+3. The Butcher Knife's printed requirement, and whether the card is an invader's treasure. Neither could be found. The ruling (24, tier one) rests on the appendix's stated purpose and on a search summary of the video game's value, not on the card.
+4. Card facts that would test two rulings: whether any shield card prints an attack option (core-020) and whether any spell card bears the two-handed icon (core-026). Both rulings give a definite answer either way, so play is not held up.
+5. The number of doorways on each tile face and the size of the tiles. Core17 shows that tiles differ, but no component list gives the detail. The chain rule (core-008) is safe whatever the tiles are; the claim that the drafted "exactly two doorways" step can be impossible depends on tiles with three or four doorways existing.
+6. The treasure types of seven of the ten cards that look like boss treasure in Appendix B (core-061), the 534-card total (core-069), and the dice of the two armour printings (core-066): all need the components.
+7. The white-cube shortfall with four characters (core-001). The box holds no fifth colour of cube, so the book must either accept a stated fallback, as proposed, or tell players to supply eight cubes of their own, as it does now. No in-box answer that is both plain and always sufficient was found; the ember-token alternative is described in the entry in case the author prefers it.
+
+## Closing (c) — cross-cluster effects for the lead editor
+
+Chapters and files outside this cluster that an edit here touches:
+
+- Chapter 02, §2.8: core-E01 and core-E02 change the component list and its paragraph. The chapter 02 issue "Hollow cubes (§2.8)" closes with core-001.
+- Chapter 18, §18.6: core-E11 removes the sentence that cites the deleted step 7 of the rest.
+- Glossary: four entries are replaced (Hollow cube, E04; Ember card, E25; Titanite, E33; Bonfire, E37). No other entry contradicts the rulings; Shop, Blacksmith Andre, Resting at the bonfire, Ember token, Legendary treasure and Level 4 encounter were checked.
+- F.A.Q. (chapter 22): no answer changes. After core-050 the lead editor may wish to add one question to §22.4 ("May the party return to the bonfire tile without resting?" "No. The party returns only to rest (see §11.1).").
+- §6.7, The Mega-Boss Encounter step 4 italicises *behaviour deck*; after core-E30 that is the second italic use in the section and may be set plain.
+- `14_open_issues.md`: lead items 3, 9, 10, 12, 15, 17, 19 and 20 and the lists for chapters 03, 04, 06, 07, 11 and 23 can be closed against this memo.
+
+Rules owned by other clusters on which this cluster has a view or a dependency:
+
+- §5.5, Traps step 2 (chapter 05). "Except the basic nodes along a tile edge that adjoins another tile" makes the trap count depend on the shape of the layout, in the book's own grid as well as under core-008. Suggested wording: "except the basic nodes along a tile edge whose doorway is part of the route (see §6.5)". The official text excludes nodes "along a wall that has a doorway" (Core17 l.816-817). Whichever is chosen, it must not depend on which tiles happen to touch.
+- §9.6 (chapter 09), parry slot. §3.2 is correct under either rule. This cluster's view: "a shield in one weapon slot; the riposte uses the weapon in the other" is simpler and is what a player would guess, and it would let the definitions of left and right in §3.2, the first question of §22.1, and the left and right wording of the glossary entries Parry, Riposte and Weapon slot fall away. If the left-slot rule is kept, nothing in chapter 03 changes.
+- §10.5 (chapter 10). Two points. It does not cite Appendix A; one cross-reference is enough ("for a weapon listed in Appendix A, the requirements given there are used (see Appendix A)"). And audit A-066: this cluster's view is to adopt it with one sentence, "A weapon whose stat requirements are all zero is never scaled", because otherwise such a weapon gives every character +1 from the first turn. Appendix A is unaffected either way.
+- §12.1 (chapter 12), the summon's price. Two souls from any one embered character buys the party a summon. Souls carried to the fog gate cannot be spent on anything else until the next rest, so the purchase has no real cost and is always made. If that cluster wants the price to be a decision, the number with precedent is two souls from every character (Ext l.44-47); this cluster does not ask for a change.
+- §12.2 (chapter 12) and §14, sold cards from outside the decks. Under §11.4 a sold invader's treasure card or Titanite Scale is a tier one or tier two card by its requirements: it fetches one soul and goes to the bottom of that deck, from which it can later be dealt. That is definite. If the owners would rather such cards left the game, one clause in §11.4's second bullet does it ("a sold boss treasure card, or any other card that came from no treasure deck, is returned to the game box").
+- §12.2, lead item 2 (invaders and clearing): nothing in chapter 07 depends on the answer (core-042).
+- §13 (chapter 13): §11.5 step 4 and §5.5 say terrain stays on its node through a reset; §13.3 removes a killed mimic's chest. A pointer in §11.5 step 4 ("except a chest removed with its mimic (see §13.3)") would join them.
+- §15.5 and §17 (chapters 15 and 17): core-E30 has the mega-boss's deck built in §6.7 step 6 "as its rules direct (see §15.5; §17)". §15.5 already says so; §17.8 (Kalameet) and §17.9 (the Chariot) build their decks by their own procedures and need no change.
+- §17.7 and §17.10 call the Appendix B cards "replacement" cards; Appendix B and the glossary say "revised card". The sense agrees; the wording may be aligned by that chapter's owner.
+- Chapter 20: core-050 does not touch the PvP sequence; the free rest still follows the PvP encounter (core-051).
+
+## Tally
+
+| Ruling | Entries |
+|---|---|
+| CONFIRM as written | 37 |
+| CHANGE | 10 (eight distinct; core-030 and core-045 repeat core-008 and core-001) |
+| ADD | 4 |
+| DELETE | 2 |
+| NOT A RULES QUESTION | 17 |
+| Total | 70 |
