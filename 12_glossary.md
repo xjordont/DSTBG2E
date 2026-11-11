@@ -4,7 +4,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Adjacent node.** A node directly next to another node horizontally, vertically, or diagonally. Nodes separated by a wall, including a wall printed across a tile or a mega-boss game board, are not adjacent, and nodes on different tiles are not adjacent (see §5.1).
 
-**Aggro.** The state of being the enemies' preferred target. Enemy behaviours marked with the skull icon target the character who holds the aggro token.
+**Aggro.** The state of being the enemies' preferred target. Enemy movement icons and attack icons marked with the skull icon target the character who holds the aggro token (see §9.2, §9.3).
 
 **Aggro token.** The single token that marks the character with aggro. It is placed on the character with the highest threat at the start of each encounter and, after each round of character turns, moves to the character who inflicted the most damage on enemy models during that round (on a tie, or if no damage was inflicted, the holder keeps it). If the holder dies it moves to the living character with the highest threat. In boss encounters it moves to any character who damages the boss during their turn (see §7.5, Encounter Turn Order; §16.4).
 
@@ -14,7 +14,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Area-of-effect (AoE).** A character attack option marked with the area-of-effect icon. It targets one node within range: one attack roll is compared with the block or resist of every enemy on that node, and every enemy there is hit (see §10.3, Area-of-Effect).
 
-**Armour.** An equipment card bearing the armour icon. One armour card may be equipped in the armour slot. Only the armour card's block or resist dice are rolled after a failed dodge.
+**Armour.** An equipment card bearing the armour icon. One armour card may be equipped in the armour slot. After a failed dodge, only the block or resist dice of the armour card and of the upgrade cards attached to it are rolled (see §9.5).
 
 **Armour slot.** The dashboard slot that holds one equipped *armour* card (see §3.2).
 
@@ -36,13 +36,13 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Behaviour deck.** The face-down deck of behaviour cards built for a boss, mimic, invader or phantom at the start of its encounter. When it is empty, the discard pile is turned face down without shuffling to form the new deck.
 
-**Behaviour icon.** A movement or attack icon on an enemy data card or a behaviour card. Icons are resolved left to right; an icon with no valid target is skipped.
+**Behaviour icon.** A movement or attack icon on an enemy data card or a behaviour card. Icons are resolved left to right; an icon that has no valid target, or that cannot be resolved, is skipped (see §9.1).
 
 **Blacksmith Andre.** The smith at the *bonfire* who keeps the *shop*, buying and selling treasure cards for *souls*, and who attaches and removes *upgrade cards* at no cost. He is visited only while the party rests at the bonfire (see §11.4).
 
 **Bleed.** A condition. A model holds at most one bleed token. When a bleed token is to be placed on a model that already holds one, the model instead suffers three damage that block and resist do not reduce, and its bleed token is removed. A bleed token is otherwise removed only when the encounter ends (see §8.5, Bleed).
 
-**Block.** The defence rolled against a physical attack. The defence total is the sum of the sword icons on the two highest block dice rolled from all equipped cards. For enemies, block is the fixed value subtracted from a physical attack value.
+**Block.** The defence rolled against an attack that deals physical damage. The defence total is the sum of the two highest block dice rolled from all equipped cards, with the fixed modifiers of those cards then applied (see §9.4). For enemies, block is the fixed value subtracted from a physical attack value.
 
 **Bonfire.** The characters' safe haven, represented by the *bonfire* tile, which has no nodes. The Firekeeper and Blacksmith Andre wait there and are visited only while the party rests. Returning to the bonfire tile costs nothing; resting there costs one *spark* (see §11.1, §11.2).
 
@@ -80,11 +80,11 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Data card.** The card that defines an enemy, boss, mimic, or phantom: name, threat, range, dodge difficulty, block and resist, behaviour icons or behaviour deck size, health, and special ability (see §8.2 for enemies; §15.4 for bosses).
 
-**Defence total.** The sum of the sword icons on the two highest block or resist dice rolled, after modifiers. Damage suffered equals the enemy's attack value minus the defence total, to a minimum of zero.
+**Defence total.** The sum of the two highest block or resist dice rolled, to which the fixed modifiers of the equipped cards are then applied; a single die counts alone, no dice count as zero, and a total of less than zero is zero. Damage suffered equals the attack value minus the defence total, to a minimum of zero (see §9.4).
 
-**Dodge.** A defence against an attack that targets the character. The character pays one stamina, rolls their dodge dice and succeeds if the total equals or exceeds the attack's dodge difficulty. A successful dodge avoids the hit entirely and the character must move to an adjacent node.
+**Dodge.** A defence against an attack that targets the character. The character pays one stamina, may pay two further stamina for one extra green die to a maximum of four dice, and succeeds if the dodge icons rolled equal or exceed the attack's dodge difficulty. A successful dodge avoids the hit and the character must move to an adjacent valid node; after a failed dodge only the armour card's block or resist dice are rolled (see §9.5).
 
-**Dodge difficulty.** The number a dodge roll must equal or exceed. It is printed on an enemy data card or boss behaviour card. In player versus player it is derived from the stamina cost of the attacker's attack option.
+**Dodge difficulty.** The number of dodge icons a dodge or parry roll must equal or exceed. It is printed on an enemy data card, a boss behaviour card, or a trap token (see §9.5). In player versus player it is derived from the stamina cost of the attacker's attack option.
 
 **Doorway.** A gap in a tile's wall through which characters pass between tiles. Basic nodes beside a doorway are entry nodes.
 
@@ -178,11 +178,15 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Move.** A change of node made by a model through the *Walk* or *Run* minor action, a *shift* icon, or an enemy or boss movement icon. The movement after a successful *dodge* and the movement of a *push* are not moves (see §5.2).
 
+**Nearest character.** The living character at the shortest range from an enemy. If two or more characters are tied, the nearest character is the one who holds the aggro token, otherwise the one with the highest threat, and otherwise the one the players choose (see §9.2).
+
 **Node.** A circular space on a tile. Every model occupies exactly one node. Nodes are basic, spawn or terrain.
+
+**Node attack.** An enemy attack that bears the node icon. It targets every character on the node of the character named by its skull icon or nearest-character icon; each character defends separately, and a node attack cannot be parried (see §9.3).
 
 **Node model limit.** At most three non-boss models and one boss model may occupy a node. A model entering a full node forces one occupant to be pushed to a valid node chosen by the players (see §5.3).
 
-**Parry.** A defence available to a character with a shield in the left weapon slot who shares a node with the attacker. The character pays one stamina and rolls dodge dice against the attack's dodge difficulty. Success staggers the attacker and allows a *riposte*; failure deals full damage and staggers the character.
+**Parry.** A defence available to a character with a shield equipped in the left weapon slot when the attacker is on the character's node; an attack that pushes, a node attack, and a boss attack outside §15.6 cannot be parried. The character pays one stamina and rolls dodge dice against the attack's dodge difficulty. Success makes the attack miss, staggers the attacker, and allows a *riposte*; failure deals the full attack value with no block or resist roll and staggers the character (see §9.6).
 
 **Phantom.** A summoned ally (summon) or a hostile intruder (invader) from the Phantoms expansion.
 
@@ -210,13 +214,13 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Reset.** The state of an encounter after the characters have rested at the *bonfire*: its encounter card is face down, its enemy models have been removed, and its terrain tokens remain in place. A *cleared* encounter keeps its black cube through a reset; a *failed* encounter has none (see §7.5, Encounter Resolution; §11.5).
 
-**Resist.** The defence rolled against a magical attack, resolved as block is. For enemies, resist is the fixed value subtracted from a magical attack value.
+**Resist.** The defence rolled against an attack that deals magical damage, resolved as block is with resist dice (see §9.4). For enemies, resist is the fixed value subtracted from a magical attack value.
 
 **Rest (major action).** The character removes every stamina cube from their endurance bar; damage cubes, hollow cubes, and condition tokens stay. A character cannot *Rest* in a turn in which they have *run*, cannot *run* after resting in the same turn, and cannot *Rest* while holding a *frostbite* token (see §10.1).
 
 **Resting at the bonfire.** The party action, costing one *spark* unless it follows the defeat of a boss, that revives dead and *lost* characters, removes every damage cube, stamina cube, hollow cube, and condition token, readies the heroic action, luck, and estus flask tokens, allows visits to the Firekeeper and Blacksmith Andre, and resets every encounter. It neither places nor removes an *ember token* (see §11.2).
 
-**Riposte.** The out-of-turn attack a character makes against an attacker after a successful *parry*, using any attack option of the weapon in the right weapon slot and paying its stamina cost. A *riposte* may not be *parried*.
+**Riposte.** The attack a character may make at once against the attacker after a successful *parry*, using one attack option of the weapon in the right weapon slot and paying its stamina cost. A riposte cannot be parried, and it does not count against the attacks of the character's own turn (see §9.6).
 
 **Round.** One pass of the encounter turn order: every enemy model takes a turn in descending threat order, then every character takes a turn in descending threat order (see §7.5, Encounter Turn Order). In a *PvP encounter* a round is one turn by each character still in play (see §20.2).
 

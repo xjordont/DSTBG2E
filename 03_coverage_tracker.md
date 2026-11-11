@@ -103,19 +103,19 @@ Totals: 24 chapters, 166 sections, 20 orphan empty headings.
 | COMBAT BASICS | Stagger | present — to audit | A-009, A-078, A-079, B-005, B-038, C-030, C-104, C-119, F-085 |  | yes (§8) | line 1632. |
 | COMBAT BASICS | Calamity (Kalameet Expansion) | present — to audit | A-080, A-115, B-005, B-026, C-029, C-030, C-104, C-119, F-085 |  | yes (§8) | line 1640. |
 | COMBAT BASICS | Corrosion (Gaping Dragon Expansion) | present — to audit | A-080, B-005, C-029, C-030, C-104, C-119, F-085 |  | yes (§8) | line 1650. |
-| ENEMY TURN | (chapter) | present — to audit | A-013, A-018, A-023, A-025, A-032, A-042, A-068, A-070, A-078, A-079, A-082, A-087, A-113, A-116, A-119, A-120, A-124, B-002, B-005, B-022, B-033, C-015, C-020, C-024, C-027, C-028, C-030, C-036, C-047, C-060, C-083, C-084, C-095, C-101, C-104, C-111, C-112, C-123, D-008, D-016, D-030, D-033, D-039, F-070, F-071, F-072, F-088, F-089, F-090, F-113, F-114, F-115, F-116, F-117 |  | no | line 1660. |
-| ENEMY TURN | Overview | present — to audit | A-078, A-113, A-116, A-124, B-005, C-015, C-020, C-024, C-030, C-036, C-104, F-089, F-113 |  | no | line 1662. |
-| ENEMY TURN | Enemy Movement | present — to audit | A-013, A-023, A-025, A-082, B-005, C-030, C-101, C-104, C-123, D-016, D-039, F-088, F-090, F-114, F-115, F-116, F-117 |  | no | line 1668. |
-| ENEMY TURN | Towards aggro | present — to audit | A-013, B-005, C-030, C-101, C-104, F-116 |  | no | line 1680. |
-| ENEMY TURN | Away from aggro | present — to audit | B-005, C-030, C-101, C-104, F-116 |  | no | line 1684. |
-| ENEMY TURN | Towards nearest | present — to audit | B-005, C-030, C-101, C-104, D-039, F-116 |  | no | line 1688. |
-| ENEMY TURN | Away from nearest | present — to audit | C-030, C-101, C-104, F-116 |  | no | line 1692. |
-| ENEMY TURN | Push-move | present — to audit | C-030, C-101, C-104, F-117 |  | no | line 1696. |
-| ENEMY TURN | Push-attack | present — to audit | A-025, C-030, C-101, C-104, D-016, F-117 |  | no | line 1700. |
-| ENEMY TURN | Enemy Attacks | present — to audit | A-018, A-023, A-032, A-042, A-068, A-070, A-078, A-079, A-087, A-119, A-120, B-002, B-022, B-033, C-027, C-028, C-030, C-047, C-060, C-083, C-084, C-095, C-104, C-111, C-112, D-008, D-030, D-033, F-070, F-071, F-072 |  | no | line 1704. |
-| ENEMY TURN | Block & Resist | present — to audit | A-032, A-070, A-120, B-002, C-030, C-060, C-104, C-111, C-112, D-033 |  | no | line 1710. |
-| ENEMY TURN | Dodge | present — to audit | A-032, A-087, B-033, C-030, C-047, C-060, C-084, C-095, C-104, F-072 |  | no | line 1734. |
-| ENEMY TURN | Parry & Riposte | present — to audit | A-018, A-032, A-042, A-068, A-078, A-119, B-022, C-027, C-028, C-030, C-060, C-104, C-112, D-030 |  | no | line 1766. |
+| ENEMY TURN | (chapter) | present — to audit | A-013, A-018, A-023, A-025, A-032, A-042, A-068, A-070, A-078, A-079, A-082, A-087, A-113, A-116, A-119, A-120, A-124, B-002, B-005, B-022, B-033, C-015, C-020, C-024, C-027, C-028, C-030, C-036, C-047, C-060, C-083, C-084, C-095, C-101, C-104, C-111, C-112, C-123, D-008, D-016, D-030, D-033, D-039, F-070, F-071, F-072, F-088, F-089, F-090, F-113, F-114, F-115, F-116, F-117 |  | yes (§9) | line 1660. |
+| ENEMY TURN | Overview | present — to audit | A-078, A-113, A-116, A-124, B-005, C-015, C-020, C-024, C-030, C-036, C-104, F-089, F-113 |  | yes (§9) | line 1662. |
+| ENEMY TURN | Enemy Movement | present — to audit | A-013, A-023, A-025, A-082, B-005, C-030, C-101, C-104, C-123, D-016, D-039, F-088, F-090, F-114, F-115, F-116, F-117 |  | yes (§9) | line 1668. |
+| ENEMY TURN | Towards aggro | present — to audit | A-013, B-005, C-030, C-101, C-104, F-116 |  | yes (§9) | line 1680. |
+| ENEMY TURN | Away from aggro | present — to audit | B-005, C-030, C-101, C-104, F-116 |  | yes (§9) | line 1684. |
+| ENEMY TURN | Towards nearest | present — to audit | B-005, C-030, C-101, C-104, D-039, F-116 |  | yes (§9) | line 1688. |
+| ENEMY TURN | Away from nearest | present — to audit | C-030, C-101, C-104, F-116 |  | yes (§9) | line 1692. |
+| ENEMY TURN | Push-move | present — to audit | C-030, C-101, C-104, F-117 |  | yes (§9) | line 1696. |
+| ENEMY TURN | Push-attack | present — to audit | A-025, C-030, C-101, C-104, D-016, F-117 |  | yes (§9) | line 1700. |
+| ENEMY TURN | Enemy Attacks | present — to audit | A-018, A-023, A-032, A-042, A-068, A-070, A-078, A-079, A-087, A-119, A-120, B-002, B-022, B-033, C-027, C-028, C-030, C-047, C-060, C-083, C-084, C-095, C-104, C-111, C-112, D-008, D-030, D-033, F-070, F-071, F-072 |  | yes (§9) | line 1704. |
+| ENEMY TURN | Block & Resist | present — to audit | A-032, A-070, A-120, B-002, C-030, C-060, C-104, C-111, C-112, D-033 |  | yes (§9) | line 1710. |
+| ENEMY TURN | Dodge | present — to audit | A-032, A-087, B-033, C-030, C-047, C-060, C-084, C-095, C-104, F-072 |  | yes (§9) | line 1734. |
+| ENEMY TURN | Parry & Riposte | present — to audit | A-018, A-032, A-042, A-068, A-078, A-119, B-022, C-027, C-028, C-030, C-060, C-104, C-112, D-030 |  | yes (§9) | line 1766. |
 | CHARACTER TURN | (chapter) | present — to audit | A-006, A-010, A-011, A-012, A-024, A-032, A-037, A-064, A-066, A-068, A-069, A-070, A-072, A-073, A-082, A-086, A-087, A-113, A-119, B-016, C-015, C-019, C-027, C-028, C-029, C-030, C-034, C-036, C-038, C-039, C-054, C-055, C-060, C-061, C-084, C-086, C-098, C-100, C-104, C-111, C-116, C-117, C-121, CMP-0001, D-017, D-030, F-016, F-017, F-018, F-073, F-084, F-088, F-089, F-090, F-118, F-119, F-120, F-121, F-122 | CMP-0001 | yes (§10) | line 1798. |
 | CHARACTER TURN | Character Turn Order | present — TOC mismatch | A-006, A-010, A-011, A-012, A-068, A-072, A-073, C-029, C-030, C-034, C-038, C-060, C-100, C-104, C-111, C-117, CMP-0001, D-017, D-030, F-084 | CMP-0001 | yes (§10) | line 1800. TOC lists Overview / Character Actions / Character Movement; body uses Turn Order / Minor / Major. |
 | CHARACTER TURN | Recover one stamina. | present — structural | A-010, A-073, C-030, C-100, C-104, D-017, F-084 |  | yes (§10) | line 1802. Procedural step rendered as an H3 heading. |
