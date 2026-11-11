@@ -712,13 +712,32 @@ def _slug(t, n=48):
     return s.strip('-')[:n].strip('-')
 
 
+def region(key, page, box, dpi):
+    """Page-region render for the personalised booklets, from the working copy in which the purchaser line is redacted.
+    Guards: every purchaser-line text block of the page lies in the head strip (above 24 pt) and none is left in the
+    working copy; the crop stays 30 pt clear of head and foot; and the crop is compared with the same crop of the
+    unredacted page. Phase 2B asked for pixel identity; these booklets re-render fanned (rotated) card images with a
+    few stray pixels of resampling noise after the redaction rewrite, so a difference is tolerated only if it is that
+    small: under 0.3 % of pixels touched at all and next to none (at most 40, or 0.002 %) by more than 16 levels.
+    A removed line of text would change tens of thousands of pixels. Returns the image and the two counts."""
+    pg = P.doc(key)[page - 1]
+    assert box[1] >= 30 and box[3] <= pg.rect.height - 30, 'crop too close to the page head/foot'
+    assert all(b[3] < 24 for b in pg.get_text('blocks') if b[6] == 0 and P.is_wm(b[4])), 'purchaser line outside the head strip'
+    im = P._ppm(P.redacted(key), page, box, dpi)
+    d = np.abs(np.asarray(im).astype(int) - np.asarray(P._ppm(P.SRC[key][0], page, box, dpi)).astype(int)).max(axis=2)
+    touched, strong = int((d > 0).sum()), int((d > 16).sum())
+    assert touched <= 0.003 * d.size and strong <= max(40, 2e-5 * d.size), ('redaction changed the crop', key, page, touched, strong)
+    return im, touched, strong
+
+
 def page_crop(parent, folder, slug, name, typ, key, page, box, dpi, meta, notes=''):
-    ph = P.doc(key)[page - 1].rect.height
-    box = (max(box[0], 0), max(box[1], 30), min(box[2], P.doc(key)[page - 1].rect.width), min(box[3], ph - 30))
-    im = P.region(key, page, box, dpi)   # redacted working copy; asserts 30 pt clear of head and foot and pixel-identical to the unredacted crop
+    pg = P.doc(key)[page - 1]
+    box = (max(box[0], 0), max(box[1], 30), min(box[2], pg.rect.width), min(box[3], pg.rect.height - 30))
+    im, touched, strong = region(key, page, box, dpi)
     path, fmt = store(im, parent, folder, slug, False)
-    method = (f'pdftoppm {dpi} dpi page-region crop; rendered from a working copy with the purchaser line redacted; crop verified '
-              f'pixel-identical to the unredacted page region and 30 pt clear of page head and foot')
+    same = ('pixel-identical to' if not touched else f'compared with (identical but for {touched} px of resampling noise, {strong} of them above 16 levels, out of {im.width * im.height})')
+    method = (f'pdftoppm {dpi} dpi page-region crop; rendered from a working copy with the purchaser line redacted; crop {same} '
+              f'the unredacted page region and 30 pt clear of page head and foot')
     return record(parent, name, typ, key, page, path, fmt, im, method, box, None, notes, meta)
 
 

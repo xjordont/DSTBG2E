@@ -81,6 +81,12 @@ def main():
             add(img['src'], 'front-matter rule')
         else:
             add(img['src'], chapter_label(chap))
+    # pictures set as backgrounds in inline styles (the painting behind each chapter title)
+    for el in soup.find_all(style=True):
+        for u in re.findall(r"url\(['\"]?([^'\")]+)['\"]?\)", el['style']):
+            sec = el if el.name == 'section' else el.find_parent('section')
+            where = 'chapter header' if 'banner' in (el.get('class') or []) else 'background'
+            add(u, f'{where}, {chapter_label(sec)}')
     css = (ROOT / 'layout/book.css').read_text(encoding='utf-8')
     role = {'ast-0075': 'folio ornament, every page', 'ast-0143': 'back cover ground', 'lava': 'cover field and chapter banner ground (logo-free crop)'}
     for m in re.finditer(r'url\("?([^")]+)"?\)', css):

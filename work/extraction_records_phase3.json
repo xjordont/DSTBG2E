@@ -8063,5 +8063,914 @@
    "baked": null,
    "kind": "game board"
   }
+ },
+ {
+  "id": "AST-0156.12",
+  "parent": "AST-0156",
+  "name": "The Four Kings booklet p.5 card fan: Data Card and Behaviour Cards",
+  "type": "frame",
+  "src": "DS-Four-Kings-Rules-web.pdf",
+  "page": 5,
+  "bbox_pt": [
+   44.4,
+   369.7,
+   178.6,
+   461.9
+  ],
+  "image_object": null,
+  "method": "pdftoppm 600 dpi page-region crop; rendered from a working copy with the purchaser line redacted; crop compared with (identical but for 12 px of resampling noise, 0 of them above 16 levels, out of 859392) the unredacted page region and 30 pt clear of page head and foot",
+  "file": "assets/frames/ast-0156-four-kings-cards-p05-data-card-and-behaviour-cards.png",
+  "format": "png",
+  "dims": "1119×768 px",
+  "has_alpha": false,
+  "bytes": 808223,
+  "notes": "Cut from a page render because the card is built on the page from a texture, an art layer and live text (no single image object): the parchment page shows at the rounded corners. Small on the page (about 57 pt wide per card).",
+  "phase": 3,
+  "design": {
+   "subject": "The Four Kings: Data Card and Behaviour Cards as fanned on the contents page",
+   "mood": "component, fanned cards",
+   "suggested_use": "spot",
+   "also_suits": [],
+   "suggested_for": "15 Boss Encounters",
+   "hdr": null,
+   "baked": "Card faces and backs: their titles and text are part of the image.",
+   "kind": "card fan"
+  }
+ },
+ {
+  "id": "AST-0156.13",
+  "parent": "AST-0156",
+  "name": "The Four Kings booklet p.5 card fan: Treasure Cards N",
+  "type": "frame",
+  "src": "DS-Four-Kings-Rules-web.pdf",
+  "page": 5,
+  "bbox_pt": [
+   192.8,
+   382.6,
+   280.8,
+   462.5
+  ],
+  "image_object": null,
+  "method": "pdftoppm 600 dpi page-region crop; rendered from a working copy with the purchaser line redacted; crop compared with (identical but for 13 px of resampling noise, 4 of them above 16 levels, out of 487445) the unredacted page region and 30 pt clear of page head and foot",
+  "file": "assets/frames/ast-0156-four-kings-cards-p05-treasure-cards-n.png",
+  "format": "png",
+  "dims": "733×665 px",
+  "has_alpha": false,
+  "bytes": 371257,
+  "notes": "Cut from a page render because the card is built on the page from a texture, an art layer and live text (no single image object): the parchment page shows at the rounded corners. Small on the page (about 57 pt wide per card).",
+  "phase": 3,
+  "design": {
+   "subject": "The Four Kings: Treasure Cards N as fanned on the contents page",
+   "mood": "component, fanned cards",
+   "suggested_use": "spot",
+   "also_suits": [],
+   "suggested_for": "15 Boss Encounters",
+   "hdr": null,
+   "baked": "Card faces and backs: their titles and text are part of the image.",
+   "kind": "card fan"
+  }
+ },
+ {
+  "id": "AST-0156.14",
+  "parent": "AST-0156",
+  "name": "The Four Kings booklet p.5 card fan: Level Encounter Cards",
+  "type": "frame",
+  "src": "DS-Four-Kings-Rules-web.pdf",
+  "page": 5,
+  "bbox_pt": [
+   172.3,
+   471.4,
+   292.5,
+   564.3
+  ],
+  "image_object": null,
+  "method": "pdftoppm 600 dpi page-region crop; rendered from a working copy with the purchaser line redacted; crop compared with (identical but for 11 px of resampling noise, 0 of them above 16 levels, out of 774774) the unredacted page region and 30 pt clear of page head and foot",
+  "file": "assets/frames/ast-0156-four-kings-cards-p05-level-encounter-cards.png",
+  "format": "png",
+  "dims": "1001×774 px",
+  "has_alpha": false,
+  "bytes": 578349,
+  "notes": "Cut from a page render because the card is built on the page from a texture, an art layer and live text (no single image object): the parchment page shows at the rounded corners. Small on the page (about 57 pt wide per card).",
+  "phase": 3,
+  "design": {
+   "subject": "The Four Kings: Level Encounter Cards as fanned on the contents page",
+   "mood": "component, fanned cards",
+   "suggested_use": "spot",
+   "also_suits": [],
+   "suggested_for": "17 Boss Special Rules",
+   "hdr": null,
+   "baked": "Card faces and backs: their titles and text are part of the image.",
+   "kind": "card fan"
+  }
+ },
+ {
+  "id": "AST-0156.15",
+  "parent": "AST-0156",
+  "name": "The Four Kings booklet p.8: level 4 encounter card \"New Londo Ruins\" with its numbered call-outs",
+  "type": "frame",
+  "src": "DS-Four-Kings-Rules-web.pdf",
+  "page": 8,
+  "bbox_pt": [
+   59.0,
+   206.6,
+   206.0,
+   401.1
+  ],
+  "image_object": null,
+  "method": "pdftoppm 450 dpi page-region crop; rendered from a working copy with the purchaser line redacted; crop pixel-identical to the unredacted page region and 30 pt clear of page head and foot",
+  "file": "assets/frames/ast-0156-four-kings-level4-encounter-card-new-londo-ruins.png",
+  "format": "png",
+  "dims": "919×1216 px",
+  "has_alpha": false,
+  "bytes": 1033390,
+  "notes": "Cut from a page render because the card is built on the page from a texture, an art layer and live text (no single image object): the parchment page shows at the rounded corners.",
+  "phase": 3,
+  "design": {
+   "subject": "Level 4 encounter card \"New Londo Ruins\" with numbered call-outs 1 to 7",
+   "mood": "card face, annotated",
+   "suggested_use": "spot",
+   "also_suits": [
+    "column plate"
+   ],
+   "suggested_for": "19 Campaigns",
+   "hdr": null,
+   "baked": "Card face: the title, icons and rules text are part of the card image. Gold call-out numbers 1 to 7 from the anatomy figure sit on its edges.",
+   "kind": "card face"
+  }
+ },
+ {
+  "id": "AST-0156.16",
+  "parent": "AST-0156",
+  "name": "The Four Kings booklet p.11: mega-boss data card \"The Four Kings\" with its numbered call-outs",
+  "type": "frame",
+  "src": "DS-Four-Kings-Rules-web.pdf",
+  "page": 11,
+  "bbox_pt": [
+   51.9,
+   117.3,
+   199.0,
+   310.3
+  ],
+  "image_object": null,
+  "method": "pdftoppm 450 dpi page-region crop; rendered from a working copy with the purchaser line redacted; crop pixel-identical to the unredacted page region and 30 pt clear of page head and foot",
+  "file": "assets/frames/ast-0156-four-kings-data-card.png",
+  "format": "png",
+  "dims": "919×1206 px",
+  "has_alpha": false,
+  "bytes": 1157419,
+  "notes": "Cut from a page render because the card is built on the page from a texture, an art layer and live text (no single image object): the parchment page shows at the rounded corners.",
+  "phase": 3,
+  "design": {
+   "subject": "Mega-boss data card \"The Four Kings\" with numbered call-outs 1 to 8",
+   "mood": "card face, annotated",
+   "suggested_use": "column plate",
+   "also_suits": [
+    "spot"
+   ],
+   "suggested_for": "15 Boss Encounters",
+   "hdr": null,
+   "baked": "Card face: the title, icons and rules text are part of the card image. Gold call-out numbers 1 to 8 from the anatomy figure sit on its edges.",
+   "kind": "card face"
+  }
+ },
+ {
+  "id": "AST-0156.17",
+  "parent": "AST-0156",
+  "name": "The Four Kings booklet p.11: behaviour card \"Homing Abyss Arrow\"",
+  "type": "frame",
+  "src": "DS-Four-Kings-Rules-web.pdf",
+  "page": 11,
+  "bbox_pt": [
+   58.9,
+   340.3,
+   192.0,
+   519.3
+  ],
+  "image_object": null,
+  "method": "pdftoppm 450 dpi page-region crop; rendered from a working copy with the purchaser line redacted; crop pixel-identical to the unredacted page region and 30 pt clear of page head and foot",
+  "file": "assets/frames/ast-0156-four-kings-behaviour-card-homing-abyss-arrow.png",
+  "format": "png",
+  "dims": "831×1119 px",
+  "has_alpha": false,
+  "bytes": 971589,
+  "notes": "Cut from a page render because the card is built on the page from a texture, an art layer and live text (no single image object): the parchment page shows at the rounded corners.",
+  "phase": 3,
+  "design": {
+   "subject": "Mega-boss behaviour card \"Homing Abyss Arrow\"",
+   "mood": "card face",
+   "suggested_use": "spot",
+   "also_suits": [
+    "column plate"
+   ],
+   "suggested_for": "16 Boss Turns",
+   "hdr": null,
+   "baked": "Card face: the title, icons and rules text are part of the card image.",
+   "kind": "card face"
+  }
+ },
+ {
+  "id": "AST-0156.18",
+  "parent": "AST-0156",
+  "name": "The Four Kings booklet p.12: behaviour decks as laid out for the encounter (Standard behaviour cards Second king behaviour cards Third king behaviour cards Fourth king behaviour cards)",
+  "type": "diagram",
+  "src": "DS-Four-Kings-Rules-web.pdf",
+  "page": 12,
+  "bbox_pt": [
+   57.5,
+   332.1,
+   370.6,
+   450.6
+  ],
+  "image_object": null,
+  "method": "pdftoppm 450 dpi page-region crop; rendered from a working copy with the purchaser line redacted; crop compared with (identical but for 17 px of resampling noise, 6 of them above 16 levels, out of 1450137) the unredacted page region and 30 pt clear of page head and foot",
+  "file": "assets/diagrams/ast-0156-four-kings-behaviour-decks-p12.png",
+  "format": "png",
+  "dims": "1957×741 px",
+  "has_alpha": false,
+  "bytes": 1473182,
+  "notes": "Cut from a page render because the card is built on the page from a texture, an art layer and live text (no single image object): the parchment page shows at the rounded corners. This is the plate that shows the special rule: the decks the boss draws from.",
+  "phase": 3,
+  "design": {
+   "subject": "The Four Kings: the behaviour decks of the encounter (Standard behaviour cards Second king behaviour cards Third king behaviour cards Fourth king behaviour cards)",
+   "mood": "component, fanned cards",
+   "suggested_use": "column plate",
+   "also_suits": [],
+   "suggested_for": "17 Boss Special Rules",
+   "hdr": null,
+   "baked": "Card faces and backs: their titles and text are part of the image.",
+   "kind": "diagram"
+  }
+ },
+ {
+  "id": "AST-0157.1",
+  "parent": "AST-0157",
+  "name": "Gaping Dragon expansion front cover, logo baked in",
+  "type": "art",
+  "src": "DS-GaD-Rules-web.pdf",
+  "page": 1,
+  "bbox_pt": [
+   -0.0,
+   0.0,
+   421.0,
+   612.3
+  ],
+  "image_object": {
+   "xref": 20,
+   "pdfimages_num": 0,
+   "colour": "cmyk",
+   "native": "1754×2551",
+   "has_mask": true,
+   "smask_pdfimages_num": 1,
+   "mask_opaque": true,
+   "ppi_as_placed": 300
+  },
+  "method": "pdfimages -png p.1 image #0 (object 20, 1754×2551 cmyk + soft mask #1 (opaque everywhere, dropped)); native resolution, no resampling; saved as JPEG quality 92 (4:4:4)",
+  "file": "assets/art/ast-0157-gaping-dragon-cover.jpg",
+  "format": "jpg",
+  "dims": "1754×2551 px",
+  "has_alpha": false,
+  "bytes": 704484,
+  "notes": "The white \"DARK SOULS / THE BOARD GAME\" logo lock-up is baked into the image (lower third).",
+  "phase": 3,
+  "design": {
+   "subject": "The Gaping Dragon rears in blue gloom, its ribcage a maw of teeth, with the game logo",
+   "mood": "monstrous, blue, gaping",
+   "suggested_use": "cover",
+   "also_suits": [],
+   "suggested_for": "17 Boss Special Rules",
+   "hdr": null,
+   "baked": "The white \"DARK SOULS / THE BOARD GAME\" logo lock-up is baked into the image (lower third).",
+   "kind": "painting"
+  }
+ },
+ {
+  "id": "AST-0157.2",
+  "parent": "AST-0157",
+  "name": "Gaping Dragon front cover, art above the logo",
+  "type": "art",
+  "src": "DS-GaD-Rules-web.pdf",
+  "page": 1,
+  "bbox_pt": [
+   -0.0,
+   0.0,
+   421.0,
+   612.3
+  ],
+  "image_object": {
+   "xref": 20,
+   "pdfimages_num": 0,
+   "colour": "cmyk",
+   "native": "1754×2551",
+   "has_mask": true,
+   "smask_pdfimages_num": 1,
+   "mask_opaque": true,
+   "crop_px": [
+    0,
+    0,
+    1754,
+    1569
+   ],
+   "ppi_as_placed": 300
+  },
+  "method": "pdfimages -png p.1 image #0 (object 20, 1754×2551 cmyk + soft mask #1 (opaque everywhere, dropped)); cropped to px box (0, 0, 1754, 1569) of the object; native resolution, no resampling; saved as JPEG quality 92 (4:4:4)",
+  "file": "assets/art/ast-0157-gaping-dragon-cover-art-only.jpg",
+  "format": "jpg",
+  "dims": "1754×1569 px",
+  "has_alpha": false,
+  "bytes": 550132,
+  "notes": "Text-free crop: the top 61.5 % of the cover image, ending just above the logo flourish.",
+  "phase": 3,
+  "design": {
+   "subject": "The Gaping Dragon rears in blue gloom, its ribcage a maw of teeth",
+   "mood": "monstrous, blue, gaping",
+   "suggested_use": "column plate",
+   "also_suits": [
+    "spot"
+   ],
+   "suggested_for": "17 Boss Special Rules",
+   "hdr": null,
+   "baked": null,
+   "kind": "painting"
+  }
+ },
+ {
+  "id": "AST-0157.3",
+  "parent": "AST-0157",
+  "name": "Gaping Dragon expansion back cover",
+  "type": "art",
+  "src": "DS-GaD-Rules-web.pdf",
+  "page": 16,
+  "bbox_pt": [
+   0.0,
+   0.0,
+   420.9,
+   612.3
+  ],
+  "image_object": {
+   "xref": 2482,
+   "pdfimages_num": 1,
+   "colour": "cmyk",
+   "native": "1754×2551",
+   "has_mask": true,
+   "smask_pdfimages_num": 2,
+   "mask_opaque": true,
+   "ppi_as_placed": 300
+  },
+  "method": "pdfimages -png p.16 image #1 (object 2482, 1754×2551 cmyk + soft mask #2 (opaque everywhere, dropped)); native resolution, no resampling; saved as JPEG quality 92 (4:4:4)",
+  "file": "assets/art/ast-0157-gaping-dragon-backcover.jpg",
+  "format": "jpg",
+  "dims": "1754×2551 px",
+  "has_alpha": false,
+  "bytes": 384245,
+  "notes": "The lower part is black (room for back-cover text).",
+  "phase": 3,
+  "design": {
+   "subject": "The Gaping Dragon, pale wings spread, small on black",
+   "mood": "pale, distant, black",
+   "suggested_use": "back cover",
+   "also_suits": [
+    "full-page plate",
+    "column plate"
+   ],
+   "suggested_for": "19 Campaigns",
+   "hdr": null,
+   "baked": null,
+   "kind": "painting"
+  }
+ },
+ {
+  "id": "AST-0157.4",
+  "parent": "AST-0157",
+  "name": "Gaping Dragon booklet p.3: sepia sketch of a long vaulted corridor",
+  "type": "art",
+  "src": "DS-GaD-Rules-web.pdf",
+  "page": 3,
+  "bbox_pt": [
+   55.9,
+   48.8,
+   357.8,
+   558.8
+  ],
+  "image_object": {
+   "xref": 54,
+   "pdfimages_num": 1,
+   "colour": "cmyk",
+   "native": "1324×1990",
+   "has_mask": false,
+   "ppi_as_placed": 316
+  },
+  "method": "pdfimages -png p.3 image #1 (object 54, 1324×1990 cmyk, no soft mask); native resolution, no resampling; saved as JPEG quality 92 (4:4:4)",
+  "file": "assets/art/ast-0157-gaping-dragon-art-vaulted-corridor-sketch.jpg",
+  "format": "jpg",
+  "dims": "1324×1990 px",
+  "has_alpha": false,
+  "bytes": 1501232,
+  "notes": "",
+  "phase": 3,
+  "design": {
+   "subject": "Sepia sketch of a long vaulted corridor receding into the dark",
+   "mood": "sepia, receding, quiet",
+   "suggested_use": "full-page plate",
+   "also_suits": [
+    "chapter header strip",
+    "column plate"
+   ],
+   "suggested_for": "19 Campaigns",
+   "hdr": 0.45,
+   "baked": null,
+   "kind": "painting"
+  }
+ },
+ {
+  "id": "AST-0157.5",
+  "parent": "AST-0157",
+  "name": "Gaping Dragon booklet p.6: monochrome study of the Gaping Dragon maw",
+  "type": "art",
+  "src": "DS-GaD-Rules-web.pdf",
+  "page": 6,
+  "bbox_pt": [
+   62.9,
+   48.8,
+   365.2,
+   558.7
+  ],
+  "image_object": {
+   "xref": 820,
+   "pdfimages_num": 1,
+   "colour": "index",
+   "native": "530×894",
+   "has_mask": true,
+   "smask_pdfimages_num": 2,
+   "mask_opaque": true,
+   "ppi_as_placed": 126
+  },
+  "method": "pdfimages -png p.6 image #1 (object 820, 530×894 index + soft mask #2 (opaque everywhere, dropped)); native resolution, no resampling",
+  "file": "assets/art/ast-0157-gaping-dragon-art-maw-study-tall.png",
+  "format": "png",
+  "dims": "530×894 px",
+  "has_alpha": false,
+  "bytes": 385782,
+  "notes": "530 px wide.",
+  "phase": 3,
+  "design": {
+   "subject": "Monochrome study of the Gaping Dragon's maw of ribs and tendrils",
+   "mood": "monochrome, writhing, close",
+   "suggested_use": "column plate",
+   "also_suits": [
+    "spot"
+   ],
+   "suggested_for": "17 Boss Special Rules",
+   "hdr": null,
+   "baked": null,
+   "kind": "painting"
+  }
+ },
+ {
+  "id": "AST-0157.6",
+  "parent": "AST-0157",
+  "name": "Gaping Dragon booklet p.10: pencil concept sheet of the Gaping Dragon, on white",
+  "type": "art",
+  "src": "DS-GaD-Rules-web.pdf",
+  "page": 10,
+  "bbox_pt": [
+   63.0,
+   227.8,
+   364.9,
+   558.7
+  ],
+  "image_object": {
+   "xref": 1545,
+   "pdfimages_num": 1,
+   "colour": "cmyk",
+   "native": "1258×1379",
+   "has_mask": false,
+   "ppi_as_placed": 300
+  },
+  "method": "pdfimages -png p.10 image #1 (object 1545, 1258×1379 cmyk, no soft mask); native resolution, no resampling; saved as JPEG quality 92 (4:4:4)",
+  "file": "assets/art/ast-0157-gaping-dragon-concept-sheet-on-white.jpg",
+  "format": "jpg",
+  "dims": "1258×1379 px",
+  "has_alpha": false,
+  "bytes": 603375,
+  "notes": "White ground is part of the image.",
+  "phase": 3,
+  "design": {
+   "subject": "Pencil concept sheet of the Gaping Dragon in several views, on white",
+   "mood": "studied, pencil, anatomical",
+   "suggested_use": "column plate",
+   "also_suits": [
+    "spot"
+   ],
+   "suggested_for": "17 Boss Special Rules",
+   "hdr": null,
+   "baked": null,
+   "kind": "painting"
+  }
+ },
+ {
+  "id": "AST-0157.7",
+  "parent": "AST-0157",
+  "name": "Gaping Dragon booklet p.14: mossy ruins dropping into green-black depths",
+  "type": "art",
+  "src": "DS-GaD-Rules-web.pdf",
+  "page": 14,
+  "bbox_pt": [
+   63.1,
+   329.8,
+   201.9,
+   559.9
+  ],
+  "image_object": {
+   "xref": 2443,
+   "pdfimages_num": 1,
+   "colour": "cmyk",
+   "native": "579×959",
+   "has_mask": false,
+   "ppi_as_placed": 300
+  },
+  "method": "pdfimages -png p.14 image #1 (object 2443, 579×959 cmyk, no soft mask); native resolution, no resampling; saved as JPEG quality 92 (4:4:4)",
+  "file": "assets/art/ast-0157-gaping-dragon-art-mossy-depths.jpg",
+  "format": "jpg",
+  "dims": "579×959 px",
+  "has_alpha": false,
+  "bytes": 209295,
+  "notes": "",
+  "phase": 3,
+  "design": {
+   "subject": "Mossy ruins drop away into green-black depths",
+   "mood": "dank, green, deep",
+   "suggested_use": "spot",
+   "also_suits": [
+    "column plate"
+   ],
+   "suggested_for": "19 Campaigns",
+   "hdr": null,
+   "baked": null,
+   "kind": "painting"
+  }
+ },
+ {
+  "id": "AST-0157.8",
+  "parent": "AST-0157",
+  "name": "Gaping Dragon booklet p.15: monochrome study of the Gaping Dragon maw, wide",
+  "type": "art",
+  "src": "DS-GaD-Rules-web.pdf",
+  "page": 15,
+  "bbox_pt": [
+   219.0,
+   449.8,
+   357.8,
+   559.9
+  ],
+  "image_object": {
+   "xref": 2465,
+   "pdfimages_num": 1,
+   "colour": "index",
+   "native": "862×684",
+   "has_mask": true,
+   "smask_pdfimages_num": 2,
+   "mask_opaque": true,
+   "ppi_as_placed": 447
+  },
+  "method": "pdfimages -png p.15 image #1 (object 2465, 862×684 index + soft mask #2 (opaque everywhere, dropped)); native resolution, no resampling; saved as JPEG quality 92 (4:4:4)",
+  "file": "assets/art/ast-0157-gaping-dragon-art-maw-study-wide.jpg",
+  "format": "jpg",
+  "dims": "862×684 px",
+  "has_alpha": false,
+  "bytes": 89136,
+  "notes": "",
+  "phase": 3,
+  "design": {
+   "subject": "Monochrome study of the Gaping Dragon's maw, wide framing",
+   "mood": "monochrome, writhing, close",
+   "suggested_use": "spot",
+   "also_suits": [
+    "column plate"
+   ],
+   "suggested_for": "16 Boss Turns",
+   "hdr": null,
+   "baked": null,
+   "kind": "painting"
+  }
+ },
+ {
+  "id": "AST-0157.9",
+  "parent": "AST-0157",
+  "name": "Gaping Dragon booklet p.15: pale golden buttresses and spires from above",
+  "type": "art",
+  "src": "DS-GaD-Rules-web.pdf",
+  "page": 15,
+  "bbox_pt": [
+   56.0,
+   323.7,
+   194.8,
+   433.9
+  ],
+  "image_object": {
+   "xref": 2467,
+   "pdfimages_num": 3,
+   "colour": "cmyk",
+   "native": "579×459",
+   "has_mask": false,
+   "ppi_as_placed": 300
+  },
+  "method": "pdfimages -png p.15 image #3 (object 2467, 579×459 cmyk, no soft mask); native resolution, no resampling",
+  "file": "assets/art/ast-0157-gaping-dragon-art-golden-buttresses.png",
+  "format": "png",
+  "dims": "579×459 px",
+  "has_alpha": false,
+  "bytes": 457363,
+  "notes": "",
+  "phase": 3,
+  "design": {
+   "subject": "Pale golden buttresses and spires seen from above",
+   "mood": "lofty, golden, pale",
+   "suggested_use": "spot",
+   "also_suits": [],
+   "suggested_for": "19 Campaigns",
+   "hdr": null,
+   "baked": null,
+   "kind": "painting"
+  }
+ },
+ {
+  "id": "AST-0157.10",
+  "parent": "AST-0157",
+  "name": "Gaping Dragon booklet p.15: sepia sketch of a stair past a stone arch",
+  "type": "art",
+  "src": "DS-GaD-Rules-web.pdf",
+  "page": 15,
+  "bbox_pt": [
+   56.0,
+   59.8,
+   194.8,
+   169.9
+  ],
+  "image_object": {
+   "xref": 2468,
+   "pdfimages_num": 4,
+   "colour": "cmyk",
+   "native": "579×459",
+   "has_mask": false,
+   "ppi_as_placed": 300
+  },
+  "method": "pdfimages -png p.15 image #4 (object 2468, 579×459 cmyk, no soft mask); native resolution, no resampling",
+  "file": "assets/art/ast-0157-gaping-dragon-art-stair-and-arch-sketch.png",
+  "format": "png",
+  "dims": "579×459 px",
+  "has_alpha": false,
+  "bytes": 539382,
+  "notes": "",
+  "phase": 3,
+  "design": {
+   "subject": "Sepia sketch of a stair climbing past a stone arch",
+   "mood": "sepia, quiet, worn",
+   "suggested_use": "spot",
+   "also_suits": [],
+   "suggested_for": "19 Campaigns",
+   "hdr": null,
+   "baked": null,
+   "kind": "painting"
+  }
+ },
+ {
+  "id": "AST-0157.11",
+  "parent": "AST-0157",
+  "name": "Gaping Dragon mega-boss miniature render",
+  "type": "photography",
+  "src": "DS-GaD-Rules-web.pdf",
+  "page": 4,
+  "bbox_pt": [
+   21.3,
+   278.3,
+   369.9,
+   552.8
+  ],
+  "image_object": {
+   "xref": 79,
+   "pdfimages_num": 15,
+   "colour": "cmyk",
+   "native": "2024×1594",
+   "has_mask": true,
+   "smask_pdfimages_num": 16,
+   "ppi_as_placed": 418
+  },
+  "method": "pdfimages -png p.4 image #15 (object 79, 2024×1594 cmyk + soft mask #16 composited to RGBA); trimmed to alpha bounds; native resolution, no resampling",
+  "file": "assets/photography/ast-0157-gaping-dragon-miniature.png",
+  "format": "png",
+  "dims": "2024×1594 px",
+  "has_alpha": true,
+  "bytes": 2114481,
+  "notes": "SFG miniature render, cut out by its own soft mask. Largest copy in the booklet.",
+  "phase": 3,
+  "design": {
+   "subject": "Gaping Dragon mega-boss miniature, grey resin render cut out by its own mask",
+   "mood": "miniature, grey, imposing",
+   "suggested_use": "column plate",
+   "also_suits": [
+    "spot",
+    "full-page plate"
+   ],
+   "suggested_for": "17 Boss Special Rules",
+   "hdr": null,
+   "baked": null,
+   "kind": "miniature render"
+  }
+ },
+ {
+  "id": "AST-0157.12",
+  "parent": "AST-0157",
+  "name": "Gaping Dragon mega-boss game board, boss side (p.5)",
+  "type": "photography",
+  "src": "DS-GaD-Rules-web.pdf",
+  "page": 5,
+  "bbox_pt": [
+   46.3,
+   44.1,
+   367.3,
+   365.1
+  ],
+  "image_object": {
+   "xref": 795,
+   "pdfimages_num": 105,
+   "colour": "cmyk",
+   "native": "1338×1338",
+   "has_mask": true,
+   "smask_pdfimages_num": 106,
+   "mask_opaque": true,
+   "ppi_as_placed": 300
+  },
+  "method": "pdfimages -png p.5 image #105 (object 795, 1338×1338 cmyk + soft mask #106 (opaque everywhere, dropped)); native resolution, no resampling",
+  "file": "assets/photography/ast-0157-gaping-dragon-game-board-boss-side.png",
+  "format": "png",
+  "dims": "1338×1338 px",
+  "has_alpha": false,
+  "bytes": 2064828,
+  "notes": "Node markers are printed on the board. Use this side to show where the special rule plays out.",
+  "phase": 3,
+  "design": {
+   "subject": "The Gaping Dragon mega-boss game board, boss side, with its node markings",
+   "mood": "component, top-down, arena",
+   "suggested_use": "column plate",
+   "also_suits": [
+    "full-page plate",
+    "spot"
+   ],
+   "suggested_for": "17 Boss Special Rules",
+   "hdr": null,
+   "baked": null,
+   "kind": "game board"
+  }
+ },
+ {
+  "id": "AST-0157.13",
+  "parent": "AST-0157",
+  "name": "Gaping Dragon mega-boss game board, encounter side (p.9, larger of the two copies)",
+  "type": "photography",
+  "src": "DS-GaD-Rules-web.pdf",
+  "page": 9,
+  "bbox_pt": [
+   58.8,
+   80.6,
+   355.1,
+   376.9
+  ],
+  "image_object": {
+   "xref": 1506,
+   "pdfimages_num": 1,
+   "colour": "cmyk",
+   "native": "1235×1235",
+   "has_mask": true,
+   "smask_pdfimages_num": 2,
+   "mask_opaque": true,
+   "ppi_as_placed": 300
+  },
+  "method": "pdfimages -png p.9 image #1 (object 1506, 1235×1235 cmyk + soft mask #2 (opaque everywhere, dropped)); native resolution, no resampling",
+  "file": "assets/photography/ast-0157-gaping-dragon-game-board-encounter-side.png",
+  "format": "png",
+  "dims": "1235×1235 px",
+  "has_alpha": false,
+  "bytes": 2150705,
+  "notes": "The tokens and the card that lie on it on p.9 are separate objects and are not in this image.",
+  "phase": 3,
+  "design": {
+   "subject": "The Gaping Dragon game board, level 4 encounter side",
+   "mood": "component, top-down, tile",
+   "suggested_use": "column plate",
+   "also_suits": [
+    "spot"
+   ],
+   "suggested_for": "19 Campaigns",
+   "hdr": null,
+   "baked": null,
+   "kind": "game board"
+  }
+ },
+ {
+  "id": "AST-0157.14",
+  "parent": "AST-0157",
+  "name": "Corrosion condition token (Gaping Dragon special rule)",
+  "type": "photography",
+  "src": "DS-GaD-Rules-web.pdf",
+  "page": 5,
+  "bbox_pt": [
+   310.3,
+   494.8,
+   345.3,
+   535.2
+  ],
+  "image_object": {
+   "xref": 801,
+   "pdfimages_num": 303,
+   "colour": "cmyk",
+   "native": "205×236",
+   "has_mask": true,
+   "smask_pdfimages_num": 304,
+   "ppi_as_placed": 421
+  },
+  "method": "pdfimages -png p.5 image #303 (object 801, 205×236 cmyk + soft mask #304 composited to RGBA); trimmed to alpha bounds; native resolution, no resampling",
+  "file": "assets/photography/ast-0157-gaping-dragon-corrosion-token.png",
+  "format": "png",
+  "dims": "205×236 px",
+  "has_alpha": true,
+  "bytes": 51727,
+  "notes": "Small: inline or thumbnail size only.",
+  "phase": 3,
+  "design": {
+   "subject": "A green corrosion condition token",
+   "mood": "token, acid green",
+   "suggested_use": "spot",
+   "also_suits": [],
+   "suggested_for": "17 Boss Special Rules",
+   "hdr": null,
+   "baked": null,
+   "kind": "token"
+  }
+ },
+ {
+  "id": "AST-0157.15",
+  "parent": "AST-0157",
+  "name": "Gaping Dragon booklet p.5 card fan: Data Card and Behaviour Cards",
+  "type": "frame",
+  "src": "DS-GaD-Rules-web.pdf",
+  "page": 5,
+  "bbox_pt": [
+   44.4,
+   369.7,
+   178.6,
+   461.9
+  ],
+  "image_object": null,
+  "method": "pdftoppm 600 dpi page-region crop; rendered from a working copy with the purchaser line redacted; crop compared with (identical but for 12 px of resampling noise, 0 of them above 16 levels, out of 859392) the unredacted page region and 30 pt clear of page head and foot",
+  "file": "assets/frames/ast-0157-gaping-dragon-cards-p05-data-card-and-behaviour-cards.png",
+  "format": "png",
+  "dims": "1119×768 px",
+  "has_alpha": false,
+  "bytes": 802587,
+  "notes": "Cut from a page render because the card is built on the page from a texture, an art layer and live text (no single image object): the parchment page shows at the rounded corners. Small on the page (about 57 pt wide per card).",
+  "phase": 3,
+  "design": {
+   "subject": "Gaping Dragon: Data Card and Behaviour Cards as fanned on the contents page",
+   "mood": "component, fanned cards",
+   "suggested_use": "spot",
+   "also_suits": [],
+   "suggested_for": "15 Boss Encounters",
+   "hdr": null,
+   "baked": "Card faces and backs: their titles and text are part of the image.",
+   "kind": "card fan"
+  }
+ },
+ {
+  "id": "AST-0157.16",
+  "parent": "AST-0157",
+  "name": "Gaping Dragon booklet p.5 card fan: Treasure Cards",
+  "type": "frame",
+  "src": "DS-GaD-Rules-web.pdf",
+  "page": 5,
+  "bbox_pt": [
+   192.8,
+   382.6,
+   280.8,
+   462.5
+  ],
+  "image_object": null,
+  "method": "pdftoppm 600 dpi page-region crop; rendered from a working copy with the purchaser line redacted; crop compared with (identical but for 15 px of resampling noise, 4 of them above 16 levels, out of 487445) the unredacted page region and 30 pt clear of page head and foot",
+  "file": "assets/frames/ast-0157-gaping-dragon-cards-p05-treasure-cards.png",
+  "format": "png",
+  "dims": "733×665 px",
+  "has_alpha": false,
+  "bytes": 390660,
+  "notes": "Cut from a page render because the card is built on the page from a texture, an art layer and live text (no single image object): the parchment page shows at the rounded corners. Small on the page (about 57 pt wide per card).",
+  "phase": 3,
+  "design": {
+   "subject": "Gaping Dragon: Treasure Cards as fanned on the contents page",
+   "mood": "component, fanned cards",
+   "suggested_use": "spot",
+   "also_suits": [],
+   "suggested_for": "15 Boss Encounters",
+   "hdr": null,
+   "baked": "Card faces and backs: their titles and text are part of the image.",
+   "kind": "card fan"
+  }
  }
 ]
