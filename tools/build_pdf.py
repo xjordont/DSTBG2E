@@ -298,6 +298,10 @@ class Chapter:
 
     def decorate(self, heads):
         soup = self.soup
+        # every table row carries an id, so that the page map shows where each row fell (QA: widow and orphan rows)
+        for ti, tb in enumerate(soup.find_all('table'), 1):
+            for ri, tr in enumerate(tb.find_all('tr')):
+                tr['id'] = f'{self.id}-t{ti}-r{ri}'
         is_gloss = self.num == '21'; is_faq = self.num == '22'
         for p in soup.find_all('p'):
             first = next((c for c in p.contents if not (isinstance(c, NavigableString) and not c.strip())), None)

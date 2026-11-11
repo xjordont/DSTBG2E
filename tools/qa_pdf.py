@@ -135,6 +135,22 @@ if target:
 else:
     note('Page count', f'{len(doc)} pages (no target set)')
 
+# 9b table rows: no body row stands alone at the foot or head of a column when its table breaks
+rows = {}
+for e in pm:
+    m = re.match(r'(.+-t\d+)-r(\d+)$', e['id'])
+    if m and e['tag'] == 'tr':
+        rows.setdefault(m.group(1), []).append((int(m.group(2)), e['page'], round(e['x'])))
+lone = []
+for tid, rs in rows.items():
+    body = sorted(r for r in rs if r[0] > 0)                 # row 0 is the header row
+    parts = {}
+    for i, page, x in body:
+        parts.setdefault((page, x), []).append(i)
+    if len(parts) > 1:
+        lone += [f'{tid} p.{k[0]}' for k, v in parts.items() if len(v) < 2 and len(body) > 3]
+add(not lone, 'No table row alone at the head or foot of a column', f'{len(rows)} tables, {sum(1 for r in rows.values() if len({(p_, x) for _, p_, x in r}) > 1)} broken across columns; lone rows {lone[:8]}')
+
 # 10 manifest against the assembled book: every asset marked placed is really used, and every extracted file
 #    that is not used says why (a file under Provenance Review must not be used at all)
 man = list(csv.DictReader(open(ROOT / '21_asset_manifest.csv', encoding='utf-8')))
