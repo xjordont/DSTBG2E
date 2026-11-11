@@ -142,14 +142,16 @@ p.faq-a { margin-top: 1.6pt; }
 p.faq-q .ql, p.faq-a .ql { font: 700 7.4pt "Cinzel"; color: #7a622b; margin-right: 0.4em; }
 
 /* ---------- cover and front matter ---------- */
-.cover { page: cover; width: 8.5in; height: 11in; background-color: #0b0a09; color: #f4f2ea; text-align: center; position: relative; overflow: hidden; }
+.cover { page: cover; width: 8.5in; height: 11in; background: #070605 url("../assets/art/ast-0118-core-2017-front-cover-composition.png") center top / cover no-repeat; color: #f4f2ea; text-align: center; position: relative; overflow: hidden; }
+.cover .cscales { display: none; }
 .cover .cscales { position: absolute; left: -0.3in; right: -0.3in; top: 4.4in; height: 5.6in;
                   background-image: radial-gradient(ellipse 38% 44% at 50% 46%, rgba(11,10,9,0) 0%, rgba(11,10,9,0.35) 45%, rgba(11,10,9,0.86) 78%, rgba(11,10,9,1) 100%), url("../build/tex/lava_scales_clean.jpg");
                   background-size: cover; background-position: center; }
-.cover .ctitle { position: absolute; left: 0.8in; right: 0.8in; top: 1.55in; }
-.cover .c1 { font: 700 54pt/1.02 "Cinzel"; letter-spacing: 0.07em; }
-.cover .c2 { font: 600 20pt/1.2 "Cinzel"; letter-spacing: 0.32em; margin-top: 10pt; padding-left: 0.32em; }
-.cover .crule { width: 3.4in; margin: 24pt auto 20pt auto; border-top: 0.8pt solid #c9ad6a; height: 0; }
+.cover .ctitle { position: absolute; left: 1.4in; right: 1.4in; top: 5.28in; padding: 16pt 0 20pt 0; background: radial-gradient(ellipse closest-side, rgba(7,6,5,0.82) 0%, rgba(7,6,5,0.6) 55%, rgba(7,6,5,0) 100%); }
+/* the title is the logo in the cover art; its words stay in the text layer for search and screen readers */
+.cover .c1 { font: 700 1pt/1pt "Cinzel"; color: transparent; }
+.cover .c2 { font: 600 1pt/1pt "Cinzel"; color: transparent; }
+.cover .crule { width: 2.7in; margin: 0 auto 17pt auto; border-top: 0.8pt solid #c9ad6a; height: 0; }
 .cover .c3 { font: 600 12.5pt/1.2 "Cinzel"; letter-spacing: 0.36em; color: #c9ad6a; padding-left: 0.36em; }
 .cover .cfoot { position: absolute; left: 0; right: 0; bottom: 0.62in; font: 400 8pt "Cinzel"; letter-spacing: 0.22em; color: rgba(244,242,234,0.8); }
 .front { page: front; break-before: page; }
