@@ -91,18 +91,18 @@ Totals: 24 chapters, 166 sections, 20 orphan empty headings.
 | GAMEPLAY | Soul Reward Table | present — defect | A-053, B-008, B-009, C-030, C-068, C-069, C-098, C-104, C-107, CMP-0007, CMP-0010, F-085 | CMP-0007, CMP-0010 | yes (§7) | line 1401. Stray "i" in header cell ("per characteri"). |
 | GAMEPLAY | (empty heading) | ORPHAN — delete |  | CMP-0006, CMP-0007, CMP-0009, CMP-0010, CMP-0011, CMP-0012, CMP-0014, CMP-0015, CMP-0019, CMP-0020 | yes (§7) | line 1441: empty H2 used as page break |
 | GAMEPLAY | Treasure Rewards | present — to audit | A-057, A-058, A-059, A-060, A-096, A-121, B-032, B-035, C-020, C-027, C-030, C-045, C-056, C-059, C-084, C-087, C-089, C-104, C-119, C-122, CMP-0014, CMP-0015, D-028, D-037, D-041, F-056, F-067, F-085, F-086, F-088, F-089 | CMP-0014, CMP-0015 | yes (§7) | line 1443. |
-| COMBAT BASICS | (chapter) | present — to audit | A-009, A-010, A-023, A-024, A-025, A-026, A-027, A-028, A-029, A-032, A-064, A-078, A-079, A-080, A-081, A-085, A-113, A-115, A-125, B-002, B-003, B-004, B-005, B-006, B-025, B-026, B-031, B-036, B-038, C-015, C-021, C-029, C-030, C-036, C-039, C-047, C-061, C-063, C-066, C-067, C-084, C-104, C-109, C-111, C-119, C-120, C-123, D-008, D-016, D-036, F-015, F-068, F-069, F-085, F-091, F-108, F-109, F-110, F-111, F-112 |  | no | line 1481. |
-| COMBAT BASICS | Target versus Hit | present — to audit | A-032, C-030, C-084, C-104, D-008, F-068, F-091, F-108 |  | no | line 1483. |
-| COMBAT BASICS | Enemy Data Cards | present — to audit | A-026, A-079, A-113, A-125, B-006, C-015, C-030, C-036, C-047, C-061, C-066, C-104, F-109, F-110 |  | no | line 1489. |
-| COMBAT BASICS | Enemy Scaling | present — to audit | A-024, A-025, A-026, A-027, A-028, A-029, A-064, B-002, B-003, B-004, B-005, B-006, B-031, B-036, C-029, C-030, C-066, C-067, C-104, C-109, C-111, D-036 |  | no | line 1519. |
-| COMBAT BASICS | Pushing | present — to audit | A-023, A-025, A-085, C-021, C-030, C-104, C-120, C-123, D-016, F-015, F-091, F-111 |  | no | line 1586. |
-| COMBAT BASICS | Conditions | present — to audit | A-009, A-010, A-078, A-079, A-080, A-081, A-115, B-005, B-025, B-026, B-038, C-029, C-030, C-039, C-063, C-104, C-119, F-069, F-085, F-112 |  | no | line 1598. |
-| COMBAT BASICS | Bleed | present — to audit | B-038, C-030, C-039, C-104, C-119, F-085 |  | no | line 1602. |
-| COMBAT BASICS | Poison | present — to audit | A-081, B-025, C-030, C-039, C-104, C-119, F-085 |  | no | line 1614. |
-| COMBAT BASICS | Frostbite | present — to audit | A-010, B-005, C-030, C-104, C-119, F-085 |  | no | line 1622. |
-| COMBAT BASICS | Stagger | present — to audit | A-009, A-078, A-079, B-005, B-038, C-030, C-104, C-119, F-085 |  | no | line 1632. |
-| COMBAT BASICS | Calamity (Kalameet Expansion) | present — to audit | A-080, A-115, B-005, B-026, C-029, C-030, C-104, C-119, F-085 |  | no | line 1640. |
-| COMBAT BASICS | Corrosion (Gaping Dragon Expansion) | present — to audit | A-080, B-005, C-029, C-030, C-104, C-119, F-085 |  | no | line 1650. |
+| COMBAT BASICS | (chapter) | present — to audit | A-009, A-010, A-023, A-024, A-025, A-026, A-027, A-028, A-029, A-032, A-064, A-078, A-079, A-080, A-081, A-085, A-113, A-115, A-125, B-002, B-003, B-004, B-005, B-006, B-025, B-026, B-031, B-036, B-038, C-015, C-021, C-029, C-030, C-036, C-039, C-047, C-061, C-063, C-066, C-067, C-084, C-104, C-109, C-111, C-119, C-120, C-123, D-008, D-016, D-036, F-015, F-068, F-069, F-085, F-091, F-108, F-109, F-110, F-111, F-112 |  | yes (§8) | line 1481. |
+| COMBAT BASICS | Target versus Hit | present — to audit | A-032, C-030, C-084, C-104, D-008, F-068, F-091, F-108 |  | yes (§8) | line 1483. |
+| COMBAT BASICS | Enemy Data Cards | present — to audit | A-026, A-079, A-113, A-125, B-006, C-015, C-030, C-036, C-047, C-061, C-066, C-104, F-109, F-110 |  | yes (§8) | line 1489. |
+| COMBAT BASICS | Enemy Scaling | present — to audit | A-024, A-025, A-026, A-027, A-028, A-029, A-064, B-002, B-003, B-004, B-005, B-006, B-031, B-036, C-029, C-030, C-066, C-067, C-104, C-109, C-111, D-036 |  | yes (§8) | line 1519. |
+| COMBAT BASICS | Pushing | present — to audit | A-023, A-025, A-085, C-021, C-030, C-104, C-120, C-123, D-016, F-015, F-091, F-111 |  | yes (§8) | line 1586. |
+| COMBAT BASICS | Conditions | present — to audit | A-009, A-010, A-078, A-079, A-080, A-081, A-115, B-005, B-025, B-026, B-038, C-029, C-030, C-039, C-063, C-104, C-119, F-069, F-085, F-112 |  | yes (§8) | line 1598. |
+| COMBAT BASICS | Bleed | present — to audit | B-038, C-030, C-039, C-104, C-119, F-085 |  | yes (§8) | line 1602. |
+| COMBAT BASICS | Poison | present — to audit | A-081, B-025, C-030, C-039, C-104, C-119, F-085 |  | yes (§8) | line 1614. |
+| COMBAT BASICS | Frostbite | present — to audit | A-010, B-005, C-030, C-104, C-119, F-085 |  | yes (§8) | line 1622. |
+| COMBAT BASICS | Stagger | present — to audit | A-009, A-078, A-079, B-005, B-038, C-030, C-104, C-119, F-085 |  | yes (§8) | line 1632. |
+| COMBAT BASICS | Calamity (Kalameet Expansion) | present — to audit | A-080, A-115, B-005, B-026, C-029, C-030, C-104, C-119, F-085 |  | yes (§8) | line 1640. |
+| COMBAT BASICS | Corrosion (Gaping Dragon Expansion) | present — to audit | A-080, B-005, C-029, C-030, C-104, C-119, F-085 |  | yes (§8) | line 1650. |
 | ENEMY TURN | (chapter) | present — to audit | A-013, A-018, A-023, A-025, A-032, A-042, A-068, A-070, A-078, A-079, A-082, A-087, A-113, A-116, A-119, A-120, A-124, B-002, B-005, B-022, B-033, C-015, C-020, C-024, C-027, C-028, C-030, C-036, C-047, C-060, C-083, C-084, C-095, C-101, C-104, C-111, C-112, C-123, D-008, D-016, D-030, D-033, D-039, F-070, F-071, F-072, F-088, F-089, F-090, F-113, F-114, F-115, F-116, F-117 |  | no | line 1660. |
 | ENEMY TURN | Overview | present — to audit | A-078, A-113, A-116, A-124, B-005, C-015, C-020, C-024, C-030, C-036, C-104, F-089, F-113 |  | no | line 1662. |
 | ENEMY TURN | Enemy Movement | present — to audit | A-013, A-023, A-025, A-082, B-005, C-030, C-101, C-104, C-123, D-016, D-039, F-088, F-090, F-114, F-115, F-116, F-117 |  | no | line 1668. |
