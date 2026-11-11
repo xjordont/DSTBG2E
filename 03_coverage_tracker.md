@@ -212,7 +212,7 @@ Totals: 24 chapters, 166 sections, 20 orphan empty headings.
 | PLAYER VS PLAYER | (empty heading) | ORPHAN — delete |  | CMP-0009, CMP-0011 | yes (§20) | line 3096: empty H1 used as page break |
 | F.A.Q. | (chapter) | STUB — empty | C-030, C-098, C-104, CMP-0003, F-046 | CMP-0003 | no | line 3098. Heading only. Completion required (CMP). |
 | F.A.Q. | (empty heading) | ORPHAN — delete |  | CMP-0003 | no | line 3100: empty H1 used as page break |
-| COMMUNITY UPDATE PACK | (chapter) | SKELETON | A-066, A-074, A-096, B-018, B-019, B-020, B-021, B-022, B-032, C-007, C-056, C-060, C-072, C-109, C-117, CMP-0004, F-047, F-048 | CMP-0004 | no | line 3102. Lists of card names + terse errata notes + weapon stat table; no rules prose. Completion required (CMP). |
+| COMMUNITY UPDATE PACK | (chapter) | SKELETON | A-066, A-074, A-096, B-018, B-019, B-020, B-021, B-022, B-032, C-007, C-056, C-060, C-072, C-109, C-117, CMP-0004, F-047, F-048 | CMP-0004 | yes (Appendix A/B) | line 3102. Lists of card names + terse errata notes + weapon stat table; no rules prose. Completion required (CMP). |
 | CHARACTERS | Estus Flask | MISSING — in TOC only | A-012 | CMP-0001 | yes (§3) | Rule text only in DOCX footer: "flip estus flask token as a major action to remove all damage cubes; stamina cubes are not removed." |
 | GLOSSARY | (chapter) | MISSING — promised |  | CMP-0002 | no | TOC lists GLOSSARY (p.74) and Introduction promises italic-term definitions; no glossary exists in body. |
 | — | Combat Cards | NOT PRESENT | OQ-04 (not in this revision) |  | no | Named in the project brief as a truncated section; no section by this name exists in this DOCX revision. Treated as not-in-scope unless the user supplies the text. |

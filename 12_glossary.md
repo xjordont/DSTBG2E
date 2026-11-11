@@ -240,6 +240,8 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Resting at the bonfire.** The party action, costing one *spark* unless it follows the defeat of a boss, that revives dead and *lost* characters, removes every damage cube, stamina cube, hollow cube, and condition token, readies the heroic action, luck, and estus flask tokens, allows visits to the Firekeeper and Blacksmith Andre, and resets every encounter. It neither places nor removes an *ember token* (see §11.2).
 
+**Revised card.** A card listed in Appendix B that takes the place of the printed card of the same name. Where a revised card differs from the printed text, the text given in Appendix B governs (see Appendix B).
+
 **Riposte.** The attack a character may make at once against the attacker after a successful *parry*, using one attack option of the weapon in the right weapon slot and paying its stamina cost. A riposte cannot be parried, and it does not count against the attacks of the character's own turn (see §9.6).
 
 **Round.** One pass of the encounter turn order: every enemy model takes a turn in descending threat order, then every character takes a turn in descending threat order (see §7.5, Encounter Turn Order). In a boss encounter a round is one turn by each living character, each preceded by a turn of the boss (see §16.1). In a *PvP encounter* a round is one turn by each character still in play (see §20.2).
@@ -280,7 +282,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Stat cube.** A white cube that marks a character's *stat tier* on a stat progression track (see §3.3).
 
-**Stat requirement.** One of the four values (STR, DEX, INT, FTH) printed on an equipment card or upgrade card. A character may equip a card only if each of their stats equals or exceeds the matching requirement of the card and of every upgrade attached to it (see §4.1).
+**Stat requirement.** One of the four values (STR, DEX, INT, FTH) printed on an equipment card or upgrade card; for a weapon listed in Appendix A, the values given there replace the printed values (see Appendix A). A character may equip a card only if each of their stats equals or exceeds the matching requirement of the card and of every upgrade attached to it (see §4.1).
 
 **Stat tier.** A character's position on each stat progression track: the base tier, or stat tier one, two, three, or four. It is marked with a *stat cube* or, at stat tier four, with a red cube in the stat tier three space. A stat at stat tier four has the value 40 or the stat tier three value plus five, whichever is higher. Tiers are bought in sequence from the Firekeeper (see §3.3, §11.3).
 
@@ -300,7 +302,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Tier two treasure.** The treasure deck that holds every treasure card with a stat requirement of 25 or more, the transposed treasure and the five legendary cards. Encounter rewards and chests draw from tier two once the mini-boss is defeated (in campaign play, once the *bonfire ascetic* is burnt) (see §6.2).
 
-**Titanite.** A weapon upgrade (Titanite Shard, Titanite Chunk, Titanite Slab, or Titanite Scale) that is fused permanently to the weapon it is attached to. When that weapon is sold, the Titanite is returned with it to the bottom of the treasure deck of the weapon's tier (see §4.2).
+**Titanite.** A weapon upgrade (Titanite Shard, Titanite Chunk, Titanite Slab, or Titanite Scale) that is fused permanently to the weapon it is attached to. A Titanite Chunk is attached only in place of an attached Titanite Shard, and a Titanite Slab only in place of an attached Titanite Chunk; the replaced card returns to the bottom of the treasure deck of its tier (see Appendix B). When that weapon is sold, the Titanite is returned with it to the bottom of the treasure deck of the weapon's tier (see §4.2).
 
 **Track behaviour card.** One of the four behaviour cards of the Executioner's Chariot expansion, named Death Race and numbered 1 to 4, that direct the Chariot's turns in fixed order until it heats up. Each shows the node to which the Chariot moves and the nodes that its attack targets (see §17.9).
 

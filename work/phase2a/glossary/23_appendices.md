@@ -1,0 +1,5 @@
+# Glossary deltas — chapter 23 Appendices
+
+ADD **Revised card.** A card listed in Appendix B that takes the place of the printed card of the same name. Where a revised card differs from the printed text, the text given in Appendix B governs (see Appendix B).
+AMEND **Stat requirement.** One of the four values (STR, DEX, INT, FTH) printed on an equipment card or upgrade card; for a weapon listed in Appendix A, the values given there replace the printed values (see Appendix A). A character may equip a card only if each of their stats equals or exceeds the matching requirement of the card and of every upgrade attached to it (see §4.1).
+AMEND **Titanite.** A weapon upgrade (Titanite Shard, Titanite Chunk, Titanite Slab, or Titanite Scale) that is fused permanently to the weapon it is attached to. A Titanite Chunk is attached only in place of an attached Titanite Shard, and a Titanite Slab only in place of an attached Titanite Chunk; the replaced card returns to the bottom of the treasure deck of its tier (see Appendix B). When that weapon is sold, the Titanite is returned with it to the bottom of the treasure deck of the weapon's tier (see §4.2).
