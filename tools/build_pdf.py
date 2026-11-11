@@ -110,6 +110,11 @@ def hero_caption(file):
     return ' '.join(w.capitalize() for w in stem.split('-'))
 
 
+def cap_width(file):
+    """Width a gallery caption needs on one line (6.1 pt capitals with tracking), up to 104 pt; longer captions wrap."""
+    return min(104.0, len(hero_caption(file) or '') * 4.75 + 4)
+
+
 def end_panel(soup, cid, key):
     """A gallery of product images that fills the empty foot of a chapter's last page. Its rows are sized from
     the room measured on the first pass (END_FREE), and it is anchored to the foot of the text block."""
@@ -130,11 +135,12 @@ def end_panel(soup, cid, key):
         dh = min(row_h, ph * PT_PER_PX); dw = pw * dh / ph
         if dw > width - pad:
             dw = width - pad; dh = ph * dw / pw
-        if cur and curw + dw + pad > width:
+        cw = max(dw, cap_width(f))        # a cell is as wide as its image or its caption, whichever is wider
+        if cur and curw + cw + pad > width:
             rows.append(cur); cur, curw = [], 0.0
             if len(rows) == nrows:
                 break
-        cur.append((f, dw, dh)); curw += dw + pad
+        cur.append((f, dw, dh, cw)); curw += cw + pad
     if cur and len(rows) < nrows:
         rows.append(cur)
     if not rows:
@@ -144,7 +150,7 @@ def end_panel(soup, cid, key):
         even, i = [], 0
         for k in range(n):
             size = q + (1 if k < rem else 0); even.append(flat[i:i + size]); i += size
-        if all(r and sum(d[1] + pad for d in r) <= width for r in even):
+        if all(r and sum(d[3] + pad for d in r) <= width for r in even):
             rows = even
     total = sum(max(d[2] for d in r) + (cap_h if any(hero_caption(d[0]) for d in r) else 0) for r in rows) + gap * (len(rows) - 1)
     if spec.get('caption'):
@@ -157,12 +163,12 @@ def end_panel(soup, cid, key):
         row = soup.new_tag('div'); row['class'] = 'prow'
         if i: row['style'] = f'margin-top:{gap}pt'
         caps = any(hero_caption(d[0]) for d in r)
-        for f, dw, dh in r:
+        for f, dw, dh, cw in r:
             cell = soup.new_tag('div'); cell['class'] = 'pf'
             im = soup.new_tag('img', src=f, alt=hero_caption(f) or ''); im['style'] = f'width:{dw:.1f}pt;height:{dh:.1f}pt'
             cell.append(im)
             if caps:
-                c = soup.new_tag('div'); c['class'] = 'pc'; c['style'] = f'width:{max(dw, 44):.0f}pt'; c.string = hero_caption(f) or '\u00a0'
+                c = soup.new_tag('div'); c['class'] = 'pc'; c['style'] = f'width:{cw:.0f}pt'; c.string = hero_caption(f) or '\u00a0'
                 cell.append(c)
             row.append(cell)
         panel.append(row)
@@ -245,13 +251,16 @@ class Chapter:
             banner.append(him)
         # a short lead of plain paragraphs sits under the banner, before the flow; anything else joins the flow
         lead_text = ''.join(n.get_text() for n in lead if isinstance(n, Tag))
-        is_intro = self.kind == 'chapter' and secs and lead and all(isinstance(n, Tag) and n.name == 'p' for n in lead) and len(lead_text) <= 720
-        for name in TUNING.get('place', {}):
-            pass
+        # the chapter's in-voice opening (its first plain paragraph) is set as a centred lead under the banner;
+        # definitions and rules that precede the first section join the two-column flow
+        tags = [n for n in lead if isinstance(n, Tag)]
+        first = tags[0] if tags else None
+        is_intro = (self.kind == 'chapter' and (secs or key not in TUNING.get('single_column', [])) and first is not None and first.name == 'p' and len(first.get_text()) <= 560
+                    and not (first.contents and isinstance(first.contents[0], Tag) and first.contents[0].name == 'strong'))
         if is_intro:
             intro = soup.new_tag('div'); intro['class'] = 'intro'
-            for n in lead: intro.append(n)
-            sec.append(intro); lead = []
+            intro.append(first.extract())
+            sec.append(intro); lead = [n for n in lead if n is not first and not (isinstance(n, NavigableString) and not n.strip())]
         for fig in figures_for(soup, key, 'top'):
             sec.append(fig)
         flow = soup.new_tag('div'); flow['class'] = flow_cls
@@ -402,7 +411,8 @@ def figures_for(soup, key, where):
         if f.get('width'): img['style'] = f'width: {f["width"]}'
         fig.append(img)
         if f.get('caption'):
-            cap = soup.new_tag('figcaption'); cap.append(BeautifulSoup(f['caption'], 'html.parser')); fig.append(cap)
+            ctext = re.sub(r'(?<![\w.])(\d{1,2}) (?=[A-Z])', '\\1\u00a0', f['caption'])
+            cap = soup.new_tag('figcaption'); cap.append(BeautifulSoup(ctext, 'html.parser')); fig.append(cap)
         if where == 'in':
             fig['data-after'] = str(f.get('after', 1))
             out.append(fig)

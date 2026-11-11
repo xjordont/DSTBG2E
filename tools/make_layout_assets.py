@@ -24,8 +24,33 @@ def lava():
 def icons():
     (OUT / 'icons').mkdir(parents=True, exist_ok=True)
     n = 0
+    import json
+    from PIL import ImageDraw, ImageFilter
+    fixes = json.loads((ROOT / 'layout/tuning.json').read_text(encoding='utf-8')).get('icon_fixes', {})
     for p in sorted((ROOT / 'assets/icons').glob('*.png')):
         im = Image.open(p).convert('RGBA')
+        # stray marks cut in with the icon (fragments of neighbouring text in the source plate) are erased
+        for l, t, r, b in fixes.get(p.stem, {}).get('erase', []):
+            ImageDraw.Draw(im).rectangle((int(im.width * l), int(im.height * t), int(im.width * r), int(im.height * b)), fill=(0, 0, 0, 0))
+        # an icon cut out with a half-transparent square of parchment around it loses the square: everything
+        # joined to a corner and less than fully opaque is cleared
+        al = im.getchannel('A'); w, h = im.size
+        corners = [(0, 0), (w - 1, 0), (0, h - 1), (w - 1, h - 1)]
+        if max(al.getpixel(c) for c in corners) > 8:
+            # background = not fully opaque AND (nearly clear OR close to the corner's own grey); a pale disc
+            # behind a silhouette is a different colour and stays
+            refs = [im.getpixel(c)[:3] for c in corners if al.getpixel(c) > 8]
+            px = im.load(); m = Image.new('L', im.size, 0); mp = m.load()
+            for y in range(h):
+                for x in range(w):
+                    r_, g_, b_, a_ = px[x, y]
+                    if a_ < 40 or (a_ < 235 and min(max(abs(r_ - q[0]), abs(g_ - q[1]), abs(b_ - q[2])) for q in refs) < 48):
+                        mp[x, y] = 128
+            for c in corners:
+                if m.getpixel(c) == 128:
+                    ImageDraw.floodfill(m, c, 255)
+            keep = m.point(lambda v: 0 if v == 255 else 255).filter(ImageFilter.GaussianBlur(0.7))
+            im.putalpha(Image.composite(al, Image.new('L', im.size, 0), keep.point(lambda v: 255 if v > 127 else 0)))
         box = im.getchannel('A').point(lambda a: 255 if a > 12 else 0).getbbox()
         if box:
             im = im.crop(box)

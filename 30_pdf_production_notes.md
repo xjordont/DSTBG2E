@@ -9,7 +9,7 @@ How the book in `31_final_dark_souls_the_board_game_second_edition_v1.pdf` is ma
 | `31_final_dark_souls_the_board_game_second_edition_v1.pdf` | screen | parchment `#f4f2ea` | 200 ppi at most at placed size | reading on screen, home printing |
 | `31_final_dark_souls_the_board_game_second_edition_v1_print.pdf` | print | white | 300 ppi at most at placed size | print-on-demand or office printing on white stock |
 
-Both editions have the same metrics and the same pagination: 100 pages, US Letter (612 x 792 pt), two columns of 252 pt. Only the page ground differs. Internal links (contents, cross-references, glossary keywords, icon reference) and PDF bookmarks are live in both.
+Both editions have the same metrics and the same pagination: 99 pages, US Letter (612 x 792 pt), two columns of 252 pt. Only the page ground differs. Internal links (contents, cross-references, glossary keywords, icon reference) and PDF bookmarks are live in both.
 
 ## 2. Pipeline
 
@@ -75,24 +75,24 @@ Fonts are cut from the variable OFL files by `tools/make_fonts.py`, which also r
 | No overflow boxes | no text outside the side margins; all fonts embedded; no fallback typeface | pass |
 | No orphan headings | no heading within 34 pt of a column foot | pass |
 | No widow rows in tables | no body row alone at the head or foot of a column where a table breaks (16 tables, 4 broken) | pass |
-| All cross-references resolve | 6,438 internal links, none dangling; `tools/xref_check.py` reports 0 broken references in the manuscript | pass |
-| Page count within 10% of target | 100 pages against a target of 100 | pass |
+| All cross-references resolve | 6,468 internal links, none dangling; `tools/xref_check.py` reports 0 broken references in the manuscript | pass |
+| Page count within 10% of target | 99 pages against a target of 100 | pass |
 | Style report at zero | `13_style_enforcement_report.md`: 0 violations | pass |
 | No external citation | no rulebook, edition, publisher, or page citation in the PDF text (the colophon's nominative statement is the one permitted mention) | pass |
 | Every extracted asset present | see below | pass, with the deviation stated below |
 | (added) completeness | all 1,750 manuscript passages are found in the PDF text | pass |
 | (added) privacy | no purchaser watermark, name, or e-mail address in the PDF text | pass |
 
-**Deviation on "every extracted asset is present".** 276 asset files are extracted. 151 are placed in the book. 125 are not, and each carries a reason in the manifest's placement column: earlier-edition and unused icons (52), source diagrams that carry source text or show components these rules do not use (19), spare component images and images of components these rules do not use (15), stylesheet reference frames and card backs (10), type specimens (8), spare ornaments (7), spare textures (7), the logo files (5), and the held cover art (2). QA checks both directions: everything marked `placed` is in the book, and everything extracted but not placed says why. Placing all 276 would have meant printing superseded icons, an unused campaign board, and held art.
+**Deviation on "every extracted asset is present".** 276 asset files are extracted. 144 are placed in the book. 132 are not, and each carries a reason in the manifest's placement column: earlier-edition and unused icons (52), spare component images and images of components these rules do not use (22), source diagrams that carry source text or show components these rules do not use (19), stylesheet reference frames and card backs (10), type specimens (8), spare ornaments (7), spare textures (7), the logo files (5), and the held cover art (2). QA checks both directions: everything marked `placed` is in the book, and everything extracted but not placed says why. Placing all 276 would have meant printing superseded icons, an unused campaign board, and held art.
 
-Informational results (not failures): 15 columns end more than 60 pt short in mid-chapter, the largest by 152 pt, where a table, an example box, or a kept heading would not fit; measured line length is 57 characters (median).
+Informational results (not failures): 17 columns end more than 60 pt short in mid-chapter, where a table, an example box, a kept list, or a kept heading would not fit; measured line length is 57 characters (median).
 
 A page-by-page review by an independent proofreader followed the automated QA; its report is `work/phase2c/pdf_review.md`, and the fixes made from it are listed at the end of that file.
 
 ## 5. Limits a printer should know
 
 - **Colour.** The files are sRGB. A press needs conversion to its CMYK profile; the palette's CMYK values in `20_layout_spec.md` §4 are the targets for the ink and gold tones. Rich black text will convert to four-colour black unless the conversion maps `#231f20` to K only.
-- **Bleed.** The cover and back cover are drawn to the trim with no bleed, and there are no crop marks. For trimmed printing, add 0.125 in of bleed to pages 1 and 100 (the cover ground is flat near-black and the back cover ground is a texture that extends cleanly).
+- **Bleed.** The cover and back cover are drawn to the trim with no bleed, and there are no crop marks. For trimmed printing, add 0.125 in of bleed to the first and last pages (the cover ground is flat near-black and the back cover ground is a texture that extends cleanly).
 - **Image resolution.** The source PDFs are web exports. Miniature renders are 150 ppi in four of the source books and 300 ppi in the other four; no image is enlarged beyond 150 ppi at placed size, so some are below the 300 ppi print standard. Six token composites were assembled at four times their native size and are soft at high magnification. Higher-resolution originals would drop in under the same file names.
 - **Fonts.** Embedded as subsets. Both are OFL.
 - **PDF standard.** Plain PDF 1.7, not PDF/X. WeasyPrint can write PDF/A; a PDF/X file needs a prepress tool.

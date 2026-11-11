@@ -18,36 +18,36 @@
    "chapter": "03",
    "width": "318pt",
    "crop": [
-    0.055,
-    0.105,
-    0.945,
-    0.985
+    0.07,
+    0.075,
+    0.93,
+    0.935
    ],
    "legend": true,
    "caption": "<strong>A character dashboard.</strong> 1 Name. 2 Illustration. 3 Heroic action. 4 Equipment slots. 5 Endurance bar. 6 Stat progression track. 7 Threat, printed as Taunt Level. 8 Heroic action token slot. 9 Luck token slot. 10 Estus flask token slot. 11 Ember token slot.",
    "masks": [
     {
      "box": [
-      0.6,
-      0.0,
-      0.87,
-      0.435
+      0.6035,
+      0.008,
+      0.883,
+      0.48
      ],
      "feather": 10
     }
    ],
    "badges": [
     [
-     0.79,
-     0.1,
+     0.8,
+     0.137,
      "2",
-     0.019
+     0.0197
     ],
     [
-     0.72,
-     0.41,
+     0.7277,
+     0.4544,
      "1",
-     0.019
+     0.0197
     ]
    ]
   },
@@ -240,10 +240,10 @@
    "after": 4,
    "width": "100%",
    "crop": [
-    0.085,
-    0.05,
-    0.935,
-    0.9
+    0.088,
+    0.135,
+    0.912,
+    0.895
    ],
    "caption": "<strong>The boss tiles.</strong> The two boss tiles joined along one edge for a main-boss encounter. Each tile shows its boss spawn node in red."
   },
@@ -255,19 +255,19 @@
    "after": 4,
    "width": "178pt",
    "crop": [
-    0.03,
-    0.04,
-    0.97,
-    0.93
+    0.045,
+    0.05,
+    0.955,
+    0.95
    ],
    "caption": "<strong>Boss arcs.</strong> The lines that divide the boss's base, extended across the tile, divide the nodes among the front, left, right, and back arcs. A node on a line is in both arcs. The dark disc is the boss's base and the grey disc is a character.",
    "masks": [
     {
      "box": [
-      0.4,
-      0.4,
-      0.62,
-      0.645
+      0.386,
+      0.38,
+      0.622,
+      0.63
      ],
      "shape": "ellipse",
      "fill": "#17130f",
@@ -276,10 +276,10 @@
     },
     {
      "box": [
-      0.235,
-      0.665,
-      0.353,
-      0.8
+      0.2263,
+      0.6465,
+      0.3481,
+      0.78
      ],
      "shape": "ellipse",
      "fill": "#8a857c",
@@ -360,12 +360,11 @@
   },
   "06": {
    "banner": {
-    "file": "assets/photography/ast-0132-token-terrain-treasure-chest-render.png",
-    "h": 44,
-    "bottom": 6
+    "file": "assets/photography/ast-0133-game-tile-bonfire-2017.png",
+    "h": 58,
+    "bottom": 6.5
    },
    "end": [
-    "assets/photography/ast-0133-game-tile-bonfire-2017.png",
     "assets/frames/ast-0089-card-back-encounter-level-1.png",
     "assets/frames/ast-0089-card-back-treasure.png",
     "assets/photography/ast-0132-token-terrain-gravestone-render.png",
@@ -473,11 +472,11 @@
   },
   "14": {
    "banner": {
-    "file": "assets/photography/ast-0138-expansion-miniature-crystal-lizard.png",
-    "h": 26,
-    "bottom": 8
+    "file": "assets/photography/ast-0138-expansion-miniature-ironclad-soldier.png",
+    "h": 96
    },
    "end": [
+    "assets/photography/ast-0138-expansion-miniature-crystal-lizard.png",
     "assets/photography/ast-0132-token-terrain-treasure-chest-render.png",
     "assets/photography/ast-0132-token-terrain-barrels-render.png",
     "assets/photography/ast-0132-token-terrain-gravestone-render.png"
@@ -648,6 +647,35 @@
   "campaign-board-right-half": "",
   "card-back-encounter-level-1": "Encounter card, Level 1",
   "card-back-treasure": "Treasure card",
-  "tomb-of-giants-fan": ""
+  "tomb-of-giants-fan": "",
+  "crystal-lizard": "Crystal lizard"
+ },
+ "icon_fixes": {
+  "ast-0033-enemy-movement-composite-symbol": {
+   "erase": [
+    [
+     0.66,
+     0.72,
+     1.0,
+     1.0
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.03
+    ]
+   ]
+  },
+  "ast-0037-enemy-attack-composite-symbol": {
+   "erase": [
+    [
+     0.66,
+     0.7,
+     1.0,
+     0.93
+    ]
+   ]
+  }
  }
 }

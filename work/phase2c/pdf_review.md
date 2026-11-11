@@ -68,3 +68,33 @@ Counts: Blocker 0 · Major 2 · Minor 18 · Polish 13.
 - All of pp. 1–100 as 80 dpi three-page contact sheets (`build/review/sheet_001_003.jpg` … `sheet_100_100.jpg`).
 - Zoomed at 95–330 dpi: all 24 banners; the seven figures (pp. 9, 12, 28, 33, 54, 55, 56); galleries on pp. 17, 27, 49, 73, 95; contents p. 3; icon reference p. 99; text and table details on pp. 6, 7, 10, 12, 15, 32, 33, 57, 68, 70, 80, 96 (`build/review/z_*.jpg`, `z2_*.jpg`, `z3_inline.jpg`).
 - Text-layer checks over all 100 pages (`build/review/analysis.txt`).
+
+## Editor's response (2026-11-11)
+
+Page numbers above refer to the build that was reviewed (100 pages). The final build has 99 pages, so pages after chapter 12 are one lower.
+
+| Finding | Action |
+|---|---|
+| p. 28 enemy data card blanking (Major) | Fixed. One ground-matched area that follows the card's own gradient; call-outs 5, 6, and 7 redrawn; fragments removed. The red shape at lower right is the bleed condition icon of the attack and is kept. |
+| p. 70 line holding only "§16.5," (Major) | Fixed. Two short references side by side are kept on one line; a scan of the whole book finds no other case. |
+| p. 3 contents number edges and tight leaders | Fixed. Chapter and section page numbers share one right edge, and a space separates leader and number. |
+| p. 9 caption splits "8" from its label | Fixed. A key number is joined to its label by a no-break space in every keyed caption. |
+| pp. 9, 54, 56 figures off-centre in their plates | Fixed. The three plates are re-cropped to their subjects. The top row of nodes on the arcs plate is cut by the edge of the tile in the source itself. |
+| pp. 54, 56 figures not keyed | Intended. Five plates carry printed call-outs; the boss tiles and the arcs diagram have descriptive captions. |
+| pp. 17, 73 galleries without captions | Fixed. Both carry the caption "Encounter tiles". |
+| p. 32 page about 65% blank | Improved. The gallery is enlarged; the six lines cannot be pulled back without unbalancing the chapter. |
+| pp. 43–44, 68 example boxes splitting with two lines | Fixed. An example box breaks only with four lines on each side. |
+| p. 46 three paragraphs in the lead style | Fixed. Only a chapter's opening paragraph is set as the lead; chapter 14 now has one. Chapter 1 is the Introduction and is set whole in one column. |
+| p. 52 tiny lizard hero; p. 69 dark dial hero; p. 18 dim chest hero | Fixed. Chapter 14 opens with the Ironclad Soldier (the Iron Keep set, which the chapter requires) and the lizard moves to its gallery; chapter 18 opens with the Adventurer's Armour figure; chapter 6 opens with the bonfire tile. |
+| Renders cut through the base | Not changed. The source renders end there; no fuller version exists in the supplied files. |
+| p. 80 table cell alignment | Fixed. A column that is mostly numeric is centred throughout. |
+| p. 97 table 2 in short of the column foot; p. 74 list carried whole | Not changed. A table row and a campaign section list are kept whole by design. |
+| p. 99 icon bitmaps: stray text, boxed backgrounds | Fixed. The stray text is erased from the two composite icons, and the half-transparent squares are cleared from every boxed icon (inline uses included). Block and Resist stay pale, as the cards print them. |
+| p. 99 page half empty | Fixed. Two columns at a larger size fill the page. |
+| Hyphenation ("rer-olls", "awar-ded" and others) | Fixed. A word breaks only with four letters on each side. |
+| p. 49 three lines in one column; pp. 68, 78 no closing ornament; pp. 41, 44 columns short before a kept box | Not changed (polish). The ornament is dropped only where it would stand alone on a new page. |
+| Gallery captions small or wrapping | Fixed. Captions are 6.1 pt, and a cell is as wide as its caption needs. |
+| Repeated renders across galleries | Partly reduced; some repeats remain where a chapter has no other fitting image. |
+| "F.A.Q." Q tail; icon-to-punctuation gaps; green die without an icon | Not changed (polish). The gaps are smaller now that the icon backgrounds are trimmed. |
+| p. 1 foot line; p. 100 block position | Fixed. The line is larger and lighter, and the back-cover text is centred in its panel. |
+

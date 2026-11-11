@@ -30,7 +30,7 @@ body.print  { --ground: #ffffff; --tint: rgba(156, 129, 65, 0.07); --tint2: rgba
 
 /* ---------- type ---------- */
 html { font-family: "Libre Caslon Text", "Liberation Serif", serif; font-size: 8.9pt; line-height: 12.2pt; color: #231f20;
-       hyphenate-character: "-"; hyphenate-limit-chars: 6 3 3; font-variant-numeric: lining-nums; font-variant-ligatures: common-ligatures no-discretionary-ligatures no-historical-ligatures; font-feature-settings: "dlig" 0, "hlig" 0; }
+       hyphenate-character: "-"; hyphenate-limit-chars: 7 4 4; font-variant-numeric: lining-nums; font-variant-ligatures: common-ligatures no-discretionary-ligatures no-historical-ligatures; font-feature-settings: "dlig" 0, "hlig" 0; }
 body { margin: 0; }
 p, li { margin: 0; orphans: 2; widows: 2; text-align: justify; hyphens: auto; }
 p + p { margin-top: 4.4pt; }
@@ -72,7 +72,7 @@ img.icon { height: 1.12em; width: auto; vertical-align: -0.22em; margin: 0 0.1em
 .pf { display: table-cell; vertical-align: bottom; padding: 0 9pt; text-align: center; }
 .pf img { display: block; margin: 0 auto; }
 .pc.pcall { height: auto; margin-top: 7pt; font-size: 6.2pt; }
-.pc { font: 600 5.6pt/7.6pt "Cinzel"; letter-spacing: 0.13em; text-transform: uppercase; color: #6b5f4a; margin: 4pt auto 0 auto; height: 15pt; text-align: center; hyphens: none; }
+.pc { font: 600 6.1pt/8pt "Cinzel"; letter-spacing: 0.13em; text-transform: uppercase; color: #6b5f4a; margin: 4pt auto 0 auto; height: 15pt; text-align: center; hyphens: none; }
 
 /* ---------- headings ---------- */
 h2 { font: 600 10.4pt/1.2 "Cinzel"; letter-spacing: 0.02em; margin: 10pt 0 4.4pt 0; padding-bottom: 2.4pt; border-bottom: 0.5pt solid var(--rule);
@@ -144,7 +144,7 @@ p.faq-q .ql, p.faq-a .ql { font: 700 7.4pt "Cinzel"; color: #7a622b; margin-righ
 .cover .c2 { font: 600 20pt/1.2 "Cinzel"; letter-spacing: 0.32em; margin-top: 10pt; padding-left: 0.32em; }
 .cover .crule { width: 3.4in; margin: 24pt auto 20pt auto; border-top: 0.8pt solid #c9ad6a; height: 0; }
 .cover .c3 { font: 600 12.5pt/1.2 "Cinzel"; letter-spacing: 0.36em; color: #c9ad6a; padding-left: 0.36em; }
-.cover .cfoot { position: absolute; left: 0; right: 0; bottom: 0.62in; font: 400 7.4pt "Cinzel"; letter-spacing: 0.22em; color: rgba(244,242,234,0.66); }
+.cover .cfoot { position: absolute; left: 0; right: 0; bottom: 0.62in; font: 400 8pt "Cinzel"; letter-spacing: 0.22em; color: rgba(244,242,234,0.8); }
 .front { page: front; break-before: page; }
 .front h1.ft { font: 700 17pt/1.15 "Cinzel"; letter-spacing: 0.05em; text-align: center; margin: 0 0 4pt 0; string-set: chapter "", section ""; bookmark-level: 1; }
 .front .ftrule { width: 160pt; margin: 9pt auto 16pt auto; text-align: center; }
@@ -156,10 +156,10 @@ p.faq-q .ql, p.faq-a .ql { font: 700 7.4pt "Cinzel"; color: #7a622b; margin-righ
 .colophon p + p { margin-top: 5pt; }
 .toc { columns: 3; column-gap: 15pt; margin-top: 6pt; font-size: 7.9pt; line-height: 10.4pt; }
 .toc .tc { break-inside: avoid; margin: 0 0 6.2pt 0; }
-.toc .tch { font: 600 7.5pt/1.25 "Cinzel"; letter-spacing: 0.04em; display: block; padding-right: 15pt; padding-left: 15pt; text-indent: -15pt; margin-bottom: 1.2pt; }
-.toc .tch .tn { display: inline-block; width: 15pt; text-indent: 0; color: #7a622b; }
+.toc .tch { font: 600 7.5pt/1.25 "Cinzel"; letter-spacing: 0.04em; display: block; position: relative; padding-right: 15pt; padding-left: 15pt; text-indent: 0; margin-bottom: 1.2pt; }
+.toc .tch .tn { position: absolute; left: 0; top: 0; width: 15pt; color: #7a622b; }
 .toc .ts { display: block; padding: 0 15pt 0 15pt; text-align: left; }
-.toc a::after { content: leader(". ") target-counter(attr(href), page); margin-right: -15pt; font-family: "Libre Caslon Text"; font-weight: 400; letter-spacing: 0; }
+.toc a::after { content: leader(". ") "\00a0" target-counter(attr(href), page); margin-right: -15pt; font-family: "Libre Caslon Text"; font-weight: 400; letter-spacing: 0; }
 
 /* ---------- icon reference and back cover ---------- */
 .ikgrid { columns: 2; column-gap: 40pt; margin: 8pt 34pt 0 34pt; }
@@ -168,6 +168,6 @@ p.faq-q .ql, p.faq-a .ql { font: 700 7.4pt "Cinzel"; color: #7a622b; margin-righ
 .ik span { display: block; text-align: left; }
 @page backcover { margin: 0; @top-left { content: none } @top-right { content: none } @bottom-center { content: none; background: none } }
 .backcover { page: backcover; break-before: page; width: 8.5in; height: 11in; background: #0b0a09 url("../assets/textures/ast-0143-back-cover-dark-stone-bg.png") center / cover no-repeat; position: relative; }
-.backcover .bc { position: absolute; left: 2.25in; right: 2.25in; top: 3.3in; text-align: center; color: #231f20; }
+.backcover .bc { position: absolute; left: 2.25in; right: 2.25in; top: 4.05in; text-align: center; color: #231f20; }
 .backcover .bc1 { font: italic 400 11.4pt/16.6pt "Libre Caslon Text"; text-align: center; hyphens: manual; }
 .backcover .bc2 { font: 600 9.6pt/14pt "Cinzel"; letter-spacing: 0.08em; text-align: center; margin-top: 22pt; hyphens: manual; }

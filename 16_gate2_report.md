@@ -27,7 +27,7 @@ Mechanical changes are marked `[MECHANICAL CHANGE]` in `11_change_log.md`. Decis
 | Every chapter opener has a designated hero asset | met | 24 of 24 openers (chapters 1 to 22, Appendix A, Appendix B): `20_layout_spec.md` §6 |
 | Cover fully specified | met | `20_layout_spec.md` §11 (front) and §6 (back cover row) |
 | All substitutions logged | met | `20_layout_spec.md` §12, Substitutions; manifest rows FONT-01 to FONT-03; `30_pdf_production_notes.md` §3 |
-| Manifest complete, with status | met | 300 rows: 158 placed, 133 extracted and not placed (each with a reason), 5 blocked, 3 substitutions, 1 not required |
+| Manifest complete, with status | met | 300 rows: 151 placed, 140 extracted and not placed (each with a reason), 5 blocked, 3 substitutions, 1 not required |
 | Extraction log final | met | `22_asset_extraction_log.md`: method, region, and final usage for every entry; Provenance Review with section F for Phase 2B |
 
 Phase 2B extraction added 162 files (98 component images, 46 icons, 10 frames and card backs, 5 diagrams, 3 textures). Four catalogue entries could not be extracted and are marked blocked with the reason: expansion set symbols (only one exists as a separate object), the equipment card frame (too small), card fans (every fan shows painted card faces), and tile floor textures (no marker-free area).
@@ -36,13 +36,13 @@ Phase 2B extraction added 162 files (98 component images, 46 icons, 10 frames an
 
 | Criterion | Result | Evidence |
 |---|---|---|
-| The PDF exists | met | `31_final_dark_souls_the_board_game_second_edition_v1.pdf` (screen) and `…_v1_print.pdf` (print), 100 pages each |
+| The PDF exists | met | `31_final_dark_souls_the_board_game_second_edition_v1.pdf` (screen) and `…_v1_print.pdf` (print), 99 pages each |
 | Automated QA passes | met | `tools/qa_pdf.py`, both editions: QA PASSED (`30_pdf_production_notes.md` §4) |
-| Independent page review | done | `work/phase2c/pdf_review.md`, with the fixes made from it |
+| Independent page review | done | `work/phase2c/pdf_review.md`: no blocker, 2 major, 18 minor, and 13 polish findings; both major and 14 minor findings are fixed, and the rest are answered at the end of that file |
 
 ## Departures from the letter of the brief
 
-1. **"Every extracted asset is present in the rendered book."** 151 of 276 extracted files are placed. The other 125 are deliberately left out and each says why in the manifest: superseded and unused icons, source diagrams that carry source text or show components these rules do not use, reference frames, spares, the logo, and held art. QA verifies both directions.
+1. **"Every extracted asset is present in the rendered book."** 144 of 276 extracted files are placed. The other 132 are deliberately left out and each says why in the manifest: superseded and unused icons, source diagrams that carry source text or show components these rules do not use, reference frames, spares, the logo, and held art. QA verifies both directions.
 2. **Painted illustrations are withheld.** The brief asks that an asset of unclear provenance be flagged and that the author be asked before extraction. Painted key art was never placed. Phase 2B found that four anatomy plates extracted in Phase 0 also show painted card and portrait illustrations, which the cards credit to the game's licensors. Those areas are blanked in the book, and the question is put to the author (see below). Nothing else in the plates was changed.
 3. **Anatomy diagrams were not redrawn** (Gate 1 OQ-03 recommended redrawing over the extracted plates). The extracted plates are used, with captions keyed to their printed call-outs.
 4. **Colour and resolution.** The PDFs are sRGB, not CMYK, and some product renders are 150 ppi at placed size because the sources are web exports (`30_pdf_production_notes.md` §5).

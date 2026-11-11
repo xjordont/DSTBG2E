@@ -228,7 +228,7 @@ Chapter openers: every chapter and appendix has a designated hero image on its b
 | Chapter 3 | AST-0138 | `expansion-miniature-character-cleric` | 98 pt |
 | Chapter 4 | AST-0138 | `expansion-miniature-armour-black-knight` | 100 pt |
 | Chapter 5 | AST-0133 | `game-tile-tomb-of-giants-fan` | 60 pt |
-| Chapter 6 | AST-0132 | `token-terrain-treasure-chest-render` | 44 pt |
+| Chapter 6 | AST-0133 | `game-tile-bonfire-2017` | 58 pt |
 | Chapter 7 | AST-0131 | `miniature-black-knight` | 96 pt |
 | Chapter 8 | AST-0131 | `miniature-giant-skeleton-soldier` | 98 pt |
 | Chapter 9 | AST-0138 | `expansion-miniature-stone-knight` | 98 pt |
@@ -236,7 +236,7 @@ Chapter openers: every chapter and appendix has a designated hero image on its b
 | Chapter 11 | AST-0132 | `token-terrain-bonfire-render` | 92 pt |
 | Chapter 12 | AST-0138 | `expansion-miniature-summon-solaire-of-astora` | 100 pt |
 | Chapter 13 | AST-0138 | `expansion-miniature-mimic` | 98 pt |
-| Chapter 14 | AST-0138 | `expansion-miniature-crystal-lizard` | 26 pt |
+| Chapter 14 | AST-0138 | `expansion-miniature-ironclad-soldier` | 96 pt |
 | Chapter 15 | AST-0138 | `expansion-miniature-artorias` | 96 pt |
 | Chapter 16 | AST-0138 | `expansion-miniature-great-grey-wolf-sif` | 84 pt |
 | Chapter 17 | AST-0138 | `expansion-miniature-black-dragon-kalameet` | 96 pt |
@@ -256,14 +256,14 @@ Chapter-end galleries: where the last page of a chapter has 114 pt or more of em
 | Chapter 2 | AST-0131 `miniature-cleric`, AST-0131 `miniature-pyromancer`, AST-0131 `miniature-thief`, AST-0131 `miniature-skeleton-soldier`, AST-0131 `miniature-skeleton-archer`, AST-0131 `miniature-necromancer`, AST-0131 `miniature-skeleton-beast` |
 | Chapter 4 | AST-0138 `expansion-miniature-armour-adventurers`, AST-0138 `expansion-miniature-armour-havels`, AST-0138 `expansion-miniature-armour-catarina`, AST-0138 `expansion-miniature-armour-guardian`, AST-0138 `expansion-miniature-armour-dark`, AST-0138 `expansion-miniature-armour-crimson-robes` |
 | Chapter 5 | AST-0133 `game-tile-tomb-of-giants-a`, AST-0133 `game-tile-tomb-of-giants-b`, AST-0133 `game-tile-tomb-of-giants-c`, AST-0133 `game-tile-tomb-of-giants-d` |
-| Chapter 6 | AST-0133 `game-tile-bonfire-2017`, AST-0089 `card-back-encounter-level-1`, AST-0089 `card-back-treasure`, AST-0132 `token-terrain-gravestone-render`, AST-0132 `token-terrain-barrels-render`, AST-0132 `token-terrain-treasure-chest-render`, AST-0132 `token-spark-dial` |
+| Chapter 6 | AST-0089 `card-back-encounter-level-1`, AST-0089 `card-back-treasure`, AST-0132 `token-terrain-gravestone-render`, AST-0132 `token-terrain-barrels-render`, AST-0132 `token-terrain-treasure-chest-render`, AST-0132 `token-spark-dial` |
 | Chapter 7 | AST-0138 `expansion-miniature-stone-guardian`, AST-0138 `expansion-miniature-mushroom-parent`, AST-0138 `expansion-miniature-mushroom-child`, AST-0138 `expansion-miniature-demonic-foliage`, AST-0138 `expansion-miniature-plow-scarecrow`, AST-0138 `expansion-miniature-shears-scarecrow`, AST-0138 `expansion-miniature-black-hollow-mage`, AST-0138 `expansion-miniature-falchion-skeleton`, AST-0138 `expansion-miniature-firebomb-hollow` |
 | Chapter 8 | AST-0136 `dice-set`, AST-0131 `miniature-giant-skeleton-archer` |
 | Chapter 10 | AST-0138 `expansion-miniature-character-pyromancer`, AST-0138 `expansion-miniature-character-thief`, AST-0138 `expansion-miniature-character-sorcerer`, AST-0138 `expansion-miniature-character-deprived`, AST-0138 `expansion-miniature-character-cleric`, AST-0138 `expansion-miniature-armour-black-iron`, AST-0138 `expansion-miniature-armour-embraced-armour-of-favour`, AST-0138 `expansion-miniature-armour-gold-trimmed-black-robes`, AST-0138 `expansion-miniature-armour-black-knight`, AST-0138 `expansion-miniature-armour-havels`, AST-0138 `expansion-miniature-armour-dark`, AST-0138 `expansion-miniature-armour-catarina` |
 | Chapter 11 | AST-0133 `game-tile-bonfire-2017`, AST-0132 `token-spark-dial` |
 | Chapter 12 | AST-0138 `expansion-miniature-summon-ruined-aflis`, AST-0138 `expansion-miniature-summon-eygon-of-carim`, AST-0138 `expansion-miniature-summon-lucatiel-of-mirrah`, AST-0138 `expansion-miniature-summon-sellsword-luet`, AST-0138 `expansion-miniature-summon-sirris-of-the-sunless-realms`, AST-0138 `expansion-miniature-summon-rogue-witch-beatrice`, AST-0138 `expansion-miniature-summon-horace-the-hushed`, AST-0138 `expansion-miniature-summon-siegward-of-catarina`, AST-0138 `expansion-miniature-summon-sword-master`, AST-0138 `expansion-miniature-invader-kirk-knight-of-thorns`, AST-0138 `expansion-miniature-invader-armorer-dennis`, AST-0138 `expansion-miniature-invader-melinda-the-butcher`, AST-0138 `expansion-miniature-invader-maldron-the-assassin`, AST-0138 `expansion-miniature-invader-maneater-mildred` |
 | Chapter 13 | AST-0138 `expansion-miniature-mimic-closed`, AST-0138 `expansion-miniature-mimic` |
-| Chapter 14 | AST-0132 `token-terrain-treasure-chest-render`, AST-0132 `token-terrain-barrels-render`, AST-0132 `token-terrain-gravestone-render` |
+| Chapter 14 | AST-0138 `expansion-miniature-crystal-lizard`, AST-0132 `token-terrain-treasure-chest-render`, AST-0132 `token-terrain-barrels-render`, AST-0132 `token-terrain-gravestone-render` |
 | Chapter 15 | AST-0138 `expansion-miniature-great-grey-wolf-sif`, AST-0138 `expansion-miniature-black-dragon-kalameet`, AST-0138 `expansion-miniature-smelter-demon`, AST-0138 `expansion-miniature-executioners-chariot`, AST-0138 `expansion-miniature-the-pursuer`, AST-0138 `expansion-miniature-sir-alonne` |
 | Chapter 16 | AST-0117 `mega-boss-board-kalameet-forest`, AST-0117 `mega-boss-board-executioners-chariot-arena`, AST-0117 `mega-boss-board-executioners-chariot-reverse` |
 | Chapter 18 | AST-0133 `game-tile-tomb-of-giants-fan` |
