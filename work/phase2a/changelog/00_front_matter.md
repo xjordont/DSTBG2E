@@ -3,7 +3,7 @@
 - Before: "SECOND EDITION NOTES" chapter (manuscript lines 371–381: publisher history, first-person process notes, requests for comment)
 - After: unnumbered Foreword (165 words) stating scope, the supersession of card text, and the book's conventions
 - Rationale: Class B admits no meta-commentary; the one fact the Notes contained that a reader needs (this book governs over card text) survives in the Foreword.
-- Source: F-002, F-003, F-004, F-005, F-006, F-055, CMP-0013; Gate 1 — OQ-01
+- Source: F-002, F-003, F-004, F-005, F-006, F-055, F-082, C-001, C-025, C-026, C-118, CMP-0013; Gate 1 — OQ-01
 
 ### CH-00-002 · Colophon
 - Type: restructure

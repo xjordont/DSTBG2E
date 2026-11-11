@@ -3,7 +3,7 @@
 - Before: no glossary in the body; the Introduction promised one and the contents listed it
 - After: a glossary of 172 headwords, each a bold headword with a definition in the present tense and a reference to its owning section
 - Rationale: The chapter was missing. It was seeded from the approved draft, reconciled with the Gate 1 answers, and then amended chapter by chapter as each section fixed its rule, so that every italicised term in the book has an entry.
-- Source: CMP-0002; C §5 (keyword audit)
+- Source: CMP-0002, C-031, C-032; C §5 (keyword audit). C-017 recorded a consistent usage and required no change.
 
 ### CH-21-002 · §21 Glossary (seed reconciliation)
 - Type: correction

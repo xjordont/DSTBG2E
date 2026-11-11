@@ -193,7 +193,7 @@ Every substantive change made in Phase 2A between the manuscript (`work/docx/man
 - Before: "SECOND EDITION NOTES" chapter (manuscript lines 371–381: publisher history, first-person process notes, requests for comment)
 - After: unnumbered Foreword (165 words) stating scope, the supersession of card text, and the book's conventions
 - Rationale: Class B admits no meta-commentary; the one fact the Notes contained that a reader needs (this book governs over card text) survives in the Foreword.
-- Source: F-002, F-003, F-004, F-005, F-006, F-055, CMP-0013; Gate 1 — OQ-01
+- Source: F-002, F-003, F-004, F-005, F-006, F-055, F-082, C-001, C-025, C-026, C-118, CMP-0013; Gate 1 — OQ-01
 
 ### CH-00-002 · Colophon
 - Type: restructure
@@ -5011,7 +5011,7 @@ Every substantive change made in Phase 2A between the manuscript (`work/docx/man
 - Before: no glossary in the body; the Introduction promised one and the contents listed it
 - After: a glossary of 172 headwords, each a bold headword with a definition in the present tense and a reference to its owning section
 - Rationale: The chapter was missing. It was seeded from the approved draft, reconciled with the Gate 1 answers, and then amended chapter by chapter as each section fixed its rule, so that every italicised term in the book has an entry.
-- Source: CMP-0002; C §5 (keyword audit)
+- Source: CMP-0002, C-031, C-032; C §5 (keyword audit). C-017 recorded a consistent usage and required no change.
 
 ### CH-21-002 · §21 Glossary (seed reconciliation)
 - Type: correction
