@@ -135,6 +135,30 @@ if target:
 else:
     note('Page count', f'{len(doc)} pages (no target set)')
 
+# 9a references and icons: checked from the build report and, independently, from the assembled HTML, because
+#    the build prints an unresolved reference as plain text and leaves a missing icon out
+rp = ROOT / f'build/report_{edition}.json'
+rep = json.loads(rp.read_text(encoding='utf-8')) if rp.exists() else None
+add(rep is not None and not rep.get('unresolved_refs') and not rep.get('missing_icons'), 'Build report: no unresolved reference and no missing icon',
+    'no build report: run tools/build_pdf.py (full build) first' if rep is None else f"unresolved {rep.get('unresolved_refs', [])[:6]}; missing icons {rep.get('missing_icons', [])[:6]}")
+from bs4 import BeautifulSoup as _BS
+_soup = _BS(html, 'html.parser')
+_unlinked = []
+for _node in _soup.find_all(string=re.compile(r'§\s?\d')):
+    if _node.find_parent(['a', 'h1', 'h2', 'h3', 'h4', 'header', 'script', 'style']) is None:
+        _unlinked.append(re.search(r'§\s?\d+(\.\d+)?', str(_node)).group(0))
+add(not _unlinked, 'Every section reference in the text is a live link', f'{len(_unlinked)} unlinked: {sorted(set(_unlinked))[:8]}')
+_tokens = {}
+for _f in sorted(ROOT.glob('10_manuscript_chapter_*.md')) + [ROOT / '12_glossary.md']:
+    for _slug in re.findall(r'\{\{icon:([a-z0-9-]+)\}\}', _f.read_text(encoding='utf-8')):
+        _tokens[_slug] = _tokens.get(_slug, 0) + 1
+_placed = {}
+for _img in _soup.find_all('img', class_='icon'):
+    if _img.find_parent('div', class_='ik') is None:
+        _slug = _img.get('src', '').rsplit('/', 1)[-1][:-4]; _placed[_slug] = _placed.get(_slug, 0) + 1
+_short = {k: (v, _placed.get(k, 0)) for k, v in _tokens.items() if _placed.get(k, 0) != v}
+add(not _short, 'Every icon token in the manuscript is an icon in the book', f'{sum(_tokens.values())} tokens; differing (token count, placed) {dict(list(_short.items())[:6])}')
+
 # 9b table rows: no body row stands alone at the foot or head of a column when its table breaks
 rows = {}
 for e in pm:

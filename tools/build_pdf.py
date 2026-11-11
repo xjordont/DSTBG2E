@@ -682,6 +682,15 @@ def build(edition='screen', only=None, out=None, html_only=False, _phase='plan',
     missing = set()
     for c in chapters:
         c.link(all_ids, heads, missing)
+    # the Foreword is not a chapter object: its section references are linked here
+    def _fore_ref(m):
+        target = f'sec-{m.group(1)}-{m.group(2)}' if m.group(2) else f'ch-{m.group(1)}'
+        if target in all_ids:
+            return f'<a class="xref" href="#{target}">{m.group(0)}</a>'
+        if not only:
+            missing.add(('Foreword', m.group(0)))
+        return m.group(0)
+    fore = re.sub(r'§(\d+)(?:\.(\d+))?', _fore_ref, fore)
     intro = chapter_file('01')
     tail = (icon_reference(chapters) + (back_cover(intro.read_text(encoding='utf-8')) if intro else '')) if not only else ''
     body = cover + fore + (contents(chapters) if not only else '') + ''.join(str(c.soup) for c in chapters) + tail
@@ -737,6 +746,8 @@ def build(edition='screen', only=None, out=None, html_only=False, _phase='plan',
     doc.write_pdf(str(out), **img_opts)
     report.update(passes=_n + 1, section_breaks={k: sum(1 for v in SEC_BREAK.values() if v == k) for k in ('page', 'column')}, plates=len([s for s in PLATES if s not in NO_PLATE]), no_endmark=sorted(NO_ENDMARK), galleries=sorted(e['id'][6:] for e in pm if e['id'].startswith('panel-')), no_gallery=sorted(NO_PANEL), pages=len(doc.pages), out=str(out.relative_to(ROOT)) if out.is_relative_to(ROOT) else str(out), patch=wp_patch.PATCH_APPLIED)
     (ROOT / f'build/pagemap_{edition}.json').write_text(json.dumps(pagemap(doc), indent=0), encoding='utf-8')
+    if not only:
+        (ROOT / f'build/report_{edition}.json').write_text(json.dumps(report, ensure_ascii=False, indent=1), encoding='utf-8')
     print(json.dumps(report, ensure_ascii=False))
     return report
 
@@ -762,4 +773,9 @@ if __name__ == '__main__':
     ap.add_argument('--only'); ap.add_argument('--out'); ap.add_argument('--html-only', action='store_true')
     ap.add_argument('--reuse', action='store_true', help='reuse the layout plan of the last full build (build/layout_plan.json)')
     a = ap.parse_args()
-    build(a.edition, set(a.only.split(',')) if a.only else None, a.out, a.html_only, reuse=a.reuse)
+    r = build(a.edition, set(a.only.split(',')) if a.only else None, a.out, a.html_only, reuse=a.reuse)
+    # A full build with an unresolved cross-reference or a missing icon is a failed build: the reference would
+    # print as plain text and the icon would be left out. (A partial build cannot resolve other chapters.)
+    if not a.only and (r.get('unresolved_refs') or r.get('missing_icons')):
+        print('BUILD FAILED: unresolved references or missing icons (see the report above)', file=sys.stderr)
+        sys.exit(1)
