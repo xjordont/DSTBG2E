@@ -161,7 +161,7 @@ When an *encounter* is *cleared* for the first time, every character, including 
 
 **Reduced reward.** Half the full soul reward, rounded down.
 
-When a boss is defeated, every character gains the boss reward (see §16.5). When an *invader* is killed, every character gains the invader reward in addition to the encounter reward (see §12.2). The rewards of the standard game are as follows; campaign play uses its own table (see §18.5).
+When a boss is defeated, every character gains the boss reward (see §16.5). When an *invader* is killed, every character gains the invader reward in addition to the encounter reward (see §12.2). The rewards are as follows, and campaign play uses the same rewards (see §18.5).
 
 | Encounter | Full reward per character | Reduced reward per character |
 |---|---|---|

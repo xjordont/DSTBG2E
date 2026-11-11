@@ -175,23 +175,23 @@ Totals: 24 chapters, 166 sections, 20 orphan empty headings.
 | BOSS SPECIAL RULES | Pillar Smasher | present — to audit | A-114, A-115, C-030, C-077, C-081, C-104, C-114, C-123, CMP-0005 | CMP-0005 | yes (§17) | line 2203. |
 | BOSS SPECIAL RULES | Wind Up | present — to audit | A-115, C-030, C-081, C-098, C-104, CMP-0005, CMP-0017 | CMP-0005, CMP-0017 | yes (§17) | line 2211. |
 | BOSS SPECIAL RULES | (empty heading) | ORPHAN — delete |  | CMP-0005, CMP-0017 | yes (§17) | line 2215: empty H1 used as page break |
-| CAMPAIGN PLAY | (chapter) | present — to audit | A-001, A-025, A-027, A-028, A-047, A-048, A-049, A-051, A-053, A-057, A-064, A-067, A-077, A-103, A-105, B-007, B-011, B-013, B-031, B-034, C-023, C-030, C-033, C-042, C-043, C-044, C-045, C-048, C-053, C-058, C-060, C-068, C-069, C-070, C-071, C-074, C-084, C-098, C-101, C-103, C-104, C-106, C-111, C-112, C-116, C-119, C-120, CMP-0006, CMP-0008, CMP-0010, F-036, F-037, F-038, F-039, F-040, F-041, F-042, F-043, F-053, F-086, F-090, F-134 | CMP-0006, CMP-0008, CMP-0010 | no | line 2217. |
-| CAMPAIGN PLAY | Setup | present — contradiction | A-103, C-023, C-030, C-053, C-060, C-074, C-103, C-104, C-106, CMP-0008, F-036, F-037, F-038, F-053, F-090, F-134 | CMP-0008 | no | line 2219. Claims "three campaigns, all three sections long"; body has 13 campaigns, 3–6 sections. |
-| CAMPAIGN PLAY | The Fog Gate | present — to audit | C-030, C-058, C-103, C-104, F-053 |  | no | line 2227. |
-| CAMPAIGN PLAY | Sparks | present — to audit | A-001, A-047, A-048, A-049, A-051, B-013, C-030, C-033, C-103, C-104, CMP-0006, F-053, F-086, F-134 | CMP-0006 | no | line 2231. |
-| CAMPAIGN PLAY | Adding & Dropping Players | present — to audit | A-027, A-105, B-013, C-030, C-048, C-104, C-112, F-039, F-134 |  | no | line 2237. |
-| CAMPAIGN PLAY | Encounter Soul Rewards | present — TOC mismatch | A-053, B-011, C-030, C-068, C-069, C-119, CMP-0010, F-053, F-090 | CMP-0010 | no | line 2241. TOC calls it "Encounter Rewards". |
-| CAMPAIGN PLAY | Campaign Soul Reward Table | present — to audit | A-053, B-011, C-030, C-069, C-119, CMP-0010 | CMP-0010 | no | line 2247. |
-| CAMPAIGN PLAY | Encounter Treasure Rewards | present — TOC mismatch | A-057, C-030, C-084, C-116, C-119, F-053 |  | no | line 2287. Not in TOC. |
-| CAMPAIGN PLAY | The Bonfire Tile | present — to audit | A-025, A-028, A-048, A-051, A-057, A-064, A-067, A-077, B-007, B-011, B-031, B-034, C-030, C-042, C-043, C-044, C-045, C-070, C-071, C-084, C-098, C-103, C-111, C-116, C-119, C-120, F-040, F-041, F-042, F-043, F-053, F-090 |  | no | line 2295. |
-| CAMPAIGN PLAY | Stat Tier Costs | present — to audit | A-067, B-007, B-011, C-030, C-045, C-071, C-098, C-103, F-042, F-043 |  | no | line 2299. |
-| CAMPAIGN PLAY | (empty heading) | ORPHAN — delete |  | CMP-0006, CMP-0008, CMP-0010 | no | line 2308: empty H3 used as page break |
-| CAMPAIGN PLAY | Blacksmith Andre's Shop | present — to audit | A-048, B-034, C-030, C-043, C-045, C-070, C-084, C-098, C-111, C-116, C-119, F-041, F-053, F-090 |  | no | line 2310. |
-| CAMPAIGN PLAY | (empty heading) | ORPHAN — delete |  | CMP-0006, CMP-0008, CMP-0010 | no | line 2324: empty H3 used as page break |
-| CAMPAIGN PLAY | Shop Price Table | present — to audit | A-077, B-034, C-030, C-045, C-070, C-098, C-103 |  | no | line 2326. |
-| CAMPAIGN PLAY | (empty heading) | ORPHAN — delete |  | CMP-0006, CMP-0008, CMP-0010 | no | line 2336: empty H3 used as page break |
-| CAMPAIGN PLAY | Bonfire Ascetic | present — TOC mismatch | A-025, A-028, A-057, A-064, B-031, B-034, C-030, C-043, C-070, C-116, C-120 |  | no | line 2338. Not in TOC. |
-| CAMPAIGN PLAY | Transposition | present — to audit | A-051, B-031, C-030, C-070, C-120 |  | no | line 2344. |
+| CAMPAIGN PLAY | (chapter) | present — to audit | A-001, A-025, A-027, A-028, A-047, A-048, A-049, A-051, A-053, A-057, A-064, A-067, A-077, A-103, A-105, B-007, B-011, B-013, B-031, B-034, C-023, C-030, C-033, C-042, C-043, C-044, C-045, C-048, C-053, C-058, C-060, C-068, C-069, C-070, C-071, C-074, C-084, C-098, C-101, C-103, C-104, C-106, C-111, C-112, C-116, C-119, C-120, CMP-0006, CMP-0008, CMP-0010, F-036, F-037, F-038, F-039, F-040, F-041, F-042, F-043, F-053, F-086, F-090, F-134 | CMP-0006, CMP-0008, CMP-0010 | yes (§18) | line 2217. |
+| CAMPAIGN PLAY | Setup | present — contradiction | A-103, C-023, C-030, C-053, C-060, C-074, C-103, C-104, C-106, CMP-0008, F-036, F-037, F-038, F-053, F-090, F-134 | CMP-0008 | yes (§18) | line 2219. Claims "three campaigns, all three sections long"; body has 13 campaigns, 3–6 sections. |
+| CAMPAIGN PLAY | The Fog Gate | present — to audit | C-030, C-058, C-103, C-104, F-053 |  | yes (§18) | line 2227. |
+| CAMPAIGN PLAY | Sparks | present — to audit | A-001, A-047, A-048, A-049, A-051, B-013, C-030, C-033, C-103, C-104, CMP-0006, F-053, F-086, F-134 | CMP-0006 | yes (§18) | line 2231. |
+| CAMPAIGN PLAY | Adding & Dropping Players | present — to audit | A-027, A-105, B-013, C-030, C-048, C-104, C-112, F-039, F-134 |  | yes (§18) | line 2237. |
+| CAMPAIGN PLAY | Encounter Soul Rewards | present — TOC mismatch | A-053, B-011, C-030, C-068, C-069, C-119, CMP-0010, F-053, F-090 | CMP-0010 | yes (§18) | line 2241. TOC calls it "Encounter Rewards". |
+| CAMPAIGN PLAY | Campaign Soul Reward Table | present — to audit | A-053, B-011, C-030, C-069, C-119, CMP-0010 | CMP-0010 | yes (§18) | line 2247. |
+| CAMPAIGN PLAY | Encounter Treasure Rewards | present — TOC mismatch | A-057, C-030, C-084, C-116, C-119, F-053 |  | yes (§18) | line 2287. Not in TOC. |
+| CAMPAIGN PLAY | The Bonfire Tile | present — to audit | A-025, A-028, A-048, A-051, A-057, A-064, A-067, A-077, B-007, B-011, B-031, B-034, C-030, C-042, C-043, C-044, C-045, C-070, C-071, C-084, C-098, C-103, C-111, C-116, C-119, C-120, F-040, F-041, F-042, F-043, F-053, F-090 |  | yes (§18) | line 2295. |
+| CAMPAIGN PLAY | Stat Tier Costs | present — to audit | A-067, B-007, B-011, C-030, C-045, C-071, C-098, C-103, F-042, F-043 |  | yes (§18) | line 2299. |
+| CAMPAIGN PLAY | (empty heading) | ORPHAN — delete |  | CMP-0006, CMP-0008, CMP-0010 | yes (§18) | line 2308: empty H3 used as page break |
+| CAMPAIGN PLAY | Blacksmith Andre's Shop | present — to audit | A-048, B-034, C-030, C-043, C-045, C-070, C-084, C-098, C-111, C-116, C-119, F-041, F-053, F-090 |  | yes (§18) | line 2310. |
+| CAMPAIGN PLAY | (empty heading) | ORPHAN — delete |  | CMP-0006, CMP-0008, CMP-0010 | yes (§18) | line 2324: empty H3 used as page break |
+| CAMPAIGN PLAY | Shop Price Table | present — to audit | A-077, B-034, C-030, C-045, C-070, C-098, C-103 |  | yes (§18) | line 2326. |
+| CAMPAIGN PLAY | (empty heading) | ORPHAN — delete |  | CMP-0006, CMP-0008, CMP-0010 | yes (§18) | line 2336: empty H3 used as page break |
+| CAMPAIGN PLAY | Bonfire Ascetic | present — TOC mismatch | A-025, A-028, A-057, A-064, B-031, B-034, C-030, C-043, C-070, C-116, C-120 |  | yes (§18) | line 2338. Not in TOC. |
+| CAMPAIGN PLAY | Transposition | present — to audit | A-051, B-031, C-030, C-070, C-120 |  | yes (§18) | line 2344. |
 | CAMPAIGNS | (chapter) | present — to audit | A-039, A-040, A-048, A-049, A-094, A-102, A-103, A-104, A-106, A-107, A-108, A-109, A-110, A-111, C-003, C-004, C-005, C-009, C-013, C-015, C-018, C-030, C-041, C-042, C-059, C-074, C-075, C-076, C-098, C-101, C-102, C-104, C-105, C-106, C-112, C-122, CMP-0008, CMP-0021, CMP-0022, D-012, D-013, D-023, D-027, F-052, F-081, F-089, F-090 | CMP-0008, CMP-0021, CMP-0022 | yes (§19) | line 2350. |
 | CAMPAIGNS | The First Journey - Dark Souls (Core) | present — defect | A-039, A-040, A-103, A-111, C-003, C-013, C-030, C-041, C-042, C-074, C-098, C-105, C-112, CMP-0008, CMP-0021, D-012, F-052 | CMP-0008, CMP-0021 | yes (§19) | line 2352. "Gargoyle (Mini-Boss)" listed twice; "Andor Londo" (Anor Londo). |
 | CAMPAIGNS | (empty heading) | ORPHAN — delete |  | CMP-0008, CMP-0021, CMP-0022 | yes (§19) | line 2400: empty H3 used as page break |

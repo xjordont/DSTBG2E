@@ -124,7 +124,7 @@ The questions in this chapter are those that arise most often at the table. Each
 
 **Q.** What is the reduced reward for an encounter that is cleared again?
 
-**A.** Half the full soul reward, rounded down. The reward tables give both values (see §7.6; §18.5).
+**A.** Half the full soul reward, rounded down. The reward table gives both values, and campaign play uses the same table (see §7.6; §18.5).
 
 **Q.** An encounter is cleared, later failed, and then cleared once more. Does it pay the full reward again?
 

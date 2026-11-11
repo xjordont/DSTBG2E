@@ -6,7 +6,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Aggro.** The state of being the enemies' preferred target. Enemy movement icons and attack icons marked with the skull icon target the character who holds the aggro token (see §9.2, §9.3).
 
-**Aggro token.** The single token that marks the character with aggro. It is placed on the character with the highest threat at the start of each encounter and, after each round of character turns, moves to the character who inflicted the most damage on enemy models during that round (on a tie, or if no damage was inflicted, the holder keeps it). If the holder dies it moves to the living character with the highest threat. In a boss encounter it moves, at the end of a character's turn, to that character if they damaged the boss during the turn, and a damaging riposte moves it at the end of the boss's turn (see §7.5, Encounter Turn Order; §16.4).
+**Aggro token.** The single token that marks the character with aggro. It is placed on the character with the highest threat at the start of each encounter and, after each round of character turns, moves to the character who inflicted the most damage on enemy models during that round (on a tie, or if no damage was inflicted, the holder keeps it). If the holder dies it moves to the living character with the highest threat. In boss encounters it moves to any character who damages the boss during their turn (see §7.5, Encounter Turn Order; §16.4).
 
 **Ambush card.** A card from the Explorers expansion that shows Treasure or Mimic. When mimics are in play, one is dealt face down beside each encounter tile and is turned face up only when the party chooses to open that tile's chest (see §13.1).
 
@@ -48,7 +48,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Bonfire.** The characters' safe haven, represented by the *bonfire* tile, which has no nodes. The Firekeeper and Blacksmith Andre wait there and are visited only while the party rests. Returning to the bonfire tile costs nothing; resting there costs one *spark* (see §11.1, §11.2).
 
-**Bonfire ascetic.** In campaign play, a one-time communal payment of sixteen *souls* made while resting at the *bonfire* that unlocks tier two treasure and increases every non-boss enemy's base health by two for the rest of the campaign, cumulative with the health scaling for character count (see §18.7).
+**Bonfire ascetic.** In campaign play, a one-time communal payment of 16 *souls* made while resting at the *bonfire*, the one exception to the rule that souls cannot be pooled. It opens tier two treasure and the tier two shop and increases by two the base health of every enemy subject to enemy scaling for the rest of the campaign, cumulative with the health scaling for the number of characters. Enemy attack values are not changed (see §18.7).
 
 **Boss.** A single powerful enemy whose turns are driven by a behaviour deck and whose base is divided into four arcs. There are three ranks: *mini-boss*, *main-boss* and *mega-boss*. Bosses do not scale with the number of characters and may not be pushed by characters.
 
@@ -61,6 +61,8 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 **Boss treasure.** A treasure card supplied with a boss. One of a boss's treasure cards is awarded at random when the boss is defeated (see §16.5). Boss treasure cannot be bought; it sells for six *souls* and is returned to the game box when sold (see §11.4; for campaign play, see §18.6).
 
 **Calamity.** A condition from the Black Dragon Kalameet expansion. A model holds at most one calamity token, which reduces the total of each of its block, resist, and dodge rolls by one. A calamity token is removed only when the encounter ends (see §8.5, Calamity).
+
+**Campaign.** A game played through a fixed list of *sections*, taken in order, in which the characters keep what they have gained from one section to the next. The book supplies 12 campaigns; campaign play follows the standard game except as its own chapter states (see §18.1, §19).
 
 **Catalyst.** A weapon card that stores up to three spells of a matching school: a pyromancer flame stores pyromancies, a staff or catalyst stores sorceries, and a talisman or chime stores miracles. A stored spell occupies no equipment slot; its attack options are used as if it were equipped, and its block, resist, and dodge dice are ignored (see §4.3).
 
@@ -110,7 +112,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Encounter card.** The card dealt face down to each tile that lists the encounter's level, enemies, terrain and traps. It is revealed when the characters enter the tile.
 
-**Encounter level.** The difficulty of an encounter, from 1 to 4. The levels of the encounters leading to a boss are printed on that boss's data card and increase from the tile adjacent to the bonfire tile towards the boss tile (see §6.5). Level 4 encounters precede mega-bosses only (see §6.7).
+**Encounter level.** The difficulty of an encounter, from 1 to 4. The levels of the encounters leading to a boss are printed on that boss's data card and increase from the tile adjacent to the bonfire tile towards the boss tile (see §6.5). In the standard game Level 4 encounters precede mega-bosses only (see §6.7). In campaign play each section lists the levels of its encounters (see §18.1).
 
 **Endurance bar.** The track of 10 spaces on the dashboard that holds both stamina cubes (filling from the left) and damage cubes (filling from the right). A *hollow* character's two hollow cubes block the two rightmost spaces, leaving eight (see §3.4).
 
@@ -130,7 +132,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Failed.** The result of an encounter in which every character dies, or in which any *hollow* character dies. A *failed* encounter awards nothing; every living character drops their *souls* on the tile, its card is turned face down and its black cube removed, and the characters must rest at the *bonfire* (see §7.5, Encounter Resolution).
 
-**Final boss.** The last boss of the game: the main-boss, or the mega-boss if the players chose to add one. Defeating the final boss wins the game.
+**Final boss.** The last boss of the game: the main-boss, or the mega-boss if the players chose to add one. Defeating the final boss wins the game (see §7.1). In campaign play the final boss is the last boss listed in the campaign's last section (see §18.1).
 
 **Firekeeper.** The figure at the *bonfire* who raises a character's stats, one *stat tier* per purchase, in exchange for that character's *souls*. Stat tiers one to four cost 2, 4, 8, and 10 souls (see §11.3; for campaign play, see §18.6).
 
@@ -166,9 +168,9 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Leap.** A boss movement marked with the leap icon. The boss is removed from its node and placed on the node of its target, at any distance, without changing its facing. Every character on that node is pushed to a valid adjacent node chosen by that character's player, and the push is not limited by arcs (see §16.2).
 
-**Legendary treasure.** A rare treasure card marked with an orange light under a chest. It cannot be purchased; five are shuffled into the tier two deck when the tier two shop is first stocked, and one drawn while stocking a shop is shuffled back (see §6.2, §6.3). In campaign play legendary treasure is obtained only by *transposition*.
+**Legendary treasure.** A rare treasure card marked with an orange light under a chest. It cannot be purchased; five are shuffled into the tier two deck when the tier two shop is first stocked, and one drawn while stocking a shop is shuffled back (see §6.2, §6.3). In campaign play legendary treasure enters neither treasure deck, is obtained only by *transposition*, and sells for four *souls* (see §18.6, §18.8).
 
-**Level 4 encounter.** The single encounter fought on the Level 4 encounter side of a *mega-boss game board* after the main-boss is defeated and before the mega-boss encounter. All four nodes along the wall beside the doorway are entry nodes; once *cleared* it is not fought again and does not reset (see §6.7).
+**Level 4 encounter.** The single encounter fought on the Level 4 encounter side of a *mega-boss game board* after the main-boss is defeated and before the mega-boss encounter. All four nodes along the wall beside the doorway are entry nodes; once *cleared* it is not fought again and does not reset (see §6.7). In campaign play a Level 4 encounter is fought where its section lists it, on a mega-boss game board placed in the section's route (see §18.1).
 
 **Lost.** The state of a *hollow* character who has died (see §7.2). A *lost* character is removed from play, the encounter is *failed* at once, and the character is revived only when the characters rest at the *bonfire*.
 
@@ -180,7 +182,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Major action.** The one principal action of a character's turn: *Attack*, *Rest*, *Drink Estus*, or *Ember*. A character may take one major action per turn (see §10.1).
 
-**Mega-boss.** An optional final boss from a mega-boss expansion, fought on its own game board after a Level 4 encounter. Death and hollowing in a mega-boss encounter follow the usual rules (see §7.2).
+**Mega-boss.** An optional final boss from a mega-boss expansion, fought on its own game board after a Level 4 encounter. Death and hollowing in a mega-boss encounter follow the usual rules (see §7.2). In campaign play a mega-boss is faced only where the campaign lists one, and a mega-boss that is not the campaign's final boss is fought under the same rules as any other boss (see §18.1).
 
 **Mega-boss game board.** The double-sided board supplied with a mega-boss expansion. Its Level 4 encounter side is the tile of the Level 4 encounter and its mega-boss side is the tile of the mega-boss encounter (see §6.7, §15.3).
 
@@ -238,13 +240,13 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Rest (major action).** The character removes every stamina cube from their endurance bar; damage cubes, hollow cubes, and condition tokens stay. A character cannot *Rest* in a turn in which they have *run*, cannot *run* after resting in the same turn, and cannot *Rest* while holding a *frostbite* token (see §10.1).
 
-**Resting at the bonfire.** The party action, costing one *spark* unless it follows the defeat of a boss, that revives dead and *lost* characters, removes every damage cube, stamina cube, hollow cube, and condition token, readies the heroic action, luck, and estus flask tokens, allows visits to the Firekeeper and Blacksmith Andre, and resets every encounter. It neither places nor removes an *ember token* (see §11.2).
+**Resting at the bonfire.** The party action, costing one *spark* unless it follows the defeat of a boss (in campaign play, unless it follows the completion of a *section*; see §18.3), that revives dead and *lost* characters, removes every damage cube, stamina cube, hollow cube, and condition token, readies the heroic action, luck, and estus flask tokens, allows visits to the Firekeeper and Blacksmith Andre, and resets every encounter. It neither places nor removes an *ember token* (see §11.2).
 
 **Revised card.** A card listed in Appendix B that takes the place of the printed card of the same name. Where a revised card differs from the printed text, the text given in Appendix B governs (see Appendix B).
 
 **Riposte.** The attack a character may make at once against the attacker after a successful *parry*, using one attack option of the weapon in the right weapon slot and paying its stamina cost. A riposte cannot be parried, and it does not count against the attacks of the character's own turn (see §9.6).
 
-**Round.** One pass of the encounter turn order: every enemy model takes a turn in descending threat order, then every character takes a turn in descending threat order (see §7.5, Encounter Turn Order). In a boss encounter a round is one turn by each living character, each preceded by a turn of the boss (see §16.1). In a *PvP encounter* a round is one turn by each character still in play (see §20.2).
+**Round.** One pass of the encounter turn order: every enemy model takes a turn in descending threat order, then every character takes a turn in descending threat order (see §7.5, Encounter Turn Order).
 
 **Run.** A minor action: the character spends one stamina and moves one node. It may be taken any number of times per turn. A character who has *run* cannot *Rest* in that turn (see §10.2).
 
@@ -254,7 +256,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Scry.** To reveal one hidden card (the top card of a treasure deck, a face-down encounter card, or the top card of the next boss's behaviour deck) and either return it or send it away (see §7.5, Encounter Resolution).
 
-**Section.** In campaign play, one list of tiles that the party lays out and plays through in order, ending in a boss or in an encounter. A section is completed when its final boss is defeated or, for a section that ends in an encounter, when that encounter is *cleared*, unless the campaign states another condition. Completing a section restocks the *shop* and grants a rest without spending a *spark* (see §18.1; §19).
+**Section.** In campaign play, one list of tiles: a *bonfire* tile, a number of encounter tiles with their encounter levels, and the bosses to be faced. A section is completed when the last boss it lists is defeated or, for a section whose list ends in an encounter, when that encounter is *cleared*. The shop is restocked and a rest that costs no *spark* is granted only when a section is completed (see §18.1).
 
 **Shaft.** A weapon icon. An attack option with the shaft icon cannot target a model on the attacker's own node (see §10.3, Shaft).
 
@@ -296,7 +298,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Terrain node.** A node on which a terrain token or model is placed at the start of an encounter, as the encounter card directs. A terrain node that holds no terrain is used as a basic node (see §5.1).
 
-**Threat.** The value that fixes turn order, printed on the character dashboard as Taunt Level and on enemy and phantom data cards. Enemies act in descending threat before the characters, who then act in descending threat. The character with the highest threat takes the aggro token at the start of each encounter (see §3.1, §7.5).
+**Threat.** The value that fixes turn order. Enemies act in descending threat before the characters, who then act in descending threat. The character with the highest threat takes the aggro token at the start of each encounter; the players settle ties (see §7.5, Encounter Turn Order).
 
 **Tier one treasure.** The treasure deck that holds common and class-specific treasure with every stat requirement below 25. Encounter rewards and chests draw from tier one until the mini-boss is defeated (in campaign play, until the *bonfire ascetic* is burnt) (see §6.2).
 
@@ -308,7 +310,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Transposed treasure.** A class treasure card marked with a blue light. All transposed treasure is tier two.
 
-**Transposition.** In campaign play, exchanging one boss treasure card and four *souls* for one of the five face-up legendary treasure cards while resting at the *bonfire* after the first section's final boss.
+**Transposition.** In campaign play, exchanging one boss treasure card and four *souls* for one of the five face-up legendary treasure cards while resting at the *bonfire*. It is available after the last boss of the first section is defeated, and the boss treasure card is returned to the game box (see §18.8).
 
 **Trap token.** A token, blank or showing a dodge difficulty and a damage value, dealt face down to the basic nodes of a trapped encounter. It is turned face up when a character enters its node by a move, a dodge, or a push, and each character there must suffer the damage or *dodge* it; enemies neither trigger traps nor suffer them (see §5.5, Traps). In a *PvP encounter* one trap token is placed at the end of each character's turn, and a character who fails to dodge it dies (see §20.6).
 

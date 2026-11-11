@@ -10,7 +10,7 @@ Date: 2026-11-10. Decision: **"Approve all"** — the user approved every recomm
 | OQ-02 | Content completions | CMP-0001 … CMP-0023 approved. CMP-0005: drafted bosses adopted; the nine BLOCKED bosses ship as placeholders ("played from its data card and the general boss rules; apply the special rules supplied with that expansion"). |
 | OQ-03 | Asset priorities | Vector wordmark (AST-0001/0004) and lava-scale texture for the cover; the complete 2022 symbol key as the book's icon set; knot, compass-corner and title-rule ornaments for openers and folios; anatomy diagrams redrawn over the extracted plates; component photography (28 TO EXTRACT) in Phase 2B. |
 | OQ-04 | "Combat Cards" | Out of scope; no such section exists in the supplied revision. |
-| OQ-05 | Reduced soul reward | **Half the full reward, rounded down**: standard 1/2/2/3, campaign 1/1/2/2, as a second column in both soul tables. |
+| OQ-05 | Reduced soul reward | **Half the full reward, rounded down**: 1/2/2/3, as a second column in the soul reward table. (The report's illustrative campaign figures 1/1/2/2 assumed the manuscript's campaign table; under OQ-21 campaign play uses the standard table.) |
 | OQ-06 | Event cards | **Deleted.** Every reference (component list, setup, scrying, Special Trap cards, Level 4 "no event card") is removed. The CMP-0012 event-card paragraph (c) is not adopted; the rest of CMP-0012 is. |
 | OQ-07 | Enemy scaling **[MECHANICAL CHANGE — signed off]** | Repeat 2 at four players deleted (four players = Base + 4 health and +1 attack); the +1 attack moves from three players to four; the bonfire ascetic adds health, not a second +1 attack. |
 | OQ-08 | Endurance bar | Official ten-box dashboards: "ten spaces; hollow blocks two, leaving eight". All hollow, skip and overflow arithmetic is restated on this basis. |
@@ -26,7 +26,7 @@ Date: 2026-11-10. Decision: **"Approve all"** — the user approved every recomm
 | OQ-18 | F.A.Q. register | Kept as a Q&A chapter in lawbook voice, placed after the Glossary as the final chapter before the appendices. |
 | OQ-19 | Stat scaling threshold **[MECHANICAL CHANGE — signed off]** | +1 when the character's stat exceeds the attack option's highest requirement by **five** or more. |
 | OQ-20 | Missing booklets | Not supplied; placeholders ship (see OQ-02). |
-| OQ-21 | Campaign pacing | Campaign soul rewards 3/4/5/6 **and** doubled stat costs both kept. |
+| OQ-21 | Campaign pacing | Single lever (B-011, first option): campaign play keeps the standard soul rewards (3/4/5/6 full; 1/2/2/3 reduced) and retains the doubled stat tier costs. The manuscript's campaign reduction of one soul is dropped. This alters a complete rule although the report did not label it a mechanical change; it is logged as CH-18-038 and flagged for the author's confirmation. |
 | OQ-22 | Campaign sparks | Maximum = starting value + 1; a spark may be bought back for 4 souls per character. |
 | OQ-23 | Dice faces | Printed as listed (Black 0,1,1,1,2,2; Blue 1,1,2,2,2,3; Orange 1,2,2,3,3,4; Green three blank / three success). |
 | OQ-24 | Calamity | Manuscript version kept: lasts the encounter. |

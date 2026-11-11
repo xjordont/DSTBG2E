@@ -356,3 +356,10 @@
 - After: "An encounter is cleared for the first time while the treasure cards dealt to its tile at setup still lie on the tile … an encounter that was cleared, later failed, and then cleared again is a repeated clear, and step 6 marks it cleared once more."
 - Rationale: A failed encounter loses its black cube (CMP-0019), so keying rewards to the cube let a cleared-then-failed encounter pay the full reward and treasure a second time, with no treasure cards left to award. The reward history is now kept by the treasure cards themselves; the cube records only the permission to skip.
 - Source: CMP-0019, A-053, review of PR #2
+
+### CH-07-052 · §7.6 Souls
+- Type: correction
+- Before: "The rewards of the standard game are as follows; campaign play uses its own table (see §18.5)."
+- After: "The rewards are as follows, and campaign play uses the same rewards (see §18.5)."
+- Rationale: Under Gate 1 OQ-21 campaign play keeps the standard soul rewards, so no separate campaign table exists (see CH-18-038).
+- Source: Gate 1 — OQ-21
