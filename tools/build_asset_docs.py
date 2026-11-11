@@ -7,12 +7,22 @@ these define the catalogue order and are renumbered here) and work/extraction_re
 (Phase 2B, written by tools/extract_phase2b.py). Phase 2B records carry the final catalogue Asset ID
 of the entry they belong to (`parent`), are attached after the renumbering and never change it: one
 record per file (`AST-NNNN` for a single-file asset, `AST-NNNN.k` for one file of a multi-file asset),
-file-less records that set a status (`not required`, `BLOCKED`) and `AST-NNNN.Rk` provenance-review items."""
+file-less records that set a status (`not required`, `BLOCKED`) and `AST-NNNN.Rk` provenance-review items.
+
+work/extraction_records_phase3.json (Phase 3, written by tools/extract_phase3.py) is merged in the same way. It holds
+the painted art, card faces, dashboards and card fans released when the author confirmed provenance on 2026-11-11,
+and the files of the eight mega-boss expansion booklets (catalogue entries appended below the specimens, so that no
+existing Asset ID moves). An entry that was held for provenance and now has files is shown as cleared."""
 import os, json, csv, re, shutil
 os.chdir(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))  # repo root, checkout-independent
 B1=json.load(open('work/extraction_records_batch1.json')); IC=json.load(open('work/extraction_records_icons_final.json'))
 P2B_FILE='work/extraction_records_phase2b.json'
 P2B=json.load(open(P2B_FILE)) if os.path.exists(P2B_FILE) else []
+P3_FILE='work/extraction_records_phase3.json'
+P3=json.load(open(P3_FILE)) if os.path.exists(P3_FILE) else []
+P3IDS={r['id'] for r in P3}
+CLEARED='provenance confirmed by the author, 2026-11-11'
+P3_WHY='cleared for use on 2026-11-11 and offered to the designer in layout/art_candidates.json; not yet placed'
 PAL=json.load(open('work/palette.json'))
 AUTH='authorised under owner\'s rights assertion'; PROV='PROVENANCE REVIEW'
 TG='DS-TG-Rulebook-Compressed_compressed.pdf'; CORE='DS-Core-Rules-lores.pdf'
@@ -151,6 +161,13 @@ sp={'AST-0070':('style guide — table styling','Caslon regular at ~8.5 pt in ce
  'AST-0076':('style guide — cover subtitle','OptimusPrinceps SemiBold, white, tracked; used for every expansion title on covers.'),
  'AST-0077':('style guide — lore block','Italic lore paragraphs open each chapter/expansion; measure ~330 pt, ragged right.')}
 for k in sorted(S): add(S[k],*sp[k])
+# ---- G10 mega-boss expansion booklets (supplied 2026-11-11; appended last so that no existing Asset ID moves)
+for boss,src in [('The Four Kings','DS-Four-Kings-Rules-web.pdf'),('Gaping Dragon','DS-GaD-Rules-web.pdf'),('Guardian Dragon','DS-GD-Rules-web.pdf'),
+ ('The Last Giant','DS-TLG-Rules.pdf'),('Manus, Father of the Abyss','DS-MFA-Rules.pdf'),('Old Iron King','DS-OIK-Rules-web.pdf'),
+ ('Vordt of the Boreal Valley','DS-VotBV-Rules-web.pdf'),('Asylum Demon','DS-AD-Rules-web-EN.pdf')]:
+    todo(f'{boss} mega-boss expansion booklet: cover and paintings, miniature render, game board (both sides), card faces, special-rule plate','mega-boss expansion set',src,1,
+         'whole booklet (16 pp): cover p.1, paintings pp.3/6/10/14–16, miniature p.4, board and card fans p.5, level 4 encounter card p.8, encounter side of the board p.9, data and behaviour cards p.11, behaviour decks p.12, custom game elements p.13',
+         'Boss Encounters, Boss Turns, Boss Special Rules and Campaigns chapters','Booklet supplied by the author on 2026-11-11, after the reconnaissance pass; catalogued and extracted in Phase 3.')
 # ---- renumber & rename
 n=0
 for e in entries:
@@ -181,7 +198,7 @@ def _subkey(r):
     k=r['id'].partition('.')[2]; return (1,int(k[1:])) if k.startswith('R') else (0,int(k or 0))
 byid={e['id']:e for e in entries}
 for e in entries: e['sub']=[]; e['review']=[]; e['p2b']=None
-for r in sorted(P2B,key=lambda r:(r['parent'],_subkey(r))):
+for r in sorted(P2B+P3,key=lambda r:(r['parent'],_subkey(r))):
     e=byid[r['parent']]
     if r.get('file'):
         assert os.path.exists(r['file']), r['file']
@@ -193,6 +210,9 @@ for e in entries:
     if not sub and not ov: continue
     e['p0_notes']=e['notes']               # Phase 0 note is kept verbatim after the Phase 2B note
     new=[]
+    n3=sum(1 for r in sub if r['id'] in P3IDS)   # files added in Phase 3
+    PH='Phase 3' if n3==len(sub) else 'Phase 2B and Phase 3' if n3 else 'Phase 2B'
+    TOOL='tools/extract_phase3.py' if n3==len(sub) else 'tools/extract_phase2b.py, tools/extract_phase3.py' if n3 else 'tools/extract_phase2b.py'
     if len(sub)==1 and sub[0]['id']==e['id']:
         r=sub[0]; e.update(file=r['file'],dims=r['dims'],format=r['format'],method=r['method'],status='extracted')
         e['p0_region']=e.get('region')
@@ -204,16 +224,34 @@ for e in entries:
         e['status']='extracted'
         e['dims']=f"{len(sub)} file{'s' if len(sub)>1 else ''}; "+((f"{min(ls)}–{max(ls)}" if min(ls)!=max(ls) else f"{ls[0]}")+" px on the long side" if ls else 'vector')
         d,_=os.path.split(sub[0]['file']); stem=re.match(r'(ast-\d{4})-',os.path.basename(sub[0]['file'])).group(1)
+        dirs=sorted({os.path.dirname(r['file']) for r in sub}); fmts=sorted({r['format'] for r in sub})
         e['files_note']=(f"{d}/{stem}-*.{sub[0]['format']} ({len(sub)} files, listed as sub-entries {sub[0]['id']} to {sub[-1]['id']})" if len(sub)>1 else f"{sub[0]['file']} (sub-entry {sub[0]['id']})")
-        e['method']='Phase 2B (tools/extract_phase2b.py): see the sub-entries, one per file'
+        if len(dirs)>1 or len(fmts)>1:     # Phase 3 files of one entry can sit in several folders (art, photography, frames, diagrams)
+            e['files_note']=f"{stem}-* in {', '.join(dirs)} ({len(sub)} files, {'/'.join(fmts)}, listed as sub-entries {sub[0]['id']} to {sub[-1]['id']})"
+        e['method']=f'{PH} ({TOOL}): see the sub-entries, one per file'
         pages=sorted({(r['src'],r['page']) for r in sub})
-        new.append('Phase 2B extraction, one file per subject from '+'; '.join(f"{s} p.{p}" for s,p in pages[:12])+('.' if len(pages)<=12 else ' and others.'))
-    if ov:
+        new.append(f'{PH} extraction, one file per subject from '+'; '.join(f"{s} p.{p}" for s,p in pages[:12])+('.' if len(pages)<=12 else ' and others.'))
+    if ov and n3 and ov['status']=='BLOCKED':   # a Phase 2B hold lapses once Phase 3 has delivered the files
+        new.append('Phase 2B had held this entry: '+ov['reason'])
+    elif ov:
         e['status']=ov['status']; new.insert(0,ov['reason'])
         if not sub: e['method']=f"{ov['status']} (Phase 2B decision)"
-    if e['review']: new.append(f"{len(e['review'])} related candidate(s) held for provenance review: see Provenance Review, section F.")
+    if e['review']: new.append(f"{len(e['review'])} related candidate(s) "+('were held for provenance review and cleared on 2026-11-11' if P3 else 'held for provenance review')+": see Provenance Review, section F.")
     e['p2b_note']=' '.join(new)
     e['notes']=(e['p2b_note']+(' Phase 0 note: '+e['p0_notes'] if e['p0_notes'] else '')).strip()
+# ---- provenance cleared (2026-11-11): an entry that was held for provenance, or that Phase 3 added files to, and that
+# now has files is no longer BLOCKED or held; its licensing is the ordinary wording and the confirmation is noted
+for e in entries:
+    held=e['lic']==PROV; got3=any(r['id'] in P3IDS for r in e['sub'])
+    if not ((e.get('file') or e['sub']) and (held or got3)): continue
+    e['cleared']=True
+    if held:
+        e['lic']=AUTH; e['designated']=True
+        e['name']=e['name'].replace(' — PROVENANCE REVIEW','')
+        e['placement']='cover and chapter art: candidates listed in layout/art_candidates.json'
+        e['notes']=(e['notes'] or '').replace(' Not extracted.',' Held, not extracted, in Phase 0.')
+    if e['status']=='BLOCKED' and not (e['p2b'] and not got3): e['status']='extracted'
+    e['notes']=((e['notes'] or '').rstrip()+' Provenance confirmed by the author, 2026-11-11.').strip()
 json.dump(entries,open('work/asset_catalogue_final.json','w'),indent=1,default=str)
 # ---- final usage: where each file is placed in the assembled book (work/asset_placement.json is written by
 # tools/mark_asset_placement.py from the built HTML and the stylesheet; absent before the first build)
@@ -224,7 +262,7 @@ WHY_NOT={'logo':'the wordmark is used nominatively only and the title is set in 
  'ornament':'reserve ornament; the book uses the knot square and the knot rule',
  'texture':'reserve texture','photography':'reserve image, or a component these rules do not use',
  'frame':'reference for the stylesheet; boxes and tables are drawn in CSS','typographic specimen':'reference for the type scale',
- 'art':'held under Provenance Review (Gate 1 OQ-33)'}
+ 'art':P3_WHY}
 def why_not(e): return 'held under Provenance Review (Gate 1 OQ-33)' if e['lic']==PROV else WHY_NOT.get(e['type'],'held in reserve')
 def usage(e):
     """(status, placement text) for a catalogue entry, from the files it owns."""
@@ -233,17 +271,18 @@ def usage(e):
         return ('placed','; '.join(w)) if w else (e['status'],'not placed: '+why_not(e))
     if e.get('sub'):
         n=sum(1 for r in e['sub'] if r['file'] in PLACED)
-        return ('placed',f"{n} of {len(e['sub'])} files placed (see the sub-entries)") if n else (e['status'],'not placed: '+why_not(e))
+        return ('placed',f"{n} of {len(e['sub'])} files placed (see the sub-entries)") if n else (e['status'],'not placed: '+(P3_WHY if all(r['id'] in P3IDS for r in e['sub']) else why_not(e)))
     return (e['status'],e['placement'])
 def sub_usage(e,r):
     w=PLACED.get(r['file'])
-    return ('placed','; '.join(w)) if w else ('extracted','not placed: '+why_not(e))
+    return ('placed','; '.join(w)) if w else ('extracted','not placed: '+(P3_WHY if r['id'] in P3IDS else why_not(e)))
 # ---- write log
 head=open('22_asset_extraction_log.md').read().split('## Colour Palette (sampled)')[0]
 out=[head.rstrip()+'\n\n## Colour Palette (sampled)\n\nSampled with PIL/numpy from 400–600 dpi `pdftoppm` renders (sRGB) and from the extracted icon crops (median of saturated pixels in the named hue band). CMYK is a naive RGB→CMYK conversion for orientation only — the source PDFs are U.S. Web Coated (SWOP) CMYK; re-pick in the layout application against that profile.\n\n| Swatch | Hex (sRGB) | Approx. CMYK | Used for | Sampled from |\n|---|---|---|---|---|\n']
 for k,v in PAL.items(): out.append(f"| {k.replace('_',' ')} | `{v['hex']}` | {v['cmyk']} | {v['use']} | {v.get('src','—')} |\n")
 out.append('\nReading of the palette: the books are essentially two-tone — warm parchment (`#f4f2ea`) with charcoal ink (`#231f20`, i.e. rich black ≈ C0 M11 Y9 K86 in the CMYK source) — with gold (`#9c8141`/`#b77e2e`) as the single decorative accent and a small functional colour code borrowed from the components: red = enemy/spawn/weak, magenta = terrain, blue/purple = encounter level, green = attack arc/adjacency, orange/blue/black = dice. Covers and the back cover use a warm near-black (`#110f0e`).\n\n## Asset Catalogue\n\nGroups: logos (AST-0001–0005), icon set from the 2022 reference page (AST-0006 onward), ornaments, frames, diagrams, art, photography, textures, typographic specimens. Entries whose Method is `TO EXTRACT` have no file yet; entries marked `NOT EXTRACTED — provenance` are catalogued for the lead\'s decision only.\n\n'
- +('Phase 2B extractions (2026-11-11, `tools/extract_phase2b.py`, records in `work/extraction_records_phase2b.json`) are shown on the catalogue entry they belong to. An asset extracted as several files lists one sub-entry `AST-NNNN.k` per file in a table under its entry; Asset IDs of the catalogue are unchanged. Component imagery was taken from embedded image objects (`pdfimages -png` with soft masks composited to RGBA) at native resolution, so it carries no parchment, caption or watermark; the few page-region crops were rendered from a working copy with the personalisation line redacted and verified clear of it.\n\n' if P2B else ''))
+ +('Phase 2B extractions (2026-11-11, `tools/extract_phase2b.py`, records in `work/extraction_records_phase2b.json`) are shown on the catalogue entry they belong to. An asset extracted as several files lists one sub-entry `AST-NNNN.k` per file in a table under its entry; Asset IDs of the catalogue are unchanged. Component imagery was taken from embedded image objects (`pdfimages -png` with soft masks composited to RGBA) at native resolution, so it carries no parchment, caption or watermark; the few page-region crops were rendered from a working copy with the personalisation line redacted and verified clear of it.\n\n' if P2B else '')
+ +('Phase 3 extractions (2026-11-11, `tools/extract_phase3.py`, records in `work/extraction_records_phase3.json`) are attached in the same way. The author confirmed provenance of the painted art on 2026-11-11, so the paintings, whole card faces, whole dashboards and card fans that had been held are now extracted, and the entries that were marked `NOT EXTRACTED — provenance` or `BLOCKED` for that reason are shown as cleared. Painted art for which the catalogue had no entry is attached to the closest entry and says so in its note. Eight mega-boss expansion booklets supplied the same day have one entry each at the end of the catalogue (group "mega-boss expansion sets"). Whole cards of those booklets exist only as a texture, an art layer and live text, so they are page-region crops, made from a working copy with the personalisation line redacted and verified clear of it; everything else is from embedded image objects. The designer\'s list of all Phase 3 files is `layout/art_candidates.json`; contact sheets are `build/art_contact*.jpg`.\n\n' if P3 else ''))
 def fmt_entry(e):
     src=e['src']; page=e.get('page'); 
     region=e.get('region') or (bbox_s(e.get('bbox_pt')) if e.get('bbox_pt') else 'whole embedded image (see Method)')
@@ -257,7 +296,7 @@ def fmt_entry(e):
     if e.get('single') and e.get('p0_region') and e['single'].get('image_object'):
         io=e['single']['image_object']; region=f"embedded image object {io.get('xref')} (pdfimages #{io.get('pdfimages_num')}), placed at {bbox_s(e.get('bbox_pt'))}; catalogued as: {e['p0_region']}"
     elif e.get('single') and e.get('p0_region'): region=f"{bbox_s(e.get('bbox_pt'))}; catalogued as: {e['p0_region']}"
-    out=(f"### [{e['id']}] {e['name']}\n- Source: {src}, p.{page}\n- Type: {typ}\n- Region: {region}\n- Dimensions: {dims}\n- Format: {e.get('format','png')}\n- Method: {e['method']}\n- Cleaned file: {cf}\n- Proposed placement: {e['placement']}\n- Final usage: {usage(e)[1] if (e.get('file') or e.get('sub')) else 'none ('+e['status']+')'}\n- Licensing: {e['lic']}\n- Notes: {e['notes'] or '—'}\n\n")
+    out=(f"### [{e['id']}] {e['name']}\n- Source: {src}, p.{page}\n- Type: {typ}\n- Region: {region}\n- Dimensions: {dims}\n- Format: {e.get('format','png')}\n- Method: {e['method']}\n- Cleaned file: {cf}\n- Proposed placement: {e['placement']}\n- Final usage: {usage(e)[1] if (e.get('file') or e.get('sub')) else 'none ('+e['status']+')'}\n- Licensing: {e['lic']+(' ('+CLEARED+')' if e.get('cleared') else '')}\n- Notes: {e['notes'] or '—'}\n\n")
     if e.get('sub'):
         out+='| Sub-entry | Subject | Cleaned file | Dimensions | Source | Region / image object | Method | Notes |\n|---|---|---|---|---|---|---|---|\n'
         for r in e['sub']:
@@ -278,14 +317,15 @@ for e in entries:
 REVIEW_F=''
 if any(e['review'] for e in entries):
     REVIEW_F=('\n### F. Phase 2B: candidates seen during extraction and not extracted\nRule applied in Phase 2B: Steamforged product imagery (miniature renders, tiles, boards, tokens, dice, card backs, layout ornaments, icons) is extracted; anything that looks like a painting, and any card or dashboard face whose painted illustration cannot be left out, is listed here instead. Where an illustration-free part could be had, that part was extracted and is named in the reason.\n\nPhase 2C decision: the anatomy plates extracted in Phase 0 that show the same painted card and dashboard illustrations (AST-0105, AST-0091, AST-0094, AST-0097) and the printed model discs of the arcs diagram (AST-0099) are placed in the book with those areas blanked (`masks` in `layout/tuning.json`); the stored plates are unchanged. The project lead is asked to rule (`14_open_issues.md`, item 21).\n\n'
-              '| Review ID | Asset | Where | What | Reason / what was done |\n|---|---|---|---|---|\n'
-              +''.join(f"| {r['id']} | {e['id']} | {r['src']}, p.{r['page']}, {r['image_object']} | {r['name']} | {r['reason']} |\n" for e in entries for r in e['review']))
+              +('Closed on 2026-11-11: every item of this table is cleared, and the last column names the Phase 3 files that now hold it.\n\n' if P3 else '')
+              +'| Review ID | Asset | Where | What | Reason / what was done (as recorded in Phase 2B) | Cleared 2026-11-11: extracted as |\n|---|---|---|---|---|---|\n'
+              +''.join(f"| {r['id']} | {e['id']} | {r['src']}, p.{r['page']}, {r['image_object']} | {r['name']} | {r['reason']} | {', '.join(x['id'] for x in P3 if x.get('resolves')==r['id']) or '—'} |\n" for e in entries for r in e['review']))
 out.append('''## Provenance Review
 
-Items below are **not** designated for reuse until the project lead rules on them. Nothing in this section has been extracted into `assets/` except '''+TG_COVER+''' (TG cover art), which was pulled because the brief asked for one cover art and is held as `BLOCKED`.
+**The review was closed on 2026-11-11.** The author confirmed in writing: "I own the rights to all source material, painted illustrations, and artwork." The painted art, card faces, dashboards and card fans listed in sections A and F are therefore cleared for use, and Phase 3 (`tools/extract_phase3.py`) has extracted them; their catalogue entries now read "authorised under owner's rights assertion" with the note "'''+CLEARED+'''". The lists below are kept unchanged as the record of what was held and why (before the confirmation, '''+TG_COVER+''', the TG cover art, was the only held item with a file). Two things are not changed by the confirmation: the community PDFs of section D, whose art is credited to third parties and is not used, and the font licences of section E.
 
 ### A. Third-party (FromSoftware / Bandai Namco) artwork inside the SFG PDFs
-The owner's rights assertion covers the SFG publications. The paintings, screenshots and key art below are, however, FromSoftware/Bandai Namco intellectual property that SFG reproduced under licence (every credits block reads "Dark Souls™ & ©BANDAI NAMCO Entertainment Inc. / ©FromSoftware, Inc."). The lead must decide whether the assertion extends to this licensed art.
+The owner's rights assertion covers the SFG publications. The paintings, screenshots and key art below are, however, FromSoftware/Bandai Namco intellectual property that SFG reproduced under licence (every credits block reads "Dark Souls™ & ©BANDAI NAMCO Entertainment Inc. / ©FromSoftware, Inc."). The lead must decide whether the assertion extends to this licensed art. (Decided 2026-11-11 by the author's confirmation: it does.)
 
 | Where | What | Notes |
 |---|---|---|
@@ -352,19 +392,21 @@ with open('21_asset_manifest.csv','w',newline='') as f:
 ext=[e for e in entries if e.get('file') and not e.get('single')]; todo_n=[e for e in entries if e['status']=='TO EXTRACT']; prov=[e for e in entries if e['lic']==PROV]
 p2f=[r for r in P2B if r.get('file')]; p2n=lambda pre: sum(1 for r in p2f if r['file'].startswith('assets/'+pre))
 P2B_SUMM=(f" **Phase 2B added:** {len(p2f)} files for {len({r['parent'] for r in p2f})} catalogue assets ({p2n('photography')} component images incl. composites, {p2n('diagrams')} diagrams, {p2n('icons')} icons, {p2n('frames')} frames and card backs, {p2n('textures')} textures); {sum(1 for e in entries if e.get('p2b') and e['p2b']['status']=='not required')} marked not required, {sum(1 for e in entries if e.get('p2b') and e['p2b']['status']=='BLOCKED')} BLOCKED, {sum(len(e['review']) for e in entries)} candidates listed for provenance review (log, Provenance Review F). Hero list for the layout: `layout/hero_assets.json`." if P2B else '')
+p3f=[r for r in P3 if r.get('file')]; p3n=lambda pre: sum(1 for r in p3f if r['file'].startswith('assets/'+pre))
+P3_SUMM=(f" **Phase 3 added (provenance confirmed by the author, 2026-11-11):** {len(p3f)} files for {len({r['parent'] for r in p3f})} catalogue assets ({p3n('art')} paintings and illustrations, {p3n('frames')} card faces, {p3n('photography')} dashboards, card fans, miniature renders and game boards, {p3n('diagrams')} special-rule plates, {p3n('icons')} tokens), including the eight mega-boss expansion booklets (AST-{len(entries)-7:04d} to AST-{len(entries):04d}). Designer's list: `layout/art_candidates.json`; contact sheets `build/art_contact*.jpg`." if P3 else '')
 icons=[e for e in ext if e['type']=='icon']
 summ=f"""# Asset reconnaissance — summary
 
 **Scanned:** 12 PDFs (10 official SFG, 2 community) — every page rendered at 80 dpi and inspected; `pdffonts` and `pdfimages -list` run on all; 9 encrypted files re-saved with pypdf.
 
-**Catalogued:** {len(entries)} assets in `22_asset_extraction_log.md` (AST-0001–AST-{len(entries):04d}). **Extracted {'in Phase 0' if P2B else 'now'}:** {len(ext)} files in `assets/` ({len(icons)} icons from the 2022 reference page, {sum(1 for e in ext if e['type']=='logo')} logo files incl. vector SVG, {sum(1 for e in ext if e['type'] in ('ornament','frame'))} ornaments/frames (SVG + PNG), {sum(1 for e in ext if e['type']=='texture')} textures incl. the 5174×3378 px print-master page background, {sum(1 for e in ext if e['type']=='diagram')} anatomy/worked-example diagrams, {sum(1 for e in ext if e['type']=='typographic specimen')} type specimens, 2 cover items). **Still to extract:** {len(todo_n)}{' (card frames, token/miniature photography, expansion set symbols, 2017-only enemy icons)' if not P2B else ' (not designated)'}.{P2B_SUMM} **Provenance review:** {len(prov)} catalogue entries plus the tables in the log.
+**Catalogued:** {len(entries)} assets in `22_asset_extraction_log.md` (AST-0001–AST-{len(entries):04d}). **Extracted {'in Phase 0' if P2B else 'now'}:** {len(ext)} files in `assets/` ({len(icons)} icons from the 2022 reference page, {sum(1 for e in ext if e['type']=='logo')} logo files incl. vector SVG, {sum(1 for e in ext if e['type'] in ('ornament','frame'))} ornaments/frames (SVG + PNG), {sum(1 for e in ext if e['type']=='texture')} textures incl. the 5174×3378 px print-master page background, {sum(1 for e in ext if e['type']=='diagram')} anatomy/worked-example diagrams, {sum(1 for e in ext if e['type']=='typographic specimen')} type specimens, 2 cover items). **Still to extract:** {len(todo_n)}{' (card frames, token/miniature photography, expansion set symbols, 2017-only enemy icons)' if not P2B else ' (not designated)'}.{P2B_SUMM}{P3_SUMM} **Provenance review:** {'closed on 2026-11-11 by the author\'s confirmation; ' if P3 else ''}{len(prov)} catalogue entries still held{'' if P3 else ' plus the tables in the log'}.
 
 **Fonts:** display OptimusPrinceps (+SemiBold, freeware); body Adobe Caslon Pro Regular/Italic/Bold/Semibold (commercial); Arimo (open) for utility text; Helvetica in one credits block. None installed locally. Proposed: Cinzel for display, Libre Caslon Text (or EB Garamond) for body, Liberation Sans for utility.
 
 **Palette:** parchment `#f4f2ea`, ink `#231f20`, gold accent `#9c8141`/`#b77e2e`, cover black `#110f0e`; functional colours red `#ce4c4a`, magenta `#b556a7`, blue `#3ca2e0`, orange `#f89a0f`, green `#36b876`.
 
 **Decisions needed from the lead**
-1. Scope of the rights assertion over FromSoftware/Bandai Namco key art reproduced in the SFG books (all paintings, cover art) — currently BLOCKED; only SFG-originated layout, icons, textures, diagrams and sculpt photography are designated.
+1. {'RESOLVED 2026-11-11: the author confirmed ownership of all source material, painted illustrations and artwork, so the key art is cleared and extracted (Phase 3).' if P3 else 'Scope of the rights assertion over FromSoftware/Bandai Namco key art reproduced in the SFG books (all paintings, cover art) — currently BLOCKED; only SFG-originated layout, icons, textures, diagrams and sculpt photography are designated.'}
 2. Use of the DARK SOULS™ wordmark in the 2E title versus a nominative mention.
 3. Whether to request original card/dashboard artwork from the owner — embedded card rasters are ≤372–1000 px, too small for print.
 4. Approve the font substitutions (Cinzel / Libre Caslon Text) so they can be installed.
@@ -372,5 +414,5 @@ summ=f"""# Asset reconnaissance — summary
 Manifest: `21_asset_manifest.csv` ({sum(1 for e in entries if e.get('designated') is not False)+3+sum(len(e['sub']) for e in entries if e.get('designated') is not False)} rows). Catalogue data: `work/asset_catalogue_final.json`. Icon label check sheet: `work/icons_contact.png`.
 """
 open('work/asset_recon_summary.md','w').write(summ)
-print('entries',len(entries),'extracted',len(ext),'todo',len(todo_n),'prov',len(prov),'icons',len(icons),'phase2b files',len(p2f))
+print('entries',len(entries),'extracted',len(ext),'todo',len(todo_n),'prov',len(prov),'icons',len(icons),'phase2b files',len(p2f),'phase3 files',len(p3f))
 print('summary words:',len(summ.split()))

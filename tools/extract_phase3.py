@@ -32,6 +32,8 @@ RECFILE = 'work/extraction_records_phase3.json'
 CANDFILE = 'layout/art_candidates.json'
 P2B = json.load(open(P.RECFILE))
 RECS, NEXT = {}, {}
+# files this tool wrote on an earlier run (they may be committed since): only these may be written again
+OWN = {r['file'] for r in json.load(open(RECFILE))} if os.path.exists(RECFILE) else set()
 JPG_MIN_PIXELS = 500_000               # opaque paintings at or above this size are stored as JPEG
 
 
@@ -68,7 +70,7 @@ def store(im, parent, folder, slug, art):
     opaque = im.mode != 'RGBA'
     jpg = art and opaque and im.width * im.height >= JPG_MIN_PIXELS
     path = f"assets/{folder}/{parent.lower()}-{slug}.{'jpg' if jpg else 'png'}"
-    assert path not in P.TRACKED, 'refusing to overwrite a tracked asset: ' + path
+    assert path not in P.TRACKED or path in OWN, 'refusing to overwrite a tracked asset of another phase: ' + path
     os.makedirs(os.path.dirname(path), exist_ok=True)
     if jpg:
         im.convert('RGB').save(path, quality=92, subsampling=0, optimize=True)
@@ -87,6 +89,7 @@ def record(parent, name, typ, key, page, path, fmt, im, method, bbox, image_obje
         r['resolves'] = resolves
     r['design'] = dict(meta)
     RECS[rid] = r
+    OWN.add(path)
     save_records()
     print(rid, path, r['dims'], 'alpha' if r['has_alpha'] else 'opaque')
     return r

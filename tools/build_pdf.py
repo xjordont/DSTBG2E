@@ -111,6 +111,8 @@ def img_size(file):
 def hero_caption(file):
     stem = re.sub(r'^ast-\d+-', '', pathlib.Path(file).stem)
     caps = TUNING.get('captions', {})
+    if '/art/' in file or stem in caps:        # paintings carry no caption unless one is given for the file
+        return caps.get(stem, '')
     for prefix in ('', 'expansion-miniature-', 'miniature-', 'token-', 'game-tile-'):
         if stem.startswith(prefix) and stem[len(prefix):] in caps:
             return caps[stem[len(prefix):]]
@@ -250,7 +252,15 @@ class Chapter:
         nh1['data-running'] = f'{self.label}  ·  {self.title}' if self.kind == 'chapter' else f'{self.kicker}  ·  {self.title}'
         nh1['data-bookmark'] = f'{self.label}. {self.title}' if self.kind == 'chapter' else f'{self.kicker}. {self.title}'
         kt.append(kick); kt.append(nh1); banner.append(badge); banner.append(kt); sec.append(banner)
-        hb = TUNING.get('heroes', {}).get(key, {}).get('banner')
+        hdr = TUNING.get('heroes', {}).get(key, {}).get('header')
+        if hdr:
+            # a painting behind the chapter title: the band of the picture is chosen by `pos`, and a dark
+            # gradient rises from the foot so that the badge and the title stay legible
+            banner['class'] = ['banner', 'art']
+            banner['style'] = (f"min-height:{hdr.get('h', 150)}pt;background-image:linear-gradient(to top, rgba(9,8,7,0.94) 0%, rgba(9,8,7,0.66) 30%, "
+                               f"rgba(9,8,7,0.12) 68%, rgba(9,8,7,0) 100%), url('{hdr['file']}');background-position:center, {hdr.get('pos', 'center 40%')};"
+                               f"background-size:cover, {hdr.get('size', 'cover')};background-repeat:no-repeat, no-repeat")
+        hb = None if hdr else TUNING.get('heroes', {}).get(key, {}).get('banner')
         if hb:
             pw, ph = img_size(hb['file']); hw = hb['h'] * pw / ph
             him = soup.new_tag('img', src=hb['file'], alt=''); him['class'] = 'hero'
@@ -701,6 +711,7 @@ def build(edition='screen', only=None, out=None, html_only=False, _phase='plan',
     # Asset URLs are rewritten for it (fragment-only links are left alone, so the contents, cross-references
     # and glossary links still work in a browser). WeasyPrint is given the root as base_url instead.
     saved = re.sub(r'\b(src|href)="(?!#|[a-z]+:|/|\.\./)([^"]+)"', r'\1="../\2"', html)
+    saved = re.sub(r"url\('(assets/[^']+)'\)", r"url('../\1')", saved)
     hp = ROOT / f'build/book_{edition}.html'; hp.write_text(saved, encoding='utf-8')
     report = {'edition': edition, 'chapters': len(chapters), 'unresolved_refs': sorted(missing), 'missing_icons': sorted(MISSING_ICONS)}
     if html_only:

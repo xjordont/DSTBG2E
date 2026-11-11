@@ -29,7 +29,17 @@
   "bytes": 51516,
   "notes": "201 px: inline or thumbnail size only.",
   "phase": 3,
-  "resolves": "AST-0072.R1"
+  "resolves": "AST-0072.R1",
+  "design": {
+   "subject": "A round black token bearing a painted red eye orb",
+   "mood": "token, crimson",
+   "suggested_use": "spot",
+   "also_suits": [],
+   "suggested_for": "12 Phantoms",
+   "hdr": null,
+   "baked": null,
+   "kind": "token"
+  }
  },
  {
   "id": "AST-0072.36",
@@ -61,7 +71,17 @@
   "bytes": 46033,
   "notes": "201 px: inline or thumbnail size only.",
   "phase": 3,
-  "resolves": "AST-0072.R1"
+  "resolves": "AST-0072.R1",
+  "design": {
+   "subject": "A round black token bearing a painted cracked red eye orb",
+   "mood": "token, crimson",
+   "suggested_use": "spot",
+   "also_suits": [],
+   "suggested_for": "12 Phantoms",
+   "hdr": null,
+   "baked": null,
+   "kind": "token"
+  }
  },
  {
   "id": "AST-0086.1",
@@ -91,7 +111,17 @@
   "has_alpha": false,
   "bytes": 135303,
   "notes": "",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "Shortbow equipment card",
+   "mood": "card face",
+   "suggested_use": "spot",
+   "also_suits": [],
+   "suggested_for": "4 Equipment",
+   "hdr": null,
+   "baked": "Card face: the title, icons and rules text are part of the card image.",
+   "kind": "card face"
+  }
  },
  {
   "id": "AST-0086.2",
@@ -121,7 +151,17 @@
   "has_alpha": false,
   "bytes": 114563,
   "notes": "",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "Ember treasure card",
+   "mood": "card face",
+   "suggested_use": "spot",
+   "also_suits": [],
+   "suggested_for": "4 Equipment",
+   "hdr": null,
+   "baked": "Card face: the title, icons and rules text are part of the card image.",
+   "kind": "card face"
+  }
  },
  {
   "id": "AST-0086.3",
@@ -151,7 +191,17 @@
   "has_alpha": false,
   "bytes": 117781,
   "notes": "",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "Carthus Flame Arc upgrade card",
+   "mood": "card face",
+   "suggested_use": "spot",
+   "also_suits": [],
+   "suggested_for": "4 Equipment",
+   "hdr": null,
+   "baked": "Card face: the title, icons and rules text are part of the card image.",
+   "kind": "card face"
+  }
  },
  {
   "id": "AST-0086.4",
@@ -181,7 +231,17 @@
   "has_alpha": false,
   "bytes": 106686,
   "notes": "",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "Obscuring Ring upgrade card",
+   "mood": "card face",
+   "suggested_use": "spot",
+   "also_suits": [],
+   "suggested_for": "4 Equipment",
+   "hdr": null,
+   "baked": "Card face: the title, icons and rules text are part of the card image.",
+   "kind": "card face"
+  }
  },
  {
   "id": "AST-0086.5",
@@ -211,7 +271,17 @@
   "has_alpha": false,
   "bytes": 131499,
   "notes": "",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "Dragonslayer Spear equipment card",
+   "mood": "card face",
+   "suggested_use": "spot",
+   "also_suits": [],
+   "suggested_for": "Appendix A Weapon Stat Revisions",
+   "hdr": null,
+   "baked": "Card face: the title, icons and rules text are part of the card image.",
+   "kind": "card face"
+  }
  },
  {
   "id": "AST-0086.6",
@@ -241,7 +311,17 @@
   "has_alpha": false,
   "bytes": 48651,
   "notes": "",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "Titanite Shard upgrade card",
+   "mood": "card face",
+   "suggested_use": "spot",
+   "also_suits": [],
+   "suggested_for": "4 Equipment",
+   "hdr": null,
+   "baked": "Card face: the title, icons and rules text are part of the card image.",
+   "kind": "card face"
+  }
  },
  {
   "id": "AST-0086.7",
@@ -271,7 +351,17 @@
   "has_alpha": false,
   "bytes": 55522,
   "notes": "",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "Morning Star equipment card",
+   "mood": "card face",
+   "suggested_use": "spot",
+   "also_suits": [],
+   "suggested_for": "Appendix A Weapon Stat Revisions",
+   "hdr": null,
+   "baked": "Card face: the title, icons and rules text are part of the card image.",
+   "kind": "card face"
+  }
  },
  {
   "id": "AST-0086.8",
@@ -301,7 +391,17 @@
   "has_alpha": false,
   "bytes": 57146,
   "notes": "",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "Chloranthy Ring upgrade card",
+   "mood": "card face",
+   "suggested_use": "spot",
+   "also_suits": [],
+   "suggested_for": "4 Equipment",
+   "hdr": null,
+   "baked": "Card face: the title, icons and rules text are part of the card image.",
+   "kind": "card face"
+  }
  },
  {
   "id": "AST-0086.9",
@@ -331,7 +431,17 @@
   "has_alpha": false,
   "bytes": 55628,
   "notes": "",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "Sunless Armour equipment card",
+   "mood": "card face",
+   "suggested_use": "spot",
+   "also_suits": [],
+   "suggested_for": "4 Equipment",
+   "hdr": null,
+   "baked": "Card face: the title, icons and rules text are part of the card image.",
+   "kind": "card face"
+  }
  },
  {
   "id": "AST-0086.10",
@@ -361,7 +471,17 @@
   "has_alpha": false,
   "bytes": 39758,
   "notes": "Under 200 px on the long side (about 135 ppi as printed): thumbnail size only.",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "Mace starting equipment card",
+   "mood": "card face",
+   "suggested_use": "spot",
+   "also_suits": [],
+   "suggested_for": "Appendix A Weapon Stat Revisions",
+   "hdr": null,
+   "baked": "Card face: the title, icons and rules text are part of the card image.",
+   "kind": "card face"
+  }
  },
  {
   "id": "AST-0086.11",
@@ -391,7 +511,17 @@
   "has_alpha": false,
   "bytes": 39518,
   "notes": "Under 200 px on the long side (about 135 ppi as printed): thumbnail size only.",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "Hand Axe starting equipment card",
+   "mood": "card face",
+   "suggested_use": "spot",
+   "also_suits": [],
+   "suggested_for": "Appendix A Weapon Stat Revisions",
+   "hdr": null,
+   "baked": "Card face: the title, icons and rules text are part of the card image.",
+   "kind": "card face"
+  }
  },
  {
   "id": "AST-0086.12",
@@ -421,7 +551,17 @@
   "has_alpha": false,
   "bytes": 40112,
   "notes": "Under 200 px on the long side (about 135 ppi as printed): thumbnail size only.",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "Winged Spear treasure card",
+   "mood": "card face",
+   "suggested_use": "spot",
+   "also_suits": [],
+   "suggested_for": "Appendix A Weapon Stat Revisions",
+   "hdr": null,
+   "baked": "Card face: the title, icons and rules text are part of the card image.",
+   "kind": "card face"
+  }
  },
  {
   "id": "AST-0086.13",
@@ -451,7 +591,17 @@
   "has_alpha": false,
   "bytes": 40723,
   "notes": "Under 200 px on the long side (about 135 ppi as printed): thumbnail size only.",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "Dark Sword treasure card",
+   "mood": "card face",
+   "suggested_use": "spot",
+   "also_suits": [],
+   "suggested_for": "Appendix A Weapon Stat Revisions",
+   "hdr": null,
+   "baked": "Card face: the title, icons and rules text are part of the card image.",
+   "kind": "card face"
+  }
  },
  {
   "id": "AST-0086.14",
@@ -481,7 +631,17 @@
   "has_alpha": false,
   "bytes": 42112,
   "notes": "Under 200 px on the long side (about 135 ppi as printed): thumbnail size only.",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "Gravelord Sword boss treasure card",
+   "mood": "card face",
+   "suggested_use": "spot",
+   "also_suits": [],
+   "suggested_for": "Appendix A Weapon Stat Revisions",
+   "hdr": null,
+   "baked": "Card face: the title, icons and rules text are part of the card image.",
+   "kind": "card face"
+  }
  },
  {
   "id": "AST-0086.15",
@@ -511,7 +671,17 @@
   "has_alpha": false,
   "bytes": 139457,
   "notes": "No catalogue entry of its own: attached to AST-0086 (the card frame family it shares) as the closest existing entry.",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "Green Blossom event card",
+   "mood": "card face",
+   "suggested_use": "spot",
+   "also_suits": [],
+   "suggested_for": "7 Gameplay",
+   "hdr": null,
+   "baked": "Card face: the title, icons and rules text are part of the card image.",
+   "kind": "card face"
+  }
  },
  {
   "id": "AST-0086.16",
@@ -542,7 +712,17 @@
   "bytes": 36410,
   "notes": "No catalogue entry of its own: attached to AST-0086 (the card frame family it shares) as the closest existing entry. Under 200 px on the long side (about 135 ppi as printed): thumbnail size only.",
   "phase": 3,
-  "resolves": "AST-0137.R1"
+  "resolves": "AST-0137.R1",
+  "design": {
+   "subject": "Lifegem event card",
+   "mood": "card face",
+   "suggested_use": "spot",
+   "also_suits": [],
+   "suggested_for": "7 Gameplay",
+   "hdr": null,
+   "baked": "Card face: the title, icons and rules text are part of the card image.",
+   "kind": "card face"
+  }
  },
  {
   "id": "AST-0086.17",
@@ -572,7 +752,17 @@
   "has_alpha": false,
   "bytes": 100527,
   "notes": "",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "Greataxe equipment card",
+   "mood": "card face",
+   "suggested_use": "spot",
+   "also_suits": [],
+   "suggested_for": "Appendix A Weapon Stat Revisions",
+   "hdr": null,
+   "baked": "Card face: the title, icons and rules text are part of the card image.",
+   "kind": "card face"
+  }
  },
  {
   "id": "AST-0086.18",
@@ -602,7 +792,17 @@
   "has_alpha": false,
   "bytes": 79198,
   "notes": "",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "Titanite Shard upgrade card",
+   "mood": "card face",
+   "suggested_use": "spot",
+   "also_suits": [],
+   "suggested_for": "Appendix B Card Amendments",
+   "hdr": null,
+   "baked": "Card face: the title, icons and rules text are part of the card image.",
+   "kind": "card face"
+  }
  },
  {
   "id": "AST-0086.19",
@@ -632,7 +832,17 @@
   "has_alpha": false,
   "bytes": 55906,
   "notes": "",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "Sunless Armour equipment card",
+   "mood": "card face",
+   "suggested_use": "spot",
+   "also_suits": [],
+   "suggested_for": "Appendix B Card Amendments",
+   "hdr": null,
+   "baked": "Card face: the title, icons and rules text are part of the card image.",
+   "kind": "card face"
+  }
  },
  {
   "id": "AST-0086.20",
@@ -662,7 +872,17 @@
   "has_alpha": false,
   "bytes": 56162,
   "notes": "",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "Morning Star equipment card",
+   "mood": "card face",
+   "suggested_use": "spot",
+   "also_suits": [],
+   "suggested_for": "Appendix B Card Amendments",
+   "hdr": null,
+   "baked": "Card face: the title, icons and rules text are part of the card image.",
+   "kind": "card face"
+  }
  },
  {
   "id": "AST-0086.21",
@@ -692,7 +912,17 @@
   "has_alpha": false,
   "bytes": 165007,
   "notes": "",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "Shortsword equipment card",
+   "mood": "card face",
+   "suggested_use": "spot",
+   "also_suits": [],
+   "suggested_for": "Appendix A Weapon Stat Revisions",
+   "hdr": null,
+   "baked": "Card face: the title, icons and rules text are part of the card image.",
+   "kind": "card face"
+  }
  },
  {
   "id": "AST-0086.22",
@@ -722,7 +952,17 @@
   "has_alpha": false,
   "bytes": 191825,
   "notes": "",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "Dragonslayer Spear equipment card",
+   "mood": "card face",
+   "suggested_use": "spot",
+   "also_suits": [],
+   "suggested_for": "Appendix B Card Amendments",
+   "hdr": null,
+   "baked": "Card face: the title, icons and rules text are part of the card image.",
+   "kind": "card face"
+  }
  },
  {
   "id": "AST-0086.23",
@@ -752,7 +992,17 @@
   "has_alpha": false,
   "bytes": 73232,
   "notes": "",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "Abyss Greatsword boss treasure card",
+   "mood": "card face",
+   "suggested_use": "spot",
+   "also_suits": [],
+   "suggested_for": "Appendix A Weapon Stat Revisions",
+   "hdr": null,
+   "baked": "Card face: the title, icons and rules text are part of the card image.",
+   "kind": "card face"
+  }
  },
  {
   "id": "AST-0086.24",
@@ -782,7 +1032,17 @@
   "has_alpha": false,
   "bytes": 70907,
   "notes": "",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "Greatsword of Artorias boss treasure card",
+   "mood": "card face",
+   "suggested_use": "spot",
+   "also_suits": [],
+   "suggested_for": "Appendix A Weapon Stat Revisions",
+   "hdr": null,
+   "baked": "Card face: the title, icons and rules text are part of the card image.",
+   "kind": "card face"
+  }
  },
  {
   "id": "AST-0087.3",
@@ -813,7 +1073,17 @@
   "bytes": 419038,
   "notes": "Largest card image in the sources. The smaller copies on p.16 (350×600) and p.6 were not extracted.",
   "phase": 3,
-  "resolves": "AST-0087.R1"
+  "resolves": "AST-0087.R1",
+  "design": {
+   "subject": "Grave Matters encounter card, whole",
+   "mood": "card face",
+   "suggested_use": "spot",
+   "also_suits": [],
+   "suggested_for": "6 Setup",
+   "hdr": null,
+   "baked": "Card face: the title, icons and rules text are part of the card image.",
+   "kind": "card face"
+  }
  },
  {
   "id": "AST-0087.4",
@@ -844,7 +1114,17 @@
   "bytes": 72491,
   "notes": "",
   "phase": 3,
-  "resolves": "AST-0137.R1"
+  "resolves": "AST-0137.R1",
+  "design": {
+   "subject": "Lakeview Refuge encounter card",
+   "mood": "card face",
+   "suggested_use": "spot",
+   "also_suits": [],
+   "suggested_for": "6 Setup",
+   "hdr": null,
+   "baked": "Card face: the title, icons and rules text are part of the card image.",
+   "kind": "card face"
+  }
  },
  {
   "id": "AST-0087.5",
@@ -875,7 +1155,17 @@
   "bytes": 67682,
   "notes": "",
   "phase": 3,
-  "resolves": "AST-0137.R1"
+  "resolves": "AST-0137.R1",
+  "design": {
+   "subject": "The Abandoned Chest encounter card",
+   "mood": "card face",
+   "suggested_use": "spot",
+   "also_suits": [],
+   "suggested_for": "6 Setup",
+   "hdr": null,
+   "baked": "Card face: the title, icons and rules text are part of the card image.",
+   "kind": "card face"
+  }
  },
  {
   "id": "AST-0087.6",
@@ -905,7 +1195,17 @@
   "has_alpha": false,
   "bytes": 129390,
   "notes": "",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "Demon Ruins encounter card",
+   "mood": "card face",
+   "suggested_use": "spot",
+   "also_suits": [],
+   "suggested_for": "Appendix B Card Amendments",
+   "hdr": null,
+   "baked": "Card face: the title, icons and rules text are part of the card image.",
+   "kind": "card face"
+  }
  },
  {
   "id": "AST-0087.7",
@@ -935,7 +1235,17 @@
   "has_alpha": false,
   "bytes": 61852,
   "notes": "",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "The Forgotten encounter card",
+   "mood": "card face",
+   "suggested_use": "spot",
+   "also_suits": [],
+   "suggested_for": "Appendix B Card Amendments",
+   "hdr": null,
+   "baked": "Card face: the title, icons and rules text are part of the card image.",
+   "kind": "card face"
+  }
  },
  {
   "id": "AST-0087.8",
@@ -965,7 +1275,17 @@
   "has_alpha": false,
   "bytes": 32951,
   "notes": "Under 200 px on the long side (about 135 ppi as printed): thumbnail size only.",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "Ghostly Keep encounter card",
+   "mood": "card face",
+   "suggested_use": "spot",
+   "also_suits": [],
+   "suggested_for": "Appendix B Card Amendments",
+   "hdr": null,
+   "baked": "Card face: the title, icons and rules text are part of the card image.",
+   "kind": "card face"
+  }
  },
  {
   "id": "AST-0087.9",
@@ -995,7 +1315,17 @@
   "has_alpha": false,
   "bytes": 34046,
   "notes": "Under 200 px on the long side (about 135 ppi as printed): thumbnail size only.",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "Prison Tower encounter card",
+   "mood": "card face",
+   "suggested_use": "spot",
+   "also_suits": [],
+   "suggested_for": "Appendix B Card Amendments",
+   "hdr": null,
+   "baked": "Card face: the title, icons and rules text are part of the card image.",
+   "kind": "card face"
+  }
  },
  {
   "id": "AST-0087.10",
@@ -1025,7 +1355,17 @@
   "has_alpha": false,
   "bytes": 33162,
   "notes": "Under 200 px on the long side (about 135 ppi as printed): thumbnail size only.",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "Pit of the Dead encounter card",
+   "mood": "card face",
+   "suggested_use": "spot",
+   "also_suits": [],
+   "suggested_for": "Appendix B Card Amendments",
+   "hdr": null,
+   "baked": "Card face: the title, icons and rules text are part of the card image.",
+   "kind": "card face"
+  }
  },
  {
   "id": "AST-0088.2",
@@ -1056,7 +1396,17 @@
   "bytes": 230912,
   "notes": "",
   "phase": 3,
-  "resolves": "AST-0088.R1"
+  "resolves": "AST-0088.R1",
+  "design": {
+   "subject": "Skeleton Soldier enemy data card",
+   "mood": "card face",
+   "suggested_use": "spot",
+   "also_suits": [],
+   "suggested_for": "9 Enemy Turn",
+   "hdr": null,
+   "baked": "Card face: the title, icons and rules text are part of the card image.",
+   "kind": "card face"
+  }
  },
  {
   "id": "AST-0088.3",
@@ -1087,7 +1437,17 @@
   "bytes": 546136,
   "notes": "",
   "phase": 3,
-  "resolves": "AST-0088.R2"
+  "resolves": "AST-0088.R2",
+  "design": {
+   "subject": "Gravelord Nito boss data card, whole",
+   "mood": "card face",
+   "suggested_use": "spot",
+   "also_suits": [],
+   "suggested_for": "15 Boss Encounters",
+   "hdr": null,
+   "baked": "Card face: the title, icons and rules text are part of the card image.",
+   "kind": "card face"
+  }
  },
  {
   "id": "AST-0088.4",
@@ -1118,7 +1478,17 @@
   "bytes": 69124,
   "notes": "",
   "phase": 3,
-  "resolves": "AST-0088.R2"
+  "resolves": "AST-0088.R2",
+  "design": {
+   "subject": "Death's Embrace boss behaviour card",
+   "mood": "card face",
+   "suggested_use": "spot",
+   "also_suits": [],
+   "suggested_for": "16 Boss Turns",
+   "hdr": null,
+   "baked": "Card face: the title, icons and rules text are part of the card image.",
+   "kind": "card face"
+  }
  },
  {
   "id": "AST-0088.5",
@@ -1148,7 +1518,17 @@
   "has_alpha": false,
   "bytes": 41698,
   "notes": "Under 200 px on the long side (about 135 ppi as printed): thumbnail size only.",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "Giant Skeleton Archer enemy data card",
+   "mood": "card face",
+   "suggested_use": "spot",
+   "also_suits": [],
+   "suggested_for": "9 Enemy Turn",
+   "hdr": null,
+   "baked": "Card face: the title, icons and rules text are part of the card image.",
+   "kind": "card face"
+  }
  },
  {
   "id": "AST-0088.6",
@@ -1178,7 +1558,17 @@
   "has_alpha": false,
   "bytes": 39594,
   "notes": "Under 200 px on the long side (about 135 ppi as printed): thumbnail size only.",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "Necromancer enemy data card",
+   "mood": "card face",
+   "suggested_use": "spot",
+   "also_suits": [],
+   "suggested_for": "9 Enemy Turn",
+   "hdr": null,
+   "baked": "Card face: the title, icons and rules text are part of the card image.",
+   "kind": "card face"
+  }
  },
  {
   "id": "AST-0088.7",
@@ -1208,7 +1598,17 @@
   "has_alpha": false,
   "bytes": 39440,
   "notes": "Under 200 px on the long side (about 135 ppi as printed): thumbnail size only.",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "Giant Skeleton Soldier enemy data card",
+   "mood": "card face",
+   "suggested_use": "spot",
+   "also_suits": [],
+   "suggested_for": "9 Enemy Turn",
+   "hdr": null,
+   "baked": "Card face: the title, icons and rules text are part of the card image.",
+   "kind": "card face"
+  }
  },
  {
   "id": "AST-0088.8",
@@ -1238,7 +1638,17 @@
   "has_alpha": false,
   "bytes": 37116,
   "notes": "Under 200 px on the long side (about 135 ppi as printed): thumbnail size only.",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "Skeleton Archer enemy data card",
+   "mood": "card face",
+   "suggested_use": "spot",
+   "also_suits": [],
+   "suggested_for": "9 Enemy Turn",
+   "hdr": null,
+   "baked": "Card face: the title, icons and rules text are part of the card image.",
+   "kind": "card face"
+  }
  },
  {
   "id": "AST-0088.9",
@@ -1268,7 +1678,17 @@
   "has_alpha": false,
   "bytes": 38972,
   "notes": "Under 200 px on the long side (about 135 ppi as printed): thumbnail size only.",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "Skeleton Beast enemy data card",
+   "mood": "card face",
+   "suggested_use": "spot",
+   "also_suits": [],
+   "suggested_for": "9 Enemy Turn",
+   "hdr": null,
+   "baked": "Card face: the title, icons and rules text are part of the card image.",
+   "kind": "card face"
+  }
  },
  {
   "id": "AST-0088.10",
@@ -1299,7 +1719,17 @@
   "bytes": 45066,
   "notes": "Under 200 px on the long side (about 135 ppi as printed): thumbnail size only.",
   "phase": 3,
-  "resolves": "AST-0137.R2"
+  "resolves": "AST-0137.R2",
+  "design": {
+   "subject": "Black Knight mini-boss data card",
+   "mood": "card face",
+   "suggested_use": "spot",
+   "also_suits": [],
+   "suggested_for": "15 Boss Encounters",
+   "hdr": null,
+   "baked": "Card face: the title, icons and rules text are part of the card image.",
+   "kind": "card face"
+  }
  },
  {
   "id": "AST-0088.11",
@@ -1329,7 +1759,17 @@
   "has_alpha": false,
   "bytes": 37113,
   "notes": "Under 200 px on the long side (about 135 ppi as printed): thumbnail size only.",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "Overhead Swing boss behaviour card",
+   "mood": "card face",
+   "suggested_use": "spot",
+   "also_suits": [],
+   "suggested_for": "16 Boss Turns",
+   "hdr": null,
+   "baked": "Card face: the title, icons and rules text are part of the card image.",
+   "kind": "card face"
+  }
  },
  {
   "id": "AST-0088.12",
@@ -1359,7 +1799,17 @@
   "has_alpha": false,
   "bytes": 35639,
   "notes": "Under 200 px on the long side (about 135 ppi as printed): thumbnail size only.",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "Lunging Cleave boss behaviour card",
+   "mood": "card face",
+   "suggested_use": "spot",
+   "also_suits": [],
+   "suggested_for": "16 Boss Turns",
+   "hdr": null,
+   "baked": "Card face: the title, icons and rules text are part of the card image.",
+   "kind": "card face"
+  }
  },
  {
   "id": "AST-0088.13",
@@ -1389,7 +1839,17 @@
   "has_alpha": false,
   "bytes": 138858,
   "notes": "A smaller copy on p.20 was not extracted.",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "Hollow Soldier enemy data card",
+   "mood": "card face",
+   "suggested_use": "spot",
+   "also_suits": [],
+   "suggested_for": "Appendix B Card Amendments",
+   "hdr": null,
+   "baked": "Card face: the title, icons and rules text are part of the card image.",
+   "kind": "card face"
+  }
  },
  {
   "id": "AST-0088.14",
@@ -1419,7 +1879,17 @@
   "has_alpha": false,
   "bytes": 35807,
   "notes": "Under 200 px on the long side (about 135 ppi as printed): thumbnail size only.",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "Large Hollow Soldier enemy data card",
+   "mood": "card face",
+   "suggested_use": "spot",
+   "also_suits": [],
+   "suggested_for": "Appendix B Card Amendments",
+   "hdr": null,
+   "baked": "Card face: the title, icons and rules text are part of the card image.",
+   "kind": "card face"
+  }
  },
  {
   "id": "AST-0088.15",
@@ -1449,7 +1919,17 @@
   "has_alpha": false,
   "bytes": 38054,
   "notes": "Under 200 px on the long side (about 135 ppi as printed): thumbnail size only.",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "Crossbow Hollow enemy data card",
+   "mood": "card face",
+   "suggested_use": "spot",
+   "also_suits": [],
+   "suggested_for": "Appendix B Card Amendments",
+   "hdr": null,
+   "baked": "Card face: the title, icons and rules text are part of the card image.",
+   "kind": "card face"
+  }
  },
  {
   "id": "AST-0088.16",
@@ -1479,7 +1959,17 @@
   "has_alpha": false,
   "bytes": 164742,
   "notes": "",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "Dancer of the Boreal Valley boss data card",
+   "mood": "card face",
+   "suggested_use": "spot",
+   "also_suits": [],
+   "suggested_for": "17 Boss Special Rules",
+   "hdr": null,
+   "baked": "Card face: the title, icons and rules text are part of the card image.",
+   "kind": "card face"
+  }
  },
  {
   "id": "AST-0088.17",
@@ -1509,7 +1999,17 @@
   "has_alpha": false,
   "bytes": 126926,
   "notes": "A smaller copy on p.29 was not extracted.",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "Blade Dance boss behaviour card",
+   "mood": "card face",
+   "suggested_use": "spot",
+   "also_suits": [],
+   "suggested_for": "16 Boss Turns",
+   "hdr": null,
+   "baked": "Card face: the title, icons and rules text are part of the card image.",
+   "kind": "card face"
+  }
  },
  {
   "id": "AST-0088.18",
@@ -1539,7 +2039,17 @@
   "has_alpha": false,
   "bytes": 132758,
   "notes": "",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "Mushroom Parent enemy data card",
+   "mood": "card face",
+   "suggested_use": "spot",
+   "also_suits": [],
+   "suggested_for": "9 Enemy Turn",
+   "hdr": null,
+   "baked": "Card face: the title, icons and rules text are part of the card image.",
+   "kind": "card face"
+  }
  },
  {
   "id": "AST-0088.19",
@@ -1569,7 +2079,17 @@
   "has_alpha": false,
   "bytes": 128085,
   "notes": "",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "Plow Scarecrow enemy data card",
+   "mood": "card face",
+   "suggested_use": "spot",
+   "also_suits": [],
+   "suggested_for": "9 Enemy Turn",
+   "hdr": null,
+   "baked": "Card face: the title, icons and rules text are part of the card image.",
+   "kind": "card face"
+  }
  },
  {
   "id": "AST-0088.20",
@@ -1599,7 +2119,17 @@
   "has_alpha": false,
   "bytes": 129162,
   "notes": "",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "Shears Scarecrow enemy data card",
+   "mood": "card face",
+   "suggested_use": "spot",
+   "also_suits": [],
+   "suggested_for": "9 Enemy Turn",
+   "hdr": null,
+   "baked": "Card face: the title, icons and rules text are part of the card image.",
+   "kind": "card face"
+  }
  },
  {
   "id": "AST-0088.21",
@@ -1629,7 +2159,17 @@
   "has_alpha": false,
   "bytes": 134307,
   "notes": "",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "Demonic Foliage enemy data card",
+   "mood": "card face",
+   "suggested_use": "spot",
+   "also_suits": [],
+   "suggested_for": "9 Enemy Turn",
+   "hdr": null,
+   "baked": "Card face: the title, icons and rules text are part of the card image.",
+   "kind": "card face"
+  }
  },
  {
   "id": "AST-0088.22",
@@ -1659,7 +2199,17 @@
   "has_alpha": false,
   "bytes": 120060,
   "notes": "",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "Mushroom Child enemy data card",
+   "mood": "card face",
+   "suggested_use": "spot",
+   "also_suits": [],
+   "suggested_for": "9 Enemy Turn",
+   "hdr": null,
+   "baked": "Card face: the title, icons and rules text are part of the card image.",
+   "kind": "card face"
+  }
  },
  {
   "id": "AST-0088.23",
@@ -1689,7 +2239,17 @@
   "has_alpha": false,
   "bytes": 133480,
   "notes": "",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "Stone Knight enemy data card",
+   "mood": "card face",
+   "suggested_use": "spot",
+   "also_suits": [],
+   "suggested_for": "9 Enemy Turn",
+   "hdr": null,
+   "baked": "Card face: the title, icons and rules text are part of the card image.",
+   "kind": "card face"
+  }
  },
  {
   "id": "AST-0088.24",
@@ -1719,7 +2279,17 @@
   "has_alpha": false,
   "bytes": 134087,
   "notes": "",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "Stone Guardian enemy data card",
+   "mood": "card face",
+   "suggested_use": "spot",
+   "also_suits": [],
+   "suggested_for": "9 Enemy Turn",
+   "hdr": null,
+   "baked": "Card face: the title, icons and rules text are part of the card image.",
+   "kind": "card face"
+  }
  },
  {
   "id": "AST-0088.25",
@@ -1749,7 +2319,17 @@
   "has_alpha": false,
   "bytes": 117633,
   "notes": "",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "Knight Artorias boss data card",
+   "mood": "card face",
+   "suggested_use": "spot",
+   "also_suits": [],
+   "suggested_for": "17 Boss Special Rules",
+   "hdr": null,
+   "baked": "Card face: the title, icons and rules text are part of the card image.",
+   "kind": "card face"
+  }
  },
  {
   "id": "AST-0088.26",
@@ -1779,7 +2359,17 @@
   "has_alpha": false,
   "bytes": 132715,
   "notes": "",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "Great Grey Wolf Sif boss data card",
+   "mood": "card face",
+   "suggested_use": "spot",
+   "also_suits": [],
+   "suggested_for": "17 Boss Special Rules",
+   "hdr": null,
+   "baked": "Card face: the title, icons and rules text are part of the card image.",
+   "kind": "card face"
+  }
  },
  {
   "id": "AST-0088.27",
@@ -1809,7 +2399,17 @@
   "has_alpha": false,
   "bytes": 90472,
   "notes": "",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "Overhead Cleave boss behaviour card",
+   "mood": "card face",
+   "suggested_use": "spot",
+   "also_suits": [],
+   "suggested_for": "16 Boss Turns",
+   "hdr": null,
+   "baked": "Card face: the title, icons and rules text are part of the card image.",
+   "kind": "card face"
+  }
  },
  {
   "id": "AST-0088.28",
@@ -1839,7 +2439,17 @@
   "has_alpha": false,
   "bytes": 105377,
   "notes": "",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "Sword Slam boss behaviour card",
+   "mood": "card face",
+   "suggested_use": "spot",
+   "also_suits": [],
+   "suggested_for": "16 Boss Turns",
+   "hdr": null,
+   "baked": "Card face: the title, icons and rules text are part of the card image.",
+   "kind": "card face"
+  }
  },
  {
   "id": "AST-0088.29",
@@ -1869,7 +2479,17 @@
   "has_alpha": false,
   "bytes": 40198,
   "notes": "Under 200 px on the long side (about 135 ppi as printed): thumbnail size only.",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "Alonne Bow Knight enemy data card",
+   "mood": "card face",
+   "suggested_use": "spot",
+   "also_suits": [],
+   "suggested_for": "9 Enemy Turn",
+   "hdr": null,
+   "baked": "Card face: the title, icons and rules text are part of the card image.",
+   "kind": "card face"
+  }
  },
  {
   "id": "AST-0088.30",
@@ -1899,7 +2519,17 @@
   "has_alpha": false,
   "bytes": 39261,
   "notes": "Under 200 px on the long side (about 135 ppi as printed): thumbnail size only.",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "Alonne Knight Captain enemy data card",
+   "mood": "card face",
+   "suggested_use": "spot",
+   "also_suits": [],
+   "suggested_for": "9 Enemy Turn",
+   "hdr": null,
+   "baked": "Card face: the title, icons and rules text are part of the card image.",
+   "kind": "card face"
+  }
  },
  {
   "id": "AST-0088.31",
@@ -1929,7 +2559,17 @@
   "has_alpha": false,
   "bytes": 38804,
   "notes": "Under 200 px on the long side (about 135 ppi as printed): thumbnail size only.",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "Alonne Sword Knight enemy data card",
+   "mood": "card face",
+   "suggested_use": "spot",
+   "also_suits": [],
+   "suggested_for": "9 Enemy Turn",
+   "hdr": null,
+   "baked": "Card face: the title, icons and rules text are part of the card image.",
+   "kind": "card face"
+  }
  },
  {
   "id": "AST-0088.32",
@@ -1959,7 +2599,17 @@
   "has_alpha": false,
   "bytes": 40649,
   "notes": "Under 200 px on the long side (about 135 ppi as printed): thumbnail size only.",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "Ironclad Soldier enemy data card",
+   "mood": "card face",
+   "suggested_use": "spot",
+   "also_suits": [],
+   "suggested_for": "9 Enemy Turn",
+   "hdr": null,
+   "baked": "Card face: the title, icons and rules text are part of the card image.",
+   "kind": "card face"
+  }
  },
  {
   "id": "AST-0088.33",
@@ -1989,7 +2639,17 @@
   "has_alpha": false,
   "bytes": 41423,
   "notes": "Under 200 px on the long side (about 135 ppi as printed): thumbnail size only.",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "Crystal Lizard data card",
+   "mood": "card face",
+   "suggested_use": "spot",
+   "also_suits": [],
+   "suggested_for": "14 Crystal Lizards",
+   "hdr": null,
+   "baked": "Card face: the title, icons and rules text are part of the card image.",
+   "kind": "card face"
+  }
  },
  {
   "id": "AST-0088.34",
@@ -2019,7 +2679,17 @@
   "has_alpha": false,
   "bytes": 36662,
   "notes": "Under 200 px on the long side (about 135 ppi as printed): thumbnail size only.",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "Sir Alonne boss data card",
+   "mood": "card face",
+   "suggested_use": "spot",
+   "also_suits": [],
+   "suggested_for": "17 Boss Special Rules",
+   "hdr": null,
+   "baked": "Card face: the title, icons and rules text are part of the card image.",
+   "kind": "card face"
+  }
  },
  {
   "id": "AST-0088.35",
@@ -2049,7 +2719,17 @@
   "has_alpha": false,
   "bytes": 39902,
   "notes": "Under 200 px on the long side (about 135 ppi as printed): thumbnail size only.",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "Smelter Demon boss data card",
+   "mood": "card face",
+   "suggested_use": "spot",
+   "also_suits": [],
+   "suggested_for": "17 Boss Special Rules",
+   "hdr": null,
+   "baked": "Card face: the title, icons and rules text are part of the card image.",
+   "kind": "card face"
+  }
  },
  {
   "id": "AST-0088.36",
@@ -2079,7 +2759,17 @@
   "has_alpha": false,
   "bytes": 30020,
   "notes": "Under 200 px on the long side (about 135 ppi as printed): thumbnail size only.",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "Charging Katana Slash boss behaviour card",
+   "mood": "card face",
+   "suggested_use": "spot",
+   "also_suits": [],
+   "suggested_for": "16 Boss Turns",
+   "hdr": null,
+   "baked": "Card face: the title, icons and rules text are part of the card image.",
+   "kind": "card face"
+  }
  },
  {
   "id": "AST-0088.37",
@@ -2109,7 +2799,17 @@
   "has_alpha": false,
   "bytes": 32429,
   "notes": "Under 200 px on the long side (about 135 ppi as printed): thumbnail size only.",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "Overhead Chop boss behaviour card",
+   "mood": "card face",
+   "suggested_use": "spot",
+   "also_suits": [],
+   "suggested_for": "16 Boss Turns",
+   "hdr": null,
+   "baked": "Card face: the title, icons and rules text are part of the card image.",
+   "kind": "card face"
+  }
  },
  {
   "id": "AST-0120.1",
@@ -2139,7 +2839,20 @@
   "has_alpha": false,
   "bytes": 143120,
   "notes": "The 2017 book prints a wider framing of the same painting: see the next file of AST-0121.",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "A knight rests before a bonfire among broken walls, sparks streaming from the coiled sword",
+   "mood": "warm, weary, quiet",
+   "suggested_use": "column plate",
+   "also_suits": [
+    "chapter header strip",
+    "spot"
+   ],
+   "suggested_for": "11 Returning to the Bonfire",
+   "hdr": 0.42,
+   "baked": null,
+   "kind": "painting"
+  }
  },
  {
   "id": "AST-0121.1",
@@ -2169,7 +2882,20 @@
   "has_alpha": false,
   "bytes": 422552,
   "notes": "The catalogue entry cites p.31 of the 2022 book for \"knight resting at bonfire\"; the image object on that page is this cavern painting. The bonfire painting named by the entry is the next file (2017 p.31) and AST-0120.",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "A cavern tomb: a pillar studded with skulls, a great trunk of stone beyond, bones across the floor",
+   "mood": "subterranean, ochre, grim",
+   "suggested_use": "full-page plate",
+   "also_suits": [
+    "chapter header strip",
+    "column plate"
+   ],
+   "suggested_for": "5 Tiles and Nodes",
+   "hdr": 0.47,
+   "baked": null,
+   "kind": "painting"
+  }
  },
  {
   "id": "AST-0121.2",
@@ -2204,7 +2930,19 @@
   "has_alpha": false,
   "bytes": 279009,
   "notes": "Stored in the 2017 PDF as six abutting tiles at 150 ppi. Shows more of the scene than AST-0120 (which is sharper where they overlap).",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "A knight rests before a bonfire among broken arches, wider view with the ruined wall at left",
+   "mood": "warm, weary, quiet",
+   "suggested_use": "column plate",
+   "also_suits": [
+    "chapter header strip"
+   ],
+   "suggested_for": "11 Returning to the Bonfire",
+   "hdr": 0.5,
+   "baked": null,
+   "kind": "painting"
+  }
  },
  {
   "id": "AST-0122.1",
@@ -2234,7 +2972,21 @@
   "has_alpha": false,
   "bytes": 708749,
   "notes": "Largest version in the sources. The catalogue entry cites p.32; the painting is on p.7 of the 2022 book and p.32 of the 2017 book.",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "A ruined keep on a crag above a mist-filled graveyard, bare branches against a storm sky",
+   "mood": "bleak, stormy, cold",
+   "suggested_use": "full-page plate",
+   "also_suits": [
+    "cover",
+    "chapter header strip",
+    "column plate"
+   ],
+   "suggested_for": "1 Introduction",
+   "hdr": 0.27,
+   "baked": null,
+   "kind": "painting"
+  }
  },
  {
   "id": "AST-0122.2",
@@ -2264,7 +3016,19 @@
   "has_alpha": false,
   "bytes": 238920,
   "notes": "Wider field of view than the portrait framing of the 2022 book, at 150 ppi.",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "A ruined keep on a crag above a misty graveyard, wide view with dead trees at both sides",
+   "mood": "bleak, stormy, cold",
+   "suggested_use": "chapter header strip",
+   "also_suits": [
+    "column plate"
+   ],
+   "suggested_for": "6 Setup",
+   "hdr": 0.36,
+   "baked": null,
+   "kind": "painting"
+  }
  },
  {
   "id": "AST-0123.1",
@@ -2294,7 +3058,21 @@
   "has_alpha": false,
   "bytes": 790679,
   "notes": "",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "Gothic spires and buttresses piled up a cliff face in deep red evening light",
+   "mood": "majestic, red, towering",
+   "suggested_use": "full-page plate",
+   "also_suits": [
+    "cover",
+    "chapter header strip",
+    "column plate"
+   ],
+   "suggested_for": "19 Campaigns",
+   "hdr": 0.2,
+   "baked": null,
+   "kind": "painting"
+  }
  },
  {
   "id": "AST-0124.1",
@@ -2324,7 +3102,20 @@
   "has_alpha": false,
   "bytes": 224121,
   "notes": "Also in the 2017 book (p.26) at half the resolution; not extracted twice.",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "The Black Knight, horned helm and greatsword, wreathed in flame",
+   "mood": "menacing, fiery, dark",
+   "suggested_use": "column plate",
+   "also_suits": [
+    "chapter header strip",
+    "spot"
+   ],
+   "suggested_for": "15 Boss Encounters",
+   "hdr": 0.24,
+   "baked": null,
+   "kind": "painting"
+  }
  },
  {
   "id": "AST-0125.1",
@@ -2354,7 +3145,19 @@
   "has_alpha": false,
   "bytes": 160987,
   "notes": "Also in the 2017 book (p.19) at half the resolution; not extracted twice.",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "A ruined cathedral nave, daylight falling through the broken apse onto an overgrown floor",
+   "mood": "solemn, golden, still",
+   "suggested_use": "column plate",
+   "also_suits": [
+    "chapter header strip"
+   ],
+   "suggested_for": "7 Gameplay",
+   "hdr": 0.3,
+   "baked": null,
+   "kind": "painting"
+  }
  },
  {
   "id": "AST-0126.1",
@@ -2384,7 +3187,20 @@
   "has_alpha": false,
   "bytes": 604119,
   "notes": "",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "A towering engine of wheels, coffins and scythe blades looms over a lone knight, in grey monochrome",
+   "mood": "ominous, monochrome, vast",
+   "suggested_use": "full-page plate",
+   "also_suits": [
+    "chapter header strip",
+    "column plate"
+   ],
+   "suggested_for": "16 Boss Turns",
+   "hdr": 0.22,
+   "baked": null,
+   "kind": "painting"
+  }
  },
  {
   "id": "AST-0127.1",
@@ -2414,7 +3230,20 @@
   "has_alpha": false,
   "bytes": 197294,
   "notes": "150 ppi: about 120 ppi if run across a full page.",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "An armoured knight kneels in a moonlit forest, a pale light held at the chest",
+   "mood": "nocturnal, blue, lonely",
+   "suggested_use": "column plate",
+   "also_suits": [
+    "back cover",
+    "chapter header strip"
+   ],
+   "suggested_for": "10 Character Turn",
+   "hdr": 0.5,
+   "baked": null,
+   "kind": "painting"
+  }
  },
  {
   "id": "AST-0128.1",
@@ -2444,7 +3273,19 @@
   "has_alpha": false,
   "bytes": 165918,
   "notes": "640 px wide: column width at most.",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "An ember-scarred knight strides forward, sword held low, against a sulphur-yellow sky",
+   "mood": "fierce, smouldering, yellow",
+   "suggested_use": "column plate",
+   "also_suits": [
+    "spot"
+   ],
+   "suggested_for": "8 Combat Basics",
+   "hdr": null,
+   "baked": null,
+   "kind": "painting"
+  }
  },
  {
   "id": "AST-0129.1",
@@ -2474,7 +3315,19 @@
   "has_alpha": false,
   "bytes": 313883,
   "notes": "",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "Sepia sketch of a square gate tower closing a walled road",
+   "mood": "austere, sepia, quiet",
+   "suggested_use": "spot",
+   "also_suits": [
+    "column plate"
+   ],
+   "suggested_for": "19 Campaigns",
+   "hdr": null,
+   "baked": null,
+   "kind": "painting"
+  }
  },
  {
   "id": "AST-0129.2",
@@ -2504,7 +3357,19 @@
   "has_alpha": false,
   "bytes": 301331,
   "notes": "",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "A great stone ball in the machinery of a dark fortress, steam rising",
+   "mood": "mechanical, dark, oppressive",
+   "suggested_use": "spot",
+   "also_suits": [
+    "column plate"
+   ],
+   "suggested_for": "19 Campaigns",
+   "hdr": null,
+   "baked": null,
+   "kind": "painting"
+  }
  },
  {
   "id": "AST-0129.3",
@@ -2534,7 +3399,19 @@
   "has_alpha": false,
   "bytes": 372239,
   "notes": "",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "Pale cathedral spires of a city in the clouds, loosely painted",
+   "mood": "pale, lofty, serene",
+   "suggested_use": "spot",
+   "also_suits": [
+    "column plate"
+   ],
+   "suggested_for": "19 Campaigns",
+   "hdr": null,
+   "baked": null,
+   "kind": "painting"
+  }
  },
  {
   "id": "AST-0129.4",
@@ -2564,7 +3441,19 @@
   "has_alpha": false,
   "bytes": 414529,
   "notes": "",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "A knight stands before a burning town with a castle rising behind it",
+   "mood": "embattled, smoky, dusk",
+   "suggested_use": "spot",
+   "also_suits": [
+    "column plate"
+   ],
+   "suggested_for": "18 Campaign Play",
+   "hdr": null,
+   "baked": null,
+   "kind": "painting"
+  }
  },
  {
   "id": "AST-0129.5",
@@ -2594,7 +3483,19 @@
   "has_alpha": false,
   "bytes": 238495,
   "notes": "",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "An armoured figure lunges with a long sword, trailing pale frost",
+   "mood": "cold, swift, spectral",
+   "suggested_use": "spot",
+   "also_suits": [
+    "column plate"
+   ],
+   "suggested_for": "16 Boss Turns",
+   "hdr": null,
+   "baked": null,
+   "kind": "painting"
+  }
  },
  {
   "id": "AST-0129.6",
@@ -2624,7 +3525,19 @@
   "has_alpha": false,
   "bytes": 214405,
   "notes": "",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "A veiled figure sweeps a flaming curved blade through the dark",
+   "mood": "fiery, sinuous, dark",
+   "suggested_use": "spot",
+   "also_suits": [
+    "column plate"
+   ],
+   "suggested_for": "17 Boss Special Rules",
+   "hdr": null,
+   "baked": null,
+   "kind": "painting"
+  }
  },
  {
   "id": "AST-0129.7",
@@ -2654,7 +3567,19 @@
   "has_alpha": false,
   "bytes": 632507,
   "notes": "",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "A great stone ball in the machinery of a dark fortress, steam rising (squarer framing)",
+   "mood": "mechanical, dark, oppressive",
+   "suggested_use": "spot",
+   "also_suits": [
+    "column plate"
+   ],
+   "suggested_for": "19 Campaigns",
+   "hdr": null,
+   "baked": null,
+   "kind": "painting"
+  }
  },
  {
   "id": "AST-0129.8",
@@ -2684,7 +3609,19 @@
   "has_alpha": false,
   "bytes": 547069,
   "notes": "",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "Sepia sketch of a square gate tower, upright framing",
+   "mood": "austere, sepia, quiet",
+   "suggested_use": "spot",
+   "also_suits": [
+    "column plate"
+   ],
+   "suggested_for": "19 Campaigns",
+   "hdr": null,
+   "baked": null,
+   "kind": "painting"
+  }
  },
  {
   "id": "AST-0129.9",
@@ -2714,7 +3651,19 @@
   "has_alpha": false,
   "bytes": 536390,
   "notes": "",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "Pale cathedral spires with dark roofs, close framing",
+   "mood": "pale, lofty, serene",
+   "suggested_use": "spot",
+   "also_suits": [
+    "column plate"
+   ],
+   "suggested_for": "19 Campaigns",
+   "hdr": null,
+   "baked": null,
+   "kind": "painting"
+  }
  },
  {
   "id": "AST-0129.10",
@@ -2744,7 +3693,19 @@
   "has_alpha": false,
   "bytes": 137415,
   "notes": "In-game render rather than a painting.",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "A sealed stone door split by a blade of white light, blue night around mossy ruins",
+   "mood": "mysterious, blue, hushed",
+   "suggested_use": "column plate",
+   "also_suits": [
+    "spot"
+   ],
+   "suggested_for": "18 Campaign Play",
+   "hdr": null,
+   "baked": null,
+   "kind": "painting"
+  }
  },
  {
   "id": "AST-0129.11",
@@ -2774,7 +3735,19 @@
   "has_alpha": false,
   "bytes": 283674,
   "notes": "In-game render rather than a painting. Same scene as the Darkroot cover, without the logo.",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "A knight wades through a shallow forest lake at night",
+   "mood": "nocturnal, misty, lonely",
+   "suggested_use": "spot",
+   "also_suits": [
+    "column plate"
+   ],
+   "suggested_for": "7 Gameplay",
+   "hdr": null,
+   "baked": null,
+   "kind": "painting"
+  }
  },
  {
   "id": "AST-0129.12",
@@ -2804,7 +3777,19 @@
   "has_alpha": false,
   "bytes": 493434,
   "notes": "",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "Knight Artorias crouches low, greatsword trailing, in a blue-lit arena",
+   "mood": "feral, blue, tense",
+   "suggested_use": "spot",
+   "also_suits": [
+    "column plate"
+   ],
+   "suggested_for": "17 Boss Special Rules",
+   "hdr": null,
+   "baked": null,
+   "kind": "painting"
+  }
  },
  {
   "id": "AST-0129.13",
@@ -2834,7 +3819,19 @@
   "has_alpha": false,
   "bytes": 332012,
   "notes": "In-game render rather than a painting.",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "A knight with shield raised faces the black dragon under an orange sky",
+   "mood": "heroic, orange, perilous",
+   "suggested_use": "spot",
+   "also_suits": [
+    "column plate"
+   ],
+   "suggested_for": "16 Boss Turns",
+   "hdr": null,
+   "baked": null,
+   "kind": "painting"
+  }
  },
  {
   "id": "AST-0129.14",
@@ -2864,7 +3861,17 @@
   "has_alpha": false,
   "bytes": 148361,
   "notes": "In-game render rather than a painting. 291 px: thumbnail size only.",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "A red-lit iron keep forecourt with burning braziers",
+   "mood": "hot, red, forbidding",
+   "suggested_use": "spot",
+   "also_suits": [],
+   "suggested_for": "19 Campaigns",
+   "hdr": null,
+   "baked": null,
+   "kind": "painting"
+  }
  },
  {
   "id": "AST-0129.15",
@@ -2894,7 +3901,17 @@
   "has_alpha": false,
   "bytes": 121820,
   "notes": "In-game render rather than a painting. 290 px: thumbnail size only.",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "A lone figure silhouetted beneath tall pointed arches",
+   "mood": "grand, pale, still",
+   "suggested_use": "spot",
+   "also_suits": [],
+   "suggested_for": "19 Campaigns",
+   "hdr": null,
+   "baked": null,
+   "kind": "painting"
+  }
  },
  {
   "id": "AST-0129.16",
@@ -2926,7 +3943,17 @@
   "has_alpha": false,
   "bytes": 126730,
   "notes": "292 px: thumbnail size only.",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "A leaning stone tower hung with windmill sails under a green-grey sky",
+   "mood": "eerie, green, decayed",
+   "suggested_use": "spot",
+   "also_suits": [],
+   "suggested_for": "19 Campaigns",
+   "hdr": null,
+   "baked": null,
+   "kind": "painting"
+  }
  },
  {
   "id": "AST-0129.17",
@@ -2956,7 +3983,17 @@
   "has_alpha": false,
   "bytes": 108767,
   "notes": "In-game render rather than a painting. 292 px: thumbnail size only.",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "A bonfire burning among fallen autumn leaves",
+   "mood": "warm, restful, autumnal",
+   "suggested_use": "spot",
+   "also_suits": [],
+   "suggested_for": "11 Returning to the Bonfire",
+   "hdr": null,
+   "baked": null,
+   "kind": "painting"
+  }
  },
  {
   "id": "AST-0129.18",
@@ -2986,7 +4023,17 @@
   "has_alpha": false,
   "bytes": 97828,
   "notes": "In-game render rather than a painting. 290 px: thumbnail size only.",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "A torch-lit circular tunnel of stone ribs",
+   "mood": "claustrophobic, amber, dark",
+   "suggested_use": "spot",
+   "also_suits": [],
+   "suggested_for": "5 Tiles and Nodes",
+   "hdr": null,
+   "baked": null,
+   "kind": "painting"
+  }
  },
  {
   "id": "AST-0129.19",
@@ -3016,7 +4063,17 @@
   "has_alpha": false,
   "bytes": 79050,
   "notes": "In-game render rather than a painting. 288 px: thumbnail size only.",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "A warrior shoulders a huge blade above a pine forest at dusk",
+   "mood": "brooding, green, windswept",
+   "suggested_use": "spot",
+   "also_suits": [],
+   "suggested_for": "20 Player versus Player",
+   "hdr": null,
+   "baked": null,
+   "kind": "painting"
+  }
  },
  {
   "id": "AST-0129.20",
@@ -3046,7 +4103,19 @@
   "has_alpha": false,
   "bytes": 104455,
   "notes": "No catalogue entry of its own: attached to AST-0129 as the closest existing entry.",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "A mass of twisted roots stained dark red against a pale wall",
+   "mood": "organic, unsettling, pale",
+   "suggested_use": "column plate",
+   "also_suits": [
+    "chapter header strip"
+   ],
+   "suggested_for": "9 Enemy Turn",
+   "hdr": 0.5,
+   "baked": null,
+   "kind": "painting"
+  }
  },
  {
   "id": "AST-0129.21",
@@ -3076,7 +4145,19 @@
   "has_alpha": false,
   "bytes": 68903,
   "notes": "No catalogue entry of its own: attached to AST-0129 as the closest existing entry.",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "A great stone bridge arches over dark water, a towered city rising behind it",
+   "mood": "gloomy, monumental, grey",
+   "suggested_use": "column plate",
+   "also_suits": [
+    "chapter header strip"
+   ],
+   "suggested_for": "18 Campaign Play",
+   "hdr": 0.33,
+   "baked": null,
+   "kind": "painting"
+  }
  },
  {
   "id": "AST-0129.22",
@@ -3106,7 +4187,19 @@
   "has_alpha": false,
   "bytes": 126695,
   "notes": "No catalogue entry of its own: attached to AST-0129 as the closest existing entry. Very tall (1:1.93): suits a full column height.",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "A shaft of amber light falls into a flooded cavern of roots and pale water",
+   "mood": "deep, amber, silent",
+   "suggested_use": "column plate",
+   "also_suits": [
+    "chapter header strip"
+   ],
+   "suggested_for": "10 Character Turn",
+   "hdr": 0.7,
+   "baked": null,
+   "kind": "painting"
+  }
  },
  {
   "id": "AST-0129.23",
@@ -3136,7 +4229,19 @@
   "has_alpha": false,
   "bytes": 141772,
   "notes": "No catalogue entry of its own: attached to AST-0129 as the closest existing entry. Also in the 2017 book (p.14) at half the resolution; not extracted twice.",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "A hooded figure sits by a small fire before towering pillars of light",
+   "mood": "contemplative, golden, hazy",
+   "suggested_use": "column plate",
+   "also_suits": [
+    "chapter header strip"
+   ],
+   "suggested_for": "21 Glossary",
+   "hdr": 0.6,
+   "baked": null,
+   "kind": "painting"
+  }
  },
  {
   "id": "AST-0129.24",
@@ -3166,7 +4271,19 @@
   "has_alpha": false,
   "bytes": 602691,
   "notes": "No catalogue entry of its own: attached to AST-0129 as the closest existing entry. 465 px wide.",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "Green-ink sketch of a ruined tower above a walled courtyard, a crow perched at left",
+   "mood": "sketchy, green, desolate",
+   "suggested_use": "spot",
+   "also_suits": [
+    "column plate"
+   ],
+   "suggested_for": "5 Tiles and Nodes",
+   "hdr": null,
+   "baked": null,
+   "kind": "painting"
+  }
  },
  {
   "id": "AST-0129.25",
@@ -3196,7 +4313,19 @@
   "has_alpha": false,
   "bytes": 193366,
   "notes": "No catalogue entry of its own: attached to AST-0129 as the closest existing entry. The Darkroot book prints an upright framing at 300 ppi (AST-0130).",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "A ruined gatehouse choked with roots on a mossy rise, a red figure at its door",
+   "mood": "overgrown, grey-green, lonely",
+   "suggested_use": "chapter header strip",
+   "also_suits": [
+    "column plate"
+   ],
+   "suggested_for": "6 Setup",
+   "hdr": 0.45,
+   "baked": null,
+   "kind": "painting"
+  }
  },
  {
   "id": "AST-0129.26",
@@ -3226,7 +4355,19 @@
   "has_alpha": false,
   "bytes": 297687,
   "notes": "No catalogue entry of its own: attached to AST-0129 as the closest existing entry. Already about 2:1.",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "A panorama of drowned ruins and leaning spars fading into mist",
+   "mood": "misty, grey, desolate",
+   "suggested_use": "chapter header strip",
+   "also_suits": [
+    "column plate"
+   ],
+   "suggested_for": "7 Gameplay",
+   "hdr": 0.5,
+   "baked": null,
+   "kind": "painting"
+  }
  },
  {
   "id": "AST-0129.27",
@@ -3256,7 +4397,19 @@
   "has_alpha": false,
   "bytes": 169723,
   "notes": "No catalogue entry of its own: attached to AST-0129 as the closest existing entry.",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "A vast rose-marble cathedral hall of statues and galleries, one small red figure on the floor",
+   "mood": "opulent, rose, hushed",
+   "suggested_use": "column plate",
+   "also_suits": [
+    "spot"
+   ],
+   "suggested_for": "19 Campaigns",
+   "hdr": null,
+   "baked": null,
+   "kind": "painting"
+  }
  },
  {
   "id": "AST-0129.28",
@@ -3286,7 +4439,19 @@
   "has_alpha": false,
   "bytes": 197534,
   "notes": "No catalogue entry of its own: attached to AST-0129 as the closest existing entry. Sharper crop of the lower half of the 2017 p.34 painting.",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "The statue wall of a rose-marble hall, one small red figure on the dark floor",
+   "mood": "opulent, rose, hushed",
+   "suggested_use": "column plate",
+   "also_suits": [
+    "spot"
+   ],
+   "suggested_for": "12 Phantoms",
+   "hdr": null,
+   "baked": null,
+   "kind": "painting"
+  }
  },
  {
   "id": "AST-0130.1",
@@ -3318,7 +4483,17 @@
   "has_alpha": false,
   "bytes": 320993,
   "notes": "The white \"DARK SOULS / THE BOARD GAME\" logo lock-up is baked into the image (lower third). The same figure without the logo is AST-0138 (phantom figure with soft mask).",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "A white phantom duellist in a wide-brimmed hat on black, with the game logo",
+   "mood": "spectral, stark, elegant",
+   "suggested_use": "cover",
+   "also_suits": [],
+   "suggested_for": "12 Phantoms",
+   "hdr": null,
+   "baked": "The white \"DARK SOULS / THE BOARD GAME\" logo lock-up is baked into the image (lower third).",
+   "kind": "painting"
+  }
  },
  {
   "id": "AST-0130.2",
@@ -3356,7 +4531,19 @@
   "has_alpha": false,
   "bytes": 196990,
   "notes": "Text-free crop: the top 61.5 % of the cover image, ending just above the logo flourish.",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "A white phantom duellist in a wide-brimmed hat on black",
+   "mood": "spectral, stark, elegant",
+   "suggested_use": "column plate",
+   "also_suits": [
+    "cover"
+   ],
+   "suggested_for": "12 Phantoms",
+   "hdr": null,
+   "baked": null,
+   "kind": "painting"
+  }
  },
  {
   "id": "AST-0130.3",
@@ -3388,7 +4575,17 @@
   "has_alpha": false,
   "bytes": 460325,
   "notes": "The white \"DARK SOULS / THE BOARD GAME\" logo lock-up is baked into the image (lower third). The same painting without the logo, and larger, is the next file.",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "The black dragon hangs in a sulphur sky above a tiny knight, with the game logo",
+   "mood": "awe, sulphur, looming",
+   "suggested_use": "cover",
+   "also_suits": [],
+   "suggested_for": "15 Boss Encounters",
+   "hdr": null,
+   "baked": "The white \"DARK SOULS / THE BOARD GAME\" logo lock-up is baked into the image (lower third).",
+   "kind": "painting"
+  }
  },
  {
   "id": "AST-0130.4",
@@ -3418,7 +4615,21 @@
   "has_alpha": false,
   "bytes": 589448,
   "notes": "Text-free and larger than the cover image. A third, smaller copy on p.14 was not extracted.",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "The black dragon hangs in a sulphur-yellow sky above a tiny lone knight",
+   "mood": "awe, sulphur, looming",
+   "suggested_use": "full-page plate",
+   "also_suits": [
+    "cover",
+    "chapter header strip",
+    "column plate"
+   ],
+   "suggested_for": "15 Boss Encounters",
+   "hdr": 0.17,
+   "baked": null,
+   "kind": "painting"
+  }
  },
  {
   "id": "AST-0130.5",
@@ -3450,7 +4661,17 @@
   "has_alpha": false,
   "bytes": 139538,
   "notes": "The white \"DARK SOULS / THE BOARD GAME\" logo lock-up is baked into the image (lower third). 846 px wide (150 ppi).",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "A skeletal chariot horse rears out of the dark, with the game logo",
+   "mood": "dread, black, feral",
+   "suggested_use": "cover",
+   "also_suits": [],
+   "suggested_for": "15 Boss Encounters",
+   "hdr": null,
+   "baked": "The white \"DARK SOULS / THE BOARD GAME\" logo lock-up is baked into the image (lower third).",
+   "kind": "painting"
+  }
  },
  {
   "id": "AST-0130.6",
@@ -3488,7 +4709,19 @@
   "has_alpha": false,
   "bytes": 98674,
   "notes": "Text-free crop: the top 61.5 % of the cover image.",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "A skeletal chariot horse rears out of the dark",
+   "mood": "dread, black, feral",
+   "suggested_use": "column plate",
+   "also_suits": [
+    "spot"
+   ],
+   "suggested_for": "16 Boss Turns",
+   "hdr": null,
+   "baked": null,
+   "kind": "painting"
+  }
  },
  {
   "id": "AST-0130.7",
@@ -3520,7 +4753,17 @@
   "has_alpha": false,
   "bytes": 298174,
   "notes": "The white \"DARK SOULS / THE BOARD GAME\" logo lock-up is baked into the image (lower third).",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "A knight wades a moonlit forest lake, with the game logo",
+   "mood": "nocturnal, blue, misty",
+   "suggested_use": "cover",
+   "also_suits": [],
+   "suggested_for": "19 Campaigns",
+   "hdr": null,
+   "baked": "The white \"DARK SOULS / THE BOARD GAME\" logo lock-up is baked into the image (lower third).",
+   "kind": "painting"
+  }
  },
  {
   "id": "AST-0130.8",
@@ -3558,7 +4801,20 @@
   "has_alpha": false,
   "bytes": 177210,
   "notes": "Text-free crop: the top 61.5 % of the cover image.",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "A knight wades a moonlit forest lake beneath dark trees",
+   "mood": "nocturnal, blue, misty",
+   "suggested_use": "column plate",
+   "also_suits": [
+    "chapter header strip",
+    "full-page plate"
+   ],
+   "suggested_for": "7 Gameplay",
+   "hdr": 0.7,
+   "baked": null,
+   "kind": "painting"
+  }
  },
  {
   "id": "AST-0130.9",
@@ -3590,7 +4846,17 @@
   "has_alpha": false,
   "bytes": 96494,
   "notes": "The white \"DARK SOULS / THE BOARD GAME\" logo lock-up is baked into the image (lower third). 850 px wide (150 ppi).",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "Knights stand before a dark keep split by a seam of molten light, with the game logo",
+   "mood": "ominous, ember, smoky",
+   "suggested_use": "cover",
+   "also_suits": [],
+   "suggested_for": "19 Campaigns",
+   "hdr": null,
+   "baked": "The white \"DARK SOULS / THE BOARD GAME\" logo lock-up is baked into the image (lower third).",
+   "kind": "painting"
+  }
  },
  {
   "id": "AST-0130.10",
@@ -3628,7 +4894,19 @@
   "has_alpha": false,
   "bytes": 52777,
   "notes": "Text-free crop: the top 61.5 % of the cover image.",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "Knights stand before a dark keep split by a seam of molten light",
+   "mood": "ominous, ember, smoky",
+   "suggested_use": "column plate",
+   "also_suits": [
+    "spot"
+   ],
+   "suggested_for": "18 Campaign Play",
+   "hdr": null,
+   "baked": null,
+   "kind": "painting"
+  }
  },
  {
   "id": "AST-0130.11",
@@ -3660,7 +4938,17 @@
   "has_alpha": false,
   "bytes": 171766,
   "notes": "The white \"DARK SOULS / THE BOARD GAME\" logo lock-up is baked into the image (lower third). 849 px wide (150 ppi).",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "An armoured pursuer with a great blade stands in a shaft of light, with the game logo",
+   "mood": "cold, steel, dramatic",
+   "suggested_use": "cover",
+   "also_suits": [],
+   "suggested_for": "13 Mimics",
+   "hdr": null,
+   "baked": "The white \"DARK SOULS / THE BOARD GAME\" logo lock-up is baked into the image (lower third).",
+   "kind": "painting"
+  }
  },
  {
   "id": "AST-0130.12",
@@ -3698,7 +4986,19 @@
   "has_alpha": false,
   "bytes": 123574,
   "notes": "Text-free crop: the top 61.5 % of the cover image.",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "An armoured pursuer with a great blade stands in a shaft of light",
+   "mood": "cold, steel, dramatic",
+   "suggested_use": "column plate",
+   "also_suits": [
+    "spot"
+   ],
+   "suggested_for": "9 Enemy Turn",
+   "hdr": null,
+   "baked": null,
+   "kind": "painting"
+  }
  },
  {
   "id": "AST-0130.13",
@@ -3730,7 +5030,17 @@
   "has_alpha": false,
   "bytes": 308540,
   "notes": "The white \"DARK SOULS / THE BOARD GAME\" logo lock-up is baked into the image (lower third).",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "A hooded adventurer in dark leather on black, with the game logo",
+   "mood": "shadowed, leather, resolute",
+   "suggested_use": "cover",
+   "also_suits": [],
+   "suggested_for": "3 Characters",
+   "hdr": null,
+   "baked": "The white \"DARK SOULS / THE BOARD GAME\" logo lock-up is baked into the image (lower third).",
+   "kind": "painting"
+  }
  },
  {
   "id": "AST-0130.14",
@@ -3768,7 +5078,19 @@
   "has_alpha": false,
   "bytes": 185159,
   "notes": "Text-free crop: the top 61.5 % of the cover image; the figure is cut at the knee by the crop.",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "A hooded adventurer in dark leather on black",
+   "mood": "shadowed, leather, resolute",
+   "suggested_use": "column plate",
+   "also_suits": [
+    "spot"
+   ],
+   "suggested_for": "3 Characters",
+   "hdr": null,
+   "baked": null,
+   "kind": "painting"
+  }
  },
  {
   "id": "AST-0130.15",
@@ -3800,7 +5122,20 @@
   "has_alpha": false,
   "bytes": 628479,
   "notes": "",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "A red phantom knight stands on black",
+   "mood": "hostile, crimson, stark",
+   "suggested_use": "back cover",
+   "also_suits": [
+    "full-page plate",
+    "column plate"
+   ],
+   "suggested_for": "20 Player versus Player",
+   "hdr": null,
+   "baked": null,
+   "kind": "painting"
+  }
  },
  {
   "id": "AST-0130.16",
@@ -3832,7 +5167,20 @@
   "has_alpha": false,
   "bytes": 286530,
   "notes": "The lower third is black (room for back-cover text).",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "The black dragon seen close from below, one red eye burning, fading to black at the foot",
+   "mood": "menacing, red-eyed, dark",
+   "suggested_use": "back cover",
+   "also_suits": [
+    "full-page plate",
+    "column plate"
+   ],
+   "suggested_for": "17 Boss Special Rules",
+   "hdr": null,
+   "baked": null,
+   "kind": "painting"
+  }
  },
  {
   "id": "AST-0130.17",
@@ -3864,7 +5212,19 @@
   "has_alpha": false,
   "bytes": 150107,
   "notes": "In-game render rather than a painting. 846 px wide (150 ppi). The lower third is black.",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "A torch-bearer crosses a rope bridge toward a dark fortress, fading to black at the foot",
+   "mood": "tense, torchlit, dark",
+   "suggested_use": "back cover",
+   "also_suits": [
+    "column plate"
+   ],
+   "suggested_for": "18 Campaign Play",
+   "hdr": null,
+   "baked": null,
+   "kind": "painting"
+  }
  },
  {
   "id": "AST-0130.18",
@@ -3896,7 +5256,20 @@
   "has_alpha": false,
   "bytes": 437012,
   "notes": "",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "Knight Artorias, cloak streaming, on black",
+   "mood": "tragic, blue-steel, stark",
+   "suggested_use": "back cover",
+   "also_suits": [
+    "full-page plate",
+    "column plate"
+   ],
+   "suggested_for": "15 Boss Encounters",
+   "hdr": null,
+   "baked": null,
+   "kind": "painting"
+  }
  },
  {
   "id": "AST-0130.19",
@@ -3926,7 +5299,19 @@
   "has_alpha": false,
   "bytes": 146968,
   "notes": "850 px wide (150 ppi).",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "A crumbling tower rises from a lake of fire under ash clouds",
+   "mood": "infernal, ashen, towering",
+   "suggested_use": "back cover",
+   "also_suits": [
+    "column plate"
+   ],
+   "suggested_for": "19 Campaigns",
+   "hdr": null,
+   "baked": null,
+   "kind": "painting"
+  }
  },
  {
   "id": "AST-0130.20",
@@ -3956,7 +5341,19 @@
   "has_alpha": false,
   "bytes": 259427,
   "notes": "849 px wide (150 ppi).",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "A ruined stone arch on a mountain path, bare trees and pale cliffs",
+   "mood": "quiet, grey, wintry",
+   "suggested_use": "back cover",
+   "also_suits": [
+    "column plate"
+   ],
+   "suggested_for": "22 F.A.Q.",
+   "hdr": null,
+   "baked": null,
+   "kind": "painting"
+  }
  },
  {
   "id": "AST-0130.21",
@@ -3988,7 +5385,20 @@
   "has_alpha": false,
   "bytes": 303985,
   "notes": "",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "A suit of dark, ragged plate armour on black",
+   "mood": "sombre, steel, still",
+   "suggested_use": "back cover",
+   "also_suits": [
+    "full-page plate",
+    "column plate"
+   ],
+   "suggested_for": "4 Equipment",
+   "hdr": null,
+   "baked": null,
+   "kind": "painting"
+  }
  },
  {
   "id": "AST-0130.22",
@@ -4020,7 +5430,20 @@
   "has_alpha": false,
   "bytes": 254799,
   "notes": "No catalogue entry of its own: attached to AST-0130 as the closest existing entry.",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "A red phantom, half figure and half blood-smear, on black",
+   "mood": "violent, crimson, abstract",
+   "suggested_use": "column plate",
+   "also_suits": [
+    "full-page plate",
+    "chapter header strip"
+   ],
+   "suggested_for": "12 Phantoms",
+   "hdr": 0.36,
+   "baked": null,
+   "kind": "painting"
+  }
  },
  {
   "id": "AST-0130.23",
@@ -4050,7 +5473,19 @@
   "has_alpha": false,
   "bytes": 731274,
   "notes": "No catalogue entry of its own: attached to AST-0130 as the closest existing entry.",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "An armoured knight silhouetted against swirling blue spirits",
+   "mood": "electric, blue, embattled",
+   "suggested_use": "chapter header strip",
+   "also_suits": [
+    "column plate"
+   ],
+   "suggested_for": "20 Player versus Player",
+   "hdr": 0.5,
+   "baked": null,
+   "kind": "painting"
+  }
  },
  {
   "id": "AST-0130.24",
@@ -4080,7 +5515,19 @@
   "has_alpha": false,
   "bytes": 371865,
   "notes": "No catalogue entry of its own: attached to AST-0130 as the closest existing entry.",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "Monochrome sketch of a band of warriors climbing a great stair toward a giant figure",
+   "mood": "monochrome, rain-streaked, epic",
+   "suggested_use": "chapter header strip",
+   "also_suits": [
+    "column plate"
+   ],
+   "suggested_for": "12 Phantoms",
+   "hdr": 0.55,
+   "baked": null,
+   "kind": "painting"
+  }
  },
  {
   "id": "AST-0130.25",
@@ -4110,7 +5557,20 @@
   "has_alpha": false,
   "bytes": 479510,
   "notes": "No catalogue entry of its own: attached to AST-0130 as the closest existing entry.",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "A ruined castle of spires and buttresses on a cliff under a pale sky",
+   "mood": "lofty, weathered, pale",
+   "suggested_use": "full-page plate",
+   "also_suits": [
+    "chapter header strip",
+    "column plate"
+   ],
+   "suggested_for": "19 Campaigns",
+   "hdr": 0.3,
+   "baked": null,
+   "kind": "painting"
+  }
  },
  {
   "id": "AST-0130.26",
@@ -4140,7 +5600,20 @@
   "has_alpha": false,
   "bytes": 320997,
   "notes": "No catalogue entry of its own: attached to AST-0130 as the closest existing entry. The 2017 book (p.21) carries a smaller copy inside a photographed art-book spread with caption text; that object was not extracted.",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "A shanty town on stilts in a murky yellow-green cavern, fires burning below",
+   "mood": "murky, sickly, sprawling",
+   "suggested_use": "full-page plate",
+   "also_suits": [
+    "chapter header strip",
+    "column plate"
+   ],
+   "suggested_for": "19 Campaigns",
+   "hdr": 0.33,
+   "baked": null,
+   "kind": "painting"
+  }
  },
  {
   "id": "AST-0130.27",
@@ -4170,7 +5643,19 @@
   "has_alpha": false,
   "bytes": 124380,
   "notes": "In-game render rather than a painting. Uncropped frame of the back-cover image, 640 px wide.",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "The black dragon seen close from below against a pale green sky",
+   "mood": "menacing, red-eyed, close",
+   "suggested_use": "column plate",
+   "also_suits": [
+    "spot"
+   ],
+   "suggested_for": "17 Boss Special Rules",
+   "hdr": null,
+   "baked": null,
+   "kind": "painting"
+  }
  },
  {
   "id": "AST-0130.28",
@@ -4200,7 +5685,20 @@
   "has_alpha": false,
   "bytes": 568195,
   "notes": "No catalogue entry of its own: attached to AST-0130 as the closest existing entry.",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "An overgrown temple gate in a red-gold forest, a small red figure in the doorway",
+   "mood": "lush, amber, secretive",
+   "suggested_use": "full-page plate",
+   "also_suits": [
+    "chapter header strip",
+    "column plate"
+   ],
+   "suggested_for": "19 Campaigns",
+   "hdr": 0.45,
+   "baked": null,
+   "kind": "painting"
+  }
  },
  {
   "id": "AST-0130.29",
@@ -4230,7 +5728,19 @@
   "has_alpha": false,
   "bytes": 136286,
   "notes": "In-game render rather than a painting. 626 px wide.",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "A knight sits by a bonfire below a cliff-top fortress at night",
+   "mood": "restful, firelit, blue-dark",
+   "suggested_use": "column plate",
+   "also_suits": [
+    "spot"
+   ],
+   "suggested_for": "11 Returning to the Bonfire",
+   "hdr": null,
+   "baked": null,
+   "kind": "painting"
+  }
  },
  {
   "id": "AST-0130.30",
@@ -4260,7 +5770,19 @@
   "has_alpha": false,
   "bytes": 239717,
   "notes": "In-game render rather than a painting. 626 px wide.",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "A rope bridge sags between cliffs under a green dusk sky",
+   "mood": "eerie, green, empty",
+   "suggested_use": "column plate",
+   "also_suits": [
+    "spot"
+   ],
+   "suggested_for": "5 Tiles and Nodes",
+   "hdr": null,
+   "baked": null,
+   "kind": "painting"
+  }
  },
  {
   "id": "AST-0130.31",
@@ -4290,7 +5812,19 @@
   "has_alpha": false,
   "bytes": 579449,
   "notes": "In-game render rather than a painting. 626 px wide.",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "The skeletal chariot horse breathes mist in a torch-lit arena, a fallen figure before it",
+   "mood": "brutal, torchlit, smoky",
+   "suggested_use": "column plate",
+   "also_suits": [
+    "spot"
+   ],
+   "suggested_for": "16 Boss Turns",
+   "hdr": null,
+   "baked": null,
+   "kind": "painting"
+  }
  },
  {
   "id": "AST-0130.32",
@@ -4320,7 +5854,19 @@
   "has_alpha": false,
   "bytes": 130868,
   "notes": "In-game render rather than a painting. 626 px wide.",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "A hooded torch-bearer advances down a fire-lit stone corridor",
+   "mood": "tense, amber, enclosed",
+   "suggested_use": "column plate",
+   "also_suits": [
+    "spot"
+   ],
+   "suggested_for": "9 Enemy Turn",
+   "hdr": null,
+   "baked": null,
+   "kind": "painting"
+  }
  },
  {
   "id": "AST-0130.33",
@@ -4350,7 +5896,19 @@
   "has_alpha": false,
   "bytes": 478107,
   "notes": "In-game render rather than a painting. 626 px wide.",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "A red-armoured warrior fights shield-bearing skeletons by firelight",
+   "mood": "frantic, firelit, red",
+   "suggested_use": "column plate",
+   "also_suits": [
+    "spot"
+   ],
+   "suggested_for": "8 Combat Basics",
+   "hdr": null,
+   "baked": null,
+   "kind": "painting"
+  }
  },
  {
   "id": "AST-0130.34",
@@ -4380,7 +5938,20 @@
   "has_alpha": false,
   "bytes": 840928,
   "notes": "No catalogue entry of its own: attached to AST-0130 as the closest existing entry.",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "Ink sketch on tan paper of a great gravestone ringed by swords planted in the earth",
+   "mood": "elegiac, sepia, still",
+   "suggested_use": "full-page plate",
+   "also_suits": [
+    "chapter header strip",
+    "column plate"
+   ],
+   "suggested_for": "21 Glossary",
+   "hdr": 0.62,
+   "baked": null,
+   "kind": "painting"
+  }
  },
  {
   "id": "AST-0130.35",
@@ -4410,7 +5981,20 @@
   "has_alpha": false,
   "bytes": 551972,
   "notes": "No catalogue entry of its own: attached to AST-0130 as the closest existing entry. Upright, sharper framing of the 2017 p.16 painting.",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "A ruined gatehouse choked with roots, a dead tree and a tall sword-like spire beside it",
+   "mood": "overgrown, grey-green, lonely",
+   "suggested_use": "full-page plate",
+   "also_suits": [
+    "chapter header strip",
+    "column plate"
+   ],
+   "suggested_for": "6 Setup",
+   "hdr": 0.55,
+   "baked": null,
+   "kind": "painting"
+  }
  },
  {
   "id": "AST-0130.36",
@@ -4440,7 +6024,19 @@
   "has_alpha": false,
   "bytes": 251717,
   "notes": "No catalogue entry of its own: attached to AST-0130 as the closest existing entry.",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "Concept art of Knight Artorias in tattered blue, front and back views",
+   "mood": "tragic, dark-blue, studied",
+   "suggested_use": "column plate",
+   "also_suits": [
+    "full-page plate"
+   ],
+   "suggested_for": "15 Boss Encounters",
+   "hdr": null,
+   "baked": null,
+   "kind": "painting"
+  }
  },
  {
   "id": "AST-0130.37",
@@ -4470,7 +6066,19 @@
   "has_alpha": false,
   "bytes": 379758,
   "notes": "No catalogue entry of its own: attached to AST-0130 as the closest existing entry.",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "Sketch of a heavy arched stone doorway overgrown with moss and leaves",
+   "mood": "ancient, mossy, closed",
+   "suggested_use": "column plate",
+   "also_suits": [
+    "spot"
+   ],
+   "suggested_for": "5 Tiles and Nodes",
+   "hdr": null,
+   "baked": null,
+   "kind": "painting"
+  }
  },
  {
   "id": "AST-0130.38",
@@ -4500,7 +6108,19 @@
   "has_alpha": false,
   "bytes": 192485,
   "notes": "No catalogue entry of its own: attached to AST-0130 as the closest existing entry. 628 px wide (about 2:1): too small for a full-width strip.",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "An iron throne-keep stands in a sea of fire-lit cloud",
+   "mood": "infernal, red, brooding",
+   "suggested_use": "column plate",
+   "also_suits": [
+    "spot"
+   ],
+   "suggested_for": "19 Campaigns",
+   "hdr": null,
+   "baked": null,
+   "kind": "painting"
+  }
  },
  {
   "id": "AST-0130.39",
@@ -4530,7 +6150,19 @@
   "has_alpha": false,
   "bytes": 165876,
   "notes": "No catalogue entry of its own: attached to AST-0130 as the closest existing entry. 630 px wide.",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "A gothic castle of spires stands over water in red dusk light",
+   "mood": "grand, red, fading",
+   "suggested_use": "column plate",
+   "also_suits": [
+    "spot"
+   ],
+   "suggested_for": "19 Campaigns",
+   "hdr": null,
+   "baked": null,
+   "kind": "painting"
+  }
  },
  {
   "id": "AST-0130.40",
@@ -4560,7 +6192,19 @@
   "has_alpha": false,
   "bytes": 76119,
   "notes": "No catalogue entry of its own: attached to AST-0130 as the closest existing entry. 632 px wide.",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "A shrine and its reflection in still blue water, joined by a column of light",
+   "mood": "serene, blue, luminous",
+   "suggested_use": "column plate",
+   "also_suits": [
+    "spot"
+   ],
+   "suggested_for": "14 Crystal Lizards",
+   "hdr": null,
+   "baked": null,
+   "kind": "painting"
+  }
  },
  {
   "id": "AST-0130.41",
@@ -4590,7 +6234,19 @@
   "has_alpha": false,
   "bytes": 519283,
   "notes": "No catalogue entry of its own: attached to AST-0130 as the closest existing entry. 628 px wide.",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "A rain-lashed ruined stair climbs between broken walls and spear-bearing statues",
+   "mood": "drenched, blue-grey, ruined",
+   "suggested_use": "column plate",
+   "also_suits": [
+    "spot"
+   ],
+   "suggested_for": "5 Tiles and Nodes",
+   "hdr": null,
+   "baked": null,
+   "kind": "painting"
+  }
  },
  {
   "id": "AST-0130.42",
@@ -4620,7 +6276,19 @@
   "has_alpha": false,
   "bytes": 146443,
   "notes": "No catalogue entry of its own: attached to AST-0130 as the closest existing entry. 632 px wide.",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "A dark chapel lit by a great stained-glass window above an altar",
+   "mood": "reverent, dim, jewelled",
+   "suggested_use": "column plate",
+   "also_suits": [
+    "spot"
+   ],
+   "suggested_for": "4 Equipment",
+   "hdr": null,
+   "baked": null,
+   "kind": "painting"
+  }
  },
  {
   "id": "AST-0130.43",
@@ -4650,7 +6318,19 @@
   "has_alpha": false,
   "bytes": 69525,
   "notes": "No catalogue entry of its own: attached to AST-0130 as the closest existing entry. 632 px wide.",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "A lone wanderer crosses drifted sand toward a great half-buried doorway",
+   "mood": "desolate, dun, windblown",
+   "suggested_use": "column plate",
+   "also_suits": [
+    "spot"
+   ],
+   "suggested_for": "18 Campaign Play",
+   "hdr": null,
+   "baked": null,
+   "kind": "painting"
+  }
  },
  {
   "id": "AST-0130.44",
@@ -4680,7 +6360,19 @@
   "has_alpha": false,
   "bytes": 363144,
   "notes": "No catalogue entry of its own: attached to AST-0130 as the closest existing entry. 406 px wide.",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "A knight stands on a fallen column in a hall of gold light and gnarled pillars",
+   "mood": "radiant, golden, ruined",
+   "suggested_use": "spot",
+   "also_suits": [
+    "column plate"
+   ],
+   "suggested_for": "10 Character Turn",
+   "hdr": null,
+   "baked": null,
+   "kind": "painting"
+  }
  },
  {
   "id": "AST-0130.45",
@@ -4710,7 +6402,21 @@
   "has_alpha": false,
   "bytes": 1149485,
   "notes": "No catalogue entry of its own: attached to AST-0130 as the closest existing entry.",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "A lone pilgrim looks out over a golden city of spires under a heavy sky",
+   "mood": "golden, vast, wistful",
+   "suggested_use": "full-page plate",
+   "also_suits": [
+    "cover",
+    "chapter header strip",
+    "column plate"
+   ],
+   "suggested_for": "3 Characters",
+   "hdr": 0.48,
+   "baked": null,
+   "kind": "painting"
+  }
  },
  {
   "id": "AST-0135.3",
@@ -4741,7 +6447,19 @@
   "bytes": 862389,
   "notes": "Phase 2B stored only the lower section of this object (AST-0135.2).",
   "phase": 3,
-  "resolves": "AST-0135.R1"
+  "resolves": "AST-0135.R1",
+  "design": {
+   "subject": "The Cleric character dashboard, whole, with the class portrait and starting-item roundels",
+   "mood": "component, painted portrait",
+   "suggested_use": "column plate",
+   "also_suits": [
+    "spot"
+   ],
+   "suggested_for": "3 Characters",
+   "hdr": null,
+   "baked": "Dashboard: class name, slot labels and printed stat values are part of the image.",
+   "kind": "dashboard"
+  }
  },
  {
   "id": "AST-0135.4",
@@ -4773,7 +6491,19 @@
   "bytes": 1158016,
   "notes": "The cube slots of the stat grid and endurance bar are transparent in the source mask. Phase 2B stored only the lower section (AST-0135.1).",
   "phase": 3,
-  "resolves": "AST-0135.R1"
+  "resolves": "AST-0135.R1",
+  "design": {
+   "subject": "The Cleric character dashboard with its ability text; the cube slots are transparent holes",
+   "mood": "component, painted portrait",
+   "suggested_use": "column plate",
+   "also_suits": [
+    "spot"
+   ],
+   "suggested_for": "3 Characters",
+   "hdr": null,
+   "baked": "Dashboard: class name, slot labels and printed stat values are part of the image.",
+   "kind": "dashboard"
+  }
  },
  {
   "id": "AST-0135.5",
@@ -4803,7 +6533,19 @@
   "has_alpha": false,
   "bytes": 340410,
   "notes": "",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "The Pyromancer character dashboard, whole, with the class portrait",
+   "mood": "component, painted portrait",
+   "suggested_use": "column plate",
+   "also_suits": [
+    "spot"
+   ],
+   "suggested_for": "3 Characters",
+   "hdr": null,
+   "baked": "Dashboard: class name, slot labels and printed stat values are part of the image.",
+   "kind": "dashboard"
+  }
  },
  {
   "id": "AST-0135.6",
@@ -4833,7 +6575,19 @@
   "has_alpha": false,
   "bytes": 330215,
   "notes": "",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "The Thief character dashboard, whole, with the class portrait",
+   "mood": "component, painted portrait",
+   "suggested_use": "column plate",
+   "also_suits": [
+    "spot"
+   ],
+   "suggested_for": "3 Characters",
+   "hdr": null,
+   "baked": "Dashboard: class name, slot labels and printed stat values are part of the image.",
+   "kind": "dashboard"
+  }
  },
  {
   "id": "AST-0135.7",
@@ -4863,7 +6617,19 @@
   "has_alpha": false,
   "bytes": 331963,
   "notes": "",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "The Cleric character dashboard, whole (smaller copy with the endurance bar printed red)",
+   "mood": "component, painted portrait",
+   "suggested_use": "column plate",
+   "also_suits": [
+    "spot"
+   ],
+   "suggested_for": "3 Characters",
+   "hdr": null,
+   "baked": "Dashboard: class name, slot labels and printed stat values are part of the image.",
+   "kind": "dashboard"
+  }
  },
  {
   "id": "AST-0135.8",
@@ -4893,7 +6659,19 @@
   "has_alpha": false,
   "bytes": 245419,
   "notes": "A smaller copy on p.4 was not extracted.",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "The 2017 Warrior character board with its painted class portrait",
+   "mood": "component, painted portrait",
+   "suggested_use": "column plate",
+   "also_suits": [
+    "spot"
+   ],
+   "suggested_for": "3 Characters",
+   "hdr": null,
+   "baked": "Dashboard: class name, slot labels and printed stat values are part of the image.",
+   "kind": "dashboard"
+  }
  },
  {
   "id": "AST-0135.9",
@@ -4923,7 +6701,19 @@
   "has_alpha": false,
   "bytes": 242133,
   "notes": "",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "The 2017 Herald character board with its painted class portrait",
+   "mood": "component, painted portrait",
+   "suggested_use": "column plate",
+   "also_suits": [
+    "spot"
+   ],
+   "suggested_for": "3 Characters",
+   "hdr": null,
+   "baked": "Dashboard: class name, slot labels and printed stat values are part of the image.",
+   "kind": "dashboard"
+  }
  },
  {
   "id": "AST-0135.10",
@@ -4953,7 +6743,19 @@
   "has_alpha": false,
   "bytes": 136655,
   "notes": "The source image is darkened where the next board of the fan lay over it.",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "The 2017 Knight character board with its painted class portrait (shaded where another board overlapped it)",
+   "mood": "component, painted portrait",
+   "suggested_use": "column plate",
+   "also_suits": [
+    "spot"
+   ],
+   "suggested_for": "3 Characters",
+   "hdr": null,
+   "baked": "Dashboard: class name, slot labels and printed stat values are part of the image.",
+   "kind": "dashboard"
+  }
  },
  {
   "id": "AST-0137.1",
@@ -4985,7 +6787,19 @@
   "bytes": 194743,
   "notes": "",
   "phase": 3,
-  "resolves": "AST-0137.R1"
+  "resolves": "AST-0137.R1",
+  "design": {
+   "subject": "A fan of three encounter cards: Grave Matters, The Abandoned Chest and Lakeview Refuge",
+   "mood": "component, fanned cards",
+   "suggested_use": "spot",
+   "also_suits": [
+    "column plate"
+   ],
+   "suggested_for": "2 Game Components",
+   "hdr": null,
+   "baked": "Card faces and backs: their titles and text are part of the image.",
+   "kind": "card fan"
+  }
  },
  {
   "id": "AST-0137.2",
@@ -5016,7 +6830,19 @@
   "bytes": 67252,
   "notes": "",
   "phase": 3,
-  "resolves": "AST-0137.R1"
+  "resolves": "AST-0137.R1",
+  "design": {
+   "subject": "The event deck: a card back with the Lifegem card fanned over it",
+   "mood": "component, fanned cards",
+   "suggested_use": "spot",
+   "also_suits": [
+    "column plate"
+   ],
+   "suggested_for": "2 Game Components",
+   "hdr": null,
+   "baked": "Card faces and backs: their titles and text are part of the image.",
+   "kind": "card fan"
+  }
  },
  {
   "id": "AST-0137.3",
@@ -5051,7 +6877,19 @@
   "bytes": 283230,
   "notes": "",
   "phase": 3,
-  "resolves": "AST-0137.R2"
+  "resolves": "AST-0137.R2",
+  "design": {
+   "subject": "The four treasure decks in a row, each a card back with a face card: Shortbow, Winged Spear, Dark Sword, Gravelord Sword",
+   "mood": "component, fanned cards",
+   "suggested_use": "spot",
+   "also_suits": [
+    "column plate"
+   ],
+   "suggested_for": "2 Game Components",
+   "hdr": null,
+   "baked": "Card faces and backs: their titles and text are part of the image.",
+   "kind": "card fan"
+  }
  },
  {
   "id": "AST-0137.4",
@@ -5083,7 +6921,19 @@
   "bytes": 122680,
   "notes": "On the page the miniature stands in front of this group; it is left out here.",
   "phase": 3,
-  "resolves": "AST-0137.R2"
+  "resolves": "AST-0137.R2",
+  "design": {
+   "subject": "The Black Knight boss cards: card back, data card and a behaviour card",
+   "mood": "component, fanned cards",
+   "suggested_use": "spot",
+   "also_suits": [
+    "column plate"
+   ],
+   "suggested_for": "2 Game Components",
+   "hdr": null,
+   "baked": "Card faces and backs: their titles and text are part of the image.",
+   "kind": "card fan"
+  }
  },
  {
   "id": "AST-0137.5",
@@ -5115,7 +6965,19 @@
   "bytes": 120185,
   "notes": "On the page the miniature stands in front of this group; it is left out here.",
   "phase": 3,
-  "resolves": "AST-0137.R2"
+  "resolves": "AST-0137.R2",
+  "design": {
+   "subject": "The Gravelord Nito boss cards: card back, data card and a behaviour card",
+   "mood": "component, fanned cards",
+   "suggested_use": "spot",
+   "also_suits": [
+    "column plate"
+   ],
+   "suggested_for": "2 Game Components",
+   "hdr": null,
+   "baked": "Card faces and backs: their titles and text are part of the image.",
+   "kind": "card fan"
+  }
  },
  {
   "id": "AST-0137.6",
@@ -5147,7 +7009,19 @@
   "has_alpha": true,
   "bytes": 529749,
   "notes": "On the page the miniature stands in front of this group; it is left out here.",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "The Cleric set: dashboard, class token and starting equipment cards",
+   "mood": "component, fanned cards",
+   "suggested_use": "spot",
+   "also_suits": [
+    "column plate"
+   ],
+   "suggested_for": "2 Game Components",
+   "hdr": null,
+   "baked": "Card faces and backs: their titles and text are part of the image.",
+   "kind": "card fan"
+  }
  },
  {
   "id": "AST-0137.7",
@@ -5179,7 +7053,19 @@
   "has_alpha": true,
   "bytes": 546874,
   "notes": "On the page the miniature stands in front of this group; it is left out here.",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "The Pyromancer set: dashboard, class token and starting equipment cards",
+   "mood": "component, fanned cards",
+   "suggested_use": "spot",
+   "also_suits": [
+    "column plate"
+   ],
+   "suggested_for": "2 Game Components",
+   "hdr": null,
+   "baked": "Card faces and backs: their titles and text are part of the image.",
+   "kind": "card fan"
+  }
  },
  {
   "id": "AST-0137.8",
@@ -5211,7 +7097,19 @@
   "has_alpha": true,
   "bytes": 532749,
   "notes": "On the page the miniature stands in front of this group; it is left out here.",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "The Thief set: dashboard, class token and starting equipment cards",
+   "mood": "component, fanned cards",
+   "suggested_use": "spot",
+   "also_suits": [
+    "column plate"
+   ],
+   "suggested_for": "2 Game Components",
+   "hdr": null,
+   "baked": "Card faces and backs: their titles and text are part of the image.",
+   "kind": "card fan"
+  }
  },
  {
   "id": "AST-0138.60",
@@ -5243,7 +7141,19 @@
   "bytes": 470960,
   "notes": "Soft mask fades the figure into transparency at the foot: place on a dark ground.",
   "phase": 3,
-  "resolves": "AST-0138.R1"
+  "resolves": "AST-0138.R1",
+  "design": {
+   "subject": "A white phantom duellist in a wide-brimmed hat, fading out below the knee",
+   "mood": "spectral, stark, elegant",
+   "suggested_use": "column plate",
+   "also_suits": [
+    "spot"
+   ],
+   "suggested_for": "12 Phantoms",
+   "hdr": null,
+   "baked": null,
+   "kind": "painting"
+  }
  },
  {
   "id": "AST-0138.61",
@@ -5275,7 +7185,19 @@
   "bytes": 323623,
   "notes": "Soft mask fades the image into transparency at the foot: place on a dark ground. Named as a second object of the same review item, but it is a different image.",
   "phase": 3,
-  "resolves": "AST-0138.R1"
+  "resolves": "AST-0138.R1",
+  "design": {
+   "subject": "A red phantom figure on black, fading out at the foot",
+   "mood": "violent, crimson, abstract",
+   "suggested_use": "spot",
+   "also_suits": [
+    "column plate"
+   ],
+   "suggested_for": "20 Player versus Player",
+   "hdr": null,
+   "baked": null,
+   "kind": "painting"
+  }
  },
  {
   "id": "AST-0138.62",
@@ -5308,7 +7230,19 @@
   "bytes": 223963,
   "notes": "The soft mask is opaque apart from noise (min alpha 243), so the dark ground is part of the image.",
   "phase": 3,
-  "resolves": "AST-0138.R2"
+  "resolves": "AST-0138.R2",
+  "design": {
+   "subject": "A Mushroom Parent holding the hand of a Mushroom Child, on a dark ground",
+   "mood": "odd, gentle, dark",
+   "suggested_use": "column plate",
+   "also_suits": [
+    "spot"
+   ],
+   "suggested_for": "9 Enemy Turn",
+   "hdr": null,
+   "baked": null,
+   "kind": "painting"
+  }
  },
  {
   "id": "AST-0138.63",
@@ -5341,7 +7275,19 @@
   "bytes": 213198,
   "notes": "406 px wide.",
   "phase": 3,
-  "resolves": "AST-0138.R3"
+  "resolves": "AST-0138.R3",
+  "design": {
+   "subject": "A knight, arrows in his back, stands in a burning waste under a red sun",
+   "mood": "defiant, red, scorched",
+   "suggested_use": "spot",
+   "also_suits": [
+    "column plate"
+   ],
+   "suggested_for": "8 Combat Basics",
+   "hdr": null,
+   "baked": null,
+   "kind": "painting"
+  }
  },
  {
   "id": "AST-0138.64",
@@ -5374,7 +7320,19 @@
   "bytes": 116534,
   "notes": "",
   "phase": 3,
-  "resolves": "AST-0138.R4"
+  "resolves": "AST-0138.R4",
+  "design": {
+   "subject": "The skeletal, ragged horse of the Executioner's Chariot on a grey ground",
+   "mood": "gaunt, grey, feral",
+   "suggested_use": "column plate",
+   "also_suits": [
+    "spot"
+   ],
+   "suggested_for": "15 Boss Encounters",
+   "hdr": null,
+   "baked": null,
+   "kind": "painting"
+  }
  },
  {
   "id": "AST-0138.65",
@@ -5407,7 +7365,19 @@
   "bytes": 117729,
   "notes": "Named as a second object of the same review item, but it is a different image.",
   "phase": 3,
-  "resolves": "AST-0138.R4"
+  "resolves": "AST-0138.R4",
+  "design": {
+   "subject": "The spiked chariot and its armoured rider on a grey ground",
+   "mood": "cruel, grey, iron",
+   "suggested_use": "column plate",
+   "also_suits": [
+    "spot"
+   ],
+   "suggested_for": "17 Boss Special Rules",
+   "hdr": null,
+   "baked": null,
+   "kind": "painting"
+  }
  },
  {
   "id": "AST-0138.66",
@@ -5439,7 +7409,19 @@
   "bytes": 249344,
   "notes": "Soft mask fades the image into transparency below: place on a dark ground.",
   "phase": 3,
-  "resolves": "AST-0138.R5"
+  "resolves": "AST-0138.R5",
+  "design": {
+   "subject": "The horned head and neck of the black dragon, fading out below",
+   "mood": "menacing, dark, golden-horned",
+   "suggested_use": "spot",
+   "also_suits": [
+    "column plate"
+   ],
+   "suggested_for": "17 Boss Special Rules",
+   "hdr": null,
+   "baked": null,
+   "kind": "painting"
+  }
  },
  {
   "id": "AST-0138.67",
@@ -5469,7 +7451,17 @@
   "has_alpha": false,
   "bytes": 43145,
   "notes": "Below the 400 px rule (201 px): kept because the Mimic and Crystal Lizard chapters have no other art. Thumbnail size only.",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "A closed wooden treasure chest",
+   "mood": "plain, wooden, expectant",
+   "suggested_use": "spot",
+   "also_suits": [],
+   "suggested_for": "13 Mimics",
+   "hdr": null,
+   "baked": null,
+   "kind": "painting"
+  }
  },
  {
   "id": "AST-0138.68",
@@ -5499,7 +7491,17 @@
   "has_alpha": false,
   "bytes": 38263,
   "notes": "Below the 400 px rule (201 px): kept for the Crystal Lizard chapter. Thumbnail size only.",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "An open treasure chest with a pale crystal glow inside",
+   "mood": "luminous, cool, lucky",
+   "suggested_use": "spot",
+   "also_suits": [],
+   "suggested_for": "14 Crystal Lizards",
+   "hdr": null,
+   "baked": null,
+   "kind": "painting"
+  }
  },
  {
   "id": "AST-0138.69",
@@ -5529,7 +7531,17 @@
   "has_alpha": false,
   "bytes": 46580,
   "notes": "Below the 400 px rule (201 px): kept for the Mimic chapter. Thumbnail size only.",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "A Mimic: a treasure chest gaping open, lined with teeth",
+   "mood": "grotesque, toothy, sudden",
+   "suggested_use": "spot",
+   "also_suits": [],
+   "suggested_for": "13 Mimics",
+   "hdr": null,
+   "baked": null,
+   "kind": "painting"
+  }
  },
  {
   "id": "AST-0138.70",
@@ -5560,6 +7572,153 @@
   "has_alpha": true,
   "bytes": 64934,
   "notes": "Below the 400 px rule (275 px wide): kept for the Mimic chapter. Soft mask fades it out below: place on a dark ground.",
-  "phase": 3
+  "phase": 3,
+  "design": {
+   "subject": "A Mimic risen on long thin limbs, chest for a head",
+   "mood": "grotesque, gangling, dark",
+   "suggested_use": "spot",
+   "also_suits": [],
+   "suggested_for": "13 Mimics",
+   "hdr": null,
+   "baked": null,
+   "kind": "painting"
+  }
+ },
+ {
+  "id": "AST-0156.1",
+  "parent": "AST-0156",
+  "name": "The Four Kings expansion front cover, logo baked in",
+  "type": "art",
+  "src": "DS-Four-Kings-Rules-web.pdf",
+  "page": 1,
+  "bbox_pt": [
+   -0.0,
+   0.0,
+   421.0,
+   612.3
+  ],
+  "image_object": {
+   "xref": 20,
+   "pdfimages_num": 0,
+   "colour": "cmyk",
+   "native": "1754×2551",
+   "has_mask": true,
+   "smask_pdfimages_num": 1,
+   "mask_opaque": true,
+   "ppi_as_placed": 300
+  },
+  "method": "pdfimages -png p.1 image #0 (object 20, 1754×2551 cmyk + soft mask #1 (opaque everywhere, dropped)); native resolution, no resampling; saved as JPEG quality 92 (4:4:4)",
+  "file": "assets/art/ast-0156-four-kings-cover.jpg",
+  "format": "jpg",
+  "dims": "1754×2551 px",
+  "has_alpha": false,
+  "bytes": 598899,
+  "notes": "The white \"DARK SOULS / THE BOARD GAME\" logo lock-up is baked into the image (lower third).",
+  "phase": 3,
+  "design": {
+   "subject": "The Four Kings, a crowned wraith of trailing dark limbs, on black, with the game logo",
+   "mood": "abyssal, spectral, black",
+   "suggested_use": "cover",
+   "also_suits": [],
+   "suggested_for": "17 Boss Special Rules",
+   "hdr": null,
+   "baked": "The white \"DARK SOULS / THE BOARD GAME\" logo lock-up is baked into the image (lower third).",
+   "kind": "painting"
+  }
+ },
+ {
+  "id": "AST-0156.2",
+  "parent": "AST-0156",
+  "name": "The Four Kings front cover, art above the logo",
+  "type": "art",
+  "src": "DS-Four-Kings-Rules-web.pdf",
+  "page": 1,
+  "bbox_pt": [
+   -0.0,
+   0.0,
+   421.0,
+   612.3
+  ],
+  "image_object": {
+   "xref": 20,
+   "pdfimages_num": 0,
+   "colour": "cmyk",
+   "native": "1754×2551",
+   "has_mask": true,
+   "smask_pdfimages_num": 1,
+   "mask_opaque": true,
+   "crop_px": [
+    0,
+    0,
+    1754,
+    1569
+   ],
+   "ppi_as_placed": 300
+  },
+  "method": "pdfimages -png p.1 image #0 (object 20, 1754×2551 cmyk + soft mask #1 (opaque everywhere, dropped)); cropped to px box (0, 0, 1754, 1569) of the object; native resolution, no resampling; saved as JPEG quality 92 (4:4:4)",
+  "file": "assets/art/ast-0156-four-kings-cover-art-only.jpg",
+  "format": "jpg",
+  "dims": "1754×1569 px",
+  "has_alpha": false,
+  "bytes": 481858,
+  "notes": "Text-free crop: the top 61.5 % of the cover image, ending just above the logo flourish.",
+  "phase": 3,
+  "design": {
+   "subject": "The Four Kings, a crowned wraith of trailing dark limbs, on black",
+   "mood": "abyssal, spectral, black",
+   "suggested_use": "column plate",
+   "also_suits": [
+    "spot"
+   ],
+   "suggested_for": "17 Boss Special Rules",
+   "hdr": null,
+   "baked": null,
+   "kind": "painting"
+  }
+ },
+ {
+  "id": "AST-0156.3",
+  "parent": "AST-0156",
+  "name": "The Four Kings expansion back cover",
+  "type": "art",
+  "src": "DS-Four-Kings-Rules-web.pdf",
+  "page": 16,
+  "bbox_pt": [
+   0.0,
+   0.0,
+   420.9,
+   612.3
+  ],
+  "image_object": {
+   "xref": 2539,
+   "pdfimages_num": 1,
+   "colour": "cmyk",
+   "native": "1754×2551",
+   "has_mask": true,
+   "smask_pdfimages_num": 2,
+   "mask_opaque": true,
+   "ppi_as_placed": 300
+  },
+  "method": "pdfimages -png p.16 image #1 (object 2539, 1754×2551 cmyk + soft mask #2 (opaque everywhere, dropped)); native resolution, no resampling; saved as JPEG quality 92 (4:4:4)",
+  "file": "assets/art/ast-0156-four-kings-backcover.jpg",
+  "format": "jpg",
+  "dims": "1754×2551 px",
+  "has_alpha": false,
+  "bytes": 373948,
+  "notes": "The lower part is black (room for back-cover text).",
+  "phase": 3,
+  "design": {
+   "subject": "Drowned ruins in deep blue gloom, fading to black at the foot",
+   "mood": "sunken, blue, silent",
+   "suggested_use": "back cover",
+   "also_suits": [
+    "full-page plate",
+    "column plate"
+   ],
+   "suggested_for": "19 Campaigns",
+   "hdr": null,
+   "baked": null,
+   "kind": "painting"
+  }
  }
 ]

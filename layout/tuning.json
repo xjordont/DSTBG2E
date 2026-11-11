@@ -109,7 +109,12 @@
     "assets/photography/ast-0131-miniature-skeleton-archer.png",
     "assets/photography/ast-0131-miniature-skeleton-beast.png",
     "assets/photography/ast-0131-miniature-necromancer.png"
-   ]
+   ],
+   "header": {
+    "file": "assets/art/ast-0122-ruined-keep-over-graveyard-portrait.jpg",
+    "pos": "center 16%",
+    "h": 150
+   }
   },
   "02": {
    "banner": {
@@ -126,12 +131,22 @@
     "assets/photography/ast-0131-miniature-necromancer.png",
     "assets/photography/ast-0131-miniature-skeleton-beast.png"
    ],
-   "rows": 2
+   "rows": 2,
+   "header": {
+    "file": "assets/art/ast-0130-phantoms-ruined-castle-on-cliff.jpg",
+    "pos": "center 32%",
+    "h": 150
+   }
   },
   "03": {
    "banner": {
     "file": "assets/photography/ast-0138-expansion-miniature-character-cleric.png",
     "h": 98
+   },
+   "header": {
+    "file": "assets/art/ast-0130-characters-pilgrim-before-golden-city.jpg",
+    "pos": "center 36%",
+    "h": 150
    }
   },
   "04": {
@@ -146,7 +161,12 @@
     "assets/photography/ast-0138-expansion-miniature-armour-guardian.png",
     "assets/photography/ast-0138-expansion-miniature-armour-dark.png",
     "assets/photography/ast-0138-expansion-miniature-armour-crimson-robes.png"
-   ]
+   ],
+   "header": {
+    "file": "assets/art/ast-0130-backcover-characters-armour.jpg",
+    "pos": "center 28%",
+    "h": 150
+   }
   },
   "05": {
    "banner": {
@@ -160,7 +180,12 @@
     "assets/photography/ast-0133-game-tile-tomb-of-giants-c.png",
     "assets/photography/ast-0133-game-tile-tomb-of-giants-d.png"
    ],
-   "caption": "Encounter tiles"
+   "caption": "Encounter tiles",
+   "header": {
+    "file": "assets/art/ast-0121-tomb-cavern-with-skull-pillar.jpg",
+    "pos": "center 42%",
+    "h": 150
+   }
   },
   "06": {
    "banner": {
@@ -175,7 +200,12 @@
     "assets/photography/ast-0132-token-terrain-barrels-render.png",
     "assets/photography/ast-0132-token-terrain-treasure-chest-render.png",
     "assets/photography/ast-0132-token-spark-dial.png"
-   ]
+   ],
+   "header": {
+    "file": "assets/art/ast-0129-concept-ruined-gate-with-roots-wide.jpg",
+    "pos": "center 45%",
+    "h": 150
+   }
   },
   "07": {
    "banner": {
@@ -192,7 +222,12 @@
     "assets/photography/ast-0138-expansion-miniature-black-hollow-mage.png",
     "assets/photography/ast-0138-expansion-miniature-falchion-skeleton.png",
     "assets/photography/ast-0138-expansion-miniature-firebomb-hollow.png"
-   ]
+   ],
+   "header": {
+    "file": "assets/art/ast-0129-concept-misty-ruins-panorama.png",
+    "pos": "center 50%",
+    "h": 150
+   }
   },
   "08": {
    "banner": {
@@ -204,12 +239,22 @@
     "assets/photography/ast-0131-miniature-giant-skeleton-archer.png"
    ],
    "rows": 1,
-   "max_row": 250
+   "max_row": 250,
+   "header": {
+    "file": "assets/art/ast-0124-black-knight-in-flames.jpg",
+    "pos": "center 20%",
+    "h": 150
+   }
   },
   "09": {
    "banner": {
     "file": "assets/photography/ast-0138-expansion-miniature-stone-knight.png",
     "h": 98
+   },
+   "header": {
+    "file": "assets/art/ast-0129-concept-blood-stained-roots.jpg",
+    "pos": "center 50%",
+    "h": 150
    }
   },
   "10": {
@@ -230,7 +275,12 @@
     "assets/photography/ast-0138-expansion-miniature-armour-havels.png",
     "assets/photography/ast-0138-expansion-miniature-armour-dark.png",
     "assets/photography/ast-0138-expansion-miniature-armour-catarina.png"
-   ]
+   ],
+   "header": {
+    "file": "assets/art/ast-0127-knight-kneeling-in-dark-forest.jpg",
+    "pos": "center 42%",
+    "h": 150
+   }
   },
   "11": {
    "banner": {
@@ -240,7 +290,12 @@
    "end": [
     "assets/photography/ast-0133-game-tile-bonfire-2017.png",
     "assets/photography/ast-0132-token-spark-dial.png"
-   ]
+   ],
+   "header": {
+    "file": "assets/art/ast-0121-knight-resting-at-bonfire-wide-2017.jpg",
+    "pos": "center 52%",
+    "h": 150
+   }
   },
   "12": {
    "banner": {
@@ -262,7 +317,12 @@
     "assets/photography/ast-0138-expansion-miniature-invader-melinda-the-butcher.png",
     "assets/photography/ast-0138-expansion-miniature-invader-maldron-the-assassin.png",
     "assets/photography/ast-0138-expansion-miniature-invader-maneater-mildred.png"
-   ]
+   ],
+   "header": {
+    "file": "assets/art/ast-0130-cover-phantoms-art-only.jpg",
+    "pos": "center 26%",
+    "h": 150
+   }
   },
   "13": {
    "banner": {
@@ -272,7 +332,12 @@
    "end": [
     "assets/photography/ast-0138-expansion-miniature-mimic-closed.png",
     "assets/photography/ast-0138-expansion-miniature-mimic.png"
-   ]
+   ],
+   "header": {
+    "file": "assets/art/ast-0130-cover-explorers-art-only.jpg",
+    "pos": "center 30%",
+    "h": 150
+   }
   },
   "14": {
    "banner": {
@@ -284,7 +349,12 @@
     "assets/photography/ast-0132-token-terrain-treasure-chest-render.png",
     "assets/photography/ast-0132-token-terrain-barrels-render.png",
     "assets/photography/ast-0132-token-terrain-gravestone-render.png"
-   ]
+   ],
+   "header": {
+    "file": "assets/art/ast-0130-cover-darkroot-art-only.jpg",
+    "pos": "center 62%",
+    "h": 150
+   }
   },
   "15": {
    "banner": {
@@ -298,7 +368,12 @@
     "assets/photography/ast-0138-expansion-miniature-executioners-chariot.png",
     "assets/photography/ast-0138-expansion-miniature-the-pursuer.png",
     "assets/photography/ast-0138-expansion-miniature-sir-alonne.png"
-   ]
+   ],
+   "header": {
+    "file": "assets/art/ast-0130-kalameet-over-lone-knight.jpg",
+    "pos": "center 27%",
+    "h": 150
+   }
   },
   "16": {
    "banner": {
@@ -309,12 +384,22 @@
     "assets/photography/ast-0117-mega-boss-board-kalameet-forest.png",
     "assets/photography/ast-0117-mega-boss-board-executioners-chariot-arena.png",
     "assets/photography/ast-0117-mega-boss-board-executioners-chariot-reverse.png"
-   ]
+   ],
+   "header": {
+    "file": "assets/art/ast-0126-tomb-colossus-and-lone-knight.jpg",
+    "pos": "center 55%",
+    "h": 150
+   }
   },
   "17": {
    "banner": {
     "file": "assets/photography/ast-0138-expansion-miniature-black-dragon-kalameet.png",
     "h": 96
+   },
+   "header": {
+    "file": "assets/art/ast-0130-backcover-kalameet-close.jpg",
+    "pos": "center 30%",
+    "h": 150
    }
   },
   "18": {
@@ -325,12 +410,22 @@
    "end": [
     "assets/photography/ast-0133-game-tile-tomb-of-giants-fan.png"
    ],
-   "caption": "Encounter tiles"
+   "caption": "Encounter tiles",
+   "header": {
+    "file": "assets/art/ast-0129-concept-stone-bridge-and-city.jpg",
+    "pos": "center 45%",
+    "h": 150
+   }
   },
   "19": {
    "banner": {
     "file": "assets/photography/ast-0138-expansion-miniature-smelter-demon.png",
     "h": 84
+   },
+   "header": {
+    "file": "assets/art/ast-0123-anor-londo-spires-at-sunset.jpg",
+    "pos": "center 38%",
+    "h": 150
    }
   },
   "20": {
@@ -349,18 +444,33 @@
     "assets/photography/ast-0138-expansion-miniature-invader-maldron-the-assassin.png",
     "assets/photography/ast-0138-expansion-miniature-invader-maneater-mildred.png",
     "assets/photography/ast-0138-expansion-miniature-invader-armorer-dennis.png"
-   ]
+   ],
+   "header": {
+    "file": "assets/art/ast-0130-phantoms-knight-among-blue-spirits.jpg",
+    "pos": "center 40%",
+    "h": 150
+   }
   },
   "21": {
    "banner": {
     "file": "assets/photography/ast-0131-miniature-necromancer.png",
     "h": 92
+   },
+   "header": {
+    "file": "assets/art/ast-0129-concept-hooded-figure-and-light-pillars.jpg",
+    "pos": "center 55%",
+    "h": 150
    }
   },
   "22": {
    "banner": {
     "file": "assets/photography/ast-0138-expansion-miniature-summon-siegward-of-catarina.png",
     "h": 98
+   },
+   "header": {
+    "file": "assets/art/ast-0130-backcover-explorers-stone-arch.jpg",
+    "pos": "center 40%",
+    "h": 150
    }
   },
   "app-a": {
@@ -376,7 +486,12 @@
     "assets/photography/ast-0138-expansion-miniature-stone-guardian.png",
     "assets/photography/ast-0138-expansion-miniature-the-pursuer.png",
     "assets/photography/ast-0138-expansion-miniature-armour-guardian.png"
-   ]
+   ],
+   "header": {
+    "file": "assets/art/ast-0130-darkroot-grave-with-planted-swords.jpg",
+    "pos": "center 30%",
+    "h": 150
+   }
   },
   "app-b": {
    "banner": {
@@ -388,7 +503,12 @@
     "assets/frames/ast-0089-card-back-treasure.png",
     "assets/photography/ast-0136-dice-set.png",
     "assets/photography/ast-0132-token-spark-dial.png"
-   ]
+   ],
+   "header": {
+    "file": "assets/art/ast-0130-phantoms-shanty-town-in-the-murk.jpg",
+    "pos": "center 45%",
+    "h": 150
+   }
   }
  },
  "captions": {
@@ -452,7 +572,69 @@
   "card-back-encounter-level-1": "Encounter card, Level 1",
   "card-back-treasure": "Treasure card",
   "tomb-of-giants-fan": "",
-  "crystal-lizard": "Crystal lizard"
+  "crystal-lizard": "Crystal lizard",
+  "backcover-darkroot-artorias": "",
+  "backcover-phantoms-red-invader": "",
+  "cover-characters-art-only": "",
+  "phantoms-red-phantom-smear": "",
+  "tg-2022-cover-art-gravelord-nito": "",
+  "kalameet-overgrown-forest-gate": "",
+  "art-mushroom-parent-and-child": "",
+  "darkroot-ruined-gate-with-roots-upright": "",
+  "darkroot-artorias-concept-front-and-back": "",
+  "concept-flooded-cavern-light-shaft": "",
+  "ruined-cathedral-interior": "",
+  "backcover-iron-keep-tower": "",
+  "backcover-chariot-rope-bridge": "",
+  "knight-resting-at-bonfire": "",
+  "darkroot-overgrown-stone-doorway": "",
+  "phantoms-procession-sketch": "",
+  "ruined-keep-over-graveyard-wide-2017": "",
+  "art-chariot-horse": "",
+  "art-chariot-and-rider": "",
+  "env-sealed-door-of-light": "",
+  "kalameet-close-from-below": "",
+  "explorers-shrine-mirrored-in-water": "",
+  "chariot-knight-by-bonfire": "",
+  "explorers-castle-at-dusk": "",
+  "art-phantom-duellist-white": "",
+  "art-phantom-red-smear": "",
+  "cover-iron-keep-art-only": "",
+  "cover-executioners-chariot-art-only": "",
+  "concept-rose-marble-hall-phantoms": "",
+  "chariot-torch-bearer-in-corridor": "",
+  "concept-rose-marble-hall-2017": "",
+  "ashen-one-key-art": "",
+  "explorers-chapel-with-stained-glass": "",
+  "explorers-wanderer-before-buried-door": "",
+  "env-fortress-boulder-engine-phantoms": "",
+  "chariot-horse-in-the-arena": "",
+  "explorers-rain-lashed-ruined-stair": "",
+  "concept-ruined-parish-green-ink": "",
+  "env-gate-tower-phantoms": "",
+  "env-knight-wading-forest-lake": "",
+  "env-white-city-spires-phantoms": "",
+  "chariot-rope-bridge-at-dusk": "",
+  "chariot-warrior-against-skeletons": "",
+  "env-artorias-crouched": "",
+  "env-gate-tower-2017": "",
+  "env-fortress-boulder-engine-2017": "",
+  "env-white-city-spires-2017": "",
+  "env-frost-knight": "",
+  "env-dancer-flaming-blade": "",
+  "env-burning-town-below-castle": "",
+  "art-kalameet-head": "",
+  "env-kalameet-breath-and-knight": "",
+  "explorers-knight-in-golden-hall": "",
+  "art-knight-in-burning-waste": "",
+  "iron-keep-throne-in-fire-clouds": "",
+  "env-windmill-tower": "",
+  "env-iron-keep-forecourt": "",
+  "env-throne-hall-arches": "",
+  "art-mimic-walking": "",
+  "env-torchlit-arena-tunnel": "",
+  "env-greatsword-bearer-above-forest": "",
+  "env-bonfire-in-autumn-leaves": ""
  },
  "icon_fixes": {
   "ast-0033-enemy-movement-composite-symbol": {
@@ -485,7 +667,172 @@
  "plates": {
   "min_gap": 104,
   "min_h": 70,
+  "max_stack": 2,
+  "enlarge": 1.0,
+  "never": [],
+  "by_chapter": {
+   "03": [
+    "assets/art/ast-0130-cover-characters-art-only.jpg"
+   ],
+   "04": [
+    "assets/art/ast-0130-explorers-chapel-with-stained-glass.jpg"
+   ],
+   "05": [
+    "assets/art/ast-0130-darkroot-overgrown-stone-doorway.jpg",
+    "assets/art/ast-0130-explorers-rain-lashed-ruined-stair.png",
+    "assets/art/ast-0129-concept-ruined-parish-green-ink.png",
+    "assets/art/ast-0130-chariot-rope-bridge-at-dusk.png",
+    "assets/art/ast-0129-env-torchlit-arena-tunnel.png"
+   ],
+   "06": [
+    "assets/art/ast-0130-darkroot-ruined-gate-with-roots-upright.jpg",
+    "assets/art/ast-0122-ruined-keep-over-graveyard-wide-2017.jpg"
+   ],
+   "07": [
+    "assets/art/ast-0125-ruined-cathedral-interior.jpg",
+    "assets/art/ast-0129-env-knight-wading-forest-lake.png"
+   ],
+   "08": [
+    "assets/art/ast-0128-ashen-one-key-art.jpg",
+    "assets/art/ast-0130-chariot-warrior-against-skeletons.png",
+    "assets/art/ast-0138-art-knight-in-burning-waste.png"
+   ],
+   "09": [
+    "assets/art/ast-0138-art-mushroom-parent-and-child.jpg",
+    "assets/art/ast-0130-chariot-torch-bearer-in-corridor.jpg"
+   ],
+   "10": [
+    "assets/art/ast-0129-concept-flooded-cavern-light-shaft.jpg",
+    "assets/art/ast-0130-explorers-knight-in-golden-hall.png"
+   ],
+   "11": [
+    "assets/art/ast-0120-knight-resting-at-bonfire.jpg",
+    "assets/art/ast-0130-chariot-knight-by-bonfire.jpg",
+    "assets/art/ast-0129-env-bonfire-in-autumn-leaves.png"
+   ],
+   "12": [
+    "assets/art/ast-0130-phantoms-red-phantom-smear.jpg",
+    "assets/art/ast-0130-phantoms-procession-sketch.jpg",
+    "assets/art/ast-0138-art-phantom-duellist-white.png",
+    "assets/art/ast-0129-concept-rose-marble-hall-phantoms.jpg"
+   ],
+   "13": [
+    "assets/art/ast-0138-art-mimic-walking.png"
+   ],
+   "14": [
+    "assets/art/ast-0130-explorers-shrine-mirrored-in-water.jpg"
+   ],
+   "15": [
+    "assets/art/ast-0130-backcover-darkroot-artorias.jpg",
+    "assets/art/ast-0119-tg-2022-cover-art-gravelord-nito.png",
+    "assets/art/ast-0130-darkroot-artorias-concept-front-and-back.jpg",
+    "assets/art/ast-0138-art-chariot-horse.jpg"
+   ],
+   "16": [
+    "assets/art/ast-0130-cover-executioners-chariot-art-only.jpg",
+    "assets/art/ast-0130-chariot-horse-in-the-arena.png",
+    "assets/art/ast-0129-env-frost-knight.png",
+    "assets/art/ast-0129-env-kalameet-breath-and-knight.png"
+   ],
+   "17": [
+    "assets/art/ast-0138-art-chariot-and-rider.jpg",
+    "assets/art/ast-0130-kalameet-close-from-below.jpg",
+    "assets/art/ast-0129-env-artorias-crouched.png",
+    "assets/art/ast-0129-env-dancer-flaming-blade.png",
+    "assets/art/ast-0138-art-kalameet-head.png"
+   ],
+   "18": [
+    "assets/art/ast-0130-backcover-chariot-rope-bridge.jpg",
+    "assets/art/ast-0129-env-sealed-door-of-light.jpg",
+    "assets/art/ast-0130-cover-iron-keep-art-only.jpg",
+    "assets/art/ast-0130-explorers-wanderer-before-buried-door.jpg",
+    "assets/art/ast-0129-env-burning-town-below-castle.png"
+   ],
+   "19": [
+    "assets/art/ast-0130-kalameet-overgrown-forest-gate.jpg",
+    "assets/art/ast-0130-backcover-iron-keep-tower.jpg",
+    "assets/art/ast-0130-explorers-castle-at-dusk.jpg",
+    "assets/art/ast-0129-concept-rose-marble-hall-2017.jpg",
+    "assets/art/ast-0129-env-fortress-boulder-engine-phantoms.png",
+    "assets/art/ast-0129-env-gate-tower-phantoms.png",
+    "assets/art/ast-0129-env-white-city-spires-phantoms.png",
+    "assets/art/ast-0129-env-gate-tower-2017.png",
+    "assets/art/ast-0129-env-fortress-boulder-engine-2017.png",
+    "assets/art/ast-0129-env-white-city-spires-2017.png",
+    "assets/art/ast-0130-iron-keep-throne-in-fire-clouds.png",
+    "assets/art/ast-0129-env-windmill-tower.png",
+    "assets/art/ast-0129-env-iron-keep-forecourt.png",
+    "assets/art/ast-0129-env-throne-hall-arches.png"
+   ],
+   "20": [
+    "assets/art/ast-0130-backcover-phantoms-red-invader.jpg",
+    "assets/art/ast-0138-art-phantom-red-smear.png",
+    "assets/art/ast-0129-env-greatsword-bearer-above-forest.png"
+   ]
+  },
   "pool": [
+   "assets/art/ast-0130-backcover-darkroot-artorias.jpg",
+   "assets/art/ast-0130-backcover-phantoms-red-invader.jpg",
+   "assets/art/ast-0130-cover-characters-art-only.jpg",
+   "assets/art/ast-0130-phantoms-red-phantom-smear.jpg",
+   "assets/art/ast-0119-tg-2022-cover-art-gravelord-nito.png",
+   "assets/art/ast-0130-kalameet-overgrown-forest-gate.jpg",
+   "assets/art/ast-0138-art-mushroom-parent-and-child.jpg",
+   "assets/art/ast-0130-darkroot-ruined-gate-with-roots-upright.jpg",
+   "assets/art/ast-0130-darkroot-artorias-concept-front-and-back.jpg",
+   "assets/art/ast-0129-concept-flooded-cavern-light-shaft.jpg",
+   "assets/art/ast-0125-ruined-cathedral-interior.jpg",
+   "assets/art/ast-0130-backcover-iron-keep-tower.jpg",
+   "assets/art/ast-0130-backcover-chariot-rope-bridge.jpg",
+   "assets/art/ast-0120-knight-resting-at-bonfire.jpg",
+   "assets/art/ast-0130-darkroot-overgrown-stone-doorway.jpg",
+   "assets/art/ast-0130-phantoms-procession-sketch.jpg",
+   "assets/art/ast-0122-ruined-keep-over-graveyard-wide-2017.jpg",
+   "assets/art/ast-0138-art-chariot-horse.jpg",
+   "assets/art/ast-0138-art-chariot-and-rider.jpg",
+   "assets/art/ast-0129-env-sealed-door-of-light.jpg",
+   "assets/art/ast-0130-kalameet-close-from-below.jpg",
+   "assets/art/ast-0130-explorers-shrine-mirrored-in-water.jpg",
+   "assets/art/ast-0130-chariot-knight-by-bonfire.jpg",
+   "assets/art/ast-0130-explorers-castle-at-dusk.jpg",
+   "assets/art/ast-0138-art-phantom-duellist-white.png",
+   "assets/art/ast-0138-art-phantom-red-smear.png",
+   "assets/art/ast-0130-cover-iron-keep-art-only.jpg",
+   "assets/art/ast-0130-cover-executioners-chariot-art-only.jpg",
+   "assets/art/ast-0129-concept-rose-marble-hall-phantoms.jpg",
+   "assets/art/ast-0130-chariot-torch-bearer-in-corridor.jpg",
+   "assets/art/ast-0129-concept-rose-marble-hall-2017.jpg",
+   "assets/art/ast-0128-ashen-one-key-art.jpg",
+   "assets/art/ast-0130-explorers-chapel-with-stained-glass.jpg",
+   "assets/art/ast-0130-explorers-wanderer-before-buried-door.jpg",
+   "assets/art/ast-0129-env-fortress-boulder-engine-phantoms.png",
+   "assets/art/ast-0130-chariot-horse-in-the-arena.png",
+   "assets/art/ast-0130-explorers-rain-lashed-ruined-stair.png",
+   "assets/art/ast-0129-concept-ruined-parish-green-ink.png",
+   "assets/art/ast-0129-env-gate-tower-phantoms.png",
+   "assets/art/ast-0129-env-knight-wading-forest-lake.png",
+   "assets/art/ast-0129-env-white-city-spires-phantoms.png",
+   "assets/art/ast-0130-chariot-rope-bridge-at-dusk.png",
+   "assets/art/ast-0130-chariot-warrior-against-skeletons.png",
+   "assets/art/ast-0129-env-artorias-crouched.png",
+   "assets/art/ast-0129-env-gate-tower-2017.png",
+   "assets/art/ast-0129-env-fortress-boulder-engine-2017.png",
+   "assets/art/ast-0129-env-white-city-spires-2017.png",
+   "assets/art/ast-0129-env-frost-knight.png",
+   "assets/art/ast-0129-env-dancer-flaming-blade.png",
+   "assets/art/ast-0129-env-burning-town-below-castle.png",
+   "assets/art/ast-0138-art-kalameet-head.png",
+   "assets/art/ast-0129-env-kalameet-breath-and-knight.png",
+   "assets/art/ast-0130-explorers-knight-in-golden-hall.png",
+   "assets/art/ast-0138-art-knight-in-burning-waste.png",
+   "assets/art/ast-0130-iron-keep-throne-in-fire-clouds.png",
+   "assets/art/ast-0129-env-windmill-tower.png",
+   "assets/art/ast-0129-env-iron-keep-forecourt.png",
+   "assets/art/ast-0129-env-throne-hall-arches.png",
+   "assets/art/ast-0138-art-mimic-walking.png",
+   "assets/art/ast-0129-env-torchlit-arena-tunnel.png",
+   "assets/art/ast-0129-env-greatsword-bearer-above-forest.png",
+   "assets/art/ast-0129-env-bonfire-in-autumn-leaves.png",
    "assets/photography/ast-0138-expansion-miniature-armour-adventurers.png",
    "assets/photography/ast-0138-expansion-miniature-armour-black-iron.png",
    "assets/photography/ast-0138-expansion-miniature-armour-black-knight.png",
@@ -556,8 +903,7 @@
    "assets/photography/ast-0131-miniature-skeleton-beast.png",
    "assets/photography/ast-0131-miniature-skeleton-soldier.png",
    "assets/photography/ast-0131-miniature-thief.png"
-  ],
-  "by_chapter": {}
+  ]
  },
  "section_starts": true
 }

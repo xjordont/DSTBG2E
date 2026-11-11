@@ -63,6 +63,9 @@ img.icon { height: 1.12em; width: auto; vertical-align: -0.22em; margin: 0 0.1em
 .flow.small { font-size: 8.5pt; line-height: 11.6pt; }
 .endmark { text-align: center; margin: 14pt 0 0 0; break-before: avoid; }
 .endmark img { width: 150pt; height: auto; opacity: 0.75; }
+/* chapter banner with a painting behind the title (set per chapter in the tuning file, key `header`) */
+.banner.art { align-items: flex-end; padding: 0 18pt 13pt 18pt; background-color: #090807; }
+.banner.art .badge { box-shadow: 0 0 0 2.2pt rgba(9,8,7,0.55); }
 /* hero image on the chapter banner: a product render standing on the banner's foot, free to rise above its head */
 .banner { position: relative; }
 .banner img.hero { position: absolute; }
