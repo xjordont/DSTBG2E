@@ -8,7 +8,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Aggro token.** The single token that marks the character with aggro. It is placed on the character with the highest threat at the start of each encounter and, after each round of character turns, moves to the character who inflicted the most damage on enemy models during that round (on a tie, or if no damage was inflicted, the holder keeps it). If the holder dies it moves to the living character with the highest threat. In boss encounters it moves to any character who damages the boss during their turn (see §7.5, Encounter Turn Order; §16.4).
 
-**Ambush card.** A face-down card dealt beside each encounter tile when playing with mimics. It is revealed when the characters choose to open that tile's chest and shows either Treasure or Mimic.
+**Ambush card.** A card from the Explorers expansion that shows Treasure or Mimic. When mimics are in play, one is dealt face down beside each encounter tile and is turned face up only when the party chooses to open that tile's chest (see §13.1).
 
 **Area attack.** A boss attack marked with the area icon. It targets every character within range who occupies a node in one of the arcs marked on the behaviour card.
 
@@ -174,7 +174,9 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Mega-boss game board.** The double-sided board supplied with a mega-boss expansion. Its Level 4 encounter side is the tile of the Level 4 encounter and its mega-boss side is the tile of the mega-boss encounter (see §6.7, §15.3).
 
-**Mimic.** An optional enemy from the Explorers expansion that masquerades as a chest. The Hungry Mimic is fought before the mini-boss is defeated and the Voracious Mimic afterwards; both are fought as mini-boss encounters without arcs.
+**Mimic.** An optional enemy from the Explorers expansion that masquerades as a chest. When the party opens a chest whose *ambush card* shows Mimic, the Hungry Mimic (before the mini-boss is defeated) or the Voracious Mimic (afterwards) is fought in a *mimic encounter*. Killing it awards two treasure cards in place of the chest's one (see §13).
+
+**Mimic encounter.** The encounter fought against a *mimic* on the tile of a *cleared* encounter whose chest the party has opened. It is fought as a mini-boss encounter without arcs, with the characters on the nodes they occupy and before any recovery or reward (see §13.2).
 
 **Mini-boss.** The first boss of the standard game, fought on the mini-boss tile.
 
