@@ -340,6 +340,52 @@ def contents(chapters):
     return f'<section class="front" id="contents"><h1 class="ft">Contents</h1>{rule}<div class="toc">{"".join(rows)}</div></section>'
 
 
+ICON_NAMES = {
+    'primary-spawn-node': 'Spawn node', 'encounter-level-1': 'Level 1 encounter', 'encounter-level-2': 'Level 2 encounter',
+    'encounter-level-3': 'Level 3 encounter', 'skeleton-soldier': 'Skeleton Soldier', 'skeleton-archer': 'Skeleton Archer',
+    'giant-skeleton-soldier': 'Giant Skeleton Soldier', 'giant-skeleton-archer': 'Giant Skeleton Archer', 'skeleton-beast': 'Skeleton Beast',
+    'necromancer': 'Necromancer', 'treasure-chest': 'Chest', 'barrel': 'Barrel', 'gravestone': 'Gravestone', 'primary-terrain-node': 'Terrain node',
+    'trapped-encounter': 'Trapped encounter', 'threat-level': 'Threat', 'taunt': 'Threat (dashboard)', 'behaviour-deck-size': 'Behaviour deck size',
+    'block-resist-shield': 'Block and resist values', 'starting-health': 'Health', 'heat-up-point': 'Heat-up point',
+    'push-with-damage-satellite-glyph': 'Push with a damage value', 'target-nearest-character': 'Nearest character',
+    'enemy-movement-composite-symbol': 'Movement icon', 'turn-90-right': 'Turn 90\u00b0 right', 'turn-90-left': 'Turn 90\u00b0 left', 'turn-around': 'Turn around',
+    'enemy-attack-composite-symbol': 'Attack icon', 'area-attack-icon': 'Area attack', 'neutral-boss-arc': 'Neutral arc', 'attack-boss-arc': 'Attack arc',
+    'weak-boss-arc': 'Weak arc', 'deal-magical-damage': 'Magical damage', 'one-handed-weapon': 'One-handed weapon', 'weapon-upgrade': 'Weapon upgrade',
+    'two-handed-weapon': 'Two-handed weapon', 'armour-upgrade': 'Armour upgrade', 'armour': 'Armour', 'block': 'Block', 'upgrade-slots': 'Upgrade slots',
+    'resist': 'Resist', 'black-dice': 'Black die', 'blue-dice': 'Blue die', 'node-attack': 'Node attack and area-of-effect', 'orange-dice': 'Orange die',
+    'shaft': 'Shaft', 'shift': 'Shift', 'push-affected-enemies': 'Push', 'attack-range': 'Range', 'repeat-behaviour-or-attack': 'Repeat', 'dodge': 'Dodge',
+    'bleed': 'Bleed', 'frostbite': 'Frostbite', 'poison': 'Poison', 'stagger': 'Stagger'}
+
+
+def icon_reference(chapters):
+    """Back-matter page: every icon used in the rules, with its name and the first section that uses it."""
+    first = {}
+    for c in chapters:
+        for img in c.soup.find_all('img', class_='icon'):
+            slug = pathlib.Path(img['src']).stem
+            sec = img.find_parent('div', class_='sec')
+            h2 = sec.find('h2') if sec else None
+            first.setdefault(slug, (h2.get('id') if h2 else c.id, (h2.find('span', class_='secnum').get_text() if h2 and h2.find('span', class_='secnum') else '')))
+    cells = []
+    for slug in sorted(first, key=lambda s: ICON_NAMES.get(s.split('-', 2)[2], s).lower()):
+        name = ICON_NAMES.get(slug.split('-', 2)[2])
+        if not name: continue
+        tid, num = first[slug]
+        ref = f' <a class="xref" href="#{tid}">\u00a7{num}</a>' if num else ''
+        cells.append(f'<div class="ik"><img src="build/icons/{slug}.png" alt="{name} icon"><span>{name}{ref}</span></div>')
+    rule = '<div class="ftrule"><img src="assets/ornaments/ast-0082-section-divider-knot-rule-knot.png" alt=""></div>'
+    return f'<section class="front" id="icon-reference"><h1 class="ft">Icon Reference</h1>{rule}<div class="ikgrid">{"".join(cells)}</div></section>'
+
+
+def back_cover(intro_md):
+    """Closing page: the Introduction's opening and closing lines on the dark back-cover ground."""
+    paras = [p.strip() for p in re.split(r'\n\s*\n', intro_md) if p.strip() and not p.startswith('#')]
+    strip = lambda t: re.sub(r'\(see [^)]*\)', '', re.sub(r'[*_]', '', t)).replace('  ', ' ').replace(' .', '.').strip()
+    lead = strip(paras[0]) if paras else ''
+    last = strip(paras[-1]) if len(paras) > 1 else ''
+    return f'<section class="backcover"><div class="bc"><p class="bc1">{lead}</p><p class="bc2">{last}</p></div></section>'
+
+
 def build(edition='screen', only=None, out=None, html_only=False, _retry=False):
     import make_layout_assets
     if not (ROOT / 'build/tex/lava_scales_clean.jpg').exists() or not (ROOT / 'build/icons').exists():
@@ -362,7 +408,9 @@ def build(edition='screen', only=None, out=None, html_only=False, _retry=False):
     missing = set()
     for c in chapters:
         c.link(all_ids, heads, missing)
-    body = cover + fore + (contents(chapters) if not only else '') + ''.join(str(c.soup) for c in chapters)
+    intro = chapter_file('01')
+    tail = (icon_reference(chapters) + (back_cover(intro.read_text(encoding='utf-8')) if intro else '')) if not only else ''
+    body = cover + fore + (contents(chapters) if not only else '') + ''.join(str(c.soup) for c in chapters) + tail
     html = f'''<!DOCTYPE html><html lang="en-GB"><head><meta charset="utf-8"><title>{TITLE}</title>
 <link rel="stylesheet" href="layout/book.css"></head><body class="{edition}">{body}</body></html>'''
     (ROOT / 'build').mkdir(exist_ok=True)

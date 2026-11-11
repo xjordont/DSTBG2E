@@ -92,5 +92,6 @@
    ],
    "caption": "<strong>Boss arcs.</strong> The lines that divide the boss's base, extended across the tile, divide the nodes among the front, left, right, and back arcs. A node on a line is in both arcs."
   }
- ]
+ ],
+ "target_pages": 100
 }

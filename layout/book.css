@@ -149,3 +149,14 @@ p.faq-q .ql, p.faq-a .ql { font: 700 7.4pt "Cinzel"; color: #7a622b; margin-righ
 .toc .tch .tn { display: inline-block; width: 15pt; text-indent: 0; color: #7a622b; }
 .toc .ts { display: block; padding: 0 15pt 0 15pt; text-align: left; }
 .toc a::after { content: leader(". ") target-counter(attr(href), page); margin-right: -15pt; font-family: "Libre Caslon Text"; font-weight: 400; letter-spacing: 0; }
+
+/* ---------- icon reference and back cover ---------- */
+.ikgrid { columns: 3; column-gap: 18pt; margin-top: 4pt; }
+.ik { break-inside: avoid; display: block; position: relative; padding: 2pt 0 2pt 27pt; min-height: 11pt; margin: 0 0 3.4pt 0; font-size: 8.6pt; line-height: 11pt; text-align: left; }
+.ik img { position: absolute; left: 0; top: 0; height: 15pt; width: 19pt; object-fit: contain; }
+.ik span { display: block; text-align: left; }
+@page backcover { margin: 0; @top-left { content: none } @top-right { content: none } @bottom-center { content: none; background: none } }
+.backcover { page: backcover; break-before: page; width: 8.5in; height: 11in; background: #0b0a09 url("../assets/textures/ast-0143-back-cover-dark-stone-bg.png") center / cover no-repeat; position: relative; }
+.backcover .bc { position: absolute; left: 2.25in; right: 2.25in; top: 3.3in; text-align: center; color: #231f20; }
+.backcover .bc1 { font: italic 400 11.4pt/16.6pt "Libre Caslon Text"; text-align: center; hyphens: manual; }
+.backcover .bc2 { font: 600 9.6pt/14pt "Cinzel"; letter-spacing: 0.08em; text-align: center; margin-top: 22pt; hyphens: manual; }
