@@ -7720,5 +7720,47 @@
    "baked": null,
    "kind": "painting"
   }
+ },
+ {
+  "id": "AST-0156.4",
+  "parent": "AST-0156",
+  "name": "The Four Kings booklet p.3: armoured figure in dark ruins",
+  "type": "art",
+  "src": "DS-Four-Kings-Rules-web.pdf",
+  "page": 3,
+  "bbox_pt": [
+   55.7,
+   48.8,
+   358.1,
+   558.7
+  ],
+  "image_object": {
+   "xref": 54,
+   "pdfimages_num": 1,
+   "colour": "cmyk",
+   "native": "854×1440",
+   "has_mask": false,
+   "ppi_as_placed": 203
+  },
+  "method": "pdfimages -png p.3 image #1 (object 54, 854×1440 cmyk, no soft mask); native resolution, no resampling; saved as JPEG quality 92 (4:4:4)",
+  "file": "assets/art/ast-0156-four-kings-art-knight-in-dark-ruins.jpg",
+  "format": "jpg",
+  "dims": "854×1440 px",
+  "has_alpha": false,
+  "bytes": 233105,
+  "notes": "In-game render rather than a painting.",
+  "phase": 3,
+  "design": {
+   "subject": "An armoured figure moves through dark ruins toward a lit doorway",
+   "mood": "furtive, dark, teal",
+   "suggested_use": "column plate",
+   "also_suits": [
+    "spot"
+   ],
+   "suggested_for": "19 Campaigns",
+   "hdr": null,
+   "baked": null,
+   "kind": "painting"
+  }
  }
 ]

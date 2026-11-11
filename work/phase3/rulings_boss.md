@@ -285,3 +285,385 @@ Scope: lead items 4, 5 and 13 of `14_open_issues.md`; every item of the per-chap
 - Mechanical: no
 - Edits: none
 
+## Chapter 16 — Boss Turns
+
+### boss-030 · ch. 16, order of character turns (§16.1)
+- Question: The same question as boss-015.
+- This book now: §16.1; the players choose.
+- Evidence: see boss-015.
+- Ruling: CONFIRM as written
+- Why: See boss-015.
+- Mechanical: no
+- Edits: none
+
+### boss-031 · ch. 16, repeat on a behaviour card (§16.1)
+- Question: Does the repeat icon on a behaviour card repeat the whole row of icons, with targets found again each time?
+- This book now: yes to both.
+- Evidence: official 2017: "the enemy will perform its entire behaviour multiple times when resolving that behaviour card" (lines 1441–1444). Official 2022: "the boss resolves their entire row of behaviour symbols the number of times shown" (lines 2257–2264). The glossary entry Repeat, as amended by the combat rulings, now says the same for enemies and bosses.
+- Ruling: CONFIRM as written
+- Why: Official in both editions. Finding the target again at each pass is the only reading that works when the first pass has pushed or killed the first target.
+- Mechanical: no
+- Edits: none
+
+### boss-032 · ch. 16, push-move against a wall (§16.2, Push-Moves)
+- Question: When a boss's push-move cannot push a character directly away, is the character pushed within the arc, with the wall fallback, where §8.4 would leave a character in place?
+- This book now: yes, for bosses only.
+- Evidence: official 2017 worked example, stage 4: the character "is pushed again, onto the only node within the boss's front arc" (lines 1520–1525), and the arc rule with its wall fallback (lines 1353–1360).
+- Ruling: CONFIRM as written
+- Why: It reproduces the official example and means a boss's charge always moves the characters in its path, which is what the icon promises. The difference from §8.4 is real but lives in one place and is cited from §8.4.
+- Mechanical: no
+- Edits: none
+
+### boss-033 · ch. 16, arc of a character on a node the boss enters (§16.2)
+- Question: In which arc is a character placed when a boss moves onto their node?
+- This book now: the arc in which the node lay immediately before the boss entered it; the player chooses if it lay in two.
+- Evidence: official 2017: "the arc that was facing the character before the boss moved" (lines 1434–1437). Official 2022: "the same arc they were in before the movement began" (lines 2252–2257).
+- Ruling: CONFIRM as written
+- Why: Because the boss turns before each node, "immediately before it entered" is the only wording that gives one answer for a movement of several nodes; the result is the one a player expects (a boss that walks forward onto a character has that character in front of it).
+- Mechanical: no
+- Edits: none
+
+### boss-034 · ch. 16, leap completions (§16.2, Leap)
+- Question: Are the three completions sound: a leap at a target on the boss's own node still pushes; a character with no valid adjacent node stays and chooses an arc; a leap whose push icon carries a damage value attacks as a push-move does?
+- This book now: all three, as drafted.
+- Evidence: official 2017: the boss is placed on the target's node, keeps its facing, "All leaps also have the Push icon … characters can be pushed onto any adjacent node. They are not considered to be in any particular arc" (lines 1456–1482). Official 2022: characters pushed by this movement go to an adjacent node of their choice, ignoring arcs (lines 2261–2266). Neither covers the three cases. The Four Kings and Old Iron King booklets reuse the leap push for their own placements.
+- Ruling: CONFIRM as written
+- Why: Each completion applies the nearest existing rule (the leap's own push, §8.4's "no valid node, no push", the push-move's damage) and adds none. The new entries for the Four Kings and the Old Iron King lean on this sub-section, so it must stay as it is.
+- Mechanical: no
+- Edits: none
+
+### boss-035 · ch. 16, icon tokens for pushes (§16.2, §16.3)
+- Question: Are the push icons mapped to the right extracted assets?
+- This book now: ast-0058 for a push, ast-0031 for a push with a damage value; no asset for the leap or skull icons.
+- Evidence: the icon list in `work/phase2a/DRAFTING_BRIEF.md` §7.
+- Ruling: NOT A RULES QUESTION (informational, nothing to decide)
+- Why: A layout matter. The new §17.10 text names its new icons in words (Inferno, Bonus Behaviour, Beam, crawl, corrosion), because no extracted asset exists for them, and uses only tokens that chapter 17 already uses.
+- Mechanical: no
+- Edits: none
+
+### boss-036 · ch. 16, aggro in boss fights (§16.4)
+- Question: How does the aggro token move in a boss fight?
+- This book now: it starts on the highest threat; at the end of a character's turn it moves to that character if they lowered the boss's health dial; a riposte moves it at the end of that boss turn; an attack reduced to nothing does not move it; a summon never holds it, though a Distract icon makes the boss treat the summon as the holder for one turn.
+- Evidence: author's manuscript: "simply move the aggro token to a character's dashboard if they deal any damage to the boss during their turn. If no damage is dealt, the aggro token remains stationary" (`work/phase2a/source/16_boss_turns.md`). Official 2017 and 2022: a character gains the token at the start of each of their own turns, whatever they do (2017 lines 1018–1021; 2022 line 1415); it starts with a character of the players' choice. Phantoms booklet: Distract (lines 293–297). Extended, Hollowed: no boss-specific rule.
+- Ruling: CONFIRM as written, with one ADD: damage to another enemy model that a boss's special rules place in the encounter moves the token in the same way (see boss-059)
+- Why: The author's rule is the better one. Under the official rule the boss attacks whoever acted last, full stop; here a character can act without drawing the boss (heal, reposition, miss) and a damaging blow is also a decision to take the next attack. Combined with free turn order (boss-015) it is the tactical core of the fight, and it costs one sentence.
+- Mechanical: yes (the addition only)
+- Edits: boss-E06, boss-E35
+
+### boss-037 · ch. 16, dead characters when a boss is defeated (§16.5)
+- Question: Does a character who died in the boss encounter receive the soul reward and an ember token, and stay out of play (and out of the PvP encounter) until the free rest?
+- This book now: yes.
+- Evidence: Hollowed Edition: dead players receive the boss's souls "even if that player died during the boss encounter" (lines 319–322). Official rules: a death fails the encounter, so the case does not arise. §20.1 bars such a character from the PvP encounter.
+- Ruling: CONFIRM as written
+- Why: The reward belongs to the party, and the free rest that follows restores everyone, so nothing is lost by waiting; a special revival before the PvP encounter would be a rule with one use.
+- Mechanical: no
+- Edits: none
+
+### boss-038 · ch. 16, the final boss (§16.5)
+- Question: Does the defeat of the final boss end the game without rewards?
+- This book now: yes; a last PvP encounter may follow.
+- Evidence: official 2017: "When the party defeats the main boss, they win the game!" (lines 1411–1413); booklets: the same for a mega-boss.
+- Ruling: CONFIRM as written
+- Why: Rewards after the game is won have no use. §20.1's phrase "follows the rewards for the boss's defeat" is harmless after the final boss, where there are none; noted for the PvP owner under cross-cluster effects.
+- Mechanical: no
+- Edits: none
+
+### boss-039 · ch. 16, boss treasure cards not awarded (§16.5 step 3)
+- Question: Where do a defeated boss's other treasure cards go?
+- This book now: to the game box.
+- Evidence: official rules put all of a boss's treasure in the inventory (2017 lines 1406–1409); awarding one at random is the author's rule (§7.7).
+- Ruling: CONFIRM as written
+- Why: Once only one card is awarded, the box is the only tidy destination; any other would create a second source of boss treasure.
+- Mechanical: no
+- Edits: none
+
+### boss-040 · ch. 16, where the spark and the free rest are stated (§16.5)
+- Question: Is the spark for a defeated boss stated once?
+- This book now: §16.5 attributes the spark and the rest to the setup steps of §6.6 and §6.7 and says each is gained once; §7.4 cites §16.5.
+- Evidence: the three sections as they stand.
+- Ruling: NOT A RULES QUESTION (informational, nothing to decide)
+- Why: The statements agree; the cross-references form a chain, not a contradiction. The Ornstein & Smough and Four Kings changes do not disturb it, because Boss Death is still resolved once per boss.
+- Mechanical: no
+- Edits: none
+
+### boss-041 · ch. 16, cross-chapter dependencies satisfied by chapter 16
+- Question: Are the listed dependencies still met?
+- This book now: yes, as read.
+- Evidence: chapters as they stand.
+- Ruling: NOT A RULES QUESTION (informational, nothing to decide)
+- Why: Checked. §16.5's sentence on bosses with two models is rewritten for boss-012.
+- Mechanical: no
+- Edits: boss-E07
+
+### boss-042 · ch. 16, dependencies placed on other chapters
+- Question: Do §18.1 and §18.3 state how the spark, rest and setup differ in campaign play, and does §17 define every icon found on only one boss's cards?
+- This book now: §18.1 (Section Completion) and §18.3 do; §17 defines Wind Up, calamity, strafe and Raise Skeleton.
+- Evidence: `10_manuscript_chapter_18_campaign_play.md` lines 46–52 and 93; chapter 17.
+- Ruling: NOT A RULES QUESTION (informational, nothing to decide)
+- Why: Met. The new entries add the crawl, Inferno, Bonus Behaviour and Beam icons and the shaft icon on Manus's cards, each defined where it is used.
+- Mechanical: no
+- Edits: none
+
+### boss-043 · ch. 16, glossary amendments
+- Question: Do the amended entries Aggro token, Round and Turn agree with the chapter?
+- This book now: they do, as amended by later rulings (Turn now mentions the summon).
+- Evidence: `12_glossary.md`.
+- Ruling: NOT A RULES QUESTION (informational, nothing to decide)
+- Why: Checked; Aggro token gains one clause for boss-036.
+- Mechanical: no
+- Edits: boss-E35
+
+## Chapter 17 — Boss Special Rules
+
+### boss-044 · ch. 17, dependency from §2.3 (Ornstein & Smough)
+- Question: Does §17 state what §2.3 says of the pair?
+- This book now: §2.3 repeats the shared-dial version.
+- Evidence: see boss-012.
+- Ruling: CHANGE (follows boss-012)
+- Why: §2.3 must describe the pair as §17.2 now does.
+- Mechanical: yes
+- Edits: boss-E42
+
+### boss-045 · ch. 17, dependency from §5.3 (one boss model to a node)
+- Question: Does §17.1 state the push of one boss model by another?
+- This book now: yes, with the consequences for facing and for characters on either node.
+- Evidence: official 2017 lines 430–433 and 968–971.
+- Ruling: CONFIRM as written
+- Why: The paragraph is carried unchanged into the rewritten sub-section; it now also serves the Four Kings, whose arriving king pushes a king standing on the spawn node.
+- Mechanical: no
+- Edits: boss-E08 (text kept)
+
+### boss-046 · ch. 17, dependency from §5.5 (pillars)
+- Question: Do §5.5 and §17.3 agree on when pillars are placed?
+- This book now: §5.5 says "a mega-boss encounter"; §17.3 says "every boss encounter fought on the mega-boss side of that game board".
+- Evidence: Asylum Demon booklet lines 197–203: both the mini-boss and the mega-boss encounters include the pillars.
+- Ruling: CHANGE (§5.5 aligned with §17.3)
+- Why: The Asylum Demon mini-boss is fought on the same board (boss-052), so "mega-boss encounter" in §5.5 is too narrow.
+- Mechanical: no
+- Edits: boss-E45
+
+### boss-047 · ch. 17, dependency from §6.7 step 5 (mega-boss special rules)
+- Question: Does §17 give the special rules that §6.7 step 5 applies?
+- This book now: for three mega-bosses; the other seven are delegated.
+- Evidence: see boss-002 to boss-008.
+- Ruling: CHANGE (the seven are now given)
+- Why: Every mega-boss now has its rules in §17.
+- Mechanical: yes
+- Edits: boss-E20 to boss-E26
+
+### boss-048 · ch. 17, dependency from §2.9 (expansion components)
+- Question: Are the components that §17 rules on listed in §2.9?
+- This book now: yes; §2.9 already lists the Four Kings' models, dials and identifier tokens, the Gaping Dragon's corrosion tokens, the Guardian Dragon's Fiery Breath cards and the Old Iron King's "Fire Beam cards".
+- Evidence: `10_manuscript_chapter_02_game_components.md` §2.9 as it stands; booklet contents pages.
+- Ruling: CONFIRM as written, with one name aligned
+- Why: Only the Old Iron King's six cards need their name changed to "Beam cards", the name the rules use, so that they are not confused with the three Fire Beam behaviour cards (boss-007).
+- Mechanical: no
+- Edits: boss-E44
+
+### boss-049 · ch. 17, dependency from §20.1 (PvP after the Twin Gargoyles)
+- Question: Does a PvP encounter follow each Gargoyle or only the second?
+- This book now: only the second (§17.1, Twin Gargoyles).
+- Evidence: the pair is one boss encounter (OQ-25, kept).
+- Ruling: CONFIRM as written
+- Why: One boss, one Boss Death, one PvP encounter. For the same reason one PvP encounter follows Ornstein & Smough and one follows the Four Kings.
+- Mechanical: no
+- Edits: none
+
+### boss-050 · ch. 17, Ornstein & Smough (§17.1, §17.2)
+- Question: The same question as boss-012, with the three inferences (a) starting nodes, (b) conditions on the shared dial, (c) one heat-up and no model leaving play.
+- This book now: as boss-012.
+- Evidence: see boss-012.
+- Ruling: CHANGE (see boss-012)
+- Why: (a) is kept in substance, one model on each boss spawn node, now with Ornstein named for the main-boss node; (b) falls away, since each model holds its own condition tokens; (c) is reversed: the first model to fall leaves play and that is the heat-up.
+- Mechanical: yes
+- Edits: boss-E08, boss-E10
+
+### boss-051 · ch. 17, Twin Gargoyles (§17.1)
+- Question: Are the four settled details and the treatment of a failure against the first Gargoyle sound?
+- This book now: one encounter in two parts; the model returns to the spawn node; a character on that node chooses an arc; the second Gargoyle acts after the turn of the character who felled the first; a summon stays; failure against either means both are fought again.
+- Evidence: official footnote: "The party receives the Gargoyles' treasure only if they defeat two Gargoyle boss encounters back-to-back. If they are defeated by the second Gargoyle, they must fight both Gargoyles" (`DS-Core-Rules-lores.txt` lines 1680–1685; repeated in the Asylum Demon and Phantoms booklets). Gate 1 OQ-25.
+- Ruling: CONFIRM as written
+- Why: "Back to back" with nothing between is the simplest complete reading: reset the dial and the deck, carry on. This book gives no recovery after any boss (§16.5), so none between the two parts is consistent. A failure against the first Gargoyle is an ordinary failed boss encounter, so "both again" follows without a rule of its own.
+- Mechanical: no
+- Edits: none
+
+### boss-052 · ch. 17, Asylum Demon (§17.3)
+- Question: On which tile is the Asylum Demon mini-boss fought, and what is the special ability printed on the two data cards?
+- This book now: §17.3 does not say where the mini-boss is fought and calls the shared ability Pillar Smasher.
+- Evidence: Asylum Demon booklet `DS-AD-Rules-web-EN.txt` lines 183–190: "The Asylum Demon is used just like any other mini boss except that the boss encounter takes place on the Mega Boss game board instead of the Mini Boss tile"; lines 197–212 (Pillar Smasher: both encounters include the pillars); data cards at lines 120 and 159: "Pillars of Woe"; lines 433–445: the Stray Demon "follows the standard rules for behaviour deck creation and heats up like a mini boss or main boss does". The rest of §17.3 (pillar placement, destruction before the attack, one damage and stagger within one node, several pillars at once, restoration at the bonfire, Wind Up) matches the booklet.
+- Ruling: CHANGE (tile stated; ability renamed)
+- Why: Both open facts are settled by the booklet. Putting the mini-boss on the same board removes the special case "an encounter fought on a tile without pillar nodes", so the section gets shorter as well as complete. §15.3, §5.5, §2.3 and the glossary entry Mini-boss each take one clause.
+- Mechanical: yes
+- Edits: boss-E11, boss-E12, boss-E03, boss-E45, boss-E47, boss-E36
+
+### boss-053 · ch. 17, pillar damage (§17.3)
+- Question: Is the damage of a destroyed pillar unblockable, and does it affect only characters?
+- This book now: not an attack; cannot be blocked, resisted or dodged; characters only.
+- Evidence: booklet lines 204–208: "any characters within one node of the pillar token immediately suffer 1 damage and the stagger condition".
+- Ruling: CONFIRM as written
+- Why: "Immediately suffer" with no attack icon is flat damage, and the booklet says characters. A summon is spared, which is consistent with summons ignoring traps (§12.1).
+- Mechanical: no
+- Edits: none
+
+### boss-054 · ch. 17, Wind Up (§17.3)
+- Question: Is the Wind Up movement a Run for every rule, and does it stop the character resting on their own next turn?
+- This book now: every rule that applies to a Run applies; nothing is said of the Rest action, so the general rule governs and it does not.
+- Evidence: booklet lines 213–225 (and the same text in the Last Giant booklet): "This movement is considered a run for purposes of rules interactions", with the example of armour that forbids running.
+- Ruling: CONFIRM as written
+- Why: The official text is reproduced. The movement happens in the boss's turn, so limits that count a character's own turn do not see it. Manus's Overextended is written with the same sentence (boss-006).
+- Mechanical: no
+- Edits: none
+
+### boss-055 · ch. 17, Great Grey Wolf Sif (§17.4)
+- Question: When is the cool-down card Limping Strike used?
+- This book now: "used only as Sif's data card directs".
+- Evidence: Darkroot booklet: the Cool Down "occurs when Sif is edging close to death" (`DS-Darkroot-Rules-web.txt` lines 174–183). Data card, in the community transcription (DSBG-Shuffle card image "Great Grey Wolf Sif – data" and `lib/dsbg_shuffle_behavior_decks.py` line 445): "Mournful Howl: Limping Strike is not a starting behavior card or a Heat Up card. When Sif is reduced to 3 health or less, replace the behavior deck with the Limping Strike card." A BoardGameGeek thread (3023917, search summary) describes the same effect.
+- Ruling: CHANGE (the rule is written out)
+- Why: The entry was the last "as the data card directs" in a chapter that promises to state each boss's rules. The rule is one sentence and gives Sif the game's only mercy phase, which is worth showing the reader. The threshold of three should be checked against the printed card.
+- Mechanical: yes (a rule where the book had a pointer)
+- Edits: boss-E13
+
+### boss-056 · ch. 17, Artorias (§17.4)
+- Question: Are the two removed cards taken from the deck and the discard pile together?
+- This book now: yes: gather both, remove two at random, add all three heat-up cards, shuffle.
+- Evidence: Darkroot booklet: "Rather than adding one Heat Up card to his existing behaviour deck, you remove two random behaviour cards and then add all three" (lines 194–200). DSBG-Shuffle does the same over the whole deck.
+- Ruling: CONFIRM as written
+- Why: "His existing behaviour deck" is all the cards in play. After boss-018 the general heat-up gathers the discard pile too, so Artorias's steps are now the general ones with two cards out and three in, and take the general timing.
+- Mechanical: no
+- Edits: none
+
+### boss-057 · ch. 17, Old Dragonslayer (§17.6)
+- Question: Does the Old Dragonslayer also heat up at a heat-up point?
+- This book now: the sentence saying so was left out because the card could not be read.
+- Evidence: Explorers booklet data card: "Corrupted Dragonslayer: The first three times the Old Dragonslayer loses 4 or more HP from one attack, add one random heat up card to the top of the behaviour deck", with a dash where the heat-up point is printed (`DS-Explorers-Rules-Web.txt` lines 158–171). DSBG-Shuffle records no heat-up value for this boss.
+- Ruling: CONFIRM as written, and ADD one sentence saying that the card shows no heat-up point
+- Why: The omission was right. Saying so in the entry stops a reader looking for a heat-up that does not exist.
+- Mechanical: no
+- Edits: boss-E15
+
+### boss-058 · ch. 17, Black Dragon Kalameet (§17.8)
+- Question: Does Kalameet keep its facing when placed on the landing node, and is the gravestone reveal rightly dropped?
+- This book now: yes to both.
+- Evidence: Kalameet booklet: after the strafe "place Kalameet on the landing node … Any characters on the landing node are pushed onto any adjacent node"; no facing given (`DS-BDK-Rules-web.txt` lines 462–481). The reveal for gravestones is the framework step that this book's scry replaces (boss-011).
+- Ruling: CONFIRM as written
+- Why: Keeping the facing is what a leap does and needs no new rule. The definition of Signature card in §17.8 is widened, because two of the new entries use the term (boss-003, boss-007).
+- Mechanical: no
+- Edits: boss-E14, boss-E32
+
+### boss-059 · ch. 17, Executioner's Chariot (§17.9)
+- Question: Are points (a) to (g) sound: the two models; every enemy acting before each character; aggro before the heat-up; scaling of the Mages and Skeletons; starting facing; no heat-up point and no second heat-up; Crush not applying to a dodge?
+- This book now: as listed in the issue; (c) is not ruled on, so before the heat-up the token cannot move unless its holder dies.
+- Evidence: Chariot booklet `DS-EC-Rules-Web.txt`: "the skeletal horse and the chariot" (lines 437–441); "other enemies will also activate during the enemy activation using their threat level to determine activation order as usual" (lines 455–462); data card front has no health, block or resist (lines 524–531); heat-up when the Chariot "is the only enemy model remaining" (lines 460–462); "Crush: If a character's armour roll or resistance roll prevents all of a behaviour card's damage, the character suffers 1 damage" (lines 383–387).
+- Ruling: CONFIRM as written for (a), (b), (d), (e), (f), (g); ADD for (c): damage to another enemy model in a boss encounter moves the aggro token as damage to the boss does
+- Why: (b) is official, hard as it is. (c) is a real gap: for the whole first part the Mages and Skeletons would attack one fixed character whatever the party did. The general clause in §16.4 fixes it without a Chariot-only rule and is what players would do unprompted. (g) follows from the card: a dodge is not a block or resist roll.
+- Mechanical: yes ((c) only)
+- Edits: boss-E06, boss-E35
+
+### boss-060 · ch. 17, Raise Skeleton (§17.9, Unique Icons)
+- Question: Is the icon rightly owned by §17.9, and limited to skeletons killed in the current encounter?
+- This book now: yes to both.
+- Evidence: Chariot booklet introduces the Raise Skeleton behaviour with the Black Hollow Mage (line 185 onward).
+- Ruling: CONFIRM as written
+- Why: The enemy and its icon come from this expansion, and §17.9 says the icon is resolved the same way in every encounter that holds a Black Hollow Mage. Moving the rule to §9 for the sake of six encounter cards would put an expansion rule in the core chapter; noted for the combat owner in case they prefer a one-line pointer there.
+- Mechanical: no
+- Edits: none
+
+### boss-061 · ch. 17, dependency placed on §8.4 (boss pushed by a boss)
+- Question: Does §8.4 list the displacement of one boss model by another and bar characters from pushing a boss?
+- This book now: yes (`10_manuscript_chapter_08_combat_basics.md` lines 93, 122, 124).
+- Evidence: as cited.
+- Ruling: NOT A RULES QUESTION (informational, nothing to decide)
+- Why: Met. §8.4 cites "§17.1" without a sub-heading, so the renamed sub-heading breaks no reference.
+- Mechanical: no
+- Edits: none
+
+### boss-062 · ch. 17, dependency placed on §8.5 (conditions)
+- Question: Does §8.5 own calamity, corrosion, frostbite and stagger?
+- This book now: yes.
+- Evidence: §8.5; the corrosion text agrees with the Gaping Dragon booklet (lines 443–453).
+- Ruling: NOT A RULES QUESTION (informational, nothing to decide)
+- Why: Met. The new entries cite §8.5 and restate nothing.
+- Mechanical: no
+- Edits: none
+
+### boss-063 · ch. 17, dependency placed on §9.4 and §9.5 (attacks that target nodes)
+- Question: Do the defence rules treat an attack on nodes like any other attack, and does §9.5 state the move after a dodge?
+- This book now: yes.
+- Evidence: §9.4, §9.5 as they stand.
+- Ruling: NOT A RULES QUESTION (informational, nothing to decide)
+- Why: Met. The Inferno and Beam attacks rely on it exactly as the strafe does.
+- Mechanical: no
+- Edits: none
+
+### boss-064 · ch. 17, dependency placed on §13 (mimics)
+- Question: Does §13 own every mimic rule?
+- This book now: yes.
+- Evidence: §13; §17.6 only cites it.
+- Ruling: NOT A RULES QUESTION (informational, nothing to decide)
+- Why: Met. A mimic's heat-up cites §15.5 and so takes the new procedure and timing (see cross-cluster effects).
+- Mechanical: no
+- Edits: none
+
+### boss-065 · ch. 17, dependency placed on §15 (facing, tiles, deck, weak arcs)
+- Question: Does §15 state the starting facing, the two spawn nodes of the joined tiles, the allowance for special decks and heat-ups, and the weak-arc bonus?
+- This book now: yes.
+- Evidence: §15.2, §15.3, §15.5, §15.6.
+- Ruling: NOT A RULES QUESTION (informational, nothing to decide)
+- Why: Met; §15.5's closing sentence now also says that a special heat-up keeps the general timing unless its rule states another.
+- Mechanical: no
+- Edits: boss-E01
+
+### boss-066 · ch. 17, dependency placed on §16 (deck renewal, arcs, area, Boss Death)
+- Question: Does §16 allow renewal whenever a card is due, place a character when a boss enters their node, define the area of an area attack, and withhold rewards after the first Gargoyle?
+- This book now: yes; renewal mid-turn is stated by the entries that need it (the Pursuer, and now the Guardian Dragon and Vordt), citing §15.5, Deck Renewal.
+- Evidence: §16.1 to §16.5.
+- Ruling: NOT A RULES QUESTION (informational, nothing to decide)
+- Why: Met.
+- Mechanical: no
+- Edits: none
+
+### boss-067 · ch. 17, dependency placed on §19 (campaign sections)
+- Question: Do the campaign sections mark the Twin Gargoyles and hold the sections that §17 cites?
+- This book now: the Gargoyle pairs cite §17.1; §19.1 has its optional Section Four with Kalameet; the Chariot's campaign is in §19.
+- Evidence: `10_manuscript_chapter_19_campaigns.md` lines 19, 46–48, 102, 215, 362.
+- Ruling: NOT A RULES QUESTION (informational, nothing to decide)
+- Why: Met. The campaigns that include the Four Kings, the Gaping Dragon, Vordt, the Last Giant and Manus now reach bosses with full rules.
+- Mechanical: no
+- Edits: none
+
+### boss-068 · ch. 17, dependency placed on Appendix B (replacement boss cards)
+- Question: Does Appendix B list the replacement cards for the Black Knight, Gravelord Nito, Crossbreed Priscilla and the Heavy Knight?
+- This book now: yes, by name; the card texts themselves are not in the book.
+- Evidence: `10_manuscript_chapter_23_appendices.md`, Boss Data and Behaviour Cards.
+- Ruling: NOT A RULES QUESTION (informational, nothing to decide)
+- Why: Met as a list. Because the replacement cards were not supplied, the entries for the two Painted World bosses cannot restate their abilities (boss-009, boss-010).
+- Mechanical: no
+- Edits: none
+
+### boss-069 · ch. 17, glossary entry Heat-up
+- Question: Does the entry end with a proper reference and state the current rule?
+- This book now: it ends "(see §17)" and states the remaining-deck shuffle.
+- Evidence: `12_glossary.md`.
+- Ruling: CHANGE (follows boss-018)
+- Why: The reference was already fixed; the rule is brought into line with §15.5.
+- Mechanical: yes
+- Edits: boss-E31
+
+### boss-070 · ch. 17, glossary entry Boss
+- Question: Is "a single powerful enemy" still right?
+- This book now: "A single powerful enemy …".
+- Evidence: Ornstein & Smough and the Four Kings are each one boss with several models.
+- Ruling: CHANGE
+- Why: One clause removes the contradiction.
+- Mechanical: no
+- Edits: boss-E30
+
+### boss-071 · ch. 17, glossary entry Calamity
+- Question: Does the entry agree with §17.8?
+- This book now: yes; calamity lasts the encounter (OQ-24).
+- Evidence: Kalameet booklet removes the token when the character next suffers damage (`DS-BDK-Rules-web.txt` lines 452–460); Gate 1 OQ-24 kept the manuscript's version on purpose.
+- Ruling: CONFIRM as written
+- Why: Owned by §8.5 and settled at Gate 1; nothing in this cluster reopens it.
+- Mechanical: no
+- Edits: none
+
