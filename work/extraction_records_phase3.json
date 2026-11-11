@@ -8086,5 +8086,47 @@
    "baked": null,
    "kind": "painting"
   }
+ },
+ {
+  "id": "AST-0158.2",
+  "parent": "AST-0158",
+  "name": "Guardian Dragon booklet p.10: Guardian Dragon concept sketches on grey",
+  "type": "art",
+  "src": "DS-GD-Rules-web.pdf",
+  "page": 10,
+  "bbox_pt": [
+   111.3,
+   228.8,
+   316.7,
+   559.2
+  ],
+  "image_object": {
+   "xref": 1496,
+   "pdfimages_num": 1,
+   "colour": "cmyk",
+   "native": "856×1377",
+   "has_mask": false,
+   "ppi_as_placed": 300
+  },
+  "method": "pdfimages -png p.10 image #1 (object 1496, 856×1377 cmyk, no soft mask); native resolution, no resampling; saved as JPEG quality 92 (4:4:4)",
+  "file": "assets/art/ast-0158-guardian-dragon-concept-sketches-on-grey.jpg",
+  "format": "jpg",
+  "dims": "856×1377 px",
+  "has_alpha": false,
+  "bytes": 166780,
+  "notes": "Grey ground is part of the image.",
+  "phase": 3,
+  "design": {
+   "subject": "Concept sketches of the Guardian Dragon: a line drawing above, a red-winged colour study below",
+   "mood": "studied, grey, crimson",
+   "suggested_use": "column plate",
+   "also_suits": [
+    "spot"
+   ],
+   "suggested_for": "17 Boss Special Rules",
+   "hdr": null,
+   "baked": null,
+   "kind": "painting"
+  }
  }
 ]
