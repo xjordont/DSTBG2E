@@ -88,6 +88,14 @@ NO_ENDMARK = set()   # chapters whose closing ornament would otherwise sit alone
 END_FREE = {}         # chapter id -> points of empty page under its closing ornament (measured on the first pass)
 NO_PANEL = set()      # chapters whose gallery did not fit after all (verified on the second pass)
 PAGE_FOOT = 742.0     # y of the foot of the text block, in points (792 - 50)
+SEC_BREAK = {}        # section id -> 'page' | 'column': numbered sections that start a new page or column
+SEC_FIXED = set()     # section ids already weighed and left where they fall
+PLATES = {}           # section id -> art plate set in the room left before that section's break
+NO_PLATE = set()      # section ids whose plate did not fit after all
+_SS = TUNING.get('section_starts') if isinstance(TUNING.get('section_starts'), dict) else {}
+T_PAGE = float(_SS.get('page', 600))     # a section in the right column with this much column left, or less, starts a new page
+T_COL = float(_SS.get('column', 345))    # a section in the left column with this much column left, or less, starts the next column
+COL_W = 252.0
 PT_PER_PX = 72 / 150  # no image is set larger than 150 ppi allows
 _SIZES = {}
 
@@ -263,7 +271,7 @@ class Chapter:
             sec.append(intro); lead = [n for n in lead if n is not first and not (isinstance(n, NavigableString) and not n.strip())]
         for fig in figures_for(soup, key, 'top'):
             sec.append(fig)
-        flow = soup.new_tag('div'); flow['class'] = flow_cls
+        flow = soup.new_tag('div', id='flow-' + self.id); flow['class'] = flow_cls
         if lead:
             d = soup.new_tag('div'); d['class'] = ['sec', 'lead']
             for n in lead: d.append(n)
@@ -278,8 +286,11 @@ class Chapter:
             else:
                 sid = f'{self.id}-{slugify(text)}'; num, title = '', text
             h2['id'] = sid; self.ids.add(sid); self.sections.append((sid, num, title))
-            d = soup.new_tag('div'); d['class'] = 'sec'
+            d = soup.new_tag('div', id='box-' + sid); d['class'] = ['sec'] + ({'page': ['newpage'], 'column': ['newcol']}.get(SEC_BREAK.get(sid), []))
             for n in group: d.append(n)
+            plate = PLATES.get(sid)
+            if plate and sid not in NO_PLATE and flow.contents:
+                flow.contents[-1].append(plate_tag(soup, sid, plate))    # stands at the foot of the section before the break
             for h3 in d.find_all('h3'):
                 h3['id'] = f'{sid}-{slugify(h3.get_text(" ", strip=True))}'; self.ids.add(h3['id'])
             flow.append(d)
@@ -508,13 +519,143 @@ def back_cover(intro_md):
     return f'<section class="backcover"><div class="bc"><p class="bc1">{lead}</p><p class="bc2">{last}</p></div></section>'
 
 
-def build(edition='screen', only=None, out=None, html_only=False, _retry=False):
+def plate_tag(soup, sid, plate):
+    """Illustrations set in the room a section break leaves at the foot of a column."""
+    div = soup.new_tag('div', id='plate-' + sid); div['class'] = 'plate'; div['style'] = f"margin-top:{plate['mt']:.1f}pt"
+    for k, it in enumerate(plate['items']):
+        im = soup.new_tag('img', src=it['file'], alt=it.get('caption') or '')
+        im['style'] = f"width:{it['w']:.1f}pt;height:{it['h']:.1f}pt" + (';margin-top:12pt' if k else '')
+        div.append(im)
+        if it.get('caption'):
+            c = soup.new_tag('div'); c['class'] = 'pc'; c.string = it['caption']; div.append(c)
+    return div
+
+
+def decide_breaks(pm):
+    """Weigh, chapter by chapter, the first numbered section not yet weighed. A section that would start part
+    way down the right column starts a new page instead, and one that would start low in the left column starts
+    the right column, when the room given up is no more than T_PAGE or T_COL. A section already at the head of
+    a page or column, or close under it, stays. One new break per chapter per pass, since a break moves
+    everything after it. Returns True if a break was added."""
+    by_ch = {}; col_top = {}
+    for e in pm:
+        if e['tag'] == 'h2' and re.match(r'sec-\d+-\d+$', e['id']):
+            hs = by_ch.setdefault(e['id'].split('-')[1], [])
+            if not hs or hs[-1]['id'] != e['id']:
+                hs.append(e)
+        elif e['tag'] == 'div' and e['id'].startswith('flow-'):
+            col_top.setdefault(e['page'], e['y'])          # where the columns begin on that page
+    added = False
+    for ch, hs in by_ch.items():
+        for i, h in enumerate(hs):
+            sid = h['id']
+            if i == 0 or sid in SEC_BREAK or sid in SEC_FIXED:
+                continue
+            left = h['x'] < 300; room = PAGE_FOOT - h['y']
+            down = h['y'] - col_top.get(h['page'], 52.0)       # distance below the head of the column
+            if down < 90:
+                SEC_FIXED.add(sid); continue                    # heads a page or a column already, or nearly
+            if not left and room <= T_PAGE:
+                SEC_BREAK[sid] = 'page'; added = True; break
+            if left and room <= T_COL:
+                SEC_BREAK[sid] = 'column'; added = True; break
+            SEC_FIXED.add(sid)
+    return added
+
+
+def choose_plates(pm):
+    """After the breaks are settled: measure the room left before each break and pick an illustration for it."""
+    spec = TUNING.get('plates', {})
+    if not spec:
+        return False
+    last = {}                                # sec box id -> its last fragment
+    order = []
+    for e in pm:
+        if e['tag'] == 'div' and e['id'].startswith('box-'):
+            if e['id'] not in last: order.append(e['id'])
+            last[e['id']] = e
+    used = set(it['file'] for p in PLATES.values() for it in p['items'])
+    changed = False
+    for sid, kind in SEC_BREAK.items():
+        if sid in PLATES or sid in NO_PLATE or 'box-' + sid not in last:
+            continue
+        i = order.index('box-' + sid)
+        if i == 0 or order[i - 1].split('-')[2] != sid.split('-')[1]:      # the section before it, in the same chapter
+            continue
+        prev = last[order[i - 1]]
+        gap = PAGE_FOOT - (prev['y'] + prev['h'])
+        if gap < spec.get('min_gap', 104):
+            NO_PLATE.add(sid); continue
+        ch = '%02d' % int(sid.split('-')[1])
+        pool = [(f, 1.25) for f in spec.get('by_chapter', {}).get(ch, [])] + [(f, 1.0) for f in spec.get('pool', [])]
+        items, room = [], gap - 10
+        while len(items) < spec.get('max_stack', 3):
+            best = None
+            for f, weight in pool:
+                if f in used or not (ROOT / f).exists():
+                    continue
+                cap = hero_caption(f); avail = room - (13 if cap else 0)
+                pw, ph = img_size(f)
+                s = min(COL_W / pw, avail / ph, PT_PER_PX * spec.get('enlarge', 1.0))
+                dw, dh = pw * s, ph * s
+                if dh < spec.get('min_h', 70):
+                    continue
+                score = dw * dh * weight
+                if best is None or score > best[0]:
+                    best = (score, f, dw, dh, cap)
+            if best is None:
+                break
+            _, f, dw, dh, cap = best
+            items.append({'file': f, 'w': dw, 'h': dh, 'caption': cap}); used.add(f)
+            room -= dh + (13 if cap else 0) + 12
+            if room < spec.get('min_h', 70) + 30:
+                break
+        if not items:
+            NO_PLATE.add(sid); continue
+        total = sum(it['h'] + (13 if it['caption'] else 0) for it in items) + 12 * (len(items) - 1)
+        spare = gap - total - 3
+        PLATES[sid] = {'items': items, 'mt': max(8.0, spare if spare < 60 else spare * 0.5), 'page': prev['page'], 'left': prev['x'] < 300}
+        changed = True
+    return changed
+
+
+_PLAN = {}
+
+
+def _plan_one(job):
+    """Settle the section starts of one chapter by rendering it alone until no break is added (worker process)."""
+    num, idx = job
+    import wp_patch  # noqa: F401
+    from weasyprint import HTML
+    part = split_h1(chapter_file(num).read_text(encoding='utf-8'))[idx]
+    cid = None
+    for _ in range(40):
+        ch = Chapter(num, part); ch.structure(_PLAN['heads']); ch.link(_PLAN['all_ids'], _PLAN['heads'], set()); cid = ch.id
+        html = ('<!DOCTYPE html><html lang="en-GB"><head><meta charset="utf-8"><link rel="stylesheet" href="layout/book.css"></head>'
+                f'<body class="screen">{ch.soup}</body></html>')
+        doc = HTML(string=html, base_url=str(ROOT) + '/').render()
+        if not decide_breaks(pagemap(doc)):
+            break
+    mine = lambda s: cid and cid.startswith('ch-') and s.split('-')[1] == cid[3:]
+    return {k: v for k, v in SEC_BREAK.items() if mine(k)}, {k for k in SEC_FIXED if mine(k)}
+
+
+def plan_breaks(jobs, heads, all_ids):
+    import multiprocessing as mp, logging
+    logging.getLogger('weasyprint').setLevel(logging.ERROR)
+    _PLAN.update(heads=heads, all_ids=all_ids)
+    with mp.get_context('fork').Pool(min(len(jobs), mp.cpu_count() or 1)) as pool:
+        for br, fx in pool.map(_plan_one, jobs, chunksize=1):
+            SEC_BREAK.update(br); SEC_FIXED.update(fx)
+
+
+def build(edition='screen', only=None, out=None, html_only=False, _phase='plan', _n=0, reuse=False):
     import make_layout_assets
     if not (ROOT / 'build/tex/lava_scales_clean.jpg').exists() or not (ROOT / 'build/icons').exists():
         make_layout_assets.lava(); make_layout_assets.icons()
     make_layout_assets.figures()
     heads = glossary_heads()
-    chapters, cover, fore = [], '', ''
+    chapters, cover, fore, jobs = [], '', '', []
     for num in ORDER:
         if only and num not in only:
             continue
@@ -524,9 +665,20 @@ def build(edition='screen', only=None, out=None, html_only=False, _retry=False):
         md = f.read_text(encoding='utf-8')
         if num == '00':
             cover, fore = front_matter(md); continue
-        for part in split_h1(md):
-            ch = Chapter(num, part); ch.structure(heads); chapters.append(ch)
+        for idx, part in enumerate(split_h1(md)):
+            ch = Chapter(num, part); ch.structure(heads); chapters.append(ch); jobs.append((num, idx))
     all_ids = set().union(*[c.ids for c in chapters]) if chapters else set()
+    state = ROOT / 'build/layout_plan.json'
+    if _phase == 'plan' and not html_only:
+        if reuse and state.exists():
+            # the plan of an earlier build of the same text (the two editions paginate alike)
+            st = json.loads(state.read_text(encoding='utf-8'))
+            SEC_BREAK.update(st['breaks']); SEC_FIXED.update(st['fixed']); PLATES.update(st['plates']); NO_PLATE.update(st['no_plate'])
+            END_FREE.update(st['end_free']); NO_ENDMARK.update(st['no_endmark']); NO_PANEL.update(st['no_panel'])
+            return build(edition, only, out, html_only, _phase='verify', _n=_n + 1)
+        if TUNING.get('section_starts', True):
+            plan_breaks(jobs, heads, all_ids)
+        return build(edition, only, out, html_only, _phase='breaks', _n=_n + 1)
     missing = set()
     for c in chapters:
         c.link(all_ids, heads, missing)
@@ -551,25 +703,39 @@ def build(edition='screen', only=None, out=None, html_only=False, _retry=False):
     doc = HTML(string=html, base_url=str(ROOT) + '/').render(**img_opts)
     pm = pagemap(doc)
     ends = {e['id'][4:]: e for e in pm if e['id'].startswith('end-') and e['tag'] == 'div'}
-    if not _retry:
-        # First pass: drop a closing ornament stranded at a page top, and measure the room under the others
-        # so that the second pass can fill it with the chapter's gallery.
+    again = lambda phase: build(edition, only, out, html_only, _phase=phase, _n=_n + 1)
+    if _n < 24 and _phase == 'breaks':
+        # Passes 1..k: settle where numbered sections start (one new break per chapter per pass).
+        if TUNING.get('section_starts', True) and decide_breaks(pm):
+            return again('breaks')
+        # Breaks settled: this render is the measuring pass. A closing ornament stranded at a page top is
+        # dropped; the room under the others is measured for the galleries, and the room before each break
+        # for an illustration.
         stranded = {cid for cid, e in ends.items() if e['y'] < 70}
         NO_ENDMARK.update(stranded)
         END_FREE.clear()
         END_FREE.update({cid: PAGE_FOOT - (e['y'] + e['h']) for cid, e in ends.items() if cid not in stranded})
-        if stranded or any(v >= 114 for v in END_FREE.values()) and TUNING.get('heroes'):
-            return build(edition, only, out, html_only, _retry=True)
-    else:
-        # Later passes: a gallery that slipped to the next page is withdrawn.
+        plates = choose_plates(pm)
+        if stranded or plates or (any(v >= 114 for v in END_FREE.values()) and TUNING.get('heroes')):
+            return again('verify')
+    elif _n < 24:
+        # Verifying passes: a gallery or a plate that slipped to another page or column is withdrawn.
         moved = {e['id'][6:] for e in pm if e['id'].startswith('panel-') and e['id'][6:] in ends and e['page'] != ends[e['id'][6:]]['page']}
-        if moved - NO_PANEL:
-            NO_PANEL.update(moved)
-            return build(edition, only, out, html_only, _retry=True)
+        seen = {e['id'][6:]: e for e in pm if e['id'].startswith('plate-')}
+        slipped = {sid for sid, pl in PLATES.items() if sid not in NO_PLATE and (sid not in seen or seen[sid]['page'] != pl['page'] or (seen[sid]['x'] < 300) != pl['left'])}
+        heads_ = {e['id']: e for e in pm if e['tag'] == 'h2'}
+        # a break that no longer does its job (the section would now head a page anyway) is harmless; one that
+        # strands a plate alone on a page is caught above
+        if (moved - NO_PANEL) or slipped:
+            NO_PANEL.update(moved); NO_PLATE.update(slipped)
+            return again('verify')
+    if not only:
+        state.write_text(json.dumps({'breaks': SEC_BREAK, 'fixed': sorted(SEC_FIXED), 'plates': PLATES, 'no_plate': sorted(NO_PLATE),
+                                     'end_free': END_FREE, 'no_endmark': sorted(NO_ENDMARK), 'no_panel': sorted(NO_PANEL)}, indent=1), encoding='utf-8')
     doc.metadata.title = TITLE; doc.metadata.authors = ['PittedPanda']; doc.metadata.lang = 'en-GB'
     out = pathlib.Path(out) if out else ROOT / f'build/book_{edition}.pdf'
     doc.write_pdf(str(out), **img_opts)
-    report.update(no_endmark=sorted(NO_ENDMARK), galleries=sorted(e['id'][6:] for e in pm if e['id'].startswith('panel-')), no_gallery=sorted(NO_PANEL), pages=len(doc.pages), out=str(out.relative_to(ROOT)) if out.is_relative_to(ROOT) else str(out), patch=wp_patch.PATCH_APPLIED)
+    report.update(passes=_n + 1, section_breaks={k: sum(1 for v in SEC_BREAK.values() if v == k) for k in ('page', 'column')}, plates=len([s for s in PLATES if s not in NO_PLATE]), no_endmark=sorted(NO_ENDMARK), galleries=sorted(e['id'][6:] for e in pm if e['id'].startswith('panel-')), no_gallery=sorted(NO_PANEL), pages=len(doc.pages), out=str(out.relative_to(ROOT)) if out.is_relative_to(ROOT) else str(out), patch=wp_patch.PATCH_APPLIED)
     (ROOT / f'build/pagemap_{edition}.json').write_text(json.dumps(pagemap(doc), indent=0), encoding='utf-8')
     print(json.dumps(report, ensure_ascii=False))
     return report
@@ -594,5 +760,6 @@ if __name__ == '__main__':
     ap = argparse.ArgumentParser()
     ap.add_argument('--edition', default='screen', choices=['screen', 'print'])
     ap.add_argument('--only'); ap.add_argument('--out'); ap.add_argument('--html-only', action='store_true')
+    ap.add_argument('--reuse', action='store_true', help='reuse the layout plan of the last full build (build/layout_plan.json)')
     a = ap.parse_args()
-    build(a.edition, set(a.only.split(',')) if a.only else None, a.out, a.html_only)
+    build(a.edition, set(a.only.split(',')) if a.only else None, a.out, a.html_only, reuse=a.reuse)

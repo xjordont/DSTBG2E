@@ -24,32 +24,7 @@
     0.935
    ],
    "legend": true,
-   "caption": "<strong>A character dashboard.</strong> 1 Name. 2 Illustration. 3 Heroic action. 4 Equipment slots. 5 Endurance bar. 6 Stat progression track. 7 Threat, printed as Taunt Level. 8 Heroic action token slot. 9 Luck token slot. 10 Estus flask token slot. 11 Ember token slot.",
-   "masks": [
-    {
-     "box": [
-      0.6035,
-      0.008,
-      0.883,
-      0.48
-     ],
-     "feather": 10
-    }
-   ],
-   "badges": [
-    [
-     0.8,
-     0.137,
-     "2",
-     0.0197
-    ],
-    [
-     0.7277,
-     0.4544,
-     "1",
-     0.0197
-    ]
-   ]
+   "caption": "<strong>A character dashboard.</strong> 1 Name. 2 Illustration. 3 Heroic action. 4 Equipment slots. 5 Endurance bar. 6 Stat progression track. 7 Threat, printed as Taunt Level. 8 Heroic action token slot. 9 Luck token slot. 10 Estus flask token slot. 11 Ember token slot."
   },
   {
    "file": "assets/diagrams/ast-0091-equipment-card-anatomy-2022.png",
@@ -58,18 +33,7 @@
    "section": "sec-4-1",
    "after": 2,
    "width": "150pt",
-   "caption": "<strong>An equipment card.</strong> 1 Name. 2 Card type. 3 Equipment slot. 4 Set symbol. 5 Range. 6 Stat requirements. 7 Attack options. 8 Block dice. 9 Resist dice. 10 Dodge dice. 11 Upgrade slots.",
-   "masks": [
-    {
-     "box": [
-      0.31,
-      0.215,
-      0.675,
-      0.555
-     ],
-     "feather": 8
-    }
-   ]
+   "caption": "<strong>An equipment card.</strong> 1 Name. 2 Card type. 3 Equipment slot. 4 Set symbol. 5 Range. 6 Stat requirements. 7 Attack options. 8 Block dice. 9 Resist dice. 10 Dodge dice. 11 Upgrade slots."
   },
   {
    "file": "assets/diagrams/ast-0094-enemy-data-card-anatomy-2022.png",
@@ -78,89 +42,7 @@
    "section": "sec-8-2",
    "after": 1,
    "width": "150pt",
-   "caption": "<strong>An enemy data card.</strong> 1 Name. 2 Threat. 3 Base health. 4 Enemy icon. 5 Attack range. 6 Block. 7 Resist. 8 Dodge difficulty. 9 Behaviour icons. 10 Set symbol.",
-   "masks": [
-    {
-     "box": [
-      0.0975,
-      0.215,
-      0.285,
-      0.44
-     ],
-     "fill": {
-      "ref_x": 0.7
-     },
-     "feather": 3
-    },
-    {
-     "box": [
-      0.265,
-      0.192,
-      0.66,
-      0.487
-     ],
-     "fill": {
-      "ref_x": 0.7
-     },
-     "feather": 7
-    },
-    {
-     "box": [
-      0.44,
-      0.1875,
-      0.56,
-      0.215
-     ],
-     "fill": {
-      "ref_x": 0.7
-     },
-     "feather": 2
-    },
-    {
-     "box": [
-      0.335,
-      0.487,
-      0.417,
-      0.578
-     ],
-     "fill": {
-      "ref_x": 0.29
-     },
-     "feather": 4
-    },
-    {
-     "box": [
-      0.579,
-      0.466,
-      0.655,
-      0.566
-     ],
-     "fill": {
-      "ref_x": 0.7
-     },
-     "feather": 4
-    }
-   ],
-   "badges": [
-    [
-     0.199,
-     0.468,
-     "5",
-     0.037
-    ],
-    [
-     0.46,
-     0.469,
-     "6",
-     0.037
-    ],
-    [
-     0.5395,
-     0.4675,
-     "7",
-     0.037
-    ]
-   ]
+   "caption": "<strong>An enemy data card.</strong> 1 Name. 2 Threat. 3 Base health. 4 Enemy icon. 5 Attack range. 6 Block. 7 Resist. 8 Dodge difficulty. 9 Behaviour icons. 10 Set symbol."
   },
   {
    "file": "assets/diagrams/ast-0095-enemy-movement-symbol-anatomy.png",
@@ -178,59 +60,7 @@
    "section": "sec-15-4",
    "after": 2,
    "width": "150pt",
-   "caption": "<strong>A boss data card.</strong> 1 Name. 2 Threat. 3 Starting health. 4 Boss type icon. 5 Behaviour deck size. 6 Block. 7 Resist. 8 Heat-up point. 9 Special ability. 10 Set symbol.",
-   "masks": [
-    {
-     "box": [
-      0.27,
-      0.195,
-      0.745,
-      0.43
-     ],
-     "fill": "#0a0b0d",
-     "feather": 5
-    },
-    {
-     "box": [
-      0.14,
-      0.195,
-      0.27,
-      0.268
-     ],
-     "fill": "#0a0b0d",
-     "feather": 4
-    },
-    {
-     "box": [
-      0.745,
-      0.195,
-      0.862,
-      0.268
-     ],
-     "fill": "#0a0b0d",
-     "feather": 4
-    },
-    {
-     "box": [
-      0.14,
-      0.392,
-      0.27,
-      0.432
-     ],
-     "fill": "#0a0b0d",
-     "feather": 4
-    },
-    {
-     "box": [
-      0.745,
-      0.392,
-      0.862,
-      0.432
-     ],
-     "fill": "#0a0b0d",
-     "feather": 4
-    }
-   ]
+   "caption": "<strong>A boss data card.</strong> 1 Name. 2 Threat. 3 Starting health. 4 Boss type icon. 5 Behaviour deck size. 6 Block. 7 Resist. 8 Heat-up point. 9 Special ability. 10 Set symbol."
   },
   {
    "file": "assets/diagrams/ast-0098-boss-behaviour-card-anatomy-2022.png",
@@ -260,33 +90,7 @@
     0.955,
     0.95
    ],
-   "caption": "<strong>Boss arcs.</strong> The lines that divide the boss's base, extended across the tile, divide the nodes among the front, left, right, and back arcs. A node on a line is in both arcs. The dark disc is the boss's base and the grey disc is a character.",
-   "masks": [
-    {
-     "box": [
-      0.386,
-      0.38,
-      0.622,
-      0.63
-     ],
-     "shape": "ellipse",
-     "fill": "#17130f",
-     "feather": 0,
-     "outline": "#b9974a"
-    },
-    {
-     "box": [
-      0.2263,
-      0.6465,
-      0.3481,
-      0.78
-     ],
-     "shape": "ellipse",
-     "fill": "#8a857c",
-     "feather": 0,
-     "outline": "#e2ddd0"
-    }
-   ]
+   "caption": "<strong>Boss arcs.</strong> The lines that divide the boss's base, extended across the tile, divide the nodes among the front, left, right, and back arcs. A node on a line is in both arcs."
   }
  ],
  "target_pages": 100,
@@ -677,5 +481,83 @@
     ]
    ]
   }
- }
+ },
+ "plates": {
+  "min_gap": 104,
+  "min_h": 70,
+  "pool": [
+   "assets/photography/ast-0138-expansion-miniature-armour-adventurers.png",
+   "assets/photography/ast-0138-expansion-miniature-armour-black-iron.png",
+   "assets/photography/ast-0138-expansion-miniature-armour-black-knight.png",
+   "assets/photography/ast-0138-expansion-miniature-armour-catarina.png",
+   "assets/photography/ast-0138-expansion-miniature-armour-crimson-robes.png",
+   "assets/photography/ast-0138-expansion-miniature-armour-dark.png",
+   "assets/photography/ast-0138-expansion-miniature-armour-embraced-armour-of-favour.png",
+   "assets/photography/ast-0138-expansion-miniature-armour-gold-trimmed-black-robes.png",
+   "assets/photography/ast-0138-expansion-miniature-armour-guardian.png",
+   "assets/photography/ast-0138-expansion-miniature-armour-havels.png",
+   "assets/photography/ast-0138-expansion-miniature-artorias.png",
+   "assets/photography/ast-0138-expansion-miniature-black-dragon-kalameet.png",
+   "assets/photography/ast-0138-expansion-miniature-black-hollow-mage.png",
+   "assets/photography/ast-0138-expansion-miniature-character-cleric.png",
+   "assets/photography/ast-0138-expansion-miniature-character-deprived.png",
+   "assets/photography/ast-0138-expansion-miniature-character-mercenary.png",
+   "assets/photography/ast-0138-expansion-miniature-character-pyromancer.png",
+   "assets/photography/ast-0138-expansion-miniature-character-sorcerer.png",
+   "assets/photography/ast-0138-expansion-miniature-character-thief.png",
+   "assets/photography/ast-0138-expansion-miniature-crystal-lizard.png",
+   "assets/photography/ast-0138-expansion-miniature-demonic-foliage.png",
+   "assets/photography/ast-0138-expansion-miniature-executioners-chariot.png",
+   "assets/photography/ast-0138-expansion-miniature-falchion-skeleton.png",
+   "assets/photography/ast-0138-expansion-miniature-firebomb-hollow.png",
+   "assets/photography/ast-0138-expansion-miniature-great-grey-wolf-sif.png",
+   "assets/photography/ast-0138-expansion-miniature-invader-armorer-dennis.png",
+   "assets/photography/ast-0138-expansion-miniature-invader-brylex.png",
+   "assets/photography/ast-0138-expansion-miniature-invader-fencer-sharron.png",
+   "assets/photography/ast-0138-expansion-miniature-invader-kirk-knight-of-thorns.png",
+   "assets/photography/ast-0138-expansion-miniature-invader-maldron-the-assassin.png",
+   "assets/photography/ast-0138-expansion-miniature-invader-maneater-mildred.png",
+   "assets/photography/ast-0138-expansion-miniature-invader-marvelous-chester.png",
+   "assets/photography/ast-0138-expansion-miniature-invader-melinda-the-butcher.png",
+   "assets/photography/ast-0138-expansion-miniature-invader-oliver-the-collector.png",
+   "assets/photography/ast-0138-expansion-miniature-invader-paladin-leeroy.png",
+   "assets/photography/ast-0138-expansion-miniature-invader-xanthous-king-jeremiah.png",
+   "assets/photography/ast-0138-expansion-miniature-ironclad-soldier.png",
+   "assets/photography/ast-0138-expansion-miniature-mimic-closed.png",
+   "assets/photography/ast-0138-expansion-miniature-mimic.png",
+   "assets/photography/ast-0138-expansion-miniature-mushroom-child.png",
+   "assets/photography/ast-0138-expansion-miniature-mushroom-parent.png",
+   "assets/photography/ast-0138-expansion-miniature-plow-scarecrow.png",
+   "assets/photography/ast-0138-expansion-miniature-shears-scarecrow.png",
+   "assets/photography/ast-0138-expansion-miniature-silver-knight-spearman.png",
+   "assets/photography/ast-0138-expansion-miniature-sir-alonne.png",
+   "assets/photography/ast-0138-expansion-miniature-smelter-demon.png",
+   "assets/photography/ast-0138-expansion-miniature-stone-guardian.png",
+   "assets/photography/ast-0138-expansion-miniature-stone-knight.png",
+   "assets/photography/ast-0138-expansion-miniature-summon-eygon-of-carim.png",
+   "assets/photography/ast-0138-expansion-miniature-summon-horace-the-hushed.png",
+   "assets/photography/ast-0138-expansion-miniature-summon-lucatiel-of-mirrah.png",
+   "assets/photography/ast-0138-expansion-miniature-summon-rogue-witch-beatrice.png",
+   "assets/photography/ast-0138-expansion-miniature-summon-ruined-aflis.png",
+   "assets/photography/ast-0138-expansion-miniature-summon-sellsword-luet.png",
+   "assets/photography/ast-0138-expansion-miniature-summon-siegward-of-catarina.png",
+   "assets/photography/ast-0138-expansion-miniature-summon-sirris-of-the-sunless-realms.png",
+   "assets/photography/ast-0138-expansion-miniature-summon-solaire-of-astora.png",
+   "assets/photography/ast-0138-expansion-miniature-summon-sword-master.png",
+   "assets/photography/ast-0138-expansion-miniature-the-pursuer.png",
+   "assets/photography/ast-0131-miniature-black-knight.png",
+   "assets/photography/ast-0131-miniature-cleric.png",
+   "assets/photography/ast-0131-miniature-giant-skeleton-archer.png",
+   "assets/photography/ast-0131-miniature-giant-skeleton-soldier.png",
+   "assets/photography/ast-0131-miniature-gravelord-nito.png",
+   "assets/photography/ast-0131-miniature-necromancer.png",
+   "assets/photography/ast-0131-miniature-pyromancer.png",
+   "assets/photography/ast-0131-miniature-skeleton-archer.png",
+   "assets/photography/ast-0131-miniature-skeleton-beast.png",
+   "assets/photography/ast-0131-miniature-skeleton-soldier.png",
+   "assets/photography/ast-0131-miniature-thief.png"
+  ],
+  "by_chapter": {}
+ },
+ "section_starts": true
 }

@@ -84,6 +84,13 @@ h4 { font: italic 700 8.9pt/1.25 "Libre Caslon Text"; margin: 6pt 0 2pt 0; break
 h2 + p, h3 + p { orphans: 3; }
 h2.attop, h3.attop { margin-top: 0; }
 .keep { break-inside: avoid; }
+/* numbered sections that start a new page or column (decided by the build from measured positions) */
+.sec.newpage { break-before: page; }
+.sec.newcol { break-before: column; }
+/* illustration in the room a section break leaves at the foot of a column */
+.plate { break-inside: avoid; break-before: avoid; text-align: center; }
+.plate img { display: block; margin: 0 auto; }
+.plate .pc { height: auto; margin-top: 4pt; }
 
 /* ---------- blocks ---------- */
 .example { background: var(--tint); border-left: 1.6pt solid var(--rule); padding: 4.4pt 6.5pt 4.6pt 7pt; margin: 5.5pt 0; box-decoration-break: clone; font-size: 8.5pt; line-height: 11.6pt; }
