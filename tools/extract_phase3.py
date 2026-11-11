@@ -18,7 +18,11 @@ contact sheets build/art_contact*.jpg.
 
 usage: extract_phase3.py [extract] [megaboss] [candidates] [sheets]   (default: all four, in that order)
   extract  = the art, card faces, dashboards and fans of the books catalogued in Phases 0 to 2
-  megaboss = the eight mega-boss expansion booklets supplied on 2026-11-11 (parents AST-0156 to AST-0163)
+  megaboss = the eight mega-boss expansion booklets supplied on 2026-11-11 (parents AST-0156 to AST-0163), essentials only:
+             logo-free cover art, one boss painting or concept, the miniature render, both sides of the game board
+  megaboss-full = the wider set for those booklets (all paintings, covers with logo, page-region crops of the card faces and
+             special-rule plates). NOT part of the default run and not completed or checked in this pass: the lead asked
+             for the essentials only. Every page-region crop it makes must be looked at before use (purchaser-line rule).
 """
 import os, sys, json, warnings
 warnings.simplefilter('ignore')
@@ -677,6 +681,11 @@ MB_STRIP_TOP = {'FK': 46, 'TLG': 46}    # page 12 strips whose deck icons sit ab
 PAGECROP = 'Cut from a page render because the card is built on the page from a texture, an art layer and live text (no single image object): the parchment page shows at the rounded corners.'
 
 
+# the one logo-free painting or concept of the boss that the essentials run takes from each booklet (None: the booklet has none)
+MB_MAIN = {'FK': 'concept-king-on-white', 'GAD': 'concept-sheet-on-white', 'GD': 'concept-sketches-on-grey', 'TLG': 'concept-front-and-back',
+           'MFA': 'art-manus-over-small-figure', 'OIK': None, 'VOT': 'art-vordt-on-black', 'AD': 'concept-stray-demon-on-white'}
+
+
 def _card_boxes(key, page, wmin=38, wmax=210):
     out = []
     for i in P.doc(key)[page - 1].get_image_info(xrefs=True):
@@ -741,7 +750,7 @@ def page_crop(parent, folder, slug, name, typ, key, page, box, dpi, meta, notes=
     return record(parent, name, typ, key, page, path, fmt, im, method, box, None, notes, meta)
 
 
-def run_megaboss():
+def run_megaboss(full=False):
     if not RECS:
         for r in json.load(open(RECFILE)):
             if r['parent'] < MB_FIRST:
@@ -753,26 +762,32 @@ def run_megaboss():
         T = MB_ART[key]
         # cover, text-free crop of it, back cover
         p, x, subj, mood = T['cover']
-        single(parent, 'art', f'{sl}-cover', f'{boss} expansion front cover, logo baked in', 'art', key, p, x,
+        if full:
+            single(parent, 'art', f'{sl}-cover', f'{boss} expansion front cover, logo baked in', 'art', key, p, x,
                m(subj + ', with the game logo', mood, COVER, 17, baked=LOGO), LOGO, None, None, art=True)
         single(parent, 'art', f'{sl}-cover-art-only', f'{boss} front cover, art above the logo', 'art', key, p, x,
-               m(subj, mood, COL, 17, (SPOT,)), 'Text-free crop: the top 61.5 % of the cover image, ending just above the logo flourish.', (0, 0, 1, 0.615), None, art=True)
+               m(subj, mood, COL, 17, (SPOT, COVER)), 'Text-free crop: the top 61.5 % of the cover image, ending just above the logo flourish. The lower third of the cover carries the baked-in game logo.', (0, 0, 1, 0.615), None, art=True)
         p, x, subj, mood = T['back']
-        single(parent, 'art', f'{sl}-backcover', f'{boss} expansion back cover', 'art', key, p, x,
+        if full:
+            single(parent, 'art', f'{sl}-backcover', f'{boss} expansion back cover', 'art', key, p, x,
                m(subj, mood, BACK, 19, (FULL, COL)), 'The lower part is black (room for back-cover text).', None, None, art=True)
         for slug, name, p, x, subj, mood, use, ch, also, hdr, notes in T['art']:
-            single(parent, 'art', f'{sl}-{slug}', f'{boss} booklet {name}', 'art', key, p, x, m(subj, mood, use, ch, also, hdr=hdr), notes, None, None, art=True)
-        for p, x, slug, name in T['minis']:
+            if not full and slug != MB_MAIN.get(key):
+                continue
+            single(parent, 'art', f'{sl}-{slug}', f'{boss} booklet {name}', 'art', key, p, x, m(subj, mood, use, ch if full else 17, also, hdr=hdr), notes, None, None, art=True)
+        for p, x, slug, name in (T['minis'] if full else T['minis'][:1]):
             single(parent, 'photography', f'{sl}-{slug}', name, 'photography', key, p, x,
                    m(name.replace(' render', '') + ', grey resin render cut out by its own mask', 'miniature, grey, imposing', COL, 17, (SPOT, FULL), kind='miniature render'),
                    'SFG miniature render, cut out by its own soft mask. Largest copy in the booklet.')
         bx, ex = T['boards']
         single(parent, 'photography', f'{sl}-game-board-boss-side', f'{boss} mega-boss game board, boss side (p.5)', 'photography', key, 5, bx,
-               m(f'The {boss.replace("The ", "")} mega-boss game board, boss side, with its node markings', 'component, top-down, arena', COL, 17, (FULL, SPOT), kind='game board'),
+               m(f'The {boss.replace("The ", "")} mega-boss game board, boss side, with its node markings', 'component, top-down, arena', COL, 16, (FULL, SPOT), kind='game board'),
                'Node markers are printed on the board. Use this side to show where the special rule plays out.')
         single(parent, 'photography', f'{sl}-game-board-encounter-side', f'{boss} mega-boss game board, encounter side (p.9, larger of the two copies)', 'photography', key, 9, ex,
-               m(f'The {boss.replace("The ", "")} game board, level 4 encounter side', 'component, top-down, tile', COL, 19, (SPOT,), kind='game board'),
+               m(f'The {boss.replace("The ", "")} game board, level 4 encounter side', 'component, top-down, tile', COL, 15, (SPOT,), kind='game board'),
                'The tokens and the card that lie on it on p.9 are separate objects and are not in this image.')
+        if not full:      # essentials only: cover art, boss painting, miniature render, both sides of the board
+            continue
         for p, x, slug, name, subj, mood in T.get('extra_objects', []):
             single(parent, 'photography', f'{sl}-{slug}', name, 'photography', key, p, x, m(subj, mood, SPOT, 17, kind='token'), 'Small: inline or thumbnail size only.')
         # ---- card faces: page-region crops
@@ -901,7 +916,7 @@ def run_sheets(per=48, cols=6, T=260):
         print(name, sheet.size, f"n {chunk[0]['n']}–{chunk[-1]['n']}")
 
 
-SECTIONS = {'extract': run_extract, 'megaboss': run_megaboss, 'candidates': run_candidates, 'sheets': run_sheets}
+SECTIONS = {'extract': run_extract, 'megaboss': run_megaboss, 'megaboss-full': lambda: run_megaboss(True), 'candidates': run_candidates, 'sheets': run_sheets}
 if __name__ == '__main__':
-    for s in ([a for a in sys.argv[1:] if a in SECTIONS] or list(SECTIONS)):
+    for s in ([a for a in sys.argv[1:] if a in SECTIONS] or ['extract', 'megaboss', 'candidates', 'sheets']):
         SECTIONS[s]()

@@ -181,5 +181,7 @@ p.faq-q .ql, p.faq-a .ql { font: 700 7.4pt "Cinzel"; color: #7a622b; margin-righ
 @page backcover { margin: 0; @top-left { content: none } @top-right { content: none } @bottom-center { content: none; background: none } }
 .backcover { page: backcover; break-before: page; width: 8.5in; height: 11in; background: #0b0a09 url("../assets/textures/ast-0143-back-cover-dark-stone-bg.png") center / cover no-repeat; position: relative; }
 .backcover .bc { position: absolute; left: 2.25in; right: 2.25in; top: 4.05in; text-align: center; color: #231f20; }
+.backcover img.bcart { position: absolute; left: 2.5in; width: 3.5in; top: 1.55in; border: 0.7pt solid #9c8141; padding: 3pt; background: #110f0e; }
+.backcover.withart .bc { top: 6.25in; }
 .backcover .bc1 { font: italic 400 11.4pt/16.6pt "Libre Caslon Text"; text-align: center; hyphens: manual; }
 .backcover .bc2 { font: 600 9.6pt/14pt "Cinzel"; letter-spacing: 0.08em; text-align: center; margin-top: 22pt; hyphens: manual; }

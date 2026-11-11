@@ -93,7 +93,7 @@
    "caption": "<strong>Boss arcs.</strong> The lines that divide the boss's base, extended across the tile, divide the nodes among the front, left, right, and back arcs. A node on a line is in both arcs."
   }
  ],
- "target_pages": 100,
+ "target_pages": 130,
  "heroes": {
   "01": {
    "banner": {
@@ -669,7 +669,9 @@
   "min_h": 70,
   "max_stack": 2,
   "enlarge": 1.0,
-  "never": [],
+  "never": [
+   "assets/art/ast-0120-knight-resting-at-bonfire.jpg"
+  ],
   "by_chapter": {
    "03": [
     "assets/art/ast-0130-cover-characters-art-only.jpg"
@@ -706,7 +708,6 @@
     "assets/art/ast-0130-explorers-knight-in-golden-hall.png"
    ],
    "11": [
-    "assets/art/ast-0120-knight-resting-at-bonfire.jpg",
     "assets/art/ast-0130-chariot-knight-by-bonfire.jpg",
     "assets/art/ast-0129-env-bonfire-in-autumn-leaves.png"
    ],
@@ -784,7 +785,6 @@
    "assets/art/ast-0125-ruined-cathedral-interior.jpg",
    "assets/art/ast-0130-backcover-iron-keep-tower.jpg",
    "assets/art/ast-0130-backcover-chariot-rope-bridge.jpg",
-   "assets/art/ast-0120-knight-resting-at-bonfire.jpg",
    "assets/art/ast-0130-darkroot-overgrown-stone-doorway.jpg",
    "assets/art/ast-0130-phantoms-procession-sketch.jpg",
    "assets/art/ast-0122-ruined-keep-over-graveyard-wide-2017.jpg",
@@ -905,5 +905,6 @@
    "assets/photography/ast-0131-miniature-thief.png"
   ]
  },
- "section_starts": true
+ "section_starts": true,
+ "back_cover_art": "assets/art/ast-0120-knight-resting-at-bonfire.jpg"
 }

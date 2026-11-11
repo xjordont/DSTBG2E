@@ -526,7 +526,9 @@ def back_cover(intro_md):
     strip = lambda t: re.sub(r'\(see [^)]*\)', '', re.sub(r'[*_]', '', t)).replace('  ', ' ').replace(' .', '.').strip()
     lead = strip(paras[0]) if paras else ''
     last = strip(paras[-1]) if len(paras) > 1 else ''
-    return f'<section class="backcover"><div class="bc"><p class="bc1">{lead}</p><p class="bc2">{last}</p></div></section>'
+    art = TUNING.get('back_cover_art')
+    pic = f'<img class="bcart" src="{art}" alt="">' if art and (ROOT / art).exists() else ''
+    return f'<section class="backcover{" withart" if pic else ""}">{pic}<div class="bc"><p class="bc1">{lead}</p><p class="bc2">{last}</p></div></section>'
 
 
 def plate_tag(soup, sid, plate):
