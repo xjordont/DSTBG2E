@@ -58,7 +58,7 @@ Each enemy has a *data card* (see §8.2) and the number of models listed. *Cryst
 
 ## 2.3 Bosses
 
-Each *boss* has a model, a *health dial*, a *data card* (see §15.4), a *behaviour deck* (see §15.5), and two or more *boss treasure* cards (see §2.5). A *mini-boss* or *main-boss* is fought on the *boss tiles* (see §15.3). A *mega-boss* is fought on the *mega-boss game board* supplied with its expansion (see §2.9), after a Level 4 encounter (see §6.7).
+Each *boss* has a model, a *health dial*, a *data card* (see §15.4), a *behaviour deck* (see §15.5), and two or more *boss treasure* cards (see §2.5). A boss fought with several models has a health dial for each of them (see §17.1). A *mini-boss* or *main-boss* is fought on the *boss tiles* (see §15.3). A *mega-boss* is fought on the *mega-boss game board* supplied with its expansion (see §2.9), after a Level 4 encounter (see §6.7).
 
 ### Mini-Bosses
 
@@ -83,11 +83,11 @@ Each *boss* has a model, a *health dial*, a *data card* (see §15.4), a *behavio
 - Sir Alonne (Iron Keep)
 - Smelter Demon (Iron Keep)
 
-Ornstein & Smough is one main-boss fought with two models, Dragon Slayer Ornstein and Executioner Smough. The pair shares one health dial and one behaviour deck, and each behaviour card names the model that acts (see §17.1).
+Ornstein & Smough is one main-boss fought with two boss models, Dragon Slayer Ornstein and Executioner Smough. Each model has its own data card and health dial, the pair shares one behaviour deck, and both models act on each boss turn (see §17.2).
 
 ### Mega-Bosses
 
-Each mega-boss is supplied by the expansion of the same name, except the Stray Demon, which is supplied by the Asylum Demon expansion together with the Asylum Demon mini-boss.
+Each mega-boss is supplied by the expansion of the same name, except the Stray Demon, which is supplied by the Asylum Demon expansion together with the Asylum Demon mini-boss. Both demons are fought on that expansion's game board (see §17.3).
 
 - Black Dragon Kalameet
 - Executioner's Chariot
@@ -278,6 +278,6 @@ Each mega-boss expansion supplies one set of the following components.
 - Gaping Dragon only: 4x Corrosion tokens (see §8.5)
 - The Four Kings only: 4x Identifier tokens (see §17.10)
 - Guardian Dragon only: 4x Fiery Breath cards (see §17.10)
-- Old Iron King only: 6x Fire Beam cards (see §17.10)
+- Old Iron King only: 6x Beam cards (see §17.10, Old Iron King)
 
 The *mega-boss game board* is used with its Level 4 encounter side face up for the Level 4 encounter and with its mega-boss side face up for the mega-boss encounter (see §6.7). The Executioner's Chariot expansion also supplies the Black Hollow Mage and Falchion Skeleton enemies (see §2.2) and six encounter cards of Levels 1 to 3. The Asylum Demon expansion also supplies the Asylum Demon mini-boss, with its own data card, nine behaviour cards, and two boss treasure cards; the one model serves for both the Asylum Demon and the Stray Demon (see §2.3).

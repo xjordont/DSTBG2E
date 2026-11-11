@@ -323,3 +323,10 @@ The embering of every character at a boss's defeat (see §16.5) provokes no inva
 - After: "An invader appears once, unless a campaign states otherwise (see §19.4; §19.15). Whether it was killed or vanished,"
 - Rationale: Two campaigns bring a listed invader back until it is killed; the general rule now points to them.
 - Source: final rulings, lead-E04 (`06_final_rulings.md`); campaign memo, cross-cluster effects
+
+### CH-12-047 · §12.2
+- Type: clarification
+- Before: "one of its unused behaviour cards, taken at random, is shuffled into its behaviour deck in place of a heat-up card (see §15.5)."
+- After: "one of its unused behaviour cards, taken at random, serves as its heat-up card, and the invader heats up as a boss does (see §15.5, Heat-Up)."
+- Rationale: [MECHANICAL CHANGE] The invader follows the one heat-up procedure and timing of boss-E01: deck and discard pile reshuffled with the added card at the start of its next turn.
+- Source: final rulings, lead-E17 (`06_final_rulings.md`); boss memo, cross-cluster effects

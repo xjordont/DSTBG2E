@@ -230,3 +230,38 @@
 - After: "A *summon* does not hold the aggro token, and damage inflicted by a summon does not move it. While the Distract icon of a summon's behaviour card is in effect, the boss treats the summon as the holder (see §12.1)."
 - Rationale: §16.4 owns boss aggro and did not mention the one effect that redirects it; the sentence points to §12.1 without restating the rule.
 - Source: final rulings, phantom-E17 (`06_final_rulings.md`); Official Phantoms booklet, Distract (lines 293-298).
+
+### CH-16-034 · §16.1
+- Type: ruling
+- Before: "A boss's turn is resolved as follows."
+- After: "A boss's turn is resolved as follows. If the boss is due to heat up, its heat-up is carried out before step 1 (see §15.5, Heat-Up)."
+- Rationale: [MECHANICAL CHANGE] States in the boss turn where the heat-up of boss-E01 is carried out, without renumbering the steps.
+- Source: final rulings, boss-E04 (`06_final_rulings.md`); follows boss-E01
+
+### CH-16-035 · §16.1
+- Type: ruling
+- Before: "If the boss heats up during its own turn, the *heat-up card* joins the behaviour deck after step 5 (see §15.5, Heat-Up)."
+- After: "If the boss's health is reduced to or below its heat-up point during its own turn, the *heat-up card* joins the behaviour deck at the start of the boss's next turn (see §15.5, Heat-Up)."
+- Rationale: Keeps §16.1 in step with the single heat-up timing of boss-E01; the result for a heat-up caused during the boss's own turn is unchanged.
+- Source: final rulings, boss-E05 (`06_final_rulings.md`); follows boss-E01
+
+### CH-16-036 · §16.4
+- Type: ruling
+- Before: "At the end of each character's *turn*, if that character inflicted damage on the boss during the turn, the aggro token moves to that character. If the character inflicted no damage on the boss, the token stays with its holder."
+- After: "At the end of each character's *turn*, if that character inflicted damage on the boss during the turn, the aggro token moves to that character. Damage inflicted on another enemy model that the boss's special rules place in the encounter moves the token in the same way (see §17). If the character inflicted no such damage, the token stays with its holder."
+- Rationale: [MECHANICAL CHANGE] Without this the token cannot move during the first part of the Executioner's Chariot encounter, when the boss cannot be damaged; one general clause closes the gap for every boss that brings other enemies.
+- Source: final rulings, boss-E06 (`06_final_rulings.md`); Issue list ch. 17, Executioner's Chariot (c); Chariot booklet DS-EC-Rules-Web.txt lines 446-462 (other enemies act in the encounter).
+
+### CH-16-037 · §16.5
+- Type: ruling
+- Before: "A boss fought with two models, and the *Twin Gargoyles*, are defeated as their own rules state (see §17.1)."
+- After: "A boss fought with several boss models is defeated only when its own rules say so: a boss model whose health dial is reduced to zero is removed from the tile, and the encounter continues against the models that remain (see §17.1, Several Boss Models in One Encounter). The *Twin Gargoyles* are defeated as their own rule states (see §17.1, Twin Gargoyles)."
+- Rationale: [MECHANICAL CHANGE] Boss Death must not be resolved when one of several boss models falls (Ornstein & Smough, the Four Kings).
+- Source: final rulings, boss-E07 (`06_final_rulings.md`); Ornstein and Smough data cards (community transcription, DSBG-Shuffle); Four Kings booklet lines 445-447.
+
+### CH-16-038 · §16.4
+- Type: clarification
+- Before: "A character inflicts damage on a boss when an attack lowers the boss's *health dial* by one or more."
+- After: "A character inflicts damage on a boss when the character's attack, or a *bleed* that the attack triggers, lowers the boss's *health dial* by one or more."
+- Rationale: Bleed triggered by a character's attack counts for the aggro token (combat-E17), and bleed is not itself an attack.
+- Source: final rulings, lead-E13 (`06_final_rulings.md`); combat memo, cross-cluster effects

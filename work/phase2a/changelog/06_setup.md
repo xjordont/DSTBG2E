@@ -490,3 +490,10 @@
 - After: "7. If the party consists of one character, place six *souls* on that character's dashboard (see §7.6). Before leaving the bonfire tile for the first time, that character may visit the *Firekeeper* and Blacksmith Andre as during a rest (see §11.3; §11.4)."
 - Rationale: [MECHANICAL CHANGE] The six souls exist to help a lone character through the first encounters, and could not be spent before a rest that costs a spark.
 - Source: final rulings, lead-E10 (`06_final_rulings.md`); core memo, observation without an edit
+
+### CH-06-070 · §6.5
+- Type: completion
+- Before: "6. Place the mini-boss's model, data card, health dial, and boss treasure cards on the mini-boss tile."
+- After: "6. Place the mini-boss's model, data card, health dial, and boss treasure cards on the mini-boss tile. When the Asylum Demon is the mini-boss, its expansion's game board takes the place of the mini-boss tile throughout this setup (see §17.3)."
+- Rationale: The Asylum Demon mini-boss is fought on its expansion's game board (boss-E11); the setup now points to it.
+- Source: final rulings, lead-E15 (`06_final_rulings.md`); boss memo, cross-cluster effects

@@ -221,3 +221,88 @@
 - After: "**Victory bonus.** The reward for winning a *PvP encounter* that follows the defeat of a boss other than the final boss, marked by a spare token placed beside the winner's dashboard. It adds one to the attack value of each of the character's attacks in every subsequent PvP encounter. A character holds no more than one victory bonus, and it is kept until the game ends (see §20.8)."
 - Rationale: [MECHANICAL CHANGE] Keeps the entry in step with §20.8: one bonus, not cumulative, marked by a spare token.
 - Source: final rulings, phantom-E39 (`06_final_rulings.md`); Follows phantom-E30.
+
+### CH-21-033 · Glossary, Boss
+- Type: clarification
+- Before: "**Boss.** A single powerful enemy whose turns are driven by a behaviour deck and whose base is divided into four arcs. There are three ranks: *mini-boss*, *main-boss*, and *mega-boss*. A boss is not scaled for the number of characters and cannot be pushed by characters (see §15; §16)."
+- After: "**Boss.** A powerful enemy whose turns are driven by a behaviour deck and whose base is divided into four arcs. Most bosses are fought with one model; Ornstein & Smough and the Four Kings are fought with several boss models, each with its own health dial (see §17.1). There are three ranks: *mini-boss*, *main-boss*, and *mega-boss*. A boss is not scaled for the number of characters and cannot be pushed by characters (see §15; §16)."
+- Rationale: A boss is no longer always a single model.
+- Source: final rulings, boss-E30 (`06_final_rulings.md`); follows boss-E08
+
+### CH-21-034 · Glossary, Heat-up
+- Type: ruling
+- Before: "**Heat-up.** The event in which a boss, mimic, or invader becomes more dangerous. When a boss's health is reduced to or below its heat-up point, one heat-up card taken at random is shuffled into the cards that remain in its behaviour deck (see §15.5); a mimic or an invader adds one of its unused behaviour cards instead. Some bosses heat up differently (see §17)."
+- After: "**Heat-up.** The event in which a boss, mimic, or invader becomes more dangerous. When a boss's health is reduced to or below its heat-up point, its behaviour deck and discard pile are gathered at the start of its next turn and shuffled together with one heat-up card taken at random to form a new behaviour deck (see §15.5); a mimic or an invader adds one of its unused behaviour cards instead. Some bosses heat up differently (see §17)."
+- Rationale: [MECHANICAL CHANGE] Keeps the glossary in step with the heat-up rule of boss-E01.
+- Source: final rulings, boss-E31 (`06_final_rulings.md`); follows boss-E01
+
+### CH-21-035 · Glossary, Signature card
+- Type: clarification
+- Before: "**Signature card.** One of Black Dragon Kalameet's two behaviour cards, Mark of Calamity and Hellfire Blast, that are included in every behaviour deck built for Kalameet (see §17.8)."
+- After: "**Signature card.** A behaviour card that is included in every behaviour deck built for its boss: Black Dragon Kalameet's Mark of Calamity and Hellfire Blast, the Gaping Dragon's two Stomach Slam cards, and the Old Iron King's three Fire Beam cards (see §17.8; §17.10)."
+- Rationale: The term now serves three bosses.
+- Source: final rulings, boss-E32 (`06_final_rulings.md`); follows boss-E14, boss-E21, boss-E25
+
+### CH-21-036 · Glossary, Wind Up
+- Type: clarification
+- Before: "**Wind Up.** A behaviour icon printed on behaviour cards of the Asylum Demon and the Stray Demon. When it is resolved, each character may spend one stamina to move to an adjacent node before the next icon is resolved; the movement counts as a *Run* (see §17.3)."
+- After: "**Wind Up.** A behaviour icon printed on behaviour cards of the Asylum Demon, the Stray Demon, and the Last Giant. When it is resolved, each character may spend one stamina to move to an adjacent node before the next icon is resolved; the movement counts as a *Run* (see §17.3)."
+- Rationale: The Last Giant's cards show the same icon.
+- Source: final rulings, boss-E33 (`06_final_rulings.md`); Last Giant booklet lines 452-462
+
+### CH-21-037 · Glossary, Shaft
+- Type: clarification
+- Before: "**Shaft.** A weapon icon. An attack option with the shaft icon cannot target a model on the attacker's own node (see §10.3, Shaft)."
+- After: "**Shaft.** A weapon icon. An attack option with the shaft icon cannot target a model on the attacker's own node (see §10.3, Shaft). On a behaviour card of Manus, Father of the Abyss, an attack with the shaft icon does not target a character on Manus's own node (see §17.10, Manus, Father of the Abyss)."
+- Rationale: The icon also appears on a boss's cards.
+- Source: final rulings, boss-E34 (`06_final_rulings.md`); Manus booklet lines 446-466
+
+### CH-21-038 · Glossary, Aggro token
+- Type: ruling
+- Before: "**Aggro token.** The single token that marks the character with aggro. It is placed on the character with the highest threat at the start of each encounter and, after each round of character turns, moves to the character who inflicted the most damage on enemy models during that round (on a tie, or if no damage was inflicted, the holder keeps it). If the holder dies it moves to the living character with the highest threat. In boss encounters it moves to any character who damages the boss during their turn (see §7.5, Encounter Turn Order; §16.4)."
+- After: "**Aggro token.** The single token that marks the character with aggro. It is placed on the character with the highest threat at the start of each encounter and, after each round of character turns, moves to the character who inflicted the most damage on enemy models during that round (on a tie, or if no damage was inflicted, the holder keeps it). If the holder dies it moves to the living character with the highest threat. In boss encounters it moves to any character who damages the boss, or another enemy model in the encounter, during their turn (see §7.5, Encounter Turn Order; §16.4)."
+- Rationale: [MECHANICAL CHANGE] Keeps the glossary in step with boss-E06.
+- Source: final rulings, boss-E35 (`06_final_rulings.md`); follows boss-E06
+
+### CH-21-039 · Glossary, Mini-boss
+- Type: completion
+- Before: "**Mini-boss.** The first boss of the standard game, fought on the mini-boss tile (see §6.5; §15.3)."
+- After: "**Mini-boss.** The first boss of the standard game, fought on the mini-boss tile or, for the Asylum Demon, on the mega-boss game board of its expansion (see §6.5; §15.3; §17.3)."
+- Rationale: Keeps the glossary in step with boss-E03 and boss-E11.
+- Source: final rulings, boss-E36 (`06_final_rulings.md`); Asylum Demon booklet lines 183-190
+
+### CH-21-040 · Glossary, Beam card (new entry)
+- Type: completion
+- Before: "**Behaviour card.** A card drawn from the behaviour deck of a boss, mimic, invader, or summon at the start of that model's turn. Its icons are resolved from left to right. A boss's current behaviour card sets the range and the dodge difficulty of its attacks and shows its weak arcs until the next card is drawn (see §15.5; §16.1)."
+- After: "**Beam card.** A card from the Old Iron King expansion revealed when a Beam icon is resolved. It shows the Iron King node on which the Old Iron King's model is placed and the nodes whose characters the Beam attack targets (see §17.10, Old Iron King).
+
+**Behaviour card.** A card drawn from the behaviour deck of a boss, mimic, invader, or summon at the start of that model's turn. Its icons are resolved from left to right. A boss's current behaviour card sets the range and the dodge difficulty of its attacks and shows its weak arcs until the next card is drawn (see §15.5; §16.1)."
+- Rationale: New defined term of boss-E25.
+- Source: final rulings, boss-E38 (`06_final_rulings.md`); Old Iron King booklet lines 435-460
+
+### CH-21-041 · Glossary, Cage node (new entry)
+- Type: completion
+- Before: "**Calamity.** A condition from the Black Dragon Kalameet expansion. A model holds at most one calamity token, which reduces the total of each of its block, resist, and dodge rolls by one. A calamity token is removed only when the encounter ends (see §8.5, Calamity)."
+- After: "**Cage node.** One of the four nodes at the corners of the mega-boss side of the Guardian Dragon's *mega-boss game board*. No model may *move*, *dodge*, or be pushed into a cage node; the Guardian Dragon's model is placed on one only when it resolves an Inferno icon (see §17.10, Guardian Dragon).
+
+**Calamity.** A condition from the Black Dragon Kalameet expansion. A model holds at most one calamity token, which reduces the total of each of its block, resist, and dodge rolls by one. A calamity token is removed only when the encounter ends (see §8.5, Calamity)."
+- Rationale: New defined term of boss-E22.
+- Source: final rulings, boss-E39 (`06_final_rulings.md`); Guardian Dragon booklet lines 438-444
+
+### CH-21-042 · Glossary, Fiery Breath card (new entry)
+- Type: completion
+- Before: "**Final boss.** The last boss of the game: the main-boss, or the mega-boss if the players chose to add one. Defeating the final boss wins the game (see §7.1). In campaign play the final boss is the last boss listed in the campaign's last section (see §18.1)."
+- After: "**Fiery Breath card.** A card from the Guardian Dragon expansion revealed when an Inferno icon is resolved. It shows the cage node on which the Guardian Dragon's model is placed, the nodes whose characters the Inferno attack targets, and the attack value and dodge difficulty of that attack (see §17.10, Guardian Dragon).
+
+**Final boss.** The last boss of the game: the main-boss, or the mega-boss if the players chose to add one. Defeating the final boss wins the game (see §7.1). In campaign play the final boss is the last boss listed in the campaign's last section (see §18.1)."
+- Rationale: New defined term of boss-E22.
+- Source: final rulings, boss-E40 (`06_final_rulings.md`); Guardian Dragon booklet lines 446-470 and p. 13 card diagram
+
+### CH-21-043 · Glossary, Iron King node (new entry)
+- Type: completion
+- Before: "**Leap.** A boss movement marked with the leap icon. The boss is removed from its node and placed on the node of its target, at any distance, without changing its facing. Every character on that node is pushed to a valid adjacent node chosen by that character's player, and the push is not limited by arcs (see §16.2)."
+- After: "**Iron King node.** One of the three nodes, printed on the mega-boss side of the Old Iron King's *mega-boss game board*, on which the Old Iron King's model is placed. The Old Iron King never stands on any other node (see §17.10, Old Iron King).
+
+**Leap.** A boss movement marked with the leap icon. The boss is removed from its node and placed on the node of its target, at any distance, without changing its facing. Every character on that node is pushed to a valid adjacent node chosen by that character's player, and the push is not limited by arcs (see §16.2)."
+- Rationale: New defined term of boss-E25.
+- Source: final rulings, boss-E41 (`06_final_rulings.md`); Old Iron King booklet lines 424-433

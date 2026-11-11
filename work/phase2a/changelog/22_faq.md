@@ -107,3 +107,21 @@
 **Q.** Who holds the aggro token when its holder dies?"
 - Rationale: States the consequence of core-E36 where players will look for it.
 - Source: final rulings, lead-E12 (`06_final_rulings.md`); core memo, cross-cluster effects
+
+### CH-22-015 · §22.5
+- Type: ruling
+- Before: "**A.** One boss with two models. The models share one data card, one health dial, and one behaviour deck, and the boss heats up once. Each behaviour card names the model that acts. A character who attacks either model attacks the boss, and the weak-arc die is judged against the arcs of the model attacked (see §17.2)."
+- After: "**A.** One boss with two boss models. Each model has its own data card and health dial, the two share one behaviour deck, and both act on each boss turn. When the first model is defeated the boss heats up: the survivor's heat-up cards become the behaviour deck, and the survivor regains health. The boss is defeated when both models have been defeated (see §17.2)."
+- Rationale: [MECHANICAL CHANGE] Keeps the F.A.Q. in step with boss-E10.
+- Source: final rulings, boss-E46 (`06_final_rulings.md`); follows boss-E10
+
+### CH-22-016 · §22.5
+- Type: clarification
+- Before: "**Q.** A campaign section lists the Gargoyle twice. Are the two fights separate encounters?"
+- After: "**Q.** When a boss heats up, is its discard pile shuffled as well?
+
+**A.** Yes. At the start of the boss's next turn the behaviour deck and the discard pile are gathered, one heat-up card taken at random is added, and all the cards are shuffled to form a new behaviour deck. The order learned before the heat-up is lost (see §15.5, Heat-Up).
+
+**Q.** A campaign section lists the Gargoyle twice. Are the two fights separate encounters?"
+- Rationale: The most asked question about boss fights now has its answer in the F.A.Q.; the rule itself is boss-E01.
+- Source: final rulings, boss-E48 (`06_final_rulings.md`); BoardGameGeek thread 1819893 (search summary); follows boss-E01

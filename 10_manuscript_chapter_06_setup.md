@@ -120,7 +120,7 @@ When random boss selection is in play, each boss is chosen at random in step 1: 
 3. Lay the bonfire tile, the four encounter tiles, and the mini-boss tile, which is one of the two *boss tiles* (see §15.3), in a single chain, each tile beside the next, with the bonfire tile at one end and the mini-boss tile at the other. The chain may run straight or turn at any tile, as the table allows; two rows of three tiles, with the bonfire tile and the mini-boss tile in opposite corners, form one such chain.
 4. Turn each encounter tile so that one of its doorways faces the tile before it in the chain and another faces the tile after it, forming a single route from the bonfire tile through all four encounter tiles to the mini-boss tile. A doorway that faces neither of those tiles is not used.
 5. Place the *fog gate* token on the doorway between the fourth encounter tile and the mini-boss tile (see §15.1).
-6. Place the mini-boss's model, data card, health dial, and boss treasure cards on the mini-boss tile.
+6. Place the mini-boss's model, data card, health dial, and boss treasure cards on the mini-boss tile. When the Asylum Demon is the mini-boss, its expansion's game board takes the place of the mini-boss tile throughout this setup (see §17.3).
 7. Build the mini-boss's *behaviour deck* (see §15.5) and place it face down on the mini-boss tile.
 
 ### Encounter Cards

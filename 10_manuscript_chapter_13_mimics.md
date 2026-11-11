@@ -43,7 +43,7 @@ The mimic takes the first *turn*. The mimic and the characters then alternate tu
 A mimic differs from a boss in three ways.
 
 - A mimic has no *boss arcs*. Its behaviour cards show no attack arcs and no *weak arc*, and no attack against a mimic gains the weak-arc die (see §15.6).
-- A mimic has no *heat-up cards*. When a mimic's health is reduced to or below the *heat-up* point {{icon:ast-0030-heat-up-point}} on its data card, one of its unused behaviour cards, taken at random, is shuffled into its behaviour deck in place of a heat-up card (see §15.5).
+- A mimic has no *heat-up cards*. When a mimic's health is reduced to or below the *heat-up* point {{icon:ast-0030-heat-up-point}} on its data card, one of its unused behaviour cards, taken at random, serves as its heat-up card, and the mimic heats up as a boss does (see §15.5, Heat-Up).
 - The killing of a mimic is not the defeat of a boss. It grants no boss soul reward, no *boss treasure*, no *spark*, no embering, and no rest (see §16.5).
 
 A mimic's health is not scaled. No *summon* is called for a mimic encounter, and no *invader* takes part in one (see §12).

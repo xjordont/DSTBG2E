@@ -209,3 +209,10 @@
 - After: "The Hungry Mimic replaces the chest token, and the Knight removes the four stamina cubes. The mimic takes the first turn and attacks the Knight, who still carries the three damage cubes. The characters kill the mimic. The party gains the chest's treasure card and one card drawn from the tier one treasure deck. Each character then gains four souls and one of the treasure cards dealt to the tile, and the Knight removes the stamina cubes placed during the mimic encounter and one damage cube."
 - Rationale: [MECHANICAL CHANGE] The example now computes from §13.2 as amended: stamina cubes are removed before the mimic's first turn, damage cubes are kept.
 - Source: final rulings, phantom-E23 (`06_final_rulings.md`); Follows phantom-E19; Level 2 full reward of four souls from the table in §7.6.
+
+### CH-13-031 · §13.2
+- Type: clarification
+- Before: "one of its unused behaviour cards, taken at random, is shuffled into its behaviour deck in place of a heat-up card (see §15.5)."
+- After: "one of its unused behaviour cards, taken at random, serves as its heat-up card, and the mimic heats up as a boss does (see §15.5, Heat-Up)."
+- Rationale: [MECHANICAL CHANGE] As lead-E17, for the mimic.
+- Source: final rulings, lead-E18 (`06_final_rulings.md`); boss memo, cross-cluster effects

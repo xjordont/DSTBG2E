@@ -392,3 +392,10 @@
 - After: "The setup and the rest that follow the PvP encounter are those of the completed section (see §18.1, Section Completion; §20.9)."
 - Rationale: [MECHANICAL CHANGE] Follows lead-E02.
 - Source: final rulings, lead-E03 (`06_final_rulings.md`)
+
+### CH-18-057 · §18.1, Section Setup
+- Type: completion
+- Before: "- A mini-boss is fought on the mini-boss tile, and a *main-boss* on the two *boss tiles* joined as one (see §15.3)."
+- After: "- A mini-boss is fought on the mini-boss tile, or on its expansion's game board when it is the Asylum Demon (see §17.3), and a *main-boss* on the two *boss tiles* joined as one (see §15.3)."
+- Rationale: As lead-E15, for campaign play.
+- Source: final rulings, lead-E16 (`06_final_rulings.md`); boss memo, cross-cluster effects

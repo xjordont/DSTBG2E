@@ -134,7 +134,7 @@ On each of its turns the invader acts as follows.
 
 An invader has no *boss arcs*. Its behaviour cards show no attack arcs and no *weak arc*, and no attack against an invader gains the weak-arc die (see §15.6).
 
-An invader has no *heat-up cards*. When an invader's health is reduced to or below the *heat-up* point {{icon:ast-0030-heat-up-point}} on its data card, one of its unused behaviour cards, taken at random, is shuffled into its behaviour deck in place of a heat-up card (see §15.5).
+An invader has no *heat-up cards*. When an invader's health is reduced to or below the *heat-up* point {{icon:ast-0030-heat-up-point}} on its data card, one of its unused behaviour cards, taken at random, serves as its heat-up card, and the invader heats up as a boss does (see §15.5, Heat-Up).
 
 The invader's special ability applies as printed on its data card.
 

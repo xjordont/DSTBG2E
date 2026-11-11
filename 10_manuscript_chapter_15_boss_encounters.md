@@ -1,6 +1,6 @@
 # 15. Boss Encounters
 
-Boss encounters are the heart of the adventure. A boss is a single model of great health and power, with a behaviour deck in place of fixed behaviours. There are three types: mini-boss, main-boss, and mega-boss.
+Boss encounters are the heart of the adventure. A boss is a foe of great health and power, with a behaviour deck in place of fixed behaviours. There are three types: mini-boss, main-boss, and mega-boss.
 
 Bosses follow the enemy rules of §8 and §9 except as stated in this chapter and §16.
 
@@ -54,7 +54,7 @@ When the characters rest at the bonfire after a failed boss encounter, the boss 
 
 **Boss tile.** One of the two tiles on which *mini-boss* and *main-boss* *encounters* are fought. One boss tile is printed with the mini-boss *spawn node* and is the mini-boss tile. The other is printed with the main-boss spawn node.
 
-A mini-boss encounter is fought on the mini-boss tile alone.
+A mini-boss encounter is fought on the mini-boss tile alone, unless the mini-boss's special rules name another tile (see §17.3).
 
 A main-boss encounter is fought on both *boss tiles*. The two tiles are joined along one edge to form a single rectangular tile, the main-boss tile (see §6.6). The joined tiles are one tile for every rule. No wall runs along the join, and each *node* beside the join is adjacent to the nodes that face it across the join (see §5.1). Models *move*, are *pushed*, and count *range* across the join as within any tile.
 
@@ -129,17 +129,17 @@ When the behaviour deck is empty at the start of a boss turn, the discard pile i
 
 **Heat-up point.** The health value, printed on a boss's data card, at or below which the boss heats up.
 
-A boss heats up when its health is reduced to or below its *heat-up point* {{icon:ast-0030-heat-up-point}}. A boss heats up once in each attempt at its encounter. When a boss heats up, a heat-up card is added to its behaviour deck as follows.
+A boss heats up when its health is reduced to or below its *heat-up point* {{icon:ast-0030-heat-up-point}}. A boss heats up once in each attempt at its encounter. The heat-up is carried out at the start of the boss's next turn, before a card is drawn (see §16.1), as follows.
 
-1. Take one card at random from the boss's heat-up cards, without looking at it.
-2. Shuffle that card, face down, into the cards that remain in the behaviour deck. The discard pile is not shuffled and its order is not changed.
-3. If no cards remain in the behaviour deck, place the heat-up card face down as the behaviour deck. The discard pile is not renewed until that card has been drawn.
+1. Gather the behaviour deck and the discard pile.
+2. Take one card at random from the boss's heat-up cards, without looking at it, and add it to the gathered cards.
+3. Shuffle the gathered cards face down to form the new behaviour deck.
 
-If a boss heats up during a character's turn, these steps are carried out as soon as the attack that caused the heat-up has been resolved. If a boss heats up during its own turn, as a *riposte* may cause, the steps are carried out after the current behaviour card has been resolved and discarded. The boss's other heat-up cards stay face down beside the boss tile and take no part in the encounter.
+The boss then draws the top card of the new deck. Until that card is drawn, the boss's current behaviour card and its weak arcs do not change (see §15.5, Card Anatomy). The boss's other heat-up cards stay face down beside the boss tile and take no part in the encounter.
 
-Some bosses heat up in other ways. The special rules of such a boss replace the steps of this sub-section (see §17).
+Some bosses heat up in other ways. The special rules of such a boss replace the steps of this sub-section. Their steps are also carried out at the start of the boss's next turn, unless those rules state another time (see §17).
 
-*Example.* A *mini-boss* has a heat-up point of 12, and its *health dial* shows 14. Two cards remain in its behaviour deck and three lie in its discard pile. The Warrior's attack inflicts three damage, and the dial is turned to 11. The boss heats up: the players take one of its heat-up cards at random and shuffle it, unseen, into the two cards of the behaviour deck. The three cards of the discard pile are left as they lie. The boss draws from a deck of three cards on its next turn.
+*Example.* A *mini-boss* has a heat-up point of 12, and its *health dial* shows 14. Two cards remain in its behaviour deck and three lie in its discard pile. The Warrior's attack inflicts three damage, and the dial is turned to 11. At the start of the boss's next turn the players gather the two cards of the deck and the three cards of the discard pile, add one of the boss's heat-up cards, taken at random and unseen, and shuffle the six cards to form the new behaviour deck. The boss then draws the top card.
 
 ### Deck Reset
 

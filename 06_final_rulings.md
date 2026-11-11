@@ -10,7 +10,7 @@ Date: 2026-11-11. Authority: the author delegated every open rules question to t
 4. `tools/apply_rulings.py` applied the accepted changes; each is an entry in `11_change_log.md` that cites its ruling, marked `[MECHANICAL CHANGE]` where play changes.
 5. Online evidence was thin: several forums refuse automated reading. No ruling rests on an online source alone; the memos say which sources were reached.
 
-Totals: 334 questions answered (add 22, change 71, confirm 177, delete 4, not a rules question 60); 175 text changes applied, 72 of them changes to play.
+Totals: 334 questions answered (add 22, change 71, confirm 177, delete 4, not a rules question 60); 222 text changes applied, 95 of them changes to play.
 
 ## 2. The 22 lead questions
 
@@ -68,6 +68,27 @@ Totals: 334 questions answered (add 22, change 71, confirm 177, delete 4, not a 
 | combat-E36 | Glossary, Repeat | Glossary follows §9.1, §10.3 and §16.1. |
 | combat-E39 | Glossary, Parry | Glossary follows §9.6. |
 | combat-E41 | Glossary, Scaled (weapon) | Glossary follows §10.5. |
+| boss-E01 | §15.5, Heat-Up | The whole deck is reshuffled with the heat-up card, so the learned order is lost as both official rulebooks intend, and one timing (the start of the boss's next turn) replaces two. |
+| boss-E02 | §15.5, Heat-Up | The example must compute from the heat-up rule as changed by boss-E01. |
+| boss-E03 | §15.3 | The Asylum Demon mini-boss is fought on its expansion's mega-boss game board; §15.3 must allow the exception that §17.3 now states. |
+| boss-E04 | §16.1 | States in the boss turn where the heat-up of boss-E01 is carried out, without renumbering the steps. |
+| boss-E06 | §16.4 | Without this the token cannot move during the first part of the Executioner's Chariot encounter, when the boss cannot be damaged; one general clause closes the gap for every boss that brings other enemies. |
+| boss-E07 | §16.5 | Boss Death must not be resolved when one of several boss models falls (Ornstein & Smough, the Four Kings). |
+| boss-E08 | §17.1, Two Boss Models in One Encounter | One framework for every boss with several models: each model has its own health dial and all models act on each card, as the official cards for Ornstein & Smough and the booklet for the Four Kings both direct. Revises Gate 1 OQ-25 for Ornstein & Smough. |
+| boss-E10 | §17.2 | Restores the official structure: two models with their own health, both acting each turn, and a heat-up when the first falls. It matches the printed cards and keeps the fight's one real decision, which of the two to defeat first. Revises Gate 1 OQ-25. |
+| boss-E11 | §17.3, Setup | Settles the open fact: the Asylum Demon mini-boss is fought on the mega-boss game board, so both demons meet the pillars. The sentence about tiles without pillar nodes is no longer needed. |
+| boss-E13 | §17.4, Great Grey Wolf Sif | Replaces 'as the data card directs' with the data card's rule, so the entry is complete. |
+| boss-E20 | §17.10, The Four Kings | Replaces the placeholder with the official rules of the Four Kings, restated in this book's terms. |
+| boss-E21 | §17.10, Gaping Dragon | Replaces the placeholder with the official rules of the Gaping Dragon, restated in this book's terms. |
+| boss-E22 | §17.10, Guardian Dragon | Replaces the placeholder with the official rules of the Guardian Dragon, restated in this book's terms. |
+| boss-E23 | §17.10, The Last Giant | Replaces the placeholder with the official rules of the Last Giant, restated in this book's terms. |
+| boss-E24 | §17.10, Manus, Father of the Abyss | Replaces the placeholder with the official rules of Manus, restated in this book's terms. |
+| boss-E25 | §17.10, Old Iron King | Replaces the placeholder with the official rules of the Old Iron King, restated in this book's terms. |
+| boss-E26 | §17.10, Vordt of the Boreal Valley | Replaces the placeholder with the official rules of Vordt, restated in this book's terms. |
+| boss-E31 | Glossary, Heat-up | Keeps the glossary in step with the heat-up rule of boss-E01. |
+| boss-E35 | Glossary, Aggro token | Keeps the glossary in step with boss-E06. |
+| boss-E42 | §2.3, Main-Bosses | Keeps §2.3 in step with boss-E10. |
+| boss-E46 | §22.5 | Keeps the F.A.Q. in step with boss-E10. |
 | campaign-E16 | §18.1, Level 4 Encounters and Mega-Bosses | A mega-boss has two treasure cards, and Call of the Abyss and Into the Depths each list three Level 4 encounters before one mega-boss, so the standard reward cannot be paid; the campaign's own rule is that boss treasure comes only from bosses. |
 | campaign-E17 | §18.5 | Keeps §18.5 in step with §18.1 and removes the contradiction with the sentence before it. |
 | campaign-E18 | §18.3 | A party purchase is paid by the party, as the bonfire ascetic already is, so that one character without souls cannot block it. |
@@ -112,6 +133,8 @@ Totals: 334 questions answered (add 22, change 71, confirm 177, delete 4, not a 
 | lead-E03 | §18.1, Player versus Player Encounters | Follows lead-E02. |
 | lead-E09 | §11.4, Sales | A card that came from outside the decks no longer enters a treasure deck when it is sold, from which it could have been dealt as an ordinary reward. |
 | lead-E10 | §6.1 | The six souls exist to help a lone character through the first encounters, and could not be spent before a rest that costs a spark. |
+| lead-E17 | §12.2 | The invader follows the one heat-up procedure and timing of boss-E01: deck and discard pile reshuffled with the added card at the start of its next turn. |
+| lead-E18 | §13.2 | As lead-E17, for the mimic. |
 
 ## 4. Where a Gate 1 answer is revised
 
@@ -145,6 +168,13 @@ Follow-up changes across areas:
 - lead-E10 (§6.1): The six souls exist to help a lone character through the first encounters, and could not be spent before a rest that costs a spark.
 - lead-E11 (§22.1): After the parry ruling (combat-E22) no rule depends on which weapon slot is which, so the question is withdrawn.
 - lead-E12 (§22.4): States the consequence of core-E36 where players will look for it.
+- lead-E13 (§16.4): Bleed triggered by a character's attack counts for the aggro token (combat-E17), and bleed is not itself an attack.
+- lead-E14 (§2.3): Ornstein & Smough and the Four Kings have a health dial for each model (boss-E08, boss-E10, boss-E20).
+- lead-E15 (§6.5): The Asylum Demon mini-boss is fought on its expansion's game board (boss-E11); the setup now points to it.
+- lead-E16 (§18.1, Section Setup): As lead-E15, for campaign play.
+- lead-E17 (§12.2): The invader follows the one heat-up procedure and timing of boss-E01: deck and discard pile reshuffled with the added card at the start of its next turn.
+- lead-E18 (§13.2): As lead-E17, for the mimic.
+- lead-E19 (§15 (introduction)): Two bosses are fought with more than one model.
 
 ## 6. Every question, by area
 

@@ -49,3 +49,13 @@ All 23 completions are **approved** and are integrated untagged. Where an OQ ans
 - Final book structure (numbering used by every "(see §N.M)" reference): Foreword (unnumbered) · §1 Introduction · §2 Game Components · §3 Characters · §4 Equipment · §5 Tiles and Nodes · §6 Setup · §7 Gameplay · §8 Combat Basics · §9 Enemy Turn · §10 Character Turn · §11 Returning to the Bonfire · §12 Phantoms · §13 Mimics · §14 Crystal Lizards · §15 Boss Encounters · §16 Boss Turns · §17 Boss Special Rules · §18 Campaign Play · §19 Campaigns · §20 Player versus Player · §21 Glossary · §22 F.A.Q. · Appendix A Weapon Stat Revisions · Appendix B Card Amendments.
 - The Preserve list (`01_audit_report.md` §5) stands; the five signed-off mechanical changes (OQ-07, OQ-09, OQ-10, OQ-13, OQ-19) are the only alterations to complete rules and each is logged in `11_change_log.md` with a `Source: Gate 1 — OQ-NN` line.
 - Clean-up list (`01_audit_report.md` §6) and cut/simplify list (§8) are applied in full.
+
+## 4. Superseded on 2026-11-11
+
+The author later delegated every open rules question to the lead editor and confirmed the rights in all source artwork. `06_final_rulings.md` is the record of what followed and governs wherever it differs from this file. Two answers above no longer stand:
+
+- **OQ-25 (Ornstein & Smough).** Revised for this pair: two boss models, each with its own data card and health dial, both acting on each paired card, with a heat-up when the first is defeated (final rulings, boss-012). The Twin Gargoyles are unaffected.
+- **OQ-33 (asset rights).** The Provenance Review is closed: the painted art is placed, the logo is used on the cover, and the anatomy plates are shown whole.
+
+No other Gate 1 answer is revised. Several were confirmed against the official and community rulesets, and a number of points that Gate 1 left open were settled; see the area tables of `06_final_rulings.md`.
+

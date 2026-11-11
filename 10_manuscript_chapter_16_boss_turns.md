@@ -10,7 +10,7 @@ A boss encounter is fought in *rounds*. In each round every living character tak
 
 A character's turn in a boss encounter is resolved as in any encounter (see §10.1). If a *summon* is in play, it takes a turn after each character's turn and before the boss's next turn (see §12.1). A tie in threat is settled as in any encounter (see §7.5, Encounter Start).
 
-A boss's turn is resolved as follows.
+A boss's turn is resolved as follows. If the boss is due to heat up, its heat-up is carried out before step 1 (see §15.5, Heat-Up).
 
 1. If the *behaviour deck* is empty, turn the discard pile face down, without shuffling it, to form the behaviour deck (see §15.5, Deck Renewal).
 2. Draw the top card of the behaviour deck and place it face up beside the deck. This card is the boss's current *behaviour card* (see §15.5, Card Anatomy).
@@ -20,7 +20,7 @@ A boss's turn is resolved as follows.
 
 Each icon is resolved in full before the next. An icon that has no valid *target*, or that cannot be resolved, is skipped, and the next icon to its right is resolved (see §9.1). The repeat icon on a behaviour card repeats the whole card, not one attack. Each time the row is resolved, the target of each icon is determined again.
 
-The boss's turn ends when step 5 is complete. *Conditions* affect a boss as they affect any enemy (see §8.5). If the boss heats up during its own turn, the *heat-up card* joins the behaviour deck after step 5 (see §15.5, Heat-Up). If the boss is defeated during its own turn, as a *riposte* may cause, the turn ends at once and no further icon is resolved (see §16.5).
+The boss's turn ends when step 5 is complete. *Conditions* affect a boss as they affect any enemy (see §8.5). If the boss's health is reduced to or below its heat-up point during its own turn, the *heat-up card* joins the behaviour deck at the start of the boss's next turn (see §15.5, Heat-Up). If the boss is defeated during its own turn, as a *riposte* may cause, the turn ends at once and no further icon is resolved (see §16.5).
 
 *Example.* The Knight, the Herald, and the Assassin fight a *mini-boss* whose behaviour deck holds four cards. The boss takes the first turn. The players choose the Herald to act, and the boss takes its second turn. The Knight acts, the boss takes its third turn, and the Assassin acts. Every character has taken a turn, so the round is complete. The boss takes its fourth turn, and the players choose any of the three characters to act next. At the start of its fifth turn the boss's behaviour deck is empty: the discard pile is turned face down without shuffling, and the boss draws the card it drew on its first turn.
 
@@ -134,9 +134,9 @@ A dodge or a parry is rolled against the dodge difficulty of the behaviour card 
 
 The *aggro token* marks the character whom a *boss*'s *behaviour cards* *target* with the skull icon (see §16.2; §16.3). When a boss *encounter* is set up, the token is placed on the character with the highest *threat* (see §15.2).
 
-In a boss encounter the aggro token does not move at the end of a *round* as it does in other encounters (see §7.5, Encounter Turn Order). At the end of each character's *turn*, if that character inflicted damage on the boss during the turn, the aggro token moves to that character. If the character inflicted no damage on the boss, the token stays with its holder.
+In a boss encounter the aggro token does not move at the end of a *round* as it does in other encounters (see §7.5, Encounter Turn Order). At the end of each character's *turn*, if that character inflicted damage on the boss during the turn, the aggro token moves to that character. Damage inflicted on another enemy model that the boss's special rules place in the encounter moves the token in the same way (see §17). If the character inflicted no such damage, the token stays with its holder.
 
-A character inflicts damage on a boss when an attack lowers the boss's *health dial* by one or more. An attack that the boss's *block* or *resist* reduces to no damage does not move the token.
+A character inflicts damage on a boss when the character's attack, or a *bleed* that the attack triggers, lowers the boss's *health dial* by one or more. An attack that the boss's *block* or *resist* reduces to no damage does not move the token.
 
 A *riposte* is made during the boss's turn (see §9.6). If a riposte inflicts damage on the boss, the aggro token moves to the character who made it at the end of that boss turn, after the behaviour card has been resolved. If more than one character ripostes in the same boss turn, the token moves to the last of them to inflict damage.
 
@@ -148,7 +148,7 @@ When the character who holds the aggro token dies, the token moves at once to th
 
 A *boss* is defeated when its *health dial* is reduced to zero (see §15.4). The boss *encounter* ends at once. The boss model is removed from the tile, and no further icon of its *behaviour card* is resolved.
 
-A boss fought with two models, and the *Twin Gargoyles*, are defeated as their own rules state (see §17.1).
+A boss fought with several boss models is defeated only when its own rules say so: a boss model whose health dial is reduced to zero is removed from the tile, and the encounter continues against the models that remain (see §17.1, Several Boss Models in One Encounter). The *Twin Gargoyles* are defeated as their own rule states (see §17.1, Twin Gargoyles).
 
 If the defeated boss is the *final boss*, the players win the game (see §7.1), and the numbered steps of this section are not carried out. If player versus player (PvP) encounters are in play, a last *PvP encounter* is then fought (see §20.1).
 

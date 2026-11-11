@@ -318,3 +318,31 @@ In all, 187 encounter cards are available. Of each of Levels 1 to 3, the Darkroo
 - After: "**Treasure card.** Any card from a treasure deck or from Blacksmith Andre's shop: *starting equipment*, *class-specific treasure*, *common treasure*, *legendary treasure*, *boss treasure*, or an *ember card* (see §4.4)."
 - Rationale: §4.4 and the glossary count an ember card as a treasure card; §2.5 did not.
 - Source: final rulings, lead-E08 (`06_final_rulings.md`); campaign memo, cross-cluster effects
+
+### CH-02-044 · §2.3, Main-Bosses
+- Type: ruling
+- Before: "Ornstein & Smough is one main-boss fought with two models, Dragon Slayer Ornstein and Executioner Smough. The pair shares one health dial and one behaviour deck, and each behaviour card names the model that acts (see §17.1)."
+- After: "Ornstein & Smough is one main-boss fought with two boss models, Dragon Slayer Ornstein and Executioner Smough. Each model has its own data card and health dial, the pair shares one behaviour deck, and both models act on each boss turn (see §17.2)."
+- Rationale: [MECHANICAL CHANGE] Keeps §2.3 in step with boss-E10.
+- Source: final rulings, boss-E42 (`06_final_rulings.md`); follows boss-E10
+
+### CH-02-045 · §2.9, Mega-Boss Expansions
+- Type: clarification
+- Before: "- Old Iron King only: 6x Fire Beam cards (see §17.10)"
+- After: "- Old Iron King only: 6x Beam cards (see §17.10, Old Iron King)"
+- Rationale: The six node-targeting cards are named Beam cards in the rules, which keeps them apart from the three Fire Beam behaviour cards.
+- Source: final rulings, boss-E44 (`06_final_rulings.md`); Old Iron King booklet lines 349-375 ('the six Beam cards') and 435-460
+
+### CH-02-046 · §2.3, Mega-Bosses
+- Type: completion
+- Before: "Each mega-boss is supplied by the expansion of the same name, except the Stray Demon, which is supplied by the Asylum Demon expansion together with the Asylum Demon mini-boss."
+- After: "Each mega-boss is supplied by the expansion of the same name, except the Stray Demon, which is supplied by the Asylum Demon expansion together with the Asylum Demon mini-boss. Both demons are fought on that expansion's game board (see §17.3)."
+- Rationale: Keeps §2.3 in step with boss-E11.
+- Source: final rulings, boss-E47 (`06_final_rulings.md`); Asylum Demon booklet lines 183-190
+
+### CH-02-047 · §2.3
+- Type: correction
+- Before: "Each *boss* has a model, a *health dial*, a *data card* (see §15.4), a *behaviour deck* (see §15.5), and two or more *boss treasure* cards (see §2.5)."
+- After: "Each *boss* has a model, a *health dial*, a *data card* (see §15.4), a *behaviour deck* (see §15.5), and two or more *boss treasure* cards (see §2.5). A boss fought with several models has a health dial for each of them (see §17.1)."
+- Rationale: Ornstein & Smough and the Four Kings have a health dial for each model (boss-E08, boss-E10, boss-E20).
+- Source: final rulings, lead-E14 (`06_final_rulings.md`); boss memo, cross-cluster effects

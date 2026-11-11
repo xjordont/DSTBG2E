@@ -6,7 +6,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Aggro.** The state of being the enemies' preferred target. Enemy movement icons and attack icons marked with the skull icon target the character who holds the aggro token (see §9.2, §9.3).
 
-**Aggro token.** The single token that marks the character with aggro. It is placed on the character with the highest threat at the start of each encounter and, after each round of character turns, moves to the character who inflicted the most damage on enemy models during that round (on a tie, or if no damage was inflicted, the holder keeps it). If the holder dies it moves to the living character with the highest threat. In boss encounters it moves to any character who damages the boss during their turn (see §7.5, Encounter Turn Order; §16.4).
+**Aggro token.** The single token that marks the character with aggro. It is placed on the character with the highest threat at the start of each encounter and, after each round of character turns, moves to the character who inflicted the most damage on enemy models during that round (on a tie, or if no damage was inflicted, the holder keeps it). If the holder dies it moves to the living character with the highest threat. In boss encounters it moves to any character who damages the boss, or another enemy model in the encounter, during their turn (see §7.5, Encounter Turn Order; §16.4).
 
 **Ambush card.** A card from the Explorers expansion that shows Treasure or Mimic. When mimics are in play, one is dealt face down beside each encounter tile and is turned face up only when the party chooses to open that tile's chest (see §13.1).
 
@@ -34,6 +34,8 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Basic node.** The most common node type, printed in yellow. Trap tokens are dealt to basic nodes, and the basic nodes along the edge through which the characters entered a tile are its entry nodes (see §5.1).
 
+**Beam card.** A card from the Old Iron King expansion revealed when a Beam icon is resolved. It shows the Iron King node on which the Old Iron King's model is placed and the nodes whose characters the Beam attack targets (see §17.10, Old Iron King).
+
 **Behaviour card.** A card drawn from the behaviour deck of a boss, mimic, invader, or summon at the start of that model's turn. Its icons are resolved from left to right. A boss's current behaviour card sets the range and the dodge difficulty of its attacks and shows its weak arcs until the next card is drawn (see §15.5; §16.1).
 
 **Behaviour deck.** The face-down deck of behaviour cards from which a boss, mimic, invader, or summon draws one card at the start of each of its turns. A boss's behaviour deck is built during setup and built again each time its failed encounter is reset (see §15.5). When the deck is empty at the start of a turn, the discard pile is turned face down without shuffling to form the new deck.
@@ -50,7 +52,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Bonfire ascetic.** In campaign play, a one-time communal payment of 16 *souls* made while resting at the *bonfire*. With the cost of a bought *spark*, it is one of the two exceptions to the rule that souls cannot be pooled. It opens tier two treasure and the tier two shop and increases by two the base health of every enemy subject to enemy scaling for the rest of the campaign, cumulative with the health scaling for the number of characters. Enemy attack values are not changed (see §18.7).
 
-**Boss.** A single powerful enemy whose turns are driven by a behaviour deck and whose base is divided into four arcs. There are three ranks: *mini-boss*, *main-boss*, and *mega-boss*. A boss is not scaled for the number of characters and cannot be pushed by characters (see §15; §16).
+**Boss.** A powerful enemy whose turns are driven by a behaviour deck and whose base is divided into four arcs. Most bosses are fought with one model; Ornstein & Smough and the Four Kings are fought with several boss models, each with its own health dial (see §17.1). There are three ranks: *mini-boss*, *main-boss*, and *mega-boss*. A boss is not scaled for the number of characters and cannot be pushed by characters (see §15; §16).
 
 **Boss arc.** One of the four sectors (front, left, right, back) into which a boss's base is divided. The arcs extend across the tile: each node lies in at least one arc, and a node on the line between two arcs lies in both (see §15.6).
 
@@ -59,6 +61,8 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 **Boss tile.** One of the two tiles on which mini-boss and main-boss encounters are fought. A mini-boss encounter is fought on the mini-boss tile alone; a main-boss encounter is fought on both boss tiles joined as one tile, the main-boss tile. A mega-boss is fought on the mega-boss game board supplied with it (see §15.3).
 
 **Boss treasure.** A treasure card supplied with a boss. One of a boss's treasure cards is awarded at random when the boss is defeated (see §16.5). Boss treasure cannot be bought; it sells for six *souls* and is returned to the game box when sold (see §11.4; for campaign play, see §18.6).
+
+**Cage node.** One of the four nodes at the corners of the mega-boss side of the Guardian Dragon's *mega-boss game board*. No model may *move*, *dodge*, or be pushed into a cage node; the Guardian Dragon's model is placed on one only when it resolves an Inferno icon (see §17.10, Guardian Dragon).
 
 **Calamity.** A condition from the Black Dragon Kalameet expansion. A model holds at most one calamity token, which reduces the total of each of its block, resist, and dodge rolls by one. A calamity token is removed only when the encounter ends (see §8.5, Calamity).
 
@@ -132,6 +136,8 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Failed.** The result of an encounter in which every character dies, or in which any *hollow* character dies. A *failed* encounter awards nothing; every living character drops their *souls* on the tile, its card is turned face down and its black cube removed, and the characters must rest at the *bonfire* (see §7.5, Encounter Resolution).
 
+**Fiery Breath card.** A card from the Guardian Dragon expansion revealed when an Inferno icon is resolved. It shows the cage node on which the Guardian Dragon's model is placed, the nodes whose characters the Inferno attack targets, and the attack value and dodge difficulty of that attack (see §17.10, Guardian Dragon).
+
 **Final boss.** The last boss of the game: the main-boss, or the mega-boss if the players chose to add one. Defeating the final boss wins the game (see §7.1). In campaign play the final boss is the last boss listed in the campaign's last section (see §18.1).
 
 **Firekeeper.** The figure at the *bonfire* who raises a character's stats, one *stat tier* per purchase, in exchange for that character's *souls*. Stat tiers one to four cost 2, 4, 8, and 10 souls (see §11.3; for campaign play, see §18.6).
@@ -144,7 +150,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Health dial.** The dial that records the health of a boss, summon, invader, or mimic. Enemies record damage with wound tokens instead (see §15.4).
 
-**Heat-up.** The event in which a boss, mimic, or invader becomes more dangerous. When a boss's health is reduced to or below its heat-up point, one heat-up card taken at random is shuffled into the cards that remain in its behaviour deck (see §15.5); a mimic or an invader adds one of its unused behaviour cards instead. Some bosses heat up differently (see §17).
+**Heat-up.** The event in which a boss, mimic, or invader becomes more dangerous. When a boss's health is reduced to or below its heat-up point, its behaviour deck and discard pile are gathered at the start of its next turn and shuffled together with one heat-up card taken at random to form a new behaviour deck (see §15.5); a mimic or an invader adds one of its unused behaviour cards instead. Some bosses heat up differently (see §17).
 
 **Heat-up card.** A behaviour card marked with the heat-up symbol. Heat-up cards are set aside when the behaviour deck is built, and one of them joins the deck when the boss heats up (see §15.5).
 
@@ -165,6 +171,8 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 **Invasion.** The placing of invader tokens that brings one invader into the game. An invasion is provoked when the encounter cards are dealt while a character is *embered*, or when a character becomes embered by discarding an *ember card* while a face-down encounter card that carries no black cube lies on a tile; no more than one is provoked before the mini-boss is defeated and no more than one after it (see §12.2).
 
 **Inventory.** A character's unlimited stack of unequipped treasure cards, kept face down beside the dashboard. Outside an encounter it may be rearranged freely and cards may be traded one for one between inventories; during an encounter it cannot be accessed (see §3.2).
+
+**Iron King node.** One of the three nodes, printed on the mega-boss side of the Old Iron King's *mega-boss game board*, on which the Old Iron King's model is placed. The Old Iron King never stands on any other node (see §17.10, Old Iron King).
 
 **Leap.** A boss movement marked with the leap icon. The boss is removed from its node and placed on the node of its target, at any distance, without changing its facing. Every character on that node is pushed to a valid adjacent node chosen by that character's player, and the push is not limited by arcs (see §16.2).
 
@@ -192,7 +200,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Mimic encounter.** The encounter fought against a *mimic* on the tile of a *cleared* encounter whose chest the party has opened. It is fought as a mini-boss encounter without arcs, with the characters on the nodes they occupy. The characters remove their stamina cubes before the mimic's first turn; the recovery and the rewards of the cleared encounter wait until the mimic is killed (see §13.2).
 
-**Mini-boss.** The first boss of the standard game, fought on the mini-boss tile (see §6.5; §15.3).
+**Mini-boss.** The first boss of the standard game, fought on the mini-boss tile or, for the Asylum Demon, on the mega-boss game board of its expansion (see §6.5; §15.3; §17.3).
 
 **Minor action.** An action a character may take during their turn before the major action, after it, or both: *Walk*, *Equip*, and *Heroic Action* once each per turn, and *Run* any number of times (see §10.1).
 
@@ -258,7 +266,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Section.** In campaign play, one list of tiles: a *bonfire* tile, a number of encounter tiles with their encounter levels, and the bosses to be faced. A section is completed when the last boss it lists is defeated or, for a section whose list ends in an encounter, when that encounter is *cleared*. The shop is restocked and a rest that costs no *spark* is granted only when a section is completed (see §18.1).
 
-**Shaft.** A weapon icon. An attack option with the shaft icon cannot target a model on the attacker's own node (see §10.3, Shaft).
+**Shaft.** A weapon icon. An attack option with the shaft icon cannot target a model on the attacker's own node (see §10.3, Shaft). On a behaviour card of Manus, Father of the Abyss, an attack with the shaft icon does not target a character on Manus's own node (see §17.10, Manus, Father of the Abyss).
 
 **Shield.** A one-handed weapon card that shows block or resist dice and has no attack option. A shield is a weapon for equipment slots and for two-handed attacks, and a shield for stocking the shop and for parrying (see §4.1).
 
@@ -266,7 +274,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Shop.** Blacksmith Andre's stock of face-up treasure cards, in a tier one shop and a tier two shop. A tier one card costs two *souls* and a tier two card four; a tier one or tier two treasure card sells for one soul and a boss treasure card for six, and starting equipment cannot be sold (see §11.4). The tier one shop is stocked at setup and the tier two shop when the mini-boss is defeated; both are restocked only after a boss is defeated (in campaign play, after a section is completed), unsold cards going to the bottom of their deck first (see §6.3).
 
-**Signature card.** One of Black Dragon Kalameet's two behaviour cards, Mark of Calamity and Hellfire Blast, that are included in every behaviour deck built for Kalameet (see §17.8).
+**Signature card.** A behaviour card that is included in every behaviour deck built for its boss: Black Dragon Kalameet's Mark of Calamity and Hellfire Blast, the Gaping Dragon's two Stomach Slam cards, and the Old Iron King's three Fire Beam cards (see §17.8; §17.10).
 
 **Souls.** The currency of the game, tracked by soul tokens on each character's dashboard. *Souls* are gained by *clearing* encounters, defeating bosses, and killing invaders, and are dropped on death. They are spent while resting at the *bonfire* and, as the one exception, to call a *summon* at the fog gate (see §7.6, §12.1). *Souls* cannot be transferred between characters. A character adventuring alone begins with six *souls* (see §6.1).
 
@@ -342,6 +350,6 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Weapon slot.** One of the two dashboard slots, the left weapon slot and the right weapon slot, that each hold one equipped weapon card. A two-handed weapon requires the other weapon slot to be empty (see §3.2).
 
-**Wind Up.** A behaviour icon printed on behaviour cards of the Asylum Demon and the Stray Demon. When it is resolved, each character may spend one stamina to move to an adjacent node before the next icon is resolved; the movement counts as a *Run* (see §17.3).
+**Wind Up.** A behaviour icon printed on behaviour cards of the Asylum Demon, the Stray Demon, and the Last Giant. When it is resolved, each character may spend one stamina to move to an adjacent node before the next icon is resolved; the movement counts as a *Run* (see §17.3).
 
 **Wound token.** A token of value 1, 3, or 5 that records the damage suffered by an enemy. Wound tokens with a total value equal to the damage are placed on the enemy model's base, and an enemy whose wound tokens equal or exceed its scaled health is killed and removed from the tile (see §8.2). Bosses, phantoms, and mimics use a health dial instead.

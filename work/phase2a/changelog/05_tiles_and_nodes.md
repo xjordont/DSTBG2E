@@ -281,3 +281,10 @@ A spawn node or terrain node that holds no enemy or terrain is entered, left, an
 - After: "except the basic nodes along a tile edge whose doorway is part of the route (see §6.5),"
 - Rationale: [MECHANICAL CHANGE] The number of traps must not depend on which tiles happen to touch; the exclusion is keyed to the doorways the party uses.
 - Source: final rulings, lead-E01 (`06_final_rulings.md`); core memo, cross-cluster effects; official core rules exclude nodes along a wall that has a doorway
+
+### CH-05-041 · §5.5, Pillars
+- Type: correction
+- Before: "At the start of a mega-boss encounter fought on that expansion's mega-boss game board, one pillar token is placed on each of its four pillar nodes (see §17.3)."
+- After: "At the start of a boss encounter fought on the mega-boss side of that expansion's mega-boss game board, one pillar token is placed on each of its four pillar nodes (see §17.3)."
+- Rationale: The Asylum Demon mini-boss is fought on the same board and meets the same pillars.
+- Source: final rulings, boss-E45 (`06_final_rulings.md`); Asylum Demon booklet lines 197-205

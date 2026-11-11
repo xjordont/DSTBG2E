@@ -110,6 +110,6 @@ When the characters rest at the bonfire and the encounters are reset, every face
 
 ### Pillars
 
-*Pillar tokens* exist only in the Asylum Demon expansion. At the start of a mega-boss encounter fought on that expansion's mega-boss game board, one pillar token is placed on each of its four pillar nodes (see §17.3). No model may move, dodge, or be pushed into a node containing a pillar token.
+*Pillar tokens* exist only in the Asylum Demon expansion. At the start of a boss encounter fought on the mega-boss side of that expansion's mega-boss game board, one pillar token is placed on each of its four pillar nodes (see §17.3). No model may move, dodge, or be pushed into a node containing a pillar token.
 
 A pillar is destroyed only as §17.3 describes. Once destroyed, its node is used as a basic node for the rest of the encounter. When the characters rest at the bonfire, destroyed pillars are returned to their pillar nodes (see §17.3).

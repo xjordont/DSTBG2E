@@ -44,7 +44,7 @@ A-042,Minor,OPTIONAL,resolved,CH-15-023 CH-15-024 CH-16-007 CH-16-032,BOSS ENCOU
 A-043,Major,REQUIRED,resolved,CH-05-021 CH-06-028 CH-15-011 CH-15-020 CH-15-021 CH-15-025,TILES & NODES › Terrain › Gravestones (manuscript.md line 943) vs BOSS ENCOUNTERS › Boss B
 A-044,Minor,OPTIONAL,resolved,CH-12-026 CH-13-014 CH-15-036,MIMICS (manuscript.md line 2047); SUMMONS › Invaders (line 2017)
 A-045,Major,REQUIRED,resolved,CH-06-034 CH-06-054 CH-12-016 CH-12-017 CH-12-018 CH-12-021 CH-16-029 CH-16-032,SUMMONS › Invaders › Invader Tokens step 1 (manuscript.md line 1999); Boss Death (line 219
-A-046,Major,REQUIRED,resolved,CH-04-023 CH-06-014 CH-06-015 CH-11-014 CH-11-022 CH-18-028,SETUP › Shop Setup › After Boss is Defeated (manuscript.md lines 1077–1089); EQUIPMENT › E
+A-046,Major,REQUIRED,resolved,CH-04-023 CH-06-014 CH-06-015 CH-07-062 CH-11-014 CH-11-022 CH-18-028,SETUP › Shop Setup › After Boss is Defeated (manuscript.md lines 1077–1089); EQUIPMENT › E
 A-047,Minor,OPTIONAL,declined,CH-02-026 CH-06-055 CH-07-047 CH-16-031 CH-18-037,GAMEPLAY › Sparks (manuscript.md lines 1247–1253); Boss Death (line 2195)
 A-048,Major,REQUIRED,resolved,CH-06-054 CH-18-008 CH-18-009 CH-18-016 CH-19-014 CH-19-018,CAMPAIGN PLAY › Sparks (manuscript.md line 2235); SETUP › Setup After the mini-boss steps 
 A-049,Major,REQUIRED,resolved,CH-06-049 CH-06-052 CH-18-010 CH-18-011,SETUP › Setup After the main-boss step 11 (manuscript.md line 1195) vs CAMPAIGNS › Demon H
@@ -64,9 +64,9 @@ A-062,Minor,OPTIONAL,declined,CH-07-047 CH-14-011,GAMEPLAY › Encounter Resolut
 A-063,Minor,REQUIRED,resolved,CH-07-033 CH-11-005 CH-13-007,GAMEPLAY › Encounters (manuscript.md lines 1255–1341); MIMICS (line 2043)
 A-064,Minor,CLEAN-UP,resolved,CH-08-018 CH-18-030,CAMPAIGN PLAY › Bonfire Ascetic (manuscript.md line 2342)
 A-065,Minor,CLEAN-UP,resolved,CH-06-008,SETUP › Tier One / Tier Two Treasure Deck (manuscript.md lines 1033–1045)
-A-066,Minor,OPTIONAL,declined,CH-10-040 CH-23-023,CHARACTER TURN › Stat Scaling (manuscript.md line 1880)
+A-066,Minor,OPTIONAL,resolved,CH-10-045,CHARACTER TURN › Stat Scaling (manuscript.md line 1880)
 A-067,Minor,REQUIRED,resolved,CH-11-018 CH-18-027,RETURNING TO THE BONFIRE › Stat Tier Costs (manuscript.md lines 1918–1923) vs Campaign Sta
-A-068,Major,REQUIRED,resolved,CH-03-005 CH-03-009 CH-03-031 CH-09-031 CH-10-007 CH-10-009 CH-10-021 CH-10-034,"ENEMY TURN › Parry & Riposte (manuscript.md lines 1772, 1790); CHARACTER TURN › Major Acti"
+A-068,Major,REQUIRED,resolved,CH-03-005 CH-03-009 CH-03-031 CH-09-031 CH-09-043 CH-10-007 CH-10-009 CH-10-021 CH-10-034,"ENEMY TURN › Parry & Riposte (manuscript.md lines 1772, 1790); CHARACTER TURN › Major Acti"
 A-069,Major,REQUIRED,resolved,CH-04-005 CH-06-012 CH-10-033,SETUP › Shop Setup (manuscript.md line 1069); EQUIPMENT › Equipment Cards (line 811)
 A-070,Minor,OPTIONAL,resolved,CH-04-019 CH-09-023 CH-10-021,EQUIPMENT › Spells (manuscript.md lines 877–887); Character Attacks (line 1846)
 A-071,Minor,OPTIONAL,resolved,CH-04-015,EQUIPMENT › Upgrades (manuscript.md line 851)
@@ -79,14 +79,14 @@ A-077,Minor,OPTIONAL,resolved,CH-11-025 CH-18-029,RETURNING TO THE BONFIRE › S
 A-078,Major,REQUIRED,resolved,CH-08-029 CH-08-035 CH-08-037 CH-09-034,COMBAT BASICS › Conditions (manuscript.md line 1600); Stagger (line 1638); Parry & Riposte
 A-079,Minor,REQUIRED,resolved,CH-08-036 CH-09-006 CH-09-017,COMBAT BASICS › Conditions › Stagger (manuscript.md line 1636)
 A-080,Minor,CLEAN-UP,resolved,CH-08-038 CH-08-039,COMBAT BASICS › Conditions › Corrosion and Calamity (manuscript.md lines 1640–1658)
-A-081,Minor,OPTIONAL,declined,CH-02-026 CH-08-041,COMBAT BASICS › Conditions › Poison (manuscript.md line 1616); GAME COMPONENTS › Tokens (l
+A-081,Minor,OPTIONAL,resolved,CH-02-033,COMBAT BASICS › Conditions › Poison (manuscript.md line 1616); GAME COMPONENTS › Tokens (l
 A-082,Major,REQUIRED,resolved,CH-05-004 CH-05-008 CH-05-009 CH-05-011 CH-05-016 CH-05-017 CH-05-023 CH-05-024 CH-09-009 CH-10-017 CH-16-009 CH-16-010 CH-16-012 CH-16-015 CH-16-032,"TILES & NODES › Terrain › Gravestones, Barrels, Chests (manuscript.md lines 931, 949, 959)"
 A-083,Major,REQUIRED,resolved,CH-05-027 CH-20-024,TILES & NODES › Terrain › Traps (manuscript.md lines 967–981)
 A-084,Minor,CLEAN-UP,resolved,CH-05-005 CH-05-028,TILES & NODES › Terrain › Traps (manuscript.md line 971)
 A-085,Minor,REQUIRED,resolved,CH-05-004 CH-05-010 CH-08-021 CH-08-022 CH-08-027,COMBAT BASICS › Pushing (manuscript.md line 1592)
 A-086,Minor,OPTIONAL,resolved,CH-05-010 CH-05-012 CH-10-018,TILES & NODES › Node Model Limits (manuscript.md line 919); Character Movement (line 1840)
 A-087,Minor,OPTIONAL,resolved,CH-09-027 CH-15-039,ENEMY TURN › Dodge step 4.4 (manuscript.md line 1754)
-A-088,Major,REQUIRED,resolved,CH-06-026,SETUP › Encounter tiles step 1 (manuscript.md line 1113)
+A-088,Major,REQUIRED,resolved,CH-06-026 CH-06-057,SETUP › Encounter tiles step 1 (manuscript.md line 1113)
 A-089,Minor,REQUIRED,resolved,CH-06-027 CH-06-036 CH-15-004 CH-15-039,SETUP › Encounter tiles (manuscript.md lines 1111–1117); Setup After the mini-boss step 4 
 A-090,Blocker,REQUIRED,resolved,CH-02-014 CH-05-019 CH-06-030 CH-07-018,"GAME COMPONENTS › Event cards (manuscript.md lines 659–667); SETUP steps (lines 1133, 1161"
 A-091,Minor,PROPOSED,resolved,CH-02-014,GAME COMPONENTS › Event cards (manuscript.md line 667)
@@ -103,7 +103,7 @@ A-101,Minor,CLEAN-UP,resolved,CH-13-002,MIMICS (manuscript.md line 2041)
 A-102,Minor,REQUIRED,resolved,CH-13-010 CH-19-021,CAMPAIGNS › A Hollow Pursuit Section Two (manuscript.md line 2748)
 A-103,Minor,REQUIRED,resolved,CH-18-005 CH-19-002,CAMPAIGN PLAY › Setup (manuscript.md lines 2223–2225)
 A-104,Major,PROPOSED,resolved,CH-19-019,CAMPAIGNS › Demon Hunting Section One (manuscript.md lines 2598–2608)
-A-105,Minor,OPTIONAL,resolved,CH-18-020 CH-18-021,CAMPAIGN PLAY › Adding & Dropping Players (manuscript.md line 2239)
+A-105,Minor,OPTIONAL,resolved,CH-18-020 CH-18-021 CH-18-049,CAMPAIGN PLAY › Adding & Dropping Players (manuscript.md line 2239)
 A-106,Minor,CLEAN-UP,resolved,CH-19-016 CH-19-017,CAMPAIGNS › Facing the Abyss (manuscript.md lines 2548 and 2764)
 A-107,Minor,CLEAN-UP,resolved,CH-19-020,CAMPAIGNS › A Hollow Pursuit (manuscript.md line 2720)
 A-108,Major,REQUIRED,resolved,CH-02-009 CH-19-028,"CAMPAIGNS › Big Game Hunting (manuscript.md lines 2994, 3018); GAME COMPONENTS › Mega-boss"
@@ -147,7 +147,7 @@ B-020,Minor,OPTIONAL,resolved,CH-23-006 CH-23-008,"L3222 (Butcher Knife 25/0), L
 B-021,Minor,PROPOSED,resolved,CH-23-007,"L3232 (Claws 0/20), L3270 (Manikin Claws 24/24), L3280/L3290 (Parrying Dagger = Rapier 14/"
 B-022,Major,REQUIRED,resolved,CH-03-005 CH-04-005 CH-06-012 CH-09-031 CH-23-022,"L1069/L1079/L1085 (Shop Setup) with L823-829 (Equipment Cards), L747-753 (Equipment Slots)"
 B-023,Minor,PROPOSED,resolved,CH-06-013,L1067-1089 (Shop Setup procedure)
-B-024,Major,PROPOSED,resolved,CH-20-018,"L3082-3094 (Player vs Player, dodge difficulty table)"
+B-024,Major,PROPOSED,resolved,CH-20-018 CH-20-038,"L3082-3094 (Player vs Player, dodge difficulty table)"
 B-025,Major,REQUIRED,resolved,CH-08-033,L1616-1620 (Conditions > Poison)
 B-026,Minor,PROPOSED,declined,CH-02-026 CH-08-041,L1642-1648 (Conditions > Calamity)
 B-027,Minor,REQUIRED,resolved,CH-02-018,L701-705 (Tokens & Terrain Elements > Condition tokens)
@@ -158,7 +158,7 @@ B-031,Blocker,REQUIRED,resolved,CH-08-018 CH-18-030 CH-18-033,L2342-2344 (Bonfir
 B-032,Minor,REQUIRED,resolved,CH-07-043 CH-14-007 CH-23-022,"L1477 (Treasure Rewards, crystal lizards) vs L2057 (Crystal Lizards)"
 B-033,Minor,PROPOSED,declined,CH-09-038,L1742 (Dodge step 2.2)
 B-034,Minor,PROPOSED,declined,CH-18-037,"L2316, L2334, L2338-2340 (Bonfire Ascetic cost 16 shared)"
-B-035,Minor,PROPOSED,resolved,CH-13-022,"L2047-2049 (Mimics) with L1455-1463 (Treasure Rewards, mimic ambush)"
+B-035,Minor,PROPOSED,resolved,CH-13-022 CH-13-026,"L2047-2049 (Mimics) with L1455-1463 (Treasure Rewards, mimic ambush)"
 B-036,Note,OPTIONAL,resolved,CH-08-017 CH-16-017,L1531 (Enemy Scaling: bosses do not scale) with L2184 (Boss Turn Overview)
 B-037,Note,OPTIONAL,declined,CH-02-026,L659-667 (Event cards) and L489-511 (Tomb of Giants enemy counts)
 B-038,Note,OPTIONAL,resolved,CH-08-030 CH-08-032,L1610 (Conditions > Bleed) and L1636 (Stagger)
@@ -251,7 +251,7 @@ C-086,Major,REQUIRED,resolved,CH-05-009 CH-05-010 CH-05-017 CH-05-023 CH-05-024 
 C-087,Major,REQUIRED,resolved,CH-05-025 CH-07-044 CH-13-005,L963; L1461; L1479; L2043
 C-088,Major,REQUIRED,resolved,CH-05-011 CH-05-033 CH-06-049 CH-07-004 CH-07-007 CH-07-013 CH-07-032 CH-11-005 CH-11-008 CH-11-010,L1223; L1906; L1195; L1341
 C-089,Note,CLEAN-UP,resolved,CH-07-030 CH-07-042 CH-13-001,L1471; L1473-1475; L2045; L2047
-C-090,Major,REQUIRED,resolved,CH-06-026,L1113
+C-090,Major,REQUIRED,resolved,CH-06-026 CH-06-057,L1113
 C-091,Minor,CLEAN-UP,resolved,CH-07-017,L1261-1263
 C-092,Note,OPTIONAL,resolved,CH-03-011 CH-04-012 CH-11-021,L849; L771; L1914; L1918-1923
 C-093,Note,CLEAN-UP,resolved,CH-06-033 CH-06-054,L1141
@@ -286,15 +286,15 @@ C-121,Minor,OPTIONAL,resolved,CH-06-023 CH-06-024 CH-06-050 CH-10-031 CH-10-032 
 C-122,Minor,CLEAN-UP,resolved,CH-06-033 CH-06-053 CH-07-012 CH-07-044 CH-07-046 CH-12-024 CH-12-031 CH-13-013 CH-13-023 CH-14-006 CH-14-009 CH-14-010 CH-19-029,L1115; L1141; L1241; L1461; L1479; L2027; L2047; L2055; L2057; L1171; L2996
 C-123,Minor,CLEAN-UP,resolved,CH-05-028 CH-08-025 CH-09-010 CH-09-037 CH-11-032 CH-16-002 CH-16-021 CH-16-030 CH-17-022 CH-17-046,L979; L1596; L1674; L1676; L2157; L2191; L2207; L1963
 C-124,Minor,REQUIRED,resolved,CH-06-023 CH-06-024 CH-06-034 CH-06-035 CH-06-040 CH-06-042 CH-07-003 CH-07-046 CH-12-002 CH-13-002 CH-14-002 CH-20-002,L1107; L1109; L1137; L1141; L2041; L2053; L1201; L3040
-CMP-0001,Major,PROPOSED,resolved,CH-03-021 CH-03-023 CH-03-024 CH-03-027 CH-10-008 CH-10-011,Characters › Character Tokens › Estus Flask (TOC line 65; body line 793; DOCX footer)
+CMP-0001,Major,PROPOSED,resolved,CH-03-021 CH-03-023 CH-03-024 CH-03-027 CH-06-061 CH-06-062 CH-10-008 CH-10-011,Characters › Character Tokens › Estus Flask (TOC line 65; body line 793; DOCX footer)
 CMP-0002,Blocker,PROPOSED,resolved,CH-21-001,"GLOSSARY (new chapter; promised at line 381, TOC line 355)"
 CMP-0003,Blocker,PROPOSED,resolved,CH-03-031 CH-05-034 CH-18-039 CH-22-001 CH-22-002 CH-22-003 CH-22-004 CH-22-006,F.A.Q. (line 3098)
-CMP-0004,Major,PROPOSED,resolved,CH-17-034 CH-23-001 CH-23-002 CH-23-003 CH-23-004 CH-23-005 CH-23-008 CH-23-009 CH-23-010 CH-23-011 CH-23-012 CH-23-013 CH-23-014 CH-23-015 CH-23-016 CH-23-017 CH-23-018 CH-23-019 CH-23-020 CH-23-021,COMMUNITY UPDATE PACK (lines 3102–3366)
+CMP-0004,Major,PROPOSED,resolved,CH-04-035 CH-17-034 CH-23-001 CH-23-002 CH-23-003 CH-23-004 CH-23-005 CH-23-008 CH-23-009 CH-23-010 CH-23-011 CH-23-012 CH-23-013 CH-23-014 CH-23-015 CH-23-016 CH-23-017 CH-23-018 CH-23-019 CH-23-020 CH-23-021,COMMUNITY UPDATE PACK (lines 3102–3366)
 CMP-0005,Blocker,PROPOSED,resolved,CH-17-001 CH-17-003 CH-17-004 CH-17-005 CH-17-006 CH-17-010 CH-17-011 CH-17-015 CH-17-016 CH-17-018 CH-17-021 CH-17-023 CH-17-027 CH-17-028 CH-17-029 CH-17-030 CH-17-031 CH-17-032 CH-17-033 CH-17-034 CH-17-035 CH-17-036 CH-17-037 CH-17-038 CH-17-039 CH-17-040 CH-17-041 CH-17-042 CH-17-043 CH-17-044,BOSS SPECIAL RULES (lines 2199–2213) and Setup After the main-boss step 11 (line 1195)
 CMP-0006,Major,PROPOSED,resolved,CH-07-002 CH-07-007 CH-07-024 CH-11-005 CH-11-008 CH-11-010 CH-18-017,"Gameplay › Death & Hollowing (line 1223), Encounter Resolution (line 1305), The Bonfire (l"
 CMP-0007,Major,PROPOSED,resolved,CH-02-003 CH-06-007 CH-06-017 CH-06-037 CH-07-036 CH-12-008 CH-12-013 CH-12-019 CH-12-022 CH-12-023 CH-12-025 CH-12-026 CH-13-008 CH-13-016,"Summons › Phantoms (lines 1989–1993), Setup After the mini-boss step 11 (line 1169), Shop "
 CMP-0008,Major,PROPOSED,resolved,CH-02-009 CH-18-004 CH-18-005 CH-18-006 CH-18-007 CH-18-008 CH-18-009 CH-18-016 CH-19-001 CH-19-002 CH-19-005 CH-19-007 CH-19-011 CH-19-013 CH-19-014 CH-19-016 CH-19-017 CH-19-018 CH-19-019 CH-19-020 CH-19-021 CH-19-022 CH-19-026 CH-19-028 CH-19-030 CH-19-032,Campaign Play › Setup (lines 2221–2225) and CAMPAIGNS (lines 2352–3034)
-CMP-0009,Major,PROPOSED,resolved,CH-07-003 CH-20-001 CH-20-003 CH-20-004 CH-20-005 CH-20-007 CH-20-008 CH-20-009 CH-20-010 CH-20-012 CH-20-014 CH-20-015 CH-20-016 CH-20-017 CH-20-021 CH-20-023 CH-20-024 CH-20-025 CH-20-026 CH-20-027 CH-20-029 CH-20-030 CH-20-031 CH-20-033,PLAYER VS PLAYER (lines 3038–3094)
+CMP-0009,Major,PROPOSED,resolved,CH-07-003 CH-20-001 CH-20-003 CH-20-004 CH-20-005 CH-20-007 CH-20-008 CH-20-009 CH-20-010 CH-20-012 CH-20-014 CH-20-015 CH-20-016 CH-20-017 CH-20-021 CH-20-023 CH-20-024 CH-20-025 CH-20-026 CH-20-027 CH-20-029 CH-20-030 CH-20-031 CH-20-033 CH-20-037,PLAYER VS PLAYER (lines 3038–3094)
 CMP-0010,Major,PROPOSED,resolved,CH-07-035 CH-18-023,"Gameplay › Souls (line 1391), Soul Reward Table (lines 1401–1439), Campaign Soul Reward Ta"
 CMP-0011,Minor,PROPOSED,resolved,CH-02-023 CH-06-004 CH-07-019 CH-20-011 CH-20-012 CH-20-033,Gameplay › Encounter Start step 9 (line 1277); Player vs Player (line 3056); Game Componen
 CMP-0012,Major,PROPOSED,resolved,CH-02-015 CH-02-016 CH-02-020 CH-02-024 CH-05-003 CH-05-007 CH-05-030 CH-06-043 CH-06-044 CH-06-045 CH-07-018 CH-07-021 CH-07-045,"Game Components (lines 653–723), Setup After the main-boss steps 3 and 5 (lines 1179, 1183"
@@ -339,7 +339,7 @@ D-027,Note,OPTIONAL,resolved,CH-02-006 CH-02-011 CH-19-015,"manuscript.md 557, 5
 D-028,Major,REQUIRED,resolved,CH-07-043 CH-14-007 CH-14-008,manuscript.md 1477 (Treasure Rewards) vs 2055 (Crystal Lizards)
 D-029,Minor,REQUIRED,resolved,CH-07-039,manuscript.md 1397 (Souls)
 D-030,Major,REQUIRED,resolved,CH-03-005 CH-09-031 CH-10-007 CH-10-021,"manuscript.md 1772, 1790, 1822 (Parry; Major Action) vs 757–763 (Equipment Slots)"
-D-031,Minor,REQUIRED,resolved,CH-06-026,manuscript.md 1113 (Encounter tiles)
+D-031,Minor,REQUIRED,resolved,CH-06-026 CH-06-057,manuscript.md 1113 (Encounter tiles)
 D-032,Major,REQUIRED,resolved,CH-06-045,"manuscript.md 1183 (Setup After the main-boss, step 5)"
 D-033,Minor,OPTIONAL,resolved,CH-04-009 CH-09-022 CH-10-022,manuscript.md 843 (Equipment Cards) and 1722 (Block & Resist)
 D-034,Minor,REQUIRED,resolved,CH-04-015,manuscript.md 851 (Upgrades)

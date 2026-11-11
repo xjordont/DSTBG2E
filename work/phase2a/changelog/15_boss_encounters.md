@@ -272,3 +272,45 @@
 - After: n/a
 - Rationale: Not restated here because another section owns the rule and this chapter cites it: A-089 (fog gate placement, §6.5), A-095 (fog gate before the mega-boss, §6.7), A-087 (dodge with no valid node, §5.2 and §9.5), A-119 (riposte as an attack, §9.6; its weak-arc consequence is applied in CH-15-031).
 - Source: A-089, A-095, A-087, A-119
+
+### CH-15-040 · §15.5, Heat-Up
+- Type: ruling
+- Before: "A boss heats up when its health is reduced to or below its *heat-up point* {{icon:ast-0030-heat-up-point}}. A boss heats up once in each attempt at its encounter. When a boss heats up, a heat-up card is added to its behaviour deck as follows.
+
+1. Take one card at random from the boss's heat-up cards, without looking at it.
+2. Shuffle that card, face down, into the cards that remain in the behaviour deck. The discard pile is not shuffled and its order is not changed.
+3. If no cards remain in the behaviour deck, place the heat-up card face down as the behaviour deck. The discard pile is not renewed until that card has been drawn.
+
+If a boss heats up during a character's turn, these steps are carried out as soon as the attack that caused the heat-up has been resolved. If a boss heats up during its own turn, as a *riposte* may cause, the steps are carried out after the cu […]"
+- After: "A boss heats up when its health is reduced to or below its *heat-up point* {{icon:ast-0030-heat-up-point}}. A boss heats up once in each attempt at its encounter. The heat-up is carried out at the start of the boss's next turn, before a card is drawn (see §16.1), as follows.
+
+1. Gather the behaviour deck and the discard pile.
+2. Take one card at random from the boss's heat-up cards, without looking at it, and add it to the gathered cards.
+3. Shuffle the gathered cards face down to form the new behaviour deck.
+
+The boss then draws the top card of the new deck. Until that card is drawn, the boss's current behaviour card and its weak arcs do not change (see §15.5, Card Anatomy). The boss's other heat-up cards stay face down beside the boss tile and take no part in the encounter.
+
+Some bosses heat up in other ways. The special rules of such a boss replace the steps of thi […]"
+- Rationale: [MECHANICAL CHANGE] The whole deck is reshuffled with the heat-up card, so the learned order is lost as both official rulebooks intend, and one timing (the start of the boss's next turn) replaces two.
+- Source: final rulings, boss-E01 (`06_final_rulings.md`); 2017 core rules lines 1392-1396 and 2022 rules lines 2146-2153 ('players will now need to relearn the boss's attack pattern'); community consensus (BoardGameGeek thread 1819893 summary; DSBG-Shuffle heat-up code); Vordt booklet lines 475-490 times its heat-up at the start of the next activation.
+
+### CH-15-041 · §15.5, Heat-Up
+- Type: ruling
+- Before: "*Example.* A *mini-boss* has a heat-up point of 12, and its *health dial* shows 14. Two cards remain in its behaviour deck and three lie in its discard pile. The Warrior's attack inflicts three damage, and the dial is turned to 11. The boss heats up: the players take one of its heat-up cards at random and shuffle it, unseen, into the two cards of the behaviour deck. The three cards of the discard pile are left as they lie. The boss draws from a deck of three cards on its next turn."
+- After: "*Example.* A *mini-boss* has a heat-up point of 12, and its *health dial* shows 14. Two cards remain in its behaviour deck and three lie in its discard pile. The Warrior's attack inflicts three damage, and the dial is turned to 11. At the start of the boss's next turn the players gather the two cards of the deck and the three cards of the discard pile, add one of the boss's heat-up cards, taken at random and unseen, and shuffle the six cards to form the new behaviour deck. The boss then draws the top card."
+- Rationale: [MECHANICAL CHANGE] The example must compute from the heat-up rule as changed by boss-E01.
+- Source: final rulings, boss-E02 (`06_final_rulings.md`); follows boss-E01
+
+### CH-15-042 · §15.3
+- Type: completion
+- Before: "A mini-boss encounter is fought on the mini-boss tile alone."
+- After: "A mini-boss encounter is fought on the mini-boss tile alone, unless the mini-boss's special rules name another tile (see §17.3)."
+- Rationale: [MECHANICAL CHANGE] The Asylum Demon mini-boss is fought on its expansion's mega-boss game board; §15.3 must allow the exception that §17.3 now states.
+- Source: final rulings, boss-E03 (`06_final_rulings.md`); Asylum Demon booklet, DS-AD-Rules-web-EN.txt lines 183-190 ('the boss encounter takes place on the Mega Boss game board instead of the Mini Boss tile').
+
+### CH-15-043 · §15 (introduction)
+- Type: correction
+- Before: "A boss is a single model of great health and power,"
+- After: "A boss is a foe of great health and power,"
+- Rationale: Two bosses are fought with more than one model.
+- Source: final rulings, lead-E19 (`06_final_rulings.md`); boss memo, cross-cluster effects

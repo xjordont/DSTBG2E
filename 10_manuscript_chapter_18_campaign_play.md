@@ -33,7 +33,7 @@ The first section is set up at the start of the campaign. Every other section is
 - Each encounter tile is dealt one encounter card of the level the section lists for its position, in place of the levels printed on a boss's data card. Where the section names an encounter, that encounter card is placed face down on the tile in place of a dealt card.
 - The encounter decks are built from the encounter cards of every set the campaign requires, shuffled together by level, in place of the set that supplies the next boss (see §6.5, Expansion Encounters). Where a campaign names the sets for its encounter decks, only those sets are used.
 - Each encounter tile is dealt one treasure card per character from the treasure deck of the current tier (see §18.5).
-- A mini-boss is fought on the mini-boss tile, and a *main-boss* on the two *boss tiles* joined as one (see §15.3). A mega-boss is fought on its game board (see §18.1, Level 4 Encounters and Mega-Bosses).
+- A mini-boss is fought on the mini-boss tile, or on its expansion's game board when it is the Asylum Demon (see §17.3), and a *main-boss* on the two *boss tiles* joined as one (see §15.3). A mega-boss is fought on its game board (see §18.1, Level 4 Encounters and Mega-Bosses).
 - A section that lists the Gargoyle as fought twice sets the Twin Gargoyles encounter, which is one boss encounter (see §17.1, Twin Gargoyles).
 - The *fog gate* token is placed on the *doorway* to the boss's tile (see §18.2). A section that lists no boss has no fog gate.
 - The *shop* is restocked as campaign play directs (see §18.6, Blacksmith Andre's Shop), and no *spark* is added during the setup of a section (see §18.3).

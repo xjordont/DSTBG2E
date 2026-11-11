@@ -323,6 +323,34 @@ In all, 187 encounter cards are available. Of each of Levels 1 to 3, the Darkroo
 - Rationale: §4.4 and the glossary count an ember card as a treasure card; §2.5 did not.
 - Source: final rulings, lead-E08 (`06_final_rulings.md`); campaign memo, cross-cluster effects
 
+### CH-02-044 · §2.3, Main-Bosses
+- Type: ruling
+- Before: "Ornstein & Smough is one main-boss fought with two models, Dragon Slayer Ornstein and Executioner Smough. The pair shares one health dial and one behaviour deck, and each behaviour card names the model that acts (see §17.1)."
+- After: "Ornstein & Smough is one main-boss fought with two boss models, Dragon Slayer Ornstein and Executioner Smough. Each model has its own data card and health dial, the pair shares one behaviour deck, and both models act on each boss turn (see §17.2)."
+- Rationale: [MECHANICAL CHANGE] Keeps §2.3 in step with boss-E10.
+- Source: final rulings, boss-E42 (`06_final_rulings.md`); follows boss-E10
+
+### CH-02-045 · §2.9, Mega-Boss Expansions
+- Type: clarification
+- Before: "- Old Iron King only: 6x Fire Beam cards (see §17.10)"
+- After: "- Old Iron King only: 6x Beam cards (see §17.10, Old Iron King)"
+- Rationale: The six node-targeting cards are named Beam cards in the rules, which keeps them apart from the three Fire Beam behaviour cards.
+- Source: final rulings, boss-E44 (`06_final_rulings.md`); Old Iron King booklet lines 349-375 ('the six Beam cards') and 435-460
+
+### CH-02-046 · §2.3, Mega-Bosses
+- Type: completion
+- Before: "Each mega-boss is supplied by the expansion of the same name, except the Stray Demon, which is supplied by the Asylum Demon expansion together with the Asylum Demon mini-boss."
+- After: "Each mega-boss is supplied by the expansion of the same name, except the Stray Demon, which is supplied by the Asylum Demon expansion together with the Asylum Demon mini-boss. Both demons are fought on that expansion's game board (see §17.3)."
+- Rationale: Keeps §2.3 in step with boss-E11.
+- Source: final rulings, boss-E47 (`06_final_rulings.md`); Asylum Demon booklet lines 183-190
+
+### CH-02-047 · §2.3
+- Type: correction
+- Before: "Each *boss* has a model, a *health dial*, a *data card* (see §15.4), a *behaviour deck* (see §15.5), and two or more *boss treasure* cards (see §2.5)."
+- After: "Each *boss* has a model, a *health dial*, a *data card* (see §15.4), a *behaviour deck* (see §15.5), and two or more *boss treasure* cards (see §2.5). A boss fought with several models has a health dial for each of them (see §17.1)."
+- Rationale: Ornstein & Smough and the Four Kings have a health dial for each model (boss-E08, boss-E10, boss-E20).
+- Source: final rulings, lead-E14 (`06_final_rulings.md`); boss memo, cross-cluster effects
+
 ## Chapter 00 — Front Matter
 
 ### CH-00-001 · Foreword
@@ -1142,6 +1170,13 @@ A spawn node or terrain node that holds no enemy or terrain is entered, left, an
 - Rationale: [MECHANICAL CHANGE] The number of traps must not depend on which tiles happen to touch; the exclusion is keyed to the doorways the party uses.
 - Source: final rulings, lead-E01 (`06_final_rulings.md`); core memo, cross-cluster effects; official core rules exclude nodes along a wall that has a doorway
 
+### CH-05-041 · §5.5, Pillars
+- Type: correction
+- Before: "At the start of a mega-boss encounter fought on that expansion's mega-boss game board, one pillar token is placed on each of its four pillar nodes (see §17.3)."
+- After: "At the start of a boss encounter fought on the mega-boss side of that expansion's mega-boss game board, one pillar token is placed on each of its four pillar nodes (see §17.3)."
+- Rationale: The Asylum Demon mini-boss is fought on the same board and meets the same pillars.
+- Source: final rulings, boss-E45 (`06_final_rulings.md`); Asylum Demon booklet lines 197-205
+
 ## Chapter 06 — Setup
 
 ### CH-06-001 · §6 Setup
@@ -1634,6 +1669,13 @@ A spawn node or terrain node that holds no enemy or terrain is entered, left, an
 - After: "7. If the party consists of one character, place six *souls* on that character's dashboard (see §7.6). Before leaving the bonfire tile for the first time, that character may visit the *Firekeeper* and Blacksmith Andre as during a rest (see §11.3; §11.4)."
 - Rationale: [MECHANICAL CHANGE] The six souls exist to help a lone character through the first encounters, and could not be spent before a rest that costs a spark.
 - Source: final rulings, lead-E10 (`06_final_rulings.md`); core memo, observation without an edit
+
+### CH-06-070 · §6.5
+- Type: completion
+- Before: "6. Place the mini-boss's model, data card, health dial, and boss treasure cards on the mini-boss tile."
+- After: "6. Place the mini-boss's model, data card, health dial, and boss treasure cards on the mini-boss tile. When the Asylum Demon is the mini-boss, its expansion's game board takes the place of the mini-boss tile throughout this setup (see §17.3)."
+- Rationale: The Asylum Demon mini-boss is fought on its expansion's game board (boss-E11); the setup now points to it.
+- Source: final rulings, lead-E15 (`06_final_rulings.md`); boss memo, cross-cluster effects
 
 ## Chapter 07 — Gameplay
 
@@ -4081,6 +4123,13 @@ The embering of every character at a boss's defeat (see §16.5) provokes no inva
 - Rationale: Two campaigns bring a listed invader back until it is killed; the general rule now points to them.
 - Source: final rulings, lead-E04 (`06_final_rulings.md`); campaign memo, cross-cluster effects
 
+### CH-12-047 · §12.2
+- Type: clarification
+- Before: "one of its unused behaviour cards, taken at random, is shuffled into its behaviour deck in place of a heat-up card (see §15.5)."
+- After: "one of its unused behaviour cards, taken at random, serves as its heat-up card, and the invader heats up as a boss does (see §15.5, Heat-Up)."
+- Rationale: [MECHANICAL CHANGE] The invader follows the one heat-up procedure and timing of boss-E01: deck and discard pile reshuffled with the added card at the start of its next turn.
+- Source: final rulings, lead-E17 (`06_final_rulings.md`); boss memo, cross-cluster effects
+
 ## Chapter 13 — Mimics
 
 ### CH-13-001 · §13 Mimics
@@ -4292,6 +4341,13 @@ The embering of every character at a boss's defeat (see §16.5) provokes no inva
 - After: "The Hungry Mimic replaces the chest token, and the Knight removes the four stamina cubes. The mimic takes the first turn and attacks the Knight, who still carries the three damage cubes. The characters kill the mimic. The party gains the chest's treasure card and one card drawn from the tier one treasure deck. Each character then gains four souls and one of the treasure cards dealt to the tile, and the Knight removes the stamina cubes placed during the mimic encounter and one damage cube."
 - Rationale: [MECHANICAL CHANGE] The example now computes from §13.2 as amended: stamina cubes are removed before the mimic's first turn, damage cubes are kept.
 - Source: final rulings, phantom-E23 (`06_final_rulings.md`); Follows phantom-E19; Level 2 full reward of four souls from the table in §7.6.
+
+### CH-13-031 · §13.2
+- Type: clarification
+- Before: "one of its unused behaviour cards, taken at random, is shuffled into its behaviour deck in place of a heat-up card (see §15.5)."
+- After: "one of its unused behaviour cards, taken at random, serves as its heat-up card, and the mimic heats up as a boss does (see §15.5, Heat-Up)."
+- Rationale: [MECHANICAL CHANGE] As lead-E17, for the mimic.
+- Source: final rulings, lead-E18 (`06_final_rulings.md`); boss memo, cross-cluster effects
 
 ## Chapter 14 — Crystal Lizards
 
@@ -4751,6 +4807,280 @@ The embering of every character at a boss's defeat (see §16.5) provokes no inva
 - After: "The Old Dragonslayer uses the Dragon Slayer Ornstein model of the core set"
 - Rationale: Printed name, as campaign-E12; 'Old Dragonslayer' is one word on its own card and is unchanged.
 - Source: final rulings, campaign-E15 (`06_final_rulings.md`); As campaign-E12; Explorers booklet contents ('Old Dragonslayer').
+
+### CH-17-053 · §17.1, Two Boss Models in One Encounter
+- Type: ruling
+- Before: "### Two Boss Models in One Encounter
+
+Some bosses are fought with more than one model. The rules under this heading apply whenever two or more boss models stand on separate *nodes* in one encounter. The two models of the Executioner's Chariot share one node and act as a single model (see §17.9).
+
+Each boss model is placed at the start of the encounter on the node that the boss's entry names. Each boss model has its own four *boss arcs* (see §15.6). A character who shares a node with a boss model is placed in the arcs of that model.
+
+A node holds at most one boss model (see §5.3). When a boss model moves onto a node that holds another boss model, the model already on the node is *pushed* to a *valid node* chosen by the players and keeps its facing (see §8.4). Characters on either node are placed in the arcs of the boss model that now shares their node, as when a boss m […]"
+- After: "### Several Boss Models in One Encounter
+
+Some bosses are fought with more than one boss model. The rules under this heading apply to a boss whose models stand on separate *nodes*: Ornstein & Smough (see §17.2) and the Four Kings (see §17.10, The Four Kings). The two models of the Executioner's Chariot share one node and act as a single model (see §17.9).
+
+The models are one boss, fought in one encounter with one *behaviour deck*. Each boss model has its own *health dial*, its own four *boss arcs* (see §15.6), and its own *condition* tokens. A character who shares a node with a boss model is placed in the arcs of that model.
+
+A node holds at most one boss model (see §5.3). When a boss model moves onto a node that holds another boss model, the model already on the node is *pushed* to a *valid node* chosen by the players and keeps its facing (see §8.4). Characters on ei […]"
+- Rationale: [MECHANICAL CHANGE] One framework for every boss with several models: each model has its own health dial and all models act on each card, as the official cards for Ornstein & Smough and the booklet for the Four Kings both direct. Revises Gate 1 OQ-25 for Ornstein & Smough.
+- Source: final rulings, boss-E08 (`06_final_rulings.md`); Ornstein data card 'United We Stand' and Smough data card 'Divided You Fall' (community transcription, DSBG-Shuffle); Four Kings booklet lines 445-456; 2017 core rules lines 430-433 and 968-971.
+
+### CH-17-054 · §17.2
+- Type: ruling
+- Before: "### Dragon Slayer Ornstein and Executioner Smough
+
+Ornstein & Smough is one main-boss fought with two models, Dragon Slayer Ornstein and Executioner Smough (see §2.3).
+
+**Components.** The two models share one data card, one *health dial*, one set of *behaviour cards*, and one set of *boss treasure* cards.
+
+**Setup.** The joined *boss tiles* of a main-boss encounter show two boss *spawn nodes*: the main-boss spawn node and the mini-boss spawn node (see §15.3). One model is placed on each, as the data card directs. If the data card names no *node* for a model, the players choose which model takes which spawn node. One *behaviour deck* is built for the *boss* (see §15.5), and the health dial is set to the starting health on the data card.
+
+**Special ability.** The rules for two boss models in one encounter apply in full (see §17.1, Two Boss Models in One Encounter). Eac […]"
+- After: "### Dragon Slayer Ornstein and Executioner Smough
+
+Ornstein & Smough is one main-boss fought with two boss models, Dragon Slayer Ornstein and Executioner Smough (see §2.3). Both models are in play from the start of the encounter, and the boss is defeated only when both have been defeated. The rules for several boss models in one encounter apply (see §17.1, Several Boss Models in One Encounter).
+
+**Components.** Each model has its own data card and its own *health dial*. The boss has 15 *behaviour cards*: five paired standard cards, each of which shows one behaviour for Ornstein and one for Smough; five *heat-up cards* for Ornstein; and five heat-up cards for Smough. The two models share one set of *boss treasure* cards.
+
+**Setup.** The joined *boss tiles* of a main-boss encounter show two boss *spawn nodes*: the main-boss spawn node and the mini-boss spawn node (see § […]"
+- Rationale: [MECHANICAL CHANGE] Restores the official structure: two models with their own health, both acting each turn, and a heat-up when the first falls. It matches the printed cards and keeps the fight's one real decision, which of the two to defeat first. Revises Gate 1 OQ-25.
+- Source: final rulings, boss-E10 (`06_final_rulings.md`); Data cards 'United We Stand' and 'Divided You Fall' and card list (community transcription, DSBG-Shuffle lib/dsbg_shuffle_behaviors.py lines 32 and 1703-1835; lib/dsbg_shuffle_behavior_decks.py lines 718-737: +10 and +15 health, capped); publisher forum thread 37344 summary; 2024 core rulebook component list (2 data cards, 15 behaviour cards).
+
+### CH-17-055 · §17.3, Setup
+- Type: completion
+- Before: "At the start of every boss *encounter* fought on the mega-boss side of that game board, one pillar token is placed on each of its four pillar nodes, before the *boss* takes its first *turn*. A *node* that holds a pillar token is closed to every model (see §5.5, Pillars). An encounter fought on a tile without pillar nodes uses no pillar tokens."
+- After: "The Asylum Demon is fought as any mini-boss, except that its *encounter* takes place on the mega-boss side of the expansion's mega-boss game board in place of the mini-boss tile (see §15.3). During setup that game board is placed where the mini-boss tile is placed, with its mega-boss side face up and the *fog gate* token on its doorway (see §6.5), and the Asylum Demon's model is placed on the mega-boss *spawn node* when the encounter is set up. The Stray Demon's encounter is set up as any mega-boss encounter (see §6.7).
+
+At the start of every *boss* encounter fought on the mega-boss side of that game board, one pillar token is placed on each of its four pillar nodes, before the boss takes its first *turn*. A *node* that holds a pillar token is closed to every model (see §5.5, Pillars)."
+- Rationale: [MECHANICAL CHANGE] Settles the open fact: the Asylum Demon mini-boss is fought on the mega-boss game board, so both demons meet the pillars. The sentence about tiles without pillar nodes is no longer needed.
+- Source: final rulings, boss-E11 (`06_final_rulings.md`); Asylum Demon booklet, DS-AD-Rules-web-EN.txt lines 183-205.
+
+### CH-17-056 · §17.3, Special Ability
+- Type: correction
+- Before: "The Asylum Demon and the Stray Demon share the special ability Pillar Smasher."
+- After: "The Asylum Demon and the Stray Demon share the special ability Pillars of Woe."
+- Rationale: Both data cards print the ability as Pillars of Woe; Pillar Smasher is only the booklet's heading for the rule.
+- Source: final rulings, boss-E12 (`06_final_rulings.md`); Asylum Demon booklet, DS-AD-Rules-web-EN.txt data cards at lines 120 and 159 ('Pillars of Woe').
+
+### CH-17-057 · §17.4, Great Grey Wolf Sif
+- Type: completion
+- Before: "**Special ability.** Sif's behaviour cards include the cool-down card Limping Strike, which shows Sif weakened and close to death. The cool-down card is used only as Sif's *data card* directs. Sif has no other rules beyond the data card."
+- After: "**Special ability.** Sif's special ability is Mournful Howl. The cool-down card Limping Strike, which shows Sif weakened and close to death, is neither a standard behaviour card nor a *heat-up card*. It is set aside when the *behaviour deck* is built. When Sif's health is reduced to three or less, the behaviour deck and its discard pile are returned to the game box at once, and Limping Strike alone forms the behaviour deck: Sif draws and resolves it on each of its *turns* until the *encounter* ends (see §15.5, Deck Renewal). Sif has no other rules beyond its *data card*."
+- Rationale: [MECHANICAL CHANGE] Replaces 'as the data card directs' with the data card's rule, so the entry is complete.
+- Source: final rulings, boss-E13 (`06_final_rulings.md`); Sif data card 'Mournful Howl' (community transcription, DSBG-Shuffle card image and lib/dsbg_shuffle_behavior_decks.py line 445); Darkroot booklet lines 174-183.
+
+### CH-17-058 · §17.8, Components
+- Type: clarification
+- Before: "**Signature card.** One of Kalameet's two *behaviour cards*, Mark of Calamity and Hellfire Blast, that are included in every *behaviour deck* built for Kalameet."
+- After: "**Signature card.** A *behaviour card* that is included in every *behaviour deck* built for its boss. Kalameet's two signature cards are Mark of Calamity and Hellfire Blast."
+- Rationale: The Gaping Dragon and the Old Iron King also have signature cards, so the term is defined for any boss.
+- Source: final rulings, boss-E14 (`06_final_rulings.md`); Gaping Dragon booklet lines 367-395; Old Iron King booklet lines 349-375 ('Signature behaviour cards').
+
+### CH-17-059 · §17.6, Old Dragonslayer
+- Type: clarification
+- Before: "The deck is not shuffled, and the card is the next one the Old Dragonslayer draws (see §16.1)."
+- After: "The deck is not shuffled, and the card is the next one the Old Dragonslayer draws (see §16.1). The Old Dragonslayer's data card shows no heat-up point, and the Old Dragonslayer does not heat up in any other way."
+- Rationale: Confirms that Corrupted Dragonslayer is the boss's only heat-up, so that no reader looks for a heat-up point.
+- Source: final rulings, boss-E15 (`06_final_rulings.md`); Explorers booklet data card, DS-Explorers-Rules-Web.txt lines 158-171 (a dash at the heat-up point); DSBG-Shuffle records no heat-up value.
+
+### CH-17-060 · §17.10, The Four Kings
+- Type: completion
+- Before: "**The Four Kings (mega-boss, The Four Kings expansion).** The Four Kings is played from its *data card* and the general boss rules (see §15 and §16). Apply the special rules supplied with that expansion. The Four Kings is fought with several boss models (see §17.1, Two Boss Models in One Encounter)."
+- After: "Each *mega-boss* of this section is fought on the *mega-boss game board* supplied with it, after a *Level 4 encounter* (see §6.7). Where an entry gives a procedure for building the *behaviour deck*, that procedure takes the place of the general one (see §15.5, Deck Construction).
+
+### The Four Kings
+
+The Four Kings is a mega-boss fought with four *boss* models, the kings numbered one to four, who enter the *encounter* one at a time. The rules for several boss models in one encounter apply (see §17.1, Several Boss Models in One Encounter).
+
+**Components.**
+
+- 4x Four Kings models
+- 4x *Health dials*, numbered one to four
+- 4x Identifier tokens, numbered one to four
+- 1x *Data card*
+- 20x *Behaviour cards*: 8 standard cards, 4 second king cards, 4 third king cards, and 4 fourth king cards
+- 2x Mega-boss treasure cards
+- 4x Level 4 encounter cards
+- 1x Mega-boss game boa […]"
+- Rationale: [MECHANICAL CHANGE] Replaces the placeholder with the official rules of the Four Kings, restated in this book's terms.
+- Source: final rulings, boss-E20 (`06_final_rulings.md`); Four Kings booklet, work/text/DS-Four-Kings-Rules-web.txt lines 56-80 (contents), 368-395 (encounter start), 439-480 (One through Four, Royal Summons, Take a Breather).
+
+### CH-17-061 · §17.10, Gaping Dragon
+- Type: completion
+- Before: "**Gaping Dragon (mega-boss, Gaping Dragon expansion).** The Gaping Dragon is played from its data card and the general boss rules (see §15 and §16). Apply the special rules supplied with that expansion. The Gaping Dragon's attacks inflict the *corrosion* *condition* (see §8.5, Corrosion)."
+- After: "### Gaping Dragon
+
+The Gaping Dragon is a mega-boss.
+
+**Components.**
+
+- 1x Gaping Dragon model
+- 1x Data card
+- 1x Health dial
+- 14x Behaviour cards: 7 standard cards, 2 signature cards (both named Stomach Slam), 4 heat-up cards, and 1 Crawling Charge card
+- 4x Corrosion tokens
+- 2x Mega-boss treasure cards
+- 4x Level 4 encounter cards
+- 1x Mega-boss game board
+
+**Setup.** The mega-boss encounter is set up as any mega-boss encounter (see §6.7), with the following differences.
+
+1. Place the Crawling Charge card face up beside the data card. It is never part of the behaviour deck.
+2. Shuffle the seven standard behaviour cards and draw three.
+3. Shuffle the four *heat-up cards* and draw one.
+4. Add the two *signature cards* to the four drawn cards, and shuffle the six cards to form the behaviour deck.
+5. Return the four undrawn standard cards to the game box, and place […]"
+- Rationale: [MECHANICAL CHANGE] Replaces the placeholder with the official rules of the Gaping Dragon, restated in this book's terms.
+- Source: final rulings, boss-E21 (`06_final_rulings.md`); Gaping Dragon booklet, work/text/DS-GaD-Rules-web.txt lines 57-80 (contents), 367-400 (encounter start), 437-470 (Corrosion, Crawling Charge).
+
+### CH-17-062 · §17.10, Guardian Dragon
+- Type: completion
+- Before: "**Guardian Dragon (mega-boss, Guardian Dragon expansion).** The Guardian Dragon is played from its data card and the general boss rules (see §15 and §16). Apply the special rules supplied with that expansion."
+- After: "### Guardian Dragon
+
+The Guardian Dragon is a mega-boss.
+
+**Components.**
+
+- 1x Guardian Dragon model
+- 1x Data card
+- 1x Health dial
+- 11x Behaviour cards: 9 standard cards and 2 heat-up cards, both named Cage Grasp Inferno
+- 4x Fiery Breath cards
+- 2x Mega-boss treasure cards
+- 4x Level 4 encounter cards
+- 1x Mega-boss game board, whose mega-boss side shows four cage nodes
+
+**Cage node.** One of the four nodes at the corners of the mega-boss side of the Guardian Dragon's game board. No model may *move*, *dodge*, or be pushed into a cage node. The Guardian Dragon's model is placed on a cage node only when it resolves an Inferno icon.
+
+**Fiery Breath card.** A card that shows the cage node on which the Guardian Dragon's model is placed, the nodes that an Inferno attack targets, and the *attack value* and dodge difficulty of that attack.
+
+**Setup.** The mega-boss encou […]"
+- Rationale: [MECHANICAL CHANGE] Replaces the placeholder with the official rules of the Guardian Dragon, restated in this book's terms.
+- Source: final rulings, boss-E22 (`06_final_rulings.md`); Guardian Dragon booklet, work/text/DS-GD-Rules-web.txt lines 54-75 (contents), 359-395 (encounter start), 432-470 (Cage Nodes, Cage Grasp Inferno, Bonus Behaviour); Fiery Breath card diagram on booklet p. 13 (attack value and dodge difficulty printed on the card).
+
+### CH-17-063 · §17.10, The Last Giant
+- Type: completion
+- Before: "**The Last Giant (mega-boss, The Last Giant expansion).** The Last Giant is played from its data card and the general boss rules (see §15 and §16). Apply the special rules supplied with that expansion."
+- After: "### The Last Giant
+
+The Last Giant is a mega-boss.
+
+**Components.**
+
+- 1x Last Giant model
+- 1x Data card
+- 1x Health dial
+- 16x Behaviour cards: 5 standard cards, 5 Arm cards, 5 heat-up cards, and 1 Falling Slam card
+- 2x Mega-boss treasure cards
+- 4x Level 4 encounter cards
+- 1x Mega-boss game board
+
+**Setup.** The mega-boss encounter is set up as any mega-boss encounter (see §6.7), with the following differences.
+
+1. Shuffle the five standard behaviour cards and draw three.
+2. Shuffle the five Arm cards and draw three.
+3. Shuffle the six drawn cards together to form the behaviour deck.
+4. Return the undrawn standard cards and the undrawn Arm cards to the game box.
+5. Set aside the Falling Slam card, and shuffle the five heat-up cards face down beside the game board.
+
+**Special ability.** The Last Giant's special ability is Armed and Dangerous. When the Last Giant h […]"
+- Rationale: [MECHANICAL CHANGE] Replaces the placeholder with the official rules of the Last Giant, restated in this book's terms.
+- Source: final rulings, boss-E23 (`06_final_rulings.md`); Last Giant booklet, work/text/DS-TLG-Rules.txt lines 53-70 (contents), 369-400 (encounter start and heat-up), 446-462 (Wind Up).
+
+### CH-17-064 · §17.10, Manus, Father of the Abyss
+- Type: completion
+- Before: "**Manus, Father of the Abyss (mega-boss, Manus, Father of the Abyss expansion).** Manus, Father of the Abyss is played from its data card and the general boss rules (see §15 and §16). Apply the special rules supplied with that expansion."
+- After: "### Manus, Father of the Abyss
+
+Manus, Father of the Abyss is a mega-boss. Its behaviour deck is built by the general procedure (see §15.5, Deck Construction).
+
+**Components.**
+
+- 1x Manus, Father of the Abyss model
+- 1x Data card
+- 1x Health dial
+- 14x Behaviour cards: 9 standard cards and 5 heat-up cards
+- 2x Mega-boss treasure cards
+- 4x Level 4 encounter cards
+- 1x Mega-boss game board
+
+**Special ability.** Manus's special ability is Overextended. At the end of each of Manus's turns, each character may spend one stamina to move to an adjacent node. Each player decides for their own character. The movement counts as a *Run* (see §10.2), and every rule that applies to a Run applies to it. The characters complete the movement before the next character's turn begins (see §16.1).
+
+**Heat-up.** Manus does not heat up as other bosses do (see §15.5, Heat-Up). When Manus's […]"
+- Rationale: [MECHANICAL CHANGE] Replaces the placeholder with the official rules of Manus, restated in this book's terms.
+- Source: final rulings, boss-E24 (`06_final_rulings.md`); Manus booklet, work/text/DS-MFA-Rules.txt lines 58-75 (contents), 370-400 (encounter start and heat-up, 'Do not shuffle the behaviour deck!'), 440-480 (Shaft, Overextended).
+
+### CH-17-065 · §17.10, Old Iron King
+- Type: completion
+- Before: "**Old Iron King (mega-boss, Old Iron King expansion).** The Old Iron King is played from its data card and the general boss rules (see §15 and §16). Apply the special rules supplied with that expansion."
+- After: "### Old Iron King
+
+The Old Iron King is a mega-boss that stands in lava and is placed only on three nodes of its game board.
+
+**Components.**
+
+- 1x Old Iron King model
+- 1x Data card
+- 1x Health dial
+- 12x Behaviour cards: 6 standard cards, 3 signature cards (each named Fire Beam), and 3 heat-up cards
+- 6x Beam cards
+- 2x Mega-boss treasure cards
+- 4x Level 4 encounter cards
+- 1x Mega-boss game board, whose mega-boss side shows three Iron King nodes
+
+**Iron King node.** One of the three nodes, printed on the mega-boss side of the Old Iron King's game board, on which the Old Iron King's model is placed. The Old Iron King never stands on any other node.
+
+**Beam card.** A card that shows the Iron King node on which the Old Iron King's model is placed and the nodes that a Beam attack targets.
+
+The area behind the Iron King nodes is lava. It holds no nodes and is treated a […]"
+- Rationale: [MECHANICAL CHANGE] Replaces the placeholder with the official rules of the Old Iron King, restated in this book's terms.
+- Source: final rulings, boss-E25 (`06_final_rulings.md`); Old Iron King booklet, work/text/DS-OIK-Rules-web.txt lines 54-75 (contents), 349-385 (encounter start and heat-up), 418-460 (Molten Iron Dweller, Beam Attacks); Beam card diagram on booklet p. 13.
+
+### CH-17-066 · §17.10, Vordt of the Boreal Valley
+- Type: completion
+- Before: "**Vordt of the Boreal Valley (mega-boss, Vordt of the Boreal Valley expansion).** Vordt of the Boreal Valley is played from its data card and the general boss rules (see §15 and §16). Apply the special rules supplied with that expansion. Vordt's attacks inflict the *frostbite* condition (see §8.5, Frostbite)."
+- After: "### Vordt of the Boreal Valley
+
+Vordt of the Boreal Valley is a mega-boss that draws from two behaviour decks and heats up twice.
+
+**Components.**
+
+- 1x Vordt of the Boreal Valley model
+- 1x Data card
+- 1x Health dial
+- 17x Behaviour cards: 6 standard movement cards, 2 heat-up movement cards, 6 standard attack cards, 2 heat-up attack cards, and 1 Frostbreath card
+- 2x Mega-boss treasure cards
+- 4x Level 4 encounter cards
+- 1x Mega-boss game board
+
+**Setup.** The mega-boss encounter is set up as any mega-boss encounter (see §6.7), with the following differences. Two decks are built in place of the general behaviour deck.
+
+1. Shuffle the six standard movement cards and draw four as the movement deck.
+2. Shuffle the six standard attack cards and draw three as the attack deck.
+3. Place the attack deck face down to the right of the movement deck. The two decks and their di […]"
+- Rationale: [MECHANICAL CHANGE] Replaces the placeholder with the official rules of Vordt, restated in this book's terms.
+- Source: final rulings, boss-E26 (`06_final_rulings.md`); Vordt booklet, work/text/DS-VotBV-Rules-web.txt lines 57-85 (contents), 378-420 (encounter start, two heat-ups), 457-490 (two decks, Frostbreath); data card 'Icy Blows'.
+
+### CH-17-067 · §17.10, Crossbreed Priscilla
+- Type: clarification
+- Before: "**Crossbreed Priscilla (main-boss, Painted World of Ariamis expansion).** Crossbreed Priscilla is played from its data card and the general boss rules (see §15 and §16). Apply the special rules supplied with that expansion. Its data card and *behaviour cards* are the replacement cards listed in the card amendments (see Appendix B)."
+- After: "### Crossbreed Priscilla
+
+Crossbreed Priscilla is a *main-boss* of the Painted World of Ariamis expansion. It is played from its data card and the general boss rules (see §15 and §16). Apply the special rules supplied with that expansion. Its data card and behaviour cards are the replacement cards listed in the card amendments (see Appendix B)."
+- Rationale: Placeholder kept: the rule that makes Priscilla invisible and visible again was not found. Only the form changes, to match the other entries of §17.10.
+- Source: final rulings, boss-E27 (`06_final_rulings.md`); Printed data card 'Snowblind' found (community transcription, DSBG-Shuffle); no source found for the invisible state; see boss-009.
+
+### CH-17-068 · §17.10, Heavy Knight
+- Type: completion
+- Before: "**Heavy Knight (mini-boss, Painted World of Ariamis expansion).** The Heavy Knight is played from its data card and the general boss rules (see §15 and §16). Apply the special rules supplied with that expansion. Its data card and behaviour cards are the replacement cards listed in the card amendments (see Appendix B)."
+- After: "### Heavy Knight
+
+The Heavy Knight is a *mini-boss* of the Painted World of Ariamis expansion. It is played with the replacement data card and behaviour cards listed in the card amendments (see Appendix B), and it has no rules beyond its data card."
+- Rationale: The expansion supplies no rules for the Heavy Knight beyond its cards, so the delegation sentence pointed at nothing; the entry now takes the form §17.7 uses for the Black Knight.
+- Source: final rulings, boss-E28 (`06_final_rulings.md`); 2022 rulebook lines 2099-2290 (boss rules shared by both 2022 sets; no special rule per boss); printed data card 'Brutal Impact' (community transcription, DSBG-Shuffle), a self-contained ability.
 
 ## Chapter 19 — Campaigns
 
@@ -5417,6 +5747,48 @@ The Level 1, Level 2, and Level 3 encounter decks are built from the *encounter 
 - Rationale: Not restated here because another section owns the rule and this chapter cites it: A-089 (fog gate placement, §6.5), A-095 (fog gate before the mega-boss, §6.7), A-087 (dodge with no valid node, §5.2 and §9.5), A-119 (riposte as an attack, §9.6; its weak-arc consequence is applied in CH-15-031).
 - Source: A-089, A-095, A-087, A-119
 
+### CH-15-040 · §15.5, Heat-Up
+- Type: ruling
+- Before: "A boss heats up when its health is reduced to or below its *heat-up point* {{icon:ast-0030-heat-up-point}}. A boss heats up once in each attempt at its encounter. When a boss heats up, a heat-up card is added to its behaviour deck as follows.
+
+1. Take one card at random from the boss's heat-up cards, without looking at it.
+2. Shuffle that card, face down, into the cards that remain in the behaviour deck. The discard pile is not shuffled and its order is not changed.
+3. If no cards remain in the behaviour deck, place the heat-up card face down as the behaviour deck. The discard pile is not renewed until that card has been drawn.
+
+If a boss heats up during a character's turn, these steps are carried out as soon as the attack that caused the heat-up has been resolved. If a boss heats up during its own turn, as a *riposte* may cause, the steps are carried out after the cu […]"
+- After: "A boss heats up when its health is reduced to or below its *heat-up point* {{icon:ast-0030-heat-up-point}}. A boss heats up once in each attempt at its encounter. The heat-up is carried out at the start of the boss's next turn, before a card is drawn (see §16.1), as follows.
+
+1. Gather the behaviour deck and the discard pile.
+2. Take one card at random from the boss's heat-up cards, without looking at it, and add it to the gathered cards.
+3. Shuffle the gathered cards face down to form the new behaviour deck.
+
+The boss then draws the top card of the new deck. Until that card is drawn, the boss's current behaviour card and its weak arcs do not change (see §15.5, Card Anatomy). The boss's other heat-up cards stay face down beside the boss tile and take no part in the encounter.
+
+Some bosses heat up in other ways. The special rules of such a boss replace the steps of thi […]"
+- Rationale: [MECHANICAL CHANGE] The whole deck is reshuffled with the heat-up card, so the learned order is lost as both official rulebooks intend, and one timing (the start of the boss's next turn) replaces two.
+- Source: final rulings, boss-E01 (`06_final_rulings.md`); 2017 core rules lines 1392-1396 and 2022 rules lines 2146-2153 ('players will now need to relearn the boss's attack pattern'); community consensus (BoardGameGeek thread 1819893 summary; DSBG-Shuffle heat-up code); Vordt booklet lines 475-490 times its heat-up at the start of the next activation.
+
+### CH-15-041 · §15.5, Heat-Up
+- Type: ruling
+- Before: "*Example.* A *mini-boss* has a heat-up point of 12, and its *health dial* shows 14. Two cards remain in its behaviour deck and three lie in its discard pile. The Warrior's attack inflicts three damage, and the dial is turned to 11. The boss heats up: the players take one of its heat-up cards at random and shuffle it, unseen, into the two cards of the behaviour deck. The three cards of the discard pile are left as they lie. The boss draws from a deck of three cards on its next turn."
+- After: "*Example.* A *mini-boss* has a heat-up point of 12, and its *health dial* shows 14. Two cards remain in its behaviour deck and three lie in its discard pile. The Warrior's attack inflicts three damage, and the dial is turned to 11. At the start of the boss's next turn the players gather the two cards of the deck and the three cards of the discard pile, add one of the boss's heat-up cards, taken at random and unseen, and shuffle the six cards to form the new behaviour deck. The boss then draws the top card."
+- Rationale: [MECHANICAL CHANGE] The example must compute from the heat-up rule as changed by boss-E01.
+- Source: final rulings, boss-E02 (`06_final_rulings.md`); follows boss-E01
+
+### CH-15-042 · §15.3
+- Type: completion
+- Before: "A mini-boss encounter is fought on the mini-boss tile alone."
+- After: "A mini-boss encounter is fought on the mini-boss tile alone, unless the mini-boss's special rules name another tile (see §17.3)."
+- Rationale: [MECHANICAL CHANGE] The Asylum Demon mini-boss is fought on its expansion's mega-boss game board; §15.3 must allow the exception that §17.3 now states.
+- Source: final rulings, boss-E03 (`06_final_rulings.md`); Asylum Demon booklet, DS-AD-Rules-web-EN.txt lines 183-190 ('the boss encounter takes place on the Mega Boss game board instead of the Mini Boss tile').
+
+### CH-15-043 · §15 (introduction)
+- Type: correction
+- Before: "A boss is a single model of great health and power,"
+- After: "A boss is a foe of great health and power,"
+- Rationale: Two bosses are fought with more than one model.
+- Source: final rulings, lead-E19 (`06_final_rulings.md`); boss memo, cross-cluster effects
+
 ## Chapter 16 — Boss Turns
 
 ### CH-16-001 · §16 Boss Turns
@@ -5649,6 +6021,41 @@ The Level 1, Level 2, and Level 3 encounter decks are built from the *encounter 
 - After: "A *summon* does not hold the aggro token, and damage inflicted by a summon does not move it. While the Distract icon of a summon's behaviour card is in effect, the boss treats the summon as the holder (see §12.1)."
 - Rationale: §16.4 owns boss aggro and did not mention the one effect that redirects it; the sentence points to §12.1 without restating the rule.
 - Source: final rulings, phantom-E17 (`06_final_rulings.md`); Official Phantoms booklet, Distract (lines 293-298).
+
+### CH-16-034 · §16.1
+- Type: ruling
+- Before: "A boss's turn is resolved as follows."
+- After: "A boss's turn is resolved as follows. If the boss is due to heat up, its heat-up is carried out before step 1 (see §15.5, Heat-Up)."
+- Rationale: [MECHANICAL CHANGE] States in the boss turn where the heat-up of boss-E01 is carried out, without renumbering the steps.
+- Source: final rulings, boss-E04 (`06_final_rulings.md`); follows boss-E01
+
+### CH-16-035 · §16.1
+- Type: ruling
+- Before: "If the boss heats up during its own turn, the *heat-up card* joins the behaviour deck after step 5 (see §15.5, Heat-Up)."
+- After: "If the boss's health is reduced to or below its heat-up point during its own turn, the *heat-up card* joins the behaviour deck at the start of the boss's next turn (see §15.5, Heat-Up)."
+- Rationale: Keeps §16.1 in step with the single heat-up timing of boss-E01; the result for a heat-up caused during the boss's own turn is unchanged.
+- Source: final rulings, boss-E05 (`06_final_rulings.md`); follows boss-E01
+
+### CH-16-036 · §16.4
+- Type: ruling
+- Before: "At the end of each character's *turn*, if that character inflicted damage on the boss during the turn, the aggro token moves to that character. If the character inflicted no damage on the boss, the token stays with its holder."
+- After: "At the end of each character's *turn*, if that character inflicted damage on the boss during the turn, the aggro token moves to that character. Damage inflicted on another enemy model that the boss's special rules place in the encounter moves the token in the same way (see §17). If the character inflicted no such damage, the token stays with its holder."
+- Rationale: [MECHANICAL CHANGE] Without this the token cannot move during the first part of the Executioner's Chariot encounter, when the boss cannot be damaged; one general clause closes the gap for every boss that brings other enemies.
+- Source: final rulings, boss-E06 (`06_final_rulings.md`); Issue list ch. 17, Executioner's Chariot (c); Chariot booklet DS-EC-Rules-Web.txt lines 446-462 (other enemies act in the encounter).
+
+### CH-16-037 · §16.5
+- Type: ruling
+- Before: "A boss fought with two models, and the *Twin Gargoyles*, are defeated as their own rules state (see §17.1)."
+- After: "A boss fought with several boss models is defeated only when its own rules say so: a boss model whose health dial is reduced to zero is removed from the tile, and the encounter continues against the models that remain (see §17.1, Several Boss Models in One Encounter). The *Twin Gargoyles* are defeated as their own rule states (see §17.1, Twin Gargoyles)."
+- Rationale: [MECHANICAL CHANGE] Boss Death must not be resolved when one of several boss models falls (Ornstein & Smough, the Four Kings).
+- Source: final rulings, boss-E07 (`06_final_rulings.md`); Ornstein and Smough data cards (community transcription, DSBG-Shuffle); Four Kings booklet lines 445-447.
+
+### CH-16-038 · §16.4
+- Type: clarification
+- Before: "A character inflicts damage on a boss when an attack lowers the boss's *health dial* by one or more."
+- After: "A character inflicts damage on a boss when the character's attack, or a *bleed* that the attack triggers, lowers the boss's *health dial* by one or more."
+- Rationale: Bleed triggered by a character's attack counts for the aggro token (combat-E17), and bleed is not itself an attack.
+- Source: final rulings, lead-E13 (`06_final_rulings.md`); combat memo, cross-cluster effects
 
 ## Chapter 23 — Appendices
 
@@ -5924,6 +6331,24 @@ The Level 1, Level 2, and Level 3 encounter decks are built from the *encounter 
 **Q.** Who holds the aggro token when its holder dies?"
 - Rationale: States the consequence of core-E36 where players will look for it.
 - Source: final rulings, lead-E12 (`06_final_rulings.md`); core memo, cross-cluster effects
+
+### CH-22-015 · §22.5
+- Type: ruling
+- Before: "**A.** One boss with two models. The models share one data card, one health dial, and one behaviour deck, and the boss heats up once. Each behaviour card names the model that acts. A character who attacks either model attacks the boss, and the weak-arc die is judged against the arcs of the model attacked (see §17.2)."
+- After: "**A.** One boss with two boss models. Each model has its own data card and health dial, the two share one behaviour deck, and both act on each boss turn. When the first model is defeated the boss heats up: the survivor's heat-up cards become the behaviour deck, and the survivor regains health. The boss is defeated when both models have been defeated (see §17.2)."
+- Rationale: [MECHANICAL CHANGE] Keeps the F.A.Q. in step with boss-E10.
+- Source: final rulings, boss-E46 (`06_final_rulings.md`); follows boss-E10
+
+### CH-22-016 · §22.5
+- Type: clarification
+- Before: "**Q.** A campaign section lists the Gargoyle twice. Are the two fights separate encounters?"
+- After: "**Q.** When a boss heats up, is its discard pile shuffled as well?
+
+**A.** Yes. At the start of the boss's next turn the behaviour deck and the discard pile are gathered, one heat-up card taken at random is added, and all the cards are shuffled to form a new behaviour deck. The order learned before the heat-up is lost (see §15.5, Heat-Up).
+
+**Q.** A campaign section lists the Gargoyle twice. Are the two fights separate encounters?"
+- Rationale: The most asked question about boss fights now has its answer in the F.A.Q.; the rule itself is boss-E01.
+- Source: final rulings, boss-E48 (`06_final_rulings.md`); BoardGameGeek thread 1819893 (search summary); follows boss-E01
 
 ## Chapter 18 — Campaign Play
 
@@ -6320,6 +6745,13 @@ The Level 1, Level 2, and Level 3 encounter decks are built from the *encounter 
 - Rationale: [MECHANICAL CHANGE] Follows lead-E02.
 - Source: final rulings, lead-E03 (`06_final_rulings.md`)
 
+### CH-18-057 · §18.1, Section Setup
+- Type: completion
+- Before: "- A mini-boss is fought on the mini-boss tile, and a *main-boss* on the two *boss tiles* joined as one (see §15.3)."
+- After: "- A mini-boss is fought on the mini-boss tile, or on its expansion's game board when it is the Asylum Demon (see §17.3), and a *main-boss* on the two *boss tiles* joined as one (see §15.3)."
+- Rationale: As lead-E15, for campaign play.
+- Source: final rulings, lead-E16 (`06_final_rulings.md`); boss memo, cross-cluster effects
+
 ## Chapter 21 — Glossary
 
 ### CH-21-001 · §21 Glossary
@@ -6545,3 +6977,88 @@ The Level 1, Level 2, and Level 3 encounter decks are built from the *encounter 
 - After: "**Victory bonus.** The reward for winning a *PvP encounter* that follows the defeat of a boss other than the final boss, marked by a spare token placed beside the winner's dashboard. It adds one to the attack value of each of the character's attacks in every subsequent PvP encounter. A character holds no more than one victory bonus, and it is kept until the game ends (see §20.8)."
 - Rationale: [MECHANICAL CHANGE] Keeps the entry in step with §20.8: one bonus, not cumulative, marked by a spare token.
 - Source: final rulings, phantom-E39 (`06_final_rulings.md`); Follows phantom-E30.
+
+### CH-21-033 · Glossary, Boss
+- Type: clarification
+- Before: "**Boss.** A single powerful enemy whose turns are driven by a behaviour deck and whose base is divided into four arcs. There are three ranks: *mini-boss*, *main-boss*, and *mega-boss*. A boss is not scaled for the number of characters and cannot be pushed by characters (see §15; §16)."
+- After: "**Boss.** A powerful enemy whose turns are driven by a behaviour deck and whose base is divided into four arcs. Most bosses are fought with one model; Ornstein & Smough and the Four Kings are fought with several boss models, each with its own health dial (see §17.1). There are three ranks: *mini-boss*, *main-boss*, and *mega-boss*. A boss is not scaled for the number of characters and cannot be pushed by characters (see §15; §16)."
+- Rationale: A boss is no longer always a single model.
+- Source: final rulings, boss-E30 (`06_final_rulings.md`); follows boss-E08
+
+### CH-21-034 · Glossary, Heat-up
+- Type: ruling
+- Before: "**Heat-up.** The event in which a boss, mimic, or invader becomes more dangerous. When a boss's health is reduced to or below its heat-up point, one heat-up card taken at random is shuffled into the cards that remain in its behaviour deck (see §15.5); a mimic or an invader adds one of its unused behaviour cards instead. Some bosses heat up differently (see §17)."
+- After: "**Heat-up.** The event in which a boss, mimic, or invader becomes more dangerous. When a boss's health is reduced to or below its heat-up point, its behaviour deck and discard pile are gathered at the start of its next turn and shuffled together with one heat-up card taken at random to form a new behaviour deck (see §15.5); a mimic or an invader adds one of its unused behaviour cards instead. Some bosses heat up differently (see §17)."
+- Rationale: [MECHANICAL CHANGE] Keeps the glossary in step with the heat-up rule of boss-E01.
+- Source: final rulings, boss-E31 (`06_final_rulings.md`); follows boss-E01
+
+### CH-21-035 · Glossary, Signature card
+- Type: clarification
+- Before: "**Signature card.** One of Black Dragon Kalameet's two behaviour cards, Mark of Calamity and Hellfire Blast, that are included in every behaviour deck built for Kalameet (see §17.8)."
+- After: "**Signature card.** A behaviour card that is included in every behaviour deck built for its boss: Black Dragon Kalameet's Mark of Calamity and Hellfire Blast, the Gaping Dragon's two Stomach Slam cards, and the Old Iron King's three Fire Beam cards (see §17.8; §17.10)."
+- Rationale: The term now serves three bosses.
+- Source: final rulings, boss-E32 (`06_final_rulings.md`); follows boss-E14, boss-E21, boss-E25
+
+### CH-21-036 · Glossary, Wind Up
+- Type: clarification
+- Before: "**Wind Up.** A behaviour icon printed on behaviour cards of the Asylum Demon and the Stray Demon. When it is resolved, each character may spend one stamina to move to an adjacent node before the next icon is resolved; the movement counts as a *Run* (see §17.3)."
+- After: "**Wind Up.** A behaviour icon printed on behaviour cards of the Asylum Demon, the Stray Demon, and the Last Giant. When it is resolved, each character may spend one stamina to move to an adjacent node before the next icon is resolved; the movement counts as a *Run* (see §17.3)."
+- Rationale: The Last Giant's cards show the same icon.
+- Source: final rulings, boss-E33 (`06_final_rulings.md`); Last Giant booklet lines 452-462
+
+### CH-21-037 · Glossary, Shaft
+- Type: clarification
+- Before: "**Shaft.** A weapon icon. An attack option with the shaft icon cannot target a model on the attacker's own node (see §10.3, Shaft)."
+- After: "**Shaft.** A weapon icon. An attack option with the shaft icon cannot target a model on the attacker's own node (see §10.3, Shaft). On a behaviour card of Manus, Father of the Abyss, an attack with the shaft icon does not target a character on Manus's own node (see §17.10, Manus, Father of the Abyss)."
+- Rationale: The icon also appears on a boss's cards.
+- Source: final rulings, boss-E34 (`06_final_rulings.md`); Manus booklet lines 446-466
+
+### CH-21-038 · Glossary, Aggro token
+- Type: ruling
+- Before: "**Aggro token.** The single token that marks the character with aggro. It is placed on the character with the highest threat at the start of each encounter and, after each round of character turns, moves to the character who inflicted the most damage on enemy models during that round (on a tie, or if no damage was inflicted, the holder keeps it). If the holder dies it moves to the living character with the highest threat. In boss encounters it moves to any character who damages the boss during their turn (see §7.5, Encounter Turn Order; §16.4)."
+- After: "**Aggro token.** The single token that marks the character with aggro. It is placed on the character with the highest threat at the start of each encounter and, after each round of character turns, moves to the character who inflicted the most damage on enemy models during that round (on a tie, or if no damage was inflicted, the holder keeps it). If the holder dies it moves to the living character with the highest threat. In boss encounters it moves to any character who damages the boss, or another enemy model in the encounter, during their turn (see §7.5, Encounter Turn Order; §16.4)."
+- Rationale: [MECHANICAL CHANGE] Keeps the glossary in step with boss-E06.
+- Source: final rulings, boss-E35 (`06_final_rulings.md`); follows boss-E06
+
+### CH-21-039 · Glossary, Mini-boss
+- Type: completion
+- Before: "**Mini-boss.** The first boss of the standard game, fought on the mini-boss tile (see §6.5; §15.3)."
+- After: "**Mini-boss.** The first boss of the standard game, fought on the mini-boss tile or, for the Asylum Demon, on the mega-boss game board of its expansion (see §6.5; §15.3; §17.3)."
+- Rationale: Keeps the glossary in step with boss-E03 and boss-E11.
+- Source: final rulings, boss-E36 (`06_final_rulings.md`); Asylum Demon booklet lines 183-190
+
+### CH-21-040 · Glossary, Beam card (new entry)
+- Type: completion
+- Before: "**Behaviour card.** A card drawn from the behaviour deck of a boss, mimic, invader, or summon at the start of that model's turn. Its icons are resolved from left to right. A boss's current behaviour card sets the range and the dodge difficulty of its attacks and shows its weak arcs until the next card is drawn (see §15.5; §16.1)."
+- After: "**Beam card.** A card from the Old Iron King expansion revealed when a Beam icon is resolved. It shows the Iron King node on which the Old Iron King's model is placed and the nodes whose characters the Beam attack targets (see §17.10, Old Iron King).
+
+**Behaviour card.** A card drawn from the behaviour deck of a boss, mimic, invader, or summon at the start of that model's turn. Its icons are resolved from left to right. A boss's current behaviour card sets the range and the dodge difficulty of its attacks and shows its weak arcs until the next card is drawn (see §15.5; §16.1)."
+- Rationale: New defined term of boss-E25.
+- Source: final rulings, boss-E38 (`06_final_rulings.md`); Old Iron King booklet lines 435-460
+
+### CH-21-041 · Glossary, Cage node (new entry)
+- Type: completion
+- Before: "**Calamity.** A condition from the Black Dragon Kalameet expansion. A model holds at most one calamity token, which reduces the total of each of its block, resist, and dodge rolls by one. A calamity token is removed only when the encounter ends (see §8.5, Calamity)."
+- After: "**Cage node.** One of the four nodes at the corners of the mega-boss side of the Guardian Dragon's *mega-boss game board*. No model may *move*, *dodge*, or be pushed into a cage node; the Guardian Dragon's model is placed on one only when it resolves an Inferno icon (see §17.10, Guardian Dragon).
+
+**Calamity.** A condition from the Black Dragon Kalameet expansion. A model holds at most one calamity token, which reduces the total of each of its block, resist, and dodge rolls by one. A calamity token is removed only when the encounter ends (see §8.5, Calamity)."
+- Rationale: New defined term of boss-E22.
+- Source: final rulings, boss-E39 (`06_final_rulings.md`); Guardian Dragon booklet lines 438-444
+
+### CH-21-042 · Glossary, Fiery Breath card (new entry)
+- Type: completion
+- Before: "**Final boss.** The last boss of the game: the main-boss, or the mega-boss if the players chose to add one. Defeating the final boss wins the game (see §7.1). In campaign play the final boss is the last boss listed in the campaign's last section (see §18.1)."
+- After: "**Fiery Breath card.** A card from the Guardian Dragon expansion revealed when an Inferno icon is resolved. It shows the cage node on which the Guardian Dragon's model is placed, the nodes whose characters the Inferno attack targets, and the attack value and dodge difficulty of that attack (see §17.10, Guardian Dragon).
+
+**Final boss.** The last boss of the game: the main-boss, or the mega-boss if the players chose to add one. Defeating the final boss wins the game (see §7.1). In campaign play the final boss is the last boss listed in the campaign's last section (see §18.1)."
+- Rationale: New defined term of boss-E22.
+- Source: final rulings, boss-E40 (`06_final_rulings.md`); Guardian Dragon booklet lines 446-470 and p. 13 card diagram
+
+### CH-21-043 · Glossary, Iron King node (new entry)
+- Type: completion
+- Before: "**Leap.** A boss movement marked with the leap icon. The boss is removed from its node and placed on the node of its target, at any distance, without changing its facing. Every character on that node is pushed to a valid adjacent node chosen by that character's player, and the push is not limited by arcs (see §16.2)."
+- After: "**Iron King node.** One of the three nodes, printed on the mega-boss side of the Old Iron King's *mega-boss game board*, on which the Old Iron King's model is placed. The Old Iron King never stands on any other node (see §17.10, Old Iron King).
+
+**Leap.** A boss movement marked with the leap icon. The boss is removed from its node and placed on the node of its target, at any distance, without changing its facing. Every character on that node is pushed to a valid adjacent node chosen by that character's player, and the push is not limited by arcs (see §16.2)."
+- Rationale: New defined term of boss-E25.
+- Source: final rulings, boss-E41 (`06_final_rulings.md`); Old Iron King booklet lines 424-433
