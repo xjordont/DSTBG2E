@@ -195,7 +195,7 @@ A character targeted by an attack may attempt to *parry* it in place of a *block
 - A *shield* is equipped in one of the character's *weapon slots* (see §3.2; §4.1).
 - The attacker is on the character's node.
 
-The shield may be in either weapon slot. A character who wields a weapon *two-handed* has no shield equipped and cannot parry (see §10.4).
+The shield may be in either weapon slot. A character who wields a weapon other than a shield *two-handed* has no shield equipped and cannot parry (see §10.4).
 
 The following attacks cannot be parried.
 

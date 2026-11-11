@@ -47,13 +47,16 @@ def kind(r):
 ALL = {a: entries(a) for a, _ in AREAS if (P3 / f'rulings_{a}.md').exists()}
 EDITS = {a: json.loads((P3 / f'edits_{a}.json').read_text(encoding='utf-8')) for a, _ in AREAS if (P3 / f'edits_{a}.json').exists()}
 lead_edits = json.loads((P3 / 'edits_lead.json').read_text(encoding='utf-8')) if (P3 / 'edits_lead.json').exists() else []
+verify_edits = [e for v in ('verify_a', 'verify_b') if (P3 / f'edits_{v}.json').exists()
+                for e in json.loads((P3 / f'edits_{v}.json').read_text(encoding='utf-8'))]
 n_items = sum(len(v[0]) for v in ALL.values())
 counts = {}
 for a, (es, _) in ALL.items():
     for e in es:
         counts[kind(e['ruling'])] = counts.get(kind(e['ruling']), 0) + 1
 n_applied = len(applied)
-n_mech = sum(1 for a in EDITS for e in EDITS[a] if e.get('mechanical') and e['id'] in applied) + sum(1 for e in lead_edits if e.get('mechanical') and e['id'] in applied)
+n_mech = (sum(1 for a in EDITS for e in EDITS[a] if e.get('mechanical') and e['id'] in applied)
+          + sum(1 for e in lead_edits + verify_edits if e.get('mechanical') and e['id'] in applied))
 
 L = []
 A = L.append
@@ -97,8 +100,8 @@ A('')
 A('| Edit | Where | What changes |')
 A('|---|---|---|')
 seen = set()
-for a in list(EDITS) + ['lead']:
-    for e in (EDITS.get(a) or lead_edits if a != 'lead' else lead_edits):
+for a in list(EDITS) + ['lead', 'verify']:
+    for e in (EDITS.get(a, []) if a not in ('lead', 'verify') else lead_edits if a == 'lead' else verify_edits):
         if e.get('mechanical') and e['id'] in applied and e.get('rationale') not in seen:
             seen.add(e.get('rationale'))
             A(f"| {e['id']} | {e.get('section', '')} | {short(e.get('rationale', ''), 260)} |")
@@ -155,6 +158,19 @@ for a, label in AREAS:
         A('')
         A(m.group(1).strip())
         A('')
+A('## 8. Verification after the rulings')
+A('')
+va = [e for e in verify_edits if e['id'] in applied]
+A(f'Once the rulings were applied, two independent readers checked the whole book against itself: every worked example recomputed from the rules as they now stand, '
+  f'every table against its text, every statement of a rule against every other statement of the same rule, and the eight added booklets against the entries drawn from them. '
+  f'Their reports are `work/phase3/verify_a.md` (chapters 1 to 11, glossary A to M) and `work/phase3/verify_b.md` (chapters 12 to 23, glossary N to Z). '
+  f'{len(va)} corrections followed, each an entry in `11_change_log.md` that cites its `VA-` or `VB-` number; '
+  f'{sum(1 for e in va if e.get("mechanical"))} of them settle a point the rules had left open and are listed in section 3. The readers\' judgement calls were decided by the lead editor:')
+A('')
+for e in va:
+    if 'judgement call' in e.get('evidence', ''):
+        A(f"- {e['id']} ({e.get('section', '')}): {e.get('rationale', '')}")
+A('')
 (ROOT / '06_final_rulings.md').write_text('\n'.join(L).rstrip('\n') + '\n', encoding='utf-8')
 
 O = []

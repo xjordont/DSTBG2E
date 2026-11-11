@@ -324,3 +324,34 @@
 - After: "- A sold boss treasure card is returned to the game box, and so is any other sold card that came from no treasure deck: an *invader*'s treasure card or a Titanite Scale card."
 - Rationale: [MECHANICAL CHANGE] A card that came from outside the decks no longer enters a treasure deck when it is sold, from which it could have been dealt as an ordinary reward.
 - Source: final rulings, lead-E09 (`06_final_rulings.md`); core memo, cross-cluster effects
+
+### CH-11-047 · §11.5
+- Type: correction
+- Before: "After the reset the characters leave the bonfire tile and enter the encounter tile adjacent to it, where that tile's encounter begins (see §7.5, Encounter Start)."
+- After: "After the reset the characters leave the bonfire tile and enter the first encounter tile of the route, where that tile's encounter begins (see §7.5, Encounter Start)."
+- Rationale: As VA-014: with a route of any shape two encounter tiles may lie beside the bonfire tile.
+- Source: final rulings, VA-027 (`06_final_rulings.md`); second verification, chapters 1 to 11 (work/phase3/verify_a.md)
+
+### CH-11-048 · §11.4, Sales and Prices
+- Type: clarification
+- Before: "Andre pays one soul for a tier one or tier two treasure card and six souls for a boss treasure card, and the character takes the souls from the supply."
+- After: "Andre pays one soul for a tier one or tier two treasure card, one soul for an *invader*'s treasure card or a Titanite Scale card, and six souls for a boss treasure card, and the character takes the souls from the supply."
+- Rationale: An invader's treasure card and a Titanite Scale card could be sold but had no stated price; each sells for one soul, as the ruling on sales intended.
+- Source: final rulings, VA-026a (`06_final_rulings.md`); lead editor's decision on a judgement call of the second verification (work/phase3/verify_a.md)
+
+### CH-11-049 · §11.4, Sales and Prices
+- Type: clarification
+- Before: "- A sold tier one or tier two treasure card is placed face down at the bottom of the treasure deck of its tier (see §6.2)."
+- After: "- A sold tier one or tier two treasure card that came from a treasure deck or from the shop is placed face down at the bottom of the treasure deck of its tier (see §6.2)."
+- Rationale: Two bullets both claimed a sold invader's treasure card; the first now covers only cards that came from a deck or the shop.
+- Source: final rulings, VA-026b (`06_final_rulings.md`); lead editor's decision on a judgement call of the second verification (work/phase3/verify_a.md)
+
+### CH-11-050 · §11.4, Prices
+- Type: clarification
+- Before: "| Tier two card | 4 | 1 |
+"
+- After: "| Tier two card | 4 | 1 |
+| *Invader*'s treasure card or Titanite Scale card | - | 1 |
+"
+- Rationale: The price table gains the row for the two cards that come from no treasure deck.
+- Source: final rulings, VA-026c (`06_final_rulings.md`); lead editor's decision on a judgement call of the second verification (work/phase3/verify_a.md)

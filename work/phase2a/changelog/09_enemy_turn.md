@@ -338,3 +338,10 @@ Steps 6 and 7 are resolved even if the character suffered no damage. A character
 - After: "No riposte is made if the other weapon slot holds no weapon with an attack option,"
 - Rationale: [MECHANICAL CHANGE] As combat-E22.
 - Source: final rulings, combat-E25 (`06_final_rulings.md`); As combat-E22.
+
+### CH-09-047 · §9.6
+- Type: clarification
+- Before: "A character who wields a weapon *two-handed* has no shield equipped and cannot parry (see §10.4)."
+- After: "A character who wields a weapon other than a shield *two-handed* has no shield equipped and cannot parry (see §10.4)."
+- Rationale: A shield equipped alone is itself wielded two-handed, and the rule that a shield in either weapon slot parries governs; no riposte follows, because the other slot holds no weapon.
+- Source: final rulings, VA-025a (`06_final_rulings.md`); lead editor's decision on a judgement call of the second verification (work/phase3/verify_a.md)

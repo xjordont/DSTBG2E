@@ -504,3 +504,66 @@
 - After: "7. If the party consists of one character, place six *souls* on that character's dashboard (see §7.6)."
 - Rationale: [MECHANICAL CHANGE] lead-E10 is withdrawn. Letting a lone character spend before setting out made an exception to the one rule that souls are spent at a rest (§7.6, §11.3, §11.4, and three glossary entries); the author's rule stands as written, and the six souls are spent at the first rest, which leaves the lone character a real choice between resting early and pressing on.
 - Source: final rulings, lead-E22 (`06_final_rulings.md`); review finding on the pull request; the author's manuscript says only that a character adventuring alone starts with six souls
+
+### CH-06-072 · §6.1
+- Type: correction
+- Before: "sets the scaling of enemy health and attack values (see §8.3)"
+- After: "sets the scaling of enemy health, movement, and attack values (see §8.3)"
+- Rationale: The table of §8.3 scales enemy movement as well as health and attack value.
+- Source: final rulings, VA-009 (`06_final_rulings.md`); second verification, chapters 1 to 11 (work/phase3/verify_a.md)
+
+### CH-06-073 · §6.2
+- Type: correction
+- Before: "Every *treasure card* belongs to one of six types (see §2.5), and its type and its stat requirements (see §4.1) decide which deck, if any, it enters."
+- After: "The *treasure cards* from which the decks are built are of the six types set out below, and a card's type and its stat requirements (see §4.1) decide which deck, if any, it enters; the number of cards of each type is given with the components (see §2.5). An *ember card*, an *invader*'s treasure card, and a Titanite Scale card are of none of the six types and enter neither deck (see §2.9; §4.4)."
+- Rationale: §2.5, §4.4, §7.7 and §11.4 count ember cards, invader treasure cards and Titanite Scale cards as treasure cards, and none of them is one of the six types; §2.5 names no sixth type.
+- Source: final rulings, VA-010 (`06_final_rulings.md`); second verification, chapters 1 to 11 (work/phase3/verify_a.md)
+
+### CH-06-074 · §6.2
+- Type: correction
+- Before: "**Common treasure.** A treasure card that is not starting equipment, class-specific, transposed, legendary, or boss treasure."
+- After: "**Common treasure.** A treasure card that is not starting equipment, class-specific, transposed, legendary, or boss treasure, and is not an *ember card*, an *invader*'s treasure card, or a Titanite Scale card."
+- Rationale: As written the catch-all makes invader treasure cards and Titanite Scale cards common treasure and puts them in the decks, against §11.4, §12.2 and §14, which keep them outside every treasure deck.
+- Source: final rulings, VA-011 (`06_final_rulings.md`); second verification, chapters 1 to 11 (work/phase3/verify_a.md)
+
+### CH-06-075 · §6.2
+- Type: correction
+- Before: "1. Set aside every boss treasure card, every legendary treasure card, every ember card, and every starting equipment card that is not equipped."
+- After: "1. Set aside every boss treasure card, every legendary treasure card, every ember card, every *invader*'s treasure card, every Titanite Scale card, and every starting equipment card that is not equipped."
+- Rationale: Step 3 sorts every card not set aside into the decks; §11.4, §12.2 and §14 require invader treasure cards and Titanite Scale cards to stay out of them.
+- Source: final rulings, VA-012 (`06_final_rulings.md`); second verification, chapters 1 to 11 (work/phase3/verify_a.md)
+
+### CH-06-076 · §6.3
+- Type: correction
+- Before: "including rings and *titanite*."
+- After: "including rings and *Titanite*."
+- Rationale: The glossary and §4.1, §4.2 and §11.4 spell the term *Titanite*.
+- Source: final rulings, VA-013 (`06_final_rulings.md`); second verification, chapters 1 to 11 (work/phase3/verify_a.md)
+
+### CH-06-077 · §6.5
+- Type: correction
+- Before: "Encounter levels increase from the tile adjacent to the bonfire tile towards the boss tile."
+- After: "Encounter levels increase along the route, from the first encounter tile after the bonfire tile to the last encounter tile before the boss tile."
+- Rationale: In a folded chain, such as the two rows of three of §6.5 step 3, two encounter tiles lie beside the bonfire tile, so 'the tile adjacent to the bonfire tile' names no single tile.
+- Source: final rulings, VA-014 (`06_final_rulings.md`); second verification, chapters 1 to 11 (work/phase3/verify_a.md)
+
+### CH-06-078 · §6.6
+- Type: correction
+- Before: "19. Exploration resumes from the encounter tile adjacent to the bonfire tile (see §11.5)."
+- After: "19. Exploration resumes from the first encounter tile of the route (see §11.5)."
+- Rationale: As VA-014: with a route of any shape the first encounter tile is fixed by the chain, not by lying beside the bonfire tile.
+- Source: final rulings, VA-016 (`06_final_rulings.md`); second verification, chapters 1 to 11 (work/phase3/verify_a.md)
+
+### CH-06-079 · §6.5, Optional Rules
+- Type: correction
+- Before: "- Player versus player (PvP) encounters follow the defeat of each boss (see §20.1)."
+- After: "- Player versus player (PvP) encounters follow the defeat of each boss or, in campaign play, of each boss whose defeat completes a *section* (see §20.1)."
+- Rationale: §20.1 and §18.1 now limit the PvP encounter in campaign play to a boss whose defeat completes a section, and §18.1 sends campaign players to this list.
+- Source: final rulings, VA-034 (`06_final_rulings.md`); second verification, chapters 1 to 11 (work/phase3/verify_a.md)
+
+### CH-06-080 · §6.5, Expansion Encounters
+- Type: ruling
+- Before: "Each encounter deck is built only from the encounter cards of the set that supplies the next boss. Encounter cards of other sets are not used on that leg of the exploration."
+- After: "Each encounter deck is built only from the encounter cards of the set that supplies the next boss. Encounter cards of other sets are not used on that leg of the exploration. If that set supplies no encounter cards of Levels 1 to 3, as when the Asylum Demon is the mini-boss, the encounter decks of that leg are built from the core set's encounter cards."
+- Rationale: [MECHANICAL CHANGE] The Asylum Demon's set supplies only Level 4 encounter cards, so a leg that ends at it had no decks to build; the core set, which every party owns, is the fallback.
+- Source: final rulings, VA-015 (`06_final_rulings.md`); lead editor's decision on a judgement call of the second verification (work/phase3/verify_a.md)

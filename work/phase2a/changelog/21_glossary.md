@@ -376,3 +376,94 @@
 - After: "Encounter rewards and chests draw from tier two once the mini-boss is defeated (in campaign play, once the *bonfire ascetic* is burnt) (see §6.2; §18.5)."
 - Rationale: The campaign clause is stated in §18.5, which was not cited.
 - Source: final rulings, VB-025 (`06_final_rulings.md`); independent verification, work/phase3/verify_b.md
+
+### CH-21-054 · §21, Attack option
+- Type: correction
+- Before: "**Attack option.** One line of a weapon or spell card, showing a stamina cost, dice and modifiers. Using an attack option is the *Attack* major action."
+- After: "**Attack option.** One line of a weapon or spell card, showing a stamina cost, the dice to roll, any fixed modifier, and any attack icons (see §4.1, Card Anatomy). A character uses one attack option for each attack of the *Attack* major action and for a *riposte* (see §10.3; §9.6)."
+- Rationale: By §10.3 the Attack major action may use an attack option of each weapon slot, and by §9.6 a riposte uses an attack option and is not the Attack major action.
+- Source: final rulings, VA-028 (`06_final_rulings.md`); second verification, chapters 1 to 11 (work/phase3/verify_a.md)
+
+### CH-21-055 · §21, Common treasure
+- Type: correction
+- Before: "**Common treasure.** A treasure card that is not starting, class-specific, transposed, legendary or boss treasure."
+- After: "**Common treasure.** A treasure card that is not starting equipment, class-specific, transposed, legendary, or boss treasure, and is not an *ember card*, an *invader*'s treasure card, or a Titanite Scale card."
+- Rationale: Companion of VA-011: the definition must not sweep cards that §11.4, §12.2 and §14 keep outside the treasure decks into common treasure.
+- Source: final rulings, VA-029 (`06_final_rulings.md`); second verification, chapters 1 to 11 (work/phase3/verify_a.md)
+
+### CH-21-056 · §21, Encounter level
+- Type: correction
+- Before: "and increase from the tile adjacent to the bonfire tile towards the boss tile (see §6.5)."
+- After: "and increase along the route from the first encounter tile to the last (see §6.5)."
+- Rationale: As VA-014: with a route of any shape two encounter tiles may lie beside the bonfire tile.
+- Source: final rulings, VA-030 (`06_final_rulings.md`); second verification, chapters 1 to 11 (work/phase3/verify_a.md)
+
+### CH-21-057 · §21, Enemy scaling
+- Type: correction
+- Before: "The adjustment of every enemy to the number of characters fixed at setup:"
+- After: "The adjustment of every enemy to the number of characters taking part in the game, which changes only when a player joins or leaves (see §18.4):"
+- Rationale: §8.3 as now written lets the number change when a player joins or leaves a game in progress (§18.4); it is not fixed at setup.
+- Source: final rulings, VA-031 (`06_final_rulings.md`); second verification, chapters 1 to 11 (work/phase3/verify_a.md)
+
+### CH-21-058 · §21, Main-boss
+- Type: correction
+- Before: "Its defeat wins the standard game unless a mega-boss is in play (see §6.6; §15.3)."
+- After: "Its defeat wins the standard game unless a mega-boss is in play (see §6.6; §7.1; §15.3)."
+- Rationale: The victory is stated in §7.1 (and §6.7), not in §6.6 or §15.3.
+- Source: final rulings, VA-032 (`06_final_rulings.md`); second verification, chapters 1 to 11 (work/phase3/verify_a.md)
+
+### CH-21-059 · §21, Boss spawn node
+- Type: correction
+- Before: "The boss model is placed on it at the start of every boss encounter (see §15.3)."
+- After: "The boss model is placed on it at the start of every boss encounter, unless the boss's special rules name another node: the Asylum Demon, a mini-boss, is placed on the mega-boss spawn node of its expansion's game board (see §15.3; §17.3)."
+- Rationale: §15.3 now carries the exception for special rules, and §17.3 places the Asylum Demon mini-boss on a mega-boss spawn node.
+- Source: final rulings, VA-036 (`06_final_rulings.md`); second verification, chapters 1 to 11 (work/phase3/verify_a.md)
+
+### CH-21-060 · §21, Boss tile
+- Type: correction
+- Before: "A mini-boss encounter is fought on the mini-boss tile alone; a main-boss encounter is fought on both boss tiles joined as one tile, the main-boss tile."
+- After: "A mini-boss encounter is fought on the mini-boss tile alone, unless the mini-boss's special rules name another tile, as for the Asylum Demon (see §17.3); a main-boss encounter is fought on both boss tiles joined as one tile, the main-boss tile."
+- Rationale: §15.3 and §17.3 fight the Asylum Demon mini-boss on its expansion's game board, not on the mini-boss tile.
+- Source: final rulings, VA-037 (`06_final_rulings.md`); second verification, chapters 1 to 11 (work/phase3/verify_a.md)
+
+### CH-21-061 · §21, Invasion
+- Type: correction
+- Before: "no more than one is provoked before the mini-boss is defeated and no more than one after it (see §12.2)."
+- After: "no more than one is provoked before the mini-boss is defeated and no more than one after it; in campaign play, no more than one is provoked in each *section* (see §12.2; §18.1)."
+- Rationale: §12.2 and §18.1 set the limit in campaign play at one invasion in each section; the entry gave only the standard game's limit.
+- Source: final rulings, VA-038 (`06_final_rulings.md`); second verification, chapters 1 to 11 (work/phase3/verify_a.md)
+
+### CH-21-062 · §21, Mimic
+- Type: correction
+- Before: "the Hungry Mimic (before the mini-boss is defeated) or the Voracious Mimic (afterwards) is fought in a *mimic encounter*."
+- After: "the Hungry Mimic (before the mini-boss is defeated; in campaign play, while the current tier is tier one) or the Voracious Mimic (afterwards) is fought in a *mimic encounter*."
+- Rationale: §13.2 chooses the mimic in campaign play by the current tier, not by the mini-boss's defeat.
+- Source: final rulings, VA-039 (`06_final_rulings.md`); second verification, chapters 1 to 11 (work/phase3/verify_a.md)
+
+### CH-21-063 · §21, Spark (glossary N to Z, outside verifier A's half; companion of VA-001)
+- Type: correction
+- Before: "and spends one each time the characters rest at the *bonfire* (see §7.4)."
+- After: "and spends one each time the characters rest at the *bonfire*, except at the rest that follows the defeat of a boss (see §7.4)."
+- Rationale: §7.4 and §11.2 make the rest that follows a boss's defeat free of any spark.
+- Source: final rulings, VA-040 (`06_final_rulings.md`); second verification, chapters 1 to 11 (work/phase3/verify_a.md)
+
+### CH-21-064 · §21, Threat (glossary N to Z, outside verifier A's half; companion of VA-004)
+- Type: correction
+- Before: "the players settle ties (see §3.1; §7.5, Encounter Turn Order)."
+- After: "the players settle ties (see §3.1; §7.5, Encounter Start; §7.5, Encounter Turn Order)."
+- Rationale: The placing of the aggro token and the settling of ties are stated in §7.5, Encounter Start, step 10.
+- Source: final rulings, VA-041 (`06_final_rulings.md`); second verification, chapters 1 to 11 (work/phase3/verify_a.md)
+
+### CH-21-065 · §21, Relevant stat (glossary N to Z, outside verifier A's half; companion of VA-005)
+- Type: correction
+- Before: "A weapon is *scaled* by comparing the character's relevant stat with that requirement (see §10.5)."
+- After: "A weapon is *scaled* by comparing the character's relevant stat with that requirement; a weapon whose stat requirements are all zero has no relevant stat (see §10.5)."
+- Rationale: §10.5 gives a weapon whose four stat requirements are all zero no relevant stat, where the entry would let the character choose among four tied stats.
+- Source: final rulings, VA-042 (`06_final_rulings.md`); second verification, chapters 1 to 11 (work/phase3/verify_a.md)
+
+### CH-21-066 · §21, Frostbite
+- Type: ruling
+- Before: "any other model with a frostbite token reduces each of its movement values by one."
+- After: "any other model with a frostbite token reduces each of its movement values, or for a *summon* each of its *shift* values, by one."
+- Rationale: [MECHANICAL CHANGE] Glossary companion of the frostbite rule for a summon.
+- Source: final rulings, VA-024b (`06_final_rulings.md`); lead editor's decision on a judgement call of the second verification (work/phase3/verify_a.md)

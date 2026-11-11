@@ -346,3 +346,17 @@ In all, 187 encounter cards are available. Of each of Levels 1 to 3, the Darkroo
 - After: "Each *boss* has a model, a *health dial*, a *data card* (see §15.4), a *behaviour deck* (see §15.5), and two or more *boss treasure* cards (see §2.5). A boss fought with several models has a health dial for each of them (see §17.1)."
 - Rationale: Ornstein & Smough and the Four Kings have a health dial for each model (boss-E08, boss-E10, boss-E20).
 - Source: final rulings, lead-E14 (`06_final_rulings.md`); boss memo, cross-cluster effects
+
+### CH-02-048 · §2.3
+- Type: correction
+- Before: "A boss fought with several models has a health dial for each of them (see §17.1)."
+- After: "A boss fought with several models that stand on separate nodes has a health dial for each of them (see §17.1); the two models of the Executioner's Chariot share one health dial (see §17.9)."
+- Rationale: §2.9 and §17.9 give the Executioner's Chariot two models and one health dial, and §17.1 limits the rule to models on separate nodes.
+- Source: final rulings, VA-002 (`06_final_rulings.md`); second verification, chapters 1 to 11 (work/phase3/verify_a.md)
+
+### CH-02-049 · §2.8
+- Type: correction
+- Before: "- 2x Boss tiles (Core), the mini-boss tile and the main-boss tile"
+- After: "- 2x Boss tiles (Core): the mini-boss tile, and a second boss tile that is joined to it to form the main-boss tile"
+- Rationale: §15.3, §6.6 step 6 and the glossary entry Boss tile make the main-boss tile the two boss tiles joined as one, not the second tile.
+- Source: final rulings, VA-003 (`06_final_rulings.md`); second verification, chapters 1 to 11 (work/phase3/verify_a.md)

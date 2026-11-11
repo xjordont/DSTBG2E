@@ -6,7 +6,7 @@
   "chapter 11"
  ],
  "assets/art/ast-0120-knight-resting-at-bonfire.jpg": [
-  "chapter 2"
+  "front matter"
  ],
  "assets/art/ast-0121-knight-resting-at-bonfire-wide-2017.jpg": [
   "chapter header, chapter 11"
@@ -36,7 +36,7 @@
   "chapter header, chapter 10"
  ],
  "assets/art/ast-0128-ashen-one-key-art.jpg": [
-  "chapter 8"
+  "chapter 19"
  ],
  "assets/art/ast-0129-concept-blood-stained-roots.jpg": [
   "chapter header, chapter 9"
@@ -54,7 +54,7 @@
   "chapter 18"
  ],
  "assets/art/ast-0129-concept-rose-marble-hall-phantoms.jpg": [
-  "chapter 11"
+  "chapter 20"
  ],
  "assets/art/ast-0129-concept-ruined-gate-with-roots-wide.jpg": [
   "chapter header, chapter 6"
@@ -66,7 +66,7 @@
   "chapter header, chapter 18"
  ],
  "assets/art/ast-0129-env-artorias-crouched.png": [
-  "chapter 10"
+  "chapter 11"
  ],
  "assets/art/ast-0129-env-bonfire-in-autumn-leaves.png": [
   "chapter 11"
@@ -75,25 +75,22 @@
   "chapter 4"
  ],
  "assets/art/ast-0129-env-dancer-flaming-blade.png": [
-  "chapter 17"
+  "chapter 18"
  ],
  "assets/art/ast-0129-env-fortress-boulder-engine-2017.png": [
   "chapter 13"
  ],
  "assets/art/ast-0129-env-fortress-boulder-engine-phantoms.png": [
-  "chapter 18"
+  "chapter 19"
  ],
  "assets/art/ast-0129-env-frost-knight.png": [
   "chapter 16"
  ],
  "assets/art/ast-0129-env-gate-tower-2017.png": [
-  "chapter 10"
+  "chapter 7"
  ],
  "assets/art/ast-0129-env-gate-tower-phantoms.png": [
-  "chapter 10"
- ],
- "assets/art/ast-0129-env-iron-keep-forecourt.png": [
-  "chapter 19"
+  "chapter 2"
  ],
  "assets/art/ast-0129-env-kalameet-breath-and-knight.png": [
   "chapter 7"
@@ -107,13 +104,13 @@
  "assets/art/ast-0129-env-throne-hall-arches.png": [
   "chapter 19"
  ],
- "assets/art/ast-0129-env-white-city-spires-2017.png": [
-  "chapter 16"
- ],
- "assets/art/ast-0129-env-white-city-spires-phantoms.png": [
+ "assets/art/ast-0129-env-torchlit-arena-tunnel.png": [
   "chapter 19"
  ],
- "assets/art/ast-0129-env-windmill-tower.png": [
+ "assets/art/ast-0129-env-white-city-spires-2017.png": [
+  "chapter 18"
+ ],
+ "assets/art/ast-0129-env-white-city-spires-phantoms.png": [
   "chapter 19"
  ],
  "assets/art/ast-0130-backcover-characters-armour.jpg": [
@@ -153,7 +150,7 @@
   "chapter 2"
  ],
  "assets/art/ast-0130-chariot-warrior-against-skeletons.png": [
-  "chapter 8"
+  "chapter 10"
  ],
  "assets/art/ast-0130-cover-characters-art-only.jpg": [
   "chapter 2"
@@ -162,19 +159,19 @@
   "chapter header, chapter 14"
  ],
  "assets/art/ast-0130-cover-executioners-chariot-art-only.jpg": [
-  "chapter 9"
+  "chapter 16"
  ],
  "assets/art/ast-0130-cover-explorers-art-only.jpg": [
   "chapter header, chapter 13"
  ],
  "assets/art/ast-0130-cover-iron-keep-art-only.jpg": [
-  "chapter 9"
+  "chapter 18"
  ],
  "assets/art/ast-0130-cover-phantoms-art-only.jpg": [
   "chapter header, chapter 12"
  ],
  "assets/art/ast-0130-darkroot-artorias-concept-front-and-back.jpg": [
-  "chapter 15"
+  "chapter 10"
  ],
  "assets/art/ast-0130-darkroot-grave-with-planted-swords.jpg": [
   "chapter header, Appendix A"
@@ -228,25 +225,61 @@
   "chapter header, Appendix B"
  ],
  "assets/art/ast-0138-art-chariot-and-rider.jpg": [
-  "chapter 17"
+  "chapter 20"
  ],
  "assets/art/ast-0138-art-chariot-horse.jpg": [
-  "chapter 19"
+  "chapter 15"
  ],
  "assets/art/ast-0138-art-kalameet-head.png": [
   "chapter 17"
  ],
- "assets/art/ast-0138-art-mimic-walking.png": [
-  "chapter 19"
- ],
  "assets/art/ast-0138-art-mushroom-parent-and-child.jpg": [
   "chapter 9"
  ],
- "assets/art/ast-0138-art-phantom-duellist-white.png": [
+ "assets/art/ast-0138-art-phantom-red-smear.png": [
+  "chapter 20"
+ ],
+ "assets/art/ast-0156-four-kings-concept-king-on-white.jpg": [
+  "chapter 17"
+ ],
+ "assets/art/ast-0156-four-kings-cover-art-only.jpg": [
+  "chapter 9"
+ ],
+ "assets/art/ast-0157-gaping-dragon-concept-sheet-on-white.jpg": [
+  "chapter 20"
+ ],
+ "assets/art/ast-0157-gaping-dragon-cover-art-only.jpg": [
+  "chapter 10"
+ ],
+ "assets/art/ast-0158-guardian-dragon-concept-sketches-on-grey.jpg": [
+  "chapter 8"
+ ],
+ "assets/art/ast-0158-guardian-dragon-cover-art-only.jpg": [
   "chapter 19"
  ],
- "assets/art/ast-0138-art-phantom-red-smear.png": [
+ "assets/art/ast-0159-last-giant-cover-art-only.jpg": [
   "chapter 19"
+ ],
+ "assets/art/ast-0160-manus-art-manus-over-small-figure.jpg": [
+  "chapter 17"
+ ],
+ "assets/art/ast-0160-manus-cover-art-only.jpg": [
+  "chapter 20"
+ ],
+ "assets/art/ast-0161-old-iron-king-cover-art-only.jpg": [
+  "chapter 20"
+ ],
+ "assets/art/ast-0162-vordt-art-vordt-on-black.jpg": [
+  "chapter 17"
+ ],
+ "assets/art/ast-0162-vordt-cover-art-only.jpg": [
+  "chapter 20"
+ ],
+ "assets/art/ast-0163-asylum-demon-concept-stray-demon-on-white.jpg": [
+  "chapter 9"
+ ],
+ "assets/art/ast-0163-asylum-demon-cover-art-only.jpg": [
+  "chapter 20"
  ],
  "assets/diagrams/ast-0091-equipment-card-anatomy-2022.png": [
   "figure, §4.1"
@@ -608,8 +641,7 @@
   "gallery, end of chapter 16"
  ],
  "assets/photography/ast-0131-miniature-black-knight.png": [
-  "gallery, end of chapter 1",
-  "chapter 20"
+  "gallery, end of chapter 1"
  ],
  "assets/photography/ast-0131-miniature-cleric.png": [
   "gallery, end of chapter 2"
@@ -623,7 +655,7 @@
  ],
  "assets/photography/ast-0131-miniature-gravelord-nito.png": [
   "gallery, end of chapter 1",
-  "chapter 7"
+  "chapter 6"
  ],
  "assets/photography/ast-0131-miniature-necromancer.png": [
   "gallery, end of chapter 2"
@@ -637,7 +669,7 @@
  ],
  "assets/photography/ast-0131-miniature-skeleton-beast.png": [
   "gallery, end of chapter 2",
-  "chapter 17"
+  "chapter 19"
  ],
  "assets/photography/ast-0131-miniature-skeleton-soldier.png": [
   "gallery, end of chapter 1",
@@ -682,8 +714,7 @@
   "gallery, end of Appendix B"
  ],
  "assets/photography/ast-0138-expansion-miniature-armour-adventurers.png": [
-  "gallery, end of chapter 4",
-  "chapter 20"
+  "gallery, end of chapter 4"
  ],
  "assets/photography/ast-0138-expansion-miniature-armour-catarina.png": [
   "gallery, end of chapter 4"
@@ -702,10 +733,10 @@
   "gallery, end of chapter 4"
  ],
  "assets/photography/ast-0138-expansion-miniature-artorias.png": [
-  "chapter 19"
+  "figure, §17.4"
  ],
  "assets/photography/ast-0138-expansion-miniature-black-dragon-kalameet.png": [
-  "chapter 19"
+  "figure, §17.8"
  ],
  "assets/photography/ast-0138-expansion-miniature-character-cleric.png": [
   "gallery, end of chapter 10"
@@ -729,29 +760,21 @@
   "gallery, end of chapter 7"
  ],
  "assets/photography/ast-0138-expansion-miniature-executioners-chariot.png": [
-  "chapter 17"
+  "figure, §17.9",
+  "chapter 19"
  ],
  "assets/photography/ast-0138-expansion-miniature-great-grey-wolf-sif.png": [
-  "chapter 18"
- ],
- "assets/photography/ast-0138-expansion-miniature-invader-armorer-dennis.png": [
-  "chapter 20"
+  "figure, §17.4",
+  "chapter 19"
  ],
  "assets/photography/ast-0138-expansion-miniature-invader-brylex.png": [
   "chapter 11",
   "gallery, end of chapter 20"
  ],
- "assets/photography/ast-0138-expansion-miniature-invader-fencer-sharron.png": [
-  "chapter 20"
- ],
- "assets/photography/ast-0138-expansion-miniature-invader-maldron-the-assassin.png": [
-  "chapter 19"
- ],
  "assets/photography/ast-0138-expansion-miniature-invader-marvelous-chester.png": [
   "gallery, end of chapter 20"
  ],
  "assets/photography/ast-0138-expansion-miniature-invader-oliver-the-collector.png": [
-  "chapter 20",
   "gallery, end of chapter 20"
  ],
  "assets/photography/ast-0138-expansion-miniature-invader-paladin-leeroy.png": [
@@ -774,8 +797,7 @@
   "chapter 19"
  ],
  "assets/photography/ast-0138-expansion-miniature-plow-scarecrow.png": [
-  "gallery, end of chapter 7",
-  "chapter 20"
+  "gallery, end of chapter 7"
  ],
  "assets/photography/ast-0138-expansion-miniature-shears-scarecrow.png": [
   "gallery, end of chapter 7"
@@ -787,11 +809,11 @@
   "gallery, end of Appendix A"
  ],
  "assets/photography/ast-0138-expansion-miniature-smelter-demon.png": [
-  "chapter 18"
+  "figure, §17.5",
+  "chapter 19"
  ],
  "assets/photography/ast-0138-expansion-miniature-stone-guardian.png": [
   "gallery, end of chapter 7",
-  "chapter 20",
   "gallery, end of Appendix A"
  ],
  "assets/photography/ast-0138-expansion-miniature-stone-knight.png": [
@@ -820,11 +842,35 @@
   "gallery, end of chapter 12"
  ],
  "assets/photography/ast-0138-expansion-miniature-summon-sirris-of-the-sunless-realms.png": [
-  "gallery, end of chapter 12",
-  "chapter 20"
+  "gallery, end of chapter 12"
  ],
  "assets/photography/ast-0138-expansion-miniature-the-pursuer.png": [
+  "figure, §17.6",
   "gallery, end of Appendix A"
+ ],
+ "assets/photography/ast-0156-four-kings-miniature.png": [
+  "figure, §17.10"
+ ],
+ "assets/photography/ast-0157-gaping-dragon-miniature.png": [
+  "figure, §17.10"
+ ],
+ "assets/photography/ast-0158-guardian-dragon-miniature.png": [
+  "figure, §17.10"
+ ],
+ "assets/photography/ast-0159-last-giant-miniature.png": [
+  "figure, §17.10"
+ ],
+ "assets/photography/ast-0160-manus-miniature.png": [
+  "figure, §17.10"
+ ],
+ "assets/photography/ast-0161-old-iron-king-miniature.png": [
+  "figure, §17.10"
+ ],
+ "assets/photography/ast-0162-vordt-miniature.png": [
+  "figure, §17.10"
+ ],
+ "assets/photography/ast-0163-asylum-demon-miniature.png": [
+  "figure, §17.3"
  ],
  "assets/textures/ast-0142-lava-scale-cover-texture.png": [
   "cover field and chapter banner ground (logo-free crop)"

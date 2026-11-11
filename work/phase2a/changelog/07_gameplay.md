@@ -475,3 +475,45 @@
 - After: "If crystal lizards are in play, a killed crystal lizard awards the party one Titanite Scale card at once (see §14). A killed invader awards its treasure card at once (see §12.2)."
 - Rationale: [MECHANICAL CHANGE] Keeps §7.7 in step with §14: the Titanite Scale card is awarded to the party, whatever killed the crystal lizard.
 - Source: final rulings, phantom-E13 (`06_final_rulings.md`); Official Iron Keep booklet: 'add one Titanite Scale card to the inventory', the party's shared inventory (DS-IronKeep-Rules-Web.txt lines 125-127).
+
+### CH-07-069 · §7.4
+- Type: correction
+- Before: "In the standard game sparks cannot be gained in any other way; campaign play varies these rules (see §18.3)."
+- After: "In the standard game sparks are gained in no other way, except when a player leaves the game (see §18.4); campaign play varies these rules (see §18.3)."
+- Rationale: §18.4 gives the party one spark when a player leaves, and applies to a standard game in progress as well as to a campaign.
+- Source: final rulings, VA-017 (`06_final_rulings.md`); second verification, chapters 1 to 11 (work/phase3/verify_a.md)
+
+### CH-07-070 · §7.5
+- Type: correction
+- Before: "The characters begin at the encounter tile adjacent to the *bonfire* tile and advance one tile at a time towards the boss tile."
+- After: "The characters begin at the first encounter tile of the route, the tile that follows the *bonfire* tile in the chain (see §6.5), and advance one tile at a time along the route towards the boss tile."
+- Rationale: As VA-014: with a route of any shape two encounter tiles may lie beside the bonfire tile.
+- Source: final rulings, VA-018 (`06_final_rulings.md`); second verification, chapters 1 to 11 (work/phase3/verify_a.md)
+
+### CH-07-071 · §7.5, Encounter Start
+- Type: correction
+- Before: "6. If the encounter card shows the trap icon, deal *trap tokens* (see §5.5, Traps)."
+- After: "6. If the encounter card shows the trap icon and the encounter is set up for the first time, deal *trap tokens* (see §5.5, Traps)."
+- Rationale: §5.5, Traps deals trap tokens only the first time the encounter is set up and never again after a reset; step 9 already carries the same limit for chests.
+- Source: final rulings, VA-019 (`06_final_rulings.md`); second verification, chapters 1 to 11 (work/phase3/verify_a.md)
+
+### CH-07-072 · §7.5, Encounter Start
+- Type: correction
+- Before: "on the character with the highest *threat* {{icon:ast-0026-threat-level}}."
+- After: "on the character with the highest *threat* {{icon:ast-0059-taunt}}."
+- Rationale: §3.1 prints a character's threat with the Taunt icon of the dashboard; ast-0026 is the threat icon of enemy, boss and phantom data cards (the asset manifest entry for §7.5 moves with it).
+- Source: final rulings, VA-020 (`06_final_rulings.md`); second verification, chapters 1 to 11 (work/phase3/verify_a.md)
+
+### CH-07-073 · §7.5, Encounter Recovery
+- Type: correction
+- Before: "Recovery does not ready the *estus flask*, *luck*, or *heroic action* tokens, and does not remove the hollow cubes of a character who was already hollow; only resting at the bonfire does so (see §11.2)."
+- After: "Recovery does not ready the *estus flask*, *luck*, or *heroic action* tokens, which only resting at the bonfire readies (see §11.2). It does not remove the hollow cubes of a character who was already hollow, which are removed only by resting at the bonfire or by becoming *embered* (see §7.2)."
+- Rationale: §7.2 and §7.3 step 3 remove hollow cubes when a character becomes embered as well as at a rest.
+- Source: final rulings, VA-021 (`06_final_rulings.md`); second verification, chapters 1 to 11 (work/phase3/verify_a.md)
+
+### CH-07-074 · §7.1
+- Type: correction
+- Before: "If the party chose player versus player (PvP) during setup, a PvP *encounter* is fought after each boss is defeated (see §20)."
+- After: "If the party chose player versus player (PvP) during setup, a PvP *encounter* is fought after each boss is defeated or, in campaign play, after each boss whose defeat completes a *section* (see §20.1; §18.1, Player versus Player Encounters)."
+- Rationale: As VA-034: §20.1 and §18.1 limit the PvP encounter in campaign play.
+- Source: final rulings, VA-035 (`06_final_rulings.md`); second verification, chapters 1 to 11 (work/phase3/verify_a.md)

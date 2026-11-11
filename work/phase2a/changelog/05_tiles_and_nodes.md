@@ -288,3 +288,31 @@ A spawn node or terrain node that holds no enemy or terrain is entered, left, an
 - After: "At the start of a boss encounter fought on the mega-boss side of that expansion's mega-boss game board, one pillar token is placed on each of its four pillar nodes (see §17.3)."
 - Rationale: The Asylum Demon mini-boss is fought on the same board and meets the same pillars.
 - Source: final rulings, boss-E45 (`06_final_rulings.md`); Asylum Demon booklet lines 197-205
+
+### CH-05-042 · §5.1
+- Type: correction
+- Before: "Tiles are joined so that a doorway of each tile faces a doorway of the tile beside it (see §6.5)."
+- After: "Tiles are joined so that a doorway of each tile faces a doorway of the tile that follows it on the route; a tile that merely lies beside another is not joined to it (see §6.5)."
+- Rationale: The route is a chain of any shape (§6.5 steps 3 and 4), so a tile may lie beside a tile that is not next on the route and shares no doorway with it.
+- Source: final rulings, VA-006 (`06_final_rulings.md`); second verification, chapters 1 to 11 (work/phase3/verify_a.md)
+
+### CH-05-043 · §5.3
+- Type: correction
+- Before: "Then the Gargoyle moves onto a node that holds the Knight, the Herald, and the Assassin; the boss does not count towards the limit, so no model is pushed."
+- After: "In a later boss encounter the Gargoyle moves onto a node that holds the Knight, the Herald, and the Assassin; the boss does not count towards the limit, so no model is pushed."
+- Rationale: A boss encounter holds no Hollow Soldier (§15.2), and the Herald has just been pushed off the node, so the two halves of the example cannot be one scene.
+- Source: final rulings, VA-007 (`06_final_rulings.md`); second verification, chapters 1 to 11 (work/phase3/verify_a.md)
+
+### CH-05-044 · §5.5
+- Type: correction
+- Before: "There are five kinds: *gravestones*, *barrels*, *chests*, and pillars, which are placed on *terrain nodes* as the *encounter card* directs, and traps, which are dealt to *basic nodes* (see §7.5, Encounter Start)."
+- After: "There are five kinds: *gravestones*, *barrels*, and *chests*, which are placed on *terrain nodes* as the *encounter card* directs (see §7.5, Encounter Start); pillars, which are placed on the pillar nodes of one game board (see §5.5, Pillars); and traps, which are dealt to *basic nodes* (see §5.5, Traps)."
+- Rationale: §5.5, Pillars and §17.3 place pillar tokens on the four pillar nodes at the start of a boss encounter, to which no encounter card is dealt (§15.2).
+- Source: final rulings, VA-008 (`06_final_rulings.md`); second verification, chapters 1 to 11 (work/phase3/verify_a.md)
+
+### CH-05-045 · §5.1
+- Type: correction
+- Before: "the *boss* is placed there at the start of its encounter (see §15.3)."
+- After: "the *boss* is placed there at the start of its encounter, unless its special rules name another node (see §15.3; §17)."
+- Rationale: §15.3 now excepts a boss whose special rules name another node (the Old Iron King is placed on an Iron King node, §17.10).
+- Source: final rulings, VA-033 (`06_final_rulings.md`); second verification, chapters 1 to 11 (work/phase3/verify_a.md)

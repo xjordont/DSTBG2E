@@ -6,8 +6,9 @@ decisions in work/phase3/lead_overrides.json, applies each accepted change to it
 
   - chapters: the change is made in 10_manuscript_chapter_NN_*.md and an entry is appended to the chapter's
     change-log fragment (work/phase2a/changelog/NN_*.md), marked [MECHANICAL CHANGE] where play changes;
-  - glossary: the new entry line is appended as an AMEND to work/phase2a/glossary/21_glossary.md (the lead
-    editor's reconciliation fragment) and logged in the glossary's change-log fragment; run
+  - glossary: every entry line the changes alter is appended whole as an AMEND to
+    work/phase2a/glossary/21_glossary.md (the lead editor's reconciliation fragment), whether a change replaces
+    the entry or a few words of it, and the change is logged in the glossary's change-log fragment; run
     `python3 tools/integrate_chapter.py 21` afterwards.
 
 lead_overrides.json: {"<edit id>": {"skip": true, "why": "..."} | {"new": "replacement text", "why": "..."}
@@ -73,11 +74,12 @@ for c in clusters:
         if e.get('mechanical'):
             why = '[MECHANICAL CHANGE] ' + why
         logs.setdefault((num, frag), []).append((e.get('section', ''), e.get('type', 'ruling'), old, new, why, eid, e.get('evidence', '')))
-        if name == '12_glossary.md':
-            for line in new.splitlines():
-                if line.startswith('**'):
-                    amends.append('AMEND ' + line)
         applied.append(eid); touched.add(name)
+
+# a glossary change may replace a whole entry or a few words of one: either way the amended entry is the whole line
+if '12_glossary.md' in touched:
+    before = set((ROOT / '12_glossary.md').read_text(encoding='utf-8').splitlines())
+    amends = ['AMEND ' + ln for ln in texts['12_glossary.md'].splitlines() if ln.startswith('**') and ln not in before]
 
 print(f'accepted and applicable: {len(applied)}; skipped by decision: {len(skipped)}; cannot be applied: {len(problems)}')
 for p in problems:

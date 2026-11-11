@@ -26,6 +26,10 @@ def source_of(path):
     if p.startswith('build/icons/'):
         return f'assets/icons/{name}'
     if p.startswith('build/fig/'):
+        # a figure is a prepared copy of a file in one of the asset folders
+        for folder in ('diagrams', 'photography', 'art', 'frames'):
+            if (ROOT / f'assets/{folder}/{name}').exists():
+                return f'assets/{folder}/{name}'
         return f'assets/diagrams/{name}'
     if p.startswith('build/tex/lava'):
         hit = sorted(glob.glob(str(ROOT / 'assets/textures/ast-0142-*')))

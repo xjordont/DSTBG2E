@@ -18,7 +18,7 @@ A target that is out of range, or that dodges or parries the attack, is not hit.
 
 A push (see §8.4) and a condition (see §8.5) carried by an attack apply only to a model that the attack hits. They apply to every model the attack hits, whether or not the attack dealt damage to it.
 
-*Example.* An enemy attack with an *attack value* of 4 bears the push icon and targets the Knight and the Herald, who share a node within its range. The Knight blocks and rolls a *defence total* of 4, so the Knight suffers no damage; the Knight is hit all the same and is pushed. The Herald dodges successfully, is not hit, and is not pushed.
+*Example.* An enemy attack with an *attack value* of 4 bears the node icon and the push icon and targets the Knight and the Herald, who share a node within its range. The Knight blocks and rolls a *defence total* of 4, so the Knight suffers no damage; the Knight is hit all the same and is pushed. The Herald dodges successfully, is not hit, and is not pushed.
 
 ## 8.2 Enemy Data Cards
 
@@ -130,7 +130,7 @@ In a PvP *encounter*, a push-attack pushes a character it hits (see §20.5).
 
 *Example.* The Herald stands on a corner node, and an enemy on the diagonally adjacent node hits the Herald with a push-attack. The two other nodes adjacent to the Herald are no farther from the enemy than the corner node is, so the Herald is not pushed. The attack's damage is resolved in full.
 
-*Example.* The Knight, the Herald, and the Assassin are in play, so an enemy's push-move with a movement value of 1 is resolved as two nodes. Its push icon carries a damage value of 5. The Assassin shares the enemy's node: the players push the Assassin to a valid node, and the Assassin suffers no damage. The enemy moves onto the Knight's node, and the Knight is attacked with an attack value of 5. The Knight blocks with a *defence total* of 3, suffers two damage, and is pushed directly away from the node the enemy has left. The enemy then moves its second node, which holds no character, and no model is pushed.
+*Example.* The Knight, the Herald, and the Assassin are in play, so an enemy's push-move with a movement value of 1 is resolved as two nodes. Its push icon carries a damage value of 5. The Assassin shares the enemy's node: the players push the Assassin to a valid node, and the Assassin suffers no damage. The enemy moves onto the Knight's node, and the Knight is attacked with an attack value of 5. The Knight blocks with a *defence total* of 3, suffers two damage, and is pushed directly away from the node the enemy has left. The enemy's movement targets the Herald, and its path turns at that node, so the second node it enters is not the node to which the Knight was pushed. That node holds no character, and no model is attacked or pushed.
 
 ## 8.5 Conditions
 
@@ -164,7 +164,7 @@ A model may hold any number of poison tokens: each attack that bears the poison 
 
 ### Frostbite
 
-A character with a frostbite token cannot recover stamina by any means. The character does not recover one stamina at the start of their turn and cannot take the *Rest* *major action* (see §10.1). An enemy, boss, or phantom with a frostbite token reduces the value of each of its movement icons by one, after *enemy scaling* has been applied (see §8.3; §9.2).
+A character with a frostbite token cannot recover stamina by any means. The character does not recover one stamina at the start of their turn and cannot take the *Rest* *major action* (see §10.1). An enemy, boss, or *invader* with a frostbite token reduces the value of each of its movement icons by one, after *enemy scaling* has been applied (see §8.3; §9.2). A *summon* with a frostbite token reduces by one the number of nodes of each *shift* icon on its behaviour cards (see §12.1).
 
 A frostbite token is removed at the end of the affected model's next complete turn.
 

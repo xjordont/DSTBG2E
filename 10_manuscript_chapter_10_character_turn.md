@@ -147,7 +147,7 @@ When a character attacks with a weapon wielded two-handed, the character may rer
 
 A spell is never two-handed (see §4.3). A spell card equipped while the other weapon slot is empty gains no reroll, and the attack options of a spell stored in a catalyst gain none. A catalyst is a weapon: an attack option printed on the catalyst card itself gains the reroll while the catalyst is wielded two-handed.
 
-A character who wields a weapon two-handed has no shield equipped and therefore cannot *parry* (see §9.6).
+A character who wields a weapon other than a shield two-handed has no shield equipped and therefore cannot *parry* (see §9.6).
 
 *Example.* The Knight has a one-handed sword in the right weapon slot and no card in the left weapon slot, so the sword is wielded two-handed. The Knight attacks a Hollow Soldier and rolls two black dice, which show 2 and 0. The Knight rerolls the 0, which now shows 1, and the *attack value* is 3. On the next *turn* the Knight takes the *Equip* minor action and equips a shield in the left weapon slot. The sword is no longer two-handed, and its attacks gain no reroll.
 

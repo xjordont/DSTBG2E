@@ -58,7 +58,7 @@ Each enemy has a *data card* (see §8.2) and the number of models listed. *Cryst
 
 ## 2.3 Bosses
 
-Each *boss* has a model, a *health dial*, a *data card* (see §15.4), a *behaviour deck* (see §15.5), and two or more *boss treasure* cards (see §2.5). A boss fought with several models has a health dial for each of them (see §17.1). A *mini-boss* or *main-boss* is fought on the *boss tiles* (see §15.3). A *mega-boss* is fought on the *mega-boss game board* supplied with its expansion (see §2.9), after a Level 4 encounter (see §6.7).
+Each *boss* has a model, a *health dial*, a *data card* (see §15.4), a *behaviour deck* (see §15.5), and two or more *boss treasure* cards (see §2.5). A boss fought with several models that stand on separate nodes has a health dial for each of them (see §17.1); the two models of the Executioner's Chariot share one health dial (see §17.9). A *mini-boss* or *main-boss* is fought on the *boss tiles* (see §15.3). A *mega-boss* is fought on the *mega-boss game board* supplied with its expansion (see §2.9), after a Level 4 encounter (see §6.7).
 
 ### Mini-Bosses
 
@@ -236,7 +236,7 @@ The *aggro token* marks the character with *aggro* (see §7.5, Encounter Turn Or
 
 - 1x Bonfire tile (Core)
 - 6x Encounter tiles, double-sided (Core)
-- 2x Boss tiles (Core), the mini-boss tile and the main-boss tile
+- 2x Boss tiles (Core): the mini-boss tile, and a second boss tile that is joined to it to form the main-boss tile
 
 The *bonfire* tile is the characters' haven and the start of every exploration (see §11.1). Encounter tiles are the sites of encounters (see §5.1). The *boss tiles* are the sites of mini-boss and main-boss encounters (see §15.3); each mega-boss expansion supplies its own game board (see §2.9).
 

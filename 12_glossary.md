@@ -22,7 +22,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Attack (major action).** The major action in which a character makes up to one attack with each weapon or spell equipped in a weapon slot, each attack using one attack option and paying its stamina cost (see §10.3).
 
-**Attack option.** One line of a weapon or spell card, showing a stamina cost, dice and modifiers. Using an attack option is the *Attack* major action.
+**Attack option.** One line of a weapon or spell card, showing a stamina cost, the dice to roll, any fixed modifier, and any attack icons (see §4.1, Card Anatomy). A character uses one attack option for each attack of the *Attack* major action and for a *riposte* (see §10.3; §9.6).
 
 **Attack value.** The total of the values rolled on an attack's dice after rerolls, with any fixed modifier applied once to the total, plus one for a *scaled* weapon and minus one for a *staggered* attacker, to a minimum of zero (see §10.3). For enemies the attack value is the fixed number printed in the attack icon, or the damage value of a push-move, scaled for the number of characters and reduced by one while the enemy is *staggered* (see §8.3; §8.4; §9.3).
 
@@ -56,9 +56,9 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Boss arc.** One of the four sectors (front, left, right, back) into which a boss's base is divided. The arcs extend across the tile: each node lies in at least one arc, and a node on the line between two arcs lies in both (see §15.6).
 
-**Boss spawn node.** The spawn node of a boss's type: the mini-boss spawn node, the main-boss spawn node, or the mega-boss spawn node. The boss model is placed on it at the start of every boss encounter (see §15.3).
+**Boss spawn node.** The spawn node of a boss's type: the mini-boss spawn node, the main-boss spawn node, or the mega-boss spawn node. The boss model is placed on it at the start of every boss encounter, unless the boss's special rules name another node: the Asylum Demon, a mini-boss, is placed on the mega-boss spawn node of its expansion's game board (see §15.3; §17.3).
 
-**Boss tile.** One of the two tiles on which mini-boss and main-boss encounters are fought. A mini-boss encounter is fought on the mini-boss tile alone; a main-boss encounter is fought on both boss tiles joined as one tile, the main-boss tile. A mega-boss is fought on the mega-boss game board supplied with it (see §15.3).
+**Boss tile.** One of the two tiles on which mini-boss and main-boss encounters are fought. A mini-boss encounter is fought on the mini-boss tile alone, unless the mini-boss's special rules name another tile, as for the Asylum Demon (see §17.3); a main-boss encounter is fought on both boss tiles joined as one tile, the main-boss tile. A mega-boss is fought on the mega-boss game board supplied with it (see §15.3).
 
 **Boss treasure.** A treasure card supplied with a boss. One of a boss's treasure cards is awarded at random when the boss is defeated (see §16.5). Boss treasure cannot be bought; it sells for six *souls* and is returned to the game box when sold (see §11.4; for campaign play, see §18.6).
 
@@ -78,7 +78,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Cleared.** The result of an encounter in which every enemy model is killed and at least one character survives. A *cleared* encounter card is marked with a black cube, keeps the cube through a *reset*, and may thereafter be skipped until the encounter is *failed*. The first clear rewards full *souls* and treasure; every later clear rewards the *reduced reward* and no treasure (see §7.5, Encounter Resolution).
 
-**Common treasure.** A treasure card that is not starting, class-specific, transposed, legendary or boss treasure. Common treasure with any stat requirement of 25 or more is tier two; all other common treasure is tier one.
+**Common treasure.** A treasure card that is not starting equipment, class-specific, transposed, legendary, or boss treasure, and is not an *ember card*, an *invader*'s treasure card, or a Titanite Scale card. Common treasure with any stat requirement of 25 or more is tier two; all other common treasure is tier one.
 
 **Condition.** A lasting effect marked by a condition token on a model: *bleed*, *poison*, *frostbite*, *stagger*, *calamity*, or *corrosion*. A condition token is placed on each model hit by an attack that bears the matching icon, after the attack's damage and any push have been resolved. A model holds at most one token of each condition, except poison (see §8.5).
 
@@ -116,11 +116,11 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Encounter card.** The card dealt face down to each tile that lists the encounter's level, enemies, terrain and traps. It is revealed when the characters enter the tile.
 
-**Encounter level.** The difficulty of an encounter, from 1 to 4. The levels of the encounters leading to a boss are printed on that boss's data card and increase from the tile adjacent to the bonfire tile towards the boss tile (see §6.5). In the standard game Level 4 encounters precede mega-bosses only (see §6.7). In campaign play each section lists the levels of its encounters (see §18.1).
+**Encounter level.** The difficulty of an encounter, from 1 to 4. The levels of the encounters leading to a boss are printed on that boss's data card and increase along the route from the first encounter tile to the last (see §6.5). In the standard game Level 4 encounters precede mega-bosses only (see §6.7). In campaign play each section lists the levels of its encounters (see §18.1).
 
 **Endurance bar.** The track of 10 spaces on the dashboard that holds both stamina cubes (filling from the left) and damage cubes (filling from the right). A *hollow* character's two hollow cubes block the two rightmost spaces, leaving eight (see §3.4).
 
-**Enemy scaling.** The adjustment of every enemy to the number of characters fixed at setup: more health with two or more characters, movement values of 1 resolved as 2 with two or more characters, and +1 attack value with four characters. Bosses, mimics, phantoms, and crystal lizards are never scaled (see §8.3).
+**Enemy scaling.** The adjustment of every enemy to the number of characters taking part in the game, which changes only when a player joins or leaves (see §18.4): more health with two or more characters, movement values of 1 resolved as 2 with two or more characters, and +1 attack value with four characters. Bosses, mimics, phantoms, and crystal lizards are never scaled (see §8.3).
 
 **Entry node.** A basic node along the tile edge that holds the doorway through which the characters entered the tile. Characters are placed on entry nodes at the start of an encounter, no more than three to a node (see §5.1; §7.5, Encounter Start). In a Level 4 encounter the four basic nodes along that edge are the entry nodes (see §6.7).
 
@@ -144,7 +144,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Fog gate.** The token that marks the doorway of a boss encounter. A boss encounter begins when the characters pass through it. The first time they pass through, the token is moved to the *bonfire* tile, where it is a shortcut to that boss until the boss is defeated (see §15.1). In campaign play it only marks the doorway of the boss encounter: it is not moved and gives no shortcut (see §18.2).
 
-**Frostbite.** A condition. A character with a frostbite token cannot recover stamina and cannot take the *Rest* major action; any other model with a frostbite token reduces each of its movement values by one. The token is removed at the end of the model's next complete turn (see §8.5, Frostbite).
+**Frostbite.** A condition. A character with a frostbite token cannot recover stamina and cannot take the *Rest* major action; any other model with a frostbite token reduces each of its movement values, or for a *summon* each of its *shift* values, by one. The token is removed at the end of the model's next complete turn (see §8.5, Frostbite).
 
 **Gravestone.** A terrain token or model. No model may *move*, *dodge*, or be pushed into a node containing a gravestone. When an encounter is *cleared*, the players may *scry* one card for each gravestone on its tile (see §5.5, Gravestones; §7.5, Encounter Resolution).
 
@@ -168,7 +168,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Invader token.** A token from the Phantoms expansion that shows an invader or is blank. When an *invasion* is provoked, one token is placed face down on each face-down encounter card that carries no black cube, one of them showing an invader; a token is revealed when the characters fight that encounter (see §12.2).
 
-**Invasion.** The placing of invader tokens that brings one invader into the game. An invasion is provoked when the encounter cards are dealt while a character is *embered*, or when a character becomes embered by discarding an *ember card* while a face-down encounter card that carries no black cube lies on a tile; no more than one is provoked before the mini-boss is defeated and no more than one after it (see §12.2).
+**Invasion.** The placing of invader tokens that brings one invader into the game. An invasion is provoked when the encounter cards are dealt while a character is *embered*, or when a character becomes embered by discarding an *ember card* while a face-down encounter card that carries no black cube lies on a tile; no more than one is provoked before the mini-boss is defeated and no more than one after it; in campaign play, no more than one is provoked in each *section* (see §12.2; §18.1).
 
 **Inventory.** A character's unlimited stack of unequipped treasure cards, kept face down beside the dashboard. Outside an encounter it may be rearranged freely and cards may be traded one for one between inventories; during an encounter it cannot be accessed (see §3.2).
 
@@ -186,7 +186,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Magical damage.** Damage from an attack that bears the magical damage icon. Magical damage is reduced by resist (see §9.3; §10.3).
 
-**Main-boss.** The second boss of the standard game, fought on both boss tiles joined as one after the mini-boss is defeated. Its defeat wins the standard game unless a mega-boss is in play (see §6.6; §15.3).
+**Main-boss.** The second boss of the standard game, fought on both boss tiles joined as one after the mini-boss is defeated. Its defeat wins the standard game unless a mega-boss is in play (see §6.6; §7.1; §15.3).
 
 **Major action.** The one principal action of a character's turn: *Attack*, *Rest*, *Drink Estus*, or *Ember*. A character may take one major action per turn (see §10.1).
 
@@ -196,7 +196,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Mega-boss setup card.** The card of the Executioner's Chariot expansion that shows the enemy spawn nodes on which the Black Hollow Mages and the Falchion Skeletons are placed at the start of the mega-boss encounter (see §17.9).
 
-**Mimic.** An optional enemy from the Explorers expansion that masquerades as a chest. When the party opens a chest whose *ambush card* shows Mimic, the Hungry Mimic (before the mini-boss is defeated) or the Voracious Mimic (afterwards) is fought in a *mimic encounter*. Killing it awards two treasure cards in place of the chest's one (see §13).
+**Mimic.** An optional enemy from the Explorers expansion that masquerades as a chest. When the party opens a chest whose *ambush card* shows Mimic, the Hungry Mimic (before the mini-boss is defeated; in campaign play, while the current tier is tier one) or the Voracious Mimic (afterwards) is fought in a *mimic encounter*. Killing it awards two treasure cards in place of the chest's one (see §13).
 
 **Mimic encounter.** The encounter fought against a *mimic* on the tile of a *cleared* encounter whose chest the party has opened. It is fought as a mini-boss encounter without arcs, with the characters on the nodes they occupy. The characters remove their stamina cubes before the mimic's first turn; the recovery and the rewards of the cleared encounter wait until the mimic is killed (see §13.2).
 
@@ -232,13 +232,13 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Push-move.** An enemy or boss movement that bears the push icon. Characters on the enemy's node are pushed aside before it moves, and characters on each node it enters are pushed directly away from the node it left; a push icon that carries a damage value also makes each entry a physical attack (see §8.4).
 
-**PvP encounter.** An optional contest fought between the characters alone, without enemies, on the tile on which a boss has been defeated, after each boss's defeat and before the rest that follows it. It has no enemy turns and no aggro token, is neither *cleared* nor *failed*, awards no *souls* and no treasure, and death in it costs nothing (see §20.1).
+**PvP encounter.** An optional contest fought between the characters alone, without enemies, on the tile on which a boss has been defeated, after each boss's defeat and before the rest that follows it (in campaign play, only after a boss whose defeat completes a *section*; see §18.1). It has no enemy turns and no aggro token, is neither *cleared* nor *failed*, awards no *souls* and no treasure, and death in it costs nothing (see §20.1).
 
 **Range.** The maximum distance between an attacker and its target, counted in nodes along the shortest chain of adjacent nodes. Range 0 is the same node; range 1 is an adjacent node; range ∞ is unlimited. Range is never blocked by terrain or models (see §5.4).
 
 **Reduced reward.** Half the full soul reward, rounded down, gained by every character when an encounter that has been cleared before is cleared again (see §7.6).
 
-**Relevant stat.** The stat whose requirement is the highest of the four stat requirements printed on a weapon card; if two or more requirements are tied for the highest, the character chooses one of the tied stats. A weapon is *scaled* by comparing the character's relevant stat with that requirement (see §10.5).
+**Relevant stat.** The stat whose requirement is the highest of the four stat requirements printed on a weapon card; if two or more requirements are tied for the highest, the character chooses one of the tied stats. A weapon is *scaled* by comparing the character's relevant stat with that requirement; a weapon whose stat requirements are all zero has no relevant stat (see §10.5).
 
 **Repeat.** An icon that causes an entire attack option, or the whole row of behaviour icons on an enemy data card or a behaviour card, to be resolved more than once. A character may resolve the attack option up to the number of times shown: the stamina cost is paid once, and each resolution is a separate attack roll with its own target (see §10.3, Repeat). An enemy or a boss resolves its row of icons the number of times shown (see §9.1; §16.1).
 
@@ -272,13 +272,13 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Shift.** An icon found on attack options and on summon behaviour cards. A character whose attack option bears it may move up to the number of nodes shown, before the target is chosen if the icon precedes the dice and after the attack's damage and effects if it follows them. A *shift* is a *move*, costs no stamina, and does not use the *Walk* or *Run* minor action (see §10.3, Shift; §12.1).
 
-**Shop.** Blacksmith Andre's stock of face-up treasure cards, in a tier one shop and a tier two shop. A tier one card costs two *souls* and a tier two card four; a tier one or tier two treasure card sells for one soul and a boss treasure card for six, and starting equipment cannot be sold (see §11.4). The tier one shop is stocked at setup and the tier two shop when the mini-boss is defeated; both are restocked only after a boss is defeated (in campaign play, after a section is completed), unsold cards going to the bottom of their deck first (see §6.3).
+**Shop.** Blacksmith Andre's stock of face-up treasure cards, in a tier one shop and a tier two shop. A tier one card costs two *souls* and a tier two card four; a tier one or tier two treasure card sells for one soul and a boss treasure card for six, and starting equipment cannot be sold (see §11.4). The tier one shop is stocked at setup and the tier two shop when the mini-boss is defeated (in campaign play, when the *bonfire ascetic* is burnt); both are restocked only after a boss is defeated (in campaign play, after a section is completed), unsold cards going to the bottom of their deck first (see §6.3; §18.6).
 
 **Signature card.** A behaviour card that is included in every behaviour deck built for its boss: Black Dragon Kalameet's Mark of Calamity and Hellfire Blast, the Gaping Dragon's two Stomach Slam cards, and the Old Iron King's three Fire Beam cards (see §17.8; §17.10).
 
 **Souls.** The currency of the game, tracked by soul tokens on each character's dashboard. *Souls* are gained by *clearing* encounters, defeating bosses, and killing invaders, and are dropped on death. They are spent while resting at the *bonfire* and, as the one exception, to call a *summon* at the fog gate (see §7.6, §12.1). *Souls* cannot be transferred between characters. A character adventuring alone begins with six *souls* (see §6.1).
 
-**Spark.** The *bonfire*'s charges, tracked on the spark dial. The party begins with six minus the number of characters, gains one for each boss defeated, and spends one each time the characters rest at the *bonfire* (see §7.4). If the characters are required to rest while the dial shows zero, the players lose the game (see §7.1). In campaign play the dial's maximum is one more than its starting value and a *spark* may be bought back for *souls* (see §18.3).
+**Spark.** The *bonfire*'s charges, tracked on the spark dial. The party begins with six minus the number of characters, gains one for each boss defeated, and spends one each time the characters rest at the *bonfire*, except at the rest that follows the defeat of a boss (see §7.4). If the characters are required to rest while the dial shows zero, the players lose the game (see §7.1). In campaign play the dial's maximum is one more than its starting value and a *spark* may be bought back for *souls* (see §18.3).
 
 **Spawn node.** A node on which enemy models are placed at the start of an encounter, as the encounter card directs. The mini-boss tile, the main-boss tile, and each mega-boss game board have a boss spawn node (see §5.1; §15.3).
 
@@ -306,11 +306,11 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Terrain node.** A node on which a terrain token or model is placed at the start of an encounter, as the encounter card directs. A terrain node that holds no terrain is used as a basic node (see §5.1).
 
-**Threat.** The value that fixes turn order, printed on the character dashboard as its Taunt Level and on enemy, boss, and phantom data cards. Enemies act in descending threat before the characters, who then act in descending threat. The character with the highest threat takes the aggro token at the start of each encounter; the players settle ties (see §3.1; §7.5, Encounter Turn Order).
+**Threat.** The value that fixes turn order, printed on the character dashboard as its Taunt Level and on enemy, boss, and phantom data cards. Enemies act in descending threat before the characters, who then act in descending threat. The character with the highest threat takes the aggro token at the start of each encounter; the players settle ties (see §3.1; §7.5, Encounter Start; §7.5, Encounter Turn Order).
 
-**Tier one treasure.** The treasure deck that holds common and class-specific treasure with every stat requirement below 25. Encounter rewards and chests draw from tier one until the mini-boss is defeated (in campaign play, until the *bonfire ascetic* is burnt) (see §6.2).
+**Tier one treasure.** The treasure deck that holds common and class-specific treasure with every stat requirement below 25. Encounter rewards and chests draw from tier one until the mini-boss is defeated (in campaign play, until the *bonfire ascetic* is burnt) (see §6.2; §18.5).
 
-**Tier two treasure.** The treasure deck that holds common and class-specific treasure with a stat requirement of 25 or more, all transposed treasure, and the five legendary cards. Encounter rewards and chests draw from tier two once the mini-boss is defeated (in campaign play, once the *bonfire ascetic* is burnt) (see §6.2).
+**Tier two treasure.** The treasure deck that holds common and class-specific treasure with a stat requirement of 25 or more, all transposed treasure, and the five legendary cards. Encounter rewards and chests draw from tier two once the mini-boss is defeated (in campaign play, once the *bonfire ascetic* is burnt) (see §6.2; §18.5).
 
 **Titanite.** A weapon upgrade card whose name includes the word Titanite (Titanite Shard, Titanite Chunk, Titanite Slab, Titanite Scale, Demon Titanite, and Blue Titanite), fused permanently to the weapon it is attached to. A Titanite Chunk is attached only in place of an attached Titanite Shard, and a Titanite Slab only in place of an attached Titanite Chunk; the replaced card returns to the bottom of the treasure deck of its tier (see Appendix B). When that weapon is sold, the Titanite is sold with it for no additional *souls*, and each card goes where a sold card of its kind goes (see §4.2; §11.4).
 

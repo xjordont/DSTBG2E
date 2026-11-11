@@ -6,7 +6,7 @@ Every encounter is fought on a tile, and every tile is a fragment of a ruined wo
 
 Every *encounter* is fought on one or more tiles: an encounter tile, the *boss tiles* (see §15.3), or the *mega-boss game board* (see §6.7). The *bonfire* tile has no nodes, and no encounter is fought on it (see §11.1).
 
-The edge of every tile is a wall. A *doorway* is a gap in the wall through which the characters pass from one tile to the next. Tiles are joined so that a doorway of each tile faces a doorway of the tile beside it (see §6.5). A tile's orientation is fixed when the tile is placed, and the tile is neither rotated nor moved until the tiles are next laid out for setup.
+The edge of every tile is a wall. A *doorway* is a gap in the wall through which the characters pass from one tile to the next. Tiles are joined so that a doorway of each tile faces a doorway of the tile that follows it on the route; a tile that merely lies beside another is not joined to it (see §6.5). A tile's orientation is fixed when the tile is placed, and the tile is neither rotated nor moved until the tiles are next laid out for setup.
 
 Every tile except the bonfire tile is printed with circular spaces called *nodes*. During an encounter every model occupies exactly one node; a model is never between nodes or in a doorway. Each node is one of three types: basic, spawn, or terrain.
 
@@ -14,7 +14,7 @@ Every tile except the bonfire tile is printed with circular spaces called *nodes
 
 **Entry node.** A basic node along the tile edge that holds the doorway through which the characters entered the tile. When the characters enter a tile, they are placed on its entry nodes (see §7.5, Encounter Start).
 
-**Spawn node.** {{icon:ast-0006-primary-spawn-node}} A node on which enemy models are placed at the start of an encounter, as the *encounter card* directs (see §7.5, Encounter Start). The mini-boss tile has a mini-boss spawn node, the main-boss tile a main-boss spawn node, and a mega-boss game board a mega-boss spawn node; the *boss* is placed there at the start of its encounter (see §15.3).
+**Spawn node.** {{icon:ast-0006-primary-spawn-node}} A node on which enemy models are placed at the start of an encounter, as the *encounter card* directs (see §7.5, Encounter Start). The mini-boss tile has a mini-boss spawn node, the main-boss tile a main-boss spawn node, and a mega-boss game board a mega-boss spawn node; the *boss* is placed there at the start of its encounter, unless its special rules name another node (see §15.3; §17).
 
 **Terrain node.** {{icon:ast-0014-primary-terrain-node}} A node on which a *terrain* token or model is placed at the start of an encounter, as the encounter card directs (see §5.5).
 
@@ -44,7 +44,7 @@ When a fourth non-boss model enters a node, the players must *push* one of the t
 
 When a boss model moves onto a node that holds another boss model, the boss already on the node is pushed to a valid node chosen by the players (see §17.1).
 
-*Example.* The Knight, the Herald, and a Hollow Soldier share a node. The Warrior walks onto it, so the players must push a character or summon: they choose the Herald, who is pushed to a valid node of their choice. The Hollow Soldier stays. Then the Gargoyle moves onto a node that holds the Knight, the Herald, and the Assassin; the boss does not count towards the limit, so no model is pushed.
+*Example.* The Knight, the Herald, and a Hollow Soldier share a node. The Warrior walks onto it, so the players must push a character or summon: they choose the Herald, who is pushed to a valid node of their choice. The Hollow Soldier stays. In a later boss encounter the Gargoyle moves onto a node that holds the Knight, the Herald, and the Assassin; the boss does not count towards the limit, so no model is pushed.
 
 ## 5.4 Range
 
@@ -62,7 +62,7 @@ The range of a character's attack is printed on the equipment card or on the att
 
 ## 5.5 Terrain
 
-*Terrain* is the set of obstacles placed on a tile at the start of an *encounter*. There are five kinds: *gravestones*, *barrels*, *chests*, and pillars, which are placed on *terrain nodes* as the *encounter card* directs, and traps, which are dealt to *basic nodes* (see §7.5, Encounter Start). Each terrain token or model occupies one *node*.
+*Terrain* is the set of obstacles placed on a tile at the start of an *encounter*. There are five kinds: *gravestones*, *barrels*, and *chests*, which are placed on *terrain nodes* as the *encounter card* directs (see §7.5, Encounter Start); pillars, which are placed on the pillar nodes of one game board (see §5.5, Pillars); and traps, which are dealt to *basic nodes* (see §5.5, Traps). Each terrain token or model occupies one *node*.
 
 The rules in this section apply to every model alike: characters, enemies, *phantoms*, and the *boss*. No terrain blocks *range* (see §5.4). An enemy or boss moves around terrain that blocks it, choosing its path as §9.2 or §16.2 describes.
 

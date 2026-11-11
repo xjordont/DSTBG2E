@@ -80,11 +80,11 @@ An *ember card* is a tier one shop card and costs two souls. A character who is 
 
 ### Sales
 
-A character may sell to Andre any treasure card they hold, whether it is *equipped*, in the *back-up slot*, or in the inventory. *Starting equipment* cannot be sold. Andre pays one soul for a tier one or tier two treasure card and six souls for a boss treasure card, and the character takes the souls from the supply. Legendary treasure and *transposed treasure* are *tier two treasure* cards (see §6.2).
+A character may sell to Andre any treasure card they hold, whether it is *equipped*, in the *back-up slot*, or in the inventory. *Starting equipment* cannot be sold. Andre pays one soul for a tier one or tier two treasure card, one soul for an *invader*'s treasure card or a Titanite Scale card, and six souls for a boss treasure card, and the character takes the souls from the supply. Legendary treasure and *transposed treasure* are *tier two treasure* cards (see §6.2).
 
 A sold card goes to one of the following places.
 
-- A sold tier one or tier two treasure card is placed face down at the bottom of the treasure deck of its tier (see §6.2).
+- A sold tier one or tier two treasure card that came from a treasure deck or from the shop is placed face down at the bottom of the treasure deck of its tier (see §6.2).
 - A sold boss treasure card is returned to the game box, and so is any other sold card that came from no treasure deck: an *invader*'s treasure card or a Titanite Scale card.
 - A sold ember card is returned face up to the tier one shop.
 
@@ -96,6 +96,7 @@ When a *weapon* with *Titanite* attached is sold, the Titanite is sold with it, 
 |---|---|---|
 | Tier one card | 2 | 1 |
 | Tier two card | 4 | 1 |
+| *Invader*'s treasure card or Titanite Scale card | - | 1 |
 | *Boss treasure* card | - | 6 |
 
 An ember card is priced as a tier one card. Boss treasure cannot be purchased. Campaign play uses its own prices (see §18.6, Shop Price Table).
@@ -120,7 +121,7 @@ The encounters are reset as follows.
 
 A *cleared* encounter keeps its black cube through the reset, and a *failed* encounter has none (see §7.5, Encounter Resolution). A cleared *Level 4 encounter* is the exception to the reset: it is not reset and is not fought again (see §6.7, Level 4 Encounters). A failed boss encounter is reset as the boss rules direct (see §15.2). An *invader* that has appeared does not return when the encounters are reset (see §12.2).
 
-After the reset the characters leave the bonfire tile and enter the encounter tile adjacent to it, where that tile's encounter begins (see §7.5, Encounter Start). The characters then advance one tile at a time towards the boss tile. If the *fog gate* token is on the bonfire tile, the party may instead pass through it to the boss encounter without entering any encounter tile (see §15.1).
+After the reset the characters leave the bonfire tile and enter the first encounter tile of the route, where that tile's encounter begins (see §7.5, Encounter Start). The characters then advance one tile at a time towards the boss tile. If the *fog gate* token is on the bonfire tile, the party may instead pass through it to the boss encounter without entering any encounter tile (see §15.1).
 
 When the characters enter a tile whose encounter card carries a black cube, the party may skip the encounter or fight it again. Skipping costs each character stamina; the cost and its limit are stated with the encounter rules (see §7.5, Encounter Start). An encounter fought again awards the *reduced reward* and no treasure (see §7.6). An encounter whose card carries no black cube, because it was failed or has not yet been cleared, cannot be skipped and must be fought.
 

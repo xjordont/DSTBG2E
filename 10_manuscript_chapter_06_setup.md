@@ -4,7 +4,7 @@ The fire is lit, and the dark waits beyond it. Before the first step is taken, t
 
 ## 6.1 Character Setup
 
-Each player chooses one character (see §2.1). The number of characters in the party sets the scaling of enemy health and attack values (see §8.3) and the starting number of *sparks* (see §6.4, §7.4).
+Each player chooses one character (see §2.1). The number of characters in the party sets the scaling of enemy health, movement, and attack values (see §8.3) and the starting number of *sparks* (see §6.4, §7.4).
 
 1. Place each character's dashboard (see §3.1) in front of its player.
 2. Equip each character with its *starting equipment*, the equipment cards that bear the character's class icon, in the slots the cards show (see §3.2, §4.1).
@@ -16,13 +16,13 @@ Each player chooses one character (see §2.1). The number of characters in the p
 
 ## 6.2 Treasure Deck Setup
 
-Two treasure decks are built at setup: the *tier one treasure* deck and the *tier two treasure* deck. Every *treasure card* belongs to one of six types (see §2.5), and its type and its stat requirements (see §4.1) decide which deck, if any, it enters.
+Two treasure decks are built at setup: the *tier one treasure* deck and the *tier two treasure* deck. The *treasure cards* from which the decks are built are of the six types set out below, and a card's type and its stat requirements (see §4.1) decide which deck, if any, it enters; the number of cards of each type is given with the components (see §2.5). An *ember card*, an *invader*'s treasure card, and a Titanite Scale card are of none of the six types and enter neither deck (see §2.9; §4.4).
 
 ### Treasure Card Types
 
 **Starting equipment.** The three or four equipment cards a character begins with, marked with that character's class icon. Starting equipment is equipped during character setup (see §6.1). It is not shuffled into either treasure deck.
 
-**Common treasure.** A treasure card that is not starting equipment, class-specific, transposed, legendary, or boss treasure. A common treasure card with any stat requirement of 25 or more is tier two. A common treasure card whose stat requirements are all below 25 is tier one.
+**Common treasure.** A treasure card that is not starting equipment, class-specific, transposed, legendary, or boss treasure, and is not an *ember card*, an *invader*'s treasure card, or a Titanite Scale card. A common treasure card with any stat requirement of 25 or more is tier two. A common treasure card whose stat requirements are all below 25 is tier one.
 
 **Class-specific treasure.** A treasure card marked with a small white class emblem in its top-right icon. The emblem has no rules effect. Class-specific treasure is sorted into tier one or tier two by its stat requirements exactly as common treasure is.
 
@@ -44,7 +44,7 @@ The tier two treasure deck holds every common treasure card and every class-spec
 
 ### Building the Treasure Decks
 
-1. Set aside every boss treasure card, every legendary treasure card, every ember card, and every starting equipment card that is not equipped.
+1. Set aside every boss treasure card, every legendary treasure card, every ember card, every *invader*'s treasure card, every Titanite Scale card, and every starting equipment card that is not equipped.
 2. Return the starting equipment cards that are not equipped to the game box.
 3. Sort the remaining treasure cards into two piles: cards whose stat requirements are all below 25, and cards with at least one stat requirement of 25 or more.
 4. Add every transposed treasure card to the second pile.
@@ -63,7 +63,7 @@ Blacksmith Andre's *shop* holds two piles of face-up *treasure cards*: the tier 
 
 Each shop is stocked by category: three weapons, three armour cards, two shields, two upgrades, and two spells. For stocking, a treasure card belongs to the first of the following categories that describes it (see §4.1).
 
-- An upgrade is a card with the weapon-upgrade icon {{icon:ast-0044-weapon-upgrade}} or the armour-upgrade icon {{icon:ast-0046-armour-upgrade}}, including rings and *titanite*.
+- An upgrade is a card with the weapon-upgrade icon {{icon:ast-0044-weapon-upgrade}} or the armour-upgrade icon {{icon:ast-0046-armour-upgrade}}, including rings and *Titanite*.
 - A spell is a card whose art shows a scroll.
 - A shield is a weapon card that shows a *block* or *resist* value and has no *attack option*.
 - An armour card is a card with the *armour* icon {{icon:ast-0047-armour}}.
@@ -125,7 +125,7 @@ When random boss selection is in play, each boss is chosen at random in step 1: 
 
 ### Encounter Cards
 
-The *encounter levels* of the four encounters on the route to a boss are printed on that boss's data card. Encounter levels increase from the tile adjacent to the bonfire tile towards the boss tile.
+The *encounter levels* of the four encounters on the route to a boss are printed on that boss's data card. Encounter levels increase along the route, from the first encounter tile after the bonfire tile to the last encounter tile before the boss tile.
 
 1. Build the encounter decks: shuffle separately the Level 1 {{icon:ast-0007-encounter-level-1}}, Level 2 {{icon:ast-0011-encounter-level-2}}, and Level 3 {{icon:ast-0015-encounter-level-3}} *encounter cards* of the set that supplies the mini-boss (see §6.5, Expansion Encounters).
 2. Deal one encounter card face down to each encounter tile, of the level the mini-boss's data card gives for that tile's position on the route. Keep the rest of each encounter deck face down beside the bonfire tile.
@@ -135,7 +135,7 @@ The *encounter levels* of the four encounters on the route to a boss are printed
 
 ### Expansion Encounters
 
-Each encounter deck is built only from the encounter cards of the set that supplies the next boss. Encounter cards of other sets are not used on that leg of the exploration.
+Each encounter deck is built only from the encounter cards of the set that supplies the next boss. Encounter cards of other sets are not used on that leg of the exploration. If that set supplies no encounter cards of Levels 1 to 3, as when the Asylum Demon is the mini-boss, the encounter decks of that leg are built from the core set's encounter cards.
 
 Mixed encounter decks are an optional rule. They require at least one expansion that supplies encounter cards. The party decides during setup whether mixed encounter decks are in play. When they are in play, each encounter deck is built from the encounter cards of its level from every set in the party's collection.
 
@@ -151,7 +151,7 @@ The party decides during setup whether each of the following optional rules is i
 - Mimics require the Explorers expansion (see §13).
 - *Crystal lizards* require the Iron Keep expansion (see §14).
 - *Phantoms*, both *summons* and invaders, require the Phantoms expansion (see §12).
-- Player versus player (PvP) encounters follow the defeat of each boss (see §20.1).
+- Player versus player (PvP) encounters follow the defeat of each boss or, in campaign play, of each boss whose defeat completes a *section* (see §20.1).
 
 ## 6.6 Setup After the Mini-Boss
 
@@ -175,7 +175,7 @@ When the *mini-boss* is defeated (see §16.5), the route is rebuilt for the seco
 16. If *invaders* are in play and any character is *embered*, place the *invader tokens* on the encounter cards (see §12.2).
 17. Add one *spark* to the spark dial (see §7.4).
 18. Place every character's model on the bonfire tile. The characters rest at the bonfire without spending a spark (see §11.2) and may visit the *Firekeeper* (see §11.3) and Blacksmith Andre (see §11.4).
-19. Exploration resumes from the encounter tile adjacent to the bonfire tile (see §11.5).
+19. Exploration resumes from the first encounter tile of the route (see §11.5).
 
 ## 6.7 Setup After the Main-Boss
 

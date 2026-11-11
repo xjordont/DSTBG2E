@@ -6,7 +6,7 @@ The characters set out from the bonfire and fight their way, tile by tile, towar
 
 The players win the game when any character survives to defeat the *final boss*. In the standard game the final boss is the *main-boss*. During setup the party may instead add a *mega-boss*, fought after the main-boss, as the final boss (see §6.5 and §6.7). Victory over the final boss is shared by every player.
 
-If the party chose player versus player (PvP) during setup, a PvP *encounter* is fought after each boss is defeated (see §20).
+If the party chose player versus player (PvP) during setup, a PvP *encounter* is fought after each boss is defeated or, in campaign play, after each boss whose defeat completes a *section* (see §20.1; §18.1, Player versus Player Encounters).
 
 The players lose the game when the characters are required to rest at the *bonfire* and the *spark* dial shows zero. The characters are required to rest when an encounter is *failed*: when every character has died, or when a *hollow* character dies (see §7.5, Encounter Resolution). The party cannot choose to rest while the spark dial shows zero (see §7.4).
 
@@ -54,13 +54,13 @@ The ember token stays on the dashboard until the character dies (see §7.2); it 
 
 *Sparks* are the party's shared resource and are tracked on the *spark* dial (see §6.4). The party begins the game with sparks equal to six minus the number of characters.
 
-Each time a *mini-boss*, *main-boss*, or *mega-boss* is defeated and the game does not end, the party gains one spark (see §16.5), and the characters then rest at the *bonfire* without spending a spark. Resting at the bonfire at any other time costs one spark (see §11.2). In the standard game sparks cannot be gained in any other way; campaign play varies these rules (see §18.3).
+Each time a *mini-boss*, *main-boss*, or *mega-boss* is defeated and the game does not end, the party gains one spark (see §16.5), and the characters then rest at the *bonfire* without spending a spark. Resting at the bonfire at any other time costs one spark (see §11.2). In the standard game sparks are gained in no other way, except when a player leaves the game (see §18.4); campaign play varies these rules (see §18.3).
 
 The party cannot rest at the bonfire while the spark dial shows zero. If the characters are required to rest while the dial shows zero, the players lose the game (see §7.1).
 
 ## 7.5 Encounters
 
-An *encounter* is a battle fought on an encounter tile against the enemies set out by the tile's *encounter card* (see §2.6). The characters begin at the encounter tile adjacent to the *bonfire* tile and advance one tile at a time towards the boss tile. Boss encounters follow these rules except where the boss rules differ (see §15 and §16); PvP encounters follow their own rules (see §20).
+An *encounter* is a battle fought on an encounter tile against the enemies set out by the tile's *encounter card* (see §2.6). The characters begin at the first encounter tile of the route, the tile that follows the *bonfire* tile in the chain (see §6.5), and advance one tile at a time along the route towards the boss tile. Boss encounters follow these rules except where the boss rules differ (see §15 and §16); PvP encounters follow their own rules (see §20).
 
 ### Encounter Start
 
@@ -77,11 +77,11 @@ When the characters arrive at an encounter tile:
 3. Place each character model on an *entry node* of the tile (see §5.1), no more than three models to a node (see §5.3).
 4. Place one stamina cube on each character's endurance bar for each encounter skipped since the party last fought or rested, to a maximum of three.
 5. Place the enemy models, scaled for the number of characters (see §8.3), on the spawn nodes and the *terrain* tokens on the terrain nodes shown on the encounter card (see §5.1 and §5.5).
-6. If the encounter card shows the trap icon, deal *trap tokens* (see §5.5, Traps).
+6. If the encounter card shows the trap icon and the encounter is set up for the first time, deal *trap tokens* (see §5.5, Traps).
 7. If *invaders* are in play, reveal the tile's invader token (see §12.2).
 8. If *crystal lizards* are in play and the encounter card shows the crystal lizard symbol, place the crystal lizards (see §14).
 9. Place one face-down treasure card from the treasure deck of the current tier (see §6.2) beneath each *chest* token placed on the tile for the first time.
-10. Place the *aggro token* on the character with the highest *threat* {{icon:ast-0026-threat-level}}. If two or more characters share the highest threat, the players choose which of them takes the aggro token and the order in which the tied characters take their *turns*; the order is kept for the whole encounter.
+10. Place the *aggro token* on the character with the highest *threat* {{icon:ast-0059-taunt}}. If two or more characters share the highest threat, the players choose which of them takes the aggro token and the order in which the tied characters take their *turns*; the order is kept for the whole encounter.
 
 ### Encounter Turn Order
 
@@ -147,7 +147,7 @@ Each character who died in the encounter is revived hollow as follows.
 2. Remove all condition tokens, stamina cubes, and damage cubes from the character.
 3. Place two *hollow cubes* on the two rightmost spaces of the character's endurance bar (see §7.2).
 
-Recovery does not ready the *estus flask*, *luck*, or *heroic action* tokens, and does not remove the hollow cubes of a character who was already hollow; only resting at the bonfire does so (see §11.2). A revived character's dropped souls stay on the tile (see §7.6).
+Recovery does not ready the *estus flask*, *luck*, or *heroic action* tokens, which only resting at the bonfire readies (see §11.2). It does not remove the hollow cubes of a character who was already hollow, which are removed only by resting at the bonfire or by becoming *embered* (see §7.2). A revived character's dropped souls stay on the tile (see §7.6).
 
 When an encounter is failed, the characters must rest at the bonfire. If the *spark* dial shows zero, the characters cannot rest and the players lose the game (see §7.1). Otherwise the party spends one spark and rests (see §11.2): every character, including each dead or lost character, is placed on the bonfire tile and fully restored, and every encounter is reset (see §11.5).
 

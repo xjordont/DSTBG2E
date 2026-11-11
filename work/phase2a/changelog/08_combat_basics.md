@@ -371,3 +371,24 @@
 - After: "The only push that affects a boss model is the push caused by another boss model that moves onto its node or is placed on it (see §17.1; §17.10, The Four Kings)."
 - Rationale: Outside half B; consequential on VB-005, so that §8.4 does not forbid the push that the royal summons requires.
 - Source: final rulings, VB-006 (`06_final_rulings.md`); independent verification, work/phase3/verify_b.md
+
+### CH-08-054 · §8.1
+- Type: correction
+- Before: "bears the push icon and targets the Knight and the Herald, who share a node within its range."
+- After: "bears the node icon and the push icon and targets the Knight and the Herald, who share a node within its range."
+- Rationale: By §8.1 and §9.3 an enemy attack has one target unless it bears the node icon; the push icon adds none.
+- Source: final rulings, VA-022 (`06_final_rulings.md`); second verification, chapters 1 to 11 (work/phase3/verify_a.md)
+
+### CH-08-055 · §8.4
+- Type: correction
+- Before: "The enemy then moves its second node, which holds no character, and no model is pushed."
+- After: "The enemy's movement targets the Herald, and its path turns at that node, so the second node it enters is not the node to which the Knight was pushed. That node holds no character, and no model is attacked or pushed."
+- Rationale: By §9.2, Push-Move the enemy moves on towards its target, and a character pushed directly away along the enemy's path is entered and attacked again, as the example of §9.2 shows; the stated outcome needs a target and a path that the example did not give.
+- Source: final rulings, VA-023 (`06_final_rulings.md`); second verification, chapters 1 to 11 (work/phase3/verify_a.md)
+
+### CH-08-056 · §8.5, Frostbite
+- Type: ruling
+- Before: "An enemy, boss, or phantom with a frostbite token reduces the value of each of its movement icons by one, after *enemy scaling* has been applied (see §8.3; §9.2)."
+- After: "An enemy, boss, or *invader* with a frostbite token reduces the value of each of its movement icons by one, after *enemy scaling* has been applied (see §8.3; §9.2). A *summon* with a frostbite token reduces by one the number of nodes of each *shift* icon on its behaviour cards (see §12.1)."
+- Rationale: [MECHANICAL CHANGE] A summon has no stamina and no movement icons, so neither half of the frostbite rule reached it; the token now slows a summon as it slows every other model that is not a character.
+- Source: final rulings, VA-024a (`06_final_rulings.md`); lead editor's decision on a judgement call of the second verification (work/phase3/verify_a.md)

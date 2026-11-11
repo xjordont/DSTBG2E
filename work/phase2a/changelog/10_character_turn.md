@@ -314,3 +314,10 @@
 - After: "A weapon whose four stat requirements are all zero has no relevant stat and is never scaled. *Spells* are never scaled (see §4.3)."
 - Rationale: [MECHANICAL CHANGE] Without it every character scales such a weapon at once, a +1 that rewards nothing and a red cube that records no choice.
 - Source: final rulings, combat-E29 (`06_final_rulings.md`); Audit finding A-066; no official or community ruleset has stat scaling.
+
+### CH-10-046 · §10.4
+- Type: clarification
+- Before: "A character who wields a weapon two-handed has no shield equipped and therefore cannot *parry* (see §9.6)."
+- After: "A character who wields a weapon other than a shield two-handed has no shield equipped and therefore cannot *parry* (see §9.6)."
+- Rationale: Companion of the same clarification in §9.6.
+- Source: final rulings, VA-025b (`06_final_rulings.md`); lead editor's decision on a judgement call of the second verification (work/phase3/verify_a.md)

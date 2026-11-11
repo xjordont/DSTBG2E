@@ -16,7 +16,7 @@ The character dashboard shows the following.
 - The *threat* value {{icon:ast-0059-taunt}} fixes the character's place in the turn order.
 - The four token slots hold the heroic action, *luck*, *estus flask*, and *ember* tokens (see §3.5).
 
-**Threat.** The value that fixes a model's place in the turn order. Characters act in descending order of threat, and the character with the highest threat takes the *aggro* token at the start of each encounter (see §7.5, Encounter Turn Order). The dashboard prints the character's threat as its Taunt Level. Enemies and *phantoms* also have a threat value, printed on their *data cards* (see §8.2, §12).
+**Threat.** The value that fixes a model's place in the turn order. Characters act in descending order of threat, and the character with the highest threat takes the *aggro* token at the start of each encounter (see §7.5, Encounter Start; §7.5, Encounter Turn Order). The dashboard prints the character's threat as its Taunt Level. Enemies and *phantoms* also have a threat value, printed on their *data cards* (see §8.2, §12).
 
 The character's *souls* are kept on the dashboard as soul tokens (see §7.6). The character's inventory is kept beside the dashboard (see §3.2).
 
@@ -50,7 +50,7 @@ Characters raise stats only while resting at the *bonfire*, by paying *souls* to
 
 The track has no space for stat tier four. When a stat rises to stat tier four, the character replaces the stat cube in the stat tier three space with a red cube and returns the stat cube to the supply. A stat at stat tier four has a value of 40, or the stat tier three value plus five, whichever is higher. Stat tier four is the highest tier.
 
-A character must meet an equipment card's stat requirements to equip it (see §4.1). A weapon whose highest stat requirement the character's stat exceeds by five or more is *scaled* (see §10.5).
+A character must meet an equipment card's stat requirements to equip it (see §4.1). A weapon whose highest stat requirement the character's value in that stat exceeds by five or more is *scaled*; a weapon whose stat requirements are all zero is never scaled (see §10.5).
 
 *Example.* The Warrior's strength stat cube is in the base space. While the characters rest at the bonfire, the Warrior pays the Firekeeper two souls for stat tier one and then four souls for stat tier two, and moves the strength stat cube two spaces to the right. The Warrior's strength is now the value printed in the stat tier two space.
 

@@ -253,3 +253,17 @@ The estus flask token is not readied when an encounter is *cleared*. It is flipp
 - After: "A shield in either weapon slot permits a *parry*, and the *riposte* is made with the weapon in the other weapon slot (see §9.6)."
 - Rationale: [MECHANICAL CHANGE] Follows §9.6 as changed by combat-E22.
 - Source: final rulings, combat-E30 (`06_final_rulings.md`); As combat-E22.
+
+### CH-03-037 · §3.1
+- Type: correction
+- Before: "takes the *aggro* token at the start of each encounter (see §7.5, Encounter Turn Order)."
+- After: "takes the *aggro* token at the start of each encounter (see §7.5, Encounter Start; §7.5, Encounter Turn Order)."
+- Rationale: The placing of the aggro token at the start of an encounter is stated in §7.5, Encounter Start, step 10, not under Encounter Turn Order.
+- Source: final rulings, VA-004 (`06_final_rulings.md`); second verification, chapters 1 to 11 (work/phase3/verify_a.md)
+
+### CH-03-038 · §3.3
+- Type: correction
+- Before: "A weapon whose highest stat requirement the character's stat exceeds by five or more is *scaled* (see §10.5)."
+- After: "A weapon whose highest stat requirement the character's value in that stat exceeds by five or more is *scaled*; a weapon whose stat requirements are all zero is never scaled (see §10.5)."
+- Rationale: §10.5 never scales a weapon whose four stat requirements are all zero, and compares only the relevant stat.
+- Source: final rulings, VA-005 (`06_final_rulings.md`); second verification, chapters 1 to 11 (work/phase3/verify_a.md)

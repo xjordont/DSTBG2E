@@ -10,7 +10,7 @@ Date: 2026-11-11. Authority: the author delegated every open rules question to t
 4. `tools/apply_rulings.py` applied the accepted changes; each is an entry in `11_change_log.md` that cites its ruling, marked `[MECHANICAL CHANGE]` where play changes.
 5. Online evidence was thin: several forums refuse automated reading. No ruling rests on an online source alone; the memos say which sources were reached.
 
-Totals: 334 questions answered (add 22, change 71, confirm 177, delete 4, not a rules question 60); 225 text changes applied, 98 of them changes to play.
+Totals: 334 questions answered (add 22, change 71, confirm 177, delete 4, not a rules question 60); 296 text changes applied, 103 of them changes to play.
 
 ## 2. The 22 lead questions
 
@@ -138,6 +138,11 @@ Totals: 334 questions answered (add 22, change 71, confirm 177, delete 4, not a 
 | lead-E20 | §8.5, Stagger | A summon rolls dice to attack and to defend, as a character does (§12.1), and has no fixed block, resist, or dodge value for the token to reduce. |
 | lead-E21 | Glossary, Stagger | Glossary follows §8.5 (lead-E20). |
 | lead-E22 | §6.1 | lead-E10 is withdrawn. Letting a lone character spend before setting out made an exception to the one rule that souls are spent at a rest (§7.6, §11.3, §11.4, and three glossary entries); the author's rule stands as written, and the six souls are spent at the … |
+| VA-015 | §6.5, Expansion Encounters | The Asylum Demon's set supplies only Level 4 encounter cards, so a leg that ends at it had no decks to build; the core set, which every party owns, is the fallback. |
+| VA-024a | §8.5, Frostbite | A summon has no stamina and no movement icons, so neither half of the frostbite rule reached it; the token now slows a summon as it slows every other model that is not a character. |
+| VA-024b | §21, Frostbite | Glossary companion of the frostbite rule for a summon. |
+| VB-009 | §18.1, Section Completion | After a boss that does not complete its section no rest follows, so the survivors recover as after any cleared encounter; otherwise a dead character would return in better state than a living one. |
+| VB-010 | §19.15 | Without this the campaign could dead-end: the invaders vanish at a character's death, the survivors clear the encounter, and a cleared Level 4 encounter is otherwise never fought again. |
 
 ## 4. Where a Gate 1 answer is revised
 
@@ -603,3 +608,18 @@ These are facts about printed components, not rules decisions. Each is stated in
 2. Cards not supplied (phantom-014, phantom-037). The summon behaviour cards and the crystal lizard data card could not be read. The rulings rest on the booklets' descriptions and do not depend on printed values, but the author should compare one summon card (dice icons, shift and Distract icons) and the crystal lizard card (threat, health, movement away from the nearest character).
 3. A Level 4 encounter card in a campaign section. As §12.2 and §18.1 stand, the Level 4 encounter card dealt at a section's setup is an encounter card and can take an invader token, so an advanced invader can join a Level 4 encounter. Nothing in the sources speaks to it and it was not raised as an issue. It is left for the campaign cluster: either accept it or add "No invader token is placed on a Level 4 encounter card" to §12.2.
 4. Online discussion. Reddit and BoardGameGeek threads on these rules could not be reached (see Sources). No ruling above depends on an online source; where the community guide was reachable it is quoted.
+
+## 8. Verification after the rulings
+
+Once the rulings were applied, two independent readers checked the whole book against itself: every worked example recomputed from the rules as they now stand, every table against its text, every statement of a rule against every other statement of the same rule, and the eight added booklets against the entries drawn from them. Their reports are `work/phase3/verify_a.md` (chapters 1 to 11, glossary A to M) and `work/phase3/verify_b.md` (chapters 12 to 23, glossary N to Z). 71 corrections followed, each an entry in `11_change_log.md` that cites its `VA-` or `VB-` number; 5 of them settle a point the rules had left open and are listed in section 3. The readers' judgement calls were decided by the lead editor:
+
+- VA-015 (§6.5, Expansion Encounters): The Asylum Demon's set supplies only Level 4 encounter cards, so a leg that ends at it had no decks to build; the core set, which every party owns, is the fallback.
+- VA-024a (§8.5, Frostbite): A summon has no stamina and no movement icons, so neither half of the frostbite rule reached it; the token now slows a summon as it slows every other model that is not a character.
+- VA-024b (§21, Frostbite): Glossary companion of the frostbite rule for a summon.
+- VA-025a (§9.6): A shield equipped alone is itself wielded two-handed, and the rule that a shield in either weapon slot parries governs; no riposte follows, because the other slot holds no weapon.
+- VA-025b (§10.4): Companion of the same clarification in §9.6.
+- VA-026a (§11.4, Sales and Prices): An invader's treasure card and a Titanite Scale card could be sold but had no stated price; each sells for one soul, as the ruling on sales intended.
+- VA-026b (§11.4, Sales and Prices): Two bullets both claimed a sold invader's treasure card; the first now covers only cards that came from a deck or the shop.
+- VA-026c (§11.4, Prices): The price table gains the row for the two cards that come from no treasure deck.
+- VB-009 (§18.1, Section Completion): After a boss that does not complete its section no rest follows, so the survivors recover as after any cleared encounter; otherwise a dead character would return in better state than a living one.
+- VB-010 (§19.15): Without this the campaign could dead-end: the invaders vanish at a character's death, the survivors clear the encounter, and a cleared Level 4 encounter is otherwise never fought again.
