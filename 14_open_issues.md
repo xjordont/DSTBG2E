@@ -30,6 +30,8 @@ These are the points on which the lead editor made a call that the author may wi
 | 18 | Unverified material | Component counts for unsupplied sets, and four campaigns from unsupplied booklets (Demon Hunting, Call of the Abyss, Into the Depths, Big Game Hunting), are kept as the manuscript gives them | §2, §19 | Could not be checked against a source |
 | 19 | Level 4 treasure | The Level 4 encounter awards one mega-boss treasure card in place of per-character tier two cards | §6.7 | Approved in CMP-0012 (d); confirm the reduction is intended |
 | 20 | First-leg layout | Two rows of three tiles for the first leg, a straight line for the second | §6.5, §6.6 | Three findings disagreed (A-088, C-090, D-031) |
+| 21 | Painted illustrations | Not shown. No painted cover, chapter, or card art is placed, and the illustration areas of four anatomy plates (dashboard, equipment card, enemy data card, boss data card) and the two model discs of the arcs diagram are blanked | figures in §3, §4.1, §8.2, §15.4, §15.6; `30_pdf_production_notes.md` §6 | The cards credit these paintings to the game's licensors, so it is unclear whether the rights statement covers them; say yes and they are restored by deleting the `masks` keys in `layout/tuning.json` |
+| 22 | Blank invader tokens | When the three blank tokens run out, invader tokens of the kind not drawn stand in as blanks | §12.2, Invader Tokens; CH-12-034 | New rule: a campaign section of five encounters needs four blanks and only three are supplied |
 
 ## 2. Per-chapter lists
 

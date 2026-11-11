@@ -277,7 +277,7 @@ for e in entries:
 # provenance review
 REVIEW_F=''
 if any(e['review'] for e in entries):
-    REVIEW_F=('\n### F. Phase 2B: candidates seen during extraction and not extracted\nRule applied in Phase 2B: Steamforged product imagery (miniature renders, tiles, boards, tokens, dice, card backs, layout ornaments, icons) is extracted; anything that looks like a painting, and any card or dashboard face whose painted illustration cannot be left out, is listed here instead. Where an illustration-free part could be had, that part was extracted and is named in the reason.\n\n'
+    REVIEW_F=('\n### F. Phase 2B: candidates seen during extraction and not extracted\nRule applied in Phase 2B: Steamforged product imagery (miniature renders, tiles, boards, tokens, dice, card backs, layout ornaments, icons) is extracted; anything that looks like a painting, and any card or dashboard face whose painted illustration cannot be left out, is listed here instead. Where an illustration-free part could be had, that part was extracted and is named in the reason.\n\nPhase 2C decision: the anatomy plates extracted in Phase 0 that show the same painted card and dashboard illustrations (AST-0105, AST-0091, AST-0094, AST-0097) and the printed model discs of the arcs diagram (AST-0099) are placed in the book with those areas blanked (`masks` in `layout/tuning.json`); the stored plates are unchanged. The project lead is asked to rule (`14_open_issues.md`, item 21).\n\n'
               '| Review ID | Asset | Where | What | Reason / what was done |\n|---|---|---|---|---|\n'
               +''.join(f"| {r['id']} | {e['id']} | {r['src']}, p.{r['page']}, {r['image_object']} | {r['name']} | {r['reason']} |\n" for e in entries for r in e['review']))
 out.append('''## Provenance Review

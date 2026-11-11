@@ -17,7 +17,7 @@ Date: 2026-11-11. This report states each gate criterion of the brief, the evide
 | All OPTIONAL fixes applied or declined | met | the 11 declined findings each cite, in `15_finding_status.csv`, the change-log entries that state the reason |
 | One commit per chapter | met | `git log` shows one "manuscript: chapter NN" commit per chapter, followed by reconciliation commits |
 
-Mechanical changes are marked `[MECHANICAL CHANGE]` in `11_change_log.md`. Decisions that remain the author's are listed in `14_open_issues.md` (20 lead items, then the per-chapter lists).
+Mechanical changes are marked `[MECHANICAL CHANGE]` in `11_change_log.md`. Decisions that remain the author's are listed in `14_open_issues.md` (22 lead items, then the per-chapter lists).
 
 ## Gate 2B — Layout specification and assets
 
@@ -51,7 +51,7 @@ Phase 2B extraction added 162 files (98 component images, 46 icons, 10 frames an
 ## Questions for the author
 
 1. **Rights in the painted illustrations.** Do the rights you hold cover the painted illustrations printed on the cards and dashboards (class portraits, enemy and boss paintings, item paintings) and the cover and chapter paintings? If yes, the four plates are restored by deleting their `masks` keys, and the held key art can be placed on the cover and openers. If no, the book stays as built.
-2. **The 20 rules decisions in `14_open_issues.md`**, of which the weightiest are: campaign soul rewards (standard rewards with doubled stat costs, CH-18-038); when an invader's encounter counts as cleared; two hollow cubes; the expansion treasure and encounter card totals that cannot be reconciled from the supplied booklets; and the nine bosses without booklets.
+2. **The rules decisions in `14_open_issues.md`** (items 1 to 20 and 22), of which the weightiest are: campaign soul rewards (standard rewards with doubled stat costs, CH-18-038); when an invader's encounter counts as cleared; two hollow cubes; the expansion treasure and encounter card totals that cannot be reconciled from the supplied booklets; and the nine bosses without booklets.
 
 ## Acceptance criteria
 

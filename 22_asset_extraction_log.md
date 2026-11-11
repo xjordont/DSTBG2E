@@ -2378,6 +2378,8 @@ Sculpts are SFG-owned works (credited sculptors) but depict licensed characters.
 ### F. Phase 2B: candidates seen during extraction and not extracted
 Rule applied in Phase 2B: Steamforged product imagery (miniature renders, tiles, boards, tokens, dice, card backs, layout ornaments, icons) is extracted; anything that looks like a painting, and any card or dashboard face whose painted illustration cannot be left out, is listed here instead. Where an illustration-free part could be had, that part was extracted and is named in the reason.
 
+Phase 2C decision: the anatomy plates extracted in Phase 0 that show the same painted card and dashboard illustrations (AST-0105, AST-0091, AST-0094, AST-0097) and the printed model discs of the arcs diagram (AST-0099) are placed in the book with those areas blanked (`masks` in `layout/tuning.json`); the stored plates are unchanged. The project lead is asked to rule (`14_open_issues.md`, item 21).
+
 | Review ID | Asset | Where | What | Reason / what was done |
 |---|---|---|---|---|
 | AST-0072.R1 | AST-0072 | DS-Phantoms-Rules-lores.pdf, p.10, object(s) 275, 277 | Two tokens of the invader set-up wheel, 201×201 px | Token faces filled with painted art (red eye / red figure) instead of a glyph. Not extracted. |
