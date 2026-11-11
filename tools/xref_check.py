@@ -40,6 +40,23 @@ for f in files:   # pass 2: check every reference against the map plus the exten
             if ref not in valid: bad.append(f'{name}:{n}: §{ref} is not a valid target')
         if re.search(r'\b(see|refer to)\s+(?:the\s+)?["“]', line, re.I): bad.append(f'{name}:{n}: quoted-name cross-reference')
         if re.search(r'\b(described|explained|detailed|discussed|mentioned)\s+(later|earlier|previously|above|below|elsewhere)\b|\baforementioned\b', line, re.I): bad.append(f'{name}:{n}: vague cross-reference')
+# a cited sub-section ("see §N.M, Title") must be an H3 of that section
+h3 = {}
+for f in files:
+    cur = None
+    for ln in pathlib.Path(f).read_text(encoding='utf-8').splitlines():
+        m = re.match(r'^## (\d+\.\d+) ', ln)
+        if m: cur = m.group(1); h3.setdefault(cur, set()); continue
+        if ln.startswith('# '): cur = None
+        m = re.match(r'^### (.+)$', ln)
+        if m and cur: h3[cur].add(m.group(1).strip())
+for f in files:
+    name = pathlib.Path(f).name
+    for n, line in enumerate(pathlib.Path(f).read_text(encoding='utf-8').splitlines(), 1):
+        for m in re.finditer(r'§(\d+\.\d+), ([A-Z][^);]*)', line):
+            sec, rest = m.group(1), m.group(2).strip()
+            if sec in h3 and not any(rest == t or rest.startswith(t) for t in h3[sec]):
+                bad.append(f'{name}:{n}: §{sec} has no sub-section "{rest[:40]}"')
 # chapters drafted so far: do their H2 sets match the map exactly?
 drafted = {m.group(1) for m in (re.match(r'10_manuscript_chapter_(\d\d)_', pathlib.Path(f).name) for f in files) if m}
 for ch in sorted(drafted):

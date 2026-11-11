@@ -34,7 +34,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Basic node.** The most common node type. Basic nodes adjacent to a doorway are also entry nodes.
 
-**Behaviour card.** A card drawn from a boss, mimic, invader or phantom behaviour deck at the start of that model's turn. Its icons are resolved left to right and it sets the model's attack range and dodge difficulty until the next card is drawn.
+**Behaviour card.** A card drawn from the behaviour deck of a boss, mimic, invader, or summon at the start of that model's turn. Its icons are resolved from left to right. A boss's current behaviour card sets the range and the dodge difficulty of its attacks and shows its weak arcs until the next card is drawn (see §15.5; §16.1).
 
 **Behaviour deck.** The face-down deck of behaviour cards from which a boss, mimic, invader, or summon draws one card at the start of each of its turns. A boss's behaviour deck is built during setup and built again each time its failed encounter is reset (see §15.5). When the deck is empty at the start of a turn, the discard pile is turned face down without shuffling to form the new deck.
 
@@ -50,7 +50,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Bonfire ascetic.** In campaign play, a one-time communal payment of 16 *souls* made while resting at the *bonfire*, the one exception to the rule that souls cannot be pooled. It opens tier two treasure and the tier two shop and increases by two the base health of every enemy subject to enemy scaling for the rest of the campaign, cumulative with the health scaling for the number of characters. Enemy attack values are not changed (see §18.7).
 
-**Boss.** A single powerful enemy whose turns are driven by a behaviour deck and whose base is divided into four arcs. There are three ranks: *mini-boss*, *main-boss* and *mega-boss*. Bosses do not scale with the number of characters and may not be pushed by characters.
+**Boss.** A single powerful enemy whose turns are driven by a behaviour deck and whose base is divided into four arcs. There are three ranks: *mini-boss*, *main-boss*, and *mega-boss*. A boss is not scaled for the number of characters and cannot be pushed by characters (see §15; §16).
 
 **Boss arc.** One of the four sectors (front, left, right, back) into which a boss's base is divided. The arcs extend across the tile: each node lies in at least one arc, and a node on the line between two arcs lies in both (see §15.6).
 
@@ -106,9 +106,9 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Ember token.** The token that marks an *embered* character. It begins the game beside the dashboard, is placed in the dashboard's ember slot when the character becomes embered, and is removed when the character dies (see §3.5, Ember; §7.3).
 
-**Embered.** The state of a character with an *ember* token. An *embered* character is not *hollow*, reduces any single attack's damage of three or more by one, may summon a phantom before a boss encounter, and provokes invaders.
+**Embered.** The state of a character with an *ember token*. An embered character is not *hollow*, reduces by one the damage of any attack that deals three or more, may call a *summon* before a boss encounter, and provokes *invasions*. The state ends when the character dies (see §7.3).
 
-**Encounter.** A battle fought on one or more tiles against the enemies set out by an encounter card. An encounter ends *cleared* or *failed*.
+**Encounter.** A battle fought on one or more tiles against the enemies set out by an encounter card, or against a boss. An encounter ends *cleared* or *failed* (see §7.5); a PvP encounter ends in neither way (see §20.7).
 
 **Encounter card.** The card dealt face down to each tile that lists the encounter's level, enemies, terrain and traps. It is revealed when the characters enter the tile.
 
@@ -154,11 +154,11 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Hit.** A target is hit by an attack when it is within the attack's range and does not avoid the attack by a successful *dodge* or *parry*, even if the attack deals no damage. Pushes and conditions carried by an attack apply only to models that the attack hits (see §8.1).
 
-**Hollow.** The state of a character revived after dying. Two *hollow cubes* block the two rightmost spaces of the endurance bar. *Hollow* is removed only by resting at the *bonfire* or by becoming *embered*. A *hollow* character who dies is *lost* and the encounter is *failed*.
+**Hollow.** The state of a character revived after dying. Two *hollow cubes* block the two rightmost spaces of the endurance bar, leaving eight. Hollow is removed only by resting at the *bonfire* or by becoming *embered*. A hollow character who dies is *lost*, and the encounter is *failed* (see §7.2).
 
 **Hollow cube.** One of eight cubes of a colour distinct from the damage, stamina, and stat cubes. Two hollow cubes block the two rightmost spaces of a *hollow* character's endurance bar (see §7.2).
 
-**Invader.** A hostile phantom brought into one encounter by an *invasion*. An invader acts after each character's turn using its own behaviour deck, is not scaled, does not count towards clearing the encounter, vanishes without award if a character dies, and awards *souls* and its treasure card when killed (see §12.2).
+**Invader.** A hostile phantom brought into one encounter by an *invasion*. An invader acts after each character's turn using its own behaviour deck, is not scaled, counts towards clearing the encounter while it is on the tile, vanishes without award if a character dies, and awards *souls* and its treasure card when killed (see §12.2).
 
 **Invader token.** A token from the Phantoms expansion that shows an invader or is blank. When an *invasion* is provoked, one token is placed face down on each face-down encounter card, one of them showing an invader; a token is revealed when the characters fight that encounter (see §12.2).
 
@@ -178,7 +178,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Magical damage.** Damage from an attack marked with the white circle icon. Magical damage is reduced by resist.
 
-**Main-boss.** The second boss of the standard game, fought on both boss tiles after the mini-boss. Its defeat wins the standard game unless a mega-boss follows.
+**Main-boss.** The second boss of the standard game, fought on both boss tiles joined as one after the mini-boss is defeated. Its defeat wins the standard game unless a mega-boss is in play (see §6.6; §15.3).
 
 **Major action.** The one principal action of a character's turn: *Attack*, *Rest*, *Drink Estus*, or *Ember*. A character may take one major action per turn (see §10.1).
 
@@ -192,7 +192,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Mimic encounter.** The encounter fought against a *mimic* on the tile of a *cleared* encounter whose chest the party has opened. It is fought as a mini-boss encounter without arcs, with the characters on the nodes they occupy and before any recovery or reward (see §13.2).
 
-**Mini-boss.** The first boss of the standard game, fought on the mini-boss tile.
+**Mini-boss.** The first boss of the standard game, fought on the mini-boss tile (see §6.5; §15.3).
 
 **Minor action.** An action a character may take during their turn before the major action, after it, or both: *Walk*, *Equip*, and *Heroic Action* once each per turn, and *Run* any number of times (see §10.1).
 
@@ -262,7 +262,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Shield.** A one-handed weapon card that shows block or resist dice and has no attack option. A shield is a weapon for equipment slots and for two-handed attacks, and a shield for stocking the shop and for parrying (see §4.1).
 
-**Shift.** A weapon or phantom behaviour icon. A character whose attack option bears it may move up to the number of nodes shown, before the target is chosen if the icon precedes the dice and after the attack's damage and effects if it follows them. A *shift* is a *move*, costs no stamina, and does not use the *Walk* or *Run* minor action (see §10.3, Shift).
+**Shift.** An icon found on attack options and on summon behaviour cards. A character whose attack option bears it may move up to the number of nodes shown, before the target is chosen if the icon precedes the dice and after the attack's damage and effects if it follows them. A *shift* is a *move*, costs no stamina, and does not use the *Walk* or *Run* minor action (see §10.3, Shift; §12.1).
 
 **Shop.** Blacksmith Andre's stock of face-up treasure cards, in a tier one shop and a tier two shop. A tier one card costs two *souls* and a tier two card four; a treasure card other than starting equipment sells for one soul (see §11.4). The tier one shop is stocked at setup and the tier two shop when the mini-boss is defeated; both are restocked only after a boss is defeated (in campaign play, after a section is completed), unsold cards going to the bottom of their deck first (see §6.3).
 
@@ -298,7 +298,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Terrain node.** A node on which a terrain token or model is placed at the start of an encounter, as the encounter card directs. A terrain node that holds no terrain is used as a basic node (see §5.1).
 
-**Threat.** The value that fixes turn order. Enemies act in descending threat before the characters, who then act in descending threat. The character with the highest threat takes the aggro token at the start of each encounter; the players settle ties (see §7.5, Encounter Turn Order).
+**Threat.** The value that fixes turn order, printed on the character dashboard as its Taunt Level and on enemy, boss, and phantom data cards. Enemies act in descending threat before the characters, who then act in descending threat. The character with the highest threat takes the aggro token at the start of each encounter; the players settle ties (see §3.1; §7.5, Encounter Turn Order).
 
 **Tier one treasure.** The treasure deck that holds common and class-specific treasure with every stat requirement below 25. Encounter rewards and chests draw from tier one until the mini-boss is defeated (in campaign play, until the *bonfire ascetic* is burnt) (see §6.2).
 
@@ -314,7 +314,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Trap token.** A token, blank or showing a dodge difficulty and a damage value, dealt face down to the basic nodes of a trapped encounter. It is turned face up when a character enters its node by a move, a dodge, or a push, and each character there must suffer the damage or *dodge* it; enemies neither trigger traps nor suffer them (see §5.5, Traps). In a *PvP encounter* one trap token is placed at the end of each character's turn, and a character who fails to dodge it dies (see §20.6).
 
-**Treasure card.** Any card from a treasure deck: *starting equipment*, *class-specific treasure*, *common treasure*, *legendary treasure*, or *boss treasure* (see §2.5). A treasure card that may be equipped to a dashboard slot is an *equipment card*.
+**Treasure card.** Any card from a treasure deck or from Blacksmith Andre's shop: *starting equipment*, *common treasure*, *class-specific treasure*, *legendary treasure*, *boss treasure*, or an *ember card*. A treasure card that may be equipped is an *equipment card* (see §2.5; §4.1).
 
 **Turn.** One model's opportunity to act. In each round the enemies take their turns, then the characters take theirs in descending threat order (see §7.5, Encounter Turn Order; §10.1). In a boss encounter the boss takes a turn before each character's turn, and the players choose the order of the characters (see §16.1).
 

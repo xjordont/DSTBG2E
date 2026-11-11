@@ -36,11 +36,13 @@ def key(h): return re.sub(r'[^a-z0-9 ]', '', h.lower().rstrip('.'))
 
 def merge_glossary(num):
     delta = one(f'work/phase2a/glossary/{num}_*.md')
+    final = one('work/phase2a/glossary/21_*.md')   # lead editor's reconciliation: applied after any chapter's deltas
     gp = ROOT / '12_glossary.md'
     head, entries = parse_glossary(gp.read_text(encoding='utf-8'))
     added = amended = 0
-    if delta:
-        for ln in delta.read_text(encoding='utf-8').splitlines():
+    sources = [d for d in ([delta] if num == '21' else [delta, final]) if d]
+    for src in sources:
+        for ln in src.read_text(encoding='utf-8').splitlines():
             m = re.match(r'^(ADD|AMEND)\s+(\*\*.+?\*\*.*)$', ln.strip())
             if not m: continue
             hw = re.match(r'^\*\*(.+?)\*\*', m.group(2)).group(1).strip()

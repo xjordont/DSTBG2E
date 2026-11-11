@@ -4,7 +4,7 @@ Each character is one of the undead who answer the *bonfire*'s call. The charact
 
 ## 3.1 Character Dashboards
 
-Each character is represented by a model and by the character dashboard of the same name. The model stands on the tiles and occupies a *node* (see §5.1). The dashboard records everything particular to the character's class, and it carries the cards, cubes, and tokens that change during play.
+Each character is represented by a model and by the *character dashboard* of the same name. The model stands on the tiles and occupies a *node* (see §5.1). The dashboard records everything particular to the character's class, and it carries the cards, cubes, and tokens that change during play.
 
 The character dashboard shows the following.
 
