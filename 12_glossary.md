@@ -74,7 +74,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Corrosion.** A condition from the Gaping Dragon expansion. A model holds at most one corrosion token, which reduces the total of each of its block rolls by one. The token is removed when the affected model next suffers damage (see §8.5, Corrosion).
 
-**Crystal lizard.** An optional enemy from the Iron Keep expansion placed on a terrain node. It flees rather than fights, does not scale its health, does not count towards clearing the encounter, and awards a Titanite Scale card to the character who kills it (see §14).
+**Crystal lizard.** An optional enemy from the Iron Keep expansion, placed on a terrain node that the encounter card marks with the crystal lizard symbol. It flees rather than fights, is not scaled, does not count towards clearing the encounter, and escapes without award when the encounter is *cleared*. The character who kills one takes a Titanite Scale card, and once one has been killed in an encounter none is placed there again (see §14).
 
 **Damage cube.** A red cube. Each point of damage a character suffers places one damage cube on the endurance bar, filling from the right. A character who must place a damage cube and has no space dies.
 
