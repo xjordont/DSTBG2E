@@ -174,6 +174,8 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Mega-boss game board.** The double-sided board supplied with a mega-boss expansion. Its Level 4 encounter side is the tile of the Level 4 encounter and its mega-boss side is the tile of the mega-boss encounter (see §6.7, §15.3).
 
+**Mega-boss setup card.** The card of the Executioner's Chariot expansion that shows the enemy spawn nodes on which the Black Hollow Mages and the Falchion Skeletons are placed at the start of the mega-boss encounter (see §17.9).
+
 **Mimic.** An optional enemy from the Explorers expansion that masquerades as a chest. When the party opens a chest whose *ambush card* shows Mimic, the Hungry Mimic (before the mini-boss is defeated) or the Voracious Mimic (afterwards) is fought in a *mimic encounter*. Killing it awards two treasure cards in place of the chest's one (see §13).
 
 **Mimic encounter.** The encounter fought against a *mimic* on the tile of a *cleared* encounter whose chest the party has opened. It is fought as a mini-boss encounter without arcs, with the characters on the nodes they occupy and before any recovery or reward (see §13.2).
@@ -197,6 +199,8 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 **Phantom.** A *summon* or an *invader*: a model of the Phantoms expansion with a data card and behaviour cards. A summon is friendly and an invader hostile; a phantom is neither a character nor a boss (see §12).
 
 **Physical damage.** Damage from an attack marked with the crossed swords icon. Physical damage is reduced by block.
+
+**Pillar node.** One of the four terrain nodes printed on the mega-boss side of the Asylum Demon expansion's *mega-boss game board*, on each of which a *pillar token* is placed at the start of a boss encounter fought there (see §17.3).
 
 **Pillar token.** A terrain token placed on each of the four pillar nodes of the Asylum Demon mega-boss game board. No model may *move*, *dodge*, or be pushed into its node until the pillar is destroyed (see §5.5, Pillars; §17.3).
 
@@ -248,6 +252,8 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Shop.** Blacksmith Andre's stock of face-up treasure cards, in a tier one shop and a tier two shop. A tier one card costs two *souls* and a tier two card four; a treasure card other than starting equipment sells for one soul (see §11.4). The tier one shop is stocked at setup and the tier two shop when the mini-boss is defeated; both are restocked only after a boss is defeated (in campaign play, after a section is completed), unsold cards going to the bottom of their deck first (see §6.3).
 
+**Signature card.** One of Black Dragon Kalameet's two behaviour cards, Mark of Calamity and Hellfire Blast, that are included in every behaviour deck built for Kalameet (see §17.8).
+
 **Souls.** The currency of the game, tracked by soul tokens on each character's dashboard. *Souls* are gained by *clearing* encounters, defeating bosses, and killing invaders, and are dropped on death. They are spent while resting at the *bonfire* and, as the one exception, to call a *summon* at the fog gate (see §7.6, §12.1). *Souls* cannot be transferred between characters. A character adventuring alone begins with six *souls* (see §6.1).
 
 **Spark.** The *bonfire*'s charges, tracked on the spark dial. The party begins with six minus the number of characters, gains one for each boss defeated, and spends one each time the characters rest at the *bonfire* (see §7.4). If the characters are required to rest while the dial shows zero, the players lose the game (see §7.1). In campaign play the dial's maximum is one more than its starting value and a *spark* may be bought back for *souls* (see §18.3).
@@ -268,7 +274,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Stat tier.** A character's position on each stat progression track: the base tier, or stat tier one, two, three, or four. It is marked with a *stat cube* or, at stat tier four, with a red cube in the stat tier three space. A stat at stat tier four has the value 40 or the stat tier three value plus five, whichever is higher. Tiers are bought in sequence from the Firekeeper (see §3.3, §11.3).
 
-**Strafe card.** A card from the Black Dragon Kalameet expansion drawn when a strafe icon is resolved; it shows the nodes attacked and the node on which Kalameet lands.
+**Strafe card.** A card from the Black Dragon Kalameet expansion revealed when a strafe icon is resolved. It shows the nodes whose characters the strafe attack targets and the landing node on which Kalameet's model is then placed; a character on the landing node is pushed to an adjacent node (see §17.8).
 
 **Summon.** A friendly phantom called before a boss encounter. Each *embered* character may pay two *souls* to draw one summon data card at random, and the players choose one of the drawn summons. The summon acts after each character's turn, defends with the dice on its data card, and is removed when its health dial is reduced to zero or the encounter ends (see §12.1).
 
@@ -286,7 +292,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Titanite.** A weapon upgrade (Titanite Shard, Titanite Chunk, Titanite Slab, or Titanite Scale) that is fused permanently to the weapon it is attached to. When that weapon is sold, the Titanite is returned with it to the bottom of the treasure deck of the weapon's tier (see §4.2).
 
-**Track behaviour card.** A numbered card from the Executioner's Chariot expansion used, in fixed order, for the Chariot's turns before it heats up.
+**Track behaviour card.** One of the four behaviour cards of the Executioner's Chariot expansion, named Death Race and numbered 1 to 4, that direct the Chariot's turns in fixed order until it heats up. Each shows the node to which the Chariot moves and the nodes that its attack targets (see §17.9).
 
 **Transposed treasure.** A class treasure card marked with a blue light. All transposed treasure is tier two.
 
@@ -297,6 +303,8 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 **Treasure card.** Any card from a treasure deck: *starting equipment*, *class-specific treasure*, *common treasure*, *legendary treasure*, or *boss treasure* (see §2.5). A treasure card that may be equipped to a dashboard slot is an *equipment card*.
 
 **Turn.** One model's opportunity to act. In each round the enemies take their turns, then the characters take theirs in descending threat order; in boss encounters the boss and the characters alternate turns (see §7.5, Encounter Turn Order; §10.1).
+
+**Twin Gargoyles.** The boss encounter set by a campaign *section* that lists the Gargoyle twice in succession: one mini-boss encounter in two parts, fought against one Gargoyle and then at once against a second, with no rest or reward between them. The rewards of a defeated boss follow only when the second Gargoyle is defeated, and a failure against either Gargoyle means both are fought again (see §17.1, Twin Gargoyles).
 
 **Two-handed.** A weapon bearing the two-handed icon, or a one-handed weapon equipped while the other weapon slot holds no card; a shield in the other weapon slot is equipment in the other hand. A weapon wielded two-handed may reroll one die of each attack roll. Spells are never two-handed (see §10.4).
 
@@ -320,6 +328,6 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Weapon slot.** One of the two dashboard slots, the left weapon slot and the right weapon slot, that each hold one equipped weapon card. A two-handed weapon requires the other weapon slot to be empty (see §3.2).
 
-**Wind Up.** A behaviour icon. When it is resolved, each character may spend one stamina to move to an adjacent node; the movement counts as a *Run*.
+**Wind Up.** A behaviour icon printed on behaviour cards of the Asylum Demon and the Stray Demon. When it is resolved, each character may spend one stamina to move to an adjacent node before the next icon is resolved; the movement counts as a *Run* (see §17.3).
 
 **Wound token.** A token of value 1, 3, or 5 that records the damage suffered by an enemy. Wound tokens with a total value equal to the damage are placed on the enemy model's base, and an enemy whose wound tokens equal or exceed its scaled health is killed and removed from the tile (see §8.2). Bosses, phantoms, and mimics use a health dial instead.
