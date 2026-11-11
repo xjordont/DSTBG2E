@@ -357,3 +357,10 @@
 - After: ""
 - Rationale: Now stated once, for both kinds of game (lead-E05).
 - Source: final rulings, lead-E06 (`06_final_rulings.md`)
+
+### CH-08-052 · §8.5, Stagger
+- Type: correction
+- Before: "A character with a stagger token subtracts one from the total of each attack roll and of each block, resist, and dodge roll that the character makes. An enemy, boss, or phantom with a stagger token reduces each of its *attack values*, its block and resist values, and its *dodge difficulty* by one."
+- After: "A character or a *summon* with a stagger token subtracts one from the total of each attack roll and of each block, resist, and dodge roll that it makes. An enemy, boss, or *invader* with a stagger token reduces each of its *attack values*, its block and resist values, and its *dodge difficulty* by one."
+- Rationale: [MECHANICAL CHANGE] A summon rolls dice to attack and to defend, as a character does (§12.1), and has no fixed block, resist, or dodge value for the token to reduce.
+- Source: final rulings, lead-E20 (`06_final_rulings.md`); review finding on the pull request, verified against §12.1

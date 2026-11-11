@@ -226,5 +226,29 @@
   "mechanical": false,
   "rationale": "Two bosses are fought with more than one model.",
   "evidence": "boss memo, cross-cluster effects"
+ },
+ {
+  "id": "lead-E20",
+  "item": "lead",
+  "file": "10_manuscript_chapter_08_combat_basics.md",
+  "section": "§8.5, Stagger",
+  "old": "A character with a stagger token subtracts one from the total of each attack roll and of each block, resist, and dodge roll that the character makes. An enemy, boss, or phantom with a stagger token reduces each of its *attack values*, its block and resist values, and its *dodge difficulty* by one.",
+  "new": "A character or a *summon* with a stagger token subtracts one from the total of each attack roll and of each block, resist, and dodge roll that it makes. An enemy, boss, or *invader* with a stagger token reduces each of its *attack values*, its block and resist values, and its *dodge difficulty* by one.",
+  "type": "correction",
+  "mechanical": true,
+  "rationale": "A summon rolls dice to attack and to defend, as a character does (§12.1), and has no fixed block, resist, or dodge value for the token to reduce.",
+  "evidence": "review finding on the pull request, verified against §12.1"
+ },
+ {
+  "id": "lead-E21",
+  "item": "lead",
+  "file": "12_glossary.md",
+  "section": "Glossary, Stagger",
+  "old": "**Stagger.** A condition. A staggered character subtracts one from the total of each attack, block, resist, and dodge roll; any other staggered model reduces its attack values, its block and resist values, and its dodge difficulty by one. The token is removed at the end of the model's next complete turn. Stagger is placed by attacks that bear the stagger icon, by stamina overflow, and by a parry (see §8.5, Stagger; §9.6; §10.1).",
+  "new": "**Stagger.** A condition. A staggered character or *summon* subtracts one from the total of each attack, block, resist, and dodge roll; any other staggered model reduces its attack values, its block and resist values, and its dodge difficulty by one. The token is removed at the end of the model's next complete turn. Stagger is placed by attacks that bear the stagger icon, by stamina overflow, and by a parry (see §8.5, Stagger; §9.6; §10.1).",
+  "type": "correction",
+  "mechanical": true,
+  "rationale": "Glossary follows §8.5 (lead-E20).",
+  "evidence": ""
  }
 ]

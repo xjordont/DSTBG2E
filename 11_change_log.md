@@ -3456,6 +3456,13 @@ A spawn node or terrain node that holds no enemy or terrain is entered, left, an
 - Rationale: Now stated once, for both kinds of game (lead-E05).
 - Source: final rulings, lead-E06 (`06_final_rulings.md`)
 
+### CH-08-052 · §8.5, Stagger
+- Type: correction
+- Before: "A character with a stagger token subtracts one from the total of each attack roll and of each block, resist, and dodge roll that the character makes. An enemy, boss, or phantom with a stagger token reduces each of its *attack values*, its block and resist values, and its *dodge difficulty* by one."
+- After: "A character or a *summon* with a stagger token subtracts one from the total of each attack roll and of each block, resist, and dodge roll that it makes. An enemy, boss, or *invader* with a stagger token reduces each of its *attack values*, its block and resist values, and its *dodge difficulty* by one."
+- Rationale: [MECHANICAL CHANGE] A summon rolls dice to attack and to defend, as a character does (§12.1), and has no fixed block, resist, or dodge value for the token to reduce.
+- Source: final rulings, lead-E20 (`06_final_rulings.md`); review finding on the pull request, verified against §12.1
+
 ## Chapter 09 — Enemy Turn
 
 ### CH-09-001 · §9 Enemy Turn
@@ -7062,3 +7069,10 @@ Some bosses heat up in other ways. The special rules of such a boss replace the 
 **Leap.** A boss movement marked with the leap icon. The boss is removed from its node and placed on the node of its target, at any distance, without changing its facing. Every character on that node is pushed to a valid adjacent node chosen by that character's player, and the push is not limited by arcs (see §16.2)."
 - Rationale: New defined term of boss-E25.
 - Source: final rulings, boss-E41 (`06_final_rulings.md`); Old Iron King booklet lines 424-433
+
+### CH-21-044 · Glossary, Stagger
+- Type: correction
+- Before: "**Stagger.** A condition. A staggered character subtracts one from the total of each attack, block, resist, and dodge roll; any other staggered model reduces its attack values, its block and resist values, and its dodge difficulty by one. The token is removed at the end of the model's next complete turn. Stagger is placed by attacks that bear the stagger icon, by stamina overflow, and by a parry (see §8.5, Stagger; §9.6; §10.1)."
+- After: "**Stagger.** A condition. A staggered character or *summon* subtracts one from the total of each attack, block, resist, and dodge roll; any other staggered model reduces its attack values, its block and resist values, and its dodge difficulty by one. The token is removed at the end of the model's next complete turn. Stagger is placed by attacks that bear the stagger icon, by stamina overflow, and by a parry (see §8.5, Stagger; §9.6; §10.1)."
+- Rationale: [MECHANICAL CHANGE] Glossary follows §8.5 (lead-E20).
+- Source: final rulings, lead-E21 (`06_final_rulings.md`)

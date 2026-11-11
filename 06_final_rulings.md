@@ -10,7 +10,7 @@ Date: 2026-11-11. Authority: the author delegated every open rules question to t
 4. `tools/apply_rulings.py` applied the accepted changes; each is an entry in `11_change_log.md` that cites its ruling, marked `[MECHANICAL CHANGE]` where play changes.
 5. Online evidence was thin: several forums refuse automated reading. No ruling rests on an online source alone; the memos say which sources were reached.
 
-Totals: 334 questions answered (add 22, change 71, confirm 177, delete 4, not a rules question 60); 222 text changes applied, 95 of them changes to play.
+Totals: 334 questions answered (add 22, change 71, confirm 177, delete 4, not a rules question 60); 224 text changes applied, 97 of them changes to play.
 
 ## 2. The 22 lead questions
 
@@ -135,6 +135,8 @@ Totals: 334 questions answered (add 22, change 71, confirm 177, delete 4, not a 
 | lead-E10 | §6.1 | The six souls exist to help a lone character through the first encounters, and could not be spent before a rest that costs a spark. |
 | lead-E17 | §12.2 | The invader follows the one heat-up procedure and timing of boss-E01: deck and discard pile reshuffled with the added card at the start of its next turn. |
 | lead-E18 | §13.2 | As lead-E17, for the mimic. |
+| lead-E20 | §8.5, Stagger | A summon rolls dice to attack and to defend, as a character does (§12.1), and has no fixed block, resist, or dodge value for the token to reduce. |
+| lead-E21 | Glossary, Stagger | Glossary follows §8.5 (lead-E20). |
 
 ## 4. Where a Gate 1 answer is revised
 
@@ -175,6 +177,8 @@ Follow-up changes across areas:
 - lead-E17 (§12.2): The invader follows the one heat-up procedure and timing of boss-E01: deck and discard pile reshuffled with the added card at the start of its next turn.
 - lead-E18 (§13.2): As lead-E17, for the mimic.
 - lead-E19 (§15 (introduction)): Two bosses are fought with more than one model.
+- lead-E20 (§8.5, Stagger): A summon rolls dice to attack and to defend, as a character does (§12.1), and has no fixed block, resist, or dodge value for the token to reduce.
+- lead-E21 (Glossary, Stagger): Glossary follows §8.5 (lead-E20).
 
 ## 6. Every question, by area
 

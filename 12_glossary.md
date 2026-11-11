@@ -284,7 +284,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Spell.** An equipment card or upgrade card whose art shows a scroll: a pyromancy, a sorcery, or a miracle. A character may use at most one spell attack option per turn, and spells are never scaled or two-handed (see §4.3).
 
-**Stagger.** A condition. A staggered character subtracts one from the total of each attack, block, resist, and dodge roll; any other staggered model reduces its attack values, its block and resist values, and its dodge difficulty by one. The token is removed at the end of the model's next complete turn. Stagger is placed by attacks that bear the stagger icon, by stamina overflow, and by a parry (see §8.5, Stagger; §9.6; §10.1).
+**Stagger.** A condition. A staggered character or *summon* subtracts one from the total of each attack, block, resist, and dodge roll; any other staggered model reduces its attack values, its block and resist values, and its dodge difficulty by one. The token is removed at the end of the model's next complete turn. Stagger is placed by attacks that bear the stagger icon, by stamina overflow, and by a parry (see §8.5, Stagger; §9.6; §10.1).
 
 **Stamina cube.** A black cube. Each point of stamina a character spends places one stamina cube on the endurance bar, filling from the left.
 

@@ -663,7 +663,7 @@ MB_ART = {
         minis=[(4, 79, 'miniature', 'Vordt of the Boreal Valley mega-boss miniature render')],
         boards=(899, 1419)),
     'AD': dict(
-        cover=(1, 20, 'The Asylum Demon, horned and bloated, great hammer in hand, on black', 'brutish, dark, heavy'),
+        cover=(1, 20, 'The Asylum Demon, horned and bloated, looming out of the dark', 'brutish, dark, heavy'),
         back=(16, 1844, 'A ruined cathedral nave, fading to black at the foot', 'solemn, golden, still'),
         art=[('art-ruined-cathedral-interior-large', 'p.3: ruined cathedral interior, largest copy', 3, 54, 'A ruined cathedral nave, daylight falling through the broken apse onto an overgrown floor', 'solemn, golden, still', COL, 19, (HDR,), 0.30, 'Slightly larger copy of AST-0125 (934 px wide).'),
              ('art-asylum-cell', 'p.10: stone cell lit from a grate above', 10, 1585, 'A stone cell lit from a grate above, a huddled figure by the wall', 'confined, grey, forlorn', COL, 19, (SPOT,), None, ''),

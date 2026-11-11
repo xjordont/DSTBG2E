@@ -172,7 +172,7 @@ A frostbite token is removed at the end of the affected model's next complete tu
 
 ### Stagger
 
-A character with a stagger token subtracts one from the total of each attack roll and of each block, resist, and dodge roll that the character makes. An enemy, boss, or phantom with a stagger token reduces each of its *attack values*, its block and resist values, and its *dodge difficulty* by one.
+A character or a *summon* with a stagger token subtracts one from the total of each attack roll and of each block, resist, and dodge roll that it makes. An enemy, boss, or *invader* with a stagger token reduces each of its *attack values*, its block and resist values, and its *dodge difficulty* by one.
 
 A stagger token is removed at the end of the affected model's next complete turn.
 
