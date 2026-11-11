@@ -223,3 +223,10 @@
 - After: n/a
 - Rationale: Not restated here because another section owns the rule and this chapter cites it: A-024 (enemy repeat, §8.3 and §9.3), A-039 (two boss models, §17.1), A-045 (invasion timing, §12.2), A-082 (terrain and movement, §5.5), A-122 (boss encounter setup, §15.2), A-005 (removal of hollow, §7.2), A-007 (ember card held at embering, §7.3), A-042 (heat-up timing, §15.5).
 - Source: A-024, A-039, A-045, A-082, A-122, A-005, A-007, A-042
+
+### CH-16-033 · §16.4
+- Type: clarification
+- Before: "A *summon* does not hold the aggro token, and damage inflicted by a summon does not move it (see §12.1)."
+- After: "A *summon* does not hold the aggro token, and damage inflicted by a summon does not move it. While the Distract icon of a summon's behaviour card is in effect, the boss treats the summon as the holder (see §12.1)."
+- Rationale: §16.4 owns boss aggro and did not mention the one effect that redirects it; the sentence points to §12.1 without restating the rule.
+- Source: final rulings, phantom-E17 (`06_final_rulings.md`); Official Phantoms booklet, Distract (lines 293-298).

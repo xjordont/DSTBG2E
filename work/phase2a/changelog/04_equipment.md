@@ -209,3 +209,38 @@
 - After: "A character consumes an ember card by discarding it from the back-up slot, as the *Ember* major action"
 - Rationale: Brings §4.4 into line with §3.2 and §7.3.
 - Source: QA-011 (example and consistency verification)
+
+### CH-04-031 · §4.4
+- Type: completion
+- Before: "A character consumes an ember card by discarding it from the back-up slot, as the *Ember* major action during an encounter or at any time outside an encounter."
+- After: "A character consumes an ember card by discarding it from the back-up slot, as the *Ember* major action during an encounter or at any time outside an encounter. The consumed card is returned to the game box and takes no further part in the game."
+- Rationale: Same destination stated where the ember card is described.
+- Source: final rulings, core-E24 (`06_final_rulings.md`); As core-E23.
+
+### CH-04-032 · §4.3
+- Type: clarification
+- Before: "Spells are never *two-handed*: a spell gains no two-handed reroll, and a spell equipped with the other weapon slot empty is not two-handed (see §10.4)."
+- After: "Spells are never *two-handed*: a spell gains no two-handed reroll, and a spell equipped with the other weapon slot empty is not two-handed (see §10.4). A spell card that bears the two-handed weapon icon requires the other weapon slot to be empty while it is equipped in a weapon slot (see §3.2), and it gains no reroll by this."
+- Rationale: Separates the slot a spell occupies (its printed icon) from the two-handed reroll (never for spells).
+- Source: final rulings, core-E26 (`06_final_rulings.md`); §3.2 weapon slots; chapter 04 issues list, item 7.
+
+### CH-04-033 · §4.1, Stat Requirements
+- Type: clarification
+- Before: "A card's stat requirements also decide its treasure tier, split at a requirement of 25 (see §6.2)."
+- After: "A card's stat requirements also decide its treasure tier, split at a requirement of 25 (see §6.2). The stat requirements of the weapons listed in Appendix A are those given there, in place of the printed values (see Appendix A)."
+- Rationale: The main text never told the reader that Appendix A replaces printed requirements.
+- Source: final rulings, core-E27 (`06_final_rulings.md`); Chapter 23 issues list, cross-chapter pointers.
+
+### CH-04-034 · §4.2, Titanite
+- Type: ruling
+- Before: "When a weapon with Titanite attached is sold, the Titanite is returned with the weapon to the bottom of the treasure deck of the weapon's tier (see §11.4)."
+- After: "When a weapon with Titanite attached is sold, the Titanite is sold with it and adds nothing to the sell value. The weapon and the Titanite are separated, and each goes where a sold card of its kind goes (see §11.4, Sales)."
+- Rationale: [MECHANICAL CHANGE] One destination rule for every sold card: each card returns to the place of its own kind, as a replaced Titanite card already does (Appendix B).
+- Source: final rulings, core-E31 (`06_final_rulings.md`); Author's source 11_returning_to_the_bonfire.md (sold Titanite goes to the tier one deck); Appendix B, Titanite Replacement.
+
+### CH-04-035 · §4.2, Titanite
+- Type: ruling
+- Before: "*Titanite* upgrade cards (Titanite Shard, Titanite Chunk, Titanite Slab, and Titanite Scale) are weapon upgrades that fuse permanently to the weapon they are attached to."
+- After: "A *Titanite* card is a weapon upgrade card whose name includes the word Titanite: Titanite Shard, Titanite Chunk, Titanite Slab, Titanite Scale, Demon Titanite, and Blue Titanite. A Titanite card fuses permanently to the weapon it is attached to."
+- Rationale: [MECHANICAL CHANGE] A test by name settles Demon Titanite and Blue Titanite without a second list: every card called Titanite behaves as Titanite.
+- Source: final rulings, core-E34 (`06_final_rulings.md`); Official 2017: no weapon upgrade is ever removed (DS-Core-Rules-lores.txt l.672-679); CMP-0004 labels both cards 'Weapon upgrade (Titanite)'.

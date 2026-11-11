@@ -237,3 +237,60 @@
 - After: "and precedes the rest at the *bonfire* that follows every boss but the *final boss* (see §20.9)."
 - Rationale: §16.5 and §20.9 grant no rest after the final boss.
 - Source: QA observation (example and consistency verification)
+
+### CH-20-035 · §20.4
+- Type: correction
+- Before: "- The defender may *parry* as against an enemy's attack, with the attacker in the place of the enemy, if the conditions for a parry are met (see §9.6). The dodge difficulty is given by the same table.
+- The defender may decline to defend. The defender suffers damage equal to the attack value and is hit."
+- After: "- The defender may *parry* as against an enemy's attack, with the attacker in the place of the enemy, if the conditions for a parry are met (see §9.6). The dodge difficulty is given by the same table."
+- Rationale: A block or resist costs nothing and is never worse than no defence, so the fourth option was dead text and disagreed with the three defences of §9.3.
+- Source: final rulings, combat-E33 (`06_final_rulings.md`); This book, §9.3, Defence and §9.4.
+
+### CH-20-036 · §20.4
+- Type: ruling
+- Before: "The icons and text of an attack option apply to a defender as they apply to an enemy (see §10.3)."
+- After: "The icons and text of an attack option apply to a defender as they apply to an enemy (see §10.3). In a PvP encounter, the word enemy in a *heroic action* or on a treasure card means another character."
+- Rationale: [MECHANICAL CHANGE] The setup readies every heroic action token, so the chapter must say whether a heroic action that names an enemy works; one sentence extends the rule already stated for attack options.
+- Source: final rulings, phantom-E26 (`06_final_rulings.md`); §20.1 step 3 and §3.5, Heroic Action of this book; no official or community PvP rules exist to consult.
+
+### CH-20-037 · §20.4, step 4
+- Type: ruling
+- Before: "4. Add one to the result for each *victory bonus* the attacker holds (see §20.8)."
+- After: "4. Add one to the result if the attacker holds the *victory bonus* (see §20.8)."
+- Rationale: [MECHANICAL CHANGE] The victory bonus is no longer cumulative.
+- Source: final rulings, phantom-E27 (`06_final_rulings.md`); Source manuscript, chapter PLAYER VS PLAYER: 'Victory on non-final bosses provides +1 attack damage in future PvP only' (a flat +1; cumulation was added by CMP-0009).
+
+### CH-20-038 · §20.4 (table)
+- Type: clarification
+- Before: "| 0 | 3 |
+| 1 | 2 |
+| 2 | 2 |
+| 3 | 1 |
+| 4 | 1 |
+| 5 or more | 1 |"
+- After: "| 0 | 3 |
+| 1 or 2 | 2 |
+| 3 or more | 1 |"
+- Rationale: The six rows hold three values; three rows are easier to remember and change no result.
+- Source: final rulings, phantom-E29 (`06_final_rulings.md`); Audit B_report.md §10.1 (probabilities for the green die) and finding B-024.
+
+### CH-20-039 · §20.8
+- Type: ruling
+- Before: "When a character wins a PvP encounter that follows the defeat of a boss other than the final boss, the character gains one *victory bonus*. One *wound token* of value 1 is placed beside the winner's dashboard to mark it. In every subsequent PvP encounter, the character adds one to the *attack value* of each of their attacks for each victory bonus held (see §20.4). Victory bonuses are cumulative, have no effect outside PvP encounters, and are kept until the game ends."
+- After: "When a character wins a PvP encounter that follows the defeat of a boss other than the final boss, the character gains the *victory bonus*. A spare token of any kind is placed beside the winner's dashboard to mark it. In every subsequent PvP encounter, the character adds one to the *attack value* of each of their attacks (see §20.4). A character holds no more than one victory bonus, however many PvP encounters the character wins. The victory bonus has no effect outside PvP encounters and is kept until the game ends."
+- Rationale: [MECHANICAL CHANGE] A flat +1 gives the earlier contests a stake without deciding the last one in advance; a cumulative bonus reaches +4 or +5 in a campaign of five or six bosses. A spare token replaces the value 1 wound token, of which the core set has six and enemies need all.
+- Source: final rulings, phantom-E30 (`06_final_rulings.md`); Source manuscript PvP bullets (flat +1); §2.8 of this book (6x wound tokens of value 1); §19 (campaigns list up to six bosses).
+
+### CH-20-040 · §20.8 (example)
+- Type: clarification
+- Before: "*Example.* The Assassin wins the PvP encounter that follows the mini-boss, and one wound token is placed beside the Assassin's dashboard."
+- After: "*Example.* The Assassin wins the PvP encounter that follows the mini-boss, and a spare token is placed beside the Assassin's dashboard."
+- Rationale: Keeps the example in step with the marker named in the rule.
+- Source: final rulings, phantom-E31 (`06_final_rulings.md`); Follows phantom-E30.
+
+### CH-20-041 · §20.9
+- Type: clarification
+- Before: "It is the one rest that follows the boss's defeat (see §16.5); a PvP encounter grants no second rest."
+- After: "It is the one rest that follows the boss's defeat (see §16.5); a PvP encounter grants no second rest. In campaign play, what follows a PvP encounter is stated with the campaign rules (see §18.1, Player versus Player Encounters)."
+- Rationale: §18.1 already settles PvP encounters in a campaign; §20.9 lacked the pointer.
+- Source: final rulings, phantom-E32 (`06_final_rulings.md`); §18.1, Player versus Player Encounters of this book.

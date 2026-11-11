@@ -28,7 +28,7 @@ The dashboard has four equipment slots: the *armour* slot, the left weapon slot,
 
 **Weapon slots.** The left weapon slot and the right weapon slot: the weapon slot on the left of the dashboard as its player reads it, and the weapon slot on its right. Each holds one weapon card, marked with the one-handed weapon icon {{icon:ast-0043-one-handed-weapon}} or the two-handed weapon icon {{icon:ast-0045-two-handed-weapon}}. A one-handed weapon may be equipped in either weapon slot, and the other weapon slot may hold a second one-handed weapon. A two-handed weapon may be equipped in either weapon slot, and the other weapon slot must then be empty. A one-handed weapon equipped while the other weapon slot is empty is wielded *two-handed* (see §10.4).
 
-Shields are weapon cards and occupy a weapon slot (see §4.1). Which weapon slot holds a shield matters for the *parry* and the *riposte* (see §9.6). Spell cards are equipped in a weapon slot or stored in an equipped *catalyst* (see §4.3).
+Shields are weapon cards and occupy a weapon slot (see §4.1). A shield in either weapon slot permits a *parry*, and the *riposte* is made with the weapon in the other weapon slot (see §9.6). Spell cards are equipped in a weapon slot or stored in an equipped *catalyst* (see §4.3).
 
 **Back-up slot.** The slot that holds up to two *treasure cards* of any kind. Cards in the back-up slot are carried but not equipped. During an encounter, a character may exchange cards between the back-up slot and the armour and weapon slots only by the *Equip* minor action (see §10.1). An *ember card* must be in the back-up slot to be used (see §4.4).
 
@@ -78,23 +78,21 @@ There are four types of character token: *heroic action*, *luck*, *estus flask*,
 
 The heroic action, luck, and estus flask tokens each have a ready side and a used side. The ready side is printed in brighter colours than the used side. A token's effect is available only while the token shows its ready side. When a character uses a token's effect, the character flips the token to its used side.
 
-The heroic action, luck, and estus flask tokens begin the game ready, in their slots on the dashboard (see §6.1). They are flipped back to the ready side only when the characters rest at the *bonfire* (see §11.2). Clearing an encounter does not ready them (see §7.5, Encounter Recovery).
+The heroic action, luck, and estus flask tokens begin the game ready, in their slots on the dashboard (see §6.1). They are flipped back to the ready side only when the characters rest at the *bonfire* (see §11.2), so each is used at most once between rests. Clearing an encounter does not ready them (see §7.5, Encounter Recovery).
 
 The ember token marks a character who is *embered*. It begins the game beside the dashboard, not in its slot, and is placed in its slot only when the character becomes embered (see §7.3).
 
 ### Heroic Action
 
-Each dashboard prints a heroic action particular to the character's class. A character may flip the heroic action token to the used side as a *minor action* (see §10.1) to resolve the heroic action as printed. The printed wording of a heroic action overrides any other rule with which it conflicts. The token is readied only at the bonfire, so a character resolves the heroic action at most once between rests.
+Each dashboard prints a heroic action particular to the character's class. A character may flip the heroic action token to the used side as a *minor action* (see §10.1) to resolve the heroic action as printed. The printed wording of a heroic action overrides any other rule with which it conflicts.
 
 ### Luck
 
-After rolling the dice for one of their own attack rolls or defence rolls (a *block*, *resist*, or *dodge* roll), a character may flip the luck token to the used side to reroll any or all of those dice. The character chooses every die to be rerolled at once and rerolls them together. The new results stand.
+After rolling the dice for one of their own attack rolls or defence rolls (a *block*, *resist*, *dodge*, or *parry* roll), a character may flip the luck token to the used side to reroll any or all of those dice. The character chooses every die to be rerolled at once and rerolls them together. The new results stand.
 
 ### Estus Flask
 
 A character may flip the estus flask token to the used side as the Drink Estus *major action* (see §10.1) to remove all damage cubes from their endurance bar. Stamina cubes are not removed. Hollow cubes are not removed. Condition tokens are not removed.
-
-The estus flask token is not readied when an encounter is *cleared*. It is flipped to the ready side only when the characters rest at the bonfire (see §11.2).
 
 ### Ember
 

@@ -10,7 +10,7 @@ Campaign play follows the standard game except as this chapter states. Where a *
 
 **Section.** One list of tiles within a campaign: a *bonfire* tile, a number of encounter tiles with their *encounter levels*, and the bosses to be faced.
 
-The party chooses one of the 12 campaigns (see §19). Two of them, The First Journey and The Coiled Sword, require only the core set (see §19.1, §19.2). Each of the other campaigns states the expansions it requires. A campaign has three to six sections, and each section lists its tiles in order outward from the bonfire tile.
+The party chooses one of the 16 campaigns (see §19). Two of them, The First Journey and The Coiled Sword, require only the core set (see §19.1, §19.2). Each of the other campaigns states the expansions it requires. A campaign has three to six sections, and each section lists its tiles in order outward from the bonfire tile.
 
 Each character keeps their *stat tiers*, *treasure cards*, *souls*, and tokens from one section to the next. Death and hollowing follow the standard game in every *encounter* of a campaign, including every *mega-boss* encounter (see §7.2).
 
@@ -31,13 +31,13 @@ The first section is set up at the start of the campaign. Every other section is
 - As many encounter tiles as the section lists encounters are drawn at random from all of the encounter tiles, in place of the four of the standard game. Each is placed with either side face up, as the party chooses.
 - The bonfire tile, the encounter tiles, and the tile of each boss are arranged as a single route in the order the section lists them (see §6.5, Encounter Tiles).
 - Each encounter tile is dealt one encounter card of the level the section lists for its position, in place of the levels printed on a boss's data card. Where the section names an encounter, that encounter card is placed face down on the tile in place of a dealt card.
-- The encounter decks are built from the sets the campaign names, in place of the set that supplies the next boss (see §6.5, Expansion Encounters).
+- The encounter decks are built from the encounter cards of every set the campaign requires, shuffled together by level, in place of the set that supplies the next boss (see §6.5, Expansion Encounters). Where a campaign names the sets for its encounter decks, only those sets are used.
 - Each encounter tile is dealt one treasure card per character from the treasure deck of the current tier (see §18.5).
 - A mini-boss is fought on the mini-boss tile, and a *main-boss* on the two *boss tiles* joined as one (see §15.3). A mega-boss is fought on its game board (see §18.1, Level 4 Encounters and Mega-Bosses).
 - A section that lists the Gargoyle as fought twice sets the Twin Gargoyles encounter, which is one boss encounter (see §17.1, Twin Gargoyles).
 - The *fog gate* token is placed on the *doorway* to the boss's tile (see §18.2). A section that lists no boss has no fog gate.
 - The *shop* is restocked as campaign play directs (see §18.6, Blacksmith Andre's Shop), and no *spark* is added during the setup of a section (see §18.3).
-- If *invaders* are in play, no more than one invasion is provoked in each section (see §12.2).
+- If *invaders* are in play, no more than one invasion is provoked in each section (see §12.2). The invader token drawn for an invasion is a standard invader token until the *bonfire ascetic* is burnt and an advanced invader token from then on (see §18.7).
 
 ### Section Completion
 
@@ -55,7 +55,7 @@ When a boss is defeated and its section is not yet completed, the party gains th
 
 A *Level 4 encounter* listed in a section is fought on the Level 4 encounter side of a *mega-boss game board*. The game board takes the place of an encounter tile at that position in the section's route. The game board and the Level 4 encounter cards are those of the mega-boss the section lists. If the section lists no mega-boss, they are those of a mega-boss expansion the campaign requires.
 
-The Level 4 encounter is set up, fought, and rewarded as in the standard game (see §6.7, Level 4 Encounters), with the soul reward of the standard game (see §18.5). Where the section names the Level 4 encounter, that encounter card is used. A cleared Level 4 encounter is not fought again and is not counted as a skipped encounter when the party next travels the route (see §7.5, Encounter Start).
+The Level 4 encounter is set up and fought as in the standard game (see §6.7, Level 4 Encounters). It is rewarded as any other encounter of its section: every character gains the soul reward of a Level 4 encounter (see §18.5), and one treasure card per character of the current tier is dealt to the game board with its encounter card. No mega-boss treasure card is dealt to a Level 4 encounter in campaign play; a mega-boss's treasure cards are gained only by defeating that mega-boss (see §16.5). Where the section names the Level 4 encounter, that encounter card is used. A cleared Level 4 encounter is not fought again and is not counted as a skipped encounter when the party next travels the route (see §7.5, Encounter Start).
 
 When a section lists two Level 4 encounters, both are fought on the same game board, one after the other. When the first is cleared, the party removes every token, model, and card from the game board and sets up the second Level 4 encounter on it.
 
@@ -94,19 +94,19 @@ Each time a *mini-boss*, *main-boss*, or *mega-boss* is defeated, the party gain
 
 A rest at the *bonfire* costs one spark, as in the standard game (see §11.2). A rest is free only when it follows the completion of a section (see §18.1, Section Completion). The defeat of a boss that does not complete its section grants a spark but no free rest.
 
-While the party rests, it may buy back one spark. Every character pays four *souls* of their own to the supply, and the spark dial is turned up by one. If any character holds fewer than four souls, the party cannot buy the spark, because souls cannot be transferred or pooled (see §7.6).
+While the party rests, it may buy back one spark. The cost is four *souls* for each character in the party, paid to the supply by any combination of the characters, and the spark dial is turned up by one. The spark is not bought unless the full cost is paid. This cost and the cost of the *bonfire ascetic* are the only costs that the characters pay together (see §18.7); souls are never passed from one character to another (see §7.6).
 
 The party may buy no more than one spark during each rest and cannot buy a spark while the dial shows its maximum. The spark is bought after the rest's own spark has been spent, and it may be bought during a free rest. Sparks are gained in no other way, except when a player leaves the campaign (see §18.4).
 
 If the characters are required to rest while the spark dial shows zero, the players lose the campaign (see §7.1). The party cannot rest while the dial shows zero, so no spark is bought to prevent that loss.
 
-*Example.* The Knight, the Herald, and the Assassin begin a campaign with the spark dial at three, and its maximum is four. The party has rested once, and the dial shows two. After clearing the second encounter of the first section, the party returns to the bonfire tile and rests again, and the dial is turned down to one. The Knight holds six souls, the Herald four, and the Assassin five. Each of them pays four souls, and the dial is turned up to two. The Knight is left with two souls, the Herald with none, and the Assassin with one.
+*Example.* The Knight, the Herald, and the Assassin begin a campaign with the spark dial at three, and its maximum is four. The party has rested once, and the dial shows two. After clearing the second encounter of the first section, the party returns to the bonfire tile and rests again, and the dial is turned down to one. The Knight holds six souls, the Herald four, and the Assassin five. A spark costs 12 souls for three characters. The Knight pays six souls, the Herald two, and the Assassin four, and the dial is turned up to two. The Knight is left with no souls, the Herald with two, and the Assassin with one.
 
 ## 18.4 Adding and Dropping Players
 
-A player may join or leave a *campaign* in progress. Either change is made only while the characters are on the *bonfire* tile and no *encounter* is in progress. A player joins or leaves a standard game in progress under the same rules. The party has no more than four characters (see §1).
+A player may join or leave a *campaign* in progress. Either change is made only while the characters are on the *bonfire* tile and no *encounter* is in progress. A player joins or leaves a standard game in progress under the same rules; the steps that set the spark dial's maximum apply only in campaign play. The party has no more than four characters (see §1).
 
-The party spends one *spark* for each player who joins. A player may join only while the spark dial shows two or more. When a player joins, the party carries out the following steps.
+The party spends one *spark* for each player who joins. A player cannot join while the spark dial shows zero. When a player joins, the party carries out the following steps.
 
 1. Turn the spark dial down by one.
 2. Set up the new character as at the start of the game, with *starting equipment*, every stat at the base tier, and no *souls* (see §6.1).
@@ -136,7 +136,7 @@ An encounter already marked *cleared* is skipped or fought again as in the stand
 
 The first time an encounter is cleared, each character takes one of the *treasure cards* dealt to its tile, as in the standard game (see §7.7). In campaign play the current tier is tier one from the start of the *campaign* until the *bonfire ascetic* is burnt, whatever bosses have been defeated, and tier two from then on (see §18.7). Every treasure card dealt to an encounter tile or placed beneath a *chest* {{icon:ast-0009-treasure-chest}} comes from the treasure deck of the current tier (see §5.5, Chests). Treasure cards already dealt when the bonfire ascetic is burnt are not replaced.
 
-*Boss treasure* is gained only by defeating bosses (see §16.5). The treasure of a *Level 4 encounter* is that of the standard game (see §6.7, Level 4 Encounters). *Legendary treasure* enters neither treasure deck and is gained only by *transposition* (see §18.8).
+*Boss treasure* is gained only by defeating bosses (see §16.5). A *Level 4 encounter* awards treasure cards of the current tier, as any other encounter does, and no mega-boss treasure card (see §18.1, Level 4 Encounters and Mega-Bosses). *Legendary treasure* enters neither treasure deck and is gained only by *transposition* (see §18.8).
 
 ## 18.6 The Bonfire
 
@@ -159,7 +159,7 @@ The value of a stat at stat tier four is the same as in the standard game (see �
 
 Blacksmith Andre's *shop* follows the standard game (see §11.4), with the following changes.
 
-The shop is restocked only when a *section* is completed, during the setup of the next section and before the rest that follows (see §18.1, Section Completion). The defeat of a boss that does not complete its section does not restock the shop. Before the shop is restocked, its unsold cards, other than *ember cards*, are placed on the bottom of their treasure decks (see §6.3, Restocking After a Boss). Step 7 of a rest restocks the shop only if a section has been completed and the shop has not been restocked since (see §11.2).
+The shop is restocked only when a *section* is completed, during the setup of the next section and before the rest that follows (see §18.1, Section Completion). The defeat of a boss that does not complete its section does not restock the shop. Before the shop is restocked, its unsold cards, other than *ember cards*, are placed on the bottom of their treasure decks (see §6.3, Restocking After a Boss).
 
 The tier two shop is closed until the bonfire ascetic is burnt, and the defeat of a *mini-boss* does not open it. It is stocked at once when the bonfire ascetic is burnt (see §18.7). From then on it is restocked with the tier one shop each time a section is completed.
 
@@ -175,6 +175,7 @@ No ember card is added to the shop after the setup of the campaign, whether a se
 | Tier two card | 4 | 1 |
 | *Boss treasure* card | - | 4 |
 | *Legendary treasure* card (*transposition*) | 4 and one boss treasure card | 4 |
+| *Spark* | 4 for each character, paid by the party | - |
 | *Bonfire ascetic* | 16, paid by the party | - |
 
 A boss treasure card sells for four souls in campaign play, in place of the six of the standard game, and is returned to the game box when sold (see §11.4, Sales). A legendary treasure card sells for four souls and is placed face down on the bottom of the legendary treasure deck (see §18.8). An ember card is priced as a tier one card. Every other price, and every other rule of purchase and sale, is that of the standard game (see §11.4).
@@ -183,7 +184,7 @@ A boss treasure card sells for four souls in campaign play, in place of the six 
 
 In campaign play the defeat of a boss does not open tier two treasure. The party opens it by burning the *bonfire ascetic*.
 
-The party may burn the bonfire ascetic once in a *campaign*, while resting at the *bonfire* (see §11.2). The cost is 16 *souls* in all, paid to the supply by any combination of the characters. This payment is the one exception to the rule that souls cannot be pooled (see §7.6). The bonfire ascetic is not burnt unless the full 16 souls are paid.
+The party may burn the bonfire ascetic once in a *campaign*, while resting at the *bonfire* (see §11.2). The cost is 16 *souls* in all, paid to the supply by any combination of the characters. This payment and the cost of a bought *spark* are the only exceptions to the rule that souls cannot be pooled (see §7.6; §18.3). The bonfire ascetic is not burnt unless the full 16 souls are paid.
 
 When the bonfire ascetic is burnt, the party stocks the tier two *shop* from the tier two treasure deck, in the way the tier one shop is stocked at the start of the game and without *ember cards* (see §6.3, Stocking at the Start of the Game). The tier one shop is not restocked at that time. Both shops are next restocked when a *section* is completed (see §18.6, Blacksmith Andre's Shop).
 
@@ -199,7 +200,7 @@ A *boss*, a *mimic*, a *phantom*, and a *crystal lizard* are not affected by the
 
 *Transposition* exchanges a *boss treasure* card for a *legendary treasure* card. It is the only source of legendary treasure in campaign play.
 
-Transposition is available after the last boss of the first *section* is defeated. In a *campaign* whose first section ends in an encounter, it is available after that section is completed (see §18.1, Section Completion). From then on a character may transpose during any rest at the *bonfire*, including a rest that costs no *spark* (see §11.2).
+Transposition is available once the first *section* of the *campaign* is completed (see §18.1, Section Completion). From then on a character may transpose during any rest at the *bonfire*, including a rest that costs no *spark* (see §11.2).
 
 When transposition becomes available, the party prepares the legendary treasure cards as follows.
 

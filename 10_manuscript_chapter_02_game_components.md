@@ -42,8 +42,7 @@ Each enemy has a *data card* (see §8.2) and the number of models listed. *Cryst
 - 1x Mushroom Child (Darkroot)
 - 1x Mushroom Parent (Darkroot)
 - 2x Necromancer {{icon:ast-0024-necromancer}} (ToG)
-- 5x Phalanx (PWA)
-- 1x Phalanx Hollow (PWA)
+- 5x Phalanx Hollow (PWA); the Phalanx (PWA) has a data card of its own and no model, and is shown by three Phalanx Hollow models placed together
 - 3x Plow Scarecrow (Darkroot)
 - 2x Sentinel (Core)
 - 3x Shears Scarecrow (Darkroot)
@@ -84,7 +83,7 @@ Each *boss* has a model, a *health dial*, a *data card* (see §15.4), a *behavio
 - Sir Alonne (Iron Keep)
 - Smelter Demon (Iron Keep)
 
-Ornstein & Smough is one main-boss fought with two models, Dragonslayer Ornstein and Executioner Smough. The pair shares one health dial and one behaviour deck, and each behaviour card names the model that acts (see §17.1).
+Ornstein & Smough is one main-boss fought with two models, Dragon Slayer Ornstein and Executioner Smough. The pair shares one health dial and one behaviour deck, and each behaviour card names the model that acts (see §17.1).
 
 ### Mega-Bosses
 
@@ -151,9 +150,9 @@ Standard summons are called before a mini-boss encounter and advanced summons be
 | *Class-specific treasure* | 40 | 120 |
 | *Common treasure* | 60 | 145 |
 | *Legendary treasure* | 10 | 20 |
-| *Boss treasure* | 18 | 63 |
+| *Boss treasure* | 18 | 48 |
 
-In all, 534 treasure cards are available. Each character's ten class-specific treasure cards comprise five class treasure cards and five *transposed treasure* cards. Each boss has two or more boss treasure cards, one of which is awarded when the boss is defeated (see §16.5). The 12 invader treasure cards of the Phantoms expansion are listed with the expansion components (see §2.9).
+In all, 519 treasure cards are available. Each character's ten class-specific treasure cards comprise five class treasure cards and five *transposed treasure* cards. Each boss has two or more boss treasure cards, one of which is awarded when the boss is defeated (see §16.5). The 12 invader treasure cards of the Phantoms expansion and the three Titanite Scale cards of the Iron Keep expansion are not counted in the table and are listed with the expansion components (see §2.9).
 
 ## 2.6 Encounter Cards and Ambush Cards
 
@@ -163,12 +162,12 @@ An *encounter card* lists the level, enemies, terrain, and traps of one encounte
 
 | Encounter cards | Core | Expansions |
 |---|---|---|
-| Level 1 | 12 | 31 |
-| Level 2 | 12 | 31 |
-| Level 3 | 12 | 31 |
+| Level 1 | 12 | 37 |
+| Level 2 | 12 | 37 |
+| Level 3 | 12 | 37 |
 | Level 4 | 0 | 40 |
 
-In all, 169 encounter cards are available. Level 4 encounter cards are supplied only by the mega-boss expansions, four with each, and are used only for the encounter that precedes a mega-boss (see §6.7).
+In all, 187 encounter cards are available. Of each of Levels 1 to 3, the Darkroot and Iron Keep expansions supply six cards each, the Explorers expansion five, the Executioner's Chariot expansion two, and ToG and PWA nine each. Level 4 encounter cards are supplied only by the mega-boss expansions, four with each, and are used only for the encounter that precedes a mega-boss (see §6.7).
 
 ### Ambush Cards
 
@@ -199,10 +198,9 @@ Black, blue, and orange dice are rolled for attacks (see §10.3) and for *block*
 - 32x Damage cubes (red) (Core)
 - 32x Stamina cubes (black) (Core)
 - 16x Stat cubes (white) (Core)
-- 8x Hollow cubes
 - 1x Spark dial (Core)
 
-*Damage cubes* and *stamina cubes* are placed on the *endurance bar* (see §3.4). *Stat cubes* mark each character's *stat tier* on the stat progression track (see §3.3). *Hollow cubes* are of a colour distinct from the damage, stamina, and stat cubes; two are placed on the endurance bar of a character who is *hollow* (see §7.2).
+*Damage cubes* and *stamina cubes* are placed on the *endurance bar* (see §3.4). *Stat cubes* mark each character's *stat tier* on the stat progression track (see §3.3). *Hollow cubes* are white cubes that are not in use as stat cubes; two are placed on the endurance bar of a character who is *hollow* (see §7.2). A white cube is placed on an endurance bar for no other purpose, so a hollow cube cannot be taken for a damage cube or a stamina cube. The supply of white cubes is not a limit: when every white cube is in use, the players mark the blocked spaces with any other markers that are neither red nor black.
 
 The *spark* dial records the party's sparks (see §7.4). Each boss's *health dial* is supplied with the boss (see §2.3); the summon, invader, and mimic health dials are supplied with their expansions (see §2.9).
 
@@ -215,7 +213,7 @@ The *spark* dial records the party's sparks (see §7.4). Each boss's *health dia
 - 4x Ember tokens (Core)
 - 6x Wound tokens of value 1, 3x Wound tokens of value 3, and 1x Wound token of value 5 (Core)
 - 10x Soul tokens of value 1, 5x Soul tokens of value 3, 3x Soul tokens of value 5, and 1x Soul token of value 8 (Core)
-- 36x Condition tokens: 7x each of bleed, poison, frostbite, and stagger (Core and expansions); 4x calamity (Black Dragon Kalameet); 4x corrosion (Gaping Dragon)
+- 28x Condition tokens: 5x each of bleed, poison, frostbite, and stagger (Core); 4x calamity (Black Dragon Kalameet); 4x corrosion (Gaping Dragon)
 - 20x Trap tokens (Core)
 - 1x Fog gate token (Core)
 
@@ -223,7 +221,7 @@ The *aggro token* marks the character with *aggro* (see §7.5, Encounter Turn Or
 
 *Wound tokens* record the damage suffered by enemies (see §8.2). Soul tokens record each character's *souls* (see §7.6); the supply of soul tokens is not a limit, and when it is exhausted the players track souls with any other counters.
 
-*Condition* tokens mark *bleed* {{icon:ast-0063-bleed}}, *poison* {{icon:ast-0065-poison}}, *frostbite* {{icon:ast-0064-frostbite}}, *stagger* {{icon:ast-0066-stagger}}, *calamity*, and *corrosion* (see §8.5). *Trap tokens* are dealt face down to the basic nodes of a trapped encounter (see §5.5, Traps). The *fog gate* token marks the entrance to a boss encounter (see §15.1).
+*Condition* tokens mark *bleed* {{icon:ast-0063-bleed}}, *poison* {{icon:ast-0065-poison}}, *frostbite* {{icon:ast-0064-frostbite}}, *stagger* {{icon:ast-0066-stagger}}, *calamity*, and *corrosion* (see §8.5). The supply of condition tokens is not a limit; when it is exhausted the players mark the condition with any other counters. *Trap tokens* are dealt face down to the basic nodes of a trapped encounter (see §5.5, Traps). The *fog gate* token marks the entrance to a boss encounter (see §15.1).
 
 ### Terrain Elements
 
@@ -252,7 +250,7 @@ The components below are supplied by the expansions named and are used only with
 - 11x Invader models, 12x Invader data cards (six standard, six advanced), 64x Invader behaviour cards, 12x Invader treasure cards, and 1x Invader health dial (see §12.2)
 - 6x Standard invader tokens, 6x Advanced invader tokens, and 3x Blank invader tokens (see §12.2)
 
-An *invader token* shows an invader icon or is blank. When an *invasion* is provoked, one invader token is placed face down on each face-down encounter card, and each is revealed when the characters fight that encounter (see §12.2).
+An *invader token* shows an invader icon or is blank. When an *invasion* is provoked, one invader token is placed face down on each face-down encounter card that carries no black cube, and each is revealed when the characters fight that encounter (see §12.2).
 
 ### Explorers
 
@@ -273,9 +271,13 @@ Each mega-boss expansion supplies one set of the following components.
 
 - 1x Mega-boss game board, double-sided, with a Level 4 encounter side and a mega-boss side (see §6.7 and §15.3)
 - 4x Level 4 encounter cards (see §2.6)
-- 1x Mega-boss model (the Executioner's Chariot has two), 1x Mega-boss data card, 1x Health dial, the behaviour cards listed on the data card, and 2x Mega-boss treasure cards (see §6.7)
+- 1x Mega-boss model (the Executioner's Chariot has two and The Four Kings four), 1x Mega-boss data card, 1x Health dial (The Four Kings has four), the behaviour cards listed on the data card, and 2x Mega-boss treasure cards (see §6.7)
 - Black Dragon Kalameet only: 8x Strafe cards and 4x Calamity tokens (see §17.8)
 - Executioner's Chariot only: 4x Track behaviour cards and 1x Mega-boss setup card (see §17.9)
 - Asylum Demon only: 4x Pillar tokens (see §17.3)
+- Gaping Dragon only: 4x Corrosion tokens (see §8.5)
+- The Four Kings only: 4x Identifier tokens (see §17.10)
+- Guardian Dragon only: 4x Fiery Breath cards (see §17.10)
+- Old Iron King only: 6x Fire Beam cards (see §17.10)
 
-The *mega-boss game board* is used with its Level 4 encounter side face up for the Level 4 encounter and with its mega-boss side face up for the mega-boss encounter (see §6.7). The Executioner's Chariot expansion also supplies the Black Hollow Mage and Falchion Skeleton enemies (see §2.2) and six encounter cards of Levels 1 to 3. The Asylum Demon expansion also supplies the Asylum Demon mini-boss (see §2.3).
+The *mega-boss game board* is used with its Level 4 encounter side face up for the Level 4 encounter and with its mega-boss side face up for the mega-boss encounter (see §6.7). The Executioner's Chariot expansion also supplies the Black Hollow Mage and Falchion Skeleton enemies (see §2.2) and six encounter cards of Levels 1 to 3. The Asylum Demon expansion also supplies the Asylum Demon mini-boss, with its own data card, nine behaviour cards, and two boss treasure cards; the one model serves for both the Asylum Demon and the Stray Demon (see §2.3).

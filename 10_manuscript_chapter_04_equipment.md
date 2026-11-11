@@ -36,7 +36,7 @@ Equipment cards are of five kinds, and Andre's shop is stocked by these kinds (s
 
 ### Stat Requirements
 
-A character may equip an equipment card only if each of the character's four stats equals or exceeds the card's matching *stat requirement*. A character's stat is the value marked on their stat progression track (see §3.3). A card's stat requirements also decide its treasure tier, split at a requirement of 25 (see §6.2).
+A character may equip an equipment card only if each of the character's four stats equals or exceeds the card's matching *stat requirement*. A character's stat is the value marked on their stat progression track (see §3.3). A card's stat requirements also decide its treasure tier, split at a requirement of 25 (see §6.2). The stat requirements of the weapons listed in Appendix A are those given there, in place of the printed values (see Appendix A).
 
 A character whose stat exceeds a weapon's requirements by a wide margin wields it as a *scaled* weapon and gains a bonus to its attacks (see §10.5).
 
@@ -54,9 +54,9 @@ Blacksmith Andre attaches and removes upgrade cards while the characters rest at
 
 ### Titanite
 
-*Titanite* upgrade cards (Titanite Shard, Titanite Chunk, Titanite Slab, and Titanite Scale) are weapon upgrades that fuse permanently to the weapon they are attached to. Once attached, a Titanite card cannot be removed, except when a Titanite Chunk or a Titanite Slab takes its place (see Appendix B, Titanite Replacement).
+A *Titanite* card is a weapon upgrade card whose name includes the word Titanite: Titanite Shard, Titanite Chunk, Titanite Slab, Titanite Scale, Demon Titanite, and Blue Titanite. A Titanite card fuses permanently to the weapon it is attached to. Once attached, a Titanite card cannot be removed, except when a Titanite Chunk or a Titanite Slab takes its place (see Appendix B, Titanite Replacement).
 
-When a weapon with Titanite attached is sold, the Titanite is returned with the weapon to the bottom of the treasure deck of the weapon's tier (see §11.4). Every other upgrade card, such as a gem or a ring, is returned to the character's *inventory* when the card it is attached to is sold. A Titanite Scale is awarded for killing a crystal lizard (see §14).
+When a weapon with Titanite attached is sold, the Titanite is sold with it and adds nothing to the sell value. The weapon and the Titanite are separated, and each goes where a sold card of its kind goes (see §11.4, Sales). Every other upgrade card, such as a gem or a ring, is returned to the character's *inventory* when the card it is attached to is sold. A Titanite Scale is awarded for killing a crystal lizard (see §14).
 
 *Example.* The Warrior's Morning Star has one upgrade slot. Andre attaches a Titanite Shard to it. The Morning Star holds no further upgrade card, and the Titanite Shard stays attached unless a Titanite Chunk later takes its place (see Appendix B).
 
@@ -78,7 +78,7 @@ A *spell* is an *equipment card* or *upgrade card* whose art shows a scroll. Spe
 
 A spell that is an equipment card is equipped in a weapon slot (see §3.2) or stored in a *catalyst*. An *upgrade spell* is attached to an equipped card during an *encounter* (see §4.2, Upgrade Spells).
 
-A character may use at most one spell *attack option* per *turn*. Spells are never *scaled* (see §10.5). Spells are never *two-handed*: a spell gains no two-handed reroll, and a spell equipped with the other weapon slot empty is not two-handed (see §10.4). A spell attack option that bears the *magical damage* icon {{icon:ast-0042-deal-magical-damage}} deals magical damage, which the target reduces with its *resist* rather than its *block* (see §9.4).
+A character may use at most one spell *attack option* per *turn*. Spells are never *scaled* (see §10.5). Spells are never *two-handed*: a spell gains no two-handed reroll, and a spell equipped with the other weapon slot empty is not two-handed (see §10.4). A spell card that bears the two-handed weapon icon requires the other weapon slot to be empty while it is equipped in a weapon slot (see §3.2), and it gains no reroll by this. A spell attack option that bears the *magical damage* icon {{icon:ast-0042-deal-magical-damage}} deals magical damage, which the target reduces with its *resist* rather than its *block* (see §9.4).
 
 ### Catalysts
 
@@ -100,4 +100,4 @@ An *ember card* is a treasure card that a character consumes to become *embered*
 
 A character may carry at most one ember card at a time, in the *back-up slot* or in the *inventory*. An embered character cannot carry an ember card. During an *encounter*, a character may consume an ember card only from the back-up slot (see §3.2). During an encounter, the inventory cannot be accessed, so an ember card there cannot be consumed until the encounter ends.
 
-A character consumes an ember card by discarding it from the back-up slot, as the *Ember* major action during an encounter or at any time outside an encounter. The character then becomes embered and places an *ember token* on their dashboard (see §7.3). The ember token and the effects of being embered are set out with the character tokens (see §3.5, Ember) and with embering (see §7.3).
+A character consumes an ember card by discarding it from the back-up slot, as the *Ember* major action during an encounter or at any time outside an encounter. The consumed card is returned to the game box and takes no further part in the game. The character then becomes embered and places an *ember token* on their dashboard (see §7.3). The ember token and the effects of being embered are set out with the character tokens (see §3.5, Ember) and with embering (see §7.3).

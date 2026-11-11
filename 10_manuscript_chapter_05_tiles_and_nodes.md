@@ -12,11 +12,13 @@ Every tile except the bonfire tile is printed with circular spaces called *nodes
 
 **Basic node.** The most common node type, printed in yellow. *Trap tokens* are dealt to basic nodes (see §5.5, Traps).
 
-**Entry node.** A basic node adjacent to a doorway. When the characters enter a tile, they are placed on the entry nodes beside the doorway through which they entered (see §7.5, Encounter Start).
+**Entry node.** A basic node along the tile edge that holds the doorway through which the characters entered the tile. When the characters enter a tile, they are placed on its entry nodes (see §7.5, Encounter Start).
 
 **Spawn node.** {{icon:ast-0006-primary-spawn-node}} A node on which enemy models are placed at the start of an encounter, as the *encounter card* directs (see §7.5, Encounter Start). The mini-boss tile has a mini-boss spawn node, the main-boss tile a main-boss spawn node, and a mega-boss game board a mega-boss spawn node; the *boss* is placed there at the start of its encounter (see §15.3).
 
 **Terrain node.** {{icon:ast-0014-primary-terrain-node}} A node on which a *terrain* token or model is placed at the start of an encounter, as the encounter card directs (see §5.5).
+
+Tiles and encounter cards tell a primary spawn node from a secondary spawn node {{icon:ast-0010-secondary-spawn-node}}, and a primary terrain node from a secondary terrain node {{icon:ast-0018-secondary-terrain-node}}, by their icons. The difference shows which node receives which models or terrain and has no other effect.
 
 A spawn node or terrain node that holds no enemy or terrain is entered, left, and counted for range exactly as a basic node is.
 
@@ -70,7 +72,7 @@ When the characters rest at the *bonfire* and the encounters are reset (see §11
 
 A gravestone {{icon:ast-0017-gravestone}} blocks its node completely. No model may *move*, *dodge*, or be *pushed* into a node containing a gravestone.
 
-When an encounter that contains one or more gravestones is *cleared*, the players may *scry* one card, however many gravestones the tile holds. The scry is resolved during Encounter Resolution, which states the cards that may be scried and what is done with them (see §7.5, Encounter Resolution).
+When an encounter is *cleared*, the players may *scry* one card for each gravestone on its tile. Each scry is resolved during Encounter Resolution, which states the cards that may be scried and what is done with them (see §7.5, Encounter Resolution).
 
 When the characters rest at the bonfire, a gravestone stays on its node.
 
@@ -98,7 +100,7 @@ An encounter whose encounter card shows the trap icon {{icon:ast-0021-trapped-en
 2. Deal one face-down trap token to each basic node of the tile, except the basic nodes along a tile edge that adjoins another tile, beginning with the nodes farthest from the *entry nodes*.
 3. If the supply runs out before every such node has a token, leave the remaining nodes without a trap.
 
-Traps do not block movement, dodging, or pushes. When a character enters a node holding a face-down trap token, whether by a *move*, by the movement that follows a successful *dodge*, or by a *push*, the token is turned face up at once, before anything else is resolved. If the token is blank, nothing happens. Otherwise each character on that node must either suffer the damage shown or attempt to dodge it as an attack with the dodge difficulty shown (see §9.5); each player chooses for their own character. The dodge follows every rule in §9.5, including the move that follows a successful dodge. If the dodge fails, the character suffers the damage shown. Trap damage is not an attack, and it cannot be blocked or resisted.
+Traps do not block movement, dodging, or pushes. When a character enters a node holding a face-down trap token, whether by a *move*, by the movement that follows a successful *dodge*, or by a *push*, the token is turned face up at once, before anything else is resolved. If the token is blank, nothing happens. Otherwise each character on that node must either suffer the damage shown or attempt to dodge it as an attack with the dodge difficulty shown (see §9.5); each player chooses for their own character. The dodge follows every rule in §9.5, including the movement that follows a successful dodge. If the dodge fails, the character suffers the damage shown. Trap damage is not an attack, and it cannot be blocked or resisted.
 
 A face-up trap token has no further effect during that encounter. Only characters trigger traps, and only characters are affected by them; enemies, bosses, and phantoms neither trigger traps nor suffer their damage.
 

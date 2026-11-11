@@ -342,3 +342,24 @@
 - After: "A campaign *section* that lists the Gargoyle as fought twice sets the Twin Gargoyles"
 - Rationale: Matches the wording of the campaign lists in §19.
 - Source: QA observation (example and consistency verification)
+
+### CH-17-050 · §17.2
+- Type: correction
+- Before: "### Dragonslayer Ornstein and Executioner Smough"
+- After: "### Dragon Slayer Ornstein and Executioner Smough"
+- Rationale: Printed name, as campaign-E12.
+- Source: final rulings, campaign-E13 (`06_final_rulings.md`); As campaign-E12.
+
+### CH-17-051 · §17.2
+- Type: correction
+- Before: "fought with two models, Dragonslayer Ornstein and Executioner Smough (see §2.3)."
+- After: "fought with two models, Dragon Slayer Ornstein and Executioner Smough (see §2.3)."
+- Rationale: Printed name, as campaign-E12.
+- Source: final rulings, campaign-E14 (`06_final_rulings.md`); As campaign-E12.
+
+### CH-17-052 · §17.5
+- Type: correction
+- Before: "The Old Dragonslayer uses the Dragonslayer Ornstein model of the core set"
+- After: "The Old Dragonslayer uses the Dragon Slayer Ornstein model of the core set"
+- Rationale: Printed name, as campaign-E12; 'Old Dragonslayer' is one word on its own card and is unchanged.
+- Source: final rulings, campaign-E15 (`06_final_rulings.md`); As campaign-E12; Explorers booklet contents ('Old Dragonslayer').

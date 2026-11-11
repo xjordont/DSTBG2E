@@ -56,9 +56,9 @@ If the encounter is *failed* while either Gargoyle is in play, the whole encount
 
 The Gargoyle, the Titanite Demon, the Boreal Outrider Knight, and the Winged Knight each have the rank of *mini-boss*, and the Dancer of the Boreal Valley is a *main-boss*. These five bosses have no rules beyond their *data cards*. A campaign *section* that lists the Gargoyle as fought twice sets the Twin Gargoyles *encounter* (see §17.1, Twin Gargoyles).
 
-### Dragonslayer Ornstein and Executioner Smough
+### Dragon Slayer Ornstein and Executioner Smough
 
-Ornstein & Smough is one main-boss fought with two models, Dragonslayer Ornstein and Executioner Smough (see §2.3).
+Ornstein & Smough is one main-boss fought with two models, Dragon Slayer Ornstein and Executioner Smough (see §2.3).
 
 **Components.** The two models share one data card, one *health dial*, one set of *behaviour cards*, and one set of *boss treasure* cards.
 
@@ -140,7 +140,7 @@ The Smelter Demon and Sir Alonne each have the rank of *main-boss*. Sir Alonne h
 
 The Old Dragonslayer is a *mini-boss*.
 
-**Components.** The Old Dragonslayer uses the Dragonslayer Ornstein model of the core set, with its own *data card*, *health dial*, eight *behaviour cards*, and two *boss treasure* cards.
+**Components.** The Old Dragonslayer uses the Dragon Slayer Ornstein model of the core set, with its own *data card*, *health dial*, eight *behaviour cards*, and two *boss treasure* cards.
 
 **Special ability.** The Old Dragonslayer's special ability is Corrupted Dragonslayer. The first three times the Old Dragonslayer loses four or more health to a single attack, one of its *heat-up cards*, chosen at random, is placed face down on top of its *behaviour deck*. The deck is not shuffled, and the card is the next one the Old Dragonslayer draws (see §16.1).
 

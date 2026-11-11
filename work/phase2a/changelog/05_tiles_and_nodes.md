@@ -244,3 +244,33 @@
 - After: "Trap damage is not an attack, and it cannot be blocked or resisted."
 - Rationale: The F.A.Q. cites §5.5 for the ruling that trap damage is not an attack; the section now states it.
 - Source: QA observation (example and consistency verification)
+
+### CH-05-036 · §5.5, Gravestones
+- Type: ruling
+- Before: "When an encounter that contains one or more gravestones is *cleared*, the players may *scry* one card, however many gravestones the tile holds. The scry is resolved during Encounter Resolution, which states the cards that may be scried and what is done with them (see §7.5, Encounter Resolution)."
+- After: "When an encounter is *cleared*, the players may *scry* one card for each gravestone on its tile. Each scry is resolved during Encounter Resolution, which states the cards that may be scried and what is done with them (see §7.5, Encounter Resolution)."
+- Rationale: [MECHANICAL CHANGE] One scry for each gravestone: the token count is the rule, and the "however many" clause is deleted.
+- Source: final rulings, combat-E01 (`06_final_rulings.md`); Official 2017 keys the benefit to each gravestone (DS-Core-Rules-lores.txt 755-759, 1385-1386); official 2022 lets each gravestone be used once (DS-TG 952-960).
+
+### CH-05-037 · §5.1
+- Type: clarification
+- Before: "**Entry node.** A basic node adjacent to a doorway. When the characters enter a tile, they are placed on the entry nodes beside the doorway through which they entered (see §7.5, Encounter Start)."
+- After: "**Entry node.** A basic node along the tile edge that holds the doorway through which the characters entered the tile. When the characters enter a tile, they are placed on its entry nodes (see §7.5, Encounter Start)."
+- Rationale: A node cannot be adjacent to a doorway, which is not a node; the edge fixes which nodes are meant, and one definition serves §5.1, §7.5, §15.3 and the glossary.
+- Source: final rulings, combat-E05 (`06_final_rulings.md`); Official 2017 example places the characters on any node along the edge of the doorway they entered by (DS-Core-Rules-lores.txt 415-422, 853-855).
+
+### CH-05-038 · §5.1
+- Type: completion
+- Before: "A spawn node or terrain node that holds no enemy or terrain is entered, left, and counted for range exactly as a basic node is."
+- After: "Tiles and encounter cards tell a primary spawn node from a secondary spawn node {{icon:ast-0010-secondary-spawn-node}}, and a primary terrain node from a secondary terrain node {{icon:ast-0018-secondary-terrain-node}}, by their icons. The difference shows which node receives which models or terrain and has no other effect.
+
+A spawn node or terrain node that holds no enemy or terrain is entered, left, and counted for range exactly as a basic node is."
+- Rationale: The encounter card cannot be read without knowing that the two icons name two different nodes.
+- Source: final rulings, combat-E09 (`06_final_rulings.md`); Official 2017 symbol key lists primary and secondary spawn and terrain nodes (DS-Core-Rules-lores.txt 1830-1842).
+
+### CH-05-039 · §5.5, Traps
+- Type: correction
+- Before: "The dodge follows every rule in §9.5, including the move that follows a successful dodge."
+- After: "The dodge follows every rule in §9.5, including the movement that follows a successful dodge."
+- Rationale: §5.2 states that the movement after a dodge is not a move; the noun is corrected.
+- Source: final rulings, combat-E10 (`06_final_rulings.md`); This book, §5.2 (Move) and §9.5.

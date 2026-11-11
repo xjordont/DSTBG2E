@@ -237,3 +237,82 @@
 - After: "2. Add blank invader tokens, face down, until there is one token for each face-down encounter card on the encounter tiles. If the blank tokens run out, make up the number with invader tokens of the kind not drawn in step 1; such a token is treated as blank when it is revealed."
 - Rationale: Three blank tokens are supplied, and a campaign section of five encounters needs four. [MECHANICAL CHANGE] A substitution rule is added.
 - Source: QA-010 (example and consistency verification)
+
+### CH-12-035 · §12.1, Summoning
+- Type: ruling
+- Before: "The players choose the summon together in step 3. Souls paid in step 1 are not returned, whichever card is chosen."
+- After: "The players choose the summon together in step 3. If they cannot agree, the drawn data cards are shuffled face down and one is drawn. Souls paid in step 1 are not returned, whichever card is chosen."
+- Rationale: [MECHANICAL CHANGE] Gives the one joint choice in the chapter that had no tie-break a tie-break that needs no token and no new term.
+- Source: final rulings, phantom-E01 (`06_final_rulings.md`); Official Phantoms booklet picks the summon at random from the cards set aside (DS-Phantoms-Rules-lores.txt lines 238-240); Hollowed Edition: 'Summons are chosen at random' (line 389).
+
+### CH-12-036 · §12.1, Summons in Combat
+- Type: clarification
+- Before: "A summon has no *endurance bar* and pays no stamina. It has no *boss arcs* and no *heat-up* point, and its health is not scaled."
+- After: "A summon has no *endurance bar* and pays no stamina. It has no *boss arcs* and no *heat-up* point, and its health is not scaled. A summon does only what its behaviour cards and its data card direct. It takes no *minor action* and no *major action*, and it cannot *parry*."
+- Rationale: States in one place what a summon cannot do, so that no player asks whether a model with dodge dice may parry, walk, or attack outside its card.
+- Source: final rulings, phantom-E02 (`06_final_rulings.md`); Official Phantoms booklet: summons are 'partially controlled by their behaviour cards and partially controlled by the players' and 'have fewer options each activation' (lines 236-239, 259-261); a data card shows block, resist and dodge only (lines 152-158).
+
+### CH-12-037 · §12.2 (opening paragraph)
+- Type: ruling
+- Before: "Standard invaders appear before the *mini-boss* is defeated, and advanced invaders after it (see §2.4)."
+- After: "Standard invaders appear before the *mini-boss* is defeated, and advanced invaders after it (see §2.4). In campaign play, standard invaders appear while the current tier is tier one, and advanced invaders once it is tier two (see §18.5)."
+- Rationale: [MECHANICAL CHANGE] A campaign has several mini-bosses or none, so 'the mini-boss' names no moment there; the current tier is the one switch every campaign has, and it keeps the stronger invaders in step with the stronger treasure.
+- Source: final rulings, phantom-E03 (`06_final_rulings.md`); §18.5 and §18.7 of this book (tier two opens only when the bonfire ascetic is burnt); official Phantoms booklet ties the split to 'the mini boss' of a one-mini-boss game only (lines 363-377).
+
+### CH-12-038 · §12.2, Invasions
+- Type: ruling
+- Before: "- During the exploration: when a character becomes embered by discarding an *ember card* (see §7.3), if one or more face-down encounter cards lie on the encounter tiles."
+- After: "- During the exploration: when a character becomes embered by discarding an *ember card* (see §7.3), if one or more face-down encounter cards that carry no black cube lie on the encounter tiles (see §7.5, Encounter Resolution)."
+- Rationale: [MECHANICAL CHANGE] A reset turns every encounter card face down, cleared ones included; without the qualifier an invader token can land on an encounter the party skips and the invasion is wasted.
+- Source: final rulings, phantom-E04 (`06_final_rulings.md`); Official Phantoms booklet: tokens go to 'each unexplored encounter tile' (lines 363-369); Hollowed Edition: 'place invader tokens on all undefeated encounters' (lines 342-343); §11.5 step 1 of this book.
+
+### CH-12-039 · §12.2, Invasions
+- Type: clarification
+- Before: "No more than one invasion is provoked before the mini-boss is defeated, and no more than one after it. Once an invasion has been provoked, no further invasion is provoked in that part of the game, however many characters are or become embered. If no character is embered when the encounter cards are dealt, no invader token is placed at that step.
+
+The embering of every character at a boss's defeat (see §16.5) provokes no invasion at that moment. The invasion that follows the mini-boss's defeat is provoked when the encounter cards of the next setup are dealt (see §6.6)."
+- After: "No more than one invasion is provoked before the mini-boss is defeated, and no more than one after it, however many characters are or become embered. The embering of every character at a boss's defeat provokes no invasion at that moment (see §16.5). The invasion that follows the mini-boss's defeat is provoked when the encounter cards of the next setup are dealt (see §6.6). In campaign play, no more than one invasion is provoked in each *section* (see §18.1)."
+- Rationale: Two paragraphs become one without losing a rule: the dropped sentences restated the two trigger moments; the campaign limit of §18.1 is cited where the limit is stated.
+- Source: final rulings, phantom-E05 (`06_final_rulings.md`); Gate 1 OQ-28 (one invasion per leg); §18.1, Section Setup of this book.
+
+### CH-12-040 · §12.2, Invader Tokens, step 2
+- Type: ruling
+- Before: "2. Add blank invader tokens, face down, until there is one token for each face-down encounter card on the encounter tiles. If the blank tokens run out, make up the number with invader tokens of the kind not drawn in step 1; such a token is treated as blank when it is revealed."
+- After: "2. Add blank invader tokens, face down, until there is one token for each face-down encounter card that carries no black cube. If the blank tokens run out, make up the number with invader tokens of the kind not drawn in step 1; such a token is treated as blank when it is revealed."
+- Rationale: [MECHANICAL CHANGE] Same qualifier as the trigger: a cleared encounter receives no token. The substitution rule for a shortage of blank tokens is kept unchanged.
+- Source: final rulings, phantom-E06 (`06_final_rulings.md`); Official Phantoms booklet lines 363-369 (unexplored tiles only) and components list, three blank tokens (line 103).
+
+### CH-12-041 · §12.2, Invader Tokens, step 4
+- Type: ruling
+- Before: "4. Place one token face down on each face-down encounter card."
+- After: "4. Place one token face down on each of those encounter cards."
+- Rationale: [MECHANICAL CHANGE] Keeps step 4 in line with step 2.
+- Source: final rulings, phantom-E07 (`06_final_rulings.md`); Follows phantom-E06.
+
+### CH-12-042 · §12.2, Invader Tokens
+- Type: clarification
+- Before: "An invader token stays face down on its encounter card until the characters fight that encounter. It stays in place when the encounters are *reset* (see §11.5) and when the party skips its encounter (see §7.5, Encounter Start). Invader tokens still on the tiles when the mini-boss is defeated are returned to the supply unrevealed (see §6.6)."
+- After: "An invader token stays face down on its encounter card until the characters fight that encounter, and it stays in place when the encounters are *reset* (see §11.5). Invader tokens still on the tiles when the mini-boss is defeated are returned to the supply unrevealed (see §6.6)."
+- Rationale: Once tokens go only to encounter cards without a black cube, no encounter that holds a token can be skipped, so the skip clause is dead text and is cut.
+- Source: final rulings, phantom-E08 (`06_final_rulings.md`); §7.5, Encounter Start of this book: only an encounter whose card carries a black cube may be skipped.
+
+### CH-12-043 · §12.2, Invader Tokens (example)
+- Type: clarification
+- Before: "*Example.* The Herald discards an ember card while two face-down encounter cards lie on the tiles ahead, before the mini-boss is defeated."
+- After: "*Example.* The Herald discards an ember card while two face-down encounter cards, neither of which carries a black cube, lie on the tiles ahead, before the mini-boss is defeated."
+- Rationale: The example states the condition the rule now names; its numbers are unchanged.
+- Source: final rulings, phantom-E09 (`06_final_rulings.md`); Follows phantom-E04 and phantom-E06.
+
+### CH-12-044 · §12.2, Invader Rewards
+- Type: clarification
+- Before: "The invader's treasure card is awarded to the party at once (see §7.7). The players decide which character receives it. If they cannot agree, the card goes to the character who holds the aggro token at that moment."
+- After: "The invader's treasure card is awarded to the party at once, and the players decide which character receives it as for any card awarded to the party (see §7.7)."
+- Rationale: One tie-break, stated once in §7.7 and worded to cover a card awarded during an encounter, replaces a local restatement that differed from it by one phrase.
+- Source: final rulings, phantom-E10 (`06_final_rulings.md`); Gate 1 OQ-29 (tie-break to the aggro holder everywhere); official Phantoms booklet: treasure card gained 'immediately' (lines 528-533).
+
+### CH-12-045 · §12.2, End of an Invasion
+- Type: clarification
+- Before: "An invader is an enemy model and counts towards clearing an encounter. While the invader is on the tile, the encounter is not *cleared*: it is cleared only when every enemy model, the invader included, has been killed, or when the invader has vanished and every other enemy model has been killed (see §7.5, Encounter Resolution)."
+- After: "An invader is an enemy model, and its encounter is not *cleared* while it is on the tile (see §7.5, Encounter Resolution). An invader leaves the tile only when it is killed or when it vanishes."
+- Rationale: The ruling is confirmed; the paragraph says the same thing in half the words and lets the general rule of §7.5 do the work.
+- Source: final rulings, phantom-E11 (`06_final_rulings.md`); Official Phantoms booklet: the invader 'will fight alongside the other enemies present' and leaves only if killed or if the party is defeated (lines 492-495, 527-533).

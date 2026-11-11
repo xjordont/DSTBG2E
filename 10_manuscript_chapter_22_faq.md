@@ -26,7 +26,7 @@ The questions in this chapter are those that arise most often at the table. Each
 
 **Q.** May a character pool *souls* with another character?
 
-**A.** Only to burn the *bonfire ascetic*, which the party pays for together (see §18.7). Every other cost is paid from the acting character's own souls: the Firekeeper's stat tiers, Blacksmith Andre's cards, a *summon*, and *transposition* (see §7.6).
+**A.** Only in campaign play, to burn the *bonfire ascetic* or to buy back a *spark*, which the party pays for together (see §18.3; §18.7). Every other cost is paid from the acting character's own souls: the Firekeeper's stat tiers, Blacksmith Andre's cards, a *summon*, and *transposition* (see §7.6).
 
 **Q.** May a new player join a game in progress?
 
@@ -56,7 +56,7 @@ The questions in this chapter are those that arise most often at the table. Each
 
 **Q.** May a character with a two-handed weapon *parry*?
 
-**A.** No. A parry requires a shield in the left weapon slot. A weapon that bears the two-handed icon requires the other weapon slot to be empty, and a one-handed weapon wielded two-handed has no shield beside it (see §9.6; §10.4).
+**A.** No. A parry requires a shield in a weapon slot. A weapon that bears the two-handed icon requires the other weapon slot to be empty, and a one-handed weapon wielded two-handed has no shield beside it (see §9.6; §10.4).
 
 **Q.** May an enemy dodge or parry a *riposte*?
 
@@ -64,7 +64,7 @@ The questions in this chapter are those that arise most often at the table. Each
 
 **Q.** How is a weapon *scaled*?
 
-**A.** A weapon is scaled while the character's stat exceeds the weapon's highest stat requirement by five or more. Each of its attack options then adds one to its attack value. Spells are never scaled (see §10.5).
+**A.** A weapon is scaled while the character's stat exceeds the weapon's highest stat requirement by five or more. Each of its attack options then adds one to its attack value. A weapon whose stat requirements are all zero is never scaled, and spells are never scaled (see §10.5).
 
 **Q.** With four characters, does the increase of one to enemy attack values apply to a *push-move* that deals damage?
 
@@ -188,11 +188,15 @@ The questions in this chapter are those that arise most often at the table. Each
 
 **Q.** Must an invader be killed for its encounter to be cleared?
 
-**A.** Not always. While the invader is on the tile, the encounter is not cleared. It is cleared when every enemy model, the invader included, has been killed, or when the invader has vanished and every other enemy model has been killed (see §12.2, End of an Invasion).
+**A.** Yes, unless it vanishes. The encounter is not cleared while the invader is on the tile, and the invader leaves the tile only when it is killed or when the death of a character makes it vanish (see §12.2, End of an Invasion).
 
 **Q.** A chest proves to be a *mimic*, and every character dies. What happens?
 
 **A.** The mimic encounter is failed, and with it the encounter that held the chest. The mimic returns to its chest, and the characters must rest at the bonfire. Each later time that encounter is cleared, the party again decides whether to open the chest (see §13.4).
+
+**Q.** Do the characters recover before a mimic is fought?
+
+**A.** They remove their stamina cubes and nothing else. Each character keeps their damage cubes and condition tokens, and a character who died in the cleared encounter stays dead. The recovery and the rewards of the cleared encounter follow the mimic's death (see §13.2; §13.3).
 
 **Q.** Do *crystal lizards* prevent an encounter from being cleared?
 

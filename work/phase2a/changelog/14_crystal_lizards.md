@@ -76,3 +76,17 @@
 - After: no change
 - Rationale: A-062 (OPTIONAL) would limit the repeating of a cleared encounter; that rule is owned by §7.5, which did not adopt it, and nothing in this chapter depends on it. C-077 (Titanite Scale cards in the component list) is owned by §2.9. The OPTIONAL findings A-097 and C-121 are applied in CH-14-008 and CH-14-004.
 - Source: A-062, C-077, A-097, C-121
+
+### CH-14-012 · §14
+- Type: ruling
+- Before: "When a character kills a crystal lizard, that character takes one Titanite Scale card from the supply at once and places it in their *inventory* (see §4.2)."
+- After: "When a crystal lizard is killed, the party is awarded one Titanite Scale card from the supply at once (see §4.2). The players decide which character receives it, as for any card awarded to the party (see §7.7)."
+- Rationale: [MECHANICAL CHANGE] An award to the party needs no rule for a crystal lizard killed by a condition or by an attack that hits several models, and it treats this card as every other card won from a kill is treated.
+- Source: final rulings, phantom-E24 (`06_final_rulings.md`); Official Iron Keep booklet: the card is added 'to the inventory', which is shared (lines 125-127); §7.7 of this book.
+
+### CH-14-013 · §14
+- Type: ruling
+- Before: "Once a crystal lizard has been killed in an encounter, no crystal lizard is placed in that encounter again, however many times the encounter is *reset* and fought (see §11.5). The party marks the tile to record the kill, for example by laying the killed model upside down beside the tile's encounter card. Until a crystal lizard has been killed there, the crystal lizards are placed again each time the encounter is set up."
+- After: "Once a crystal lizard has been killed in an encounter, no crystal lizard is placed in that encounter again, however many times the encounter is *reset* and fought (see §11.5). To record the kill, one *damage cube* is placed on the encounter card of that encounter, where it stays until the card is returned to the game box. Until a crystal lizard has been killed there, the crystal lizards are placed again each time the encounter is set up."
+- Rationale: A definite marker in the book's own idiom (a cube on the encounter card, as for a cleared encounter) replaces an example that fails on the second marked tile, because only two crystal lizard models are supplied.
+- Source: final rulings, phantom-E25 (`06_final_rulings.md`); §2.2 of this book (2x Crystal Lizard); official Iron Keep booklet suggests 'an opened chest token beside the tile' (lines 128-131); §7.5 (black cube marks a cleared encounter).

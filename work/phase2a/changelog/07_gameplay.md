@@ -384,3 +384,94 @@
 - After: "Each time a *mini-boss*, *main-boss*, or *mega-boss* is defeated and the game does not end, the party gains one spark (see §16.5)"
 - Rationale: §16.5 grants no spark and no rest after the final boss.
 - Source: QA observation (example and consistency verification)
+
+### CH-07-056 · §7.2
+- Type: ruling
+- Before: "**Hollow cube.** One of eight cubes of a colour distinct from the damage, stamina, and stat cubes. Two *hollow cubes* block the two rightmost spaces of a hollow character's endurance bar."
+- After: "**Hollow cube.** A white cube placed on an endurance bar. Two *hollow cubes* block the two rightmost spaces of a hollow character's endurance bar. Hollow cubes are taken from the white cubes that are not in use as *stat cubes* (see §2.8)."
+- Rationale: Definition follows the component ruling.
+- Source: final rulings, core-E03 (`06_final_rulings.md`); As core-E02.
+
+### CH-07-057 · §7.5, Encounter Resolution
+- Type: clarification
+- Before: "3. Give each character, including each character who died, one of the treasure cards dealt to the tile (see §7.7)."
+- After: "3. Award the treasure cards dealt to the tile, one to each character, including each character who died; where a single card was dealt to the tile, award it to the party (see §7.7)."
+- Rationale: Step 3 now also fits the Level 4 encounter, to which one card is dealt for the whole party (§6.7).
+- Source: final rulings, core-E15 (`06_final_rulings.md`); §6.7 step 5; §7.7 final paragraph.
+
+### CH-07-058 · §7.7
+- Type: clarification
+- Before: "The players decide which character takes which card; if they cannot agree, the character holding the *aggro token* decides."
+- After: "The cards are turned face up, and the players decide which character takes which card; if they cannot agree, the character holding the *aggro token* decides."
+- Rationale: States that the dealt cards are revealed before they are shared out.
+- Source: final rulings, core-E16 (`06_final_rulings.md`); Gate 1 OQ-11 and OQ-29.
+
+### CH-07-059 · §7.7
+- Type: correction
+- Before: "A treasure card a character receives is placed in that character's inventory (see §4.1)."
+- After: "A treasure card a character receives is placed in that character's inventory (see §3.2)."
+- Rationale: The inventory is defined in §3.2, not §4.1.
+- Source: final rulings, core-E17 (`06_final_rulings.md`); §3.2, Inventory.
+
+### CH-07-060 · §7.2
+- Type: clarification
+- Before: "2. Discard the character's *ember token*, if present (see §7.3)."
+- After: "2. Remove the character's *ember token* from the dashboard, if present, and place it beside the dashboard (see §7.3)."
+- Rationale: Matches §3.5: the token is the character's own and returns to its place beside the dashboard.
+- Source: final rulings, core-E21 (`06_final_rulings.md`); §3.5, Ember.
+
+### CH-07-061 · §7.2
+- Type: clarification
+- Before: "their souls are dropped, their ember token is discarded, and their model is placed beside the bonfire tile"
+- After: "their souls are dropped, their ember token is removed, and their model is placed beside the bonfire tile"
+- Rationale: Same wording as the death procedure.
+- Source: final rulings, core-E22 (`06_final_rulings.md`); §3.5, Ember.
+
+### CH-07-062 · §7.3
+- Type: completion
+- Before: "1. Discard the ember card."
+- After: "1. Return the ember card to the game box. It takes no further part in the game."
+- Rationale: States where a consumed ember card goes; the supply of one per character at setup is the limit on embering by card.
+- Source: final rulings, core-E23 (`06_final_rulings.md`); §6.3 (one ember card per character, never restocked; A-046); chapter 04 and chapter 07 issues lists.
+
+### CH-07-063 · §7.5, Encounter Resolution
+- Type: ruling
+- Before: "5. If the tile holds a *gravestone* {{icon:ast-0017-gravestone}}, the players may *scry* one card."
+- After: "5. The players may *scry* one card for each *gravestone* {{icon:ast-0017-gravestone}} on the tile."
+- Rationale: [MECHANICAL CHANGE] Keeps the resolution step in line with §5.5.
+- Source: final rulings, combat-E02 (`06_final_rulings.md`); As combat-E01.
+
+### CH-07-064 · §7.5, Encounter Resolution
+- Type: ruling
+- Before: "When an encounter containing a gravestone is cleared, the players may scry one card of their collective choice (see §5.5, Gravestones). The card is one of the following."
+- After: "When an encounter is cleared, the players may scry one card of their collective choice for each gravestone on its tile (see §5.5, Gravestones). The scries are resolved one at a time, and each card scried is one of the following."
+- Rationale: [MECHANICAL CHANGE] Keeps the scry rule in line with §5.5 and fixes the order of several scries.
+- Source: final rulings, combat-E03 (`06_final_rulings.md`); As combat-E01.
+
+### CH-07-065 · §7.5, Encounter Turn Order
+- Type: clarification
+- Before: "the model with the most *wound tokens* takes its turn first."
+- After: "the model whose *wound tokens* have the greatest total value takes its turn first."
+- Rationale: Wound tokens have values of 1, 3 and 5, so their number is not the damage.
+- Source: final rulings, combat-E31 (`06_final_rulings.md`); This book, §2.8 and §8.2.
+
+### CH-07-066 · §7.5, Encounter Turn Order
+- Type: clarification
+- Before: "counting wound tokens placed and damage recorded on an invader's health dial."
+- After: "counting the total value of the wound tokens placed and the damage recorded on an invader's health dial."
+- Rationale: As combat-E31.
+- Source: final rulings, combat-E32 (`06_final_rulings.md`); This book, §2.8 and §8.2.
+
+### CH-07-067 · §7.7
+- Type: clarification
+- Before: "Whenever a treasure card is awarded to the party rather than to a named character (a chest's card, a mimic's cards, a boss treasure card, or the *mega-boss* treasure card of a Level 4 encounter), the players decide which character receives it. If they cannot agree, the card goes to the character who holds the aggro token when the encounter ends."
+- After: "Whenever a treasure card is awarded to the party rather than to a named character (a chest's card, a mimic's cards, an invader's treasure card, a Titanite Scale card, a boss treasure card, or the *mega-boss* treasure card of a Level 4 encounter), the players decide which character receives it. If they cannot agree, the card goes to the character who holds the aggro token when the card is awarded."
+- Rationale: The list now names every card awarded to the party, and 'when the card is awarded' covers a card gained during an encounter as well as one gained at its end.
+- Source: final rulings, phantom-E12 (`06_final_rulings.md`); Gate 1 OQ-29; §12.2, Invader Rewards and §14 of this book.
+
+### CH-07-068 · §7.7
+- Type: ruling
+- Before: "If crystal lizards are in play, a character who kills a crystal lizard takes one Titanite Scale card at once (see §14). A killed invader awards its treasure (see §12.2)."
+- After: "If crystal lizards are in play, a killed crystal lizard awards the party one Titanite Scale card at once (see §14). A killed invader awards its treasure card at once (see §12.2)."
+- Rationale: [MECHANICAL CHANGE] Keeps §7.7 in step with §14: the Titanite Scale card is awarded to the party, whatever killed the crystal lizard.
+- Source: final rulings, phantom-E13 (`06_final_rulings.md`); Official Iron Keep booklet: 'add one Titanite Scale card to the inventory', the party's shared inventory (DS-IronKeep-Rules-Web.txt lines 125-127).

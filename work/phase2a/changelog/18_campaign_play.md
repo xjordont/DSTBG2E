@@ -286,3 +286,95 @@
 - After: "Each character who died in the boss encounter is revived as after any cleared encounter, except that the ember token of the boss's defeat keeps that character from becoming *hollow*, so no hollow cube is placed (see §7.5, Encounter Recovery; §16.5). The exploration then continues."
 - Rationale: §16.5 step 4 embers every character, the dead included, and an embered character is not hollow; the revival wording implied hollow cubes. No published campaign lists two bosses in one section, so the case arises only in a campaign of the players' own design.
 - Source: QA observation (example and consistency verification)
+
+### CH-18-042 · §18.6, Blacksmith Andre's Shop
+- Type: ruling
+- Before: "Before the shop is restocked, its unsold cards, other than *ember cards*, are placed on the bottom of their treasure decks (see §6.3, Restocking After a Boss). Step 7 of a rest restocks the shop only if a section has been completed and the shop has not been restocked since (see §11.2)."
+- After: "Before the shop is restocked, its unsold cards, other than *ember cards*, are placed on the bottom of their treasure decks (see §6.3, Restocking After a Boss)."
+- Rationale: Removes the reference to the deleted step.
+- Source: final rulings, core-E11 (`06_final_rulings.md`); As core-E09.
+
+### CH-18-043 · §18.1, Level 4 Encounters and Mega-Bosses
+- Type: ruling
+- Before: "The Level 4 encounter is set up, fought, and rewarded as in the standard game (see §6.7, Level 4 Encounters), with the soul reward of the standard game (see §18.5)."
+- After: "The Level 4 encounter is set up and fought as in the standard game (see §6.7, Level 4 Encounters). It is rewarded as any other encounter of its section: every character gains the soul reward of a Level 4 encounter (see §18.5), and one treasure card per character of the current tier is dealt to the game board with its encounter card. No mega-boss treasure card is dealt to a Level 4 encounter in campaign play; a mega-boss's treasure cards are gained only by defeating that mega-boss (see §16.5)."
+- Rationale: [MECHANICAL CHANGE] A mega-boss has two treasure cards, and Call of the Abyss and Into the Depths each list three Level 4 encounters before one mega-boss, so the standard reward cannot be paid; the campaign's own rule is that boss treasure comes only from bosses.
+- Source: final rulings, campaign-E16 (`06_final_rulings.md`); §6.7 step 5 (one mega-boss treasure card per Level 4 encounter); official booklets: two treasure cards per mega-boss; official campaign lists (Four Kings and Gaping Dragon booklets); source manuscript 'Boss treasure is only obtained by defeating bosses'.
+
+### CH-18-044 · §18.5
+- Type: ruling
+- Before: "The treasure of a *Level 4 encounter* is that of the standard game (see §6.7, Level 4 Encounters)."
+- After: "A *Level 4 encounter* awards treasure cards of the current tier, as any other encounter does, and no mega-boss treasure card (see §18.1, Level 4 Encounters and Mega-Bosses)."
+- Rationale: [MECHANICAL CHANGE] Keeps §18.5 in step with §18.1 and removes the contradiction with the sentence before it.
+- Source: final rulings, campaign-E17 (`06_final_rulings.md`); As campaign-E16.
+
+### CH-18-045 · §18.3
+- Type: ruling
+- Before: "While the party rests, it may buy back one spark. Every character pays four *souls* of their own to the supply, and the spark dial is turned up by one. If any character holds fewer than four souls, the party cannot buy the spark, because souls cannot be transferred or pooled (see §7.6)."
+- After: "While the party rests, it may buy back one spark. The cost is four *souls* for each character in the party, paid to the supply by any combination of the characters, and the spark dial is turned up by one. The spark is not bought unless the full cost is paid. This cost and the cost of the *bonfire ascetic* are the only costs that the characters pay together (see §18.7); souls are never passed from one character to another (see §7.6)."
+- Rationale: [MECHANICAL CHANGE] A party purchase is paid by the party, as the bonfire ascetic already is, so that one character without souls cannot block it.
+- Source: final rulings, campaign-E18 (`06_final_rulings.md`); Official 2017 campaign rules: sparks bought 'at a cost of 2 souls per character in the group' from the shared soul cache (DS-Core-Rules-lores.txt 1601-1606); source manuscript and §18.7: the ascetic is paid 'from any combination of character contributions'.
+
+### CH-18-046 · §18.3
+- Type: ruling
+- Before: "The Knight holds six souls, the Herald four, and the Assassin five. Each of them pays four souls, and the dial is turned up to two. The Knight is left with two souls, the Herald with none, and the Assassin with one."
+- After: "The Knight holds six souls, the Herald four, and the Assassin five. A spark costs 12 souls for three characters. The Knight pays six souls, the Herald two, and the Assassin four, and the dial is turned up to two. The Knight is left with no souls, the Herald with two, and the Assassin with one."
+- Rationale: [MECHANICAL CHANGE] The example must compute from the pooled payment.
+- Source: final rulings, campaign-E19 (`06_final_rulings.md`); 4 x 3 = 12; 6 + 2 + 4 = 12.
+
+### CH-18-047 · §18.7
+- Type: ruling
+- Before: "This payment is the one exception to the rule that souls cannot be pooled (see §7.6)."
+- After: "This payment and the cost of a bought *spark* are the only exceptions to the rule that souls cannot be pooled (see §7.6; §18.3)."
+- Rationale: [MECHANICAL CHANGE] Two party purchases now share one payment rule.
+- Source: final rulings, campaign-E20 (`06_final_rulings.md`); As campaign-E18.
+
+### CH-18-048 · §18.6, Shop Price Table
+- Type: clarification
+- Before: "| *Bonfire ascetic* | 16, paid by the party | - |"
+- After: "| *Spark* | 4 for each character, paid by the party | - |
+| *Bonfire ascetic* | 16, paid by the party | - |"
+- Rationale: Puts every campaign price in the one table.
+- Source: final rulings, campaign-E21 (`06_final_rulings.md`); §18.3.
+
+### CH-18-049 · §18.4
+- Type: ruling
+- Before: "A player may join only while the spark dial shows two or more."
+- After: "A player cannot join while the spark dial shows zero."
+- Rationale: [MECHANICAL CHANGE] The cost of joining is one spark, so one spark is enough; a second condition is not needed.
+- Source: final rulings, campaign-E28 (`06_final_rulings.md`); Official 2017 rule: 'New players can join a campaign that is in progress at the cost of 1 spark each' (DS-Core-Rules-lores.txt 1615-1618); source manuscript the same; A-105.
+
+### CH-18-050 · §18.4
+- Type: clarification
+- Before: "A player joins or leaves a standard game in progress under the same rules."
+- After: "A player joins or leaves a standard game in progress under the same rules; the steps that set the spark dial's maximum apply only in campaign play."
+- Rationale: The standard game has no campaign maximum, so two steps of each procedure do not apply to it.
+- Source: final rulings, campaign-E29 (`06_final_rulings.md`); §7.4 and §18.3.
+
+### CH-18-051 · §18.1, Section Setup
+- Type: completion
+- Before: "- The encounter decks are built from the sets the campaign names, in place of the set that supplies the next boss (see §6.5, Expansion Encounters)."
+- After: "- The encounter decks are built from the encounter cards of every set the campaign requires, shuffled together by level, in place of the set that supplies the next boss (see §6.5, Expansion Encounters). Where a campaign names the sets for its encounter decks, only those sets are used."
+- Rationale: [MECHANICAL CHANGE] Six of the twelve campaigns name no sets for their decks; one default closes the gap for all of them.
+- Source: final rulings, campaign-E30 (`06_final_rulings.md`); Official booklets: Call of the Abyss and Into the Depths 'shared deck of encounters from the core game and the Darkroot expansion'; Go Beyond Death 'shared deck ... core game, the Explorers expansion, and the Iron Keep expansion'.
+
+### CH-18-052 · §18.8
+- Type: clarification
+- Before: "Transposition is available after the last boss of the first *section* is defeated. In a *campaign* whose first section ends in an encounter, it is available after that section is completed (see §18.1, Section Completion)."
+- After: "Transposition is available once the first *section* of the *campaign* is completed (see §18.1, Section Completion)."
+- Rationale: Section completion already covers a section that ends in a boss and one that ends in an encounter; one sentence replaces two.
+- Source: final rulings, campaign-E31 (`06_final_rulings.md`); §18.1, Section Completion; F.A.Q. §22.7 already words it this way.
+
+### CH-18-053 · §18.1, Section Setup
+- Type: ruling
+- Before: "- If *invaders* are in play, no more than one invasion is provoked in each section (see §12.2)."
+- After: "- If *invaders* are in play, no more than one invasion is provoked in each section (see §12.2). The invader token drawn for an invasion is a standard invader token until the *bonfire ascetic* is burnt and an advanced invader token from then on (see §18.7)."
+- Rationale: [MECHANICAL CHANGE] §12.2 chooses the token by whether the mini-boss has been defeated, which has no meaning in a campaign; the bonfire ascetic already takes the mini-boss's place for treasure and the shop.
+- Source: final rulings, campaign-E33 (`06_final_rulings.md`); §12.2, Invader Tokens, step 1; §18.5 to §18.7 (the ascetic opens tier two in place of the mini-boss's defeat); official Phantoms rules key the two invader sets to the mini-boss's defeat.
+
+### CH-18-054 · §18.1
+- Type: completion
+- Before: "The party chooses one of the 12 campaigns (see §19)."
+- After: "The party chooses one of the 16 campaigns (see §19)."
+- Rationale: Four campaigns are added as §19.13 to §19.16.
+- Source: final rulings, campaign-E45 (`06_final_rulings.md`); Old Iron King, The Last Giant, Vordt of the Boreal Valley and Guardian Dragon booklets, campaign pages.

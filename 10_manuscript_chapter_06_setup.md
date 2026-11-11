@@ -9,8 +9,8 @@ Each player chooses one character (see §2.1). The number of characters in the p
 1. Place each character's dashboard (see §3.1) in front of its player.
 2. Equip each character with its *starting equipment*, the equipment cards that bear the character's class icon, in the slots the cards show (see §3.2, §4.1).
 3. Place one *stat cube* on the base tier space of each of the character's four stat progression tracks (see §3.3).
-4. Place the character's *luck*, *heroic action*, and *estus flask* tokens on the dashboard, ready side up (see §3.5).
-5. Place the *ember* tokens, *damage cubes*, *stamina cubes*, *hollow cubes*, soul tokens, *condition* tokens, *trap tokens*, and *wound tokens* in a supply within reach of every player (see §2.8).
+4. Place the character's *luck*, *heroic action*, and *estus flask* tokens on the dashboard, ready side up, and the character's *ember* token beside the dashboard (see §3.5).
+5. Place the *damage cubes*, *stamina cubes*, remaining white cubes, soul tokens, *condition* tokens, *trap tokens*, and *wound tokens* in a supply within reach of every player (see §2.8). The remaining white cubes serve as *hollow cubes* (see §7.2).
 6. Place the *aggro token* on the character with the highest *threat* value (see §7.5, Encounter Start).
 7. If the party consists of one character, place six *souls* on that character's dashboard (see §7.6).
 
@@ -53,7 +53,7 @@ The tier two treasure deck holds every common treasure card and every class-spec
 
 ### Expansion Treasure
 
-Treasure cards from every expansion in the party's collection are included and are sorted into the tier one and tier two treasure decks by the rules of this section.
+Treasure cards from every expansion in the party's collection are included and are sorted into the tier one and tier two treasure decks by the rules of this section. The cards listed in Appendix B are added or amended as that appendix states before the decks are built (see Appendix B).
 
 ## 6.3 Shop Setup
 
@@ -117,8 +117,8 @@ When random boss selection is in play, each boss is chosen at random in step 1: 
 
 1. Draw four of the six encounter tiles at random.
 2. Place each encounter tile with either side face up, as the party chooses.
-3. Arrange the bonfire tile, the four encounter tiles, and the mini-boss tile, which is one of the two *boss tiles* (see §15.3), in a grid of two rows of three tiles, with the bonfire tile and the mini-boss tile in opposite corners.
-4. Turn each encounter tile so that exactly two of its doorways open on to adjacent tiles, forming a single route from the bonfire tile through all four encounter tiles to the mini-boss tile.
+3. Lay the bonfire tile, the four encounter tiles, and the mini-boss tile, which is one of the two *boss tiles* (see §15.3), in a single chain, each tile beside the next, with the bonfire tile at one end and the mini-boss tile at the other. The chain may run straight or turn at any tile, as the table allows; two rows of three tiles, with the bonfire tile and the mini-boss tile in opposite corners, form one such chain.
+4. Turn each encounter tile so that one of its doorways faces the tile before it in the chain and another faces the tile after it, forming a single route from the bonfire tile through all four encounter tiles to the mini-boss tile. A doorway that faces neither of those tiles is not used.
 5. Place the *fog gate* token on the doorway between the fourth encounter tile and the mini-boss tile (see §15.1).
 6. Place the mini-boss's model, data card, health dial, and boss treasure cards on the mini-boss tile.
 7. Build the mini-boss's *behaviour deck* (see §15.5) and place it face down on the mini-boss tile.
@@ -128,10 +128,10 @@ When random boss selection is in play, each boss is chosen at random in step 1: 
 The *encounter levels* of the four encounters on the route to a boss are printed on that boss's data card. Encounter levels increase from the tile adjacent to the bonfire tile towards the boss tile.
 
 1. Build the encounter decks: shuffle separately the Level 1 {{icon:ast-0007-encounter-level-1}}, Level 2 {{icon:ast-0011-encounter-level-2}}, and Level 3 {{icon:ast-0015-encounter-level-3}} *encounter cards* of the set that supplies the mini-boss (see §6.5, Expansion Encounters).
-2. Deal one encounter card face down to each encounter tile, of the level the mini-boss's data card gives for that tile's position on the route.
+2. Deal one encounter card face down to each encounter tile, of the level the mini-boss's data card gives for that tile's position on the route. Keep the rest of each encounter deck face down beside the bonfire tile.
 3. Deal one *tier one treasure* card per character face down to each encounter tile. These cards are the encounter's treasure reward and are awarded when the encounter is first *cleared* (see §7.7).
 4. If *mimics* are in play, deal one *ambush card* face down beside each encounter tile (see §13).
-5. If *invaders* are in play, place the *invader tokens* on the encounter cards (see §12.2).
+5. If *invaders* are in play and any character is *embered*, place the *invader tokens* on the encounter cards (see §12.2).
 
 ### Expansion Encounters
 
@@ -162,17 +162,17 @@ When the *mini-boss* is defeated (see §16.5), the route is rebuilt for the seco
 3. Clear every remaining token from the encounter tiles.
 4. If *mimics* are in play, gather the *ambush cards* and shuffle them (see §13).
 5. Flip the four encounter tiles to their other sides and shuffle them.
-6. Arrange the *bonfire* tile, the four encounter tiles, and the main-boss tile in a straight line, with the bonfire tile and the main-boss tile at opposite ends. The main-boss tile is the two *boss tiles* joined as one (see §15.3).
+6. Lay the *bonfire* tile, the four encounter tiles, and the main-boss tile in a single chain, as in the first setup (see §6.5, Encounter Tiles), with the bonfire tile at one end and the main-boss tile at the other. The main-boss tile is the two *boss tiles* joined as one (see §15.3).
 7. Turn each encounter tile so that a single route runs from the bonfire tile through all four encounter tiles to the main-boss tile.
 8. Move the *fog gate* token to the doorway between the fourth encounter tile and the main-boss tile (see §15.1).
 9. Place the main-boss's model, *data card*, *health dial*, and *boss treasure* cards on the main-boss tile.
 10. Build the main-boss's *behaviour deck* (see §15.5) and place it face down on the main-boss tile.
 11. Build the encounter decks from the set that supplies the main-boss (see §6.5, Expansion Encounters).
 12. Deal one encounter card face down to each encounter tile, of the level the main-boss's data card gives for that tile's position on the route (see §6.5, Encounter Cards).
-13. Deal one *tier two treasure* card per character face down to each encounter tile. These cards are the encounter's treasure reward (see §7.7).
-14. If mimics are in play, deal one ambush card face down beside each encounter tile (see §13).
-15. If *invaders* are in play, place the *invader tokens* on the encounter cards (see §12.2).
-16. Restock the tier one *shop* and stock the tier two shop (see §6.3, Restocking After a Boss).
+13. Restock the tier one *shop* and stock the tier two shop (see §6.3, Restocking After a Boss).
+14. Deal one *tier two treasure* card per character face down to each encounter tile. These cards are the encounter's treasure reward (see §7.7).
+15. If mimics are in play, deal one ambush card face down beside each encounter tile (see §13).
+16. If *invaders* are in play and any character is *embered*, place the *invader tokens* on the encounter cards (see §12.2).
 17. Add one *spark* to the spark dial (see §7.4).
 18. Place every character's model on the bonfire tile. The characters rest at the bonfire without spending a spark (see §11.2) and may visit the *Firekeeper* (see §11.3) and Blacksmith Andre (see §11.4).
 19. Exploration resumes from the encounter tile adjacent to the bonfire tile (see §11.5).
@@ -188,7 +188,7 @@ When a mega-boss is in play, the defeat of the main-boss (see §16.5) is followe
 3. Place the mega-boss game board adjacent to the *bonfire* tile, with its Level 4 encounter side face up, the side that shows enemy spawn nodes {{icon:ast-0006-primary-spawn-node}} and terrain nodes {{icon:ast-0014-primary-terrain-node}}, and with one of its doorways aligned with a doorway of the bonfire tile.
 4. Shuffle the mega-boss's four Level 4 encounter cards and deal one face down to the game board.
 5. Shuffle the mega-boss's *boss treasure* cards and deal one face down to the game board. This card is the Level 4 encounter's treasure reward (see §6.7, Level 4 Encounters). No tier two treasure cards are dealt to the game board.
-6. Place the mega-boss's model, *data card*, *health dial*, *behaviour cards*, and remaining boss treasure cards beside the game board.
+6. Place the mega-boss's model, *data card*, *health dial*, and remaining boss treasure cards beside the game board, build its *behaviour deck* as its rules direct (see §15.5; §17), and place the deck face down beside them.
 7. Restock the tier one and tier two *shops* (see §6.3, Restocking After a Boss).
 8. Add one *spark* to the spark dial (see §7.4).
 9. Place every character's model on the bonfire tile. The characters rest at the bonfire without spending a spark (see §11.2) and may visit the *Firekeeper* (see §11.3) and Blacksmith Andre (see §11.4).

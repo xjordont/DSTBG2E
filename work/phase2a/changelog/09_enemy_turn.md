@@ -265,3 +265,76 @@
 - After: not applied here
 - Rationale: OPTIONAL findings skipped: D-039 (restoring "taunt" for characters conflicts with the single term "threat"); A-018 (riposte and boss aggro, owned by §16.4); A-042 (heat-up during the boss's own turn, owned by §15.5). Approved PROPOSED findings not applied: B-002 and B-033, which alter preserve-list rules. Owned elsewhere and cited only: A-013 (§7.5), A-032 (§20.4), A-078 and A-079 (§8.5), B-022 (§4.1). No change required: A-124, C-095.
 - Source: brief §5; preserve list; chapter 09 issues list
+
+### CH-09-039 · §9.1
+- Type: ruling
+- Before: "An icon that has no valid *target*, or that cannot be resolved, is skipped, and the next icon to the right is resolved. The enemy's turn ends when its last icon has been resolved or when the enemy is killed."
+- After: "An icon that has no valid *target*, or that cannot be resolved, is skipped, and the next icon to the right is resolved. If the data card bears the *repeat* icon {{icon:ast-0061-repeat-behaviour-or-attack}}, the enemy resolves its whole row of icons the number of times shown, and the target of each icon is determined again each time. The enemy's turn ends when its last icon has been resolved for the last time or when the enemy is killed."
+- Rationale: [MECHANICAL CHANGE] States the repeat rule for an enemy data card where the row of icons is described, in the words §16.1 uses for a boss.
+- Source: final rulings, combat-E18 (`06_final_rulings.md`); As combat-E12.
+
+### CH-09-040 · §9.3
+- Type: ruling
+- Before: "- A *condition* icon places the matching condition token on each character hit by the attack (see §8.5).
+- A *repeat* icon {{icon:ast-0061-repeat-behaviour-or-attack}} causes the attack to be resolved the number of times shown, and the target is determined afresh each time. A repeat icon applies only to the attack icon beside it, not to a movement icon."
+- After: "- A *condition* icon places the matching condition token on each character hit by the attack (see §8.5).
+
+A *repeat* icon {{icon:ast-0061-repeat-behaviour-or-attack}} on the data card repeats the enemy's whole row of icons, not one attack (see §9.1)."
+- Rationale: [MECHANICAL CHANGE] Deletes the attack-only special case, which was written for the scaling rule that Gate 1 removed.
+- Source: final rulings, combat-E19 (`06_final_rulings.md`); As combat-E12; Gate 1 OQ-07.
+
+### CH-09-041 · §9.3
+- Type: clarification
+- Before: "### Defence
+
+When an attack targets a character, the character's player must choose one defence before any dice are rolled."
+- After: "### Attack Sequence
+
+An enemy attack is resolved as follows.
+
+1. Determine the target (see §9.3, Targets).
+2. Check the range. If the target is not within range, skip the icon.
+3. Choose the character's defence (see §9.3, Defence).
+4. Resolve the defence (see §9.4; §9.5; §9.6). If a dodge or a parry succeeds, the character is not hit, and the attack on that character ends.
+5. Place the damage that the defence has not prevented (see §3.4).
+6. If the attack is a push-attack, push the character (see §8.4).
+7. Place any condition token the attack carries (see §8.5).
+
+Steps 6 and 7 are resolved even if the character suffered no damage. A character who dies in step 5 is not pushed and receives no token. A node attack resolves steps 3 to 7 for one character at a time, in an order chosen by the players. The attack of a push-move with a damage value follows the same steps from […]"
+- Rationale: States the order of an enemy attack once, as §10.3 does for a character attack, so that §8.4, §8.5, §9.4, §9.5, §9.6 and §16.3 have one sequence to match.
+- Source: final rulings, combat-E20 (`06_final_rulings.md`); Official 2022 numbered attack steps (DS-TG 1667-1763); this book, §8.4 and §8.5 (damage, then push, then condition).
+
+### CH-09-042 · §9.4
+- Type: correction
+- Before: "7. Place any *condition* token the attack carries (see §8.5) and resolve any *push* (see §8.4), even if the character suffered no damage."
+- After: "7. Resolve any *push* (see §8.4), then place any *condition* token the attack carries (see §8.5), even if the character suffered no damage."
+- Rationale: Step 7 gave the condition before the push; §8.5 and §10.3 give the push first, and the order decides whether a stagger token affects the dodge of a trap entered by the push.
+- Source: final rulings, combat-E21 (`06_final_rulings.md`); This book, §8.5 second paragraph and §10.3 step 11.
+
+### CH-09-043 · §9.6
+- Type: ruling
+- Before: "- A *shield* is equipped in the character's left *weapon slot* (see §3.2; §4.1)."
+- After: "- A *shield* is equipped in one of the character's *weapon slots* (see §3.2; §4.1)."
+- Rationale: [MECHANICAL CHANGE] The parry was the only rule in the book that depended on which weapon slot held a card; the choice of slot carried no decision.
+- Source: final rulings, combat-E22 (`06_final_rulings.md`); Audit finding A-068 (approved, REQUIRED) proposed the same; no official or community ruleset has a left-hand rule.
+
+### CH-09-044 · §9.6
+- Type: ruling
+- Before: "A shield in the right weapon slot does not permit a parry. A character who wields"
+- After: "The shield may be in either weapon slot. A character who wields"
+- Rationale: [MECHANICAL CHANGE] As combat-E22.
+- Source: final rulings, combat-E23 (`06_final_rulings.md`); As combat-E22.
+
+### CH-09-045 · §9.6, Riposte
+- Type: ruling
+- Before: "A riposte is one attack against the attacker, made with one *attack option* of the *weapon* equipped in the character's right weapon slot."
+- After: "A riposte is one attack against the attacker, made with one *attack option* of the *weapon* equipped in the character's other weapon slot, the slot that does not hold the shield used for the parry. A *spell* cannot be used for a riposte, whether it is equipped in that slot or stored in a *catalyst* there (see §4.3)."
+- Rationale: [MECHANICAL CHANGE] Follows the either-slot parry and states the spell exclusion that the word "weapon" only implied.
+- Source: final rulings, combat-E24 (`06_final_rulings.md`); As combat-E22; this book, §4.1 and §4.3.
+
+### CH-09-046 · §9.6, Riposte
+- Type: ruling
+- Before: "No riposte is made if the right weapon slot holds no weapon with an attack option,"
+- After: "No riposte is made if the other weapon slot holds no weapon with an attack option,"
+- Rationale: [MECHANICAL CHANGE] As combat-E22.
+- Source: final rulings, combat-E25 (`06_final_rulings.md`); As combat-E22.

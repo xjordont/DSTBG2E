@@ -8,7 +8,7 @@ Every fight turns on the same few questions: who is struck, how hard, and what t
 
 When a model attacks, the model that must defend against the attack is the attack's *target*. An attack has one target unless its icons give it more. Some attacks target every opposing model on one *node* (see §9.3; §10.3, Area-of-Effect), and some *boss* attacks target every character on several nodes (see §16.3).
 
-A character targets enemies, bosses, and *invaders*. A character targets another character only in a player versus player (PvP) *encounter* (see §20). An enemy never targets another enemy. The targeting of *phantoms* is stated with their rules (see §12).
+A character targets hostile models: enemies, bosses, *invaders*, *mimics*, and *crystal lizards* (see §10.3). A character targets another character only in a player versus player (PvP) *encounter* (see §20). An enemy never targets another enemy. The targeting of *phantoms* is stated with their rules (see §12).
 
 **Hit.** An attack hits its target when the target is within the attack's *range* (see §5.4) and does not avoid the attack by a successful *dodge* (see §9.5) or a successful *parry* (see §9.6).
 
@@ -41,7 +41,7 @@ Smaller icons printed around a behaviour icon modify it, as follows.
 - The *node* icon makes an attack target every character on the target's node (see §9.3).
 - The *push* icon makes a movement a *push-move* and an attack a *push-attack* (see §8.4).
 - A push icon that carries a number {{icon:ast-0031-push-with-damage-satellite-glyph}} makes a push-move deal that damage (see §8.4).
-- The *repeat* icon {{icon:ast-0061-repeat-behaviour-or-attack}} shows the number of times the attack beside it is resolved (see §9.3).
+- The *repeat* icon {{icon:ast-0061-repeat-behaviour-or-attack}} modifies no single icon: it shows the number of times the enemy's whole row of behaviour icons is resolved (see §9.1).
 - A *condition* icon places that condition on each model the attack *hits* (see §8.5).
 
 The attack icon itself shows whether the attack deals *physical damage* or *magical damage* {{icon:ast-0042-deal-magical-damage}} (see §9.3).
@@ -85,12 +85,13 @@ In campaign play, the *bonfire ascetic* further increases the health of every en
 
 **Push.** Forced movement of a model from its *node* to an *adjacent node*.
 
-A *push* forces a model from its node to a *valid node* (see §5.2). A push is not a *move*, and it costs no stamina. A model is pushed from the node it occupies when the push is resolved. A model is pushed for one of four reasons.
+A *push* forces a model from its node to a *valid node* (see §5.2). A push is not a *move*, and it costs no stamina. A model is pushed from the node it occupies when the push is resolved. A model is pushed for one of the following reasons.
 
 - A *push-attack* *hits* the model.
 - A *push-move* begins on the model's node or enters it.
 - A fourth non-boss model enters the model's node, and the *node model limit* displaces the model (see §5.3).
 - A *boss* model moves onto the node of another boss model (see §17.1).
+- A rule of a boss pushes the model, as a *leap* does (see §16.2, Leap; §17).
 
 A model is pushed only into a valid node. A node containing a *gravestone*, a *chest*, or a *pillar token* is not a valid node for a push, and a model pushed into a node containing an intact *barrel* destroys the barrel (see §5.5). A character pushed onto a node that holds a face-down *trap token* triggers the trap (see §5.5, Traps). A model pushed into a node at its node model limit displaces a model already on that node (see §5.3).
 
@@ -115,7 +116,7 @@ An enemy resolves a push-move one node at a time (see §9.2). For each node of t
 
 The characters pushed in step 1 are not attacked and suffer no damage. A character pushed in step 4 is pushed directly away from the node the enemy has left, as for a push-attack made from that node.
 
-A push-move without a damage value is not an attack: a character cannot *dodge*, *block*, or *resist* it. The attack of a push-move with a damage value is defended as any other enemy attack (see §9.4; §9.5). A character who blocks that attack is hit and is pushed whether or not damage is dealt. A character who dodges it is not hit and is not pushed.
+A push-move without a damage value is not an attack: a character cannot *dodge*, *block*, or *resist* it. The attack of a push-move with a damage value is defended by a block or a dodge, as any other enemy attack is (see §9.4; §9.5). No *parry* of it is permitted (see §9.6). A character who blocks that attack is hit and is pushed whether or not damage is dealt. A character who dodges it is not hit and is not pushed.
 
 A boss resolves a push-move in the same way, with the differences stated for boss movement (see §16.2). When a boss pushes a character off the boss's own node, the boss's arcs limit the nodes to which the character is pushed (see §15.6).
 
@@ -141,9 +142,9 @@ When an attack that bears a condition icon *hits* a model, place the matching co
 
 A model holds at most one token of each condition, and it may hold tokens of different conditions at the same time. When a token of a condition is to be placed on a model that already holds a token of that condition, the token is not placed and has no effect. Bleed and poison are exceptions, each stated under its own heading below.
 
-Damage dealt by a condition is recorded as any other damage is: with *damage cubes* for a character (see §3.4), with *wound tokens* for an enemy (see §8.2), and on the *health dial* for a boss, a phantom, or a *mimic* (see §15.4). A value reduced by a condition cannot fall below zero.
+Damage dealt by a condition is recorded as any other damage is: with *damage cubes* for a character (see §3.4), with *wound tokens* for an enemy (see §8.2), and on the *health dial* for a boss, a phantom, or a *mimic* (see §15.4). A value reduced by a condition cannot fall below zero. When the *aggro token* is assigned, bleed damage counts as damage inflicted by the character whose attack triggered it, and poison damage counts for no character (see §7.5, Encounter Turn Order; §16.4).
 
-Each condition lasts until the rule under its heading removes it. Where a token is removed at the end of a model's next complete *turn*, a token placed during that model's own turn is not removed at the end of that turn; it is removed at the end of the model's following turn. Every condition token still in play is removed when the *encounter* ends (see §7.5, Encounter Recovery).
+Each condition lasts until the rule under its heading removes it. The end of the affected model's own *turn* is the only moment at which a turn acts on a condition: poison is then resolved, and frostbite and stagger tokens are then removed. Where a token is removed at the end of a model's next complete turn, a token placed during that model's own turn is not removed at the end of that turn; it is removed at the end of the model's following turn. Every condition token still in play is removed when the *encounter* ends (see §7.5, Encounter Recovery).
 
 In a PvP encounter, conditions apply between characters (see §20.5).
 

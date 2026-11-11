@@ -207,6 +207,115 @@ Every substantive change made in Phase 2A between the manuscript (`work/docx/man
 - Rationale: As CH entry above: the unsupported upper limit is withdrawn.
 - Source: QA-007 (example and consistency verification)
 
+### CH-02-030 · §2.8
+- Type: ruling
+- Before: "- 16x Stat cubes (white) (Core)
+- 8x Hollow cubes
+- 1x Spark dial (Core)"
+- After: "- 16x Stat cubes (white) (Core)
+- 1x Spark dial (Core)"
+- Rationale: Hollow cubes are not a separate component; they are the white cubes of the core set that are not marking a stat, so the unsourced line is removed.
+- Source: final rulings, core-E01 (`06_final_rulings.md`); Core 2017 component list: 16x Level Up Tokens (white cubes), DS-Core-Rules-lores.txt l.244; author's source 03_characters.md l.58 and 07_gameplay.md l.20 ('white cubes').
+
+### CH-02-031 · §2.8
+- Type: ruling
+- Before: "*Hollow cubes* are of a colour distinct from the damage, stamina, and stat cubes; two are placed on the endurance bar of a character who is *hollow* (see §7.2)."
+- After: "*Hollow cubes* are white cubes that are not in use as stat cubes; two are placed on the endurance bar of a character who is *hollow* (see §7.2). A white cube is placed on an endurance bar for no other purpose, so a hollow cube cannot be taken for a damage cube or a stamina cube. The supply of white cubes is not a limit: when every white cube is in use, the players mark the blocked spaces with any other markers that are neither red nor black."
+- Rationale: Names the physical component (white cube, never otherwise on the endurance bar) and gives the fallback for a party of four, whose 16 white cubes are all stat cubes.
+- Source: final rulings, core-E02 (`06_final_rulings.md`); Author's source ('a marker such as white cubes'); Extended Rules l.57-59 (a marker of any type when the box lacks a colour); §2.8 already treats the soul token supply the same way.
+
+### CH-02-032 · §2.8
+- Type: correction
+- Before: "- 36x Condition tokens: 7x each of bleed, poison, frostbite, and stagger (Core and expansions); 4x calamity (Black Dragon Kalameet); 4x corrosion (Gaping Dragon)"
+- After: "- 28x Condition tokens: 5x each of bleed, poison, frostbite, and stagger (Core); 4x calamity (Black Dragon Kalameet); 4x corrosion (Gaping Dragon)"
+- Rationale: The core set supplies five of each condition token and no first-edition expansion adds more; seven each cannot be supported.
+- Source: final rulings, campaign-E03 (`06_final_rulings.md`); DS-Core-Rules-lores.txt 252-261 (5x each); BDK booklet line 82 (4x calamity); Gaping Dragon booklet contents (4x corrosion); no other supplied or downloaded booklet lists bleed, poison, frostbite or stagger tokens.
+
+### CH-02-033 · §2.8
+- Type: clarification
+- Before: "*calamity*, and *corrosion* (see §8.5)."
+- After: "*calamity*, and *corrosion* (see §8.5). The supply of condition tokens is not a limit; when it is exhausted the players mark the condition with any other counters."
+- Rationale: Poison stacks without limit (§8.5) and five tokens can run out; the same sentence already covers soul tokens.
+- Source: final rulings, campaign-E04 (`06_final_rulings.md`); §8.5 sets no supply limit (chapter 08 issue list, A-081 not applied); §2.8 soul-token wording.
+
+### CH-02-034 · §2.2
+- Type: correction
+- Before: "- 5x Phalanx (PWA)
+- 1x Phalanx Hollow (PWA)"
+- After: "- 5x Phalanx Hollow (PWA); the Phalanx (PWA) has a data card of its own and no model, and is shown by three Phalanx Hollow models placed together"
+- Rationale: The set holds 13 enemy models, five of them Phalanx Hollows; six Phalanx models would make 14.
+- Source: final rulings, campaign-E05 (`06_final_rulings.md`); Publisher and retailer listings give 18 miniatures (3 characters, 13 enemies, 2 bosses); community Unofficial Guide and Rules FAQ, set overview table: '5x Phalanx Hollows ... 1x Phalanx (no distinct miniature, represented with 3 Phalanx Hollow miniatures pushed together)'.
+
+### CH-02-035 · §2.9
+- Type: correction
+- Before: "- 1x Mega-boss model (the Executioner's Chariot has two), 1x Mega-boss data card, 1x Health dial, the behaviour cards listed on the data card, and 2x Mega-boss treasure cards (see §6.7)"
+- After: "- 1x Mega-boss model (the Executioner's Chariot has two and The Four Kings four), 1x Mega-boss data card, 1x Health dial (The Four Kings has four), the behaviour cards listed on the data card, and 2x Mega-boss treasure cards (see §6.7)"
+- Rationale: The Four Kings expansion supplies four models and four health dials.
+- Source: final rulings, campaign-E06 (`06_final_rulings.md`); Official Four Kings booklet, Contents: '4x Four Kings Miniatures, 4x Four Kings Health Dials, 1x Four Kings Data Card, 4x Four Kings Identifier Tokens, 20x Behaviour Cards, 2x Treasure Cards, 4x Level 4 Encounter Cards'.
+
+### CH-02-036 · §2.9
+- Type: completion
+- Before: "- Asylum Demon only: 4x Pillar tokens (see §17.3)"
+- After: "- Asylum Demon only: 4x Pillar tokens (see §17.3)
+- Gaping Dragon only: 4x Corrosion tokens (see §8.5)
+- The Four Kings only: 4x Identifier tokens (see §17.10)
+- Guardian Dragon only: 4x Fiery Breath cards (see §17.10)
+- Old Iron King only: 6x Fire Beam cards (see §17.10)"
+- Rationale: Lists the components particular to four mega-boss expansions, now verified from their booklets.
+- Source: final rulings, campaign-E07 (`06_final_rulings.md`); Official booklets, Contents pages: Gaping Dragon (4x Corrosion Condition Tokens), Four Kings (4x Identifier Tokens), Guardian Dragon (4x Fiery Breath Cards), Old Iron King (6x Fire Beam Cards). Vordt, The Last Giant and Manus list no component beyond the common set.
+
+### CH-02-037 · §2.9
+- Type: completion
+- Before: "The Asylum Demon expansion also supplies the Asylum Demon mini-boss (see §2.3)."
+- After: "The Asylum Demon expansion also supplies the Asylum Demon mini-boss, with its own data card, nine behaviour cards, and two boss treasure cards; the one model serves for both the Asylum Demon and the Stray Demon (see §2.3)."
+- Rationale: The expansion holds one model and two complete sets of boss cards.
+- Source: final rulings, campaign-E08 (`06_final_rulings.md`); Official Asylum Demon booklet, Contents: 1x Asylum Demon Miniature, 1x Asylum Demon Data Card, 9x Mini Boss Behaviour Cards, 2x Asylum Demon Treasure Cards, 1x Stray Demon Data Card, 13x Mega Boss Behaviour Cards, 2x Stray Demon Treasure Cards, 4x Pillar Tokens, 4x Level 4 Encounter Cards.
+
+### CH-02-038 · §2.5
+- Type: correction
+- Before: "| *Boss treasure* | 18 | 63 |"
+- After: "| *Boss treasure* | 18 | 48 |"
+- Rationale: The expansions supply 48 boss treasure cards; 63 also counted the 12 invader treasure cards and the 3 Titanite Scale cards, which the book lists separately.
+- Source: final rulings, campaign-E09 (`06_final_rulings.md`); Booklet contents: Darkroot 3+3, Explorers 3+2, Iron Keep 2+3, Asylum Demon 2+2, nine other mega-boss expansions 2 each, ToG 5 (DS-TG contents), PWA 5 (by subtraction, agreeing with the community count of 95 item cards).
+
+### CH-02-039 · §2.5
+- Type: correction
+- Before: "In all, 534 treasure cards are available. Each character's ten class-specific treasure cards comprise five class treasure cards and five *transposed treasure* cards. Each boss has two or more boss treasure cards, one of which is awarded when the boss is defeated (see §16.5). The 12 invader treasure cards of the Phantoms expansion are listed with the expansion components (see §2.9)."
+- After: "In all, 519 treasure cards are available. Each character's ten class-specific treasure cards comprise five class treasure cards and five *transposed treasure* cards. Each boss has two or more boss treasure cards, one of which is awarded when the boss is defeated (see §16.5). The 12 invader treasure cards of the Phantoms expansion and the three Titanite Scale cards of the Iron Keep expansion are not counted in the table and are listed with the expansion components (see §2.9)."
+- Rationale: The total follows the corrected boss treasure figure, and the two card types counted outside the table are named.
+- Source: final rulings, campaign-E10 (`06_final_rulings.md`); 13+45+40+120+60+145+10+20+18+48 = 519; 519+12+3 = 534, the manuscript's total.
+
+### CH-02-040 · §2.6
+- Type: correction
+- Before: "| Level 1 | 12 | 31 |
+| Level 2 | 12 | 31 |
+| Level 3 | 12 | 31 |
+| Level 4 | 0 | 40 |
+
+In all, 169 encounter cards are available."
+- After: "| Level 1 | 12 | 37 |
+| Level 2 | 12 | 37 |
+| Level 3 | 12 | 37 |
+| Level 4 | 0 | 40 |
+
+In all, 187 encounter cards are available. Of each of Levels 1 to 3, the Darkroot and Iron Keep expansions supply six cards each, the Explorers expansion five, the Executioner's Chariot expansion two, and ToG and PWA nine each."
+- Rationale: Thirty-one per level matches no combination of sets; the per-set figures are stated so that the total can be checked.
+- Source: final rulings, campaign-E11 (`06_final_rulings.md`); Darkroot booklet 131-132 and Iron Keep booklet 100-101 (six of each level), Explorers booklet 277-278 (five of each), Executioner's Chariot booklet (10 cards: 4 Level 4 and six named Level 1 to 3 cards), ToG rulebook (29 cards, two of them boss encounter cards), community guide (ToG and PWA 27 each, 9/9/9).
+
+### CH-02-041 · §2.3
+- Type: correction
+- Before: "fought with two models, Dragonslayer Ornstein and Executioner Smough. The pair"
+- After: "fought with two models, Dragon Slayer Ornstein and Executioner Smough. The pair"
+- Rationale: The printed name is two words (Gate 1 OQ-17: printed spellings for proper nouns).
+- Source: final rulings, campaign-E12 (`06_final_rulings.md`); DS-Core-Rules-lores.txt 170, 177, 1662-1663 and the 2023 Sunless City rulebook print 'Dragon Slayer Ornstein'.
+
+### CH-02-042 · §2.9, Phantoms
+- Type: ruling
+- Before: "When an *invasion* is provoked, one invader token is placed face down on each face-down encounter card, and each is revealed when the characters fight that encounter (see §12.2)."
+- After: "When an *invasion* is provoked, one invader token is placed face down on each face-down encounter card that carries no black cube, and each is revealed when the characters fight that encounter (see §12.2)."
+- Rationale: [MECHANICAL CHANGE] Keeps the component note in step with §12.2.
+- Source: final rulings, phantom-E16 (`06_final_rulings.md`); Follows phantom-E06.
+
 ## Chapter 00 — Front Matter
 
 ### CH-00-001 · Foreword
@@ -458,6 +567,43 @@ Every substantive change made in Phase 2A between the manuscript (`work/docx/man
 - Rationale: The parry (§9.6) depends on which slot is the left one; the F.A.Q. ruling needed a home in the owning section so that the F.A.Q. carries no rule of its own.
 - Source: A-068, CMP-0003
 
+### CH-03-032 · §3.5
+- Type: clarification
+- Before: "They are flipped back to the ready side only when the characters rest at the *bonfire* (see §11.2). Clearing an encounter does not ready them (see §7.5, Encounter Recovery)."
+- After: "They are flipped back to the ready side only when the characters rest at the *bonfire* (see §11.2), so each is used at most once between rests. Clearing an encounter does not ready them (see §7.5, Encounter Recovery)."
+- Rationale: The one refresh rule of the three tokens is stated once, with its consequence, in the paragraph that covers all three.
+- Source: final rulings, core-E12 (`06_final_rulings.md`); Official 2017 and 2022 ready all three tokens at the bonfire rest (DS-Core-Rules-lores.txt l.702-706; DS-TG-Rulebook l.1929-1933).
+
+### CH-03-033 · §3.5, Heroic Action
+- Type: clarification
+- Before: "The printed wording of a heroic action overrides any other rule with which it conflicts. The token is readied only at the bonfire, so a character resolves the heroic action at most once between rests."
+- After: "The printed wording of a heroic action overrides any other rule with which it conflicts."
+- Rationale: Removes a restatement of the shared refresh rule so that the three token sub-sections are parallel.
+- Source: final rulings, core-E13 (`06_final_rulings.md`); §3.5 general paragraph.
+
+### CH-03-034 · §3.5, Estus Flask
+- Type: clarification
+- Before: "Condition tokens are not removed.
+
+The estus flask token is not readied when an encounter is *cleared*. It is flipped to the ready side only when the characters rest at the bonfire (see §11.2)."
+- After: "Condition tokens are not removed."
+- Rationale: Removes a restatement of the shared refresh rule so that the three token sub-sections are parallel.
+- Source: final rulings, core-E14 (`06_final_rulings.md`); §3.5 general paragraph.
+
+### CH-03-035 · §3.5, Luck
+- Type: clarification
+- Before: "After rolling the dice for one of their own attack rolls or defence rolls (a *block*, *resist*, or *dodge* roll), a character may flip the luck token to the used side to reroll any or all of those dice."
+- After: "After rolling the dice for one of their own attack rolls or defence rolls (a *block*, *resist*, *dodge*, or *parry* roll), a character may flip the luck token to the used side to reroll any or all of those dice."
+- Rationale: §9.6 already allows the luck token on a parry roll; the list in §3.5 omitted it.
+- Source: final rulings, core-E18 (`06_final_rulings.md`); §9.6 parry procedure, step 4.
+
+### CH-03-036 · §3.2
+- Type: ruling
+- Before: "Which weapon slot holds a shield matters for the *parry* and the *riposte* (see §9.6)."
+- After: "A shield in either weapon slot permits a *parry*, and the *riposte* is made with the weapon in the other weapon slot (see §9.6)."
+- Rationale: [MECHANICAL CHANGE] Follows §9.6 as changed by combat-E22.
+- Source: final rulings, combat-E30 (`06_final_rulings.md`); As combat-E22.
+
 ## Chapter 04 — Equipment
 
 ### CH-04-001 · §4 Equipment
@@ -669,6 +815,41 @@ Every substantive change made in Phase 2A between the manuscript (`work/docx/man
 - After: "A character consumes an ember card by discarding it from the back-up slot, as the *Ember* major action"
 - Rationale: Brings §4.4 into line with §3.2 and §7.3.
 - Source: QA-011 (example and consistency verification)
+
+### CH-04-031 · §4.4
+- Type: completion
+- Before: "A character consumes an ember card by discarding it from the back-up slot, as the *Ember* major action during an encounter or at any time outside an encounter."
+- After: "A character consumes an ember card by discarding it from the back-up slot, as the *Ember* major action during an encounter or at any time outside an encounter. The consumed card is returned to the game box and takes no further part in the game."
+- Rationale: Same destination stated where the ember card is described.
+- Source: final rulings, core-E24 (`06_final_rulings.md`); As core-E23.
+
+### CH-04-032 · §4.3
+- Type: clarification
+- Before: "Spells are never *two-handed*: a spell gains no two-handed reroll, and a spell equipped with the other weapon slot empty is not two-handed (see §10.4)."
+- After: "Spells are never *two-handed*: a spell gains no two-handed reroll, and a spell equipped with the other weapon slot empty is not two-handed (see §10.4). A spell card that bears the two-handed weapon icon requires the other weapon slot to be empty while it is equipped in a weapon slot (see §3.2), and it gains no reroll by this."
+- Rationale: Separates the slot a spell occupies (its printed icon) from the two-handed reroll (never for spells).
+- Source: final rulings, core-E26 (`06_final_rulings.md`); §3.2 weapon slots; chapter 04 issues list, item 7.
+
+### CH-04-033 · §4.1, Stat Requirements
+- Type: clarification
+- Before: "A card's stat requirements also decide its treasure tier, split at a requirement of 25 (see §6.2)."
+- After: "A card's stat requirements also decide its treasure tier, split at a requirement of 25 (see §6.2). The stat requirements of the weapons listed in Appendix A are those given there, in place of the printed values (see Appendix A)."
+- Rationale: The main text never told the reader that Appendix A replaces printed requirements.
+- Source: final rulings, core-E27 (`06_final_rulings.md`); Chapter 23 issues list, cross-chapter pointers.
+
+### CH-04-034 · §4.2, Titanite
+- Type: ruling
+- Before: "When a weapon with Titanite attached is sold, the Titanite is returned with the weapon to the bottom of the treasure deck of the weapon's tier (see §11.4)."
+- After: "When a weapon with Titanite attached is sold, the Titanite is sold with it and adds nothing to the sell value. The weapon and the Titanite are separated, and each goes where a sold card of its kind goes (see §11.4, Sales)."
+- Rationale: [MECHANICAL CHANGE] One destination rule for every sold card: each card returns to the place of its own kind, as a replaced Titanite card already does (Appendix B).
+- Source: final rulings, core-E31 (`06_final_rulings.md`); Author's source 11_returning_to_the_bonfire.md (sold Titanite goes to the tier one deck); Appendix B, Titanite Replacement.
+
+### CH-04-035 · §4.2, Titanite
+- Type: ruling
+- Before: "*Titanite* upgrade cards (Titanite Shard, Titanite Chunk, Titanite Slab, and Titanite Scale) are weapon upgrades that fuse permanently to the weapon they are attached to."
+- After: "A *Titanite* card is a weapon upgrade card whose name includes the word Titanite: Titanite Shard, Titanite Chunk, Titanite Slab, Titanite Scale, Demon Titanite, and Blue Titanite. A Titanite card fuses permanently to the weapon it is attached to."
+- Rationale: [MECHANICAL CHANGE] A test by name settles Demon Titanite and Blue Titanite without a second list: every card called Titanite behaves as Titanite.
+- Source: final rulings, core-E34 (`06_final_rulings.md`); Official 2017: no weapon upgrade is ever removed (DS-Core-Rules-lores.txt l.672-679); CMP-0004 labels both cards 'Weapon upgrade (Titanite)'.
 
 ## Chapter 05 — Tiles and Nodes
 
@@ -916,6 +1097,36 @@ Every substantive change made in Phase 2A between the manuscript (`work/docx/man
 - After: "Trap damage is not an attack, and it cannot be blocked or resisted."
 - Rationale: The F.A.Q. cites §5.5 for the ruling that trap damage is not an attack; the section now states it.
 - Source: QA observation (example and consistency verification)
+
+### CH-05-036 · §5.5, Gravestones
+- Type: ruling
+- Before: "When an encounter that contains one or more gravestones is *cleared*, the players may *scry* one card, however many gravestones the tile holds. The scry is resolved during Encounter Resolution, which states the cards that may be scried and what is done with them (see §7.5, Encounter Resolution)."
+- After: "When an encounter is *cleared*, the players may *scry* one card for each gravestone on its tile. Each scry is resolved during Encounter Resolution, which states the cards that may be scried and what is done with them (see §7.5, Encounter Resolution)."
+- Rationale: [MECHANICAL CHANGE] One scry for each gravestone: the token count is the rule, and the "however many" clause is deleted.
+- Source: final rulings, combat-E01 (`06_final_rulings.md`); Official 2017 keys the benefit to each gravestone (DS-Core-Rules-lores.txt 755-759, 1385-1386); official 2022 lets each gravestone be used once (DS-TG 952-960).
+
+### CH-05-037 · §5.1
+- Type: clarification
+- Before: "**Entry node.** A basic node adjacent to a doorway. When the characters enter a tile, they are placed on the entry nodes beside the doorway through which they entered (see §7.5, Encounter Start)."
+- After: "**Entry node.** A basic node along the tile edge that holds the doorway through which the characters entered the tile. When the characters enter a tile, they are placed on its entry nodes (see §7.5, Encounter Start)."
+- Rationale: A node cannot be adjacent to a doorway, which is not a node; the edge fixes which nodes are meant, and one definition serves §5.1, §7.5, §15.3 and the glossary.
+- Source: final rulings, combat-E05 (`06_final_rulings.md`); Official 2017 example places the characters on any node along the edge of the doorway they entered by (DS-Core-Rules-lores.txt 415-422, 853-855).
+
+### CH-05-038 · §5.1
+- Type: completion
+- Before: "A spawn node or terrain node that holds no enemy or terrain is entered, left, and counted for range exactly as a basic node is."
+- After: "Tiles and encounter cards tell a primary spawn node from a secondary spawn node {{icon:ast-0010-secondary-spawn-node}}, and a primary terrain node from a secondary terrain node {{icon:ast-0018-secondary-terrain-node}}, by their icons. The difference shows which node receives which models or terrain and has no other effect.
+
+A spawn node or terrain node that holds no enemy or terrain is entered, left, and counted for range exactly as a basic node is."
+- Rationale: The encounter card cannot be read without knowing that the two icons name two different nodes.
+- Source: final rulings, combat-E09 (`06_final_rulings.md`); Official 2017 symbol key lists primary and secondary spawn and terrain nodes (DS-Core-Rules-lores.txt 1830-1842).
+
+### CH-05-039 · §5.5, Traps
+- Type: correction
+- Before: "The dodge follows every rule in §9.5, including the move that follows a successful dodge."
+- After: "The dodge follows every rule in §9.5, including the movement that follows a successful dodge."
+- Rationale: §5.2 states that the movement after a dodge is not a move; the noun is corrected.
+- Source: final rulings, combat-E10 (`06_final_rulings.md`); This book, §5.2 (Move) and §9.5.
 
 ## Chapter 06 — Setup
 
@@ -1311,6 +1522,91 @@ Every substantive change made in Phase 2A between the manuscript (`work/docx/man
 - Rationale: Shuffling a legendary card straight back made a later restock unable to finish once only legendary cards remained in the deck; setting it aside lets the deck-exhaustion exit apply and keeps legendary cards out of the shop.
 - Source: A-075 (legendary cards cannot be purchased), review of PR #2
 
+### CH-06-057 · §6.5, Encounter Tiles
+- Type: ruling
+- Before: "3. Arrange the bonfire tile, the four encounter tiles, and the mini-boss tile, which is one of the two *boss tiles* (see §15.3), in a grid of two rows of three tiles, with the bonfire tile and the mini-boss tile in opposite corners."
+- After: "3. Lay the bonfire tile, the four encounter tiles, and the mini-boss tile, which is one of the two *boss tiles* (see §15.3), in a single chain, each tile beside the next, with the bonfire tile at one end and the mini-boss tile at the other. The chain may run straight or turn at any tile, as the table allows; two rows of three tiles, with the bonfire tile and the mini-boss tile in opposite corners, form one such chain."
+- Rationale: One layout rule for both legs: the route is a chain of tiles and its shape is free; the two-by-three grid stays as a permitted arrangement.
+- Source: final rulings, core-E05 (`06_final_rulings.md`); Official 2017 setup lays the tiles 'in any way you wish, aligning their doorways as you go' (DS-Core-Rules-lores.txt l.295-300); findings A-088, C-090, D-031 disagree only about shape.
+
+### CH-06-058 · §6.5, Encounter Tiles
+- Type: clarification
+- Before: "4. Turn each encounter tile so that exactly two of its doorways open on to adjacent tiles, forming a single route from the bonfire tile through all four encounter tiles to the mini-boss tile."
+- After: "4. Turn each encounter tile so that one of its doorways faces the tile before it in the chain and another faces the tile after it, forming a single route from the bonfire tile through all four encounter tiles to the mini-boss tile. A doorway that faces neither of those tiles is not used."
+- Rationale: 'Exactly two doorways' cannot be met by a tile with three or four doorways placed in a grid; the route is fixed by the chain, and spare doorways are ignored.
+- Source: final rulings, core-E06 (`06_final_rulings.md`); Official tiles carry differing numbers of doorways (DS-Core-Rules-lores.txt l.409, l.835-850).
+
+### CH-06-059 · §6.6
+- Type: ruling
+- Before: "6. Arrange the *bonfire* tile, the four encounter tiles, and the main-boss tile in a straight line, with the bonfire tile and the main-boss tile at opposite ends. The main-boss tile is the two *boss tiles* joined as one (see §15.3)."
+- After: "6. Lay the *bonfire* tile, the four encounter tiles, and the main-boss tile in a single chain, as in the first setup (see §6.5, Encounter Tiles), with the bonfire tile at one end and the main-boss tile at the other. The main-boss tile is the two *boss tiles* joined as one (see §15.3)."
+- Rationale: Second leg uses the same chain rule as the first; a straight line of seven tile widths is no longer required.
+- Source: final rulings, core-E07 (`06_final_rulings.md`); As core-E05.
+
+### CH-06-060 · §6.6
+- Type: ruling
+- Before: "13. Deal one *tier two treasure* card per character face down to each encounter tile. These cards are the encounter's treasure reward (see §7.7).
+14. If mimics are in play, deal one ambush card face down beside each encounter tile (see §13).
+15. If *invaders* are in play, place the *invader tokens* on the encounter cards (see §12.2).
+16. Restock the tier one *shop* and stock the tier two shop (see §6.3, Restocking After a Boss)."
+- After: "13. Restock the tier one *shop* and stock the tier two shop (see §6.3, Restocking After a Boss).
+14. Deal one *tier two treasure* card per character face down to each encounter tile. These cards are the encounter's treasure reward (see §7.7).
+15. If mimics are in play, deal one ambush card face down beside each encounter tile (see §13).
+16. If *invaders* are in play, place the *invader tokens* on the encounter cards (see §12.2)."
+- Rationale: [MECHANICAL CHANGE] The shop is stocked before the treasure rewards are dealt, as in the first setup (§6.3 before §6.5), so the five legendary cards are in the tier two deck when the second leg's rewards are dealt.
+- Source: final rulings, core-E08 (`06_final_rulings.md`); Official 2017 adds the legendary cards to the deck when the mini-boss falls so that they can be drawn in the second half (DS-Core-Rules-lores.txt l.371-381); author's source: legendary treasure 'do not appear in every game'.
+
+### CH-06-061 · §6.1
+- Type: correction
+- Before: "4. Place the character's *luck*, *heroic action*, and *estus flask* tokens on the dashboard, ready side up (see §3.5)."
+- After: "4. Place the character's *luck*, *heroic action*, and *estus flask* tokens on the dashboard, ready side up, and the character's *ember* token beside the dashboard (see §3.5)."
+- Rationale: §3.5 and the glossary start the ember token beside the dashboard; §6.1 placed it in the common supply.
+- Source: final rulings, core-E19 (`06_final_rulings.md`); CMP-0001 (approved at Gate 1): 'The ember token begins the game beside the dashboard'.
+
+### CH-06-062 · §6.1
+- Type: correction
+- Before: "5. Place the *ember* tokens, *damage cubes*, *stamina cubes*, *hollow cubes*, soul tokens, *condition* tokens, *trap tokens*, and *wound tokens* in a supply within reach of every player (see §2.8)."
+- After: "5. Place the *damage cubes*, *stamina cubes*, remaining white cubes, soul tokens, *condition* tokens, *trap tokens*, and *wound tokens* in a supply within reach of every player (see §2.8). The remaining white cubes serve as *hollow cubes* (see §7.2)."
+- Rationale: Ember tokens leave the common supply (core-019) and the hollow cubes are named as the spare white cubes (core-001).
+- Source: final rulings, core-E20 (`06_final_rulings.md`); CMP-0001; core-001.
+
+### CH-06-063 · §6.2, Expansion Treasure
+- Type: clarification
+- Before: "Treasure cards from every expansion in the party's collection are included and are sorted into the tier one and tier two treasure decks by the rules of this section."
+- After: "Treasure cards from every expansion in the party's collection are included and are sorted into the tier one and tier two treasure decks by the rules of this section. The cards listed in Appendix B are added or amended as that appendix states before the decks are built (see Appendix B)."
+- Rationale: Setup now points to the card amendments it depends on.
+- Source: final rulings, core-E28 (`06_final_rulings.md`); Chapter 23 issues list, cross-chapter pointers.
+
+### CH-06-064 · §6.5, Encounter Cards
+- Type: clarification
+- Before: "2. Deal one encounter card face down to each encounter tile, of the level the mini-boss's data card gives for that tile's position on the route."
+- After: "2. Deal one encounter card face down to each encounter tile, of the level the mini-boss's data card gives for that tile's position on the route. Keep the rest of each encounter deck face down beside the bonfire tile."
+- Rationale: The encounter scry of §7.5 draws a replacement from the encounter deck, so the decks stay on the table.
+- Source: final rulings, core-E29 (`06_final_rulings.md`); §7.5, Encounter Resolution (scry); chapter 07 issues list, item 1.
+
+### CH-06-065 · §6.7
+- Type: correction
+- Before: "6. Place the mega-boss's model, *data card*, *health dial*, *behaviour cards*, and remaining boss treasure cards beside the game board."
+- After: "6. Place the mega-boss's model, *data card*, *health dial*, and remaining boss treasure cards beside the game board, build its *behaviour deck* as its rules direct (see §15.5; §17), and place the deck face down beside them."
+- Rationale: §15.5 says every boss's deck is built at the setup step that places its components; §6.7 placed the cards without building the deck, so a gravestone in the Level 4 encounter granted a scry of a deck that did not exist.
+- Source: final rulings, core-E30 (`06_final_rulings.md`); §15.5 ('built during setup ... see §6.5, §6.6, §6.7'); §6.5 Encounter Tiles step 7; §6.6 step 10; §7.5, Encounter Resolution (scry).
+
+### CH-06-066 · §6.5, Encounter Cards, step 5
+- Type: clarification
+- Before: "(see §13).
+5. If *invaders* are in play, place the *invader tokens* on the encounter cards (see §12.2)."
+- After: "(see §13).
+5. If *invaders* are in play and any character is *embered*, place the *invader tokens* on the encounter cards (see §12.2)."
+- Rationale: The step read as unconditional although §12.2 places tokens at setup only when a character is embered.
+- Source: final rulings, phantom-E14 (`06_final_rulings.md`); §12.2, Invasions of this book; official Phantoms booklet places tokens only 'when a character gains an Ember token' (lines 363-366).
+
+### CH-06-067 · §6.6, step 15
+- Type: clarification
+- Before: "16. If *invaders* are in play, place the *invader tokens* on the encounter cards (see §12.2)."
+- After: "16. If *invaders* are in play and any character is *embered*, place the *invader tokens* on the encounter cards (see §12.2)."
+- Rationale: Same wording as §6.5 step 5, so that the two setups state the same condition. Lead editor: Step renumbered by core-E08.
+- Source: final rulings, phantom-E15 (`06_final_rulings.md`); §12.2, Invasions of this book.
+
 ## Chapter 07 — Gameplay
 
 ### CH-07-001 · §7 Gameplay
@@ -1698,6 +1994,97 @@ Every substantive change made in Phase 2A between the manuscript (`work/docx/man
 - Rationale: §16.5 grants no spark and no rest after the final boss.
 - Source: QA observation (example and consistency verification)
 
+### CH-07-056 · §7.2
+- Type: ruling
+- Before: "**Hollow cube.** One of eight cubes of a colour distinct from the damage, stamina, and stat cubes. Two *hollow cubes* block the two rightmost spaces of a hollow character's endurance bar."
+- After: "**Hollow cube.** A white cube placed on an endurance bar. Two *hollow cubes* block the two rightmost spaces of a hollow character's endurance bar. Hollow cubes are taken from the white cubes that are not in use as *stat cubes* (see §2.8)."
+- Rationale: Definition follows the component ruling.
+- Source: final rulings, core-E03 (`06_final_rulings.md`); As core-E02.
+
+### CH-07-057 · §7.5, Encounter Resolution
+- Type: clarification
+- Before: "3. Give each character, including each character who died, one of the treasure cards dealt to the tile (see §7.7)."
+- After: "3. Award the treasure cards dealt to the tile, one to each character, including each character who died; where a single card was dealt to the tile, award it to the party (see §7.7)."
+- Rationale: Step 3 now also fits the Level 4 encounter, to which one card is dealt for the whole party (§6.7).
+- Source: final rulings, core-E15 (`06_final_rulings.md`); §6.7 step 5; §7.7 final paragraph.
+
+### CH-07-058 · §7.7
+- Type: clarification
+- Before: "The players decide which character takes which card; if they cannot agree, the character holding the *aggro token* decides."
+- After: "The cards are turned face up, and the players decide which character takes which card; if they cannot agree, the character holding the *aggro token* decides."
+- Rationale: States that the dealt cards are revealed before they are shared out.
+- Source: final rulings, core-E16 (`06_final_rulings.md`); Gate 1 OQ-11 and OQ-29.
+
+### CH-07-059 · §7.7
+- Type: correction
+- Before: "A treasure card a character receives is placed in that character's inventory (see §4.1)."
+- After: "A treasure card a character receives is placed in that character's inventory (see §3.2)."
+- Rationale: The inventory is defined in §3.2, not §4.1.
+- Source: final rulings, core-E17 (`06_final_rulings.md`); §3.2, Inventory.
+
+### CH-07-060 · §7.2
+- Type: clarification
+- Before: "2. Discard the character's *ember token*, if present (see §7.3)."
+- After: "2. Remove the character's *ember token* from the dashboard, if present, and place it beside the dashboard (see §7.3)."
+- Rationale: Matches §3.5: the token is the character's own and returns to its place beside the dashboard.
+- Source: final rulings, core-E21 (`06_final_rulings.md`); §3.5, Ember.
+
+### CH-07-061 · §7.2
+- Type: clarification
+- Before: "their souls are dropped, their ember token is discarded, and their model is placed beside the bonfire tile"
+- After: "their souls are dropped, their ember token is removed, and their model is placed beside the bonfire tile"
+- Rationale: Same wording as the death procedure.
+- Source: final rulings, core-E22 (`06_final_rulings.md`); §3.5, Ember.
+
+### CH-07-062 · §7.3
+- Type: completion
+- Before: "1. Discard the ember card."
+- After: "1. Return the ember card to the game box. It takes no further part in the game."
+- Rationale: States where a consumed ember card goes; the supply of one per character at setup is the limit on embering by card.
+- Source: final rulings, core-E23 (`06_final_rulings.md`); §6.3 (one ember card per character, never restocked; A-046); chapter 04 and chapter 07 issues lists.
+
+### CH-07-063 · §7.5, Encounter Resolution
+- Type: ruling
+- Before: "5. If the tile holds a *gravestone* {{icon:ast-0017-gravestone}}, the players may *scry* one card."
+- After: "5. The players may *scry* one card for each *gravestone* {{icon:ast-0017-gravestone}} on the tile."
+- Rationale: [MECHANICAL CHANGE] Keeps the resolution step in line with §5.5.
+- Source: final rulings, combat-E02 (`06_final_rulings.md`); As combat-E01.
+
+### CH-07-064 · §7.5, Encounter Resolution
+- Type: ruling
+- Before: "When an encounter containing a gravestone is cleared, the players may scry one card of their collective choice (see §5.5, Gravestones). The card is one of the following."
+- After: "When an encounter is cleared, the players may scry one card of their collective choice for each gravestone on its tile (see §5.5, Gravestones). The scries are resolved one at a time, and each card scried is one of the following."
+- Rationale: [MECHANICAL CHANGE] Keeps the scry rule in line with §5.5 and fixes the order of several scries.
+- Source: final rulings, combat-E03 (`06_final_rulings.md`); As combat-E01.
+
+### CH-07-065 · §7.5, Encounter Turn Order
+- Type: clarification
+- Before: "the model with the most *wound tokens* takes its turn first."
+- After: "the model whose *wound tokens* have the greatest total value takes its turn first."
+- Rationale: Wound tokens have values of 1, 3 and 5, so their number is not the damage.
+- Source: final rulings, combat-E31 (`06_final_rulings.md`); This book, §2.8 and §8.2.
+
+### CH-07-066 · §7.5, Encounter Turn Order
+- Type: clarification
+- Before: "counting wound tokens placed and damage recorded on an invader's health dial."
+- After: "counting the total value of the wound tokens placed and the damage recorded on an invader's health dial."
+- Rationale: As combat-E31.
+- Source: final rulings, combat-E32 (`06_final_rulings.md`); This book, §2.8 and §8.2.
+
+### CH-07-067 · §7.7
+- Type: clarification
+- Before: "Whenever a treasure card is awarded to the party rather than to a named character (a chest's card, a mimic's cards, a boss treasure card, or the *mega-boss* treasure card of a Level 4 encounter), the players decide which character receives it. If they cannot agree, the card goes to the character who holds the aggro token when the encounter ends."
+- After: "Whenever a treasure card is awarded to the party rather than to a named character (a chest's card, a mimic's cards, an invader's treasure card, a Titanite Scale card, a boss treasure card, or the *mega-boss* treasure card of a Level 4 encounter), the players decide which character receives it. If they cannot agree, the card goes to the character who holds the aggro token when the card is awarded."
+- Rationale: The list now names every card awarded to the party, and 'when the card is awarded' covers a card gained during an encounter as well as one gained at its end.
+- Source: final rulings, phantom-E12 (`06_final_rulings.md`); Gate 1 OQ-29; §12.2, Invader Rewards and §14 of this book.
+
+### CH-07-068 · §7.7
+- Type: ruling
+- Before: "If crystal lizards are in play, a character who kills a crystal lizard takes one Titanite Scale card at once (see §14). A killed invader awards its treasure (see §12.2)."
+- After: "If crystal lizards are in play, a killed crystal lizard awards the party one Titanite Scale card at once (see §14). A killed invader awards its treasure card at once (see §12.2)."
+- Rationale: [MECHANICAL CHANGE] Keeps §7.7 in step with §14: the Titanite Scale card is awarded to the party, whatever killed the crystal lizard.
+- Source: final rulings, phantom-E13 (`06_final_rulings.md`); Official Iron Keep booklet: 'add one Titanite Scale card to the inventory', the party's shared inventory (DS-IronKeep-Rules-Web.txt lines 125-127).
+
 ## Chapter 11 — Returning to the Bonfire
 
 ### CH-11-001 · §11 Returning to the Bonfire
@@ -1979,6 +2366,44 @@ Every substantive change made in Phase 2A between the manuscript (`work/docx/man
 - After: not applied
 - Rationale: D-011 (OPTIONAL; pay one soul to ready luck): skipped, because the rest readies the luck token. C-092 (OPTIONAL; campaign cost sentence): belongs to §18.6. A-077 (OPTIONAL): applied to boss treasure only; legendary treasure is a tier two card with a deck to return to. A-104 (Demon Hunting, Section One): owned by §19.6. B-016 (stat scaling threshold): owned by §10.5. The alternative stat tier four costs of A-067 (16) and D-005 (12) and D-005's flat value of 40 are superseded by Gate 1 OQ-09.
 - Source: D-011, C-092, A-077, A-104, B-016, A-067, D-005
+
+### CH-11-041 · §11.2
+- Type: ruling
+- Before: "7. If the *shop* has not been restocked since a boss was last defeated, restock it (see §6.3, Restocking After a Boss).
+8. The characters may visit the *Firekeeper* (see §11.3) and Blacksmith Andre (see §11.4), in either order and any number of times.
+9. *Reset* every encounter (see §11.5)."
+- After: "7. The characters may visit the *Firekeeper* (see §11.3) and Blacksmith Andre (see §11.4), in either order and any number of times.
+8. *Reset* every encounter (see §11.5)."
+- Rationale: The conditional restock never takes effect: the setup after a boss (§6.6, §6.7) and the setup of a campaign section (§18.6) restock before the rest begins.
+- Source: final rulings, core-E09 (`06_final_rulings.md`); §6.6 step 16, §6.7 step 7, §18.6; chapter 11 issues list, item 7.
+
+### CH-11-042 · §11.2
+- Type: ruling
+- Before: "Resting does not restock the shop except as step 7 directs. Cards bought from the shop are not replaced, and unsold cards stay in the shop, until the shop is next restocked (see §6.3, Restocking After a Boss). In campaign play, step 7 applies when a section has been completed rather than when a boss has been defeated (see §18.6, Blacksmith Andre's Shop)."
+- After: "Resting does not restock the *shop*. Cards bought from the shop are not replaced, and unsold cards stay in the shop, until the shop is next restocked during the setup that follows a boss's defeat (see §6.3, Restocking After a Boss). In campaign play the shop is restocked during the setup that follows the completion of a section (see §18.6, Blacksmith Andre's Shop)."
+- Rationale: Follows the deletion of step 7.
+- Source: final rulings, core-E10 (`06_final_rulings.md`); As core-E09.
+
+### CH-11-043 · §11.4, Sales
+- Type: ruling
+- Before: "When a *weapon* with *Titanite* attached is sold, the Titanite goes with the weapon to the bottom of the treasure deck of the weapon's tier, and every other *upgrade card* attached to a sold card returns to the character's inventory (see §4.2, Titanite). The sell value of the weapon is paid once; attached Titanite adds nothing to it."
+- After: "When a *weapon* with *Titanite* attached is sold, the Titanite is sold with it, and every other *upgrade card* attached to a sold card returns to the character's inventory (see §4.2, Titanite). The sell value of the weapon is paid once; attached Titanite adds nothing to it. The weapon and the Titanite are separated, and each goes to the place stated for a sold card of its kind."
+- Rationale: [MECHANICAL CHANGE] As core-E31.
+- Source: final rulings, core-E32 (`06_final_rulings.md`); As core-E31.
+
+### CH-11-044 · §11.1
+- Type: ruling
+- Before: "- After an encounter is *cleared*, the party may return to the bonfire tile instead of advancing to the next tile (see §7.5, Encounter Recovery)."
+- After: "- After an encounter is *cleared*, the party may return to the bonfire tile and rest instead of advancing to the next tile (see §7.5, Encounter Recovery)."
+- Rationale: [MECHANICAL CHANGE] Returning and resting are one act, as §7.5 already states.
+- Source: final rulings, core-E35 (`06_final_rulings.md`); §7.5, Encounter Recovery; author's source 11_returning_to_the_bonfire.md l.8; official 2022 'Resting at the Bonfire' (DS-TG-Rulebook l.1927-1930, l.2075-2079).
+
+### CH-11-045 · §11.1
+- Type: ruling
+- Before: "Returning to the bonfire tile costs nothing. The party spends a *spark* only when it rests (see §11.2). Until the party rests, no character is restored, the Firekeeper and Andre cannot be visited, and no encounter is *reset*."
+- After: "Returning to the bonfire tile and resting there are one act. The party returns only to rest, and the rest begins when the models are placed on the tile (see §11.2). The party cannot choose to return while the *spark* dial shows zero (see §7.4)."
+- Rationale: [MECHANICAL CHANGE] Removes the state of standing at the bonfire without resting, which had no use except to fight cleared encounters again without spending a spark.
+- Source: final rulings, core-E36 (`06_final_rulings.md`); As core-E35.
 
 ## Chapter 10 — Character Turn
 
@@ -2269,6 +2694,34 @@ Every substantive change made in Phase 2A between the manuscript (`work/docx/man
 - Rationale: The example used the superseded printed requirements; Appendix A sets the Rapier at 14 STR and 21 DEX and governs scaling.
 - Source: QA-001 (example and consistency verification)
 
+### CH-10-042 · §10.3, Range
+- Type: clarification
+- Before: "Range is checked when the target is chosen, after any shift resolved before the dice. A character cannot make an attack that has no permitted target within its range."
+- After: "Range is checked when the target is chosen, after any shift resolved before the dice. A character cannot begin an attack unless a permitted target is within its range or a shift printed before its dice is able to bring one within range. If no permitted target is within range when the target is to be chosen, the attack ends without a roll, and the stamina paid is not returned."
+- Rationale: Step 4 had no outcome when a shift, or a trap entered during it, left no target in range.
+- Source: final rulings, combat-E26 (`06_final_rulings.md`); Official 2022 pays and shifts before the target is chosen (DS-TG 1421-1423, 1546-1549); no source gives the outcome.
+
+### CH-10-043 · §10.3, Repeat
+- Type: ruling
+- Before: "An attack option that bears the *repeat* icon {{icon:ast-0061-repeat-behaviour-or-attack}} is resolved in full the number of times shown in the icon. The character pays the stamina cost once, before the first resolution, and then resolves steps 3 to 12 of the attack once for each time shown."
+- After: "An attack option that bears the *repeat* icon {{icon:ast-0061-repeat-behaviour-or-attack}} may be resolved in full up to the number of times shown in the icon. The character pays the stamina cost once, before the first resolution, resolves steps 3 to 12 of the attack for each resolution, and may stop after any resolution."
+- Rationale: [MECHANICAL CHANGE] A repeated attack is a permission, as every other attack of the Attack major action is ("up to one attack with each weapon").
+- Source: final rulings, combat-E27 (`06_final_rulings.md`); Official 2022: "perform the attack up to the number of times shown" (DS-TG 1566-1572).
+
+### CH-10-044 · §10.4
+- Type: clarification
+- Before: "A spell card equipped while the other weapon slot is empty gains no reroll, and the attack options of a spell stored in a catalyst gain none."
+- After: "A spell card equipped while the other weapon slot is empty gains no reroll, and the attack options of a spell stored in a catalyst gain none. A catalyst is a weapon: an attack option printed on the catalyst card itself gains the reroll while the catalyst is wielded two-handed."
+- Rationale: Applies the general rule to the one card type the section left open; no special case is created.
+- Source: final rulings, combat-E28 (`06_final_rulings.md`); This book, §4.1 (a catalyst is a weapon) and §10.4.
+
+### CH-10-045 · §10.5
+- Type: ruling
+- Before: "*Spells* are never scaled (see §4.3)."
+- After: "A weapon whose four stat requirements are all zero has no relevant stat and is never scaled. *Spells* are never scaled (see §4.3)."
+- Rationale: [MECHANICAL CHANGE] Without it every character scales such a weapon at once, a +1 that rewards nothing and a red cube that records no choice.
+- Source: final rulings, combat-E29 (`06_final_rulings.md`); Audit finding A-066; no official or community ruleset has stat scaling.
+
 ## Chapter 20 — Player versus Player
 
 ### CH-20-001 · §20 Player versus Player
@@ -2508,6 +2961,63 @@ Every substantive change made in Phase 2A between the manuscript (`work/docx/man
 - After: "and precedes the rest at the *bonfire* that follows every boss but the *final boss* (see §20.9)."
 - Rationale: §16.5 and §20.9 grant no rest after the final boss.
 - Source: QA observation (example and consistency verification)
+
+### CH-20-035 · §20.4
+- Type: correction
+- Before: "- The defender may *parry* as against an enemy's attack, with the attacker in the place of the enemy, if the conditions for a parry are met (see §9.6). The dodge difficulty is given by the same table.
+- The defender may decline to defend. The defender suffers damage equal to the attack value and is hit."
+- After: "- The defender may *parry* as against an enemy's attack, with the attacker in the place of the enemy, if the conditions for a parry are met (see §9.6). The dodge difficulty is given by the same table."
+- Rationale: A block or resist costs nothing and is never worse than no defence, so the fourth option was dead text and disagreed with the three defences of §9.3.
+- Source: final rulings, combat-E33 (`06_final_rulings.md`); This book, §9.3, Defence and §9.4.
+
+### CH-20-036 · §20.4
+- Type: ruling
+- Before: "The icons and text of an attack option apply to a defender as they apply to an enemy (see §10.3)."
+- After: "The icons and text of an attack option apply to a defender as they apply to an enemy (see §10.3). In a PvP encounter, the word enemy in a *heroic action* or on a treasure card means another character."
+- Rationale: [MECHANICAL CHANGE] The setup readies every heroic action token, so the chapter must say whether a heroic action that names an enemy works; one sentence extends the rule already stated for attack options.
+- Source: final rulings, phantom-E26 (`06_final_rulings.md`); §20.1 step 3 and §3.5, Heroic Action of this book; no official or community PvP rules exist to consult.
+
+### CH-20-037 · §20.4, step 4
+- Type: ruling
+- Before: "4. Add one to the result for each *victory bonus* the attacker holds (see §20.8)."
+- After: "4. Add one to the result if the attacker holds the *victory bonus* (see §20.8)."
+- Rationale: [MECHANICAL CHANGE] The victory bonus is no longer cumulative.
+- Source: final rulings, phantom-E27 (`06_final_rulings.md`); Source manuscript, chapter PLAYER VS PLAYER: 'Victory on non-final bosses provides +1 attack damage in future PvP only' (a flat +1; cumulation was added by CMP-0009).
+
+### CH-20-038 · §20.4 (table)
+- Type: clarification
+- Before: "| 0 | 3 |
+| 1 | 2 |
+| 2 | 2 |
+| 3 | 1 |
+| 4 | 1 |
+| 5 or more | 1 |"
+- After: "| 0 | 3 |
+| 1 or 2 | 2 |
+| 3 or more | 1 |"
+- Rationale: The six rows hold three values; three rows are easier to remember and change no result.
+- Source: final rulings, phantom-E29 (`06_final_rulings.md`); Audit B_report.md §10.1 (probabilities for the green die) and finding B-024.
+
+### CH-20-039 · §20.8
+- Type: ruling
+- Before: "When a character wins a PvP encounter that follows the defeat of a boss other than the final boss, the character gains one *victory bonus*. One *wound token* of value 1 is placed beside the winner's dashboard to mark it. In every subsequent PvP encounter, the character adds one to the *attack value* of each of their attacks for each victory bonus held (see §20.4). Victory bonuses are cumulative, have no effect outside PvP encounters, and are kept until the game ends."
+- After: "When a character wins a PvP encounter that follows the defeat of a boss other than the final boss, the character gains the *victory bonus*. A spare token of any kind is placed beside the winner's dashboard to mark it. In every subsequent PvP encounter, the character adds one to the *attack value* of each of their attacks (see §20.4). A character holds no more than one victory bonus, however many PvP encounters the character wins. The victory bonus has no effect outside PvP encounters and is kept until the game ends."
+- Rationale: [MECHANICAL CHANGE] A flat +1 gives the earlier contests a stake without deciding the last one in advance; a cumulative bonus reaches +4 or +5 in a campaign of five or six bosses. A spare token replaces the value 1 wound token, of which the core set has six and enemies need all.
+- Source: final rulings, phantom-E30 (`06_final_rulings.md`); Source manuscript PvP bullets (flat +1); §2.8 of this book (6x wound tokens of value 1); §19 (campaigns list up to six bosses).
+
+### CH-20-040 · §20.8 (example)
+- Type: clarification
+- Before: "*Example.* The Assassin wins the PvP encounter that follows the mini-boss, and one wound token is placed beside the Assassin's dashboard."
+- After: "*Example.* The Assassin wins the PvP encounter that follows the mini-boss, and a spare token is placed beside the Assassin's dashboard."
+- Rationale: Keeps the example in step with the marker named in the rule.
+- Source: final rulings, phantom-E31 (`06_final_rulings.md`); Follows phantom-E30.
+
+### CH-20-041 · §20.9
+- Type: clarification
+- Before: "It is the one rest that follows the boss's defeat (see §16.5); a PvP encounter grants no second rest."
+- After: "It is the one rest that follows the boss's defeat (see §16.5); a PvP encounter grants no second rest. In campaign play, what follows a PvP encounter is stated with the campaign rules (see §18.1, Player versus Player Encounters)."
+- Rationale: §18.1 already settles PvP encounters in a campaign; §20.9 lacked the pointer.
+- Source: final rulings, phantom-E32 (`06_final_rulings.md`); §18.1, Player versus Player Encounters of this book.
 
 ## Chapter 08 — Combat Basics
 
@@ -2805,6 +3315,56 @@ Every substantive change made in Phase 2A between the manuscript (`work/docx/man
 - Rationale: §9.3 applies an enemy's repeat icon to the attack icon beside it only.
 - Source: QA observation (example and consistency verification)
 
+### CH-08-043 · §8.1
+- Type: clarification
+- Before: "A character targets enemies, bosses, and *invaders*."
+- After: "A character targets hostile models: enemies, bosses, *invaders*, *mimics*, and *crystal lizards* (see §10.3)."
+- Rationale: §8.1 and §10.3 gave two different lists of what a character may target.
+- Source: final rulings, combat-E11 (`06_final_rulings.md`); This book, §10.3; §13; §14.
+
+### CH-08-044 · §8.2
+- Type: ruling
+- Before: "- The *repeat* icon {{icon:ast-0061-repeat-behaviour-or-attack}} shows the number of times the attack beside it is resolved (see §9.3)."
+- After: "- The *repeat* icon {{icon:ast-0061-repeat-behaviour-or-attack}} modifies no single icon: it shows the number of times the enemy's whole row of behaviour icons is resolved (see §9.1)."
+- Rationale: [MECHANICAL CHANGE] One meaning for the repeat icon on every data card and behaviour card: the whole row is repeated.
+- Source: final rulings, combat-E12 (`06_final_rulings.md`); Official 2017: the enemy performs its entire behaviour (DS-Core-Rules-lores.txt 1441-1444); official 2022: entire row of behaviour symbols (DS-TG 2256-2264); this book, §16.1 step 4 and glossary Repeat.
+
+### CH-08-045 · §8.4
+- Type: correction
+- Before: "A model is pushed for one of four reasons."
+- After: "A model is pushed for one of the following reasons."
+- Rationale: The list was not complete: a leap and other boss rules also push.
+- Source: final rulings, combat-E13 (`06_final_rulings.md`); This book, §16.2, Leap; §17.8; §17.9.
+
+### CH-08-046 · §8.4
+- Type: correction
+- Before: "- A *boss* model moves onto the node of another boss model (see §17.1)."
+- After: "- A *boss* model moves onto the node of another boss model (see §17.1).
+- A rule of a boss pushes the model, as a *leap* does (see §16.2, Leap; §17)."
+- Rationale: Adds the pushes that the boss chapters already make.
+- Source: final rulings, combat-E14 (`06_final_rulings.md`); This book, §16.2, Leap; §17.8; §17.9.
+
+### CH-08-047 · §8.4
+- Type: clarification
+- Before: "The attack of a push-move with a damage value is defended as any other enemy attack (see §9.4; §9.5)."
+- After: "The attack of a push-move with a damage value is defended by a block or a dodge, as any other enemy attack is (see §9.4; §9.5). No *parry* of it is permitted (see §9.6)."
+- Rationale: §8.4 read as if a parry were allowed; §9.2 and §9.6 forbid it.
+- Source: final rulings, combat-E15 (`06_final_rulings.md`); This book, §9.2 and §9.6.
+
+### CH-08-048 · §8.5
+- Type: clarification
+- Before: "Each condition lasts until the rule under its heading removes it. Where a token is removed at the end of a model's next complete *turn*, a token placed"
+- After: "Each condition lasts until the rule under its heading removes it. The end of the affected model's own *turn* is the only moment at which a turn acts on a condition: poison is then resolved, and frostbite and stagger tokens are then removed. Where a token is removed at the end of a model's next complete turn, a token placed"
+- Rationale: States the one clock that poison, frostbite and stagger share, which step 3 of the character turn relies on.
+- Source: final rulings, combat-E16 (`06_final_rulings.md`); Official 2017 and 2022 resolve all three at the end of the model's own activation (DS-Core-Rules-lores.txt 968-971, 986-988; DS-TG 1483-1512).
+
+### CH-08-049 · §8.5
+- Type: clarification
+- Before: "A value reduced by a condition cannot fall below zero."
+- After: "A value reduced by a condition cannot fall below zero. When the *aggro token* is assigned, bleed damage counts as damage inflicted by the character whose attack triggered it, and poison damage counts for no character (see §7.5, Encounter Turn Order; §16.4)."
+- Rationale: Settles which condition damage counts towards the aggro token without any new book-keeping.
+- Source: final rulings, combat-E17 (`06_final_rulings.md`); No source addresses it; follows from when the damage is recorded.
+
 ## Chapter 09 — Enemy Turn
 
 ### CH-09-001 · §9 Enemy Turn
@@ -3073,6 +3633,79 @@ Every substantive change made in Phase 2A between the manuscript (`work/docx/man
 - Rationale: OPTIONAL findings skipped: D-039 (restoring "taunt" for characters conflicts with the single term "threat"); A-018 (riposte and boss aggro, owned by §16.4); A-042 (heat-up during the boss's own turn, owned by §15.5). Approved PROPOSED findings not applied: B-002 and B-033, which alter preserve-list rules. Owned elsewhere and cited only: A-013 (§7.5), A-032 (§20.4), A-078 and A-079 (§8.5), B-022 (§4.1). No change required: A-124, C-095.
 - Source: brief §5; preserve list; chapter 09 issues list
 
+### CH-09-039 · §9.1
+- Type: ruling
+- Before: "An icon that has no valid *target*, or that cannot be resolved, is skipped, and the next icon to the right is resolved. The enemy's turn ends when its last icon has been resolved or when the enemy is killed."
+- After: "An icon that has no valid *target*, or that cannot be resolved, is skipped, and the next icon to the right is resolved. If the data card bears the *repeat* icon {{icon:ast-0061-repeat-behaviour-or-attack}}, the enemy resolves its whole row of icons the number of times shown, and the target of each icon is determined again each time. The enemy's turn ends when its last icon has been resolved for the last time or when the enemy is killed."
+- Rationale: [MECHANICAL CHANGE] States the repeat rule for an enemy data card where the row of icons is described, in the words §16.1 uses for a boss.
+- Source: final rulings, combat-E18 (`06_final_rulings.md`); As combat-E12.
+
+### CH-09-040 · §9.3
+- Type: ruling
+- Before: "- A *condition* icon places the matching condition token on each character hit by the attack (see §8.5).
+- A *repeat* icon {{icon:ast-0061-repeat-behaviour-or-attack}} causes the attack to be resolved the number of times shown, and the target is determined afresh each time. A repeat icon applies only to the attack icon beside it, not to a movement icon."
+- After: "- A *condition* icon places the matching condition token on each character hit by the attack (see §8.5).
+
+A *repeat* icon {{icon:ast-0061-repeat-behaviour-or-attack}} on the data card repeats the enemy's whole row of icons, not one attack (see §9.1)."
+- Rationale: [MECHANICAL CHANGE] Deletes the attack-only special case, which was written for the scaling rule that Gate 1 removed.
+- Source: final rulings, combat-E19 (`06_final_rulings.md`); As combat-E12; Gate 1 OQ-07.
+
+### CH-09-041 · §9.3
+- Type: clarification
+- Before: "### Defence
+
+When an attack targets a character, the character's player must choose one defence before any dice are rolled."
+- After: "### Attack Sequence
+
+An enemy attack is resolved as follows.
+
+1. Determine the target (see §9.3, Targets).
+2. Check the range. If the target is not within range, skip the icon.
+3. Choose the character's defence (see §9.3, Defence).
+4. Resolve the defence (see §9.4; §9.5; §9.6). If a dodge or a parry succeeds, the character is not hit, and the attack on that character ends.
+5. Place the damage that the defence has not prevented (see §3.4).
+6. If the attack is a push-attack, push the character (see §8.4).
+7. Place any condition token the attack carries (see §8.5).
+
+Steps 6 and 7 are resolved even if the character suffered no damage. A character who dies in step 5 is not pushed and receives no token. A node attack resolves steps 3 to 7 for one character at a time, in an order chosen by the players. The attack of a push-move with a damage value follows the same steps from […]"
+- Rationale: States the order of an enemy attack once, as §10.3 does for a character attack, so that §8.4, §8.5, §9.4, §9.5, §9.6 and §16.3 have one sequence to match.
+- Source: final rulings, combat-E20 (`06_final_rulings.md`); Official 2022 numbered attack steps (DS-TG 1667-1763); this book, §8.4 and §8.5 (damage, then push, then condition).
+
+### CH-09-042 · §9.4
+- Type: correction
+- Before: "7. Place any *condition* token the attack carries (see §8.5) and resolve any *push* (see §8.4), even if the character suffered no damage."
+- After: "7. Resolve any *push* (see §8.4), then place any *condition* token the attack carries (see §8.5), even if the character suffered no damage."
+- Rationale: Step 7 gave the condition before the push; §8.5 and §10.3 give the push first, and the order decides whether a stagger token affects the dodge of a trap entered by the push.
+- Source: final rulings, combat-E21 (`06_final_rulings.md`); This book, §8.5 second paragraph and §10.3 step 11.
+
+### CH-09-043 · §9.6
+- Type: ruling
+- Before: "- A *shield* is equipped in the character's left *weapon slot* (see §3.2; §4.1)."
+- After: "- A *shield* is equipped in one of the character's *weapon slots* (see §3.2; §4.1)."
+- Rationale: [MECHANICAL CHANGE] The parry was the only rule in the book that depended on which weapon slot held a card; the choice of slot carried no decision.
+- Source: final rulings, combat-E22 (`06_final_rulings.md`); Audit finding A-068 (approved, REQUIRED) proposed the same; no official or community ruleset has a left-hand rule.
+
+### CH-09-044 · §9.6
+- Type: ruling
+- Before: "A shield in the right weapon slot does not permit a parry. A character who wields"
+- After: "The shield may be in either weapon slot. A character who wields"
+- Rationale: [MECHANICAL CHANGE] As combat-E22.
+- Source: final rulings, combat-E23 (`06_final_rulings.md`); As combat-E22.
+
+### CH-09-045 · §9.6, Riposte
+- Type: ruling
+- Before: "A riposte is one attack against the attacker, made with one *attack option* of the *weapon* equipped in the character's right weapon slot."
+- After: "A riposte is one attack against the attacker, made with one *attack option* of the *weapon* equipped in the character's other weapon slot, the slot that does not hold the shield used for the parry. A *spell* cannot be used for a riposte, whether it is equipped in that slot or stored in a *catalyst* there (see §4.3)."
+- Rationale: [MECHANICAL CHANGE] Follows the either-slot parry and states the spell exclusion that the word "weapon" only implied.
+- Source: final rulings, combat-E24 (`06_final_rulings.md`); As combat-E22; this book, §4.1 and §4.3.
+
+### CH-09-046 · §9.6, Riposte
+- Type: ruling
+- Before: "No riposte is made if the right weapon slot holds no weapon with an attack option,"
+- After: "No riposte is made if the other weapon slot holds no weapon with an attack option,"
+- Rationale: [MECHANICAL CHANGE] As combat-E22.
+- Source: final rulings, combat-E25 (`06_final_rulings.md`); As combat-E22.
+
 ## Chapter 12 — Phantoms
 
 ### CH-12-001 · §12 Phantoms
@@ -3313,6 +3946,85 @@ Every substantive change made in Phase 2A between the manuscript (`work/docx/man
 - Rationale: Three blank tokens are supplied, and a campaign section of five encounters needs four. [MECHANICAL CHANGE] A substitution rule is added.
 - Source: QA-010 (example and consistency verification)
 
+### CH-12-035 · §12.1, Summoning
+- Type: ruling
+- Before: "The players choose the summon together in step 3. Souls paid in step 1 are not returned, whichever card is chosen."
+- After: "The players choose the summon together in step 3. If they cannot agree, the drawn data cards are shuffled face down and one is drawn. Souls paid in step 1 are not returned, whichever card is chosen."
+- Rationale: [MECHANICAL CHANGE] Gives the one joint choice in the chapter that had no tie-break a tie-break that needs no token and no new term.
+- Source: final rulings, phantom-E01 (`06_final_rulings.md`); Official Phantoms booklet picks the summon at random from the cards set aside (DS-Phantoms-Rules-lores.txt lines 238-240); Hollowed Edition: 'Summons are chosen at random' (line 389).
+
+### CH-12-036 · §12.1, Summons in Combat
+- Type: clarification
+- Before: "A summon has no *endurance bar* and pays no stamina. It has no *boss arcs* and no *heat-up* point, and its health is not scaled."
+- After: "A summon has no *endurance bar* and pays no stamina. It has no *boss arcs* and no *heat-up* point, and its health is not scaled. A summon does only what its behaviour cards and its data card direct. It takes no *minor action* and no *major action*, and it cannot *parry*."
+- Rationale: States in one place what a summon cannot do, so that no player asks whether a model with dodge dice may parry, walk, or attack outside its card.
+- Source: final rulings, phantom-E02 (`06_final_rulings.md`); Official Phantoms booklet: summons are 'partially controlled by their behaviour cards and partially controlled by the players' and 'have fewer options each activation' (lines 236-239, 259-261); a data card shows block, resist and dodge only (lines 152-158).
+
+### CH-12-037 · §12.2 (opening paragraph)
+- Type: ruling
+- Before: "Standard invaders appear before the *mini-boss* is defeated, and advanced invaders after it (see §2.4)."
+- After: "Standard invaders appear before the *mini-boss* is defeated, and advanced invaders after it (see §2.4). In campaign play, standard invaders appear while the current tier is tier one, and advanced invaders once it is tier two (see §18.5)."
+- Rationale: [MECHANICAL CHANGE] A campaign has several mini-bosses or none, so 'the mini-boss' names no moment there; the current tier is the one switch every campaign has, and it keeps the stronger invaders in step with the stronger treasure.
+- Source: final rulings, phantom-E03 (`06_final_rulings.md`); §18.5 and §18.7 of this book (tier two opens only when the bonfire ascetic is burnt); official Phantoms booklet ties the split to 'the mini boss' of a one-mini-boss game only (lines 363-377).
+
+### CH-12-038 · §12.2, Invasions
+- Type: ruling
+- Before: "- During the exploration: when a character becomes embered by discarding an *ember card* (see §7.3), if one or more face-down encounter cards lie on the encounter tiles."
+- After: "- During the exploration: when a character becomes embered by discarding an *ember card* (see §7.3), if one or more face-down encounter cards that carry no black cube lie on the encounter tiles (see §7.5, Encounter Resolution)."
+- Rationale: [MECHANICAL CHANGE] A reset turns every encounter card face down, cleared ones included; without the qualifier an invader token can land on an encounter the party skips and the invasion is wasted.
+- Source: final rulings, phantom-E04 (`06_final_rulings.md`); Official Phantoms booklet: tokens go to 'each unexplored encounter tile' (lines 363-369); Hollowed Edition: 'place invader tokens on all undefeated encounters' (lines 342-343); §11.5 step 1 of this book.
+
+### CH-12-039 · §12.2, Invasions
+- Type: clarification
+- Before: "No more than one invasion is provoked before the mini-boss is defeated, and no more than one after it. Once an invasion has been provoked, no further invasion is provoked in that part of the game, however many characters are or become embered. If no character is embered when the encounter cards are dealt, no invader token is placed at that step.
+
+The embering of every character at a boss's defeat (see §16.5) provokes no invasion at that moment. The invasion that follows the mini-boss's defeat is provoked when the encounter cards of the next setup are dealt (see §6.6)."
+- After: "No more than one invasion is provoked before the mini-boss is defeated, and no more than one after it, however many characters are or become embered. The embering of every character at a boss's defeat provokes no invasion at that moment (see §16.5). The invasion that follows the mini-boss's defeat is provoked when the encounter cards of the next setup are dealt (see §6.6). In campaign play, no more than one invasion is provoked in each *section* (see §18.1)."
+- Rationale: Two paragraphs become one without losing a rule: the dropped sentences restated the two trigger moments; the campaign limit of §18.1 is cited where the limit is stated.
+- Source: final rulings, phantom-E05 (`06_final_rulings.md`); Gate 1 OQ-28 (one invasion per leg); §18.1, Section Setup of this book.
+
+### CH-12-040 · §12.2, Invader Tokens, step 2
+- Type: ruling
+- Before: "2. Add blank invader tokens, face down, until there is one token for each face-down encounter card on the encounter tiles. If the blank tokens run out, make up the number with invader tokens of the kind not drawn in step 1; such a token is treated as blank when it is revealed."
+- After: "2. Add blank invader tokens, face down, until there is one token for each face-down encounter card that carries no black cube. If the blank tokens run out, make up the number with invader tokens of the kind not drawn in step 1; such a token is treated as blank when it is revealed."
+- Rationale: [MECHANICAL CHANGE] Same qualifier as the trigger: a cleared encounter receives no token. The substitution rule for a shortage of blank tokens is kept unchanged.
+- Source: final rulings, phantom-E06 (`06_final_rulings.md`); Official Phantoms booklet lines 363-369 (unexplored tiles only) and components list, three blank tokens (line 103).
+
+### CH-12-041 · §12.2, Invader Tokens, step 4
+- Type: ruling
+- Before: "4. Place one token face down on each face-down encounter card."
+- After: "4. Place one token face down on each of those encounter cards."
+- Rationale: [MECHANICAL CHANGE] Keeps step 4 in line with step 2.
+- Source: final rulings, phantom-E07 (`06_final_rulings.md`); Follows phantom-E06.
+
+### CH-12-042 · §12.2, Invader Tokens
+- Type: clarification
+- Before: "An invader token stays face down on its encounter card until the characters fight that encounter. It stays in place when the encounters are *reset* (see §11.5) and when the party skips its encounter (see §7.5, Encounter Start). Invader tokens still on the tiles when the mini-boss is defeated are returned to the supply unrevealed (see §6.6)."
+- After: "An invader token stays face down on its encounter card until the characters fight that encounter, and it stays in place when the encounters are *reset* (see §11.5). Invader tokens still on the tiles when the mini-boss is defeated are returned to the supply unrevealed (see §6.6)."
+- Rationale: Once tokens go only to encounter cards without a black cube, no encounter that holds a token can be skipped, so the skip clause is dead text and is cut.
+- Source: final rulings, phantom-E08 (`06_final_rulings.md`); §7.5, Encounter Start of this book: only an encounter whose card carries a black cube may be skipped.
+
+### CH-12-043 · §12.2, Invader Tokens (example)
+- Type: clarification
+- Before: "*Example.* The Herald discards an ember card while two face-down encounter cards lie on the tiles ahead, before the mini-boss is defeated."
+- After: "*Example.* The Herald discards an ember card while two face-down encounter cards, neither of which carries a black cube, lie on the tiles ahead, before the mini-boss is defeated."
+- Rationale: The example states the condition the rule now names; its numbers are unchanged.
+- Source: final rulings, phantom-E09 (`06_final_rulings.md`); Follows phantom-E04 and phantom-E06.
+
+### CH-12-044 · §12.2, Invader Rewards
+- Type: clarification
+- Before: "The invader's treasure card is awarded to the party at once (see §7.7). The players decide which character receives it. If they cannot agree, the card goes to the character who holds the aggro token at that moment."
+- After: "The invader's treasure card is awarded to the party at once, and the players decide which character receives it as for any card awarded to the party (see §7.7)."
+- Rationale: One tie-break, stated once in §7.7 and worded to cover a card awarded during an encounter, replaces a local restatement that differed from it by one phrase.
+- Source: final rulings, phantom-E10 (`06_final_rulings.md`); Gate 1 OQ-29 (tie-break to the aggro holder everywhere); official Phantoms booklet: treasure card gained 'immediately' (lines 528-533).
+
+### CH-12-045 · §12.2, End of an Invasion
+- Type: clarification
+- Before: "An invader is an enemy model and counts towards clearing an encounter. While the invader is on the tile, the encounter is not *cleared*: it is cleared only when every enemy model, the invader included, has been killed, or when the invader has vanished and every other enemy model has been killed (see §7.5, Encounter Resolution)."
+- After: "An invader is an enemy model, and its encounter is not *cleared* while it is on the tile (see §7.5, Encounter Resolution). An invader leaves the tile only when it is killed or when it vanishes."
+- Rationale: The ruling is confirmed; the paragraph says the same thing in half the words and lets the general rule of §7.5 do the work.
+- Source: final rulings, phantom-E11 (`06_final_rulings.md`); Official Phantoms booklet: the invader 'will fight alongside the other enemies present' and leaves only if killed or if the party is defeated (lines 492-495, 527-533).
+
 ## Chapter 13 — Mimics
 
 ### CH-13-001 · §13 Mimics
@@ -3483,6 +4195,48 @@ Every substantive change made in Phase 2A between the manuscript (`work/docx/man
 - Rationale: A-092 (ambush cards in the component list) is owned by §2.9. C-087 (one tie-break for contested treasure) is owned by §7.7, which this chapter cites. The OPTIONAL findings A-044 and C-121 are applied in CH-13-014 and CH-13-002; none is skipped.
 - Source: A-092, C-087, A-044, C-121
 
+### CH-13-025 · §13.1
+- Type: clarification
+- Before: "- Mimic: the chest is a mimic. A *mimic encounter* begins at once, before any recovery or reward (see §13.2)."
+- After: "- Mimic: the chest is a mimic. A *mimic encounter* begins at once, before the recovery and the rewards of the cleared encounter (see §13.2)."
+- Rationale: 'Before any recovery' no longer holds once the characters shed their stamina cubes before the mimic's first turn.
+- Source: final rulings, phantom-E18 (`06_final_rulings.md`); Follows phantom-E19.
+
+### CH-13-026 · §13.2
+- Type: ruling
+- Before: "The characters begin the mimic encounter as the cleared encounter left them. Each character keeps their damage cubes, stamina cubes, and condition tokens, and the *aggro token* stays with its holder."
+- After: "Before the mimic's first turn, each character removes every stamina cube from their *endurance bar*. Nothing else is recovered. Each character keeps their damage cubes and condition tokens, no token is turned to its ready side, and the *aggro token* stays with its holder."
+- Rationale: [MECHANICAL CHANGE] The ambush stays dangerous because damage carries over, but the fight no longer opens with characters who cannot act, and the party has no reason to stall on the last enemy to shed stamina before opening a chest.
+- Source: final rulings, phantom-E19 (`06_final_rulings.md`); Audit finding B-035 (approved at Gate 1, not applied: CH-13-022); official Explorers booklet removes all cubes before the mimic (DS-Explorers-Rules-Web.txt lines 464-467); Hollowed Edition: 'Players heal as normal' before opening (lines 378-380).
+
+### CH-13-027 · §13.2
+- Type: ruling
+- Before: "The Hungry Mimic is fought if the mini-boss has not been defeated, and the Voracious Mimic if it has."
+- After: "The Hungry Mimic is fought if the mini-boss has not been defeated, and the Voracious Mimic if it has. In campaign play, the Hungry Mimic is fought while the current tier is tier one, and the Voracious Mimic once it is tier two (see §18.5)."
+- Rationale: [MECHANICAL CHANGE] Same anchor as for invaders: a campaign has no single mini-boss, and the mimic's extra card is drawn from the treasure deck of the current tier, so the stronger mimic guards the stronger treasure.
+- Source: final rulings, phantom-E20 (`06_final_rulings.md`); §13.3 step 2, §18.5 and §18.7 of this book; official Explorers booklet: 'a mini boss' (lines 476-482).
+
+### CH-13-028 · §13.3, step 4
+- Type: ruling
+- Before: "4. Return the chest token and the *ambush card* to the supply."
+- After: "4. Return the chest token to its node, open side up, and the *ambush card* to the supply."
+- Rationale: [MECHANICAL CHANGE] An opened chest already stays on its node for the rest of the game; treating the looted mimic's chest the same way removes an exception from §5.5, §7.5 and §11.5.
+- Source: final rulings, phantom-E21 (`06_final_rulings.md`); §5.5, Chests of this book ('an opened chest is never closed again'); official Explorers booklet removes only the mimic (lines 549-556).
+
+### CH-13-029 · §13.3
+- Type: ruling
+- Before: "A killed mimic does not return. Its chest token is not placed again when the encounter is *reset*, and the chest's node is used as a basic node (see §5.1)."
+- After: "A killed mimic does not return. Its chest stays on its node as an opened chest (see §5.5, Chests)."
+- Rationale: [MECHANICAL CHANGE] Follows the change to step 4: no special terrain state is left behind by a killed mimic.
+- Source: final rulings, phantom-E22 (`06_final_rulings.md`); §5.5, Chests of this book.
+
+### CH-13-030 · §13.3 (example)
+- Type: ruling
+- Before: "The Hungry Mimic replaces the chest token, takes the first turn, and attacks the Knight, who still carries all seven cubes. The characters kill the mimic. The party gains the chest's treasure card and one card drawn from the tier one treasure deck. Each character then gains four souls and one of the treasure cards dealt to the tile, and the Knight removes all four stamina cubes and one damage cube."
+- After: "The Hungry Mimic replaces the chest token, and the Knight removes the four stamina cubes. The mimic takes the first turn and attacks the Knight, who still carries the three damage cubes. The characters kill the mimic. The party gains the chest's treasure card and one card drawn from the tier one treasure deck. Each character then gains four souls and one of the treasure cards dealt to the tile, and the Knight removes the stamina cubes placed during the mimic encounter and one damage cube."
+- Rationale: [MECHANICAL CHANGE] The example now computes from §13.2 as amended: stamina cubes are removed before the mimic's first turn, damage cubes are kept.
+- Source: final rulings, phantom-E23 (`06_final_rulings.md`); Follows phantom-E19; Level 2 full reward of four souls from the table in §7.6.
+
 ## Chapter 14 — Crystal Lizards
 
 ### CH-14-001 · §14 Crystal Lizards
@@ -3561,6 +4315,20 @@ Every substantive change made in Phase 2A between the manuscript (`work/docx/man
 - After: no change
 - Rationale: A-062 (OPTIONAL) would limit the repeating of a cleared encounter; that rule is owned by §7.5, which did not adopt it, and nothing in this chapter depends on it. C-077 (Titanite Scale cards in the component list) is owned by §2.9. The OPTIONAL findings A-097 and C-121 are applied in CH-14-008 and CH-14-004.
 - Source: A-062, C-077, A-097, C-121
+
+### CH-14-012 · §14
+- Type: ruling
+- Before: "When a character kills a crystal lizard, that character takes one Titanite Scale card from the supply at once and places it in their *inventory* (see §4.2)."
+- After: "When a crystal lizard is killed, the party is awarded one Titanite Scale card from the supply at once (see §4.2). The players decide which character receives it, as for any card awarded to the party (see §7.7)."
+- Rationale: [MECHANICAL CHANGE] An award to the party needs no rule for a crystal lizard killed by a condition or by an attack that hits several models, and it treats this card as every other card won from a kill is treated.
+- Source: final rulings, phantom-E24 (`06_final_rulings.md`); Official Iron Keep booklet: the card is added 'to the inventory', which is shared (lines 125-127); §7.7 of this book.
+
+### CH-14-013 · §14
+- Type: ruling
+- Before: "Once a crystal lizard has been killed in an encounter, no crystal lizard is placed in that encounter again, however many times the encounter is *reset* and fought (see §11.5). The party marks the tile to record the kill, for example by laying the killed model upside down beside the tile's encounter card. Until a crystal lizard has been killed there, the crystal lizards are placed again each time the encounter is set up."
+- After: "Once a crystal lizard has been killed in an encounter, no crystal lizard is placed in that encounter again, however many times the encounter is *reset* and fought (see §11.5). To record the kill, one *damage cube* is placed on the encounter card of that encounter, where it stays until the card is returned to the game box. Until a crystal lizard has been killed there, the crystal lizards are placed again each time the encounter is set up."
+- Rationale: A definite marker in the book's own idiom (a cube on the encounter card, as for a cleared encounter) replaces an example that fails on the second marked tile, because only two crystal lizard models are supplied.
+- Source: final rulings, phantom-E25 (`06_final_rulings.md`); §2.2 of this book (2x Crystal Lizard); official Iron Keep booklet suggests 'an opened chest token beside the tile' (lines 128-131); §7.5 (black cube marks a cleared encounter).
 
 ## Chapter 17 — Boss Special Rules
 
@@ -3907,6 +4675,27 @@ Every substantive change made in Phase 2A between the manuscript (`work/docx/man
 - Rationale: Matches the wording of the campaign lists in §19.
 - Source: QA observation (example and consistency verification)
 
+### CH-17-050 · §17.2
+- Type: correction
+- Before: "### Dragonslayer Ornstein and Executioner Smough"
+- After: "### Dragon Slayer Ornstein and Executioner Smough"
+- Rationale: Printed name, as campaign-E12.
+- Source: final rulings, campaign-E13 (`06_final_rulings.md`); As campaign-E12.
+
+### CH-17-051 · §17.2
+- Type: correction
+- Before: "fought with two models, Dragonslayer Ornstein and Executioner Smough (see §2.3)."
+- After: "fought with two models, Dragon Slayer Ornstein and Executioner Smough (see §2.3)."
+- Rationale: Printed name, as campaign-E12.
+- Source: final rulings, campaign-E14 (`06_final_rulings.md`); As campaign-E12.
+
+### CH-17-052 · §17.5
+- Type: correction
+- Before: "The Old Dragonslayer uses the Dragonslayer Ornstein model of the core set"
+- After: "The Old Dragonslayer uses the Dragon Slayer Ornstein model of the core set"
+- Rationale: Printed name, as campaign-E12; 'Old Dragonslayer' is one word on its own card and is unchanged.
+- Source: final rulings, campaign-E15 (`06_final_rulings.md`); As campaign-E12; Explorers booklet contents ('Old Dragonslayer').
+
 ## Chapter 19 — Campaigns
 
 ### CH-19-001 · §19 Campaigns
@@ -4139,6 +4928,163 @@ Every substantive change made in Phase 2A between the manuscript (`work/docx/man
 - After: no text in this chapter
 - Rationale: A-039 is settled in §2.3 and §17.2 (one boss, listed here as "Ornstein & Smough"). A-049 is moot (Gate 1 — OQ-14). A-094 belongs to §6.7 and §18.1 and is cited from §19.1 only. C-074 and A-103 correct §18.1; the introduction here states twelve. No OPTIONAL finding was skipped: A-110, F-052, and D-027 are applied.
 - Source: A-039, A-049, A-094, C-074, A-103, A-110, F-052, D-027, Gate 1 — OQ-14, OQ-25
+
+### CH-19-034 · §19.4
+- Type: correction
+- Before: "## 19.4 The Gauntlet
+
+This campaign requires the core set and the Phantoms expansion. The party may add the *encounter cards* of any other expansion.
+
+The party does not place *invader tokens* during this campaign (see §12.2). An *encounter* that lists an *invader* includes that invader the first time the characters enter that encounter, and the invader is fought under the invader rules (see §12.2). Each listed invader appears once in the campaign, whether that encounter is *cleared* or *failed*."
+- After: "## 19.4 The Gauntlet
+
+This campaign requires the core set and the Phantoms expansion. The party may add the *encounter cards* of any other expansion.
+
+The party does not place *invader tokens* during this campaign (see §12.2). An *encounter* that lists an *invader* includes that invader every time the characters enter that encounter, until the invader is killed. A listed invader that has been killed does not appear again. The invader is fought under the invader rules (see §12.2), except that an invader that vanishes, or whose encounter is *failed*, returns the next time the characters enter that encounter."
+- Rationale: [MECHANICAL CHANGE] The Gauntlet's own rule differs from Ambush Lies Ahead: each invader must be beaten, which is the point of the campaign.
+- Source: final rulings, campaign-E35 (`06_final_rulings.md`); DS-Phantoms-Rules-lores.txt 636-640: 'Unlike the standard invader rules or other campaign encounters, when an encounter lists an invader, that invader is part of the encounter every time the party enters that encounter until the invader is defeated.'
+
+### CH-19-035 · §19.6
+- Type: correction
+- Before: "Section One has no *bonfire* tile. When the characters rest during Section One, the party spends one *spark* and the characters are restored as for any rest (see §11.2). The characters revive on the bonfire tile listed in Section Two and enter Section One again at its first *encounter* tile. The *Firekeeper* and *Blacksmith Andre* cannot be visited until Section Two.
+
+### Section One: Undead Asylum
+
+1. Level 1 encounter
+2. Level 1 encounter
+3. Asylum Demon (*mini-boss*)"
+- After: "In Section One the Asylum Demon is fought on the mega-boss side of the Asylum Demon expansion's *mega-boss game board*, with its pillar tokens (see §17.3).
+
+### Section One: Undead Asylum
+
+1. *Bonfire* tile
+2. Level 1 *encounter*
+3. Level 1 encounter
+4. Asylum Demon (*mini-boss*)"
+- Rationale: [MECHANICAL CHANGE] The official list gives Section One a bonfire tile, so the special rest rule answers a problem that does not exist and is deleted.
+- Source: final rulings, campaign-E36 (`06_final_rulings.md`); Official Asylum Demon booklet, Demon Hunting: 'Section 1 Undead Asylum: Bonfire Tile, Level 1 Encounter, Level 1 Encounter, Asylum Demon (Mini Boss)'; same booklet: the Asylum Demon's encounter 'takes place on the Mega Boss game board instead of the Mini Boss tile'.
+
+### CH-19-036 · §19.6
+- Type: correction
+- Before: "### Section Four: Sen's Fortress"
+- After: "### Section Four: Northern Undead Asylum"
+- Rationale: The duplicated section name was a copying error.
+- Source: final rulings, campaign-E37 (`06_final_rulings.md`); Official Asylum Demon booklet: 'Section 4 Northern Undead Asylum: Bonfire Tile, Level 2 Encounter, Level 3 Encounter, Level 4 Encounter, Stray Demon (Mega Boss)'.
+
+### CH-19-037 · §19.7
+- Type: correction
+- Before: "### Section Four: The Abyss
+
+1. Bonfire tile
+2. *Level 4 encounter*
+3. Level 4 encounter
+4. The Four Kings (*mega-boss*)"
+- After: "### Section Four: Penultimate Trial
+
+1. Bonfire tile
+2. Level 3 encounter
+3. Level 3 encounter
+4. *Level 4 encounter*
+5. Ornstein & Smough (main-boss)
+
+### Section Five: The Abyss
+
+1. Bonfire tile
+2. Level 4 encounter
+3. Level 4 encounter
+4. The Four Kings (*mega-boss*)"
+- Rationale: [MECHANICAL CHANGE] The official campaign has five sections; the manuscript omitted the fourth.
+- Source: final rulings, campaign-E38 (`06_final_rulings.md`); Official Four Kings booklet, Call of the Abyss: 'Section 4 Penultimate Trial: Bonfire Tile, Level 3 Encounter, Level 3 Encounter, Level 4 Encounter, Ornstein & Smough (Main Boss)'; 'Section 5 The Abyss: Bonfire Tile, Level 4 Encounter, Level 4 Encounter, The Four Kings (Mega Boss)'; publisher's production update: 'over five game sessions'.
+
+### CH-19-038 · §19.10
+- Type: correction
+- Before: "2. Level 3 encounter
+3. Level 3 encounter: Outskirts of Blighttown
+4. *Level 4 encounter*
+5. Ornstein & Smough (main-boss)"
+- After: "2. Level 3 encounter
+3. Level 3 encounter
+4. *Level 4 encounter*: Outskirts of Blighttown
+5. Ornstein & Smough (main-boss)"
+- Rationale: [MECHANICAL CHANGE] Outskirts of Blighttown is the Level 4 encounter of the section, not a Level 3 encounter.
+- Source: final rulings, campaign-E39 (`06_final_rulings.md`); Official Gaping Dragon booklet, Into the Depths: 'Section 4 Warriors' Revenge: Bonfire Tile, Level 3 Encounter, Level 3 Encounter, Outskirts of Blighttown Level 4 Encounter, Ornstein & Smough (Main Boss)'.
+
+### CH-19-039 · §19.10
+- Type: completion
+- Before: "This campaign requires the core set, the Darkroot expansion, and the Gaping Dragon expansion. The party may add the Explorers and Characters expansions."
+- After: "This campaign requires the core set, the Darkroot expansion, and the Gaping Dragon expansion. The party may add the Explorers and Characters expansions.
+
+The party may play this campaign without the Darkroot expansion. The Dancer of the Boreal Valley then takes the place of Artorias in Section Three, and the encounter decks of Levels 1 to 3 are built only from the *encounter cards* of the core set."
+- Rationale: [MECHANICAL CHANGE] The official campaign gives this substitution, which opens the campaign to a party without Darkroot.
+- Source: final rulings, campaign-E40 (`06_final_rulings.md`); Official Gaping Dragon booklet: 'If you would like to play this campaign but do not have access to the Darkroot expansion, you can leave the Darkroot encounter cards out of the encounter deck and substitute the Dancer for Artorias in the Crypt of the Fallen.'
+
+### CH-19-040 · §19.12
+- Type: completion
+- Before: "Every *boss* encounter of this campaign, including the *mini-boss* encounter, is fought on a *mega-boss game board*. After Section One is completed, the party plays Section Two A, Section Two B, and Section Two C in the order it chooses. The players win the campaign when all three are completed."
+- After: "Every *boss* encounter of this campaign, including the *mini-boss* encounter, is fought on a *mega-boss game board*. The Asylum Demon is fought on the mega-boss side of the Asylum Demon expansion's game board (see §17.3). When Section One is completed, every character gains 16 *souls* in addition to the boss reward (see §7.6). The party then plays Section Two A, Section Two B, and Section Two C in the order it chooses, and sets up each of them when the section before it is completed (see §18.1, Section Setup). The players win the campaign when all three are completed.
+
+The party may replace the mega-boss of any of these three sections with another mega-boss it owns, and may add further sections of the same form. Each such section uses the game board and the Level 4 encounter cards of its own mega-boss."
+- Rationale: [MECHANICAL CHANGE] Restores the campaign's own soul grant, names the board for the mini-boss, and says when each of the three free-order sections is set up.
+- Source: final rulings, campaign-E41 (`06_final_rulings.md`); Official Manus booklet, Big Game Hunting: 'When the party successfully defeats Section 1, each character gains 16 souls in addition to the souls they would gain normally'; 'each boss fight takes place on a mega boss tile, even the mini boss fight'; 'Players are also welcome to play Big Game Hunting with additional mega bosses or with alternative mega bosses'.
+
+### CH-19-041 · §19.1
+- Type: correction
+- Before: "### Section Four: Bathed in Flame"
+- After: "### Section Four: Royal Wood"
+- Rationale: Every other section heading is the section's printed name; 'Bathed in Flame' is the title of the scenario, not of the section.
+- Source: final rulings, campaign-E42 (`06_final_rulings.md`); DS-BDK-Rules-web.txt 500-530: scenario 'Bathed in Flame', 'Section 4 Royal Wood'.
+
+### CH-19-042 · §19.9
+- Type: clarification
+- Before: "every character gains the campaign soul reward for its level and two further *souls* (see §18.5)."
+- After: "every character gains the soul reward for its level and two further *souls* (see §7.6; §18.5)."
+- Rationale: Campaign play has no reward table of its own, so 'the campaign soul reward' points at nothing.
+- Source: final rulings, campaign-E43 (`06_final_rulings.md`); §18.5 (standard rewards apply); official Undead Colosseum grants a raised flat reward because cleared encounters are never fought again (DS-EC-Rules-Web.txt 615-628).
+
+### CH-19-043 · §19.8
+- Type: clarification
+- Before: "When the party opens the chest, a *mimic* encounter begins as if an ambush card showing Mimic had been revealed (see §13.1)."
+- After: "Each time the party opens the chest, a *mimic* encounter begins as if an ambush card showing Mimic had been revealed (see §13.1). A failed mimic encounter returns the mimic to the chest (see §13.4)."
+- Rationale: With no ambush card to serve as the record, the text must say that the chest is a mimic on every attempt.
+- Source: final rulings, campaign-E44 (`06_final_rulings.md`); §13.4; Explorers booklet: 'Do not place an Ambush card beside this tile; the chest is automatically a mimic. The party proceeds to Section 3 when the mimic is defeated.'
+
+### CH-19-044 · §19 introduction
+- Type: completion
+- Before: "Twelve roads lead out from the first bonfire. One climbs through the Undead Burg to Anor Londo, another descends into the Abyss, and a third never leaves the arena. This chapter sets out all twelve campaigns, section by section."
+- After: "Sixteen roads lead out from the first bonfire. One climbs through the Undead Burg to Anor Londo, another descends into the Abyss, and a third never leaves the arena. This chapter sets out all 16 campaigns, section by section."
+- Rationale: The chapter now holds 16 campaigns.
+- Source: final rulings, campaign-E46 (`06_final_rulings.md`); As campaign-E45.
+
+### CH-19-045 · §19.12 (insert §19.13 to §19.16 after it)
+- Type: completion
+- Before: "3. Manus, Father of the Abyss (mega-boss)"
+- After: "3. Manus, Father of the Abyss (mega-boss)
+
+## 19.13 Go Beyond Death
+
+This campaign requires the core set, the Explorers expansion, the Iron Keep expansion, and the Old Iron King expansion. The party may add the Characters expansion.
+
+The Level 1, Level 2, and Level 3 encounter decks are built from the *encounter cards* of the core set, the Explorers expansion, and the Iron Keep expansion together (see §6.5, Expansion Encounters). Both *Level 4 encounters* are fought on the Old Iron King expansion's *mega-boss game board* (see §18.1).
+
+### Section One: Tower of Flame
+
+1. *Bonfire* tile
+2. Level 1 *encounter*
+3. Level 1 encounter
+4. Level 1 encounter
+5. Level 2 encounter
+6. Old Dragonslayer (*mini-boss*)
+
+### Section Two: Threshold Bridge
+
+1. Bonfire tile
+2. Level 1 encounter
+3. Level 2 encounter
+4. Level 2 encounter
+5. Level 3 encounter
+6. Smelter Demon (*main-boss*) […]"
+- Rationale: [MECHANICAL CHANGE] Adds the four published campaigns the book lacked (items campaign-041 to campaign-044), restated in this book's terms.
+- Source: final rulings, campaign-E48 (`06_final_rulings.md`); work/text/DS-OIK-Rules-web.txt (Go Beyond Death), DS-TLG-Rules.txt (Footsteps of Giants), DS-VotBV-Rules-web.txt (Treasures of the Ice Cave), DS-GD-Rules-web.txt (Demons & Dragons), campaign pages.
 
 ## Chapter 15 — Boss Encounters
 
@@ -4641,6 +5587,13 @@ Every substantive change made in Phase 2A between the manuscript (`work/docx/man
 - Rationale: Not restated here because another section owns the rule and this chapter cites it: A-024 (enemy repeat, §8.3 and §9.3), A-039 (two boss models, §17.1), A-045 (invasion timing, §12.2), A-082 (terrain and movement, §5.5), A-122 (boss encounter setup, §15.2), A-005 (removal of hollow, §7.2), A-007 (ember card held at embering, §7.3), A-042 (heat-up timing, §15.5).
 - Source: A-024, A-039, A-045, A-082, A-122, A-005, A-007, A-042
 
+### CH-16-033 · §16.4
+- Type: clarification
+- Before: "A *summon* does not hold the aggro token, and damage inflicted by a summon does not move it (see §12.1)."
+- After: "A *summon* does not hold the aggro token, and damage inflicted by a summon does not move it. While the Distract icon of a summon's behaviour card is in effect, the boss treats the summon as the holder (see §12.1)."
+- Rationale: §16.4 owns boss aggro and did not mention the one effect that redirects it; the sentence points to §12.1 without restating the rule.
+- Source: final rulings, phantom-E17 (`06_final_rulings.md`); Official Phantoms booklet, Distract (lines 293-298).
+
 ## Chapter 23 — Appendices
 
 ### CH-23-001 · Appendix A Weapon Stat Revisions and Appendix B Card Amendments
@@ -4854,6 +5807,45 @@ Every substantive change made in Phase 2A between the manuscript (`work/docx/man
 - After: "**A.** Not always. While the invader is on the tile, the encounter is not cleared. It is cleared when every enemy model, the invader included, has been killed, or when the invader has vanished and every other enemy model has been killed (see §12.2, End of an Invasion)."
 - Rationale: §12.2 also clears the encounter when the invader has vanished and every other enemy model is dead.
 - Source: QA-004 (example and consistency verification)
+
+### CH-22-008 · §22.2
+- Type: ruling
+- Before: "**A.** No. A parry requires a shield in the left weapon slot. A weapon that bears"
+- After: "**A.** No. A parry requires a shield in a weapon slot. A weapon that bears"
+- Rationale: [MECHANICAL CHANGE] Follows §9.6 as changed by combat-E22.
+- Source: final rulings, combat-E34 (`06_final_rulings.md`); As combat-E22.
+
+### CH-22-009 · §22.2
+- Type: ruling
+- Before: "Each of its attack options then adds one to its attack value. Spells are never scaled (see §10.5)."
+- After: "Each of its attack options then adds one to its attack value. A weapon whose stat requirements are all zero is never scaled, and spells are never scaled (see §10.5)."
+- Rationale: [MECHANICAL CHANGE] Follows §10.5 as changed by combat-E29.
+- Source: final rulings, combat-E35 (`06_final_rulings.md`); As combat-E29.
+
+### CH-22-010 · §22.1
+- Type: ruling
+- Before: "**A.** Only to burn the *bonfire ascetic*, which the party pays for together (see §18.7). Every other cost is paid from the acting character's own souls: the Firekeeper's stat tiers, Blacksmith Andre's cards, a *summon*, and *transposition* (see §7.6)."
+- After: "**A.** Only in campaign play, to burn the *bonfire ascetic* or to buy back a *spark*, which the party pays for together (see §18.3; §18.7). Every other cost is paid from the acting character's own souls: the Firekeeper's stat tiers, Blacksmith Andre's cards, a *summon*, and *transposition* (see §7.6)."
+- Rationale: [MECHANICAL CHANGE] F.A.Q. follows §18.3 and §18.7.
+- Source: final rulings, campaign-E23 (`06_final_rulings.md`); As campaign-E18.
+
+### CH-22-011 · §22.6
+- Type: clarification
+- Before: "**A.** Not always. While the invader is on the tile, the encounter is not cleared. It is cleared when every enemy model, the invader included, has been killed, or when the invader has vanished and every other enemy model has been killed (see §12.2, End of an Invasion)."
+- After: "**A.** Yes, unless it vanishes. The encounter is not cleared while the invader is on the tile, and the invader leaves the tile only when it is killed or when the death of a character makes it vanish (see §12.2, End of an Invasion)."
+- Rationale: Same rule, answered the way the question is asked and in the words of §12.2 as amended.
+- Source: final rulings, phantom-E40 (`06_final_rulings.md`); Follows phantom-E11.
+
+### CH-22-012 · §22.6
+- Type: ruling
+- Before: "**A.** The mimic encounter is failed, and with it the encounter that held the chest. The mimic returns to its chest, and the characters must rest at the bonfire. Each later time that encounter is cleared, the party again decides whether to open the chest (see §13.4)."
+- After: "**A.** The mimic encounter is failed, and with it the encounter that held the chest. The mimic returns to its chest, and the characters must rest at the bonfire. Each later time that encounter is cleared, the party again decides whether to open the chest (see §13.4).
+
+**Q.** Do the characters recover before a mimic is fought?
+
+**A.** They remove their stamina cubes and nothing else. Each character keeps their damage cubes and condition tokens, and a character who died in the cleared encounter stays dead. The recovery and the rewards of the cleared encounter follow the mimic's death (see §13.2; §13.3)."
+- Rationale: [MECHANICAL CHANGE] Players who know the published rule expect a full recovery before the mimic; the answer states this book's rule as amended.
+- Source: final rulings, phantom-E41 (`06_final_rulings.md`); Follows phantom-E19.
 
 ## Chapter 18 — Campaign Play
 
@@ -5144,6 +6136,98 @@ Every substantive change made in Phase 2A between the manuscript (`work/docx/man
 - Rationale: §16.5 step 4 embers every character, the dead included, and an embered character is not hollow; the revival wording implied hollow cubes. No published campaign lists two bosses in one section, so the case arises only in a campaign of the players' own design.
 - Source: QA observation (example and consistency verification)
 
+### CH-18-042 · §18.6, Blacksmith Andre's Shop
+- Type: ruling
+- Before: "Before the shop is restocked, its unsold cards, other than *ember cards*, are placed on the bottom of their treasure decks (see §6.3, Restocking After a Boss). Step 7 of a rest restocks the shop only if a section has been completed and the shop has not been restocked since (see §11.2)."
+- After: "Before the shop is restocked, its unsold cards, other than *ember cards*, are placed on the bottom of their treasure decks (see §6.3, Restocking After a Boss)."
+- Rationale: Removes the reference to the deleted step.
+- Source: final rulings, core-E11 (`06_final_rulings.md`); As core-E09.
+
+### CH-18-043 · §18.1, Level 4 Encounters and Mega-Bosses
+- Type: ruling
+- Before: "The Level 4 encounter is set up, fought, and rewarded as in the standard game (see §6.7, Level 4 Encounters), with the soul reward of the standard game (see §18.5)."
+- After: "The Level 4 encounter is set up and fought as in the standard game (see §6.7, Level 4 Encounters). It is rewarded as any other encounter of its section: every character gains the soul reward of a Level 4 encounter (see §18.5), and one treasure card per character of the current tier is dealt to the game board with its encounter card. No mega-boss treasure card is dealt to a Level 4 encounter in campaign play; a mega-boss's treasure cards are gained only by defeating that mega-boss (see §16.5)."
+- Rationale: [MECHANICAL CHANGE] A mega-boss has two treasure cards, and Call of the Abyss and Into the Depths each list three Level 4 encounters before one mega-boss, so the standard reward cannot be paid; the campaign's own rule is that boss treasure comes only from bosses.
+- Source: final rulings, campaign-E16 (`06_final_rulings.md`); §6.7 step 5 (one mega-boss treasure card per Level 4 encounter); official booklets: two treasure cards per mega-boss; official campaign lists (Four Kings and Gaping Dragon booklets); source manuscript 'Boss treasure is only obtained by defeating bosses'.
+
+### CH-18-044 · §18.5
+- Type: ruling
+- Before: "The treasure of a *Level 4 encounter* is that of the standard game (see §6.7, Level 4 Encounters)."
+- After: "A *Level 4 encounter* awards treasure cards of the current tier, as any other encounter does, and no mega-boss treasure card (see §18.1, Level 4 Encounters and Mega-Bosses)."
+- Rationale: [MECHANICAL CHANGE] Keeps §18.5 in step with §18.1 and removes the contradiction with the sentence before it.
+- Source: final rulings, campaign-E17 (`06_final_rulings.md`); As campaign-E16.
+
+### CH-18-045 · §18.3
+- Type: ruling
+- Before: "While the party rests, it may buy back one spark. Every character pays four *souls* of their own to the supply, and the spark dial is turned up by one. If any character holds fewer than four souls, the party cannot buy the spark, because souls cannot be transferred or pooled (see §7.6)."
+- After: "While the party rests, it may buy back one spark. The cost is four *souls* for each character in the party, paid to the supply by any combination of the characters, and the spark dial is turned up by one. The spark is not bought unless the full cost is paid. This cost and the cost of the *bonfire ascetic* are the only costs that the characters pay together (see §18.7); souls are never passed from one character to another (see §7.6)."
+- Rationale: [MECHANICAL CHANGE] A party purchase is paid by the party, as the bonfire ascetic already is, so that one character without souls cannot block it.
+- Source: final rulings, campaign-E18 (`06_final_rulings.md`); Official 2017 campaign rules: sparks bought 'at a cost of 2 souls per character in the group' from the shared soul cache (DS-Core-Rules-lores.txt 1601-1606); source manuscript and §18.7: the ascetic is paid 'from any combination of character contributions'.
+
+### CH-18-046 · §18.3
+- Type: ruling
+- Before: "The Knight holds six souls, the Herald four, and the Assassin five. Each of them pays four souls, and the dial is turned up to two. The Knight is left with two souls, the Herald with none, and the Assassin with one."
+- After: "The Knight holds six souls, the Herald four, and the Assassin five. A spark costs 12 souls for three characters. The Knight pays six souls, the Herald two, and the Assassin four, and the dial is turned up to two. The Knight is left with no souls, the Herald with two, and the Assassin with one."
+- Rationale: [MECHANICAL CHANGE] The example must compute from the pooled payment.
+- Source: final rulings, campaign-E19 (`06_final_rulings.md`); 4 x 3 = 12; 6 + 2 + 4 = 12.
+
+### CH-18-047 · §18.7
+- Type: ruling
+- Before: "This payment is the one exception to the rule that souls cannot be pooled (see §7.6)."
+- After: "This payment and the cost of a bought *spark* are the only exceptions to the rule that souls cannot be pooled (see §7.6; §18.3)."
+- Rationale: [MECHANICAL CHANGE] Two party purchases now share one payment rule.
+- Source: final rulings, campaign-E20 (`06_final_rulings.md`); As campaign-E18.
+
+### CH-18-048 · §18.6, Shop Price Table
+- Type: clarification
+- Before: "| *Bonfire ascetic* | 16, paid by the party | - |"
+- After: "| *Spark* | 4 for each character, paid by the party | - |
+| *Bonfire ascetic* | 16, paid by the party | - |"
+- Rationale: Puts every campaign price in the one table.
+- Source: final rulings, campaign-E21 (`06_final_rulings.md`); §18.3.
+
+### CH-18-049 · §18.4
+- Type: ruling
+- Before: "A player may join only while the spark dial shows two or more."
+- After: "A player cannot join while the spark dial shows zero."
+- Rationale: [MECHANICAL CHANGE] The cost of joining is one spark, so one spark is enough; a second condition is not needed.
+- Source: final rulings, campaign-E28 (`06_final_rulings.md`); Official 2017 rule: 'New players can join a campaign that is in progress at the cost of 1 spark each' (DS-Core-Rules-lores.txt 1615-1618); source manuscript the same; A-105.
+
+### CH-18-050 · §18.4
+- Type: clarification
+- Before: "A player joins or leaves a standard game in progress under the same rules."
+- After: "A player joins or leaves a standard game in progress under the same rules; the steps that set the spark dial's maximum apply only in campaign play."
+- Rationale: The standard game has no campaign maximum, so two steps of each procedure do not apply to it.
+- Source: final rulings, campaign-E29 (`06_final_rulings.md`); §7.4 and §18.3.
+
+### CH-18-051 · §18.1, Section Setup
+- Type: completion
+- Before: "- The encounter decks are built from the sets the campaign names, in place of the set that supplies the next boss (see §6.5, Expansion Encounters)."
+- After: "- The encounter decks are built from the encounter cards of every set the campaign requires, shuffled together by level, in place of the set that supplies the next boss (see §6.5, Expansion Encounters). Where a campaign names the sets for its encounter decks, only those sets are used."
+- Rationale: [MECHANICAL CHANGE] Six of the twelve campaigns name no sets for their decks; one default closes the gap for all of them.
+- Source: final rulings, campaign-E30 (`06_final_rulings.md`); Official booklets: Call of the Abyss and Into the Depths 'shared deck of encounters from the core game and the Darkroot expansion'; Go Beyond Death 'shared deck ... core game, the Explorers expansion, and the Iron Keep expansion'.
+
+### CH-18-052 · §18.8
+- Type: clarification
+- Before: "Transposition is available after the last boss of the first *section* is defeated. In a *campaign* whose first section ends in an encounter, it is available after that section is completed (see §18.1, Section Completion)."
+- After: "Transposition is available once the first *section* of the *campaign* is completed (see §18.1, Section Completion)."
+- Rationale: Section completion already covers a section that ends in a boss and one that ends in an encounter; one sentence replaces two.
+- Source: final rulings, campaign-E31 (`06_final_rulings.md`); §18.1, Section Completion; F.A.Q. §22.7 already words it this way.
+
+### CH-18-053 · §18.1, Section Setup
+- Type: ruling
+- Before: "- If *invaders* are in play, no more than one invasion is provoked in each section (see §12.2)."
+- After: "- If *invaders* are in play, no more than one invasion is provoked in each section (see §12.2). The invader token drawn for an invasion is a standard invader token until the *bonfire ascetic* is burnt and an advanced invader token from then on (see §18.7)."
+- Rationale: [MECHANICAL CHANGE] §12.2 chooses the token by whether the mini-boss has been defeated, which has no meaning in a campaign; the bonfire ascetic already takes the mini-boss's place for treasure and the shop.
+- Source: final rulings, campaign-E33 (`06_final_rulings.md`); §12.2, Invader Tokens, step 1; §18.5 to §18.7 (the ascetic opens tier two in place of the mini-boss's defeat); official Phantoms rules key the two invader sets to the mini-boss's defeat.
+
+### CH-18-054 · §18.1
+- Type: completion
+- Before: "The party chooses one of the 12 campaigns (see §19)."
+- After: "The party chooses one of the 16 campaigns (see §19)."
+- Rationale: Four campaigns are added as §19.13 to §19.16.
+- Source: final rulings, campaign-E45 (`06_final_rulings.md`); Old Iron King, The Last Giant, Vordt of the Boreal Valley and Guardian Dragon booklets, campaign pages.
+
 ## Chapter 21 — Glossary
 
 ### CH-21-001 · §21 Glossary
@@ -5173,3 +6257,199 @@ Every substantive change made in Phase 2A between the manuscript (`work/docx/man
 - After: "Dropped souls: also returned when a boss is defeated. Shop: a tier one or tier two treasure card sells for one soul and a boss treasure card for six. Tier two treasure: common and class-specific treasure with a stat requirement of 25 or more. Twin Gargoyles: a section that lists the Gargoyle as fought twice."
 - Rationale: Four entries disagreed with the sections they cite (§6.6, §11.4, §6.2, §19).
 - Source: QA-003, QA-008, QA-009, QA observation (example and consistency verification)
+
+### CH-21-005 · Glossary
+- Type: ruling
+- Before: "**Hollow cube.** One of eight cubes of a colour distinct from the damage, stamina, and stat cubes. Two hollow cubes block the two rightmost spaces of a *hollow* character's endurance bar (see §7.2)."
+- After: "**Hollow cube.** A white cube, taken from the white cubes that are not in use as stat cubes, placed on an endurance bar. Two hollow cubes block the two rightmost spaces of a *hollow* character's endurance bar (see §2.8, §7.2)."
+- Rationale: Glossary follows the component ruling.
+- Source: final rulings, core-E04 (`06_final_rulings.md`); As core-E02.
+
+### CH-21-006 · Glossary
+- Type: completion
+- Before: "**Ember card.** A tier one shop card. Discarding an *ember* card from the back-up slot (the *Ember* major action, or outside an encounter) makes the character *embered* (see §7.3). A character may carry only one *ember* card and cannot carry one while *embered*; a card held when the character becomes *embered* passes to another character (see §7.3)."
+- After: "**Ember card.** A tier one shop card. Discarding an *ember* card from the back-up slot (the *Ember* major action, or outside an encounter) makes the character *embered*, and the card is returned to the game box (see §7.3). A character may carry only one *ember* card and cannot carry one while *embered*; a card held when the character becomes *embered* passes to another character (see §7.3)."
+- Rationale: Glossary follows §7.3.
+- Source: final rulings, core-E25 (`06_final_rulings.md`); As core-E23.
+
+### CH-21-007 · Glossary
+- Type: ruling
+- Before: "**Titanite.** A weapon upgrade (Titanite Shard, Titanite Chunk, Titanite Slab, or Titanite Scale) that is fused permanently to the weapon it is attached to. A Titanite Chunk is attached only in place of an attached Titanite Shard, and a Titanite Slab only in place of an attached Titanite Chunk; the replaced card returns to the bottom of the treasure deck of its tier (see Appendix B). When that weapon is sold, the Titanite is returned with it to the bottom of the treasure deck of the weapon's tier (see §4.2)."
+- After: "**Titanite.** A weapon upgrade card whose name includes the word Titanite (Titanite Shard, Titanite Chunk, Titanite Slab, Titanite Scale, Demon Titanite, and Blue Titanite), fused permanently to the weapon it is attached to. A Titanite Chunk is attached only in place of an attached Titanite Shard, and a Titanite Slab only in place of an attached Titanite Chunk; the replaced card returns to the bottom of the treasure deck of its tier (see Appendix B). When that weapon is sold, the Titanite is sold with it for no additional *souls*, and each card goes where a sold card of its kind goes (see §4.2; §11.4)."
+- Rationale: [MECHANICAL CHANGE] Carries both Titanite rulings: Titanite is recognised by name (core-063) and a sold Titanite card goes to the place of its own kind (core-048).
+- Source: final rulings, core-E33 (`06_final_rulings.md`); As core-E31 and core-E34.
+
+### CH-21-008 · Glossary
+- Type: ruling
+- Before: "**Bonfire.** The characters' safe haven, represented by the *bonfire* tile, which has no nodes. The Firekeeper and Blacksmith Andre wait there and are visited only while the party rests. Returning to the bonfire tile costs nothing; resting there costs one *spark* (see §11.1, §11.2)."
+- After: "**Bonfire.** The characters' safe haven, represented by the *bonfire* tile, which has no nodes. The Firekeeper and Blacksmith Andre wait there and are visited only while the party rests. The party returns to the bonfire tile only to rest, and a rest costs one *spark* unless it follows the defeat of a boss (see §11.1, §11.2)."
+- Rationale: [MECHANICAL CHANGE] Glossary follows §11.1.
+- Source: final rulings, core-E37 (`06_final_rulings.md`); As core-E35.
+
+### CH-21-009 · Glossary, Gravestone
+- Type: ruling
+- Before: "**Gravestone.** A terrain token or model. No model may *move*, *dodge*, or be pushed into a node containing a gravestone. When an encounter that contains a gravestone is *cleared*, the players may *scry* one card (see §5.5, Gravestones; §7.5, Encounter Resolution)."
+- After: "**Gravestone.** A terrain token or model. No model may *move*, *dodge*, or be pushed into a node containing a gravestone. When an encounter is *cleared*, the players may *scry* one card for each gravestone on its tile (see §5.5, Gravestones; §7.5, Encounter Resolution)."
+- Rationale: [MECHANICAL CHANGE] Glossary follows §5.5.
+- Source: final rulings, combat-E04 (`06_final_rulings.md`); As combat-E01.
+
+### CH-21-010 · Glossary, Entry node
+- Type: clarification
+- Before: "**Entry node.** A basic node beside the doorway through which the characters entered the tile. Characters are placed on entry nodes at the start of an encounter, no more than three to a node. In a Level 4 encounter all four nodes along the wall beside the doorway are entry nodes (see §6.7)."
+- After: "**Entry node.** A basic node along the tile edge that holds the doorway through which the characters entered the tile. Characters are placed on entry nodes at the start of an encounter, no more than three to a node (see §5.1; §7.5, Encounter Start). In a Level 4 encounter the four basic nodes along that edge are the entry nodes (see §6.7)."
+- Rationale: Glossary follows §5.1.
+- Source: final rulings, combat-E06 (`06_final_rulings.md`); As combat-E05.
+
+### CH-21-011 · Glossary, Basic node
+- Type: clarification
+- Before: "**Basic node.** The most common node type. Basic nodes adjacent to a doorway are also entry nodes."
+- After: "**Basic node.** The most common node type, printed in yellow. Trap tokens are dealt to basic nodes, and the basic nodes along the edge through which the characters entered a tile are its entry nodes (see §5.1)."
+- Rationale: Removes the second, looser definition of an entry node.
+- Source: final rulings, combat-E07 (`06_final_rulings.md`); As combat-E05.
+
+### CH-21-012 · Glossary, Doorway
+- Type: clarification
+- Before: "**Doorway.** A gap in a tile's wall through which characters pass between tiles. Basic nodes beside a doorway are entry nodes."
+- After: "**Doorway.** A gap in a tile's wall through which the characters pass from one tile to the next. No model passes through a doorway during an encounter, and the basic nodes along the edge of the doorway by which the characters entered are the entry nodes (see §5.1; §5.2)."
+- Rationale: Removes the third, looser definition of an entry node and states the doorway rule of §5.2.
+- Source: final rulings, combat-E08 (`06_final_rulings.md`); As combat-E05.
+
+### CH-21-013 · Glossary, Repeat
+- Type: ruling
+- Before: "**Repeat.** An icon that causes an entire attack option or behaviour card to be resolved the number of times shown. For a character's attack option the stamina cost is paid once and each resolution is a separate attack roll with its own target (see §10.3, Repeat)."
+- After: "**Repeat.** An icon that causes an entire attack option, or the whole row of behaviour icons on an enemy data card or a behaviour card, to be resolved more than once. A character may resolve the attack option up to the number of times shown: the stamina cost is paid once, and each resolution is a separate attack roll with its own target (see §10.3, Repeat). An enemy or a boss resolves its row of icons the number of times shown (see §9.1; §16.1)."
+- Rationale: [MECHANICAL CHANGE] Glossary follows §9.1, §10.3 and §16.1.
+- Source: final rulings, combat-E36 (`06_final_rulings.md`); As combat-E12 and combat-E27.
+
+### CH-21-014 · Glossary, Push
+- Type: correction
+- Before: "**Push.** Forced movement of a model from its node to an adjacent valid node. A push is caused by a push-attack, by a push-move, by the node model limit, or by a boss model moving onto the node of another boss model. A push is not a move and costs no stamina; a gravestone, a chest, and a pillar token block it, and a push with no valid node does not happen (see §8.4)."
+- After: "**Push.** Forced movement of a model from its node to an adjacent valid node. A push is caused by a push-attack, by a push-move, by the node model limit, by a boss model moving onto the node of another boss model, or by a rule of a boss such as a leap. A push is not a move and costs no stamina; a gravestone, a chest, and a pillar token block it, and a push with no valid node does not happen (see §8.4)."
+- Rationale: Glossary follows §8.4.
+- Source: final rulings, combat-E37 (`06_final_rulings.md`); As combat-E13.
+
+### CH-21-015 · Glossary, Condition
+- Type: clarification
+- Before: "**Condition.** A lasting effect marked by a condition token on a model: *bleed*, *poison*, *frostbite*, *stagger*, *calamity*, or *corrosion*. A condition token is placed on each model hit by an attack that bears the matching icon, after the attack is resolved. A model holds at most one token of each condition, except poison (see §8.5)."
+- After: "**Condition.** A lasting effect marked by a condition token on a model: *bleed*, *poison*, *frostbite*, *stagger*, *calamity*, or *corrosion*. A condition token is placed on each model hit by an attack that bears the matching icon, after the attack's damage and any push have been resolved. A model holds at most one token of each condition, except poison (see §8.5)."
+- Rationale: Glossary states the same order as §8.5 and the attack sequence.
+- Source: final rulings, combat-E38 (`06_final_rulings.md`); This book, §8.5.
+
+### CH-21-016 · Glossary, Parry
+- Type: ruling
+- Before: "**Parry.** A defence available to a character with a shield equipped in the left weapon slot when the attacker is on the character's node; an attack that pushes, a node attack, and a boss attack outside §15.6 cannot be parried. The character pays one stamina and rolls dodge dice against the attack's dodge difficulty. Success makes the attack miss, staggers the attacker, and allows a *riposte*; failure deals the full attack value with no block or resist roll and staggers the character (see §9.6)."
+- After: "**Parry.** A defence available to a character with a shield equipped in either weapon slot when the attacker is on the character's node; an attack that pushes, a node attack, and a boss attack outside §15.6 cannot be parried. The character pays one stamina and rolls dodge dice against the attack's dodge difficulty. Success makes the attack miss, staggers the attacker, and allows a *riposte*; failure deals the full attack value with no block or resist roll and staggers the character (see §9.6)."
+- Rationale: [MECHANICAL CHANGE] Glossary follows §9.6.
+- Source: final rulings, combat-E39 (`06_final_rulings.md`); As combat-E22.
+
+### CH-21-017 · Glossary, Riposte
+- Type: ruling
+- Before: "**Riposte.** The attack a character may make at once against the attacker after a successful *parry*, using one attack option of the weapon in the right weapon slot and paying its stamina cost. A riposte cannot be parried, and it does not count against the attacks of the character's own turn (see §9.6)."
+- After: "**Riposte.** The attack a character may make at once against the attacker after a successful *parry*, using one attack option of the weapon in the other weapon slot, never a spell, and paying its stamina cost. A riposte cannot be parried, and it does not count against the attacks of the character's own turn (see §9.6)."
+- Rationale: [MECHANICAL CHANGE] Glossary follows §9.6.
+- Source: final rulings, combat-E40 (`06_final_rulings.md`); As combat-E22.
+
+### CH-21-018 · Glossary, Scaled (weapon)
+- Type: ruling
+- Before: "**Scaled (weapon).** A weapon equipped by a character whose *relevant stat* exceeds the weapon's highest printed stat requirement by five or more. It is marked with a red cube and each of its attack options adds one to its attack value. Spells are never scaled (see §10.5)."
+- After: "**Scaled (weapon).** A weapon equipped by a character whose *relevant stat* exceeds the weapon's highest printed stat requirement by five or more. It is marked with a red cube and each of its attack options adds one to its attack value. A weapon whose stat requirements are all zero is never scaled, and spells are never scaled (see §10.5)."
+- Rationale: [MECHANICAL CHANGE] Glossary follows §10.5.
+- Source: final rulings, combat-E41 (`06_final_rulings.md`); As combat-E29.
+
+### CH-21-019 · Glossary, Attack value
+- Type: clarification
+- Before: "**Attack value.** The total of the values rolled on an attack's dice after rerolls, with any fixed modifier applied once to the total, plus one for a *scaled* weapon and minus one for a *staggered* attacker, to a minimum of zero (see §10.3). For enemies the attack value is the fixed number printed in the attack icon, scaled for the number of characters (see §9.3)."
+- After: "**Attack value.** The total of the values rolled on an attack's dice after rerolls, with any fixed modifier applied once to the total, plus one for a *scaled* weapon and minus one for a *staggered* attacker, to a minimum of zero (see §10.3). For enemies the attack value is the fixed number printed in the attack icon, or the damage value of a push-move, scaled for the number of characters and reduced by one while the enemy is *staggered* (see §8.3; §8.4; §9.3)."
+- Rationale: Adds the push-move damage value and the stagger reduction, which §8.3, §8.4 and §8.5 already treat as part of an enemy attack value.
+- Source: final rulings, combat-E42 (`06_final_rulings.md`); This book, §8.3; §8.4; §8.5, Stagger.
+
+### CH-21-020 · Glossary, Magical damage
+- Type: clarification
+- Before: "**Magical damage.** Damage from an attack marked with the white circle icon. Magical damage is reduced by resist."
+- After: "**Magical damage.** Damage from an attack that bears the magical damage icon. Magical damage is reduced by resist (see §9.3; §10.3)."
+- Rationale: Names the icon as §4.3, §8.2, §9.3 and §10.3 name it.
+- Source: final rulings, combat-E43 (`06_final_rulings.md`); This book, §9.3 and §10.3.
+
+### CH-21-021 · Glossary, Physical damage
+- Type: clarification
+- Before: "**Physical damage.** Damage from an attack marked with the crossed swords icon. Physical damage is reduced by block."
+- After: "**Physical damage.** Damage from an enemy attack marked with the crossed swords icon, or from a character's attack option that does not bear the magical damage icon. Physical damage is reduced by block (see §9.3; §10.3)."
+- Rationale: A character's attack option shows no crossed swords icon; it deals physical damage by default (§10.3).
+- Source: final rulings, combat-E44 (`06_final_rulings.md`); This book, §10.3.
+
+### CH-21-022 · Bonfire ascetic
+- Type: ruling
+- Before: "**Bonfire ascetic.** In campaign play, a one-time communal payment of 16 *souls* made while resting at the *bonfire*, the one exception to the rule that souls cannot be pooled. It opens tier two treasure and the tier two shop and increases by two the base health of every enemy subject to enemy scaling for the rest of the campaign, cumulative with the health scaling for the number of characters. Enemy attack values are not changed (see §18.7)."
+- After: "**Bonfire ascetic.** In campaign play, a one-time communal payment of 16 *souls* made while resting at the *bonfire*. With the cost of a bought *spark*, it is one of the two exceptions to the rule that souls cannot be pooled. It opens tier two treasure and the tier two shop and increases by two the base health of every enemy subject to enemy scaling for the rest of the campaign, cumulative with the health scaling for the number of characters. Enemy attack values are not changed (see §18.7)."
+- Rationale: [MECHANICAL CHANGE] Glossary follows §18.3 and §18.7.
+- Source: final rulings, campaign-E22 (`06_final_rulings.md`); As campaign-E18.
+
+### CH-21-023 · Transposition
+- Type: clarification
+- Before: "**Transposition.** In campaign play, exchanging one boss treasure card and four *souls* for one of the five face-up legendary treasure cards while resting at the *bonfire*. It is available after the last boss of the first section is defeated, and the boss treasure card is returned to the game box (see §18.8)."
+- After: "**Transposition.** In campaign play, exchanging one boss treasure card and four *souls* for one of the five face-up legendary treasure cards while resting at the *bonfire*. It is available once the first section is completed, and the boss treasure card is returned to the game box (see §18.8)."
+- Rationale: Glossary follows §18.8.
+- Source: final rulings, campaign-E32 (`06_final_rulings.md`); As campaign-E31.
+
+### CH-21-024 · Fog gate
+- Type: clarification
+- Before: "**Fog gate.** The token that marks the doorway of a boss encounter. A boss encounter begins when the characters pass through it. The first time they pass through, the token is moved to the *bonfire* tile, where it is a shortcut to that boss until the boss is defeated (see §15.1). In campaign play it is aesthetic only (see §18.2)."
+- After: "**Fog gate.** The token that marks the doorway of a boss encounter. A boss encounter begins when the characters pass through it. The first time they pass through, the token is moved to the *bonfire* tile, where it is a shortcut to that boss until the boss is defeated (see §15.1). In campaign play it only marks the doorway of the boss encounter: it is not moved and gives no shortcut (see §18.2)."
+- Rationale: The glossary should say what §18.2 says: the token still marks the doorway and is where a summon is called.
+- Source: final rulings, campaign-E34 (`06_final_rulings.md`); §18.2.
+
+### CH-21-025 · Campaign
+- Type: completion
+- Before: "**Campaign.** A game played through a fixed list of *sections*, taken in order, in which the characters keep what they have gained from one section to the next. The book supplies 12 campaigns; campaign play follows the standard game except as its own chapter states (see §18.1, §19)."
+- After: "**Campaign.** A game played through a fixed list of *sections*, taken in order, in which the characters keep what they have gained from one section to the next. The book supplies 16 campaigns; campaign play follows the standard game except as its own chapter states (see §18.1, §19)."
+- Rationale: Glossary follows §18.1 and §19.
+- Source: final rulings, campaign-E47 (`06_final_rulings.md`); As campaign-E45.
+
+### CH-21-026 · Invader token
+- Type: ruling
+- Before: "**Invader token.** A token from the Phantoms expansion that shows an invader or is blank. When an *invasion* is provoked, one token is placed face down on each face-down encounter card, one of them showing an invader; a token is revealed when the characters fight that encounter (see §12.2)."
+- After: "**Invader token.** A token from the Phantoms expansion that shows an invader or is blank. When an *invasion* is provoked, one token is placed face down on each face-down encounter card that carries no black cube, one of them showing an invader; a token is revealed when the characters fight that encounter (see §12.2)."
+- Rationale: [MECHANICAL CHANGE] Keeps the entry in step with §12.2, Invader Tokens.
+- Source: final rulings, phantom-E33 (`06_final_rulings.md`); Follows phantom-E06.
+
+### CH-21-027 · Invasion
+- Type: ruling
+- Before: "**Invasion.** The placing of invader tokens that brings one invader into the game. An invasion is provoked when the encounter cards are dealt while a character is *embered*, or when a character becomes embered by discarding an *ember card* while a face-down encounter card lies on a tile; no more than one is provoked before the mini-boss is defeated and no more than one after it (see §12.2)."
+- After: "**Invasion.** The placing of invader tokens that brings one invader into the game. An invasion is provoked when the encounter cards are dealt while a character is *embered*, or when a character becomes embered by discarding an *ember card* while a face-down encounter card that carries no black cube lies on a tile; no more than one is provoked before the mini-boss is defeated and no more than one after it (see §12.2)."
+- Rationale: [MECHANICAL CHANGE] Keeps the entry in step with §12.2, Invasions.
+- Source: final rulings, phantom-E34 (`06_final_rulings.md`); Follows phantom-E04.
+
+### CH-21-028 · Weak arc
+- Type: correction
+- Before: "**Weak arc.** A boss arc shown in red on the arc diagram of the boss's current behaviour card, the card it drew most recently. A character who attacks a boss from a weak arc adds one black die to each attack roll, however many weak arcs the character is in (see §15.6)."
+- After: "**Weak arc.** A boss arc shown in red on the arc diagram of the boss's current behaviour card, the card it drew most recently. A character or a *summon* that attacks a boss from a weak arc adds one black die to each attack roll, however many weak arcs the attacker is in (see §15.6)."
+- Rationale: §12.1 and §15.6 give the weak-arc die to a summon; the entry named characters only.
+- Source: final rulings, phantom-E35 (`06_final_rulings.md`); Official Phantoms booklet: 'Summons, like characters, gain an additional black die on attacks in the weak arc' (lines 264-266).
+
+### CH-21-029 · Turn
+- Type: correction
+- Before: "**Turn.** One model's opportunity to act. In each round the enemies take their turns, then the characters take theirs in descending threat order (see §7.5, Encounter Turn Order; §10.1). In a boss encounter the boss takes a turn before each character's turn, and the players choose the order of the characters (see §16.1)."
+- After: "**Turn.** One model's opportunity to act. In each round the enemies take their turns, then the characters take theirs in descending threat order (see §7.5, Encounter Turn Order; §10.1). In a boss encounter the boss takes a turn before each character's turn, and the players choose the order of the characters (see §16.1). An *invader* takes a turn after each character's turn, and so does a *summon* in a boss encounter (see §12)."
+- Rationale: The entry omitted the two models whose turns follow each character's turn.
+- Source: final rulings, phantom-E36 (`06_final_rulings.md`); §12.1, Summon Turns and §12.2, Invader Turns of this book.
+
+### CH-21-030 · Crystal lizard
+- Type: ruling
+- Before: "**Crystal lizard.** An optional enemy from the Iron Keep expansion, placed on a terrain node that the encounter card marks with the crystal lizard symbol. It flees rather than fights, is not scaled, does not count towards clearing the encounter, and escapes without award when the encounter is *cleared*. The character who kills one takes a Titanite Scale card, and once one has been killed in an encounter none is placed there again (see §14)."
+- After: "**Crystal lizard.** An optional enemy from the Iron Keep expansion, placed on a terrain node that the encounter card marks with the crystal lizard symbol. It flees rather than fights, is not scaled, does not count towards clearing the encounter, and escapes without award when the encounter is *cleared*. Killing one awards the party a Titanite Scale card, and once one has been killed in an encounter none is placed there again (see §14)."
+- Rationale: [MECHANICAL CHANGE] Keeps the entry in step with §14: the card is awarded to the party.
+- Source: final rulings, phantom-E37 (`06_final_rulings.md`); Follows phantom-E24.
+
+### CH-21-031 · Mimic encounter
+- Type: ruling
+- Before: "**Mimic encounter.** The encounter fought against a *mimic* on the tile of a *cleared* encounter whose chest the party has opened. It is fought as a mini-boss encounter without arcs, with the characters on the nodes they occupy and before any recovery or reward (see §13.2)."
+- After: "**Mimic encounter.** The encounter fought against a *mimic* on the tile of a *cleared* encounter whose chest the party has opened. It is fought as a mini-boss encounter without arcs, with the characters on the nodes they occupy. The characters remove their stamina cubes before the mimic's first turn; the recovery and the rewards of the cleared encounter wait until the mimic is killed (see §13.2)."
+- Rationale: [MECHANICAL CHANGE] Keeps the entry in step with §13.2 as amended.
+- Source: final rulings, phantom-E38 (`06_final_rulings.md`); Follows phantom-E19.
+
+### CH-21-032 · Victory bonus
+- Type: ruling
+- Before: "**Victory bonus.** The reward for winning a *PvP encounter* that follows the defeat of a boss other than the final boss, marked by one wound token of value 1 placed beside the winner's dashboard. Each victory bonus adds one to the attack value of each of the character's attacks in every subsequent PvP encounter; victory bonuses are cumulative and are kept until the game ends (see §20.8)."
+- After: "**Victory bonus.** The reward for winning a *PvP encounter* that follows the defeat of a boss other than the final boss, marked by a spare token placed beside the winner's dashboard. It adds one to the attack value of each of the character's attacks in every subsequent PvP encounter. A character holds no more than one victory bonus, and it is kept until the game ends (see §20.8)."
+- Rationale: [MECHANICAL CHANGE] Keeps the entry in step with §20.8: one bonus, not cumulative, marked by a spare token.
+- Source: final rulings, phantom-E39 (`06_final_rulings.md`); Follows phantom-E30.

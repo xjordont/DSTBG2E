@@ -100,7 +100,7 @@ Besides the magical damage icon, an attack option may show a push icon (see §8.
 
 Every weapon card and spell card prints a base range beside the range icon {{icon:ast-0060-attack-range}} (see §4.1, Card Anatomy). An attack option that prints a range of its own uses that range in place of the card's base range. The attack option's range applies to that attack option alone; the card's other attack options keep the base range.
 
-Range is counted in *nodes* (see §5.4). The range of an attack is a maximum: a target at any shorter distance, including a target on the attacker's own node, is within range unless an icon on the attack option forbids it (see §10.3, Shaft). Range is checked when the target is chosen, after any shift resolved before the dice. A character cannot make an attack that has no permitted target within its range.
+Range is counted in *nodes* (see §5.4). The range of an attack is a maximum: a target at any shorter distance, including a target on the attacker's own node, is within range unless an icon on the attack option forbids it (see §10.3, Shaft). Range is checked when the target is chosen, after any shift resolved before the dice. A character cannot begin an attack unless a permitted target is within its range or a shift printed before its dice is able to bring one within range. If no permitted target is within range when the target is to be chosen, the attack ends without a roll, and the stamina paid is not returned.
 
 *Example.* The Herald's spear prints a base range of 1, and one of its attack options prints a range of 2. With that attack option the Herald targets a Hollow Soldier two nodes away. With any other attack option of the spear the Herald targets an enemy on the Herald's own node or on an adjacent node.
 
@@ -128,7 +128,7 @@ An attack option that bears the shaft icon cannot target a model on the attacker
 
 ### Repeat
 
-An attack option that bears the *repeat* icon {{icon:ast-0061-repeat-behaviour-or-attack}} is resolved in full the number of times shown in the icon. The character pays the stamina cost once, before the first resolution, and then resolves steps 3 to 12 of the attack once for each time shown.
+An attack option that bears the *repeat* icon {{icon:ast-0061-repeat-behaviour-or-attack}} may be resolved in full up to the number of times shown in the icon. The character pays the stamina cost once, before the first resolution, resolves steps 3 to 12 of the attack for each resolution, and may stop after any resolution.
 
 Each resolution is a separate attack roll with its own target: the character may target the same enemy again or a different enemy within range. The two-handed reroll applies to each roll (see §10.4). The luck token rerolls the dice of one roll only (see §3.5, Luck). All the resolutions together are that weapon's one attack for the turn.
 
@@ -145,7 +145,7 @@ Any card in the other weapon slot is equipment in the other hand. A one-handed w
 
 When a character attacks with a weapon wielded two-handed, the character may reroll one die of the attack roll after rolling (see §10.3). The new result stands. The reroll is available on every attack roll made with that weapon, including each resolution of an *attack option* that bears the *repeat* icon {{icon:ast-0061-repeat-behaviour-or-attack}} (see §10.3, Repeat).
 
-A spell is never two-handed (see §4.3). A spell card equipped while the other weapon slot is empty gains no reroll, and the attack options of a spell stored in a catalyst gain none.
+A spell is never two-handed (see §4.3). A spell card equipped while the other weapon slot is empty gains no reroll, and the attack options of a spell stored in a catalyst gain none. A catalyst is a weapon: an attack option printed on the catalyst card itself gains the reroll while the catalyst is wielded two-handed.
 
 A character who wields a weapon two-handed has no shield equipped and therefore cannot *parry* (see §9.6).
 
@@ -159,7 +159,7 @@ A weapon is *scaled* while it is *equipped* by a character whose value in the re
 
 Every *attack option* of a scaled weapon adds one to its *attack value* (see §10.3). The bonus is +1 and no more, however far the stat exceeds the requirement. Only the relevant stat is compared; the weapon's other stat requirements play no part in scaling.
 
-*Spells* are never scaled (see §4.3).
+A weapon whose four stat requirements are all zero has no relevant stat and is never scaled. *Spells* are never scaled (see §4.3).
 
 *Example.* The Warrior's great axe prints requirements of 14 STR, 8 DEX, 0 INT, and 0 FTH, so strength is its relevant stat. The Warrior's strength is 20, which exceeds 14 by six. The axe is scaled: the Warrior marks it with a red cube, and each of its attack options adds one to its attack value.
 

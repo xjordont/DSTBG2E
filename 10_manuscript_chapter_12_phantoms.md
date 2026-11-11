@@ -25,7 +25,7 @@ Each time the characters are about to pass through the *fog gate* into a mini-bo
 7. Shuffle the four behaviour cards and place them face down as the summon's *behaviour deck*.
 8. When the character models have been placed on the *entry nodes* of the *boss tile* (see §15.2), place the summon model on an entry node that holds fewer than three models.
 
-The players choose the summon together in step 3. Souls paid in step 1 are not returned, whichever card is chosen. This payment is an exception to the rule that souls are spent only while resting at the *bonfire* (see §7.6). If no character pays, no summon joins the encounter.
+The players choose the summon together in step 3. If they cannot agree, the drawn data cards are shuffled face down and one is drawn. Souls paid in step 1 are not returned, whichever card is chosen. This payment is an exception to the rule that souls are spent only while resting at the *bonfire* (see §7.6). If no character pays, no summon joins the encounter.
 
 *Example.* The Knight and the Herald are embered, and the Assassin is not. Before the Gargoyle encounter the Knight and the Herald each pay two souls and draw Eygon of Carim and Sword Master. The players choose Eygon of Carim. The data card of Sword Master returns to the supply, and all four souls stay paid.
 
@@ -50,7 +50,7 @@ When a summon resolves a *shift* icon {{icon:ast-0057-shift}}, it may *move* up 
 
 ### Summons in Combat
 
-A summon's data card shows its *threat* {{icon:ast-0026-threat-level}}, its starting health, its *block*, *resist*, and *dodge* dice, and a special ability. A summon has no *endurance bar* and pays no stamina. It has no *boss arcs* and no *heat-up* point, and its health is not scaled.
+A summon's data card shows its *threat* {{icon:ast-0026-threat-level}}, its starting health, its *block*, *resist*, and *dodge* dice, and a special ability. A summon has no *endurance bar* and pays no stamina. It has no *boss arcs* and no *heat-up* point, and its health is not scaled. A summon does only what its behaviour cards and its data card direct. It takes no *minor action* and no *major action*, and it cannot *parry*.
 
 The boss's behaviours treat a summon as a character. A summon is counted when a behaviour *targets* the nearest character or compares threat (see §16.3). A summon that is *hit* is *pushed* and receives *conditions* as a character does (see §8.4; §8.5).
 
@@ -77,7 +77,7 @@ A summon is not a character. The encounter is not *failed* by the death of a sum
 
 *Invaders* are an optional rule. They require the Phantoms expansion. The party decides during setup whether invaders are in play.
 
-An invader is a hostile *phantom* that joins one *encounter* and hunts the characters. Standard invaders appear before the *mini-boss* is defeated, and advanced invaders after it (see §2.4). Except where this section says otherwise, the rules for enemy models apply to an invader.
+An invader is a hostile *phantom* that joins one *encounter* and hunts the characters. Standard invaders appear before the *mini-boss* is defeated, and advanced invaders after it (see §2.4). In campaign play, standard invaders appear while the current tier is tier one, and advanced invaders once it is tier two (see §18.5). Except where this section says otherwise, the rules for enemy models apply to an invader.
 
 ### Invasions
 
@@ -86,28 +86,26 @@ An invader is a hostile *phantom* that joins one *encounter* and hunts the chara
 *Embered* characters provoke invasions. An invasion is provoked at either of two moments.
 
 - At setup: when the *encounter cards* are dealt to the tiles (see §6.5; §6.6), if one or more characters are embered.
-- During the exploration: when a character becomes embered by discarding an *ember card* (see §7.3), if one or more face-down encounter cards lie on the encounter tiles.
+- During the exploration: when a character becomes embered by discarding an *ember card* (see §7.3), if one or more face-down encounter cards that carry no black cube lie on the encounter tiles (see §7.5, Encounter Resolution).
 
-No more than one invasion is provoked before the mini-boss is defeated, and no more than one after it. Once an invasion has been provoked, no further invasion is provoked in that part of the game, however many characters are or become embered. If no character is embered when the encounter cards are dealt, no invader token is placed at that step.
-
-The embering of every character at a boss's defeat (see §16.5) provokes no invasion at that moment. The invasion that follows the mini-boss's defeat is provoked when the encounter cards of the next setup are dealt (see §6.6).
+No more than one invasion is provoked before the mini-boss is defeated, and no more than one after it, however many characters are or become embered. The embering of every character at a boss's defeat provokes no invasion at that moment (see §16.5). The invasion that follows the mini-boss's defeat is provoked when the encounter cards of the next setup are dealt (see §6.6). In campaign play, no more than one invasion is provoked in each *section* (see §18.1).
 
 ### Invader Tokens
 
 When an invasion is provoked, the invader tokens are placed as follows.
 
 1. Draw one invader token at random and keep it face down: a standard invader token if the mini-boss has not been defeated, an advanced invader token if it has.
-2. Add blank invader tokens, face down, until there is one token for each face-down encounter card on the encounter tiles. If the blank tokens run out, make up the number with invader tokens of the kind not drawn in step 1; such a token is treated as blank when it is revealed.
+2. Add blank invader tokens, face down, until there is one token for each face-down encounter card that carries no black cube. If the blank tokens run out, make up the number with invader tokens of the kind not drawn in step 1; such a token is treated as blank when it is revealed.
 3. Shuffle these tokens face down.
-4. Place one token face down on each face-down encounter card.
+4. Place one token face down on each of those encounter cards.
 
-An invader token stays face down on its encounter card until the characters fight that encounter. It stays in place when the encounters are *reset* (see §11.5) and when the party skips its encounter (see §7.5, Encounter Start). Invader tokens still on the tiles when the mini-boss is defeated are returned to the supply unrevealed (see §6.6).
+An invader token stays face down on its encounter card until the characters fight that encounter, and it stays in place when the encounters are *reset* (see §11.5). Invader tokens still on the tiles when the mini-boss is defeated are returned to the supply unrevealed (see §6.6).
 
 The token on an encounter card is revealed during Encounter Start, after the enemy models and *terrain* have been placed (see §7.5, Encounter Start). A blank token is returned to the supply, and the encounter is fought without an invader. A token that shows an invader brings that invader into the encounter; the token is returned to the game box and is not used again during the game.
 
 Invader tokens are placed only on encounter cards. No invader appears in a *boss* encounter, and none takes part in a mimic encounter (see §13). Some campaigns place named invaders in listed encounters and use no invader tokens (see §19.3; §19.4).
 
-*Example.* The Herald discards an ember card while two face-down encounter cards lie on the tiles ahead, before the mini-boss is defeated. The party draws one standard invader token, adds one blank token, shuffles the two face down, and places one on each card. The token on the next tile is blank and returns to the supply. The token on the tile after it shows Maneater Mildred, who joins that encounter.
+*Example.* The Herald discards an ember card while two face-down encounter cards, neither of which carries a black cube, lie on the tiles ahead, before the mini-boss is defeated. The party draws one standard invader token, adds one blank token, shuffles the two face down, and places one on each card. The token on the next tile is blank and returns to the supply. The token on the tile after it shows Maneater Mildred, who joins that encounter.
 
 ### Invader Setup
 
@@ -152,10 +150,10 @@ If any character dies while an invader is on the tile, the invader vanishes at o
 
 An invader is killed when its health dial is reduced to zero. Its model is removed from the tile at once, even if other enemy models remain.
 
-When an invader is killed, every character gains *souls* equal to the invader reward at once, in addition to the reward of the encounter (see §7.6). The invader's treasure card is awarded to the party at once (see §7.7). The players decide which character receives it. If they cannot agree, the card goes to the character who holds the aggro token at that moment.
+When an invader is killed, every character gains *souls* equal to the invader reward at once, in addition to the reward of the encounter (see §7.6). The invader's treasure card is awarded to the party at once, and the players decide which character receives it as for any card awarded to the party (see §7.7).
 
 ### End of an Invasion
 
-An invader is an enemy model and counts towards clearing an encounter. While the invader is on the tile, the encounter is not *cleared*: it is cleared only when every enemy model, the invader included, has been killed, or when the invader has vanished and every other enemy model has been killed (see §7.5, Encounter Resolution).
+An invader is an enemy model, and its encounter is not *cleared* while it is on the tile (see §7.5, Encounter Resolution). An invader leaves the tile only when it is killed or when it vanishes.
 
 An invader appears once. Whether it was killed or vanished, its model and cards are returned to the game box. It is not placed again when its encounter is reset (see §11.5).

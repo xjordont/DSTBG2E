@@ -391,3 +391,88 @@
 - After: "If a legendary treasure card is drawn, set it aside with the other set-aside cards. It is shuffled back into the tier two treasure deck with them when stocking ends."
 - Rationale: Shuffling a legendary card straight back made a later restock unable to finish once only legendary cards remained in the deck; setting it aside lets the deck-exhaustion exit apply and keeps legendary cards out of the shop.
 - Source: A-075 (legendary cards cannot be purchased), review of PR #2
+
+### CH-06-057 · §6.5, Encounter Tiles
+- Type: ruling
+- Before: "3. Arrange the bonfire tile, the four encounter tiles, and the mini-boss tile, which is one of the two *boss tiles* (see §15.3), in a grid of two rows of three tiles, with the bonfire tile and the mini-boss tile in opposite corners."
+- After: "3. Lay the bonfire tile, the four encounter tiles, and the mini-boss tile, which is one of the two *boss tiles* (see §15.3), in a single chain, each tile beside the next, with the bonfire tile at one end and the mini-boss tile at the other. The chain may run straight or turn at any tile, as the table allows; two rows of three tiles, with the bonfire tile and the mini-boss tile in opposite corners, form one such chain."
+- Rationale: One layout rule for both legs: the route is a chain of tiles and its shape is free; the two-by-three grid stays as a permitted arrangement.
+- Source: final rulings, core-E05 (`06_final_rulings.md`); Official 2017 setup lays the tiles 'in any way you wish, aligning their doorways as you go' (DS-Core-Rules-lores.txt l.295-300); findings A-088, C-090, D-031 disagree only about shape.
+
+### CH-06-058 · §6.5, Encounter Tiles
+- Type: clarification
+- Before: "4. Turn each encounter tile so that exactly two of its doorways open on to adjacent tiles, forming a single route from the bonfire tile through all four encounter tiles to the mini-boss tile."
+- After: "4. Turn each encounter tile so that one of its doorways faces the tile before it in the chain and another faces the tile after it, forming a single route from the bonfire tile through all four encounter tiles to the mini-boss tile. A doorway that faces neither of those tiles is not used."
+- Rationale: 'Exactly two doorways' cannot be met by a tile with three or four doorways placed in a grid; the route is fixed by the chain, and spare doorways are ignored.
+- Source: final rulings, core-E06 (`06_final_rulings.md`); Official tiles carry differing numbers of doorways (DS-Core-Rules-lores.txt l.409, l.835-850).
+
+### CH-06-059 · §6.6
+- Type: ruling
+- Before: "6. Arrange the *bonfire* tile, the four encounter tiles, and the main-boss tile in a straight line, with the bonfire tile and the main-boss tile at opposite ends. The main-boss tile is the two *boss tiles* joined as one (see §15.3)."
+- After: "6. Lay the *bonfire* tile, the four encounter tiles, and the main-boss tile in a single chain, as in the first setup (see §6.5, Encounter Tiles), with the bonfire tile at one end and the main-boss tile at the other. The main-boss tile is the two *boss tiles* joined as one (see §15.3)."
+- Rationale: Second leg uses the same chain rule as the first; a straight line of seven tile widths is no longer required.
+- Source: final rulings, core-E07 (`06_final_rulings.md`); As core-E05.
+
+### CH-06-060 · §6.6
+- Type: ruling
+- Before: "13. Deal one *tier two treasure* card per character face down to each encounter tile. These cards are the encounter's treasure reward (see §7.7).
+14. If mimics are in play, deal one ambush card face down beside each encounter tile (see §13).
+15. If *invaders* are in play, place the *invader tokens* on the encounter cards (see §12.2).
+16. Restock the tier one *shop* and stock the tier two shop (see §6.3, Restocking After a Boss)."
+- After: "13. Restock the tier one *shop* and stock the tier two shop (see §6.3, Restocking After a Boss).
+14. Deal one *tier two treasure* card per character face down to each encounter tile. These cards are the encounter's treasure reward (see §7.7).
+15. If mimics are in play, deal one ambush card face down beside each encounter tile (see §13).
+16. If *invaders* are in play, place the *invader tokens* on the encounter cards (see §12.2)."
+- Rationale: [MECHANICAL CHANGE] The shop is stocked before the treasure rewards are dealt, as in the first setup (§6.3 before §6.5), so the five legendary cards are in the tier two deck when the second leg's rewards are dealt.
+- Source: final rulings, core-E08 (`06_final_rulings.md`); Official 2017 adds the legendary cards to the deck when the mini-boss falls so that they can be drawn in the second half (DS-Core-Rules-lores.txt l.371-381); author's source: legendary treasure 'do not appear in every game'.
+
+### CH-06-061 · §6.1
+- Type: correction
+- Before: "4. Place the character's *luck*, *heroic action*, and *estus flask* tokens on the dashboard, ready side up (see §3.5)."
+- After: "4. Place the character's *luck*, *heroic action*, and *estus flask* tokens on the dashboard, ready side up, and the character's *ember* token beside the dashboard (see §3.5)."
+- Rationale: §3.5 and the glossary start the ember token beside the dashboard; §6.1 placed it in the common supply.
+- Source: final rulings, core-E19 (`06_final_rulings.md`); CMP-0001 (approved at Gate 1): 'The ember token begins the game beside the dashboard'.
+
+### CH-06-062 · §6.1
+- Type: correction
+- Before: "5. Place the *ember* tokens, *damage cubes*, *stamina cubes*, *hollow cubes*, soul tokens, *condition* tokens, *trap tokens*, and *wound tokens* in a supply within reach of every player (see §2.8)."
+- After: "5. Place the *damage cubes*, *stamina cubes*, remaining white cubes, soul tokens, *condition* tokens, *trap tokens*, and *wound tokens* in a supply within reach of every player (see §2.8). The remaining white cubes serve as *hollow cubes* (see §7.2)."
+- Rationale: Ember tokens leave the common supply (core-019) and the hollow cubes are named as the spare white cubes (core-001).
+- Source: final rulings, core-E20 (`06_final_rulings.md`); CMP-0001; core-001.
+
+### CH-06-063 · §6.2, Expansion Treasure
+- Type: clarification
+- Before: "Treasure cards from every expansion in the party's collection are included and are sorted into the tier one and tier two treasure decks by the rules of this section."
+- After: "Treasure cards from every expansion in the party's collection are included and are sorted into the tier one and tier two treasure decks by the rules of this section. The cards listed in Appendix B are added or amended as that appendix states before the decks are built (see Appendix B)."
+- Rationale: Setup now points to the card amendments it depends on.
+- Source: final rulings, core-E28 (`06_final_rulings.md`); Chapter 23 issues list, cross-chapter pointers.
+
+### CH-06-064 · §6.5, Encounter Cards
+- Type: clarification
+- Before: "2. Deal one encounter card face down to each encounter tile, of the level the mini-boss's data card gives for that tile's position on the route."
+- After: "2. Deal one encounter card face down to each encounter tile, of the level the mini-boss's data card gives for that tile's position on the route. Keep the rest of each encounter deck face down beside the bonfire tile."
+- Rationale: The encounter scry of §7.5 draws a replacement from the encounter deck, so the decks stay on the table.
+- Source: final rulings, core-E29 (`06_final_rulings.md`); §7.5, Encounter Resolution (scry); chapter 07 issues list, item 1.
+
+### CH-06-065 · §6.7
+- Type: correction
+- Before: "6. Place the mega-boss's model, *data card*, *health dial*, *behaviour cards*, and remaining boss treasure cards beside the game board."
+- After: "6. Place the mega-boss's model, *data card*, *health dial*, and remaining boss treasure cards beside the game board, build its *behaviour deck* as its rules direct (see §15.5; §17), and place the deck face down beside them."
+- Rationale: §15.5 says every boss's deck is built at the setup step that places its components; §6.7 placed the cards without building the deck, so a gravestone in the Level 4 encounter granted a scry of a deck that did not exist.
+- Source: final rulings, core-E30 (`06_final_rulings.md`); §15.5 ('built during setup ... see §6.5, §6.6, §6.7'); §6.5 Encounter Tiles step 7; §6.6 step 10; §7.5, Encounter Resolution (scry).
+
+### CH-06-066 · §6.5, Encounter Cards, step 5
+- Type: clarification
+- Before: "(see §13).
+5. If *invaders* are in play, place the *invader tokens* on the encounter cards (see §12.2)."
+- After: "(see §13).
+5. If *invaders* are in play and any character is *embered*, place the *invader tokens* on the encounter cards (see §12.2)."
+- Rationale: The step read as unconditional although §12.2 places tokens at setup only when a character is embered.
+- Source: final rulings, phantom-E14 (`06_final_rulings.md`); §12.2, Invasions of this book; official Phantoms booklet places tokens only 'when a character gains an Ember token' (lines 363-366).
+
+### CH-06-067 · §6.6, step 15
+- Type: clarification
+- Before: "16. If *invaders* are in play, place the *invader tokens* on the encounter cards (see §12.2)."
+- After: "16. If *invaders* are in play and any character is *embered*, place the *invader tokens* on the encounter cards (see §12.2)."
+- Rationale: Same wording as §6.5 step 5, so that the two setups state the same condition. Lead editor: Step renumbered by core-E08.
+- Source: final rulings, phantom-E15 (`06_final_rulings.md`); §12.2, Invasions of this book.

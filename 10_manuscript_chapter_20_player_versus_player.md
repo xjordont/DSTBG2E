@@ -55,18 +55,17 @@ The attacker makes the attack as follows.
 1. Choose an *attack option* of an *equipped* card and pay its stamina cost.
 2. Name one other character within the attack option's *range* as the target (see §5.4).
 3. Roll the attack option's dice, apply every modifier, and use any rerolls.
-4. Add one to the result for each *victory bonus* the attacker holds (see §20.8).
+4. Add one to the result if the attacker holds the *victory bonus* (see §20.8).
 
 The final result is the *attack value*. The modifiers and rerolls of the standard game apply to the roll: the +1 of a *scaled* weapon (see §10.5), the reroll of a *two-handed* weapon (see §10.4), and the *luck* token (see §3.5, Luck).
 
-The icons and text of an attack option apply to a defender as they apply to an enemy (see §10.3). An attack option that bears the *shaft* icon {{icon:ast-0056-shaft}} cannot target a character on the attacker's *node*. An attack option that bears the *AoE* icon {{icon:ast-0054-node-attack}} targets every other character on the chosen node: the attacker rolls once, and each of those characters chooses and resolves a defence of their own against the same attack value. Each use of an attack option that bears the *repeat* icon {{icon:ast-0061-repeat-behaviour-or-attack}} is a separate attack, with its own roll and its own defence.
+The icons and text of an attack option apply to a defender as they apply to an enemy (see §10.3). In a PvP encounter, the word enemy in a *heroic action* or on a treasure card means another character. An attack option that bears the *shaft* icon {{icon:ast-0056-shaft}} cannot target a character on the attacker's *node*. An attack option that bears the *AoE* icon {{icon:ast-0054-node-attack}} targets every other character on the chosen node: the attacker rolls once, and each of those characters chooses and resolves a defence of their own against the same attack value. Each use of an attack option that bears the *repeat* icon {{icon:ast-0061-repeat-behaviour-or-attack}} is a separate attack, with its own roll and its own defence.
 
 When the attack value is final, the defender chooses one of the following defences before rolling any dice.
 
 - The defender may *block* an attack that deals *physical damage* or *resist* an attack that deals *magical damage* (see §9.4). The defender suffers damage equal to the attack value minus the *defence total*, to a minimum of zero, and is *hit*.
 - The defender may *dodge* as against an enemy's attack (see §9.5). The *dodge difficulty* is given by the table in this section.
 - The defender may *parry* as against an enemy's attack, with the attacker in the place of the enemy, if the conditions for a parry are met (see §9.6). The dodge difficulty is given by the same table.
-- The defender may decline to defend. The defender suffers damage equal to the attack value and is hit.
 
 A character has no fixed block or resist value. A defender who blocks or resists rolls the dice and takes the two highest (see §9.4).
 
@@ -79,11 +78,8 @@ The dodge difficulty of a character's attack is set by the stamina cost printed 
 | Stamina cost of the *attack option* | *Dodge difficulty* |
 |---|---|
 | 0 | 3 |
-| 1 | 2 |
-| 2 | 2 |
-| 3 | 1 |
-| 4 | 1 |
-| 5 or more | 1 |
+| 1 or 2 | 2 |
+| 3 or more | 1 |
 
 *Example.* The Assassin attacks the Knight, who stands on an adjacent node, with an attack option that costs one stamina. The Assassin places one stamina cube and rolls two blue dice, which show 2 and 3, for an attack value of 5. An attack option that costs one stamina has dodge difficulty 2. The Knight chooses to dodge, places one stamina cube, and rolls two dodge dice, which show one success and one blank. The total of 1 is lower than the dodge difficulty, so the dodge fails and the Knight is hit. The Knight rolls only the block dice of the armour card, two black dice, which show 1 and 2, for a defence total of 3. The Knight suffers two damage and places two damage cubes.
 
@@ -127,13 +123,13 @@ If no character suffers damage and no character dies during three consecutive *r
 
 **Victory bonus.** The reward for winning a PvP encounter that follows the defeat of a boss other than the *final boss*: +1 to the attack value of each of the winner's attacks in every subsequent PvP encounter.
 
-When a character wins a PvP encounter that follows the defeat of a boss other than the final boss, the character gains one *victory bonus*. One *wound token* of value 1 is placed beside the winner's dashboard to mark it. In every subsequent PvP encounter, the character adds one to the *attack value* of each of their attacks for each victory bonus held (see §20.4). Victory bonuses are cumulative, have no effect outside PvP encounters, and are kept until the game ends.
+When a character wins a PvP encounter that follows the defeat of a boss other than the final boss, the character gains the *victory bonus*. A spare token of any kind is placed beside the winner's dashboard to mark it. In every subsequent PvP encounter, the character adds one to the *attack value* of each of their attacks (see §20.4). A character holds no more than one victory bonus, however many PvP encounters the character wins. The victory bonus has no effect outside PvP encounters and is kept until the game ends.
 
 **Ultimate victor.** The character who wins the PvP encounter that follows the defeat of the final boss.
 
 The winner of the PvP encounter that follows the defeat of the final boss is the *ultimate victor*. That PvP encounter awards no victory bonus. If no character wins it, the game has no ultimate victor. Victory over the final boss is shared by every player, whatever the outcome of the PvP encounter (see §7.1).
 
-*Example.* The Assassin wins the PvP encounter that follows the mini-boss, and one wound token is placed beside the Assassin's dashboard. In the PvP encounter that follows the main-boss, which is the final boss of this game, the Assassin rolls a total of 4 for an attack and adds one for the victory bonus, for an attack value of 5. The Assassin is the last character on the tile and is the ultimate victor.
+*Example.* The Assassin wins the PvP encounter that follows the mini-boss, and a spare token is placed beside the Assassin's dashboard. In the PvP encounter that follows the main-boss, which is the final boss of this game, the Assassin rolls a total of 4 for an attack and adds one for the victory bonus, for an attack value of 5. The Assassin is the last character on the tile and is the ultimate victor.
 
 ## 20.9 After the PvP Encounter
 
@@ -142,6 +138,6 @@ When a *PvP encounter* that follows the defeat of a boss other than the *final b
 1. Return every *trap token* on the tile to the supply.
 2. Carry out the setup that follows that boss (see §6.6 and §6.7).
 
-That setup ends with a rest at the *bonfire* that costs no *spark* (see §11.2). The rest restores every character, including each character who died in the PvP encounter and each character who died in the boss encounter. It is the one rest that follows the boss's defeat (see §16.5); a PvP encounter grants no second rest.
+That setup ends with a rest at the *bonfire* that costs no *spark* (see §11.2). The rest restores every character, including each character who died in the PvP encounter and each character who died in the boss encounter. It is the one rest that follows the boss's defeat (see §16.5); a PvP encounter grants no second rest. In campaign play, what follows a PvP encounter is stated with the campaign rules (see §18.1, Player versus Player Encounters).
 
 When the PvP encounter that follows the defeat of the final boss ends, the game ends. No setup and no rest follow it.

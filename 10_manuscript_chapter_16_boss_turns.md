@@ -140,7 +140,7 @@ A character inflicts damage on a boss when an attack lowers the boss's *health d
 
 A *riposte* is made during the boss's turn (see §9.6). If a riposte inflicts damage on the boss, the aggro token moves to the character who made it at the end of that boss turn, after the behaviour card has been resolved. If more than one character ripostes in the same boss turn, the token moves to the last of them to inflict damage.
 
-When the character who holds the aggro token dies, the token moves at once to the living character with the highest threat (see §7.5, Encounter Turn Order). A *summon* does not hold the aggro token, and damage inflicted by a summon does not move it (see §12.1).
+When the character who holds the aggro token dies, the token moves at once to the living character with the highest threat (see §7.5, Encounter Turn Order). A *summon* does not hold the aggro token, and damage inflicted by a summon does not move it. While the Distract icon of a summon's behaviour card is in effect, the boss treats the summon as the holder (see §12.1).
 
 *Example.* The Knight holds the aggro token. The Herald attacks the boss and inflicts two damage, and at the end of the Herald's turn the token moves to the Herald. The boss takes its turn and attacks the Herald. The Assassin then attacks the boss, and the boss's block reduces the attack to no damage. The token stays with the Herald.
 

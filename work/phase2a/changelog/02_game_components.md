@@ -202,3 +202,112 @@
 - After: "Each boss has two or more boss treasure cards, one of which"
 - Rationale: As CH entry above: the unsupported upper limit is withdrawn.
 - Source: QA-007 (example and consistency verification)
+
+### CH-02-030 · §2.8
+- Type: ruling
+- Before: "- 16x Stat cubes (white) (Core)
+- 8x Hollow cubes
+- 1x Spark dial (Core)"
+- After: "- 16x Stat cubes (white) (Core)
+- 1x Spark dial (Core)"
+- Rationale: Hollow cubes are not a separate component; they are the white cubes of the core set that are not marking a stat, so the unsourced line is removed.
+- Source: final rulings, core-E01 (`06_final_rulings.md`); Core 2017 component list: 16x Level Up Tokens (white cubes), DS-Core-Rules-lores.txt l.244; author's source 03_characters.md l.58 and 07_gameplay.md l.20 ('white cubes').
+
+### CH-02-031 · §2.8
+- Type: ruling
+- Before: "*Hollow cubes* are of a colour distinct from the damage, stamina, and stat cubes; two are placed on the endurance bar of a character who is *hollow* (see §7.2)."
+- After: "*Hollow cubes* are white cubes that are not in use as stat cubes; two are placed on the endurance bar of a character who is *hollow* (see §7.2). A white cube is placed on an endurance bar for no other purpose, so a hollow cube cannot be taken for a damage cube or a stamina cube. The supply of white cubes is not a limit: when every white cube is in use, the players mark the blocked spaces with any other markers that are neither red nor black."
+- Rationale: Names the physical component (white cube, never otherwise on the endurance bar) and gives the fallback for a party of four, whose 16 white cubes are all stat cubes.
+- Source: final rulings, core-E02 (`06_final_rulings.md`); Author's source ('a marker such as white cubes'); Extended Rules l.57-59 (a marker of any type when the box lacks a colour); §2.8 already treats the soul token supply the same way.
+
+### CH-02-032 · §2.8
+- Type: correction
+- Before: "- 36x Condition tokens: 7x each of bleed, poison, frostbite, and stagger (Core and expansions); 4x calamity (Black Dragon Kalameet); 4x corrosion (Gaping Dragon)"
+- After: "- 28x Condition tokens: 5x each of bleed, poison, frostbite, and stagger (Core); 4x calamity (Black Dragon Kalameet); 4x corrosion (Gaping Dragon)"
+- Rationale: The core set supplies five of each condition token and no first-edition expansion adds more; seven each cannot be supported.
+- Source: final rulings, campaign-E03 (`06_final_rulings.md`); DS-Core-Rules-lores.txt 252-261 (5x each); BDK booklet line 82 (4x calamity); Gaping Dragon booklet contents (4x corrosion); no other supplied or downloaded booklet lists bleed, poison, frostbite or stagger tokens.
+
+### CH-02-033 · §2.8
+- Type: clarification
+- Before: "*calamity*, and *corrosion* (see §8.5)."
+- After: "*calamity*, and *corrosion* (see §8.5). The supply of condition tokens is not a limit; when it is exhausted the players mark the condition with any other counters."
+- Rationale: Poison stacks without limit (§8.5) and five tokens can run out; the same sentence already covers soul tokens.
+- Source: final rulings, campaign-E04 (`06_final_rulings.md`); §8.5 sets no supply limit (chapter 08 issue list, A-081 not applied); §2.8 soul-token wording.
+
+### CH-02-034 · §2.2
+- Type: correction
+- Before: "- 5x Phalanx (PWA)
+- 1x Phalanx Hollow (PWA)"
+- After: "- 5x Phalanx Hollow (PWA); the Phalanx (PWA) has a data card of its own and no model, and is shown by three Phalanx Hollow models placed together"
+- Rationale: The set holds 13 enemy models, five of them Phalanx Hollows; six Phalanx models would make 14.
+- Source: final rulings, campaign-E05 (`06_final_rulings.md`); Publisher and retailer listings give 18 miniatures (3 characters, 13 enemies, 2 bosses); community Unofficial Guide and Rules FAQ, set overview table: '5x Phalanx Hollows ... 1x Phalanx (no distinct miniature, represented with 3 Phalanx Hollow miniatures pushed together)'.
+
+### CH-02-035 · §2.9
+- Type: correction
+- Before: "- 1x Mega-boss model (the Executioner's Chariot has two), 1x Mega-boss data card, 1x Health dial, the behaviour cards listed on the data card, and 2x Mega-boss treasure cards (see §6.7)"
+- After: "- 1x Mega-boss model (the Executioner's Chariot has two and The Four Kings four), 1x Mega-boss data card, 1x Health dial (The Four Kings has four), the behaviour cards listed on the data card, and 2x Mega-boss treasure cards (see §6.7)"
+- Rationale: The Four Kings expansion supplies four models and four health dials.
+- Source: final rulings, campaign-E06 (`06_final_rulings.md`); Official Four Kings booklet, Contents: '4x Four Kings Miniatures, 4x Four Kings Health Dials, 1x Four Kings Data Card, 4x Four Kings Identifier Tokens, 20x Behaviour Cards, 2x Treasure Cards, 4x Level 4 Encounter Cards'.
+
+### CH-02-036 · §2.9
+- Type: completion
+- Before: "- Asylum Demon only: 4x Pillar tokens (see §17.3)"
+- After: "- Asylum Demon only: 4x Pillar tokens (see §17.3)
+- Gaping Dragon only: 4x Corrosion tokens (see §8.5)
+- The Four Kings only: 4x Identifier tokens (see §17.10)
+- Guardian Dragon only: 4x Fiery Breath cards (see §17.10)
+- Old Iron King only: 6x Fire Beam cards (see §17.10)"
+- Rationale: Lists the components particular to four mega-boss expansions, now verified from their booklets.
+- Source: final rulings, campaign-E07 (`06_final_rulings.md`); Official booklets, Contents pages: Gaping Dragon (4x Corrosion Condition Tokens), Four Kings (4x Identifier Tokens), Guardian Dragon (4x Fiery Breath Cards), Old Iron King (6x Fire Beam Cards). Vordt, The Last Giant and Manus list no component beyond the common set.
+
+### CH-02-037 · §2.9
+- Type: completion
+- Before: "The Asylum Demon expansion also supplies the Asylum Demon mini-boss (see §2.3)."
+- After: "The Asylum Demon expansion also supplies the Asylum Demon mini-boss, with its own data card, nine behaviour cards, and two boss treasure cards; the one model serves for both the Asylum Demon and the Stray Demon (see §2.3)."
+- Rationale: The expansion holds one model and two complete sets of boss cards.
+- Source: final rulings, campaign-E08 (`06_final_rulings.md`); Official Asylum Demon booklet, Contents: 1x Asylum Demon Miniature, 1x Asylum Demon Data Card, 9x Mini Boss Behaviour Cards, 2x Asylum Demon Treasure Cards, 1x Stray Demon Data Card, 13x Mega Boss Behaviour Cards, 2x Stray Demon Treasure Cards, 4x Pillar Tokens, 4x Level 4 Encounter Cards.
+
+### CH-02-038 · §2.5
+- Type: correction
+- Before: "| *Boss treasure* | 18 | 63 |"
+- After: "| *Boss treasure* | 18 | 48 |"
+- Rationale: The expansions supply 48 boss treasure cards; 63 also counted the 12 invader treasure cards and the 3 Titanite Scale cards, which the book lists separately.
+- Source: final rulings, campaign-E09 (`06_final_rulings.md`); Booklet contents: Darkroot 3+3, Explorers 3+2, Iron Keep 2+3, Asylum Demon 2+2, nine other mega-boss expansions 2 each, ToG 5 (DS-TG contents), PWA 5 (by subtraction, agreeing with the community count of 95 item cards).
+
+### CH-02-039 · §2.5
+- Type: correction
+- Before: "In all, 534 treasure cards are available. Each character's ten class-specific treasure cards comprise five class treasure cards and five *transposed treasure* cards. Each boss has two or more boss treasure cards, one of which is awarded when the boss is defeated (see §16.5). The 12 invader treasure cards of the Phantoms expansion are listed with the expansion components (see §2.9)."
+- After: "In all, 519 treasure cards are available. Each character's ten class-specific treasure cards comprise five class treasure cards and five *transposed treasure* cards. Each boss has two or more boss treasure cards, one of which is awarded when the boss is defeated (see §16.5). The 12 invader treasure cards of the Phantoms expansion and the three Titanite Scale cards of the Iron Keep expansion are not counted in the table and are listed with the expansion components (see §2.9)."
+- Rationale: The total follows the corrected boss treasure figure, and the two card types counted outside the table are named.
+- Source: final rulings, campaign-E10 (`06_final_rulings.md`); 13+45+40+120+60+145+10+20+18+48 = 519; 519+12+3 = 534, the manuscript's total.
+
+### CH-02-040 · §2.6
+- Type: correction
+- Before: "| Level 1 | 12 | 31 |
+| Level 2 | 12 | 31 |
+| Level 3 | 12 | 31 |
+| Level 4 | 0 | 40 |
+
+In all, 169 encounter cards are available."
+- After: "| Level 1 | 12 | 37 |
+| Level 2 | 12 | 37 |
+| Level 3 | 12 | 37 |
+| Level 4 | 0 | 40 |
+
+In all, 187 encounter cards are available. Of each of Levels 1 to 3, the Darkroot and Iron Keep expansions supply six cards each, the Explorers expansion five, the Executioner's Chariot expansion two, and ToG and PWA nine each."
+- Rationale: Thirty-one per level matches no combination of sets; the per-set figures are stated so that the total can be checked.
+- Source: final rulings, campaign-E11 (`06_final_rulings.md`); Darkroot booklet 131-132 and Iron Keep booklet 100-101 (six of each level), Explorers booklet 277-278 (five of each), Executioner's Chariot booklet (10 cards: 4 Level 4 and six named Level 1 to 3 cards), ToG rulebook (29 cards, two of them boss encounter cards), community guide (ToG and PWA 27 each, 9/9/9).
+
+### CH-02-041 · §2.3
+- Type: correction
+- Before: "fought with two models, Dragonslayer Ornstein and Executioner Smough. The pair"
+- After: "fought with two models, Dragon Slayer Ornstein and Executioner Smough. The pair"
+- Rationale: The printed name is two words (Gate 1 OQ-17: printed spellings for proper nouns).
+- Source: final rulings, campaign-E12 (`06_final_rulings.md`); DS-Core-Rules-lores.txt 170, 177, 1662-1663 and the 2023 Sunless City rulebook print 'Dragon Slayer Ornstein'.
+
+### CH-02-042 · §2.9, Phantoms
+- Type: ruling
+- Before: "When an *invasion* is provoked, one invader token is placed face down on each face-down encounter card, and each is revealed when the characters fight that encounter (see §12.2)."
+- After: "When an *invasion* is provoked, one invader token is placed face down on each face-down encounter card that carries no black cube, and each is revealed when the characters fight that encounter (see §12.2)."
+- Rationale: [MECHANICAL CHANGE] Keeps the component note in step with §12.2.
+- Source: final rulings, phantom-E16 (`06_final_rulings.md`); Follows phantom-E06.

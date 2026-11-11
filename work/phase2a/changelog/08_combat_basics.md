@@ -293,3 +293,53 @@
 - After: "shows the number of times the attack beside it is resolved (see §9.3)."
 - Rationale: §9.3 applies an enemy's repeat icon to the attack icon beside it only.
 - Source: QA observation (example and consistency verification)
+
+### CH-08-043 · §8.1
+- Type: clarification
+- Before: "A character targets enemies, bosses, and *invaders*."
+- After: "A character targets hostile models: enemies, bosses, *invaders*, *mimics*, and *crystal lizards* (see §10.3)."
+- Rationale: §8.1 and §10.3 gave two different lists of what a character may target.
+- Source: final rulings, combat-E11 (`06_final_rulings.md`); This book, §10.3; §13; §14.
+
+### CH-08-044 · §8.2
+- Type: ruling
+- Before: "- The *repeat* icon {{icon:ast-0061-repeat-behaviour-or-attack}} shows the number of times the attack beside it is resolved (see §9.3)."
+- After: "- The *repeat* icon {{icon:ast-0061-repeat-behaviour-or-attack}} modifies no single icon: it shows the number of times the enemy's whole row of behaviour icons is resolved (see §9.1)."
+- Rationale: [MECHANICAL CHANGE] One meaning for the repeat icon on every data card and behaviour card: the whole row is repeated.
+- Source: final rulings, combat-E12 (`06_final_rulings.md`); Official 2017: the enemy performs its entire behaviour (DS-Core-Rules-lores.txt 1441-1444); official 2022: entire row of behaviour symbols (DS-TG 2256-2264); this book, §16.1 step 4 and glossary Repeat.
+
+### CH-08-045 · §8.4
+- Type: correction
+- Before: "A model is pushed for one of four reasons."
+- After: "A model is pushed for one of the following reasons."
+- Rationale: The list was not complete: a leap and other boss rules also push.
+- Source: final rulings, combat-E13 (`06_final_rulings.md`); This book, §16.2, Leap; §17.8; §17.9.
+
+### CH-08-046 · §8.4
+- Type: correction
+- Before: "- A *boss* model moves onto the node of another boss model (see §17.1)."
+- After: "- A *boss* model moves onto the node of another boss model (see §17.1).
+- A rule of a boss pushes the model, as a *leap* does (see §16.2, Leap; §17)."
+- Rationale: Adds the pushes that the boss chapters already make.
+- Source: final rulings, combat-E14 (`06_final_rulings.md`); This book, §16.2, Leap; §17.8; §17.9.
+
+### CH-08-047 · §8.4
+- Type: clarification
+- Before: "The attack of a push-move with a damage value is defended as any other enemy attack (see §9.4; §9.5)."
+- After: "The attack of a push-move with a damage value is defended by a block or a dodge, as any other enemy attack is (see §9.4; §9.5). No *parry* of it is permitted (see §9.6)."
+- Rationale: §8.4 read as if a parry were allowed; §9.2 and §9.6 forbid it.
+- Source: final rulings, combat-E15 (`06_final_rulings.md`); This book, §9.2 and §9.6.
+
+### CH-08-048 · §8.5
+- Type: clarification
+- Before: "Each condition lasts until the rule under its heading removes it. Where a token is removed at the end of a model's next complete *turn*, a token placed"
+- After: "Each condition lasts until the rule under its heading removes it. The end of the affected model's own *turn* is the only moment at which a turn acts on a condition: poison is then resolved, and frostbite and stagger tokens are then removed. Where a token is removed at the end of a model's next complete turn, a token placed"
+- Rationale: States the one clock that poison, frostbite and stagger share, which step 3 of the character turn relies on.
+- Source: final rulings, combat-E16 (`06_final_rulings.md`); Official 2017 and 2022 resolve all three at the end of the model's own activation (DS-Core-Rules-lores.txt 968-971, 986-988; DS-TG 1483-1512).
+
+### CH-08-049 · §8.5
+- Type: clarification
+- Before: "A value reduced by a condition cannot fall below zero."
+- After: "A value reduced by a condition cannot fall below zero. When the *aggro token* is assigned, bleed damage counts as damage inflicted by the character whose attack triggered it, and poison damage counts for no character (see §7.5, Encounter Turn Order; §16.4)."
+- Rationale: Settles which condition damage counts towards the aggro token without any new book-keeping.
+- Source: final rulings, combat-E17 (`06_final_rulings.md`); No source addresses it; follows from when the damage is recorded.

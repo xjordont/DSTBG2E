@@ -279,3 +279,41 @@
 - After: not applied
 - Rationale: D-011 (OPTIONAL; pay one soul to ready luck): skipped, because the rest readies the luck token. C-092 (OPTIONAL; campaign cost sentence): belongs to §18.6. A-077 (OPTIONAL): applied to boss treasure only; legendary treasure is a tier two card with a deck to return to. A-104 (Demon Hunting, Section One): owned by §19.6. B-016 (stat scaling threshold): owned by §10.5. The alternative stat tier four costs of A-067 (16) and D-005 (12) and D-005's flat value of 40 are superseded by Gate 1 OQ-09.
 - Source: D-011, C-092, A-077, A-104, B-016, A-067, D-005
+
+### CH-11-041 · §11.2
+- Type: ruling
+- Before: "7. If the *shop* has not been restocked since a boss was last defeated, restock it (see §6.3, Restocking After a Boss).
+8. The characters may visit the *Firekeeper* (see §11.3) and Blacksmith Andre (see §11.4), in either order and any number of times.
+9. *Reset* every encounter (see §11.5)."
+- After: "7. The characters may visit the *Firekeeper* (see §11.3) and Blacksmith Andre (see §11.4), in either order and any number of times.
+8. *Reset* every encounter (see §11.5)."
+- Rationale: The conditional restock never takes effect: the setup after a boss (§6.6, §6.7) and the setup of a campaign section (§18.6) restock before the rest begins.
+- Source: final rulings, core-E09 (`06_final_rulings.md`); §6.6 step 16, §6.7 step 7, §18.6; chapter 11 issues list, item 7.
+
+### CH-11-042 · §11.2
+- Type: ruling
+- Before: "Resting does not restock the shop except as step 7 directs. Cards bought from the shop are not replaced, and unsold cards stay in the shop, until the shop is next restocked (see §6.3, Restocking After a Boss). In campaign play, step 7 applies when a section has been completed rather than when a boss has been defeated (see §18.6, Blacksmith Andre's Shop)."
+- After: "Resting does not restock the *shop*. Cards bought from the shop are not replaced, and unsold cards stay in the shop, until the shop is next restocked during the setup that follows a boss's defeat (see §6.3, Restocking After a Boss). In campaign play the shop is restocked during the setup that follows the completion of a section (see §18.6, Blacksmith Andre's Shop)."
+- Rationale: Follows the deletion of step 7.
+- Source: final rulings, core-E10 (`06_final_rulings.md`); As core-E09.
+
+### CH-11-043 · §11.4, Sales
+- Type: ruling
+- Before: "When a *weapon* with *Titanite* attached is sold, the Titanite goes with the weapon to the bottom of the treasure deck of the weapon's tier, and every other *upgrade card* attached to a sold card returns to the character's inventory (see §4.2, Titanite). The sell value of the weapon is paid once; attached Titanite adds nothing to it."
+- After: "When a *weapon* with *Titanite* attached is sold, the Titanite is sold with it, and every other *upgrade card* attached to a sold card returns to the character's inventory (see §4.2, Titanite). The sell value of the weapon is paid once; attached Titanite adds nothing to it. The weapon and the Titanite are separated, and each goes to the place stated for a sold card of its kind."
+- Rationale: [MECHANICAL CHANGE] As core-E31.
+- Source: final rulings, core-E32 (`06_final_rulings.md`); As core-E31.
+
+### CH-11-044 · §11.1
+- Type: ruling
+- Before: "- After an encounter is *cleared*, the party may return to the bonfire tile instead of advancing to the next tile (see §7.5, Encounter Recovery)."
+- After: "- After an encounter is *cleared*, the party may return to the bonfire tile and rest instead of advancing to the next tile (see §7.5, Encounter Recovery)."
+- Rationale: [MECHANICAL CHANGE] Returning and resting are one act, as §7.5 already states.
+- Source: final rulings, core-E35 (`06_final_rulings.md`); §7.5, Encounter Recovery; author's source 11_returning_to_the_bonfire.md l.8; official 2022 'Resting at the Bonfire' (DS-TG-Rulebook l.1927-1930, l.2075-2079).
+
+### CH-11-045 · §11.1
+- Type: ruling
+- Before: "Returning to the bonfire tile costs nothing. The party spends a *spark* only when it rests (see §11.2). Until the party rests, no character is restored, the Firekeeper and Andre cannot be visited, and no encounter is *reset*."
+- After: "Returning to the bonfire tile and resting there are one act. The party returns only to rest, and the rest begins when the models are placed on the tile (see §11.2). The party cannot choose to return while the *spark* dial shows zero (see §7.4)."
+- Rationale: [MECHANICAL CHANGE] Removes the state of standing at the bonfire without resting, which had no use except to fight cleared encounters again without spending a spark.
+- Source: final rulings, core-E36 (`06_final_rulings.md`); As core-E35.

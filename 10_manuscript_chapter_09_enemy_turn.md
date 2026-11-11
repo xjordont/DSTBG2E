@@ -8,7 +8,7 @@ Each *round* of an *encounter* begins with the enemies: every enemy model takes 
 
 Each enemy's behaviour is printed on its *data card* as a row of *behaviour icons*: movement icons (see §9.2) and attack icons (see §9.3). The other values on the data card are described with the card (see §8.2). During its turn the enemy resolves its icons one at a time from left to right, and each icon is resolved in full before the next.
 
-An icon that has no valid *target*, or that cannot be resolved, is skipped, and the next icon to the right is resolved. The enemy's turn ends when its last icon has been resolved or when the enemy is killed.
+An icon that has no valid *target*, or that cannot be resolved, is skipped, and the next icon to the right is resolved. If the data card bears the *repeat* icon {{icon:ast-0061-repeat-behaviour-or-attack}}, the enemy resolves its whole row of icons the number of times shown, and the target of each icon is determined again each time. The enemy's turn ends when its last icon has been resolved for the last time or when the enemy is killed.
 
 Enemies target only characters; an enemy never targets another enemy (see §8.1). An enemy's health, movement, and attack values are scaled for the number of characters (see §8.3). An enemy that holds a *stagger* or *frostbite* token resolves its icons with the penalty stated for that *condition* (see §8.5).
 
@@ -86,7 +86,8 @@ The small icons printed around the attack icon modify the attack.
 - The node icon {{icon:ast-0054-node-attack}} makes the attack a *node attack*.
 - The push icon {{icon:ast-0058-push-affected-enemies}} makes the attack a *push-attack*: each character *hit* by the attack is *pushed* away from the enemy after the damage is resolved (see §8.4).
 - A *condition* icon places the matching condition token on each character hit by the attack (see §8.5).
-- A *repeat* icon {{icon:ast-0061-repeat-behaviour-or-attack}} causes the attack to be resolved the number of times shown, and the target is determined afresh each time. A repeat icon applies only to the attack icon beside it, not to a movement icon.
+
+A *repeat* icon {{icon:ast-0061-repeat-behaviour-or-attack}} on the data card repeats the enemy's whole row of icons, not one attack (see §9.1).
 
 ### Targets
 
@@ -97,6 +98,20 @@ If the target is not within the attack's range, the attack misses: the icon is s
 **Node attack.** An attack that bears the node icon. It targets every character on the node of the character named by its skull icon or nearest-character icon.
 
 If the node targeted by a node attack is not within range, the attack is skipped. Each character on the node is attacked separately: each defends on their own, and the full attack value is applied to each.
+
+### Attack Sequence
+
+An enemy attack is resolved as follows.
+
+1. Determine the target (see §9.3, Targets).
+2. Check the range. If the target is not within range, skip the icon.
+3. Choose the character's defence (see §9.3, Defence).
+4. Resolve the defence (see §9.4; §9.5; §9.6). If a dodge or a parry succeeds, the character is not hit, and the attack on that character ends.
+5. Place the damage that the defence has not prevented (see §3.4).
+6. If the attack is a push-attack, push the character (see §8.4).
+7. Place any condition token the attack carries (see §8.5).
+
+Steps 6 and 7 are resolved even if the character suffered no damage. A character who dies in step 5 is not pushed and receives no token. A node attack resolves steps 3 to 7 for one character at a time, in an order chosen by the players. The attack of a push-move with a damage value follows the same steps from step 3 (see §8.4).
 
 ### Defence
 
@@ -124,7 +139,7 @@ A character *blocks* an attack that deals physical damage with the dice shown be
 4. Add together the two highest results. If one die was rolled, its result is the sum. If no dice were rolled, the sum is zero.
 5. Apply to the sum every fixed modifier printed with the block or resist dice of the equipped cards. The result is the *defence total*.
 6. Subtract the defence total from the *attack value*. The character suffers the difference as damage, to a minimum of zero (see §3.4).
-7. Place any *condition* token the attack carries (see §8.5) and resolve any *push* (see §8.4), even if the character suffered no damage.
+7. Resolve any *push* (see §8.4), then place any *condition* token the attack carries (see §8.5), even if the character suffered no damage.
 
 Dice beyond the two highest are ignored. A fixed modifier is applied after the two highest results are added, whether or not a die of its card is among the two highest. A defence total of less than zero is treated as zero. A condition token on the character may reduce the defence total (see §8.5).
 
@@ -177,10 +192,10 @@ A trap is dodged under the rules of this section, against the dodge difficulty s
 
 A character targeted by an attack may attempt to *parry* it in place of a *block*, a *resist*, or a *dodge*. A parry is permitted only if both of the following are true.
 
-- A *shield* is equipped in the character's left *weapon slot* (see §3.2; §4.1).
+- A *shield* is equipped in one of the character's *weapon slots* (see §3.2; §4.1).
 - The attacker is on the character's node.
 
-A shield in the right weapon slot does not permit a parry. A character who wields a weapon *two-handed* has no shield equipped and cannot parry (see §10.4).
+The shield may be in either weapon slot. A character who wields a weapon *two-handed* has no shield equipped and cannot parry (see §10.4).
 
 The following attacks cannot be parried.
 
@@ -205,11 +220,11 @@ When a parry succeeds, the attack misses. The character is not *hit*: the charac
 
 ### Riposte
 
-A riposte is one attack against the attacker, made with one *attack option* of the *weapon* equipped in the character's right weapon slot. The character pays the stamina cost of the attack option and resolves the attack as §10.3 describes. The attacker's stagger token is in place before the riposte is resolved. An enemy cannot dodge or parry a riposte.
+A riposte is one attack against the attacker, made with one *attack option* of the *weapon* equipped in the character's other weapon slot, the slot that does not hold the shield used for the parry. A *spell* cannot be used for a riposte, whether it is equipped in that slot or stored in a *catalyst* there (see §4.3). The character pays the stamina cost of the attack option and resolves the attack as §10.3 describes. The attacker's stagger token is in place before the riposte is resolved. An enemy cannot dodge or parry a riposte.
 
 A riposte is made during the attacker's *turn*. It is not the character's *Attack* major action, and it does not count against the attacks the character makes in their own turn (see §10.3). In every other respect a riposte is an attack: the character may flip the luck token to reroll its dice, and the icons of the attack option apply. A riposte against a character in a PvP encounter is defended as §20.4 describes.
 
-A riposte is optional. No riposte is made if the right weapon slot holds no weapon with an attack option, if the character cannot pay the stamina cost, or if no attack option of that weapon may target the character's own node, as with the *shaft* icon (see §10.3, Shaft). The parry succeeds all the same, and the attacker is staggered.
+A riposte is optional. No riposte is made if the other weapon slot holds no weapon with an attack option, if the character cannot pay the stamina cost, or if no attack option of that weapon may target the character's own node, as with the *shaft* icon (see §10.3, Shaft). The parry succeeds all the same, and the attacker is staggered.
 
 If the riposte kills the attacker, the attacker's turn ends at once, and its remaining icons are not resolved (see §9.1).
 

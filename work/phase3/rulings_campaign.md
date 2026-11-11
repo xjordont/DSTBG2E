@@ -1,6 +1,6 @@
 # Rulings memo — cluster `campaign`
 
-Scope: lead items 1, 11 and 18; every item in the issue lists for chapters 02, 18 and 19; the chapters themselves and the glossary terms they define. Edits are in `work/phase3/edits_campaign.json` (44 entries, each `old` checked to occur exactly once in its file).
+Scope: lead items 1, 11 and 18; every item in the issue lists for chapters 02, 18 and 19; the chapters themselves and the glossary terms they define. Edits are in `work/phase3/edits_campaign.json` (48 entries, each `old` checked to occur exactly once in its file; E45 to E48 belong to the follow-up section at the end).
 
 ## Sources used
 
@@ -486,7 +486,7 @@ Two CONFIRM rulings carry a wording edit: campaign-002 (E29) and campaign-036 (E
 2. The split of the 2022 encounter cards by level (nine each) comes from the community guide alone; the rulebook gives only the total of 29 with two boss encounter cards.
 3. The highest number on the physical spark dial is inferred to be five (the official game never sets it higher, and one community ruleset says it cannot go above five). If the dial shows six, campaign-016 can be withdrawn without other effect.
 4. The printed form of Ornstein's name was checked against two rulebooks, not against the card.
-5. Four further official campaigns exist that the book does not include (annex below). Adding them is a question of scope, not of rules, and is left to the lead editor. If they are added, "12" and "twelve" change in §18.1, §19 and the glossary entry Campaign.
+5. Superseded by the follow-up below: the four further official campaigns are now drafted as §19.13 to §19.16 (campaign-041 to campaign-045).
 6. A catch-up for a character who joins late in a campaign (campaign-023) was not added. If play shows that a late joiner cannot contribute, the simplest form is a soul grant for each completed section, on the model of Big Game Hunting's 16 souls.
 
 ## (c) Cross-cluster effects
@@ -505,9 +505,94 @@ Two CONFIRM rulings carry a wording edit: campaign-002 (E29) and campaign-036 (E
 
 ## Annex — official campaigns not in this book
 
-For the lead editor's decision under (b) 5. Lists are as printed in the booklets.
+Superseded by the follow-up section at the end of this memo, where these four campaigns are drafted in full. Lists are as printed in the booklets.
 
 - Go Beyond Death (Old Iron King; core, Explorers, Iron Keep; shared deck of the three, Level 4 from Old Iron King). 1 Tower of Flame: Bonfire, L1, L1, L1, L2, Old Dragonslayer. 2 Threshold Bridge: Bonfire, L1, L2, L2, L3, Smelter Demon. 3 Ironhearth Hall: Bonfire, L2, L3, L3, Fortress Gates (L4), Pursuer. 4 Eygil's Idol: Bonfire, L3, Blazing Furnace (L4), Old Iron King.
 - Footsteps of Giants (The Last Giant; core, Darkroot; shared deck; a Level 2 or 3 card is redrawn unless it shows a Large Hollow Soldier, Sentinel, Mushroom Parent, Stone Knight or Stone Guardian). 1 Echoes of Giants: Bonfire, L1, L1, L1, Winged Knight. 2 Hall of Remembrance: Bonfire, L2, L2, L2, Titanite Demon. 3 Twisted Wood: Bonfire, L2, L2, L3, Sif. 4 Grove of Giants: Bonfire, L3, L3, Forest of Fallen Giants (L4), Artorias. 5 The Giant's Rest: Bonfire, L3, L3, The Petrified Fallen (L4), The Last Giant.
 - Treasures of the Ice Cave (Vordt; core, Phantoms; Level 4 from Vordt). 1 Glacial Entrance: Bonfire, L1, L1, L2, L2 with Melinda the Butcher and Oliver the Collector. 2 Arctic Pass: Bonfire, L2, L2, L2, L3, Boreal Outrider Knight. 3 Frozen Corridor: Bonfire, L2, L3, L3, Guarded Path (L4) with Marvelous Chester and Paladin Leeroy. 4 The Boreal Sanctuary: Bonfire, L3, L3, The Dog's Domain (L4), Vordt. Both invaders of an encounter must be beaten, and they return if the party dies.
 - Demons and Dragons (Guardian Dragon; Asylum Demon, Gaping Dragon and Kalameet expansions). Encounters award no souls and one treasure card per player; stat tiers are granted at the start of each section; a Level 4 encounter grants a spark. 1 The Dungeon's Gates: Bonfire, L1, L1, L1, L2, Asylum Demon. 2 The Bloody Road: Bonfire, L2, L2, L2, L2, Titanite Demon. 3 The Peak of Peril: Bonfire, L2, L3, L3, L4, Guardian Dragon. 4 The Maw of Death: Bonfire, L3, L3, L4, Gaping Dragon. 5 The Final Conflict: Bonfire, L4, Stray Demon, L4, Black Dragon Kalameet. This one replaces the soul economy outright and would need the most new text.
+
+---
+
+## Follow-up — the four further campaigns and the local booklets
+
+The eight mega-boss booklets are now in `work/text/` (DS-AD-Rules-web-EN.txt, DS-Four-Kings-Rules-web.txt, DS-GaD-Rules-web.txt, DS-GD-Rules-web.txt, DS-MFA-Rules.txt, DS-OIK-Rules-web.txt, DS-TLG-Rules.txt, DS-VotBV-Rules-web.txt). Line references below are to those files.
+
+### campaign-046 · Re-check against the local booklets
+- Question: Do the local booklets differ from the online copies used for campaign-007, -031, -033 and -034?
+- This book now: as edited by campaign-E05 to E08 and E36 to E41.
+- Evidence: a word-for-word comparison of each local text with the copy used earlier. Seven are identical; the eighth (Asylum Demon) differs only by a stray control character in the extraction. Campaign pages: Demon Hunting, DS-AD 490-551; Call of the Abyss, DS-Four-Kings 513-568; Into the Depths, DS-GaD 507-561; Big Game Hunting, DS-MFA 501-561.
+- Ruling: CONFIRM. No earlier edit changes.
+- Why: The lists and the contents pages are the same text.
+- Mechanical: no
+- Edits: none
+
+### campaign-041 · §19.13 Go Beyond Death
+- Question: How is the Old Iron King campaign stated in this book's terms?
+- This book now: absent.
+- Evidence: DS-OIK-Rules-web.txt, campaign pages: four sections; "a shared deck of encounters from the core game, the Explorers expansion, and the Iron Keep expansion"; Level 4 encounters from the Old Iron King expansion; named Level 4 encounters Fortress Gates (Section 3, before the Pursuer) and Blazing Furnace (Section 4).
+- Ruling: ADD as §19.13.
+- Why: It needs no rule of its own. The general rules of §18.1 already cover a named Level 4 encounter and a Level 4 encounter in a section that ends in a main-boss.
+- Mechanical: yes (new content)
+- Edits: campaign-E48
+
+### campaign-042 · §19.14 Footsteps of Giants
+- Question: How is The Last Giant campaign stated, and how is its redraw rule applied to cards dealt face down?
+- This book now: absent.
+- Evidence: DS-TLG-Rules.txt, campaign pages: five sections; shared deck of the core game and Darkroot; "When players draw a level 2 or level 3 encounter, discard that encounter and draw again unless it contains one of the following enemies" (Large Hollow Soldier, Sentinel, Mushroom Parent, Stone Knight, Stone Guardian); named Level 4 encounters Forest of Fallen Giants and The Petrified Fallen.
+- Ruling: ADD as §19.14. The redraw rule is written as a filter applied when the Level 2 and Level 3 decks are built.
+- Why: Filtering the deck first gives exactly the same cards as drawing and redrawing, and it keeps the cards face down, as §18.1 deals them.
+- Mechanical: yes (new content)
+- Edits: campaign-E48
+
+### campaign-043 · §19.15 Treasures of the Ice Cave
+- Question: How is the Vordt campaign stated, and how are two invaders fought in one encounter?
+- This book now: absent. §12.2 provides for one invader, one invader health dial, and an invader that vanishes when a character dies.
+- Evidence: DS-VotBV-Rules-web.txt, campaign pages: four sections; encounters from the core game, Level 4 from Vordt; "Both invaders must be defeated before obtaining their treasure. If the party dies during this encounter both invaders will respawn. The party proceeds to Section 2 when the encounter is defeated" (Sections 1 and 3); The Dog's Domain named for Section 4. The Phantoms expansion supplies one invader health dial (DS-Phantoms 98-105).
+- Ruling: ADD as §19.15, with four short rules for the paired invaders.
+- Why: Three of the four rules restate the booklet (both return until both are killed in one visit; treasure only when both are dead; the section ends only then). The fourth fills two real holes the booklet leaves: where the second invader stands and how its health is recorded when the box holds one dial. Requiring both kills for the section also stops a party from ending a section by losing a character and letting the invaders vanish.
+- Mechanical: yes (new content)
+- Edits: campaign-E48
+
+### campaign-044 · §19.16 Demons and Dragons
+- Question: How is the Guardian Dragon campaign's replacement economy stated in this book's terms?
+- This book now: absent.
+- Evidence: DS-GD-Rules-web.txt, campaign pages: five sections; "Level 4 encounters should be drawn from a shared deck and should use the encounter side of the game board from their original expansion"; "encounters do not reward souls. Instead, each encounter rewards one card from the treasure deck per player. Additionally, level 4 encounters reward the party with 1 spark"; "level 4 encounters and mega boss encounters will not reset"; a list of free stat increases at the start of each section; Section 5 lists two Level 4 encounters and two mega-bosses. The printed title is "Demons & Dragons".
+- Ruling: ADD as §19.16: four bulleted rules and one table.
+- Why: In this book every encounter already awards a treasure card to each character, so "one card per player in place of souls" becomes one sentence: encounters award no souls. The stat grants are a table. Followed in full they bring all four stats to tier three by Section Five, so no further rule is needed.
+- Judgement calls, each one sentence in the draft and easy to strike:
+  - Boss and invader soul rewards are kept. The booklet removes souls from "encounters"; read literally that leaves the boss reward, and in this book that small income (six souls a character for each boss) is what pays for the bonfire ascetic, a spark or a transposition. The other reading, no souls at all, would leave the ascetic to be paid for by selling 16 cards.
+  - The level 1 to 3 decks are built from the core set, the booklet being silent.
+  - The heading is "Demons and Dragons", since headings in this book carry no ampersand.
+  - Section Five has a boss that does not end its section; the last line of the draft points to §18.1, which already governs it.
+- Mechanical: yes (new content)
+- Edits: campaign-E48
+
+### campaign-045 · The count of campaigns
+- Question: Where does the book state the number of campaigns?
+- This book now: "12" in §18.1; "Twelve" and "twelve" in the introduction to §19; "12" in the glossary entry Campaign. The Introduction, the front matter and the F.A.Q. state no number.
+- Evidence: a search of every chapter file and the glossary.
+- Ruling: CHANGE to 16 in the three places.
+- Why: Consequential on campaign-041 to campaign-044. "A campaign has three to six sections" and "Two of them ... require only the core set" (§18.1) remain true.
+- Mechanical: no
+- Edits: campaign-E45, campaign-E46, campaign-E47
+
+Additions to the table in (a):
+
+| Item | Ruling | What changes | Mechanical | Edits |
+|---|---|---|---|---|
+| campaign-041 | ADD | §19.13 Go Beyond Death | yes | E48 |
+| campaign-042 | ADD | §19.14 Footsteps of Giants | yes | E48 |
+| campaign-043 | ADD | §19.15 Treasures of the Ice Cave, with rules for paired invaders | yes | E48 |
+| campaign-044 | ADD | §19.16 Demons and Dragons, with its replacement economy | yes | E48 |
+| campaign-045 | CHANGE | Twelve campaigns become 16 in §18.1, §19 and the glossary | no | E45 to E47 |
+
+Notes for the lead editor on the follow-up:
+
+- One edit, E48, carries all four new sections, because the insertion point (the last line of §19.12) can serve as `old` only once.
+- §2.9 needs no further component line: the Fire Beam cards, the Fiery Breath cards, the corrosion tokens and the pillar tokens are already listed by campaign-E07, and the other two expansions have no component of their own. The one shortage is the second invader health dial of §19.15, which the draft meets with "any health dial that is not in use".
+- The lines "The party may add the Explorers and Characters expansions" in the new sections follow the pattern of the chapter; the booklets do not print them.
+- The new sections state their encounter sets in full, so they stand whether or not campaign-E30 (the default in §18.1) is adopted.
+- §19.16 depends on two general rules staying as they are: a boss that does not end its section (§18.1, Section Completion) and the Level 4 reward of campaign-E16.
+- §12.2 needs the same pointer for §19.15 as for §19.4: "An invader appears once" and "the invader vanishes" hold "except where a campaign states otherwise".
+- Totals after the follow-up: CONFIRM 18, CHANGE 20, ADD 5, NOT A QUESTION 3 (46 entries).

@@ -19,17 +19,17 @@ A character dies when they must place a *damage cube* on their *endurance bar* a
 When a character dies:
 
 1. Place all of the character's *souls* on the encounter tile, in a pile separate from any other character's *dropped souls* (see §7.6).
-2. Discard the character's *ember token*, if present (see §7.3).
+2. Remove the character's *ember token* from the dashboard, if present, and place it beside the dashboard (see §7.3).
 3. If the character holds the *aggro token*, move it to the living character with the highest *threat* (see §7.5, Encounter Turn Order).
 4. Remove the character's model from the tile and place it on its side beside the *bonfire* tile.
 
 If the encounter is *cleared*, each character who died in it is revived *hollow* during Encounter Recovery (see §7.5, Encounter Recovery). If every character dies, the encounter is *failed* instead (see §7.5, Encounter Resolution); a character who adventures alone is therefore never revived hollow.
 
-**Hollow cube.** One of eight cubes of a colour distinct from the damage, stamina, and stat cubes. Two *hollow cubes* block the two rightmost spaces of a hollow character's endurance bar.
+**Hollow cube.** A white cube placed on an endurance bar. Two *hollow cubes* block the two rightmost spaces of a hollow character's endurance bar. Hollow cubes are taken from the white cubes that are not in use as *stat cubes* (see §2.8).
 
 A hollow character has two hollow cubes on the two rightmost spaces of their endurance bar, which reduce the bar from ten usable spaces to eight. *Stamina cubes* and damage cubes fill the remaining eight spaces as usual (see §3.4). Hollow cubes are not removed by the *Rest* major action (see §10.1), by the *estus flask* (see §3.5, Estus Flask), or by Encounter Recovery. Hollow is removed only by resting at the bonfire (see §11.2) or by becoming *embered* (see §7.3).
 
-A hollow character who dies is *lost*. A lost character is removed from play exactly as any dead character: their souls are dropped, their ember token is discarded, and their model is placed beside the bonfire tile. When a character becomes lost, the encounter is failed at once (see §7.5, Encounter Resolution) and the characters must rest at the bonfire; if the *spark* dial shows zero, the players lose the game (see §7.1). A lost character is not revived by clearing an encounter but only when the characters rest at the bonfire (see §11.2), and the rest removes their hollow cubes as usual.
+A hollow character who dies is *lost*. A lost character is removed from play exactly as any dead character: their souls are dropped, their ember token is removed, and their model is placed beside the bonfire tile. When a character becomes lost, the encounter is failed at once (see §7.5, Encounter Resolution) and the characters must rest at the bonfire; if the *spark* dial shows zero, the players lose the game (see §7.1). A lost character is not revived by clearing an encounter but only when the characters rest at the bonfire (see §11.2), and the rest removes their hollow cubes as usual.
 
 These rules apply in every encounter, including boss and *mega-boss* encounters. Death in a PvP encounter has no cost (see §20.7).
 
@@ -39,7 +39,7 @@ A character becomes *embered* by discarding an *ember card* from their back-up s
 
 To ember a character:
 
-1. Discard the ember card.
+1. Return the ember card to the game box. It takes no further part in the game.
 2. Remove every *damage cube* from the character's *endurance bar*.
 3. Remove the character's *hollow cubes*, if present.
 4. Place an *ember token* in the ember slot of the character's dashboard (see §3.5, Ember).
@@ -87,11 +87,11 @@ When the characters arrive at an encounter tile:
 
 An encounter is fought in *rounds*. In each round every enemy model takes a turn, then every character takes a turn. Rounds continue until every enemy model has been killed or the encounter is *failed* (see §7.5, Encounter Resolution).
 
-Enemy models take their turns one at a time in descending threat order (see §9.1). If two or more enemy models share a threat value, the model nearest to a character takes its turn first. If those models are equidistant from the nearest character, the model with the most *wound tokens* takes its turn first. If they are still tied, the players choose which takes its turn first.
+Enemy models take their turns one at a time in descending threat order (see §9.1). If two or more enemy models share a threat value, the model nearest to a character takes its turn first. If those models are equidistant from the nearest character, the model whose *wound tokens* have the greatest total value takes its turn first. If they are still tied, the players choose which takes its turn first.
 
 Characters then take their turns one at a time in descending threat order (see §10.1), in the order settled at Encounter Start. A dead character takes no turn. An invader takes a turn after each character's turn (see §12.2). In boss encounters the boss and the characters alternate turns (see §16.1).
 
-The aggro token marks the character targeted by enemy behaviours that bear the skull icon (see §9.3). After the last character's turn of each round, the aggro token moves to the character who inflicted the most damage on enemy models during that round, counting wound tokens placed and damage recorded on an invader's health dial. If two or more characters tie for the most damage, or no character inflicted damage, the aggro token stays with its holder.
+The aggro token marks the character targeted by enemy behaviours that bear the skull icon (see §9.3). After the last character's turn of each round, the aggro token moves to the character who inflicted the most damage on enemy models during that round, counting the total value of the wound tokens placed and the damage recorded on an invader's health dial. If two or more characters tie for the most damage, or no character inflicted damage, the aggro token stays with its holder.
 
 When the character holding the aggro token dies, the token moves at once to the living character with the highest threat; the players settle ties. In boss encounters the aggro token moves at the end of the turn of each character who inflicted damage on the boss during that turn (see §16.4).
 
@@ -103,9 +103,9 @@ An encounter is cleared for the first time while the treasure cards dealt to its
 
 1. Return to each surviving character their own *dropped souls* from the tile (see §7.6).
 2. Award each character, including each character who died, the full soul reward for the encounter's level (see §7.6).
-3. Give each character, including each character who died, one of the treasure cards dealt to the tile (see §7.7).
+3. Award the treasure cards dealt to the tile, one to each character, including each character who died; where a single card was dealt to the tile, award it to the party (see §7.7).
 4. If the tile holds an unopened chest, open it and award its treasure card (see §7.7).
-5. If the tile holds a *gravestone* {{icon:ast-0017-gravestone}}, the players may *scry* one card.
+5. The players may *scry* one card for each *gravestone* {{icon:ast-0017-gravestone}} on the tile.
 6. Place a black cube on the encounter card to mark it cleared.
 7. Recover (see §7.5, Encounter Recovery).
 
@@ -125,7 +125,7 @@ When the characters rest at the bonfire, every encounter is *reset* (see §11.5)
 
 **Scry.** To reveal one hidden card and then either return it to its place or send it away.
 
-When an encounter containing a gravestone is cleared, the players may scry one card of their collective choice (see §5.5, Gravestones). The card is one of the following.
+When an encounter is cleared, the players may scry one card of their collective choice for each gravestone on its tile (see §5.5, Gravestones). The scries are resolved one at a time, and each card scried is one of the following.
 
 - The top card of either treasure deck. The players reveal it and either return it face down to the top of that deck or place it face down at the bottom of that deck.
 - One face-down encounter card. The players reveal it and either return it face down to its tile or replace it with the top card of the encounter deck of the same level, placing the revealed card face down at the bottom of that deck.
@@ -182,16 +182,16 @@ Only the character who dropped the souls may reclaim them, and only by surviving
 
 ## 7.7 Treasure Rewards
 
-Treasure cards (see §2.5) are gained as the reward for clearing an *encounter* for the first time, from a *chest* {{icon:ast-0009-treasure-chest}}, from a killed *invader* or *mimic*, from a killed *crystal lizard*, and from a defeated boss. A treasure card a character receives is placed in that character's inventory (see §4.1).
+Treasure cards (see §2.5) are gained as the reward for clearing an *encounter* for the first time, from a *chest* {{icon:ast-0009-treasure-chest}}, from a killed *invader* or *mimic*, from a killed *crystal lizard*, and from a defeated boss. A treasure card a character receives is placed in that character's inventory (see §3.2).
 
-When an encounter is *cleared* for the first time, each character, including each character who died in it, takes one of the treasure cards dealt face down to that tile at setup (see §6.5 and §6.6). The dealt cards are the whole reward; no cards are drawn from the treasure decks at that time. The players decide which character takes which card; if they cannot agree, the character holding the *aggro token* decides.
+When an encounter is *cleared* for the first time, each character, including each character who died in it, takes one of the treasure cards dealt face down to that tile at setup (see §6.5 and §6.6). The dealt cards are the whole reward; no cards are drawn from the treasure decks at that time. The cards are turned face up, and the players decide which character takes which card; if they cannot agree, the character holding the *aggro token* decides.
 
 An encounter cleared again awards no treasure. In the standard game the cards dealt before the *mini-boss* is defeated come from the *tier one treasure* deck and the cards dealt afterwards from the *tier two treasure* deck (see §6.2).
 
 When an encounter containing an unopened chest is cleared, the chest is opened: flip the chest token to its open side and reveal the treasure card beneath it (see §5.5, Chests). The card is awarded to the party. If mimics are in play, a chest is opened only as the mimic rules describe, and the encounter is not resolved until the characters have decided whether to open it (see §13). A killed mimic awards two treasure cards in place of the chest's one (see §13).
 
-Whenever a treasure card is awarded to the party rather than to a named character (a chest's card, a mimic's cards, a boss treasure card, or the *mega-boss* treasure card of a Level 4 encounter), the players decide which character receives it. If they cannot agree, the card goes to the character who holds the aggro token when the encounter ends.
+Whenever a treasure card is awarded to the party rather than to a named character (a chest's card, a mimic's cards, an invader's treasure card, a Titanite Scale card, a boss treasure card, or the *mega-boss* treasure card of a Level 4 encounter), the players decide which character receives it. If they cannot agree, the card goes to the character who holds the aggro token when the card is awarded.
 
-If crystal lizards are in play, a character who kills a crystal lizard takes one Titanite Scale card at once (see §14). A killed invader awards its treasure (see §12.2).
+If crystal lizards are in play, a killed crystal lizard awards the party one Titanite Scale card at once (see §14). A killed invader awards its treasure card at once (see §12.2).
 
 When a boss is defeated, the party is awarded one of that boss's treasure cards, drawn at random (see §16.5). The treasure reward of a Level 4 encounter is the mega-boss treasure card dealt to its tile (see §6.7).

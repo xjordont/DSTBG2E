@@ -216,3 +216,40 @@
 - After: "**Weapon slots.** The left weapon slot and the right weapon slot: the weapon slot on the left of the dashboard as its player reads it, and the weapon slot on its right."
 - Rationale: The parry (§9.6) depends on which slot is the left one; the F.A.Q. ruling needed a home in the owning section so that the F.A.Q. carries no rule of its own.
 - Source: A-068, CMP-0003
+
+### CH-03-032 · §3.5
+- Type: clarification
+- Before: "They are flipped back to the ready side only when the characters rest at the *bonfire* (see §11.2). Clearing an encounter does not ready them (see §7.5, Encounter Recovery)."
+- After: "They are flipped back to the ready side only when the characters rest at the *bonfire* (see §11.2), so each is used at most once between rests. Clearing an encounter does not ready them (see §7.5, Encounter Recovery)."
+- Rationale: The one refresh rule of the three tokens is stated once, with its consequence, in the paragraph that covers all three.
+- Source: final rulings, core-E12 (`06_final_rulings.md`); Official 2017 and 2022 ready all three tokens at the bonfire rest (DS-Core-Rules-lores.txt l.702-706; DS-TG-Rulebook l.1929-1933).
+
+### CH-03-033 · §3.5, Heroic Action
+- Type: clarification
+- Before: "The printed wording of a heroic action overrides any other rule with which it conflicts. The token is readied only at the bonfire, so a character resolves the heroic action at most once between rests."
+- After: "The printed wording of a heroic action overrides any other rule with which it conflicts."
+- Rationale: Removes a restatement of the shared refresh rule so that the three token sub-sections are parallel.
+- Source: final rulings, core-E13 (`06_final_rulings.md`); §3.5 general paragraph.
+
+### CH-03-034 · §3.5, Estus Flask
+- Type: clarification
+- Before: "Condition tokens are not removed.
+
+The estus flask token is not readied when an encounter is *cleared*. It is flipped to the ready side only when the characters rest at the bonfire (see §11.2)."
+- After: "Condition tokens are not removed."
+- Rationale: Removes a restatement of the shared refresh rule so that the three token sub-sections are parallel.
+- Source: final rulings, core-E14 (`06_final_rulings.md`); §3.5 general paragraph.
+
+### CH-03-035 · §3.5, Luck
+- Type: clarification
+- Before: "After rolling the dice for one of their own attack rolls or defence rolls (a *block*, *resist*, or *dodge* roll), a character may flip the luck token to the used side to reroll any or all of those dice."
+- After: "After rolling the dice for one of their own attack rolls or defence rolls (a *block*, *resist*, *dodge*, or *parry* roll), a character may flip the luck token to the used side to reroll any or all of those dice."
+- Rationale: §9.6 already allows the luck token on a parry roll; the list in §3.5 omitted it.
+- Source: final rulings, core-E18 (`06_final_rulings.md`); §9.6 parry procedure, step 4.
+
+### CH-03-036 · §3.2
+- Type: ruling
+- Before: "Which weapon slot holds a shield matters for the *parry* and the *riposte* (see §9.6)."
+- After: "A shield in either weapon slot permits a *parry*, and the *riposte* is made with the weapon in the other weapon slot (see §9.6)."
+- Rationale: [MECHANICAL CHANGE] Follows §9.6 as changed by combat-E22.
+- Source: final rulings, combat-E30 (`06_final_rulings.md`); As combat-E22.

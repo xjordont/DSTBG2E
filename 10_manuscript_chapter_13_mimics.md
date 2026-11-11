@@ -17,7 +17,7 @@ If the party forgoes the chest, the encounter is resolved and the characters rec
 If the party opens the chest, the ambush card beside the tile is turned face up.
 
 - Treasure: the chest is opened, and the *treasure card* beneath it is awarded as a chest's card is (see §7.7). The encounter is then resolved and the characters recover in the ordinary way.
-- Mimic: the chest is a mimic. A *mimic encounter* begins at once, before any recovery or reward (see §13.2).
+- Mimic: the chest is a mimic. A *mimic encounter* begins at once, before the recovery and the rewards of the cleared encounter (see §13.2).
 
 In the campaign A Hollow Pursuit, one chest is a mimic without an ambush card (see §19.8).
 
@@ -25,7 +25,7 @@ In the campaign A Hollow Pursuit, one chest is a mimic without an ambush card (s
 
 **Mimic encounter.** The encounter fought against a *mimic* on the tile of a *cleared* encounter whose *chest* the party has opened.
 
-A mimic encounter is fought as a *mini-boss* encounter, with the differences stated in this section (see §15; §16; §17.6). The Hungry Mimic is fought if the mini-boss has not been defeated, and the Voracious Mimic if it has. The mimic encounter is set up as follows.
+A mimic encounter is fought as a *mini-boss* encounter, with the differences stated in this section (see §15; §16; §17.6). The Hungry Mimic is fought if the mini-boss has not been defeated, and the Voracious Mimic if it has. In campaign play, the Hungry Mimic is fought while the current tier is tier one, and the Voracious Mimic once it is tier two (see §18.5). The mimic encounter is set up as follows.
 
 1. Take the *data card*, the *behaviour cards*, and the model of the Hungry Mimic or the Voracious Mimic, and the mimic *health dial*.
 2. Set the health dial to the starting health {{icon:ast-0029-starting-health}} printed on the data card.
@@ -36,7 +36,7 @@ A mimic encounter is fought as a *mini-boss* encounter, with the differences sta
 7. Keep the chest token and the treasure card that lay beneath it beside the tile.
 8. Leave every character model on the node it occupies.
 
-The characters begin the mimic encounter as the cleared encounter left them. Each character keeps their damage cubes, stamina cubes, and condition tokens, and the *aggro token* stays with its holder. A character who died in the cleared encounter stays dead and takes no part in the mimic encounter.
+Before the mimic's first turn, each character removes every stamina cube from their *endurance bar*. Nothing else is recovered. Each character keeps their damage cubes and condition tokens, no token is turned to its ready side, and the *aggro token* stays with its holder. A character who died in the cleared encounter stays dead and takes no part in the mimic encounter.
 
 The mimic takes the first *turn*. The mimic and the characters then alternate turns as a boss and the characters do (see §16.1), and the aggro token moves as it does in a boss encounter (see §16.4).
 
@@ -55,7 +55,7 @@ A *mimic* is killed when its *health dial* is reduced to zero, and the *mimic en
 1. Remove the mimic model from the tile.
 2. Award the party two *treasure cards*: the card that lay beneath the *chest*, and one card drawn from the treasure deck of the current tier (see §6.2).
 3. Resolve the *encounter* that contained the chest as a *cleared* encounter, omitting the opening of the chest (see §7.5, Encounter Resolution).
-4. Return the chest token and the *ambush card* to the supply.
+4. Return the chest token to its node, open side up, and the *ambush card* to the supply.
 
 The two treasure cards are the reward that the mimic's data card calls Loot the Body. They take the place of the single card that the chest held, and they are awarded to the party as a chest's card is (see §7.7).
 
@@ -63,9 +63,9 @@ A mimic has no soul reward of its own. The *souls* and the treasure that the cha
 
 The recovery deferred since the encounter was cleared takes place at the end of step 3. Each surviving character removes all condition tokens, all stamina cubes, and one damage cube, and each character who died in either encounter is revived *hollow* (see §7.5, Encounter Recovery).
 
-A killed mimic does not return. Its chest token is not placed again when the encounter is *reset*, and the chest's node is used as a basic node (see §5.1).
+A killed mimic does not return. Its chest stays on its node as an opened chest (see §5.5, Chests).
 
-*Example.* The Knight and the Herald clear a Level 2 encounter that contains a chest, before the mini-boss is defeated. The Knight carries three damage cubes and four stamina cubes. The party opens the chest, and the ambush card shows Mimic. The Hungry Mimic replaces the chest token, takes the first turn, and attacks the Knight, who still carries all seven cubes. The characters kill the mimic. The party gains the chest's treasure card and one card drawn from the tier one treasure deck. Each character then gains four souls and one of the treasure cards dealt to the tile, and the Knight removes all four stamina cubes and one damage cube.
+*Example.* The Knight and the Herald clear a Level 2 encounter that contains a chest, before the mini-boss is defeated. The Knight carries three damage cubes and four stamina cubes. The party opens the chest, and the ambush card shows Mimic. The Hungry Mimic replaces the chest token, and the Knight removes the four stamina cubes. The mimic takes the first turn and attacks the Knight, who still carries the three damage cubes. The characters kill the mimic. The party gains the chest's treasure card and one card drawn from the tier one treasure deck. Each character then gains four souls and one of the treasure cards dealt to the tile, and the Knight removes the stamina cubes placed during the mimic encounter and one damage cube.
 
 ## 13.4 Failed Mimic Encounters
 

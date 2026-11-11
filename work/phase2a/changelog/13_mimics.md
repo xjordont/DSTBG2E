@@ -167,3 +167,45 @@
 - After: no change
 - Rationale: A-092 (ambush cards in the component list) is owned by §2.9. C-087 (one tie-break for contested treasure) is owned by §7.7, which this chapter cites. The OPTIONAL findings A-044 and C-121 are applied in CH-13-014 and CH-13-002; none is skipped.
 - Source: A-092, C-087, A-044, C-121
+
+### CH-13-025 · §13.1
+- Type: clarification
+- Before: "- Mimic: the chest is a mimic. A *mimic encounter* begins at once, before any recovery or reward (see §13.2)."
+- After: "- Mimic: the chest is a mimic. A *mimic encounter* begins at once, before the recovery and the rewards of the cleared encounter (see §13.2)."
+- Rationale: 'Before any recovery' no longer holds once the characters shed their stamina cubes before the mimic's first turn.
+- Source: final rulings, phantom-E18 (`06_final_rulings.md`); Follows phantom-E19.
+
+### CH-13-026 · §13.2
+- Type: ruling
+- Before: "The characters begin the mimic encounter as the cleared encounter left them. Each character keeps their damage cubes, stamina cubes, and condition tokens, and the *aggro token* stays with its holder."
+- After: "Before the mimic's first turn, each character removes every stamina cube from their *endurance bar*. Nothing else is recovered. Each character keeps their damage cubes and condition tokens, no token is turned to its ready side, and the *aggro token* stays with its holder."
+- Rationale: [MECHANICAL CHANGE] The ambush stays dangerous because damage carries over, but the fight no longer opens with characters who cannot act, and the party has no reason to stall on the last enemy to shed stamina before opening a chest.
+- Source: final rulings, phantom-E19 (`06_final_rulings.md`); Audit finding B-035 (approved at Gate 1, not applied: CH-13-022); official Explorers booklet removes all cubes before the mimic (DS-Explorers-Rules-Web.txt lines 464-467); Hollowed Edition: 'Players heal as normal' before opening (lines 378-380).
+
+### CH-13-027 · §13.2
+- Type: ruling
+- Before: "The Hungry Mimic is fought if the mini-boss has not been defeated, and the Voracious Mimic if it has."
+- After: "The Hungry Mimic is fought if the mini-boss has not been defeated, and the Voracious Mimic if it has. In campaign play, the Hungry Mimic is fought while the current tier is tier one, and the Voracious Mimic once it is tier two (see §18.5)."
+- Rationale: [MECHANICAL CHANGE] Same anchor as for invaders: a campaign has no single mini-boss, and the mimic's extra card is drawn from the treasure deck of the current tier, so the stronger mimic guards the stronger treasure.
+- Source: final rulings, phantom-E20 (`06_final_rulings.md`); §13.3 step 2, §18.5 and §18.7 of this book; official Explorers booklet: 'a mini boss' (lines 476-482).
+
+### CH-13-028 · §13.3, step 4
+- Type: ruling
+- Before: "4. Return the chest token and the *ambush card* to the supply."
+- After: "4. Return the chest token to its node, open side up, and the *ambush card* to the supply."
+- Rationale: [MECHANICAL CHANGE] An opened chest already stays on its node for the rest of the game; treating the looted mimic's chest the same way removes an exception from §5.5, §7.5 and §11.5.
+- Source: final rulings, phantom-E21 (`06_final_rulings.md`); §5.5, Chests of this book ('an opened chest is never closed again'); official Explorers booklet removes only the mimic (lines 549-556).
+
+### CH-13-029 · §13.3
+- Type: ruling
+- Before: "A killed mimic does not return. Its chest token is not placed again when the encounter is *reset*, and the chest's node is used as a basic node (see §5.1)."
+- After: "A killed mimic does not return. Its chest stays on its node as an opened chest (see §5.5, Chests)."
+- Rationale: [MECHANICAL CHANGE] Follows the change to step 4: no special terrain state is left behind by a killed mimic.
+- Source: final rulings, phantom-E22 (`06_final_rulings.md`); §5.5, Chests of this book.
+
+### CH-13-030 · §13.3 (example)
+- Type: ruling
+- Before: "The Hungry Mimic replaces the chest token, takes the first turn, and attacks the Knight, who still carries all seven cubes. The characters kill the mimic. The party gains the chest's treasure card and one card drawn from the tier one treasure deck. Each character then gains four souls and one of the treasure cards dealt to the tile, and the Knight removes all four stamina cubes and one damage cube."
+- After: "The Hungry Mimic replaces the chest token, and the Knight removes the four stamina cubes. The mimic takes the first turn and attacks the Knight, who still carries the three damage cubes. The characters kill the mimic. The party gains the chest's treasure card and one card drawn from the tier one treasure deck. Each character then gains four souls and one of the treasure cards dealt to the tile, and the Knight removes the stamina cubes placed during the mimic encounter and one damage cube."
+- Rationale: [MECHANICAL CHANGE] The example now computes from §13.2 as amended: stamina cubes are removed before the mimic's first turn, damage cubes are kept.
+- Source: final rulings, phantom-E23 (`06_final_rulings.md`); Follows phantom-E19; Level 2 full reward of four souls from the table in §7.6.

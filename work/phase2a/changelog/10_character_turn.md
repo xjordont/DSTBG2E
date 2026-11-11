@@ -286,3 +286,31 @@
 - After: "The Assassin's Rapier requires 14 STR and 21 DEX (see Appendix A), so dexterity is its relevant stat. The Assassin's dexterity is 24, which exceeds 21 by three, and the Rapier is not scaled. At the *bonfire* the Assassin raises dexterity to 29. The Rapier is now scaled, and the Assassin marks it with a red cube."
 - Rationale: The example used the superseded printed requirements; Appendix A sets the Rapier at 14 STR and 21 DEX and governs scaling.
 - Source: QA-001 (example and consistency verification)
+
+### CH-10-042 · §10.3, Range
+- Type: clarification
+- Before: "Range is checked when the target is chosen, after any shift resolved before the dice. A character cannot make an attack that has no permitted target within its range."
+- After: "Range is checked when the target is chosen, after any shift resolved before the dice. A character cannot begin an attack unless a permitted target is within its range or a shift printed before its dice is able to bring one within range. If no permitted target is within range when the target is to be chosen, the attack ends without a roll, and the stamina paid is not returned."
+- Rationale: Step 4 had no outcome when a shift, or a trap entered during it, left no target in range.
+- Source: final rulings, combat-E26 (`06_final_rulings.md`); Official 2022 pays and shifts before the target is chosen (DS-TG 1421-1423, 1546-1549); no source gives the outcome.
+
+### CH-10-043 · §10.3, Repeat
+- Type: ruling
+- Before: "An attack option that bears the *repeat* icon {{icon:ast-0061-repeat-behaviour-or-attack}} is resolved in full the number of times shown in the icon. The character pays the stamina cost once, before the first resolution, and then resolves steps 3 to 12 of the attack once for each time shown."
+- After: "An attack option that bears the *repeat* icon {{icon:ast-0061-repeat-behaviour-or-attack}} may be resolved in full up to the number of times shown in the icon. The character pays the stamina cost once, before the first resolution, resolves steps 3 to 12 of the attack for each resolution, and may stop after any resolution."
+- Rationale: [MECHANICAL CHANGE] A repeated attack is a permission, as every other attack of the Attack major action is ("up to one attack with each weapon").
+- Source: final rulings, combat-E27 (`06_final_rulings.md`); Official 2022: "perform the attack up to the number of times shown" (DS-TG 1566-1572).
+
+### CH-10-044 · §10.4
+- Type: clarification
+- Before: "A spell card equipped while the other weapon slot is empty gains no reroll, and the attack options of a spell stored in a catalyst gain none."
+- After: "A spell card equipped while the other weapon slot is empty gains no reroll, and the attack options of a spell stored in a catalyst gain none. A catalyst is a weapon: an attack option printed on the catalyst card itself gains the reroll while the catalyst is wielded two-handed."
+- Rationale: Applies the general rule to the one card type the section left open; no special case is created.
+- Source: final rulings, combat-E28 (`06_final_rulings.md`); This book, §4.1 (a catalyst is a weapon) and §10.4.
+
+### CH-10-045 · §10.5
+- Type: ruling
+- Before: "*Spells* are never scaled (see §4.3)."
+- After: "A weapon whose four stat requirements are all zero has no relevant stat and is never scaled. *Spells* are never scaled (see §4.3)."
+- Rationale: [MECHANICAL CHANGE] Without it every character scales such a weapon at once, a +1 that rewards nothing and a red cube that records no choice.
+- Source: final rulings, combat-E29 (`06_final_rulings.md`); Audit finding A-066; no official or community ruleset has stat scaling.

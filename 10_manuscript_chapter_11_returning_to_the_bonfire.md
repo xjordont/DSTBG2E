@@ -8,13 +8,13 @@ The *bonfire* is represented by the bonfire tile, which is placed at setup (see 
 
 The characters begin the game on the bonfire tile (see §6.4). The party returns to it in the following cases.
 
-- After an encounter is *cleared*, the party may return to the bonfire tile instead of advancing to the next tile (see §7.5, Encounter Recovery).
+- After an encounter is *cleared*, the party may return to the bonfire tile and rest instead of advancing to the next tile (see §7.5, Encounter Recovery).
 - When an encounter is *failed*, the party must return to the bonfire tile and rest (see §7.5, Encounter Resolution). The death of a *hollow* character fails the encounter at once (see §7.2).
 - When a boss is defeated, the characters return to the bonfire tile and rest (see §16.5).
 
 When the party returns, the characters' models are placed on the bonfire tile. The characters do not pass back through the encounter tiles, and no encounter is fought on the way.
 
-Returning to the bonfire tile costs nothing. The party spends a *spark* only when it rests (see §11.2). Until the party rests, no character is restored, the Firekeeper and Andre cannot be visited, and no encounter is *reset*.
+Returning to the bonfire tile and resting there are one act. The party returns only to rest, and the rest begins when the models are placed on the tile (see §11.2). The party cannot choose to return while the *spark* dial shows zero (see §7.4).
 
 ## 11.2 Resting
 
@@ -30,15 +30,14 @@ The party rests as follows.
 4. Remove every *hollow cube* from each character's endurance bar (see §7.2).
 5. Remove every *condition* token from each character (see §8.5).
 6. Flip each character's *heroic action*, *luck*, and *estus flask* tokens to the ready side (see §3.5).
-7. If the *shop* has not been restocked since a boss was last defeated, restock it (see §6.3, Restocking After a Boss).
-8. The characters may visit the *Firekeeper* (see §11.3) and Blacksmith Andre (see §11.4), in either order and any number of times.
-9. *Reset* every encounter (see §11.5).
+7. The characters may visit the *Firekeeper* (see §11.3) and Blacksmith Andre (see §11.4), in either order and any number of times.
+8. *Reset* every encounter (see §11.5).
 
 A rest restores every character in the same way, whether the character was living, dead, or lost when the rest began. After a rest no character is *hollow*, and every endurance bar is empty.
 
 Resting neither places nor removes an *ember token*. An *embered* character stays embered through the rest, and a character who is not embered does not become embered by resting (see §7.3).
 
-Resting does not restock the shop except as step 7 directs. Cards bought from the shop are not replaced, and unsold cards stay in the shop, until the shop is next restocked (see §6.3, Restocking After a Boss). In campaign play, step 7 applies when a section has been completed rather than when a boss has been defeated (see §18.6, Blacksmith Andre's Shop).
+Resting does not restock the *shop*. Cards bought from the shop are not replaced, and unsold cards stay in the shop, until the shop is next restocked during the setup that follows a boss's defeat (see §6.3, Restocking After a Boss). In campaign play the shop is restocked during the setup that follows the completion of a section (see §18.6, Blacksmith Andre's Shop).
 
 While the party rests, each character may rearrange their *inventory* and equipment slots and may trade cards with other characters, as at any time outside an encounter (see §3.2).
 
@@ -89,7 +88,7 @@ A sold card goes to one of the following places.
 - A sold boss treasure card is returned to the game box.
 - A sold ember card is returned face up to the tier one shop.
 
-When a *weapon* with *Titanite* attached is sold, the Titanite goes with the weapon to the bottom of the treasure deck of the weapon's tier, and every other *upgrade card* attached to a sold card returns to the character's inventory (see §4.2, Titanite). The sell value of the weapon is paid once; attached Titanite adds nothing to it.
+When a *weapon* with *Titanite* attached is sold, the Titanite is sold with it, and every other *upgrade card* attached to a sold card returns to the character's inventory (see §4.2, Titanite). The sell value of the weapon is paid once; attached Titanite adds nothing to it. The weapon and the Titanite are separated, and each goes to the place stated for a sold card of its kind.
 
 ### Prices
 
