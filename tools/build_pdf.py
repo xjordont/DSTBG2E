@@ -153,7 +153,7 @@ class Chapter:
         kt.append(kick); kt.append(nh1); banner.append(badge); banner.append(kt); sec.append(banner)
         # a short lead of plain paragraphs sits under the banner, before the flow; anything else joins the flow
         lead_text = ''.join(n.get_text() for n in lead if isinstance(n, Tag))
-        is_intro = secs and lead and all(isinstance(n, Tag) and n.name == 'p' for n in lead) and len(lead_text) <= 720
+        is_intro = self.kind == 'chapter' and secs and lead and all(isinstance(n, Tag) and n.name == 'p' for n in lead) and len(lead_text) <= 720
         for name in TUNING.get('place', {}):
             pass
         if is_intro:
@@ -272,7 +272,7 @@ def figures_for(soup, key, where):
             continue
         fig = soup.new_tag('figure'); fig['id'] = 'fig-' + slugify(pathlib.Path(f['file']).stem)
         if f.get('legend'): fig['class'] = 'legend'
-        img = soup.new_tag('img', src=f['file'], alt=f.get('alt', f.get('caption', ''))[:120])
+        img = soup.new_tag('img', src='build/fig/' + pathlib.Path(f['file']).name, alt=re.sub(r'<[^>]+>', '', f.get('caption', ''))[:120])
         if f.get('width'): img['style'] = f'width: {f["width"]}'
         fig.append(img)
         if f.get('caption'):
@@ -327,8 +327,10 @@ def contents(chapters):
 
 
 def build(edition='screen', only=None, out=None, html_only=False, _retry=False):
+    import make_layout_assets
     if not (ROOT / 'build/tex/lava_scales_clean.jpg').exists() or not (ROOT / 'build/icons').exists():
-        import make_layout_assets; make_layout_assets.lava(); make_layout_assets.icons()
+        make_layout_assets.lava(); make_layout_assets.icons()
+    make_layout_assets.figures()
     heads = glossary_heads()
     chapters, cover, fore = [], '', ''
     for num in ORDER:

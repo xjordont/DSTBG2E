@@ -1,1 +1,96 @@
-{"single_column": ["01"], "ref_chapters": [], "small_type": ["21"], "toc_no_sections": ["21"], "figures": []}
+{
+ "single_column": [
+  "01"
+ ],
+ "ref_chapters": [],
+ "small_type": [
+  "21",
+  "22"
+ ],
+ "toc_no_sections": [
+  "21"
+ ],
+ "figures": [
+  {
+   "file": "assets/diagrams/ast-0105-character-board-anatomy-2017.png",
+   "asset": "AST-0105",
+   "at": "top",
+   "chapter": "03",
+   "width": "318pt",
+   "crop": [
+    0.055,
+    0.105,
+    0.945,
+    0.985
+   ],
+   "legend": true,
+   "caption": "<strong>A character dashboard.</strong> 1 Name. 2 Illustration. 3 Heroic action. 4 Equipment slots. 5 Endurance bar. 6 Stat progression track. 7 Threat, printed as Taunt Level. 8 Heroic action token slot. 9 Luck token slot. 10 Estus flask token slot. 11 Ember token slot."
+  },
+  {
+   "file": "assets/diagrams/ast-0091-equipment-card-anatomy-2022.png",
+   "asset": "AST-0091",
+   "at": "in",
+   "section": "sec-4-1",
+   "after": 2,
+   "width": "150pt",
+   "caption": "<strong>An equipment card.</strong> 1 Name. 2 Card type. 3 Equipment slot. 4 Set symbol. 5 Range. 6 Stat requirements. 7 Attack options. 8 Block dice. 9 Resist dice. 10 Dodge dice. 11 Upgrade slots."
+  },
+  {
+   "file": "assets/diagrams/ast-0094-enemy-data-card-anatomy-2022.png",
+   "asset": "AST-0094",
+   "at": "in",
+   "section": "sec-8-2",
+   "after": 2,
+   "width": "150pt",
+   "caption": "<strong>An enemy data card.</strong> 1 Name. 2 Threat. 3 Base health. 4 Enemy icon. 5 Attack range. 6 Block. 7 Resist. 8 Dodge difficulty. 9 Behaviour icons. 10 Set symbol."
+  },
+  {
+   "file": "assets/diagrams/ast-0095-enemy-movement-symbol-anatomy.png",
+   "asset": "AST-0095",
+   "at": "in",
+   "section": "sec-9-2",
+   "after": 2,
+   "width": "128pt",
+   "caption": "<strong>A movement icon.</strong> 1 Target. 2 Nodes moved towards the target. 3 Nodes moved away from the target. 4 Push icon. 5 Leap icon, used by bosses."
+  },
+  {
+   "file": "assets/diagrams/ast-0097-boss-data-card-anatomy-2022.png",
+   "asset": "AST-0097",
+   "at": "in",
+   "section": "sec-15-4",
+   "after": 2,
+   "width": "150pt",
+   "caption": "<strong>A boss data card.</strong> 1 Name. 2 Threat. 3 Starting health. 4 Boss type icon. 5 Behaviour deck size. 6 Block. 7 Resist. 8 Heat-up point. 9 Special ability. 10 Set symbol."
+  },
+  {
+   "file": "assets/diagrams/ast-0098-boss-behaviour-card-anatomy-2022.png",
+   "asset": "AST-0098",
+   "at": "in",
+   "section": "sec-15-3",
+   "after": 4,
+   "width": "100%",
+   "crop": [
+    0.085,
+    0.05,
+    0.935,
+    0.9
+   ],
+   "caption": "<strong>The boss tiles.</strong> The two boss tiles joined along one edge for a main-boss encounter. Each tile shows its boss spawn node in red."
+  },
+  {
+   "file": "assets/diagrams/ast-0099-boss-arcs-tile-diagram-a.png",
+   "asset": "AST-0099",
+   "at": "in",
+   "section": "sec-15-6",
+   "after": 4,
+   "width": "178pt",
+   "crop": [
+    0.03,
+    0.04,
+    0.97,
+    0.93
+   ],
+   "caption": "<strong>Boss arcs.</strong> The lines that divide the boss's base, extended across the tile, divide the nodes among the front, left, right, and back arcs. A node on a line is in both arcs."
+  }
+ ]
+}

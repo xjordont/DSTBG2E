@@ -35,5 +35,22 @@ def icons():
     return n
 
 
+def figures():
+    """Figures placed by layout/tuning.json: composite onto the parchment ground and apply the crop given there
+    (fractions of width and height: left, top, right, bottom). Written to build/fig/<source name>.png."""
+    import json
+    tun = json.loads((ROOT / 'layout/tuning.json').read_text(encoding='utf-8'))
+    (OUT / 'fig').mkdir(parents=True, exist_ok=True); n = 0
+    for f in tun.get('figures', []):
+        im = Image.open(ROOT / f['file']).convert('RGBA')
+        if f.get('crop'):
+            l, t, r, b = f['crop']; w, h = im.size
+            im = im.crop((int(w * l), int(h * t), int(w * r), int(h * b)))
+        if max(im.size) > 1600:
+            s = 1600 / max(im.size); im = im.resize((round(im.width * s), round(im.height * s)), Image.LANCZOS)
+        im.save(OUT / 'fig' / pathlib.Path(f['file']).name); n += 1
+    return n
+
+
 if __name__ == '__main__':
-    print('lava crop', lava(), '· icons trimmed', icons())
+    print('lava crop', lava(), '· icons trimmed', icons(), '· figures', figures())
