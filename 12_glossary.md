@@ -18,6 +18,8 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Armour slot.** The dashboard slot that holds one equipped *armour* card (see §3.2).
 
+**Attack arc.** A *boss arc* shown in green on the arc diagram beneath an *area attack*. The area attack targets every character within range who is in that arc (see §15.6; §16.3).
+
 **Attack (major action).** The major action in which a character makes up to one attack with each weapon or spell equipped in a weapon slot, each attack using one attack option and paying its stamina cost (see §10.3).
 
 **Attack option.** One line of a weapon or spell card, showing a stamina cost, dice and modifiers. Using an attack option is the *Attack* major action.
@@ -34,7 +36,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Behaviour card.** A card drawn from a boss, mimic, invader or phantom behaviour deck at the start of that model's turn. Its icons are resolved left to right and it sets the model's attack range and dodge difficulty until the next card is drawn.
 
-**Behaviour deck.** The face-down deck of behaviour cards built for a boss, mimic, invader or phantom at the start of its encounter. When it is empty, the discard pile is turned face down without shuffling to form the new deck.
+**Behaviour deck.** The face-down deck of behaviour cards from which a boss, mimic, invader, or summon draws one card at the start of each of its turns. A boss's behaviour deck is built during setup and built again each time its failed encounter is reset (see §15.5). When the deck is empty at the start of a turn, the discard pile is turned face down without shuffling to form the new deck.
 
 **Behaviour icon.** A movement or attack icon on an enemy data card or a behaviour card. Icons are resolved left to right; an icon that has no valid target, or that cannot be resolved, is skipped (see §9.1).
 
@@ -50,9 +52,11 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Boss.** A single powerful enemy whose turns are driven by a behaviour deck and whose base is divided into four arcs. There are three ranks: *mini-boss*, *main-boss* and *mega-boss*. Bosses do not scale with the number of characters and may not be pushed by characters.
 
-**Boss arc.** One of the four sectors (front, left, right, back) of a boss's base. Each node on the tile lies in at least one arc; nodes on the line between two arcs lie in both.
+**Boss arc.** One of the four sectors (front, left, right, back) into which a boss's base is divided. The arcs extend across the tile: each node lies in at least one arc, and a node on the line between two arcs lies in both (see §15.6).
 
-**Boss tile.** The mini-boss tile or main-boss tile on which a boss encounter is fought. A main-boss encounter uses both boss tiles joined as one large tile. Mega-bosses use the mega-boss game board supplied with their expansion.
+**Boss spawn node.** The spawn node of a boss's type: the mini-boss spawn node, the main-boss spawn node, or the mega-boss spawn node. The boss model is placed on it at the start of every boss encounter (see §15.3).
+
+**Boss tile.** One of the two tiles on which mini-boss and main-boss encounters are fought. A mini-boss encounter is fought on the mini-boss tile alone; a main-boss encounter is fought on both boss tiles joined as one tile, the main-boss tile. A mega-boss is fought on the mega-boss game board supplied with it (see §15.3).
 
 **Boss treasure.** A treasure card supplied with a boss. One of a boss's treasure cards is awarded at random when the boss is defeated (see §16.5). Boss treasure cannot be bought; it sells for six *souls* and is returned to the game box when sold (see §11.4; for campaign play, see §18.6).
 
@@ -122,13 +126,15 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Estus flask.** A character token. Flipping it as the Drink Estus major action removes all damage cubes from the endurance bar; stamina cubes, hollow cubes, and condition tokens are not removed. It is readied only by resting at the *bonfire* (see §3.5, Estus Flask).
 
+**Facing.** The direction in which the centre of a boss's front arc points. A boss faces directly towards an adjacent node and changes its facing only when a movement icon or a turn icon turns it (see §15.6).
+
 **Failed.** The result of an encounter in which every character dies, or in which any *hollow* character dies. A *failed* encounter awards nothing; every living character drops their *souls* on the tile, its card is turned face down and its black cube removed, and the characters must rest at the *bonfire* (see §7.5, Encounter Resolution).
 
 **Final boss.** The last boss of the game: the main-boss, or the mega-boss if the players chose to add one. Defeating the final boss wins the game.
 
 **Firekeeper.** The figure at the *bonfire* who raises a character's stats, one *stat tier* per purchase, in exchange for that character's *souls*. Stat tiers one to four cost 2, 4, 8, and 10 souls (see §11.3; for campaign play, see §18.6).
 
-**Fog gate.** The token marking the entrance to a boss encounter. In the standard game it moves to the *bonfire* tile after the first boss attempt and provides a shortcut back to the boss. In campaign play it has no effect.
+**Fog gate.** The token that marks the doorway of a boss encounter. A boss encounter begins when the characters pass through it. The first time they pass through, the token is moved to the *bonfire* tile, where it is a shortcut to that boss until the boss is defeated (see §15.1). In campaign play it is aesthetic only (see §18.2).
 
 **Frostbite.** A condition. A character with a frostbite token cannot recover stamina and cannot take the *Rest* major action; any other model with a frostbite token reduces each of its movement values by one. The token is removed at the end of the model's next complete turn (see §8.5, Frostbite).
 
@@ -136,9 +142,11 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Health dial.** The dial that records the health of a boss, summon, invader, or mimic. Enemies record damage with wound tokens instead (see §15.4).
 
-**Heat-up.** The point at which a boss, mimic or invader becomes more dangerous. When its health is reduced to or below its heat-up point, a heat-up card (or, for mimics and invaders, an unused standard card) is shuffled into its behaviour deck. Some bosses heat up differently; see Boss Special Rules.
+**Heat-up.** The event in which a boss, mimic, or invader becomes more dangerous. When a boss's health is reduced to or below its heat-up point, one heat-up card taken at random is shuffled into the cards that remain in its behaviour deck (see §15.5); a mimic or an invader adds one of its unused behaviour cards instead. Some bosses heat up differently (see §17).
 
-**Heat-up card.** A behaviour card marked with the heat-up symbol. Heat-up cards are set aside when the behaviour deck is built and enter play only at heat-up.
+**Heat-up card.** A behaviour card marked with the heat-up symbol. Heat-up cards are set aside when the behaviour deck is built, and one of them joins the deck when the boss heats up (see §15.5).
+
+**Heat-up point.** The health value, printed on a boss's data card, at or below which the boss heats up (see §15.5).
 
 **Heroic action.** The once-per-rest ability printed on the dashboard, resolved as a minor action by flipping the *heroic action* token to its used side. Its printed wording overrides other rules. The token is readied only by resting at the *bonfire* (see §3.5, Heroic Action).
 
@@ -155,6 +163,8 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 **Invasion.** The placing of invader tokens that brings one invader into the game. An invasion is provoked when the encounter cards are dealt while a character is *embered*, or when a character becomes embered by discarding an *ember card* while a face-down encounter card lies on a tile; no more than one is provoked before the mini-boss is defeated and no more than one after it (see §12.2).
 
 **Inventory.** A character's unlimited stack of unequipped treasure cards, kept face down beside the dashboard. Outside an encounter it may be rearranged freely and cards may be traded one for one between inventories; during an encounter it cannot be accessed (see §3.2).
+
+**Leap.** A boss movement marked with the leap icon. The boss is removed from its node and placed on the node of its target, at any distance, without changing its facing. Every character on that node is pushed to a valid adjacent node chosen by that character's player, and the push is not limited by arcs (see §16.2).
 
 **Legendary treasure.** A rare treasure card marked with an orange light under a chest. It cannot be purchased; five are shuffled into the tier two deck when the tier two shop is first stocked, and one drawn while stocking a shop is shuffled back (see §6.2, §6.3). In campaign play legendary treasure is obtained only by *transposition*.
 
@@ -322,7 +332,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Walk.** A minor action, once per turn: the character moves one node without spending stamina (see §10.2).
 
-**Weak arc.** A boss arc shown in red on the most recently resolved behaviour card. A character attacking a boss from a weak arc adds one black die.
+**Weak arc.** A boss arc shown in red on the arc diagram of the boss's current behaviour card, the card it drew most recently. A character who attacks a boss from a weak arc adds one black die to each attack roll, however many weak arcs the character is in (see §15.6).
 
 **Weapon.** An equipment card that bears the one-handed or two-handed weapon icon and whose art does not show a scroll. Shields, catalysts, bows, crossbows, and throwable weapons are weapons (see §4.1).
 
