@@ -60,7 +60,7 @@ A boss, a phantom, and a mimic record their health on a *health dial* in place o
 
 ## 8.3 Enemy Scaling
 
-*Enemy scaling* matches the enemies to the size of the party. The number of characters is fixed at setup (see §6.1) and does not change when a character dies: a dead character and a *lost* character still count. Each enemy is scaled for that number when its model is placed (see §7.5, Encounter Start).
+*Enemy scaling* matches the enemies to the size of the party. The number of characters is the number taking part in the game (see §6.1). It does not change when a character dies: a dead character and a *lost* character still count. It changes only when a player joins or leaves the game (see §18.4). Each enemy is scaled for that number when its model is placed (see §7.5, Encounter Start).
 
 | Characters | Enemy health | Enemy movement | Enemy *attack value* |
 |---|---|---|---|
@@ -77,7 +77,7 @@ With four characters, every attack value on an enemy's data card is increased by
 
 Every enemy is scaled, with four exceptions. A *boss*, a *mimic*, a *phantom*, and a *crystal lizard* are never scaled (see §15.4; §13; §12; §14).
 
-In campaign play, the *bonfire ascetic* further increases the health of every enemy that is subject to enemy scaling (see §18.7). The number of characters in a campaign changes only when a player joins or leaves it (see §18.4).
+In campaign play, the *bonfire ascetic* further increases the health of every enemy that is subject to enemy scaling (see §18.7).
 
 *Example.* A Hollow Soldier's data card shows a base health of 1, a movement value of 1, and an attack value of 4. Against the Knight alone it has a health of 1, moves one *node*, and attacks with a value of 4. Against the Knight and the Herald its scaled health is 2 and it moves two nodes. Against the Knight, the Herald, and the Assassin its scaled health is 3. Against the Knight, the Herald, the Assassin, and the Warrior its scaled health is 5 and its attack value is 5. The Warrior dies during the *encounter*, and the enemies of the next encounter are still scaled for four characters.
 

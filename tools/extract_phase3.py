@@ -16,7 +16,9 @@ Writes work/extraction_records_phase3.json (one record per file, schema of the P
 `phase` and, where a record answers a held review item, `resolves`), layout/art_candidates.json and the
 contact sheets build/art_contact*.jpg.
 
-usage: extract_phase3.py [extract] [candidates] [sheets]   (default: all three, in that order)
+usage: extract_phase3.py [extract] [megaboss] [candidates] [sheets]   (default: all four, in that order)
+  extract  = the art, card faces, dashboards and fans of the books catalogued in Phases 0 to 2
+  megaboss = the eight mega-boss expansion booklets supplied on 2026-11-11 (parents AST-0156 to AST-0163)
 """
 import os, sys, json, warnings
 warnings.simplefilter('ignore')
@@ -29,7 +31,7 @@ P.SCRATCH = 'work/pdfimages/phase3'
 RECFILE = 'work/extraction_records_phase3.json'
 CANDFILE = 'layout/art_candidates.json'
 P2B = json.load(open(P.RECFILE))
-RECS, META, NEXT, SKIPPED = {}, {}, {}, []
+RECS, NEXT = {}, {}
 JPG_MIN_PIXELS = 500_000               # opaque paintings at or above this size are stored as JPEG
 
 
@@ -83,8 +85,8 @@ def record(parent, name, typ, key, page, path, fmt, im, method, bbox, image_obje
              bytes=os.path.getsize(path), notes=notes, phase=3)
     if resolves:
         r['resolves'] = resolves
+    r['design'] = dict(meta)
     RECS[rid] = r
-    META[rid] = dict(meta, width=im.width, height=im.height, has_alpha=im.mode == 'RGBA')
     save_records()
     print(rid, path, r['dims'], 'alpha' if r['has_alpha'] else 'opaque')
     return r
@@ -546,7 +548,7 @@ EXISTING = [dict(id='AST-0119', file='assets/art/ast-0119-tg-2022-cover-art-grav
 
 
 def run_extract():
-    RECS.clear(); META.clear(); NEXT.clear()
+    RECS.clear(); NEXT.clear()
     for parent, slug, name, key, page, xref, meta, notes, crop, resolves in ART:
         if isinstance(xref, list):
             tiles(parent, 'art', slug, name, key, page, xref, meta, notes, resolves)
@@ -560,7 +562,236 @@ def run_extract():
         single(parent, 'frames', slug, name, 'frame', key, page, xref, meta, notes, crop, resolves)
     for parent, slug, name, key, page, xref, meta, notes, crop, resolves in TOKENS:
         single(parent, 'icons', slug, name, 'icon', key, page, xref, meta, notes, crop, resolves)
-    json.dump(META, open(P.SCRATCH + '/_meta.json', 'w'))
+    print('records:', len(RECS), '->', RECFILE)
+
+
+
+# --------------------------------------------------------------------------- the eight mega-boss expansion booklets
+# Supplied by the author on 2026-11-11. Catalogue parents AST-0156 to AST-0163 are appended to the catalogue by
+# tools/build_asset_docs.py (AST-0148 to AST-0155 were already taken by the typographic specimens).
+MB_FIRST = 'AST-0156'
+MB = [  # key, parent, file, slug, boss name
+    ('FK', 'AST-0156', 'DS-Four-Kings-Rules-web.pdf', 'four-kings', 'The Four Kings'),
+    ('GAD', 'AST-0157', 'DS-GaD-Rules-web.pdf', 'gaping-dragon', 'Gaping Dragon'),
+    ('GD', 'AST-0158', 'DS-GD-Rules-web.pdf', 'guardian-dragon', 'Guardian Dragon'),
+    ('TLG', 'AST-0159', 'DS-TLG-Rules.pdf', 'last-giant', 'The Last Giant'),
+    ('MFA', 'AST-0160', 'DS-MFA-Rules.pdf', 'manus', 'Manus, Father of the Abyss'),
+    ('OIK', 'AST-0161', 'DS-OIK-Rules-web.pdf', 'old-iron-king', 'Old Iron King'),
+    ('VOT', 'AST-0162', 'DS-VotBV-Rules-web.pdf', 'vordt', 'Vordt of the Boreal Valley'),
+    ('AD', 'AST-0163', 'DS-AD-Rules-web-EN.pdf', 'asylum-demon', 'Asylum Demon'),
+]
+for _k, _p, _f, _s, _b in MB:          # register the sources with the Phase 2B helpers (personalised PDFs)
+    P.SRC[_k] = (P.DEC + _f, _f)
+P.WM_KEYS = tuple(P.WM_KEYS) + tuple(k for k, *_ in MB)
+
+# per booklet: cover (page, xref, subject), back cover, interior art, miniature renders, boards, special-rule extras
+# art rows: (slug, record name, page, xref, subject, mood, use, chapter, also, header focus, notes)
+MB_ART = {
+    'FK': dict(
+        cover=(1, 20, 'The Four Kings, a crowned wraith of trailing dark limbs, on black', 'abyssal, spectral, black'),
+        back=(16, 2539, 'Drowned ruins in deep blue gloom, fading to black at the foot', 'sunken, blue, silent'),
+        art=[('art-knight-in-dark-ruins', 'p.3: armoured figure in dark ruins', 3, 54, 'An armoured figure moves through dark ruins toward a lit doorway', 'furtive, dark, teal', COL, 19, (SPOT,), None, SHOT),
+             ('art-drowned-city', 'p.6: drowned city of towers in blue gloom', 6, 668, 'A drowned city of towers looms through deep blue gloom', 'sunken, blue, silent', COL, 19, (FULL,), None, ''),
+             ('concept-king-on-white', 'p.10: ink concept of one of the Four Kings, on white', 10, 1334, 'Ink concept of one of the Four Kings, a wraith of ragged black limbs, on white', 'spidery, black, stark', COL, 17, (SPOT,), None, 'White ground is part of the image.'),
+             ('art-sunken-ruins-blue', 'p.15: sunken ruins in blue haze', 15, 2523, 'Sunken ruins in blue haze', 'sunken, blue, silent', SPOT, 19, (), None, '')],
+        minis=[(4, 65, 'miniature', 'The Four Kings miniature render (one king, full figure)'), (4, 81, 'miniature-second-pose', 'The Four Kings miniature render (second copy as placed behind the first)')],
+        boards=(626, 1299)),
+    'GAD': dict(
+        cover=(1, 20, 'The Gaping Dragon rears in blue gloom, its ribcage a maw of teeth', 'monstrous, blue, gaping'),
+        back=(16, 2482, 'The Gaping Dragon, pale wings spread, small on black', 'pale, distant, black'),
+        art=[('art-vaulted-corridor-sketch', 'p.3: sepia sketch of a long vaulted corridor', 3, 54, 'Sepia sketch of a long vaulted corridor receding into the dark', 'sepia, receding, quiet', FULL, 19, (HDR, COL), 0.45, ''),
+             ('art-maw-study-tall', 'p.6: monochrome study of the Gaping Dragon maw', 6, 820, "Monochrome study of the Gaping Dragon's maw of ribs and tendrils", 'monochrome, writhing, close', COL, 17, (SPOT,), None, '530 px wide.'),
+             ('concept-sheet-on-white', 'p.10: pencil concept sheet of the Gaping Dragon, on white', 10, 1545, 'Pencil concept sheet of the Gaping Dragon in several views, on white', 'studied, pencil, anatomical', COL, 17, (SPOT,), None, 'White ground is part of the image.'),
+             ('art-mossy-depths', 'p.14: mossy ruins dropping into green-black depths', 14, 2443, 'Mossy ruins drop away into green-black depths', 'dank, green, deep', SPOT, 19, (COL,), None, ''),
+             ('art-maw-study-wide', 'p.15: monochrome study of the Gaping Dragon maw, wide', 15, 2465, "Monochrome study of the Gaping Dragon's maw, wide framing", 'monochrome, writhing, close', SPOT, 16, (COL,), None, ''),
+             ('art-golden-buttresses', 'p.15: pale golden buttresses and spires from above', 15, 2467, 'Pale golden buttresses and spires seen from above', 'lofty, golden, pale', SPOT, 19, (), None, ''),
+             ('art-stair-and-arch-sketch', 'p.15: sepia sketch of a stair past a stone arch', 15, 2468, 'Sepia sketch of a stair climbing past a stone arch', 'sepia, quiet, worn', SPOT, 19, (), None, '')],
+        minis=[(4, 79, 'miniature', 'Gaping Dragon mega-boss miniature render')],
+        boards=(795, 1506), extra_objects=[(5, 801, 'corrosion-token', 'Corrosion condition token (Gaping Dragon special rule)', 'A green corrosion condition token', 'token, acid green')]),
+    'GD': dict(
+        cover=(1, 20, 'The Guardian Dragon, red-winged, coiled on black', 'coiled, crimson, black'),
+        back=(16, 2260, 'A dark hall of tall shelves under hanging lamps, fading to black', 'dim, amber, hushed'),
+        art=[('art-ruined-castle-on-cliff-tall', 'p.3: ruined castle of spires on a cliff, tall framing', 3, 54, 'A ruined castle of spires and buttresses on a cliff under a pale sky, tall framing', 'lofty, weathered, pale', FULL, 19, (HDR, COL), 0.22, 'Taller framing of the painting stored as AST-0130 (Phantoms p.13), same width.'),
+             ('art-dark-library-hall', 'p.6: dark library hall under hanging lamps', 6, 778, 'A vast dark library hall recedes under hanging lamps', 'dim, amber, hushed', FULL, 19, (HDR, COL), 0.62, ''),
+             ('concept-sketches-on-grey', 'p.10: Guardian Dragon concept sketches on grey', 10, 1496, 'Concept sketches of the Guardian Dragon: a line drawing above, a red-winged colour study below', 'studied, grey, crimson', COL, 17, (SPOT,), None, 'Grey ground is part of the image.')],
+        minis=[(4, 79, 'miniature', 'Guardian Dragon mega-boss miniature render')],
+        boards=(748, 1457)),
+    'TLG': dict(
+        cover=(1, 20, 'The Last Giant, hollow-faced and bound in roots, on black', 'hulking, hollow, black'),
+        back=(16, 2601, 'A shrine mirrored in still blue water under a column of light, fading to black', 'serene, blue, luminous'),
+        art=[('art-giant-turned-to-tree', 'p.3: colossal giant turned to a dead tree', 3, 54, 'A colossal giant turned to a dead tree stands in a grey wood', 'petrified, grey, mournful', FULL, 17, (HDR, COL), 0.25, ''),
+             ('art-knight-in-golden-hall-tall', 'p.6: knight on a fallen column in a golden hall, large', 6, 862, 'A knight stands on a fallen column in a hall of gold light and gnarled pillars', 'radiant, golden, ruined', FULL, 19, (HDR, COL), 0.52, 'Largest version of the painting stored small as AST-0130 (Explorers p.14, 406 px).'),
+             ('concept-front-and-back', 'p.10: Last Giant concept art, front and back views', 10, 1582, 'Concept art of the Last Giant, front and back views', 'gaunt, dark, studied', COL, 17, (SPOT,), None, ''),
+             ('art-mossy-cave-mouth', 'p.15: lone figure before a moss-green cave mouth', 15, 2586, 'A lone figure stands before a moss-green cave mouth', 'damp, green, hushed', SPOT, 19, (), None, ''),
+             ('art-forest-ruin-with-light', 'p.15: overgrown forest ruin with pale light', 15, 2587, 'An overgrown forest ruin with pale light falling through an arch', 'overgrown, green, hazy', SPOT, 19, (), None, '')],
+        minis=[(4, 77, 'miniature', 'The Last Giant mega-boss miniature render')],
+        boards=(842, 1540)),
+    'MFA': dict(
+        cover=(1, 20, 'Manus, Father of the Abyss: antlers, a mass of red eyes and a great clawed hand', 'abyssal, red-eyed, looming'),
+        back=(16, 2008, 'An armoured knight silhouetted against swirling blue spirits, fading to black', 'electric, blue, embattled'),
+        art=[('art-figure-in-light-beam', 'p.3: figure with a glowing charm under a beam of light', 3, 54, 'A dark figure holds a glowing charm beneath a slanting beam of light', 'mystic, dark, glinting', FULL, 19, (COL,), None, ''),
+             ('art-knight-resting-at-bonfire-tall', 'p.6: knight resting at a bonfire among ruins, large tall framing', 6, 616, 'A knight rests before a bonfire among broken walls, sparks streaming from the coiled sword', 'warm, weary, quiet', FULL, 19, (HDR, COL), 0.47, 'Largest version of the bonfire painting (AST-0120 is 934 px wide).'),
+             ('art-knight-in-shaft-of-light', 'p.10: armoured knight in a shaft of light', 10, 1262, 'An armoured knight stands in a shaft of light, sword and shield lowered', 'solemn, dark, spotlit', COL, 15, (FULL,), None, ''),
+             ('art-blood-red-hall', 'p.15: blood-red ruined hall', 15, 1996, 'A ruined hall drenched in blood-red light', 'bloody, red, ruined', SPOT, 19, (), None, ''),
+             ('art-manus-over-small-figure', 'p.15: Manus looming over a small blue figure', 15, 1997, 'Manus looms, antlered and red-eyed, over a small figure in blue', 'abyssal, red-eyed, looming', SPOT, 17, (COL,), None, '')],
+        minis=[(4, 67, 'miniature', 'Manus, Father of the Abyss mega-boss miniature render')],
+        boards=(592, 1227)),
+    'OIK': dict(
+        cover=(1, 22, 'The Old Iron King, a horned demon of molten iron, wreathed in flame', 'molten, infernal, roaring'),
+        back=(16, 2428, 'An iron keep in clouds of fire, fading to black', 'infernal, red, brooding'),
+        art=[('art-knights-before-fiery-gate', 'p.3: knights before a keep split by a seam of fire', 3, 58, 'Knights stand before a dark keep split by a seam of molten light', 'ominous, ember, smoky', COL, 19, (SPOT,), None, '630 px wide. A larger copy of this painting is in the Vordt booklet (AST-0162).'),
+             ('art-bull-headed-iron-idol', 'p.10: bull-headed iron idol holding a candle', 10, 1587, 'A bull-headed iron idol holds out a lit candle', 'brazen, dark, candlelit', COL, 17, (SPOT,), None, '627 px wide.')],
+        minis=[(4, 80, 'miniature', 'Old Iron King mega-boss miniature render')],
+        boards=(815, 1548)),
+    'VOT': dict(
+        cover=(1, 20, 'Vordt of the Boreal Valley, a hunched beast in frost-rimed armour, on black', 'frozen, bestial, silver'),
+        back=(16, 2627, 'A moonlit gothic city of spires, fading to black', 'moonlit, blue, cold'),
+        art=[('art-moonlit-gothic-city', 'p.3: moonlit gothic city of spires', 3, 54, 'A moonlit gothic city of spires and bridges in blue night', 'moonlit, blue, cold', FULL, 19, (HDR, COL), 0.30, ''),
+             ('art-knight-before-fire-seam-gate', 'p.6: knight before a towering gate split by a seam of fire', 6, 1032, 'A knight faces a towering gate split by a seam of fire', 'ominous, ember, towering', FULL, 19, (HDR, COL), 0.62, 'Text-free and larger than the Iron Keep cover (AST-0130), which uses this painting.'),
+             ('art-vordt-on-black', 'p.10: Vordt of the Boreal Valley on black', 10, 1750, 'Vordt of the Boreal Valley, silver-armoured and hunched, on black', 'frozen, bestial, silver', COL, 17, (FULL,), None, ''),
+             ('art-snowbound-ruined-street', 'p.14: snow-bound ruined city street', 14, 2594, 'A snow-bound street of ruined towers', 'frozen, pale, ruined', SPOT, 19, (COL,), None, ''),
+             ('art-cathedral-rose-window', 'p.15: cathedral front with a great rose window', 15, 2612, 'A cathedral front with a great rose window in blue light', 'cold, blue, ornate', SPOT, 19, (), None, ''),
+             ('art-path-through-teal-ruins', 'p.15: path through dark teal ruins', 15, 2613, 'A path winds through dark teal ruins', 'murky, teal, deserted', SPOT, 19, (), None, ''),
+             ('art-cliff-city-in-mist', 'p.15: city on a cliff in teal mist', 15, 2614, 'A city clings to a cliff in teal mist', 'murky, teal, lofty', SPOT, 19, (), None, '')],
+        minis=[(4, 79, 'miniature', 'Vordt of the Boreal Valley mega-boss miniature render')],
+        boards=(899, 1419)),
+    'AD': dict(
+        cover=(1, 20, 'The Asylum Demon, horned and bloated, great hammer in hand, on black', 'brutish, dark, heavy'),
+        back=(16, 1844, 'A ruined cathedral nave, fading to black at the foot', 'solemn, golden, still'),
+        art=[('art-ruined-cathedral-interior-large', 'p.3: ruined cathedral interior, largest copy', 3, 54, 'A ruined cathedral nave, daylight falling through the broken apse onto an overgrown floor', 'solemn, golden, still', COL, 19, (HDR,), 0.30, 'Slightly larger copy of AST-0125 (934 px wide).'),
+             ('art-asylum-cell', 'p.10: stone cell lit from a grate above', 10, 1585, 'A stone cell lit from a grate above, a huddled figure by the wall', 'confined, grey, forlorn', COL, 19, (SPOT,), None, ''),
+             ('concept-stray-demon-on-white', 'p.12: demon concept art on white', 12, 1786, 'Concept art of the demon, horned, winged and bloated, on white', 'brutish, dark, studied', COL, 17, (SPOT,), None, 'White ground is part of the image.'),
+             ('art-ruined-parish-green-ink-large', 'p.13: green-ink sketch of a ruined tower and courtyard, large', 13, 1795, 'Green-ink sketch of a ruined tower above a walled courtyard, a crow perched at left', 'sketchy, green, desolate', FULL, 19, (HDR, COL), 0.35, 'Largest version of the sketch stored small as AST-0129 (2017 core p.15, 465 px).')],
+        minis=[(4, 65, 'miniature', 'Asylum Demon / Stray Demon mega-boss miniature render')],
+        boards=(864, 1545), extra_objects=[(5, 873, 'pillar-token', 'Pillar token (Asylum Demon special rule: Pillar Smasher)', 'A round pillar token: a broken stone pillar seen from above', 'token, stone')]),
+}
+# special-rule plates cut from the page (no single image object exists): page 13 card, with room for its key where it has one
+MB_SPECIAL = {'GAD': (13, 3, 3, 3, 3, 'Crawling Charge behaviour card (Custom Game Elements)'),
+              'GD': (13, 80, 3, 3, 8, 'Fiery Breath card with its key: the indicated cage node and the nodes the breath strikes'),
+              'MFA': (13, 3, 3, 3, 3, 'Ground Slam behaviour card (the Shaft rule)'),
+              'OIK': (13, 34, 3, 3, 26, 'Beam card with its key: the nodes the beam strikes and the movement node')}
+MB_STRIP_TOP = {'FK': 46, 'TLG': 46}    # page 12 strips whose deck icons sit above the card fans
+PAGECROP = 'Cut from a page render because the card is built on the page from a texture, an art layer and live text (no single image object): the parchment page shows at the rounded corners.'
+
+
+def _card_boxes(key, page, wmin=38, wmax=210):
+    out = []
+    for i in P.doc(key)[page - 1].get_image_info(xrefs=True):
+        b = i['bbox']
+        if i['xref'] and 0.68 <= i['width'] / i['height'] <= 0.79 and wmin <= b[2] - b[0] <= wmax and b[3] - b[1] > 0.9 * (b[2] - b[0]):
+            out.append(tuple(b))
+    return out
+
+
+def _clusters(boxes, gap=0.0):
+    groups = []
+    for b in boxes:
+        hit = [g for g in groups if any(not (b[2] + gap < c[0] or c[2] + gap < b[0] or b[3] + gap < c[1] or c[3] + gap < b[1]) for c in g)]
+        groups = [g for g in groups if not any(g is h for h in hit)] + [[b] + [c for g in hit for c in g]]
+    out = [(min(c[0] for c in g), min(c[1] for c in g), max(c[2] for c in g), max(c[3] for c in g)) for g in groups]
+    return sorted(out, key=lambda r: (round(r[1] / 40), r[0]))
+
+
+def _text(key, page, rect):
+    """Live page text inside a rectangle (never the head strip of the page), as one cleaned line."""
+    assert rect[1] >= 30
+    words = P.doc(key)[page - 1].get_text('words', clip=P.fitz.Rect(rect))
+    words = sorted(words, key=lambda w: (round(w[1] / 4), w[0]))
+    t = ' '.join(w[4] for w in words if not w[4].strip('0123456789.,x') == '')
+    assert '@' not in t and 'Generated' not in t
+    return ' '.join(t.split())
+
+
+def _slug(t, n=48):
+    s = ''.join(ch.lower() if ch.isalnum() else '-' for ch in t)
+    while '--' in s:
+        s = s.replace('--', '-')
+    return s.strip('-')[:n].strip('-')
+
+
+def page_crop(parent, folder, slug, name, typ, key, page, box, dpi, meta, notes=''):
+    ph = P.doc(key)[page - 1].rect.height
+    box = (max(box[0], 0), max(box[1], 30), min(box[2], P.doc(key)[page - 1].rect.width), min(box[3], ph - 30))
+    im = P.region(key, page, box, dpi)   # redacted working copy; asserts 30 pt clear of head and foot and pixel-identical to the unredacted crop
+    path, fmt = store(im, parent, folder, slug, False)
+    method = (f'pdftoppm {dpi} dpi page-region crop; rendered from a working copy with the purchaser line redacted; crop verified '
+              f'pixel-identical to the unredacted page region and 30 pt clear of page head and foot')
+    return record(parent, name, typ, key, page, path, fmt, im, method, box, None, notes, meta)
+
+
+def run_megaboss():
+    if not RECS:
+        for r in json.load(open(RECFILE)):
+            if r['parent'] < MB_FIRST:
+                RECS[r['id']] = r
+    for rid in [i for i, r in RECS.items() if r['parent'] >= MB_FIRST]:
+        del RECS[rid]
+    for key, parent, _f, sl, boss in MB:
+        NEXT.pop(parent, None)
+        T = MB_ART[key]
+        # cover, text-free crop of it, back cover
+        p, x, subj, mood = T['cover']
+        single(parent, 'art', f'{sl}-cover', f'{boss} expansion front cover, logo baked in', 'art', key, p, x,
+               m(subj + ', with the game logo', mood, COVER, 17, baked=LOGO), LOGO, None, None, art=True)
+        single(parent, 'art', f'{sl}-cover-art-only', f'{boss} front cover, art above the logo', 'art', key, p, x,
+               m(subj, mood, COL, 17, (SPOT,)), 'Text-free crop: the top 61.5 % of the cover image, ending just above the logo flourish.', (0, 0, 1, 0.615), None, art=True)
+        p, x, subj, mood = T['back']
+        single(parent, 'art', f'{sl}-backcover', f'{boss} expansion back cover', 'art', key, p, x,
+               m(subj, mood, BACK, 19, (FULL, COL)), 'The lower part is black (room for back-cover text).', None, None, art=True)
+        for slug, name, p, x, subj, mood, use, ch, also, hdr, notes in T['art']:
+            single(parent, 'art', f'{sl}-{slug}', f'{boss} booklet {name}', 'art', key, p, x, m(subj, mood, use, ch, also, hdr=hdr), notes, None, None, art=True)
+        for p, x, slug, name in T['minis']:
+            single(parent, 'photography', f'{sl}-{slug}', name, 'photography', key, p, x,
+                   m(name.replace(' render', '') + ', grey resin render cut out by its own mask', 'miniature, grey, imposing', COL, 17, (SPOT, FULL), kind='miniature render'),
+                   'SFG miniature render, cut out by its own soft mask. Largest copy in the booklet.')
+        bx, ex = T['boards']
+        single(parent, 'photography', f'{sl}-game-board-boss-side', f'{boss} mega-boss game board, boss side (p.5)', 'photography', key, 5, bx,
+               m(f'The {boss.replace("The ", "")} mega-boss game board, boss side, with its node markings', 'component, top-down, arena', COL, 17, (FULL, SPOT), kind='game board'),
+               'Node markers are printed on the board. Use this side to show where the special rule plays out.')
+        single(parent, 'photography', f'{sl}-game-board-encounter-side', f'{boss} mega-boss game board, encounter side (p.9, larger of the two copies)', 'photography', key, 9, ex,
+               m(f'The {boss.replace("The ", "")} game board, level 4 encounter side', 'component, top-down, tile', COL, 19, (SPOT,), kind='game board'),
+               'The tokens and the card that lie on it on p.9 are separate objects and are not in this image.')
+        for p, x, slug, name, subj, mood in T.get('extra_objects', []):
+            single(parent, 'photography', f'{sl}-{slug}', name, 'photography', key, p, x, m(subj, mood, SPOT, 17, kind='token'), 'Small: inline or thumbnail size only.')
+        # ---- card faces: page-region crops
+        for n, box in enumerate(_clusters(_card_boxes(key, 5), gap=3.0), 1):          # contents-page fans
+            cap = _text(key, 5, (box[0] - 14, box[3] + 1, box[2] + 14, box[3] + 24)) or f'card group {n}'
+            low = cap.lower()
+            ch = 19 if 'level 4' in low and 'data' not in low else 15 if ('data' in low or 'treasure' in low) else 17
+            page_crop(parent, 'frames', f'{sl}-cards-p05-{_slug(cap, 40)}', f'{boss} booklet p.5 card fan: {cap}', 'frame', key, 5,
+                      (box[0] - 3, box[1] - 3, box[2] + 3, box[3] + 3), 600,
+                      m(f'{boss}: {cap} as fanned on the contents page', 'component, fanned cards', SPOT, ch, baked=FANTXT, kind='card fan'), PAGECROP + ' Small on the page (about 57 pt wide per card).')
+        for box in _clusters(_card_boxes(key, 8, wmin=80)):                           # level 4 encounter card with its call-outs
+            t = _text(key, 8, (box[0] + 22, box[1] + 4, box[2] - 22, box[1] + 0.2 * (box[3] - box[1]))).title()
+            page_crop(parent, 'frames', f'{sl}-level4-encounter-card-{_slug(t, 30)}', f'{boss} booklet p.8: level 4 encounter card "{t}" with its numbered call-outs', 'frame', key, 8,
+                      (box[0] - 10, box[1] - 10, box[2] + 10, box[3] + 10), 450,
+                      m(f'Level 4 encounter card "{t}" with numbered call-outs 1 to 7', 'card face, annotated', SPOT, 19, (COL,), baked=CARDTXT + ' Gold call-out numbers 1 to 7 from the anatomy figure sit on its edges.', kind='card face'), PAGECROP)
+        cards11 = sorted(_clusters(_card_boxes(key, 11, wmin=80)), key=lambda r: r[1])
+        for j, box in enumerate(cards11):                                              # data card (call-outs) and behaviour card
+            t = _text(key, 11, (box[0] + 20, box[1] + 4, box[2] - 20, box[1] + 0.2 * (box[3] - box[1]))).title()
+            if j == 0:
+                page_crop(parent, 'frames', f'{sl}-data-card', f'{boss} booklet p.11: mega-boss data card "{t}" with its numbered call-outs', 'frame', key, 11,
+                          (box[0] - 10, box[1] - 10, box[2] + 10, box[3] + 10), 450,
+                          m(f'Mega-boss data card "{t}" with numbered call-outs 1 to 8', 'card face, annotated', COL, 15, (SPOT,), baked=CARDTXT + ' Gold call-out numbers 1 to 8 from the anatomy figure sit on its edges.', kind='card face'), PAGECROP)
+            else:
+                page_crop(parent, 'frames', f'{sl}-behaviour-card-{_slug(t, 30)}', f'{boss} booklet p.11: behaviour card "{t}"', 'frame', key, 11,
+                          (box[0] - 3, box[1] - 3, box[2] + 3, box[3] + 3), 450,
+                          m(f'Mega-boss behaviour card "{t}"', 'card face', SPOT, 16, (COL,), baked=CARDTXT, kind='card face'), PAGECROP)
+        b12 = _card_boxes(key, 12)
+        if b12:                                                                        # behaviour-deck fans of the encounter set-up page
+            x0, y0, x1, y1 = min(b[0] for b in b12), min(b[1] for b in b12), max(b[2] for b in b12), max(b[3] for b in b12)
+            cap = _text(key, 12, (x0 - 10, y1 + 1, x1 + 10, y1 + 14))
+            special = key in MB_STRIP_TOP or key == 'VOT'
+            page_crop(parent, 'frames' if not special else 'diagrams', f'{sl}-behaviour-decks-p12', f'{boss} booklet p.12: behaviour decks as laid out for the encounter ({cap})', 'frame' if not special else 'diagram', key, 12,
+                      (x0 - 4, y0 - 4 - MB_STRIP_TOP.get(key, 0), x1 + 4, y1 + 4), 450,
+                      m(f'{boss}: the behaviour decks of the encounter ({cap})', 'component, fanned cards', SPOT if not special else COL, 17 if special else 16, baked=FANTXT, kind='diagram' if special else 'card fan'),
+                      PAGECROP + (' This is the plate that shows the special rule: the decks the boss draws from.' if special else ''))
+        if key in MB_SPECIAL:
+            p, l, t_, r_, b_, what = MB_SPECIAL[key]
+            for box in _clusters(_card_boxes(key, p, wmin=60))[:1]:
+                page_crop(parent, 'diagrams', f'{sl}-special-rule-p13', f'{boss} booklet p.13: {what}', 'diagram', key, p,
+                          (box[0] - l, box[1] - t_, box[2] + r_, box[3] + b_), 450,
+                          m(f'{boss} special rule: {what}', 'card face, rule example', COL, 17, (SPOT,), baked=CARDTXT, kind='diagram'), PAGECROP)
     print('records:', len(RECS), '->', RECFILE)
 
 
@@ -577,14 +808,18 @@ def header_box(w, h, hdr, aspect=3.0):
 
 def run_candidates():
     recs = json.load(open(RECFILE))
-    meta = json.load(open(P.SCRATCH + '/_meta.json'))
     rows = []
     for e in EXISTING:
         im = Image.open(e['file'])
         rows.append((e['id'], e['file'], dict(e['meta'], width=im.width, height=im.height, has_alpha=im.mode == 'RGBA'), 'Phase 0', e['note'], None, 1))
     order = {'painting': 0, 'dashboard': 1, 'card fan': 2, 'card face': 3, 'token': 4}
-    for r in sorted(recs, key=lambda r: (order[meta[r['id']]['kind']], P.idkey(r['id']))):
-        rows.append((r['id'], r['file'], meta[r['id']], 'Phase 3', r['notes'], r, None))
+    mb = lambda r: r['parent'] >= MB_FIRST
+
+    def key(r):
+        return (1, 0, P.idkey(r['id'])) if mb(r) else (0, order[r['design']['kind']], P.idkey(r['id']))
+    for r in sorted(recs, key=key):
+        w, h = (int(v) for v in r['dims'].split(' ')[0].split('×'))
+        rows.append((r['id'], r['file'], dict(r['design'], width=w, height=h, has_alpha=r['has_alpha']), 'Phase 3', r['notes'], r, None))
     out = []
     for n, (rid, f, mt, phase, note, r, _) in enumerate(rows, 1):
         w, h = mt['width'], mt['height']
@@ -600,6 +835,8 @@ def run_candidates():
         d['ppi_at_column_250pt'] = round(w / (250 / 72))
         d['ppi_at_full_width_520pt'] = round(w / (520 / 72))
         d['source'] = f"{r['src']}, p.{r['page']}" if r else 'DS-TG-Rulebook-Compressed_compressed.pdf, p.1'
+        if r and r['method'].startswith('pdftoppm'):
+            d['page_render_crop'] = True
         d['extracted_in'] = phase
         if note:
             d['notes'] = note
@@ -642,7 +879,7 @@ def run_sheets(per=48, cols=6, T=260):
         print(name, sheet.size, f"n {chunk[0]['n']}–{chunk[-1]['n']}")
 
 
-SECTIONS = {'extract': run_extract, 'candidates': run_candidates, 'sheets': run_sheets}
+SECTIONS = {'extract': run_extract, 'megaboss': run_megaboss, 'candidates': run_candidates, 'sheets': run_sheets}
 if __name__ == '__main__':
     for s in ([a for a in sys.argv[1:] if a in SECTIONS] or list(SECTIONS)):
         SECTIONS[s]()

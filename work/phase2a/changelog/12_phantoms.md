@@ -316,3 +316,10 @@ The embering of every character at a boss's defeat (see §16.5) provokes no inva
 - After: "An invader is an enemy model, and its encounter is not *cleared* while it is on the tile (see §7.5, Encounter Resolution). An invader leaves the tile only when it is killed or when it vanishes."
 - Rationale: The ruling is confirmed; the paragraph says the same thing in half the words and lets the general rule of §7.5 do the work.
 - Source: final rulings, phantom-E11 (`06_final_rulings.md`); Official Phantoms booklet: the invader 'will fight alongside the other enemies present' and leaves only if killed or if the party is defeated (lines 492-495, 527-533).
+
+### CH-12-046 · §12.2, End of an Invasion
+- Type: clarification
+- Before: "An invader appears once. Whether it was killed or vanished,"
+- After: "An invader appears once, unless a campaign states otherwise (see §19.4; §19.15). Whether it was killed or vanished,"
+- Rationale: Two campaigns bring a listed invader back until it is killed; the general rule now points to them.
+- Source: final rulings, lead-E04 (`06_final_rulings.md`); campaign memo, cross-cluster effects

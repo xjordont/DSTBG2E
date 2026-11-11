@@ -85,3 +85,25 @@
 **A.** They remove their stamina cubes and nothing else. Each character keeps their damage cubes and condition tokens, and a character who died in the cleared encounter stays dead. The recovery and the rewards of the cleared encounter follow the mimic's death (see §13.2; §13.3)."
 - Rationale: [MECHANICAL CHANGE] Players who know the published rule expect a full recovery before the mimic; the answer states this book's rule as amended.
 - Source: final rulings, phantom-E41 (`06_final_rulings.md`); Follows phantom-E19.
+
+### CH-22-013 · §22.1
+- Type: ruling
+- Before: "**Q.** Which weapon slot is the left weapon slot, and which is the right?
+
+**A.** The left weapon slot is the weapon slot on the left of the dashboard as its player reads it, and the right weapon slot is the one on the right. A character moves cards between them only by the Equip minor action during an encounter (see §3.2; §10.1).
+
+"
+- After: ""
+- Rationale: After the parry ruling (combat-E22) no rule depends on which weapon slot is which, so the question is withdrawn.
+- Source: final rulings, lead-E11 (`06_final_rulings.md`); combat memo, cross-cluster effects
+
+### CH-22-014 · §22.4
+- Type: clarification
+- Before: "**Q.** Who holds the aggro token when its holder dies?"
+- After: "**Q.** May the party return to the bonfire tile without resting?
+
+**A.** No. The party returns to the bonfire tile only to rest (see §11.1).
+
+**Q.** Who holds the aggro token when its holder dies?"
+- Rationale: States the consequence of core-E36 where players will look for it.
+- Source: final rulings, lead-E12 (`06_final_rulings.md`); core memo, cross-cluster effects

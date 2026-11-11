@@ -142,7 +142,7 @@ Standard summons are called before a mini-boss encounter and advanced summons be
 
 ## 2.5 Treasure Cards
 
-**Treasure card.** Any card from a treasure deck: *starting equipment*, *class-specific treasure*, *common treasure*, *legendary treasure*, or *boss treasure*. A treasure card that may be equipped to a dashboard slot is an *equipment card* (see §4.1). The treasure decks are built at setup from the cards listed below (see §6.2).
+**Treasure card.** Any card from a treasure deck or from Blacksmith Andre's shop: *starting equipment*, *class-specific treasure*, *common treasure*, *legendary treasure*, *boss treasure*, or an *ember card* (see §4.4). A treasure card that may be equipped to a dashboard slot is an *equipment card* (see §4.1). The treasure decks are built at setup from the cards listed below (see §6.2).
 
 | Treasure cards | Core | Expansions |
 |---|---|---|

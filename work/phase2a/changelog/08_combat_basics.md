@@ -343,3 +343,17 @@
 - After: "A value reduced by a condition cannot fall below zero. When the *aggro token* is assigned, bleed damage counts as damage inflicted by the character whose attack triggered it, and poison damage counts for no character (see §7.5, Encounter Turn Order; §16.4)."
 - Rationale: Settles which condition damage counts towards the aggro token without any new book-keeping.
 - Source: final rulings, combat-E17 (`06_final_rulings.md`); No source addresses it; follows from when the damage is recorded.
+
+### CH-08-050 · §8.3
+- Type: clarification
+- Before: "The number of characters is fixed at setup (see §6.1) and does not change when a character dies: a dead character and a *lost* character still count."
+- After: "The number of characters is the number taking part in the game (see §6.1). It does not change when a character dies: a dead character and a *lost* character still count. It changes only when a player joins or leaves the game (see §18.4)."
+- Rationale: A player may join or leave a standard game as well as a campaign (§18.4), so the count is not fixed at setup.
+- Source: final rulings, lead-E05 (`06_final_rulings.md`); campaign memo, cross-cluster effects
+
+### CH-08-051 · §8.3
+- Type: clarification
+- Before: " The number of characters in a campaign changes only when a player joins or leaves it (see §18.4)."
+- After: ""
+- Rationale: Now stated once, for both kinds of game (lead-E05).
+- Source: final rulings, lead-E06 (`06_final_rulings.md`)

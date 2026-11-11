@@ -317,3 +317,10 @@
 - After: "Returning to the bonfire tile and resting there are one act. The party returns only to rest, and the rest begins when the models are placed on the tile (see §11.2). The party cannot choose to return while the *spark* dial shows zero (see §7.4)."
 - Rationale: [MECHANICAL CHANGE] Removes the state of standing at the bonfire without resting, which had no use except to fight cleared encounters again without spending a spark.
 - Source: final rulings, core-E36 (`06_final_rulings.md`); As core-E35.
+
+### CH-11-046 · §11.4, Sales
+- Type: ruling
+- Before: "- A sold boss treasure card is returned to the game box."
+- After: "- A sold boss treasure card is returned to the game box, and so is any other sold card that came from no treasure deck: an *invader*'s treasure card or a Titanite Scale card."
+- Rationale: [MECHANICAL CHANGE] A card that came from outside the decks no longer enters a treasure deck when it is sold, from which it could have been dealt as an ordinary reward.
+- Source: final rulings, lead-E09 (`06_final_rulings.md`); core memo, cross-cluster effects

@@ -12,7 +12,7 @@ Each player chooses one character (see §2.1). The number of characters in the p
 4. Place the character's *luck*, *heroic action*, and *estus flask* tokens on the dashboard, ready side up, and the character's *ember* token beside the dashboard (see §3.5).
 5. Place the *damage cubes*, *stamina cubes*, remaining white cubes, soul tokens, *condition* tokens, *trap tokens*, and *wound tokens* in a supply within reach of every player (see §2.8). The remaining white cubes serve as *hollow cubes* (see §7.2).
 6. Place the *aggro token* on the character with the highest *threat* value (see §7.5, Encounter Start).
-7. If the party consists of one character, place six *souls* on that character's dashboard (see §7.6).
+7. If the party consists of one character, place six *souls* on that character's dashboard (see §7.6). Before leaving the bonfire tile for the first time, that character may visit the *Firekeeper* and Blacksmith Andre as during a rest (see §11.3; §11.4).
 
 ## 6.2 Treasure Deck Setup
 
@@ -200,7 +200,7 @@ When a mega-boss is in play, the defeat of the main-boss (see §16.5) is followe
 
 A Level 4 encounter is set up and fought as any other encounter (see §7.5), with the following differences. All four basic nodes along the wall beside the doorway are *entry nodes*. The encounter card places more enemies, *terrain*, and *trap tokens* than a Level 1 to 3 card, and the card is followed as printed.
 
-The encounter's soul reward is the Level 4 reward (see §7.6). Its treasure reward is the single mega-boss treasure card dealt to the game board, which is awarded when the encounter is *cleared* in the same way as a chest's treasure card (see §7.7).
+The encounter's soul reward is the Level 4 reward (see §7.6). Its treasure reward is the single mega-boss treasure card dealt to the game board, which is awarded when the encounter is *cleared* in the same way as a chest's treasure card (see §7.7). In campaign play a Level 4 encounter is rewarded as the other encounters of its section are (see §18.1).
 
 If a revealed Level 4 encounter card requires a set the party does not own, return it to the game box, deal another of the mega-boss's Level 4 encounter cards face down to the game board, and reveal that card instead.
 

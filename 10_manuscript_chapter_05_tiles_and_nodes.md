@@ -97,7 +97,7 @@ When the characters rest at the bonfire and the encounters are reset, a chest st
 An encounter whose encounter card shows the trap icon {{icon:ast-0021-trapped-encounter}} is a trapped encounter. *Trap tokens* are dealt to its tile the first time the encounter is set up, as part of Encounter Start (see §7.5, Encounter Start), and thereafter stay on the tile. A trap token is blank or shows a *dodge difficulty* and a damage value. Trap tokens are dealt to the tile as follows.
 
 1. Shuffle every trap token in the supply face down.
-2. Deal one face-down trap token to each basic node of the tile, except the basic nodes along a tile edge that adjoins another tile, beginning with the nodes farthest from the *entry nodes*.
+2. Deal one face-down trap token to each basic node of the tile, except the basic nodes along a tile edge whose doorway is part of the route (see §6.5), beginning with the nodes farthest from the *entry nodes*.
 3. If the supply runs out before every such node has a token, leave the remaining nodes without a trap.
 
 Traps do not block movement, dodging, or pushes. When a character enters a node holding a face-down trap token, whether by a *move*, by the movement that follows a successful *dodge*, or by a *push*, the token is turned face up at once, before anything else is resolved. If the token is blank, nothing happens. Otherwise each character on that node must either suffer the damage shown or attempt to dodge it as an attack with the dodge difficulty shown (see §9.5); each player chooses for their own character. The dodge follows every rule in §9.5, including the movement that follows a successful dodge. If the dodge fails, the character suffers the damage shown. Trap damage is not an attack, and it cannot be blocked or resisted.

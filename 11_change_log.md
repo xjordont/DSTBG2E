@@ -316,6 +316,13 @@ In all, 187 encounter cards are available. Of each of Levels 1 to 3, the Darkroo
 - Rationale: [MECHANICAL CHANGE] Keeps the component note in step with §12.2.
 - Source: final rulings, phantom-E16 (`06_final_rulings.md`); Follows phantom-E06.
 
+### CH-02-043 · §2.5
+- Type: correction
+- Before: "**Treasure card.** Any card from a treasure deck: *starting equipment*, *class-specific treasure*, *common treasure*, *legendary treasure*, or *boss treasure*."
+- After: "**Treasure card.** Any card from a treasure deck or from Blacksmith Andre's shop: *starting equipment*, *class-specific treasure*, *common treasure*, *legendary treasure*, *boss treasure*, or an *ember card* (see §4.4)."
+- Rationale: §4.4 and the glossary count an ember card as a treasure card; §2.5 did not.
+- Source: final rulings, lead-E08 (`06_final_rulings.md`); campaign memo, cross-cluster effects
+
 ## Chapter 00 — Front Matter
 
 ### CH-00-001 · Foreword
@@ -1128,6 +1135,13 @@ A spawn node or terrain node that holds no enemy or terrain is entered, left, an
 - Rationale: §5.2 states that the movement after a dodge is not a move; the noun is corrected.
 - Source: final rulings, combat-E10 (`06_final_rulings.md`); This book, §5.2 (Move) and §9.5.
 
+### CH-05-040 · §5.5, Traps
+- Type: ruling
+- Before: "except the basic nodes along a tile edge that adjoins another tile,"
+- After: "except the basic nodes along a tile edge whose doorway is part of the route (see §6.5),"
+- Rationale: [MECHANICAL CHANGE] The number of traps must not depend on which tiles happen to touch; the exclusion is keyed to the doorways the party uses.
+- Source: final rulings, lead-E01 (`06_final_rulings.md`); core memo, cross-cluster effects; official core rules exclude nodes along a wall that has a doorway
+
 ## Chapter 06 — Setup
 
 ### CH-06-001 · §6 Setup
@@ -1606,6 +1620,20 @@ A spawn node or terrain node that holds no enemy or terrain is entered, left, an
 - After: "16. If *invaders* are in play and any character is *embered*, place the *invader tokens* on the encounter cards (see §12.2)."
 - Rationale: Same wording as §6.5 step 5, so that the two setups state the same condition. Lead editor: Step renumbered by core-E08.
 - Source: final rulings, phantom-E15 (`06_final_rulings.md`); §12.2, Invasions of this book.
+
+### CH-06-068 · §6.7, Level 4 Encounters
+- Type: clarification
+- Before: "which is awarded when the encounter is *cleared* in the same way as a chest's treasure card (see §7.7)."
+- After: "which is awarded when the encounter is *cleared* in the same way as a chest's treasure card (see §7.7). In campaign play a Level 4 encounter is rewarded as the other encounters of its section are (see §18.1)."
+- Rationale: Points to the campaign rule made by campaign-E16.
+- Source: final rulings, lead-E07 (`06_final_rulings.md`); campaign memo, cross-cluster effects
+
+### CH-06-069 · §6.1
+- Type: ruling
+- Before: "7. If the party consists of one character, place six *souls* on that character's dashboard (see §7.6)."
+- After: "7. If the party consists of one character, place six *souls* on that character's dashboard (see §7.6). Before leaving the bonfire tile for the first time, that character may visit the *Firekeeper* and Blacksmith Andre as during a rest (see §11.3; §11.4)."
+- Rationale: [MECHANICAL CHANGE] The six souls exist to help a lone character through the first encounters, and could not be spent before a rest that costs a spark.
+- Source: final rulings, lead-E10 (`06_final_rulings.md`); core memo, observation without an edit
 
 ## Chapter 07 — Gameplay
 
@@ -2404,6 +2432,13 @@ A spawn node or terrain node that holds no enemy or terrain is entered, left, an
 - After: "Returning to the bonfire tile and resting there are one act. The party returns only to rest, and the rest begins when the models are placed on the tile (see §11.2). The party cannot choose to return while the *spark* dial shows zero (see §7.4)."
 - Rationale: [MECHANICAL CHANGE] Removes the state of standing at the bonfire without resting, which had no use except to fight cleared encounters again without spending a spark.
 - Source: final rulings, core-E36 (`06_final_rulings.md`); As core-E35.
+
+### CH-11-046 · §11.4, Sales
+- Type: ruling
+- Before: "- A sold boss treasure card is returned to the game box."
+- After: "- A sold boss treasure card is returned to the game box, and so is any other sold card that came from no treasure deck: an *invader*'s treasure card or a Titanite Scale card."
+- Rationale: [MECHANICAL CHANGE] A card that came from outside the decks no longer enters a treasure deck when it is sold, from which it could have been dealt as an ordinary reward.
+- Source: final rulings, lead-E09 (`06_final_rulings.md`); core memo, cross-cluster effects
 
 ## Chapter 10 — Character Turn
 
@@ -3365,6 +3400,20 @@ A spawn node or terrain node that holds no enemy or terrain is entered, left, an
 - Rationale: Settles which condition damage counts towards the aggro token without any new book-keeping.
 - Source: final rulings, combat-E17 (`06_final_rulings.md`); No source addresses it; follows from when the damage is recorded.
 
+### CH-08-050 · §8.3
+- Type: clarification
+- Before: "The number of characters is fixed at setup (see §6.1) and does not change when a character dies: a dead character and a *lost* character still count."
+- After: "The number of characters is the number taking part in the game (see §6.1). It does not change when a character dies: a dead character and a *lost* character still count. It changes only when a player joins or leaves the game (see §18.4)."
+- Rationale: A player may join or leave a standard game as well as a campaign (§18.4), so the count is not fixed at setup.
+- Source: final rulings, lead-E05 (`06_final_rulings.md`); campaign memo, cross-cluster effects
+
+### CH-08-051 · §8.3
+- Type: clarification
+- Before: " The number of characters in a campaign changes only when a player joins or leaves it (see §18.4)."
+- After: ""
+- Rationale: Now stated once, for both kinds of game (lead-E05).
+- Source: final rulings, lead-E06 (`06_final_rulings.md`)
+
 ## Chapter 09 — Enemy Turn
 
 ### CH-09-001 · §9 Enemy Turn
@@ -4024,6 +4073,13 @@ The embering of every character at a boss's defeat (see §16.5) provokes no inva
 - After: "An invader is an enemy model, and its encounter is not *cleared* while it is on the tile (see §7.5, Encounter Resolution). An invader leaves the tile only when it is killed or when it vanishes."
 - Rationale: The ruling is confirmed; the paragraph says the same thing in half the words and lets the general rule of §7.5 do the work.
 - Source: final rulings, phantom-E11 (`06_final_rulings.md`); Official Phantoms booklet: the invader 'will fight alongside the other enemies present' and leaves only if killed or if the party is defeated (lines 492-495, 527-533).
+
+### CH-12-046 · §12.2, End of an Invasion
+- Type: clarification
+- Before: "An invader appears once. Whether it was killed or vanished,"
+- After: "An invader appears once, unless a campaign states otherwise (see §19.4; §19.15). Whether it was killed or vanished,"
+- Rationale: Two campaigns bring a listed invader back until it is killed; the general rule now points to them.
+- Source: final rulings, lead-E04 (`06_final_rulings.md`); campaign memo, cross-cluster effects
 
 ## Chapter 13 — Mimics
 
@@ -5847,6 +5903,28 @@ The Level 1, Level 2, and Level 3 encounter decks are built from the *encounter 
 - Rationale: [MECHANICAL CHANGE] Players who know the published rule expect a full recovery before the mimic; the answer states this book's rule as amended.
 - Source: final rulings, phantom-E41 (`06_final_rulings.md`); Follows phantom-E19.
 
+### CH-22-013 · §22.1
+- Type: ruling
+- Before: "**Q.** Which weapon slot is the left weapon slot, and which is the right?
+
+**A.** The left weapon slot is the weapon slot on the left of the dashboard as its player reads it, and the right weapon slot is the one on the right. A character moves cards between them only by the Equip minor action during an encounter (see §3.2; §10.1).
+
+"
+- After: ""
+- Rationale: After the parry ruling (combat-E22) no rule depends on which weapon slot is which, so the question is withdrawn.
+- Source: final rulings, lead-E11 (`06_final_rulings.md`); combat memo, cross-cluster effects
+
+### CH-22-014 · §22.4
+- Type: clarification
+- Before: "**Q.** Who holds the aggro token when its holder dies?"
+- After: "**Q.** May the party return to the bonfire tile without resting?
+
+**A.** No. The party returns to the bonfire tile only to rest (see §11.1).
+
+**Q.** Who holds the aggro token when its holder dies?"
+- Rationale: States the consequence of core-E36 where players will look for it.
+- Source: final rulings, lead-E12 (`06_final_rulings.md`); core memo, cross-cluster effects
+
 ## Chapter 18 — Campaign Play
 
 ### CH-18-001 · §18 Campaign Play
@@ -6227,6 +6305,20 @@ The Level 1, Level 2, and Level 3 encounter decks are built from the *encounter 
 - After: "The party chooses one of the 16 campaigns (see §19)."
 - Rationale: Four campaigns are added as §19.13 to §19.16.
 - Source: final rulings, campaign-E45 (`06_final_rulings.md`); Old Iron King, The Last Giant, Vordt of the Boreal Valley and Guardian Dragon booklets, campaign pages.
+
+### CH-18-055 · §18.1, Player versus Player Encounters
+- Type: ruling
+- Before: "When they are in play, a *PvP encounter* follows the defeat of each boss, as in the standard game."
+- After: "When they are in play, a *PvP encounter* follows the defeat of each boss whose defeat completes a section. A boss defeated before its section is completed is followed by no PvP encounter."
+- Rationale: [MECHANICAL CHANGE] A contest in the middle of a section handed a co-operating party a full restoration; tying the contest to the end of a section removes that and the rule that restored characters to an earlier state.
+- Source: final rulings, lead-E02 (`06_final_rulings.md`); phantom memo, cross-cluster effects
+
+### CH-18-056 · §18.1, Player versus Player Encounters
+- Type: ruling
+- Before: "When the boss's defeat completes a section, the setup and the rest that follow the PvP encounter are those of the completed section (see §18.1, Section Completion; §20.9). When the boss's defeat does not complete its section, no rest follows the PvP encounter. Every character who took part is instead restored as at the start of the PvP encounter (see §20.1), each character who died in it returns to the tile, and the exploration continues."
+- After: "The setup and the rest that follow the PvP encounter are those of the completed section (see §18.1, Section Completion; §20.9)."
+- Rationale: [MECHANICAL CHANGE] Follows lead-E02.
+- Source: final rulings, lead-E03 (`06_final_rulings.md`)
 
 ## Chapter 21 — Glossary
 

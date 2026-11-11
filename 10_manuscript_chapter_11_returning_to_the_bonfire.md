@@ -85,7 +85,7 @@ A character may sell to Andre any treasure card they hold, whether it is *equipp
 A sold card goes to one of the following places.
 
 - A sold tier one or tier two treasure card is placed face down at the bottom of the treasure deck of its tier (see §6.2).
-- A sold boss treasure card is returned to the game box.
+- A sold boss treasure card is returned to the game box, and so is any other sold card that came from no treasure deck: an *invader*'s treasure card or a Titanite Scale card.
 - A sold ember card is returned face up to the tier one shop.
 
 When a *weapon* with *Titanite* attached is sold, the Titanite is sold with it, and every other *upgrade card* attached to a sold card returns to the character's inventory (see §4.2, Titanite). The sell value of the weapon is paid once; attached Titanite adds nothing to it. The weapon and the Titanite are separated, and each goes to the place stated for a sold card of its kind.

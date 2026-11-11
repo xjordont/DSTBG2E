@@ -274,3 +274,10 @@ A spawn node or terrain node that holds no enemy or terrain is entered, left, an
 - After: "The dodge follows every rule in §9.5, including the movement that follows a successful dodge."
 - Rationale: §5.2 states that the movement after a dodge is not a move; the noun is corrected.
 - Source: final rulings, combat-E10 (`06_final_rulings.md`); This book, §5.2 (Move) and §9.5.
+
+### CH-05-040 · §5.5, Traps
+- Type: ruling
+- Before: "except the basic nodes along a tile edge that adjoins another tile,"
+- After: "except the basic nodes along a tile edge whose doorway is part of the route (see §6.5),"
+- Rationale: [MECHANICAL CHANGE] The number of traps must not depend on which tiles happen to touch; the exclusion is keyed to the doorways the party uses.
+- Source: final rulings, lead-E01 (`06_final_rulings.md`); core memo, cross-cluster effects; official core rules exclude nodes along a wall that has a doorway

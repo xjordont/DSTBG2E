@@ -378,3 +378,17 @@
 - After: "The party chooses one of the 16 campaigns (see §19)."
 - Rationale: Four campaigns are added as §19.13 to §19.16.
 - Source: final rulings, campaign-E45 (`06_final_rulings.md`); Old Iron King, The Last Giant, Vordt of the Boreal Valley and Guardian Dragon booklets, campaign pages.
+
+### CH-18-055 · §18.1, Player versus Player Encounters
+- Type: ruling
+- Before: "When they are in play, a *PvP encounter* follows the defeat of each boss, as in the standard game."
+- After: "When they are in play, a *PvP encounter* follows the defeat of each boss whose defeat completes a section. A boss defeated before its section is completed is followed by no PvP encounter."
+- Rationale: [MECHANICAL CHANGE] A contest in the middle of a section handed a co-operating party a full restoration; tying the contest to the end of a section removes that and the rule that restored characters to an earlier state.
+- Source: final rulings, lead-E02 (`06_final_rulings.md`); phantom memo, cross-cluster effects
+
+### CH-18-056 · §18.1, Player versus Player Encounters
+- Type: ruling
+- Before: "When the boss's defeat completes a section, the setup and the rest that follow the PvP encounter are those of the completed section (see §18.1, Section Completion; §20.9). When the boss's defeat does not complete its section, no rest follows the PvP encounter. Every character who took part is instead restored as at the start of the PvP encounter (see §20.1), each character who died in it returns to the tile, and the exploration continues."
+- After: "The setup and the rest that follow the PvP encounter are those of the completed section (see §18.1, Section Completion; §20.9)."
+- Rationale: [MECHANICAL CHANGE] Follows lead-E02.
+- Source: final rulings, lead-E03 (`06_final_rulings.md`)

@@ -156,4 +156,4 @@ When an invader is killed, every character gains *souls* equal to the invader re
 
 An invader is an enemy model, and its encounter is not *cleared* while it is on the tile (see §7.5, Encounter Resolution). An invader leaves the tile only when it is killed or when it vanishes.
 
-An invader appears once. Whether it was killed or vanished, its model and cards are returned to the game box. It is not placed again when its encounter is reset (see §11.5).
+An invader appears once, unless a campaign states otherwise (see §19.4; §19.15). Whether it was killed or vanished, its model and cards are returned to the game box. It is not placed again when its encounter is reset (see §11.5).

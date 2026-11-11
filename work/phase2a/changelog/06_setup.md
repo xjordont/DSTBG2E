@@ -476,3 +476,17 @@
 - After: "16. If *invaders* are in play and any character is *embered*, place the *invader tokens* on the encounter cards (see §12.2)."
 - Rationale: Same wording as §6.5 step 5, so that the two setups state the same condition. Lead editor: Step renumbered by core-E08.
 - Source: final rulings, phantom-E15 (`06_final_rulings.md`); §12.2, Invasions of this book.
+
+### CH-06-068 · §6.7, Level 4 Encounters
+- Type: clarification
+- Before: "which is awarded when the encounter is *cleared* in the same way as a chest's treasure card (see §7.7)."
+- After: "which is awarded when the encounter is *cleared* in the same way as a chest's treasure card (see §7.7). In campaign play a Level 4 encounter is rewarded as the other encounters of its section are (see §18.1)."
+- Rationale: Points to the campaign rule made by campaign-E16.
+- Source: final rulings, lead-E07 (`06_final_rulings.md`); campaign memo, cross-cluster effects
+
+### CH-06-069 · §6.1
+- Type: ruling
+- Before: "7. If the party consists of one character, place six *souls* on that character's dashboard (see §7.6)."
+- After: "7. If the party consists of one character, place six *souls* on that character's dashboard (see §7.6). Before leaving the bonfire tile for the first time, that character may visit the *Firekeeper* and Blacksmith Andre as during a rest (see §11.3; §11.4)."
+- Rationale: [MECHANICAL CHANGE] The six souls exist to help a lone character through the first encounters, and could not be spent before a rest that costs a spark.
+- Source: final rulings, lead-E10 (`06_final_rulings.md`); core memo, observation without an edit

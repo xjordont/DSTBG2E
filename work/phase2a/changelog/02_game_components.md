@@ -311,3 +311,10 @@ In all, 187 encounter cards are available. Of each of Levels 1 to 3, the Darkroo
 - After: "When an *invasion* is provoked, one invader token is placed face down on each face-down encounter card that carries no black cube, and each is revealed when the characters fight that encounter (see §12.2)."
 - Rationale: [MECHANICAL CHANGE] Keeps the component note in step with §12.2.
 - Source: final rulings, phantom-E16 (`06_final_rulings.md`); Follows phantom-E06.
+
+### CH-02-043 · §2.5
+- Type: correction
+- Before: "**Treasure card.** Any card from a treasure deck: *starting equipment*, *class-specific treasure*, *common treasure*, *legendary treasure*, or *boss treasure*."
+- After: "**Treasure card.** Any card from a treasure deck or from Blacksmith Andre's shop: *starting equipment*, *class-specific treasure*, *common treasure*, *legendary treasure*, *boss treasure*, or an *ember card* (see §4.4)."
+- Rationale: §4.4 and the glossary count an ember card as a treasure card; §2.5 did not.
+- Source: final rulings, lead-E08 (`06_final_rulings.md`); campaign memo, cross-cluster effects

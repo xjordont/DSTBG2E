@@ -67,9 +67,9 @@ The campaign's final boss is the last boss listed in its last section. The playe
 
 ### Player versus Player Encounters
 
-Player versus player (PvP) encounters remain an optional rule in campaign play (see §20.1). When they are in play, a *PvP encounter* follows the defeat of each boss, as in the standard game. The PvP encounter that follows the campaign's final boss decides the *ultimate victor* (see §20.8).
+Player versus player (PvP) encounters remain an optional rule in campaign play (see §20.1). When they are in play, a *PvP encounter* follows the defeat of each boss whose defeat completes a section. A boss defeated before its section is completed is followed by no PvP encounter. The PvP encounter that follows the campaign's final boss decides the *ultimate victor* (see §20.8).
 
-When the boss's defeat completes a section, the setup and the rest that follow the PvP encounter are those of the completed section (see §18.1, Section Completion; §20.9). When the boss's defeat does not complete its section, no rest follows the PvP encounter. Every character who took part is instead restored as at the start of the PvP encounter (see §20.1), each character who died in it returns to the tile, and the exploration continues.
+The setup and the rest that follow the PvP encounter are those of the completed section (see §18.1, Section Completion; §20.9).
 
 ## 18.2 The Fog Gate
 

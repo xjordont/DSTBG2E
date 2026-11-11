@@ -4,10 +4,6 @@ The questions in this chapter are those that arise most often at the table. Each
 
 ## 22.1 Characters and Actions
 
-**Q.** Which weapon slot is the left weapon slot, and which is the right?
-
-**A.** The left weapon slot is the weapon slot on the left of the dashboard as its player reads it, and the right weapon slot is the one on the right. A character moves cards between them only by the Equip minor action during an encounter (see §3.2; §10.1).
-
 **Q.** May a character Rest after walking?
 
 **A.** Yes. Only the *Run* minor action prevents the Rest major action in the same turn. Walk, Equip, Heroic Action, and the movement of a *shift* icon do not (see §10.1).
@@ -109,6 +105,10 @@ The questions in this chapter are those that arise most often at the table. Each
 **Q.** Who decides when the rules leave a choice or a tie to the players?
 
 **A.** The players decide together. A tie in *threat* between characters is settled at Encounter Start and is kept for the whole encounter, and a tie between enemy models is settled by the order stated for enemy turns (see §7.5). When the players cannot agree on which character receives a treasure card, the card goes to the character who holds the *aggro token* (see §7.7).
+
+**Q.** May the party return to the bonfire tile without resting?
+
+**A.** No. The party returns to the bonfire tile only to rest (see §11.1).
 
 **Q.** Who holds the aggro token when its holder dies?
 
