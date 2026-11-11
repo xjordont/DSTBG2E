@@ -306,6 +306,11 @@ class Chapter:
             flow.append(d)
             for fig in figures_for(soup, sid, 'in'):
                 place_in_section(d, fig)
+            for fig in figures_for(soup, sid, 'h3'):       # a figure set directly under a sub-heading of the section
+                want = fig.attrs.pop('data-heading')
+                h3 = next((h for h in d.find_all('h3') if h.get_text(' ', strip=True) == want), None)
+                if h3 is not None:
+                    h3.insert_after(fig)
         sec.append(flow)
         for fig in figures_for(soup, key, 'end'):
             sec.append(fig)
@@ -424,7 +429,7 @@ def figures_for(soup, key, where):
     for f in TUNING.get('figures', []):
         if f.get('at') != where:
             continue
-        if (where == 'in' and f.get('section') != key) or (where != 'in' and f.get('chapter') != key):
+        if (where in ('in', 'h3') and f.get('section') != key) or (where not in ('in', 'h3') and f.get('chapter') != key):
             continue
         fig = soup.new_tag('figure'); fig['id'] = 'fig-' + slugify(pathlib.Path(f['file']).stem)
         if f.get('legend'): fig['class'] = 'legend'
@@ -437,6 +442,8 @@ def figures_for(soup, key, where):
         if where == 'in':
             fig['data-after'] = str(f.get('after', 1))
             out.append(fig)
+        elif where == 'h3':
+            fig['data-heading'] = f.get('heading', ''); out.append(fig)
         else:
             w = soup.new_tag('div'); w['class'] = 'topfig' if where == 'top' else 'endfig'; w.append(fig); out.append(w)
     return out
