@@ -106,7 +106,7 @@ The icon set is the 2022 symbol key extracted in Phase 0 (109 icons, `assets/ico
 | AST-0023 | `ast-0023-shrine` | Shrine | 0 | reference page only |
 | AST-0024 | `ast-0024-necromancer` | Necromancer | 1 | 02 |
 | AST-0025 | `ast-0025-torch` | Torch | 0 | reference page only |
-| AST-0026 | `ast-0026-threat-level` | Threat level | 5 | 07, 08, 09, 12, 15 |
+| AST-0026 | `ast-0026-threat-level` | Threat level | 4 | 08, 09, 12, 15 |
 | AST-0027 | `ast-0027-behaviour-deck-size` | Behaviour deck size | 5 | 08, 12, 13, 15 |
 | AST-0028 | `ast-0028-block-resist-shield` | Block / Resist shield (enemy statistics) | 3 | 08, 12, 15 |
 | AST-0029 | `ast-0029-starting-health` | Starting Health | 6 | 08, 12, 13, 15, 17 |
@@ -139,7 +139,7 @@ The icon set is the 2022 symbol key extracted in Phase 0 (109 icons, `assets/ico
 | AST-0056 | `ast-0056-shaft` | Shaft (cannot attack at Range 0) | 2 | 10, 20 |
 | AST-0057 | `ast-0057-shift` | Shift (move indicated number of nodes in any direction) | 3 | 10, 12 |
 | AST-0058 | `ast-0058-push-affected-enemies` | Push affected enemies | 7 | 08, 09, 10, 16, 20 |
-| AST-0059 | `ast-0059-taunt` | Taunt | 1 | 03 |
+| AST-0059 | `ast-0059-taunt` | Taunt | 2 | 03, 07 |
 | AST-0060 | `ast-0060-attack-range` | Attack range | 5 | 04, 08, 10, 15, 16 |
 | AST-0061 | `ast-0061-repeat-behaviour-or-attack` | Repeat behaviour or attack | 8 | 08, 09, 10, 15, 16, 20 |
 | AST-0062 | `ast-0062-dodge` | Dodge | 7 | 02, 04, 08, 09, 15, 16, 23 |
@@ -222,6 +222,20 @@ Figures placed (from `layout/tuning.json`):
 | AST-0097 | in §15.4 | 150pt | A boss data card. 1 Name. 2 Threat. 3 Starting health. 4 Boss type icon. 5 Behaviour deck size. 6 Block. 7 Res |
 | AST-0098 | in §15.3 | 100% | The boss tiles. The two boss tiles joined along one edge for a main-boss encounter. Each tile shows its boss s |
 | AST-0099 | in §15.6 | 178pt | Boss arcs. The lines that divide the boss's base, extended across the tile, divide the nodes among the front,  |
+| AST-0156 | in §17.10 | 137pt |  |
+| AST-0157 | in §17.10 | 150pt |  |
+| AST-0158 | in §17.10 | 198pt |  |
+| AST-0159 | in §17.10 | 64pt |  |
+| AST-0160 | in §17.10 | 136pt |  |
+| AST-0161 | in §17.10 | 140pt |  |
+| AST-0162 | in §17.10 | 138pt |  |
+| AST-0138 | in §17.4 | 189pt |  |
+| AST-0138 | in §17.4 | 137pt |  |
+| AST-0138 | in §17.5 | 183pt |  |
+| AST-0138 | in §17.6 | 94pt |  |
+| AST-0163 | in §17.3 | 126pt |  |
+| AST-0138 | in §17.8 | 141pt |  |
+| AST-0138 | in §17.9 | 173pt |  |
 
 Chapter openers: every chapter and appendix opens with a painting behind its title (from `layout/tuning.json`, key `heroes`, entry `header`). `pos` is the CSS background position that chooses the band of the painting.
 
@@ -252,7 +266,7 @@ Chapter openers: every chapter and appendix opens with a painting behind its tit
 | Appendix A | AST-0130 | `darkroot-grave-with-planted-swords` | center 30% |
 | Appendix B | AST-0130 | `phantoms-shanty-town-in-the-murk` | center 45% |
 
-Section-end illustrations: 62 pictures are assigned to chapters and 132 form the general pool (`plates` in the tuning file, written by `tools/assign_plates.py` from `layout/art_candidates.json`). Paintings carry no caption; a card, dashboard or miniature is captioned with what it is.
+Section-end illustrations: 83 pictures are assigned to chapters and 78 form the general pool (`plates` in the tuning file, written by `tools/assign_plates.py` from `layout/art_candidates.json`). Paintings carry no caption; a card, dashboard or miniature is captioned with what it is.
 
 Chapter-end galleries: where the last page of a chapter has 114 pt or more of empty text block under the closing ornament, the build fills it with product images from that chapter's pool, in one to three centred rows with captions in the display face. The build measures the room on a first pass and sizes the rows on a second; no image is set larger than 150 ppi allows; a gallery that would not fit is withdrawn. A gallery that nearly fills the room stands on the foot of the text block, and a smaller one is centred in the room.
 
@@ -260,6 +274,7 @@ Chapter-end galleries: where the last page of a chapter has 114 pt or more of em
 |---|---|
 | Chapter 1 | AST-0131 `miniature-gravelord-nito`, AST-0131 `miniature-black-knight`, AST-0131 `miniature-giant-skeleton-archer`, AST-0131 `miniature-giant-skeleton-soldier`, AST-0131 `miniature-skeleton-soldier`, AST-0131 `miniature-skeleton-archer`, AST-0131 `miniature-skeleton-beast`, AST-0131 `miniature-necromancer` |
 | Chapter 2 | AST-0131 `miniature-cleric`, AST-0131 `miniature-pyromancer`, AST-0131 `miniature-thief`, AST-0131 `miniature-skeleton-soldier`, AST-0131 `miniature-skeleton-archer`, AST-0131 `miniature-necromancer`, AST-0131 `miniature-skeleton-beast` |
+| Chapter 3 | AST-0135 `character-board-2017-knight`, AST-0135 `character-dashboard-whole-pyromancer`, AST-0135 `character-dashboard-whole-thief` |
 | Chapter 4 | AST-0138 `expansion-miniature-armour-adventurers`, AST-0138 `expansion-miniature-armour-havels`, AST-0138 `expansion-miniature-armour-catarina`, AST-0138 `expansion-miniature-armour-guardian`, AST-0138 `expansion-miniature-armour-dark`, AST-0138 `expansion-miniature-armour-crimson-robes` |
 | Chapter 5 | AST-0133 `game-tile-tomb-of-giants-a`, AST-0133 `game-tile-tomb-of-giants-b`, AST-0133 `game-tile-tomb-of-giants-c`, AST-0133 `game-tile-tomb-of-giants-d` |
 | Chapter 6 | AST-0089 `card-back-encounter-level-1`, AST-0089 `card-back-treasure`, AST-0132 `token-terrain-gravestone-render`, AST-0132 `token-terrain-barrels-render`, AST-0132 `token-terrain-treasure-chest-render`, AST-0132 `token-spark-dial` |
@@ -272,6 +287,7 @@ Chapter-end galleries: where the last page of a chapter has 114 pt or more of em
 | Chapter 14 | AST-0138 `expansion-miniature-crystal-lizard`, AST-0132 `token-terrain-treasure-chest-render`, AST-0132 `token-terrain-barrels-render`, AST-0132 `token-terrain-gravestone-render` |
 | Chapter 15 | AST-0138 `expansion-miniature-great-grey-wolf-sif`, AST-0138 `expansion-miniature-black-dragon-kalameet`, AST-0138 `expansion-miniature-smelter-demon`, AST-0138 `expansion-miniature-executioners-chariot`, AST-0138 `expansion-miniature-the-pursuer`, AST-0138 `expansion-miniature-sir-alonne` |
 | Chapter 16 | AST-0117 `mega-boss-board-kalameet-forest`, AST-0117 `mega-boss-board-executioners-chariot-arena`, AST-0117 `mega-boss-board-executioners-chariot-reverse` |
+| Chapter 17 | AST-0163 `asylum-demon-game-board-boss-side`, AST-0156 `four-kings-game-board-boss-side`, AST-0157 `gaping-dragon-game-board-boss-side`, AST-0158 `guardian-dragon-game-board-boss-side`, AST-0159 `last-giant-game-board-boss-side`, AST-0160 `manus-game-board-boss-side`, AST-0161 `old-iron-king-game-board-boss-side`, AST-0162 `vordt-game-board-boss-side` |
 | Chapter 18 | AST-0133 `game-tile-tomb-of-giants-fan` |
 | Chapter 20 | AST-0138 `expansion-miniature-invader-oliver-the-collector`, AST-0138 `expansion-miniature-invader-brylex`, AST-0138 `expansion-miniature-invader-marvelous-chester`, AST-0138 `expansion-miniature-invader-paladin-leeroy`, AST-0138 `expansion-miniature-invader-fencer-sharron`, AST-0138 `expansion-miniature-invader-kirk-knight-of-thorns`, AST-0138 `expansion-miniature-invader-melinda-the-butcher`, AST-0138 `expansion-miniature-invader-maldron-the-assassin`, AST-0138 `expansion-miniature-invader-maneater-mildred`, AST-0138 `expansion-miniature-invader-armorer-dennis` |
 | Appendix A | AST-0138 `expansion-miniature-silver-knight-spearman`, AST-0138 `expansion-miniature-ironclad-soldier`, AST-0138 `expansion-miniature-sir-alonne`, AST-0138 `expansion-miniature-stone-knight`, AST-0138 `expansion-miniature-stone-guardian`, AST-0138 `expansion-miniature-the-pursuer`, AST-0138 `expansion-miniature-armour-guardian` |
@@ -318,9 +334,6 @@ Full-bleed cover composition AST-0118 (2480 x 3366 px): the field of lava scales
 | Asset ID | Description | Status | What is needed |
 |---|---|---|---|
 | AST-0071 | Expansion set symbols (Darkroot wolf, Iron Keep helm, Explorers chest, BDK drago | BLOCKED | Only the universal icon exists as a separate image object (extracted as AST-0071.1). |
-| AST-0086 | Equipment card frame (charcoal ground, gold corner ornament, parchment text box, | BLOCKED | Embedded card images are ≤372 px — too small for print reuse. |
-| AST-0119 | 2022 Tomb of Giants cover art (Gravelord Nito on black) — PROVENANCE REVIEW | BLOCKED | ruling on FromSoftware / Bandai Namco key art (Gate 1 OQ-33) |
-| AST-0137 | Card fan photographs (encounter cards, event cards, treasure decks) | BLOCKED | Provenance review: every card fan in the sources shows card faces (encounter, event, treasure and boss cards) that carry painted illustrations, so no fan was extracted. |
 | AST-0147 | Tile floor textures (flagstone, dirt, bone pit) | BLOCKED | No usable floor texture can be cut from the sources: every tile and board raster is covered with node rings and markers at 70 to 170 px spacing (rasters are 140 to 300 pp |
 
 The author confirmed the rights in all source artwork on 2026-11-11, so the paintings are placed and nothing is withheld. The Painted World of Ariamis rulebook was not supplied (see `06_final_rulings.md`, section 7).

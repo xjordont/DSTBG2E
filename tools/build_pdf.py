@@ -729,7 +729,7 @@ def build(edition='screen', only=None, out=None, html_only=False, _phase='plan',
     from weasyprint import HTML
     # Images are embedded at no more than the edition's resolution at their placed size (none is enlarged).
     img_opts = dict(optimize_images=True, dpi=300 if edition == 'print' else 200, jpeg_quality=88)
-    doc = HTML(string=html, base_url=str(ROOT) + '/').render(**img_opts)
+    doc = HTML(string=html if edition == 'print' else lighter_images(html), base_url=str(ROOT) + '/').render(**img_opts)
     pm = pagemap(doc)
     ends = {e['id'][4:]: e for e in pm if e['id'].startswith('end-') and e['tag'] == 'div'}
     again = lambda phase: build(edition, only, out, html_only, _phase=phase, _n=_n + 1)
@@ -755,8 +755,11 @@ def build(edition='screen', only=None, out=None, html_only=False, _phase='plan',
         heads_ = {e['id']: e for e in pm if e['tag'] == 'h2'}
         # a break that no longer does its job (the section would now head a page anyway) is harmless; one that
         # strands a plate alone on a page is caught above
-        if (moved - NO_PANEL) or slipped:
-            NO_PANEL.update(moved); NO_PLATE.update(slipped)
+        # an illustration set in the last column of a chapter can use the room its closing ornament and gallery
+        # were measured for: an ornament that now heads a page is dropped with its gallery
+        adrift = {cid for cid, e in ends.items() if e['y'] < 70} - NO_ENDMARK
+        if (moved - NO_PANEL) or slipped or adrift:
+            NO_PANEL.update(moved | adrift); NO_PLATE.update(slipped); NO_ENDMARK.update(adrift)
             return again('verify')
     if not only:
         state.write_text(json.dumps({'breaks': SEC_BREAK, 'fixed': sorted(SEC_FIXED), 'plates': PLATES, 'no_plate': sorted(NO_PLATE),
@@ -770,6 +773,42 @@ def build(edition='screen', only=None, out=None, html_only=False, _phase='plan',
         (ROOT / f'build/report_{edition}.json').write_text(json.dumps(report, ensure_ascii=False, indent=1), encoding='utf-8')
     print(json.dumps(report, ensure_ascii=False))
     return report
+
+
+_JPEG = {}
+
+
+def lighter_images(html):
+    """The screen edition embeds each large opaque PNG as a JPEG copy (build/jpg/), a fraction of the size at
+    the same pixel dimensions; pictures with transparency, small pictures and the print edition keep the PNG.
+    Only the copy given to the renderer is changed: the saved HTML still names the asset files."""
+    from PIL import Image
+    outdir = ROOT / 'build/jpg'; outdir.mkdir(parents=True, exist_ok=True)
+
+    def copy_of(path):
+        if path not in _JPEG:
+            src = ROOT / path; dst = outdir / (src.stem + '.jpg'); _JPEG[path] = None
+            with Image.open(src) as im:
+                opaque = im.mode in ('RGB', 'L') or (im.mode == 'RGBA' and im.getchannel('A').getextrema()[0] == 255)
+                if opaque and im.width * im.height >= 60000 and not path.startswith('assets/icons/'):
+                    if not dst.exists() or dst.stat().st_mtime < src.stat().st_mtime:
+                        im.convert('RGB').save(dst, 'JPEG', quality=90, optimize=True)
+                    _JPEG[path] = str(dst.relative_to(ROOT))
+        return _JPEG[path]
+
+    def swap(m):
+        new = copy_of(m.group(2))
+        return m.group(1) + (new or m.group(2)) + m.group(3)
+
+    html = re.sub(r'(src=")(assets/[^"]+\.png)(")', swap, html)
+    html = re.sub(r"(url\(')(assets/[^']+\.png)('\))", swap, html)
+    # the cover painting is set by the stylesheet: the screen edition overrides it with its JPEG copy
+    css = (ROOT / 'layout/book.css').read_text(encoding='utf-8')
+    m = re.search(r'\.cover \{[^}]*url\("\.\./(assets/[^"]+\.png)"\)', css)
+    cov = copy_of(m.group(1)) if m else None
+    if cov:
+        html = html.replace('</head>', f"<style>.cover{{background-image:url('{cov}')}}</style></head>", 1)
+    return html
 
 
 def pagemap(doc):
