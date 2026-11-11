@@ -80,7 +80,7 @@ Book-specific derivatives: gold accent `#c9ad6a` (badge, cover rule, kicker), da
 
 ## 5. Iconography
 
-The icon set is the 2022 symbol key extracted in Phase 0 (61 icons, `assets/icons/`). Icons are set inline at 1.12 em high, aligned 0.22 em below the baseline, trimmed to their inked bounds (`tools/make_layout_assets.py`). All are placed on the parchment ground; no dark-ground variants are needed because banners carry text only. 55 icons are used in the chapters; the others appear only on the icon reference page.
+The icon set is the 2022 symbol key extracted in Phase 0 (107 icons, `assets/icons/`). Icons are set inline at 1.12 em high, aligned 0.22 em below the baseline, trimmed to their inked bounds (`tools/make_layout_assets.py`). All are placed on the parchment ground; no dark-ground variants are needed because banners carry text only. 55 icons are used in the chapters; the others appear only on the icon reference page.
 
 | Asset ID | Icon | Meaning | Uses | Chapters |
 |---|---|---|---|---|
@@ -145,6 +145,52 @@ The icon set is the 2022 symbol key extracted in Phase 0 (61 icons, `assets/icon
 | AST-0064 | `ast-0064-frostbite` | Frostbite | 2 | 02, 08 |
 | AST-0065 | `ast-0065-poison` | Poison | 2 | 02, 08 |
 | AST-0066 | `ast-0066-stagger` | Stagger | 7 | 02, 03, 08, 09, 10, 17 |
+| AST-0067 | `ast-0067-enemy-icon-2017-crossbow-hollow` | 2017-edition enemy icons: Hollow Soldier, Crossbow Hollow, Large Hollo | 0 | reference page only |
+| AST-0067 | `ast-0067-enemy-icon-2017-hollow-soldier` | 2017-edition enemy icons: Hollow Soldier, Crossbow Hollow, Large Hollo | 0 | reference page only |
+| AST-0067 | `ast-0067-enemy-icon-2017-large-hollow-soldier` | 2017-edition enemy icons: Hollow Soldier, Crossbow Hollow, Large Hollo | 0 | reference page only |
+| AST-0067 | `ast-0067-enemy-icon-2017-sentinel` | 2017-edition enemy icons: Hollow Soldier, Crossbow Hollow, Large Hollo | 0 | reference page only |
+| AST-0067 | `ast-0067-enemy-icon-2017-silver-knight-greatbowman` | 2017-edition enemy icons: Hollow Soldier, Crossbow Hollow, Large Hollo | 0 | reference page only |
+| AST-0067 | `ast-0067-enemy-icon-2017-silver-knight-swordsman` | 2017-edition enemy icons: Hollow Soldier, Crossbow Hollow, Large Hollo | 0 | reference page only |
+| AST-0068 | `ast-0068-trapped-encounter-icon-2017` | Trapped-encounter sword icon (2017 horizontal variant) | 0 | reference page only |
+| AST-0069 | `ast-0069-boss-icon-main-boss-advanced-crowned-skull` | Mini-boss (standard) and Main-boss (advanced) skull icons | 0 | reference page only |
+| AST-0069 | `ast-0069-boss-icon-mini-boss-standard-skull` | Mini-boss (standard) and Main-boss (advanced) skull icons | 0 | reference page only |
+| AST-0070 | `ast-0070-mega-boss-icon-black-dragon-kalameet` | Mega-boss icon (dragon silhouette in flame ring) | 0 | reference page only |
+| AST-0070 | `ast-0070-mega-boss-icon-executioners-chariot` | Mega-boss icon (dragon silhouette in flame ring) | 0 | reference page only |
+| AST-0071 | `ast-0071-set-symbol-universal-icon` | Expansion set symbols (Darkroot wolf, Iron Keep helm, Explorers chest, | 0 | reference page only |
+| AST-0072 | `ast-0072-phantom-icon-invader-armorer-dennis` | Invader and Summon token icons (Phantoms): 14 invader portraits + 10 s | 0 | reference page only |
+| AST-0072 | `ast-0072-phantom-icon-invader-fencer-sharron` | Invader and Summon token icons (Phantoms): 14 invader portraits + 10 s | 0 | reference page only |
+| AST-0072 | `ast-0072-phantom-icon-invader-invader-brylex` | Invader and Summon token icons (Phantoms): 14 invader portraits + 10 s | 0 | reference page only |
+| AST-0072 | `ast-0072-phantom-icon-invader-kirk-knight-of-thorns` | Invader and Summon token icons (Phantoms): 14 invader portraits + 10 s | 0 | reference page only |
+| AST-0072 | `ast-0072-phantom-icon-invader-longfinger-kirk` | Invader and Summon token icons (Phantoms): 14 invader portraits + 10 s | 0 | reference page only |
+| AST-0072 | `ast-0072-phantom-icon-invader-maldron-the-assassin` | Invader and Summon token icons (Phantoms): 14 invader portraits + 10 s | 0 | reference page only |
+| AST-0072 | `ast-0072-phantom-icon-invader-maneater-mildred` | Invader and Summon token icons (Phantoms): 14 invader portraits + 10 s | 0 | reference page only |
+| AST-0072 | `ast-0072-phantom-icon-invader-marvelous-chester` | Invader and Summon token icons (Phantoms): 14 invader portraits + 10 s | 0 | reference page only |
+| AST-0072 | `ast-0072-phantom-icon-invader-melinda-the-butcher` | Invader and Summon token icons (Phantoms): 14 invader portraits + 10 s | 0 | reference page only |
+| AST-0072 | `ast-0072-phantom-icon-invader-oliver-the-collector` | Invader and Summon token icons (Phantoms): 14 invader portraits + 10 s | 0 | reference page only |
+| AST-0072 | `ast-0072-phantom-icon-invader-paladin-leeroy` | Invader and Summon token icons (Phantoms): 14 invader portraits + 10 s | 0 | reference page only |
+| AST-0072 | `ast-0072-phantom-icon-invader-xanthous-king-jeremiah` | Invader and Summon token icons (Phantoms): 14 invader portraits + 10 s | 0 | reference page only |
+| AST-0072 | `ast-0072-phantom-icon-summon-eygon-of-carim` | Invader and Summon token icons (Phantoms): 14 invader portraits + 10 s | 0 | reference page only |
+| AST-0072 | `ast-0072-phantom-icon-summon-horace-the-hushed` | Invader and Summon token icons (Phantoms): 14 invader portraits + 10 s | 0 | reference page only |
+| AST-0072 | `ast-0072-phantom-icon-summon-lucatiel-of-mirrah` | Invader and Summon token icons (Phantoms): 14 invader portraits + 10 s | 0 | reference page only |
+| AST-0072 | `ast-0072-phantom-icon-summon-rogue-witch-beatrice` | Invader and Summon token icons (Phantoms): 14 invader portraits + 10 s | 0 | reference page only |
+| AST-0072 | `ast-0072-phantom-icon-summon-ruined-aflis` | Invader and Summon token icons (Phantoms): 14 invader portraits + 10 s | 0 | reference page only |
+| AST-0072 | `ast-0072-phantom-icon-summon-sellsword-luet` | Invader and Summon token icons (Phantoms): 14 invader portraits + 10 s | 0 | reference page only |
+| AST-0072 | `ast-0072-phantom-icon-summon-siegward-of-catarina` | Invader and Summon token icons (Phantoms): 14 invader portraits + 10 s | 0 | reference page only |
+| AST-0072 | `ast-0072-phantom-icon-summon-sirris-of-the-sunless-realms` | Invader and Summon token icons (Phantoms): 14 invader portraits + 10 s | 0 | reference page only |
+| AST-0072 | `ast-0072-phantom-icon-summon-solaire-of-astora` | Invader and Summon token icons (Phantoms): 14 invader portraits + 10 s | 0 | reference page only |
+| AST-0072 | `ast-0072-phantom-icon-summon-sword-master` | Invader and Summon token icons (Phantoms): 14 invader portraits + 10 s | 0 | reference page only |
+| AST-0072 | `ast-0072-phantom-token-01` | Invader and Summon token icons (Phantoms): 14 invader portraits + 10 s | 0 | reference page only |
+| AST-0072 | `ast-0072-phantom-token-02` | Invader and Summon token icons (Phantoms): 14 invader portraits + 10 s | 0 | reference page only |
+| AST-0072 | `ast-0072-phantom-token-03` | Invader and Summon token icons (Phantoms): 14 invader portraits + 10 s | 0 | reference page only |
+| AST-0072 | `ast-0072-phantom-token-04` | Invader and Summon token icons (Phantoms): 14 invader portraits + 10 s | 0 | reference page only |
+| AST-0072 | `ast-0072-phantom-token-05` | Invader and Summon token icons (Phantoms): 14 invader portraits + 10 s | 0 | reference page only |
+| AST-0072 | `ast-0072-phantom-token-06` | Invader and Summon token icons (Phantoms): 14 invader portraits + 10 s | 0 | reference page only |
+| AST-0072 | `ast-0072-phantom-token-07` | Invader and Summon token icons (Phantoms): 14 invader portraits + 10 s | 0 | reference page only |
+| AST-0072 | `ast-0072-phantom-token-08` | Invader and Summon token icons (Phantoms): 14 invader portraits + 10 s | 0 | reference page only |
+| AST-0072 | `ast-0072-phantom-token-09` | Invader and Summon token icons (Phantoms): 14 invader portraits + 10 s | 0 | reference page only |
+| AST-0072 | `ast-0072-phantom-token-10` | Invader and Summon token icons (Phantoms): 14 invader portraits + 10 s | 0 | reference page only |
+| AST-0072 | `ast-0072-phantom-token-11` | Invader and Summon token icons (Phantoms): 14 invader portraits + 10 s | 0 | reference page only |
+| AST-0072 | `ast-0072-phantom-token-12` | Invader and Summon token icons (Phantoms): 14 invader portraits + 10 s | 0 | reference page only |
 
 ## 6. Asset placement
 
@@ -153,11 +199,13 @@ The icon set is the 2022 symbol key extracted in Phase 0 (61 icons, `assets/icon
 | Cover | AST-0142 (lava-scale texture), logo-free crop | field of scales fading to near-black in the lower half; title set in the display face above it. The DARK SOULS wordmark is not placed (nominative use only, Gate 1 OQ-33) |
 | Chapter banner (hero slot) | per-chapter hero image where one is assigned (table below); otherwise AST-0142 crop | dark gradient under the whole title; number badge in gold |
 | Chapter end | AST-0082 (knot, rule, knot divider) | centred beneath the balanced columns; omitted when it would stand alone on a page |
+| Chapter-end gallery | product images from the chapter's pool (table below) | fills the empty foot of a chapter's last page |
+| Back cover | AST-0143 (dark stone ground with its light panel) | the opening and closing lines of the Introduction, centred in the panel |
 | Folio | AST-0075 (knot square) | one either side of the page number |
 | Front-matter rule | AST-0082 | under the Foreword and Contents titles |
 | Example box | tint and left rule in node gold | border and tint repeat on both parts when a box breaks |
 | Anatomy figures | see the figure table below | captions keyed to the numbered call-outs of each plate |
-| Icon reference page | every icon in `assets/icons/` | back matter, after the appendices |
+| Icon reference page | every icon the rules use (see §5) | back matter, after the appendices; each entry links to the first section that uses the icon |
 
 Figures placed (from `layout/tuning.json`):
 
@@ -171,7 +219,59 @@ Figures placed (from `layout/tuning.json`):
 | AST-0098 | in §15.3 | 100% | The boss tiles. The two boss tiles joined along one edge for a main-boss encounter. Each tile shows its boss s |
 | AST-0099 | in §15.6 | 178pt | Boss arcs. The lines that divide the boss's base, extended across the tile, divide the nodes among the front,  |
 
-Chapter hero images: none assigned yet; every banner uses the AST-0142 crop.
+Chapter openers: every chapter and appendix has a designated hero image on its banner (from `layout/tuning.json`, key `heroes`). A render with a transparent ground stands on the foot of the banner and may rise above its head into the top margin; a wide image sits inside the banner. The banner reserves the hero's width so that the title never runs under it.
+
+| Opener | Hero asset | File | Height on the banner |
+|---|---|---|---|
+| Chapter 1 | AST-0131 | `miniature-skeleton-soldier` | 96 pt |
+| Chapter 2 | AST-0136 | `dice-set` | 58 pt |
+| Chapter 3 | AST-0138 | `expansion-miniature-character-cleric` | 98 pt |
+| Chapter 4 | AST-0138 | `expansion-miniature-armour-black-knight` | 100 pt |
+| Chapter 5 | AST-0133 | `game-tile-tomb-of-giants-fan` | 60 pt |
+| Chapter 6 | AST-0132 | `token-terrain-treasure-chest-render` | 44 pt |
+| Chapter 7 | AST-0131 | `miniature-black-knight` | 96 pt |
+| Chapter 8 | AST-0131 | `miniature-giant-skeleton-soldier` | 98 pt |
+| Chapter 9 | AST-0138 | `expansion-miniature-stone-knight` | 98 pt |
+| Chapter 10 | AST-0138 | `expansion-miniature-character-mercenary` | 98 pt |
+| Chapter 11 | AST-0132 | `token-terrain-bonfire-render` | 92 pt |
+| Chapter 12 | AST-0138 | `expansion-miniature-summon-solaire-of-astora` | 100 pt |
+| Chapter 13 | AST-0138 | `expansion-miniature-mimic` | 98 pt |
+| Chapter 14 | AST-0138 | `expansion-miniature-crystal-lizard` | 26 pt |
+| Chapter 15 | AST-0138 | `expansion-miniature-artorias` | 96 pt |
+| Chapter 16 | AST-0138 | `expansion-miniature-great-grey-wolf-sif` | 84 pt |
+| Chapter 17 | AST-0138 | `expansion-miniature-black-dragon-kalameet` | 96 pt |
+| Chapter 18 | AST-0132 | `token-spark-dial` | 54 pt |
+| Chapter 19 | AST-0138 | `expansion-miniature-smelter-demon` | 84 pt |
+| Chapter 20 | AST-0138 | `expansion-miniature-invader-xanthous-king-jeremiah` | 100 pt |
+| Chapter 21 | AST-0131 | `miniature-necromancer` | 92 pt |
+| Chapter 22 | AST-0138 | `expansion-miniature-summon-siegward-of-catarina` | 98 pt |
+| Appendix A | AST-0138 | `expansion-miniature-summon-sword-master` | 100 pt |
+| Appendix B | AST-0138 | `expansion-miniature-the-pursuer` | 96 pt |
+
+Chapter-end galleries: where the last page of a chapter has 114 pt or more of empty text block under the closing ornament, the build fills it with product images from that chapter's pool, in one to three centred rows with captions in the display face. The build measures the room on a first pass and sizes the rows on a second; no image is set larger than 150 ppi allows; a gallery that would not fit is withdrawn. A gallery that nearly fills the room stands on the foot of the text block, and a smaller one is centred in the room.
+
+| Chapter | Gallery pool (in order; the build places as many as fit) |
+|---|---|
+| Chapter 1 | AST-0131 `miniature-gravelord-nito`, AST-0131 `miniature-black-knight`, AST-0131 `miniature-giant-skeleton-archer`, AST-0131 `miniature-giant-skeleton-soldier`, AST-0131 `miniature-skeleton-soldier`, AST-0131 `miniature-skeleton-archer`, AST-0131 `miniature-skeleton-beast`, AST-0131 `miniature-necromancer` |
+| Chapter 2 | AST-0131 `miniature-cleric`, AST-0131 `miniature-pyromancer`, AST-0131 `miniature-thief`, AST-0131 `miniature-skeleton-soldier`, AST-0131 `miniature-skeleton-archer`, AST-0131 `miniature-necromancer`, AST-0131 `miniature-skeleton-beast` |
+| Chapter 4 | AST-0138 `expansion-miniature-armour-adventurers`, AST-0138 `expansion-miniature-armour-havels`, AST-0138 `expansion-miniature-armour-catarina`, AST-0138 `expansion-miniature-armour-guardian`, AST-0138 `expansion-miniature-armour-dark`, AST-0138 `expansion-miniature-armour-crimson-robes` |
+| Chapter 5 | AST-0133 `game-tile-tomb-of-giants-a`, AST-0133 `game-tile-tomb-of-giants-b`, AST-0133 `game-tile-tomb-of-giants-c`, AST-0133 `game-tile-tomb-of-giants-d` |
+| Chapter 6 | AST-0133 `game-tile-bonfire-2017`, AST-0089 `card-back-encounter-level-1`, AST-0089 `card-back-treasure`, AST-0132 `token-terrain-gravestone-render`, AST-0132 `token-terrain-barrels-render`, AST-0132 `token-terrain-treasure-chest-render`, AST-0132 `token-spark-dial` |
+| Chapter 7 | AST-0138 `expansion-miniature-stone-guardian`, AST-0138 `expansion-miniature-mushroom-parent`, AST-0138 `expansion-miniature-mushroom-child`, AST-0138 `expansion-miniature-demonic-foliage`, AST-0138 `expansion-miniature-plow-scarecrow`, AST-0138 `expansion-miniature-shears-scarecrow`, AST-0138 `expansion-miniature-black-hollow-mage`, AST-0138 `expansion-miniature-falchion-skeleton`, AST-0138 `expansion-miniature-firebomb-hollow` |
+| Chapter 8 | AST-0136 `dice-set`, AST-0131 `miniature-giant-skeleton-archer` |
+| Chapter 10 | AST-0138 `expansion-miniature-character-pyromancer`, AST-0138 `expansion-miniature-character-thief`, AST-0138 `expansion-miniature-character-sorcerer`, AST-0138 `expansion-miniature-character-deprived`, AST-0138 `expansion-miniature-character-cleric`, AST-0138 `expansion-miniature-armour-black-iron`, AST-0138 `expansion-miniature-armour-embraced-armour-of-favour`, AST-0138 `expansion-miniature-armour-gold-trimmed-black-robes`, AST-0138 `expansion-miniature-armour-black-knight`, AST-0138 `expansion-miniature-armour-havels`, AST-0138 `expansion-miniature-armour-dark`, AST-0138 `expansion-miniature-armour-catarina` |
+| Chapter 11 | AST-0133 `game-tile-bonfire-2017`, AST-0132 `token-spark-dial` |
+| Chapter 12 | AST-0138 `expansion-miniature-summon-ruined-aflis`, AST-0138 `expansion-miniature-summon-eygon-of-carim`, AST-0138 `expansion-miniature-summon-lucatiel-of-mirrah`, AST-0138 `expansion-miniature-summon-sellsword-luet`, AST-0138 `expansion-miniature-summon-sirris-of-the-sunless-realms`, AST-0138 `expansion-miniature-summon-rogue-witch-beatrice`, AST-0138 `expansion-miniature-summon-horace-the-hushed`, AST-0138 `expansion-miniature-summon-siegward-of-catarina`, AST-0138 `expansion-miniature-summon-sword-master`, AST-0138 `expansion-miniature-invader-kirk-knight-of-thorns`, AST-0138 `expansion-miniature-invader-armorer-dennis`, AST-0138 `expansion-miniature-invader-melinda-the-butcher`, AST-0138 `expansion-miniature-invader-maldron-the-assassin`, AST-0138 `expansion-miniature-invader-maneater-mildred` |
+| Chapter 13 | AST-0138 `expansion-miniature-mimic-closed`, AST-0138 `expansion-miniature-mimic` |
+| Chapter 14 | AST-0132 `token-terrain-treasure-chest-render`, AST-0132 `token-terrain-barrels-render`, AST-0132 `token-terrain-gravestone-render` |
+| Chapter 15 | AST-0138 `expansion-miniature-great-grey-wolf-sif`, AST-0138 `expansion-miniature-black-dragon-kalameet`, AST-0138 `expansion-miniature-smelter-demon`, AST-0138 `expansion-miniature-executioners-chariot`, AST-0138 `expansion-miniature-the-pursuer`, AST-0138 `expansion-miniature-sir-alonne` |
+| Chapter 16 | AST-0117 `mega-boss-board-kalameet-forest`, AST-0117 `mega-boss-board-executioners-chariot-arena`, AST-0117 `mega-boss-board-executioners-chariot-reverse` |
+| Chapter 18 | AST-0133 `game-tile-tomb-of-giants-fan` |
+| Chapter 20 | AST-0138 `expansion-miniature-invader-oliver-the-collector`, AST-0138 `expansion-miniature-invader-brylex`, AST-0138 `expansion-miniature-invader-marvelous-chester`, AST-0138 `expansion-miniature-invader-paladin-leeroy`, AST-0138 `expansion-miniature-invader-fencer-sharron`, AST-0138 `expansion-miniature-invader-kirk-knight-of-thorns`, AST-0138 `expansion-miniature-invader-melinda-the-butcher`, AST-0138 `expansion-miniature-invader-maldron-the-assassin`, AST-0138 `expansion-miniature-invader-maneater-mildred`, AST-0138 `expansion-miniature-invader-armorer-dennis` |
+| Appendix A | AST-0138 `expansion-miniature-silver-knight-spearman`, AST-0138 `expansion-miniature-ironclad-soldier`, AST-0138 `expansion-miniature-sir-alonne`, AST-0138 `expansion-miniature-stone-knight`, AST-0138 `expansion-miniature-stone-guardian`, AST-0138 `expansion-miniature-the-pursuer`, AST-0138 `expansion-miniature-armour-guardian` |
+| Appendix B | AST-0089 `card-back-encounter-level-1`, AST-0089 `card-back-treasure`, AST-0136 `dice-set`, AST-0132 `token-spark-dial` |
+
+Withheld areas: AST-0105, AST-0091, AST-0094, AST-0097, AST-0099 are placed with their painted illustrations blanked (`masks` in the tuning file; `withhold()` in `tools/make_layout_assets.py`), and call-out badges removed by the blanking are redrawn. The frames, icons, values, and call-outs are unchanged. The source plates in `assets/diagrams/` are untouched, so the blanking is removed by deleting the `masks` keys.
 
 ## 7. Tables
 
@@ -213,38 +313,26 @@ Ground `#0b0a09`. Title "DARK SOULS" in Cinzel Bold 54 pt and "THE BOARD GAME" i
 
 | Asset ID | Description | Status | What is needed |
 |---|---|---|---|
-| AST-0067 | 2017-edition enemy icons: Hollow Soldier, Crossbow Hollow, Large Hollow Soldier, | TO EXTRACT | extraction pending |
-| AST-0068 | Trapped-encounter sword icon (2017 horizontal variant) | TO EXTRACT | extraction pending |
-| AST-0069 | Mini-boss (standard) and Main-boss (advanced) skull icons | TO EXTRACT | extraction pending |
-| AST-0070 | Mega-boss icon (dragon silhouette in flame ring) | TO EXTRACT | extraction pending |
-| AST-0071 | Expansion set symbols (Darkroot wolf, Iron Keep helm, Explorers chest, BDK drago | TO EXTRACT | extraction pending |
-| AST-0072 | Invader and Summon token icons (Phantoms): 14 invader portraits + 10 summon port | TO EXTRACT | extraction pending |
-| AST-0085 | Large art frame: compass corners + hairline rules around full-column illustratio | TO EXTRACT | extraction pending |
-| AST-0086 | Equipment card frame (charcoal ground, gold corner ornament, parchment text box, | BLOCKED | source or ruling needed |
-| AST-0087 | Encounter card frame (parchment card with dark banner, node map area) | TO EXTRACT | extraction pending |
-| AST-0088 | Enemy / boss data card frame and behaviour card frame | TO EXTRACT | extraction pending |
-| AST-0089 | Card backs: treasure (orange ring), encounter level 1/2/3 (blue/purple ring), ev | TO EXTRACT | extraction pending |
-| AST-0111 | Encounter setup worked example (The Forgotten) — card + tile with placed tokens | TO EXTRACT | extraction pending |
-| AST-0112 | Node adjacency diagram (green highlighted nodes) | TO EXTRACT | extraction pending |
-| AST-0113 | Range / doorway diagram (tile with arrow through door) | TO EXTRACT | extraction pending |
-| AST-0114 | Timer track diagram (0–8 track with hourglass marker) | TO EXTRACT | extraction pending |
-| AST-0115 | Equipment modifier strip ([0] 1 +1 / [3] 2 +1) | TO EXTRACT | extraction pending |
-| AST-0116 | Enemy attack dice resolution strip (attack 5 → dice → damage cubes) | TO EXTRACT | extraction pending |
-| AST-0117 | Mega-boss game board (round Chariot arena; Kalameet forest board) | TO EXTRACT | extraction pending |
+| AST-0071 | Expansion set symbols (Darkroot wolf, Iron Keep helm, Explorers chest, BDK drago | BLOCKED | Only the universal icon exists as a separate image object (extracted as AST-0071.1). |
+| AST-0086 | Equipment card frame (charcoal ground, gold corner ornament, parchment text box, | BLOCKED | Embedded card images are ≤372 px — too small for print reuse. |
 | AST-0119 | 2022 Tomb of Giants cover art (Gravelord Nito on black) — PROVENANCE REVIEW | BLOCKED | ruling on FromSoftware / Bandai Namco key art (Gate 1 OQ-33) |
-| AST-0131 | Miniature renders, 2022 core: Cleric, Pyromancer, Thief; Giant Skeleton Archer/S | TO EXTRACT | extraction pending |
-| AST-0132 | Token and terrain photography set (wound/soul tokens, luck, heroic action, estus | TO EXTRACT | extraction pending |
-| AST-0133 | Game tile photography (4 double-sided tiles; 2017: 6 exploration + bonfire + bos | TO EXTRACT | extraction pending |
-| AST-0134 | Campaign board photograph (full strip) | TO EXTRACT | extraction pending |
-| AST-0135 | Character dashboard photograph (clean, no call-outs) | TO EXTRACT | extraction pending |
-| AST-0136 | Dice photography (black, blue, orange, green) | TO EXTRACT | extraction pending |
-| AST-0137 | Card fan photographs (encounter cards, event cards, treasure decks) | TO EXTRACT | extraction pending |
-| AST-0138 | Expansion miniature renders (Sif, Artorias, Mushroom Parent/Child, Smelter Demon | TO EXTRACT | extraction pending |
-| AST-0145 | Card text-box parchment fill (worn cream paper) | TO EXTRACT | extraction pending |
-| AST-0146 | Dashboard stone/parchment panel texture | TO EXTRACT | extraction pending |
-| AST-0147 | Tile floor textures (flagstone, dirt, bone pit) | TO EXTRACT | extraction pending |
+| AST-0137 | Card fan photographs (encounter cards, event cards, treasure decks) | BLOCKED | Provenance review: every card fan in the sources shows card faces (encounter, event, treasure and boss cards) that carry painted illustrations, so no fan was extracted. |
+| AST-0147 | Tile floor textures (flagstone, dirt, bone pit) | BLOCKED | No usable floor texture can be cut from the sources: every tile and board raster is covered with node rings and markers at 70 to 170 px spacing (rasters are 140 to 300 pp |
 
 Painted key art is withheld until the rights question is answered, so chapter banners and chapter-end panels use product imagery and textures only. The rule booklets for nine bosses were not supplied (see `14_open_issues.md`).
+
+### Substitutions
+
+| Original | Substitute | Where recorded |
+|---|---|---|
+| OptimusPrinceps (display face of the source books) | Cinzel, SIL OFL | manifest FONT-01 |
+| Adobe Caslon Pro (body face) | Libre Caslon Text, SIL OFL | manifest FONT-02 |
+| Helvetica (small print) | none: small print is set in the body face | manifest FONT-03 |
+| DARK SOULS logo lock-up on the cover (AST-0001 to AST-0006) | the title set in Cinzel; nominative use only | Gate 1 OQ-33; manifest placement column |
+| Painted cover and chapter art (held under Provenance Review) | cover: logo-free crop of the lava-scale texture AST-0142; openers and chapter ends: miniature, tile, board, dice, and token renders | `22_asset_extraction_log.md`, Provenance Review |
+| Painted illustrations inside the placed anatomy plates | blanked areas (see Withheld areas, §6) | `layout/tuning.json` |
+| Card-style example boxes and framed tables (AST-0083 to AST-0088) | boxes and tables drawn in CSS | manifest placement column |
+| Source diagrams that carry source text or show unused components | not placed; the seven plates listed in §6 are placed | manifest placement column |
 
 ## 13. Build
 

@@ -1,0 +1,637 @@
+{
+ "assets/diagrams/ast-0091-equipment-card-anatomy-2022.png": [
+  "figure, §4.1"
+ ],
+ "assets/diagrams/ast-0094-enemy-data-card-anatomy-2022.png": [
+  "figure, §8.2"
+ ],
+ "assets/diagrams/ast-0095-enemy-movement-symbol-anatomy.png": [
+  "figure, §9.2"
+ ],
+ "assets/diagrams/ast-0097-boss-data-card-anatomy-2022.png": [
+  "figure, §15.4"
+ ],
+ "assets/diagrams/ast-0098-boss-behaviour-card-anatomy-2022.png": [
+  "figure, §15.3"
+ ],
+ "assets/diagrams/ast-0099-boss-arcs-tile-diagram-a.png": [
+  "figure, §15.6"
+ ],
+ "assets/diagrams/ast-0105-character-board-anatomy-2017.png": [
+  "figure, chapter 3"
+ ],
+ "assets/frames/ast-0089-card-back-encounter-level-1.png": [
+  "gallery, end of chapter 6",
+  "gallery, end of Appendix B"
+ ],
+ "assets/frames/ast-0089-card-back-treasure.png": [
+  "gallery, end of chapter 6",
+  "gallery, end of Appendix B"
+ ],
+ "assets/icons/ast-0006-primary-spawn-node.png": [
+  "icon reference page",
+  "inline icon, §5.1",
+  "inline icon, §6.7",
+  "inline icon, §17.9"
+ ],
+ "assets/icons/ast-0007-encounter-level-1.png": [
+  "icon reference page",
+  "inline icon, §2.6",
+  "inline icon, §6.5"
+ ],
+ "assets/icons/ast-0008-skeleton-soldier.png": [
+  "icon reference page",
+  "inline icon, §2.2"
+ ],
+ "assets/icons/ast-0009-treasure-chest.png": [
+  "icon reference page",
+  "inline icon, §2.8",
+  "inline icon, §5.5",
+  "inline icon, §7.7",
+  "and 3 more sections"
+ ],
+ "assets/icons/ast-0011-encounter-level-2.png": [
+  "icon reference page",
+  "inline icon, §2.6",
+  "inline icon, §6.5"
+ ],
+ "assets/icons/ast-0012-skeleton-archer.png": [
+  "icon reference page",
+  "inline icon, §2.2"
+ ],
+ "assets/icons/ast-0013-barrel.png": [
+  "icon reference page",
+  "inline icon, §2.8",
+  "inline icon, §5.5"
+ ],
+ "assets/icons/ast-0014-primary-terrain-node.png": [
+  "icon reference page",
+  "inline icon, §5.1",
+  "inline icon, §6.7",
+  "inline icon, chapter 14"
+ ],
+ "assets/icons/ast-0015-encounter-level-3.png": [
+  "icon reference page",
+  "inline icon, §2.6",
+  "inline icon, §6.5"
+ ],
+ "assets/icons/ast-0016-giant-skeleton-soldier.png": [
+  "icon reference page",
+  "inline icon, §2.2"
+ ],
+ "assets/icons/ast-0017-gravestone.png": [
+  "icon reference page",
+  "inline icon, §2.8",
+  "inline icon, §5.5",
+  "inline icon, §7.5"
+ ],
+ "assets/icons/ast-0019-giant-skeleton-archer.png": [
+  "icon reference page",
+  "inline icon, §2.2"
+ ],
+ "assets/icons/ast-0021-trapped-encounter.png": [
+  "icon reference page",
+  "inline icon, §2.6",
+  "inline icon, §5.5"
+ ],
+ "assets/icons/ast-0022-skeleton-beast.png": [
+  "icon reference page",
+  "inline icon, §2.2"
+ ],
+ "assets/icons/ast-0024-necromancer.png": [
+  "icon reference page",
+  "inline icon, §2.2"
+ ],
+ "assets/icons/ast-0026-threat-level.png": [
+  "icon reference page",
+  "inline icon, §7.5",
+  "inline icon, §8.2",
+  "inline icon, §9.1",
+  "and 2 more sections"
+ ],
+ "assets/icons/ast-0027-behaviour-deck-size.png": [
+  "icon reference page",
+  "inline icon, §8.2",
+  "inline icon, §12.2",
+  "inline icon, §13.2",
+  "and 2 more sections"
+ ],
+ "assets/icons/ast-0028-block-resist-shield.png": [
+  "icon reference page",
+  "inline icon, §8.2",
+  "inline icon, §12.2",
+  "inline icon, §15.4"
+ ],
+ "assets/icons/ast-0029-starting-health.png": [
+  "icon reference page",
+  "inline icon, §8.2",
+  "inline icon, §12.1",
+  "inline icon, §12.2",
+  "and 3 more sections"
+ ],
+ "assets/icons/ast-0030-heat-up-point.png": [
+  "icon reference page",
+  "inline icon, §8.2",
+  "inline icon, §12.2",
+  "inline icon, §13.2",
+  "and 9 more sections"
+ ],
+ "assets/icons/ast-0031-push-with-damage-satellite-glyph.png": [
+  "icon reference page",
+  "inline icon, §8.2",
+  "inline icon, §8.4",
+  "inline icon, §9.2",
+  "and 1 more sections"
+ ],
+ "assets/icons/ast-0032-target-nearest-character.png": [
+  "icon reference page",
+  "inline icon, §8.2",
+  "inline icon, §9.2",
+  "inline icon, §9.3",
+  "and 2 more sections"
+ ],
+ "assets/icons/ast-0033-enemy-movement-composite-symbol.png": [
+  "icon reference page",
+  "inline icon, §8.2",
+  "inline icon, §9.2",
+  "inline icon, §15.5",
+  "and 1 more sections"
+ ],
+ "assets/icons/ast-0034-turn-90-right.png": [
+  "icon reference page",
+  "inline icon, §15.6",
+  "inline icon, §16.2"
+ ],
+ "assets/icons/ast-0035-turn-90-left.png": [
+  "icon reference page",
+  "inline icon, §15.6",
+  "inline icon, §16.2"
+ ],
+ "assets/icons/ast-0036-turn-around.png": [
+  "icon reference page",
+  "inline icon, §15.6",
+  "inline icon, §16.2"
+ ],
+ "assets/icons/ast-0037-enemy-attack-composite-symbol.png": [
+  "icon reference page",
+  "inline icon, §8.2",
+  "inline icon, §9.3",
+  "inline icon, §15.5",
+  "and 1 more sections"
+ ],
+ "assets/icons/ast-0038-area-attack-icon.png": [
+  "icon reference page",
+  "inline icon, §16.3",
+  "inline icon, §17.3"
+ ],
+ "assets/icons/ast-0039-neutral-boss-arc.png": [
+  "icon reference page",
+  "inline icon, §15.6"
+ ],
+ "assets/icons/ast-0040-attack-boss-arc.png": [
+  "icon reference page",
+  "inline icon, §15.6",
+  "inline icon, §16.3"
+ ],
+ "assets/icons/ast-0041-weak-boss-arc.png": [
+  "icon reference page",
+  "inline icon, §12.1",
+  "inline icon, §15.6",
+  "inline icon, §17.1",
+  "and 1 more sections"
+ ],
+ "assets/icons/ast-0042-deal-magical-damage.png": [
+  "icon reference page",
+  "inline icon, §4.3",
+  "inline icon, §8.2",
+  "inline icon, §9.3",
+  "and 3 more sections"
+ ],
+ "assets/icons/ast-0043-one-handed-weapon.png": [
+  "icon reference page",
+  "inline icon, §3.2",
+  "inline icon, §4.1",
+  "inline icon, §10.4"
+ ],
+ "assets/icons/ast-0044-weapon-upgrade.png": [
+  "icon reference page",
+  "inline icon, §4.2",
+  "inline icon, §6.3",
+  "inline icon, §11.4"
+ ],
+ "assets/icons/ast-0045-two-handed-weapon.png": [
+  "icon reference page",
+  "inline icon, §3.2",
+  "inline icon, §4.1",
+  "inline icon, §10.3",
+  "and 1 more sections"
+ ],
+ "assets/icons/ast-0046-armour-upgrade.png": [
+  "icon reference page",
+  "inline icon, §4.2",
+  "inline icon, §6.3",
+  "inline icon, §11.4"
+ ],
+ "assets/icons/ast-0047-armour.png": [
+  "icon reference page",
+  "inline icon, §3.2",
+  "inline icon, §4.1",
+  "inline icon, §6.3"
+ ],
+ "assets/icons/ast-0048-block.png": [
+  "icon reference page",
+  "inline icon, §4.1",
+  "inline icon, §9.4"
+ ],
+ "assets/icons/ast-0049-upgrade-slots.png": [
+  "icon reference page",
+  "inline icon, §4.1"
+ ],
+ "assets/icons/ast-0050-resist.png": [
+  "icon reference page",
+  "inline icon, §4.1",
+  "inline icon, §9.4"
+ ],
+ "assets/icons/ast-0051-black-dice.png": [
+  "icon reference page",
+  "inline icon, §2.7",
+  "inline icon, §4.1",
+  "inline icon, §10.3",
+  "and 2 more sections"
+ ],
+ "assets/icons/ast-0053-blue-dice.png": [
+  "icon reference page",
+  "inline icon, §2.7",
+  "inline icon, §4.1"
+ ],
+ "assets/icons/ast-0054-node-attack.png": [
+  "icon reference page",
+  "inline icon, §9.3",
+  "inline icon, §10.3",
+  "inline icon, §16.3",
+  "and 1 more sections"
+ ],
+ "assets/icons/ast-0055-orange-dice.png": [
+  "icon reference page",
+  "inline icon, §2.7",
+  "inline icon, §4.1"
+ ],
+ "assets/icons/ast-0056-shaft.png": [
+  "icon reference page",
+  "inline icon, §10.3",
+  "inline icon, §20.4"
+ ],
+ "assets/icons/ast-0057-shift.png": [
+  "icon reference page",
+  "inline icon, §10.2",
+  "inline icon, §10.3",
+  "inline icon, §12.1"
+ ],
+ "assets/icons/ast-0058-push-affected-enemies.png": [
+  "icon reference page",
+  "inline icon, §8.4",
+  "inline icon, §9.2",
+  "inline icon, §9.3",
+  "and 4 more sections"
+ ],
+ "assets/icons/ast-0059-taunt.png": [
+  "icon reference page",
+  "inline icon, §3.1"
+ ],
+ "assets/icons/ast-0060-attack-range.png": [
+  "icon reference page",
+  "inline icon, §4.1",
+  "inline icon, §8.2",
+  "inline icon, §10.3",
+  "and 2 more sections"
+ ],
+ "assets/icons/ast-0061-repeat-behaviour-or-attack.png": [
+  "icon reference page",
+  "inline icon, §8.2",
+  "inline icon, §9.3",
+  "inline icon, §10.3",
+  "and 4 more sections"
+ ],
+ "assets/icons/ast-0062-dodge.png": [
+  "icon reference page",
+  "inline icon, §2.7",
+  "inline icon, §4.1",
+  "inline icon, §8.2",
+  "and 4 more sections"
+ ],
+ "assets/icons/ast-0063-bleed.png": [
+  "icon reference page",
+  "inline icon, §2.8",
+  "inline icon, §8.5"
+ ],
+ "assets/icons/ast-0064-frostbite.png": [
+  "icon reference page",
+  "inline icon, §2.8",
+  "inline icon, §8.5"
+ ],
+ "assets/icons/ast-0065-poison.png": [
+  "icon reference page",
+  "inline icon, §2.8",
+  "inline icon, §8.5"
+ ],
+ "assets/icons/ast-0066-stagger.png": [
+  "icon reference page",
+  "inline icon, §2.8",
+  "inline icon, §3.4",
+  "inline icon, §8.5",
+  "and 4 more sections"
+ ],
+ "assets/ornaments/ast-0075-knot-square.png": [
+  "folio ornament, every page"
+ ],
+ "assets/ornaments/ast-0082-section-divider-knot-rule-knot.png": [
+  "front-matter rule",
+  "chapter-end ornament"
+ ],
+ "assets/photography/ast-0117-mega-boss-board-executioners-chariot-arena.png": [
+  "gallery, end of chapter 16"
+ ],
+ "assets/photography/ast-0117-mega-boss-board-executioners-chariot-reverse.png": [
+  "gallery, end of chapter 16"
+ ],
+ "assets/photography/ast-0117-mega-boss-board-kalameet-forest.png": [
+  "gallery, end of chapter 16"
+ ],
+ "assets/photography/ast-0131-miniature-black-knight.png": [
+  "gallery, end of chapter 1",
+  "banner, chapter 7"
+ ],
+ "assets/photography/ast-0131-miniature-cleric.png": [
+  "gallery, end of chapter 2"
+ ],
+ "assets/photography/ast-0131-miniature-giant-skeleton-archer.png": [
+  "gallery, end of chapter 1",
+  "gallery, end of chapter 8"
+ ],
+ "assets/photography/ast-0131-miniature-giant-skeleton-soldier.png": [
+  "gallery, end of chapter 1",
+  "banner, chapter 8"
+ ],
+ "assets/photography/ast-0131-miniature-gravelord-nito.png": [
+  "gallery, end of chapter 1"
+ ],
+ "assets/photography/ast-0131-miniature-necromancer.png": [
+  "gallery, end of chapter 2",
+  "banner, chapter 21"
+ ],
+ "assets/photography/ast-0131-miniature-pyromancer.png": [
+  "gallery, end of chapter 2"
+ ],
+ "assets/photography/ast-0131-miniature-skeleton-archer.png": [
+  "gallery, end of chapter 2"
+ ],
+ "assets/photography/ast-0131-miniature-skeleton-beast.png": [
+  "gallery, end of chapter 2"
+ ],
+ "assets/photography/ast-0131-miniature-skeleton-soldier.png": [
+  "banner, chapter 1",
+  "gallery, end of chapter 2"
+ ],
+ "assets/photography/ast-0131-miniature-thief.png": [
+  "gallery, end of chapter 2"
+ ],
+ "assets/photography/ast-0132-token-spark-dial.png": [
+  "gallery, end of chapter 6",
+  "gallery, end of chapter 11",
+  "banner, chapter 18",
+  "gallery, end of Appendix B"
+ ],
+ "assets/photography/ast-0132-token-terrain-barrels-render.png": [
+  "gallery, end of chapter 6",
+  "gallery, end of chapter 14"
+ ],
+ "assets/photography/ast-0132-token-terrain-bonfire-render.png": [
+  "banner, chapter 11"
+ ],
+ "assets/photography/ast-0132-token-terrain-gravestone-render.png": [
+  "gallery, end of chapter 6",
+  "gallery, end of chapter 14"
+ ],
+ "assets/photography/ast-0132-token-terrain-treasure-chest-render.png": [
+  "banner, chapter 6",
+  "gallery, end of chapter 6",
+  "gallery, end of chapter 14"
+ ],
+ "assets/photography/ast-0133-game-tile-bonfire-2017.png": [
+  "gallery, end of chapter 6",
+  "gallery, end of chapter 11"
+ ],
+ "assets/photography/ast-0133-game-tile-tomb-of-giants-a.png": [
+  "gallery, end of chapter 5"
+ ],
+ "assets/photography/ast-0133-game-tile-tomb-of-giants-b.png": [
+  "gallery, end of chapter 5"
+ ],
+ "assets/photography/ast-0133-game-tile-tomb-of-giants-c.png": [
+  "gallery, end of chapter 5"
+ ],
+ "assets/photography/ast-0133-game-tile-tomb-of-giants-d.png": [
+  "gallery, end of chapter 5"
+ ],
+ "assets/photography/ast-0133-game-tile-tomb-of-giants-fan.png": [
+  "banner, chapter 5",
+  "gallery, end of chapter 18"
+ ],
+ "assets/photography/ast-0136-dice-set.png": [
+  "banner, chapter 2",
+  "gallery, end of chapter 8",
+  "gallery, end of Appendix B"
+ ],
+ "assets/photography/ast-0138-expansion-miniature-armour-adventurers.png": [
+  "gallery, end of chapter 4"
+ ],
+ "assets/photography/ast-0138-expansion-miniature-armour-black-iron.png": [
+  "gallery, end of chapter 10"
+ ],
+ "assets/photography/ast-0138-expansion-miniature-armour-black-knight.png": [
+  "banner, chapter 4",
+  "gallery, end of chapter 10"
+ ],
+ "assets/photography/ast-0138-expansion-miniature-armour-catarina.png": [
+  "gallery, end of chapter 4"
+ ],
+ "assets/photography/ast-0138-expansion-miniature-armour-crimson-robes.png": [
+  "gallery, end of chapter 4"
+ ],
+ "assets/photography/ast-0138-expansion-miniature-armour-dark.png": [
+  "gallery, end of chapter 4"
+ ],
+ "assets/photography/ast-0138-expansion-miniature-armour-embraced-armour-of-favour.png": [
+  "gallery, end of chapter 10"
+ ],
+ "assets/photography/ast-0138-expansion-miniature-armour-gold-trimmed-black-robes.png": [
+  "gallery, end of chapter 10"
+ ],
+ "assets/photography/ast-0138-expansion-miniature-armour-guardian.png": [
+  "gallery, end of chapter 4",
+  "gallery, end of Appendix A"
+ ],
+ "assets/photography/ast-0138-expansion-miniature-armour-havels.png": [
+  "gallery, end of chapter 4"
+ ],
+ "assets/photography/ast-0138-expansion-miniature-artorias.png": [
+  "banner, chapter 15"
+ ],
+ "assets/photography/ast-0138-expansion-miniature-black-dragon-kalameet.png": [
+  "gallery, end of chapter 15",
+  "banner, chapter 17"
+ ],
+ "assets/photography/ast-0138-expansion-miniature-black-hollow-mage.png": [
+  "gallery, end of chapter 7"
+ ],
+ "assets/photography/ast-0138-expansion-miniature-character-cleric.png": [
+  "banner, chapter 3",
+  "gallery, end of chapter 10"
+ ],
+ "assets/photography/ast-0138-expansion-miniature-character-deprived.png": [
+  "gallery, end of chapter 10"
+ ],
+ "assets/photography/ast-0138-expansion-miniature-character-mercenary.png": [
+  "banner, chapter 10"
+ ],
+ "assets/photography/ast-0138-expansion-miniature-character-pyromancer.png": [
+  "gallery, end of chapter 10"
+ ],
+ "assets/photography/ast-0138-expansion-miniature-character-sorcerer.png": [
+  "gallery, end of chapter 10"
+ ],
+ "assets/photography/ast-0138-expansion-miniature-character-thief.png": [
+  "gallery, end of chapter 10"
+ ],
+ "assets/photography/ast-0138-expansion-miniature-crystal-lizard.png": [
+  "banner, chapter 14"
+ ],
+ "assets/photography/ast-0138-expansion-miniature-demonic-foliage.png": [
+  "gallery, end of chapter 7"
+ ],
+ "assets/photography/ast-0138-expansion-miniature-executioners-chariot.png": [
+  "gallery, end of chapter 15"
+ ],
+ "assets/photography/ast-0138-expansion-miniature-falchion-skeleton.png": [
+  "gallery, end of chapter 7"
+ ],
+ "assets/photography/ast-0138-expansion-miniature-firebomb-hollow.png": [
+  "gallery, end of chapter 7"
+ ],
+ "assets/photography/ast-0138-expansion-miniature-great-grey-wolf-sif.png": [
+  "gallery, end of chapter 15",
+  "banner, chapter 16"
+ ],
+ "assets/photography/ast-0138-expansion-miniature-invader-brylex.png": [
+  "gallery, end of chapter 20"
+ ],
+ "assets/photography/ast-0138-expansion-miniature-invader-fencer-sharron.png": [
+  "gallery, end of chapter 20"
+ ],
+ "assets/photography/ast-0138-expansion-miniature-invader-kirk-knight-of-thorns.png": [
+  "gallery, end of chapter 12",
+  "gallery, end of chapter 20"
+ ],
+ "assets/photography/ast-0138-expansion-miniature-invader-maldron-the-assassin.png": [
+  "gallery, end of chapter 20"
+ ],
+ "assets/photography/ast-0138-expansion-miniature-invader-marvelous-chester.png": [
+  "gallery, end of chapter 20"
+ ],
+ "assets/photography/ast-0138-expansion-miniature-invader-melinda-the-butcher.png": [
+  "gallery, end of chapter 20"
+ ],
+ "assets/photography/ast-0138-expansion-miniature-invader-oliver-the-collector.png": [
+  "gallery, end of chapter 20"
+ ],
+ "assets/photography/ast-0138-expansion-miniature-invader-paladin-leeroy.png": [
+  "gallery, end of chapter 20"
+ ],
+ "assets/photography/ast-0138-expansion-miniature-invader-xanthous-king-jeremiah.png": [
+  "banner, chapter 20"
+ ],
+ "assets/photography/ast-0138-expansion-miniature-ironclad-soldier.png": [
+  "gallery, end of Appendix A"
+ ],
+ "assets/photography/ast-0138-expansion-miniature-mimic-closed.png": [
+  "gallery, end of chapter 13"
+ ],
+ "assets/photography/ast-0138-expansion-miniature-mimic.png": [
+  "banner, chapter 13",
+  "gallery, end of chapter 13"
+ ],
+ "assets/photography/ast-0138-expansion-miniature-mushroom-child.png": [
+  "gallery, end of chapter 7"
+ ],
+ "assets/photography/ast-0138-expansion-miniature-mushroom-parent.png": [
+  "gallery, end of chapter 7"
+ ],
+ "assets/photography/ast-0138-expansion-miniature-plow-scarecrow.png": [
+  "gallery, end of chapter 7"
+ ],
+ "assets/photography/ast-0138-expansion-miniature-shears-scarecrow.png": [
+  "gallery, end of chapter 7"
+ ],
+ "assets/photography/ast-0138-expansion-miniature-silver-knight-spearman.png": [
+  "gallery, end of Appendix A"
+ ],
+ "assets/photography/ast-0138-expansion-miniature-sir-alonne.png": [
+  "gallery, end of chapter 15",
+  "gallery, end of Appendix A"
+ ],
+ "assets/photography/ast-0138-expansion-miniature-smelter-demon.png": [
+  "gallery, end of chapter 15",
+  "banner, chapter 19"
+ ],
+ "assets/photography/ast-0138-expansion-miniature-stone-guardian.png": [
+  "gallery, end of chapter 7",
+  "gallery, end of Appendix A"
+ ],
+ "assets/photography/ast-0138-expansion-miniature-stone-knight.png": [
+  "banner, chapter 9",
+  "gallery, end of Appendix A"
+ ],
+ "assets/photography/ast-0138-expansion-miniature-summon-eygon-of-carim.png": [
+  "gallery, end of chapter 12"
+ ],
+ "assets/photography/ast-0138-expansion-miniature-summon-horace-the-hushed.png": [
+  "gallery, end of chapter 12"
+ ],
+ "assets/photography/ast-0138-expansion-miniature-summon-lucatiel-of-mirrah.png": [
+  "gallery, end of chapter 12"
+ ],
+ "assets/photography/ast-0138-expansion-miniature-summon-rogue-witch-beatrice.png": [
+  "gallery, end of chapter 12"
+ ],
+ "assets/photography/ast-0138-expansion-miniature-summon-ruined-aflis.png": [
+  "gallery, end of chapter 12"
+ ],
+ "assets/photography/ast-0138-expansion-miniature-summon-sellsword-luet.png": [
+  "gallery, end of chapter 12"
+ ],
+ "assets/photography/ast-0138-expansion-miniature-summon-siegward-of-catarina.png": [
+  "gallery, end of chapter 12",
+  "banner, chapter 22"
+ ],
+ "assets/photography/ast-0138-expansion-miniature-summon-sirris-of-the-sunless-realms.png": [
+  "gallery, end of chapter 12"
+ ],
+ "assets/photography/ast-0138-expansion-miniature-summon-solaire-of-astora.png": [
+  "banner, chapter 12"
+ ],
+ "assets/photography/ast-0138-expansion-miniature-summon-sword-master.png": [
+  "gallery, end of chapter 12",
+  "banner, Appendix A"
+ ],
+ "assets/photography/ast-0138-expansion-miniature-the-pursuer.png": [
+  "gallery, end of chapter 15",
+  "gallery, end of Appendix A",
+  "banner, Appendix B"
+ ],
+ "assets/textures/ast-0142-lava-scale-cover-texture.png": [
+  "cover field and chapter banner ground (logo-free crop)"
+ ],
+ "assets/textures/ast-0143-back-cover-dark-stone-bg.png": [
+  "back cover ground"
+ ]
+}

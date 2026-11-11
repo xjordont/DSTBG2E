@@ -135,16 +135,31 @@ if target:
 else:
     note('Page count', f'{len(doc)} pages (no target set)')
 
-# 10 assets marked placed are referenced by the assembled HTML
+# 10 manifest against the assembled book: every asset marked placed is really used, and every extracted file
+#    that is not used says why (a file under Provenance Review must not be used at all)
 man = list(csv.DictReader(open(ROOT / '21_asset_manifest.csv', encoding='utf-8')))
-log = (ROOT / '22_asset_extraction_log.md').read_text(encoding='utf-8')
-placed = [r for r in man if r['Status'].strip().lower().startswith('placed')]
 css = (ROOT / 'layout/book.css').read_text(encoding='utf-8')
-def referenced(aid):
-    num = aid.split('-')[1].split('.')[0].lower()
-    return bool(re.search(rf'ast-{num}[-.]', html + css, re.I))
-absent = [r['Asset ID'] for r in placed if not referenced(r['Asset ID'])]
-add(not absent, 'Every asset marked placed in the manifest is referenced by the book', f'{len(placed)} placed; absent {absent[:8]}')
+used_text = html + css
+def file_of(r):
+    m = re.search(r'\bfile: (assets/\S+?)\.? ', r['Notes'] + ' ')
+    return m.group(1) if m else None
+def in_book(path):
+    name = path.rsplit('/', 1)[-1]
+    if path in used_text or f'build/icons/{name}' in used_text or f'build/fig/{name}' in used_text:
+        return True
+    return 'ast-0142' in name and 'lava_scales_clean' in used_text      # the cover field is a logo-free crop of AST-0142
+placed = [r for r in man if r['Status'].strip().lower() == 'placed']
+single = [r for r in placed if file_of(r)]
+absent = [r['Asset ID'] for r in single if not in_book(file_of(r))]
+parents = [r for r in placed if not file_of(r)]
+orphan = [r['Asset ID'] for r in parents if not any(s['Asset ID'].startswith(r['Asset ID'] + '.') and s['Status'] == 'placed' for s in man)]
+add(not absent and not orphan, 'Every asset marked placed in the manifest is present in the book', f'{len(placed)} placed ({len(single)} files); absent {(absent + orphan)[:8]}')
+unplaced = [r for r in man if file_of(r) and r['Status'].strip().lower() != 'placed']
+no_reason = [r['Asset ID'] for r in unplaced if not r['Placement (page/chapter)'].startswith('not placed:')]
+leaked = [r['Asset ID'] for r in unplaced if in_book(file_of(r))]
+held = [r['Asset ID'] for r in man if 'provenance' in r['Licensing'].lower() and file_of(r) and in_book(file_of(r))]
+add(not no_reason and not leaked and not held, 'Every extracted file that is not placed states why, and none held for provenance is used',
+    f'{len(unplaced)} files not placed; without a reason {no_reason[:6]}; used but not marked {leaked[:6]}; held but used {held[:6]}')
 
 # 11 measured characters per line (body columns)
 lens = []

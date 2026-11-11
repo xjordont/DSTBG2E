@@ -85,6 +85,84 @@ def pandoc(md):
 
 MISSING_ICONS = set()
 NO_ENDMARK = set()   # chapters whose closing ornament would otherwise sit alone on a new page
+END_FREE = {}         # chapter id -> points of empty page under its closing ornament (measured on the first pass)
+NO_PANEL = set()      # chapters whose gallery did not fit after all (verified on the second pass)
+PAGE_FOOT = 742.0     # y of the foot of the text block, in points (792 - 50)
+PT_PER_PX = 72 / 150  # no image is set larger than 150 ppi allows
+_SIZES = {}
+
+
+def img_size(file):
+    if file not in _SIZES:
+        from PIL import Image
+        with Image.open(ROOT / file) as im:
+            _SIZES[file] = im.size
+    return _SIZES[file]
+
+
+def hero_caption(file):
+    stem = re.sub(r'^ast-\d+-', '', pathlib.Path(file).stem)
+    caps = TUNING.get('captions', {})
+    for prefix in ('', 'expansion-miniature-', 'miniature-', 'token-', 'game-tile-'):
+        if stem.startswith(prefix) and stem[len(prefix):] in caps:
+            return caps[stem[len(prefix):]]
+    stem = re.sub(r'^(expansion-)?(miniature-)?(character-)?', '', stem)
+    return ' '.join(w.capitalize() for w in stem.split('-'))
+
+
+def end_panel(soup, cid, key):
+    """A gallery of product images that fills the empty foot of a chapter's last page. Its rows are sized from
+    the room measured on the first pass (END_FREE), and it is anchored to the foot of the text block."""
+    spec = TUNING.get('heroes', {}).get(key, {})
+    pool = spec.get('end') or []
+    free = END_FREE.get(cid, 0)
+    avail = free - 22
+    if not pool or cid in NO_PANEL or avail < 92:
+        return None
+    width, pad, cap_h, gap = 520.0, 18.0, 19.0, 12.0
+    nrows = spec.get('rows') or (1 if avail < 250 else 2 if avail < 470 else 3)
+    row_h = min((avail - nrows * cap_h - (nrows - 1) * gap) / nrows, 178.0)
+    rows, cur, curw = [], [], 0.0
+    for f in pool:
+        pw, ph = img_size(f)
+        dh = min(row_h, ph * PT_PER_PX); dw = pw * dh / ph
+        if dw > width - pad:
+            dw = width - pad; dh = ph * dw / pw
+        if cur and curw + dw + pad > width:
+            rows.append(cur); cur, curw = [], 0.0
+            if len(rows) == nrows:
+                break
+        cur.append((f, dw, dh)); curw += dw + pad
+    if cur and len(rows) < nrows:
+        rows.append(cur)
+    if not rows:
+        return None
+    if len(rows) > 1:   # share the images evenly between the rows when the even split also fits the measure
+        flat = [d for r in rows for d in r]; n = len(rows); q, rem = divmod(len(flat), n)
+        even, i = [], 0
+        for k in range(n):
+            size = q + (1 if k < rem else 0); even.append(flat[i:i + size]); i += size
+        if all(r and sum(d[1] + pad for d in r) <= width for r in even):
+            rows = even
+    total = sum(max(d[2] for d in r) + (cap_h if any(hero_caption(d[0]) for d in r) else 0) for r in rows) + gap * (len(rows) - 1)
+    panel = soup.new_tag('div', id=f'panel-{cid}'); panel['class'] = 'endpanel'
+    spare = free - total - 6
+    # a gallery that nearly fills the room stands on the foot of the text block; a smaller one is centred in the room
+    panel['style'] = f'margin-top:{max(12.0, spare if spare < 70 else spare * 0.5):.1f}pt'
+    for i, r in enumerate(rows):
+        row = soup.new_tag('div'); row['class'] = 'prow'
+        if i: row['style'] = f'margin-top:{gap}pt'
+        caps = any(hero_caption(d[0]) for d in r)
+        for f, dw, dh in r:
+            cell = soup.new_tag('div'); cell['class'] = 'pf'
+            im = soup.new_tag('img', src=f, alt=hero_caption(f) or ''); im['style'] = f'width:{dw:.1f}pt;height:{dh:.1f}pt'
+            cell.append(im)
+            if caps:
+                c = soup.new_tag('div'); c['class'] = 'pc'; c['style'] = f'width:{max(dw, 44):.0f}pt'; c.string = hero_caption(f) or '\u00a0'
+                cell.append(c)
+            row.append(cell)
+        panel.append(row)
+    return panel
 
 
 def icon_tag(slug):
@@ -152,6 +230,13 @@ class Chapter:
         nh1['data-running'] = f'{self.label}  ·  {self.title}' if self.kind == 'chapter' else f'{self.kicker}  ·  {self.title}'
         nh1['data-bookmark'] = f'{self.label}. {self.title}' if self.kind == 'chapter' else f'{self.kicker}. {self.title}'
         kt.append(kick); kt.append(nh1); banner.append(badge); banner.append(kt); sec.append(banner)
+        hb = TUNING.get('heroes', {}).get(key, {}).get('banner')
+        if hb:
+            pw, ph = img_size(hb['file']); hw = hb['h'] * pw / ph
+            him = soup.new_tag('img', src=hb['file'], alt=''); him['class'] = 'hero'
+            him['style'] = f"height:{hb['h']}pt;width:{hw:.1f}pt;right:{hb.get('right', 16)}pt;bottom:{hb.get('bottom', 0)}pt"
+            banner['class'] = ['banner', 'has-hero']; banner['style'] = f"padding-right:{hw + hb.get('right', 16) + 12:.0f}pt"
+            banner.append(him)
         # a short lead of plain paragraphs sits under the banner, before the flow; anything else joins the flow
         lead_text = ''.join(n.get_text() for n in lead if isinstance(n, Tag))
         is_intro = self.kind == 'chapter' and secs and lead and all(isinstance(n, Tag) and n.name == 'p' for n in lead) and len(lead_text) <= 720
@@ -192,6 +277,9 @@ class Chapter:
             end = soup.new_tag('div', id=f'end-{self.id}'); end['class'] = 'endmark'
             end.append(soup.new_tag('img', src='assets/ornaments/ast-0082-section-divider-knot-rule-knot.png', alt=''))
             sec.append(end)
+            panel = end_panel(soup, self.id, key)
+            if panel is not None:
+                sec.append(panel)
         soup.append(sec)
         self.decorate(heads)
         self.keep_headings()
@@ -424,15 +512,30 @@ def build(edition='screen', only=None, out=None, html_only=False, _retry=False):
         print(json.dumps(report, ensure_ascii=False)); return report
     import wp_patch  # noqa: F401  (column-balancing patch; must precede rendering)
     from weasyprint import HTML
-    doc = HTML(string=html, base_url=str(ROOT) + '/').render()
-    stranded = {e['id'][4:] for e in pagemap(doc) if e['id'].startswith('end-') and e['y'] < 70}
-    if stranded and not _retry:
+    # Images are embedded at no more than the edition's resolution at their placed size (none is enlarged).
+    img_opts = dict(optimize_images=True, dpi=300 if edition == 'print' else 200, jpeg_quality=88)
+    doc = HTML(string=html, base_url=str(ROOT) + '/').render(**img_opts)
+    pm = pagemap(doc)
+    ends = {e['id'][4:]: e for e in pm if e['id'].startswith('end-') and e['tag'] == 'div'}
+    if not _retry:
+        # First pass: drop a closing ornament stranded at a page top, and measure the room under the others
+        # so that the second pass can fill it with the chapter's gallery.
+        stranded = {cid for cid, e in ends.items() if e['y'] < 70}
         NO_ENDMARK.update(stranded)
-        return build(edition, only, out, html_only, _retry=True)
+        END_FREE.clear()
+        END_FREE.update({cid: PAGE_FOOT - (e['y'] + e['h']) for cid, e in ends.items() if cid not in stranded})
+        if stranded or any(v >= 114 for v in END_FREE.values()) and TUNING.get('heroes'):
+            return build(edition, only, out, html_only, _retry=True)
+    else:
+        # Later passes: a gallery that slipped to the next page is withdrawn.
+        moved = {e['id'][6:] for e in pm if e['id'].startswith('panel-') and e['id'][6:] in ends and e['page'] != ends[e['id'][6:]]['page']}
+        if moved - NO_PANEL:
+            NO_PANEL.update(moved)
+            return build(edition, only, out, html_only, _retry=True)
     doc.metadata.title = TITLE; doc.metadata.authors = ['PittedPanda']; doc.metadata.lang = 'en-GB'
     out = pathlib.Path(out) if out else ROOT / f'build/book_{edition}.pdf'
-    doc.write_pdf(str(out))
-    report.update(no_endmark=sorted(NO_ENDMARK), pages=len(doc.pages), out=str(out.relative_to(ROOT)) if out.is_relative_to(ROOT) else str(out), patch=wp_patch.PATCH_APPLIED)
+    doc.write_pdf(str(out), **img_opts)
+    report.update(no_endmark=sorted(NO_ENDMARK), galleries=sorted(e['id'][6:] for e in pm if e['id'].startswith('panel-')), no_gallery=sorted(NO_PANEL), pages=len(doc.pages), out=str(out.relative_to(ROOT)) if out.is_relative_to(ROOT) else str(out), patch=wp_patch.PATCH_APPLIED)
     (ROOT / f'build/pagemap_{edition}.json').write_text(json.dumps(pagemap(doc), indent=0), encoding='utf-8')
     print(json.dumps(report, ensure_ascii=False))
     return report

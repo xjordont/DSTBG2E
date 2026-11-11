@@ -24,7 +24,32 @@
     0.985
    ],
    "legend": true,
-   "caption": "<strong>A character dashboard.</strong> 1 Name. 2 Illustration. 3 Heroic action. 4 Equipment slots. 5 Endurance bar. 6 Stat progression track. 7 Threat, printed as Taunt Level. 8 Heroic action token slot. 9 Luck token slot. 10 Estus flask token slot. 11 Ember token slot."
+   "caption": "<strong>A character dashboard.</strong> 1 Name. 2 Illustration. 3 Heroic action. 4 Equipment slots. 5 Endurance bar. 6 Stat progression track. 7 Threat, printed as Taunt Level. 8 Heroic action token slot. 9 Luck token slot. 10 Estus flask token slot. 11 Ember token slot.",
+   "masks": [
+    {
+     "box": [
+      0.6,
+      0.0,
+      0.87,
+      0.435
+     ],
+     "feather": 10
+    }
+   ],
+   "badges": [
+    [
+     0.79,
+     0.1,
+     "2",
+     0.019
+    ],
+    [
+     0.72,
+     0.41,
+     "1",
+     0.019
+    ]
+   ]
   },
   {
    "file": "assets/diagrams/ast-0091-equipment-card-anatomy-2022.png",
@@ -33,16 +58,57 @@
    "section": "sec-4-1",
    "after": 2,
    "width": "150pt",
-   "caption": "<strong>An equipment card.</strong> 1 Name. 2 Card type. 3 Equipment slot. 4 Set symbol. 5 Range. 6 Stat requirements. 7 Attack options. 8 Block dice. 9 Resist dice. 10 Dodge dice. 11 Upgrade slots."
+   "caption": "<strong>An equipment card.</strong> 1 Name. 2 Card type. 3 Equipment slot. 4 Set symbol. 5 Range. 6 Stat requirements. 7 Attack options. 8 Block dice. 9 Resist dice. 10 Dodge dice. 11 Upgrade slots.",
+   "masks": [
+    {
+     "box": [
+      0.31,
+      0.215,
+      0.675,
+      0.555
+     ],
+     "feather": 8
+    }
+   ]
   },
   {
    "file": "assets/diagrams/ast-0094-enemy-data-card-anatomy-2022.png",
    "asset": "AST-0094",
    "at": "in",
    "section": "sec-8-2",
-   "after": 2,
+   "after": 1,
    "width": "150pt",
-   "caption": "<strong>An enemy data card.</strong> 1 Name. 2 Threat. 3 Base health. 4 Enemy icon. 5 Attack range. 6 Block. 7 Resist. 8 Dodge difficulty. 9 Behaviour icons. 10 Set symbol."
+   "caption": "<strong>An enemy data card.</strong> 1 Name. 2 Threat. 3 Base health. 4 Enemy icon. 5 Attack range. 6 Block. 7 Resist. 8 Dodge difficulty. 9 Behaviour icons. 10 Set symbol.",
+   "masks": [
+    {
+     "box": [
+      0.104,
+      0.2,
+      0.7,
+      0.452
+     ],
+     "fill": "#0a0b0d",
+     "feather": 5
+    },
+    {
+     "box": [
+      0.272,
+      0.445,
+      0.4,
+      0.56
+     ],
+     "feather": 5
+    },
+    {
+     "box": [
+      0.585,
+      0.47,
+      0.705,
+      0.565
+     ],
+     "feather": 5
+    }
+   ]
   },
   {
    "file": "assets/diagrams/ast-0095-enemy-movement-symbol-anatomy.png",
@@ -60,7 +126,59 @@
    "section": "sec-15-4",
    "after": 2,
    "width": "150pt",
-   "caption": "<strong>A boss data card.</strong> 1 Name. 2 Threat. 3 Starting health. 4 Boss type icon. 5 Behaviour deck size. 6 Block. 7 Resist. 8 Heat-up point. 9 Special ability. 10 Set symbol."
+   "caption": "<strong>A boss data card.</strong> 1 Name. 2 Threat. 3 Starting health. 4 Boss type icon. 5 Behaviour deck size. 6 Block. 7 Resist. 8 Heat-up point. 9 Special ability. 10 Set symbol.",
+   "masks": [
+    {
+     "box": [
+      0.27,
+      0.195,
+      0.745,
+      0.43
+     ],
+     "fill": "#0a0b0d",
+     "feather": 5
+    },
+    {
+     "box": [
+      0.14,
+      0.195,
+      0.27,
+      0.268
+     ],
+     "fill": "#0a0b0d",
+     "feather": 4
+    },
+    {
+     "box": [
+      0.745,
+      0.195,
+      0.862,
+      0.268
+     ],
+     "fill": "#0a0b0d",
+     "feather": 4
+    },
+    {
+     "box": [
+      0.14,
+      0.392,
+      0.27,
+      0.432
+     ],
+     "fill": "#0a0b0d",
+     "feather": 4
+    },
+    {
+     "box": [
+      0.745,
+      0.392,
+      0.862,
+      0.432
+     ],
+     "fill": "#0a0b0d",
+     "feather": 4
+    }
+   ]
   },
   {
    "file": "assets/diagrams/ast-0098-boss-behaviour-card-anatomy-2022.png",
@@ -90,8 +208,392 @@
     0.97,
     0.93
    ],
-   "caption": "<strong>Boss arcs.</strong> The lines that divide the boss's base, extended across the tile, divide the nodes among the front, left, right, and back arcs. A node on a line is in both arcs."
+   "caption": "<strong>Boss arcs.</strong> The lines that divide the boss's base, extended across the tile, divide the nodes among the front, left, right, and back arcs. A node on a line is in both arcs. The dark disc is the boss's base and the grey disc is a character.",
+   "masks": [
+    {
+     "box": [
+      0.4,
+      0.4,
+      0.62,
+      0.645
+     ],
+     "shape": "ellipse",
+     "fill": "#17130f",
+     "feather": 0,
+     "outline": "#b9974a"
+    },
+    {
+     "box": [
+      0.235,
+      0.665,
+      0.353,
+      0.8
+     ],
+     "shape": "ellipse",
+     "fill": "#8a857c",
+     "feather": 0,
+     "outline": "#e2ddd0"
+    }
+   ]
   }
  ],
- "target_pages": 100
+ "target_pages": 100,
+ "heroes": {
+  "01": {
+   "banner": {
+    "file": "assets/photography/ast-0131-miniature-skeleton-soldier.png",
+    "h": 96
+   },
+   "end": [
+    "assets/photography/ast-0131-miniature-gravelord-nito.png",
+    "assets/photography/ast-0131-miniature-black-knight.png",
+    "assets/photography/ast-0131-miniature-giant-skeleton-archer.png",
+    "assets/photography/ast-0131-miniature-giant-skeleton-soldier.png",
+    "assets/photography/ast-0131-miniature-skeleton-soldier.png",
+    "assets/photography/ast-0131-miniature-skeleton-archer.png",
+    "assets/photography/ast-0131-miniature-skeleton-beast.png",
+    "assets/photography/ast-0131-miniature-necromancer.png"
+   ]
+  },
+  "02": {
+   "banner": {
+    "file": "assets/photography/ast-0136-dice-set.png",
+    "h": 58,
+    "bottom": 7
+   },
+   "end": [
+    "assets/photography/ast-0131-miniature-cleric.png",
+    "assets/photography/ast-0131-miniature-pyromancer.png",
+    "assets/photography/ast-0131-miniature-thief.png",
+    "assets/photography/ast-0131-miniature-skeleton-soldier.png",
+    "assets/photography/ast-0131-miniature-skeleton-archer.png",
+    "assets/photography/ast-0131-miniature-necromancer.png",
+    "assets/photography/ast-0131-miniature-skeleton-beast.png"
+   ],
+   "rows": 2
+  },
+  "03": {
+   "banner": {
+    "file": "assets/photography/ast-0138-expansion-miniature-character-cleric.png",
+    "h": 98
+   }
+  },
+  "04": {
+   "banner": {
+    "file": "assets/photography/ast-0138-expansion-miniature-armour-black-knight.png",
+    "h": 100
+   },
+   "end": [
+    "assets/photography/ast-0138-expansion-miniature-armour-adventurers.png",
+    "assets/photography/ast-0138-expansion-miniature-armour-havels.png",
+    "assets/photography/ast-0138-expansion-miniature-armour-catarina.png",
+    "assets/photography/ast-0138-expansion-miniature-armour-guardian.png",
+    "assets/photography/ast-0138-expansion-miniature-armour-dark.png",
+    "assets/photography/ast-0138-expansion-miniature-armour-crimson-robes.png"
+   ]
+  },
+  "05": {
+   "banner": {
+    "file": "assets/photography/ast-0133-game-tile-tomb-of-giants-fan.png",
+    "h": 60,
+    "bottom": 6
+   },
+   "end": [
+    "assets/photography/ast-0133-game-tile-tomb-of-giants-a.png",
+    "assets/photography/ast-0133-game-tile-tomb-of-giants-b.png",
+    "assets/photography/ast-0133-game-tile-tomb-of-giants-c.png",
+    "assets/photography/ast-0133-game-tile-tomb-of-giants-d.png"
+   ]
+  },
+  "06": {
+   "banner": {
+    "file": "assets/photography/ast-0132-token-terrain-treasure-chest-render.png",
+    "h": 44,
+    "bottom": 6
+   },
+   "end": [
+    "assets/photography/ast-0133-game-tile-bonfire-2017.png",
+    "assets/frames/ast-0089-card-back-encounter-level-1.png",
+    "assets/frames/ast-0089-card-back-treasure.png",
+    "assets/photography/ast-0132-token-terrain-gravestone-render.png",
+    "assets/photography/ast-0132-token-terrain-barrels-render.png",
+    "assets/photography/ast-0132-token-terrain-treasure-chest-render.png",
+    "assets/photography/ast-0132-token-spark-dial.png"
+   ]
+  },
+  "07": {
+   "banner": {
+    "file": "assets/photography/ast-0131-miniature-black-knight.png",
+    "h": 96
+   },
+   "end": [
+    "assets/photography/ast-0138-expansion-miniature-stone-guardian.png",
+    "assets/photography/ast-0138-expansion-miniature-mushroom-parent.png",
+    "assets/photography/ast-0138-expansion-miniature-mushroom-child.png",
+    "assets/photography/ast-0138-expansion-miniature-demonic-foliage.png",
+    "assets/photography/ast-0138-expansion-miniature-plow-scarecrow.png",
+    "assets/photography/ast-0138-expansion-miniature-shears-scarecrow.png",
+    "assets/photography/ast-0138-expansion-miniature-black-hollow-mage.png",
+    "assets/photography/ast-0138-expansion-miniature-falchion-skeleton.png",
+    "assets/photography/ast-0138-expansion-miniature-firebomb-hollow.png"
+   ]
+  },
+  "08": {
+   "banner": {
+    "file": "assets/photography/ast-0131-miniature-giant-skeleton-soldier.png",
+    "h": 98
+   },
+   "end": [
+    "assets/photography/ast-0136-dice-set.png",
+    "assets/photography/ast-0131-miniature-giant-skeleton-archer.png"
+   ],
+   "rows": 1
+  },
+  "09": {
+   "banner": {
+    "file": "assets/photography/ast-0138-expansion-miniature-stone-knight.png",
+    "h": 98
+   }
+  },
+  "10": {
+   "banner": {
+    "file": "assets/photography/ast-0138-expansion-miniature-character-mercenary.png",
+    "h": 98
+   },
+   "end": [
+    "assets/photography/ast-0138-expansion-miniature-character-pyromancer.png",
+    "assets/photography/ast-0138-expansion-miniature-character-thief.png",
+    "assets/photography/ast-0138-expansion-miniature-character-sorcerer.png",
+    "assets/photography/ast-0138-expansion-miniature-character-deprived.png",
+    "assets/photography/ast-0138-expansion-miniature-character-cleric.png",
+    "assets/photography/ast-0138-expansion-miniature-armour-black-iron.png",
+    "assets/photography/ast-0138-expansion-miniature-armour-embraced-armour-of-favour.png",
+    "assets/photography/ast-0138-expansion-miniature-armour-gold-trimmed-black-robes.png",
+    "assets/photography/ast-0138-expansion-miniature-armour-black-knight.png",
+    "assets/photography/ast-0138-expansion-miniature-armour-havels.png",
+    "assets/photography/ast-0138-expansion-miniature-armour-dark.png",
+    "assets/photography/ast-0138-expansion-miniature-armour-catarina.png"
+   ]
+  },
+  "11": {
+   "banner": {
+    "file": "assets/photography/ast-0132-token-terrain-bonfire-render.png",
+    "h": 92
+   },
+   "end": [
+    "assets/photography/ast-0133-game-tile-bonfire-2017.png",
+    "assets/photography/ast-0132-token-spark-dial.png"
+   ]
+  },
+  "12": {
+   "banner": {
+    "file": "assets/photography/ast-0138-expansion-miniature-summon-solaire-of-astora.png",
+    "h": 100
+   },
+   "end": [
+    "assets/photography/ast-0138-expansion-miniature-summon-ruined-aflis.png",
+    "assets/photography/ast-0138-expansion-miniature-summon-eygon-of-carim.png",
+    "assets/photography/ast-0138-expansion-miniature-summon-lucatiel-of-mirrah.png",
+    "assets/photography/ast-0138-expansion-miniature-summon-sellsword-luet.png",
+    "assets/photography/ast-0138-expansion-miniature-summon-sirris-of-the-sunless-realms.png",
+    "assets/photography/ast-0138-expansion-miniature-summon-rogue-witch-beatrice.png",
+    "assets/photography/ast-0138-expansion-miniature-summon-horace-the-hushed.png",
+    "assets/photography/ast-0138-expansion-miniature-summon-siegward-of-catarina.png",
+    "assets/photography/ast-0138-expansion-miniature-summon-sword-master.png",
+    "assets/photography/ast-0138-expansion-miniature-invader-kirk-knight-of-thorns.png",
+    "assets/photography/ast-0138-expansion-miniature-invader-armorer-dennis.png",
+    "assets/photography/ast-0138-expansion-miniature-invader-melinda-the-butcher.png",
+    "assets/photography/ast-0138-expansion-miniature-invader-maldron-the-assassin.png",
+    "assets/photography/ast-0138-expansion-miniature-invader-maneater-mildred.png"
+   ]
+  },
+  "13": {
+   "banner": {
+    "file": "assets/photography/ast-0138-expansion-miniature-mimic.png",
+    "h": 98
+   },
+   "end": [
+    "assets/photography/ast-0138-expansion-miniature-mimic-closed.png",
+    "assets/photography/ast-0138-expansion-miniature-mimic.png"
+   ]
+  },
+  "14": {
+   "banner": {
+    "file": "assets/photography/ast-0138-expansion-miniature-crystal-lizard.png",
+    "h": 26,
+    "bottom": 8
+   },
+   "end": [
+    "assets/photography/ast-0132-token-terrain-treasure-chest-render.png",
+    "assets/photography/ast-0132-token-terrain-barrels-render.png",
+    "assets/photography/ast-0132-token-terrain-gravestone-render.png"
+   ]
+  },
+  "15": {
+   "banner": {
+    "file": "assets/photography/ast-0138-expansion-miniature-artorias.png",
+    "h": 96
+   },
+   "end": [
+    "assets/photography/ast-0138-expansion-miniature-great-grey-wolf-sif.png",
+    "assets/photography/ast-0138-expansion-miniature-black-dragon-kalameet.png",
+    "assets/photography/ast-0138-expansion-miniature-smelter-demon.png",
+    "assets/photography/ast-0138-expansion-miniature-executioners-chariot.png",
+    "assets/photography/ast-0138-expansion-miniature-the-pursuer.png",
+    "assets/photography/ast-0138-expansion-miniature-sir-alonne.png"
+   ]
+  },
+  "16": {
+   "banner": {
+    "file": "assets/photography/ast-0138-expansion-miniature-great-grey-wolf-sif.png",
+    "h": 84
+   },
+   "end": [
+    "assets/photography/ast-0117-mega-boss-board-kalameet-forest.png",
+    "assets/photography/ast-0117-mega-boss-board-executioners-chariot-arena.png",
+    "assets/photography/ast-0117-mega-boss-board-executioners-chariot-reverse.png"
+   ]
+  },
+  "17": {
+   "banner": {
+    "file": "assets/photography/ast-0138-expansion-miniature-black-dragon-kalameet.png",
+    "h": 96
+   }
+  },
+  "18": {
+   "banner": {
+    "file": "assets/photography/ast-0132-token-spark-dial.png",
+    "h": 54,
+    "bottom": 9
+   },
+   "end": [
+    "assets/photography/ast-0133-game-tile-tomb-of-giants-fan.png"
+   ]
+  },
+  "19": {
+   "banner": {
+    "file": "assets/photography/ast-0138-expansion-miniature-smelter-demon.png",
+    "h": 84
+   }
+  },
+  "20": {
+   "banner": {
+    "file": "assets/photography/ast-0138-expansion-miniature-invader-xanthous-king-jeremiah.png",
+    "h": 100
+   },
+   "end": [
+    "assets/photography/ast-0138-expansion-miniature-invader-oliver-the-collector.png",
+    "assets/photography/ast-0138-expansion-miniature-invader-brylex.png",
+    "assets/photography/ast-0138-expansion-miniature-invader-marvelous-chester.png",
+    "assets/photography/ast-0138-expansion-miniature-invader-paladin-leeroy.png",
+    "assets/photography/ast-0138-expansion-miniature-invader-fencer-sharron.png",
+    "assets/photography/ast-0138-expansion-miniature-invader-kirk-knight-of-thorns.png",
+    "assets/photography/ast-0138-expansion-miniature-invader-melinda-the-butcher.png",
+    "assets/photography/ast-0138-expansion-miniature-invader-maldron-the-assassin.png",
+    "assets/photography/ast-0138-expansion-miniature-invader-maneater-mildred.png",
+    "assets/photography/ast-0138-expansion-miniature-invader-armorer-dennis.png"
+   ]
+  },
+  "21": {
+   "banner": {
+    "file": "assets/photography/ast-0131-miniature-necromancer.png",
+    "h": 92
+   }
+  },
+  "22": {
+   "banner": {
+    "file": "assets/photography/ast-0138-expansion-miniature-summon-siegward-of-catarina.png",
+    "h": 98
+   }
+  },
+  "app-a": {
+   "banner": {
+    "file": "assets/photography/ast-0138-expansion-miniature-summon-sword-master.png",
+    "h": 100
+   },
+   "end": [
+    "assets/photography/ast-0138-expansion-miniature-silver-knight-spearman.png",
+    "assets/photography/ast-0138-expansion-miniature-ironclad-soldier.png",
+    "assets/photography/ast-0138-expansion-miniature-sir-alonne.png",
+    "assets/photography/ast-0138-expansion-miniature-stone-knight.png",
+    "assets/photography/ast-0138-expansion-miniature-stone-guardian.png",
+    "assets/photography/ast-0138-expansion-miniature-the-pursuer.png",
+    "assets/photography/ast-0138-expansion-miniature-armour-guardian.png"
+   ]
+  },
+  "app-b": {
+   "banner": {
+    "file": "assets/photography/ast-0138-expansion-miniature-the-pursuer.png",
+    "h": 96
+   },
+   "end": [
+    "assets/frames/ast-0089-card-back-encounter-level-1.png",
+    "assets/frames/ast-0089-card-back-treasure.png",
+    "assets/photography/ast-0136-dice-set.png",
+    "assets/photography/ast-0132-token-spark-dial.png"
+   ]
+  }
+ },
+ "captions": {
+  "gravelord-nito": "Gravelord Nito",
+  "array-souls-wounds-conditions-terrain": "",
+  "row-terrain-tokens": "",
+  "dice-set": "The dice",
+  "tomb-of-giants-a": "",
+  "tomb-of-giants-b": "",
+  "tomb-of-giants-c": "",
+  "tomb-of-giants-d": "",
+  "bonfire-2017": "The bonfire tile",
+  "terrain-gravestone-render": "Gravestone",
+  "terrain-barrels-render": "Barrel",
+  "terrain-treasure-chest-render": "Chest",
+  "terrain-bonfire-render": "The bonfire",
+  "spark-dial": "Spark dial",
+  "armour-adventurers": "Adventurer's Armour",
+  "armour-havels": "Havel's Armour",
+  "armour-catarina": "Catarina Armour",
+  "armour-guardian": "Guardian Armour",
+  "armour-dark": "Dark Armour",
+  "armour-crimson-robes": "Crimson Robes",
+  "armour-black-iron": "Black Iron Armour",
+  "armour-embraced-armour-of-favour": "Embraced Armour of Favour",
+  "armour-gold-trimmed-black-robes": "Gold-Trimmed Black Robes",
+  "armour-black-knight": "Black Knight Armour",
+  "summon-solaire-of-astora": "Solaire of Astora",
+  "summon-ruined-aflis": "Ruined Aflis",
+  "summon-eygon-of-carim": "Eygon of Carim",
+  "summon-lucatiel-of-mirrah": "Lucatiel of Mirrah",
+  "summon-sellsword-luet": "Sellsword Luet",
+  "summon-sirris-of-the-sunless-realms": "Sirris of the Sunless Realms",
+  "summon-rogue-witch-beatrice": "Rogue Witch Beatrice",
+  "summon-horace-the-hushed": "Horace the Hushed",
+  "summon-siegward-of-catarina": "Siegward of Catarina",
+  "summon-sword-master": "Sword Master",
+  "invader-kirk-knight-of-thorns": "Kirk, Knight of Thorns",
+  "invader-armorer-dennis": "Armorer Dennis",
+  "invader-melinda-the-butcher": "Melinda the Butcher",
+  "invader-maldron-the-assassin": "Maldron the Assassin",
+  "invader-maneater-mildred": "Maneater Mildred",
+  "invader-oliver-the-collector": "Oliver the Collector",
+  "invader-brylex": "Invader Brylex",
+  "invader-marvelous-chester": "Marvelous Chester",
+  "invader-paladin-leeroy": "Paladin Leeroy",
+  "invader-fencer-sharron": "Fencer Sharron",
+  "invader-xanthous-king-jeremiah": "Xanthous King Jeremiah",
+  "great-grey-wolf-sif": "Great Grey Wolf Sif",
+  "black-dragon-kalameet": "Black Dragon Kalameet",
+  "executioners-chariot": "Executioner's Chariot",
+  "the-pursuer": "Pursuer",
+  "artorias": "Artorias",
+  "mimic-closed": "A mimic at rest",
+  "mimic": "A mimic revealed",
+  "mega-boss-board-kalameet-forest": "Black Dragon Kalameet game board",
+  "mega-boss-board-executioners-chariot-arena": "Executioner's Chariot game board",
+  "mega-boss-board-executioners-chariot-reverse": "Executioner's Chariot game board, second side",
+  "campaign-board-left-half": "",
+  "campaign-board-right-half": "",
+  "card-back-encounter-level-1": "Encounter card, Level 1",
+  "card-back-treasure": "Treasure card",
+  "tomb-of-giants-fan": ""
+ }
 }

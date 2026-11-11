@@ -62,6 +62,15 @@ img.icon { height: 1.12em; width: auto; vertical-align: -0.22em; margin: 0 0.1em
 .flow.small { font-size: 8.5pt; line-height: 11.6pt; }
 .endmark { text-align: center; margin: 14pt 0 0 0; break-before: avoid; }
 .endmark img { width: 150pt; height: auto; opacity: 0.75; }
+/* hero image on the chapter banner: a product render standing on the banner's foot, free to rise above its head */
+.banner { position: relative; }
+.banner img.hero { position: absolute; }
+/* gallery at the foot of a chapter's last page (sizes and the top margin are computed by the build) */
+.endpanel { break-inside: avoid; break-before: avoid; text-align: center; }
+.prow { display: table; margin: 0 auto; }
+.pf { display: table-cell; vertical-align: bottom; padding: 0 9pt; text-align: center; }
+.pf img { display: block; margin: 0 auto; }
+.pc { font: 600 5.6pt/7.6pt "Cinzel"; letter-spacing: 0.13em; text-transform: uppercase; color: #6b5f4a; margin: 4pt auto 0 auto; height: 15pt; text-align: center; hyphens: none; }
 
 /* ---------- headings ---------- */
 h2 { font: 600 10.4pt/1.2 "Cinzel"; letter-spacing: 0.02em; margin: 10pt 0 4.4pt 0; padding-bottom: 2.4pt; border-bottom: 0.5pt solid var(--rule);

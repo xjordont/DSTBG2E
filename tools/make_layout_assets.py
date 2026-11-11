@@ -48,8 +48,51 @@ def figures():
             im = im.crop((int(w * l), int(h * t), int(w * r), int(h * b)))
         if max(im.size) > 1600:
             s = 1600 / max(im.size); im = im.resize((round(im.width * s), round(im.height * s)), Image.LANCZOS)
+        im = withhold(im, f.get('masks', []), f.get('badges', []))
         im.save(OUT / 'fig' / pathlib.Path(f['file']).name); n += 1
     return n
+
+
+def withhold(im, masks, badges):
+    """Blank the areas of a plate that are withheld from the book (painted illustrations under provenance
+    review) and redraw any call-out badge the blanking removed. Boxes and badge centres are fractions of the
+    cropped plate. A mask is {"box": [l, t, r, b], "shape": "rect" | "ellipse", "fill": "auto" | "#rrggbb",
+    "feather": px}; "auto" takes the median colour of a thin ring just outside the box."""
+    from PIL import ImageDraw, ImageFilter, ImageFont
+    if not masks and not badges:
+        return im
+    im = im.convert('RGBA'); w, h = im.size
+    for m in masks:
+        l, t, r, b = m['box']; box = (int(w * l), int(h * t), int(w * r), int(h * b))
+        fill = m.get('fill', 'auto')
+        if fill == 'auto':
+            g = max(4, w // 160); px = im.convert('RGB').load(); ring = []
+            for x in range(max(0, box[0] - g), min(w, box[2] + g), 3):
+                for y in (max(0, box[1] - g), min(h - 1, box[3] + g - 1)):
+                    ring.append(px[x, y])
+            for y in range(max(0, box[1] - g), min(h, box[3] + g), 3):
+                for x in (max(0, box[0] - g), min(w - 1, box[2] + g - 1)):
+                    ring.append(px[x, y])
+            ring.sort(key=lambda c: sum(c)); fill = ring[len(ring) // 2]
+        layer = Image.new('RGBA', im.size, fill); mk = Image.new('L', im.size, 0); d = ImageDraw.Draw(mk)
+        (d.ellipse if m.get('shape') == 'ellipse' else d.rectangle)(box, fill=255)
+        if m.get('feather', 8):
+            mk = mk.filter(ImageFilter.GaussianBlur(m.get('feather', 8)))
+        im.paste(layer, (0, 0), mk)
+        if m.get('outline'):
+            d = ImageDraw.Draw(im)
+            (d.ellipse if m.get('shape') == 'ellipse' else d.rectangle)(box, outline=m['outline'], width=m.get('outline_width', max(2, w // 300)))
+    if badges:
+        font_file = ROOT / 'assets/fonts/static/LibreCaslonText-Regular.ttf'
+        for x, y, label, *rest in badges:
+            rad = int(w * (rest[0] if rest else 0.03)); cx, cy = int(w * x), int(h * y)
+            glow = Image.new('RGBA', im.size, (0, 0, 0, 0)); gd = ImageDraw.Draw(glow)
+            gd.ellipse((cx - rad, cy - rad, cx + rad, cy + rad), fill=(226, 234, 170, 255))
+            im.alpha_composite(glow.filter(ImageFilter.GaussianBlur(max(1, rad // 9))))
+            font = ImageFont.truetype(str(font_file), int(rad * 1.45))
+            d = ImageDraw.Draw(im); bb = d.textbbox((0, 0), str(label), font=font)
+            d.text((cx - (bb[0] + bb[2]) / 2, cy - (bb[1] + bb[3]) / 2), str(label), font=font, fill=(52, 54, 40, 255))
+    return im
 
 
 if __name__ == '__main__':

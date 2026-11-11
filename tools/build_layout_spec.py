@@ -104,11 +104,13 @@ A('|---|---|---|')
 A('| Cover | AST-0142 (lava-scale texture), logo-free crop | field of scales fading to near-black in the lower half; title set in the display face above it. The DARK SOULS wordmark is not placed (nominative use only, Gate 1 OQ-33) |')
 A('| Chapter banner (hero slot) | per-chapter hero image where one is assigned (table below); otherwise AST-0142 crop | dark gradient under the whole title; number badge in gold |')
 A('| Chapter end | AST-0082 (knot, rule, knot divider) | centred beneath the balanced columns; omitted when it would stand alone on a page |')
+A('| Chapter-end gallery | product images from the chapter\'s pool (table below) | fills the empty foot of a chapter\'s last page |')
+A('| Back cover | AST-0143 (dark stone ground with its light panel) | the opening and closing lines of the Introduction, centred in the panel |')
 A('| Folio | AST-0075 (knot square) | one either side of the page number |')
 A('| Front-matter rule | AST-0082 | under the Foreword and Contents titles |')
 A('| Example box | tint and left rule in node gold | border and tint repeat on both parts when a box breaks |')
 A('| Anatomy figures | see the figure table below | captions keyed to the numbered call-outs of each plate |')
-A('| Icon reference page | every icon in `assets/icons/` | back matter, after the appendices |')
+A('| Icon reference page | every icon the rules use (see §5) | back matter, after the appendices; each entry links to the first section that uses the icon |')
 A('')
 A('Figures placed (from `layout/tuning.json`):')
 A('')
@@ -118,14 +120,34 @@ for f in tun.get('figures', []):
     pos = f"top of chapter {f['chapter']}" if f['at'] == 'top' else (f"end of chapter {f['chapter']}" if f['at'] == 'end' else f"in {f['section'].replace('sec-', '§').replace('-', '.')}")
     A(f"| {f.get('asset', '')} | {pos} | {f.get('width', '')} | {re.sub(r'<[^>]+>', '', f.get('caption', ''))[:110]} |")
 A('')
+def _aid(path):
+    m = re.search(r'ast-(\d{4})', path); return f'AST-{m.group(1)}' if m else ''
+def _name(path):
+    return re.sub(r'^ast-\d{4}-', '', pathlib.Path(path).stem)
 if tun.get('heroes'):
-    A('Chapter hero images (from `layout/tuning.json`):')
+    A('Chapter openers: every chapter and appendix has a designated hero image on its banner (from `layout/tuning.json`, key `heroes`). A render with a transparent ground stands on the foot of the banner and may rise above its head into the top margin; a wide image sits inside the banner. The banner reserves the hero\'s width so that the title never runs under it.')
     A('')
-    A('| Chapter | Hero image | Subject |')
-    A('|---|---|---|')
+    A('| Opener | Hero asset | File | Height on the banner |')
+    A('|---|---|---|---|')
     for ch, h in sorted(tun['heroes'].items()):
-        A(f"| {ch} | `{h.get('file', '')}` | {h.get('subject', '')} |")
+        bn = h.get('banner')
+        if bn:
+            label = f"Appendix {ch[4:].upper()}" if ch.startswith('app-') else f'Chapter {int(ch)}'
+            A(f"| {label} | {_aid(bn['file'])} | `{_name(bn['file'])}` | {bn['h']} pt |")
     A('')
+    A('Chapter-end galleries: where the last page of a chapter has 114 pt or more of empty text block under the closing ornament, the build fills it with product images from that chapter\'s pool, in one to three centred rows with captions in the display face. The build measures the room on a first pass and sizes the rows on a second; no image is set larger than 150 ppi allows; a gallery that would not fit is withdrawn. A gallery that nearly fills the room stands on the foot of the text block, and a smaller one is centred in the room.')
+    A('')
+    A('| Chapter | Gallery pool (in order; the build places as many as fit) |')
+    A('|---|---|')
+    for ch, h in sorted(tun['heroes'].items()):
+        if h.get('end'):
+            label = f"Appendix {ch[4:].upper()}" if ch.startswith('app-') else f'Chapter {int(ch)}'
+            A(f"| {label} | {', '.join(f'{_aid(f)} `{_name(f)}`' for f in h['end'])} |")
+    A('')
+    masked = [f for f in tun.get('figures', []) if f.get('masks')]
+    if masked:
+        A('Withheld areas: ' + ', '.join(f.get('asset', '') for f in masked) + ' are placed with their painted illustrations blanked (`masks` in the tuning file; `withhold()` in `tools/make_layout_assets.py`), and call-out badges removed by the blanking are redrawn. The frames, icons, values, and call-outs are unchanged. The source plates in `assets/diagrams/` are untouched, so the blanking is removed by deleting the `masks` keys.')
+        A('')
 else:
     A('Chapter hero images: none assigned yet; every banner uses the AST-0142 crop.')
     A('')
@@ -171,10 +193,23 @@ out = [r for r in man.values() if r['Status'].strip().upper().startswith(('BLOCK
 A('| Asset ID | Description | Status | What is needed |')
 A('|---|---|---|---|')
 for r in out:
-    need = 'ruling on FromSoftware / Bandai Namco key art (Gate 1 OQ-33)' if 'PROVENANCE' in r['Licensing'].upper() else ('extraction pending' if r['Status'].upper().startswith('TO EXTRACT') else 'source or ruling needed')
+    need = 'ruling on FromSoftware / Bandai Namco key art (Gate 1 OQ-33)' if 'PROVENANCE' in r['Licensing'].upper() else ('extraction pending' if r['Status'].upper().startswith('TO EXTRACT') else next((s for s in re.split(r'(?<=[.;]) ', r['Notes']) if not s.startswith(('file', '(sub-entry'))), 'source or ruling needed')[:170])
     A(f"| {r['Asset ID']} | {r['Description'][:80]} | {r['Status']} | {need} |")
 A('')
 A('Painted key art is withheld until the rights question is answered, so chapter banners and chapter-end panels use product imagery and textures only. The rule booklets for nine bosses were not supplied (see `14_open_issues.md`).')
+A('')
+A('### Substitutions')
+A('')
+A('| Original | Substitute | Where recorded |')
+A('|---|---|---|')
+A('| OptimusPrinceps (display face of the source books) | Cinzel, SIL OFL | manifest FONT-01 |')
+A('| Adobe Caslon Pro (body face) | Libre Caslon Text, SIL OFL | manifest FONT-02 |')
+A('| Helvetica (small print) | none: small print is set in the body face | manifest FONT-03 |')
+A('| DARK SOULS logo lock-up on the cover (AST-0001 to AST-0006) | the title set in Cinzel; nominative use only | Gate 1 OQ-33; manifest placement column |')
+A('| Painted cover and chapter art (held under Provenance Review) | cover: logo-free crop of the lava-scale texture AST-0142; openers and chapter ends: miniature, tile, board, dice, and token renders | `22_asset_extraction_log.md`, Provenance Review |')
+A('| Painted illustrations inside the placed anatomy plates | blanked areas (see Withheld areas, §6) | `layout/tuning.json` |')
+A('| Card-style example boxes and framed tables (AST-0083 to AST-0088) | boxes and tables drawn in CSS | manifest placement column |')
+A('| Source diagrams that carry source text or show unused components | not placed; the seven plates listed in §6 are placed | manifest placement column |')
 A('')
 A('## 13. Build')
 A('')

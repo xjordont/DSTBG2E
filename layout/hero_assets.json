@@ -1,0 +1,803 @@
+{
+ "heroes": [
+  {
+   "file": "assets/photography/ast-0131-miniature-gravelord-nito.png",
+   "subject": "Gravelord Nito main-boss miniature render",
+   "width": 903,
+   "height": 410,
+   "has_alpha": true,
+   "suggested_for": "chapter 01 Introduction"
+  },
+  {
+   "file": "assets/photography/ast-0132-token-array-souls-wounds-conditions-terrain.png",
+   "subject": "Token and terrain-token array as arranged on p.6 (soul, wound, aggro, luck, heroic action, estus, ember, party, condition and terrain tokens, spark dial), captions omitted",
+   "width": 3885,
+   "height": 1359,
+   "has_alpha": true,
+   "suggested_for": "chapter 02 Game Components"
+  },
+  {
+   "file": "assets/photography/ast-0138-expansion-miniature-character-cleric.png",
+   "subject": "Cleric character miniature render (Characters expansion, 300 ppi)",
+   "width": 379,
+   "height": 438,
+   "has_alpha": true,
+   "suggested_for": "chapter 03 Characters"
+  },
+  {
+   "file": "assets/photography/ast-0138-expansion-miniature-character-pyromancer.png",
+   "subject": "Pyromancer character miniature render (Characters expansion, 300 ppi)",
+   "width": 302,
+   "height": 614,
+   "has_alpha": true,
+   "suggested_for": "chapter 03 Characters"
+  },
+  {
+   "file": "assets/photography/ast-0138-expansion-miniature-character-thief.png",
+   "subject": "Thief character miniature render (Characters expansion, 300 ppi)",
+   "width": 399,
+   "height": 426,
+   "has_alpha": true,
+   "suggested_for": "chapter 03 Characters"
+  },
+  {
+   "file": "assets/photography/ast-0138-expansion-miniature-character-sorcerer.png",
+   "subject": "Sorcerer character miniature render (Characters expansion)",
+   "width": 394,
+   "height": 482,
+   "has_alpha": true,
+   "suggested_for": "chapter 03 Characters"
+  },
+  {
+   "file": "assets/photography/ast-0138-expansion-miniature-character-deprived.png",
+   "subject": "Deprived character miniature render (Characters expansion)",
+   "width": 345,
+   "height": 465,
+   "has_alpha": true,
+   "suggested_for": "chapter 03 Characters"
+  },
+  {
+   "file": "assets/photography/ast-0135-character-dashboard-lower-section-a.png",
+   "subject": "Character dashboard, lower section (ability box, stat grid, equipment-slot labels, endurance bar), clean, no call-outs",
+   "width": 1019,
+   "height": 570,
+   "has_alpha": true,
+   "suggested_for": "chapter 04 Equipment"
+  },
+  {
+   "file": "assets/photography/ast-0138-expansion-miniature-armour-black-knight.png",
+   "subject": "Black Knight Armour set miniature render (Characters expansion)",
+   "width": 463,
+   "height": 532,
+   "has_alpha": true,
+   "suggested_for": "chapter 04 Equipment"
+  },
+  {
+   "file": "assets/photography/ast-0138-expansion-miniature-armour-adventurers.png",
+   "subject": "Adventurer's Armour set miniature render (Characters expansion)",
+   "width": 489,
+   "height": 547,
+   "has_alpha": true,
+   "suggested_for": "chapter 04 Equipment"
+  },
+  {
+   "file": "assets/photography/ast-0138-expansion-miniature-armour-havels.png",
+   "subject": "Havel's Armour set miniature render (Characters expansion)",
+   "width": 275,
+   "height": 569,
+   "has_alpha": true,
+   "suggested_for": "chapter 04 Equipment"
+  },
+  {
+   "file": "assets/photography/ast-0133-game-tile-tomb-of-giants-fan.png",
+   "subject": "Fan of the four double-sided Tomb of Giants game tiles as arranged on p.6",
+   "width": 2630,
+   "height": 1245,
+   "has_alpha": true,
+   "suggested_for": "chapter 05 Tiles and Nodes"
+  },
+  {
+   "file": "assets/photography/ast-0135-character-dashboard-lower-section-b.png",
+   "subject": "Character dashboard, lower section with printed stat values (second dashboard state on p.8), clean",
+   "width": 1019,
+   "height": 449,
+   "has_alpha": false,
+   "suggested_for": "chapter 06 Setup"
+  },
+  {
+   "file": "assets/photography/ast-0134-campaign-board-left-half.png",
+   "subject": "Campaign board, left half (2022 core, p.13)",
+   "width": 979,
+   "height": 250,
+   "has_alpha": false,
+   "suggested_for": "chapter 07 Gameplay"
+  },
+  {
+   "file": "assets/photography/ast-0136-dice-set.png",
+   "subject": "Dice set as arranged on p.6 (5 black, 4 blue, 2 orange, 4 green)",
+   "width": 1260,
+   "height": 1050,
+   "has_alpha": true,
+   "suggested_for": "chapter 08 Combat Basics"
+  },
+  {
+   "file": "assets/photography/ast-0138-expansion-miniature-stone-knight.png",
+   "subject": "Stone Knight miniature render (Darkroot)",
+   "width": 705,
+   "height": 761,
+   "has_alpha": true,
+   "suggested_for": "chapter 09 Enemy Turn"
+  },
+  {
+   "file": "assets/photography/ast-0138-expansion-miniature-stone-guardian.png",
+   "subject": "Stone Guardian miniature render (Darkroot)",
+   "width": 739,
+   "height": 755,
+   "has_alpha": true,
+   "suggested_for": "chapter 09 Enemy Turn"
+  },
+  {
+   "file": "assets/photography/ast-0138-expansion-miniature-character-mercenary.png",
+   "subject": "Mercenary character miniature render (Characters expansion)",
+   "width": 402,
+   "height": 481,
+   "has_alpha": true,
+   "suggested_for": "chapter 10 Character Turn"
+  },
+  {
+   "file": "assets/photography/ast-0138-expansion-miniature-armour-black-iron.png",
+   "subject": "Black Iron Armour set miniature render (Characters expansion)",
+   "width": 305,
+   "height": 468,
+   "has_alpha": true,
+   "suggested_for": "chapter 10 Character Turn"
+  },
+  {
+   "file": "assets/photography/ast-0133-game-tile-bonfire-2017.png",
+   "subject": "Bonfire tile (2017 core set), clean tile art without the anatomy call-outs",
+   "width": 788,
+   "height": 788,
+   "has_alpha": false,
+   "suggested_for": "chapter 11 Returning to the Bonfire"
+  },
+  {
+   "file": "assets/photography/ast-0138-expansion-miniature-summon-ruined-aflis.png",
+   "subject": "Summon: Ruined Aflis miniature render (Phantoms)",
+   "width": 382,
+   "height": 698,
+   "has_alpha": true,
+   "suggested_for": "chapter 12 Phantoms"
+  },
+  {
+   "file": "assets/photography/ast-0138-expansion-miniature-summon-solaire-of-astora.png",
+   "subject": "Summon: Solaire of Astora miniature render (Phantoms)",
+   "width": 340,
+   "height": 528,
+   "has_alpha": true,
+   "suggested_for": "chapter 12 Phantoms"
+  },
+  {
+   "file": "assets/photography/ast-0138-expansion-miniature-invader-kirk-knight-of-thorns.png",
+   "subject": "Invader: Kirk, Knight of Thorns / Longfinger Kirk miniature render (Phantoms)",
+   "width": 376,
+   "height": 567,
+   "has_alpha": true,
+   "suggested_for": "chapter 12 Phantoms"
+  },
+  {
+   "file": "assets/photography/ast-0138-expansion-miniature-mimic.png",
+   "subject": "Mimic miniature render, open (Explorers)",
+   "width": 265,
+   "height": 381,
+   "has_alpha": true,
+   "suggested_for": "chapter 13 Mimics"
+  },
+  {
+   "file": "assets/photography/ast-0138-expansion-miniature-artorias.png",
+   "subject": "Artorias miniature render (Darkroot)",
+   "width": 923,
+   "height": 794,
+   "has_alpha": true,
+   "suggested_for": "chapter 15 Boss Encounters"
+  },
+  {
+   "file": "assets/photography/ast-0131-miniature-black-knight.png",
+   "subject": "Black Knight mini-boss miniature render",
+   "width": 374,
+   "height": 382,
+   "has_alpha": true,
+   "suggested_for": "chapter 15 Boss Encounters"
+  },
+  {
+   "file": "assets/photography/ast-0138-expansion-miniature-great-grey-wolf-sif.png",
+   "subject": "Great Grey Wolf Sif miniature render (Darkroot)",
+   "width": 2175,
+   "height": 1361,
+   "has_alpha": true,
+   "suggested_for": "chapter 16 Boss Turns"
+  },
+  {
+   "file": "assets/photography/ast-0138-expansion-miniature-black-dragon-kalameet.png",
+   "subject": "Black Dragon Kalameet mega-boss miniature render",
+   "width": 2036,
+   "height": 1701,
+   "has_alpha": true,
+   "suggested_for": "chapter 17 Boss Special Rules"
+  },
+  {
+   "file": "assets/photography/ast-0138-expansion-miniature-executioners-chariot.png",
+   "subject": "Executioner's Chariot mega-boss miniature render",
+   "width": 708,
+   "height": 484,
+   "has_alpha": true,
+   "suggested_for": "chapter 17 Boss Special Rules"
+  },
+  {
+   "file": "assets/photography/ast-0134-campaign-board-right-half.png",
+   "subject": "Campaign board, right half (2022 core, p.13)",
+   "width": 979,
+   "height": 250,
+   "has_alpha": false,
+   "suggested_for": "chapter 18 Campaign Play"
+  },
+  {
+   "file": "assets/photography/ast-0117-mega-boss-board-kalameet-forest.png",
+   "subject": "Black Dragon Kalameet mega-boss game board (forest clearing, node markers printed on the board)",
+   "width": 1352,
+   "height": 1352,
+   "has_alpha": false,
+   "suggested_for": "chapter 19 Campaigns"
+  },
+  {
+   "file": "assets/photography/ast-0138-expansion-miniature-smelter-demon.png",
+   "subject": "Smelter Demon miniature render (Iron Keep)",
+   "width": 780,
+   "height": 502,
+   "has_alpha": true,
+   "suggested_for": "chapter 19 Campaigns"
+  },
+  {
+   "file": "assets/photography/ast-0138-expansion-miniature-invader-oliver-the-collector.png",
+   "subject": "Invader: Oliver the Collector miniature render (Phantoms)",
+   "width": 725,
+   "height": 647,
+   "has_alpha": true,
+   "suggested_for": "chapter 20 Player versus Player"
+  },
+  {
+   "file": "assets/photography/ast-0138-expansion-miniature-invader-xanthous-king-jeremiah.png",
+   "subject": "Invader: Xanthous King Jeremiah miniature render (Phantoms)",
+   "width": 340,
+   "height": 730,
+   "has_alpha": true,
+   "suggested_for": "chapter 20 Player versus Player"
+  },
+  {
+   "file": "assets/photography/ast-0138-expansion-miniature-invader-brylex.png",
+   "subject": "Invader: Invader Brylex miniature render (Phantoms)",
+   "width": 657,
+   "height": 510,
+   "has_alpha": true,
+   "suggested_for": "chapter 20 Player versus Player"
+  },
+  {
+   "file": "assets/photography/ast-0132-token-row-terrain-tokens.png",
+   "subject": "Terrain token row as arranged on p.6 (gravestone, shrine, barrel, lever, trap, skeleton ball and neighbours)",
+   "width": 3336,
+   "height": 317,
+   "has_alpha": true,
+   "suggested_for": "chapter 21 Glossary"
+  },
+  {
+   "file": "assets/photography/ast-0138-expansion-miniature-summon-siegward-of-catarina.png",
+   "subject": "Summon: Siegward of Catarina miniature render (Phantoms)",
+   "width": 333,
+   "height": 506,
+   "has_alpha": true,
+   "suggested_for": "chapter 22 F.A.Q."
+  },
+  {
+   "file": "assets/photography/ast-0138-expansion-miniature-summon-sword-master.png",
+   "subject": "Summon: Sword Master miniature render (Phantoms)",
+   "width": 389,
+   "height": 601,
+   "has_alpha": true,
+   "suggested_for": "Appendix A"
+  },
+  {
+   "file": "assets/photography/ast-0138-expansion-miniature-the-pursuer.png",
+   "subject": "The Pursuer miniature render (Explorers)",
+   "width": 332,
+   "height": 417,
+   "has_alpha": true,
+   "suggested_for": "Appendix A"
+  },
+  {
+   "file": "assets/photography/ast-0117-mega-boss-board-executioners-chariot-arena.png",
+   "subject": "Executioner's Chariot mega-boss game board (round arena)",
+   "width": 654,
+   "height": 654,
+   "has_alpha": false,
+   "suggested_for": "theme: mega bosses (spare)"
+  },
+  {
+   "file": "assets/photography/ast-0138-expansion-miniature-mushroom-parent.png",
+   "subject": "Mushroom Parent miniature render (Darkroot)",
+   "width": 532,
+   "height": 603,
+   "has_alpha": true,
+   "suggested_for": "theme: enemies (spare)"
+  },
+  {
+   "file": "assets/photography/ast-0138-expansion-miniature-plow-scarecrow.png",
+   "subject": "Plow Scarecrow miniature render (Darkroot)",
+   "width": 538,
+   "height": 502,
+   "has_alpha": true,
+   "suggested_for": "theme: enemies (spare)"
+  },
+  {
+   "file": "assets/photography/ast-0138-expansion-miniature-demonic-foliage.png",
+   "subject": "Demonic Foliage miniature render (Darkroot)",
+   "width": 414,
+   "height": 535,
+   "has_alpha": true,
+   "suggested_for": "theme: enemies (spare)"
+  },
+  {
+   "file": "assets/photography/ast-0138-expansion-miniature-armour-catarina.png",
+   "subject": "Catarina Armour set miniature render (Characters expansion)",
+   "width": 322,
+   "height": 483,
+   "has_alpha": true,
+   "suggested_for": "theme: characters, armour sets (spare)"
+  },
+  {
+   "file": "assets/photography/ast-0138-expansion-miniature-armour-guardian.png",
+   "subject": "Guardian Armour set miniature render (Characters expansion)",
+   "width": 344,
+   "height": 514,
+   "has_alpha": true,
+   "suggested_for": "theme: characters, armour sets (spare)"
+  },
+  {
+   "file": "assets/photography/ast-0138-expansion-miniature-armour-embraced-armour-of-favour.png",
+   "subject": "Embraced Armour of Favour set miniature render (Characters expansion)",
+   "width": 365,
+   "height": 505,
+   "has_alpha": true,
+   "suggested_for": "theme: characters, armour sets (spare)"
+  },
+  {
+   "file": "assets/photography/ast-0138-expansion-miniature-armour-crimson-robes.png",
+   "subject": "Crimson Robes set miniature render (Characters expansion)",
+   "width": 278,
+   "height": 610,
+   "has_alpha": true,
+   "suggested_for": "theme: characters, armour sets (spare)"
+  },
+  {
+   "file": "assets/photography/ast-0138-expansion-miniature-armour-dark.png",
+   "subject": "Dark Armour set miniature render (Characters expansion)",
+   "width": 357,
+   "height": 505,
+   "has_alpha": true,
+   "suggested_for": "theme: characters, armour sets (spare)"
+  },
+  {
+   "file": "assets/photography/ast-0138-expansion-miniature-armour-gold-trimmed-black-robes.png",
+   "subject": "Gold-Trimmed Black Robes set miniature render (Characters expansion)",
+   "width": 364,
+   "height": 425,
+   "has_alpha": true,
+   "suggested_for": "theme: characters, armour sets (spare)"
+  },
+  {
+   "file": "assets/photography/ast-0138-expansion-miniature-summon-eygon-of-carim.png",
+   "subject": "Summon: Eygon of Carim miniature render (Phantoms)",
+   "width": 422,
+   "height": 587,
+   "has_alpha": true,
+   "suggested_for": "theme: phantoms, summons (spare)"
+  },
+  {
+   "file": "assets/photography/ast-0138-expansion-miniature-summon-lucatiel-of-mirrah.png",
+   "subject": "Summon: Lucatiel of Mirrah miniature render (Phantoms)",
+   "width": 296,
+   "height": 588,
+   "has_alpha": true,
+   "suggested_for": "theme: phantoms, summons (spare)"
+  },
+  {
+   "file": "assets/photography/ast-0138-expansion-miniature-summon-sellsword-luet.png",
+   "subject": "Summon: Sellsword Luet miniature render (Phantoms)",
+   "width": 426,
+   "height": 506,
+   "has_alpha": true,
+   "suggested_for": "theme: phantoms, summons (spare)"
+  },
+  {
+   "file": "assets/photography/ast-0138-expansion-miniature-summon-sirris-of-the-sunless-realms.png",
+   "subject": "Summon: Sirris of the Sunless Realms miniature render (Phantoms)",
+   "width": 470,
+   "height": 487,
+   "has_alpha": true,
+   "suggested_for": "theme: phantoms, summons (spare)"
+  },
+  {
+   "file": "assets/photography/ast-0138-expansion-miniature-summon-rogue-witch-beatrice.png",
+   "subject": "Summon: Rogue Witch Beatrice miniature render (Phantoms)",
+   "width": 323,
+   "height": 502,
+   "has_alpha": true,
+   "suggested_for": "theme: phantoms, summons (spare)"
+  },
+  {
+   "file": "assets/photography/ast-0138-expansion-miniature-invader-melinda-the-butcher.png",
+   "subject": "Invader: Melinda the Butcher miniature render (Phantoms)",
+   "width": 384,
+   "height": 519,
+   "has_alpha": true,
+   "suggested_for": "theme: phantoms, invaders (spare)"
+  },
+  {
+   "file": "assets/photography/ast-0138-expansion-miniature-invader-maldron-the-assassin.png",
+   "subject": "Invader: Maldron the Assassin miniature render (Phantoms)",
+   "width": 517,
+   "height": 442,
+   "has_alpha": true,
+   "suggested_for": "theme: phantoms, invaders (spare)"
+  },
+  {
+   "file": "assets/photography/ast-0138-expansion-miniature-invader-maneater-mildred.png",
+   "subject": "Invader: Maneater Mildred miniature render (Phantoms)",
+   "width": 390,
+   "height": 509,
+   "has_alpha": true,
+   "suggested_for": "theme: phantoms, invaders (spare)"
+  },
+  {
+   "file": "assets/photography/ast-0138-expansion-miniature-invader-marvelous-chester.png",
+   "subject": "Invader: Marvelous Chester miniature render (Phantoms)",
+   "width": 382,
+   "height": 552,
+   "has_alpha": true,
+   "suggested_for": "theme: phantoms, invaders (spare)"
+  },
+  {
+   "file": "assets/photography/ast-0138-expansion-miniature-invader-paladin-leeroy.png",
+   "subject": "Invader: Paladin Leeroy miniature render (Phantoms)",
+   "width": 341,
+   "height": 538,
+   "has_alpha": true,
+   "suggested_for": "theme: phantoms, invaders (spare)"
+  },
+  {
+   "file": "assets/photography/ast-0138-expansion-miniature-invader-fencer-sharron.png",
+   "subject": "Invader: Fencer Sharron miniature render (Phantoms)",
+   "width": 475,
+   "height": 600,
+   "has_alpha": true,
+   "suggested_for": "theme: phantoms, invaders (spare)"
+  }
+ ],
+ "panels": [
+  {
+   "file": "assets/photography/ast-0117-mega-boss-board-executioners-chariot-reverse.png",
+   "subject": "Executioner's Chariot game board, second board image on p.9",
+   "width": 604,
+   "height": 604,
+   "has_alpha": false,
+   "suggested_for": "chapter-end panel"
+  },
+  {
+   "file": "assets/photography/ast-0131-miniature-cleric.png",
+   "subject": "Cleric miniature render (2022 core)",
+   "width": 189,
+   "height": 218,
+   "has_alpha": true,
+   "suggested_for": "chapter-end panel"
+  },
+  {
+   "file": "assets/photography/ast-0131-miniature-pyromancer.png",
+   "subject": "Pyromancer miniature render (2022 core)",
+   "width": 150,
+   "height": 307,
+   "has_alpha": true,
+   "suggested_for": "chapter-end panel"
+  },
+  {
+   "file": "assets/photography/ast-0131-miniature-thief.png",
+   "subject": "Thief miniature render (2022 core)",
+   "width": 199,
+   "height": 212,
+   "has_alpha": true,
+   "suggested_for": "chapter-end panel"
+  },
+  {
+   "file": "assets/photography/ast-0131-miniature-giant-skeleton-archer.png",
+   "subject": "Giant Skeleton Archer miniature render",
+   "width": 307,
+   "height": 365,
+   "has_alpha": true,
+   "suggested_for": "chapter-end panel"
+  },
+  {
+   "file": "assets/photography/ast-0131-miniature-necromancer.png",
+   "subject": "Necromancer miniature render",
+   "width": 162,
+   "height": 255,
+   "has_alpha": true,
+   "suggested_for": "chapter-end panel"
+  },
+  {
+   "file": "assets/photography/ast-0131-miniature-giant-skeleton-soldier.png",
+   "subject": "Giant Skeleton Soldier miniature render",
+   "width": 261,
+   "height": 362,
+   "has_alpha": true,
+   "suggested_for": "chapter-end panel"
+  },
+  {
+   "file": "assets/photography/ast-0131-miniature-skeleton-archer.png",
+   "subject": "Skeleton Archer miniature render",
+   "width": 148,
+   "height": 299,
+   "has_alpha": true,
+   "suggested_for": "chapter-end panel"
+  },
+  {
+   "file": "assets/photography/ast-0131-miniature-skeleton-beast.png",
+   "subject": "Skeleton Beast miniature render",
+   "width": 379,
+   "height": 218,
+   "has_alpha": true,
+   "suggested_for": "chapter-end panel"
+  },
+  {
+   "file": "assets/photography/ast-0131-miniature-skeleton-soldier.png",
+   "subject": "Skeleton Soldier miniature render",
+   "width": 211,
+   "height": 266,
+   "has_alpha": true,
+   "suggested_for": "chapter-end panel"
+  },
+  {
+   "file": "assets/photography/ast-0132-token-spark-dial.png",
+   "subject": "Spark dial (2022 core, p.6)",
+   "width": 175,
+   "height": 175,
+   "has_alpha": true,
+   "suggested_for": "chapter-end panel"
+  },
+  {
+   "file": "assets/photography/ast-0132-token-terrain-gravestone-render.png",
+   "subject": "Gravestone terrain piece render (Explorers)",
+   "width": 149,
+   "height": 254,
+   "has_alpha": true,
+   "suggested_for": "chapter-end panel"
+  },
+  {
+   "file": "assets/photography/ast-0132-token-terrain-bonfire-render.png",
+   "subject": "Bonfire terrain piece render (Explorers)",
+   "width": 149,
+   "height": 220,
+   "has_alpha": true,
+   "suggested_for": "chapter-end panel"
+  },
+  {
+   "file": "assets/photography/ast-0132-token-terrain-barrels-render.png",
+   "subject": "Barrels terrain piece render (Explorers)",
+   "width": 92,
+   "height": 100,
+   "has_alpha": true,
+   "suggested_for": "chapter-end panel"
+  },
+  {
+   "file": "assets/photography/ast-0132-token-terrain-treasure-chest-render.png",
+   "subject": "Treasure Chest terrain piece render (Explorers)",
+   "width": 267,
+   "height": 132,
+   "has_alpha": true,
+   "suggested_for": "chapter-end panel"
+  },
+  {
+   "file": "assets/photography/ast-0132-token-enemy-tokens.png",
+   "subject": "Enemy token set as arranged on p.6 (six enemy types)",
+   "width": 856,
+   "height": 1067,
+   "has_alpha": true,
+   "suggested_for": "chapter-end panel"
+  },
+  {
+   "file": "assets/photography/ast-0132-token-row-soul-and-wound-tokens.png",
+   "subject": "Soul and wound token row as arranged on p.6 (1/3/5 soul tokens, 1/3/5 wound tokens and neighbours)",
+   "width": 3645,
+   "height": 250,
+   "has_alpha": true,
+   "suggested_for": "chapter-end panel"
+  },
+  {
+   "file": "assets/photography/ast-0133-game-tile-tomb-of-giants-a.png",
+   "subject": "Tomb of Giants game tile A (2022 core, tile fan on p.6)",
+   "width": 284,
+   "height": 284,
+   "has_alpha": false,
+   "suggested_for": "chapter-end panel"
+  },
+  {
+   "file": "assets/photography/ast-0133-game-tile-tomb-of-giants-b.png",
+   "subject": "Tomb of Giants game tile B (2022 core)",
+   "width": 284,
+   "height": 284,
+   "has_alpha": false,
+   "suggested_for": "chapter-end panel"
+  },
+  {
+   "file": "assets/photography/ast-0133-game-tile-tomb-of-giants-c.png",
+   "subject": "Tomb of Giants game tile C (2022 core)",
+   "width": 284,
+   "height": 284,
+   "has_alpha": false,
+   "suggested_for": "chapter-end panel"
+  },
+  {
+   "file": "assets/photography/ast-0133-game-tile-tomb-of-giants-d.png",
+   "subject": "Tomb of Giants game tile D (2022 core)",
+   "width": 284,
+   "height": 284,
+   "has_alpha": false,
+   "suggested_for": "chapter-end panel"
+  },
+  {
+   "file": "assets/photography/ast-0134-campaign-board-full-strip.png",
+   "subject": "Campaign board, full strip (2022 core, p.6)",
+   "width": 1004,
+   "height": 166,
+   "has_alpha": false,
+   "suggested_for": "chapter-end panel"
+  },
+  {
+   "file": "assets/photography/ast-0136-dice-black.png",
+   "subject": "Black die (2022 core, p.6)",
+   "width": 63,
+   "height": 63,
+   "has_alpha": true,
+   "suggested_for": "chapter-end panel"
+  },
+  {
+   "file": "assets/photography/ast-0136-dice-blue.png",
+   "subject": "Blue die (2022 core, p.6)",
+   "width": 64,
+   "height": 62,
+   "has_alpha": true,
+   "suggested_for": "chapter-end panel"
+  },
+  {
+   "file": "assets/photography/ast-0136-dice-orange.png",
+   "subject": "Orange die (2022 core, p.6)",
+   "width": 64,
+   "height": 62,
+   "has_alpha": true,
+   "suggested_for": "chapter-end panel"
+  },
+  {
+   "file": "assets/photography/ast-0136-dice-green.png",
+   "subject": "Green die (2022 core, p.6)",
+   "width": 64,
+   "height": 63,
+   "has_alpha": true,
+   "suggested_for": "chapter-end panel"
+  },
+  {
+   "file": "assets/photography/ast-0138-expansion-miniature-mushroom-child.png",
+   "subject": "Mushroom Child miniature render (Darkroot)",
+   "width": 296,
+   "height": 340,
+   "has_alpha": true,
+   "suggested_for": "chapter-end panel"
+  },
+  {
+   "file": "assets/photography/ast-0138-expansion-miniature-shears-scarecrow.png",
+   "subject": "Shears Scarecrow miniature render (Darkroot)",
+   "width": 273,
+   "height": 573,
+   "has_alpha": true,
+   "suggested_for": "chapter-end panel"
+  },
+  {
+   "file": "assets/photography/ast-0138-expansion-miniature-black-hollow-mage.png",
+   "subject": "Black Hollow Mage miniature render (Executioner's Chariot)",
+   "width": 300,
+   "height": 237,
+   "has_alpha": true,
+   "suggested_for": "chapter-end panel"
+  },
+  {
+   "file": "assets/photography/ast-0138-expansion-miniature-falchion-skeleton.png",
+   "subject": "Falchion Skeleton miniature render (Executioner's Chariot)",
+   "width": 311,
+   "height": 244,
+   "has_alpha": true,
+   "suggested_for": "chapter-end panel"
+  },
+  {
+   "file": "assets/photography/ast-0138-expansion-miniature-sir-alonne.png",
+   "subject": "Sir Alonne miniature render (Iron Keep)",
+   "width": 267,
+   "height": 574,
+   "has_alpha": true,
+   "suggested_for": "chapter-end panel"
+  },
+  {
+   "file": "assets/photography/ast-0138-expansion-miniature-ironclad-soldier.png",
+   "subject": "Ironclad Soldier miniature render (Iron Keep)",
+   "width": 193,
+   "height": 332,
+   "has_alpha": true,
+   "suggested_for": "chapter-end panel"
+  },
+  {
+   "file": "assets/photography/ast-0138-expansion-miniature-crystal-lizard.png",
+   "subject": "Crystal Lizard miniature render (Iron Keep)",
+   "width": 149,
+   "height": 53,
+   "has_alpha": true,
+   "suggested_for": "chapter-end panel"
+  },
+  {
+   "file": "assets/photography/ast-0138-expansion-miniature-mimic-closed.png",
+   "subject": "Mimic miniature render, closed chest (Explorers)",
+   "width": 268,
+   "height": 135,
+   "has_alpha": true,
+   "suggested_for": "chapter-end panel"
+  },
+  {
+   "file": "assets/photography/ast-0138-expansion-miniature-silver-knight-spearman.png",
+   "subject": "Silver Knight Spearman miniature render (Explorers)",
+   "width": 179,
+   "height": 334,
+   "has_alpha": true,
+   "suggested_for": "chapter-end panel"
+  },
+  {
+   "file": "assets/photography/ast-0138-expansion-miniature-firebomb-hollow.png",
+   "subject": "Firebomb Hollow miniature render (Explorers)",
+   "width": 146,
+   "height": 164,
+   "has_alpha": true,
+   "suggested_for": "chapter-end panel"
+  },
+  {
+   "file": "assets/photography/ast-0138-expansion-miniature-summon-horace-the-hushed.png",
+   "subject": "Summon: Horace the Hushed miniature render (Phantoms)",
+   "width": 296,
+   "height": 498,
+   "has_alpha": true,
+   "suggested_for": "chapter-end panel"
+  },
+  {
+   "file": "assets/photography/ast-0138-expansion-miniature-invader-armorer-dennis.png",
+   "subject": "Invader: Armorer Dennis miniature render (Phantoms)",
+   "width": 400,
+   "height": 423,
+   "has_alpha": true,
+   "suggested_for": "chapter-end panel"
+  }
+ ],
+ "notes": [
+  "All files are Steamforged product imagery (miniature renders, boards, tiles, tokens, dice, dashboard section) taken from embedded image objects of the rulebook PDFs; none is a page crop, so none carries parchment, captions or the purchaser watermark. Painted key art was not extracted.",
+  "Pixel sizes are the native sizes of the embedded objects (trimmed to their alpha bounds); nothing was upscaled except the composites listed below. The source PDFs are web/low-res exports: miniatures are 150 ppi in the 2022 core, Iron Keep, Explorers and Executioner's Chariot books and 300 ppi in Phantoms, Characters, Darkroot and Black Dragon Kalameet.",
+  "Resolution: only 9 heroes are natively about 900 px or more on the long side (ast-0131-miniature-gravelord-nito.png, ast-0135-character-dashboard-lower-section-a.png, ast-0135-character-dashboard-lower-section-b.png, ast-0134-campaign-board-left-half.png, ast-0138-expansion-miniature-artorias.png, ast-0138-expansion-miniature-great-grey-wolf-sif.png, ast-0138-expansion-miniature-black-dragon-kalameet.png, ast-0134-campaign-board-right-half.png, ast-0117-mega-boss-board-kalameet-forest.png); 7 more are 700 to 880 px (ast-0138-expansion-miniature-stone-knight.png, ast-0138-expansion-miniature-stone-guardian.png, ast-0133-game-tile-bonfire-2017.png, ast-0138-expansion-miniature-executioners-chariot.png, ast-0138-expansion-miniature-smelter-demon.png, ast-0138-expansion-miniature-invader-oliver-the-collector.png, ast-0138-expansion-miniature-invader-xanthous-king-jeremiah.png). Every other hero is the largest version the sources hold. Size heroes by pixel count: at 150 ppi effective a 450 px image prints 3 in (76 mm) on its long side, at 200 ppi 2.25 in.",
+  "Composites (several small embedded token / dice / tile objects re-assembled with their page placement on a transparent ground, upsampled about 4x from 150 ppi objects, therefore soft; their large pixel sizes are not real resolution): ast-0132-token-array-souls-wounds-conditions-terrain.png, ast-0132-token-enemy-tokens.png, ast-0132-token-row-soul-and-wound-tokens.png, ast-0132-token-row-terrain-tokens.png, ast-0133-game-tile-tomb-of-giants-fan.png, ast-0136-dice-set.png. Use them small (dice set about 1.7 in, tile fan about 4.4 in, token array and token rows about 6.5 in wide for full sharpness) or as background-weight decoration.",
+  "Backgrounds: files with has_alpha=true are cut out on transparency (the soft masks include the sculpt bases). Opaque files (has_alpha=false) are rectangular with their own printed artwork to the edge, not parchment: ast-0117-mega-boss-board-kalameet-forest.png, ast-0117-mega-boss-board-executioners-chariot-arena.png, ast-0117-mega-boss-board-executioners-chariot-reverse.png, ast-0133-game-tile-tomb-of-giants-a.png, ast-0133-game-tile-tomb-of-giants-b.png, ast-0133-game-tile-tomb-of-giants-c.png, ast-0133-game-tile-tomb-of-giants-d.png, ast-0133-game-tile-bonfire-2017.png, ast-0134-campaign-board-left-half.png, ast-0134-campaign-board-right-half.png, ast-0134-campaign-board-full-strip.png, ast-0135-character-dashboard-lower-section-b.png.",
+  "Subjects cropped by the source image edge (subject runs into the boundary of the embedded object, exactly as in the rulebooks; listed with the cut sides): ast-0131-miniature-cleric.png (bottom); ast-0131-miniature-pyromancer.png (bottom); ast-0131-miniature-thief.png (bottom); ast-0132-token-terrain-gravestone-render.png (bottom); ast-0132-token-terrain-bonfire-render.png (bottom); ast-0132-token-terrain-treasure-chest-render.png (bottom); ast-0138-expansion-miniature-artorias.png (bottom); ast-0138-expansion-miniature-stone-knight.png (bottom); ast-0138-expansion-miniature-stone-guardian.png (bottom); ast-0138-expansion-miniature-mushroom-parent.png (bottom); ast-0138-expansion-miniature-mushroom-child.png (bottom); ast-0138-expansion-miniature-shears-scarecrow.png (bottom); ast-0138-expansion-miniature-plow-scarecrow.png (bottom); ast-0138-expansion-miniature-smelter-demon.png (bottom); ast-0138-expansion-miniature-sir-alonne.png (bottom); ast-0138-expansion-miniature-ironclad-soldier.png (bottom); ast-0138-expansion-miniature-crystal-lizard.png (bottom); ast-0138-expansion-miniature-mimic.png (bottom); ast-0138-expansion-miniature-the-pursuer.png (bottom); ast-0138-expansion-miniature-silver-knight-spearman.png (bottom); ast-0138-expansion-miniature-firebomb-hollow.png (bottom); ast-0138-expansion-miniature-summon-ruined-aflis.png (bottom); ast-0138-expansion-miniature-summon-eygon-of-carim.png (bottom); ast-0138-expansion-miniature-summon-horace-the-hushed.png (bottom); ast-0138-expansion-miniature-summon-siegward-of-catarina.png (bottom); ast-0138-expansion-miniature-summon-sword-master.png (bottom); ast-0138-expansion-miniature-summon-rogue-witch-beatrice.png (bottom); ast-0138-expansion-miniature-summon-lucatiel-of-mirrah.png (bottom); ast-0138-expansion-miniature-summon-sellsword-luet.png (bottom); ast-0138-expansion-miniature-summon-sirris-of-the-sunless-realms.png (bottom); ast-0138-expansion-miniature-summon-solaire-of-astora.png (bottom); ast-0138-expansion-miniature-invader-kirk-knight-of-thorns.png (bottom); ast-0138-expansion-miniature-invader-melinda-the-butcher.png (bottom); ast-0138-expansion-miniature-invader-maldron-the-assassin.png (bottom); ast-0138-expansion-miniature-invader-maneater-mildred.png (bottom); ast-0138-expansion-miniature-invader-xanthous-king-jeremiah.png (bottom); ast-0138-expansion-miniature-invader-oliver-the-collector.png (bottom); ast-0138-expansion-miniature-invader-armorer-dennis.png (bottom); ast-0138-expansion-miniature-invader-marvelous-chester.png (bottom); ast-0138-expansion-miniature-invader-brylex.png (bottom); ast-0138-expansion-miniature-invader-paladin-leeroy.png (bottom); ast-0138-expansion-miniature-invader-fencer-sharron.png (bottom); ast-0138-expansion-miniature-character-thief.png (bottom); ast-0138-expansion-miniature-character-mercenary.png (bottom); ast-0138-expansion-miniature-character-pyromancer.png (bottom); ast-0138-expansion-miniature-character-sorcerer.png (bottom); ast-0138-expansion-miniature-character-deprived.png (bottom). Most are sculpt bases cut flat at the bottom; set those on a rule or frame edge.",
+  "Chapter 14 (Crystal Lizards): the only source image is ast-0138-expansion-miniature-crystal-lizard.png at 149x53 px; it is listed under panels, not heroes. Chapter 13 (Mimics): the Mimic render is 265x381 px (150 ppi), usable up to about 2.5 in tall.",
+  "Chapters 03 and 10 share the Characters-expansion class renders; chapter 12 and chapter 20 use the Phantoms summon (white resin) and invader (red resin) renders respectively. Entries marked \"theme: ... (spare)\" are further hero-grade renders with no chapter of their own.",
+  "Character dashboard: only the lower section (ability box, stat grid, slot labels, endurance bar) is provided; the name band of the dashboard carries a painted class portrait and is held for provenance review. The cube slots in ast-0135-character-dashboard-lower-section-a.png are transparent holes.",
+  "Card fans (AST-0137) were not extracted: every fan shows card faces with painted illustrations (provenance review). Card backs without illustrations are in assets/frames/ast-0089-card-back-*.png (124x186 to 175x300 px, too small for a hero). No hero-grade match exists for Appendix B (card amendments); use a card back at small size or a generic component image.",
+  "The 2017 bonfire tile (ast-0133-game-tile-bonfire-2017.png) and the mega-boss boards have node rings and markers printed in the artwork."
+ ]
+}
