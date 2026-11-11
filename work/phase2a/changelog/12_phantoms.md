@@ -223,3 +223,10 @@
 - After: no change
 - Rationale: A-015 (OPTIONAL) is not applied here because §7.5, Encounter Turn Order owns the aggro measure and already counts damage on an invader's health dial; §12.2 cites it. C-077 is owned by the component list of §2.9. A-124 and C-115 record policies and ask for no change. The other OPTIONAL findings (A-021, A-044, F-091) are applied in CH-12-020, CH-12-026, and CH-12-024.
 - Source: A-015, C-077, A-124, C-115
+
+### CH-12-033 · §12.2 Invaders (End of an Invasion)
+- Type: clarification
+- Before: (draft) "An invader does not count towards clearing an encounter … An invader on the tile when the encounter is cleared is removed and awards nothing."
+- After: "An invader is an enemy model and counts towards clearing an encounter. While the invader is on the tile, the encounter is not cleared"
+- Rationale: The manuscript is silent. The general rule (an encounter is cleared when every enemy model has been killed, §7.5) is applied to the invader, which §12.2 treats as an enemy model, rather than adding a new removal rule. Lead editor's decision at integration; the alternative is recorded in the issues list for the author.
+- Source: A-021, manuscript lines 2023–2037

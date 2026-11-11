@@ -156,6 +156,6 @@ When an invader is killed, every character gains *souls* equal to the invader re
 
 ### End of an Invasion
 
-An invader does not count towards clearing an encounter. The encounter is *cleared* when every other enemy model has been killed, whether or not the invader is still on the tile (see §7.5, Encounter Resolution). An invader on the tile when the encounter is cleared is removed and awards nothing.
+An invader is an enemy model and counts towards clearing an encounter. While the invader is on the tile, the encounter is not *cleared*: it is cleared only when every enemy model, the invader included, has been killed, or when the invader has vanished and every other enemy model has been killed (see §7.5, Encounter Resolution).
 
-An invader appears once. Whether it was killed, vanished, or was removed, its model and cards are returned to the game box. It is not placed again when its encounter is reset (see §11.5).
+An invader appears once. Whether it was killed or vanished, its model and cards are returned to the game box. It is not placed again when its encounter is reset (see §11.5).
