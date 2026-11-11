@@ -121,7 +121,9 @@ def end_panel(soup, cid, key):
         return None
     width, pad, cap_h, gap = 520.0, 18.0, 19.0, 12.0
     nrows = spec.get('rows') or (1 if avail < 250 else 2 if avail < 470 else 3)
-    row_h = min((avail - nrows * cap_h - (nrows - 1) * gap) / nrows, 178.0)
+    if spec.get('caption'):
+        avail -= cap_h
+    row_h = min((avail - nrows * cap_h - (nrows - 1) * gap) / nrows, float(spec.get('max_row', 178.0)))
     rows, cur, curw = [], [], 0.0
     for f in pool:
         pw, ph = img_size(f)
@@ -145,6 +147,8 @@ def end_panel(soup, cid, key):
         if all(r and sum(d[1] + pad for d in r) <= width for r in even):
             rows = even
     total = sum(max(d[2] for d in r) + (cap_h if any(hero_caption(d[0]) for d in r) else 0) for r in rows) + gap * (len(rows) - 1)
+    if spec.get('caption'):
+        total += cap_h
     panel = soup.new_tag('div', id=f'panel-{cid}'); panel['class'] = 'endpanel'
     spare = free - total - 6
     # a gallery that nearly fills the room stands on the foot of the text block; a smaller one is centred in the room
@@ -162,6 +166,8 @@ def end_panel(soup, cid, key):
                 cell.append(c)
             row.append(cell)
         panel.append(row)
+    if spec.get('caption'):
+        c = soup.new_tag('div'); c['class'] = ['pc', 'pcall']; c.string = spec['caption']; panel.append(c)
     return panel
 
 
@@ -328,6 +334,10 @@ class Chapter:
                     cell['class'] = 'num'
             # a header cell above an all-numeric column is centred too
             body = [r.find_all('td') for r in rows if r.find('td')]
+            for i in range(max((len(r) for r in body), default=0)):
+                col = [r[i] for r in body if i < len(r)]
+                if len(col) > 2 and sum('num' in (c.get('class') or []) for c in col) >= 0.6 * len(col):
+                    for c in col: c['class'] = 'num'
             for i, th in enumerate(t.find_all('th')):
                 col = [r[i] for r in body if i < len(r)]
                 if col and all('num' in (c.get('class') or []) for c in col): th['class'] = 'num'
@@ -356,7 +366,17 @@ class Chapter:
                 a = soup.new_tag('a', href='#' + target); a['class'] = 'xref'; a.string = m.group(0)
                 parts.append(a); last = m.end()
             if parts:
-                parts.append(s[last:]); node.replace_with(*[p for p in parts if p != ''])
+                parts.append(s[last:])
+                # two short references side by side ("§16.5, §18.3") stay on one line
+                merged, i = [], 0
+                while i < len(parts):
+                    if (i + 2 < len(parts) and isinstance(parts[i], Tag) and parts[i + 1] in (', ', '; ') and isinstance(parts[i + 2], Tag)
+                            and len(parts[i].get_text()) + len(parts[i + 2].get_text()) <= 12):
+                        sp = soup.new_tag('span'); sp['class'] = 'xl'
+                        sp.append(parts[i]); sp.append(parts[i + 1]); sp.append(parts[i + 2]); merged.append(sp); i += 3
+                    else:
+                        merged.append(parts[i]); i += 1
+                node.replace_with(*[p for p in merged if p != ''])
         for em in soup.find_all('em'):
             if em.find_parent(['a', 'h1', 'h2', 'h3', 'h4', 'header', 'figcaption']):
                 continue

@@ -61,7 +61,7 @@ def withhold(im, masks, badges):
     from PIL import ImageDraw, ImageFilter, ImageFont
     if not masks and not badges:
         return im
-    im = im.convert('RGBA'); w, h = im.size
+    im = im.convert('RGBA'); w, h = im.size; orig = im.convert('RGB')
     for m in masks:
         l, t, r, b = m['box']; box = (int(w * l), int(h * t), int(w * r), int(h * b))
         fill = m.get('fill', 'auto')
@@ -74,7 +74,18 @@ def withhold(im, masks, badges):
                 for x in (max(0, box[0] - g), min(w - 1, box[2] + g - 1)):
                     ring.append(px[x, y])
             ring.sort(key=lambda c: sum(c)); fill = ring[len(ring) // 2]
-        layer = Image.new('RGBA', im.size, fill); mk = Image.new('L', im.size, 0); d = ImageDraw.Draw(mk)
+        if isinstance(fill, dict):
+            # ground-matched fill: every row takes the colour the plate has at a clean reference column, so the
+            # blanked area follows the card's own gradient and leaves no seam
+            rx = int(w * fill['ref_x']); src = orig.load(); layer = Image.new('RGBA', im.size, (0, 0, 0, 0)); lp = layer.load()
+            for y in range(max(0, box[1] - 12), min(h, box[3] + 12)):
+                px = sorted(src[x, y] for x in range(max(0, rx - 4), min(w, rx + 5)))
+                col = px[len(px) // 2] + (255,)
+                for x in range(max(0, box[0] - 12), min(w, box[2] + 12)):
+                    lp[x, y] = col
+            mk = Image.new('L', im.size, 0); d = ImageDraw.Draw(mk)
+        else:
+            layer = Image.new('RGBA', im.size, fill); mk = Image.new('L', im.size, 0); d = ImageDraw.Draw(mk)
         (d.ellipse if m.get('shape') == 'ellipse' else d.rectangle)(box, fill=255)
         if m.get('feather', 8):
             mk = mk.filter(ImageFilter.GaussianBlur(m.get('feather', 8)))

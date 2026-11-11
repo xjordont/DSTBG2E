@@ -40,6 +40,7 @@ th em, h1 em, h2 em, h3 em, .toc em, .exlabel em { font-style: normal; }
 .sym { font-family: "Cinzel"; font-weight: 600; font-size: 0.92em; }
 a { color: inherit; text-decoration: none; }
 a.xref { color: #5a4416; }
+.xl { white-space: nowrap; }
 img.icon { height: 1.12em; width: auto; vertical-align: -0.22em; margin: 0 0.1em; }
 
 /* ---------- chapter frame ---------- */
@@ -70,6 +71,7 @@ img.icon { height: 1.12em; width: auto; vertical-align: -0.22em; margin: 0 0.1em
 .prow { display: table; margin: 0 auto; }
 .pf { display: table-cell; vertical-align: bottom; padding: 0 9pt; text-align: center; }
 .pf img { display: block; margin: 0 auto; }
+.pc.pcall { height: auto; margin-top: 7pt; font-size: 6.2pt; }
 .pc { font: 600 5.6pt/7.6pt "Cinzel"; letter-spacing: 0.13em; text-transform: uppercase; color: #6b5f4a; margin: 4pt auto 0 auto; height: 15pt; text-align: center; hyphens: none; }
 
 /* ---------- headings ---------- */
@@ -86,7 +88,7 @@ h2.attop, h3.attop { margin-top: 0; }
 /* ---------- blocks ---------- */
 .example { background: var(--tint); border-left: 1.6pt solid var(--rule); padding: 4.4pt 6.5pt 4.6pt 7pt; margin: 5.5pt 0; box-decoration-break: clone; font-size: 8.5pt; line-height: 11.6pt; }
 .example.short { break-inside: avoid; }
-.example p { text-align: left; hyphens: manual; }
+.example p { text-align: left; hyphens: manual; orphans: 4; widows: 4; }
 .exlabel { font: 600 6.9pt "Cinzel"; letter-spacing: 0.12em; text-transform: uppercase; color: #7a622b; margin-right: 0.5em; }
 p.defn > strong:first-child { font-weight: 700; }
 ul, ol { margin: 3.4pt 0 3.4pt 0; padding-left: 13pt; }
@@ -160,9 +162,9 @@ p.faq-q .ql, p.faq-a .ql { font: 700 7.4pt "Cinzel"; color: #7a622b; margin-righ
 .toc a::after { content: leader(". ") target-counter(attr(href), page); margin-right: -15pt; font-family: "Libre Caslon Text"; font-weight: 400; letter-spacing: 0; }
 
 /* ---------- icon reference and back cover ---------- */
-.ikgrid { columns: 3; column-gap: 18pt; margin-top: 4pt; }
-.ik { break-inside: avoid; display: block; position: relative; padding: 2pt 0 2pt 27pt; min-height: 11pt; margin: 0 0 3.4pt 0; font-size: 8.6pt; line-height: 11pt; text-align: left; }
-.ik img { position: absolute; left: 0; top: 0; height: 15pt; width: 19pt; object-fit: contain; }
+.ikgrid { columns: 2; column-gap: 40pt; margin: 8pt 34pt 0 34pt; }
+.ik { break-inside: avoid; display: block; position: relative; padding: 3.3pt 0 3.3pt 34pt; min-height: 12pt; margin: 0 0 1.5pt 0; font-size: 9.4pt; line-height: 12pt; text-align: left; border-bottom: 0.4pt solid rgba(35,31,32,0.14); }
+.ik img { position: absolute; left: 2pt; top: 1.2pt; height: 16.4pt; width: 23pt; object-fit: contain; }
 .ik span { display: block; text-align: left; }
 @page backcover { margin: 0; @top-left { content: none } @top-right { content: none } @bottom-center { content: none; background: none } }
 .backcover { page: backcover; break-before: page; width: 8.5in; height: 11in; background: #0b0a09 url("../assets/textures/ast-0143-back-cover-dark-stone-bg.png") center / cover no-repeat; position: relative; }

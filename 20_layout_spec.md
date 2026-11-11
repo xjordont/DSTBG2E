@@ -240,7 +240,7 @@ Chapter openers: every chapter and appendix has a designated hero image on its b
 | Chapter 15 | AST-0138 | `expansion-miniature-artorias` | 96 pt |
 | Chapter 16 | AST-0138 | `expansion-miniature-great-grey-wolf-sif` | 84 pt |
 | Chapter 17 | AST-0138 | `expansion-miniature-black-dragon-kalameet` | 96 pt |
-| Chapter 18 | AST-0132 | `token-spark-dial` | 54 pt |
+| Chapter 18 | AST-0138 | `expansion-miniature-armour-adventurers` | 98 pt |
 | Chapter 19 | AST-0138 | `expansion-miniature-smelter-demon` | 84 pt |
 | Chapter 20 | AST-0138 | `expansion-miniature-invader-xanthous-king-jeremiah` | 100 pt |
 | Chapter 21 | AST-0131 | `miniature-necromancer` | 92 pt |

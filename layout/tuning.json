@@ -82,32 +82,84 @@
    "masks": [
     {
      "box": [
-      0.104,
-      0.2,
-      0.7,
-      0.452
+      0.0975,
+      0.215,
+      0.285,
+      0.44
      ],
-     "fill": "#0a0b0d",
-     "feather": 5
+     "fill": {
+      "ref_x": 0.7
+     },
+     "feather": 3
     },
     {
      "box": [
-      0.272,
-      0.445,
-      0.4,
-      0.56
+      0.265,
+      0.192,
+      0.66,
+      0.487
      ],
-     "feather": 5
+     "fill": {
+      "ref_x": 0.7
+     },
+     "feather": 7
     },
     {
      "box": [
-      0.585,
-      0.47,
-      0.705,
-      0.565
+      0.44,
+      0.1875,
+      0.56,
+      0.215
      ],
-     "feather": 5
+     "fill": {
+      "ref_x": 0.7
+     },
+     "feather": 2
+    },
+    {
+     "box": [
+      0.335,
+      0.487,
+      0.417,
+      0.578
+     ],
+     "fill": {
+      "ref_x": 0.29
+     },
+     "feather": 4
+    },
+    {
+     "box": [
+      0.579,
+      0.466,
+      0.655,
+      0.566
+     ],
+     "fill": {
+      "ref_x": 0.7
+     },
+     "feather": 4
     }
+   ],
+   "badges": [
+    [
+     0.199,
+     0.468,
+     "5",
+     0.037
+    ],
+    [
+     0.46,
+     0.469,
+     "6",
+     0.037
+    ],
+    [
+     0.5395,
+     0.4675,
+     "7",
+     0.037
+    ]
    ]
   },
   {
@@ -303,7 +355,8 @@
     "assets/photography/ast-0133-game-tile-tomb-of-giants-b.png",
     "assets/photography/ast-0133-game-tile-tomb-of-giants-c.png",
     "assets/photography/ast-0133-game-tile-tomb-of-giants-d.png"
-   ]
+   ],
+   "caption": "Encounter tiles"
   },
   "06": {
    "banner": {
@@ -347,7 +400,8 @@
     "assets/photography/ast-0136-dice-set.png",
     "assets/photography/ast-0131-miniature-giant-skeleton-archer.png"
    ],
-   "rows": 1
+   "rows": 1,
+   "max_row": 250
   },
   "09": {
    "banner": {
@@ -462,13 +516,13 @@
   },
   "18": {
    "banner": {
-    "file": "assets/photography/ast-0132-token-spark-dial.png",
-    "h": 54,
-    "bottom": 9
+    "file": "assets/photography/ast-0138-expansion-miniature-armour-adventurers.png",
+    "h": 98
    },
    "end": [
     "assets/photography/ast-0133-game-tile-tomb-of-giants-fan.png"
-   ]
+   ],
+   "caption": "Encounter tiles"
   },
   "19": {
    "banner": {

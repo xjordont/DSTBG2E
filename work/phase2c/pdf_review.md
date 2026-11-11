@@ -1,0 +1,70 @@
+# PDF layout review — build/book_screen.pdf
+
+Reviewed: 100 pages, US Letter. Page numbers below are the PDF index (1 = cover); the printed folios agree with the index on every page that carries one.
+
+## Verdict
+
+The book is structurally sound: every chapter opener has its banner and hero, running heads and folios are correct on every page, all contents entries point to the right pages, there are no fallback fonts, no stray markup, no text or images outside the margins, and no overlapping gallery items. Nothing blocks release. Two defects are plainly visible errors and should be fixed first: the patchy blanking on the enemy data card figure (p. 28) and a hard line break in the middle of a sentence (p. 70). The rest are compromises and inconsistencies: a contents page whose chapter-level page numbers sit in a different column from the section-level ones, two galleries with no captions, one chapter end page that is about two-thirds blank, two weak hero images, renders cut through the base, icon bitmaps with leftover text or opaque backgrounds, and a handful of poor hyphenation breaks.
+
+Severity used here: **Blocker** = wrong or missing content, unreadable; **Major** = unambiguous error an ordinary reader will notice; **Minor** = visible on inspection, or a layout compromise worth fixing; **Polish** = refinement.
+
+Counts: Blocker 0 · Major 2 · Minor 18 · Polish 13.
+
+## Findings
+
+| Page | Severity | Where on the page | What is wrong | Suggested fix |
+|---|---|---|---|---|
+| 28 | Major | Right column, figure "An enemy data card" (Skeleton Soldier) | The blanking is a patchwork, not one clean area. A flat black rectangle covers the art but stops short of the card's right edge, leaving a visible seam beside call-out 4. Below it sit two more rectangles of different shades: black between call-outs 5 and 6, dark brown to the right of call-out 7. Leftover fragments show: a purple speck just right of call-out 7, a brown arc directly under the card name, a pale speck on the card's left border. A red flame-like shape at lower right is not keyed by any call-out. | Replace with a single mask in the card's own background colour, run to the card frame; remove the fragments. Decide whether the red shape is art (blank it) or an icon (key it). |
+| 70 | Major | Left column, paragraph beginning "When a boss is defeated and its section is not yet completed", about 40% down | Hard line break inside a cross-reference. One line ends "(see", the next line holds only "§16.5," and the following line starts "§18.3). Each character…". The text layer confirms a break after "§16.5, ". | Remove the stray newline or break in the source so "(see §16.5, §18.3)" flows. |
+| 3 | Minor | Contents, all three columns, chapter-level rows | Chapter page numbers right-align 15 pt inside the section page numbers (right edges at x = 194.3 / 372.7 / 551.0 pt against 209.3 / 387.7 / 566.0 pt), so each column has two number edges. In five rows the leader dots run to within about 2 pt of the number: 4 Equipment 12, 5 Tiles and Nodes 15, 6 Setup 18, 19 Campaigns 74, 22 F.A.Q. 91 (other chapter rows 5 pt or more, section rows 7 pt or more). | Let chapter rows span the full column so all numbers share one right edge; enforce a minimum gap after the leader. |
+| 9 | Minor | Caption under the character dashboard figure | The keyed caption is set in two columns and the break falls between a key number and its label: column 1 ends "…Taunt Level. 8", column 2 starts "Heroic action token slot." | Keep each number with its label (no-break), or set the caption in one column. |
+| 9, 54, 56 | Minor | Figure cards (tinted panel around the image) | Image not centred in its card. p. 9: image is flush with the card's top edge (the dashboard's top looks cropped, the "Perseverance" heading touches the edge) with a band of about 16 pt below. p. 54: tile image flush left and bottom, parchment band about 14 pt on top and 7 pt on the right. p. 56: image flush with the card bottom, and the diagram is cropped through its top row of nodes (two node rings cut in half). | Equal padding on all four sides; re-crop p. 56 on whole node rows. |
+| 54, 56 | Minor | Figures "The boss tiles" and "Boss arcs" | These two figures have descriptive captions but no numbered call-outs or keyed caption. Only five figures are keyed (pp. 9, 12, 28, 33, 55); the brief expects seven. | Confirm whether these two are meant to be keyed; add call-outs if so. |
+| 17 | Minor | Gallery below the closing ornament | Four encounter-tile renders with no captions (no caption text in the PDF). Every other gallery has captions. | Add captions, or confirm the omission is intended. |
+| 73 | Minor | Gallery below the closing ornament | One lone image (fanned tiles), no caption; it is the same art as the Chapter 5 hero. | Add a caption or replace with a captioned set. |
+| 32 | Minor | Whole page (Chapter 8 last page) | The page carries one sub-heading ("Corrosion") and 3 + 3 lines of text, then a two-item gallery (The Dice, Giant Skeleton Archer) floating mid-page. About 65% of the text area is blank. | Pull the six lines back by tightening pp. 29–31, or enlarge the gallery to fill. |
+| 43–44 | Minor | Foot of right column, p. 43 | An example box splits across the page turn with the label and two lines on p. 43 and 17 lines on p. 44. | Move the box whole, or require at least three lines before a break. |
+| 46 | Minor | Chapter 12 opener, below the banner | Three paragraphs are set in the centred italic lead style, including the definition "Phantom. A summon or an invader…" and a rules paragraph (11 centred italic lines after the 5-line lead). Definitions elsewhere are body style (for example "Target." on p. 28). | Limit the lead style to the first paragraph. |
+| 52 | Minor | Chapter 14 banner hero | The crystal lizard render is tiny (about 20 pt tall in a 71 pt banner), dark grey on the dark banner; it reads as a lump on a slab. | Scale up or use a lighter render. |
+| 69 | Minor | Chapter 18 banner hero | The spark dial is black on the near-black banner; only its numerals are visible. | Lighter render, outline or glow. |
+| 9, 12, 18, 33, 38, 43, 46, 50, 52, 53, 59, 74, 79, 91, 94, 96; galleries e.g. 27, 49 | Minor | Hero images and gallery renders | Many renders end in a straight horizontal cut through the miniature's base. In banners the cut sits on the banner's bottom edge; in galleries it shows against white. Renders with whole round bases appear beside them (heroes on pp. 4, 23, 28, 63, 83; Black Hollow Mage and Falchion Skeleton on p. 27). | Re-export with whole bases, or make the treatment consistent within a row. |
+| 80 | Minor | Right column, table "Stamina cost of the attack option / Dodge difficulty" | Last row's first cell "5 or more" is left-aligned; rows 0–4 are centred. | Align all first-column cells the same way. |
+| 97 | Minor | Foot of left column | The table stops 147 pt (2.0 in) short of the column foot and resumes with a repeated header at the top of the right column. | Let the next row (Titanite Slab) fill the column. |
+| 74 | Minor | Foot of right column | Column ends 98 pt (1.4 in) short; the "Section Two: Undead Settlement" list is carried whole to p. 75. | Allow section lists to break after two or more items. |
+| 99 | Minor | Icon reference, icon bitmaps | (a) "Attack icon §8.2" and "Movement icon §8.2" include stray cropped text from a source diagram ("Deal"; "Mov / indic"). (b) Several icons sit on opaque pale square backgrounds (Armour, Magical damage, One-handed weapon, Two-handed weapon, Upgrade slots, Spawn node, Terrain node, Threat, Trapped encounter) while the rest are round cut-outs; the same boxed bitmaps appear inline (pp. 10, 12, 15, 33). (c) Block and Resist are near-white on white and barely visible. | Re-cut with transparency and no text; give the pale icons a dark outline. |
+| 99 | Minor | Whole page | The list ends at 459 pt of a 737 pt text area; the lower 40% is blank. "Node attack and area-of-effect §9.3" wraps, leaving "§9.3" alone on a line. | Larger icons or row spacing to fill the page; widen that column. |
+| 80, 18, 39, 35, 71, 25, 94 | Minor | Body text, line ends | Poor hyphenation breaks: "rer-olls" (p. 80), "awar-ded" (p. 18), "wiel-ded" (p. 39), "defen-ded" (p. 35), "coun-ted" (p. 71), "collec-ted" (p. 25), "lis-ted" (p. 94). Also "res-ist" (p. 14), "res-isting" (p. 35), "dir-ects" (p. 30). | Add hyphenation exceptions or soft hyphens (re-rolls, award-ed, wield-ed…). |
+| 49 | Polish | Top of page | Three lines of text sit in the left column only; the right column is empty. | Balance the columns or span the lines. |
+| 68, 78 | Polish | End of Chapters 17 and 19 | No closing ornament; every other chapter has one. p. 68 also has a two-line tail of an example box alone at the top of the right column. | Reserve room for the ornament; keep the box tail to three lines or more. |
+| 41, 44 | Polish | p. 41 right column foot, p. 44 left column foot | Each column ends 82 pt short because the next example box is kept whole. | Allow long example boxes to break. |
+| 8, 14, 27, 62, 95 | Polish | Gallery captions | Captions wrap to two lines beside single-line neighbours: "Skeleton / Archer" (p. 8), "Havel's / Armour" and "Crimson / Robes" (p. 14), "Shears / Scarecrow" (p. 27), "Executioner's Chariot Game / Board" (p. 62), "Silver Knight / Spearman" (p. 95). | No-wrap captions or a wider caption box. |
+| 22, 27, 58 | Polish | Galleries | One item much smaller than its neighbours: Barrel (p. 22), Firebomb Hollow (p. 27), Sir Alonne (p. 58). p. 58 rows run 2 / 1 / 3. | Even out render heights within a row. |
+| 4/32, 8/42, 14/95, 22/45/52/98, 27/95, 32/98, 49/82, 58/95 | Polish | Galleries | The same renders repeat: Giant Skeleton Archer (4, 32); Cleric, Pyromancer, Thief (8, 42); Guardian Armour (14, 95); Chest, Barrel, Gravestone (22, 52); Bonfire Tile (22, 45); Spark Dial (22, 45, 98, plus the p. 69 hero); Encounter Card and Treasure Card (22, 98); The Dice (32, 98, plus the p. 5 hero); Stone Guardian (27, 95); Kirk (49, 82); Pursuer and Sir Alonne (58, 95). | Vary the selection where other renders exist. |
+| all galleries | Polish | Captions | Gallery captions are 5.6 pt Cinzel, at the limit of legibility (running heads are 6.6 pt, folios 8 pt). | Consider 6.5 pt or more. |
+| 3, 91, 92, 93 | Polish | "F.A.Q." in banner, running head and contents | The long tail of the Cinzel Q runs under the following full stop; in the contents it reaches the leader dots. | Kern, or use an alternate Q. |
+| 6, 7, 12, 33 | Polish | Inline icons followed by punctuation | A visible gap sits between icon and the comma or period: p. 6 last line "Level 1 [icon] ,", p. 7 "bleed [icon] ,", "frostbite [icon] ,", "stagger [icon] ,", p. 12 "icon [icon] , the two-", p. 33 "threat [icon] . The". The placed boxes are 1 pt apart; the gap is padding inside the bitmaps. | Trim icon bitmaps to their ink. |
+| 7 | Polish | Section 2.7 dice list | Black, Blue and Orange dice lines carry an inline die icon; "4x Green dice" has none. | Add a green die icon or drop all four. |
+| 4, 52 | Polish | Chapters 1 and 14 openers | No centred italic lead; the opening paragraph is body style, unlike the other numbered chapters. | Confirm intended. |
+| 18 | Polish | Chapter 6 banner hero | The chest render is dim grey and stays wholly inside the banner; low contrast. | Lighter render. |
+| 1, 100 | Polish | Cover foot; back cover panel | p. 1: the line "An unofficial, non-commercial fan work" is very small and faint. p. 100: the text block sits in the upper 45% of the panel, the lower half is empty. | Slightly larger, lighter line; centre the back-cover block optically. |
+
+## Checked and found fine
+
+- **Banners:** all 24 openers (pp. 4, 5, 9, 12, 15, 18, 23, 28, 33, 38, 43, 46, 50, 52, 53, 59, 63, 69, 74, 79, 83, 91, 94, 96) have a hero image. No hero overlaps a title or kicker; no title wraps.
+- **Running heads and folios:** every continuation page carries the correct chapter (left) and section (right); Glossary pages carry the chapter only. Folios are present on pp. 2–99 and equal the PDF index.
+- **Contents:** all 24 chapter and appendix entries, all 116 numbered section entries and the 6 appendix sub-entries match the real pages (text-layer comparison plus visual check).
+- **Fonts and text:** only Libre Caslon Text (regular, italic, bold, bold italic) and Cinzel are used; no fallback glyphs. No asterisks, braces, [ASSET…], HTML tags, backslashes or TODO markers. No double spaces before punctuation in the text layer.
+- **Margins and collisions:** no text line or image outside the margins on pp. 2–99. No gallery image box overlaps another image, text, the closing ornament or the folio. No figure caption collides with text.
+- **Images:** no stretched image (aspect within 4%); every gallery and figure image is at 105 dpi or more in this screen build. The cover art is 72–101 dpi, acceptable on screen.
+- **Inline icons:** 373 placed, none missing or empty, all 7 pt or 10 pt high, none taller than its line.
+- **Tables:** header styling intact; headers repeat on continuation (pp. 94→95, 96→98); no row split mid-row; no cell overflow.
+- **Headings and lists:** no heading stranded at a column foot; no numbered list parted from its lead-in by a page turn (pp. 25→26 and 81→82 keep the lead-in and item 1 together).
+- **Blanked figures:** pp. 9, 12 and 55 are clean (no spill, no covered call-out or icon). p. 33 is not blanked and is fine.
+- **Example boxes:** tint and gold rule present throughout.
+- **Front and back matter:** cover, foreword and back cover have nothing broken.
+
+## Pages viewed
+
+- All of pp. 1–100 as 80 dpi three-page contact sheets (`build/review/sheet_001_003.jpg` … `sheet_100_100.jpg`).
+- Zoomed at 95–330 dpi: all 24 banners; the seven figures (pp. 9, 12, 28, 33, 54, 55, 56); galleries on pp. 17, 27, 49, 73, 95; contents p. 3; icon reference p. 99; text and table details on pp. 6, 7, 10, 12, 15, 32, 33, 57, 68, 70, 80, 96 (`build/review/z_*.jpg`, `z2_*.jpg`, `z3_inline.jpg`).
+- Text-layer checks over all 100 pages (`build/review/analysis.txt`).
