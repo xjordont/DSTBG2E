@@ -79,6 +79,7 @@ def pandoc(md):
     html = r.stdout
     html = re.sub(r'\{\{icon:([a-z0-9-]+)\}\}', lambda m: icon_tag(m.group(1)), html)
     html = re.sub(r'(<p>)?@@SUB:([\d.]+)@@ ', lambda m: f'<p class="substep"><span class="sn">{m.group(2)}</span> ', html)
+    html = html.replace('\u221e', '<span class="sym">\u221e</span>')   # the body face has no infinity sign
     return html
 
 
@@ -193,6 +194,19 @@ class Chapter:
             sec.append(end)
         soup.append(sec)
         self.decorate(heads)
+        self.keep_headings()
+
+    def keep_headings(self):
+        """A heading and a short block that follows it travel together (WeasyPrint does not always honour
+        break-after: avoid at a column foot)."""
+        soup = self.soup
+        for h in soup.find_all(['h3', 'h4']):
+            nxt = h.find_next_sibling()
+            if nxt is None or nxt.name in ('h2', 'h3', 'h4') or (h.parent and 'keep' in (h.parent.get('class') or [])):
+                continue
+            short = len(nxt.get_text()) < 260 and nxt.name in ('p', 'ol', 'ul', 'div')
+            if short:
+                w = soup.new_tag('div'); w['class'] = 'keep'; h.wrap(w); w.append(nxt.extract())
 
     def decorate(self, heads):
         soup = self.soup
@@ -200,7 +214,7 @@ class Chapter:
         for p in soup.find_all('p'):
             first = next((c for c in p.contents if not (isinstance(c, NavigableString) and not c.strip())), None)
             if isinstance(first, Tag) and first.name == 'em' and first.get_text().strip().lower().startswith('example'):
-                box = soup.new_tag('div'); box['class'] = ['example'] + (['short'] if len(p.get_text()) < 700 else [])
+                box = soup.new_tag('div'); box['class'] = ['example'] + (['short'] if len(p.get_text()) < 430 else [])
                 lab = soup.new_tag('span'); lab['class'] = 'exlabel'; lab.string = 'Example'
                 first.replace_with(lab); p.wrap(box)
             elif isinstance(first, Tag) and first.name == 'strong':

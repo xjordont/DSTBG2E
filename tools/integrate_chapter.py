@@ -34,24 +34,44 @@ def parse_glossary(text):
 
 def key(h): return re.sub(r'[^a-z0-9 ]', '', h.lower().rstrip('.'))
 
+APPLIED = ROOT / 'work/phase2a/glossary/applied.json'
+
+
+def _digest(line):
+    import hashlib
+    return hashlib.sha1(line.strip().encode('utf-8')).hexdigest()[:16]
+
+
 def merge_glossary(num):
+    """Apply a chapter's glossary deltas once each. A delta line already applied (recorded by digest in
+    applied.json) is not applied again, so re-integrating an earlier chapter cannot overwrite an entry that a
+    later chapter or the reconciliation has since restated; only new or edited delta lines take effect. The lead
+    editor's reconciliation (21_*.md) is applied after any chapter's deltas, every time, and so always wins."""
+    import json
     delta = one(f'work/phase2a/glossary/{num}_*.md')
-    final = one('work/phase2a/glossary/21_*.md')   # lead editor's reconciliation: applied after any chapter's deltas
+    final = one('work/phase2a/glossary/21_*.md')
     gp = ROOT / '12_glossary.md'
     head, entries = parse_glossary(gp.read_text(encoding='utf-8'))
+    applied = set(json.loads(APPLIED.read_text(encoding='utf-8'))) if APPLIED.exists() else set()
     added = amended = 0
     sources = [d for d in ([delta] if num == '21' else [delta, final]) if d]
     for src in sources:
+        always = (src == final)
         for ln in src.read_text(encoding='utf-8').splitlines():
             m = re.match(r'^(ADD|AMEND)\s+(\*\*.+?\*\*.*)$', ln.strip())
             if not m: continue
+            d = _digest(m.group(2))
+            if d in applied and not always: continue
             hw = re.match(r'^\*\*(.+?)\*\*', m.group(2)).group(1).strip()
             idx = next((i for i, (h, _) in enumerate(entries) if key(h) == key(hw)), None)
             if idx is None: entries.append((hw, m.group(2).strip())); added += 1
-            else: entries[idx] = (hw, m.group(2).strip()); amended += 1
+            elif entries[idx][1] != m.group(2).strip(): entries[idx] = (hw, m.group(2).strip()); amended += 1
+            applied.add(d)
     entries.sort(key=lambda e: key(e[0]))
     gp.write_text('\n\n'.join(head + [e[1] for e in entries]) + '\n', encoding='utf-8')
+    APPLIED.write_text(json.dumps(sorted(applied), indent=0) + '\n', encoding='utf-8')
     return added, amended, len(entries)
+
 
 def merge_changelog(num):
     frag = one(f'work/phase2a/changelog/{num}_*.md')
