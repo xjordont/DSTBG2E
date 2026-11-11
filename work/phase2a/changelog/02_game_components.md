@@ -181,3 +181,24 @@
 - After: n/a
 - Rationale: OPTIONAL findings skipped: A-047 (spark maximum; owning section §7.4), A-081 (poison token supply; owning section §8.5), B-037 (Tomb of Giants enemy counts: the set's model counts are 3/3/1 as the manuscript lists, the 4/4/2 figures are its cardboard enemy tokens), D-025 (totals unverifiable; kept and logged as an issue). Findings mapped to this chapter but owned elsewhere and not applied here: A-033 and A-083 (traps, §5.5 and §20.6), A-088 and A-089 (tile layout and fog gate placement, §6.5), B-026 (calamity duration, §8.5; OQ-24 keeps the manuscript version), C-045 (tier terminology, applied only in passing), A-101 (Explorers name, §13), C-093 (verified, no change).
 - Source: A-047, A-081, B-037, D-025, A-033, A-083, A-088, A-089, B-026, C-045, A-101, C-093
+
+### CH-02-027 · §2.9 Expansion Components (invader tokens)
+- Type: correction
+- Before: "When invaders are in play, one invader token is placed face down on each face-down encounter card and is revealed when the characters enter that tile (see §12.2)."
+- After: "When an *invasion* is provoked, one invader token is placed face down on each face-down encounter card, and each is revealed when the characters fight that encounter (see §12.2)."
+- Rationale: §12.2 places tokens only when an invasion is provoked and reveals one only when its encounter is fought.
+- Source: QA-006 (example and consistency verification)
+
+### CH-02-028 · §2.3 Bosses
+- Type: correction
+- Before: "and between two and four *boss treasure* cards (see §2.5)"
+- After: "and two or more *boss treasure* cards (see §2.5)"
+- Rationale: The upper limit of four was an editorial addition that the expansion total of 63 boss treasure cards cannot satisfy; the limit is withdrawn and the count kept (D-025 remains open).
+- Source: QA-007 (example and consistency verification)
+
+### CH-02-029 · §2.5 Treasure Cards
+- Type: correction
+- Before: "Each boss has between two and four boss treasure cards, one of which"
+- After: "Each boss has two or more boss treasure cards, one of which"
+- Rationale: As CH entry above: the unsupported upper limit is withdrawn.
+- Source: QA-007 (example and consistency verification)

@@ -34,7 +34,7 @@ The first section is set up at the start of the campaign. Every other section is
 - The encounter decks are built from the sets the campaign names, in place of the set that supplies the next boss (see §6.5, Expansion Encounters).
 - Each encounter tile is dealt one treasure card per character from the treasure deck of the current tier (see §18.5).
 - A mini-boss is fought on the mini-boss tile, and a *main-boss* on the two *boss tiles* joined as one (see §15.3). A mega-boss is fought on its game board (see §18.1, Level 4 Encounters and Mega-Bosses).
-- A section that lists the Gargoyle twice in succession sets the Twin Gargoyles encounter, which is one boss encounter (see §17.1, Twin Gargoyles).
+- A section that lists the Gargoyle as fought twice sets the Twin Gargoyles encounter, which is one boss encounter (see §17.1, Twin Gargoyles).
 - The *fog gate* token is placed on the *doorway* to the boss's tile (see §18.2). A section that lists no boss has no fog gate.
 - The *shop* is restocked as campaign play directs (see §18.6, Blacksmith Andre's Shop), and no *spark* is added during the setup of a section (see §18.3).
 - If *invaders* are in play, no more than one invasion is provoked in each section (see §12.2).
@@ -49,7 +49,7 @@ When a section is completed by clearing an encounter, the encounter is resolved 
 
 When the last section of the campaign is completed, the campaign ends, and no setup and no rest follow (see §18.1, The Final Boss).
 
-When a boss is defeated and its section is not yet completed, the party gains the boss's rewards and its spark (see §16.5, §18.3). Each character who died in the boss encounter is revived as after any cleared encounter (see §7.2), and the exploration continues (see §7.5, Encounter Recovery). No section is set up, the shop is not restocked, and no rest is granted.
+When a boss is defeated and its section is not yet completed, the party gains the boss's rewards and its spark (see §16.5, §18.3). Each character who died in the boss encounter is revived as after any cleared encounter, except that the ember token of the boss's defeat keeps that character from becoming *hollow*, so no hollow cube is placed (see §7.5, Encounter Recovery; §16.5). The exploration then continues. No section is set up, the shop is not restocked, and no rest is granted.
 
 ### Level 4 Encounters and Mega-Bosses
 

@@ -272,3 +272,17 @@
 - After: "… A player joins or leaves a standard game in progress under the same rules."
 - Rationale: The approved F.A.Q. ruling lets a player join a standard game on the campaign's terms; the rule is stated here so that the F.A.Q. carries no rule of its own.
 - Source: CMP-0003
+
+### CH-18-040 · §18.1 Sections
+- Type: clarification
+- Before: "- A section that lists the Gargoyle twice in succession sets the Twin Gargoyles encounter"
+- After: "- A section that lists the Gargoyle as fought twice sets the Twin Gargoyles encounter"
+- Rationale: Matches the wording of the campaign lists in §19.
+- Source: QA observation (example and consistency verification)
+
+### CH-18-041 · §18.1 Sections (boss before the end of a section)
+- Type: clarification
+- Before: "Each character who died in the boss encounter is revived as after any cleared encounter (see §7.2), and the exploration continues (see §7.5, Encounter Recovery)."
+- After: "Each character who died in the boss encounter is revived as after any cleared encounter, except that the ember token of the boss's defeat keeps that character from becoming *hollow*, so no hollow cube is placed (see §7.5, Encounter Recovery; §16.5). The exploration then continues."
+- Rationale: §16.5 step 4 embers every character, the dead included, and an embered character is not hollow; the revival wording implied hollow cubes. No published campaign lists two bosses in one section, so the case arises only in a campaign of the players' own design.
+- Source: QA observation (example and consistency verification)

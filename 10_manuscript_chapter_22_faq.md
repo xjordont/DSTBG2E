@@ -188,7 +188,7 @@ The questions in this chapter are those that arise most often at the table. Each
 
 **Q.** Must an invader be killed for its encounter to be cleared?
 
-**A.** Yes. While the invader is on the tile, the encounter is not cleared (see §12.2, End of an Invasion).
+**A.** Not always. While the invader is on the tile, the encounter is not cleared. It is cleared when every enemy model, the invader included, has been killed, or when the invader has vanished and every other enemy model has been killed (see §12.2, End of an Invasion).
 
 **Q.** A chest proves to be a *mimic*, and every character dies. What happens?
 

@@ -163,6 +163,6 @@ Every *attack option* of a scaled weapon adds one to its *attack value* (see §1
 
 *Example.* The Warrior's great axe prints requirements of 14 STR, 8 DEX, 0 INT, and 0 FTH, so strength is its relevant stat. The Warrior's strength is 20, which exceeds 14 by six. The axe is scaled: the Warrior marks it with a red cube, and each of its attack options adds one to its attack value.
 
-*Example.* The Assassin's rapier prints requirements of 10 STR and 20 DEX, so dexterity is its relevant stat. The Assassin's dexterity is 24, which exceeds 20 by four, and the rapier is not scaled. At the *bonfire* the Assassin raises dexterity to 29. The rapier is now scaled, and the Assassin marks it with a red cube.
+*Example.* The Assassin's Rapier requires 14 STR and 21 DEX (see Appendix A), so dexterity is its relevant stat. The Assassin's dexterity is 24, which exceeds 21 by three, and the Rapier is not scaled. At the *bonfire* the Assassin raises dexterity to 29. The Rapier is now scaled, and the Assassin marks it with a red cube.
 
 *Example.* The Knight's sword prints requirements of 18 STR and 18 DEX, tied for the highest. The Knight has 24 STR and 20 DEX and chooses strength as the relevant stat. The Knight's strength exceeds 18 by six, so the sword is scaled.

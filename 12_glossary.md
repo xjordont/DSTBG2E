@@ -98,7 +98,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Drink Estus (major action).** The major action in which a character flips the *estus flask* token to its used side and removes every damage cube from their endurance bar. It may be taken only while the token shows its ready side (see §3.5, Estus Flask; §10.1).
 
-**Dropped souls.** *Souls* placed on an encounter tile by a character who died there or, when an encounter was *failed*, by a living character. Only the character who dropped them may reclaim them, by surviving to clear that encounter. They are returned to the supply if that character dies first (see §7.6).
+**Dropped souls.** *Souls* placed on an encounter tile by a character who died there or, when an encounter was *failed*, by a living character. Only the character who dropped them may reclaim them, by surviving to clear that encounter; any still on the tiles when a boss is defeated are returned to the characters who dropped them. They are returned to the supply if that character dies first (see §7.6; §6.6).
 
 **Ember.** An *ember card* consumed by a character as the *Ember* major action, or the state of being *embered* that results (see §4.4, §7.3).
 
@@ -264,7 +264,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Shift.** An icon found on attack options and on summon behaviour cards. A character whose attack option bears it may move up to the number of nodes shown, before the target is chosen if the icon precedes the dice and after the attack's damage and effects if it follows them. A *shift* is a *move*, costs no stamina, and does not use the *Walk* or *Run* minor action (see §10.3, Shift; §12.1).
 
-**Shop.** Blacksmith Andre's stock of face-up treasure cards, in a tier one shop and a tier two shop. A tier one card costs two *souls* and a tier two card four; a treasure card other than starting equipment sells for one soul (see §11.4). The tier one shop is stocked at setup and the tier two shop when the mini-boss is defeated; both are restocked only after a boss is defeated (in campaign play, after a section is completed), unsold cards going to the bottom of their deck first (see §6.3).
+**Shop.** Blacksmith Andre's stock of face-up treasure cards, in a tier one shop and a tier two shop. A tier one card costs two *souls* and a tier two card four; a tier one or tier two treasure card sells for one soul and a boss treasure card for six, and starting equipment cannot be sold (see §11.4). The tier one shop is stocked at setup and the tier two shop when the mini-boss is defeated; both are restocked only after a boss is defeated (in campaign play, after a section is completed), unsold cards going to the bottom of their deck first (see §6.3).
 
 **Signature card.** One of Black Dragon Kalameet's two behaviour cards, Mark of Calamity and Hellfire Blast, that are included in every behaviour deck built for Kalameet (see §17.8).
 
@@ -302,7 +302,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Tier one treasure.** The treasure deck that holds common and class-specific treasure with every stat requirement below 25. Encounter rewards and chests draw from tier one until the mini-boss is defeated (in campaign play, until the *bonfire ascetic* is burnt) (see §6.2).
 
-**Tier two treasure.** The treasure deck that holds every treasure card with a stat requirement of 25 or more, the transposed treasure and the five legendary cards. Encounter rewards and chests draw from tier two once the mini-boss is defeated (in campaign play, once the *bonfire ascetic* is burnt) (see §6.2).
+**Tier two treasure.** The treasure deck that holds common and class-specific treasure with a stat requirement of 25 or more, all transposed treasure, and the five legendary cards. Encounter rewards and chests draw from tier two once the mini-boss is defeated (in campaign play, once the *bonfire ascetic* is burnt) (see §6.2).
 
 **Titanite.** A weapon upgrade (Titanite Shard, Titanite Chunk, Titanite Slab, or Titanite Scale) that is fused permanently to the weapon it is attached to. A Titanite Chunk is attached only in place of an attached Titanite Shard, and a Titanite Slab only in place of an attached Titanite Chunk; the replaced card returns to the bottom of the treasure deck of its tier (see Appendix B). When that weapon is sold, the Titanite is returned with it to the bottom of the treasure deck of the weapon's tier (see §4.2).
 
@@ -318,7 +318,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Turn.** One model's opportunity to act. In each round the enemies take their turns, then the characters take theirs in descending threat order (see §7.5, Encounter Turn Order; §10.1). In a boss encounter the boss takes a turn before each character's turn, and the players choose the order of the characters (see §16.1).
 
-**Twin Gargoyles.** The boss encounter set by a campaign *section* that lists the Gargoyle twice in succession: one mini-boss encounter in two parts, fought against one Gargoyle and then at once against a second, with no rest or reward between them. The rewards of a defeated boss follow only when the second Gargoyle is defeated, and a failure against either Gargoyle means both are fought again (see §17.1, Twin Gargoyles).
+**Twin Gargoyles.** The boss encounter set by a campaign *section* that lists the Gargoyle as fought twice: one mini-boss encounter in two parts, fought against one Gargoyle and then at once against a second, with no rest or reward between them. The rewards of a defeated boss follow only when the second Gargoyle is defeated, and a failure against either Gargoyle means both are fought again (see §17.1, Twin Gargoyles).
 
 **Two-handed.** A weapon bearing the two-handed icon, or a one-handed weapon equipped while the other weapon slot holds no card; a shield in the other weapon slot is equipment in the other hand. A weapon wielded two-handed may reroll one die of each attack roll. Spells are never two-handed (see §10.4).
 

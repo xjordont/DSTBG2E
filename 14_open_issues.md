@@ -2,7 +2,7 @@
 
 Questions that Phase 2A could not settle from the manuscript, the approved completions or the Gate 1 answers. None blocks the book: every rule in the Class B chapters is definite. Each item names the section that would change.
 
-Items in the per-chapter lists: 266.
+Items in the per-chapter lists: 269.
 
 ## 1. Decisions the author may wish to revisit
 
@@ -33,7 +33,7 @@ These are the points on which the lead editor made a call that the author may wi
 
 ## 2. Per-chapter lists
 
-### Chapter 02 — game components (8)
+### Chapter 02 — game components (9)
 
 - Style checker false positives: "Armorer Dennis" (§2.4) and "Plow Scarecrow" (§2.2) are printed card names mandated by OQ-17 and by the brief's terminology list, but `tools/style_check.py` flags them as Americanisms (`armor\w*`, `plow\w*`). The tool needs a whitelist for printed names; it could not be edited from this chapter. The chapter is otherwise at zero violations.
 - Hollow cubes (§2.8): no supplied set lists a hollow marker; the chapter lists 8x Hollow cubes (two per character) with no set tag and states only that their colour differs from the damage, stamina, and stat cubes. The author must confirm the component (colour and source).
@@ -43,6 +43,7 @@ These are the points on which the lead editor made a call that the author may wi
 - "Dragonslayer Ornstein" (§2.3): the core set's own text prints "Dragon Slayer Ornstein" (two words); the manuscript's one-word form is kept for consistency with §17 and §19. The author must confirm the spelling printed on the card (OQ-17).
 - Cross-chapter dependencies: §2.4's one-sentence summary of standard and advanced summons and invaders must match §12.1 and §12.2 as drafted; §2.9's "Mega-boss setup card" (Executioner's Chariot) is defined only by §17.9; the Level 4 reward from the mega-boss treasure cards is owned by §6.7 (CMP-0012(d)).
 - Glossary entries outside this chapter's ownership that contradict Gate 1 and are not amended here: **Mega-boss** still states permadeath (contrary to OQ-14; owner §7.2/§15); **Endurance bar** still states eight spaces (contrary to OQ-08; owner §3.4); **Poison** and **Stagger** durations (OQ-13, OQ-16; owner §8.5).
+- Boss treasure per boss (§2.3, §2.5): the earlier draft said each boss has "between two and four" boss treasure cards, a limit no source states and which the expansion total of 63 cannot satisfy (21 expansion bosses, of which the ten mega-bosses and the Old Dragonslayer have two each). The limit is withdrawn ("two or more"); the totals 18 and 63 are the manuscript's and still need a recount against the components (D-025).
 
 ### Chapter 03 — characters (7)
 
@@ -188,7 +189,7 @@ Resolved at integration (lead editor): the scry procedure now lives only in §7.
 - D-011 (pay one soul at the Firekeeper to ready the luck token) is not applied: the rest itself readies the token (§11.2, step 6), so the purchase has no use in this edition. The author must confirm the drop is intended.
 - Glossary: the entry **Starting equipment** said "may not be sold"; it is amended to "cannot be sold" with a cross-reference. The entry **Fog gate** is left as it is; §15.1 owns it.
 
-### Chapter 12 — phantoms (12)
+### Chapter 12 — phantoms (13)
 
 - Invader and clearing (§12.2, End of an Invasion): the manuscript does not say whether an invader must be killed for its encounter to be cleared, and §7.5 leaves the point to this section. The chapter states that an invader does not count towards clearing and that an invader still on the tile when the encounter is cleared is removed without award. The author must confirm; the alternative (the invader must be killed) makes the encounter harder to leave. §7.5, Encounter Resolution ("crystal lizards do not count") and the glossary entry **Cleared** must then name invaders beside crystal lizards.
 - Invasion trigger (§12.2, Invasions): the manuscript's "Embered characters provoke an invader if no invasion has occurred yet" is drafted as two moments (A-045): the dealing of encounter cards while a character is embered, and the discarding of an ember card while a face-down encounter card lies on a tile. A character who becomes embered while every encounter card is face up provokes no invasion until the next setup. The embering at a boss's defeat is deferred to the next setup so that tokens are never placed on cards that §6.6 is about to remove. The author must confirm.
@@ -204,6 +205,7 @@ Resolved at integration (lead editor): the scry procedure now lives only in §7.
 - Glossary entries owned elsewhere and not amended here: **Cleared** (invaders do not count); **Weak arc** ("a character attacking a boss": summons also gain the die); **Behaviour deck** and **Behaviour card** ("invader or phantom": an invader is a phantom; "summon" is meant); **Shift** ("phantom behaviour icon": only summon cards carry it); **Turn** (the summon's and invader's turns).
 
 Resolved at integration (lead editor): an invader counts towards clearing (the general rule of §7.5 applies; CH-12-033). The author may instead rule that an invader does not count and leaves when the other enemies are killed; §12.2 and §7.5 would then both change.
+- Blank invader tokens (§12.2, Invader Tokens, step 2): three blank tokens are supplied, and a campaign section of five encounters needs four. A substitution rule was added (tokens of the kind not drawn stand in as blanks); confirm or replace it.
 
 ### Chapter 13 — mimics (10)
 
@@ -302,7 +304,7 @@ Resolved at integration (lead editor): an invader counts towards clearing (the g
 - **Boss** calls a boss "a single powerful enemy"; Ornstein & Smough is one boss with two models (§17.1). The owner (§15) may wish to add "fought with one model or, for some bosses, more than one".
 - **Calamity** (owner §8.5) is unchanged and agrees with §17.8.
 
-### Chapter 18 — campaign play (17)
+### Chapter 18 — campaign play (18)
 
 - Campaign soul rewards (§18.5): two Gate 1 answers disagree. OQ-21's recommendation reads "keep rewards at 3/4/5/6 and the doubled costs" (B-011, first option), which read literally makes the campaign full rewards equal to the standard ones. OQ-05, CMP-0010, and the Preserve list give the campaign reduced column as 1/1/2/2 and "soul rewards one lower", which presuppose a full column of 2/3/4/5. The chapter follows the manuscript's table and the lead's instruction: full 2/3/4/5, reduced 1/1/2/2. B-011 is therefore not applied. If the author intended 3/4/5/6 in campaign play, the table becomes identical to §7.6 and the reduced column 1/2/2/3.
 - Bonfire ascetic fee (§18.7): B-034 (approved PROPOSED: eight souls per character, and only after the first section's final boss) is not applied. The chapter keeps the manuscript's one-time communal fee of 16 souls, payable during any rest, as the chapter instructions, the glossary, and the Preserve list state. The author must confirm.
@@ -323,6 +325,7 @@ Resolved at integration (lead editor): an invader counts towards clearing (the g
 - C-103 (qualify the campaign headings "Stat Tier Costs", "Shop Price Table", "The Fog Gate", "Sparks", "Setup") is not applied because the section map fixes the titles; cross-references carry the section number, which keeps them unambiguous.
 
 Resolved at integration (lead editor): campaign soul rewards follow Gate 1 OQ-21 (standard rewards kept, doubled stat costs retained; CH-18-038). The author must confirm this, because OQ-05's illustrative campaign figures (1/1/2/2) and the Preserve list ("soul rewards one lower") assumed the manuscript's table of 2/3/4/5.
+- Boss defeated before the end of a section (§18.1): the dead are revived without hollow cubes, because §16.5 embers every character at a boss's defeat. No published campaign lists two bosses in one section; confirm the ruling for campaigns of the players' own design.
 
 ### Chapter 19 — campaigns (10)
 

@@ -186,6 +186,27 @@ Every substantive change made in Phase 2A between the manuscript (`work/docx/man
 - Rationale: OPTIONAL findings skipped: A-047 (spark maximum; owning section §7.4), A-081 (poison token supply; owning section §8.5), B-037 (Tomb of Giants enemy counts: the set's model counts are 3/3/1 as the manuscript lists, the 4/4/2 figures are its cardboard enemy tokens), D-025 (totals unverifiable; kept and logged as an issue). Findings mapped to this chapter but owned elsewhere and not applied here: A-033 and A-083 (traps, §5.5 and §20.6), A-088 and A-089 (tile layout and fog gate placement, §6.5), B-026 (calamity duration, §8.5; OQ-24 keeps the manuscript version), C-045 (tier terminology, applied only in passing), A-101 (Explorers name, §13), C-093 (verified, no change).
 - Source: A-047, A-081, B-037, D-025, A-033, A-083, A-088, A-089, B-026, C-045, A-101, C-093
 
+### CH-02-027 · §2.9 Expansion Components (invader tokens)
+- Type: correction
+- Before: "When invaders are in play, one invader token is placed face down on each face-down encounter card and is revealed when the characters enter that tile (see §12.2)."
+- After: "When an *invasion* is provoked, one invader token is placed face down on each face-down encounter card, and each is revealed when the characters fight that encounter (see §12.2)."
+- Rationale: §12.2 places tokens only when an invasion is provoked and reveals one only when its encounter is fought.
+- Source: QA-006 (example and consistency verification)
+
+### CH-02-028 · §2.3 Bosses
+- Type: correction
+- Before: "and between two and four *boss treasure* cards (see §2.5)"
+- After: "and two or more *boss treasure* cards (see §2.5)"
+- Rationale: The upper limit of four was an editorial addition that the expansion total of 63 boss treasure cards cannot satisfy; the limit is withdrawn and the count kept (D-025 remains open).
+- Source: QA-007 (example and consistency verification)
+
+### CH-02-029 · §2.5 Treasure Cards
+- Type: correction
+- Before: "Each boss has between two and four boss treasure cards, one of which"
+- After: "Each boss has two or more boss treasure cards, one of which"
+- Rationale: As CH entry above: the unsupported upper limit is withdrawn.
+- Source: QA-007 (example and consistency verification)
+
 ## Chapter 00 — Front Matter
 
 ### CH-00-001 · Foreword
@@ -621,6 +642,34 @@ Every substantive change made in Phase 2A between the manuscript (`work/docx/man
 - Rationale: Grouped record of OPTIONAL findings outside this chapter's ownership.
 - Source: C-092, D-033, A-120, F-098, F-100
 
+### CH-04-027 · §4.2 Upgrade Cards (Titanite)
+- Type: correction
+- Before: "Once attached, a Titanite card cannot be removed."
+- After: "Once attached, a Titanite card cannot be removed, except when a Titanite Chunk or a Titanite Slab takes its place (see Appendix B, Titanite Replacement)."
+- Rationale: Appendix B lets a Chunk replace a Shard and a Slab replace a Chunk; §4.2 stated no exception.
+- Source: QA-002 (example and consistency verification)
+
+### CH-04-028 · §4.2 Upgrade Cards (Titanite example)
+- Type: correction
+- Before: "The Morning Star holds no further upgrade card, and the Titanite Shard stays attached for the rest of the game."
+- After: "The Morning Star holds no further upgrade card, and the Titanite Shard stays attached unless a Titanite Chunk later takes its place (see Appendix B)."
+- Rationale: The example contradicted Titanite Replacement in Appendix B.
+- Source: QA-002 (example and consistency verification)
+
+### CH-04-029 · §4.4 Ember Cards
+- Type: clarification
+- Before: "An ember card in the inventory cannot be consumed until the encounter ends."
+- After: "During an encounter, the inventory cannot be accessed, so an ember card there cannot be consumed until the encounter ends."
+- Rationale: §3.2 and §7.3 require the ember card to be in the back-up slot whenever it is consumed; the sentence implied otherwise outside an encounter.
+- Source: QA-011 (example and consistency verification)
+
+### CH-04-030 · §4.4 Ember Cards
+- Type: clarification
+- Before: "A character consumes an ember card by discarding it, as the *Ember* major action"
+- After: "A character consumes an ember card by discarding it from the back-up slot, as the *Ember* major action"
+- Rationale: Brings §4.4 into line with §3.2 and §7.3.
+- Source: QA-011 (example and consistency verification)
+
 ## Chapter 05 — Tiles and Nodes
 
 ### CH-05-001 · §5 Tiles and Nodes
@@ -860,6 +909,13 @@ Every substantive change made in Phase 2A between the manuscript (`work/docx/man
 - After: "When a character enters a node holding a face-down trap token, whether by a move, by the movement that follows a successful dodge, or by a push, the token is turned face up at once"
 - Rationale: §5.2 defines a move so as to exclude dodge movement, which left a dodge onto a trap node untriggered. The approved F.A.Q. ruling is that any character movement onto the node, including a dodge, triggers the trap.
 - Source: CMP-0003 (F.A.Q., traps), review of PR #2
+
+### CH-05-035 · §5.5 Terrain (Traps)
+- Type: clarification
+- Before: "Trap damage cannot be blocked or resisted."
+- After: "Trap damage is not an attack, and it cannot be blocked or resisted."
+- Rationale: The F.A.Q. cites §5.5 for the ruling that trap damage is not an attack; the section now states it.
+- Source: QA observation (example and consistency verification)
 
 ## Chapter 06 — Setup
 
@@ -1621,6 +1677,27 @@ Every substantive change made in Phase 2A between the manuscript (`work/docx/man
 - Rationale: Under Gate 1 OQ-21 campaign play keeps the standard soul rewards, so no separate campaign table exists (see CH-18-038).
 - Source: Gate 1 — OQ-21
 
+### CH-07-053 · §7.6 Souls (Dropped Souls)
+- Type: correction
+- Before: "the character retrieves them during Encounter Resolution (see §7.5, Encounter Resolution)."
+- After: "the character retrieves them during Encounter Resolution (see §7.5, Encounter Resolution). The one exception is the setup that follows the defeat of a boss, which returns all dropped souls still on the tiles to the characters who dropped them (see §6.6; §6.7)."
+- Rationale: §6.6 step 1 and §6.7 step 1 return dropped souls after a boss; "only" excluded that case.
+- Source: QA-003 (example and consistency verification)
+
+### CH-07-054 · §7.5 Encounters (Aggro)
+- Type: correction
+- Before: "In boss encounters the aggro token moves after any damage to the boss (see §16.4)."
+- After: "In boss encounters the aggro token moves at the end of the turn of each character who inflicted damage on the boss during that turn (see §16.4)."
+- Rationale: §16.4 moves the token at the end of the character's turn, not at the moment of the damage.
+- Source: QA-005 (example and consistency verification)
+
+### CH-07-055 · §7.4 Sparks
+- Type: clarification
+- Before: "Each time a *mini-boss*, *main-boss*, or *mega-boss* is defeated, the party gains one spark (see §16.5)"
+- After: "Each time a *mini-boss*, *main-boss*, or *mega-boss* is defeated and the game does not end, the party gains one spark (see §16.5)"
+- Rationale: §16.5 grants no spark and no rest after the final boss.
+- Source: QA observation (example and consistency verification)
+
 ## Chapter 11 — Returning to the Bonfire
 
 ### CH-11-001 · §11 Returning to the Bonfire
@@ -2185,6 +2262,13 @@ Every substantive change made in Phase 2A between the manuscript (`work/docx/man
 - Rationale: A-066 (a weapon whose highest stat requirement is zero cannot be scaled) alters the preserved scaling mechanic outside the changes signed off at Gate 1; it is left for the author (see issues). The pack findings A-032 (§20.4), A-024 (§8.3, moot under OQ-07), A-064 (§18.7), and A-087 (§5.2, §9.5) call for no text in this chapter.
 - Source: A-066; A-032, A-024, A-064, A-087
 
+### CH-10-041 · §10.5 Equipment Scaling
+- Type: correction
+- Before: "The Assassin's rapier prints requirements of 10 STR and 20 DEX, so dexterity is its relevant stat. The Assassin's dexterity is 24, which exceeds 20 by four, and the rapier is not scaled. At the *bonfire* the Assassin raises dexterity to 29. The rapier is now scaled, and the Assassin marks it with a red cube."
+- After: "The Assassin's Rapier requires 14 STR and 21 DEX (see Appendix A), so dexterity is its relevant stat. The Assassin's dexterity is 24, which exceeds 21 by three, and the Rapier is not scaled. At the *bonfire* the Assassin raises dexterity to 29. The Rapier is now scaled, and the Assassin marks it with a red cube."
+- Rationale: The example used the superseded printed requirements; Appendix A sets the Rapier at 14 STR and 21 DEX and governs scaling.
+- Source: QA-001 (example and consistency verification)
+
 ## Chapter 20 — Player versus Player
 
 ### CH-20-001 · §20 Player versus Player
@@ -2417,6 +2501,13 @@ Every substantive change made in Phase 2A between the manuscript (`work/docx/man
 - After: new text
 - Rationale: A-014 applied (tie in threat settled by the players). A-035 applied (CH-20-028). A-034 applied in part: its fewer-than-two rule is adopted (CH-20-006); its soul-token marker is not used, because Gate 1 — OQ-15 names the wound token of CMP-0009; its reading that every character takes part is not used, because CMP-0009 keeps the manuscript's exclusion of characters who died in the boss encounter. B-030 and D-018 (list a first player token) are resolved by deleting the token under CMP-0011.
 - Source: A-014, A-034, A-035, B-030, D-018
+
+### CH-20-034 · §20.1 PvP Encounters
+- Type: clarification
+- Before: "and precedes the rest at the *bonfire* that follows every boss (see §20.9)."
+- After: "and precedes the rest at the *bonfire* that follows every boss but the *final boss* (see §20.9)."
+- Rationale: §16.5 and §20.9 grant no rest after the final boss.
+- Source: QA observation (example and consistency verification)
 
 ## Chapter 08 — Combat Basics
 
@@ -2706,6 +2797,13 @@ Every substantive change made in Phase 2A between the manuscript (`work/docx/man
 - After: n/a
 - Rationale: OPTIONAL findings skipped: A-081 (no supply limit on poison tokens is stated; the manuscript's "not limited" stands and substitutes serve when the seven tokens run out), B-036 (the optional boss health increase is not adopted; bosses never scale). Superseded by Gate 1: A-024 and B-005 (Repeat 2 is deleted by OQ-07, so its definition is moot), B-026 (OQ-24 keeps the encounter-long calamity). B-002's alternative (three highest dice with a shield) is not adopted because it alters the preserved two-highest-dice rule, which §9.4 owns. Owned by other chapters and only cited here: A-032 (§20.4, §20.5), A-115 (§17.8), B-031 and A-064 (§18.7), A-027 (§18.4), A-125 (§3.1 and the glossary).
 - Source: A-081, B-036, A-024, B-005, B-026, B-002, A-032, A-115, B-031, A-064, A-027, A-125
+
+### CH-08-042 · §8.2 Reading an Enemy Data Card
+- Type: correction
+- Before: "shows the number of times the behaviour is resolved (see §9.3)."
+- After: "shows the number of times the attack beside it is resolved (see §9.3)."
+- Rationale: §9.3 applies an enemy's repeat icon to the attack icon beside it only.
+- Source: QA observation (example and consistency verification)
 
 ## Chapter 09 — Enemy Turn
 
@@ -3207,6 +3305,13 @@ Every substantive change made in Phase 2A between the manuscript (`work/docx/man
 - After: "An invader is an enemy model and counts towards clearing an encounter. While the invader is on the tile, the encounter is not cleared"
 - Rationale: The manuscript is silent. The general rule (an encounter is cleared when every enemy model has been killed, §7.5) is applied to the invader, which §12.2 treats as an enemy model, rather than adding a new removal rule. Lead editor's decision at integration; the alternative is recorded in the issues list for the author.
 - Source: A-021, manuscript lines 2023–2037
+
+### CH-12-034 · §12.2 Invaders (Invader Tokens)
+- Type: completion
+- Before: "2. Add blank invader tokens, face down, until there is one token for each face-down encounter card on the encounter tiles."
+- After: "2. Add blank invader tokens, face down, until there is one token for each face-down encounter card on the encounter tiles. If the blank tokens run out, make up the number with invader tokens of the kind not drawn in step 1; such a token is treated as blank when it is revealed."
+- Rationale: Three blank tokens are supplied, and a campaign section of five encounters needs four. [MECHANICAL CHANGE] A substitution rule is added.
+- Source: QA-010 (example and consistency verification)
 
 ## Chapter 13 — Mimics
 
@@ -3787,6 +3892,20 @@ Every substantive change made in Phase 2A between the manuscript (`work/docx/man
 - After: not applicable
 - Rationale: OPTIONAL findings skipped: none. The pack maps ten findings to this chapter (A-114, A-115, C-030, C-077, C-081, C-098, C-104, C-112, C-114, C-123), none of them OPTIONAL, and all ten are applied.
 - Source: pack 17
+
+### CH-17-048 · §17.1 Twin Gargoyles
+- Type: clarification
+- Before: "The boss encounter set by a campaign *section* that lists the Gargoyle twice in succession (see §19)."
+- After: "The boss encounter set by a campaign *section* that lists the Gargoyle as fought twice (see §19)."
+- Rationale: Matches the wording of the campaign lists in §19.
+- Source: QA observation (example and consistency verification)
+
+### CH-17-049 · §17.2 Bosses without Special Rules
+- Type: clarification
+- Before: "A campaign *section* that lists the Gargoyle twice in succession sets the Twin Gargoyles"
+- After: "A campaign *section* that lists the Gargoyle as fought twice sets the Twin Gargoyles"
+- Rationale: Matches the wording of the campaign lists in §19.
+- Source: QA observation (example and consistency verification)
 
 ## Chapter 19 — Campaigns
 
@@ -4729,6 +4848,13 @@ Every substantive change made in Phase 2A between the manuscript (`work/docx/man
 - Rationale: The rule's home is §18.4, which states that it applies in the standard game as well; the F.A.Q. cites it.
 - Source: CMP-0003
 
+### CH-22-007 · §22 F.A.Q. (invaders)
+- Type: correction
+- Before: "**A.** Yes. While the invader is on the tile, the encounter is not cleared (see §12.2, End of an Invasion)."
+- After: "**A.** Not always. While the invader is on the tile, the encounter is not cleared. It is cleared when every enemy model, the invader included, has been killed, or when the invader has vanished and every other enemy model has been killed (see §12.2, End of an Invasion)."
+- Rationale: §12.2 also clears the encounter when the invader has vanished and every other enemy model is dead.
+- Source: QA-004 (example and consistency verification)
+
 ## Chapter 18 — Campaign Play
 
 ### CH-18-001 · §18 Campaign Play
@@ -5004,6 +5130,20 @@ Every substantive change made in Phase 2A between the manuscript (`work/docx/man
 - Rationale: The approved F.A.Q. ruling lets a player join a standard game on the campaign's terms; the rule is stated here so that the F.A.Q. carries no rule of its own.
 - Source: CMP-0003
 
+### CH-18-040 · §18.1 Sections
+- Type: clarification
+- Before: "- A section that lists the Gargoyle twice in succession sets the Twin Gargoyles encounter"
+- After: "- A section that lists the Gargoyle as fought twice sets the Twin Gargoyles encounter"
+- Rationale: Matches the wording of the campaign lists in §19.
+- Source: QA observation (example and consistency verification)
+
+### CH-18-041 · §18.1 Sections (boss before the end of a section)
+- Type: clarification
+- Before: "Each character who died in the boss encounter is revived as after any cleared encounter (see §7.2), and the exploration continues (see §7.5, Encounter Recovery)."
+- After: "Each character who died in the boss encounter is revived as after any cleared encounter, except that the ember token of the boss's defeat keeps that character from becoming *hollow*, so no hollow cube is placed (see §7.5, Encounter Recovery; §16.5). The exploration then continues."
+- Rationale: §16.5 step 4 embers every character, the dead included, and an embered character is not hollow; the revival wording implied hollow cubes. No published campaign lists two bosses in one section, so the case arises only in a campaign of the players' own design.
+- Source: QA observation (example and consistency verification)
+
 ## Chapter 21 — Glossary
 
 ### CH-21-001 · §21 Glossary
@@ -5026,3 +5166,10 @@ Every substantive change made in Phase 2A between the manuscript (`work/docx/man
 - After: eleven entries restated by the lead editor (Threat, Invader, Behaviour card, Shift, Encounter, Boss, Embered, Treasure card, Main-boss, Mini-boss, Hollow)
 - Rationale: Where chapters drafted in parallel amended the same headword, the last merge won regardless of ownership. The owning section's rule is restored, and the bridge from threat to the dashboard's printed Taunt Level is kept as the Preserve list requires.
 - Source: D-039, CH-12-033, chapter issues lists
+
+### CH-21-004 · §21 Glossary (verification amendments)
+- Type: correction
+- Before: "Dropped souls: reclaimed only by surviving to clear that encounter. Shop: a treasure card other than starting equipment sells for one soul. Tier two treasure: every treasure card with a stat requirement of 25 or more. Twin Gargoyles: a section that lists the Gargoyle twice in succession."
+- After: "Dropped souls: also returned when a boss is defeated. Shop: a tier one or tier two treasure card sells for one soul and a boss treasure card for six. Tier two treasure: common and class-specific treasure with a stat requirement of 25 or more. Twin Gargoyles: a section that lists the Gargoyle as fought twice."
+- Rationale: Four entries disagreed with the sections they cite (§6.6, §11.4, §6.2, §19).
+- Source: QA-003, QA-008, QA-009, QA observation (example and consistency verification)

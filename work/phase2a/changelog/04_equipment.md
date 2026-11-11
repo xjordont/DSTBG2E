@@ -181,3 +181,31 @@
 - After: C-092 skipped: its campaign cost example belongs to §18.6, not this chapter. D-033 and A-120 applied only as an anatomy statement; the defence-total detail is owned by §9.4 (see issues). F-098 and F-100 applied through the voice rewrite.
 - Rationale: Grouped record of OPTIONAL findings outside this chapter's ownership.
 - Source: C-092, D-033, A-120, F-098, F-100
+
+### CH-04-027 · §4.2 Upgrade Cards (Titanite)
+- Type: correction
+- Before: "Once attached, a Titanite card cannot be removed."
+- After: "Once attached, a Titanite card cannot be removed, except when a Titanite Chunk or a Titanite Slab takes its place (see Appendix B, Titanite Replacement)."
+- Rationale: Appendix B lets a Chunk replace a Shard and a Slab replace a Chunk; §4.2 stated no exception.
+- Source: QA-002 (example and consistency verification)
+
+### CH-04-028 · §4.2 Upgrade Cards (Titanite example)
+- Type: correction
+- Before: "The Morning Star holds no further upgrade card, and the Titanite Shard stays attached for the rest of the game."
+- After: "The Morning Star holds no further upgrade card, and the Titanite Shard stays attached unless a Titanite Chunk later takes its place (see Appendix B)."
+- Rationale: The example contradicted Titanite Replacement in Appendix B.
+- Source: QA-002 (example and consistency verification)
+
+### CH-04-029 · §4.4 Ember Cards
+- Type: clarification
+- Before: "An ember card in the inventory cannot be consumed until the encounter ends."
+- After: "During an encounter, the inventory cannot be accessed, so an ember card there cannot be consumed until the encounter ends."
+- Rationale: §3.2 and §7.3 require the ember card to be in the back-up slot whenever it is consumed; the sentence implied otherwise outside an encounter.
+- Source: QA-011 (example and consistency verification)
+
+### CH-04-030 · §4.4 Ember Cards
+- Type: clarification
+- Before: "A character consumes an ember card by discarding it, as the *Ember* major action"
+- After: "A character consumes an ember card by discarding it from the back-up slot, as the *Ember* major action"
+- Rationale: Brings §4.4 into line with §3.2 and §7.3.
+- Source: QA-011 (example and consistency verification)

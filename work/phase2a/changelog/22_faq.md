@@ -39,3 +39,10 @@
 - After: "Yes, while the characters are on the bonfire tile and at the cost of one spark … (see §18.4)."
 - Rationale: The rule's home is §18.4, which states that it applies in the standard game as well; the F.A.Q. cites it.
 - Source: CMP-0003
+
+### CH-22-007 · §22 F.A.Q. (invaders)
+- Type: correction
+- Before: "**A.** Yes. While the invader is on the tile, the encounter is not cleared (see §12.2, End of an Invasion)."
+- After: "**A.** Not always. While the invader is on the tile, the encounter is not cleared. It is cleared when every enemy model, the invader included, has been killed, or when the invader has vanished and every other enemy model has been killed (see §12.2, End of an Invasion)."
+- Rationale: §12.2 also clears the encounter when the invader has vanished and every other enemy model is dead.
+- Source: QA-004 (example and consistency verification)

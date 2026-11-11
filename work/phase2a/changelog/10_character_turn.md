@@ -279,3 +279,10 @@
 - After: not applied
 - Rationale: A-066 (a weapon whose highest stat requirement is zero cannot be scaled) alters the preserved scaling mechanic outside the changes signed off at Gate 1; it is left for the author (see issues). The pack findings A-032 (§20.4), A-024 (§8.3, moot under OQ-07), A-064 (§18.7), and A-087 (§5.2, §9.5) call for no text in this chapter.
 - Source: A-066; A-032, A-024, A-064, A-087
+
+### CH-10-041 · §10.5 Equipment Scaling
+- Type: correction
+- Before: "The Assassin's rapier prints requirements of 10 STR and 20 DEX, so dexterity is its relevant stat. The Assassin's dexterity is 24, which exceeds 20 by four, and the rapier is not scaled. At the *bonfire* the Assassin raises dexterity to 29. The rapier is now scaled, and the Assassin marks it with a red cube."
+- After: "The Assassin's Rapier requires 14 STR and 21 DEX (see Appendix A), so dexterity is its relevant stat. The Assassin's dexterity is 24, which exceeds 21 by three, and the Rapier is not scaled. At the *bonfire* the Assassin raises dexterity to 29. The Rapier is now scaled, and the Assassin marks it with a red cube."
+- Rationale: The example used the superseded printed requirements; Appendix A sets the Rapier at 14 STR and 21 DEX and governs scaling.
+- Source: QA-001 (example and consistency verification)

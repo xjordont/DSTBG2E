@@ -18,3 +18,10 @@
 - After: eleven entries restated by the lead editor (Threat, Invader, Behaviour card, Shift, Encounter, Boss, Embered, Treasure card, Main-boss, Mini-boss, Hollow)
 - Rationale: Where chapters drafted in parallel amended the same headword, the last merge won regardless of ownership. The owning section's rule is restored, and the bridge from threat to the dashboard's printed Taunt Level is kept as the Preserve list requires.
 - Source: D-039, CH-12-033, chapter issues lists
+
+### CH-21-004 · §21 Glossary (verification amendments)
+- Type: correction
+- Before: "Dropped souls: reclaimed only by surviving to clear that encounter. Shop: a treasure card other than starting equipment sells for one soul. Tier two treasure: every treasure card with a stat requirement of 25 or more. Twin Gargoyles: a section that lists the Gargoyle twice in succession."
+- After: "Dropped souls: also returned when a boss is defeated. Shop: a tier one or tier two treasure card sells for one soul and a boss treasure card for six. Tier two treasure: common and class-specific treasure with a stat requirement of 25 or more. Twin Gargoyles: a section that lists the Gargoyle as fought twice."
+- Rationale: Four entries disagreed with the sections they cite (§6.6, §11.4, §6.2, §19).
+- Source: QA-003, QA-008, QA-009, QA observation (example and consistency verification)

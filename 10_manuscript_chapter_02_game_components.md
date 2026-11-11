@@ -59,7 +59,7 @@ Each enemy has a *data card* (see §8.2) and the number of models listed. *Cryst
 
 ## 2.3 Bosses
 
-Each *boss* has a model, a *health dial*, a *data card* (see §15.4), a *behaviour deck* (see §15.5), and between two and four *boss treasure* cards (see §2.5). A *mini-boss* or *main-boss* is fought on the *boss tiles* (see §15.3). A *mega-boss* is fought on the *mega-boss game board* supplied with its expansion (see §2.9), after a Level 4 encounter (see §6.7).
+Each *boss* has a model, a *health dial*, a *data card* (see §15.4), a *behaviour deck* (see §15.5), and two or more *boss treasure* cards (see §2.5). A *mini-boss* or *main-boss* is fought on the *boss tiles* (see §15.3). A *mega-boss* is fought on the *mega-boss game board* supplied with its expansion (see §2.9), after a Level 4 encounter (see §6.7).
 
 ### Mini-Bosses
 
@@ -153,7 +153,7 @@ Standard summons are called before a mini-boss encounter and advanced summons be
 | *Legendary treasure* | 10 | 20 |
 | *Boss treasure* | 18 | 63 |
 
-In all, 534 treasure cards are available. Each character's ten class-specific treasure cards comprise five class treasure cards and five *transposed treasure* cards. Each boss has between two and four boss treasure cards, one of which is awarded when the boss is defeated (see §16.5). The 12 invader treasure cards of the Phantoms expansion are listed with the expansion components (see §2.9).
+In all, 534 treasure cards are available. Each character's ten class-specific treasure cards comprise five class treasure cards and five *transposed treasure* cards. Each boss has two or more boss treasure cards, one of which is awarded when the boss is defeated (see §16.5). The 12 invader treasure cards of the Phantoms expansion are listed with the expansion components (see §2.9).
 
 ## 2.6 Encounter Cards and Ambush Cards
 
@@ -252,7 +252,7 @@ The components below are supplied by the expansions named and are used only with
 - 11x Invader models, 12x Invader data cards (six standard, six advanced), 64x Invader behaviour cards, 12x Invader treasure cards, and 1x Invader health dial (see §12.2)
 - 6x Standard invader tokens, 6x Advanced invader tokens, and 3x Blank invader tokens (see §12.2)
 
-An *invader token* shows an invader icon or is blank. When invaders are in play, one invader token is placed face down on each face-down encounter card and is revealed when the characters enter that tile (see §12.2).
+An *invader token* shows an invader icon or is blank. When an *invasion* is provoked, one invader token is placed face down on each face-down encounter card, and each is revealed when the characters fight that encounter (see §12.2).
 
 ### Explorers
 

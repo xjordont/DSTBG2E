@@ -328,3 +328,17 @@
 - After: not applicable
 - Rationale: OPTIONAL findings skipped: none. The pack maps ten findings to this chapter (A-114, A-115, C-030, C-077, C-081, C-098, C-104, C-112, C-114, C-123), none of them OPTIONAL, and all ten are applied.
 - Source: pack 17
+
+### CH-17-048 · §17.1 Twin Gargoyles
+- Type: clarification
+- Before: "The boss encounter set by a campaign *section* that lists the Gargoyle twice in succession (see §19)."
+- After: "The boss encounter set by a campaign *section* that lists the Gargoyle as fought twice (see §19)."
+- Rationale: Matches the wording of the campaign lists in §19.
+- Source: QA observation (example and consistency verification)
+
+### CH-17-049 · §17.2 Bosses without Special Rules
+- Type: clarification
+- Before: "A campaign *section* that lists the Gargoyle twice in succession sets the Twin Gargoyles"
+- After: "A campaign *section* that lists the Gargoyle as fought twice sets the Twin Gargoyles"
+- Rationale: Matches the wording of the campaign lists in §19.
+- Source: QA observation (example and consistency verification)

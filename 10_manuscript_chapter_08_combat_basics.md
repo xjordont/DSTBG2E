@@ -41,7 +41,7 @@ Smaller icons printed around a behaviour icon modify it, as follows.
 - The *node* icon makes an attack target every character on the target's node (see §9.3).
 - The *push* icon makes a movement a *push-move* and an attack a *push-attack* (see §8.4).
 - A push icon that carries a number {{icon:ast-0031-push-with-damage-satellite-glyph}} makes a push-move deal that damage (see §8.4).
-- The *repeat* icon {{icon:ast-0061-repeat-behaviour-or-attack}} shows the number of times the behaviour is resolved (see §9.3).
+- The *repeat* icon {{icon:ast-0061-repeat-behaviour-or-attack}} shows the number of times the attack beside it is resolved (see §9.3).
 - A *condition* icon places that condition on each model the attack *hits* (see §8.5).
 
 The attack icon itself shows whether the attack deals *physical damage* or *magical damage* {{icon:ast-0042-deal-magical-damage}} (see §9.3).

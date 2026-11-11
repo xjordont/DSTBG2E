@@ -30,7 +30,7 @@ The *weak arcs* {{icon:ast-0041-weak-boss-arc}} shown on the most recently resol
 
 ### Twin Gargoyles
 
-**Twin Gargoyles.** The boss encounter set by a campaign *section* that lists the Gargoyle twice in succession (see §19).
+**Twin Gargoyles.** The boss encounter set by a campaign *section* that lists the Gargoyle as fought twice (see §19).
 
 The Twin Gargoyles are one *mini-boss* encounter in two parts, fought on the mini-boss tile against one Gargoyle and then, at once, against a second. The one Gargoyle model, data card, health dial, and set of behaviour cards serve for both parts. In the standard game the Gargoyle is selected once and is fought once.
 
@@ -54,7 +54,7 @@ If the encounter is *failed* while either Gargoyle is in play, the whole encount
 
 ## 17.2 Core Set
 
-The Gargoyle, the Titanite Demon, the Boreal Outrider Knight, and the Winged Knight each have the rank of *mini-boss*, and the Dancer of the Boreal Valley is a *main-boss*. These five bosses have no rules beyond their *data cards*. A campaign *section* that lists the Gargoyle twice in succession sets the Twin Gargoyles *encounter* (see §17.1, Twin Gargoyles).
+The Gargoyle, the Titanite Demon, the Boreal Outrider Knight, and the Winged Knight each have the rank of *mini-boss*, and the Dancer of the Boreal Valley is a *main-boss*. These five bosses have no rules beyond their *data cards*. A campaign *section* that lists the Gargoyle as fought twice sets the Twin Gargoyles *encounter* (see §17.1, Twin Gargoyles).
 
 ### Dragonslayer Ornstein and Executioner Smough
 

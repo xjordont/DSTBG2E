@@ -19,3 +19,4 @@
 - C-103 (qualify the campaign headings "Stat Tier Costs", "Shop Price Table", "The Fog Gate", "Sparks", "Setup") is not applied because the section map fixes the titles; cross-references carry the section number, which keeps them unambiguous.
 
 Resolved at integration (lead editor): campaign soul rewards follow Gate 1 OQ-21 (standard rewards kept, doubled stat costs retained; CH-18-038). The author must confirm this, because OQ-05's illustrative campaign figures (1/1/2/2) and the Preserve list ("soul rewards one lower") assumed the manuscript's table of 2/3/4/5.
+- Boss defeated before the end of a section (§18.1): the dead are revived without hollow cubes, because §16.5 embers every character at a boss's defeat. No published campaign lists two bosses in one section; confirm the ruling for campaigns of the players' own design.

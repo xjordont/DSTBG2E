@@ -230,3 +230,10 @@
 - After: "An invader is an enemy model and counts towards clearing an encounter. While the invader is on the tile, the encounter is not cleared"
 - Rationale: The manuscript is silent. The general rule (an encounter is cleared when every enemy model has been killed, §7.5) is applied to the invader, which §12.2 treats as an enemy model, rather than adding a new removal rule. Lead editor's decision at integration; the alternative is recorded in the issues list for the author.
 - Source: A-021, manuscript lines 2023–2037
+
+### CH-12-034 · §12.2 Invaders (Invader Tokens)
+- Type: completion
+- Before: "2. Add blank invader tokens, face down, until there is one token for each face-down encounter card on the encounter tiles."
+- After: "2. Add blank invader tokens, face down, until there is one token for each face-down encounter card on the encounter tiles. If the blank tokens run out, make up the number with invader tokens of the kind not drawn in step 1; such a token is treated as blank when it is revealed."
+- Rationale: Three blank tokens are supplied, and a campaign section of five encounters needs four. [MECHANICAL CHANGE] A substitution rule is added.
+- Source: QA-010 (example and consistency verification)

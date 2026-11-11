@@ -230,3 +230,10 @@
 - After: new text
 - Rationale: A-014 applied (tie in threat settled by the players). A-035 applied (CH-20-028). A-034 applied in part: its fewer-than-two rule is adopted (CH-20-006); its soul-token marker is not used, because Gate 1 — OQ-15 names the wound token of CMP-0009; its reading that every character takes part is not used, because CMP-0009 keeps the manuscript's exclusion of characters who died in the boss encounter. B-030 and D-018 (list a first player token) are resolved by deleting the token under CMP-0011.
 - Source: A-014, A-034, A-035, B-030, D-018
+
+### CH-20-034 · §20.1 PvP Encounters
+- Type: clarification
+- Before: "and precedes the rest at the *bonfire* that follows every boss (see §20.9)."
+- After: "and precedes the rest at the *bonfire* that follows every boss but the *final boss* (see §20.9)."
+- Rationale: §16.5 and §20.9 grant no rest after the final boss.
+- Source: QA observation (example and consistency verification)

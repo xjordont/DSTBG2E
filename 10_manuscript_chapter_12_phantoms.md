@@ -97,7 +97,7 @@ The embering of every character at a boss's defeat (see §16.5) provokes no inva
 When an invasion is provoked, the invader tokens are placed as follows.
 
 1. Draw one invader token at random and keep it face down: a standard invader token if the mini-boss has not been defeated, an advanced invader token if it has.
-2. Add blank invader tokens, face down, until there is one token for each face-down encounter card on the encounter tiles.
+2. Add blank invader tokens, face down, until there is one token for each face-down encounter card on the encounter tiles. If the blank tokens run out, make up the number with invader tokens of the kind not drawn in step 1; such a token is treated as blank when it is revealed.
 3. Shuffle these tokens face down.
 4. Place one token face down on each face-down encounter card.
 

@@ -333,7 +333,7 @@ D-021,Major,REQUIRED,resolved,CH-03-014,manuscript.md 781 (Endurance Bar)
 D-022,Minor,REQUIRED,resolved,CH-02-008,manuscript.md 509–511 (Main-Bosses)
 D-023,Minor,REQUIRED,resolved,CH-02-009 CH-19-028,manuscript.md 523–541 (Mega-bosses) vs 3018
 D-024,Minor,REQUIRED,resolved,CH-02-010 CH-02-012 CH-02-022 CH-02-024,manuscript.md 679–723 (Tokens & Terrain Elements)
-D-025,Note,OPTIONAL,declined,CH-02-026,manuscript.md 635–657 (Encounter cards)
+D-025,Note,OPTIONAL,resolved,CH-02-028,manuscript.md 635–657 (Encounter cards)
 D-026,Minor,REQUIRED,resolved,CH-02-004,manuscript.md 449 (Enemies)
 D-027,Note,OPTIONAL,resolved,CH-02-006 CH-02-011 CH-19-015,"manuscript.md 557, 561, 569, 2492, 2528 (Phantoms)"
 D-028,Major,REQUIRED,resolved,CH-07-043 CH-14-007 CH-14-008,manuscript.md 1477 (Treasure Rewards) vs 2055 (Crystal Lizards)

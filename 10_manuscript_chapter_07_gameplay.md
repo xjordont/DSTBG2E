@@ -54,7 +54,7 @@ The ember token stays on the dashboard until the character dies (see §7.2); it 
 
 *Sparks* are the party's shared resource and are tracked on the *spark* dial (see §6.4). The party begins the game with sparks equal to six minus the number of characters.
 
-Each time a *mini-boss*, *main-boss*, or *mega-boss* is defeated, the party gains one spark (see §16.5), and the characters then rest at the *bonfire* without spending a spark. Resting at the bonfire at any other time costs one spark (see §11.2). In the standard game sparks cannot be gained in any other way; campaign play varies these rules (see §18.3).
+Each time a *mini-boss*, *main-boss*, or *mega-boss* is defeated and the game does not end, the party gains one spark (see §16.5), and the characters then rest at the *bonfire* without spending a spark. Resting at the bonfire at any other time costs one spark (see §11.2). In the standard game sparks cannot be gained in any other way; campaign play varies these rules (see §18.3).
 
 The party cannot rest at the bonfire while the spark dial shows zero. If the characters are required to rest while the dial shows zero, the players lose the game (see §7.1).
 
@@ -93,7 +93,7 @@ Characters then take their turns one at a time in descending threat order (see �
 
 The aggro token marks the character targeted by enemy behaviours that bear the skull icon (see §9.3). After the last character's turn of each round, the aggro token moves to the character who inflicted the most damage on enemy models during that round, counting wound tokens placed and damage recorded on an invader's health dial. If two or more characters tie for the most damage, or no character inflicted damage, the aggro token stays with its holder.
 
-When the character holding the aggro token dies, the token moves at once to the living character with the highest threat; the players settle ties. In boss encounters the aggro token moves after any damage to the boss (see §16.4).
+When the character holding the aggro token dies, the token moves at once to the living character with the highest threat; the players settle ties. In boss encounters the aggro token moves at the end of the turn of each character who inflicted damage on the boss during that turn (see §16.4).
 
 ### Encounter Resolution
 
@@ -176,7 +176,7 @@ The reduced reward applies to encounters only; invaders and bosses are rewarded 
 
 When a character dies, all of the souls on their dashboard are dropped on the tile where they died, in a pile separate from any other character's *dropped souls* (see §7.2). When an encounter is failed, every living character also drops all of their souls on that tile (see §7.5, Encounter Resolution). Dropped souls stay on the tile through every *reset*. The souls a character drops at death are not forfeited by that death.
 
-Only the character who dropped the souls may reclaim them, and only by surviving an encounter on that tile that ends cleared; the character retrieves them during Encounter Resolution (see §7.5, Encounter Resolution). A character who is dead or *lost* when the encounter is cleared does not retrieve them. If the character who dropped the souls dies before reclaiming them, the dropped souls are returned to the supply; souls dropped at the moment of that death remain on the tile.
+Only the character who dropped the souls may reclaim them, and only by surviving an encounter on that tile that ends cleared; the character retrieves them during Encounter Resolution (see §7.5, Encounter Resolution). The one exception is the setup that follows the defeat of a boss, which returns all dropped souls still on the tiles to the characters who dropped them (see §6.6; §6.7). A character who is dead or *lost* when the encounter is cleared does not retrieve them. If the character who dropped the souls dies before reclaiming them, the dropped souls are returned to the supply; souls dropped at the moment of that death remain on the tile.
 
 *Example.* The Knight dies in the second encounter, a Level 2 encounter, holding seven souls, which are placed on that tile. The Herald survives and the encounter is cleared, so the Knight is revived hollow and gains the four souls of the full reward, but the seven souls stay on the tile. The party rests at the bonfire, returns, skips the first encounter, and fights the second again. The Knight survives and the encounter is cleared, so the Knight retrieves the seven souls and gains the reduced reward of two souls.
 

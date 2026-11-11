@@ -286,3 +286,10 @@
 - After: n/a
 - Rationale: OPTIONAL findings skipped: A-081 (no supply limit on poison tokens is stated; the manuscript's "not limited" stands and substitutes serve when the seven tokens run out), B-036 (the optional boss health increase is not adopted; bosses never scale). Superseded by Gate 1: A-024 and B-005 (Repeat 2 is deleted by OQ-07, so its definition is moot), B-026 (OQ-24 keeps the encounter-long calamity). B-002's alternative (three highest dice with a shield) is not adopted because it alters the preserved two-highest-dice rule, which §9.4 owns. Owned by other chapters and only cited here: A-032 (§20.4, §20.5), A-115 (§17.8), B-031 and A-064 (§18.7), A-027 (§18.4), A-125 (§3.1 and the glossary).
 - Source: A-081, B-036, A-024, B-005, B-026, B-002, A-032, A-115, B-031, A-064, A-027, A-125
+
+### CH-08-042 · §8.2 Reading an Enemy Data Card
+- Type: correction
+- Before: "shows the number of times the behaviour is resolved (see §9.3)."
+- After: "shows the number of times the attack beside it is resolved (see §9.3)."
+- Rationale: §9.3 applies an enemy's repeat icon to the attack icon beside it only.
+- Source: QA observation (example and consistency verification)

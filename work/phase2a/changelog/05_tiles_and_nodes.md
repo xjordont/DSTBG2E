@@ -237,3 +237,10 @@
 - After: "When a character enters a node holding a face-down trap token, whether by a move, by the movement that follows a successful dodge, or by a push, the token is turned face up at once"
 - Rationale: §5.2 defines a move so as to exclude dodge movement, which left a dodge onto a trap node untriggered. The approved F.A.Q. ruling is that any character movement onto the node, including a dodge, triggers the trap.
 - Source: CMP-0003 (F.A.Q., traps), review of PR #2
+
+### CH-05-035 · §5.5 Terrain (Traps)
+- Type: clarification
+- Before: "Trap damage cannot be blocked or resisted."
+- After: "Trap damage is not an attack, and it cannot be blocked or resisted."
+- Rationale: The F.A.Q. cites §5.5 for the ruling that trap damage is not an attack; the section now states it.
+- Source: QA observation (example and consistency verification)

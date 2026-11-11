@@ -14,3 +14,4 @@
 - Glossary entries owned elsewhere and not amended here: **Cleared** (invaders do not count); **Weak arc** ("a character attacking a boss": summons also gain the die); **Behaviour deck** and **Behaviour card** ("invader or phantom": an invader is a phantom; "summon" is meant); **Shift** ("phantom behaviour icon": only summon cards carry it); **Turn** (the summon's and invader's turns).
 
 Resolved at integration (lead editor): an invader counts towards clearing (the general rule of §7.5 applies; CH-12-033). The author may instead rule that an invader does not count and leaves when the other enemies are killed; §12.2 and §7.5 would then both change.
+- Blank invader tokens (§12.2, Invader Tokens, step 2): three blank tokens are supplied, and a campaign section of five encounters needs four. A substitution rule was added (tokens of the kind not drawn stand in as blanks); confirm or replace it.

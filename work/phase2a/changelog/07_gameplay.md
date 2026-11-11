@@ -363,3 +363,24 @@
 - After: "The rewards are as follows, and campaign play uses the same rewards (see §18.5)."
 - Rationale: Under Gate 1 OQ-21 campaign play keeps the standard soul rewards, so no separate campaign table exists (see CH-18-038).
 - Source: Gate 1 — OQ-21
+
+### CH-07-053 · §7.6 Souls (Dropped Souls)
+- Type: correction
+- Before: "the character retrieves them during Encounter Resolution (see §7.5, Encounter Resolution)."
+- After: "the character retrieves them during Encounter Resolution (see §7.5, Encounter Resolution). The one exception is the setup that follows the defeat of a boss, which returns all dropped souls still on the tiles to the characters who dropped them (see §6.6; §6.7)."
+- Rationale: §6.6 step 1 and §6.7 step 1 return dropped souls after a boss; "only" excluded that case.
+- Source: QA-003 (example and consistency verification)
+
+### CH-07-054 · §7.5 Encounters (Aggro)
+- Type: correction
+- Before: "In boss encounters the aggro token moves after any damage to the boss (see §16.4)."
+- After: "In boss encounters the aggro token moves at the end of the turn of each character who inflicted damage on the boss during that turn (see §16.4)."
+- Rationale: §16.4 moves the token at the end of the character's turn, not at the moment of the damage.
+- Source: QA-005 (example and consistency verification)
+
+### CH-07-055 · §7.4 Sparks
+- Type: clarification
+- Before: "Each time a *mini-boss*, *main-boss*, or *mega-boss* is defeated, the party gains one spark (see §16.5)"
+- After: "Each time a *mini-boss*, *main-boss*, or *mega-boss* is defeated and the game does not end, the party gains one spark (see §16.5)"
+- Rationale: §16.5 grants no spark and no rest after the final boss.
+- Source: QA observation (example and consistency verification)
