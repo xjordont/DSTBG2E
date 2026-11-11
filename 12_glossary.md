@@ -242,7 +242,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Scry.** To reveal one hidden card (the top card of a treasure deck, a face-down encounter card, or the top card of the next boss's behaviour deck) and either return it or send it away (see §7.5, Encounter Resolution).
 
-**Section.** In campaign play, one list of tiles ending in one or more bosses. The shop restocks and a free rest is granted only when a section is completed: when its final boss is defeated or, for a section that ends in a named encounter, when that encounter is *cleared*.
+**Section.** In campaign play, one list of tiles that the party lays out and plays through in order, ending in a boss or in an encounter. A section is completed when its final boss is defeated or, for a section that ends in an encounter, when that encounter is *cleared*, unless the campaign states another condition. Completing a section restocks the *shop* and grants a rest without spending a *spark* (see §18.1; §19).
 
 **Shaft.** A weapon icon. An attack option with the shaft icon cannot target a model on the attacker's own node (see §10.3, Shaft).
 
