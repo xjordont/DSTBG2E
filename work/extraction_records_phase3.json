@@ -7762,5 +7762,89 @@
    "baked": null,
    "kind": "painting"
   }
+ },
+ {
+  "id": "AST-0156.5",
+  "parent": "AST-0156",
+  "name": "The Four Kings booklet p.6: drowned city of towers in blue gloom",
+  "type": "art",
+  "src": "DS-Four-Kings-Rules-web.pdf",
+  "page": 6,
+  "bbox_pt": [
+   62.8,
+   47.6,
+   365.1,
+   559.8
+  ],
+  "image_object": {
+   "xref": 668,
+   "pdfimages_num": 1,
+   "colour": "cmyk",
+   "native": "902×1528",
+   "has_mask": false,
+   "ppi_as_placed": 215
+  },
+  "method": "pdfimages -png p.6 image #1 (object 668, 902×1528 cmyk, no soft mask); native resolution, no resampling; saved as JPEG quality 92 (4:4:4)",
+  "file": "assets/art/ast-0156-four-kings-art-drowned-city.jpg",
+  "format": "jpg",
+  "dims": "902×1528 px",
+  "has_alpha": false,
+  "bytes": 192340,
+  "notes": "",
+  "phase": 3,
+  "design": {
+   "subject": "A drowned city of towers looms through deep blue gloom",
+   "mood": "sunken, blue, silent",
+   "suggested_use": "column plate",
+   "also_suits": [
+    "full-page plate"
+   ],
+   "suggested_for": "19 Campaigns",
+   "hdr": null,
+   "baked": null,
+   "kind": "painting"
+  }
+ },
+ {
+  "id": "AST-0156.6",
+  "parent": "AST-0156",
+  "name": "The Four Kings booklet p.10: ink concept of one of the Four Kings, on white",
+  "type": "art",
+  "src": "DS-Four-Kings-Rules-web.pdf",
+  "page": 10,
+  "bbox_pt": [
+   62.8,
+   228.8,
+   365.2,
+   558.7
+  ],
+  "image_object": {
+   "xref": 1334,
+   "pdfimages_num": 1,
+   "colour": "cmyk",
+   "native": "1261×1375",
+   "has_mask": false,
+   "ppi_as_placed": 300
+  },
+  "method": "pdfimages -png p.10 image #1 (object 1334, 1261×1375 cmyk, no soft mask); native resolution, no resampling; saved as JPEG quality 92 (4:4:4)",
+  "file": "assets/art/ast-0156-four-kings-concept-king-on-white.jpg",
+  "format": "jpg",
+  "dims": "1261×1375 px",
+  "has_alpha": false,
+  "bytes": 256636,
+  "notes": "White ground is part of the image.",
+  "phase": 3,
+  "design": {
+   "subject": "Ink concept of one of the Four Kings, a wraith of ragged black limbs, on white",
+   "mood": "spidery, black, stark",
+   "suggested_use": "column plate",
+   "also_suits": [
+    "spot"
+   ],
+   "suggested_for": "17 Boss Special Rules",
+   "hdr": null,
+   "baked": null,
+   "kind": "painting"
+  }
  }
 ]
