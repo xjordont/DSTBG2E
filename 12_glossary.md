@@ -208,7 +208,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Nearest character.** The living character at the shortest range from an enemy. If two or more characters are tied, the nearest character is the one who holds the aggro token, otherwise the one with the highest threat, and otherwise the one the players choose (see §9.2).
 
-**Node.** A circular space on a tile. Every model occupies exactly one node. Nodes are basic, spawn or terrain.
+**Node.** A circular space on a tile. During an encounter every model occupies exactly one node. Each node is one of three types: basic, spawn, or terrain (see §5.1).
 
 **Node attack.** An enemy attack that bears the node icon. It targets every character on the node of the character named by its skull icon or nearest-character icon; each character defends separately, and a node attack cannot be parried (see §9.3).
 
@@ -254,7 +254,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Riposte.** The attack a character may make at once against the attacker after a successful *parry*, using one attack option of the weapon in the other weapon slot, never a spell, and paying its stamina cost. A riposte cannot be parried, and it does not count against the attacks of the character's own turn (see §9.6).
 
-**Round.** One pass of the encounter turn order: every enemy model takes a turn in descending threat order, then every character takes a turn in descending threat order (see §7.5, Encounter Turn Order).
+**Round.** One pass of the encounter turn order: every enemy model takes a turn in descending threat order, then every character takes a turn in descending threat order (see §7.5, Encounter Turn Order). In a boss encounter a round is one turn by each living character, in an order the players choose, with one boss turn before each of those turns (see §16.1). In a *PvP encounter* a round is one turn by each character still in play (see §20.2).
 
 **Run.** A minor action: the character spends one stamina and moves one node. It may be taken any number of times per turn. A character who has *run* cannot *Rest* in that turn (see §10.2).
 
@@ -280,13 +280,13 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Spark.** The *bonfire*'s charges, tracked on the spark dial. The party begins with six minus the number of characters, gains one for each boss defeated, and spends one each time the characters rest at the *bonfire* (see §7.4). If the characters are required to rest while the dial shows zero, the players lose the game (see §7.1). In campaign play the dial's maximum is one more than its starting value and a *spark* may be bought back for *souls* (see §18.3).
 
-**Spawn node.** A node on which enemy models are placed at the start of an encounter. Boss tiles have a boss spawn node.
+**Spawn node.** A node on which enemy models are placed at the start of an encounter, as the encounter card directs. The mini-boss tile, the main-boss tile, and each mega-boss game board have a boss spawn node (see §5.1; §15.3).
 
 **Spell.** An equipment card or upgrade card whose art shows a scroll: a pyromancy, a sorcery, or a miracle. A character may use at most one spell attack option per turn, and spells are never scaled or two-handed (see §4.3).
 
 **Stagger.** A condition. A staggered character or *summon* subtracts one from the total of each attack, block, resist, and dodge roll; any other staggered model reduces its attack values, its block and resist values, and its dodge difficulty by one. The token is removed at the end of the model's next complete turn. Stagger is placed by attacks that bear the stagger icon, by stamina overflow, and by a parry (see §8.5, Stagger; §9.6; §10.1).
 
-**Stamina cube.** A black cube. Each point of stamina a character spends places one stamina cube on the endurance bar, filling from the left.
+**Stamina cube.** A black cube. Each point of stamina a character spends places one stamina cube on the endurance bar, filling from the left (see §3.4).
 
 **Starting equipment.** The three or four equipment cards a character begins with, marked with that character's class icon (see §6.2). Starting equipment cannot be sold (see §11.4).
 
@@ -316,7 +316,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Track behaviour card.** One of the four behaviour cards of the Executioner's Chariot expansion, named Death Race and numbered 1 to 4, that direct the Chariot's turns in fixed order until it heats up. Each shows the node to which the Chariot moves and the nodes that its attack targets (see §17.9).
 
-**Transposed treasure.** A class treasure card marked with a blue light. All transposed treasure is tier two.
+**Transposed treasure.** A *class-specific treasure* card marked with a blue light in the top-right of the card. All transposed treasure is tier two (see §6.2).
 
 **Transposition.** In campaign play, exchanging one boss treasure card and four *souls* for one of the five face-up legendary treasure cards while resting at the *bonfire*. It is available once the first section is completed, and the boss treasure card is returned to the game box (see §18.8).
 

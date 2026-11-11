@@ -462,7 +462,7 @@ This campaign requires the core set, the Asylum Demon expansion, The Last Giant 
 
 Every *boss* encounter of this campaign, including the *mini-boss* encounter, is fought on a *mega-boss game board*. The Asylum Demon is fought on the mega-boss side of the Asylum Demon expansion's game board (see §17.3). When Section One is completed, every character gains 16 *souls* in addition to the boss reward (see §7.6). The party then plays Section Two A, Section Two B, and Section Two C in the order it chooses, and sets up each of them when the section before it is completed (see §18.1, Section Setup). The players win the campaign when all three are completed.
 
-The party may replace the mega-boss of any of these three sections with another mega-boss it owns, and may add further sections of the same form. Each such section uses the game board and the Level 4 encounter cards of its own mega-boss.
+The party may replace the mega-boss of any of these three sections with another mega-boss it owns, and may add further sections of the same form; the players then win the campaign when every such section is completed. Each such section uses the game board and the Level 4 encounter cards of its own mega-boss.
 
 ### Section One: Asylum Hunt
 
@@ -593,7 +593,7 @@ The Level 1, Level 2, and Level 3 encounter decks are built only from the *encou
 
 The party does not place *invader tokens* during this campaign (see §12.2). Two *encounters* each list two *invaders*. They are fought under the invader rules (see §12.2), with the following changes.
 
-- Both invaders are part of that encounter every time the characters enter it, until both have been killed during one visit. If either invader vanishes, or the encounter is *failed*, both return the next time the characters enter it.
+- Both invaders are part of that encounter every time the characters enter it, until both have been killed during one visit. If either invader vanishes, or the encounter is *failed*, both return the next time the characters enter it. An encounter that is *cleared* before both of its invaders have been killed is fought again when the characters next enter it, the Level 4 encounter of Section Three included, and it is not skipped.
 - The first invader is placed as the invader rules state, and the second on a node adjacent to it, chosen by the players. Each invader has its own *behaviour deck*, and each takes a turn after each character's turn, in the order the players choose. The health of the second invader is recorded on any *health dial* that is not in use.
 - The *souls* and the treasure cards of both invaders are awarded when the second of them is killed, and not before.
 - The section is completed only when that encounter is *cleared* and both of its invaders have been killed (see §18.1).
@@ -695,4 +695,4 @@ The following rules take the place of the soul rewards of campaign play (see §1
 4. Level 4 encounter
 5. Black Dragon Kalameet (mega-boss)
 
-The defeat of the Stray Demon does not complete Section Five. The players win the campaign when Black Dragon Kalameet is defeated (see §18.1).
+The encounters of Section Five are fought in the order listed: the Stray Demon is fought when the first Level 4 encounter is cleared, and the second Level 4 encounter is set up when the Stray Demon is defeated. The defeat of the Stray Demon does not complete Section Five. The players win the campaign when Black Dragon Kalameet is defeated (see §18.1).

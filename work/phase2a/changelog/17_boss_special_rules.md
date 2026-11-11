@@ -637,3 +637,10 @@ Crossbreed Priscilla is a *main-boss* of the Painted World of Ariamis expansion.
 The Heavy Knight is a *mini-boss* of the Painted World of Ariamis expansion. It is played with the replacement data card and behaviour cards listed in the card amendments (see Appendix B), and it has no rules beyond its data card."
 - Rationale: The expansion supplies no rules for the Heavy Knight beyond its cards, so the delegation sentence pointed at nothing; the entry now takes the form §17.7 uses for the Black Knight.
 - Source: final rulings, boss-E28 (`06_final_rulings.md`); 2022 rulebook lines 2099-2290 (boss rules shared by both 2022 sets; no special rule per boss); printed data card 'Brutal Impact' (community transcription, DSBG-Shuffle), a self-contained ability.
+
+### CH-17-069 · §17.6
+- Type: correction
+- Before: "When the Pursuer's health is reduced to or below its *heat-up* point {{icon:ast-0030-heat-up-point}}, one random heat-up card is shuffled into its behaviour deck, as for any *boss* (see §15.5). From that moment until the *encounter* ends, the *attack value* of every attack on the Pursuer's behaviour cards is increased by one."
+- After: "When the Pursuer's health is reduced to or below its *heat-up* point {{icon:ast-0030-heat-up-point}}, it heats up as the general rule directs (see §15.5, Heat-Up). From the moment the heat-up is carried out until the *encounter* ends, the *attack value* of every attack on the Pursuer's behaviour cards is increased by one."
+- Rationale: With the heat-up now carried out at the start of the next turn, 'From that moment' had two readings; the wording follows the Old Iron King's entry.
+- Source: final rulings, VB-008 (`06_final_rulings.md`); independent verification, work/phase3/verify_b.md

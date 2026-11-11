@@ -26,7 +26,7 @@ The questions in this chapter are those that arise most often at the table. Each
 
 **Q.** May a new player join a game in progress?
 
-**A.** Yes, while the characters are on the bonfire tile and at the cost of one *spark*. The new character begins with starting equipment, base stats, and no souls (see §18.4).
+**A.** Yes, while the characters are on the bonfire tile, no encounter is in progress, and the spark dial shows one or more. The party spends one *spark* for each player who joins. The new character begins with starting equipment, base stats, and no souls (see §18.4).
 
 ## 22.2 Attack and Defence
 
@@ -162,7 +162,7 @@ The questions in this chapter are those that arise most often at the table. Each
 
 **Q.** A character is pushed off a boss's node. Must the character stay in the same arc?
 
-**A.** Yes. The character is pushed to a valid adjacent node in the arc in which the character is placed. If a wall leaves no such node, the character is pushed to a valid adjacent node that touches the wall (see §15.6, Characters and Arcs).
+**A.** Yes, except after a *leap*. The character is pushed to a valid adjacent node in the arc in which the character is placed. If a wall leaves no such node, the character is pushed to a valid adjacent node that touches the wall. The push that follows a leap is not limited by arcs (see §15.6, Characters and Arcs; §16.2, Leap).
 
 **Q.** Does a character who dies in a mega-boss encounter leave the game?
 
@@ -188,7 +188,7 @@ The questions in this chapter are those that arise most often at the table. Each
 
 **Q.** An invader is on the tile and a character dies. Does the encounter continue?
 
-**A.** Yes. The invader vanishes at once and awards nothing, and the encounter continues against the remaining enemy models. The invader does not return (see §12.2, Combat with an Invader).
+**A.** Yes, unless that death fails the encounter. The invader vanishes at once and awards nothing, and the encounter continues against the remaining enemy models. The invader does not return, unless a campaign states otherwise (see §12.2, Combat with an Invader; §12.2, End of an Invasion).
 
 **Q.** Must an invader be killed for its encounter to be cleared?
 

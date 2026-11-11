@@ -364,3 +364,10 @@
 - After: "A character or a *summon* with a stagger token subtracts one from the total of each attack roll and of each block, resist, and dodge roll that it makes. An enemy, boss, or *invader* with a stagger token reduces each of its *attack values*, its block and resist values, and its *dodge difficulty* by one."
 - Rationale: [MECHANICAL CHANGE] A summon rolls dice to attack and to defend, as a character does (§12.1), and has no fixed block, resist, or dodge value for the token to reduce.
 - Source: final rulings, lead-E20 (`06_final_rulings.md`); review finding on the pull request, verified against §12.1
+
+### CH-08-053 · §8.4
+- Type: correction
+- Before: "The only push that affects a boss model is the push caused by another boss model moving onto its node (see §17.1)."
+- After: "The only push that affects a boss model is the push caused by another boss model that moves onto its node or is placed on it (see §17.1; §17.10, The Four Kings)."
+- Rationale: Outside half B; consequential on VB-005, so that §8.4 does not forbid the push that the royal summons requires.
+- Source: final rulings, VB-006 (`06_final_rulings.md`); independent verification, work/phase3/verify_b.md

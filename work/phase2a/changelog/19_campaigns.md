@@ -387,3 +387,24 @@ The Level 1, Level 2, and Level 3 encounter decks are built from the *encounter 
 6. Smelter Demon (*main-boss*) […]"
 - Rationale: [MECHANICAL CHANGE] Adds the four published campaigns the book lacked (items campaign-041 to campaign-044), restated in this book's terms.
 - Source: final rulings, campaign-E48 (`06_final_rulings.md`); work/text/DS-OIK-Rules-web.txt (Go Beyond Death), DS-TLG-Rules.txt (Footsteps of Giants), DS-VotBV-Rules-web.txt (Treasures of the Ice Cave), DS-GD-Rules-web.txt (Demons & Dragons), campaign pages.
+
+### CH-19-046 · §19.16
+- Type: correction
+- Before: "The defeat of the Stray Demon does not complete Section Five."
+- After: "The encounters of Section Five are fought in the order listed: the Stray Demon is fought when the first Level 4 encounter is cleared, and the second Level 4 encounter is set up when the Stray Demon is defeated. The defeat of the Stray Demon does not complete Section Five."
+- Rationale: §18.1 sets a mega-boss up after the section's last Level 4 encounter; this section's listed order (and its booklet) puts the Stray Demon between the two.
+- Source: final rulings, VB-011 (`06_final_rulings.md`); independent verification, work/phase3/verify_b.md
+
+### CH-19-047 · §19.12
+- Type: correction
+- Before: "The party may replace the mega-boss of any of these three sections with another mega-boss it owns, and may add further sections of the same form."
+- After: "The party may replace the mega-boss of any of these three sections with another mega-boss it owns, and may add further sections of the same form; the players then win the campaign when every such section is completed."
+- Rationale: 'The players win the campaign when all three are completed' does not hold once further sections are added.
+- Source: final rulings, VB-012 (`06_final_rulings.md`); independent verification, work/phase3/verify_b.md
+
+### CH-19-048 · §19.15
+- Type: ruling
+- Before: "Both invaders are part of that encounter every time the characters enter it, until both have been killed during one visit. If either invader vanishes, or the encounter is *failed*, both return the next time the characters enter it."
+- After: "Both invaders are part of that encounter every time the characters enter it, until both have been killed during one visit. If either invader vanishes, or the encounter is *failed*, both return the next time the characters enter it. An encounter that is *cleared* before both of its invaders have been killed is fought again when the characters next enter it, the Level 4 encounter of Section Three included, and it is not skipped."
+- Rationale: [MECHANICAL CHANGE] Without this the campaign could dead-end: the invaders vanish at a character's death, the survivors clear the encounter, and a cleared Level 4 encounter is otherwise never fought again.
+- Source: final rulings, VB-010 (`06_final_rulings.md`); independent verification, work/phase3/verify_b.md (judgement call decided by the lead editor)

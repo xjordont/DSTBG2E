@@ -294,3 +294,10 @@
 - After: "It is the one rest that follows the boss's defeat (see §16.5); a PvP encounter grants no second rest. In campaign play, what follows a PvP encounter is stated with the campaign rules (see §18.1, Player versus Player Encounters)."
 - Rationale: §18.1 already settles PvP encounters in a campaign; §20.9 lacked the pointer.
 - Source: final rulings, phantom-E32 (`06_final_rulings.md`); §18.1, Player versus Player Encounters of this book.
+
+### CH-20-042 · §20.1
+- Type: correction
+- Before: "When PvP encounters are in play, one *PvP encounter* is fought after each *mini-boss*, *main-boss*, and *mega-boss* is defeated."
+- After: "When PvP encounters are in play, one *PvP encounter* is fought after each *mini-boss*, *main-boss*, and *mega-boss* is defeated. In campaign play it is fought only after a boss whose defeat completes a *section* (see §18.1, Player versus Player Encounters)."
+- Rationale: §20.1 owns the rule and lacked the campaign exception made today in §18.1.
+- Source: final rulings, VB-013 (`06_final_rulings.md`); independent verification, work/phase3/verify_b.md

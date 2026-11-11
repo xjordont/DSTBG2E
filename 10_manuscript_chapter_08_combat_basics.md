@@ -122,7 +122,7 @@ A boss resolves a push-move in the same way, with the differences stated for bos
 
 A push caused by the node model limit, or by a boss model moving onto the node of another boss model, sends the displaced model to any valid node chosen by the players. The model to be displaced is chosen as §5.3 and §17.1 state.
 
-A boss model cannot be pushed by a character's attack. The only push that affects a boss model is the push caused by another boss model moving onto its node (see §17.1).
+A boss model cannot be pushed by a character's attack. The only push that affects a boss model is the push caused by another boss model that moves onto its node or is placed on it (see §17.1; §17.10, The Four Kings).
 
 In a PvP *encounter*, a push-attack pushes a character it hits (see §20.5).
 

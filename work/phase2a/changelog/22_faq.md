@@ -125,3 +125,24 @@
 **Q.** A campaign section lists the Gargoyle twice. Are the two fights separate encounters?"
 - Rationale: The most asked question about boss fights now has its answer in the F.A.Q.; the rule itself is boss-E01.
 - Source: final rulings, boss-E48 (`06_final_rulings.md`); BoardGameGeek thread 1819893 (search summary); follows boss-E01
+
+### CH-22-017 · §22.1
+- Type: correction
+- Before: "**A.** Yes, while the characters are on the bonfire tile and at the cost of one *spark*. The new character begins with starting equipment, base stats, and no souls (see §18.4)."
+- After: "**A.** Yes, while the characters are on the bonfire tile, no encounter is in progress, and the spark dial shows one or more. The party spends one *spark* for each player who joins. The new character begins with starting equipment, base stats, and no souls (see §18.4)."
+- Rationale: The answer omitted two conditions of §18.4: no encounter in progress, and a spark dial that shows one or more.
+- Source: final rulings, VB-014 (`06_final_rulings.md`); independent verification, work/phase3/verify_b.md
+
+### CH-22-018 · §22.6
+- Type: correction
+- Before: "**A.** Yes. The invader vanishes at once and awards nothing, and the encounter continues against the remaining enemy models. The invader does not return (see §12.2, Combat with an Invader)."
+- After: "**A.** Yes, unless that death fails the encounter. The invader vanishes at once and awards nothing, and the encounter continues against the remaining enemy models. The invader does not return, unless a campaign states otherwise (see §12.2, Combat with an Invader; §12.2, End of an Invasion)."
+- Rationale: The death of a hollow or last character fails the encounter; the rule that the invader does not return, and its campaign exception, stand under End of an Invasion.
+- Source: final rulings, VB-015 (`06_final_rulings.md`); independent verification, work/phase3/verify_b.md
+
+### CH-22-019 · §22.5
+- Type: correction
+- Before: "**A.** Yes. The character is pushed to a valid adjacent node in the arc in which the character is placed. If a wall leaves no such node, the character is pushed to a valid adjacent node that touches the wall (see §15.6, Characters and Arcs)."
+- After: "**A.** Yes, except after a *leap*. The character is pushed to a valid adjacent node in the arc in which the character is placed. If a wall leaves no such node, the character is pushed to a valid adjacent node that touches the wall. The push that follows a leap is not limited by arcs (see §15.6, Characters and Arcs; §16.2, Leap)."
+- Rationale: The cited section excepts the push that follows a leap.
+- Source: final rulings, VB-016 (`06_final_rulings.md`); independent verification, work/phase3/verify_b.md

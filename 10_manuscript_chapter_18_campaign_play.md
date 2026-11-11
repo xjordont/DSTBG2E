@@ -49,7 +49,7 @@ When a section is completed by clearing an encounter, the encounter is resolved 
 
 When the last section of the campaign is completed, the campaign ends, and no setup and no rest follow (see §18.1, The Final Boss).
 
-When a boss is defeated and its section is not yet completed, the party gains the boss's rewards and its spark (see §16.5, §18.3). Each character who died in the boss encounter is revived as after any cleared encounter, except that the ember token of the boss's defeat keeps that character from becoming *hollow*, so no hollow cube is placed (see §7.5, Encounter Recovery; §16.5). The exploration then continues. No section is set up, the shop is not restocked, and no rest is granted.
+When a boss is defeated and its section is not yet completed, the party gains the boss's rewards and its spark (see §16.5, §18.3). Each surviving character recovers, and each character who died in the boss encounter is revived, as after any cleared encounter, except that the ember token of the boss's defeat keeps a revived character from becoming *hollow*, so no hollow cube is placed (see §7.5, Encounter Recovery; §16.5). The exploration then continues. No section is set up, the shop is not restocked, and no rest is granted.
 
 ### Level 4 Encounters and Mega-Bosses
 

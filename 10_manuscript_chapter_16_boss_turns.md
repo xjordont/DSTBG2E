@@ -166,6 +166,6 @@ The setup of step 7 adds one *spark* to the spark dial. This is the spark that e
 
 The spark is gained once and the rest is taken once for each defeated boss, whether or not a PvP encounter is fought (see §20.9). The recovery that follows a *cleared* encounter is not carried out after a boss (see §7.5, Encounter Recovery). A character who died in the boss encounter stays out of play until the rest, which restores every character (see §11.2).
 
-The embering of step 4 provokes no *invasion* at that moment (see §12.2). In campaign play the spark, the rest, and the setup that follow a boss differ (see §18.1; §18.3).
+The embering of step 4 provokes no *invasion* at that moment (see §12.2). In campaign play the PvP encounter, the spark, the rest, and the setup that follow a boss differ (see §18.1; §18.3).
 
 *Example.* The Knight, the Herald, and the Assassin defeat the mini-boss, and the Assassin died during the encounter. Each of the three characters gains the boss soul reward. One of the mini-boss's treasure cards is drawn at random, and the players give it to the Herald. All three characters receive an ember token, and the Knight removes four damage cubes. No PvP encounter is in play, so the party carries out the setup after the mini-boss. The spark dial, which shows two, is turned to three. The characters rest at the bonfire without spending a spark, and the rest restores the Assassin.

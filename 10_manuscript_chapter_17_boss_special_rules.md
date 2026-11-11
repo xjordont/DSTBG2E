@@ -162,7 +162,7 @@ The Pursuer is a *main-boss*. Several of its behaviour cards show a *dodge diffi
 
 **Special ability.** The Pursuer's special ability is Ceaseless Pursuit. On each of its *turns* the Pursuer draws and resolves two behaviour cards, one after the other. If the behaviour deck is empty when either card is due, the deck is renewed before that card is drawn (see §16.1). The *weak arcs* {{icon:ast-0041-weak-boss-arc}} that apply to character attacks are those of the second card, the card most recently resolved (see §15.6).
 
-**Heat-up.** When the Pursuer's health is reduced to or below its *heat-up* point {{icon:ast-0030-heat-up-point}}, one random heat-up card is shuffled into its behaviour deck, as for any *boss* (see §15.5). From that moment until the *encounter* ends, the *attack value* of every attack on the Pursuer's behaviour cards is increased by one.
+**Heat-up.** When the Pursuer's health is reduced to or below its *heat-up* point {{icon:ast-0030-heat-up-point}}, it heats up as the general rule directs (see §15.5, Heat-Up). From the moment the heat-up is carried out until the *encounter* ends, the *attack value* of every attack on the Pursuer's behaviour cards is increased by one.
 
 ### Hungry Mimic and Voracious Mimic
 

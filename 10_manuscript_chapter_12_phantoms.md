@@ -94,7 +94,7 @@ No more than one invasion is provoked before the mini-boss is defeated, and no m
 
 When an invasion is provoked, the invader tokens are placed as follows.
 
-1. Draw one invader token at random and keep it face down: a standard invader token if the mini-boss has not been defeated, an advanced invader token if it has.
+1. Draw one invader token at random and keep it face down: a standard invader token if the mini-boss has not been defeated, an advanced invader token if it has. In campaign play, draw a standard invader token while the current tier is tier one and an advanced invader token once it is tier two (see §18.1, Section Setup).
 2. Add blank invader tokens, face down, until there is one token for each face-down encounter card that carries no black cube. If the blank tokens run out, make up the number with invader tokens of the kind not drawn in step 1; such a token is treated as blank when it is revealed.
 3. Shuffle these tokens face down.
 4. Place one token face down on each of those encounter cards.
@@ -103,7 +103,7 @@ An invader token stays face down on its encounter card until the characters figh
 
 The token on an encounter card is revealed during Encounter Start, after the enemy models and *terrain* have been placed (see §7.5, Encounter Start). A blank token is returned to the supply, and the encounter is fought without an invader. A token that shows an invader brings that invader into the encounter; the token is returned to the game box and is not used again during the game.
 
-Invader tokens are placed only on encounter cards. No invader appears in a *boss* encounter, and none takes part in a mimic encounter (see §13). Some campaigns place named invaders in listed encounters and use no invader tokens (see §19.3; §19.4).
+Invader tokens are placed only on encounter cards. No invader appears in a *boss* encounter, and none takes part in a mimic encounter (see §13). Some campaigns place named invaders in listed encounters and use no invader tokens (see §19.3; §19.4; §19.15).
 
 *Example.* The Herald discards an ember card while two face-down encounter cards, neither of which carries a black cube, lie on the tiles ahead, before the mini-boss is defeated. The party draws one standard invader token, adds one blank token, shuffles the two face down, and places one on each card. The token on the next tile is blank and returns to the supply. The token on the tile after it shows Maneater Mildred, who joins that encounter.
 

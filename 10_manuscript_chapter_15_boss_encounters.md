@@ -38,7 +38,7 @@ The boss's *behaviour deck* is built during setup, before the boss encounter beg
 8. Place the *aggro token* on the character with the highest *threat* (see §7.5, Encounter Start).
 9. Begin the boss's first *turn* (see §16.1).
 
-If a boss's special rules state where the boss is placed or how it faces, those rules replace step 6 (see §17).
+If a boss's special rules state where the boss is placed or how it faces, those rules replace that part of step 6, and the rest of the step applies (see §17).
 
 The boss takes the first turn of the encounter. The boss and the characters then alternate turns: one character takes a turn after each boss turn (see §16.1). A summon takes its turns as §12.1 describes. No *invader* joins a boss encounter (see §12.2).
 
@@ -60,7 +60,7 @@ A main-boss encounter is fought on both *boss tiles*. The two tiles are joined a
 
 A *mega-boss* encounter is fought on the mega-boss side of the *mega-boss game board* supplied with that mega-boss (see §6.7). A wall printed across a game board separates the nodes on either side of it (see §5.1).
 
-**Boss spawn node.** The spawn node of the boss's type: the mini-boss spawn node, the main-boss spawn node, or the mega-boss spawn node. The boss model is placed on it at the start of every boss encounter (see §15.2).
+**Boss spawn node.** The spawn node of the boss's type: the mini-boss spawn node, the main-boss spawn node, or the mega-boss spawn node. The boss model is placed on it at the start of every boss encounter, unless the boss's special rules name another node (see §15.2; §17).
 
 The mini-boss spawn node of the main-boss tile is used as a *basic node* during a main-boss encounter (see §5.1), unless the main-boss's special rules place a model on it (see §17).
 
@@ -227,4 +227,4 @@ The movement that follows a successful dodge ignores arcs. A character who dodge
 
 A character may parry a boss's attack only when the attack targets one character and the conditions for a parry are met (see §9.6). An area attack, a *node attack*, and a push-attack cannot be parried. A boss that is parried is *staggered*, and the character may riposte, as against any enemy (see §9.6).
 
-A boss model cannot be pushed by a character's attack or by a character's movement (see §8.4). The push icon on a character's attack option has no effect on a boss, and a boss is not displaced under the node model limit (see §5.3). A boss model is pushed only when another boss model moves onto its node (see §17.1).
+A boss model cannot be pushed by a character's attack or by a character's movement (see §8.4). The push icon on a character's attack option has no effect on a boss, and a boss is not displaced under the node model limit (see §5.3). A boss model is pushed only when another boss model moves onto its node or is placed on it (see §17.1; §17.10, The Four Kings).

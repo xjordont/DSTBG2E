@@ -330,3 +330,17 @@ The embering of every character at a boss's defeat (see §16.5) provokes no inva
 - After: "one of its unused behaviour cards, taken at random, serves as its heat-up card, and the invader heats up as a boss does (see §15.5, Heat-Up)."
 - Rationale: [MECHANICAL CHANGE] The invader follows the one heat-up procedure and timing of boss-E01: deck and discard pile reshuffled with the added card at the start of its next turn.
 - Source: final rulings, lead-E17 (`06_final_rulings.md`); boss memo, cross-cluster effects
+
+### CH-12-048 · §12.2
+- Type: correction
+- Before: "1. Draw one invader token at random and keep it face down: a standard invader token if the mini-boss has not been defeated, an advanced invader token if it has."
+- After: "1. Draw one invader token at random and keep it face down: a standard invader token if the mini-boss has not been defeated, an advanced invader token if it has. In campaign play, draw a standard invader token while the current tier is tier one and an advanced invader token once it is tier two (see §18.1, Section Setup)."
+- Rationale: The numbered step gave only the standard-game test; §12.2's opening paragraph and §18.1 key the token to the current tier in campaign play.
+- Source: final rulings, VB-001 (`06_final_rulings.md`); independent verification, work/phase3/verify_b.md
+
+### CH-12-049 · §12.2
+- Type: correction
+- Before: "Some campaigns place named invaders in listed encounters and use no invader tokens (see §19.3; §19.4)."
+- After: "Some campaigns place named invaders in listed encounters and use no invader tokens (see §19.3; §19.4; §19.15)."
+- Rationale: §19.15, added today, is a third campaign that lists named invaders and places no tokens.
+- Source: final rulings, VB-002 (`06_final_rulings.md`); independent verification, work/phase3/verify_b.md

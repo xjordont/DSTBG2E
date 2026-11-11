@@ -314,3 +314,24 @@ Some bosses heat up in other ways. The special rules of such a boss replace the 
 - After: "A boss is a foe of great health and power,"
 - Rationale: Two bosses are fought with more than one model.
 - Source: final rulings, lead-E19 (`06_final_rulings.md`); boss memo, cross-cluster effects
+
+### CH-15-044 · §15.2
+- Type: correction
+- Before: "If a boss's special rules state where the boss is placed or how it faces, those rules replace step 6 (see §17)."
+- After: "If a boss's special rules state where the boss is placed or how it faces, those rules replace that part of step 6, and the rest of the step applies (see §17)."
+- Rationale: Entries that name only a node (Four Kings, Old Iron King, Asylum Demon, Executioner's Chariot) otherwise lose the starting facing, which the Old Iron King's booklet and back-arc rule require.
+- Source: final rulings, VB-003 (`06_final_rulings.md`); independent verification, work/phase3/verify_b.md
+
+### CH-15-045 · §15.3
+- Type: correction
+- Before: "The boss model is placed on it at the start of every boss encounter (see §15.2)."
+- After: "The boss model is placed on it at the start of every boss encounter, unless the boss's special rules name another node (see §15.2; §17)."
+- Rationale: Smough, the Asylum Demon and the Old Iron King are placed on other nodes (§17.2, §17.3, §17.10).
+- Source: final rulings, VB-004 (`06_final_rulings.md`); independent verification, work/phase3/verify_b.md
+
+### CH-15-046 · §15.6
+- Type: correction
+- Before: "A boss model is pushed only when another boss model moves onto its node (see §17.1)."
+- After: "A boss model is pushed only when another boss model moves onto its node or is placed on it (see §17.1; §17.10, The Four Kings)."
+- Rationale: The royal summons places a king on the spawn node and pushes every other model there, a king included (§17.10, step 2).
+- Source: final rulings, VB-005 (`06_final_rulings.md`); independent verification, work/phase3/verify_b.md

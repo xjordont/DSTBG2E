@@ -313,3 +313,66 @@
 - After: "**Stagger.** A condition. A staggered character or *summon* subtracts one from the total of each attack, block, resist, and dodge roll; any other staggered model reduces its attack values, its block and resist values, and its dodge difficulty by one. The token is removed at the end of the model's next complete turn. Stagger is placed by attacks that bear the stagger icon, by stamina overflow, and by a parry (see §8.5, Stagger; §9.6; §10.1)."
 - Rationale: [MECHANICAL CHANGE] Glossary follows §8.5 (lead-E20).
 - Source: final rulings, lead-E21 (`06_final_rulings.md`)
+
+### CH-21-045 · Glossary, Round
+- Type: correction
+- Before: "**Round.** One pass of the encounter turn order: every enemy model takes a turn in descending threat order, then every character takes a turn in descending threat order (see §7.5, Encounter Turn Order)."
+- After: "**Round.** One pass of the encounter turn order: every enemy model takes a turn in descending threat order, then every character takes a turn in descending threat order (see §7.5, Encounter Turn Order). In a boss encounter a round is one turn by each living character, in an order the players choose, with one boss turn before each of those turns (see §16.1). In a *PvP encounter* a round is one turn by each character still in play (see §20.2)."
+- Rationale: The term is used in italics for the rounds of boss encounters (§16.1) and PvP encounters (§20.2, §20.8), which the entry did not cover.
+- Source: final rulings, VB-017 (`06_final_rulings.md`); independent verification, work/phase3/verify_b.md
+
+### CH-21-046 · Glossary, PvP encounter
+- Type: correction
+- Before: "after each boss's defeat and before the rest that follows it."
+- After: "after each boss's defeat and before the rest that follows it (in campaign play, only after a boss whose defeat completes a *section*; see §18.1)."
+- Rationale: Carries today's campaign rule of §18.1 into the entry.
+- Source: final rulings, VB-018 (`06_final_rulings.md`); independent verification, work/phase3/verify_b.md
+
+### CH-21-047 · Glossary, Shop
+- Type: correction
+- Before: "The tier one shop is stocked at setup and the tier two shop when the mini-boss is defeated; both are restocked only after a boss is defeated (in campaign play, after a section is completed), unsold cards going to the bottom of their deck first (see §6.3)."
+- After: "The tier one shop is stocked at setup and the tier two shop when the mini-boss is defeated (in campaign play, when the *bonfire ascetic* is burnt); both are restocked only after a boss is defeated (in campaign play, after a section is completed), unsold cards going to the bottom of their deck first (see §6.3; §18.6)."
+- Rationale: In campaign play the tier two shop opens with the bonfire ascetic, not with a mini-boss (§18.6, §18.7).
+- Source: final rulings, VB-019 (`06_final_rulings.md`); independent verification, work/phase3/verify_b.md
+
+### CH-21-048 · Glossary, Node
+- Type: correction
+- Before: "**Node.** A circular space on a tile. Every model occupies exactly one node. Nodes are basic, spawn or terrain."
+- After: "**Node.** A circular space on a tile. During an encounter every model occupies exactly one node. Each node is one of three types: basic, spawn, or terrain (see §5.1)."
+- Rationale: The entry cited no section; §5.1 states the rule.
+- Source: final rulings, VB-020 (`06_final_rulings.md`); independent verification, work/phase3/verify_b.md
+
+### CH-21-049 · Glossary, Spawn node
+- Type: correction
+- Before: "**Spawn node.** A node on which enemy models are placed at the start of an encounter. Boss tiles have a boss spawn node."
+- After: "**Spawn node.** A node on which enemy models are placed at the start of an encounter, as the encounter card directs. The mini-boss tile, the main-boss tile, and each mega-boss game board have a boss spawn node (see §5.1; §15.3)."
+- Rationale: The entry cited no section and omitted the mega-boss spawn node of a game board.
+- Source: final rulings, VB-021 (`06_final_rulings.md`); independent verification, work/phase3/verify_b.md
+
+### CH-21-050 · Glossary, Stamina cube
+- Type: correction
+- Before: "**Stamina cube.** A black cube. Each point of stamina a character spends places one stamina cube on the endurance bar, filling from the left."
+- After: "**Stamina cube.** A black cube. Each point of stamina a character spends places one stamina cube on the endurance bar, filling from the left (see §3.4)."
+- Rationale: The entry cited no section; §3.4 states the rule.
+- Source: final rulings, VB-022 (`06_final_rulings.md`); independent verification, work/phase3/verify_b.md
+
+### CH-21-051 · Glossary, Transposed treasure
+- Type: correction
+- Before: "**Transposed treasure.** A class treasure card marked with a blue light. All transposed treasure is tier two."
+- After: "**Transposed treasure.** A *class-specific treasure* card marked with a blue light in the top-right of the card. All transposed treasure is tier two (see §6.2)."
+- Rationale: The entry cited no section and named the parent type otherwise than its headword.
+- Source: final rulings, VB-023 (`06_final_rulings.md`); independent verification, work/phase3/verify_b.md
+
+### CH-21-052 · Glossary, Tier one treasure
+- Type: correction
+- Before: "Encounter rewards and chests draw from tier one until the mini-boss is defeated (in campaign play, until the *bonfire ascetic* is burnt) (see §6.2)."
+- After: "Encounter rewards and chests draw from tier one until the mini-boss is defeated (in campaign play, until the *bonfire ascetic* is burnt) (see §6.2; §18.5)."
+- Rationale: The campaign clause is stated in §18.5, which was not cited.
+- Source: final rulings, VB-024 (`06_final_rulings.md`); independent verification, work/phase3/verify_b.md
+
+### CH-21-053 · Glossary, Tier two treasure
+- Type: correction
+- Before: "Encounter rewards and chests draw from tier two once the mini-boss is defeated (in campaign play, once the *bonfire ascetic* is burnt) (see §6.2)."
+- After: "Encounter rewards and chests draw from tier two once the mini-boss is defeated (in campaign play, once the *bonfire ascetic* is burnt) (see §6.2; §18.5)."
+- Rationale: The campaign clause is stated in §18.5, which was not cited.
+- Source: final rulings, VB-025 (`06_final_rulings.md`); independent verification, work/phase3/verify_b.md

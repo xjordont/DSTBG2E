@@ -399,3 +399,10 @@
 - After: "- A mini-boss is fought on the mini-boss tile, or on its expansion's game board when it is the Asylum Demon (see §17.3), and a *main-boss* on the two *boss tiles* joined as one (see §15.3)."
 - Rationale: As lead-E15, for campaign play.
 - Source: final rulings, lead-E16 (`06_final_rulings.md`); boss memo, cross-cluster effects
+
+### CH-18-058 · §18.1, Section Completion
+- Type: ruling
+- Before: "Each character who died in the boss encounter is revived as after any cleared encounter, except that the ember token of the boss's defeat keeps that character from becoming *hollow*, so no hollow cube is placed (see §7.5, Encounter Recovery; §16.5). The exploration then continues."
+- After: "Each surviving character recovers, and each character who died in the boss encounter is revived, as after any cleared encounter, except that the ember token of the boss's defeat keeps a revived character from becoming *hollow*, so no hollow cube is placed (see §7.5, Encounter Recovery; §16.5). The exploration then continues."
+- Rationale: [MECHANICAL CHANGE] After a boss that does not complete its section no rest follows, so the survivors recover as after any cleared encounter; otherwise a dead character would return in better state than a living one.
+- Source: final rulings, VB-009 (`06_final_rulings.md`); independent verification, work/phase3/verify_b.md (judgement call decided by the lead editor)

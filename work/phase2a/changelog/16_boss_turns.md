@@ -265,3 +265,10 @@
 - After: "A character inflicts damage on a boss when the character's attack, or a *bleed* that the attack triggers, lowers the boss's *health dial* by one or more."
 - Rationale: Bleed triggered by a character's attack counts for the aggro token (combat-E17), and bleed is not itself an attack.
 - Source: final rulings, lead-E13 (`06_final_rulings.md`); combat memo, cross-cluster effects
+
+### CH-16-039 · §16.5
+- Type: correction
+- Before: "In campaign play the spark, the rest, and the setup that follow a boss differ (see §18.1; §18.3)."
+- After: "In campaign play the PvP encounter, the spark, the rest, and the setup that follow a boss differ (see §18.1; §18.3)."
+- Rationale: Step 6 orders a PvP encounter after every boss; in campaign play it follows only a boss that completes a section (§18.1).
+- Source: final rulings, VB-007 (`06_final_rulings.md`); independent verification, work/phase3/verify_b.md

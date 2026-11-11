@@ -3103,6 +3103,13 @@ A spawn node or terrain node that holds no enemy or terrain is entered, left, an
 - Rationale: §18.1 already settles PvP encounters in a campaign; §20.9 lacked the pointer.
 - Source: final rulings, phantom-E32 (`06_final_rulings.md`); §18.1, Player versus Player Encounters of this book.
 
+### CH-20-042 · §20.1
+- Type: correction
+- Before: "When PvP encounters are in play, one *PvP encounter* is fought after each *mini-boss*, *main-boss*, and *mega-boss* is defeated."
+- After: "When PvP encounters are in play, one *PvP encounter* is fought after each *mini-boss*, *main-boss*, and *mega-boss* is defeated. In campaign play it is fought only after a boss whose defeat completes a *section* (see §18.1, Player versus Player Encounters)."
+- Rationale: §20.1 owns the rule and lacked the campaign exception made today in §18.1.
+- Source: final rulings, VB-013 (`06_final_rulings.md`); independent verification, work/phase3/verify_b.md
+
 ## Chapter 08 — Combat Basics
 
 ### CH-08-001 · §8 Combat Basics
@@ -3469,6 +3476,13 @@ A spawn node or terrain node that holds no enemy or terrain is entered, left, an
 - After: "A character or a *summon* with a stagger token subtracts one from the total of each attack roll and of each block, resist, and dodge roll that it makes. An enemy, boss, or *invader* with a stagger token reduces each of its *attack values*, its block and resist values, and its *dodge difficulty* by one."
 - Rationale: [MECHANICAL CHANGE] A summon rolls dice to attack and to defend, as a character does (§12.1), and has no fixed block, resist, or dodge value for the token to reduce.
 - Source: final rulings, lead-E20 (`06_final_rulings.md`); review finding on the pull request, verified against §12.1
+
+### CH-08-053 · §8.4
+- Type: correction
+- Before: "The only push that affects a boss model is the push caused by another boss model moving onto its node (see §17.1)."
+- After: "The only push that affects a boss model is the push caused by another boss model that moves onto its node or is placed on it (see §17.1; §17.10, The Four Kings)."
+- Rationale: Outside half B; consequential on VB-005, so that §8.4 does not forbid the push that the royal summons requires.
+- Source: final rulings, VB-006 (`06_final_rulings.md`); independent verification, work/phase3/verify_b.md
 
 ## Chapter 09 — Enemy Turn
 
@@ -4143,6 +4157,20 @@ The embering of every character at a boss's defeat (see §16.5) provokes no inva
 - After: "one of its unused behaviour cards, taken at random, serves as its heat-up card, and the invader heats up as a boss does (see §15.5, Heat-Up)."
 - Rationale: [MECHANICAL CHANGE] The invader follows the one heat-up procedure and timing of boss-E01: deck and discard pile reshuffled with the added card at the start of its next turn.
 - Source: final rulings, lead-E17 (`06_final_rulings.md`); boss memo, cross-cluster effects
+
+### CH-12-048 · §12.2
+- Type: correction
+- Before: "1. Draw one invader token at random and keep it face down: a standard invader token if the mini-boss has not been defeated, an advanced invader token if it has."
+- After: "1. Draw one invader token at random and keep it face down: a standard invader token if the mini-boss has not been defeated, an advanced invader token if it has. In campaign play, draw a standard invader token while the current tier is tier one and an advanced invader token once it is tier two (see §18.1, Section Setup)."
+- Rationale: The numbered step gave only the standard-game test; §12.2's opening paragraph and §18.1 key the token to the current tier in campaign play.
+- Source: final rulings, VB-001 (`06_final_rulings.md`); independent verification, work/phase3/verify_b.md
+
+### CH-12-049 · §12.2
+- Type: correction
+- Before: "Some campaigns place named invaders in listed encounters and use no invader tokens (see §19.3; §19.4)."
+- After: "Some campaigns place named invaders in listed encounters and use no invader tokens (see §19.3; §19.4; §19.15)."
+- Rationale: §19.15, added today, is a third campaign that lists named invaders and places no tokens.
+- Source: final rulings, VB-002 (`06_final_rulings.md`); independent verification, work/phase3/verify_b.md
 
 ## Chapter 13 — Mimics
 
@@ -5096,6 +5124,13 @@ The Heavy Knight is a *mini-boss* of the Painted World of Ariamis expansion. It 
 - Rationale: The expansion supplies no rules for the Heavy Knight beyond its cards, so the delegation sentence pointed at nothing; the entry now takes the form §17.7 uses for the Black Knight.
 - Source: final rulings, boss-E28 (`06_final_rulings.md`); 2022 rulebook lines 2099-2290 (boss rules shared by both 2022 sets; no special rule per boss); printed data card 'Brutal Impact' (community transcription, DSBG-Shuffle), a self-contained ability.
 
+### CH-17-069 · §17.6
+- Type: correction
+- Before: "When the Pursuer's health is reduced to or below its *heat-up* point {{icon:ast-0030-heat-up-point}}, one random heat-up card is shuffled into its behaviour deck, as for any *boss* (see §15.5). From that moment until the *encounter* ends, the *attack value* of every attack on the Pursuer's behaviour cards is increased by one."
+- After: "When the Pursuer's health is reduced to or below its *heat-up* point {{icon:ast-0030-heat-up-point}}, it heats up as the general rule directs (see §15.5, Heat-Up). From the moment the heat-up is carried out until the *encounter* ends, the *attack value* of every attack on the Pursuer's behaviour cards is increased by one."
+- Rationale: With the heat-up now carried out at the start of the next turn, 'From that moment' had two readings; the wording follows the Old Iron King's entry.
+- Source: final rulings, VB-008 (`06_final_rulings.md`); independent verification, work/phase3/verify_b.md
+
 ## Chapter 19 — Campaigns
 
 ### CH-19-001 · §19 Campaigns
@@ -5486,6 +5521,27 @@ The Level 1, Level 2, and Level 3 encounter decks are built from the *encounter 
 - Rationale: [MECHANICAL CHANGE] Adds the four published campaigns the book lacked (items campaign-041 to campaign-044), restated in this book's terms.
 - Source: final rulings, campaign-E48 (`06_final_rulings.md`); work/text/DS-OIK-Rules-web.txt (Go Beyond Death), DS-TLG-Rules.txt (Footsteps of Giants), DS-VotBV-Rules-web.txt (Treasures of the Ice Cave), DS-GD-Rules-web.txt (Demons & Dragons), campaign pages.
 
+### CH-19-046 · §19.16
+- Type: correction
+- Before: "The defeat of the Stray Demon does not complete Section Five."
+- After: "The encounters of Section Five are fought in the order listed: the Stray Demon is fought when the first Level 4 encounter is cleared, and the second Level 4 encounter is set up when the Stray Demon is defeated. The defeat of the Stray Demon does not complete Section Five."
+- Rationale: §18.1 sets a mega-boss up after the section's last Level 4 encounter; this section's listed order (and its booklet) puts the Stray Demon between the two.
+- Source: final rulings, VB-011 (`06_final_rulings.md`); independent verification, work/phase3/verify_b.md
+
+### CH-19-047 · §19.12
+- Type: correction
+- Before: "The party may replace the mega-boss of any of these three sections with another mega-boss it owns, and may add further sections of the same form."
+- After: "The party may replace the mega-boss of any of these three sections with another mega-boss it owns, and may add further sections of the same form; the players then win the campaign when every such section is completed."
+- Rationale: 'The players win the campaign when all three are completed' does not hold once further sections are added.
+- Source: final rulings, VB-012 (`06_final_rulings.md`); independent verification, work/phase3/verify_b.md
+
+### CH-19-048 · §19.15
+- Type: ruling
+- Before: "Both invaders are part of that encounter every time the characters enter it, until both have been killed during one visit. If either invader vanishes, or the encounter is *failed*, both return the next time the characters enter it."
+- After: "Both invaders are part of that encounter every time the characters enter it, until both have been killed during one visit. If either invader vanishes, or the encounter is *failed*, both return the next time the characters enter it. An encounter that is *cleared* before both of its invaders have been killed is fought again when the characters next enter it, the Level 4 encounter of Section Three included, and it is not skipped."
+- Rationale: [MECHANICAL CHANGE] Without this the campaign could dead-end: the invaders vanish at a character's death, the survivors clear the encounter, and a cleared Level 4 encounter is otherwise never fought again.
+- Source: final rulings, VB-010 (`06_final_rulings.md`); independent verification, work/phase3/verify_b.md (judgement call decided by the lead editor)
+
 ## Chapter 15 — Boss Encounters
 
 ### CH-15-001 · §15 Boss Encounters
@@ -5803,6 +5859,27 @@ Some bosses heat up in other ways. The special rules of such a boss replace the 
 - Rationale: Two bosses are fought with more than one model.
 - Source: final rulings, lead-E19 (`06_final_rulings.md`); boss memo, cross-cluster effects
 
+### CH-15-044 · §15.2
+- Type: correction
+- Before: "If a boss's special rules state where the boss is placed or how it faces, those rules replace step 6 (see §17)."
+- After: "If a boss's special rules state where the boss is placed or how it faces, those rules replace that part of step 6, and the rest of the step applies (see §17)."
+- Rationale: Entries that name only a node (Four Kings, Old Iron King, Asylum Demon, Executioner's Chariot) otherwise lose the starting facing, which the Old Iron King's booklet and back-arc rule require.
+- Source: final rulings, VB-003 (`06_final_rulings.md`); independent verification, work/phase3/verify_b.md
+
+### CH-15-045 · §15.3
+- Type: correction
+- Before: "The boss model is placed on it at the start of every boss encounter (see §15.2)."
+- After: "The boss model is placed on it at the start of every boss encounter, unless the boss's special rules name another node (see §15.2; §17)."
+- Rationale: Smough, the Asylum Demon and the Old Iron King are placed on other nodes (§17.2, §17.3, §17.10).
+- Source: final rulings, VB-004 (`06_final_rulings.md`); independent verification, work/phase3/verify_b.md
+
+### CH-15-046 · §15.6
+- Type: correction
+- Before: "A boss model is pushed only when another boss model moves onto its node (see §17.1)."
+- After: "A boss model is pushed only when another boss model moves onto its node or is placed on it (see §17.1; §17.10, The Four Kings)."
+- Rationale: The royal summons places a king on the spawn node and pushes every other model there, a king included (§17.10, step 2).
+- Source: final rulings, VB-005 (`06_final_rulings.md`); independent verification, work/phase3/verify_b.md
+
 ## Chapter 16 — Boss Turns
 
 ### CH-16-001 · §16 Boss Turns
@@ -6070,6 +6147,13 @@ Some bosses heat up in other ways. The special rules of such a boss replace the 
 - After: "A character inflicts damage on a boss when the character's attack, or a *bleed* that the attack triggers, lowers the boss's *health dial* by one or more."
 - Rationale: Bleed triggered by a character's attack counts for the aggro token (combat-E17), and bleed is not itself an attack.
 - Source: final rulings, lead-E13 (`06_final_rulings.md`); combat memo, cross-cluster effects
+
+### CH-16-039 · §16.5
+- Type: correction
+- Before: "In campaign play the spark, the rest, and the setup that follow a boss differ (see §18.1; §18.3)."
+- After: "In campaign play the PvP encounter, the spark, the rest, and the setup that follow a boss differ (see §18.1; §18.3)."
+- Rationale: Step 6 orders a PvP encounter after every boss; in campaign play it follows only a boss that completes a section (§18.1).
+- Source: final rulings, VB-007 (`06_final_rulings.md`); independent verification, work/phase3/verify_b.md
 
 ## Chapter 23 — Appendices
 
@@ -6363,6 +6447,27 @@ Some bosses heat up in other ways. The special rules of such a boss replace the 
 **Q.** A campaign section lists the Gargoyle twice. Are the two fights separate encounters?"
 - Rationale: The most asked question about boss fights now has its answer in the F.A.Q.; the rule itself is boss-E01.
 - Source: final rulings, boss-E48 (`06_final_rulings.md`); BoardGameGeek thread 1819893 (search summary); follows boss-E01
+
+### CH-22-017 · §22.1
+- Type: correction
+- Before: "**A.** Yes, while the characters are on the bonfire tile and at the cost of one *spark*. The new character begins with starting equipment, base stats, and no souls (see §18.4)."
+- After: "**A.** Yes, while the characters are on the bonfire tile, no encounter is in progress, and the spark dial shows one or more. The party spends one *spark* for each player who joins. The new character begins with starting equipment, base stats, and no souls (see §18.4)."
+- Rationale: The answer omitted two conditions of §18.4: no encounter in progress, and a spark dial that shows one or more.
+- Source: final rulings, VB-014 (`06_final_rulings.md`); independent verification, work/phase3/verify_b.md
+
+### CH-22-018 · §22.6
+- Type: correction
+- Before: "**A.** Yes. The invader vanishes at once and awards nothing, and the encounter continues against the remaining enemy models. The invader does not return (see §12.2, Combat with an Invader)."
+- After: "**A.** Yes, unless that death fails the encounter. The invader vanishes at once and awards nothing, and the encounter continues against the remaining enemy models. The invader does not return, unless a campaign states otherwise (see §12.2, Combat with an Invader; §12.2, End of an Invasion)."
+- Rationale: The death of a hollow or last character fails the encounter; the rule that the invader does not return, and its campaign exception, stand under End of an Invasion.
+- Source: final rulings, VB-015 (`06_final_rulings.md`); independent verification, work/phase3/verify_b.md
+
+### CH-22-019 · §22.5
+- Type: correction
+- Before: "**A.** Yes. The character is pushed to a valid adjacent node in the arc in which the character is placed. If a wall leaves no such node, the character is pushed to a valid adjacent node that touches the wall (see §15.6, Characters and Arcs)."
+- After: "**A.** Yes, except after a *leap*. The character is pushed to a valid adjacent node in the arc in which the character is placed. If a wall leaves no such node, the character is pushed to a valid adjacent node that touches the wall. The push that follows a leap is not limited by arcs (see §15.6, Characters and Arcs; §16.2, Leap)."
+- Rationale: The cited section excepts the push that follows a leap.
+- Source: final rulings, VB-016 (`06_final_rulings.md`); independent verification, work/phase3/verify_b.md
 
 ## Chapter 18 — Campaign Play
 
@@ -6766,6 +6871,13 @@ Some bosses heat up in other ways. The special rules of such a boss replace the 
 - Rationale: As lead-E15, for campaign play.
 - Source: final rulings, lead-E16 (`06_final_rulings.md`); boss memo, cross-cluster effects
 
+### CH-18-058 · §18.1, Section Completion
+- Type: ruling
+- Before: "Each character who died in the boss encounter is revived as after any cleared encounter, except that the ember token of the boss's defeat keeps that character from becoming *hollow*, so no hollow cube is placed (see §7.5, Encounter Recovery; §16.5). The exploration then continues."
+- After: "Each surviving character recovers, and each character who died in the boss encounter is revived, as after any cleared encounter, except that the ember token of the boss's defeat keeps a revived character from becoming *hollow*, so no hollow cube is placed (see §7.5, Encounter Recovery; §16.5). The exploration then continues."
+- Rationale: [MECHANICAL CHANGE] After a boss that does not complete its section no rest follows, so the survivors recover as after any cleared encounter; otherwise a dead character would return in better state than a living one.
+- Source: final rulings, VB-009 (`06_final_rulings.md`); independent verification, work/phase3/verify_b.md (judgement call decided by the lead editor)
+
 ## Chapter 21 — Glossary
 
 ### CH-21-001 · §21 Glossary
@@ -7083,3 +7195,66 @@ Some bosses heat up in other ways. The special rules of such a boss replace the 
 - After: "**Stagger.** A condition. A staggered character or *summon* subtracts one from the total of each attack, block, resist, and dodge roll; any other staggered model reduces its attack values, its block and resist values, and its dodge difficulty by one. The token is removed at the end of the model's next complete turn. Stagger is placed by attacks that bear the stagger icon, by stamina overflow, and by a parry (see §8.5, Stagger; §9.6; §10.1)."
 - Rationale: [MECHANICAL CHANGE] Glossary follows §8.5 (lead-E20).
 - Source: final rulings, lead-E21 (`06_final_rulings.md`)
+
+### CH-21-045 · Glossary, Round
+- Type: correction
+- Before: "**Round.** One pass of the encounter turn order: every enemy model takes a turn in descending threat order, then every character takes a turn in descending threat order (see §7.5, Encounter Turn Order)."
+- After: "**Round.** One pass of the encounter turn order: every enemy model takes a turn in descending threat order, then every character takes a turn in descending threat order (see §7.5, Encounter Turn Order). In a boss encounter a round is one turn by each living character, in an order the players choose, with one boss turn before each of those turns (see §16.1). In a *PvP encounter* a round is one turn by each character still in play (see §20.2)."
+- Rationale: The term is used in italics for the rounds of boss encounters (§16.1) and PvP encounters (§20.2, §20.8), which the entry did not cover.
+- Source: final rulings, VB-017 (`06_final_rulings.md`); independent verification, work/phase3/verify_b.md
+
+### CH-21-046 · Glossary, PvP encounter
+- Type: correction
+- Before: "after each boss's defeat and before the rest that follows it."
+- After: "after each boss's defeat and before the rest that follows it (in campaign play, only after a boss whose defeat completes a *section*; see §18.1)."
+- Rationale: Carries today's campaign rule of §18.1 into the entry.
+- Source: final rulings, VB-018 (`06_final_rulings.md`); independent verification, work/phase3/verify_b.md
+
+### CH-21-047 · Glossary, Shop
+- Type: correction
+- Before: "The tier one shop is stocked at setup and the tier two shop when the mini-boss is defeated; both are restocked only after a boss is defeated (in campaign play, after a section is completed), unsold cards going to the bottom of their deck first (see §6.3)."
+- After: "The tier one shop is stocked at setup and the tier two shop when the mini-boss is defeated (in campaign play, when the *bonfire ascetic* is burnt); both are restocked only after a boss is defeated (in campaign play, after a section is completed), unsold cards going to the bottom of their deck first (see §6.3; §18.6)."
+- Rationale: In campaign play the tier two shop opens with the bonfire ascetic, not with a mini-boss (§18.6, §18.7).
+- Source: final rulings, VB-019 (`06_final_rulings.md`); independent verification, work/phase3/verify_b.md
+
+### CH-21-048 · Glossary, Node
+- Type: correction
+- Before: "**Node.** A circular space on a tile. Every model occupies exactly one node. Nodes are basic, spawn or terrain."
+- After: "**Node.** A circular space on a tile. During an encounter every model occupies exactly one node. Each node is one of three types: basic, spawn, or terrain (see §5.1)."
+- Rationale: The entry cited no section; §5.1 states the rule.
+- Source: final rulings, VB-020 (`06_final_rulings.md`); independent verification, work/phase3/verify_b.md
+
+### CH-21-049 · Glossary, Spawn node
+- Type: correction
+- Before: "**Spawn node.** A node on which enemy models are placed at the start of an encounter. Boss tiles have a boss spawn node."
+- After: "**Spawn node.** A node on which enemy models are placed at the start of an encounter, as the encounter card directs. The mini-boss tile, the main-boss tile, and each mega-boss game board have a boss spawn node (see §5.1; §15.3)."
+- Rationale: The entry cited no section and omitted the mega-boss spawn node of a game board.
+- Source: final rulings, VB-021 (`06_final_rulings.md`); independent verification, work/phase3/verify_b.md
+
+### CH-21-050 · Glossary, Stamina cube
+- Type: correction
+- Before: "**Stamina cube.** A black cube. Each point of stamina a character spends places one stamina cube on the endurance bar, filling from the left."
+- After: "**Stamina cube.** A black cube. Each point of stamina a character spends places one stamina cube on the endurance bar, filling from the left (see §3.4)."
+- Rationale: The entry cited no section; §3.4 states the rule.
+- Source: final rulings, VB-022 (`06_final_rulings.md`); independent verification, work/phase3/verify_b.md
+
+### CH-21-051 · Glossary, Transposed treasure
+- Type: correction
+- Before: "**Transposed treasure.** A class treasure card marked with a blue light. All transposed treasure is tier two."
+- After: "**Transposed treasure.** A *class-specific treasure* card marked with a blue light in the top-right of the card. All transposed treasure is tier two (see §6.2)."
+- Rationale: The entry cited no section and named the parent type otherwise than its headword.
+- Source: final rulings, VB-023 (`06_final_rulings.md`); independent verification, work/phase3/verify_b.md
+
+### CH-21-052 · Glossary, Tier one treasure
+- Type: correction
+- Before: "Encounter rewards and chests draw from tier one until the mini-boss is defeated (in campaign play, until the *bonfire ascetic* is burnt) (see §6.2)."
+- After: "Encounter rewards and chests draw from tier one until the mini-boss is defeated (in campaign play, until the *bonfire ascetic* is burnt) (see §6.2; §18.5)."
+- Rationale: The campaign clause is stated in §18.5, which was not cited.
+- Source: final rulings, VB-024 (`06_final_rulings.md`); independent verification, work/phase3/verify_b.md
+
+### CH-21-053 · Glossary, Tier two treasure
+- Type: correction
+- Before: "Encounter rewards and chests draw from tier two once the mini-boss is defeated (in campaign play, once the *bonfire ascetic* is burnt) (see §6.2)."
+- After: "Encounter rewards and chests draw from tier two once the mini-boss is defeated (in campaign play, once the *bonfire ascetic* is burnt) (see §6.2; §18.5)."
+- Rationale: The campaign clause is stated in §18.5, which was not cited.
+- Source: final rulings, VB-025 (`06_final_rulings.md`); independent verification, work/phase3/verify_b.md

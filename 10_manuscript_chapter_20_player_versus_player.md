@@ -8,7 +8,7 @@ Player versus player (PvP) encounters are an optional rule. They require no expa
 
 **PvP encounter.** A contest fought between the characters alone, without enemies, on the tile on which a boss has been defeated.
 
-When PvP encounters are in play, one *PvP encounter* is fought after each *mini-boss*, *main-boss*, and *mega-boss* is defeated. It is fought on the tile on which that boss was defeated: the mini-boss tile, the main-boss tile, which is the two *boss tiles* joined as one (see §15.3), or the *mega-boss game board*. It follows the rewards for the boss's defeat (see §16.5) and precedes the rest at the *bonfire* that follows every boss but the *final boss* (see §20.9).
+When PvP encounters are in play, one *PvP encounter* is fought after each *mini-boss*, *main-boss*, and *mega-boss* is defeated. In campaign play it is fought only after a boss whose defeat completes a *section* (see §18.1, Player versus Player Encounters). It is fought on the tile on which that boss was defeated: the mini-boss tile, the main-boss tile, which is the two *boss tiles* joined as one (see §15.3), or the *mega-boss game board*. It follows the rewards for the boss's defeat (see §16.5) and precedes the rest at the *bonfire* that follows every boss but the *final boss* (see §20.9).
 
 The winner of a PvP encounter gains a *victory bonus* for the PvP encounters that follow; the winner of the PvP encounter that follows the *final boss* is instead the *ultimate victor* (see §20.8). A PvP encounter awards no *souls* and no *treasure cards*. Death in a PvP encounter costs nothing, and the rest that follows the PvP encounter restores every character (see §20.7 and §20.9).
 
