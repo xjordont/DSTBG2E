@@ -296,7 +296,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Terrain node.** A node on which a terrain token or model is placed at the start of an encounter, as the encounter card directs. A terrain node that holds no terrain is used as a basic node (see §5.1).
 
-**Threat.** The value that fixes turn order. Enemies act in descending threat before the characters, who then act in descending threat. The character with the highest threat takes the aggro token at the start of each encounter; the players settle ties (see §7.5, Encounter Turn Order).
+**Threat.** The value that fixes turn order, printed on the character dashboard as Taunt Level and on enemy and phantom data cards. Enemies act in descending threat before the characters, who then act in descending threat. The character with the highest threat takes the aggro token at the start of each encounter (see §3.1, §7.5).
 
 **Tier one treasure.** The treasure deck that holds common and class-specific treasure with every stat requirement below 25. Encounter rewards and chests draw from tier one until the mini-boss is defeated (in campaign play, until the *bonfire ascetic* is burnt) (see §6.2).
 

@@ -26,7 +26,7 @@ The dashboard has four equipment slots: the *armour* slot, the left weapon slot,
 
 **Armour slot.** The slot that holds one armour card, marked with the armour icon {{icon:ast-0047-armour}}. An armour card cannot be equipped in a weapon slot.
 
-**Weapon slots.** The left weapon slot and the right weapon slot. Each holds one weapon card, marked with the one-handed weapon icon {{icon:ast-0043-one-handed-weapon}} or the two-handed weapon icon {{icon:ast-0045-two-handed-weapon}}. A one-handed weapon may be equipped in either weapon slot, and the other weapon slot may hold a second one-handed weapon. A two-handed weapon may be equipped in either weapon slot, and the other weapon slot must then be empty. A one-handed weapon equipped while the other weapon slot is empty is wielded *two-handed* (see §10.4).
+**Weapon slots.** The left weapon slot and the right weapon slot: the weapon slot on the left of the dashboard as its player reads it, and the weapon slot on its right. Each holds one weapon card, marked with the one-handed weapon icon {{icon:ast-0043-one-handed-weapon}} or the two-handed weapon icon {{icon:ast-0045-two-handed-weapon}}. A one-handed weapon may be equipped in either weapon slot, and the other weapon slot may hold a second one-handed weapon. A two-handed weapon may be equipped in either weapon slot, and the other weapon slot must then be empty. A one-handed weapon equipped while the other weapon slot is empty is wielded *two-handed* (see §10.4).
 
 Shields are weapon cards and occupy a weapon slot (see §4.1). Which weapon slot holds a shield matters for the *parry* and the *riposte* (see §9.6). Spell cards are equipped in a weapon slot or stored in an equipped *catalyst* (see §4.3).
 

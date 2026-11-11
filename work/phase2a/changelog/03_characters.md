@@ -209,3 +209,10 @@
 - After: n/a
 - Rationale: A-009 (double stamina overflow while staggered) is owned by §10.1 and §8.5, Stagger, not by this chapter. A-072 (Equip once per turn) is owned by §10.1; the glossary already states it. A-105 (adding and dropping players) is owned by §18.4. C-092 (campaign cost example) is owned by §18.6. D-039 (restore "taunt" for characters) is rejected; the preserve list keeps threat as the single term, with the printed label noted once (A-125).
 - Source: A-009, A-072, A-105, C-092, D-039
+
+### CH-03-031 · §3.2 Equipment Slots
+- Type: clarification
+- Before: "**Weapon slots.** The left weapon slot and the right weapon slot. Each holds one weapon card"
+- After: "**Weapon slots.** The left weapon slot and the right weapon slot: the weapon slot on the left of the dashboard as its player reads it, and the weapon slot on its right."
+- Rationale: The parry (§9.6) depends on which slot is the left one; the F.A.Q. ruling needed a home in the owning section so that the F.A.Q. carries no rule of its own.
+- Source: A-068, CMP-0003
