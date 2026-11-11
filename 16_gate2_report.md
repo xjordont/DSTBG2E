@@ -38,7 +38,7 @@ Phase 2B extraction added 162 files (98 component images, 46 icons, 10 frames an
 |---|---|---|
 | The PDF exists | met | `31_final_dark_souls_the_board_game_second_edition_v1.pdf` (screen) and `…_v1_print.pdf` (print), 99 pages each |
 | Automated QA passes | met | `tools/qa_pdf.py`, both editions: QA PASSED (`30_pdf_production_notes.md` §4) |
-| Independent page review | done | `work/phase2c/pdf_review.md`: no blocker, 2 major, 18 minor, and 13 polish findings; both major and 14 minor findings are fixed, and the rest are answered at the end of that file |
+| Independent page review | done | `work/phase2c/pdf_review.md`: no blocker, 2 major, 18 minor, and 13 polish findings; both major findings and 13 of the minor ones are fixed, one more is improved, and the rest are answered at the end of that file |
 
 ## Departures from the letter of the brief
 
