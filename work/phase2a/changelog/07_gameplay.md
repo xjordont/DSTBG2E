@@ -349,3 +349,10 @@
 - After: "Souls are spent while resting at the bonfire (see §11.3 and §11.4). The one exception is the cost of calling a summon at the fog gate, which is paid before a boss encounter (see §12.1)."
 - Rationale: The unconditional restriction forbade the summon cost that §11.3 and §12.1 allow; A-100 resolves the manuscript's conflict by naming the fog-gate summon as the one exception.
 - Source: A-100, review of PR #2
+
+### CH-07-051 · §7.5 Encounters (Encounter Resolution); §7.6 Souls
+- Type: correction
+- Before: "When an encounter whose encounter card carries no black cube is cleared: …" (full reward and treasure keyed to the black cube)
+- After: "An encounter is cleared for the first time while the treasure cards dealt to its tile at setup still lie on the tile … an encounter that was cleared, later failed, and then cleared again is a repeated clear, and step 6 marks it cleared once more."
+- Rationale: A failed encounter loses its black cube (CMP-0019), so keying rewards to the cube let a cleared-then-failed encounter pay the full reward and treasure a second time, with no treasure cards left to award. The reward history is now kept by the treasure cards themselves; the cube records only the permission to skip.
+- Source: CMP-0019, A-053, review of PR #2

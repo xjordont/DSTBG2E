@@ -66,7 +66,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Class-specific treasure.** A treasure card marked with a small white class emblem. It is sorted into the tier one or tier two deck by its stat requirements exactly as common treasure is.
 
-**Cleared.** The result of an encounter in which every enemy model is killed and at least one character survives. A *cleared* encounter card is marked with a black cube, rewards *souls* and (the first time only) treasure, keeps its black cube through a *reset*, and may thereafter be skipped (see §7.5, Encounter Resolution).
+**Cleared.** The result of an encounter in which every enemy model is killed and at least one character survives. A *cleared* encounter card is marked with a black cube, keeps the cube through a *reset*, and may thereafter be skipped until the encounter is *failed*. The first clear rewards full *souls* and treasure; every later clear rewards the *reduced reward* and no treasure (see §7.5, Encounter Resolution).
 
 **Common treasure.** A treasure card that is not starting, class-specific, transposed, legendary or boss treasure. Common treasure with any stat requirement of 25 or more is tier two; all other common treasure is tier one.
 
@@ -216,7 +216,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Range.** The maximum distance between an attacker and its target, counted in nodes along the shortest chain of adjacent nodes. Range 0 is the same node; range 1 is an adjacent node; range ∞ is unlimited. Range is never blocked by terrain or models (see §5.4).
 
-**Reduced reward.** Half the full soul reward, rounded down, gained by every character when an encounter already marked *cleared* is cleared again (see §7.6).
+**Reduced reward.** Half the full soul reward, rounded down, gained by every character when an encounter that has been cleared before is cleared again (see §7.6).
 
 **Relevant stat.** The stat whose requirement is the highest of the four stat requirements printed on a weapon card; if two or more requirements are tied for the highest, the character chooses one of the tied stats. A weapon is *scaled* by comparing the character's relevant stat with that requirement (see §10.5).
 
@@ -232,7 +232,7 @@ Terms set in *italics* in this book are defined here. Where a definition and a c
 
 **Riposte.** The attack a character may make at once against the attacker after a successful *parry*, using one attack option of the weapon in the right weapon slot and paying its stamina cost. A riposte cannot be parried, and it does not count against the attacks of the character's own turn (see §9.6).
 
-**Round.** One pass of the encounter turn order: every enemy model takes a turn in descending threat order, then every character takes a turn in descending threat order (see §7.5, Encounter Turn Order). In a *PvP encounter* a round is one turn by each character still in play (see §20.2).
+**Round.** One pass of the encounter turn order: every enemy model takes a turn in descending threat order, then every character takes a turn in descending threat order (see §7.5, Encounter Turn Order).
 
 **Run.** A minor action: the character spends one stamina and moves one node. It may be taken any number of times per turn. A character who has *run* cannot *Rest* in that turn (see §10.2).
 

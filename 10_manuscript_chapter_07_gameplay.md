@@ -99,7 +99,7 @@ When the character holding the aggro token dies, the token moves at once to the 
 
 An encounter ends in one of two ways. The encounter is cleared when every enemy model has been killed and at least one character is alive; crystal lizards do not count (see §14). The encounter is failed when every character has died, or when a *hollow* character dies and is *lost* (see §7.2). A failed encounter awards no *souls* and no treasure.
 
-When an encounter whose encounter card carries no black cube is cleared:
+An encounter is cleared for the first time while the treasure cards dealt to its tile at setup still lie on the tile (see §7.7). When an encounter is cleared for the first time:
 
 1. Return to each surviving character their own *dropped souls* from the tile (see §7.6).
 2. Award each character, including each character who died, the full soul reward for the encounter's level (see §7.6).
@@ -111,7 +111,7 @@ When an encounter whose encounter card carries no black cube is cleared:
 
 If *mimics* are in play and the tile holds an unopened chest, the characters decide whether to open it before step 1, and a mimic that appears is fought before any reward is collected (see §13).
 
-When an encounter whose encounter card already carries a black cube is cleared, the same steps are followed with two differences: in step 2 each character gains the *reduced reward* instead of the full reward (see §7.6), and step 3 is omitted, because a repeated clear awards no treasure.
+When an encounter is cleared again after its treasure cards have been collected, the same steps are followed with two differences: in step 2 each character gains the *reduced reward* instead of the full reward (see §7.6), and step 3 is omitted, because a repeated clear awards no treasure. This is so whether or not the encounter card carries a black cube: an encounter that was cleared, later failed, and then cleared again is a repeated clear, and step 6 marks it cleared once more.
 
 When an encounter is failed:
 
@@ -157,7 +157,7 @@ After recovery the party chooses either to advance to the next encounter tile (s
 
 *Souls* are the game's currency. Each character keeps their own souls as soul tokens on their dashboard. Souls cannot be transferred between characters. Souls are spent while resting at the *bonfire* (see §11.3 and §11.4). The one exception is the cost of calling a *summon* at the *fog gate*, which is paid before a boss encounter (see §12.1).
 
-When an *encounter* is *cleared* for the first time, every character, including each character who died in it, gains the full soul reward for the encounter's level. When an encounter already marked cleared is cleared again, every character gains the *reduced reward* instead.
+When an *encounter* is *cleared* for the first time, every character, including each character who died in it, gains the full soul reward for the encounter's level. When an encounter that has been cleared before is cleared again, every character gains the *reduced reward* instead, whether or not its encounter card still carries a black cube (see §7.5, Encounter Resolution).
 
 **Reduced reward.** Half the full soul reward, rounded down.
 
