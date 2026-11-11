@@ -8128,5 +8128,1229 @@
    "baked": null,
    "kind": "painting"
   }
+ },
+ {
+  "id": "AST-0158.3",
+  "parent": "AST-0158",
+  "name": "Guardian Dragon mega-boss miniature render",
+  "type": "photography",
+  "src": "DS-GD-Rules-web.pdf",
+  "page": 4,
+  "bbox_pt": [
+   24.0,
+   315.2,
+   422.1,
+   552.8
+  ],
+  "image_object": {
+   "xref": 79,
+   "pdfimages_num": 15,
+   "colour": "cmyk",
+   "native": "2154×1286",
+   "has_mask": true,
+   "smask_pdfimages_num": 16,
+   "ppi_as_placed": 390
+  },
+  "method": "pdfimages -png p.4 image #15 (object 79, 2154×1286 cmyk + soft mask #16 composited to RGBA); trimmed to alpha bounds; native resolution, no resampling",
+  "file": "assets/photography/ast-0158-guardian-dragon-miniature.png",
+  "format": "png",
+  "dims": "2154×1286 px",
+  "has_alpha": true,
+  "bytes": 1288291,
+  "notes": "SFG miniature render, cut out by its own soft mask. Largest copy in the booklet.",
+  "phase": 3,
+  "design": {
+   "subject": "Guardian Dragon mega-boss miniature, grey resin render cut out by its own mask",
+   "mood": "miniature, grey, imposing",
+   "suggested_use": "column plate",
+   "also_suits": [
+    "spot",
+    "full-page plate"
+   ],
+   "suggested_for": "17 Boss Special Rules",
+   "hdr": null,
+   "baked": null,
+   "kind": "miniature render"
+  }
+ },
+ {
+  "id": "AST-0158.4",
+  "parent": "AST-0158",
+  "name": "Guardian Dragon mega-boss game board, boss side (p.5)",
+  "type": "photography",
+  "src": "DS-GD-Rules-web.pdf",
+  "page": 5,
+  "bbox_pt": [
+   41.2,
+   39.1,
+   372.4,
+   370.2
+  ],
+  "image_object": {
+   "xref": 748,
+   "pdfimages_num": 99,
+   "colour": "cmyk",
+   "native": "1380×1380",
+   "has_mask": true,
+   "smask_pdfimages_num": 100,
+   "mask_opaque": true,
+   "ppi_as_placed": 300
+  },
+  "method": "pdfimages -png p.5 image #99 (object 748, 1380×1380 cmyk + soft mask #100 (opaque everywhere, dropped)); native resolution, no resampling",
+  "file": "assets/photography/ast-0158-guardian-dragon-game-board-boss-side.png",
+  "format": "png",
+  "dims": "1380×1380 px",
+  "has_alpha": false,
+  "bytes": 3281657,
+  "notes": "Node markers are printed on the board. Use this side to show where the special rule plays out.",
+  "phase": 3,
+  "design": {
+   "subject": "The Guardian Dragon mega-boss game board, boss side, with its node markings",
+   "mood": "component, top-down, arena",
+   "suggested_use": "column plate",
+   "also_suits": [
+    "full-page plate",
+    "spot"
+   ],
+   "suggested_for": "16 Boss Turns",
+   "hdr": null,
+   "baked": null,
+   "kind": "game board"
+  }
+ },
+ {
+  "id": "AST-0158.5",
+  "parent": "AST-0158",
+  "name": "Guardian Dragon mega-boss game board, encounter side (p.9, larger of the two copies)",
+  "type": "photography",
+  "src": "DS-GD-Rules-web.pdf",
+  "page": 9,
+  "bbox_pt": [
+   50.7,
+   72.5,
+   363.1,
+   385.0
+  ],
+  "image_object": {
+   "xref": 1457,
+   "pdfimages_num": 1,
+   "colour": "cmyk",
+   "native": "1302×1302",
+   "has_mask": true,
+   "smask_pdfimages_num": 2,
+   "mask_opaque": true,
+   "ppi_as_placed": 300
+  },
+  "method": "pdfimages -png p.9 image #1 (object 1457, 1302×1302 cmyk + soft mask #2 (opaque everywhere, dropped)); native resolution, no resampling",
+  "file": "assets/photography/ast-0158-guardian-dragon-game-board-encounter-side.png",
+  "format": "png",
+  "dims": "1302×1302 px",
+  "has_alpha": false,
+  "bytes": 3184398,
+  "notes": "The tokens and the card that lie on it on p.9 are separate objects and are not in this image.",
+  "phase": 3,
+  "design": {
+   "subject": "The Guardian Dragon game board, level 4 encounter side",
+   "mood": "component, top-down, tile",
+   "suggested_use": "column plate",
+   "also_suits": [
+    "spot"
+   ],
+   "suggested_for": "15 Boss Encounters",
+   "hdr": null,
+   "baked": null,
+   "kind": "game board"
+  }
+ },
+ {
+  "id": "AST-0159.1",
+  "parent": "AST-0159",
+  "name": "The Last Giant front cover, art above the logo",
+  "type": "art",
+  "src": "DS-TLG-Rules.pdf",
+  "page": 1,
+  "bbox_pt": [
+   -0.0,
+   0.0,
+   421.0,
+   612.3
+  ],
+  "image_object": {
+   "xref": 20,
+   "pdfimages_num": 0,
+   "colour": "cmyk",
+   "native": "1754×2551",
+   "has_mask": true,
+   "smask_pdfimages_num": 1,
+   "mask_opaque": true,
+   "crop_px": [
+    0,
+    0,
+    1754,
+    1569
+   ],
+   "ppi_as_placed": 300
+  },
+  "method": "pdfimages -png p.1 image #0 (object 20, 1754×2551 cmyk + soft mask #1 (opaque everywhere, dropped)); cropped to px box (0, 0, 1754, 1569) of the object; native resolution, no resampling; saved as JPEG quality 92 (4:4:4)",
+  "file": "assets/art/ast-0159-last-giant-cover-art-only.jpg",
+  "format": "jpg",
+  "dims": "1754×1569 px",
+  "has_alpha": false,
+  "bytes": 305206,
+  "notes": "Text-free crop: the top 61.5 % of the cover image, ending just above the logo flourish. The lower third of the cover carries the baked-in game logo.",
+  "phase": 3,
+  "design": {
+   "subject": "The Last Giant, hollow-faced and bound in roots, on black",
+   "mood": "hulking, hollow, black",
+   "suggested_use": "column plate",
+   "also_suits": [
+    "spot",
+    "cover"
+   ],
+   "suggested_for": "17 Boss Special Rules",
+   "hdr": null,
+   "baked": null,
+   "kind": "painting"
+  }
+ },
+ {
+  "id": "AST-0159.2",
+  "parent": "AST-0159",
+  "name": "The Last Giant booklet p.10: Last Giant concept art, front and back views",
+  "type": "art",
+  "src": "DS-TLG-Rules.pdf",
+  "page": 10,
+  "bbox_pt": [
+   64.1,
+   240.8,
+   366.7,
+   550.7
+  ],
+  "image_object": {
+   "xref": 1582,
+   "pdfimages_num": 1,
+   "colour": "cmyk",
+   "native": "1261×1292",
+   "has_mask": true,
+   "smask_pdfimages_num": 2,
+   "ppi_as_placed": 300
+  },
+  "method": "pdfimages -png p.10 image #1 (object 1582, 1261×1292 cmyk + soft mask #2 composited to RGBA); trimmed to alpha bounds; native resolution, no resampling",
+  "file": "assets/art/ast-0159-last-giant-concept-front-and-back.png",
+  "format": "png",
+  "dims": "1196×1187 px",
+  "has_alpha": true,
+  "bytes": 1238585,
+  "notes": "",
+  "phase": 3,
+  "design": {
+   "subject": "Concept art of the Last Giant, front and back views",
+   "mood": "gaunt, dark, studied",
+   "suggested_use": "column plate",
+   "also_suits": [
+    "spot"
+   ],
+   "suggested_for": "17 Boss Special Rules",
+   "hdr": null,
+   "baked": null,
+   "kind": "painting"
+  }
+ },
+ {
+  "id": "AST-0159.3",
+  "parent": "AST-0159",
+  "name": "The Last Giant mega-boss miniature render",
+  "type": "photography",
+  "src": "DS-TLG-Rules.pdf",
+  "page": 4,
+  "bbox_pt": [
+   204.7,
+   270.8,
+   364.6,
+   564.9
+  ],
+  "image_object": {
+   "xref": 77,
+   "pdfimages_num": 13,
+   "colour": "cmyk",
+   "native": "844×1553",
+   "has_mask": true,
+   "smask_pdfimages_num": 14,
+   "ppi_as_placed": 380
+  },
+  "method": "pdfimages -png p.4 image #13 (object 77, 844×1553 cmyk + soft mask #14 composited to RGBA); trimmed to alpha bounds; native resolution, no resampling",
+  "file": "assets/photography/ast-0159-last-giant-miniature.png",
+  "format": "png",
+  "dims": "844×1553 px",
+  "has_alpha": true,
+  "bytes": 962891,
+  "notes": "SFG miniature render, cut out by its own soft mask. Largest copy in the booklet.",
+  "phase": 3,
+  "design": {
+   "subject": "The Last Giant mega-boss miniature, grey resin render cut out by its own mask",
+   "mood": "miniature, grey, imposing",
+   "suggested_use": "column plate",
+   "also_suits": [
+    "spot",
+    "full-page plate"
+   ],
+   "suggested_for": "17 Boss Special Rules",
+   "hdr": null,
+   "baked": null,
+   "kind": "miniature render"
+  }
+ },
+ {
+  "id": "AST-0159.4",
+  "parent": "AST-0159",
+  "name": "The Last Giant mega-boss game board, boss side (p.5)",
+  "type": "photography",
+  "src": "DS-TLG-Rules.pdf",
+  "page": 5,
+  "bbox_pt": [
+   38.4,
+   36.3,
+   375.2,
+   373.0
+  ],
+  "image_object": {
+   "xref": 842,
+   "pdfimages_num": 2,
+   "colour": "cmyk",
+   "native": "1404×1404",
+   "has_mask": true,
+   "smask_pdfimages_num": 3,
+   "mask_opaque": true,
+   "ppi_as_placed": 300
+  },
+  "method": "pdfimages -png p.5 image #2 (object 842, 1404×1404 cmyk + soft mask #3 (opaque everywhere, dropped)); native resolution, no resampling",
+  "file": "assets/photography/ast-0159-last-giant-game-board-boss-side.png",
+  "format": "png",
+  "dims": "1404×1404 px",
+  "has_alpha": false,
+  "bytes": 3154838,
+  "notes": "Node markers are printed on the board. Use this side to show where the special rule plays out.",
+  "phase": 3,
+  "design": {
+   "subject": "The Last Giant mega-boss game board, boss side, with its node markings",
+   "mood": "component, top-down, arena",
+   "suggested_use": "column plate",
+   "also_suits": [
+    "full-page plate",
+    "spot"
+   ],
+   "suggested_for": "16 Boss Turns",
+   "hdr": null,
+   "baked": null,
+   "kind": "game board"
+  }
+ },
+ {
+  "id": "AST-0159.5",
+  "parent": "AST-0159",
+  "name": "The Last Giant mega-boss game board, encounter side (p.9, larger of the two copies)",
+  "type": "photography",
+  "src": "DS-TLG-Rules.pdf",
+  "page": 9,
+  "bbox_pt": [
+   51.0,
+   72.8,
+   362.8,
+   384.7
+  ],
+  "image_object": {
+   "xref": 1540,
+   "pdfimages_num": 1,
+   "colour": "cmyk",
+   "native": "1300×1300",
+   "has_mask": true,
+   "smask_pdfimages_num": 2,
+   "mask_opaque": true,
+   "ppi_as_placed": 300
+  },
+  "method": "pdfimages -png p.9 image #1 (object 1540, 1300×1300 cmyk + soft mask #2 (opaque everywhere, dropped)); native resolution, no resampling",
+  "file": "assets/photography/ast-0159-last-giant-game-board-encounter-side.png",
+  "format": "png",
+  "dims": "1300×1300 px",
+  "has_alpha": false,
+  "bytes": 2705890,
+  "notes": "The tokens and the card that lie on it on p.9 are separate objects and are not in this image.",
+  "phase": 3,
+  "design": {
+   "subject": "The Last Giant game board, level 4 encounter side",
+   "mood": "component, top-down, tile",
+   "suggested_use": "column plate",
+   "also_suits": [
+    "spot"
+   ],
+   "suggested_for": "15 Boss Encounters",
+   "hdr": null,
+   "baked": null,
+   "kind": "game board"
+  }
+ },
+ {
+  "id": "AST-0160.1",
+  "parent": "AST-0160",
+  "name": "Manus, Father of the Abyss front cover, art above the logo",
+  "type": "art",
+  "src": "DS-MFA-Rules.pdf",
+  "page": 1,
+  "bbox_pt": [
+   -0.0,
+   0.0,
+   421.0,
+   612.3
+  ],
+  "image_object": {
+   "xref": 20,
+   "pdfimages_num": 0,
+   "colour": "cmyk",
+   "native": "1754×2551",
+   "has_mask": true,
+   "smask_pdfimages_num": 1,
+   "mask_opaque": true,
+   "crop_px": [
+    0,
+    0,
+    1754,
+    1569
+   ],
+   "ppi_as_placed": 300
+  },
+  "method": "pdfimages -png p.1 image #0 (object 20, 1754×2551 cmyk + soft mask #1 (opaque everywhere, dropped)); cropped to px box (0, 0, 1754, 1569) of the object; native resolution, no resampling; saved as JPEG quality 92 (4:4:4)",
+  "file": "assets/art/ast-0160-manus-cover-art-only.jpg",
+  "format": "jpg",
+  "dims": "1754×1569 px",
+  "has_alpha": false,
+  "bytes": 588290,
+  "notes": "Text-free crop: the top 61.5 % of the cover image, ending just above the logo flourish. The lower third of the cover carries the baked-in game logo.",
+  "phase": 3,
+  "design": {
+   "subject": "Manus, Father of the Abyss: antlers, a mass of red eyes and a great clawed hand",
+   "mood": "abyssal, red-eyed, looming",
+   "suggested_use": "column plate",
+   "also_suits": [
+    "spot",
+    "cover"
+   ],
+   "suggested_for": "17 Boss Special Rules",
+   "hdr": null,
+   "baked": null,
+   "kind": "painting"
+  }
+ },
+ {
+  "id": "AST-0160.2",
+  "parent": "AST-0160",
+  "name": "Manus, Father of the Abyss booklet p.15: Manus looming over a small blue figure",
+  "type": "art",
+  "src": "DS-MFA-Rules.pdf",
+  "page": 15,
+  "bbox_pt": [
+   56.0,
+   402.8,
+   194.9,
+   558.8
+  ],
+  "image_object": {
+   "xref": 1997,
+   "pdfimages_num": 3,
+   "colour": "cmyk",
+   "native": "757×844",
+   "has_mask": true,
+   "smask_pdfimages_num": 4,
+   "mask_opaque": true,
+   "ppi_as_placed": 393
+  },
+  "method": "pdfimages -png p.15 image #3 (object 1997, 757×844 cmyk + soft mask #4 (opaque everywhere, dropped)); native resolution, no resampling; saved as JPEG quality 92 (4:4:4)",
+  "file": "assets/art/ast-0160-manus-art-manus-over-small-figure.jpg",
+  "format": "jpg",
+  "dims": "757×844 px",
+  "has_alpha": false,
+  "bytes": 106632,
+  "notes": "",
+  "phase": 3,
+  "design": {
+   "subject": "Manus looms, antlered and red-eyed, over a small figure in blue",
+   "mood": "abyssal, red-eyed, looming",
+   "suggested_use": "spot",
+   "also_suits": [
+    "column plate"
+   ],
+   "suggested_for": "17 Boss Special Rules",
+   "hdr": null,
+   "baked": null,
+   "kind": "painting"
+  }
+ },
+ {
+  "id": "AST-0160.3",
+  "parent": "AST-0160",
+  "name": "Manus, Father of the Abyss mega-boss miniature render",
+  "type": "photography",
+  "src": "DS-MFA-Rules.pdf",
+  "page": 4,
+  "bbox_pt": [
+   34.1,
+   231.0,
+   408.1,
+   555.1
+  ],
+  "image_object": {
+   "xref": 67,
+   "pdfimages_num": 3,
+   "colour": "cmyk",
+   "native": "2240×1941",
+   "has_mask": true,
+   "smask_pdfimages_num": 4,
+   "ppi_as_placed": 431
+  },
+  "method": "pdfimages -png p.4 image #3 (object 67, 2240×1941 cmyk + soft mask #4 composited to RGBA); trimmed to alpha bounds; native resolution, no resampling",
+  "file": "assets/photography/ast-0160-manus-miniature.png",
+  "format": "png",
+  "dims": "2240×1941 px",
+  "has_alpha": true,
+  "bytes": 3593742,
+  "notes": "SFG miniature render, cut out by its own soft mask. Largest copy in the booklet.",
+  "phase": 3,
+  "design": {
+   "subject": "Manus, Father of the Abyss mega-boss miniature, grey resin render cut out by its own mask",
+   "mood": "miniature, grey, imposing",
+   "suggested_use": "column plate",
+   "also_suits": [
+    "spot",
+    "full-page plate"
+   ],
+   "suggested_for": "17 Boss Special Rules",
+   "hdr": null,
+   "baked": null,
+   "kind": "miniature render"
+  }
+ },
+ {
+  "id": "AST-0160.4",
+  "parent": "AST-0160",
+  "name": "Manus, Father of the Abyss mega-boss game board, boss side (p.5)",
+  "type": "photography",
+  "src": "DS-MFA-Rules.pdf",
+  "page": 5,
+  "bbox_pt": [
+   33.3,
+   31.1,
+   380.3,
+   378.1
+  ],
+  "image_object": {
+   "xref": 592,
+   "pdfimages_num": 106,
+   "colour": "cmyk",
+   "native": "1446×1446",
+   "has_mask": true,
+   "smask_pdfimages_num": 107,
+   "mask_opaque": true,
+   "ppi_as_placed": 300
+  },
+  "method": "pdfimages -png p.5 image #106 (object 592, 1446×1446 cmyk + soft mask #107 (opaque everywhere, dropped)); native resolution, no resampling",
+  "file": "assets/photography/ast-0160-manus-game-board-boss-side.png",
+  "format": "png",
+  "dims": "1446×1446 px",
+  "has_alpha": false,
+  "bytes": 3470831,
+  "notes": "Node markers are printed on the board. Use this side to show where the special rule plays out.",
+  "phase": 3,
+  "design": {
+   "subject": "The Manus, Father of the Abyss mega-boss game board, boss side, with its node markings",
+   "mood": "component, top-down, arena",
+   "suggested_use": "column plate",
+   "also_suits": [
+    "full-page plate",
+    "spot"
+   ],
+   "suggested_for": "16 Boss Turns",
+   "hdr": null,
+   "baked": null,
+   "kind": "game board"
+  }
+ },
+ {
+  "id": "AST-0160.5",
+  "parent": "AST-0160",
+  "name": "Manus, Father of the Abyss mega-boss game board, encounter side (p.9, larger of the two copies)",
+  "type": "photography",
+  "src": "DS-MFA-Rules.pdf",
+  "page": 9,
+  "bbox_pt": [
+   60.9,
+   88.7,
+   353.0,
+   380.8
+  ],
+  "image_object": {
+   "xref": 1227,
+   "pdfimages_num": 1,
+   "colour": "cmyk",
+   "native": "1217×1217",
+   "has_mask": true,
+   "smask_pdfimages_num": 2,
+   "mask_opaque": true,
+   "ppi_as_placed": 300
+  },
+  "method": "pdfimages -png p.9 image #1 (object 1227, 1217×1217 cmyk + soft mask #2 (opaque everywhere, dropped)); native resolution, no resampling",
+  "file": "assets/photography/ast-0160-manus-game-board-encounter-side.png",
+  "format": "png",
+  "dims": "1217×1217 px",
+  "has_alpha": false,
+  "bytes": 2463696,
+  "notes": "The tokens and the card that lie on it on p.9 are separate objects and are not in this image.",
+  "phase": 3,
+  "design": {
+   "subject": "The Manus, Father of the Abyss game board, level 4 encounter side",
+   "mood": "component, top-down, tile",
+   "suggested_use": "column plate",
+   "also_suits": [
+    "spot"
+   ],
+   "suggested_for": "15 Boss Encounters",
+   "hdr": null,
+   "baked": null,
+   "kind": "game board"
+  }
+ },
+ {
+  "id": "AST-0161.1",
+  "parent": "AST-0161",
+  "name": "Old Iron King front cover, art above the logo",
+  "type": "art",
+  "src": "DS-OIK-Rules-web.pdf",
+  "page": 1,
+  "bbox_pt": [
+   -1.1,
+   -1.0,
+   405.0,
+   596.3
+  ],
+  "image_object": {
+   "xref": 22,
+   "pdfimages_num": 0,
+   "colour": "icc",
+   "native": "846×1245",
+   "has_mask": true,
+   "smask_pdfimages_num": 1,
+   "mask_opaque": true,
+   "crop_px": [
+    0,
+    0,
+    846,
+    766
+   ],
+   "ppi_as_placed": 150
+  },
+  "method": "pdfimages -png p.1 image #0 (object 22, 846×1245 icc + soft mask #1 (opaque everywhere, dropped)); cropped to px box (0, 0, 846, 766) of the object; native resolution, no resampling; saved as JPEG quality 92 (4:4:4)",
+  "file": "assets/art/ast-0161-old-iron-king-cover-art-only.jpg",
+  "format": "jpg",
+  "dims": "846×766 px",
+  "has_alpha": false,
+  "bytes": 230104,
+  "notes": "Text-free crop: the top 61.5 % of the cover image, ending just above the logo flourish. The lower third of the cover carries the baked-in game logo.",
+  "phase": 3,
+  "design": {
+   "subject": "The Old Iron King, a horned demon of molten iron, wreathed in flame",
+   "mood": "molten, infernal, roaring",
+   "suggested_use": "column plate",
+   "also_suits": [
+    "spot",
+    "cover"
+   ],
+   "suggested_for": "17 Boss Special Rules",
+   "hdr": null,
+   "baked": null,
+   "kind": "painting"
+  }
+ },
+ {
+  "id": "AST-0161.2",
+  "parent": "AST-0161",
+  "name": "Old Iron King mega-boss miniature render",
+  "type": "photography",
+  "src": "DS-OIK-Rules-web.pdf",
+  "page": 4,
+  "bbox_pt": [
+   35.3,
+   264.0,
+   368.6,
+   544.3
+  ],
+  "image_object": {
+   "xref": 80,
+   "pdfimages_num": 1,
+   "colour": "icc",
+   "native": "695×584",
+   "has_mask": true,
+   "smask_pdfimages_num": 2,
+   "ppi_as_placed": 150
+  },
+  "method": "pdfimages -png p.4 image #1 (object 80, 695×584 icc + soft mask #2 composited to RGBA); trimmed to alpha bounds; native resolution, no resampling",
+  "file": "assets/photography/ast-0161-old-iron-king-miniature.png",
+  "format": "png",
+  "dims": "695×584 px",
+  "has_alpha": true,
+  "bytes": 209911,
+  "notes": "SFG miniature render, cut out by its own soft mask. Largest copy in the booklet.",
+  "phase": 3,
+  "design": {
+   "subject": "Old Iron King mega-boss miniature, grey resin render cut out by its own mask",
+   "mood": "miniature, grey, imposing",
+   "suggested_use": "column plate",
+   "also_suits": [
+    "spot",
+    "full-page plate"
+   ],
+   "suggested_for": "17 Boss Special Rules",
+   "hdr": null,
+   "baked": null,
+   "kind": "miniature render"
+  }
+ },
+ {
+  "id": "AST-0161.3",
+  "parent": "AST-0161",
+  "name": "Old Iron King mega-boss game board, boss side (p.5)",
+  "type": "photography",
+  "src": "DS-OIK-Rules-web.pdf",
+  "page": 5,
+  "bbox_pt": [
+   41.5,
+   39.3,
+   355.1,
+   353.0
+  ],
+  "image_object": {
+   "xref": 815,
+   "pdfimages_num": 109,
+   "colour": "icc",
+   "native": "654×654",
+   "has_mask": true,
+   "smask_pdfimages_num": 110,
+   "mask_opaque": true,
+   "ppi_as_placed": 150
+  },
+  "method": "pdfimages -png p.5 image #109 (object 815, 654×654 icc + soft mask #110 (opaque everywhere, dropped)); native resolution, no resampling",
+  "file": "assets/photography/ast-0161-old-iron-king-game-board-boss-side.png",
+  "format": "png",
+  "dims": "654×654 px",
+  "has_alpha": false,
+  "bytes": 898699,
+  "notes": "Node markers are printed on the board. Use this side to show where the special rule plays out.",
+  "phase": 3,
+  "design": {
+   "subject": "The Old Iron King mega-boss game board, boss side, with its node markings",
+   "mood": "component, top-down, arena",
+   "suggested_use": "column plate",
+   "also_suits": [
+    "full-page plate",
+    "spot"
+   ],
+   "suggested_for": "16 Boss Turns",
+   "hdr": null,
+   "baked": null,
+   "kind": "game board"
+  }
+ },
+ {
+  "id": "AST-0161.4",
+  "parent": "AST-0161",
+  "name": "Old Iron King mega-boss game board, encounter side (p.9, larger of the two copies)",
+  "type": "photography",
+  "src": "DS-OIK-Rules-web.pdf",
+  "page": 9,
+  "bbox_pt": [
+   53.5,
+   75.3,
+   343.4,
+   365.2
+  ],
+  "image_object": {
+   "xref": 1548,
+   "pdfimages_num": 1,
+   "colour": "icc",
+   "native": "604×604",
+   "has_mask": true,
+   "smask_pdfimages_num": 2,
+   "mask_opaque": true,
+   "ppi_as_placed": 150
+  },
+  "method": "pdfimages -png p.9 image #1 (object 1548, 604×604 icc + soft mask #2 (opaque everywhere, dropped)); native resolution, no resampling",
+  "file": "assets/photography/ast-0161-old-iron-king-game-board-encounter-side.png",
+  "format": "png",
+  "dims": "604×604 px",
+  "has_alpha": false,
+  "bytes": 760119,
+  "notes": "The tokens and the card that lie on it on p.9 are separate objects and are not in this image.",
+  "phase": 3,
+  "design": {
+   "subject": "The Old Iron King game board, level 4 encounter side",
+   "mood": "component, top-down, tile",
+   "suggested_use": "column plate",
+   "also_suits": [
+    "spot"
+   ],
+   "suggested_for": "15 Boss Encounters",
+   "hdr": null,
+   "baked": null,
+   "kind": "game board"
+  }
+ },
+ {
+  "id": "AST-0162.1",
+  "parent": "AST-0162",
+  "name": "Vordt of the Boreal Valley front cover, art above the logo",
+  "type": "art",
+  "src": "DS-VotBV-Rules-web.pdf",
+  "page": 1,
+  "bbox_pt": [
+   -0.0,
+   0.0,
+   421.0,
+   612.3
+  ],
+  "image_object": {
+   "xref": 20,
+   "pdfimages_num": 0,
+   "colour": "cmyk",
+   "native": "1754×2551",
+   "has_mask": true,
+   "smask_pdfimages_num": 1,
+   "mask_opaque": true,
+   "crop_px": [
+    0,
+    0,
+    1754,
+    1569
+   ],
+   "ppi_as_placed": 300
+  },
+  "method": "pdfimages -png p.1 image #0 (object 20, 1754×2551 cmyk + soft mask #1 (opaque everywhere, dropped)); cropped to px box (0, 0, 1754, 1569) of the object; native resolution, no resampling; saved as JPEG quality 92 (4:4:4)",
+  "file": "assets/art/ast-0162-vordt-cover-art-only.jpg",
+  "format": "jpg",
+  "dims": "1754×1569 px",
+  "has_alpha": false,
+  "bytes": 544888,
+  "notes": "Text-free crop: the top 61.5 % of the cover image, ending just above the logo flourish. The lower third of the cover carries the baked-in game logo.",
+  "phase": 3,
+  "design": {
+   "subject": "Vordt of the Boreal Valley, a hunched beast in frost-rimed armour, on black",
+   "mood": "frozen, bestial, silver",
+   "suggested_use": "column plate",
+   "also_suits": [
+    "spot",
+    "cover"
+   ],
+   "suggested_for": "17 Boss Special Rules",
+   "hdr": null,
+   "baked": null,
+   "kind": "painting"
+  }
+ },
+ {
+  "id": "AST-0162.2",
+  "parent": "AST-0162",
+  "name": "Vordt of the Boreal Valley booklet p.10: Vordt of the Boreal Valley on black",
+  "type": "art",
+  "src": "DS-VotBV-Rules-web.pdf",
+  "page": 10,
+  "bbox_pt": [
+   62.7,
+   227.8,
+   365.3,
+   559.7
+  ],
+  "image_object": {
+   "xref": 1750,
+   "pdfimages_num": 1,
+   "colour": "cmyk",
+   "native": "1261×1383",
+   "has_mask": false,
+   "ppi_as_placed": 300
+  },
+  "method": "pdfimages -png p.10 image #1 (object 1750, 1261×1383 cmyk, no soft mask); native resolution, no resampling; saved as JPEG quality 92 (4:4:4)",
+  "file": "assets/art/ast-0162-vordt-art-vordt-on-black.jpg",
+  "format": "jpg",
+  "dims": "1261×1383 px",
+  "has_alpha": false,
+  "bytes": 493890,
+  "notes": "",
+  "phase": 3,
+  "design": {
+   "subject": "Vordt of the Boreal Valley, silver-armoured and hunched, on black",
+   "mood": "frozen, bestial, silver",
+   "suggested_use": "column plate",
+   "also_suits": [
+    "full-page plate"
+   ],
+   "suggested_for": "17 Boss Special Rules",
+   "hdr": null,
+   "baked": null,
+   "kind": "painting"
+  }
+ },
+ {
+  "id": "AST-0162.3",
+  "parent": "AST-0162",
+  "name": "Vordt of the Boreal Valley mega-boss miniature render",
+  "type": "photography",
+  "src": "DS-VotBV-Rules-web.pdf",
+  "page": 4,
+  "bbox_pt": [
+   65.4,
+   300.8,
+   362.1,
+   554.3
+  ],
+  "image_object": {
+   "xref": 79,
+   "pdfimages_num": 15,
+   "colour": "cmyk",
+   "native": "1236×1056",
+   "has_mask": true,
+   "smask_pdfimages_num": 16,
+   "ppi_as_placed": 300
+  },
+  "method": "pdfimages -png p.4 image #15 (object 79, 1236×1056 cmyk + soft mask #16 composited to RGBA); trimmed to alpha bounds; native resolution, no resampling",
+  "file": "assets/photography/ast-0162-vordt-miniature.png",
+  "format": "png",
+  "dims": "1236×1056 px",
+  "has_alpha": true,
+  "bytes": 669867,
+  "notes": "SFG miniature render, cut out by its own soft mask. Largest copy in the booklet.",
+  "phase": 3,
+  "design": {
+   "subject": "Vordt of the Boreal Valley mega-boss miniature, grey resin render cut out by its own mask",
+   "mood": "miniature, grey, imposing",
+   "suggested_use": "column plate",
+   "also_suits": [
+    "spot",
+    "full-page plate"
+   ],
+   "suggested_for": "17 Boss Special Rules",
+   "hdr": null,
+   "baked": null,
+   "kind": "miniature render"
+  }
+ },
+ {
+  "id": "AST-0162.4",
+  "parent": "AST-0162",
+  "name": "Vordt of the Boreal Valley mega-boss game board, boss side (p.5)",
+  "type": "photography",
+  "src": "DS-VotBV-Rules-web.pdf",
+  "page": 5,
+  "bbox_pt": [
+   45.3,
+   43.1,
+   368.4,
+   366.2
+  ],
+  "image_object": {
+   "xref": 899,
+   "pdfimages_num": 37,
+   "colour": "cmyk",
+   "native": "1347×1347",
+   "has_mask": true,
+   "smask_pdfimages_num": 38,
+   "mask_opaque": true,
+   "ppi_as_placed": 300
+  },
+  "method": "pdfimages -png p.5 image #37 (object 899, 1347×1347 cmyk + soft mask #38 (opaque everywhere, dropped)); native resolution, no resampling",
+  "file": "assets/photography/ast-0162-vordt-game-board-boss-side.png",
+  "format": "png",
+  "dims": "1347×1347 px",
+  "has_alpha": false,
+  "bytes": 2875944,
+  "notes": "Node markers are printed on the board. Use this side to show where the special rule plays out.",
+  "phase": 3,
+  "design": {
+   "subject": "The Vordt of the Boreal Valley mega-boss game board, boss side, with its node markings",
+   "mood": "component, top-down, arena",
+   "suggested_use": "column plate",
+   "also_suits": [
+    "full-page plate",
+    "spot"
+   ],
+   "suggested_for": "16 Boss Turns",
+   "hdr": null,
+   "baked": null,
+   "kind": "game board"
+  }
+ },
+ {
+  "id": "AST-0162.5",
+  "parent": "AST-0162",
+  "name": "Vordt of the Boreal Valley mega-boss game board, encounter side (p.9, larger of the two copies)",
+  "type": "photography",
+  "src": "DS-VotBV-Rules-web.pdf",
+  "page": 9,
+  "bbox_pt": [
+   57.7,
+   79.5,
+   356.2,
+   378.0
+  ],
+  "image_object": {
+   "xref": 1419,
+   "pdfimages_num": 2,
+   "colour": "cmyk",
+   "native": "1244×1244",
+   "has_mask": true,
+   "smask_pdfimages_num": 3,
+   "mask_opaque": true,
+   "ppi_as_placed": 300
+  },
+  "method": "pdfimages -png p.9 image #2 (object 1419, 1244×1244 cmyk + soft mask #3 (opaque everywhere, dropped)); native resolution, no resampling",
+  "file": "assets/photography/ast-0162-vordt-game-board-encounter-side.png",
+  "format": "png",
+  "dims": "1244×1244 px",
+  "has_alpha": false,
+  "bytes": 2461958,
+  "notes": "The tokens and the card that lie on it on p.9 are separate objects and are not in this image.",
+  "phase": 3,
+  "design": {
+   "subject": "The Vordt of the Boreal Valley game board, level 4 encounter side",
+   "mood": "component, top-down, tile",
+   "suggested_use": "column plate",
+   "also_suits": [
+    "spot"
+   ],
+   "suggested_for": "15 Boss Encounters",
+   "hdr": null,
+   "baked": null,
+   "kind": "game board"
+  }
+ },
+ {
+  "id": "AST-0163.1",
+  "parent": "AST-0163",
+  "name": "Asylum Demon front cover, art above the logo",
+  "type": "art",
+  "src": "DS-AD-Rules-web-EN.pdf",
+  "page": 1,
+  "bbox_pt": [
+   -0.0,
+   0.0,
+   421.0,
+   612.3
+  ],
+  "image_object": {
+   "xref": 20,
+   "pdfimages_num": 0,
+   "colour": "cmyk",
+   "native": "1754×2551",
+   "has_mask": true,
+   "smask_pdfimages_num": 1,
+   "mask_opaque": true,
+   "crop_px": [
+    0,
+    0,
+    1754,
+    1569
+   ],
+   "ppi_as_placed": 300
+  },
+  "method": "pdfimages -png p.1 image #0 (object 20, 1754×2551 cmyk + soft mask #1 (opaque everywhere, dropped)); cropped to px box (0, 0, 1754, 1569) of the object; native resolution, no resampling; saved as JPEG quality 92 (4:4:4)",
+  "file": "assets/art/ast-0163-asylum-demon-cover-art-only.jpg",
+  "format": "jpg",
+  "dims": "1754×1569 px",
+  "has_alpha": false,
+  "bytes": 585575,
+  "notes": "Text-free crop: the top 61.5 % of the cover image, ending just above the logo flourish. The lower third of the cover carries the baked-in game logo.",
+  "phase": 3,
+  "design": {
+   "subject": "The Asylum Demon, horned and bloated, great hammer in hand, on black",
+   "mood": "brutish, dark, heavy",
+   "suggested_use": "column plate",
+   "also_suits": [
+    "spot",
+    "cover"
+   ],
+   "suggested_for": "17 Boss Special Rules",
+   "hdr": null,
+   "baked": null,
+   "kind": "painting"
+  }
+ },
+ {
+  "id": "AST-0163.2",
+  "parent": "AST-0163",
+  "name": "Asylum Demon booklet p.12: demon concept art on white",
+  "type": "art",
+  "src": "DS-AD-Rules-web-EN.pdf",
+  "page": 12,
+  "bbox_pt": [
+   63.8,
+   311.8,
+   365.2,
+   559.8
+  ],
+  "image_object": {
+   "xref": 1786,
+   "pdfimages_num": 1,
+   "colour": "cmyk",
+   "native": "1256×1034",
+   "has_mask": false,
+   "ppi_as_placed": 300
+  },
+  "method": "pdfimages -png p.12 image #1 (object 1786, 1256×1034 cmyk, no soft mask); native resolution, no resampling; saved as JPEG quality 92 (4:4:4)",
+  "file": "assets/art/ast-0163-asylum-demon-concept-stray-demon-on-white.jpg",
+  "format": "jpg",
+  "dims": "1256×1034 px",
+  "has_alpha": false,
+  "bytes": 388801,
+  "notes": "White ground is part of the image.",
+  "phase": 3,
+  "design": {
+   "subject": "Concept art of the demon, horned, winged and bloated, on white",
+   "mood": "brutish, dark, studied",
+   "suggested_use": "column plate",
+   "also_suits": [
+    "spot"
+   ],
+   "suggested_for": "17 Boss Special Rules",
+   "hdr": null,
+   "baked": null,
+   "kind": "painting"
+  }
+ },
+ {
+  "id": "AST-0163.3",
+  "parent": "AST-0163",
+  "name": "Asylum Demon / Stray Demon mega-boss miniature render",
+  "type": "photography",
+  "src": "DS-AD-Rules-web-EN.pdf",
+  "page": 4,
+  "bbox_pt": [
+   103.5,
+   294.8,
+   378.8,
+   552.8
+  ],
+  "image_object": {
+   "xref": 65,
+   "pdfimages_num": 1,
+   "colour": "cmyk",
+   "native": "1148×1075",
+   "has_mask": true,
+   "smask_pdfimages_num": 2,
+   "ppi_as_placed": 300
+  },
+  "method": "pdfimages -png p.4 image #1 (object 65, 1148×1075 cmyk + soft mask #2 composited to RGBA); trimmed to alpha bounds; native resolution, no resampling",
+  "file": "assets/photography/ast-0163-asylum-demon-miniature.png",
+  "format": "png",
+  "dims": "1148×1075 px",
+  "has_alpha": true,
+  "bytes": 870519,
+  "notes": "SFG miniature render, cut out by its own soft mask. Largest copy in the booklet.",
+  "phase": 3,
+  "design": {
+   "subject": "Asylum Demon / Stray Demon mega-boss miniature, grey resin render cut out by its own mask",
+   "mood": "miniature, grey, imposing",
+   "suggested_use": "column plate",
+   "also_suits": [
+    "spot",
+    "full-page plate"
+   ],
+   "suggested_for": "17 Boss Special Rules",
+   "hdr": null,
+   "baked": null,
+   "kind": "miniature render"
+  }
+ },
+ {
+  "id": "AST-0163.4",
+  "parent": "AST-0163",
+  "name": "Asylum Demon mega-boss game board, boss side (p.5)",
+  "type": "photography",
+  "src": "DS-AD-Rules-web-EN.pdf",
+  "page": 5,
+  "bbox_pt": [
+   40.6,
+   38.4,
+   373.0,
+   370.8
+  ],
+  "image_object": {
+   "xref": 864,
+   "pdfimages_num": 101,
+   "colour": "cmyk",
+   "native": "1386×1386",
+   "has_mask": true,
+   "smask_pdfimages_num": 102,
+   "mask_opaque": true,
+   "ppi_as_placed": 300
+  },
+  "method": "pdfimages -png p.5 image #101 (object 864, 1386×1386 cmyk + soft mask #102 (opaque everywhere, dropped)); native resolution, no resampling",
+  "file": "assets/photography/ast-0163-asylum-demon-game-board-boss-side.png",
+  "format": "png",
+  "dims": "1386×1386 px",
+  "has_alpha": false,
+  "bytes": 3144889,
+  "notes": "Node markers are printed on the board. Use this side to show where the special rule plays out.",
+  "phase": 3,
+  "design": {
+   "subject": "The Asylum Demon mega-boss game board, boss side, with its node markings",
+   "mood": "component, top-down, arena",
+   "suggested_use": "column plate",
+   "also_suits": [
+    "full-page plate",
+    "spot"
+   ],
+   "suggested_for": "16 Boss Turns",
+   "hdr": null,
+   "baked": null,
+   "kind": "game board"
+  }
+ },
+ {
+  "id": "AST-0163.5",
+  "parent": "AST-0163",
+  "name": "Asylum Demon mega-boss game board, encounter side (p.9, larger of the two copies)",
+  "type": "photography",
+  "src": "DS-AD-Rules-web-EN.pdf",
+  "page": 9,
+  "bbox_pt": [
+   50.7,
+   72.5,
+   363.1,
+   385.0
+  ],
+  "image_object": {
+   "xref": 1545,
+   "pdfimages_num": 1,
+   "colour": "cmyk",
+   "native": "1302×1302",
+   "has_mask": true,
+   "smask_pdfimages_num": 2,
+   "mask_opaque": true,
+   "ppi_as_placed": 300
+  },
+  "method": "pdfimages -png p.9 image #1 (object 1545, 1302×1302 cmyk + soft mask #2 (opaque everywhere, dropped)); native resolution, no resampling",
+  "file": "assets/photography/ast-0163-asylum-demon-game-board-encounter-side.png",
+  "format": "png",
+  "dims": "1302×1302 px",
+  "has_alpha": false,
+  "bytes": 2682259,
+  "notes": "The tokens and the card that lie on it on p.9 are separate objects and are not in this image.",
+  "phase": 3,
+  "design": {
+   "subject": "The Asylum Demon game board, level 4 encounter side",
+   "mood": "component, top-down, tile",
+   "suggested_use": "column plate",
+   "also_suits": [
+    "spot"
+   ],
+   "suggested_for": "15 Boss Encounters",
+   "hdr": null,
+   "baked": null,
+   "kind": "game board"
+  }
  }
 ]
