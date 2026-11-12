@@ -69,7 +69,7 @@ Five-sixths of the growth was in the first draft, before the author's later requ
 4. **Copies had to be kept in step, and each fix added a clause.** Once a rule lived in four places, every ruling was mirrored four times, and the verification passes settled disagreements between copies by adding a qualifier to one, never by deleting the copy. The hollow marker alone went through six entries in four sections; the author's text was "a marker such as white cubes".
 5. **Rulings bred rulings.** Parry from either slot needed three follow-ups and two more in verification. The attack sequence needed four clarifications in the last review. The heat-up timing needed six echo sentences in four chapters and changes nothing in play.
 6. **Templates applied to everything.** A flavour introduction for every chapter; worked examples by standing instruction (42 in five combat chapters); a three-sentence formula for every optional rule; Components, Setup, Special ability, Heat-up and Unique icons for every boss, including bosses with nothing to say under a heading; numbered procedures "one action per step" where the author had a sentence.
-7. **Coined terms.** Move, Valid node, lost, left and right weapon slot, relevant stat, next complete turn, victory bonus, ultimate victor. Each needed a definition, some needed rules of their own, and Move produced a bug that took two fixes.
+7. **Coined terms.** Move, Valid node, relevant stat, next complete turn, victory bonus, ultimate victor. ("Lost" and the left and right weapon slots, first listed here, are the author's own terms; see `41_rules_workshop.md`.) Each needed a definition, some needed rules of their own, and Move produced a bug that took two fixes.
 8. **The house voice.** Bullets became full third-person sentences with the actor named and the condition first. That alone roughly doubles a terse rule.
 9. **Rules were changed inside bulk approvals.** Several of the author's rules were reversed or extended in the 33 Gate 1 answers and the final rulings, which were approved or delegated as a block. The cost in words and the departure from the author's rule were never put in front of the author one by one. Section 5 does that now.
 
@@ -100,9 +100,7 @@ Recommendation in each case: go back to the author's rule, or to one sentence. T
 | 16.2 | A two-stage fallback for a character a boss cannot push directly away | | "otherwise any adjacent node of the player's choice" |
 | 7.7, 20.2 | Two different tie-breaks for sharing treasure; tied opponents "agree" on turn order | the aggro holder decides; a die roll | simplify |
 | 2.2 | The Phalanx is "three Phalanx Hollow models placed together" | "5x Phalanx, 1x Phalanx Hollow" | restore |
-| 7.2 | A "lost" state for a hollow character who dies | when a hollow character dies, the encounter is failed | delete the term |
 | 5.2 | Move and Valid node as defined terms; Move excludes dodges and pushes, which broke traps and took two fixes | each terrain rule says what it blocks | delete both terms |
-| 3.2 | Left and right weapon slots as defined terms | made for the parry; nothing else uses them | delete unless the author's parry is restored |
 | 4.4, 7.3 | A one-ember-card carry limit, not in the source, which created the hand-off procedure above | | delete |
 | 7.5 | A two-marker test for whether an encounter is cleared for the first time | | one sentence |
 | 18.5, 18.7 | Campaign soul rewards and the bonfire ascetic's +2 health (Gate 1 answers) | one sentence each in the source | author to confirm |
