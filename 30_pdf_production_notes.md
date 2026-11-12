@@ -29,7 +29,7 @@ No InDesign-class tool is present in the environment. The book is typeset with t
 python3 tools/make_fonts.py                      # static cuts of Cinzel and Libre Caslon Text
 python3 tools/make_layout_assets.py              # trimmed icons and figure crops
 python3 tools/assign_plates.py                   # illustration pools and captions from layout/art_candidates.json
-python3 tools/build_pdf.py                       # build/book_screen.pdf, .html, pagemap_screen.json, layout_plan.json (5 to 12 minutes)
+python3 tools/build_pdf.py                       # build/book_screen.pdf, .html, pagemap_screen.json, layout_plan.json (6 to 15 minutes)
 python3 tools/build_pdf.py --edition print --reuse   # build/book_print.pdf with the same layout plan (about 2 minutes)
 python3 tools/mark_asset_placement.py            # work/asset_placement.json: where each asset file is used
 python3 tools/build_asset_docs.py                # 21_asset_manifest.csv and 22_asset_extraction_log.md
@@ -46,7 +46,7 @@ python3 tools/build_layout_spec.py               # 20_layout_spec.md
 2. `{{icon:ast-NNNN-slug}}` tokens become inline images. `(see §N.M)` references and italic glossary keywords become links.
 3. **Planning (per chapter, in parallel).** Each chapter is rendered alone until its section starts settle. A numbered section that would begin in the right-hand column with 600 pt or less of the column left starts a new page; one that would begin in the left-hand column with 345 pt or less left starts a new column; a section already within 90 pt of a column head is left alone, and a chapter's closing section shorter than 400 pt never starts a new page. The thresholds are in `layout/tuning.json` (`section_starts`).
 4. **Measuring passes (whole book).** The build reads back where every element fell. The room left before each section break is measured, largest first, and an illustration is chosen for it: from the chapter's own pictures first, then from the general pool. A painting is set at the full column width or not at all; two may be stacked; none is used twice. A break whose room is larger than 130 pt and takes no picture is given up: the section runs on, and the chapter is measured again. The room under each chapter's closing ornament is measured for its gallery.
-5. **Verifying passes.** Illustrations and galleries are set and the book is rendered again. A picture or gallery that slipped to another page or column is withdrawn (one per chapter per pass, since one slip moves everything after it), and so is a closing ornament that now stands alone at the head of a page; the book is rendered until nothing moves. A full build takes between four and twelve renders.
+5. **Verifying passes.** Illustrations and galleries are set and the book is rendered again. A picture or gallery that slipped to another page or column is withdrawn (one per chapter per pass, since one slip moves everything after it), and so is a closing ornament that now stands alone at the head of a page; the book is rendered until nothing moves. A full build takes between six and fifteen renders. A heading that opens a column after an unforced break is set flush with the column head, so that the two columns start level. Where that would let the heading slip back to the foot of the column before, it is pinned to the column head instead.
 6. The contents page takes its page numbers from WeasyPrint's `target-counter`, so they cannot drift from the pages.
 
 The plan is saved in `build/layout_plan.json`; `--reuse` builds the other edition from it, so the two paginate alike.
@@ -80,7 +80,7 @@ Fonts are cut from the variable OFL files by `tools/make_fonts.py`, which also r
 | No overflow boxes | no text outside the side margins; all fonts embedded; no fallback typeface | pass |
 | No orphan headings | no heading within 34 pt of a column foot | pass |
 | No widow rows in tables | no body row alone at the head or foot of a column where a table breaks (17 tables, 4 broken) | pass |
-| All cross-references resolve | 6,970 internal links, none dangling; `tools/xref_check.py` reports 0 broken references in the manuscript | pass |
+| All cross-references resolve | 6,975 internal links, none dangling; `tools/xref_check.py` reports 0 broken references in the manuscript | pass |
 | Page count within 10% of target | 124 pages against a target of 130 (the target was raised from 100 when the author asked for sections to start on new pages) | pass |
 | Style report at zero | `13_style_enforcement_report.md`: 0 violations | pass |
 | No external citation | no rulebook, edition, publisher, or page citation in the PDF text (the colophon's nominative statement is the one permitted mention) | pass |
@@ -91,9 +91,9 @@ Fonts are cut from the variable OFL files by `tools/make_fonts.py`, which also r
 
 **Deviation on "every extracted asset is present".** 496 asset files are extracted. 234 are placed in the book. 262 are not, and each carries a reason in the manifest's placement column: earlier-edition and unused icons, images of components these rules do not use, alternates and details of a picture that is placed, card faces and paintings for which the layout had no room, source diagrams that carry source text, reference frames, type specimens, spare ornaments and textures. QA checks both directions: everything marked `placed` is in the book, and everything extracted but not placed says why.
 
-Informational results (not failures): 52 columns end more than 60 pt short in mid-chapter, where a table, an example box, a kept list, or a kept heading would not fit, or where a section starts the next column and the room was too small for a picture; measured line length is 56 characters (median).
+Informational results (not failures): 53 columns end more than 60 pt short in mid-chapter, where a table, an example box, a kept list, or a kept heading would not fit, or where a section starts the next column and the room was too small for a picture; measured line length is 56 characters (median).
 
-An independent page-by-page review of the first version 2 build followed the automated QA and found 6 major, 43 minor, and 13 cosmetic points, most of them about how illustrations were chosen and sized. The rules of the layout were changed in answer (steps 3 to 5 above) and the book was rebuilt; the report and the response to each finding are in `work/phase3/pdf_review_v2.md`. (The review of version 1 is `work/phase2c/pdf_review.md`.)
+An independent page-by-page review of the first version 2 build followed the automated QA and found 6 major, 43 minor, and 13 cosmetic points, most of them about how illustrations were chosen and sized. The rules of the layout were changed in answer (steps 3 to 5 above) and the book was rebuilt; the report and the response to each finding are in `work/phase3/pdf_review_v2.md`. A second independent reader then checked the rebuilt book from cover to cover and found no major defect and eleven minor ones (headings sitting low at a column head, two stacked pictures of unequal width, and single blemishes); all were fixed in the final build (`work/phase3/pdf_review_v2_final.md`). (The review of version 1 is `work/phase2c/pdf_review.md`.)
 
 ## 5. Limits a printer should know
 

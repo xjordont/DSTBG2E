@@ -9,7 +9,7 @@ chapter; banner; sections; examples; tables; icons; cross-reference links; gloss
 WeasyPrint. Layout decisions made by eye live in layout/tuning.json so that the build is repeatable.
 Outputs: build/book_<edition>.html, the PDF, and build/pagemap_<edition>.json (element positions per page).
 A chapter file that does not exist yet is skipped with a warning, so partial builds are possible."""
-import argparse, glob, json, pathlib, re, subprocess, sys
+import argparse, glob, json, os, pathlib, re, subprocess, sys
 from bs4 import BeautifulSoup, NavigableString, Tag
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
@@ -93,6 +93,9 @@ SEC_FIXED = set()     # section ids already weighed and left where they fall
 PLATES = {}           # section id -> art plate set in the room left before that section's break
 NO_PLATE = set()      # section ids whose plate did not fit after all
 GAPS = {}             # section id -> points of empty column before its break (measured when its picture is chosen)
+ATTOP = set()         # headings that open a column after an unforced break: set flush with the column head
+ATTOP_FORCE = set()   # headings that, once flush, would fit at the foot of the column before: pinned to the column head
+ATTOP_NEVER = set()   # headings whose pin left a hole in the column before: left with their normal space for good
 _SS = TUNING.get('section_starts') if isinstance(TUNING.get('section_starts'), dict) else {}
 T_PAGE = float(_SS.get('page', 600))     # a section in the right column with this much column left, or less, starts a new page
 T_COL = float(_SS.get('column', 345))    # a section in the left column with this much column left, or less, starts the next column
@@ -361,6 +364,9 @@ class Chapter:
                 w = soup.new_tag('div'); w['class'] = 'keep'; h.wrap(w); w.append(nxt.extract())
 
     def decorate(self, heads):
+        for h in self.soup.find_all(['h2', 'h3']):
+            if h.get('id') in ATTOP or h.get('id') in ATTOP_FORCE:
+                h['class'] = (h.get('class') or []) + ['attop'] + (['forcecol'] if h.get('id') in ATTOP_FORCE else [])
         for h in self.soup.find_all('h3'):
             if len(h.get_text()) > 36:      # a long sub-heading is set tighter, so that it keeps to one line
                 h['class'] = (h.get('class') or []) + ['long']
@@ -399,6 +405,10 @@ class Chapter:
                 col = [r[i] for r in body if i < len(r)]
                 if len(col) > 2 and sum('num' in (c.get('class') or []) for c in col) >= 0.6 * len(col):
                     for c in col: c['class'] = 'num'
+            for i in range(max((len(r) for r in body), default=0)):
+                col = [r[i] for r in body if i < len(r)]       # a column that mixes numbers and words is set left
+                if any('num' in (c.get('class') or []) for c in col) and not all('num' in (c.get('class') or []) for c in col):
+                    for c in col: c.attrs.pop('class', None)
             for i, th in enumerate(t.find_all('th')):
                 col = [r[i] for r in body if i < len(r)]
                 if col and all('num' in (c.get('class') or []) for c in col): th['class'] = 'num'
@@ -525,6 +535,7 @@ def contents(chapters):
         subs = ''.join(f'<a class="ts" href="#{sid}">{(num + " ") if num else ""}{title}</a>' for sid, num, title in c.sections) \
             if c.num not in TUNING.get('toc_no_sections', []) else ''
         rows.append(f'<div class="tc">{head}{subs}</div>')
+    rows.append('<div class="tc"><a class="tch" href="#icon-reference"><span class="tn"></span>Icon Reference</a></div>')
     return f'<section class="front" id="contents"><h1 class="ft">Contents</h1>{rule}<div class="toc">{"".join(rows)}</div></section>'
 
 
@@ -581,7 +592,8 @@ def plate_tag(soup, sid, plate):
     div = soup.new_tag('div', id='plate-' + sid); div['class'] = 'plate'; div['style'] = f"margin-top:{plate['mt']:.1f}pt"
     for k, it in enumerate(plate['items']):
         im = soup.new_tag('img', src=it['file'], alt=it.get('caption') or '')
-        im['style'] = f"width:{it['w']:.1f}pt;height:{it['h']:.1f}pt" + (';margin-top:12pt' if k else '')
+        im['style'] = (f"width:{it['w']:.1f}pt;height:{it['h']:.1f}pt" + (';object-fit:cover' if it.get('cover') else '')
+                       + (';margin-top:12pt' if k else ''))
         div.append(im)
         if it.get('caption'):
             c = soup.new_tag('div'); c['class'] = 'pc'; c.string = it['caption']; div.append(c)
@@ -628,6 +640,14 @@ def decide_breaks(pm):
                 SEC_BREAK[sid] = 'column'; added = True; break
             SEC_FIXED.add(sid)
     return added
+
+
+def forget_heads(sid):
+    """The column-head headings of a chapter whose breaks are being settled afresh are judged afresh too."""
+    pre = f"sec-{sid.split('-')[1]}-"
+    for group in (ATTOP, ATTOP_FORCE, ATTOP_NEVER):
+        for hid in [h for h in group if h.startswith(pre)]:
+            group.discard(hid)
 
 
 def choose_plates(pm):
@@ -686,17 +706,24 @@ def choose_plates(pm):
                 dw, dh = pw * s, ph * s
                 if dh < spec.get('min_h', 70):
                     continue
-                if dw < spec.get('min_w', 0.9) * COL_W and not is_object(f):
-                    continue                      # a painting inset in the column reads as filler
+                cover = False
+                if not is_object(f) and dw < COL_W - 0.5:
+                    # A painting stands at the full width of the column or not at all. One that the room's
+                    # height made a little narrower is set at full width and loses a strip at top and foot;
+                    # one that full width would enlarge beyond 150 ppi is not used.
+                    if dw >= spec.get('min_w', 0.9) * COL_W and COL_W / pw <= PT_PER_PX * spec.get('enlarge', 1.0):
+                        dw, cover = COL_W, True
+                    else:
+                        continue
                 if items and is_object(f) != is_object(items[0]['file']):
                     continue                      # a stack is two paintings or two objects, not one of each
                 score = dw * dh * weight
                 if best is None or score > best[0]:
-                    best = (score, f, dw, dh, cap)
+                    best = (score, f, dw, dh, cap, cover)
             if best is None:
                 break
-            _, f, dw, dh, cap = best
-            items.append({'file': f, 'w': dw, 'h': dh, 'caption': cap}); used.add(f)
+            _, f, dw, dh, cap, cover = best
+            items.append({'file': f, 'w': dw, 'h': dh, 'caption': cap, 'cover': cover}); used.add(f)
             room -= dh + (13 if cap else 0) + 12
             if room < spec.get('min_h', 70) + 30:
                 break
@@ -765,7 +792,7 @@ def build(edition='screen', only=None, out=None, html_only=False, _phase='plan',
             # the plan of an earlier build of the same text (the two editions paginate alike)
             st = json.loads(state.read_text(encoding='utf-8'))
             SEC_BREAK.update(st['breaks']); SEC_FIXED.update(st['fixed']); PLATES.update(st['plates']); NO_PLATE.update(st['no_plate'])
-            END_FREE.update(st['end_free']); NO_ENDMARK.update(st['no_endmark']); NO_PANEL.update(st['no_panel'])
+            END_FREE.update(st['end_free']); NO_ENDMARK.update(st['no_endmark']); NO_PANEL.update(st['no_panel']); ATTOP.update(st.get('attop', [])); ATTOP_FORCE.update(st.get('attop_force', []))
             return build(edition, only, out, html_only, _phase='verify', _n=_n + 1)
         if TUNING.get('section_starts', True):
             plan_breaks(jobs, heads, all_ids)
@@ -826,6 +853,7 @@ def build(edition='screen', only=None, out=None, html_only=False, _phase='plan',
             order_ = list(dict.fromkeys(order_))
             for sid in unfilled:
                 SEC_BREAK.pop(sid, None); SEC_FIXED.add(sid); NO_PLATE.discard(sid); GAPS.pop(sid, None)
+                forget_heads(sid)
                 for later in order_[order_.index(sid) + 1:] if sid in order_ else []:
                     if later.split('-')[1] == sid.split('-')[1]:
                         PLATES.pop(later, None); NO_PLATE.discard(later); GAPS.pop(later, None)
@@ -864,6 +892,43 @@ def build(edition='screen', only=None, out=None, html_only=False, _phase='plan',
         for sid in sorted(slipped, key=lambda x: order_.index(x) if x in order_ else 1e9):
             first.setdefault(sid.split('-')[1], sid)
         slipped = set(first.values())
+        # A heading that opens a column after an unforced break keeps its space-before, so the column starts
+        # lower than its neighbour. Such headings are set flush; one that leaves the column head again
+        # afterwards gets its space back for good.
+        ctop = {}
+        for e in pm:
+            if e['tag'] == 'div' and e['id'].startswith('flow-'):
+                ctop.setdefault(e['page'], e['y'])
+        outer, inner = {}, {}
+        for e in pm:
+            if e['tag'] in ('h2', 'h3'):
+                if e['id'] not in outer: outer[e['id']] = e
+                else: inner[e['id']] = min(inner.get(e['id'], 1e9), e['y'])
+        at_head = {hid for hid, e in outer.items() if abs(e['y'] - ctop.get(e['page'], -1e9)) < 1.5}
+        flush = {hid for hid in at_head if inner.get(hid, outer[hid]['y']) - outer[hid]['y'] > 2} - ATTOP - ATTOP_FORCE - ATTOP_NEVER
+        # A heading that, without its space, fits at the foot of the column before would go back and forth:
+        # it is pinned to the column head with a column break of its own. One that left the column head for
+        # another reason (the text before it moved) simply gets its space back.
+        gone = ATTOP - at_head
+        pin = {hid for hid in gone if hid in outer and PAGE_FOOT - outer[hid]['y'] < 90}
+        # a pin must not leave a hole larger than the heading and its first lines, which did not fit there anyway
+        hole = set()
+        for hid in ATTOP_FORCE:
+            e = outer.get(hid)
+            if e is None:
+                continue
+            col = (e['page'], True) if e['x'] >= 300 else (e['page'] - 1, False)
+            foot = max((f['y'] + f['h'] for f in frags if f['page'] == col[0] and (f['x'] < 300) == col[1]), default=PAGE_FOOT)
+            if PAGE_FOOT - foot > 85:
+                hole.add(hid)
+        if hole:
+            ATTOP_FORCE.difference_update(hole); ATTOP_NEVER.update(hole)
+            return again('verify')
+        if os.environ.get('LAYOUT_TRACE'):
+            print(f'[pass {_n}] moved={sorted(moved - NO_PANEL)} slipped={sorted(slipped)} adrift={sorted(adrift)} flush={sorted(flush)} gone={sorted(gone)} attop={sorted(ATTOP)} pinned={sorted(ATTOP_FORCE)}', file=sys.stderr)
+        if not ((moved - NO_PANEL) or slipped or adrift) and (flush or gone):
+            ATTOP.update(flush); ATTOP.difference_update(gone); ATTOP_FORCE.update(pin)
+            return again('verify')
         if (moved - NO_PANEL) or slipped or adrift:
             NO_PANEL.update(moved | adrift); NO_ENDMARK.update(adrift)
             limit = float(_SS.get('max_blank', 130)); back = False
@@ -873,13 +938,14 @@ def build(edition='screen', only=None, out=None, html_only=False, _phase='plan',
                     # without its picture the break would leave a large empty column: the section runs on,
                     # and the rest of its chapter is measured again
                     SEC_BREAK.pop(sid, None); SEC_FIXED.add(sid); NO_PLATE.discard(sid); GAPS.pop(sid, None); back = True
+                    forget_heads(sid)
                     for later in order_[order_.index(sid) + 1:] if sid in order_ else []:
                         if later.split('-')[1] == sid.split('-')[1]:
                             PLATES.pop(later, None); NO_PLATE.discard(later); GAPS.pop(later, None)
             return again('breaks' if back else 'verify')
     if not only:
         state.write_text(json.dumps({'breaks': SEC_BREAK, 'fixed': sorted(SEC_FIXED), 'plates': PLATES, 'no_plate': sorted(NO_PLATE),
-                                     'end_free': END_FREE, 'no_endmark': sorted(NO_ENDMARK), 'no_panel': sorted(NO_PANEL)}, indent=1), encoding='utf-8')
+                                     'end_free': END_FREE, 'no_endmark': sorted(NO_ENDMARK), 'no_panel': sorted(NO_PANEL), 'attop': sorted(ATTOP), 'attop_force': sorted(ATTOP_FORCE)}, indent=1), encoding='utf-8')
     doc.metadata.title = TITLE; doc.metadata.authors = ['PittedPanda']; doc.metadata.lang = 'en-GB'
     out = pathlib.Path(out) if out else ROOT / f'build/book_{edition}.pdf'
     doc.write_pdf(str(out), **img_opts)

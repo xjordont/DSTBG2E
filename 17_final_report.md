@@ -70,7 +70,7 @@ The full specification is `20_layout_spec.md`; every choice made by eye is in `l
 | Every audit finding has a status | 485 of 485 (476 resolved, 9 declined, 0 open) |
 | Every open rules question answered | 334 of 334; `14_open_issues.md` lists none |
 | Style violations | 0 (`13_style_enforcement_report.md`) |
-| Cross-references | 0 broken in the manuscript; 6,970 links in the PDF, none dangling |
+| Cross-references | 0 broken in the manuscript; 6,975 links in the PDF, none dangling |
 | Worked examples | 86 of 86 compute from the rules as they stand |
 | Automated PDF QA | passed, both editions (`32_pdf_qa_report.md`) |
-| Independent page review | done on the first version 2 build: 6 major, 43 minor, 13 cosmetic findings, each acted on or answered (`work/phase3/pdf_review_v2.md`); the book was rebuilt from the changed layout rules |
+| Independent page review | two rounds. The first v2 build: 6 major, 43 minor, 13 cosmetic findings, each acted on or answered, and the layout rules changed (`work/phase3/pdf_review_v2.md`). The rebuilt book, read cover to cover by a second reader: 0 major, 11 minor, all fixed in the final build (`work/phase3/pdf_review_v2_final.md`) |

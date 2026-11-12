@@ -86,7 +86,7 @@
    "width": "178pt",
    "crop": [
     0.045,
-    0.05,
+    0.097,
     0.955,
     0.95
    ],
@@ -694,7 +694,7 @@
   "mega-boss-board-executioners-chariot-reverse": "Executioner's Chariot game board, second side",
   "campaign-board-left-half": "",
   "campaign-board-right-half": "",
-  "card-back-encounter-level-1": "Encounter card, Level 1",
+  "card-back-encounter-level-1": "Encounter card, Level 1",
   "card-back-treasure": "Treasure card",
   "tomb-of-giants-fan": "",
   "crystal-lizard": "Crystal lizard",
@@ -1040,7 +1040,8 @@
   "character-dashboard-whole-pyromancer": "The Pyromancer’s dashboard",
   "character-dashboard-whole-thief": "The Thief’s dashboard",
   "card-fan-encounter-cards": "Encounter cards",
-  "card-fan-treasure-decks": "The treasure decks"
+  "card-fan-treasure-decks": "The treasure decks",
+  "card-back-encounter-level-1": "Encounter card, Level 1"
  },
  "gallery_scale": {
   "expansion-miniature-mushroom-child": 0.6,
