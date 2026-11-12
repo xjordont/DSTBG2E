@@ -10,7 +10,7 @@ Date: 2026-11-11. Authority: the author delegated every open rules question to t
 4. `tools/apply_rulings.py` applied the accepted changes; each is an entry in `11_change_log.md` that cites its ruling, marked `[MECHANICAL CHANGE]` where play changes.
 5. Online evidence was thin: several forums refuse automated reading. No ruling rests on an online source alone; the memos say which sources were reached.
 
-Totals: 334 questions answered (add 22, change 71, confirm 177, delete 4, not a rules question 60); 296 text changes applied, 103 of them changes to play.
+Totals: 334 questions answered (add 22, change 71, confirm 177, delete 4, not a rules question 60); 300 text changes applied, 103 of them changes to play.
 
 ## 2. The 22 lead questions
 
@@ -623,3 +623,10 @@ Once the rulings were applied, two independent readers checked the whole book ag
 - VA-026c (§11.4, Prices): The price table gains the row for the two cards that come from no treasure deck.
 - VB-009 (§18.1, Section Completion): After a boss that does not complete its section no rest follows, so the survivors recover as after any cleared encounter; otherwise a dead character would return in better state than a living one.
 - VB-010 (§19.15): Without this the campaign could dead-end: the invaders vanish at a character's death, the survivors clear the encounter, and a cleared Level 4 encounter is otherwise never fought again.
+
+4 further clarifications followed the automated review of the pull request (`RV-` numbers in `11_change_log.md`). None changes play:
+
+- RV-001 (§9.3, Attack Sequence): Step 4 names what a defence procedure settles, so that damage, pushes and conditions are resolved in steps 5 to 7 and nowhere else.
+- RV-002 (§9.4): The block and resist procedure repeated steps 5 to 7 of the attack sequence that calls it; read literally, damage, the push and the condition were applied twice. The procedure now ends with the damage figure.
+- RV-003 (§9.5, Failed Dodge): A failed dodge reaches the same procedure; the sentence now hands back to the attack sequence in the same way.
+- RV-004 (§9.6, Failed Parry): A failed parry restated the damage and the condition of the attack sequence in the same way; it now points to the steps that resolve them.

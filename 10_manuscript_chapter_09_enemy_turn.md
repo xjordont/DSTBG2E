@@ -106,7 +106,7 @@ An enemy attack is resolved as follows.
 1. Determine the target (see §9.3, Targets).
 2. Check the range. If the target is not within range, skip the icon.
 3. Choose the character's defence (see §9.3, Defence).
-4. Resolve the defence (see §9.4; §9.5; §9.6). If a dodge or a parry succeeds, the character is not hit, and the attack on that character ends.
+4. Resolve the defence, which fixes how much of the damage it prevents (see §9.4; §9.5; §9.6). If a dodge or a parry succeeds, the character is not hit, and the attack on that character ends.
 5. Place the damage that the defence has not prevented (see §3.4).
 6. If the attack is a push-attack, push the character (see §8.4).
 7. Place any condition token the attack carries (see §8.5).
@@ -138,8 +138,9 @@ A character *blocks* an attack that deals physical damage with the dice shown be
 3. The character may flip the *luck* token to reroll any or all of the dice (see §3.5, Luck).
 4. Add together the two highest results. If one die was rolled, its result is the sum. If no dice were rolled, the sum is zero.
 5. Apply to the sum every fixed modifier printed with the block or resist dice of the equipped cards. The result is the *defence total*.
-6. Subtract the defence total from the *attack value*. The character suffers the difference as damage, to a minimum of zero (see §3.4).
-7. Resolve any *push* (see §8.4), then place any *condition* token the attack carries (see §8.5), even if the character suffered no damage.
+6. Subtract the defence total from the *attack value*. The difference, to a minimum of zero, is the damage that the defence has not prevented.
+
+The procedure ends with step 6. The damage is placed, and any *push* and any *condition* token the attack carries are resolved, in steps 5 to 7 of the attack sequence, which follow whether or not the character suffered damage (see §9.3, Attack Sequence).
 
 Dice beyond the two highest are ignored. A fixed modifier is applied after the two highest results are added, whether or not a die of its card is among the two highest. A defence total of less than zero is treated as zero. A condition token on the character may reduce the defence total (see §8.5).
 
@@ -176,7 +177,7 @@ The movement that follows a dodge is not a *move*, and it costs no stamina beyon
 
 ### Failed Dodge
 
-When a dodge fails, the character is *hit*. The character rolls only the block or resist dice, as the damage type requires, of their *armour* card and of the *upgrade cards* attached to it. The dice of weapons, *shields*, and *spells* are not rolled. The roll is resolved from step 2 of the block and resist procedure (see §9.4): the two highest results and the fixed modifiers of the dice rolled form the *defence total*, and conditions and pushes apply.
+When a dodge fails, the character is *hit*. The character rolls only the block or resist dice, as the damage type requires, of their *armour* card and of the *upgrade cards* attached to it. The dice of weapons, *shields*, and *spells* are not rolled. The roll is resolved from step 2 of the block and resist procedure (see §9.4): the two highest results and the fixed modifiers of the dice rolled form the *defence total*. The attack sequence then continues with its steps 5 to 7, so the damage is placed and any push and any condition token are resolved once (see §9.3, Attack Sequence).
 
 The stamina paid for a failed dodge is not returned. A character with no armour card, or whose armour provides no dice of the kind required, suffers the full *attack value*.
 
@@ -230,7 +231,7 @@ If the riposte kills the attacker, the attacker's turn ends at once, and its rem
 
 ### Failed Parry
 
-When a parry fails, the character is hit and suffers damage equal to the full *attack value*. No block or resist dice are rolled. Any condition token the attack carries is placed on the character (see §8.5). A stagger token is then placed on the character, who is staggered (see §8.5, Stagger); the stamina paid for the parry is not returned.
+When a parry fails, the character is hit and no block or resist dice are rolled: the defence prevents nothing, and the damage placed in step 5 of the attack sequence equals the full *attack value* (see §9.3, Attack Sequence). Any condition token the attack carries is placed in step 7 of that sequence (see §8.5). A stagger token is then placed on the character, who is staggered (see §8.5, Stagger); the stamina paid for the parry is not returned.
 
 *Example.* An enemy on the Knight's node attacks the Knight with attack value 4 and physical damage, and the enemy's dodge difficulty is 1. The Knight has a shield in the left weapon slot and a sword in the right weapon slot. The Knight pays one stamina and rolls the one dodge die shown on the Knight's armour, which shows a dodge icon. One equals the dodge difficulty, so the parry succeeds: the Knight suffers no damage, and a stagger token is placed on the enemy. The Knight ripostes with the sword's attack option that costs one stamina, pays that stamina, and rolls an attack value of 4. The stagger token reduces the enemy's block from 1 to 0, so four *wound tokens* are placed on the enemy.
 

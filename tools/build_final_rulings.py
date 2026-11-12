@@ -47,7 +47,7 @@ def kind(r):
 ALL = {a: entries(a) for a, _ in AREAS if (P3 / f'rulings_{a}.md').exists()}
 EDITS = {a: json.loads((P3 / f'edits_{a}.json').read_text(encoding='utf-8')) for a, _ in AREAS if (P3 / f'edits_{a}.json').exists()}
 lead_edits = json.loads((P3 / 'edits_lead.json').read_text(encoding='utf-8')) if (P3 / 'edits_lead.json').exists() else []
-verify_edits = [e for v in ('verify_a', 'verify_b') if (P3 / f'edits_{v}.json').exists()
+verify_edits = [e for v in ('verify_a', 'verify_b', 'review') if (P3 / f'edits_{v}.json').exists()
                 for e in json.loads((P3 / f'edits_{v}.json').read_text(encoding='utf-8'))]
 n_items = sum(len(v[0]) for v in ALL.values())
 counts = {}
@@ -160,7 +160,8 @@ for a, label in AREAS:
         A('')
 A('## 8. Verification after the rulings')
 A('')
-va = [e for e in verify_edits if e['id'] in applied]
+va = [e for e in verify_edits if e['id'] in applied and not e['id'].startswith('RV-')]
+rv = [e for e in verify_edits if e['id'] in applied and e['id'].startswith('RV-')]
 A(f'Once the rulings were applied, two independent readers checked the whole book against itself: every worked example recomputed from the rules as they now stand, '
   f'every table against its text, every statement of a rule against every other statement of the same rule, and the eight added booklets against the entries drawn from them. '
   f'Their reports are `work/phase3/verify_a.md` (chapters 1 to 11, glossary A to M) and `work/phase3/verify_b.md` (chapters 12 to 23, glossary N to Z). '
@@ -171,6 +172,12 @@ for e in va:
     if 'judgement call' in e.get('evidence', ''):
         A(f"- {e['id']} ({e.get('section', '')}): {e.get('rationale', '')}")
 A('')
+if rv:
+    A(f'{len(rv)} further clarifications followed the automated review of the pull request (`RV-` numbers in `11_change_log.md`). None changes play:')
+    A('')
+    for e in rv:
+        A(f"- {e['id']} ({e.get('section', '')}): {e.get('rationale', '')}")
+    A('')
 (ROOT / '06_final_rulings.md').write_text('\n'.join(L).rstrip('\n') + '\n', encoding='utf-8')
 
 O = []

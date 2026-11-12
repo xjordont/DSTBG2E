@@ -345,3 +345,38 @@ Steps 6 and 7 are resolved even if the character suffered no damage. A character
 - After: "A character who wields a weapon other than a shield *two-handed* has no shield equipped and cannot parry (see §10.4)."
 - Rationale: A shield equipped alone is itself wielded two-handed, and the rule that a shield in either weapon slot parries governs; no riposte follows, because the other slot holds no weapon.
 - Source: final rulings, VA-025a (`06_final_rulings.md`); lead editor's decision on a judgement call of the second verification (work/phase3/verify_a.md)
+
+### CH-09-048 · §9.3, Attack Sequence
+- Type: clarification
+- Before: "4. Resolve the defence (see §9.4; §9.5; §9.6). If a dodge or a parry succeeds, the character is not hit, and the attack on that character ends."
+- After: "4. Resolve the defence, which fixes how much of the damage it prevents (see §9.4; §9.5; §9.6). If a dodge or a parry succeeds, the character is not hit, and the attack on that character ends."
+- Rationale: Step 4 names what a defence procedure settles, so that damage, pushes and conditions are resolved in steps 5 to 7 and nowhere else.
+- Source: final rulings, RV-001 (`06_final_rulings.md`); automated review of the pull request (comment on §9.3, Attack Sequence, step 4); verified against §9.3 to §9.6
+
+### CH-09-049 · §9.4
+- Type: clarification
+- Before: "6. Subtract the defence total from the *attack value*. The character suffers the difference as damage, to a minimum of zero (see §3.4).
+7. Resolve any *push* (see §8.4), then place any *condition* token the attack carries (see §8.5), even if the character suffered no damage.
+
+Dice beyond the two highest are ignored."
+- After: "6. Subtract the defence total from the *attack value*. The difference, to a minimum of zero, is the damage that the defence has not prevented.
+
+The procedure ends with step 6. The damage is placed, and any *push* and any *condition* token the attack carries are resolved, in steps 5 to 7 of the attack sequence, which follow whether or not the character suffered damage (see §9.3, Attack Sequence).
+
+Dice beyond the two highest are ignored."
+- Rationale: The block and resist procedure repeated steps 5 to 7 of the attack sequence that calls it; read literally, damage, the push and the condition were applied twice. The procedure now ends with the damage figure.
+- Source: final rulings, RV-002 (`06_final_rulings.md`); automated review of the pull request (comment on §9.3, Attack Sequence, step 4); verified against §9.3 to §9.6
+
+### CH-09-050 · §9.5, Failed Dodge
+- Type: clarification
+- Before: "the two highest results and the fixed modifiers of the dice rolled form the *defence total*, and conditions and pushes apply."
+- After: "the two highest results and the fixed modifiers of the dice rolled form the *defence total*. The attack sequence then continues with its steps 5 to 7, so the damage is placed and any push and any condition token are resolved once (see §9.3, Attack Sequence)."
+- Rationale: A failed dodge reaches the same procedure; the sentence now hands back to the attack sequence in the same way.
+- Source: final rulings, RV-003 (`06_final_rulings.md`); automated review of the pull request (comment on §9.3, Attack Sequence, step 4); verified against §9.3 to §9.6
+
+### CH-09-051 · §9.6, Failed Parry
+- Type: clarification
+- Before: "When a parry fails, the character is hit and suffers damage equal to the full *attack value*. No block or resist dice are rolled. Any condition token the attack carries is placed on the character (see §8.5). A stagger token is then placed on the character, who is staggered (see §8.5, Stagger); the stamina paid for the parry is not returned."
+- After: "When a parry fails, the character is hit and no block or resist dice are rolled: the defence prevents nothing, and the damage placed in step 5 of the attack sequence equals the full *attack value* (see §9.3, Attack Sequence). Any condition token the attack carries is placed in step 7 of that sequence (see §8.5). A stagger token is then placed on the character, who is staggered (see §8.5, Stagger); the stamina paid for the parry is not returned."
+- Rationale: A failed parry restated the damage and the condition of the attack sequence in the same way; it now points to the steps that resolve them.
+- Source: final rulings, RV-004 (`06_final_rulings.md`); automated review of the pull request (comment on §9.3, Attack Sequence, step 4); verified against §9.3 to §9.6

@@ -15,8 +15,8 @@ The result is version 2 of the book: `31_final_dark_souls_the_board_game_second_
 | Rules questions open | 22 lead questions and the per-chapter lists | none |
 | Bosses played from placeholder rules | nine | one (Crossbreed Priscilla; see §5) |
 | Campaigns | 12 | 16 |
-| Manuscript | 68,872 words, 172 glossary headwords | 77,401 words, 176 headwords |
-| Change-log entries | 732 | 1,028 |
+| Manuscript | 68,872 words, 172 glossary headwords | 77,477 words, 176 headwords |
+| Change-log entries | 732 | 1,032 |
 | Painted art | withheld; anatomy plates partly blanked | placed throughout; plates shown whole |
 | Cover | title set in type on a texture | the painted cover composition with the logo |
 | Chapter openers | product renders | a painting behind every chapter title |
@@ -29,10 +29,10 @@ The result is version 2 of the book: `31_final_dark_souls_the_board_game_second_
 Every question that stood in `14_open_issues.md` is answered. The decision record is `06_final_rulings.md`; each change to the text is an entry in `11_change_log.md` that cites its ruling, marked `[MECHANICAL CHANGE]` where play changes.
 
 - **Method.** The questions were divided among five rules areas. For each, a researcher read the chapters, the author's source manuscript, the official 2017 and 2022 rulebooks, the official F.A.Q., the official expansion booklets, the two community rulesets, and what online discussion could be reached, and wrote one entry per question with the evidence and a recommendation (`work/phase3/rulings_<area>.md`). The lead editor decided, settled the places where two areas met, and withdrew what the evidence did not support (`work/phase3/lead_overrides.json`, `edits_lead.json`).
-- **Scale.** 334 questions answered. Most were confirmations that the book already said the right thing. 296 changes to the text followed, 103 of which change or settle how the game is played.
+- **Scale.** 334 questions answered. Most were confirmations that the book already said the right thing. 300 changes to the text followed, 103 of which change or settle how the game is played.
 - **The standard applied.** The ruling a player would guess; one rule for like cases; no book-keeping without a choice; a special case deleted wherever deleting it closed the question.
 - **Online evidence was thin.** Several forums refuse automated reading. No ruling rests on an online source alone, and each memo says which sources were reached.
-- **Verification.** After the rulings were applied, two independent readers checked the whole book against itself: every worked example recomputed, every table against its text, every statement of a rule against every other statement of it, and the new boss entries against their booklets (`work/phase3/verify_a.md`, `verify_b.md`). 71 corrections followed. All 86 worked examples now compute from the rules as they stand.
+- **Verification.** After the rulings were applied, two independent readers checked the whole book against itself: every worked example recomputed, every table against its text, every statement of a rule against every other statement of it, and the new boss entries against their booklets (`work/phase3/verify_a.md`, `verify_b.md`). 71 corrections followed. Four clarifications came later from the automated review of the pull request: the block procedure of §9.4 repeated the damage, push and condition steps of the attack sequence that calls it, and now hands back to that sequence. All 86 worked examples now compute from the rules as they stand.
 
 The rulings of most consequence at the table are listed in `06_final_rulings.md`, section 3. Two earlier Gate 1 answers were revised and are named in `05_gate1_decisions.md`, section 4: Ornstein & Smough are fought as two models with two health dials, as the cards are printed, and the rights question is closed.
 
