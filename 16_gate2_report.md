@@ -1,5 +1,7 @@
 # 16 — Gate 2 Report: Phases 2A, 2B, and 2C (Class A)
 
+**Later note.** This report describes version 1 of the book. The author then delegated every open rules question, confirmed the rights in the painted art, and supplied eight more booklets; the two "Questions for the author" below are answered, and departures 2 and 5 no longer hold. The finished book is described in `17_final_report.md`.
+
 Date: 2026-11-11. This report states each gate criterion of the brief, the evidence for it, and every place where the result departs from the letter of the brief. Gate 1 was answered "Approve all" (`05_gate1_decisions.md`).
 
 ## Gate 2A — Manuscript

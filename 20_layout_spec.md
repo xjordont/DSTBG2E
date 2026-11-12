@@ -24,8 +24,10 @@ Target extent: 130 pages (QA tolerance 10%).
 - Wider material is placed under the chapter banner (before the flow), at the end of the chapter (after the flow), or in a chapter set as one wide column (`ref_chapters` in the tuning file). The chapter intro (60 words or fewer) sits under the banner at a 400 pt measure.
 - Every chapter and appendix starts a new page. The Introduction is set in one column at a 392 pt measure.
 - Headings keep with the text that follows; a heading and a short block after it are bound together so that no heading is stranded at a column foot.
-- Numbered sections start at the head of a page or column where that costs little. The build weighs each section in order: one that would start part way down the right column, with 600 pt of the column or less still to fill, starts a new page; one that would start low in the left column, with 345 pt or less to fill, starts the right column; one within 90 pt of the head of a column stays. The first section of a chapter always follows the chapter header.
-- The room a section break leaves at the foot of a column takes an illustration (104 pt or more of room; one or two pictures; chosen first from the chapter's own pictures, then from the general pool; never enlarged beyond 150 ppi; withdrawn if it would not fit). Smaller gaps stay open.
+- Numbered sections start at the head of a page or column where that costs little. The build weighs each section in order: one that would start part way down the right column, with 600 pt of the column or less still to fill, starts a new page; one that would start low in the left column, with 345 pt or less to fill, starts the right column; one within 90 pt of the head of a column stays. The first section of a chapter always follows the chapter header, and a chapter's closing section shorter than 400 pt never starts a new page.
+- A break is kept only if the room it leaves is small or filled: where more than 130 pt of a column would stand empty before a break and no illustration fits it, the section runs on instead.
+- The room a section break leaves at the foot of a column takes an illustration. The largest rooms are served first; a picture is chosen first from the chapter's own pictures, then from the general pool. A painting is set at the full column width or not at all, and two may be stacked; none is enlarged beyond 150 ppi. A picture that does not fill its room follows the text, so that the white collects at the foot. A picture that slips to another column when the book is set is withdrawn.
+- Miniatures, tokens and cards are shown in the closing galleries and under the boss headings of chapter 17, not as column illustrations. No picture appears twice in the book; QA fails if one does.
 
 ## 3. Type scale
 
@@ -220,22 +222,22 @@ Figures placed (from `layout/tuning.json`):
 | AST-0094 | in §8.2 | 150pt | An enemy data card. 1 Name. 2 Threat. 3 Base health. 4 Enemy icon. 5 Attack range. 6 Block. 7 Resist. 8 Dodge  |
 | AST-0095 | in §9.2 | 128pt | A movement icon. 1 Target. 2 Nodes moved towards the target. 3 Nodes moved away from the target. 4 Push icon.  |
 | AST-0097 | in §15.4 | 150pt | A boss data card. 1 Name. 2 Threat. 3 Starting health. 4 Boss type icon. 5 Behaviour deck size. 6 Block. 7 Res |
-| AST-0098 | in §15.3 | 100% | The boss tiles. The two boss tiles joined along one edge for a main-boss encounter. Each tile shows its boss s |
+| AST-0098 | in §15.3 | 190pt | The boss tiles. The two boss tiles joined along one edge for a main-boss encounter. Each tile shows its boss s |
 | AST-0099 | in §15.6 | 178pt | Boss arcs. The lines that divide the boss's base, extended across the tile, divide the nodes among the front,  |
-| AST-0156 | in §17.10 | 137pt |  |
-| AST-0157 | in §17.10 | 150pt |  |
-| AST-0158 | in §17.10 | 198pt |  |
-| AST-0159 | in §17.10 | 64pt |  |
-| AST-0160 | in §17.10 | 136pt |  |
-| AST-0161 | in §17.10 | 140pt |  |
-| AST-0162 | in §17.10 | 138pt |  |
-| AST-0138 | in §17.4 | 189pt |  |
-| AST-0138 | in §17.4 | 137pt |  |
-| AST-0138 | in §17.5 | 183pt |  |
-| AST-0138 | in §17.6 | 94pt |  |
-| AST-0163 | in §17.3 | 126pt |  |
-| AST-0138 | in §17.8 | 141pt |  |
-| AST-0138 | in §17.9 | 173pt |  |
+| AST-0156 | in §17.10 | 110pt |  |
+| AST-0157 | in §17.10 | 120pt |  |
+| AST-0158 | in §17.10 | 158pt |  |
+| AST-0159 | in §17.10 | 51pt |  |
+| AST-0160 | in §17.10 | 109pt |  |
+| AST-0161 | in §17.10 | 112pt |  |
+| AST-0162 | in §17.10 | 110pt |  |
+| AST-0138 | in §17.4 | 151pt |  |
+| AST-0138 | in §17.4 | 110pt |  |
+| AST-0138 | in §17.5 | 146pt |  |
+| AST-0138 | in §17.6 | 75pt |  |
+| AST-0163 | in §17.3 | 101pt |  |
+| AST-0138 | in §17.8 | 113pt |  |
+| AST-0138 | in §17.9 | 138pt |  |
 
 Chapter openers: every chapter and appendix opens with a painting behind its title (from `layout/tuning.json`, key `heroes`, entry `header`). `pos` is the CSS background position that chooses the band of the painting.
 
@@ -244,7 +246,7 @@ Chapter openers: every chapter and appendix opens with a painting behind its tit
 | Chapter 1 | AST-0122 | `ruined-keep-over-graveyard-portrait` | center 16% |
 | Chapter 2 | AST-0130 | `phantoms-ruined-castle-on-cliff` | center 32% |
 | Chapter 3 | AST-0130 | `characters-pilgrim-before-golden-city` | center 36% |
-| Chapter 4 | AST-0130 | `backcover-characters-armour` | center 28% |
+| Chapter 4 | AST-0130 | `cover-characters-art-only` | center 22% |
 | Chapter 5 | AST-0121 | `tomb-cavern-with-skull-pillar` | center 42% |
 | Chapter 6 | AST-0129 | `concept-ruined-gate-with-roots-wide` | center 45% |
 | Chapter 7 | AST-0129 | `concept-misty-ruins-panorama` | center 50% |
@@ -258,40 +260,38 @@ Chapter openers: every chapter and appendix opens with a painting behind its tit
 | Chapter 15 | AST-0130 | `kalameet-over-lone-knight` | center 27% |
 | Chapter 16 | AST-0126 | `tomb-colossus-and-lone-knight` | center 55% |
 | Chapter 17 | AST-0130 | `backcover-kalameet-close` | center 30% |
-| Chapter 18 | AST-0129 | `concept-stone-bridge-and-city` | center 45% |
+| Chapter 18 | AST-0129 | `concept-stone-bridge-and-city` | center 6% |
 | Chapter 19 | AST-0123 | `anor-londo-spires-at-sunset` | center 38% |
 | Chapter 20 | AST-0130 | `phantoms-knight-among-blue-spirits` | center 40% |
-| Chapter 21 | AST-0129 | `concept-hooded-figure-and-light-pillars` | center 55% |
+| Chapter 21 | AST-0125 | `ruined-cathedral-interior` | center 27% |
 | Chapter 22 | AST-0130 | `backcover-explorers-stone-arch` | center 40% |
 | Appendix A | AST-0130 | `darkroot-grave-with-planted-swords` | center 30% |
 | Appendix B | AST-0130 | `phantoms-shanty-town-in-the-murk` | center 45% |
 
-Section-end illustrations: 83 pictures are assigned to chapters and 78 form the general pool (`plates` in the tuning file, written by `tools/assign_plates.py` from `layout/art_candidates.json`). Paintings carry no caption; a card, dashboard or miniature is captioned with what it is.
+Section-end illustrations: 63 pictures are assigned to chapters and 55 form the general pool (`plates` in the tuning file, written by `tools/assign_plates.py` from `layout/art_candidates.json`). Paintings carry no caption; a card, dashboard or miniature is captioned with what it is.
 
 Chapter-end galleries: where the last page of a chapter has 114 pt or more of empty text block under the closing ornament, the build fills it with product images from that chapter's pool, in one to three centred rows with captions in the display face. The build measures the room on a first pass and sizes the rows on a second; no image is set larger than 150 ppi allows; a gallery that would not fit is withdrawn. A gallery that nearly fills the room stands on the foot of the text block, and a smaller one is centred in the room.
 
 | Chapter | Gallery pool (in order; the build places as many as fit) |
 |---|---|
-| Chapter 1 | AST-0131 `miniature-gravelord-nito`, AST-0131 `miniature-black-knight`, AST-0131 `miniature-giant-skeleton-archer`, AST-0131 `miniature-giant-skeleton-soldier`, AST-0131 `miniature-skeleton-soldier`, AST-0131 `miniature-skeleton-archer`, AST-0131 `miniature-skeleton-beast`, AST-0131 `miniature-necromancer` |
-| Chapter 2 | AST-0131 `miniature-cleric`, AST-0131 `miniature-pyromancer`, AST-0131 `miniature-thief`, AST-0131 `miniature-skeleton-soldier`, AST-0131 `miniature-skeleton-archer`, AST-0131 `miniature-necromancer`, AST-0131 `miniature-skeleton-beast` |
-| Chapter 3 | AST-0135 `character-board-2017-knight`, AST-0135 `character-dashboard-whole-pyromancer`, AST-0135 `character-dashboard-whole-thief` |
+| Chapter 1 | AST-0131 `miniature-gravelord-nito`, AST-0131 `miniature-black-knight`, AST-0131 `miniature-giant-skeleton-archer`, AST-0131 `miniature-giant-skeleton-soldier`, AST-0131 `miniature-skeleton-soldier`, AST-0131 `miniature-skeleton-archer` |
+| Chapter 2 | AST-0131 `miniature-cleric`, AST-0131 `miniature-pyromancer`, AST-0131 `miniature-thief`, AST-0131 `miniature-necromancer`, AST-0131 `miniature-skeleton-beast`, AST-0138 `expansion-miniature-black-hollow-mage`, AST-0138 `expansion-miniature-falchion-skeleton` |
+| Chapter 3 | AST-0135 `character-dashboard-whole-pyromancer`, AST-0135 `character-dashboard-whole-thief` |
 | Chapter 4 | AST-0138 `expansion-miniature-armour-adventurers`, AST-0138 `expansion-miniature-armour-havels`, AST-0138 `expansion-miniature-armour-catarina`, AST-0138 `expansion-miniature-armour-guardian`, AST-0138 `expansion-miniature-armour-dark`, AST-0138 `expansion-miniature-armour-crimson-robes` |
 | Chapter 5 | AST-0133 `game-tile-tomb-of-giants-a`, AST-0133 `game-tile-tomb-of-giants-b`, AST-0133 `game-tile-tomb-of-giants-c`, AST-0133 `game-tile-tomb-of-giants-d` |
-| Chapter 6 | AST-0089 `card-back-encounter-level-1`, AST-0089 `card-back-treasure`, AST-0132 `token-terrain-gravestone-render`, AST-0132 `token-terrain-barrels-render`, AST-0132 `token-terrain-treasure-chest-render`, AST-0132 `token-spark-dial` |
-| Chapter 7 | AST-0138 `expansion-miniature-stone-guardian`, AST-0138 `expansion-miniature-mushroom-parent`, AST-0138 `expansion-miniature-mushroom-child`, AST-0138 `expansion-miniature-demonic-foliage`, AST-0138 `expansion-miniature-plow-scarecrow`, AST-0138 `expansion-miniature-shears-scarecrow`, AST-0138 `expansion-miniature-black-hollow-mage`, AST-0138 `expansion-miniature-falchion-skeleton`, AST-0138 `expansion-miniature-firebomb-hollow` |
-| Chapter 8 | AST-0136 `dice-set`, AST-0131 `miniature-giant-skeleton-archer` |
-| Chapter 10 | AST-0138 `expansion-miniature-character-pyromancer`, AST-0138 `expansion-miniature-character-thief`, AST-0138 `expansion-miniature-character-sorcerer`, AST-0138 `expansion-miniature-character-deprived`, AST-0138 `expansion-miniature-character-cleric`, AST-0138 `expansion-miniature-armour-black-iron`, AST-0138 `expansion-miniature-armour-embraced-armour-of-favour`, AST-0138 `expansion-miniature-armour-gold-trimmed-black-robes`, AST-0138 `expansion-miniature-armour-black-knight`, AST-0138 `expansion-miniature-armour-havels`, AST-0138 `expansion-miniature-armour-dark`, AST-0138 `expansion-miniature-armour-catarina` |
+| Chapter 7 | AST-0138 `expansion-miniature-stone-guardian`, AST-0138 `expansion-miniature-mushroom-parent`, AST-0138 `expansion-miniature-mushroom-child`, AST-0138 `expansion-miniature-demonic-foliage`, AST-0138 `expansion-miniature-plow-scarecrow`, AST-0138 `expansion-miniature-shears-scarecrow`, AST-0138 `expansion-miniature-firebomb-hollow` |
+| Chapter 8 | AST-0136 `dice-set` |
+| Chapter 10 | AST-0138 `expansion-miniature-character-pyromancer`, AST-0138 `expansion-miniature-character-thief`, AST-0138 `expansion-miniature-character-sorcerer`, AST-0138 `expansion-miniature-character-deprived`, AST-0138 `expansion-miniature-character-cleric`, AST-0138 `expansion-miniature-character-mercenary` |
 | Chapter 11 | AST-0133 `game-tile-bonfire-2017`, AST-0132 `token-spark-dial` |
-| Chapter 12 | AST-0138 `expansion-miniature-summon-ruined-aflis`, AST-0138 `expansion-miniature-summon-eygon-of-carim`, AST-0138 `expansion-miniature-summon-lucatiel-of-mirrah`, AST-0138 `expansion-miniature-summon-sellsword-luet`, AST-0138 `expansion-miniature-summon-sirris-of-the-sunless-realms`, AST-0138 `expansion-miniature-summon-rogue-witch-beatrice`, AST-0138 `expansion-miniature-summon-horace-the-hushed`, AST-0138 `expansion-miniature-summon-siegward-of-catarina`, AST-0138 `expansion-miniature-summon-sword-master`, AST-0138 `expansion-miniature-invader-kirk-knight-of-thorns`, AST-0138 `expansion-miniature-invader-armorer-dennis`, AST-0138 `expansion-miniature-invader-melinda-the-butcher`, AST-0138 `expansion-miniature-invader-maldron-the-assassin`, AST-0138 `expansion-miniature-invader-maneater-mildred` |
+| Chapter 12 | AST-0138 `expansion-miniature-summon-ruined-aflis`, AST-0138 `expansion-miniature-summon-eygon-of-carim`, AST-0138 `expansion-miniature-summon-lucatiel-of-mirrah`, AST-0138 `expansion-miniature-summon-sellsword-luet`, AST-0138 `expansion-miniature-summon-sirris-of-the-sunless-realms`, AST-0138 `expansion-miniature-summon-rogue-witch-beatrice`, AST-0138 `expansion-miniature-summon-horace-the-hushed`, AST-0138 `expansion-miniature-summon-siegward-of-catarina`, AST-0138 `expansion-miniature-summon-sword-master`, AST-0138 `expansion-miniature-summon-solaire-of-astora` |
 | Chapter 13 | AST-0138 `expansion-miniature-mimic-closed`, AST-0138 `expansion-miniature-mimic` |
 | Chapter 14 | AST-0138 `expansion-miniature-crystal-lizard`, AST-0132 `token-terrain-treasure-chest-render`, AST-0132 `token-terrain-barrels-render`, AST-0132 `token-terrain-gravestone-render` |
-| Chapter 15 | AST-0138 `expansion-miniature-great-grey-wolf-sif`, AST-0138 `expansion-miniature-black-dragon-kalameet`, AST-0138 `expansion-miniature-smelter-demon`, AST-0138 `expansion-miniature-executioners-chariot`, AST-0138 `expansion-miniature-the-pursuer`, AST-0138 `expansion-miniature-sir-alonne` |
+| Chapter 15 | AST-0138 `expansion-miniature-great-grey-wolf-sif`, AST-0138 `expansion-miniature-black-dragon-kalameet`, AST-0138 `expansion-miniature-smelter-demon`, AST-0138 `expansion-miniature-executioners-chariot`, AST-0138 `expansion-miniature-the-pursuer` |
 | Chapter 16 | AST-0117 `mega-boss-board-kalameet-forest`, AST-0117 `mega-boss-board-executioners-chariot-arena`, AST-0117 `mega-boss-board-executioners-chariot-reverse` |
 | Chapter 17 | AST-0163 `asylum-demon-game-board-boss-side`, AST-0156 `four-kings-game-board-boss-side`, AST-0157 `gaping-dragon-game-board-boss-side`, AST-0158 `guardian-dragon-game-board-boss-side`, AST-0159 `last-giant-game-board-boss-side`, AST-0160 `manus-game-board-boss-side`, AST-0161 `old-iron-king-game-board-boss-side`, AST-0162 `vordt-game-board-boss-side` |
-| Chapter 18 | AST-0133 `game-tile-tomb-of-giants-fan` |
-| Chapter 20 | AST-0138 `expansion-miniature-invader-oliver-the-collector`, AST-0138 `expansion-miniature-invader-brylex`, AST-0138 `expansion-miniature-invader-marvelous-chester`, AST-0138 `expansion-miniature-invader-paladin-leeroy`, AST-0138 `expansion-miniature-invader-fencer-sharron`, AST-0138 `expansion-miniature-invader-kirk-knight-of-thorns`, AST-0138 `expansion-miniature-invader-melinda-the-butcher`, AST-0138 `expansion-miniature-invader-maldron-the-assassin`, AST-0138 `expansion-miniature-invader-maneater-mildred`, AST-0138 `expansion-miniature-invader-armorer-dennis` |
-| Appendix A | AST-0138 `expansion-miniature-silver-knight-spearman`, AST-0138 `expansion-miniature-ironclad-soldier`, AST-0138 `expansion-miniature-sir-alonne`, AST-0138 `expansion-miniature-stone-knight`, AST-0138 `expansion-miniature-stone-guardian`, AST-0138 `expansion-miniature-the-pursuer`, AST-0138 `expansion-miniature-armour-guardian` |
-| Appendix B | AST-0089 `card-back-encounter-level-1`, AST-0089 `card-back-treasure`, AST-0136 `dice-set`, AST-0132 `token-spark-dial` |
+| Chapter 20 | AST-0138 `expansion-miniature-invader-oliver-the-collector`, AST-0138 `expansion-miniature-invader-brylex`, AST-0138 `expansion-miniature-invader-marvelous-chester`, AST-0138 `expansion-miniature-invader-paladin-leeroy`, AST-0138 `expansion-miniature-invader-fencer-sharron`, AST-0138 `expansion-miniature-invader-kirk-knight-of-thorns`, AST-0138 `expansion-miniature-invader-melinda-the-butcher`, AST-0138 `expansion-miniature-invader-maldron-the-assassin`, AST-0138 `expansion-miniature-invader-maneater-mildred`, AST-0138 `expansion-miniature-invader-armorer-dennis`, AST-0138 `expansion-miniature-invader-xanthous-king-jeremiah` |
+| Appendix A | AST-0138 `expansion-miniature-silver-knight-spearman`, AST-0138 `expansion-miniature-ironclad-soldier`, AST-0138 `expansion-miniature-sir-alonne`, AST-0138 `expansion-miniature-stone-knight`, AST-0138 `expansion-miniature-armour-black-iron`, AST-0138 `expansion-miniature-armour-embraced-armour-of-favour`, AST-0138 `expansion-miniature-armour-gold-trimmed-black-robes`, AST-0138 `expansion-miniature-armour-black-knight` |
+| Appendix B | AST-0089 `card-back-encounter-level-1`, AST-0089 `card-back-treasure`, AST-0137 `card-fan-encounter-cards`, AST-0137 `card-fan-treasure-decks` |
 
 ## 7. Tables
 

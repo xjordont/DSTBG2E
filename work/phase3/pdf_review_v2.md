@@ -88,3 +88,47 @@ p.106 · MINOR · "Mercenary" miniature at the foot of the right column is print
 p.107 · MAJOR · "Xanthous King Jeremiah" miniature is printed about 5.2 in tall, filling more than half the column, in a saturated crimson unlike any other render in the book; the left column beside it ends in a narrow inset picture and the right column on p.108 is two thirds empty · reduce the miniature to gallery scale and let the text of 20.8 and 20.9 flow back; chapter 20 then closes without the hole on p.108.
 p.108 · MINOR · Right column holds section 20.9 only and is empty for its lower two thirds, while the left column runs to the foot with a small inset picture (final page of chapter 20, so the missing ornament is accepted, but the imbalance comes from the oversized miniature on p.107) · resolve with the p.107 fix and balance the last page.
 p.109 · MINOR · Chapter 21 banner art is an out-of-focus blur of yellow and brown with no readable subject · choose a picture with a subject, as on the other openers.
+
+## Editor's response (2026-11-12)
+
+The review stopped at page 109 when the reviewer's session ended; pages 110 to the end (glossary, F.A.Q., appendices, icon reference, back cover) were checked by the editor on contact sheets. After the changes below the book was rebuilt (124 pages), the editor read every page of the rebuild on contact sheets, and a second independent reader checked the rebuild from cover to cover (`work/phase3/pdf_review_v2_final.md`). Every finding above was acted on or answered. Page numbers above and below are those of the build that was reviewed (128 pages); the rebuilt book has 124 pages and its numbers differ.
+
+### Changes to the rules of the layout (they answer the recurring findings)
+
+| Recurring finding | What changed | Where |
+|---|---|---|
+| Two unrelated pictures stacked in a column, the second narrower (p.17, 43, 60, 77, 90, 91, 101, 102) | A painting is set at the full column width or not at all; a stack is allowed only for two paintings or two objects, each at full size | `choose_plates` in `tools/build_pdf.py` |
+| Small pictures inset in a column that read as filler (p.23, 51, 94 to 100) | Same rule: no inset paintings. Cut-out miniatures and cards keep their own width | same |
+| A miniature printed far larger than the bosses (p.106, 107 MAJOR) | Miniatures are no longer set as column illustrations at all: they appear in the closing galleries and under the boss headings | `tools/assign_plates.py` |
+| The same picture twice (p.8/23, 28/91, 43/94, 72/99, 95/101, 37/104; miniatures p.4/10/39) | The art list held several crops of one painting under different names. Seventeen files are now barred from the pool, every gallery pool is disjoint, and QA fails if any picture file is placed twice | `plates.never` in `layout/tuning.json`; `tools/qa_pdf.py`, check "No picture is shown twice" |
+| Cut-outs on white that the source had clipped (p.47 MAJOR, p.105 MAJOR, p.102) | The concept sheets on white are barred from the pool | `plates.never` |
+| A picture or gallery floating with white above and below (p.14, 18, 22, 29, 39, 54, 56, 61) | A picture that does not fill its room follows the text, and a gallery follows the closing ornament, so that the white collects at the foot | `choose_plates`, `end_panel` |
+| Example boxes broken across columns and pages (p.41 to 43, 75 to 77) | All but the six longest examples are kept whole | `.example.short`, threshold 700 characters |
+| Columns ending short in mid-chapter because a boss heading and its miniature moved on whole (p.78, 82, 86) | The boss miniatures are a fifth smaller | `figures` in `layout/tuning.json` |
+| A page left almost empty by a short closing section (p.61) | A chapter's closing section never starts a new page when it is shorter than 400 pt | `section_starts.last` |
+| A break that leaves a large empty column with no picture to fill it (p.29, 108) | A section starts a new page or column only if the room before it is 130 pt or less, or a picture fills it; otherwise the section runs on | `section_starts.max_blank` |
+| A paragraph without its space after a sub-heading block (p.21, 31, 38) | Fixed in the stylesheet | `.keep + p` in `layout/book.css` |
+| Tables with a cramped column (p.32, 36) | A short value never wraps, and a label column beside columns of numbers takes the room | table pass in `tools/build_pdf.py`, `td.nw` |
+
+### Single findings
+
+| Finding | Action |
+|---|---|
+| p.2 credits float in mid-page | Moved to the foot of the page |
+| p.5 section headings at the heads of two columns do not align | A section that starts a column or a page now stands flush with the column head |
+| p.5, 9, 13 art on a black rectangle | Kept: the paintings are on black in the source. The armour painting, which was mostly black, is no longer used |
+| p.7 figure sliced at the edge of the picture | Picture removed from the pool |
+| p.14 MAJOR murky Knight dashboard beside a Pyromancer dashboard of another design | The gallery now shows the Pyromancer's and the Thief's dashboards, which match |
+| p.15 chapter 4 title painting unreadable | Replaced by the hooded adventurer, cropped to head and shoulders |
+| p.33 Mushroom Child as large as the Mushroom Parent; bases cut flat | The child is shown at six tenths of the parent's height. The flat plinths are how the source renders are drawn |
+| p.39 dice shown with an unrelated miniature | The dice stand alone |
+| p.54 spark dial upside down | Turned to read upright. Its softness is the source's |
+| p.65 the boss tiles figure soft | Printed smaller |
+| p.67 MAJOR hole in the left column of §15.6 | The arcs diagram now closes the left column |
+| p.75 a sub-heading wraps with one word on its second line | Long sub-headings are set slightly tighter and keep to one line |
+| p.77 Artorias's sword cut off; p.83 MAJOR Guardian Dragon's wing cut off | Both renders are cut by their frames in the source booklets. The cut edge now fades out, so the model leaves the picture softly |
+| p.81, p.98 soft game renders | The first is removed from the pool. The second is the Asylum Demon booklet's cover painting and is kept |
+| p.87 The Four Kings' board prints almost black | Kept: the board is dark as printed |
+| p.88 chapter 18 title painting almost black | Re-cropped to the bridge and the city above it |
+| p.93 a small fan of tiles under the ornament | Gallery removed |
+| p.109 chapter 21 title painting has no subject | Replaced by the cathedral interior |

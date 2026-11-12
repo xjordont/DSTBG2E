@@ -805,7 +805,7 @@ def build(edition='screen', only=None, out=None, html_only=False, _phase='plan',
     pm = pagemap(doc)
     ends = {e['id'][4:]: e for e in pm if e['id'].startswith('end-') and e['tag'] == 'div'}
     again = lambda phase: build(edition, only, out, html_only, _phase=phase, _n=_n + 1)
-    if _n < 24 and _phase == 'breaks':
+    if _n < 40 and _phase == 'breaks':
         # Passes 1..k: settle where numbered sections start (one new break per chapter per pass).
         if TUNING.get('section_starts', True) and decide_breaks(pm):
             return again('breaks')
@@ -832,26 +832,51 @@ def build(edition='screen', only=None, out=None, html_only=False, _phase='plan',
             return again('breaks')
         if stranded or plates or (any(v >= 114 for v in END_FREE.values()) and TUNING.get('heroes')):
             return again('verify')
-    elif _n < 24:
+    elif _n < 40:
         # Verifying passes: a gallery or a plate that slipped to another page or column is withdrawn.
         moved = {e['id'][6:] for e in pm if e['id'].startswith('panel-') and e['id'][6:] in ends and e['page'] != ends[e['id'][6:]]['page']}
         seen = {e['id'][6:]: e for e in pm if e['id'].startswith('plate-')}
-        slipped = {sid for sid, pl in PLATES.items() if sid not in NO_PLATE and (sid not in seen or seen[sid]['page'] != pl['page'] or (pl.get('kind') != 'page' and (seen[sid]['x'] < 300) != pl['left']))}
-        heads_ = {e['id']: e for e in pm if e['tag'] == 'h2'}
-        # a break that no longer does its job (the section would now head a page anyway) is harmless; one that
-        # strands a plate alone on a page is caught above
+        frags = [e for e in pm if e['tag'] == 'div' and e['id'].startswith('box-')]
+
+        def stands(sid, pl):
+            """True if the picture still closes the column in which its section's text ends. Pages are not
+            compared with the plan: a break given up earlier in the book moves every later page."""
+            e = seen.get(sid)
+            if e is None:
+                return False
+            mine = [f for f in frags if f['page'] == e['page'] and f['y'] - 1 <= e['y'] <= f['y'] + f['h']]
+            box = next((f['id'] for f in mine if abs(f['x'] - e['x']) < 3), None)
+            if box is None:
+                return False
+            same = [f for f in frags if f['id'] == box and f['page'] == e['page']]
+            if any(abs(f['x'] - e['x']) < 3 and e['y'] - f['y'] > 20 for f in same):
+                return True                              # text of its section stands above it in the column
+            # before a page break the picture may fill the right column while the text keeps the left one
+            return pl.get('kind') == 'page' and e['x'] >= 300 and any(f['x'] < 300 for f in same)
+
+        slipped = {sid for sid, pl in PLATES.items() if sid not in NO_PLATE and not stands(sid, pl)}
         # an illustration set in the last column of a chapter can use the room its closing ornament and gallery
         # were measured for: an ornament that now heads a page is dropped with its gallery
         adrift = {cid for cid, e in ends.items() if e['y'] < 70} - NO_ENDMARK
         # one slipped picture moves everything after it in its chapter: only the first in each chapter is
         # withdrawn, and the rest are judged again on the next pass
-        first, order_ = {}, [e['id'][4:] for e in pm if e['tag'] == 'div' and e['id'].startswith('box-')]
+        first, order_ = {}, list(dict.fromkeys(e['id'][4:] for e in frags))
         for sid in sorted(slipped, key=lambda x: order_.index(x) if x in order_ else 1e9):
             first.setdefault(sid.split('-')[1], sid)
         slipped = set(first.values())
         if (moved - NO_PANEL) or slipped or adrift:
-            NO_PANEL.update(moved | adrift); NO_PLATE.update(slipped); NO_ENDMARK.update(adrift)
-            return again('verify')
+            NO_PANEL.update(moved | adrift); NO_ENDMARK.update(adrift)
+            limit = float(_SS.get('max_blank', 130)); back = False
+            for sid in slipped:
+                PLATES.pop(sid, None); NO_PLATE.add(sid)       # its pictures are free for another place
+                if GAPS.get(sid, 0) > limit and sid in SEC_BREAK:
+                    # without its picture the break would leave a large empty column: the section runs on,
+                    # and the rest of its chapter is measured again
+                    SEC_BREAK.pop(sid, None); SEC_FIXED.add(sid); NO_PLATE.discard(sid); GAPS.pop(sid, None); back = True
+                    for later in order_[order_.index(sid) + 1:] if sid in order_ else []:
+                        if later.split('-')[1] == sid.split('-')[1]:
+                            PLATES.pop(later, None); NO_PLATE.discard(later); GAPS.pop(later, None)
+            return again('breaks' if back else 'verify')
     if not only:
         state.write_text(json.dumps({'breaks': SEC_BREAK, 'fixed': sorted(SEC_FIXED), 'plates': PLATES, 'no_plate': sorted(NO_PLATE),
                                      'end_free': END_FREE, 'no_endmark': sorted(NO_ENDMARK), 'no_panel': sorted(NO_PANEL)}, indent=1), encoding='utf-8')
