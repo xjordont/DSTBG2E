@@ -9,7 +9,7 @@ both lists and the captions:
   - pictures with a title or logo baked in, pictures already used as a chapter header, in a closing gallery or as
     a figure, pictures listed in `plates.never`, and pictures too small to print at column width are left out;
   - paintings carry no caption; a card, dashboard or card fan is captioned with what it is (from `subject`);
-  - the general pool is every remaining painting, then the miniature renders.
+  - the general pool is every remaining painting; miniatures are left to the galleries and the boss headings.
 
 Run it again whenever the art list or the chapter headers change:  python3 tools/assign_plates.py
 """
@@ -51,14 +51,15 @@ for c in sorted(cands, key=lambda c: -(c['width'] * c['height'])):
         continue
     if c.get('kind') == 'token':
         continue
+    if re.search(r'-(expansion-)?miniature-', f):
+        continue
     key = chapter_key(c.get('suggested_for'))
     (by.setdefault(key, []) if key else pool).append(f)
     stem = re.sub(r'^ast-\d+-', '', pathlib.Path(f).stem)
     caps[stem] = caption(c)
     if key and f.startswith('assets/art/'):
         pool.append(f)                      # a painting not needed by its own chapter may serve another
-minis = sorted(glob.glob(str(ROOT / 'assets/photography/ast-0138-*.png'))) + sorted(glob.glob(str(ROOT / 'assets/photography/ast-0131-*.png')))
-pool += [str(pathlib.Path(m).relative_to(ROOT)) for m in minis]
+# miniatures are shown in the closing galleries and under the boss headings, never as column illustrations
 pool = [f for f in pool if f not in skip and f not in shown]
 by = {k: [f for f in v if f not in shown] for k, v in by.items()}
 old = tun.get('plates', {})

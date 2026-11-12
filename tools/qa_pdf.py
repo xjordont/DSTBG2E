@@ -159,6 +159,19 @@ for _img in _soup.find_all('img', class_='icon'):
 _short = {k: (v, _placed.get(k, 0)) for k, v in _tokens.items() if _placed.get(k, 0) != v}
 add(not _short, 'Every icon token in the manuscript is an icon in the book', f'{sum(_tokens.values())} tokens; differing (token count, placed) {dict(list(_short.items())[:6])}')
 
+# 9a pictures: no painting, miniature, board or card is shown twice (inline icons and ornaments excepted)
+_pics = {}
+for _img in _soup.find_all('img'):
+    _src = _img.get('src', '')
+    if 'icon' in (_img.get('class') or []) or '/icons/' in _src or '/ornaments/' in _src or _img.find_parent('div', class_='ik'):
+        continue
+    _pics.setdefault(_src.rsplit('/', 1)[-1], []).append((_img.find_parent('section') or {}).get('id', 'front'))
+for _el in _soup.find_all(style=True):
+    for _u in re.findall(r"url\(['\"]?([^'\")]+)", _el['style']):
+        _pics.setdefault(_u.rsplit('/', 1)[-1], []).append('header')
+_twice = {k: v for k, v in _pics.items() if len(v) > 1}
+add(not _twice, 'No picture is shown twice', f'{len(_pics)} pictures; repeated {dict(list(_twice.items())[:6])}')
+
 # 9b table rows: no body row stands alone at the foot or head of a column when its table breaks
 rows = {}
 for e in pm:

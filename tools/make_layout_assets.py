@@ -74,8 +74,31 @@ def figures():
         if max(im.size) > 1600:
             s = 1600 / max(im.size); im = im.resize((round(im.width * s), round(im.height * s)), Image.LANCZOS)
         im = withhold(im, f.get('masks', []), f.get('badges', []))
+        for side in f.get('fade', []):
+            im = fade_edge(im, side)
         im.save(OUT / 'fig' / pathlib.Path(f['file']).name); n += 1
     return n
+
+
+def fade_edge(im, side, share=0.14):
+    """Fade one edge of a cut-out to nothing. Used where the source render is cut off by its own frame (a wing
+    tip, a sword point): the model then leaves the picture softly instead of ending in a straight cut."""
+    im = im.convert('RGBA'); w, h = im.size
+    n = max(2, int((w if side in ('left', 'right') else h) * share))
+    ramp = Image.new('L', (w, h), 255); px = ramp.load()
+    for i in range(n):
+        v = int(255 * (i / n) ** 1.5)
+        if side == 'right':
+            for y in range(h): px[w - 1 - i, y] = v
+        elif side == 'left':
+            for y in range(h): px[i, y] = v
+        elif side == 'top':
+            for x in range(w): px[x, i] = v
+        else:
+            for x in range(w): px[x, h - 1 - i] = v
+    from PIL import ImageChops
+    im.putalpha(ImageChops.multiply(im.getchannel('A'), ramp))
+    return im
 
 
 def withhold(im, masks, badges):

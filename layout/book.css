@@ -33,7 +33,7 @@ html { font-family: "Libre Caslon Text", "Liberation Serif", serif; font-size: 8
        hyphenate-character: "-"; hyphenate-limit-chars: 7 4 4; font-variant-numeric: lining-nums; font-variant-ligatures: common-ligatures no-discretionary-ligatures no-historical-ligatures; font-feature-settings: "dlig" 0, "hlig" 0; }
 body { margin: 0; }
 p, li { margin: 0; orphans: 2; widows: 2; text-align: justify; hyphens: auto; }
-p + p { margin-top: 4.4pt; }
+p + p, .keep + p { margin-top: 4.4pt; }
 strong { font-weight: 700; }
 em { font-style: italic; }
 th em, h1 em, h2 em, h3 em, .toc em, .exlabel em { font-style: normal; }
@@ -84,8 +84,11 @@ h2 .secnum { color: #7a622b; margin-right: 0.2em; }
 .sec:first-child > h2:first-child { margin-top: 0; }
 h3 { font: 600 8.1pt/1.2 "Cinzel"; letter-spacing: 0.07em; text-transform: uppercase; margin: 7.5pt 0 2.8pt 0; break-after: avoid; bookmark-level: 3; hyphens: manual; text-align: left; color: #3a322b; }
 h4 { font: italic 700 8.9pt/1.25 "Libre Caslon Text"; margin: 6pt 0 2pt 0; break-after: avoid; bookmark-level: none; }
+h3.long { font-size: 7.7pt; letter-spacing: 0.025em; }
 h2 + p, h3 + p { orphans: 3; }
 h2.attop, h3.attop { margin-top: 0; }
+/* a section that starts a column or a page stands flush with the head of the column beside it */
+.sec.newcol > h2:first-child, .sec.newpage > h2:first-child { margin-top: 0; }
 .keep { break-inside: avoid; }
 /* numbered sections that start a new page or column (decided by the build from measured positions) */
 .sec.newpage { break-before: page; }
@@ -125,6 +128,7 @@ th { font: 600 6.5pt/1.25 "Cinzel"; letter-spacing: 0.06em; text-transform: uppe
 td { padding: 2.6pt 4.5pt; vertical-align: top; border-bottom: 0.4pt solid rgba(35,31,32,0.28); text-align: left; hyphens: manual; }
 tbody tr:nth-child(even) td { background: var(--tint2); }
 td.num, th.num { text-align: center; }
+td.nw { white-space: nowrap; }
 td:first-child, th:first-child { hyphens: manual; }
 p.tablenote { font-style: italic; font-size: 8.2pt; margin-top: 2pt; }
 
@@ -163,7 +167,8 @@ p.faq-q .ql, p.faq-a .ql { font: 700 7.4pt "Cinzel"; color: #7a622b; margin-righ
 .front .ftrule img { width: 160pt; opacity: 0.8; }
 .foreword { max-width: 372pt; margin: 76pt auto 0 auto; font-size: 10.2pt; line-height: 14.6pt; }
 .foreword p + p { margin-top: 7pt; }
-.colophon { max-width: 372pt; margin: 52pt auto 0 auto; font-size: 8.3pt; line-height: 11.6pt; text-align: center; color: #3a322b; }
+/* the credits stand near the foot of the foreword page (the foreword is a fixed text; three lines of slack remain) */
+.colophon { max-width: 372pt; margin: 190pt auto 0 auto; font-size: 8.3pt; line-height: 11.6pt; text-align: center; color: #3a322b; }
 .colophon p { text-align: center; hyphens: manual; }
 .colophon p + p { margin-top: 5pt; }
 .toc { columns: 3; column-gap: 15pt; margin-top: 6pt; font-size: 7.9pt; line-height: 10.4pt; }

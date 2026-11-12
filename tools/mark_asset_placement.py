@@ -13,6 +13,8 @@ import argparse, glob, json, pathlib, re
 from bs4 import BeautifulSoup
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
+FIGURE_SOURCES = {pathlib.Path(f['file']).name: f['file']
+                  for f in json.loads((ROOT / 'layout/tuning.json').read_text(encoding='utf-8')).get('figures', [])}
 
 
 def source_of(path):
@@ -26,7 +28,9 @@ def source_of(path):
     if p.startswith('build/icons/'):
         return f'assets/icons/{name}'
     if p.startswith('build/fig/'):
-        # a figure is a prepared copy of a file in one of the asset folders
+        # a figure is a prepared copy of the source file that layout/tuning.json configures for it
+        if name in FIGURE_SOURCES:
+            return FIGURE_SOURCES[name]
         for folder in ('diagrams', 'photography', 'art', 'frames'):
             if (ROOT / f'assets/{folder}/{name}').exists():
                 return f'assets/{folder}/{name}'

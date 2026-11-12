@@ -92,9 +92,11 @@ SEC_BREAK = {}        # section id -> 'page' | 'column': numbered sections that 
 SEC_FIXED = set()     # section ids already weighed and left where they fall
 PLATES = {}           # section id -> art plate set in the room left before that section's break
 NO_PLATE = set()      # section ids whose plate did not fit after all
+GAPS = {}             # section id -> points of empty column before its break (measured when its picture is chosen)
 _SS = TUNING.get('section_starts') if isinstance(TUNING.get('section_starts'), dict) else {}
 T_PAGE = float(_SS.get('page', 600))     # a section in the right column with this much column left, or less, starts a new page
 T_COL = float(_SS.get('column', 345))    # a section in the left column with this much column left, or less, starts the next column
+T_LAST = float(_SS.get('last', 400))     # a chapter's closing section shorter than this (both columns together) never starts a new page
 COL_W = 252.0
 PT_PER_PX = 72 / 150  # no image is set larger than 150 ppi allows
 _SIZES = {}
@@ -106,6 +108,23 @@ def img_size(file):
         with Image.open(ROOT / file) as im:
             _SIZES[file] = im.size
     return _SIZES[file]
+
+
+_CUTOUT = {}
+
+
+def is_cutout(file):
+    """True for a picture with a transparent ground (a miniature, a token): it has no edge to align."""
+    if file not in _CUTOUT:
+        from PIL import Image
+        with Image.open(ROOT / file) as im:
+            _CUTOUT[file] = im.mode in ('RGBA', 'LA') and im.getchannel('A').getextrema()[0] < 128
+    return _CUTOUT[file]
+
+
+def is_object(file):
+    """A miniature, token, card or dashboard: a thing shown at its own size, not a painting that fills the measure."""
+    return is_cutout(file) or '/frames/' in file or '/photography/' in file
 
 
 def hero_caption(file):
@@ -140,9 +159,10 @@ def end_panel(soup, cid, key):
         avail -= cap_h
     row_h = min((avail - nrows * cap_h - (nrows - 1) * gap) / nrows, float(spec.get('max_row', 178.0)))
     rows, cur, curw = [], [], 0.0
+    scales = TUNING.get('gallery_scale', {})        # a model smaller than its neighbours is shown smaller
     for f in pool:
         pw, ph = img_size(f)
-        dh = min(row_h, ph * PT_PER_PX); dw = pw * dh / ph
+        dh = min(row_h, ph * PT_PER_PX) * scales.get(re.sub(r'^ast-\d+-', '', pathlib.Path(f).stem), 1.0); dw = pw * dh / ph
         if dw > width - pad:
             dw = width - pad; dh = ph * dw / pw
         cw = max(dw, cap_width(f))        # a cell is as wide as its image or its caption, whichever is wider
@@ -167,8 +187,9 @@ def end_panel(soup, cid, key):
         total += cap_h
     panel = soup.new_tag('div', id=f'panel-{cid}'); panel['class'] = 'endpanel'
     spare = free - total - 6
-    # a gallery that nearly fills the room stands on the foot of the text block; a smaller one is centred in the room
-    panel['style'] = f'margin-top:{max(12.0, spare if spare < 70 else spare * 0.5):.1f}pt'
+    # a gallery that nearly fills the room stands on the foot of the text block; a smaller one follows the
+    # closing ornament, so that the empty room collects at the foot of the page
+    panel['style'] = f'margin-top:{max(12.0, spare if spare < 70 else 20.0):.1f}pt'
     for i, r in enumerate(rows):
         row = soup.new_tag('div'); row['class'] = 'prow'
         if i: row['style'] = f'margin-top:{gap}pt'
@@ -176,6 +197,8 @@ def end_panel(soup, cid, key):
         for f, dw, dh, cw in r:
             cell = soup.new_tag('div'); cell['class'] = 'pf'
             im = soup.new_tag('img', src=f, alt=hero_caption(f) or ''); im['style'] = f'width:{dw:.1f}pt;height:{dh:.1f}pt'
+            turn = TUNING.get('gallery_rotate', {}).get(re.sub(r'^ast-\d+-', '', pathlib.Path(f).stem))
+            if turn: im['style'] += f';transform:rotate({turn}deg)'      # a component photographed upside down
             cell.append(im)
             if caps:
                 c = soup.new_tag('div'); c['class'] = 'pc'; c['style'] = f'width:{cw:.0f}pt'; c.string = hero_caption(f) or '\u00a0'
@@ -338,6 +361,9 @@ class Chapter:
                 w = soup.new_tag('div'); w['class'] = 'keep'; h.wrap(w); w.append(nxt.extract())
 
     def decorate(self, heads):
+        for h in self.soup.find_all('h3'):
+            if len(h.get_text()) > 36:      # a long sub-heading is set tighter, so that it keeps to one line
+                h['class'] = (h.get('class') or []) + ['long']
         soup = self.soup
         # every table row carries an id, so that the page map shows where each row fell (QA: widow and orphan rows)
         for ti, tb in enumerate(soup.find_all('table'), 1):
@@ -347,7 +373,7 @@ class Chapter:
         for p in soup.find_all('p'):
             first = next((c for c in p.contents if not (isinstance(c, NavigableString) and not c.strip())), None)
             if isinstance(first, Tag) and first.name == 'em' and first.get_text().strip().lower().startswith('example'):
-                box = soup.new_tag('div'); box['class'] = ['example'] + (['short'] if len(p.get_text()) < 430 else [])
+                box = soup.new_tag('div'); box['class'] = ['example'] + (['short'] if len(p.get_text()) < 700 else [])
                 lab = soup.new_tag('span'); lab['class'] = 'exlabel'; lab.string = 'Example'
                 first.replace_with(lab); p.wrap(box)
             elif isinstance(first, Tag) and first.name == 'strong':
@@ -376,6 +402,18 @@ class Chapter:
             for i, th in enumerate(t.find_all('th')):
                 col = [r[i] for r in body if i < len(r)]
                 if col and all('num' in (c.get('class') or []) for c in col): th['class'] = 'num'
+            # a short value ("Base health + 1") stays on one line, and a column of labels beside columns of
+            # numbers takes the room the numbers do not need
+            for r in body:
+                for c in r:
+                    if len(c.get_text(strip=True)) <= 16 and 'num' not in (c.get('class') or []):
+                        c['class'] = (c.get('class') or []) + ['nw'] if isinstance(c.get('class'), list) else ['nw']
+            ncol = max((len(r) for r in body), default=0)
+            if ncol >= 3 and body and all('num' in (c.get('class') or []) for r in body for c in r[1:]) \
+                    and max(len(r[0].get_text(strip=True)) for r in body) > 24:
+                for r in rows:
+                    cells = r.find_all(['td', 'th'])
+                    if cells: cells[0]['style'] = 'width:46%'
             w = soup.new_tag('div'); w['class'] = 'tablewrap'; t.wrap(w)
 
     def link(self, all_ids, heads, missing):
@@ -565,16 +603,26 @@ def decide_breaks(pm):
         elif e['tag'] == 'div' and e['id'].startswith('flow-'):
             col_top.setdefault(e['page'], e['y'])          # where the columns begin on that page
     added = False
+    box_h = {}
+    for e in pm:
+        if e['tag'] == 'div' and e['id'].startswith('box-'):
+            box_h[e['id']] = box_h.get(e['id'], 0.0) + e['h']
     for ch, hs in by_ch.items():
         for i, h in enumerate(hs):
             sid = h['id']
             if i == 0 or sid in SEC_BREAK or sid in SEC_FIXED:
                 continue
+            if sid in _SS.get('never', []):
+                SEC_FIXED.add(sid); continue
+            if _SS.get('force', {}).get(sid) in ('page', 'column'):
+                SEC_BREAK[sid] = _SS['force'][sid]; added = True; break
             left = h['x'] < 300; room = PAGE_FOOT - h['y']
             down = h['y'] - col_top.get(h['page'], 52.0)       # distance below the head of the column
             if down < 90:
                 SEC_FIXED.add(sid); continue                    # heads a page or a column already, or nearly
             if not left and room <= T_PAGE:
+                if i == len(hs) - 1 and box_h.get('box-' + sid, 1e9) < T_LAST:
+                    SEC_FIXED.add(sid); continue                # a short closing section would leave a page nearly empty
                 SEC_BREAK[sid] = 'page'; added = True; break
             if left and room <= T_COL:
                 SEC_BREAK[sid] = 'column'; added = True; break
@@ -595,6 +643,7 @@ def choose_plates(pm):
             last[e['id']] = e
     used = set(it['file'] for p in PLATES.values() for it in p['items'])
     changed = False
+    todo = []
     for sid, kind in SEC_BREAK.items():
         if sid in PLATES or sid in NO_PLATE or 'box-' + sid not in last:
             continue
@@ -603,11 +652,25 @@ def choose_plates(pm):
             continue
         prev = last[order[i - 1]]
         gap = PAGE_FOOT - (prev['y'] + prev['h'])
-        if gap < spec.get('min_gap', 104):
+        room0 = gap - 10
+        if kind == 'page' and prev['x'] >= 300:
+            # Columns are balanced before a forced page break: where the closing section runs through both
+            # columns and both end short by about the same amount, a picture set at its end draws text up
+            # into the left column, so the room is what both columns leave.
+            mine = [e for e in pm if e['id'] == prev['id'] and e['page'] == prev['page'] and e['x'] < 300]
+            if mine:
+                gap_left = PAGE_FOOT - max(e['y'] + e['h'] for e in mine)
+                if gap_left > 40 and abs(gap_left - gap) < 60:
+                    room0 = min(gap + gap_left - 40, 640.0)
+        GAPS[sid] = gap
+        if room0 < spec.get('min_gap', 104) - 10:
             NO_PLATE.add(sid); continue
+        todo.append((room0, sid, kind, prev, gap))
+    # the largest rooms are served first, so that the pictures go where an empty column would show most
+    for room0, sid, kind, prev, gap in sorted(todo, key=lambda t: -t[0]):
         ch = '%02d' % int(sid.split('-')[1])
         pool = [(f, 1.25) for f in spec.get('by_chapter', {}).get(ch, [])] + [(f, 1.0) for f in spec.get('pool', [])]
-        items, room = [], gap - 10
+        items, room = [], room0
         while len(items) < spec.get('max_stack', 3):
             best = None
             for f, weight in pool:
@@ -616,9 +679,17 @@ def choose_plates(pm):
                 cap = hero_caption(f); avail = room - (13 if cap else 0)
                 pw, ph = img_size(f)
                 s = min(COL_W / pw, avail / ph, PT_PER_PX * spec.get('enlarge', 1.0))
+                if is_cutout(f):
+                    s = min(s, spec.get('max_cutout_h', 150) / ph)      # a miniature is not printed larger than the bosses
+                elif is_object(f):
+                    s = min(s, spec.get('max_card_h', 250) / ph)        # nor a card larger than about life size
                 dw, dh = pw * s, ph * s
                 if dh < spec.get('min_h', 70):
                     continue
+                if dw < spec.get('min_w', 0.9) * COL_W and not is_object(f):
+                    continue                      # a painting inset in the column reads as filler
+                if items and is_object(f) != is_object(items[0]['file']):
+                    continue                      # a stack is two paintings or two objects, not one of each
                 score = dw * dh * weight
                 if best is None or score > best[0]:
                     best = (score, f, dw, dh, cap)
@@ -632,8 +703,9 @@ def choose_plates(pm):
         if not items:
             NO_PLATE.add(sid); continue
         total = sum(it['h'] + (13 if it['caption'] else 0) for it in items) + 12 * (len(items) - 1)
-        spare = gap - total - 3
-        PLATES[sid] = {'items': items, 'mt': max(8.0, spare if spare < 60 else spare * 0.5), 'page': prev['page'], 'left': prev['x'] < 300}
+        spare = (gap if room0 == gap - 10 else 0.0) - total - 3
+        # a picture that nearly fills the room stands on the foot of the column; a smaller one follows the text
+        PLATES[sid] = {'items': items, 'mt': max(8.0, spare if spare < 60 else 14.0), 'page': prev['page'], 'left': prev['x'] < 300, 'kind': kind}
         changed = True
     return changed
 
@@ -745,19 +817,38 @@ def build(edition='screen', only=None, out=None, html_only=False, _phase='plan',
         END_FREE.clear()
         END_FREE.update({cid: PAGE_FOOT - (e['y'] + e['h']) for cid, e in ends.items() if cid not in stranded})
         plates = choose_plates(pm)
+        # A break is kept only if the room before it is small or a picture fills it. Where neither holds the
+        # section runs on, and the pictures and rooms of the sections after it in the chapter are settled afresh.
+        limit = float(_SS.get('max_blank', 130))
+        unfilled = [sid for sid in list(SEC_BREAK) if sid in NO_PLATE and GAPS.get(sid, 0) > limit]
+        if unfilled and TUNING.get('section_starts', True):
+            order_ = [e['id'][4:] for e in pm if e['tag'] == 'div' and e['id'].startswith('box-')]
+            order_ = list(dict.fromkeys(order_))
+            for sid in unfilled:
+                SEC_BREAK.pop(sid, None); SEC_FIXED.add(sid); NO_PLATE.discard(sid); GAPS.pop(sid, None)
+                for later in order_[order_.index(sid) + 1:] if sid in order_ else []:
+                    if later.split('-')[1] == sid.split('-')[1]:
+                        PLATES.pop(later, None); NO_PLATE.discard(later); GAPS.pop(later, None)
+            return again('breaks')
         if stranded or plates or (any(v >= 114 for v in END_FREE.values()) and TUNING.get('heroes')):
             return again('verify')
     elif _n < 24:
         # Verifying passes: a gallery or a plate that slipped to another page or column is withdrawn.
         moved = {e['id'][6:] for e in pm if e['id'].startswith('panel-') and e['id'][6:] in ends and e['page'] != ends[e['id'][6:]]['page']}
         seen = {e['id'][6:]: e for e in pm if e['id'].startswith('plate-')}
-        slipped = {sid for sid, pl in PLATES.items() if sid not in NO_PLATE and (sid not in seen or seen[sid]['page'] != pl['page'] or (seen[sid]['x'] < 300) != pl['left'])}
+        slipped = {sid for sid, pl in PLATES.items() if sid not in NO_PLATE and (sid not in seen or seen[sid]['page'] != pl['page'] or (pl.get('kind') != 'page' and (seen[sid]['x'] < 300) != pl['left']))}
         heads_ = {e['id']: e for e in pm if e['tag'] == 'h2'}
         # a break that no longer does its job (the section would now head a page anyway) is harmless; one that
         # strands a plate alone on a page is caught above
         # an illustration set in the last column of a chapter can use the room its closing ornament and gallery
         # were measured for: an ornament that now heads a page is dropped with its gallery
         adrift = {cid for cid, e in ends.items() if e['y'] < 70} - NO_ENDMARK
+        # one slipped picture moves everything after it in its chapter: only the first in each chapter is
+        # withdrawn, and the rest are judged again on the next pass
+        first, order_ = {}, [e['id'][4:] for e in pm if e['tag'] == 'div' and e['id'].startswith('box-')]
+        for sid in sorted(slipped, key=lambda x: order_.index(x) if x in order_ else 1e9):
+            first.setdefault(sid.split('-')[1], sid)
+        slipped = set(first.values())
         if (moved - NO_PANEL) or slipped or adrift:
             NO_PANEL.update(moved | adrift); NO_PLATE.update(slipped); NO_ENDMARK.update(adrift)
             return again('verify')
