@@ -1808,7 +1808,7 @@ Phase 3 extractions (2026-11-11, `tools/extract_phase3.py`, records in `work/ext
 - Method: pdftoppm 300 dpi full page
 - Cleaned file: assets/art/ast-0118-core-2017-front-cover-composition.png
 - Proposed placement: cover concept reference (texture + logo); 2E cover to be re-composed
-- Final usage: stylesheet
+- Final usage: front cover
 - Licensing: authorised under owner's rights assertion
 - Notes: Composition only: texture (AST-0142) + logo (AST-0004).
 
@@ -1840,7 +1840,7 @@ Phase 3 extractions (2026-11-11, `tools/extract_phase3.py`, records in `work/ext
 
 | Sub-entry | Subject | Cleaned file | Dimensions | Source | Region / image object | Method | Notes |
 |---|---|---|---|---|---|---|---|
-| AST-0120.1 | Knight resting at a bonfire among ruins (2022 core p.14, 300 ppi) | `assets/art/ast-0120-knight-resting-at-bonfire.jpg` | 934×1055 px | DS-TG-Rulebook-Compressed_compressed.pdf, p.14 | object 1152 (pdfimages #27) | pdfimages -png p.14 image #27 (object 1152, 934×1055 cmyk, no soft mask); native resolution, no resampling; saved as JPEG quality 92 (4:4:4) | The 2017 book prints a wider framing of the same painting: see the next file of AST-0121. Final usage: front matter. |
+| AST-0120.1 | Knight resting at a bonfire among ruins (2022 core p.14, 300 ppi) | `assets/art/ast-0120-knight-resting-at-bonfire.jpg` | 934×1055 px | DS-TG-Rulebook-Compressed_compressed.pdf, p.14 | object 1152 (pdfimages #27) | pdfimages -png p.14 image #27 (object 1152, 934×1055 cmyk, no soft mask); native resolution, no resampling; saved as JPEG quality 92 (4:4:4) | The 2017 book prints a wider framing of the same painting: see the next file of AST-0121. Final usage: back cover. |
 
 ### [AST-0121] Knight resting at bonfire among ruins (full-page painting)
 - Source: DS-TG-Rulebook-Compressed_compressed.pdf, p.31

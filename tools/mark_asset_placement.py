@@ -73,7 +73,9 @@ def main():
     for img in soup.find_all('img'):
         cls = img.get('class') or []
         chap = img.find_parent('section')
-        if 'hero' in cls:
+        if img.find_parent(class_='backcover'):
+            add(img['src'], 'back cover')
+        elif 'hero' in cls:
             add(img['src'], f'banner, {chapter_label(chap)}')
         elif img.find_parent('div', class_='endpanel'):
             add(img['src'], f'gallery, end of {chapter_label(chap)}')
@@ -96,7 +98,8 @@ def main():
             where = 'chapter header' if 'banner' in (el.get('class') or []) else 'background'
             add(u, f'{where}, {chapter_label(sec)}')
     css = (ROOT / 'layout/book.css').read_text(encoding='utf-8')
-    role = {'ast-0075': 'folio ornament, every page', 'ast-0143': 'back cover ground', 'lava': 'cover field and chapter banner ground (logo-free crop)'}
+    role = {'ast-0075': 'folio ornament, every page', 'ast-0143': 'back cover ground', 'ast-0118': 'front cover',
+            'lava': 'cover field and chapter banner ground (logo-free crop)'}
     for m in re.finditer(r'url\("?([^")]+)"?\)', css):
         u = m.group(1)
         if '/fonts/' in u:
