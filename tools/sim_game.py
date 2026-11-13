@@ -106,6 +106,7 @@ def fight(party, level, rule, stats=None, start_sta=0):
                 if c.alive:                               # the boss may have just killed this character
                     d = c.act(b['block']); turns += 1
                     if d: hp -= d; aggro = c
+                    if hp <= 0: break                     # a dead boss does not attack again
         ok = hp <= 0 and not failed()
     else:
         en = [[rule['hp'](h, n), bl, a + rule['atk'](n)] for h, bl, a in MIX[level]]

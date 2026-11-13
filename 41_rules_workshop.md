@@ -385,14 +385,14 @@ Bosses are not scaled.
 | | 1 character | 2 | 3 | 4 |
 |---|---|---|---|---|
 | Sparks at the start | 5 | 4 | 3 | 2 |
-| Games won | 59% | 66% | 67% | 53% |
-| at the easier setting | 81% | 87% | 86% | 76% |
-| at the harder setting | 44% | 49% | 53% | 39% |
-| Level 3 encounter, rounds | 7.5 | 5.6 | 4.7 | 4.1 |
-| Level 3 encounter, someone dies | 41% | 62% | 68% | 78% |
+| Games won | 59% | 65% | 68% | 55% |
+| at the easier setting | 81% | 87% | 86% | 77% |
+| at the harder setting | 44% | 50% | 53% | 38% |
+| Level 3 encounter, rounds | 7.5 | 5.6 | 4.7 | 4.0 |
+| Level 3 encounter, someone dies | 41% | 61% | 69% | 77% |
 | Paid rests used, of sparks available over the game | 5.1 of 7 | 4.2 of 6 | 3.5 of 5 | 2.7 of 4 |
-| Fights in a game (including repeats) | 13.5 | 12.1 | 10.8 | 9.7 |
-| Table time (character turns plus enemy turns) | 311 | 238 | 197 | 179 |
+| Fights in a game (including repeats) | 13.5 | 12.1 | 10.9 | 9.8 |
+| Table time (character turns plus enemy turns) | 310 | 236 | 197 | 181 |
 
 - **Win rate:** within about seven points of the middle at each of the three difficulty settings; four characters are the lowest and two and three the highest.
 - **Level 3 length:** four to seven and a half rounds. A lone character is the slowest because it takes one turn a round.
@@ -405,12 +405,12 @@ All the enemies act once a round however many characters there are. So each adde
 
 | Rule | Games won, 1 / 2 / 3 / 4 characters | Level 3 rounds |
 |---|---|---|
-| **Calibrated** | 59% / 66% / 67% / 53% | 7.5 / 5.6 / 4.7 / 4.1 |
-| One line: +1 health and +1 attack per extra character | 59% / 52% / 68% / 69% | 7.6 / 5.7 / 4.7 / 3.7 |
+| **Calibrated** | 59% / 65% / 68% / 55% | 7.5 / 5.6 / 4.7 / 4.0 |
+| One line: +1 health and +1 attack per extra character | 60% / 52% / 66% / 70% | 7.5 / 5.8 / 4.7 / 3.7 |
 | Round four: +1 health each, +1 attack at three or more | 59% / 100% / 100% / 100% | 7.6 / 6.0 / 4.2 / 2.9 |
-| Manuscript: the same, with attacks repeated at four | 59% / 100% / 100% / 81% | 7.5 / 6.0 / 4.2 / 3.9 |
-| Health multiplied by the number of characters (Faded Embers) | 60% / 94% / 100% / 100% | 7.6 / 9.0 / 8.5 / 7.5 |
-| No scaling | 59% / 100% / 100% / 100% | 7.5 / 5.4 / 2.7 / 2.0 |
+| Manuscript: the same, with attacks repeated at four | 59% / 100% / 99% / 82% | 7.5 / 6.0 / 4.2 / 3.9 |
+| Health multiplied by the number of characters (Faded Embers) | 58% / 94% / 100% / 100% | 7.5 / 9.1 / 8.5 / 7.6 |
+| No scaling | 60% / 100% / 100% / 100% | 7.6 / 5.5 / 2.7 / 2.0 |
 
 The one-line rule is the simplest to say and is nearly as level; its cost is a two-character game that is harder than the rest and four-character fights under four rounds.
 
@@ -420,7 +420,7 @@ The one-line rule is the simplest to say and is nearly as level; its cost is a t
 2. **Two characters** are the count most sensitive to the attack bonus: +1 moves the win rate from near-certain to level with a lone character.
 3. **The assumption about fight length** (first bullet of 11.1). Three or four timed Level 3 fights with a lone character would confirm or correct it.
 
-Figures are from the model after a correction on 2026-11-13 (a dead character's turn no longer earns the boss a turn); the correction moved no win rate by more than five points and changed no conclusion.
+Figures are from the model after two corrections on 2026-11-13 (a dead character's turn no longer earns the boss a turn; a boss that has been killed no longer attacks once more). The first moved no win rate by more than five points and the second none by more than two; neither changed a conclusion. The lone character's row is the same game under every rule, so its spread (58% to 60%) shows the run-to-run noise.
 
 To re-run: `python3 tools/sim_game.py` (add `--reach 0.34` or `0.42` for an easier or harder table); `python3 tools/sim_search.py grid 0.39` lists every candidate.
 
