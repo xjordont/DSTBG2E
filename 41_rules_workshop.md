@@ -96,6 +96,114 @@ My advice is to take none of the mechanics. Each solves a problem your design al
 - **One page of icons at the back.**
 - About 300 words a page, 18 pages. Our book at the same density, with your campaigns and the boss entries, would be near 50.
 
-## 8. Reply format
+## 8. Round two (2026-11-13): the author's directions, and Block A reasoned out
 
-"A: all" (or the numbers to hold back), "B: all" (or exceptions), then C1 to C5, then anything from D you want.
+**Directions received.**
+
+1. Compare each Block A rule across the manuscript, the 2017 rules, the 2022 rules and the house rules, and pick the best design; the manuscript wins a true tie.
+2. Parry is allowed with any one weapon or shield in the left slot.
+3. Aggro goes to the last character to deal damage; counting damage is cumbersome.
+4. The 2022 event cards are used if the players have them.
+5. No optional rules, except rules that need components found only in the 2017 or only in the 2022 core set.
+
+**Corrections to section 3.** Two "Elsewhere" notes were wrong. The official Phantoms rules flip an invader token after the encounter is set up, not on entering. The official Explorers rules give full recovery before a mimic fight and make the rematch a choice. Both are stated correctly below.
+
+### 8.1 Block A, rule by rule
+
+Sources: 2017 = core rulebook and its expansion booklets; 2022 = Tomb of Giants rulebook; CE = Combined Edition; JS = Jolly Souls; BE = Bare Essentials; Zed = Zed Mod.
+
+**A1 Campaign sparks.**
+Yours: maximum = starting number; never bought; free rest only after a section's last boss. 2017: +1 per boss; may be bought at 2 souls per character up to the starting number. 2022: no campaign mode. House: Zed and JS drop sparks; CE gives them one use.
+**Decision: yours.** Sparks are the clock. A price turns the clock into a shop item and souls into retries, which is the grind every house rule set out to remove.
+
+**A2 Parry.**
+Yours: one stamina; shield in the left slot; attacker on the same node; not against push, area or arc attacks; roll dodge dice against the dodge difficulty; success = no damage, no condition, attacker staggered, riposte with the right-hand weapon; failure = full damage with no block, and stagger. 2017, 2022: no parry. House: JS and BE allow any weapon or shield, rolling only that item's dodge dice.
+**Decision: yours, with your amendment: any one weapon or shield in the left slot.** The dice stay as you wrote them (all equipped dodge dice, as for a dodge). I did not take the house version's "that item's dice only": few cards carry dodge dice, and parry would almost never be possible. What this gives: a character wielding a weapon two-handed has nothing in the left slot and cannot parry, which is the right price for two hands. Dodge is the safe defence (a failure still blocks with armour); parry is the gamble.
+
+**A3 Mimic.**
+Yours: no recovery before the fight; a mimic once fought must be fought again every time until killed. 2017 (Explorers): full recovery first; after a defeat the party "may choose to engage the mimic again". 2022: none. House: CE fights it when the card is drawn.
+**Decision: no recovery (yours); the rematch is the party's choice (2017).** No recovery is the better design: opening a chest while hurt is a real gamble. The forced rematch is the one place I depart from you. A failed encounter cannot be skipped, so a forced rematch with no recovery can wall the only route with a fight the party has already lost once. A choice costs no extra words and keeps the decision. Say the word and it stays forced.
+
+**A4 Crystal lizard.**
+Yours: the character who kills a lizard takes a Titanite Scale at once. 2017 (Iron Keep): one Scale to the shared inventory if every lizard dies before the encounter is won. 2022: none.
+**Decision: yours.** It rewards the chase and needs no shared inventory.
+
+**A5 Invader token.**
+Yours: flipped on entering the tile, before the encounter card is revealed. 2017 (Phantoms): flipped after the encounter is set up. Book: as 2017.
+**Decision: yours.** Nothing is decided between the two moments, so it is a true tie.
+
+**A6 Titanite.**
+Yours: fused to its weapon; sold with it, both to the bottom of the tier one deck. 2017, 2022: upgrades come off freely. Book: separated at sale.
+**Decision: yours.** Permanent reinforcement is the theme, and a commitment is a better decision than a free swap.
+
+**A7 Traps.**
+Yours: dealt to basic nodes except along an edge that touches another tile; sprung when a character moves or is pushed in; hits every model on the node. 2017: the same placement in other words; damage or a dodge, never blocked; no effect on enemies. 2022: one use; dodge dice only; no effect on enemies. House: Zed clears only the doorway entered.
+**Decision: yours, including "every model on the node".** Stepping onto an enemy's node and taking the trap together is a real tactic, and it is how traps behave in the source games. One clause from 2022 is added: a character who dodges a trap stays where they are (your dodge moves the character, which would walk them onto the next trap).
+
+**A8 Push-move with a number.**
+Yours: pushed characters suffer that damage (the 2017 wording). 2017 F.A.Q.: it is an attack on the characters on each node the enemy enters. 2022: pushed characters suffer an attack after the push. Book: 2017's reading, so a character pushed along the path is hit on every node.
+**Decision: each character pushed is attacked once per push-move, and defends as usual.** Your scaling turns one-node moves into two at two or more characters, so without "once" a double hit is routine.
+
+**A9 Heat-up.**
+Yours: the heat-up card joins the deck when health reaches the point. 2017, 2022: one random heat-up card is shuffled into the deck at that moment. Book: delayed to the boss's next turn, in five steps.
+**Decision: yours and both official editions.** One sentence: when a boss's health first reaches its heat-up point, shuffle one random heat-up card with its deck and discard pile to make a new deck.
+
+**A10 Aggro.**
+Yours: after all characters have acted, to the character who dealt the most damage; a tie leaves it. 2017, 2022: the acting character takes it at the start of their turn (enemies act between character turns). House: BE gives it to the last character to attack; CE passes it clockwise.
+**Decision: your amendment. The last character to deal damage holds it; if no one dealt damage it stays.** No counting, and it is the same rule in a boss fight, where the boss acts after each character.
+**One consequence needs your call.** You have characters act in descending threat. Under the new rule the lowest-threat character who lands a hit ends every round holding aggro, and the Knight never can unless everyone after him holds back. BE pairs this aggro rule with "the players decide the order". I recommend that: **characters take their turns in any order the party chooses each round.** Who strikes last, and so who the enemies turn on, becomes the main decision of the round. Threat still sets the first aggro holder and breaks ties among targets.
+
+**A11 Poison.**
+Yours: tokens stack; at the end of its turn a model suffers one damage per token and removes one. 2017, 2022: one token, one damage, then gone. Book: n damage, then remove all.
+**Decision: yours.** It is the only version in which poison is worth building around, and it matches your bleed (the second token bursts for three). One sentence each.
+
+**A12 Campaign economy.**
+Yours: soul rewards one lower, stat costs doubled. 2017: costs doubled (4/8/16, tier four 20), rewards unchanged. Book: as 2017.
+**Decision: yours.** Your standard rewards are already above the official ones, and a campaign has three times the encounters. True tie on design; yours.
+
+**A13 Bonfire ascetic.**
+Yours: after it is burnt, non-boss enemies have +1 attack. Official: no such item. House: JS resets encounters with a harder one and an invader. Book: +2 health.
+**Decision: yours.** The price of better treasure should be danger. Extra health only makes fights longer.
+
+**A14 Summon's turn.**
+Yours: once a round, after the characters. 2017 (Phantoms): after every character's turn. Book: as 2017.
+**Decision: 2017, in boss encounters.** Your boss acts after each character. A summon that acts once a round is worth a quarter of what it costs in a four-player game and full value solo; acting after each character keeps it level with the boss at every player count, and its deck was built for that pace. It costs no extra rule: "the summon takes a turn after each character's turn."
+
+**A15 Joining and leaving.** Yours is the 2017 text. **Decision: yours, four sentences.**
+
+**A16 Disputed treasure.** **Decision: the aggro holder decides, everywhere** (your chapter 7; your chapter 5 said a random character).
+
+**A17 Phalanx.** A fact, not a design choice: please check the Painted World box. Is it five Phalanx models and one Phalanx Hollow, or the reverse?
+
+**A18 Player versus player.** No official version. **Decision: your rules, without the added stalemate rule.** See 8.3 for whether it stays in the book.
+
+### 8.2 Block C, reasoned the same way
+
+**C1 Endurance bar: ten spaces, eight when hollow.** Both official dashboards print ten. Eight would need a rule to cover two.
+
+**C2 Your numbers.**
+- Skip cost: **yours, two stamina per encounter skipped.** It is linear, needs no cap, and limits itself.
+- Scaling bonus: **yours, at ten over the requirement.** No official version; true tie.
+- +1 enemy attack at three characters: **yours.**
+- Repeat at four characters: **the one number I cannot settle by reasoning.** For it: in the official game every enemy attacks four times a round at four players; yours attacks twice. Against it: yours puts both attacks, and every enemy's, on one aggro holder in a single enemy phase. If you have played four-player with it, it stays. If not, I would drop it and keep +1 attack.
+
+**C3 Event cards.** Per your direction: used whenever a 2022 core set is on the table. Dealt as you wrote: one face down to each encounter tile, revealed on entry; a gravestone may look at one and keep or replace it. The printed cards have no levels, so they are dealt at random. To map their wording (soul cache, inventory, encounter track) onto your game I need the text of the 30 cards, which is not in any rulebook: a photo of the spread is enough.
+
+**C4 Mega-boss death: no special rule.** I have changed my lean. You wrote that a character who dies there is gone for good. Against it: the source games are about dying and trying again, your sparks are exactly that budget, and a special rule that makes leftover sparks worthless at the finale is one more rule for a less thematic result. The same death rules everywhere costs no words.
+
+### 8.3 What "no optional rules" changes
+
+Component-gated, so kept and stated as "if the party owns it, it is in play": invaders and summons (Phantoms), mimics (Explorers), crystal lizards (Iron Keep), mega-bosses and their Level 4 encounters, event cards (2022 sets).
+
+Removed: random boss selection and mixed encounter decks as options; the chest, Pursuer and victory-name ideas of Block D.
+
+**Needs your call: player versus player.** Your chapter opens "Decide during setup if PvP rules will be used", which is an optional rule with no component behind it. Either it happens after every boss in every game, or it leaves the book. I would not force a duel on every co-operative group, so under your rule I would cut it; if you want it kept, it is the single exception.
+
+### 8.4 Still open
+
+1. Character turn order under the new aggro rule (A10): the party's choice each round?
+2. Mimic rematch (A3): a choice, or forced as you wrote?
+3. Repeat at four characters (C2): played?
+4. Player versus player (8.3): every game, cut, or the one exception?
+5. Event card texts (C3) and the Phalanx count (A17).
+6. Block B fixes and the terse voice (C5): confirm.
