@@ -96,13 +96,14 @@ def fight(party, level, rule, stats=None, start_sta=0):
         while hp > 0 and not failed() and rounds < 80:
             rounds += 1
             for c in list(party):
-                # the boss acts, then one character
+                # the boss acts, then one character; a dead character takes no turn and earns the boss none
+                if not c.alive: continue
                 if not aggro.alive and live(): aggro = random.choice(live())
                 if random.random() < REACH_BOSS and live():
                     aggro.hurt(max(0, b['atk'] + (1 if hp <= b['heat'] else 0) - block(aggro.tier)))
                 turns += 1
                 if failed() or hp <= 0: break
-                if c.alive:
+                if c.alive:                               # the boss may have just killed this character
                     d = c.act(b['block']); turns += 1
                     if d: hp -= d; aggro = c
         ok = hp <= 0 and not failed()
