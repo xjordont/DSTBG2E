@@ -56,11 +56,14 @@ def run(n, rule):
         order = [i for i in range(n) if alive[i]]; random.shuffle(order)
         if rule['shape'] == 'alternate':            # the published game: enemies act after each character
             for i in order:
+                if not alive[i]: continue           # killed earlier this round: no turn, and no enemy phase for it
                 enemy_phase(); aggro = i if alive[i] else aggro; char_turn(i)
         elif rule['shape'] == 'pairs':              # enemies again after every second character
-            for k, i in enumerate(order):
+            k = 0
+            for i in order:
+                if not alive[i]: continue
                 if k % 2 == 0: enemy_phase()
-                char_turn(i)
+                char_turn(i); k += 1
         else:                                       # all enemies, then all characters
             enemy_phase(rule.get('reps', lambda n: 1)(n))
             for i in order: char_turn(i)

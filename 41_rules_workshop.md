@@ -347,6 +347,8 @@ That is the manuscript's own table with two things taken out: the movement bonus
 - The repeat at four makes four characters the most dangerous count: every doubled attack lands on one aggro holder.
 - A lone character is far the hardest case under every rule, the published game included. The manuscript already answers it with five sparks and six starting souls.
 
+Later correction to the tool (2026-11-13): in the published game's round, a character killed before their turn still earned the enemies a phase. Fixed; the published-game rows move by one point at most, so the table is left as run.
+
 **Simple:** two sentences. **Intuitive:** more characters, tougher and harder-hitting enemies. **Balanced:** the same shape as the published game. Not played at a table; the numbers above are the evidence.
 
 ### 10.4 Status
