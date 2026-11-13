@@ -273,7 +273,7 @@ Bosses are not scaled in either version: they already act after each character.
 | Endurance bar | ten spaces; a hollow character has eight |
 | Round | enemies in descending threat; characters in any order the party chooses |
 | Aggro | the last character to deal damage; unchanged if none did |
-| Enemy scaling | +1 health per character beyond the first; +1 attack with three or more characters (section 10.3) |
+| Enemy scaling | +1 attack for each character beyond the first; +2 health for each character beyond the second (section 11, which replaces 10.3) |
 | Skipping cleared encounters | two stamina per character for each one skipped |
 | Recovery after a clear | all stamina, one damage cube |
 | Treasure | the card dealt to the tile is the reward; the aggro holder settles disputes |
@@ -352,4 +352,73 @@ That is the manuscript's own table with two things taken out: the movement bonus
 ### 10.4 Status
 
 Every rule is now settled (section 9.6). Nothing is optional except content that needs an expansion or a 2022 core set.
+
+## 11. Round five (2026-11-13): scaling calibrated against sparks, win rate and game length
+
+**Author's targets.** Level 3 encounters of four to seven rounds; the chance that someone dies in step with the number of sparks; a similar length of game and a similar win rate with one, two, three or four characters.
+
+**Section 10.3 is withdrawn.** It was judged on single fights. Played through a whole game, it is badly unbalanced: where a lone character wins 59% of games, two, three and four characters win 99% or more.
+
+### 11.1 How it was tested
+
+`tools/sim_game.py` plays the settled ruleset from the first bonfire to the main boss: eight encounters and two bosses, sparks, rests, hollowing, recovery, skipping, souls and progression. `tools/sim_search.py` searches the scaling rules. 3,000 to 5,000 games per figure.
+
+What the model assumes, since these cannot be read off the rules:
+- **A lone character clears a Level 3 encounter in about seven and a half rounds.** Character damage is set to give that. If your table is faster or slower, every round count below moves with it.
+- **Overall difficulty** is one dial (the share of enemy attacks that connect). It is set so that a lone character wins about 60% of games, and every rule was checked again at an easier setting (about 80%) and a harder one (about 45%).
+- It leaves out movement, dodging, parrying, conditions and class abilities, and the players follow one fixed policy. It compares rules with each other. It does not forecast a real table.
+
+### 11.2 The calibrated rule
+
+> For each character beyond the first, each enemy attack has +1 damage.
+> For each character beyond the second, each enemy has +2 health.
+
+| Characters | Enemy attack | Enemy health |
+|---|---|---|
+| 1 | as printed | as printed |
+| 2 | +1 | as printed |
+| 3 | +2 | +2 |
+| 4 | +3 | +4 |
+
+Bosses are not scaled.
+
+| | 1 character | 2 | 3 | 4 |
+|---|---|---|---|---|
+| Sparks at the start | 5 | 4 | 3 | 2 |
+| Games won | 59% | 61% | 67% | 52% |
+| at the easier setting | 81% | 83% | 86% | 76% |
+| at the harder setting | 46% | 47% | 53% | 38% |
+| Level 3 encounter, rounds | 7.5 | 5.6 | 4.7 | 4.0 |
+| Level 3 encounter, someone dies | 41% | 62% | 68% | 78% |
+| Paid rests used, of sparks available over the game | 5.1 of 7 | 4.3 of 6 | 3.6 of 5 | 2.7 of 4 |
+| Fights in a game (including repeats) | 13.5 | 12.1 | 10.9 | 9.7 |
+| Table time (character turns plus enemy turns) | 311 | 236 | 198 | 179 |
+
+- **Win rate:** within about eight points of one another at each of the three difficulty settings.
+- **Level 3 length:** four to seven and a half rounds. A lone character is the slowest because it takes one turn a round.
+- **Sparks:** every party size spends about seven-tenths of the sparks it will ever have. A larger party sees a death more often and has fewer sparks to answer it, but a death there does not end the fight.
+- **Game length:** a larger party plays fewer rounds and repeats fewer fights, so the count of turns falls as characters are added; with more people at the table the clock time comes out closer than the turn count suggests.
+
+### 11.3 Why it has this shape
+
+All the enemies act once a round however many characters there are. So each added character adds a full turn of damage to the party's side and nothing to the enemies'. Health alone cannot answer that: it only makes fights longer. To keep the odds level, **what the enemies deal has to rise with every character added**, and a bonus to attack is the only way to do that without adding enemy turns. That is why every milder rule fails the same way:
+
+| Rule | Games won, 1 / 2 / 3 / 4 characters | Level 3 rounds |
+|---|---|---|
+| **Calibrated** | 59% / 61% / 67% / 52% | 7.5 / 5.6 / 4.7 / 4.0 |
+| One line: +1 health and +1 attack per extra character | 59% / 48% / 67% / 70% | 7.5 / 5.8 / 4.7 / 3.7 |
+| Round four: +1 health each, +1 attack at three or more | 60% / 99% / 99% / 100% | 7.6 / 6.0 / 4.2 / 2.9 |
+| Manuscript: the same, with attacks repeated at four | 59% / 100% / 99% / 79% | 7.5 / 6.0 / 4.2 / 3.9 |
+| Health multiplied by the number of characters (Faded Embers) | 59% / 92% / 100% / 100% | 7.5 / 9.1 / 8.5 / 7.5 |
+| No scaling | 61% / 99% / 100% / 100% | 7.6 / 5.4 / 2.7 / 2.0 |
+
+The one-line rule is the simplest to say and is nearly as level; its cost is a two-character game that is harder than the rest and four-character fights under four rounds.
+
+### 11.4 What to watch when it is played
+
+1. **Blocking against +3.** With four characters a Hollow Soldier hits for 7 and a Sentinel for 9. A block will rarely stop all of it, so four-character play leans on dodging and on choosing who holds aggro. The model's characters only block, so a real table that dodges well will do better than these figures. If four-character play feels like a coin-flip, the first thing to try is +2 attack and +6 health at four.
+2. **Two characters** are the count most sensitive to the attack bonus: +1 moves the win rate from near-certain to level with a lone character.
+3. **The assumption about fight length** (first bullet of 11.1). Three or four timed Level 3 fights with a lone character would confirm or correct it.
+
+To re-run: `python3 tools/sim_game.py` (add `--reach 0.34` or `0.42` for an easier or harder table); `python3 tools/sim_search.py grid 0.39` lists every candidate.
 
