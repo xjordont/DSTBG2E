@@ -207,3 +207,98 @@ Removed: random boss selection and mixed encounter decks as options; the chest, 
 4. Player versus player (8.3): every game, cut, or the one exception?
 5. Event card texts (C3) and the Phalanx count (A17).
 6. Block B fixes and the terse voice (C5): confirm.
+
+## 9. Round three (2026-11-13): answers, lookups, and the one decision left
+
+**Author's answers.** 1 Character turn order: the party chooses, each round. 2 Mimic rematch: editor's judgement. 3 Repeat at four characters: not played; make scaling simple, balanced and intuitive. 4 Player versus player: kept, as the single optional rule. 5 Event cards and the Phalanx count: to be looked up. 6 Block B and the terse voice: confirmed.
+
+### 9.1 Lookups
+
+- **Phalanx.** Retail listings give "5x Phalanx" among 13 enemy miniatures. The community guide says the five models are Phalanx Hollows and that the Phalanx has no model of its own: it is shown by three Phalanx Hollow models pushed together. So the book's listing stands and the manuscript's ("5x Phalanx, 1x Phalanx Hollow") had the names the wrong way round. One line in the component list.
+- **Painted World of Ariamis rulebook.** Not obtainable. The publisher lists the Tomb of Giants rulebook as a free download and a combined errata sheet behind a checkout, but no Painted World rulebook, and no page gives the Heavy Knight's or Crossbreed Priscilla's rules. Both stay as they are: played from their cards under the general boss rules.
+- **Event card texts.** Not published anywhere I can reach. The rule below therefore works from the 2022 rulebook's own vocabulary and does not depend on any one card.
+
+### 9.2 Event cards (final wording of the rule, in substance)
+
+Used when a 2022 core set is on the table.
+
+1. Shuffle the event cards. Deal one face down to each encounter tile.
+2. When the characters first enter a tile, reveal its event card. An immediate card is resolved and discarded. A consumable card is taken by one character. A rendezvous card stays on the tile and applies to its encounter.
+3. A gravestone lets the party look at one face-down event card and keep it or replace it from the deck.
+4. Where a card names something this game does not have: the soul cache is the characters' souls, shared as the party chooses; the inventory is a character of the party's choice; the next encounter is the tile the card lies on. A card that still cannot be applied is discarded.
+
+### 9.3 Mimic rematch
+
+Settled as recommended: no recovery before the fight; after a defeat the party chooses whether to open the chest again.
+
+### 9.4 Enemy scaling: the decision left
+
+**What scaling has to do.** In your round the enemies act once and then every character acts. So as characters are added, the party's damage and its health both grow, and the enemies' do not. Health is easy to fix. Enemy damage is the hard part, because whatever is added lands on one aggro holder in one enemy phase: that is why the repeat at four kills.
+
+**Recommended: a second enemy phase, and nothing else.**
+
+> Each enemy has +1 health for each character beyond the first.
+> The enemies act at the start of the round, and again after every second character's turn while a character has yet to act.
+
+| Characters | Round |
+|---|---|
+| 1 | Enemies, A |
+| 2 | Enemies, A, B |
+| 3 | Enemies, A, B, Enemies, C |
+| 4 | Enemies, A, B, Enemies, C, D |
+
+- **Simple:** no +1 to remember on every attack, no repeated attacks, no changed movement. The cards are played as printed at every player count.
+- **Balanced:** enemy attacks per character per round run 1, ½, ⅔, ½ for one to four characters. Under the manuscript's table the same figure is 1, ½, ⅓, ½, with the four-player half arriving doubled on one character.
+- **Intuitive:** "the enemies act after every two of us." It is the official game's shape (enemies between character turns) at half the frequency, so rounds stay short.
+- **Tactical:** with the new aggro rule, the party chooses which pair acts first and who strikes last in each pair, so two characters share the tanking in a large party.
+- What goes: the manuscript's movement bonus at two characters, +1 attack at three, and repeat at four.
+
+**Fallback: numbers only.**
+
+> Each enemy has +1 health for each character beyond the first. With three or four characters, each enemy attack value is +1.
+
+One line shorter, and closest to your table. But four characters are then safer than three, and every extra point lands on the one aggro holder.
+
+Bosses are not scaled in either version: they already act after each character.
+
+### 9.5 Defaults taken for two questions never answered
+
+- **Glossary:** one line per term with its section number.
+- **F.A.Q.:** the ten answers a player would not guess; the rest is dropped.
+
+### 9.6 The settled ruleset, in one list
+
+| Rule | Settled as |
+|---|---|
+| Endurance bar | ten spaces; a hollow character has eight |
+| Round | enemies in descending threat; characters in any order the party chooses |
+| Aggro | the last character to deal damage; unchanged if none did |
+| Enemy scaling | section 9.4, awaiting the author's pick |
+| Skipping cleared encounters | two stamina per character for each one skipped |
+| Recovery after a clear | all stamina, one damage cube |
+| Treasure | the card dealt to the tile is the reward; the aggro holder settles disputes |
+| Parry | any weapon or shield in the left slot; attacker on the same node; riposte with the right-hand weapon; failure is full damage and stagger |
+| Stagger | −1 attack, block, resist, dodge; gone at the end of the model's turn, or its next turn if placed during its own |
+| Poison | stacks; one damage per token at the end of the turn, then remove one |
+| Push-move with a number | each pushed character is attacked once per push-move |
+| Traps | every model on the node; a character may dodge and stays put |
+| Titanite | fused; sold with its weapon |
+| Ember | an embered character cannot buy or use an ember card |
+| Scaling bonus | +1 at ten over the requirement |
+| Stat tier four | 10 souls (campaign 20); value is tier three +5 |
+| Heat-up | at once: one random heat-up card shuffled with the deck and discard pile |
+| Summon | two souls, embered characters only; acts after each character's turn |
+| Invader token | flipped on entering the tile |
+| Mimic | no recovery before the fight; rematch is the party's choice |
+| Crystal lizard | the killer takes a Titanite Scale |
+| Mega-boss | ordinary death rules; sparks are the retries |
+| Ornstein & Smough; Twin Gargoyles | two models with a dial each; Gargoyles back to back; about 80 words each |
+| Campaign sparks | maximum = starting number; never bought; free rest only after a section's last boss |
+| Campaign economy | rewards one lower; stat costs doubled |
+| Bonfire ascetic | 16 souls; non-boss enemies +1 attack afterwards |
+| Joining and leaving | the manuscript's four sentences |
+| Event cards | section 9.2, when a 2022 core set is owned |
+| Player versus player | the manuscript's rules; the book's one optional rule |
+| Expansion content | in play whenever the party owns it |
+| Voice and length | the manuscript's terse register; about 29,000 words |
+
