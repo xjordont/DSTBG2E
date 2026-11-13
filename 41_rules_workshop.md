@@ -273,7 +273,7 @@ Bosses are not scaled in either version: they already act after each character.
 | Endurance bar | ten spaces; a hollow character has eight |
 | Round | enemies in descending threat; characters in any order the party chooses |
 | Aggro | the last character to deal damage; unchanged if none did |
-| Enemy scaling | section 9.4, awaiting the author's pick |
+| Enemy scaling | +1 health per character beyond the first; +1 attack with three or more characters (section 10.3) |
 | Skipping cleared encounters | two stamina per character for each one skipped |
 | Recovery after a clear | all stamina, one damage cube |
 | Treasure | the card dealt to the tile is the reward; the aggro holder settles disputes |
@@ -298,7 +298,58 @@ Bosses are not scaled in either version: they already act after each character.
 | Bonfire ascetic | 16 souls; non-boss enemies +1 attack afterwards |
 | Joining and leaving | the manuscript's four sentences |
 | Event cards | section 9.2, when a 2022 core set is owned |
-| Player versus player | the manuscript's rules; the book's one optional rule |
+| Player versus player | the manuscript's rules; fought after every boss in every game of two or more characters (section 10.1) |
 | Expansion content | in play whenever the party owns it |
 | Voice and length | the manuscript's terse register; about 29,000 words |
+
+## 10. Round four (2026-11-13): no optional rules at all, and scaling settled from the house rules
+
+### 10.1 Player versus player
+
+Author: it always happens; there are no optional rules. So: after every boss, in every game with two or more characters, by the manuscript's rules. The second-phase scaling idea of section 9.4 is withdrawn: the author found it awkward.
+
+### 10.2 What 31 house rulesets do about the round
+
+The author's shared folder holds 31 files. 28 were read (`work/phase5/house_a.md`, `house_b.md`, `house_c.md`); two image-only files returned no text and one stops part-way.
+
+- **Only three use "all enemies, then all characters":** Faded Embers, Praise the Fun, and The Better Board Game. Robert Small's variant and "New tactic rules" use close relatives. Everything else keeps the published alternation and changes only souls, sparks and treasure.
+- **Not one of them scales enemy damage, enemy activations or enemy numbers by player count.** There is no precedent for the manuscript's +1 attack, its repeat at four, or a second enemy phase.
+- **The two that scale at all scale health only:** Faded Embers and The Better Board Game multiply enemy health by the number of players. Faded Embers' author, who wrote a rationale for every change, says enemies now act once a round, so their survival time is scaled instead; and warns that at three or four players each enemy needs a health dial.
+- **The valve for party size is sparks, not the fight.** Faded Embers: a fixed pool, one spark per death, the fight goes on until all are down; its author notes this gives "1 player ... 5 chances, 4 players ... 2". That is the manuscript's six minus the number of characters. Several others do the same.
+- **Aggro to the last character to attack,** in both Faded Embers and The Better Board Game; Praise the Fun lets the party set its order. Both of the author's round-two directions have tested precedent.
+- **Players-first was tried and rejected** by Faded Embers ("players murdering the most annoying enemy before it could activate"). The manuscript's enemies-first stands.
+- **Player versus player:** two files only. The Better Board Game has a last-one-standing finale on a shrinking arena; the Hollowed Edition's extension sets dodge difficulty from the attack's stamina cost. Both are what the manuscript already does.
+
+### 10.3 Enemy scaling, settled
+
+> Each enemy has +1 health for each character beyond the first.
+> With three or more characters, each enemy attack has +1 damage.
+
+That is the manuscript's own table with two things taken out: the movement bonus at two characters and the repeat at four.
+
+**Why this and not the others.** A rough simulation (`tools/sim_scaling.py`; it compares rules with one another and is not a forecast of a real table) of a Level 2 and a Level 3 encounter, 8,000 fights each:
+
+| Rule | Rounds, 2 / 3 / 4 characters | Damage per character, 2 / 3 / 4 | Chance someone dies, 2 / 3 / 4 |
+|---|---|---|---|
+| Published game (enemies after each character), Level 2 | 3.6 / 2.5 / 2.0 | 4.2 / 2.8 / 2.1 | 10% / 4% / 2% |
+| **Settled rule**, Level 2 | 3.9 / 3.0 / 2.4 | 2.6 / 2.1 / 1.4 | 2% / 4% / 2% |
+| Health only (+1 each), Level 2 | 3.9 / 3.0 / 2.4 | 2.6 / 1.3 / 0.9 | 2% / 0% / 0% |
+| Health × characters, Level 2 | 4.9 / 4.2 / 4.1 | 3.0 / 1.8 / 1.2 | 3% / 1% / 0% |
+| Manuscript with repeat at four, Level 2 | 3.9 / 3.0 / 2.5 | 2.6 / 2.1 / 2.9 | 2% / 4% / 19% |
+| Published game, Level 3 | 5.3 / 4.4 / 3.2 | 9.6 / 7.2 / 5.4 | 82% / 63% / 47% |
+| **Settled rule**, Level 3 | 6.6 / 5.2 / 4.2 | 6.7 / 5.1 / 3.2 | 41% / 38% / 23% |
+| Health × characters, Level 3 | 8.6 / 10.5 / 10.0 | 9.5 / 7.0 / 5.0 | 78% / 56% / 41% |
+| Manuscript with repeat at four, Level 3 | 6.6 / 5.2 / 4.9 | 6.8 / 5.1 / 7.2 | 41% / 38% / 73% |
+
+- The settled rule falls smoothly as characters are added, as the published game does, at about two-thirds of its danger and with fights of similar length. The sparks (five for one character, two for four) take up the rest.
+- Health only makes three and four characters a walkover. The +1 attack at three is what keeps the curve level.
+- Health × characters matches the published game's danger almost exactly, but a Level 3 fight runs ten rounds and needs a dial on every enemy.
+- The repeat at four makes four characters the most dangerous count: every doubled attack lands on one aggro holder.
+- A lone character is far the hardest case under every rule, the published game included. The manuscript already answers it with five sparks and six starting souls.
+
+**Simple:** two sentences. **Intuitive:** more characters, tougher and harder-hitting enemies. **Balanced:** the same shape as the published game. Not played at a table; the numbers above are the evidence.
+
+### 10.4 Status
+
+Every rule is now settled (section 9.6). Nothing is optional except content that needs an expansion or a 2022 core set.
 
