@@ -285,8 +285,11 @@ class Fight:
                         o = c.best_option(src, DIST[c.node][src.node], 99, hand='R')
                         if o: c.heroic = False; self.strike(c, src, o)
                 if how != 'parry' and r.dodge_move:
-                    c.node = step_away(c.node, src.node, rng) if DIST[c.node][src.node] == 0 else c.node
-                    if c.node == src.node: c.node = rng.choice(NBR[c.node])
+                    # the manuscript: a successful dodge always moves the character one node. Off the attacker's own
+                    # node if it is there; otherwise sideways, keeping its distance where the tile allows
+                    d0 = DIST[c.node][src.node]
+                    same = [x for x in NBR[c.node] if DIST[x][src.node] == max(1, d0)]
+                    c.node = rng.choice(same or [x for x in NBR[c.node] if x != src.node] or NBR[c.node])
             elif how == 'parry':
                 taken = dmg; c.stagger = True
             elif r.dodge_fail == 'armour':
@@ -311,6 +314,8 @@ class Fight:
                 if push and c.alive: c.node = step_away(c.node, src.node, rng) if c.node != src.node else rng.choice(NBR[c.node])
 
     def riposte(self, c, f):
+        # the one space kept back is the player's caution, not a rule: a riposte comes in the middle of the enemies'
+        # turn, and a full bar means the next point of damage kills
         o = c.best_option(f, 0, c.cap - c.dmg - c.sta - 1, hand='R')
         if o: c.sta += o['cost']; self.strike(c, f, o)        # the riposte's stamina is paid like any attack's
 

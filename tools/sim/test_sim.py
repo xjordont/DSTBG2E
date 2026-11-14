@@ -208,6 +208,15 @@ for s in range(200):
     c.sta = 3; f.char_turn(c); worst = max(worst, c.sta)
 check('manuscript: a character who rests does not run in the same turn', worst == 0, worst)
 
+# ---------------------------------------------------------------- a successful dodge always moves the character (manuscript)
+moved = 0
+for s in range(100):
+    c = Char('Assassin', M); f = E.Fight([c], M, random.Random(s), enemies=['Crossbow Hollow'], policy=E.Policy(evade=0.0))
+    c.heroic = c.luck = False; c.blk = c.arm_blk = c.res = c.arm_res = ''; c.L = None; c.can_parry = False
+    foe = f.foes[0]; c.node = E.IDX[(4, 4)]; foe.node = E.IDX[(0, 0)]; start = c.node
+    f.defend(foe, c, 9, True, 0); moved += c.node != start and E.DIST[c.node][start] == 1
+check('manuscript: a dodge of an attack from another node still moves the character one node', moved == 100, moved)
+
 # ---------------------------------------------------------------- equipment data
 check('every starting item is met by its class at base stats',
       all(Char(k, R17).cost_to_meet(ITEMS[n]['req'])[0] == 0 for k, v in CLASSES.items() for n in v['start']))
