@@ -68,14 +68,14 @@ def show(res, specs):
 
 
 if __name__ == '__main__':
-    ap = argparse.ArgumentParser(); ap.add_argument('--games', type=int, default=600); ap.add_argument('--skill', type=float, default=0.5)
+    ap = argparse.ArgumentParser(); ap.add_argument('--games', type=int, default=600); ap.add_argument('--skill', type=float, default=1.0)
     ap.add_argument('--specs'); a = ap.parse_args()
     if a.specs:
         import json
         specs = json.load(open(a.specs)); show(table(specs, a.games, a.skill), specs); sys.exit(0)
-    from compare import PROPOSED
-    specs = {'Official 2017 / 2022 (the combat rules are the same)': {'base': 'official2017'},
-             "Author's manuscript": {'base': 'manuscript'},
-             'Settled rules, section 11 scaling': {'base': 'settled'},
-             'Proposed (section 12.5)': PROPOSED}
+    from compare import PROPOSED_A, PROPOSED_B
+    specs = {'Official 2017': {'base': 'official2017'},
+             "Author's manuscript, as written": {'base': 'manuscript'},
+             'Proposal A (section 13.4)': PROPOSED_A,
+             'Proposal B (section 13.4)': PROPOSED_B}
     show(table(specs, a.games, a.skill), specs)

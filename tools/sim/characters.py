@@ -17,7 +17,7 @@ for _i in ITEMS.values():
         _i['up'] = 'mod' if '+1 damage' in _t else 'die' if 'gain 1 black die' in _t else None
 CORE4 = ['Knight', 'Warrior', 'Herald', 'Assassin']
 REF_FOES = ((1, 1, 1), (1, 1, 5), (2, 1, 5), (2, 1, 10))            # (block, resist, health) of reference targets
-REF_HITS = ((4, False, 1), (5, False, 1), (5, False, 2), (6, False, 1), (4, True, 1))   # (damage, magic, dodge difficulty)
+REF_HITS = ((4, False, 1), (5, False, 1), (5, False, 2), (6, False, 1), (6, False, 2), (4, True, 1), (5, True, 2))   # (damage, magic, dodge difficulty)
 
 
 def is_shield(it): return it is not None and it['type'] == 'hand' and not it['attacks']
@@ -117,19 +117,27 @@ class Char:
 
 
 def power(p, r):
-    """A single figure for how strong a loadout is: damage it deals in a turn less the damage it lets through."""
-    off = 0.0
-    for b, res, hp in REF_FOES:
-        best = 0.0
+    """A single figure for how strong a loadout is: the damage it deals in a turn against lightly, medium and heavily
+    armoured targets, less the damage it lets through from a spread of attacks. Defence counts for more than offence,
+    because a death costs the party far more than a slow fight."""
+    def best(block, resist, cap):
+        top = 0.0
         for ro in p['options']['R'] or [None]:
             for lo in ([None] + p['options']['L']):
                 tot = 0.0; cost = 0
                 for o in (ro, lo):
                     if o is None: continue
-                    pm = attack_pmf(o['dice'], o['mod'], 0 if o['ignore'] else (res if o['magic'] else b), o['repeat'])
-                    tot += sum(min(x, hp) * q for x, q in pm) + (0.25 if o['range'] >= 1 else 0); cost += o['cost']
-                if cost <= 5: best = max(best, tot - 0.3 * cost)
-        off += best / len(REF_FOES)
+                    pm = attack_pmf(o['dice'], o['mod'], 0 if o['ignore'] else (resist if o['magic'] else block), o['repeat'])
+                    tot += sum(min(x, cap) * q for x, q in pm); cost += o['cost']
+                if cost <= 5: top = max(top, tot - 0.3 * cost)
+        return top
+    off = 0.25 * best(1, 1, 5) + 0.4 * best(2, 1, 10) + 0.35 * best(3, 2, 30)
+    quick = 0.0                                             # felling a one-health, block-two enemy with a cheap attack
+    for hand in 'RL':
+        for o in p['options'][hand]:
+            if o['cost'] <= 2:
+                quick = max(quick, sum(q for x, q in attack_pmf(o['dice'], o['mod'], 1 if o['magic'] else 2, o['repeat']) if x >= 1))
+    if any(o['range'] >= 1 for h in 'RL' for o in p['options'][h]): off += 0.15
     taken = 0.0
     for dmg, magic, k in REF_HITS:
         dice = p['res'] if magic else p['blk']; pen = p['res_pen'] if magic else p['blk_pen']
@@ -140,7 +148,7 @@ def power(p, r):
             fail = sum(d * q for d, q in hit_stats(adice, r.block, dmg, 0)) if r.dodge_fail == 'armour' else dmg
             blk = min(blk, (1 - ps) * fail + 0.4)
         taken += blk / len(REF_HITS)
-    return off - 1.2 * taken
+    return off + 0.8 * quick - 1.6 * taken
 
 
 class Economy:
@@ -242,8 +250,9 @@ class Economy:
                     if f and f[1] == 0 and f[0] > 0.05:
                         (self.inv if self.r.pool else c.bag).remove(it); self.equip(c, it, f[2], f[3]); again = True
 
-    def spend(self):
-        """At the bonfire: spend souls on whatever gains the most power per soul, until nothing is worth buying."""
+    def spend(self, levels=True):
+        """At the bonfire: spend souls on whatever gains the most power per soul, until nothing is worth buying.
+        With levels=False only Andre is visited: cards may be bought and equipped, but no stat is raised."""
         r = self.r
         if r.pool: return self.spend_pool()
         for c in self.party:
@@ -253,41 +262,54 @@ class Economy:
                 cands = []
                 for it in c.bag:
                     f = self.fit(c, it)
-                    if f and f[0] > 0.05 and f[1] <= c.souls: cands.append((f[0] / (f[1] + 0.5), f, it, 0, c.bag))
+                    if f and f[0] > 0.05 and f[1] <= c.souls and (levels or f[1] == 0): cands.append((f[0] / (f[1] + 0.5), f, it, 0, c.bag))
                 for shop, price in ((self.shop1, 2), (self.shop2, 4)):
                     for it in shop:
                         f = self.fit(c, it)
-                        if f and f[0] > 0.05 and f[1] + price <= c.souls: cands.append((f[0] / (f[1] + price + 0.5), f, it, price, shop))
+                        if f and f[0] > 0.05 and f[1] + price <= c.souls and (levels or f[1] == 0): cands.append((f[0] / (f[1] + price + 0.5), f, it, price, shop))
                 if not cands: break
                 _, f, it, price, src = max(cands, key=lambda x: x[0])
                 src.remove(it); c.souls -= f[1] + price; self.equip(c, it, f[2], f[3])
             for it in list(c.bag):                                   # sell what will never be used
                 f = self.fit(c, it)
                 if not f or f[0] <= 0.05: c.bag.remove(it); c.souls += 1
+            # with souls left over and nothing to buy, raise the stat that brings the best card in hand or shop closer
+            if levels and c.souls >= 2:
+                wants = [(self.fit(c, it), it) for it in c.bag + self.shop1 + self.shop2]
+                wants = [(f, it) for f, it in wants if f and f[0] > 0.3 and f[1] > 0]
+                if wants:
+                    f, it = max(wants, key=lambda x: x[0][0] / (x[0][1] + 1))
+                    for i in range(4):
+                        while c.tier[i] < f[2][i] and c.souls >= r.tier_cost[min(c.tier[i], len(r.tier_cost) - 1)]:
+                            c.souls -= r.tier_cost[min(c.tier[i], len(r.tier_cost) - 1)]; c.tier[i] += 1
+                    c.refresh()
 
     def spend_pool(self):
+        """The shared cache of the official rules: look at some new cards, then put the souls where they add most,
+        the weakest character first (any death loses the fight). Souls that buy nothing useful are kept."""
         r = self.r; shown = []
         if r.treasure == 'shop4':
             shown = [x for x in (self.draw() for _ in range(r.shop_limit)) if x]
-        while True:
-            cands = []
-            for c in self.party:
-                for it in self.inv:
-                    f = self.fit(c, it)
-                    if f and f[0] > 0.05 and f[1] <= self.pool: cands.append((f[0] / (f[1] + 0.5), f, it, 0, c, self.inv))
-                for it in shown:
-                    f = self.fit(c, it)
-                    if f and f[0] > 0.05 and f[1] + 1 <= self.pool: cands.append((f[0] / (f[1] + 1.5), f, it, 1, c, shown))
-            best = max(cands, key=lambda x: x[0]) if cands else None
-            if best and best[0] >= 0.1:
-                _, f, it, price, c, src = best
-                src.remove(it); self.pool -= f[1] + price; self.equip(c, it, f[2], f[3]); continue
-            # nothing clearly worth its souls: look at another card, but never draw away the price of the best one in hand
-            hold = (best[1][1] + best[3]) if best else 0
-            if r.treasure == 'draw' and self.deck and self.pool - r.draw_cost >= hold:
-                self.pool -= r.draw_cost; self.inv.append(self.draw()); continue
-            if best:
-                _, f, it, price, c, src = best
-                src.remove(it); self.pool -= f[1] + price; self.equip(c, it, f[2], f[3]); continue
-            break
-        self.deck = shown + self.deck if r.treasure == 'shop4' else self.deck
+        elif r.treasure == 'draw':
+            for _ in range(int(self.pool * self.DRAW_SHARE + self.rng.random())):
+                if not self.deck or self.pool < r.draw_cost: break
+                self.pool -= r.draw_cost; self.inv.append(self.draw())
+        # each character has an equal share of the cache to level and equip with; what a share cannot use goes back
+        share = {id(c): self.pool / len(self.party) for c in self.party}
+        for final in (False, True):
+            while True:
+                cands = []
+                for c in sorted(self.party, key=lambda c: c._power):
+                    limit = self.pool if final else min(self.pool, share[id(c)])
+                    for src, price in ((self.inv, 0), (shown, 1)):
+                        for it in src:
+                            f = self.fit(c, it)
+                            if f and f[0] > 0.05 and f[1] + price <= limit:
+                                cands.append((f[0] / (f[1] + price + 0.5), f, it, price, c, src))
+                    if cands and not final: break               # the weakest character who can use something goes first
+                if not cands: break
+                _, f, it, price, c, src = max(cands, key=lambda x: x[0])
+                src.remove(it); self.pool -= f[1] + price; share[id(c)] -= f[1] + price; self.equip(c, it, f[2], f[3])
+        if r.treasure == 'shop4': self.deck = shown + self.deck
+
+    DRAW_SHARE = 0.3          # share of the cache spent on drawing treasure before levelling for it

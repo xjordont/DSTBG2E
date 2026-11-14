@@ -123,7 +123,7 @@ class Policy:
     def at(s):
         """One scale for the play the model does not act out move by move: 0 = none of it, 1 = all that seems possible.
         It sets how often an ordinary attack is avoided by position and how well a boss's fixed card order is read."""
-        return dict(evade=0.35 * s, read_new=0.1 + 0.2 * s, read_known=0.3 + 0.6 * s)
+        return dict(evade=0.6 * s, read_new=0.1 + 0.3 * s, read_known=min(0.95, 0.3 + 0.65 * s))
 
     def __init__(self, skill=None, **kw):
         if skill is not None: self.__dict__.update(self.at(skill))
@@ -149,7 +149,7 @@ class Foe:
 
 class Fight:
     """One encounter (a list of enemy names) or one boss fight (a boss name)."""
-    ARC = 0.35       # chance that a boss attack also catches another character standing within one node of the boss
+    ARC = 0.2        # chance that a boss attack also catches another character standing within one node of the boss
     WEAK = 0.3       # chance that a character's attack on a boss comes from a weak arc (+1 black die): card not yet seen
     WEAK_KNOWN = 0.6 # the same once the card has been seen (the deck comes round in the same order)
 
@@ -158,6 +158,7 @@ class Fight:
         self.n = n or len(party);                      # scaling counts every character in the game, present or not
         self.seats = len(party); self.rounds = 0; self.char_turns = 0; self.enemy_acts = 0; self.deaths = 0
         self.is_boss = boss is not None; self.dealt = {}
+        self.boss_atk = rules.boss_atk(self.n) if hasattr(rules, 'boss_atk') else 0
         r = rules
         ents = list(ENTRY); rng.shuffle(ents)
         for i, c in enumerate(party):
@@ -366,7 +367,7 @@ class Fight:
                 victims = [t] + [c for c in live if c is not t and DIST[f.node][c.node] <= 1 and rng.random() < self.ARC]
                 for c in victims:
                     if rng.random() < (self.pol.read_known if known else self.pol.read_new): continue    # out of the arc or the reach
-                    self.defend(f, c, a['dmg'] - (1 if f.stagger else 0), a['magic'], card['dodge'], push=a['push'],
+                    self.defend(f, c, a['dmg'] + self.boss_atk - (1 if f.stagger else 0), a['magic'], card['dodge'], push=a['push'],
                                 effects=a['effects'], parryable=False)
         f.stagger = f.frost = False
 
@@ -381,7 +382,8 @@ class Fight:
         """Room this character should keep on the bar for the damage due before its next turn: the mean plus 1.3
         standard deviations of that damage, from the attacks that can reach it and the chance each is aimed at it."""
         r = self.r; n = max(1, len(self.live())); mean = var = 0.0
-        phases = n if (r.round == 'alternate' or self.is_boss) else 1       # enemy phases before this character acts again
+        once = self.is_boss and getattr(r, 'boss_round', 'alternate') == 'once'
+        phases = n if ((r.round == 'alternate' and not self.is_boss) or (self.is_boss and not once)) else 1   # enemy phases before this character acts again
 
         def add(share, dmg, magic, times=1):
             nonlocal mean, var
@@ -396,7 +398,7 @@ class Fight:
                 p_me = (0.5 if self.aggro is c else 0.0) + 0.5 / n
                 p_me = (p_me + self.ARC * (1 - p_me)) * (1 - self.pol.read_new)
                 for k in cards:
-                    for a in k['attacks']: add(p_me, a['dmg'], a['magic'], phases * k['repeat'] / len(cards))
+                    for a in k['attacks']: add(p_me, a['dmg'] + self.boss_atk, a['magic'], phases * k['repeat'] / len(cards))
                 continue
             closing = sum(s['n'] for s in f.card['steps'] if s['k'] == 'move' and s['dir'] == 'to')
             nearest = self.target(f, 'nearest') is c
@@ -535,6 +537,7 @@ class Fight:
                         # the price of stamina: the added chance of dying before the next turn
                         danger = (self.risk(free - cost) - risk0) * (1 - pk if last else 1.0)
                         score = (ed if f.boss else ed / f.max * 0.5 * vk) + pk * vk - pol.w_sta * cost - wd * danger
+                        if cost == 0 and ed > 0: score = max(score, 0.01)          # a free blow is never passed up
                         if best is None or score > best[0]: best = (score, f, hand, o, steps, cost, run, surge)
             if best is None or best[0] <= 0: break
             _, f, hand, o, steps, cost, run, surge = best
@@ -576,7 +579,7 @@ class Fight:
     def run(self, max_rounds=60):
         r = self.r
         for c in self.party: c.was_hollow = c.hollow
-        if self.is_boss or r.round == 'alternate':
+        if (self.is_boss and getattr(r, 'boss_round', 'alternate') == 'alternate') or (not self.is_boss and r.round == 'alternate'):
             while not self.over() and self.rounds < max_rounds:
                 self.rounds += 1
                 for _ in range(self.seats):
@@ -594,7 +597,7 @@ class Fight:
                 self.rounds += 1; self.dealt = {}
                 for f in sorted(self.foes_alive(), key=lambda f: (-f.threat, min(DIST[f.node][c.node] for c in self.live()))):
                     if self.over(): break
-                    self.enemy_turn(f)
+                    (self.boss_turn if f.boss else self.enemy_turn)(f)
                 if self.over(): break
                 for c in self.order():
                     if self.over(): break

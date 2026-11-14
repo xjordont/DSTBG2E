@@ -76,7 +76,8 @@ def play(n, rules, seed, table=None, classes=None):
                 else: pos = 4 if boss_seen else 0
                 walk = 0
                 continue
-            if getattr(r, 'free_visit', False): spend()     # 2017: Andre and the Firekeeper can be visited between encounters
+            fv = getattr(r, 'free_visit', False)             # visiting the bonfire between encounters without resting:
+            if fv: eco.spend(levels=fv != 'shop')            # True = Andre and the Firekeeper; 'shop' = Andre only
             # ---- walk to the next fight
             if not at_boss and r.skip_cost is not None and ever[pos] and not done[pos]:
                 walk += r.skip_cost; done[pos] = True; pos += 1; continue        # skip a cleared encounter

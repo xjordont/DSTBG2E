@@ -97,7 +97,7 @@ def make(spec):
     add = spec.pop('hp_add', None); mul = spec.pop('hp_mul', None)
     if add or mul:
         kw['hp'] = lambda h, n, add=add, mul=mul: int(round(h * (mul[n] if mul else 1))) + (add[n] if add else 0)
-    for k in ('atk', 'reps', 'move2', 'sparks', 'boss_mul'):
+    for k in ('atk', 'reps', 'move2', 'sparks', 'boss_mul', 'boss_atk'):
         if k in spec:
             v = spec.pop(k); kw[k] = lambda n, v=v: v[n]
     if 'soul_mul' in spec:

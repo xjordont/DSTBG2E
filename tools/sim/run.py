@@ -48,7 +48,7 @@ def summary(res):
     return s
 
 
-GRID = [dict(ready2=a, ready3=b, reserve=c) for a, b in ((-9, -9), (-0.5, 0.5), (0.0, 1.0)) for c in (0, 1)]
+GRID = [dict(ready2=a, ready3=b, reserve=c) for a, b in ((-9, -9), (-2.0, -0.5), (-1.0, 0.5)) for c in (0, 1)]
 
 
 def best(spec, n, skill=1, games=1500, probe=300, extra=None):
