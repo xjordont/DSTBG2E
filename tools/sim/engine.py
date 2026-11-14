@@ -436,7 +436,9 @@ class Fight:
                 if faces[i] < sum(DIE[dice[i]]) / 6: faces[i] = rng.choice(DIE[dice[i]])
             rolls.append(sum(faces) + o['mod'] - (1 if (c.stagger and r.stagger == 'author') else 0))
         for t in targets:
-            total = sum(max(0, v - (0 if o.get('ignore') else t.resist if o['magic'] else t.armor)) for v in rolls)
+            guard = 0 if o.get('ignore') else t.resist if o['magic'] else t.armor
+            if t.stagger and r.stagger == 'author': guard = max(0, guard - 1)      # a staggered model blocks and resists one less
+            total = sum(max(0, v - guard) for v in rolls)
             if total > 0:
                 if t.bleed and r.bleed == 'official': total += 2; t.bleed = False
                 t.hp -= total; self.dealt[c] = self.dealt.get(c, 0) + total; grand += total

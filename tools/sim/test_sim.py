@@ -154,6 +154,15 @@ c = Char('Knight', M); f = E.Fight([c], M, random.Random(0), enemies=['Hollow So
 c.options['R'] = [dict(c.options['R'][1])]; cost = c.options['R'][0]['cost']; c.sta = 0; f.riposte(c, f.foes[0])
 check('a riposte costs its attack option\'s stamina', cost > 0 and c.sta == cost, (cost, c.sta))
 
+# ---------------------------------------------------------------- stagger lowers an enemy's defence (manuscript)
+def struck(rules, staggered):
+    c = Char('Knight', rules); f = E.Fight([c], rules, random.Random(0), enemies=['Sentinel']); foe = f.foes[0]; foe.stagger = staggered
+    o = dict(c.options['R'][0], dice='', mod=3); f.strike(c, foe, o); return foe.max - foe.hp
+
+
+check('manuscript: a staggered enemy blocks one less', struck(M, False) == 1 and struck(M, True) == 2)
+check('official: stagger does not change an enemy\'s block', struck(R17, False) == 1 and struck(R17, True) == 1)
+
 # ---------------------------------------------------------------- equipment data
 check('every starting item is met by its class at base stats',
       all(Char(k, R17).cost_to_meet(ITEMS[n]['req'])[0] == 0 for k, v in CLASSES.items() for n in v['start']))
