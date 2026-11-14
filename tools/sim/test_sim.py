@@ -229,6 +229,25 @@ for s in range(300):
     f.defend(foe, c, 7, False, 2); most = max(most, c.sta)
 check('manuscript: a dodge costs three stamina at most (one extra die)', most <= 3, most)
 
+# ---------------------------------------------------------------- a push by a moving enemy is away from the node it left
+back = far = 0
+for s in range(200):
+    c = Char('Knight', M); f = E.Fight([c], M, random.Random(s), enemies=['Large Hollow Soldier'], policy=E.Policy(evade=0.0))
+    c.heroic = c.luck = False; c.dodge = 0; foe = f.foes[0]; foe.node = E.IDX[(0, 0)]; c.node = E.IDX[(1, 1)]
+    f.enemy_turn(foe)
+    if c.alive: back += c.node == E.IDX[(0, 0)]; far += E.DIST[c.node][E.IDX[(0, 0)]] == 2
+check('a character struck by a pushing move is pushed away from the node the enemy left', back == 0 and far == 200, (back, far))
+
+# ---------------------------------------------------------------- a replaced card is kept: it may be sold, or used by another
+from characters import Economy, ITEMS
+c = Char('Knight', M); eco = Economy([c], M, random.Random(1)); first = c.A
+spare = next(it for it in ITEMS.values() if it['type'] == 'armour' and it['name'] not in c.start)
+other = next(it for it in ITEMS.values() if it['type'] == 'armour' and it is not spare and it['name'] not in c.start)
+eco.equip(c, spare, c.tier, 'A'); kept_start = first in c.bag; eco.equip(c, other, c.tier, 'A')
+check('manuscript: replaced treasure returns to the bag; starting equipment does not', (not kept_start) and c.bag == [spare], [x['name'] for x in c.bag])
+c = Char('Knight', R17); eco = Economy([c], R17, random.Random(1)); first = c.A; eco.equip(c, spare, c.tier, 'A')
+check('official: replaced equipment returns to the shared inventory', first in eco.inv)
+
 # ---------------------------------------------------------------- equipment data
 check('every starting item is met by its class at base stats',
       all(Char(k, R17).cost_to_meet(ITEMS[n]['req'])[0] == 0 for k, v in CLASSES.items() for n in v['start']))

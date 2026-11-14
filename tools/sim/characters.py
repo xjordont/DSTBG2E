@@ -30,6 +30,7 @@ class Char:
         self.tier = [0, 0, 0, 0]
         w, s, a = k['start']
         self.R, self.L, self.A = ITEMS[w], ITEMS[s], ITEMS[a]
+        self.start = {w, s, a}                        # starting equipment: it cannot be sold
         self.bag = []; self.plus = {}                 # spare cards; weapon name -> upgrade bonus
         self.souls = 0; self.earned = 0
         self.dmg = self.sta = 0; self.hollow = False; self.alive = True; self.was_hollow = False
@@ -223,13 +224,19 @@ class Economy:
         return best
 
     def equip(self, c, it, tiers, slot):
-        c.tier = list(tiers)
+        c.tier = list(tiers); out = []
         if slot == 'U': c.plus[c.R['name']] = it['up']
-        elif slot == 'A': c.A = it
-        elif slot == 'L': c.L = it
+        elif slot == 'A': out.append(c.A); c.A = it
+        elif slot == 'L': out.append(c.L); c.L = it
         else:
-            c.R = it
-            if it['hands'] == 2: c.L = None
+            out.append(c.R); c.R = it
+            if it['hands'] == 2: out.append(c.L); c.L = None
+        # a replaced card goes back to the inventory: the shared one of the official rules, or the character's own,
+        # where it may be sold (starting equipment cannot be sold, so it is simply set aside)
+        for old in out:
+            if not old: continue
+            if self.r.pool: self.inv.append(old)
+            elif old['name'] not in c.start: c.bag.append(old)
         c.refresh()
 
     def give(self, cards):

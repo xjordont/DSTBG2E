@@ -346,8 +346,10 @@ class Fight:
                             if c.node != f.node: continue
                             if 'dmg' in st and (c not in struck or not r.push_once):
                                 struck.add(c)
+                                # the push itself is resolved below, away from the node the enemy left; a dodge
+                                # may already have taken the character off the node
                                 self.defend(f, c, st['dmg'] + f.atk_bonus - (1 if f.stagger else 0), st['magic'], st['dodge'],
-                                            push=True, parryable=False)
+                                            push=False, parryable=False)
                             if c.alive and c.node == f.node:
                                 far = [x for x in NBR[c.node] if DIST[x][origin] > DIST[c.node][origin]]
                                 c.node = rng.choice(far or NBR[c.node])
@@ -604,6 +606,7 @@ class Fight:
                     if self.over(): break
                     for f in sorted(self.foes_alive(), key=lambda f: -f.threat):
                         if self.over(): break
+                        if f.hp <= 0: continue               # killed during another enemy's activation
                         (self.boss_turn if f.boss else self.enemy_turn)(f)
                     if self.over(): break
                     for _k in range(self.seats):             # the next living character in seat order
@@ -615,6 +618,7 @@ class Fight:
                 self.rounds += 1; self.dealt = {}
                 for f in sorted(self.foes_alive(), key=lambda f: (-f.threat, min(DIST[f.node][c.node] for c in self.live()))):
                     if self.over(): break
+                    if f.hp <= 0: continue                   # killed during another enemy's activation
                     (self.boss_turn if f.boss else self.enemy_turn)(f)
                 if self.over(): break
                 for c in self.order():
