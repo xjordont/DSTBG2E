@@ -442,7 +442,8 @@ class Fight:
             if total > 0:
                 if t.bleed and r.bleed == 'official': total += 2; t.bleed = False
                 t.hp -= total; self.dealt[c] = self.dealt.get(c, 0) + total; grand += total
-                if r.aggro == 'last': self.aggro = c
+                # the manuscript: against a boss the token goes to whoever damaged it since its last turn
+                if r.aggro == 'last' or (r.aggro == 'most' and self.is_boss): self.aggro = c
                 self.check_heat(t)
             self.say('   ', c.name, 'hits', t.name, 'with', o['name'], 'for', total, '(hp', max(0, t.hp), ')')
         return grand

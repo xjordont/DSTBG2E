@@ -168,6 +168,11 @@ c = Char('Knight', M); f = E.Fight([c], M, random.Random(0), enemies=['Hollow So
 f.defend(foe, c, 9, False, 1); f.enemy_turn(foe)
 check('an enemy killed mid-activation (by a riposte) attacks no more', c.dmg == 0 and c.sta == 0 and c.alive, (c.dmg, c.sta))
 
+# ---------------------------------------------------------------- boss aggro under the manuscript
+a, b = Char('Knight', M), Char('Assassin', M); f = E.Fight([a, b], M, random.Random(0), boss='Gargoyle')
+before = f.aggro; f.strike(b, f.foes[0], dict(b.options['R'][0], dice='', mod=9))
+check('manuscript: a character who damages the boss takes the aggro token', before is a and f.aggro is b)
+
 # ---------------------------------------------------------------- equipment data
 check('every starting item is met by its class at base stats',
       all(Char(k, R17).cost_to_meet(ITEMS[n]['req'])[0] == 0 for k, v in CLASSES.items() for n in v['start']))

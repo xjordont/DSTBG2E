@@ -454,7 +454,7 @@ Every rule that differs between rulesets is a switch (`tools/sim/rules.py`), so 
 
 ### 12.2 How it was checked
 
-1. **Against hand calculation.** `tools/sim/test_sim.py` (55 checks, all passing): dice distributions, dodge odds, the geometry of the tile, attack arithmetic, and a fight small enough to solve by hand (a Knight with only his light attack against one Hollow Soldier: 1.5 enemy attacks expected, 1.58 damage; the simulator gives 1.58 within sampling error).
+1. **Against hand calculation.** `tools/sim/test_sim.py` (56 checks, all passing): dice distributions, dodge odds, the geometry of the tile, attack arithmetic, and a fight small enough to solve by hand (a Knight with only his light attack against one Hollow Soldier: 1.5 enemy attacks expected, 1.58 damage; the simulator gives 1.58 within sampling error).
 2. **Rules as written.** Scaling tables, spark counts, enemy activations for each character turn (one each in the official rules, one for the whole party in the manuscript), the death rule of each ruleset, stat costs and the size of the treasure deck are each asserted.
 3. **Invariants** over whole games of every ruleset and party size: no dead model acts, no bar overfills, no rest without a spark, the same seed gives the same game.
 4. **Sampling error.** Win rates are given with a 95% interval; the final tables use 600 to 1,200 games a cell.
@@ -481,11 +481,11 @@ Every party is given the same souls for its stage (0, 8, 14, 26 and 36 a charact
 
 | Stage | Cleared | Rounds | Someone dies |
 |---|---|---|---|
-| Level 1 | 76% / 89% / 85% / 75% | 4.5 / 4.8 / 5.4 / 5.2 | 24% / 19% / 34% / 62% |
-| Level 2 | 39% / 66% / 75% / 67% | 6.3 / 6.3 / 5.4 / 4.2 | 61% / 44% / 47% / 60% |
-| Mini-boss | 9% / 47% / 75% / 89% | 16.9 / 12.1 / 8.2 / 6.1 | 91% / 78% / 77% / 78% |
-| Level 3 | 25% / 65% / 78% / 62% | 6.0 / 5.4 / 4.2 / 3.5 | 75% / 51% / 54% / 82% |
-| Main boss | 4% / 44% / 79% / 93% | 8.7 / 6.3 / 4.3 / 3.4 | 96% / 90% / 89% / 89% |
+| Level 1 | 76% / 89% / 87% / 78% | 4.5 / 4.8 / 5.2 / 5.1 | 24% / 19% / 33% / 63% |
+| Level 2 | 39% / 66% / 75% / 68% | 6.3 / 6.3 / 5.3 / 4.2 | 61% / 44% / 46% / 61% |
+| Mini-boss | 9% / 34% / 62% / 77% | 16.9 / 12.9 / 8.9 / 6.6 | 91% / 83% / 76% / 75% |
+| Level 3 | 25% / 65% / 79% / 62% | 6.0 / 5.3 / 4.2 / 3.5 | 75% / 51% / 54% / 82% |
+| Main boss | 4% / 39% / 72% / 90% | 8.7 / 6.4 / 4.4 / 3.3 | 96% / 87% / 85% / 83% |
 
 **Settled rules, section 11 scaling**
 
@@ -508,7 +508,7 @@ Every party is given the same souls for its stage (0, 8, 14, 26 and 36 a charact
 | Main boss | 56% / 65% / 72% / 90% | 5.0 / 4.8 / 4.4 / 3.3 | 44% / 67% / 85% / 83% |
 
 - **Official rules:** enemies act before every character's turn and any death loses the encounter. More characters make ordinary encounters somewhat easier; bosses are hard at every size. A round with four characters is four enemy phases, so fights are over in one or two rounds.
-- **The manuscript:** the unscaled boss is the largest imbalance in the book. A lone character clears the main boss 4 times in 100, four characters 93 in 100. In ordinary encounters four characters are punished by the repeat (someone dies in 62% of Level 1 fights).
+- **The manuscript:** the unscaled boss is the largest imbalance in the book. A lone character clears the main boss 4 times in 100, four characters 90 in 100. In ordinary encounters four characters are punished by the repeat (someone dies in 63% of Level 1 fights).
 - **Section 11's scaling** (attack +1, +2, +3) makes a death very likely with three and four characters even at Level 1 (53% and 75%).
 
 ### 12.4 Whole games
@@ -517,7 +517,7 @@ Every party is given the same souls for its stage (0, 8, 14, 26 and 36 a charact
 |---|---|---|---|---|
 | Official 2017 | 3% / 3% / 3% / 0% | 5.6 / 4.7 / 3.7 / 2.2 | 24 / 19 / 17 / 10 | encounters |
 | Official 2022 (same enemy cards; its own rewards and shop) | 1% / 0% / 0% / 0% | 5.1 / 4.0 / 3.0 / 2.0 | 13 / 14 / 12 / 9 | encounters |
-| Author's manuscript, as written | 0% / 1% / 1% / 0% | 5.2 / 4.2 / 3.1 / 2.0 | 8 / 7 / 6 / 4 | encounters |
+| Author's manuscript, as written | 0% / 0% / 0% / 0% | 5.2 / 4.1 / 3.1 / 2.0 | 8 / 7 / 6 / 4 | encounters |
 | Settled rules of section 9.6 with the scaling of section 11 | 0% / 1% / 0% / 0% | 5.2 / 4.1 / 3.1 / 2.0 | 8 / 8 / 5 / 4 | encounters |
 | Proposed, but souls can only be spent at a rest (the manuscript rule) | 29% / 13% / 7% / 3% | 5.0 / 4.4 / 3.3 / 2.1 | 11 / 8 / 6 / 5 | encounters / mini-boss / mini-boss / mini-boss |
 | **Proposed (section 12.5)** | 42% / 46% / 41% / 42% | 4.7 / 3.7 / 3.1 / 2.1 | 11 / 10 / 9 / 8 | encounters / mini-boss / mini-boss / encounters |
@@ -588,7 +588,7 @@ What changes from section 9.6:
 |---|---|---|---|
 | Enemy attack | +1 for each character beyond the first | no bonus; −1 against a lone character | finding 3 |
 | Enemy health | +2 for each character beyond the second | unchanged | it gives the fight length asked for |
-| Bosses | not scaled | one third and two thirds health for one and two characters | 12.3: 4% against 93% |
+| Bosses | not scaled | one third and two thirds health for one and two characters | 12.3: 4% against 90% |
 | Spending souls | only at a rest | at the bonfire, between encounters, without a rest | finding 2 |
 
 The manuscript's own scaling table compares as follows: its +1 health for each character is close to the proposal for two and three characters; its faster enemies, its +1 attack at three and its repeat at four are what the model rejects.
@@ -609,6 +609,6 @@ python3 tools/sim/fights.py                   # 12.3
 python3 tools/sim/compare.py                  # 12.4 and 12.5 (add --skill 0.25 or 0.75)
 ```
 
-Corrections after the automated review of the pull request (2026-11-14): a riposte after a parry was not charged its stamina, and a staggered enemy did not block one less as the manuscript's stagger rule says. A third: an enemy killed by a riposte or a backstab in the middle of its activation still finished its remaining attacks. All three are fixed and checked. The proposal's whole-game figures were run again after each: 42% / 46% / 41% / 42%, then 42% / 46% / 40% / 41%, then 42% / 47% / 41% / 41%, against 42% / 46% / 41% / 42% in the table above, all inside the sampling error. The other rows were not re-run: the official rules have no parry, and the manuscript rows stand at 0% to 1%.
+Corrections after the automated review of the pull request (2026-11-14): a riposte after a parry was not charged its stamina, and a staggered enemy did not block one less as the manuscript's stagger rule says. A third: an enemy killed by a riposte or a backstab in the middle of its activation still finished its remaining attacks. All three are fixed and checked. The proposal's whole-game figures were run again after each: 42% / 46% / 41% / 42%, then 42% / 46% / 40% / 41%, then 42% / 47% / 41% / 41%, against 42% / 46% / 41% / 42% in the table above, all inside the sampling error. A fourth: under the manuscript's own rules the aggro token did not pass to a character who damaged a boss. Fixed and checked; it touches only the manuscript's rows, which were run again and are the figures now shown (its boss rows fell by 3 to 13 points for two to four characters). The other rows were not re-run after the first three: the official rules have no parry, and the settled-rules row stands at 0% to 1%.
 
 `tools/sim_game.py`, `tools/sim_search.py` and `tools/sim_scaling.py` are the earlier abstract models, kept for the record and marked superseded.
