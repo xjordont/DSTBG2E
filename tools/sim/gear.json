@@ -1,0 +1,4240 @@
+{
+"note": "Printed values of the 2017 core set's starting equipment and treasure cards (boss treasure left out), compiled from two independently maintained community card databases and checked against the card images in the official rulebooks where those are legible; see 41_rules_workshop.md, section 12, for the sources and the cards that rest on one source. req = strength, dexterity, intelligence, faith. Dice: b black, u blue, o orange.",
+"classes": {
+"Knight": {
+"stats": [
+[
+13,
+21,
+30,
+40
+],
+[
+12,
+19,
+29,
+38
+],
+[
+9,
+15,
+23,
+31
+],
+[
+9,
+15,
+23,
+31
+]
+],
+"taunt": 10,
+"heroic": "Once per spark after making a block roll, the Knight may roll an additional blue die and add it to the roll.",
+"start": [
+"Long Sword",
+"Kite Shield (Knight)",
+"Knight Armour"
+]
+},
+"Warrior": {
+"stats": [
+[
+16,
+23,
+32,
+40
+],
+[
+9,
+16,
+25,
+35
+],
+[
+8,
+15,
+23,
+30
+],
+[
+9,
+16,
+25,
+35
+]
+],
+"taunt": 9,
+"heroic": "Once per spark during his activation, the Warrior may move one node without spending stamina. The next range 0 attack he makes costs 0 stamina and gains [node attack].",
+"start": [
+"Battle Axe",
+"Round Shield",
+"Northern Armour"
+]
+},
+"Assassin": {
+"stats": [
+[
+10,
+16,
+25,
+34
+],
+[
+14,
+22,
+31,
+40
+],
+[
+11,
+18,
+27,
+36
+],
+[
+9,
+14,
+22,
+30
+]
+],
+"taunt": 8,
+"heroic": "Once per spark after making a successful dodge, the Assassin may attack the enemy he dodged. The attack does not cost Stamina but must have range to the enemy.",
+"start": [
+"Estoc",
+"Target Shield",
+"Assassin Armour"
+]
+},
+"Herald": {
+"stats": [
+[
+12,
+19,
+28,
+37
+],
+[
+11,
+17,
+26,
+34
+],
+[
+8,
+12,
+20,
+29
+],
+[
+13,
+22,
+31,
+40
+]
+],
+"taunt": 4,
+"heroic": "Once per spark during his activation, the Herald may use Perseverance. When he does, each character gains 2 Stamina.",
+"start": [
+"Spear",
+"Kite Shield (Herald)",
+"Herald Armour"
+]
+}
+},
+"items": {
+"Long Sword": {
+"name": "Long Sword",
+"deck": "starting",
+"cls": "Knight",
+"req": [
+13,
+12,
+0,
+0
+],
+"copies": 1,
+"slots": 0,
+"conf": "high",
+"type": "hand",
+"hands": 1,
+"attacks": [
+{
+"cost": 0,
+"dice": "u",
+"mod": 0,
+"magic": false,
+"range": 0,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false
+},
+{
+"cost": 4,
+"dice": "bu",
+"mod": 0,
+"magic": false,
+"range": 0,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false
+}
+],
+"block": "",
+"resist": "",
+"dodge": 0,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Kite Shield (Knight)": {
+"name": "Kite Shield (Knight)",
+"deck": "starting",
+"cls": "Knight",
+"req": [
+0,
+0,
+0,
+0
+],
+"copies": 1,
+"slots": 0,
+"conf": "medium",
+"type": "hand",
+"hands": 1,
+"attacks": [],
+"block": "b",
+"resist": "",
+"dodge": 0,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Knight Armour": {
+"name": "Knight Armour",
+"deck": "starting",
+"cls": "Knight",
+"req": [
+12,
+0,
+0,
+0
+],
+"copies": 1,
+"slots": 0,
+"conf": "high",
+"type": "armour",
+"hands": 0,
+"attacks": [],
+"block": "u",
+"resist": "b",
+"dodge": 0,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Battle Axe": {
+"name": "Battle Axe",
+"deck": "starting",
+"cls": "Warrior",
+"req": [
+14,
+0,
+0,
+0
+],
+"copies": 1,
+"slots": 0,
+"conf": "high",
+"type": "hand",
+"hands": 1,
+"attacks": [
+{
+"cost": 0,
+"dice": "bb",
+"mod": 0,
+"magic": false,
+"range": 0,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false
+},
+{
+"cost": 2,
+"dice": "bb",
+"mod": 0,
+"magic": false,
+"range": 0,
+"repeat": 1,
+"node": true,
+"shaft": false,
+"heal": 0,
+"ignore": false
+}
+],
+"block": "",
+"resist": "",
+"dodge": 0,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Round Shield": {
+"name": "Round Shield",
+"deck": "starting",
+"cls": "Warrior",
+"req": [
+0,
+0,
+0,
+0
+],
+"copies": 1,
+"slots": 0,
+"conf": "high",
+"type": "hand",
+"hands": 1,
+"attacks": [],
+"block": "b",
+"resist": "",
+"dodge": 0,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Northern Armour": {
+"name": "Northern Armour",
+"deck": "starting",
+"cls": "Warrior",
+"req": [
+16,
+8,
+0,
+0
+],
+"copies": 1,
+"slots": 0,
+"conf": "high",
+"type": "armour",
+"hands": 0,
+"attacks": [],
+"block": "b",
+"resist": "b",
+"dodge": 1,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Estoc": {
+"name": "Estoc",
+"deck": "starting",
+"cls": "Assassin",
+"req": [
+0,
+14,
+0,
+0
+],
+"copies": 1,
+"slots": 0,
+"conf": "high",
+"type": "hand",
+"hands": 1,
+"attacks": [
+{
+"cost": 0,
+"dice": "bb",
+"mod": -1,
+"magic": false,
+"range": 0,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false
+},
+{
+"cost": 3,
+"dice": "bbb",
+"mod": -1,
+"magic": false,
+"range": 0,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false
+}
+],
+"block": "",
+"resist": "",
+"dodge": 0,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Target Shield": {
+"name": "Target Shield",
+"deck": "starting",
+"cls": "Assassin",
+"req": [
+0,
+0,
+0,
+0
+],
+"copies": 1,
+"slots": 0,
+"conf": "high",
+"type": "hand",
+"hands": 1,
+"attacks": [],
+"block": "",
+"resist": "",
+"dodge": 1,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Assassin Armour": {
+"name": "Assassin Armour",
+"deck": "starting",
+"cls": "Assassin",
+"req": [
+10,
+14,
+0,
+0
+],
+"copies": 1,
+"slots": 0,
+"conf": "high",
+"type": "armour",
+"hands": 0,
+"attacks": [],
+"block": "b",
+"resist": "b",
+"dodge": 1,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Spear": {
+"name": "Spear",
+"deck": "starting",
+"cls": "Herald",
+"req": [
+0,
+0,
+0,
+0
+],
+"copies": 1,
+"slots": 0,
+"conf": "medium",
+"type": "hand",
+"hands": 1,
+"attacks": [
+{
+"cost": 0,
+"dice": "b",
+"mod": 0,
+"magic": false,
+"range": 1,
+"repeat": 1,
+"node": false,
+"shaft": true,
+"heal": 0,
+"ignore": false
+},
+{
+"cost": 3,
+"dice": "b",
+"mod": 1,
+"magic": false,
+"range": 1,
+"repeat": 1,
+"node": false,
+"shaft": true,
+"heal": 0,
+"ignore": false
+}
+],
+"block": "",
+"resist": "",
+"dodge": 0,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Kite Shield (Herald)": {
+"name": "Kite Shield (Herald)",
+"deck": "starting",
+"cls": "Herald",
+"req": [
+0,
+0,
+0,
+0
+],
+"copies": 1,
+"slots": 0,
+"conf": "high",
+"type": "hand",
+"hands": 1,
+"attacks": [],
+"block": "b",
+"resist": "",
+"dodge": 0,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Talisman": {
+"name": "Talisman",
+"deck": "starting",
+"cls": "Herald",
+"req": [
+12,
+0,
+0,
+12
+],
+"copies": 1,
+"slots": 0,
+"conf": "high",
+"type": "hand",
+"hands": 1,
+"attacks": [],
+"block": "",
+"resist": "",
+"dodge": 0,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Herald Armour": {
+"name": "Herald Armour",
+"deck": "starting",
+"cls": "Herald",
+"req": [
+10,
+0,
+0,
+10
+],
+"copies": 1,
+"slots": 0,
+"conf": "high",
+"type": "armour",
+"hands": 0,
+"attacks": [],
+"block": "b",
+"resist": "b",
+"dodge": 1,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Alva Armour": {
+"name": "Alva Armour",
+"deck": "transposed",
+"cls": "Assassin",
+"req": [
+24,
+38,
+24,
+0
+],
+"copies": 1,
+"slots": 1,
+"conf": "high",
+"type": "armour",
+"hands": 0,
+"attacks": [],
+"block": "u",
+"resist": "u",
+"dodge": 2,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Avelyn": {
+"name": "Avelyn",
+"deck": "legendary",
+"cls": null,
+"req": [
+0,
+30,
+23,
+0
+],
+"copies": 1,
+"slots": 1,
+"conf": "high",
+"type": "hand",
+"hands": 2,
+"attacks": [
+{
+"cost": 1,
+"dice": "u",
+"mod": 0,
+"magic": false,
+"range": 3,
+"repeat": 3,
+"node": false,
+"shaft": true,
+"heal": 0,
+"ignore": false
+},
+{
+"cost": 4,
+"dice": "o",
+"mod": 0,
+"magic": false,
+"range": 3,
+"repeat": 3,
+"node": false,
+"shaft": true,
+"heal": 0,
+"ignore": false
+}
+],
+"block": "",
+"resist": "",
+"dodge": 1,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Balder Side Sword": {
+"name": "Balder Side Sword",
+"deck": "transposed",
+"cls": "Warrior",
+"req": [
+33,
+23,
+0,
+0
+],
+"copies": 1,
+"slots": 1,
+"conf": "high",
+"type": "hand",
+"hands": 1,
+"attacks": [
+{
+"cost": 0,
+"dice": "uu",
+"mod": 0,
+"magic": false,
+"range": 0,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false
+},
+{
+"cost": 4,
+"dice": "oo",
+"mod": 0,
+"magic": false,
+"range": 1,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false
+}
+],
+"block": "",
+"resist": "b",
+"dodge": 0,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Black Armour": {
+"name": "Black Armour",
+"deck": "common",
+"cls": null,
+"req": [
+0,
+20,
+20,
+0
+],
+"copies": 1,
+"slots": 2,
+"conf": "high",
+"type": "armour",
+"hands": 0,
+"attacks": [],
+"block": "u",
+"resist": "b",
+"dodge": 1,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Black Iron Greatshield": {
+"name": "Black Iron Greatshield",
+"deck": "transposed",
+"cls": "Knight",
+"req": [
+27,
+37,
+17,
+0
+],
+"copies": 1,
+"slots": 0,
+"conf": "high",
+"type": "hand",
+"hands": 1,
+"attacks": [],
+"block": "u",
+"resist": "uu",
+"dodge": 0,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Blessed Gem": {
+"name": "Blessed Gem",
+"deck": "common",
+"cls": null,
+"req": [
+0,
+0,
+0,
+25
+],
+"copies": 1,
+"slots": 0,
+"conf": "high",
+"type": "upgrade",
+"hands": 0,
+"attacks": [],
+"up": null,
+"on": "weapon",
+"text": "This weapon's attacks gain 1 black die."
+},
+"Blood Gem": {
+"name": "Blood Gem",
+"deck": "common",
+"cls": null,
+"req": [
+15,
+0,
+0,
+0
+],
+"copies": 1,
+"slots": 0,
+"conf": "high",
+"type": "upgrade",
+"hands": 0,
+"attacks": [],
+"up": null,
+"on": "weapon",
+"text": "This weapon's attacks gain Bleed."
+},
+"Blue Tearstone Ring": {
+"name": "Blue Tearstone Ring",
+"deck": "class",
+"cls": "Knight",
+"req": [
+0,
+25,
+0,
+25
+],
+"copies": 1,
+"slots": 0,
+"conf": "high",
+"type": "upgrade",
+"hands": 0,
+"attacks": [],
+"up": null,
+"on": "armour",
+"text": "After you suffer damage from an enemy attack, gain 1 stamina."
+},
+"Bountiful Light": {
+"name": "Bountiful Light",
+"deck": "transposed",
+"cls": "Herald",
+"req": [
+0,
+0,
+0,
+35
+],
+"copies": 1,
+"slots": 0,
+"conf": "high",
+"type": "hand",
+"hands": 1,
+"attacks": [
+{
+"cost": 4,
+"dice": "",
+"mod": 0,
+"magic": false,
+"range": 1,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 2,
+"ignore": false
+}
+],
+"block": "",
+"resist": "",
+"dodge": 0,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Bountiful Sunlight": {
+"name": "Bountiful Sunlight",
+"deck": "transposed",
+"cls": "Herald",
+"req": [
+0,
+0,
+20,
+35
+],
+"copies": 1,
+"slots": 0,
+"conf": "high",
+"type": "hand",
+"hands": 1,
+"attacks": [],
+"block": "",
+"resist": "",
+"dodge": 0,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Brigand Axe": {
+"name": "Brigand Axe",
+"deck": "common",
+"cls": null,
+"req": [
+19,
+0,
+16,
+0
+],
+"copies": 1,
+"slots": 1,
+"conf": "high",
+"type": "hand",
+"hands": 1,
+"attacks": [
+{
+"cost": 0,
+"dice": "bb",
+"mod": 0,
+"magic": false,
+"range": 0,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false
+},
+{
+"cost": 3,
+"dice": "bu",
+"mod": 0,
+"magic": false,
+"range": 0,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false
+}
+],
+"block": "",
+"resist": "b",
+"dodge": 0,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Broadsword": {
+"name": "Broadsword",
+"deck": "class",
+"cls": "Knight",
+"req": [
+30,
+28,
+0,
+0
+],
+"copies": 1,
+"slots": 1,
+"conf": "medium",
+"type": "hand",
+"hands": 1,
+"attacks": [
+{
+"cost": 0,
+"dice": "bb",
+"mod": 0,
+"magic": false,
+"range": 0,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false
+},
+{
+"cost": 2,
+"dice": "bu",
+"mod": 0,
+"magic": false,
+"range": 0,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false
+},
+{
+"cost": 4,
+"dice": "uu",
+"mod": 0,
+"magic": false,
+"range": 0,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false
+}
+],
+"block": "b",
+"resist": "b",
+"dodge": 0,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Caestus": {
+"name": "Caestus",
+"deck": "class",
+"cls": "Warrior",
+"req": [
+0,
+0,
+15,
+0
+],
+"copies": 1,
+"slots": 0,
+"conf": "high",
+"type": "hand",
+"hands": 1,
+"attacks": [
+{
+"cost": 0,
+"dice": "bb",
+"mod": 0,
+"magic": false,
+"range": 0,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false
+},
+{
+"cost": 3,
+"dice": "bb",
+"mod": 0,
+"magic": false,
+"range": 0,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false
+}
+],
+"block": "",
+"resist": "",
+"dodge": 0,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Carthus Curved Sword": {
+"name": "Carthus Curved Sword",
+"deck": "transposed",
+"cls": "Assassin",
+"req": [
+0,
+35,
+25,
+0
+],
+"copies": 1,
+"slots": 1,
+"conf": "medium",
+"type": "hand",
+"hands": 1,
+"attacks": [
+{
+"cost": 1,
+"dice": "uu",
+"mod": -1,
+"magic": false,
+"range": 0,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false
+},
+{
+"cost": 3,
+"dice": "uuu",
+"mod": -1,
+"magic": false,
+"range": 0,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false
+}
+],
+"block": "",
+"resist": "",
+"dodge": 1,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Cathedral Knight Armour": {
+"name": "Cathedral Knight Armour",
+"deck": "class",
+"cls": "Herald",
+"req": [
+0,
+0,
+18,
+22
+],
+"copies": 1,
+"slots": 2,
+"conf": "high",
+"type": "armour",
+"hands": 0,
+"attacks": [],
+"block": "u",
+"resist": "bb",
+"dodge": 0,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Chloranthy Ring": {
+"name": "Chloranthy Ring",
+"deck": "common",
+"cls": null,
+"req": [
+18,
+18,
+18,
+18
+],
+"copies": 1,
+"slots": 0,
+"conf": "high",
+"type": "upgrade",
+"hands": 0,
+"attacks": [],
+"up": null,
+"on": "armour",
+"text": "Characters in your node gain 3 \u2b1bstamina at the start of their activations (instead of 2)"
+},
+"Claymore": {
+"name": "Claymore",
+"deck": "common",
+"cls": null,
+"req": [
+30,
+26,
+0,
+0
+],
+"copies": 1,
+"slots": 1,
+"conf": "high",
+"type": "hand",
+"hands": 2,
+"attacks": [
+{
+"cost": 1,
+"dice": "uu",
+"mod": 1,
+"magic": false,
+"range": 1,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false
+},
+{
+"cost": 4,
+"dice": "oo",
+"mod": 1,
+"magic": false,
+"range": 1,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false
+}
+],
+"block": "b",
+"resist": "",
+"dodge": 0,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Composite Bow": {
+"name": "Composite Bow",
+"deck": "class",
+"cls": "Assassin",
+"req": [
+15,
+21,
+0,
+0
+],
+"copies": 1,
+"slots": 1,
+"conf": "high",
+"type": "hand",
+"hands": 2,
+"attacks": [
+{
+"cost": 0,
+"dice": "bb",
+"mod": -1,
+"magic": false,
+"range": 4,
+"repeat": 1,
+"node": false,
+"shaft": true,
+"heal": 0,
+"ignore": false
+},
+{
+"cost": 3,
+"dice": "bbb",
+"mod": -1,
+"magic": false,
+"range": 4,
+"repeat": 1,
+"node": false,
+"shaft": true,
+"heal": 0,
+"ignore": false
+}
+],
+"block": "",
+"resist": "",
+"dodge": 1,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Court Sorcerer Robes": {
+"name": "Court Sorcerer Robes",
+"deck": "common",
+"cls": null,
+"req": [
+0,
+17,
+22,
+0
+],
+"copies": 1,
+"slots": 2,
+"conf": "high",
+"type": "armour",
+"hands": 0,
+"attacks": [],
+"block": "b",
+"resist": "u",
+"dodge": 1,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Crystal Gem": {
+"name": "Crystal Gem",
+"deck": "common",
+"cls": null,
+"req": [
+0,
+0,
+25,
+0
+],
+"copies": 1,
+"slots": 0,
+"conf": "high",
+"type": "upgrade",
+"hands": 0,
+"attacks": [],
+"up": null,
+"on": "weapon",
+"text": "This weapon's attacks gain 1 black die."
+},
+"Dark Sword": {
+"name": "Dark Sword",
+"deck": "legendary",
+"cls": null,
+"req": [
+30,
+30,
+0,
+0
+],
+"copies": 1,
+"slots": 2,
+"conf": "high",
+"type": "hand",
+"hands": 1,
+"attacks": [
+{
+"cost": 0,
+"dice": "u",
+"mod": 0,
+"magic": false,
+"range": 0,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false
+},
+{
+"cost": 2,
+"dice": "uu",
+"mod": 0,
+"magic": false,
+"range": 0,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false
+},
+{
+"cost": 5,
+"dice": "oo",
+"mod": 0,
+"magic": false,
+"range": 0,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false
+}
+],
+"block": "",
+"resist": "",
+"dodge": 0,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Deacon Robes": {
+"name": "Deacon Robes",
+"deck": "common",
+"cls": null,
+"req": [
+0,
+0,
+0,
+24
+],
+"copies": 1,
+"slots": 1,
+"conf": "high",
+"type": "armour",
+"hands": 0,
+"attacks": [],
+"block": "b",
+"resist": "bb",
+"dodge": 1,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Dragon Crest Shield": {
+"name": "Dragon Crest Shield",
+"deck": "common",
+"cls": null,
+"req": [
+21,
+0,
+0,
+21
+],
+"copies": 1,
+"slots": 0,
+"conf": "high",
+"type": "hand",
+"hands": 1,
+"attacks": [],
+"block": "u",
+"resist": "u",
+"dodge": 0,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Dragonslayer's Axe": {
+"name": "Dragonslayer's Axe",
+"deck": "transposed",
+"cls": "Warrior",
+"req": [
+35,
+15,
+15,
+15
+],
+"copies": 1,
+"slots": 1,
+"conf": "high",
+"type": "hand",
+"hands": 1,
+"attacks": [
+{
+"cost": 0,
+"dice": "o",
+"mod": 0,
+"magic": true,
+"range": 0,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false
+},
+{
+"cost": 3,
+"dice": "uo",
+"mod": 0,
+"magic": true,
+"range": 0,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false
+}
+],
+"block": "",
+"resist": "b",
+"dodge": 0,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Dragon Tooth": {
+"name": "Dragon Tooth",
+"deck": "legendary",
+"cls": null,
+"req": [
+37,
+0,
+0,
+25
+],
+"copies": 1,
+"slots": 1,
+"conf": "high",
+"type": "hand",
+"hands": 2,
+"attacks": [
+{
+"cost": 4,
+"dice": "uoo",
+"mod": 0,
+"magic": false,
+"range": 1,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false
+},
+{
+"cost": 6,
+"dice": "uoo",
+"mod": 0,
+"magic": false,
+"range": 1,
+"repeat": 1,
+"node": true,
+"shaft": false,
+"heal": 0,
+"ignore": false
+}
+],
+"block": "b",
+"resist": "u",
+"dodge": 0,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Drake Sword": {
+"name": "Drake Sword",
+"deck": "legendary",
+"cls": null,
+"req": [
+27,
+17,
+17,
+0
+],
+"copies": 1,
+"slots": 0,
+"conf": "high",
+"type": "hand",
+"hands": 1,
+"attacks": [
+{
+"cost": 2,
+"dice": "uu",
+"mod": 0,
+"magic": false,
+"range": 0,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false
+},
+{
+"cost": 4,
+"dice": "oo",
+"mod": 0,
+"magic": false,
+"range": 0,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false
+},
+{
+"cost": 4,
+"dice": "uu",
+"mod": 0,
+"magic": false,
+"range": 3,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false
+}
+],
+"block": "",
+"resist": "",
+"dodge": 0,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Drang Armour": {
+"name": "Drang Armour",
+"deck": "common",
+"cls": null,
+"req": [
+18,
+14,
+0,
+0
+],
+"copies": 1,
+"slots": 1,
+"conf": "high",
+"type": "armour",
+"hands": 0,
+"attacks": [],
+"block": "u",
+"resist": "",
+"dodge": 1,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Eastern Iron Shield": {
+"name": "Eastern Iron Shield",
+"deck": "common",
+"cls": null,
+"req": [
+0,
+28,
+0,
+0
+],
+"copies": 1,
+"slots": 0,
+"conf": "high",
+"type": "hand",
+"hands": 1,
+"attacks": [],
+"block": "u",
+"resist": "",
+"dodge": 1,
+"block_mod": 0,
+"resist_mod": 0
+},
+"East-West Shield": {
+"name": "East-West Shield",
+"deck": "common",
+"cls": null,
+"req": [
+0,
+0,
+28,
+0
+],
+"copies": 1,
+"slots": 0,
+"conf": "high",
+"type": "hand",
+"hands": 1,
+"attacks": [],
+"block": "b",
+"resist": "u",
+"dodge": 1,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Effigy Shield": {
+"name": "Effigy Shield",
+"deck": "common",
+"cls": null,
+"req": [
+10,
+0,
+0,
+10
+],
+"copies": 1,
+"slots": 0,
+"conf": "high",
+"type": "hand",
+"hands": 1,
+"attacks": [],
+"block": "b",
+"resist": "b",
+"dodge": 0,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Elite Knight Armour": {
+"name": "Elite Knight Armour",
+"deck": "transposed",
+"cls": "Knight",
+"req": [
+35,
+0,
+0,
+15
+],
+"copies": 1,
+"slots": 2,
+"conf": "high",
+"type": "armour",
+"hands": 0,
+"attacks": [],
+"block": "uu",
+"resist": "b",
+"dodge": 0,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Elkhorn Round Shield": {
+"name": "Elkhorn Round Shield",
+"deck": "transposed",
+"cls": "Assassin",
+"req": [
+16,
+34,
+16,
+0
+],
+"copies": 1,
+"slots": 0,
+"conf": "high",
+"type": "hand",
+"hands": 1,
+"attacks": [],
+"block": "b",
+"resist": "bb",
+"dodge": 1,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Exile Armour": {
+"name": "Exile Armour",
+"deck": "common",
+"cls": null,
+"req": [
+26,
+0,
+0,
+16
+],
+"copies": 1,
+"slots": 2,
+"conf": "high",
+"type": "armour",
+"hands": 0,
+"attacks": [],
+"block": "uu",
+"resist": "",
+"dodge": 0,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Falchion": {
+"name": "Falchion",
+"deck": "transposed",
+"cls": "Knight",
+"req": [
+37,
+30,
+0,
+23
+],
+"copies": 1,
+"slots": 2,
+"conf": "high",
+"type": "hand",
+"hands": 1,
+"attacks": [
+{
+"cost": 0,
+"dice": "uu",
+"mod": 0,
+"magic": false,
+"range": 0,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false
+},
+{
+"cost": 3,
+"dice": "oo",
+"mod": 0,
+"magic": false,
+"range": 0,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false
+}
+],
+"block": "b",
+"resist": "u",
+"dodge": 0,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Fallen Knight Armour": {
+"name": "Fallen Knight Armour",
+"deck": "transposed",
+"cls": "Warrior",
+"req": [
+30,
+0,
+22,
+0
+],
+"copies": 1,
+"slots": 2,
+"conf": "high",
+"type": "armour",
+"hands": 0,
+"attacks": [],
+"block": "u",
+"resist": "u",
+"dodge": 1,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Faraam Armour": {
+"name": "Faraam Armour",
+"deck": "transposed",
+"cls": "Knight",
+"req": [
+29,
+0,
+19,
+0
+],
+"copies": 1,
+"slots": 2,
+"conf": "high",
+"type": "armour",
+"hands": 0,
+"attacks": [],
+"block": "o",
+"resist": "u",
+"dodge": 0,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Fireball": {
+"name": "Fireball",
+"deck": "common",
+"cls": null,
+"req": [
+0,
+0,
+23,
+0
+],
+"copies": 1,
+"slots": 0,
+"conf": "high",
+"type": "hand",
+"hands": 1,
+"attacks": [
+{
+"cost": 0,
+"dice": "bb",
+"mod": 0,
+"magic": true,
+"range": 2,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false
+},
+{
+"cost": 5,
+"dice": "oo",
+"mod": 0,
+"magic": true,
+"range": 2,
+"repeat": 1,
+"node": true,
+"shaft": false,
+"heal": 0,
+"ignore": false
+}
+],
+"block": "",
+"resist": "",
+"dodge": 0,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Firebombs": {
+"name": "Firebombs",
+"deck": "common",
+"cls": null,
+"req": [
+0,
+0,
+15,
+15
+],
+"copies": 1,
+"slots": 0,
+"conf": "high",
+"type": "hand",
+"hands": 1,
+"attacks": [
+{
+"cost": 4,
+"dice": "bbb",
+"mod": 0,
+"magic": true,
+"range": 1,
+"repeat": 1,
+"node": true,
+"shaft": false,
+"heal": 0,
+"ignore": false
+}
+],
+"block": "",
+"resist": "",
+"dodge": 0,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Firelink Armour": {
+"name": "Firelink Armour",
+"deck": "common",
+"cls": null,
+"req": [
+20,
+0,
+15,
+0
+],
+"copies": 1,
+"slots": 2,
+"conf": "high",
+"type": "armour",
+"hands": 0,
+"attacks": [],
+"block": "u",
+"resist": "u",
+"dodge": 0,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Force": {
+"name": "Force",
+"deck": "common",
+"cls": null,
+"req": [
+0,
+0,
+12,
+0
+],
+"copies": 1,
+"slots": 0,
+"conf": "medium",
+"type": "hand",
+"hands": 1,
+"attacks": [],
+"block": "",
+"resist": "",
+"dodge": 0,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Fume Ultra Greatsword": {
+"name": "Fume Ultra Greatsword",
+"deck": "legendary",
+"cls": null,
+"req": [
+37,
+33,
+0,
+0
+],
+"copies": 1,
+"slots": 2,
+"conf": "high",
+"type": "hand",
+"hands": 2,
+"attacks": [
+{
+"cost": 2,
+"dice": "uo",
+"mod": 0,
+"magic": false,
+"range": 1,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false
+},
+{
+"cost": 5,
+"dice": "uuo",
+"mod": 0,
+"magic": false,
+"range": 1,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false
+},
+{
+"cost": 4,
+"dice": "uo",
+"mod": 0,
+"magic": false,
+"range": 1,
+"repeat": 1,
+"node": true,
+"shaft": false,
+"heal": 0,
+"ignore": false
+}
+],
+"block": "u",
+"resist": "b",
+"dodge": 0,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Golden Wing Crest Shield": {
+"name": "Golden Wing Crest Shield",
+"deck": "class",
+"cls": "Herald",
+"req": [
+26,
+0,
+0,
+26
+],
+"copies": 1,
+"slots": 1,
+"conf": "high",
+"type": "hand",
+"hands": 1,
+"attacks": [
+{
+"cost": 0,
+"dice": "b",
+"mod": 0,
+"magic": false,
+"range": 0,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false
+}
+],
+"block": "u",
+"resist": "u",
+"dodge": 0,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Gotthard Twinswords": {
+"name": "Gotthard Twinswords",
+"deck": "legendary",
+"cls": null,
+"req": [
+25,
+35,
+0,
+0
+],
+"copies": 1,
+"slots": 1,
+"conf": "high",
+"type": "hand",
+"hands": 2,
+"attacks": [
+{
+"cost": 1,
+"dice": "bb",
+"mod": 0,
+"magic": false,
+"range": 0,
+"repeat": 2,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false
+},
+{
+"cost": 4,
+"dice": "uu",
+"mod": 0,
+"magic": false,
+"range": 0,
+"repeat": 2,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false
+},
+{
+"cost": 3,
+"dice": "uu",
+"mod": 0,
+"magic": false,
+"range": 1,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false
+}
+],
+"block": "b",
+"resist": "b",
+"dodge": 0,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Grass Crest Shield": {
+"name": "Grass Crest Shield",
+"deck": "transposed",
+"cls": "Herald",
+"req": [
+28,
+0,
+0,
+28
+],
+"copies": 1,
+"slots": 0,
+"conf": "medium",
+"type": "hand",
+"hands": 1,
+"attacks": [],
+"block": "u",
+"resist": "o",
+"dodge": 0,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Greataxe": {
+"name": "Greataxe",
+"deck": "common",
+"cls": null,
+"req": [
+32,
+22,
+0,
+0
+],
+"copies": 1,
+"slots": 2,
+"conf": "high",
+"type": "hand",
+"hands": 2,
+"attacks": [
+{
+"cost": 0,
+"dice": "uu",
+"mod": 0,
+"magic": false,
+"range": 0,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false
+},
+{
+"cost": 3,
+"dice": "oo",
+"mod": 0,
+"magic": false,
+"range": 0,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false
+},
+{
+"cost": 3,
+"dice": "uu",
+"mod": 0,
+"magic": false,
+"range": 0,
+"repeat": 1,
+"node": true,
+"shaft": false,
+"heal": 0,
+"ignore": false
+}
+],
+"block": "u",
+"resist": "",
+"dodge": 0,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Great Mace": {
+"name": "Great Mace",
+"deck": "common",
+"cls": null,
+"req": [
+21,
+0,
+0,
+28
+],
+"copies": 1,
+"slots": 2,
+"conf": "high",
+"type": "hand",
+"hands": 2,
+"attacks": [
+{
+"cost": 0,
+"dice": "u",
+"mod": 1,
+"magic": false,
+"range": 0,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false
+},
+{
+"cost": 3,
+"dice": "uu",
+"mod": 1,
+"magic": false,
+"range": 0,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false
+}
+],
+"block": "b",
+"resist": "b",
+"dodge": 0,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Great Machete": {
+"name": "Great Machete",
+"deck": "transposed",
+"cls": "Warrior",
+"req": [
+40,
+35,
+0,
+0
+],
+"copies": 1,
+"slots": 1,
+"conf": "high",
+"type": "hand",
+"hands": 2,
+"attacks": [
+{
+"cost": 1,
+"dice": "uuu",
+"mod": 0,
+"magic": false,
+"range": 1,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false
+},
+{
+"cost": 4,
+"dice": "bboo",
+"mod": 0,
+"magic": false,
+"range": 1,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false
+},
+{
+"cost": 4,
+"dice": "uuu",
+"mod": 0,
+"magic": false,
+"range": 1,
+"repeat": 1,
+"node": true,
+"shaft": false,
+"heal": 0,
+"ignore": false
+}
+],
+"block": "b",
+"resist": "b",
+"dodge": 0,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Great Magic Weapon": {
+"name": "Great Magic Weapon",
+"deck": "common",
+"cls": null,
+"req": [
+0,
+0,
+12,
+12
+],
+"copies": 1,
+"slots": 0,
+"conf": "high",
+"type": "hand",
+"hands": 1,
+"attacks": [],
+"block": "",
+"resist": "",
+"dodge": 0,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Great Wooden Hammer": {
+"name": "Great Wooden Hammer",
+"deck": "class",
+"cls": "Warrior",
+"req": [
+30,
+0,
+0,
+0
+],
+"copies": 1,
+"slots": 1,
+"conf": "high",
+"type": "hand",
+"hands": 2,
+"attacks": [
+{
+"cost": 0,
+"dice": "bbb",
+"mod": 0,
+"magic": false,
+"range": 0,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false
+},
+{
+"cost": 3,
+"dice": "bbb",
+"mod": 0,
+"magic": false,
+"range": 0,
+"repeat": 1,
+"node": true,
+"shaft": false,
+"heal": 0,
+"ignore": false
+}
+],
+"block": "b",
+"resist": "",
+"dodge": 0,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Halberd": {
+"name": "Halberd",
+"deck": "common",
+"cls": null,
+"req": [
+15,
+0,
+0,
+31
+],
+"copies": 1,
+"slots": 2,
+"conf": "low",
+"type": "hand",
+"hands": 2,
+"attacks": [
+{
+"cost": 1,
+"dice": "u",
+"mod": 1,
+"magic": false,
+"range": 1,
+"repeat": 1,
+"node": false,
+"shaft": true,
+"heal": 0,
+"ignore": false
+},
+{
+"cost": 4,
+"dice": "uu",
+"mod": 1,
+"magic": false,
+"range": 1,
+"repeat": 1,
+"node": false,
+"shaft": true,
+"heal": 0,
+"ignore": false
+}
+],
+"block": "u",
+"resist": "",
+"dodge": 0,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Hard Leather Armour": {
+"name": "Hard Leather Armour",
+"deck": "common",
+"cls": null,
+"req": [
+26,
+26,
+26,
+0
+],
+"copies": 1,
+"slots": 1,
+"conf": "high",
+"type": "armour",
+"hands": 0,
+"attacks": [],
+"block": "b",
+"resist": "b",
+"dodge": 2,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Heal": {
+"name": "Heal",
+"deck": "common",
+"cls": null,
+"req": [
+0,
+0,
+0,
+23
+],
+"copies": 1,
+"slots": 0,
+"conf": "medium",
+"type": "hand",
+"hands": 1,
+"attacks": [
+{
+"cost": 0,
+"dice": "",
+"mod": 0,
+"magic": false,
+"range": 3,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 1,
+"ignore": false
+},
+{
+"cost": 3,
+"dice": "",
+"mod": 0,
+"magic": false,
+"range": 3,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 4,
+"ignore": false
+}
+],
+"block": "",
+"resist": "",
+"dodge": 0,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Heal Aid": {
+"name": "Heal Aid",
+"deck": "common",
+"cls": null,
+"req": [
+0,
+0,
+0,
+13
+],
+"copies": 1,
+"slots": 0,
+"conf": "medium",
+"type": "hand",
+"hands": 1,
+"attacks": [
+{
+"cost": 0,
+"dice": "",
+"mod": 0,
+"magic": false,
+"range": 3,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 1,
+"ignore": false
+}
+],
+"block": "",
+"resist": "",
+"dodge": 0,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Heavy Gem": {
+"name": "Heavy Gem",
+"deck": "common",
+"cls": null,
+"req": [
+25,
+0,
+0,
+0
+],
+"copies": 1,
+"slots": 0,
+"conf": "high",
+"type": "upgrade",
+"hands": 0,
+"attacks": [],
+"up": null,
+"on": "weapon",
+"text": "This weapon's attacks gain 1 black die."
+},
+"Hornet Ring": {
+"name": "Hornet Ring",
+"deck": "class",
+"cls": "Assassin",
+"req": [
+0,
+30,
+0,
+0
+],
+"copies": 1,
+"slots": 0,
+"conf": "high",
+"type": "upgrade",
+"hands": 0,
+"attacks": [],
+"up": null,
+"on": "armour",
+"text": "Your attacks gain an additional orange die but get -2 total damage."
+},
+"Knight Slayer's Ring": {
+"name": "Knight Slayer's Ring",
+"deck": "class",
+"cls": "Warrior",
+"req": [
+30,
+0,
+0,
+0
+],
+"copies": 1,
+"slots": 0,
+"conf": "high",
+"type": "upgrade",
+"hands": 0,
+"attacks": [],
+"up": null,
+"on": "armour",
+"text": "After you make an attack that exceeds an enemy's Block or Resist value by 3 or more, gain 1 stamina."
+},
+"Kukris": {
+"name": "Kukris",
+"deck": "common",
+"cls": null,
+"req": [
+0,
+15,
+0,
+0
+],
+"copies": 1,
+"slots": 0,
+"conf": "high",
+"type": "hand",
+"hands": 1,
+"attacks": [],
+"block": "",
+"resist": "",
+"dodge": 0,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Lightning Gem": {
+"name": "Lightning Gem",
+"deck": "common",
+"cls": null,
+"req": [
+0,
+0,
+15,
+0
+],
+"copies": 1,
+"slots": 0,
+"conf": "medium",
+"type": "upgrade",
+"hands": 0,
+"attacks": [],
+"up": null,
+"on": "weapon",
+"text": "This weapon's attacks gain Magic."
+},
+"Lothric Knight Armour": {
+"name": "Lothric Knight Armour",
+"deck": "class",
+"cls": "Knight",
+"req": [
+21,
+0,
+0,
+15
+],
+"copies": 1,
+"slots": 2,
+"conf": "high",
+"type": "armour",
+"hands": 0,
+"attacks": [],
+"block": "u",
+"resist": "u",
+"dodge": 0,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Lothric's Holy Sword": {
+"name": "Lothric's Holy Sword",
+"deck": "class",
+"cls": "Herald",
+"req": [
+27,
+0,
+0,
+31
+],
+"copies": 1,
+"slots": 1,
+"conf": "high",
+"type": "hand",
+"hands": 1,
+"attacks": [
+{
+"cost": 0,
+"dice": "u",
+"mod": 0,
+"magic": true,
+"range": 0,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false
+},
+{
+"cost": 3,
+"dice": "bu",
+"mod": 0,
+"magic": true,
+"range": 0,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false
+}
+],
+"block": "",
+"resist": "b",
+"dodge": 0,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Lucerne": {
+"name": "Lucerne",
+"deck": "transposed",
+"cls": "Assassin",
+"req": [
+0,
+31,
+31,
+0
+],
+"copies": 1,
+"slots": 1,
+"conf": "high",
+"type": "hand",
+"hands": 2,
+"attacks": [
+{
+"cost": 1,
+"dice": "bbu",
+"mod": -1,
+"magic": false,
+"range": 0,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false
+},
+{
+"cost": 4,
+"dice": "bbbu",
+"mod": -1,
+"magic": false,
+"range": 0,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false
+}
+],
+"block": "b",
+"resist": "b",
+"dodge": 1,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Master's Attire": {
+"name": "Master's Attire",
+"deck": "common",
+"cls": null,
+"req": [
+0,
+30,
+18,
+0
+],
+"copies": 1,
+"slots": 2,
+"conf": "high",
+"type": "armour",
+"hands": 0,
+"attacks": [],
+"block": "",
+"resist": "",
+"dodge": 2,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Moonlight Greatsword": {
+"name": "Moonlight Greatsword",
+"deck": "legendary",
+"cls": null,
+"req": [
+21,
+21,
+31,
+0
+],
+"copies": 1,
+"slots": 2,
+"conf": "high",
+"type": "hand",
+"hands": 2,
+"attacks": [
+{
+"cost": 0,
+"dice": "bu",
+"mod": 0,
+"magic": true,
+"range": 0,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false
+},
+{
+"cost": 3,
+"dice": "uuu",
+"mod": 0,
+"magic": true,
+"range": 0,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false
+},
+{
+"cost": 4,
+"dice": "uuu",
+"mod": 0,
+"magic": true,
+"range": 3,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false
+}
+],
+"block": "b",
+"resist": "",
+"dodge": 0,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Morning Star": {
+"name": "Morning Star",
+"deck": "common",
+"cls": null,
+"req": [
+16,
+0,
+0,
+19
+],
+"copies": 1,
+"slots": 1,
+"conf": "high",
+"type": "hand",
+"hands": 1,
+"attacks": [
+{
+"cost": 0,
+"dice": "u",
+"mod": 0,
+"magic": false,
+"range": 0,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false
+},
+{
+"cost": 3,
+"dice": "uu",
+"mod": 0,
+"magic": false,
+"range": 0,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false
+}
+],
+"block": "",
+"resist": "b",
+"dodge": 0,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Murakumo": {
+"name": "Murakumo",
+"deck": "common",
+"cls": null,
+"req": [
+0,
+27,
+17,
+0
+],
+"copies": 1,
+"slots": 1,
+"conf": "high",
+"type": "hand",
+"hands": 1,
+"attacks": [
+{
+"cost": 0,
+"dice": "b",
+"mod": 0,
+"magic": false,
+"range": 0,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false
+},
+{
+"cost": 3,
+"dice": "bbb",
+"mod": 0,
+"magic": false,
+"range": 0,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false
+}
+],
+"block": "",
+"resist": "",
+"dodge": 1,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Partizan": {
+"name": "Partizan",
+"deck": "transposed",
+"cls": "Herald",
+"req": [
+28,
+17,
+0,
+35
+],
+"copies": 1,
+"slots": 1,
+"conf": "high",
+"type": "hand",
+"hands": 2,
+"attacks": [
+{
+"cost": 1,
+"dice": "uu",
+"mod": 0,
+"magic": false,
+"range": 1,
+"repeat": 1,
+"node": false,
+"shaft": true,
+"heal": 0,
+"ignore": false
+},
+{
+"cost": 4,
+"dice": "uuo",
+"mod": 0,
+"magic": false,
+"range": 1,
+"repeat": 1,
+"node": false,
+"shaft": true,
+"heal": 0,
+"ignore": false
+}
+],
+"block": "u",
+"resist": "b",
+"dodge": 0,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Pierce Shield": {
+"name": "Pierce Shield",
+"deck": "common",
+"cls": null,
+"req": [
+16,
+10,
+0,
+0
+],
+"copies": 1,
+"slots": 1,
+"conf": "high",
+"type": "hand",
+"hands": 1,
+"attacks": [
+{
+"cost": 2,
+"dice": "bb",
+"mod": 0,
+"magic": false,
+"range": 0,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false
+}
+],
+"block": "b",
+"resist": "",
+"dodge": 0,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Poison Gem": {
+"name": "Poison Gem",
+"deck": "common",
+"cls": null,
+"req": [
+0,
+15,
+0,
+0
+],
+"copies": 1,
+"slots": 0,
+"conf": "high",
+"type": "upgrade",
+"hands": 0,
+"attacks": [],
+"up": null,
+"on": "weapon",
+"text": "This weapon's attacks gain Poison."
+},
+"Poison Mist": {
+"name": "Poison Mist",
+"deck": "common",
+"cls": null,
+"req": [
+0,
+11,
+16,
+0
+],
+"copies": 1,
+"slots": 0,
+"conf": "medium",
+"type": "hand",
+"hands": 1,
+"attacks": [],
+"block": "",
+"resist": "",
+"dodge": 0,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Rapier": {
+"name": "Rapier",
+"deck": "common",
+"cls": null,
+"req": [
+0,
+21,
+21,
+0
+],
+"copies": 1,
+"slots": 1,
+"conf": "high",
+"type": "hand",
+"hands": 1,
+"attacks": [
+{
+"cost": 0,
+"dice": "b",
+"mod": 1,
+"magic": false,
+"range": 0,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false
+},
+{
+"cost": 3,
+"dice": "uu",
+"mod": 0,
+"magic": false,
+"range": 0,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false
+}
+],
+"block": "b",
+"resist": "",
+"dodge": 0,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Reinforced Club": {
+"name": "Reinforced Club",
+"deck": "common",
+"cls": null,
+"req": [
+23,
+0,
+0,
+16
+],
+"copies": 1,
+"slots": 2,
+"conf": "high",
+"type": "hand",
+"hands": 1,
+"attacks": [
+{
+"cost": 0,
+"dice": "u",
+"mod": 0,
+"magic": false,
+"range": 0,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false
+},
+{
+"cost": 3,
+"dice": "uu",
+"mod": 0,
+"magic": false,
+"range": 0,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false
+}
+],
+"block": "",
+"resist": "",
+"dodge": 0,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Replenishment": {
+"name": "Replenishment",
+"deck": "class",
+"cls": "Herald",
+"req": [
+0,
+0,
+0,
+25
+],
+"copies": 1,
+"slots": 0,
+"conf": "high",
+"type": "hand",
+"hands": 1,
+"attacks": [
+{
+"cost": 2,
+"dice": "",
+"mod": 0,
+"magic": false,
+"range": 1,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 1,
+"ignore": false
+}
+],
+"block": "",
+"resist": "",
+"dodge": 0,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Rotten Ghru Dagger": {
+"name": "Rotten Ghru Dagger",
+"deck": "class",
+"cls": "Assassin",
+"req": [
+0,
+17,
+17,
+0
+],
+"copies": 1,
+"slots": 1,
+"conf": "high",
+"type": "hand",
+"hands": 1,
+"attacks": [
+{
+"cost": 0,
+"dice": "bb",
+"mod": -1,
+"magic": false,
+"range": 0,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false
+},
+{
+"cost": 3,
+"dice": "bbb",
+"mod": -1,
+"magic": false,
+"range": 0,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false
+}
+],
+"block": "",
+"resist": "",
+"dodge": 0,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Saint Bident": {
+"name": "Saint Bident",
+"deck": "transposed",
+"cls": "Herald",
+"req": [
+35,
+0,
+0,
+35
+],
+"copies": 1,
+"slots": 2,
+"conf": "high",
+"type": "hand",
+"hands": 1,
+"attacks": [
+{
+"cost": 0,
+"dice": "uu",
+"mod": 0,
+"magic": false,
+"range": 1,
+"repeat": 1,
+"node": false,
+"shaft": true,
+"heal": 0,
+"ignore": false
+},
+{
+"cost": 3,
+"dice": "buu",
+"mod": 0,
+"magic": false,
+"range": 1,
+"repeat": 1,
+"node": false,
+"shaft": true,
+"heal": 0,
+"ignore": false
+}
+],
+"block": "b",
+"resist": "b",
+"dodge": 0,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Santier's Spear": {
+"name": "Santier's Spear",
+"deck": "legendary",
+"cls": null,
+"req": [
+20,
+30,
+0,
+0
+],
+"copies": 1,
+"slots": 1,
+"conf": "high",
+"type": "hand",
+"hands": 2,
+"attacks": [
+{
+"cost": 1,
+"dice": "uu",
+"mod": 1,
+"magic": false,
+"range": 1,
+"repeat": 1,
+"node": false,
+"shaft": true,
+"heal": 0,
+"ignore": false
+},
+{
+"cost": 3,
+"dice": "uu",
+"mod": 0,
+"magic": false,
+"range": 0,
+"repeat": 1,
+"node": true,
+"shaft": false,
+"heal": 0,
+"ignore": false
+},
+{
+"cost": 4,
+"dice": "uuu",
+"mod": 0,
+"magic": false,
+"range": 0,
+"repeat": 1,
+"node": true,
+"shaft": false,
+"heal": 0,
+"ignore": false
+}
+],
+"block": "",
+"resist": "",
+"dodge": 0,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Scimitar": {
+"name": "Scimitar",
+"deck": "common",
+"cls": null,
+"req": [
+0,
+20,
+18,
+0
+],
+"copies": 1,
+"slots": 1,
+"conf": "high",
+"type": "hand",
+"hands": 1,
+"attacks": [
+{
+"cost": 0,
+"dice": "bb",
+"mod": 0,
+"magic": false,
+"range": 0,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false
+},
+{
+"cost": 3,
+"dice": "oo",
+"mod": -1,
+"magic": false,
+"range": 0,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false
+}
+],
+"block": "",
+"resist": "",
+"dodge": 0,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Shadow Armour": {
+"name": "Shadow Armour",
+"deck": "class",
+"cls": "Assassin",
+"req": [
+0,
+34,
+0,
+17
+],
+"copies": 1,
+"slots": 2,
+"conf": "high",
+"type": "armour",
+"hands": 0,
+"attacks": [],
+"block": "",
+"resist": "",
+"dodge": 2,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Sharp Gem": {
+"name": "Sharp Gem",
+"deck": "common",
+"cls": null,
+"req": [
+0,
+25,
+0,
+0
+],
+"copies": 1,
+"slots": 0,
+"conf": "high",
+"type": "upgrade",
+"hands": 0,
+"attacks": [],
+"up": null,
+"on": "weapon",
+"text": "This weapon's attacks gain 1 black die."
+},
+"Shortsword": {
+"name": "Shortsword",
+"deck": "common",
+"cls": null,
+"req": [
+15,
+23,
+0,
+0
+],
+"copies": 1,
+"slots": 1,
+"conf": "high",
+"type": "hand",
+"hands": 1,
+"attacks": [
+{
+"cost": 0,
+"dice": "bb",
+"mod": 0,
+"magic": false,
+"range": 0,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false
+},
+{
+"cost": 2,
+"dice": "bbb",
+"mod": 0,
+"magic": false,
+"range": 0,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false
+}
+],
+"block": "",
+"resist": "",
+"dodge": 0,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Silver Eagle Kite Shield": {
+"name": "Silver Eagle Kite Shield",
+"deck": "common",
+"cls": null,
+"req": [
+15,
+0,
+0,
+0
+],
+"copies": 1,
+"slots": 0,
+"conf": "high",
+"type": "hand",
+"hands": 1,
+"attacks": [],
+"block": "u",
+"resist": "",
+"dodge": 0,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Silver Knight Shield": {
+"name": "Silver Knight Shield",
+"deck": "class",
+"cls": "Warrior",
+"req": [
+31,
+23,
+0,
+0
+],
+"copies": 1,
+"slots": 1,
+"conf": "high",
+"type": "hand",
+"hands": 1,
+"attacks": [
+{
+"cost": 1,
+"dice": "bu",
+"mod": 0,
+"magic": false,
+"range": 0,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false
+},
+{
+"cost": 3,
+"dice": "uu",
+"mod": 0,
+"magic": false,
+"range": 0,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false
+}
+],
+"block": "u",
+"resist": "",
+"dodge": 0,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Silver Knight Straight Sword": {
+"name": "Silver Knight Straight Sword",
+"deck": "common",
+"cls": null,
+"req": [
+20,
+20,
+20,
+20
+],
+"copies": 1,
+"slots": 2,
+"conf": "high",
+"type": "hand",
+"hands": 1,
+"attacks": [
+{
+"cost": 0,
+"dice": "bb",
+"mod": 0,
+"magic": false,
+"range": 0,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false
+},
+{
+"cost": 3,
+"dice": "bu",
+"mod": 0,
+"magic": false,
+"range": 0,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false
+}
+],
+"block": "",
+"resist": "",
+"dodge": 1,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Simple Gem": {
+"name": "Simple Gem",
+"deck": "common",
+"cls": null,
+"req": [
+0,
+0,
+0,
+15
+],
+"copies": 1,
+"slots": 0,
+"conf": "high",
+"type": "upgrade",
+"hands": 0,
+"attacks": [],
+"up": null,
+"on": "weapon",
+"text": "Reduce the cost of this weapon's highest-stamina attack by 1 stamina."
+},
+"Sorcerer's Staff": {
+"name": "Sorcerer's Staff",
+"deck": "common",
+"cls": null,
+"req": [
+15,
+0,
+30,
+0
+],
+"copies": 1,
+"slots": 2,
+"conf": "high",
+"type": "hand",
+"hands": 2,
+"attacks": [
+{
+"cost": 0,
+"dice": "u",
+"mod": 0,
+"magic": false,
+"range": 1,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false
+},
+{
+"cost": 3,
+"dice": "uu",
+"mod": 0,
+"magic": false,
+"range": 1,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false
+},
+{
+"cost": 3,
+"dice": "o",
+"mod": 0,
+"magic": true,
+"range": 3,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false
+}
+],
+"block": "",
+"resist": "u",
+"dodge": 1,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Soul Arrow": {
+"name": "Soul Arrow",
+"deck": "common",
+"cls": null,
+"req": [
+0,
+0,
+16,
+0
+],
+"copies": 1,
+"slots": 0,
+"conf": "medium",
+"type": "hand",
+"hands": 1,
+"attacks": [
+{
+"cost": 0,
+"dice": "bb",
+"mod": 0,
+"magic": true,
+"range": 3,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false
+},
+{
+"cost": 4,
+"dice": "bbb",
+"mod": 0,
+"magic": true,
+"range": 3,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false
+}
+],
+"block": "",
+"resist": "",
+"dodge": 0,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Soulstream": {
+"name": "Soulstream",
+"deck": "common",
+"cls": null,
+"req": [
+0,
+0,
+22,
+0
+],
+"copies": 1,
+"slots": 0,
+"conf": "high",
+"type": "hand",
+"hands": 1,
+"attacks": [
+{
+"cost": 0,
+"dice": "b",
+"mod": 0,
+"magic": true,
+"range": 1,
+"repeat": 1,
+"node": true,
+"shaft": false,
+"heal": 0,
+"ignore": false
+},
+{
+"cost": 2,
+"dice": "u",
+"mod": 0,
+"magic": true,
+"range": 2,
+"repeat": 1,
+"node": true,
+"shaft": false,
+"heal": 0,
+"ignore": false
+},
+{
+"cost": 4,
+"dice": "o",
+"mod": 0,
+"magic": true,
+"range": 3,
+"repeat": 1,
+"node": true,
+"shaft": false,
+"heal": 0,
+"ignore": false
+}
+],
+"block": "",
+"resist": "",
+"dodge": 0,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Spider Shield": {
+"name": "Spider Shield",
+"deck": "class",
+"cls": "Knight",
+"req": [
+27,
+0,
+15,
+0
+],
+"copies": 1,
+"slots": 0,
+"conf": "high",
+"type": "hand",
+"hands": 1,
+"attacks": [],
+"block": "bb",
+"resist": "",
+"dodge": 0,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Spiked Mace": {
+"name": "Spiked Mace",
+"deck": "class",
+"cls": "Warrior",
+"req": [
+32,
+0,
+0,
+22
+],
+"copies": 1,
+"slots": 1,
+"conf": "high",
+"type": "hand",
+"hands": 2,
+"attacks": [
+{
+"cost": 1,
+"dice": "bu",
+"mod": 0,
+"magic": false,
+"range": 0,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false
+},
+{
+"cost": 3,
+"dice": "buu",
+"mod": 0,
+"magic": false,
+"range": 0,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false
+},
+{
+"cost": 5,
+"dice": "buu",
+"mod": 0,
+"magic": false,
+"range": 0,
+"repeat": 1,
+"node": true,
+"shaft": false,
+"heal": 0,
+"ignore": false
+}
+],
+"block": "b",
+"resist": "b",
+"dodge": 0,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Spotted Whip": {
+"name": "Spotted Whip",
+"deck": "class",
+"cls": "Assassin",
+"req": [
+0,
+30,
+23,
+0
+],
+"copies": 1,
+"slots": 1,
+"conf": "high",
+"type": "hand",
+"hands": 1,
+"attacks": [
+{
+"cost": 0,
+"dice": "bb",
+"mod": -1,
+"magic": false,
+"range": 1,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false
+},
+{
+"cost": 3,
+"dice": "bu",
+"mod": -1,
+"magic": false,
+"range": 1,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false
+}
+],
+"block": "",
+"resist": "",
+"dodge": 1,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Sunless Armour": {
+"name": "Sunless Armour",
+"deck": "common",
+"cls": null,
+"req": [
+13,
+0,
+0,
+13
+],
+"copies": 1,
+"slots": 2,
+"conf": "high",
+"type": "armour",
+"hands": 0,
+"attacks": [],
+"block": "u",
+"resist": "b",
+"dodge": 0,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Sunlight Straight Sword": {
+"name": "Sunlight Straight Sword",
+"deck": "legendary",
+"cls": null,
+"req": [
+15,
+15,
+0,
+30
+],
+"copies": 1,
+"slots": 1,
+"conf": "high",
+"type": "hand",
+"hands": 1,
+"attacks": [
+{
+"cost": 0,
+"dice": "bu",
+"mod": 0,
+"magic": false,
+"range": 0,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false
+},
+{
+"cost": 3,
+"dice": "uu",
+"mod": 0,
+"magic": false,
+"range": 0,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false
+}
+],
+"block": "",
+"resist": "",
+"dodge": 0,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Sun Princess Ring": {
+"name": "Sun Princess Ring",
+"deck": "class",
+"cls": "Knight",
+"req": [
+30,
+0,
+0,
+25
+],
+"copies": 1,
+"slots": 0,
+"conf": "high",
+"type": "upgrade",
+"hands": 0,
+"attacks": [],
+"up": null,
+"on": "armour",
+"text": "When you end your activation, gain 1 health."
+},
+"Sunset Armour": {
+"name": "Sunset Armour",
+"deck": "common",
+"cls": null,
+"req": [
+20,
+0,
+0,
+24
+],
+"copies": 1,
+"slots": 2,
+"conf": "high",
+"type": "armour",
+"hands": 0,
+"attacks": [],
+"block": "bb",
+"resist": "b",
+"dodge": 1,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Thrall Axe": {
+"name": "Thrall Axe",
+"deck": "common",
+"cls": null,
+"req": [
+16,
+16,
+0,
+0
+],
+"copies": 1,
+"slots": 2,
+"conf": "high",
+"type": "hand",
+"hands": 1,
+"attacks": [
+{
+"cost": 0,
+"dice": "bb",
+"mod": 0,
+"magic": false,
+"range": 0,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false
+},
+{
+"cost": 3,
+"dice": "bu",
+"mod": 0,
+"magic": false,
+"range": 0,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false
+}
+],
+"block": "",
+"resist": "",
+"dodge": 0,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Tiny Being's Ring": {
+"name": "Tiny Being's Ring",
+"deck": "class",
+"cls": "Herald",
+"req": [
+0,
+0,
+0,
+20
+],
+"copies": 1,
+"slots": 0,
+"conf": "high",
+"type": "upgrade",
+"hands": 0,
+"attacks": [],
+"up": null,
+"on": "armour",
+"text": "At the start of your activation, you may gain 1 \u2b1bstamina and 1 \ud83d\udfe5health (instead of 2 \u2b1bstamina)"
+},
+"Titanite Shard": {
+"name": "Titanite Shard",
+"deck": "common",
+"cls": null,
+"req": [
+0,
+0,
+0,
+0
+],
+"copies": 4,
+"slots": 0,
+"conf": "high",
+"type": "upgrade",
+"hands": 0,
+"attacks": [],
+"up": "dmg1",
+"on": "weapon",
+"text": "This weapon's attacks gain +1 damage."
+},
+"Twin Dragon Greatshield": {
+"name": "Twin Dragon Greatshield",
+"deck": "transposed",
+"cls": "Knight",
+"req": [
+35,
+35,
+15,
+15
+],
+"copies": 1,
+"slots": 0,
+"conf": "high",
+"type": "hand",
+"hands": 1,
+"attacks": [],
+"block": "uu",
+"resist": "u",
+"dodge": 0,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Umbral Dagger": {
+"name": "Umbral Dagger",
+"deck": "transposed",
+"cls": "Assassin",
+"req": [
+0,
+35,
+35,
+0
+],
+"copies": 1,
+"slots": 1,
+"conf": "medium",
+"type": "hand",
+"hands": 1,
+"attacks": [
+{
+"cost": 0,
+"dice": "uu",
+"mod": -1,
+"magic": false,
+"range": 0,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false
+},
+{
+"cost": 2,
+"dice": "oo",
+"mod": -1,
+"magic": false,
+"range": 0,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false
+},
+{
+"cost": 3,
+"dice": "uoo",
+"mod": -1,
+"magic": false,
+"range": 0,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false
+}
+],
+"block": "",
+"resist": "",
+"dodge": 1,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Warpick": {
+"name": "Warpick",
+"deck": "transposed",
+"cls": "Warrior",
+"req": [
+35,
+25,
+0,
+0
+],
+"copies": 1,
+"slots": 1,
+"conf": "high",
+"type": "hand",
+"hands": 1,
+"attacks": [
+{
+"cost": 1,
+"dice": "uo",
+"mod": 0,
+"magic": false,
+"range": 0,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false
+},
+{
+"cost": 4,
+"dice": "uoo",
+"mod": 0,
+"magic": false,
+"range": 0,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false
+}
+],
+"block": "",
+"resist": "",
+"dodge": 0,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Washing Pole": {
+"name": "Washing Pole",
+"deck": "legendary",
+"cls": null,
+"req": [
+0,
+37,
+0,
+21
+],
+"copies": 1,
+"slots": 2,
+"conf": "high",
+"type": "hand",
+"hands": 2,
+"attacks": [
+{
+"cost": 0,
+"dice": "bb",
+"mod": 0,
+"magic": false,
+"range": 2,
+"repeat": 1,
+"node": false,
+"shaft": true,
+"heal": 0,
+"ignore": false
+},
+{
+"cost": 2,
+"dice": "uu",
+"mod": 0,
+"magic": false,
+"range": 2,
+"repeat": 1,
+"node": false,
+"shaft": true,
+"heal": 0,
+"ignore": false
+},
+{
+"cost": 4,
+"dice": "uu",
+"mod": 0,
+"magic": false,
+"range": 2,
+"repeat": 1,
+"node": false,
+"shaft": true,
+"heal": 0,
+"ignore": false
+}
+],
+"block": "",
+"resist": "",
+"dodge": 1,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Winged Spear": {
+"name": "Winged Spear",
+"deck": "common",
+"cls": null,
+"req": [
+20,
+0,
+0,
+22
+],
+"copies": 1,
+"slots": 2,
+"conf": "high",
+"type": "hand",
+"hands": 2,
+"attacks": [
+{
+"cost": 0,
+"dice": "b",
+"mod": 1,
+"magic": false,
+"range": 1,
+"repeat": 1,
+"node": false,
+"shaft": true,
+"heal": 0,
+"ignore": false
+},
+{
+"cost": 3,
+"dice": "bb",
+"mod": 1,
+"magic": false,
+"range": 1,
+"repeat": 1,
+"node": false,
+"shaft": true,
+"heal": 0,
+"ignore": false
+}
+],
+"block": "b",
+"resist": "b",
+"dodge": 0,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Worker Armour": {
+"name": "Worker Armour",
+"deck": "common",
+"cls": null,
+"req": [
+12,
+12,
+12,
+12
+],
+"copies": 1,
+"slots": 2,
+"conf": "high",
+"type": "armour",
+"hands": 0,
+"attacks": [],
+"block": "b",
+"resist": "b",
+"dodge": 1,
+"block_mod": 0,
+"resist_mod": 0
+},
+"Zweihander": {
+"name": "Zweihander",
+"deck": "common",
+"cls": null,
+"req": [
+35,
+25,
+0,
+0
+],
+"copies": 1,
+"slots": 2,
+"conf": "high",
+"type": "hand",
+"hands": 2,
+"attacks": [
+{
+"cost": 2,
+"dice": "buu",
+"mod": 0,
+"magic": false,
+"range": 1,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false
+},
+{
+"cost": 5,
+"dice": "boo",
+"mod": 0,
+"magic": false,
+"range": 1,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false
+}
+],
+"block": "b",
+"resist": "",
+"dodge": 0,
+"block_mod": 0,
+"resist_mod": 0
+}
+}
+}

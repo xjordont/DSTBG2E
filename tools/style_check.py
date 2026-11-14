@@ -7,27 +7,32 @@ import re, sys, pathlib, datetime
 HEDGE = r"\b(should|might|could|reasonably|probably|perhaps|maybe|likely)\b"
 AMER = r"\b(armor\w*|behavior\w*|center\w*|favor(?!ite)\w*|color\w*|randomiz\w*|leveling|defense\w*|offense\w*|license(?!d\b)\w*|gray|catalog(?!ue)\w*|analyz\w*|organiz\w*|standardiz\w*|realiz\w*|recogniz\w*|maneuver\w*|jewelry|fulfill\w*|skillful\w*|traveled|canceled|labeled|modeled|plow\w*|practic(e|es)\b(?=\s+(the|a|an)\b)|\w+ization\b|\w+izes?\b|\w+izing\b)\b"
 AMER_WHITELIST = {"size","sizes","sized","prize","prizes","seize","seizes","capsize","horizon","citizen","citizens","sizing","seizing"}
+# Proper nouns printed on official cards keep their printed spelling (Gate 1, OQ-17); they are not Americanisms.
+PRINTED_NAMES = r"\b(armorer dennis|plow scarecrow|marvelous chester)\b"
 EXT = r"(official rule\s?book|original rule\s?book|rule booklet|core rulebook|SFG|Steam ?Forged|Kickstarter|first edition|1E\b|V2\b|see page \d+|p\.\s?\d+|pp\.\s?\d+|google docs|Hollowed Edition|Extended Rules)"
 META = r"\[(PROPOSED|HOMEBREW|CLARITY|BALANCE|RULES-BLOAT|ERRATA|MECHANICAL CHANGE|CLEAN-UP|TODO|TBD|ASSET-[^\]]*)\]"
 YOU = r"\b(you|your|yours|yourself)\b"
 def check(path):
-    out = []; in_example = False
+    out = []; in_example = False; in_colophon = False   # the Colophon section may name rights holders
     for n, line in enumerate(pathlib.Path(path).read_text(encoding="utf-8").splitlines(), 1):
         low = line.lower()
         # The second-person exemption covers only a paragraph that opens with "Example"
         # (optionally emphasised) and ends at the first blank line or heading.
+        if line.startswith("#"):
+            in_colophon = line.lstrip("#").strip().lower() == "colophon"
         if line.strip() == "" or line.startswith("#"):
             in_example = False
         elif re.match(r"^\s*(>\s*)?[*_]*example\b", low):
             in_example = True
         for m in re.finditer(HEDGE, low): out.append((path, n, "hedge", m.group(0), line.strip()))
-        for m in re.finditer(AMER, low):
+        for m in re.finditer(AMER, re.sub(PRINTED_NAMES, "", low)):
             w = m.group(0)
             if w in AMER_WHITELIST or w.endswith(("size","sizes")): continue
             out.append((path, n, "americanism", w, line.strip()))
         if not in_example and not line.lstrip().startswith(">"):
             for m in re.finditer(YOU, low): out.append((path, n, "second-person", m.group(0), line.strip()))
-        for m in re.finditer(EXT, line, re.IGNORECASE): out.append((path, n, "external-ref", m.group(0), line.strip()))
+        if not in_colophon:
+            for m in re.finditer(EXT, line, re.IGNORECASE): out.append((path, n, "external-ref", m.group(0), line.strip()))
         for m in re.finditer(META, line): out.append((path, n, "meta-tag", m.group(0), line.strip()))
     return out
 def main(argv):

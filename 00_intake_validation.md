@@ -111,3 +111,21 @@ Provenance review: twelve catalogue entries (all FromSoftware / Bandai Namco key
 ## 6. Verdict
 
 **READY_FOR_PHASE_1.** All inputs are present and readable; no truncation; the manuscript's defects are editorial, not blocking. Open questions raised at intake: OQ-04 — the brief's "Combat Cards" section does not exist in this DOCX revision; OQ-33 — scope of the rights assertion over FromSoftware / Bandai Namco key art and approval of the open-font substitutions.
+
+## Addendum, 2026-11-11: eight further booklets supplied by the author
+
+Received after the first book was built, to close the bosses whose rules had been placeholders. Two other uploads of the same date (`DS-BDK-Rules-web.pdf`, `DS-EC-Rules-Web.pdf`) are byte-identical to files 6 and 8 above and were not added again. The Painted World of Ariamis rulebook (Crossbreed Priscilla, Heavy Knight) is still not among the inputs.
+
+| # | File | Role | Pages | Size | SHA-256 (first 16) | Extracted words | Status | Warnings |
+|---|---|---|---|---|---|---|---|---|
+| 14 | DS-Four-Kings-Rules-web.pdf | Official SFG The Four Kings expansion booklet | 16 | 12.5 MB | a8bbc0b51b84e658 | 2,898 | READABLE | Owner-encrypted; opens with an empty user password. Purchaser line on every page (text object, stripped from the working extract) |
+| 15 | DS-GaD-Rules-web.pdf | Official SFG Gaping Dragon expansion booklet | 16 | 15.0 MB | a20b776d15390c48 | 2,632 | READABLE | Owner-encrypted; opens with an empty user password. Purchaser line on every page (text object, stripped from the working extract) |
+| 16 | DS-GD-Rules-web.pdf | Official SFG Guardian Dragon expansion booklet | 16 | 13.9 MB | 97165bbc8729f531 | 2,787 | READABLE | Owner-encrypted; opens with an empty user password. Purchaser line on every page (text object, stripped from the working extract) |
+| 17 | DS-TLG-Rules.pdf | Official SFG The Last Giant expansion booklet | 16 | 14.7 MB | e9778ffe3b3ca130 | 2,693 | READABLE | Owner-encrypted; opens with an empty user password. Purchaser line on every page (text object, stripped from the working extract) |
+| 18 | DS-MFA-Rules.pdf | Official SFG Manus, Father of the Abyss expansion booklet | 16 | 14.8 MB | 99b52eb60e9fcbd4 | 2,724 | READABLE | Owner-encrypted; opens with an empty user password. Purchaser line on every page (text object, stripped from the working extract) |
+| 19 | DS-OIK-Rules-web.pdf | Official SFG Old Iron King expansion booklet | 16 | 3.3 MB | 7faf1a96422e85f9 | 2,864 | READABLE | Owner-encrypted; opens with an empty user password. Purchaser line on every page (text object, stripped from the working extract) |
+| 20 | DS-VotBV-Rules-web.pdf | Official SFG Vordt of the Boreal Valley expansion booklet | 16 | 13.9 MB | ab6d62339fb66d28 | 2,979 | READABLE | Owner-encrypted; opens with an empty user password. Purchaser line on every page (text object, stripped from the working extract) |
+| 21 | DS-AD-Rules-web-EN.pdf | Official SFG Asylum Demon expansion booklet | 16 | 14.6 MB | abd401307ded24a5 | 2,710 | READABLE | Owner-encrypted; opens with an empty user password. Purchaser line on every page (text object, stripped from the working extract) |
+
+On the same date the author confirmed ownership of the rights in all source material, painted illustrations, and artwork, which closes the Provenance Review of `22_asset_extraction_log.md`, and delegated the open rules questions to the lead editor (decision record: `06_final_rulings.md`).
+

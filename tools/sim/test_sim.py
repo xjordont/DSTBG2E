@@ -1,0 +1,260 @@
+#!/usr/bin/env python3
+"""Checks of the simulator against hand calculation and against its own invariants.
+Run: python3 tools/sim/test_sim.py        (prints one line per check; exits non-zero on a failure)"""
+import math, os, random, sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import engine as E
+import rules as RU
+from characters import Char, Economy, ITEMS, CLASSES
+from game import play
+
+FAILS = []
+
+
+def check(name, ok, detail=''):
+    print(('ok   ' if ok else 'FAIL ') + name + (('   ' + str(detail)) if detail else ''))
+    if not ok: FAILS.append(name)
+
+
+def close(a, b, tol): return abs(a - b) <= tol
+
+
+# ---------------------------------------------------------------- dice and the tile
+check('black die mean 7/6', close(sum(v * p for v, p in E.pmf_sum('b')), 7 / 6, 1e-9))
+check('blue die mean 11/6', close(sum(v * p for v, p in E.pmf_sum('u')), 11 / 6, 1e-9))
+check('orange die mean 15/6', close(sum(v * p for v, p in E.pmf_sum('o')), 15 / 6, 1e-9))
+check('every distribution sums to one', all(close(sum(p for _, p in f(d)), 1, 1e-9) for d in ('', 'b', 'bu', 'buo', 'bbbb') for f in (E.pmf_sum, E.pmf_best2)))
+check('two highest of two dice is their sum', all(close(a[1], b[1], 1e-9) and a[0] == b[0] for a, b in zip(E.pmf_best2('bu'), E.pmf_sum('bu'))))
+check('two highest of three is never above the sum', sum(v * p for v, p in E.pmf_best2('bbu')) < sum(v * p for v, p in E.pmf_sum('bbu')))
+check('dodge: one die, difficulty one, is one half', close(E.p_dodge(1, 1), 0.5, 1e-9))
+check('dodge: two dice, difficulty one, is three quarters', close(E.p_dodge(2, 1), 0.75, 1e-9))
+check('dodge: two dice, difficulty two, is one quarter', close(E.p_dodge(2, 2), 0.25, 1e-9))
+check('dodge: difficulty zero always succeeds', E.p_dodge(0, 0) == 1.0)
+check('the tile has 13 nodes', len(E.NODES) == 13)
+check('corner to opposite corner is four steps', E.DIST[E.IDX[(0, 0)]][E.IDX[(4, 4)]] == 4)
+check('along an edge, corner to corner is two steps', E.DIST[E.IDX[(0, 0)]][E.IDX[(4, 0)]] == 2)
+check('the centre touches eight nodes', len(E.NBR[E.IDX[(2, 2)]]) == 8)
+check('a corner touches three nodes', len(E.NBR[E.IDX[(0, 0)]]) == 3)
+
+# ---------------------------------------------------------------- attack arithmetic
+# Long Sword light attack (one blue die) against block 1: damage 0,0,1,1,1,2 -> mean 5/6; kills a 1-health enemy 4 times in 6
+pm = dict(E.attack_pmf('u', 0, 1, 1))
+check('Long Sword against block 1: mean 5/6', close(sum(d * p for d, p in pm.items()), 5 / 6, 1e-9))
+check('Long Sword kills a Hollow Soldier 4 times in 6', close(1 - pm[0], 4 / 6, 1e-9))
+# an attack of 4 against a Knight's starting block (blue + black, summed): mean damage by enumeration
+exp = sum(max(0, 4 - a - b) for a in E.DIE['u'] for b in E.DIE['b']) / 36
+check('attack 4 against blue+black block, enumerated', close(sum(d * p for d, p in E.hit_stats('ub', 'sum', 4, 0)), exp, 1e-9), round(exp, 3))
+
+# ---------------------------------------------------------------- one enemy, one character: simulation against enumeration
+R17 = RU.OFFICIAL_2017
+
+
+def lone(seeds=4000):
+    """A Knight with no tokens and only his light attack, a Hollow Soldier already on his node, official rules."""
+    wins = dmg = 0
+    for s in range(seeds):
+        c = Char('Knight', R17); f = E.Fight([c], R17, random.Random(s), enemies=['Hollow Soldier'],
+                                             policy=E.Policy(estus_risk=9, luck_at=99, evade=0.0, kite=False))
+        c.heroic = c.luck = c.estus = False; c.options['R'] = c.options['R'][:1]; f.foes[0].node = c.node
+        ok = f.run(); wins += ok; dmg += c.dmg
+    return wins / seeds, dmg / seeds
+
+
+# The soldier attacks in every enemy phase it is alive; the Knight kills it with probability 2/3 on each of his turns.
+# Expected attacks: 1 + 1/3 + 1/9 + ... = 1.5, each for the enumerated mean above.
+w, d = lone()
+check('Knight against one Hollow Soldier: always wins', w > 0.999, w)
+check('Knight against one Hollow Soldier: mean damage is 1.5 attacks, as enumerated', close(d, 1.5 * exp, 0.07), '%.3f against %.3f' % (d, 1.5 * exp))
+
+# ---------------------------------------------------------------- scaling is applied as written
+
+
+def foes(rules, n, names):
+    party = [Char(c, rules) for c in ('Knight', 'Warrior', 'Herald', 'Assassin')[:n]]
+    return E.Fight(party, rules, random.Random(0), enemies=names).foes
+
+
+M = RU.MANUSCRIPT
+check('manuscript: +1 health per extra character', [foes(M, n, ['Hollow Soldier'])[0].hp for n in (1, 2, 3, 4)] == [1, 2, 3, 4])
+check('manuscript: +1 attack at three and four', [foes(M, n, ['Hollow Soldier'])[0].atk_bonus for n in (1, 2, 3, 4)] == [0, 0, 1, 1])
+check('manuscript: repeat only at four', [M.reps(n) for n in (1, 2, 3, 4)] == [1, 1, 1, 2])
+check('manuscript: one-node moves become two at two or more', [M.move2(n) for n in (1, 2, 3, 4)] == [False, True, True, True])
+check('official: no scaling', all(foes(R17, n, ['Sentinel'])[0].hp == 10 and foes(R17, n, ['Sentinel'])[0].atk_bonus == 0 for n in (1, 2, 3, 4)))
+check('sparks are five, four, three, two', [R17.sparks(n) for n in (1, 2, 3, 4)] == [5, 4, 3, 2] == [M.sparks(n) for n in (1, 2, 3, 4)])
+
+# ---------------------------------------------------------------- activations per round
+
+
+def acts(rules, n, seeds=200):
+    """Mean enemy activations per character turn while every enemy is alive (one unkillable enemy)."""
+    card = dict(E.ENEMIES['Hollow Soldier']); card = dict(card, hp=10 ** 6, steps=[dict(k='move', n=1, dir='to', tgt='nearest')])
+    E.ENEMIES['_Dummy'] = card; tot = 0
+    for s in range(seeds):
+        party = [Char(c, rules) for c in ('Knight', 'Warrior', 'Herald', 'Assassin')[:n]]
+        f = E.Fight(party, rules, random.Random(s), enemies=['_Dummy']); f.run(max_rounds=5)
+        tot += f.enemy_acts / f.char_turns
+    del E.ENEMIES['_Dummy']; return tot / seeds
+
+
+check('official: one enemy activation for each character turn', all(close(acts(R17, n), 1.0, 1e-9) for n in (1, 2, 3, 4)))
+check('manuscript: one enemy activation for each round of n character turns', all(close(acts(M, n), 1.0 / n, 1e-9) for n in (1, 2, 3, 4)))
+
+# ---------------------------------------------------------------- invariants over whole games
+
+
+def invariants(rules, n, seeds):
+    bad = []
+    orig_wound = E.Fight.wound; orig_turn = E.Fight.char_turn; orig_enemy = E.Fight.enemy_turn; orig_boss = E.Fight.boss_turn
+
+    def wound(self, c, d):
+        orig_wound(self, c, d)
+        if c.alive and c.dmg + c.sta > c.cap: bad.append('bar overfull')
+
+    def turn(self, c):
+        if not c.alive: bad.append('dead character acted')
+        orig_turn(self, c)
+        if c.sta < 0 or c.dmg < 0: bad.append('negative cubes')
+        if c.alive and c.dmg + c.sta > c.cap: bad.append('bar overfull after turn')
+
+    def enemy(self, f):
+        if f.hp <= 0: bad.append('dead enemy acted')
+        orig_enemy(self, f)
+
+    def boss(self, f):
+        if f.hp <= 0: bad.append('dead boss acted')
+        orig_boss(self, f)
+    E.Fight.wound, E.Fight.char_turn, E.Fight.enemy_turn, E.Fight.boss_turn = wound, turn, enemy, boss
+    try:
+        for s in range(seeds):
+            o = play(n, rules, s)
+            if o['rests'] > rules.sparks(n) + 1 + (rules.sparks(n) if rules.boss_spark == 'reset' else 0): bad.append('more rests than sparks')
+            if o['win'] and o['lost_at'] is not None: bad.append('won and lost')
+    finally:
+        E.Fight.wound, E.Fight.char_turn, E.Fight.enemy_turn, E.Fight.boss_turn = orig_wound, orig_turn, orig_enemy, orig_boss
+    return bad
+
+
+for name, rules in (('official 2017', R17), ('official 2022', RU.OFFICIAL_2022), ('manuscript', M), ('settled', RU.SETTLED)):
+    for n in (1, 2, 3, 4):
+        b = invariants(rules, n, 40)
+        check('invariants hold: %s, %d character%s' % (name, n, '' if n == 1 else 's'), not b, sorted(set(b)))
+
+# ---------------------------------------------------------------- determinism and the death rules
+a = play(3, M, 11); b = play(3, M, 11)
+check('the same seed gives the same game', a == b)
+c = Char('Knight', R17); f = E.Fight([c], R17, random.Random(0), enemies=['Hollow Soldier']); c.dmg = 7; c.sta = 0
+check('official: damage that fills the bar kills', f.lethal(c, 3) and not f.lethal(c, 2))
+c = Char('Knight', M); f = E.Fight([c], M, random.Random(0), enemies=['Hollow Soldier']); c.dmg = 7; c.sta = 0
+check('manuscript: damage that fills the bar exactly does not kill; one more does', (not f.lethal(c, 3)) and f.lethal(c, 4))
+c.hollow = True
+check('manuscript: a hollow character has an eight-space bar', c.cap == 8)
+
+# ---------------------------------------------------------------- a riposte is paid for
+c = Char('Knight', M); f = E.Fight([c], M, random.Random(0), enemies=['Hollow Soldier'])
+c.options['R'] = [dict(c.options['R'][1])]; cost = c.options['R'][0]['cost']; c.sta = 0; f.riposte(c, f.foes[0])
+check('a riposte costs its attack option\'s stamina', cost > 0 and c.sta == cost, (cost, c.sta))
+
+# ---------------------------------------------------------------- stagger lowers an enemy's defence (manuscript)
+def struck(rules, staggered):
+    c = Char('Knight', rules); f = E.Fight([c], rules, random.Random(0), enemies=['Sentinel']); foe = f.foes[0]; foe.stagger = staggered
+    o = dict(c.options['R'][0], dice='', mod=3); f.strike(c, foe, o); return foe.max - foe.hp
+
+
+check('manuscript: a staggered enemy blocks one less', struck(M, False) == 1 and struck(M, True) == 2)
+check('official: stagger does not change an enemy\'s block', struck(R17, False) == 1 and struck(R17, True) == 1)
+
+# ---------------------------------------------------------------- a dead attacker's remaining attacks do not resolve
+c = Char('Knight', M); f = E.Fight([c], M, random.Random(0), enemies=['Hollow Soldier']); foe = f.foes[0]; foe.hp = 0; foe.node = c.node
+f.defend(foe, c, 9, False, 1); f.enemy_turn(foe)
+check('an enemy killed mid-activation (by a riposte) attacks no more', c.dmg == 0 and c.sta == 0 and c.alive, (c.dmg, c.sta))
+
+# ---------------------------------------------------------------- boss aggro under the manuscript
+a, b = Char('Knight', M), Char('Assassin', M); f = E.Fight([a, b], M, random.Random(0), boss='Gargoyle')
+before = f.aggro; f.strike(b, f.foes[0], dict(b.options['R'][0], dice='', mod=9))
+check('manuscript: a character who damages the boss takes the aggro token', before is a and f.aggro is b)
+
+# ---------------------------------------------------------------- frostbite bars the Rest action; an ember ends the hollow state
+c = Char('Knight', M); f = E.Fight([c], M, random.Random(0), boss='Boreal Outrider Knight'); c.options = {'R': [], 'L': []}
+c.sta = 5; c.frost = True; f.char_turn(c)
+check('manuscript: a frostbitten character recovers no stamina, by Rest or otherwise', c.sta == 5, c.sta)
+a, b = Char('Knight', M), Char('Warrior', M); a.hollow = True; a.ember_card = True; a.estus = False
+f = E.Fight([a, b], M, random.Random(0), enemies=['Hollow Soldier']); a.was_hollow = True; a.dmg = 6; f.char_turn(a)
+used = a.ember and not a.hollow; f.wound(a, 99)
+check('manuscript: a hollow character who embers and then dies does not lose the encounter', used and not a.alive and not f.failed())
+
+# ---------------------------------------------------------------- a staggered attacker is easier to dodge (manuscript)
+def dodged(staggered, trials=400):
+    n = 0
+    for s in range(trials):
+        c = Char('Assassin', M); f = E.Fight([c], M, random.Random(s), enemies=['Hollow Soldier'], policy=E.Policy(evade=0.0))
+        c.heroic = c.luck = False; c.blk = c.arm_blk = ''; c.L = None; c.can_parry = False; c.dodge = 1
+        foe = f.foes[0]; foe.node = c.node; foe.stagger = staggered; f.defend(foe, c, 9, False, 1); n += c.dmg == 0
+    return n / trials
+
+
+check('manuscript: difficulty 1 against one die is dodged half the time, always when the attacker is staggered',
+      close(dodged(False), 0.5, 0.08) and dodged(True) == 1.0, (dodged(False), dodged(True)))
+
+# ---------------------------------------------------------------- treasure for each character; no Run after a Rest
+import game as G
+seen = []
+_give = Economy.give
+Economy.give = lambda self, cards: (seen.append(len(cards)), _give(self, cards))[1]
+G.play(4, M, 5); Economy.give = _give
+check('manuscript: a first clear gives one treasure card to each of four characters', seen and all(k == 4 for k in seen), seen[:4])
+worst = 0
+for s in range(200):
+    c = Char('Knight', M); f = E.Fight([c], M, random.Random(s), enemies=['Sentinel']); c.options = {'R': [], 'L': []}
+    c.sta = 3; f.char_turn(c); worst = max(worst, c.sta)
+check('manuscript: a character who rests does not run in the same turn', worst == 0, worst)
+
+# ---------------------------------------------------------------- a successful dodge always moves the character (manuscript)
+moved = 0
+for s in range(100):
+    c = Char('Assassin', M); f = E.Fight([c], M, random.Random(s), enemies=['Crossbow Hollow'], policy=E.Policy(evade=0.0))
+    c.heroic = c.luck = False; c.blk = c.arm_blk = c.res = c.arm_res = ''; c.L = None; c.can_parry = False
+    foe = f.foes[0]; c.node = E.IDX[(4, 4)]; foe.node = E.IDX[(0, 0)]; start = c.node
+    f.defend(foe, c, 9, True, 0); moved += c.node != start and E.DIST[c.node][start] == 1
+check('manuscript: a dodge of an attack from another node still moves the character one node', moved == 100, moved)
+
+# ---------------------------------------------------------------- the Warrior's heroic step is taken; one extra dodge die at most
+c = Char('Warrior', R17); f = E.Fight([c], R17, random.Random(1), enemies=['Sentinel'], policy=E.Policy(kite=False))
+foe = f.foes[0]; c.node = E.IDX[(0, 4)]; foe.node = E.IDX[(1, 3)]; foe.hp = 10 ** 6
+c.options['R'] = [o for o in c.options['R'] if o['cost'] >= 2]; c.options['L'] = []; f.char_turn(c)      # only the costly attack: the heroic action applies
+check("the Warrior's heroic attack is made from the target's node", (not c.heroic) and c.node == foe.node, (c.heroic, c.node, foe.node))
+most = 0
+for s in range(300):
+    c = Char('Assassin', M); f = E.Fight([c], M, random.Random(s), enemies=['Hollow Soldier'], policy=E.Policy(evade=0.0))
+    c.heroic = c.luck = False; c.dmg = 5; c.L = None; c.can_parry = False; foe = f.foes[0]; foe.node = c.node
+    f.defend(foe, c, 7, False, 2); most = max(most, c.sta)
+check('manuscript: a dodge costs three stamina at most (one extra die)', most <= 3, most)
+
+# ---------------------------------------------------------------- a push by a moving enemy is away from the node it left
+back = far = 0
+for s in range(200):
+    c = Char('Knight', M); f = E.Fight([c], M, random.Random(s), enemies=['Large Hollow Soldier'], policy=E.Policy(evade=0.0))
+    c.heroic = c.luck = False; c.dodge = 0; foe = f.foes[0]; foe.node = E.IDX[(0, 0)]; c.node = E.IDX[(1, 1)]
+    f.enemy_turn(foe)
+    if c.alive: back += c.node == E.IDX[(0, 0)]; far += E.DIST[c.node][E.IDX[(0, 0)]] == 2
+check('a character struck by a pushing move is pushed away from the node the enemy left', back == 0 and far == 200, (back, far))
+
+# ---------------------------------------------------------------- a replaced card is kept: it may be sold, or used by another
+from characters import Economy, ITEMS
+c = Char('Knight', M); eco = Economy([c], M, random.Random(1)); first = c.A
+spare = next(it for it in ITEMS.values() if it['type'] == 'armour' and it['name'] not in c.start)
+other = next(it for it in ITEMS.values() if it['type'] == 'armour' and it is not spare and it['name'] not in c.start)
+eco.equip(c, spare, c.tier, 'A'); kept_start = first in c.bag; eco.equip(c, other, c.tier, 'A')
+check('manuscript: replaced treasure returns to the bag; starting equipment does not', (not kept_start) and c.bag == [spare], [x['name'] for x in c.bag])
+c = Char('Knight', R17); eco = Economy([c], R17, random.Random(1)); first = c.A; eco.equip(c, spare, c.tier, 'A')
+check('official: replaced equipment returns to the shared inventory', first in eco.inv)
+
+# ---------------------------------------------------------------- equipment data
+check('every starting item is met by its class at base stats',
+      all(Char(k, R17).cost_to_meet(ITEMS[n]['req'])[0] == 0 for k, v in CLASSES.items() for n in v['start']))
+check('stat costs: tier one 2, tier two 4, tier three 8', Char('Knight', R17).cost_to_meet([40, 0, 0, 0])[0] == 14)
+check('official deck: 56 common cards and five class cards a character',
+      len(Economy([Char('Knight', R17)], R17, random.Random(0)).deck) == 61)
+
+print()
+print('%d checks failed' % len(FAILS) if FAILS else 'all checks passed')
+sys.exit(1 if FAILS else 0)
