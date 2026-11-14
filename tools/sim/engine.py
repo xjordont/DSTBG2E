@@ -303,7 +303,7 @@ class Fight:
 
     def riposte(self, c, f):
         o = c.best_option(f, 0, c.cap - c.dmg - c.sta - 1, hand='R')
-        if o: self.strike(c, f, o)
+        if o: c.sta += o['cost']; self.strike(c, f, o)        # the riposte's stamina is paid like any attack's
 
     # -------------------------------------------------------------- enemy activation
     def enemy_turn(self, f):

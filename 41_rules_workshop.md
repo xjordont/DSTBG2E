@@ -454,7 +454,7 @@ Every rule that differs between rulesets is a switch (`tools/sim/rules.py`), so 
 
 ### 12.2 How it was checked
 
-1. **Against hand calculation.** `tools/sim/test_sim.py` (51 checks, all passing): dice distributions, dodge odds, the geometry of the tile, attack arithmetic, and a fight small enough to solve by hand (a Knight with only his light attack against one Hollow Soldier: 1.5 enemy attacks expected, 1.58 damage; the simulator gives 1.58 within sampling error).
+1. **Against hand calculation.** `tools/sim/test_sim.py` (52 checks, all passing): dice distributions, dodge odds, the geometry of the tile, attack arithmetic, and a fight small enough to solve by hand (a Knight with only his light attack against one Hollow Soldier: 1.5 enemy attacks expected, 1.58 damage; the simulator gives 1.58 within sampling error).
 2. **Rules as written.** Scaling tables, spark counts, enemy activations for each character turn (one each in the official rules, one for the whole party in the manuscript), the death rule of each ruleset, stat costs and the size of the treasure deck are each asserted.
 3. **Invariants** over whole games of every ruleset and party size: no dead model acts, no bar overfills, no rest without a spark, the same seed gives the same game.
 4. **Sampling error.** Win rates are given with a 95% interval; the final tables use 600 to 1,200 games a cell.
@@ -608,5 +608,7 @@ python3 tools/sim/test_sim.py                 # the checks
 python3 tools/sim/fights.py                   # 12.3
 python3 tools/sim/compare.py                  # 12.4 and 12.5 (add --skill 0.25 or 0.75)
 ```
+
+Correction after the automated review of the pull request (2026-11-14): a riposte after a parry was not charged its stamina. Fixed and checked; the proposal's whole-game figures were run again and no win rate moved (42% / 46% / 41% / 42%). The other rows were not re-run: the official rules have no parry, and the manuscript rows stand at 0% to 1%.
 
 `tools/sim_game.py`, `tools/sim_search.py` and `tools/sim_scaling.py` are the earlier abstract models, kept for the record and marked superseded.

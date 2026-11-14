@@ -149,6 +149,11 @@ check('manuscript: damage that fills the bar exactly does not kill; one more doe
 c.hollow = True
 check('manuscript: a hollow character has an eight-space bar', c.cap == 8)
 
+# ---------------------------------------------------------------- a riposte is paid for
+c = Char('Knight', M); f = E.Fight([c], M, random.Random(0), enemies=['Hollow Soldier'])
+c.options['R'] = [dict(c.options['R'][1])]; cost = c.options['R'][0]['cost']; c.sta = 0; f.riposte(c, f.foes[0])
+check('a riposte costs its attack option\'s stamina', cost > 0 and c.sta == cost, (cost, c.sta))
+
 # ---------------------------------------------------------------- equipment data
 check('every starting item is met by its class at base stats',
       all(Char(k, R17).cost_to_meet(ITEMS[n]['req'])[0] == 0 for k, v in CLASSES.items() for n in v['start']))
