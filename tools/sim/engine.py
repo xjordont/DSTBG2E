@@ -313,11 +313,34 @@ class Fight:
                         else: c.bleed = True
                 if push and c.alive: c.node = step_away(c.node, src.node, rng) if c.node != src.node else rng.choice(NBR[c.node])
 
+    def can_reach(self, f, c, slack=1):
+        """Whether foe f has an attack that could land on character c in its coming activation."""
+        closing = sum(s['n'] for s in f.card['steps'] if s['k'] == 'move' and s['dir'] == 'to')
+        return any('dmg' in s and s.get('range', 0) + closing + slack >= DIST[f.node][c.node] for s in f.card['steps'])
+
+    def p_kill(self, c, f, o):
+        """Chance that attack option o by character c kills foe f outright."""
+        guard = 0 if o.get('ignore') else f.resist if o['magic'] else f.armor
+        mod = o['mod']
+        if self.r.stagger == 'author': guard = max(0, guard - (1 if f.stagger else 0)); mod -= 1 if c.stagger else 0
+        return sum(q for x, q in attack_pmf(o['dice'], mod, guard, o['repeat']) if x >= f.hp)
+
     def riposte(self, c, f):
-        # the one space kept back is the player's caution, not a rule: a riposte comes in the middle of the enemies'
-        # turn, and a full bar means the next point of damage kills
-        o = c.best_option(f, 0, c.cap - c.dmg - c.sta - 1, hand='R')
-        if o: c.sta += o['cost']; self.strike(c, f, o)        # the riposte's stamina is paid like any attack's
+        """The riposte after a parry, paid for like any attack. A player keeps one space of the bar back, since the
+        riposte comes in the middle of the enemies' turn and a full bar means the next point of damage kills. The
+        player fills the bar all the same (the author's ruling on how it is played) when the enemy is the last of the
+        encounter, or when the riposte will probably kill it and no enemy still to act this turn can reach the
+        character. Keeping a space back is the player's caution, not a rule."""
+        room = c.cap - c.dmg - c.sta
+        o = c.best_option(f, 0, room - 1, hand='R')
+        if self.r.lethal != 'full':                           # where a full bar kills, the last space is never spent
+            full = c.best_option(f, 0, room, hand='R')
+            if full is not None and full is not o:
+                others = [x for x in self.foes_alive() if x is not f]
+                waiting = [x for x in others if x in getattr(self, 'to_act', others)]
+                if not others or (self.p_kill(c, f, full) >= 0.5 and not any(self.can_reach(x, c) for x in waiting)):
+                    o = full
+        if o: c.sta += o['cost']; self.strike(c, f, o)
 
     # -------------------------------------------------------------- enemy activation
     def enemy_turn(self, f):
@@ -604,7 +627,9 @@ class Fight:
                 self.rounds += 1
                 for _ in range(self.seats):
                     if self.over(): break
+                    self.to_act = set(self.foes_alive())
                     for f in sorted(self.foes_alive(), key=lambda f: -f.threat):
+                        self.to_act.discard(f)
                         if self.over(): break
                         if f.hp <= 0: continue               # killed during another enemy's activation
                         (self.boss_turn if f.boss else self.enemy_turn)(f)
@@ -616,7 +641,9 @@ class Fight:
         else:
             while not self.over() and self.rounds < max_rounds:
                 self.rounds += 1; self.dealt = {}
+                self.to_act = set(self.foes_alive())
                 for f in sorted(self.foes_alive(), key=lambda f: (-f.threat, min(DIST[f.node][c.node] for c in self.live()))):
+                    self.to_act.discard(f)
                     if self.over(): break
                     if f.hp <= 0: continue                   # killed during another enemy's activation
                     (self.boss_turn if f.boss else self.enemy_turn)(f)

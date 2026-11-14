@@ -154,6 +154,21 @@ c = Char('Knight', M); f = E.Fight([c], M, random.Random(0), enemies=['Hollow So
 c.options['R'] = [dict(c.options['R'][1])]; cost = c.options['R'][0]['cost']; c.sta = 0; f.riposte(c, f.foes[0])
 check('a riposte costs its attack option\'s stamina', cost > 0 and c.sta == cost, (cost, c.sta))
 
+# ---------------------------------------------------------------- when a riposte may fill the bar (the author's ruling)
+def filled(enemies, hp, far):
+    """A Knight with room for exactly the riposte's cost parries the first enemy; is the last space spent?"""
+    c = Char('Knight', M); f = E.Fight([c], M, random.Random(0), enemies=enemies); foe = f.foes[0]; foe.hp = hp
+    c.node = foe.node = E.IDX[(0, 0)]
+    for x in f.foes[1:]: x.node = E.IDX[(4, 4)] if far else c.node
+    c.options['R'] = [dict(c.options['R'][1])]; cost = c.options['R'][0]['cost']; c.sta = c.cap - cost; f.riposte(c, foe)
+    return c.sta == c.cap
+
+
+check('a riposte fills the bar against the last enemy of the encounter', filled(['Hollow Soldier'], 99, True))
+check('a riposte fills the bar for a likely kill with no other enemy in reach', filled(['Hollow Soldier', 'Hollow Soldier'], 1, True))
+check('a riposte keeps a space back when another enemy can reach', not filled(['Hollow Soldier', 'Hollow Soldier'], 1, False))
+check('a riposte keeps a space back when a kill is unlikely and others remain', not filled(['Hollow Soldier', 'Hollow Soldier'], 99, True))
+
 # ---------------------------------------------------------------- stagger lowers an enemy's defence (manuscript)
 def struck(rules, staggered):
     c = Char('Knight', rules); f = E.Fight([c], rules, random.Random(0), enemies=['Sentinel']); foe = f.foes[0]; foe.stagger = staggered
