@@ -995,4 +995,6 @@ Everything else in 9.6 stands. Proposal B of 13.4 is withdrawn.
 4. **Whose souls** is the closest call in 14.5: the official shared cache is simpler and would also work with a different scaling table.
 5. **Not modelled,** as before: terrain, traps, events, invaders, phantoms, mimics, the expansions' enemies, and the 2022 sets.
 
+Corrections after the automated review of the pull request (2026-11-14): a character who took the Rest action could still run when stepping out of reach, and the manuscript and settled presets had been left giving one treasure card to the party on a first clear where they should give one to each character (introduced with this round's changes; the final ruleset and every figure in sections 13 and 14 used the per-character reward). Both are fixed and checked (61 checks pass). The final ruleset was run again: 65% / 65% / 59% / 58%, unchanged. The manuscript as written, run again: 44% / 74% / 75% / 28%, against 44% / 75% / 74% / 28% in 13.3.
+
 To re-run: `python3 tools/sim/test_sim.py`; `python3 tools/sim/fights.py`; `python3 tools/sim/compare.py --only official2017 final`. The modules of 14.3 and 14.4 are named in `tools/sim/rules.py`.

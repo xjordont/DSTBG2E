@@ -195,6 +195,19 @@ def dodged(staggered, trials=400):
 check('manuscript: difficulty 1 against one die is dodged half the time, always when the attacker is staggered',
       close(dodged(False), 0.5, 0.08) and dodged(True) == 1.0, (dodged(False), dodged(True)))
 
+# ---------------------------------------------------------------- treasure for each character; no Run after a Rest
+import game as G
+seen = []
+_give = Economy.give
+Economy.give = lambda self, cards: (seen.append(len(cards)), _give(self, cards))[1]
+G.play(4, M, 5); Economy.give = _give
+check('manuscript: a first clear gives one treasure card to each of four characters', seen and all(k == 4 for k in seen), seen[:4])
+worst = 0
+for s in range(200):
+    c = Char('Knight', M); f = E.Fight([c], M, random.Random(s), enemies=['Sentinel']); c.options = {'R': [], 'L': []}
+    c.sta = 3; f.char_turn(c); worst = max(worst, c.sta)
+check('manuscript: a character who rests does not run in the same turn', worst == 0, worst)
+
 # ---------------------------------------------------------------- equipment data
 check('every starting item is met by its class at base stats',
       all(Char(k, R17).cost_to_meet(ITEMS[n]['req'])[0] == 0 for k, v in CLASSES.items() for n in v['start']))

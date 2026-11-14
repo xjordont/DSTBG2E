@@ -507,7 +507,7 @@ class Fight:
         if c.heroic and c.name == 'Herald' and (sum(x.sta for x in self.live()) >= 2 * len(self.live())):
             c.heroic = False                                         # Perseverance: each character gains 2 stamina
             for x in self.live(): x.sta = max(0, x.sta - 2)
-        attacked = False; moved = False
+        attacked = False; moved = False; rested = False
         used = set()
         wd = pol.w_death * (1.6 if (r.death == 'party' or c.hollow or len(self.live()) == 1) else 1.0)
         for attempt in (0, 1):
@@ -563,14 +563,16 @@ class Fight:
         if not attacked:
             foes = self.foes_alive()
             if foes and r.turn == 'major' and c.sta > 0 and not (c.frost and r.frost == 'author'):      # frostbite bars any recovery
-                c.sta = 0; self.dec['rest'] = self.dec.get('rest', 0) + 1; self.say('  ', c.name, 'rests')            # the Rest action
+                c.sta = 0; rested = True; self.dec['rest'] = self.dec.get('rest', 0) + 1; self.say('  ', c.name, 'rests')            # the Rest action
             elif foes:
                 f = min(foes, key=lambda f: DIST[c.node][f.node])
                 if DIST[c.node][f.node] > 1: c.node = step_to(c.node, f.node, rng); moved = True
         # hit and run: official rules allow movement before or after attacking, not both; the manuscript has no such limit
         if pol.kite and self.foes_alive() and not self.is_boss and (r.turn != 'official' or not moved):
             free = c.cap - c.dmg - c.sta
-            self.reposition(c, min(2, free - 1 - int(pol.caution * 0.5 * self.incoming(c))), walk_free=not moved)
+            budget = min(2, free - 1 - int(pol.caution * 0.5 * self.incoming(c)))
+            if rested: budget = min(budget, 0)               # Rest and Run cannot share a turn: only the free Walk is left
+            self.reposition(c, budget, walk_free=not moved)
         self.end_turn(c)
 
     def end_turn(self, c):

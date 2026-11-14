@@ -73,7 +73,7 @@ MANUSCRIPT = Rules(
     # economy: souls are personal; three, four, five for Levels 1, 2, 3 and six for a boss; a treasure card each on a
     # first clear; Andre's shop at two souls (tier one) and four (tier two); a lone character starts with six souls
     pool=False, souls=lambda level, n, first: {1: 3, 2: 4, 3: 5}[level] // (1 if first else 2), boss_souls=lambda n, sparks: 6,
-    solo_souls=6, treasure='author', draw_cost=None, shop_limit=None, free_treasure=lambda level, n: 1.0, tier4=5,
+    solo_souls=6, treasure='author', draw_cost=None, shop_limit=None, free_treasure='each', tier4=5,
     # the bonfire: a rest costs a spark; cleared encounters may be skipped for two stamina each; the fog gate is a
     # shortcut once a boss has been reached; one spark is added for each boss
     skip_cost=2, fog_gate=True, boss_spark='plus1', luck_cost=None, free_visit=False,
