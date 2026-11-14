@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-"""Rough Monte Carlo comparison of round structures and enemy scaling for one to four characters.
+"""SUPERSEDED by tools/sim/ (41_rules_workshop.md, section 12): this abstract model assumed its difficulty; the new one plays the printed cards.
+
+Rough Monte Carlo comparison of round structures and enemy scaling for one to four characters.
 
 A deliberately crude model: it is for comparing rules with each other, not for predicting a real table.
   - characters: ten-space bar (damage only), block = two highest of three black dice, attack = two black dice

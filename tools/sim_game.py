@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-"""Whole-game Monte Carlo model of the standard game, for tuning enemy scaling against sparks.
+"""SUPERSEDED by tools/sim/ (41_rules_workshop.md, section 12): this abstract model assumed its difficulty; the new one plays the printed cards.
+
+Whole-game Monte Carlo model of the standard game, for tuning enemy scaling against sparks.
 
 It plays the settled ruleset (41_rules_workshop.md, section 9.6) from the first bonfire to the main boss:
 four encounters (Levels 1, 1, 2, 2), the mini-boss, four more (Levels 2, 2, 3, 3), the main boss.

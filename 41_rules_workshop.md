@@ -273,7 +273,8 @@ Bosses are not scaled in either version: they already act after each character.
 | Endurance bar | ten spaces; a hollow character has eight |
 | Round | enemies in descending threat; characters in any order the party chooses |
 | Aggro | the last character to deal damage; unchanged if none did |
-| Enemy scaling | +1 attack for each character beyond the first; +2 health for each character beyond the second (section 11, which replaces 10.3) |
+| Enemy scaling | +2 health for each character beyond the second; −1 attack against a lone character; boss health one third and two thirds for one and two characters (section 12.5, which replaces 11) |
+| Spending souls | at the bonfire, between encounters, without a rest (section 12.5) |
 | Skipping cleared encounters | two stamina per character for each one skipped |
 | Recovery after a clear | all stamina, one damage cube |
 | Treasure | the card dealt to the tile is the reward; the aggro holder settles disputes |
@@ -357,6 +358,8 @@ Every rule is now settled (section 9.6). Nothing is optional except content that
 
 ## 11. Round five (2026-11-13): scaling calibrated against sparks, win rate and game length
 
+> **Withdrawn on 2026-11-14.** This section's model assumed its own difficulty. Section 12 replaces it with a simulator that plays the printed cards, and reaches a different result.
+
 **Author's targets.** Level 3 encounters of four to seven rounds; the chance that someone dies in step with the number of sparks; a similar length of game and a similar win rate with one, two, three or four characters.
 
 **Section 10.3 is withdrawn.** It was judged on single fights. Played through a whole game, it is badly unbalanced: where a lone character wins 59% of games, two, three and four characters win essentially every game.
@@ -426,3 +429,184 @@ Figures are from the model after two corrections on 2026-11-13 (a dead character
 
 To re-run: `python3 tools/sim_game.py` (add `--reach 0.34` or `0.42` for an easier or harder table); `python3 tools/sim_search.py grid 0.39` lists every candidate.
 
+## 12. Round six (2026-11-14): the simulator rebuilt on the printed cards; official rules compared; scaling and two other rules re-worked
+
+**Author's instruction.** "Ensure the simulation is accurate and robust. Then rerun it comparing my manuscript's original scaling rules and the official 2017/2022 rules. Workshop scaling and any other rules as needed to obtain balanced, quick, fair, tactical, fun gameplay."
+
+**Section 11 is withdrawn.** Its model had invented enemies and one dial for difficulty, set by assumption so that a lone character won six games in ten. Rebuilt on the printed cards, the same rules do not behave as section 11 said: the scaling recommended there loses almost every game at every party size. The figures below replace it.
+
+### 12.1 What the new simulator plays
+
+`tools/sim/` plays the game move by move on the real components:
+
+- **The tile:** the 13 nodes of an encounter tile, with range and movement counted node to node.
+- **Enemies:** the six enemy cards of the 2017 core set with their printed health, block, resist, damage, dodge difficulty, threat, range, movement and targeting (nearest or aggro, node attacks, pushes), and the 36 core encounter cards with their printed line-ups.
+- **Bosses:** four mini-bosses and the Dancer of the Boreal Valley, each with its printed health, heat-up point, block, resist and full behaviour deck (damage, dodge difficulty, repeats and conditions of every card); the deck is built, cycled and heated up as the rules say.
+- **Characters:** Knight, Warrior, Herald and Assassin with their printed stat tracks, taunt values, heroic actions and starting equipment, and 116 treasure cards of the core set (weapons, shields, spells, armour, upgrades, class, transposed and legendary cards) with their printed dice, stamina costs, ranges and requirements.
+- **A turn:** the endurance bar, stamina recovery, walking and running, each weapon's attack options, block or resist, dodge (with extra dice where the ruleset has them), parry and riposte, luck, the Estus flask, embers, stagger, frostbite, poison and bleed.
+- **A game:** bonfire, four encounters, mini-boss, four encounters, main boss; sparks, rests, resets, skipping, the fog gate, souls, dropped souls, treasure, Andre's shop, the Firekeeper and levelling.
+
+Every rule that differs between rulesets is a switch (`tools/sim/rules.py`), so the official 2017 rules, the official 2022 rules, the manuscript and any variant are played by the same engine on the same cards.
+
+**Card data.** Enemy, boss and encounter values are from the public DSBG-Shuffle data set; behaviour icons were read from the card faces. Equipment and class values were compiled from two independently maintained community card databases and checked against the card images printed in the official rulebooks where those are legible (13 cards checked, all matched). One card rests on a single source: the Knight's starting shield (one black block die).
+
+**What it does not play.** Terrain, traps, chests, event cards, invaders, phantoms, mimics, boss arcs drawn on the table, support spells, most upgrade rings, and the Tomb of Giants enemies (the 2022 rules are played on the 2017 enemy cards, with the 2022 rewards and shop). Boss arcs and positioning finer than a node are represented by a skill setting (12.2).
+
+### 12.2 How it was checked
+
+1. **Against hand calculation.** `tools/sim/test_sim.py` (51 checks, all passing): dice distributions, dodge odds, the geometry of the tile, attack arithmetic, and a fight small enough to solve by hand (a Knight with only his light attack against one Hollow Soldier: 1.5 enemy attacks expected, 1.58 damage; the simulator gives 1.58 within sampling error).
+2. **Rules as written.** Scaling tables, spark counts, enemy activations for each character turn (one each in the official rules, one for the whole party in the manuscript), the death rule of each ruleset, stat costs and the size of the treasure deck are each asserted.
+3. **Invariants** over whole games of every ruleset and party size: no dead model acts, no bar overfills, no rest without a spark, the same seed gives the same game.
+4. **Sampling error.** Win rates are given with a 95% interval; the final tables use 600 to 1,200 games a cell.
+5. **The players.** They are a written policy, not a search: they choose block, dodge or parry by expected damage and risk of death, choose attacks by what a kill is worth against the stamina it costs, step out of reach after attacking when it pays, save the flask for danger, buy and level whatever adds most strength for the souls, and choose when to rest. For each ruleset and party size they are allowed to pick the resting policy that suits that ruleset best, on separate games from the ones measured.
+6. **Skill.** What the model cannot act out (boss arcs, reading a boss's fixed card order, positioning finer than a node) is one setting from 0 to 1. All figures are at 0.5 unless stated; the proposal was run again at 0.25 and 0.75.
+
+**What cannot be checked: the absolute level.** No record exists of how often real tables win. The simulated players are weaker than practised players, above all against bosses, and they do not grind well. Read every win rate as a comparison between rulesets and between party sizes, not as a forecast.
+
+### 12.3 Single fights at equal strength
+
+Every party is given the same souls for its stage (0, 8, 14, 26 and 36 a character for Level 1, Level 2, the mini-boss, Level 3 and the main boss), spends them the same way, and fights one random encounter or boss from a full rest. Differences come from the combat and scaling rules alone. Each cell: 1, 2, 3 and 4 characters.
+
+**Official 2017 / 2022 (the combat rules are the same)**
+
+| Stage | Cleared | Rounds | Someone dies |
+|---|---|---|---|
+| Level 1 | 80% / 81% / 89% / 90% | 4.0 / 2.2 / 1.5 / 1.2 | 20% / 19% / 11% / 10% |
+| Level 2 | 43% / 57% / 63% / 70% | 6.5 / 2.9 / 1.9 / 1.5 | 57% / 43% / 37% / 30% |
+| Mini-boss | 10% / 17% / 16% / 21% | 17.3 / 8.7 / 6.0 / 4.5 | 89% / 83% / 84% / 79% |
+| Level 3 | 31% / 45% / 50% / 51% | 7.1 / 3.0 / 2.0 / 1.5 | 68% / 55% / 50% / 49% |
+| Main boss | 13% / 20% / 19% / 19% | 9.3 / 5.3 / 3.5 / 2.5 | 87% / 80% / 81% / 81% |
+
+**Author's manuscript**
+
+| Stage | Cleared | Rounds | Someone dies |
+|---|---|---|---|
+| Level 1 | 76% / 89% / 85% / 75% | 4.5 / 4.8 / 5.4 / 5.2 | 24% / 19% / 34% / 62% |
+| Level 2 | 39% / 66% / 75% / 67% | 6.3 / 6.3 / 5.4 / 4.2 | 61% / 44% / 47% / 60% |
+| Mini-boss | 9% / 47% / 75% / 89% | 16.9 / 12.1 / 8.2 / 6.1 | 91% / 78% / 77% / 78% |
+| Level 3 | 25% / 65% / 78% / 62% | 6.0 / 5.4 / 4.2 / 3.5 | 75% / 51% / 54% / 82% |
+| Main boss | 4% / 44% / 79% / 93% | 8.7 / 6.3 / 4.3 / 3.4 | 96% / 90% / 89% / 89% |
+
+**Settled rules, section 11 scaling**
+
+| Stage | Cleared | Rounds | Someone dies |
+|---|---|---|---|
+| Level 1 | 76% / 94% / 80% / 73% | 4.5 / 2.6 / 5.0 / 7.4 | 24% / 14% / 53% / 75% |
+| Level 2 | 41% / 76% / 74% / 69% | 6.3 / 4.4 / 4.9 / 4.9 | 59% / 37% / 51% / 62% |
+| Mini-boss | 9% / 34% / 62% / 77% | 16.9 / 12.9 / 8.9 / 6.6 | 91% / 83% / 76% / 75% |
+| Level 3 | 25% / 72% / 75% / 69% | 6.0 / 4.5 / 4.0 / 3.9 | 75% / 51% / 63% / 76% |
+| Main boss | 4% / 39% / 72% / 90% | 8.7 / 6.4 / 4.4 / 3.3 | 96% / 87% / 85% / 83% |
+
+**Proposed (section 12.5)**
+
+| Stage | Cleared | Rounds | Someone dies |
+|---|---|---|---|
+| Level 1 | 99% / 100% / 98% / 98% | 4.2 / 2.4 / 4.5 / 6.6 | 1% / 3% / 17% / 20% |
+| Level 2 | 72% / 88% / 93% / 96% | 8.3 / 4.5 / 4.3 / 4.5 | 28% / 19% / 18% / 21% |
+| Mini-boss | 47% / 57% / 62% / 77% | 11.5 / 10.0 / 8.9 / 6.6 | 53% / 62% / 76% / 75% |
+| Level 3 | 58% / 87% / 99% / 100% | 8.0 / 4.4 / 3.3 / 3.1 | 42% / 30% / 21% / 17% |
+| Main boss | 56% / 65% / 72% / 90% | 5.0 / 4.8 / 4.4 / 3.3 | 44% / 67% / 85% / 83% |
+
+- **Official rules:** enemies act before every character's turn and any death loses the encounter. More characters make ordinary encounters somewhat easier; bosses are hard at every size. A round with four characters is four enemy phases, so fights are over in one or two rounds.
+- **The manuscript:** the unscaled boss is the largest imbalance in the book. A lone character clears the main boss 4 times in 100, four characters 93 in 100. In ordinary encounters four characters are punished by the repeat (someone dies in 62% of Level 1 fights).
+- **Section 11's scaling** (attack +1, +2, +3) makes a death very likely with three and four characters even at Level 1 (53% and 75%).
+
+### 12.4 Whole games
+
+| Ruleset | Games won, 1 / 2 / 3 / 4 characters | Rests used | Fights | Where most games are lost |
+|---|---|---|---|---|
+| Official 2017 | 3% / 3% / 3% / 0% | 5.6 / 4.7 / 3.7 / 2.2 | 24 / 19 / 17 / 10 | encounters |
+| Official 2022 (same enemy cards; its own rewards and shop) | 1% / 0% / 0% / 0% | 5.1 / 4.0 / 3.0 / 2.0 | 13 / 14 / 12 / 9 | encounters |
+| Author's manuscript, as written | 0% / 1% / 1% / 0% | 5.2 / 4.2 / 3.1 / 2.0 | 8 / 7 / 6 / 4 | encounters |
+| Settled rules of section 9.6 with the scaling of section 11 | 0% / 1% / 0% / 0% | 5.2 / 4.1 / 3.1 / 2.0 | 8 / 8 / 5 / 4 | encounters |
+| Proposed, but souls can only be spent at a rest (the manuscript rule) | 29% / 13% / 7% / 3% | 5.0 / 4.4 / 3.3 / 2.1 | 11 / 8 / 6 / 5 | encounters / mini-boss / mini-boss / mini-boss |
+| **Proposed (section 12.5)** | 42% / 46% / 41% / 42% | 4.7 / 3.7 / 3.1 / 2.1 | 11 / 10 / 9 / 8 | encounters / mini-boss / mini-boss / encounters |
+
+Win rates are within one to four points either way (95%). In the 2022 row no party of two or more reached a Level 3 encounter.
+
+1. **Official 2017 and 2022** are close to unwinnable for these players: 0% to 3%. The official game expects the party to grind early encounters for souls, and any single death sends the whole party back. This is where the model is surely too hard on real players; the direction is still plain: more characters, fewer sparks, lower chance.
+2. **The manuscript as written** and **the settled rules with section 11's scaling** also lose nearly every game, for a reason the fight table does not show: **souls cannot be spent without a rest, and a rest costs a spark.** A party reaches its first Level 2 encounter and its first boss in starting equipment, carrying wounds, with unspent souls on the table. With the proposal's scaling but this one rule kept, the win rate is 29% / 13% / 7% / 3%.
+3. **Attack bonuses are far more dangerous than health bonuses** in a round where every enemy acts before any character: the enemies' blows land on one or two characters. Three characters win 45% with +2 health and no attack bonus, 19% with +1 attack as well.
+4. **Healing more after a clear, more sparks, and a gentler hollow rule** each moved the result by a few points only. They are not recommended.
+
+Variants run on the way (400 games a cell, so read differences under ten points as noise):
+
+| Variant (on the settled rules of 9.6) | Games won, 1 / 2 / 3 / 4 characters |
+|---|---|
+| Section 11 scaling | 0% / 0% / 0% / 0% |
+| No scaling at all | 0% / 3% / 10% / 11% |
+| No scaling; souls spent freely at the bonfire | 1% / 26% / 59% / 71% |
+| + health +1 each, attack −1 alone and +1 at three or four; boss health one third a character | 42% / 28% / 19% / 20% |
+| the same, souls spent only at a rest | 30% / 4% / 1% / 0% |
+| the same, two damage healed after a clear | 46% / 30% / 17% / 21% |
+| the same, sparks 5 / 4 / 4 / 3 | 42% / 28% / 20% / 23% |
+| the same, a hollow character who dies is only lost until the next rest | 44% / 31% / 19% / 20% |
+| health only: +1 / +2 / +3 | 42% / 28% / 45% / 36% |
+| health only, beyond the second character: +1 / +2 | 42% / 48% / 61% / 46% |
+| **The proposal (12.5)** | see below |
+
+### 12.5 The proposal
+
+Four rules. Everything else stays as settled in 9.6.
+
+> **Enemy scaling.** For each character beyond the second, each enemy has +2 health. A lone character subtracts 1 from each enemy attack.
+>
+> **Boss scaling.** A boss has one third of its printed health against one character and two thirds against two. Its heat-up point is reduced in the same proportion.
+>
+> **The bonfire.** Between encounters the party may walk back to the bonfire and spend souls with the Firekeeper and Andre without resting. Only a rest costs a spark, restores the characters and resets the encounters.
+
+| Characters | Enemy health | Enemy attack | Boss health | Sparks |
+|---|---|---|---|---|
+| 1 | as printed | −1 | one third | 5 |
+| 2 | as printed | as printed | two thirds | 4 |
+| 3 | +2 | as printed | as printed | 3 |
+| 4 | +4 | as printed | as printed | 2 |
+
+| | 1 character | 2 | 3 | 4 |
+|---|---|---|---|---|
+| Games won | 42% | 46% | 41% | 42% |
+| at weaker play (skill 0.25) | 33% | 27% | 23% | 23% |
+| at stronger play (skill 0.75) | 46% | 66% | 64% | 63% |
+| Level 3 encounter, rounds | 6.2 | 4.7 | 4.1 | 4.2 |
+| Level 3 encounter, someone dies | 50% | 45% | 34% | 37% |
+| Rests used, of sparks held over the game | 4.7 of 6 | 3.7 of 5 | 3.1 of 4 | 2.1 of 3 |
+| Fights in a game | 11.0 | 10.4 | 9.0 | 8.4 |
+| Table time (activations of any model) | 195 | 232 | 277 | 332 |
+| Games lost at: encounters / mini-boss / main boss | 35% / 16% / 7% | 16% / 27% / 11% | 22% / 26% / 10% | 31% / 22% / 5% |
+
+Against the author's targets:
+
+- **Similar win rate:** 42% / 46% / 41% / 42% at one to four characters. Skill moves the sizes apart: at weaker play a lone character does best (33% / 27% / 23% / 23%), at stronger play worst (46% / 66% / 64% / 63%), because a boss with a third of its health leaves less to learn. Parties of two, three and four stay within five points of each other at all three settings.
+- **Level 3 encounters of four to seven rounds:** 6.2, 4.7, 4.1 and 4.2.
+- **Deaths in step with sparks:** the chance that someone dies in a Level 3 encounter runs from one in two for a lone character with five sparks to about one in three for three or four characters with three or two.
+- **Length:** 8 to 11 fights a game at every size. Counted in activations a four-character game is about two thirds longer than a solo game, because there are more models to move; no rule here adds enemy turns.
+- **Tactical:** nothing in the proposal adds dice, repeats or extra phases. The party still chooses its order, aggro follows the last blow, and a retreat out of reach is still the best answer to slow enemies.
+
+What changes from section 9.6:
+
+| Rule | Section 9.6 and 11 | Now | Why |
+|---|---|---|---|
+| Enemy attack | +1 for each character beyond the first | no bonus; −1 against a lone character | finding 3 |
+| Enemy health | +2 for each character beyond the second | unchanged | it gives the fight length asked for |
+| Bosses | not scaled | one third and two thirds health for one and two characters | 12.3: 4% against 93% |
+| Spending souls | only at a rest | at the bonfire, between encounters, without a rest | finding 2 |
+
+The manuscript's own scaling table compares as follows: its +1 health for each character is close to the proposal for two and three characters; its faster enemies, its +1 attack at three and its repeat at four are what the model rejects.
+
+### 12.6 What to watch, and the one dial to turn
+
+1. **The level is set by weak players.** If practised tables win far more than half their games, raise boss health by one step (one half and as printed for one and two characters; one and a half times printed for four), which the fight table shows lowers every size together.
+2. **The bonfire rule is the largest change to the manuscript** and the one the model is surest of. If the author would rather keep "no spending without a rest", the alternative is to make the first rest of each half of the game free; this was not run.
+3. **A lone character's Level 3 fights are the longest** in rounds (6.2) and the shortest in table time.
+4. **Not modelled:** traps, terrain, events, invaders, phantoms, mimics, and the expansions' enemies. A summoned phantom at a boss would make a small party's boss fight easier than shown here.
+5. **Section 9.6's entry for enemy scaling now reads:** "+2 health for each character beyond the second; −1 attack against a lone character; boss health one third and two thirds for one and two characters (section 12.5)". A new entry is added: "Souls are spent at the bonfire, between encounters, without a rest."
+
+### 12.7 To re-run
+
+```
+python3 tools/sim/test_sim.py                 # the checks
+python3 tools/sim/fights.py                   # 12.3
+python3 tools/sim/compare.py                  # 12.4 and 12.5 (add --skill 0.25 or 0.75)
+```
+
+`tools/sim_game.py`, `tools/sim_search.py` and `tools/sim_scaling.py` are the earlier abstract models, kept for the record and marked superseded.

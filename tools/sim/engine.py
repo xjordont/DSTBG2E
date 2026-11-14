@@ -153,9 +153,10 @@ class Fight:
     WEAK = 0.3       # chance that a character's attack on a boss comes from a weak arc (+1 black die): card not yet seen
     WEAK_KNOWN = 0.6 # the same once the card has been seen (the deck comes round in the same order)
 
-    def __init__(self, party, rules, rng, enemies=None, boss=None, policy=None, log=None):
+    def __init__(self, party, rules, rng, enemies=None, boss=None, policy=None, log=None, n=None):
         self.party, self.r, self.rng, self.pol, self.log = party, rules, rng, policy or Policy(), log
-        self.n = len(party); self.rounds = 0; self.char_turns = 0; self.enemy_acts = 0; self.deaths = 0
+        self.n = n or len(party);                      # scaling counts every character in the game, present or not
+        self.seats = len(party); self.rounds = 0; self.char_turns = 0; self.enemy_acts = 0; self.deaths = 0
         self.is_boss = boss is not None; self.dealt = {}
         r = rules
         ents = list(ENTRY); rng.shuffle(ents)
@@ -163,7 +164,9 @@ class Fight:
             c.node = ents[i % 3] if self.pol.spread else ents[0]
             c.alive = True; c.stagger = c.frost = False; c.poison = 0; c.bleed = False; c.ran = False
         if boss:
-            b = BOSSES[boss]; f = Foe(boss, b, b['hp'], IDX[(2, 0)], boss=True)
+            b = BOSSES[boss]; mul = getattr(r, 'boss_mul', None)
+            if mul: b = dict(b, hp=int(round(b['hp'] * mul(self.n))), heatup=int(round(b['heatup'] * mul(self.n))))
+            f = Foe(boss, b, b['hp'], IDX[(2, 0)], boss=True)
             std = [c for c in b['cards'] if not c['heatup']]; rng.shuffle(std)
             f.deck = std[:b['deck']]; f.discard = []; f.heat_cards = [c for c in b['cards'] if c['heatup']]
             self.foes = [f]
@@ -174,7 +177,7 @@ class Fight:
                 f = Foe(name, card, r.hp(card['hp'], self.n), sp[0] if i < (len(enemies) + 1) // 2 else sp[1])
                 f.atk_bonus = r.atk(self.n); self.foes.append(f)
         self.aggro = max(party, key=lambda c: c.taunt)
-        self.turn_i = getattr(party[0], '_first', 0) % self.n      # official: who activates first carries over
+        self.turn_i = getattr(party[0], '_first', 0) % self.seats      # official: who activates first carries over
 
     # -------------------------------------------------------------- helpers
     def live(self): return [c for c in self.party if c.alive]
@@ -182,6 +185,7 @@ class Fight:
 
     def failed(self):
         if self.r.death == 'party': return self.deaths > 0
+        if self.r.death == 'lost': return not self.live()        # a hollow character who dies is lost until the next rest
         return not self.live() or any((not c.alive) and c.was_hollow for c in self.party)
 
     def over(self): return self.failed() or not self.foes_alive()
@@ -205,7 +209,7 @@ class Fight:
         if d <= 0 or not c.alive: return
         if c.bleed and self.r.bleed == 'official': d += 2; c.bleed = False
         if self.lethal(c, d):
-            c.alive = False; c.dmg = min(c.cap, c.dmg + d); self.deaths += 1; self.say('   ', c.name, 'dies')
+            c.alive = False; c.dmg = min(c.cap, c.dmg + d); self.deaths += 1; c.ember = False; self.say('   ', c.name, 'dies')
             if self.aggro is c and self.live(): self.aggro = max(self.live(), key=lambda x: x.taunt)
         else:
             c.dmg += d
@@ -476,6 +480,10 @@ class Fight:
             self.say('  ', c.name, 'turn: dmg', c.dmg, 'sta', c.sta, 'at', NODES[c.node], 'need %.1f' % need,
                      [(f.name[:8], NODES[f.node], f.hp) for f in foes])
         free = c.cap - c.dmg - c.sta
+        # an ember card (the manuscript): an action that clears all damage and the hollow state and leaves the character embered
+        if c.ember_card and (c.dmg >= pol.estus_at + 1 or (c.hollow and c.dmg >= 3)) and not c.estus:
+            c.ember_card = False; c.ember = True; c.dmg = 0; c.hollow = False
+            self.say('  ', c.name, 'uses an ember'); self.end_turn(c); return
         # the flask: drunk when death is near; where damage outlasts the encounter (the manuscript) also once badly hurt
         if c.estus and c.dmg >= 3 and (self.risk(free) > pol.estus_risk or (r.recover != 'all' and c.dmg >= pol.estus_at)):
             c.estus = False; c.dmg = 0
@@ -568,14 +576,14 @@ class Fight:
         if self.is_boss or r.round == 'alternate':
             while not self.over() and self.rounds < max_rounds:
                 self.rounds += 1
-                for _ in range(self.n):
+                for _ in range(self.seats):
                     if self.over(): break
                     for f in sorted(self.foes_alive(), key=lambda f: -f.threat):
                         if self.over(): break
                         (self.boss_turn if f.boss else self.enemy_turn)(f)
                     if self.over(): break
-                    for _k in range(self.n):                 # the next living character in seat order
-                        c = self.party[self.turn_i % self.n]; self.turn_i += 1
+                    for _k in range(self.seats):             # the next living character in seat order
+                        c = self.party[self.turn_i % self.seats]; self.turn_i += 1
                         if c.alive: break
                     if c.alive: self.char_turn(c)
         else:

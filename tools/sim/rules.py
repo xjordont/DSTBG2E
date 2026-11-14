@@ -68,7 +68,7 @@ MANUSCRIPT = Rules(
     death='hollow', lethal='overflow', recover='sta+1', hollow_bar=8,
     # enemy scaling, as the manuscript's table
     hp=plus(1), atk=lambda n: 1 if n >= 3 else 0, move2=lambda n: n >= 2, reps=lambda n: 2 if n >= 4 else 1, push_once=True,
-    stagger='author', frost='author', poison='stack', bleed='author', ember=False, estus='health',
+    stagger='author', frost='author', poison='stack', bleed='author', ember=True, estus='health',
     # economy: souls are personal; three, four, five for Levels 1, 2, 3 and six for a boss; a treasure card each on a
     # first clear; Andre's shop at two souls (tier one) and four (tier two); a lone character starts with six souls
     pool=False, souls=lambda level, n, first: {1: 3, 2: 4, 3: 5}[level] // (1 if first else 2), boss_souls=lambda n, sparks: 6,
@@ -97,8 +97,12 @@ def make(spec):
     add = spec.pop('hp_add', None); mul = spec.pop('hp_mul', None)
     if add or mul:
         kw['hp'] = lambda h, n, add=add, mul=mul: int(round(h * (mul[n] if mul else 1))) + (add[n] if add else 0)
-    for k in ('atk', 'reps', 'move2', 'sparks'):
+    for k in ('atk', 'reps', 'move2', 'sparks', 'boss_mul'):
         if k in spec:
             v = spec.pop(k); kw[k] = lambda n, v=v: v[n]
+    if 'soul_mul' in spec:
+        m = spec.pop('soul_mul'); base_souls = r.souls; base_boss = r.boss_souls
+        kw['souls'] = lambda level, n, first: int(round(base_souls(level, n, first) * m))
+        kw['boss_souls'] = lambda n, sparks: int(round(base_boss(n, sparks) * m))
     kw.update(spec)
     return r.but(**kw)

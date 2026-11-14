@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-"""Search the scaling rules with tools/sim_game.py: which rule gives two, three and four characters the same
+"""SUPERSEDED by tools/sim/ (41_rules_workshop.md, section 12): this abstract model assumed its difficulty; the new one plays the printed cards.
+
+Search the scaling rules with tools/sim_game.py: which rule gives two, three and four characters the same
 win rate as a lone character, with Level 3 encounters of four to seven rounds?
 
   python3 tools/sim_search.py solo              # solo win rate by difficulty setting and starting souls

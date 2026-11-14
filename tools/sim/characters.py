@@ -33,7 +33,7 @@ class Char:
         self.bag = []; self.plus = {}                 # spare cards; weapon name -> upgrade bonus
         self.souls = 0; self.earned = 0
         self.dmg = self.sta = 0; self.hollow = False; self.alive = True; self.was_hollow = False
-        self.estus = self.luck = self.heroic = True; self.ember = False
+        self.estus = self.luck = self.heroic = True; self.ember = False; self.ember_card = False
         self.node = 0; self.stagger = self.frost = self.bleed = False; self.poison = 0; self.ran = False
         self.refresh()
 
@@ -149,6 +149,7 @@ class Economy:
     def __init__(self, party, rules, rng):
         self.party, self.r, self.rng = party, rules, rng
         self.pool = 0                                  # the shared soul cache of the official rules
+        self.embers = len(party)                       # the manuscript's shop: ember cards equal to the number of characters
         self.inv = []                                  # the shared inventory of the official rules
         names = {c.name for c in party}
         cards = [i for i in ITEMS.values() for _ in range(i.get('copies', 1))]
@@ -246,6 +247,8 @@ class Economy:
         r = self.r
         if r.pool: return self.spend_pool()
         for c in self.party:
+            if getattr(r, 'ember', False) and self.embers > 0 and not c.ember_card and not c.ember and c.souls >= 2:
+                c.souls -= 2; c.ember_card = True; self.embers -= 1            # an ember card: one each, tier-one price
             while True:
                 cands = []
                 for it in c.bag:

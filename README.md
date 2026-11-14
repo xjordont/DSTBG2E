@@ -8,6 +8,7 @@ An unofficial, non-commercial fan rulebook: edited manuscript, final rulings, la
 | `17_final_report.md` | what the finished book contains, what changed since version 1, and what is not perfect |
 | `40_bloat_audit.md` | the audit of the rules text against the author's manuscript: where the 57,000 added words are, how they got there, and what should come out |
 | `41_rules_workshop.md` | the open decisions: for each rule that differs from the author's manuscript, the author's version, the book's, what four house rulesets do, and a recommendation |
+| `tools/sim/` | the rules simulator of section 12 of the workshop record: the printed enemy, boss, encounter and equipment cards played move by move under the official 2017 and 2022 rules, the manuscript, and any variant; `test_sim.py` checks it against hand calculation |
 | `06_final_rulings.md` | every rules question that was open, how it was settled, and on what evidence |
 | `10_manuscript_chapter_*.md`, `12_glossary.md` | the manuscript, one file per chapter |
 | `11_change_log.md` | every change to the source manuscript, with mechanical changes marked |

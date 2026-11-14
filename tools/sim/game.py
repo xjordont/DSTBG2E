@@ -29,7 +29,7 @@ def play(n, rules, seed, table=None, classes=None):
     if n == 1:
         if r.pool: eco.pool = r.solo_souls
         else: party[0].souls = r.solo_souls
-    for c in party: c.dropped = None
+    for c in party: c.dropped = None; c.lost = False
     sparks = r.sparks(n)
     eco.spend()                                            # the party starts at the bonfire
     out = dict(win=False, rests=0, fights=0, char_turns=0, enemy_acts=0, rounds=0, lost_at=None, deaths=0,
@@ -45,7 +45,7 @@ def play(n, rules, seed, table=None, classes=None):
         if not free:
             if sparks <= 0: return False
             sparks -= 1; out['rests'] += 1
-        for c in party: c.full_rest()
+        for c in party: c.full_rest(); c.lost = False
         spend(); return True
 
     for stage, boss in enumerate((rng.choice(MINIS), rng.choice(MAINS))):
@@ -61,7 +61,7 @@ def play(n, rules, seed, table=None, classes=None):
             # ---- a voluntary rest before the next fight
             want = False
             if sparks > t.reserve and not fresh:
-                worn = any(c.hollow for c in party) or max(c.dmg for c in party) >= t.worn_at \
+                worn = any(c.hollow or c.lost for c in party) or max(c.dmg for c in party) >= t.worn_at \
                     or sum(not c.estus for c in party) * 2 > n
                 lvl = ('mini' if stage == 0 else 'main') if at_boss else levels[pos]
                 goal = t.ready3 if lvl in (3, 'main') else t.ready2 if lvl in (2, 'mini') else -99
@@ -84,10 +84,11 @@ def play(n, rules, seed, table=None, classes=None):
             for c in party:
                 c.sta = min(walk, c.cap - c.dmg - 1) if walk else c.sta
             walk = 0
+            here = [c for c in party if not c.lost]
             if at_boss:
-                boss_seen = True; f = Fight(party, r, rng, boss=boss, policy=t); lv = 'mini' if stage == 0 else 'main'
+                boss_seen = True; f = Fight(here, r, rng, boss=boss, policy=t, n=n); lv = 'mini' if stage == 0 else 'main'
             else:
-                f = Fight(party, r, rng, enemies=cards[pos]['enemies'], policy=t); lv = levels[pos]
+                f = Fight(here, r, rng, enemies=cards[pos]['enemies'], policy=t, n=n); lv = levels[pos]
             ok = f.run(); fresh = False
             out['fights'] += 1; out['char_turns'] += f.char_turns; out['enemy_acts'] += f.enemy_acts; out['rounds'] += f.rounds
             out['deaths'] += f.deaths
@@ -115,6 +116,8 @@ def play(n, rules, seed, table=None, classes=None):
                     eco.give(cardsT)
                 # ---- recovery
                 for c in party:
+                    if c.lost: continue
+                    if not c.alive and c.hollow and r.death == 'lost': c.lost = True; continue
                     if not c.alive: c.alive = True; c.hollow = True; c.dmg = 0; c.sta = 0
                     elif r.recover == 'all': c.dmg = 0; c.sta = 0
                     else: c.dmg = max(0, c.dmg - getattr(r, 'heal_after', 1)); c.sta = 0
@@ -136,6 +139,8 @@ def play(n, rules, seed, table=None, classes=None):
         # ---- the boss is dead
         if stage == 0:
             sparks = r.sparks(n) if r.boss_spark == 'reset' else sparks + 1
+            if getattr(r, 'ember', False):
+                for c in party: c.ember = True               # the manuscript: each character is embered when a boss falls
             eco.after_mini_boss(); rest(free=True)
     out['win'] = True; out['sparks_left'] = sparks
     out['power'] = sum(c._power for c in party) / n
