@@ -1,0 +1,1179 @@
+{
+ "note": "Card values (health, block, resist, damage, dodge difficulty, behaviour decks, encounter line-ups) are the printed values of the 2017 core set as recorded in the public DSBG-Shuffle data set (github.com/DanDuhon/DSBG-Shuffle); threat, range, movement and targeting were read from the card faces. Range 9 stands for unlimited range.",
+ "enemies": {
+  "Hollow Soldier": {
+   "threat": 5,
+   "hp": 1,
+   "armor": 1,
+   "resist": 1,
+   "steps": [
+    {
+     "k": "move",
+     "n": 1,
+     "dir": "to",
+     "tgt": "nearest"
+    },
+    {
+     "k": "attack",
+     "tgt": "nearest",
+     "range": 0,
+     "dmg": 4,
+     "magic": false,
+     "dodge": 1
+    }
+   ]
+  },
+  "Crossbow Hollow": {
+   "threat": 2,
+   "hp": 1,
+   "armor": 1,
+   "resist": 0,
+   "steps": [
+    {
+     "k": "move",
+     "n": 1,
+     "dir": "away",
+     "tgt": "aggro"
+    },
+    {
+     "k": "attack",
+     "tgt": "aggro",
+     "range": 9,
+     "dmg": 3,
+     "magic": true,
+     "dodge": 1
+    }
+   ]
+  },
+  "Large Hollow Soldier": {
+   "threat": 6,
+   "hp": 5,
+   "armor": 1,
+   "resist": 0,
+   "steps": [
+    {
+     "k": "move",
+     "n": 1,
+     "dir": "to",
+     "tgt": "nearest",
+     "push": true,
+     "dmg": 5,
+     "magic": false,
+     "dodge": 1
+    }
+   ]
+  },
+  "Sentinel": {
+   "threat": 9,
+   "hp": 10,
+   "armor": 2,
+   "resist": 1,
+   "steps": [
+    {
+     "k": "move",
+     "n": 1,
+     "dir": "to",
+     "tgt": "nearest",
+     "push": true
+    },
+    {
+     "k": "attack",
+     "tgt": "nearest",
+     "range": 1,
+     "node": true,
+     "dmg": 6,
+     "magic": false,
+     "dodge": 1
+    }
+   ]
+  },
+  "Silver Knight Greatbowman": {
+   "threat": 3,
+   "hp": 1,
+   "armor": 2,
+   "resist": 0,
+   "steps": [
+    {
+     "k": "attack",
+     "tgt": "aggro",
+     "range": 9,
+     "node": true,
+     "dmg": 4,
+     "magic": false,
+     "dodge": 1
+    },
+    {
+     "k": "move",
+     "n": 1,
+     "dir": "away",
+     "tgt": "aggro"
+    }
+   ]
+  },
+  "Silver Knight Swordsman": {
+   "threat": 7,
+   "hp": 1,
+   "armor": 2,
+   "resist": 1,
+   "steps": [
+    {
+     "k": "move",
+     "n": 2,
+     "dir": "to",
+     "tgt": "nearest"
+    },
+    {
+     "k": "attack",
+     "tgt": "nearest",
+     "range": 0,
+     "node": true,
+     "push": true,
+     "dmg": 5,
+     "magic": false,
+     "dodge": 2
+    }
+   ]
+  }
+ },
+ "encounters": {
+  "1": [
+   {
+    "name": "Ash Gardens",
+    "enemies": [
+     "Silver Knight Greatbowman",
+     "Crossbow Hollow"
+    ]
+   },
+   {
+    "name": "Ashen Hollow",
+    "enemies": [
+     "Crossbow Hollow",
+     "Hollow Soldier",
+     "Hollow Soldier"
+    ]
+   },
+   {
+    "name": "Broken Passageway",
+    "enemies": [
+     "Silver Knight Swordsman",
+     "Hollow Soldier",
+     "Hollow Soldier"
+    ]
+   },
+   {
+    "name": "Dark Hollow",
+    "enemies": [
+     "Large Hollow Soldier"
+    ]
+   },
+   {
+    "name": "Forsaken Depths",
+    "enemies": [
+     "Hollow Soldier",
+     "Crossbow Hollow",
+     "Hollow Soldier",
+     "Crossbow Hollow"
+    ]
+   },
+   {
+    "name": "Ghostly Keep",
+    "enemies": [
+     "Hollow Soldier",
+     "Hollow Soldier",
+     "Crossbow Hollow"
+    ]
+   },
+   {
+    "name": "Hollow Cave",
+    "enemies": [
+     "Hollow Soldier",
+     "Hollow Soldier",
+     "Hollow Soldier"
+    ]
+   },
+   {
+    "name": "Ruined Keep",
+    "enemies": [
+     "Crossbow Hollow",
+     "Hollow Soldier",
+     "Crossbow Hollow"
+    ]
+   },
+   {
+    "name": "Shattered Dungeon",
+    "enemies": [
+     "Hollow Soldier",
+     "Crossbow Hollow",
+     "Crossbow Hollow"
+    ]
+   },
+   {
+    "name": "The Deeps",
+    "enemies": [
+     "Silver Knight Swordsman",
+     "Hollow Soldier",
+     "Crossbow Hollow"
+    ]
+   },
+   {
+    "name": "The Forgotten",
+    "enemies": [
+     "Hollow Soldier",
+     "Hollow Soldier",
+     "Silver Knight Greatbowman"
+    ]
+   },
+   {
+    "name": "Unlighted Chamber",
+    "enemies": [
+     "Hollow Soldier",
+     "Crossbow Hollow",
+     "Silver Knight Swordsman"
+    ]
+   }
+  ],
+  "2": [
+   {
+    "name": "Black Dungeon",
+    "enemies": [
+     "Silver Knight Swordsman",
+     "Silver Knight Swordsman",
+     "Silver Knight Greatbowman",
+     "Silver Knight Swordsman"
+    ]
+   },
+   {
+    "name": "Burned Gardens",
+    "enemies": [
+     "Large Hollow Soldier",
+     "Silver Knight Swordsman",
+     "Silver Knight Swordsman"
+    ]
+   },
+   {
+    "name": "Demon Ruins",
+    "enemies": [
+     "Silver Knight Greatbowman",
+     "Silver Knight Swordsman",
+     "Large Hollow Soldier"
+    ]
+   },
+   {
+    "name": "Forgotten Gorge",
+    "enemies": [
+     "Hollow Soldier",
+     "Hollow Soldier",
+     "Silver Knight Greatbowman",
+     "Hollow Soldier",
+     "Silver Knight Greatbowman"
+    ]
+   },
+   {
+    "name": "High Wall of Lothric",
+    "enemies": [
+     "Large Hollow Soldier",
+     "Hollow Soldier",
+     "Hollow Soldier",
+     "Crossbow Hollow"
+    ]
+   },
+   {
+    "name": "Lightless Passage",
+    "enemies": [
+     "Large Hollow Soldier",
+     "Hollow Soldier",
+     "Hollow Soldier",
+     "Hollow Soldier"
+    ]
+   },
+   {
+    "name": "Lost Labyrinth",
+    "enemies": [
+     "Large Hollow Soldier",
+     "Large Hollow Soldier"
+    ]
+   },
+   {
+    "name": "Prison Tower",
+    "enemies": [
+     "Silver Knight Swordsman",
+     "Silver Knight Greatbowman",
+     "Silver Knight Swordsman"
+    ]
+   },
+   {
+    "name": "Sentinel's Wrath",
+    "enemies": [
+     "Sentinel"
+    ]
+   },
+   {
+    "name": "Sunrise Pass",
+    "enemies": [
+     "Silver Knight Greatbowman",
+     "Silver Knight Greatbowman",
+     "Large Hollow Soldier"
+    ]
+   },
+   {
+    "name": "Temple of the Deeps",
+    "enemies": [
+     "Hollow Soldier",
+     "Hollow Soldier",
+     "Crossbow Hollow",
+     "Hollow Soldier",
+     "Crossbow Hollow"
+    ]
+   },
+   {
+    "name": "Weathered Peak",
+    "enemies": [
+     "Silver Knight Swordsman",
+     "Silver Knight Swordsman",
+     "Crossbow Hollow",
+     "Silver Knight Greatbowman",
+     "Hollow Soldier"
+    ]
+   }
+  ],
+  "3": [
+   {
+    "name": "Cemetery of Ash",
+    "enemies": [
+     "Large Hollow Soldier",
+     "Silver Knight Swordsman",
+     "Silver Knight Swordsman",
+     "Large Hollow Soldier",
+     "Silver Knight Greatbowman",
+     "Silver Knight Greatbowman"
+    ]
+   },
+   {
+    "name": "Central Irithyll",
+    "enemies": [
+     "Large Hollow Soldier",
+     "Sentinel",
+     "Large Hollow Soldier"
+    ]
+   },
+   {
+    "name": "Desecrated Church",
+    "enemies": [
+     "Silver Knight Swordsman",
+     "Silver Knight Swordsman",
+     "Silver Knight Greatbowman",
+     "Large Hollow Soldier",
+     "Silver Knight Swordsman",
+     "Silver Knight Greatbowman"
+    ]
+   },
+   {
+    "name": "Dilapidated Bridge",
+    "enemies": [
+     "Large Hollow Soldier",
+     "Hollow Soldier",
+     "Crossbow Hollow",
+     "Large Hollow Soldier",
+     "Hollow Soldier",
+     "Crossbow Hollow"
+    ]
+   },
+   {
+    "name": "Empty Crypt",
+    "enemies": [
+     "Sentinel",
+     "Sentinel"
+    ]
+   },
+   {
+    "name": "Lost Shrine",
+    "enemies": [
+     "Silver Knight Swordsman",
+     "Silver Knight Swordsman",
+     "Silver Knight Greatbowman",
+     "Silver Knight Swordsman",
+     "Silver Knight Greatbowman",
+     "Silver Knight Greatbowman"
+    ]
+   },
+   {
+    "name": "Perished Depths",
+    "enemies": [
+     "Sentinel",
+     "Hollow Soldier",
+     "Hollow Soldier",
+     "Crossbow Hollow",
+     "Crossbow Hollow"
+    ]
+   },
+   {
+    "name": "Pit of the Dead",
+    "enemies": [
+     "Sentinel",
+     "Sentinel",
+     "Silver Knight Greatbowman"
+    ]
+   },
+   {
+    "name": "Profane Shrine",
+    "enemies": [
+     "Silver Knight Swordsman",
+     "Silver Knight Swordsman",
+     "Silver Knight Swordsman",
+     "Large Hollow Soldier",
+     "Hollow Soldier",
+     "Hollow Soldier"
+    ]
+   },
+   {
+    "name": "Silent Tombs",
+    "enemies": [
+     "Large Hollow Soldier",
+     "Silver Knight Swordsman",
+     "Silver Knight Swordsman",
+     "Large Hollow Soldier",
+     "Silver Knight Greatbowman"
+    ]
+   },
+   {
+    "name": "Untended Graves",
+    "enemies": [
+     "Silver Knight Greatbowman",
+     "Silver Knight Greatbowman",
+     "Sentinel",
+     "Silver Knight Swordsman"
+    ]
+   },
+   {
+    "name": "Wretched Gardens",
+    "enemies": [
+     "Sentinel",
+     "Silver Knight Greatbowman",
+     "Large Hollow Soldier"
+    ]
+   }
+  ]
+ },
+ "bosses": {
+  "Gargoyle": {
+   "kind": "mini",
+   "hp": 26,
+   "heatup": 12,
+   "armor": 2,
+   "resist": 1,
+   "deck": 4,
+   "levels": [
+    1,
+    1,
+    1,
+    2
+   ],
+   "cards": [
+    {
+     "name": "Sweeping Strike",
+     "dodge": 1,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 5,
+       "magic": false,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Halberd Thrust",
+     "dodge": 1,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 6,
+       "magic": false,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Tail Sweep",
+     "dodge": 2,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 4,
+       "magic": false,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Tail Whip",
+     "dodge": 2,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 4,
+       "magic": false,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Electric Breath",
+     "dodge": 2,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 4,
+       "magic": true,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Flying Tail Whip",
+     "dodge": 1,
+     "repeat": 1,
+     "heatup": true,
+     "attacks": [
+      {
+       "dmg": 6,
+       "magic": false,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Swooping Cleave",
+     "dodge": 2,
+     "repeat": 1,
+     "heatup": true,
+     "attacks": [
+      {
+       "dmg": 6,
+       "magic": false,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Aerial Electric Breath",
+     "dodge": 2,
+     "repeat": 1,
+     "heatup": true,
+     "attacks": [
+      {
+       "dmg": 5,
+       "magic": true,
+       "push": false,
+       "effects": []
+      }
+     ]
+    }
+   ]
+  },
+  "Titanite Demon": {
+   "kind": "mini",
+   "hp": 22,
+   "heatup": 10,
+   "armor": 3,
+   "resist": 2,
+   "deck": 4,
+   "levels": [
+    1,
+    2,
+    2,
+    2
+   ],
+   "cards": [
+    {
+     "name": "Double Swing",
+     "dodge": 1,
+     "repeat": 2,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 4,
+       "magic": false,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Tail Whip",
+     "dodge": 2,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 4,
+       "magic": false,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Grab & Smash",
+     "dodge": 1,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 6,
+       "magic": false,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Lightning Bolt",
+     "dodge": 2,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 5,
+       "magic": true,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Vicious Swing",
+     "dodge": 1,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 5,
+       "magic": false,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Sweeping Strike",
+     "dodge": 1,
+     "repeat": 1,
+     "heatup": true,
+     "attacks": [
+      {
+       "dmg": 6,
+       "magic": false,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Vaulting Slam",
+     "dodge": 2,
+     "repeat": 1,
+     "heatup": true,
+     "attacks": [
+      {
+       "dmg": 6,
+       "magic": false,
+       "push": true,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Double Pole Crush",
+     "dodge": 1,
+     "repeat": 2,
+     "heatup": true,
+     "attacks": [
+      {
+       "dmg": 5,
+       "magic": false,
+       "push": false,
+       "effects": []
+      }
+     ]
+    }
+   ]
+  },
+  "Winged Knight": {
+   "kind": "mini",
+   "hp": 24,
+   "heatup": 12,
+   "armor": 3,
+   "resist": 1,
+   "deck": 4,
+   "levels": [
+    1,
+    1,
+    2,
+    2
+   ],
+   "cards": [
+    {
+     "name": "Backhand Shaft Strike",
+     "dodge": 1,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 5,
+       "magic": false,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Overhand Smash",
+     "dodge": 2,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 5,
+       "magic": false,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Double Slash",
+     "dodge": 2,
+     "repeat": 2,
+     "heatup": true,
+     "attacks": [
+      {
+       "dmg": 6,
+       "magic": false,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Whirlwind",
+     "dodge": 1,
+     "repeat": 3,
+     "heatup": true,
+     "attacks": [
+      {
+       "dmg": 4,
+       "magic": false,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Pillars of Light",
+     "dodge": 1,
+     "repeat": 1,
+     "heatup": true,
+     "attacks": [
+      {
+       "dmg": 5,
+       "magic": true,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Sweeping Blade Swing",
+     "dodge": 1,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 5,
+       "magic": false,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Diagonal Uppercut",
+     "dodge": 1,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 5,
+       "magic": false,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Charging Assault",
+     "dodge": 2,
+     "repeat": 2,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 4,
+       "magic": false,
+       "push": false,
+       "effects": []
+      }
+     ]
+    }
+   ]
+  },
+  "Boreal Outrider Knight": {
+   "kind": "mini",
+   "hp": 26,
+   "heatup": 13,
+   "armor": 2,
+   "resist": 3,
+   "deck": 4,
+   "levels": [
+    1,
+    1,
+    2,
+    2
+   ],
+   "cards": [
+    {
+     "name": "Backhand Slashes",
+     "dodge": 2,
+     "repeat": 2,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 4,
+       "magic": false,
+       "push": false,
+       "effects": [
+        "frostbite"
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Overhand Slash",
+     "dodge": 1,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 5,
+       "magic": false,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Sweeping Strike",
+     "dodge": 1,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 5,
+       "magic": false,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Chilling Thrust",
+     "dodge": 2,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 4,
+       "magic": true,
+       "push": false,
+       "effects": [
+        "frostbite"
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Leaping Frost",
+     "dodge": 1,
+     "repeat": 2,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 4,
+       "magic": false,
+       "push": false,
+       "effects": [
+        "frostbite"
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Lunging Triple Slash",
+     "dodge": 1,
+     "repeat": 3,
+     "heatup": true,
+     "attacks": [
+      {
+       "dmg": 4,
+       "magic": false,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Uppercut Slam",
+     "dodge": 2,
+     "repeat": 1,
+     "heatup": true,
+     "attacks": [
+      {
+       "dmg": 5,
+       "magic": false,
+       "push": false,
+       "effects": [
+        "frostbite"
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Frost Breath",
+     "dodge": 1,
+     "repeat": 1,
+     "heatup": true,
+     "attacks": [
+      {
+       "dmg": 6,
+       "magic": true,
+       "push": false,
+       "effects": [
+        "frostbite"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "Dancer of the Boreal Valley": {
+   "kind": "main",
+   "hp": 34,
+   "heatup": 18,
+   "armor": 2,
+   "resist": 2,
+   "deck": 5,
+   "levels": [
+    2,
+    2,
+    3,
+    3
+   ],
+   "cards": [
+    {
+     "name": "Uppercut",
+     "dodge": 2,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 5,
+       "magic": false,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Blade Dance",
+     "dodge": 1,
+     "repeat": 2,
+     "heatup": true,
+     "attacks": [
+      {
+       "dmg": 5,
+       "magic": false,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Plunging Assault",
+     "dodge": 1,
+     "repeat": 3,
+     "heatup": true,
+     "attacks": [
+      {
+       "dmg": 6,
+       "magic": false,
+       "push": true,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Whirling Blades",
+     "dodge": 1,
+     "repeat": 4,
+     "heatup": true,
+     "attacks": [
+      {
+       "dmg": 6,
+       "magic": false,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Double Slash",
+     "dodge": 1,
+     "repeat": 2,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 5,
+       "magic": false,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Plunging Attack",
+     "dodge": 2,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 6,
+       "magic": false,
+       "push": true,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Triple Slash",
+     "dodge": 1,
+     "repeat": 3,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 5,
+       "magic": false,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Lunging Thrust",
+     "dodge": 2,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 5,
+       "magic": false,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Backhand Blade Swipe",
+     "dodge": 2,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 7,
+       "magic": false,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Flashing Blade",
+     "dodge": 1,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 6,
+       "magic": false,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Deadly Grasp",
+     "dodge": 2,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 7,
+       "magic": false,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Sweeping Blade Swipe",
+     "dodge": 2,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 7,
+       "magic": false,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Ash Cloud",
+     "dodge": 1,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 6,
+       "magic": true,
+       "push": false,
+       "effects": []
+      }
+     ]
+    }
+   ]
+  }
+ }
+}
