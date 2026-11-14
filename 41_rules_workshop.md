@@ -824,7 +824,7 @@ To re-run: `python3 tools/sim/test_sim.py`; `python3 tools/sim/fights.py`; `pyth
 | The grind | The most frequent complaint, in every review reached. Steamforged: the original "encouraged farming souls and treasure before each boss". | 16 of a lone character's 28 fights, and 6 of four characters' 18, repeat a cleared encounter. |
 | One death sends everyone back | Second most frequent. | With the grind already gone, removing it lifts three and four characters from 89% and 84% to 98% and 100%: it is what holds large parties back. |
 | Random treasure | "Pure luck"; unsuitable draws are common and each costs a soul. | The 2022 rulebook itself replaced the blind draw. |
-| Length | Two to three times the time on the box. | A lone official game takes about 650 activations of a model, and two to four characters about 370 to 420, against 290 to 365 at every size in the final ruleset. |
+| Length | Two to three times the time on the box. | A lone official game takes about 650 activations of a model, and two to four characters about 370 to 420, against 310 to 365 at every size in the final ruleset. |
 | Waiting | Steamforged: "we heard players felt they had too much downtime". | 1.7 to 1.8 enemy activations for every character turn. |
 | What works | The endurance bar ("a huge win"), boss behaviour decks ("a highlight"), fixed enemy behaviour that makes a turn a puzzle. | Kept unchanged in everything below. |
 
@@ -912,22 +912,22 @@ Count: of the 23 rules decided here, 14 are the manuscript's; 3 are the official
 
 | | 1 character | 2 | 3 | 4 | Official 2017 (1 / 2 / 3 / 4) |
 |---|---|---|---|---|---|
-| Games won (±3; 800 games a cell) | 65% | 66% | 55% | 59% | 44% / 50% / 62% / 46% |
+| Games won (±3; 800 games a cell) | 65% | 63% | 58% | 57% | 44% / 50% / 62% / 46% |
 | at weaker play (skill 0.8) | 37% | 25% | 22% | 20% | 21% / 26% / 42% / 26% |
-| Fights in a game | 10.9 | 11.0 | 9.2 | 9.3 | 28 / 22 / 21 / 18 |
+| Fights in a game | 10.9 | 11.0 | 9.7 | 9.2 | 28 / 22 / 21 / 18 |
 | of which repeats | 0 | 0 | 0 | 0 | 16 / 12 / 9 / 6 |
-| Table time (activations) | 358 | 364 | 289 | 331 | 655 / 388 / 420 / 369 |
-| Rests used | 3.8 | 3.3 | 3.2 | 2.2 | 5.1 / 5.5 / 3.2 / 2.3 |
-| Level 3 encounter, rounds | 8.1 | 3.9 | 3.4 | 3.4 | 10.4 / 4.2 / 2.6 / 2.0 |
-| Level 3 encounter, someone dies | 10% | 23% | 37% | 47% | 21% / 21% / 28% / 29% |
-| Games lost at: encounters / mini-boss / main boss | 3% / 20% / 12% | 1% / 18% / 15% | 18% / 16% / 12% | 25% / 12% / 4% | |
+| Table time (activations) | 355 | 366 | 309 | 326 | 655 / 388 / 420 / 369 |
+| Rests used | 3.8 | 3.3 | 3.0 | 2.2 | 5.1 / 5.5 / 3.2 / 2.3 |
+| Level 3 encounter, rounds | 8.0 | 3.8 | 3.4 | 3.5 | 10.4 / 4.2 / 2.6 / 2.0 |
+| Level 3 encounter, someone dies | 10% | 23% | 40% | 48% | 21% / 21% / 28% / 29% |
+| Games lost at: encounters / mini-boss / main boss | 3% / 20% / 12% | 1% / 19% / 17% | 17% / 15% / 10% | 26% / 12% / 5% | |
 
 Against the goals:
 
-- **Balanced:** 55% to 66% at every party size. The official game under the same players spans 44% to 62%.
-- **Not grindy, and quick:** 9 to 11 fights and 290 to 365 activations at every size, no encounter fought twice. The official game takes 18 to 28 fights, a third to more than half of them repeats.
+- **Balanced:** 57% to 65% at every party size. The official game under the same players spans 44% to 62%.
+- **Not grindy, and quick:** 9 to 11 fights and 310 to 365 activations at every size, no encounter fought twice. The official game takes 18 to 28 fights, a third to more than half of them repeats.
 - **Tactical:** against the official turn rules, about twice as many defences are a real choice of dodge or parry, and twice as many turns end with a step out of reach (14.4). The party orders its own turn and decides who draws the enemies.
-- **Fair:** the chance that someone dies in a Level 3 encounter rises with party size (10% to 47%) while what a death costs falls (the encounter for a lone character, a hollowing for the others) and sparks fall from five to two.
+- **Fair:** the chance that someone dies in a Level 3 encounter rises with party size (10% to 48%) while what a death costs falls (the encounter for a lone character, a hollowing for the others) and sparks fall from five to two.
 - **Simple:** one table by party size, three lines long. No extra enemy turns, no repeats, no faster enemies, no stamina toll, no reduced rewards.
 
 **Single fights at equal strength** (see 12.3 for the method). Each cell: 1, 2, 3 and 4 characters.
@@ -964,7 +964,7 @@ Against the goals:
 
 ### 14.7 An alternative table for longer fights
 
-The author's target for a Level 3 encounter was four to seven rounds. The table above gives 3.4 to 3.9 for two to four characters and 8.1 for a lone character. More enemy health with gentler damage lengthens them:
+The author's target for a Level 3 encounter was four to seven rounds. The table above gives 3.4 to 3.8 for two to four characters and 8.0 for a lone character. More enemy health with gentler damage lengthens them:
 
 | Characters | Enemy health | Damage | Games won | Level 3 rounds |
 |---|---|---|---|---|
@@ -989,12 +989,12 @@ Everything else in 9.6 stands. Proposal B of 13.4 is withdrawn.
 
 ### 14.9 What is not settled by this
 
-1. **The level is set by the author's recollection of the official game** (section 13.2) and every figure inherits it. The final ruleset is somewhat easier than the official game under the same players (55% to 66% against 44% to 62%). To make it harder, give a lone character 4 souls and add one to each damage step; the steps are coarse, about 20 points of win rate each.
+1. **The level is set by the author's recollection of the official game** (section 13.2) and every figure inherits it. The final ruleset is somewhat easier than the official game under the same players (57% to 65% against 44% to 62%). To make it harder, give a lone character 4 souls and add one to each damage step; the steps are coarse, about 20 points of win rate each.
 2. **A lone character's fights are long** (8 rounds at Level 3), as they are in the official game (10).
 3. **The gravestone's power to look at a face-down encounter card** has nothing to look at once cards are drawn on entry. It should look at the top card of an encounter deck.
 4. **Whose souls** is the closest call in 14.5: the official shared cache is simpler and would also work with a different scaling table.
 5. **Not modelled,** as before: terrain, traps, events, invaders, phantoms, mimics, the expansions' enemies, and the 2022 sets.
 
-Corrections after the automated review of the pull request (2026-11-14): a character who took the Rest action could still run when stepping out of reach, and the manuscript and settled presets had been left giving one treasure card to the party on a first clear where they should give one to each character (introduced with this round's changes; the final ruleset and every figure in sections 13 and 14 used the per-character reward). Both are fixed and checked. The final ruleset was run again: 65% / 65% / 59% / 58%, unchanged. A third: under the manuscript a successful dodge always moves the character one node, and the simulator moved it only off the attacker's own node. Fixed and checked (62 checks pass); the final ruleset was run once more and the table of 14.6 now shows that run (65% / 66% / 55% / 59%; it was 65% / 65% / 59% / 58%, inside the sampling error). The weaker-play row, the ladder and the module tests were not re-run. The manuscript as written, run again: 44% / 74% / 75% / 28%, against 44% / 75% / 74% / 28% in 13.3.
+Corrections after the automated review of the pull request (2026-11-14): a character who took the Rest action could still run when stepping out of reach, and the manuscript and settled presets had been left giving one treasure card to the party on a first clear where they should give one to each character (introduced with this round's changes; the final ruleset and every figure in sections 13 and 14 used the per-character reward). Both are fixed and checked. The final ruleset was run again: 65% / 65% / 59% / 58%, unchanged. A third: under the manuscript a successful dodge always moves the character one node, and the simulator moved it only off the attacker's own node. Fixed and checked (62 checks pass); the final ruleset was run once more (65% / 66% / 55% / 59%). A fourth and fifth: the Warrior's heroic action attacked without taking its step, so the Warrior struck from a node away; and a dodge could buy two extra dice where the manuscript allows one. Both are fixed and checked (64 checks pass). The final ruleset was run again and the table of 14.6 now shows that run (65% / 63% / 58% / 57%; the first run was 65% / 65% / 59% / 58%, all inside the sampling error). The Warrior's fault also touched the official rules, so the anchor was run again: 44% / 51% / 64% / 48%, against 44% / 50% / 62% / 46% in 13.2. The weaker-play row, the ladder and the module tests were not re-run. The manuscript as written, run again: 44% / 74% / 75% / 28%, against 44% / 75% / 74% / 28% in 13.3.
 
 To re-run: `python3 tools/sim/test_sim.py`; `python3 tools/sim/fights.py`; `python3 tools/sim/compare.py --only official2017 final`. The modules of 14.3 and 14.4 are named in `tools/sim/rules.py`.

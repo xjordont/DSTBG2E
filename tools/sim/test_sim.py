@@ -217,6 +217,18 @@ for s in range(100):
     f.defend(foe, c, 9, True, 0); moved += c.node != start and E.DIST[c.node][start] == 1
 check('manuscript: a dodge of an attack from another node still moves the character one node', moved == 100, moved)
 
+# ---------------------------------------------------------------- the Warrior's heroic step is taken; one extra dodge die at most
+c = Char('Warrior', R17); f = E.Fight([c], R17, random.Random(1), enemies=['Sentinel'], policy=E.Policy(kite=False))
+foe = f.foes[0]; c.node = E.IDX[(0, 4)]; foe.node = E.IDX[(1, 3)]; foe.hp = 10 ** 6
+c.options['R'] = [o for o in c.options['R'] if o['cost'] >= 2]; c.options['L'] = []; f.char_turn(c)      # only the costly attack: the heroic action applies
+check("the Warrior's heroic attack is made from the target's node", (not c.heroic) and c.node == foe.node, (c.heroic, c.node, foe.node))
+most = 0
+for s in range(300):
+    c = Char('Assassin', M); f = E.Fight([c], M, random.Random(s), enemies=['Hollow Soldier'], policy=E.Policy(evade=0.0))
+    c.heroic = c.luck = False; c.dmg = 5; c.L = None; c.can_parry = False; foe = f.foes[0]; foe.node = c.node
+    f.defend(foe, c, 7, False, 2); most = max(most, c.sta)
+check('manuscript: a dodge costs three stamina at most (one extra die)', most <= 3, most)
+
 # ---------------------------------------------------------------- equipment data
 check('every starting item is met by its class at base stats',
       all(Char(k, R17).cost_to_meet(ITEMS[n]['req'])[0] == 0 for k, v in CLASSES.items() for n in v['start']))

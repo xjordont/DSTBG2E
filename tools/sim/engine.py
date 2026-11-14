@@ -241,7 +241,7 @@ class Fight:
         fail = hit_stats(adice, r.block, dmg, pen) if r.dodge_fail == 'armour' else ((dmg, 1.0),)
         tries = [(nd, sta1)]
         if r.dodge_extra:
-            tries += [(nd + j, sta1 + 2 * j) for j in (1, 2) if nd + j <= 4]
+            if nd + 1 <= 4: tries.append((nd + 1, sta1 + 2))          # one extra die a dodge, for two more stamina
         for dice_n, sta in tries:
             if sta > room or (dice_n <= 0 and k > 0): continue
             ps = p_dodge(dice_n, k + pen)
@@ -533,8 +533,9 @@ class Fight:
                             steps = 1
                         if steps == 99: continue
                         surge = c.heroic and c.name == 'Warrior' and rg == 0 and o['cost'] >= 2      # free step, free node attack
-                        if surge: o = dict(o, cost=0, node=True); steps = max(0, steps - 1)
-                        run = max(0, steps - 1) + (steps if (c.frost and r.frost == 'official') else 0)
+                        if surge: o = dict(o, cost=0, node=True)
+                        # one step is the free Walk; the Warrior's heroic action gives one more free step
+                        run = max(0, steps - 1 - (1 if surge else 0)) + (steps if (c.frost and r.frost == 'official') else 0)
                         cost = o['cost'] + run + (1 if (c.stagger and r.stagger == 'official') else 0) \
                             + (1 if (f.boss and f.heated and f.name == 'Gargoyle' and d - steps == 0) else 0)
                         room = free - (1 if r.lethal == 'full' else 0)
