@@ -182,6 +182,19 @@ f = E.Fight([a, b], M, random.Random(0), enemies=['Hollow Soldier']); a.was_holl
 used = a.ember and not a.hollow; f.wound(a, 99)
 check('manuscript: a hollow character who embers and then dies does not lose the encounter', used and not a.alive and not f.failed())
 
+# ---------------------------------------------------------------- a staggered attacker is easier to dodge (manuscript)
+def dodged(staggered, trials=400):
+    n = 0
+    for s in range(trials):
+        c = Char('Assassin', M); f = E.Fight([c], M, random.Random(s), enemies=['Hollow Soldier'], policy=E.Policy(evade=0.0))
+        c.heroic = c.luck = False; c.blk = c.arm_blk = ''; c.L = None; c.can_parry = False; c.dodge = 1
+        foe = f.foes[0]; foe.node = c.node; foe.stagger = staggered; f.defend(foe, c, 9, False, 1); n += c.dmg == 0
+    return n / trials
+
+
+check('manuscript: difficulty 1 against one die is dodged half the time, always when the attacker is staggered',
+      close(dodged(False), 0.5, 0.08) and dodged(True) == 1.0, (dodged(False), dodged(True)))
+
 # ---------------------------------------------------------------- equipment data
 check('every starting item is met by its class at base stats',
       all(Char(k, R17).cost_to_meet(ITEMS[n]['req'])[0] == 0 for k, v in CLASSES.items() for n in v['start']))

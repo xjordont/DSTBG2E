@@ -219,6 +219,7 @@ class Fight:
         """An attack of `dmg` (after scaling) with dodge difficulty k resolves against character c."""
         if not c.alive or src.hp <= 0: return          # a riposte or a backstab may have killed the attacker mid-activation
         r, pol, rng = self.r, self.pol, self.rng
+        if src.stagger and r.stagger == 'author': k = max(0, k - 1)      # a staggered attacker is easier to dodge and parry
         if not src.boss and rng.random() < pol.evade: return
         free = c.cap - c.dmg - c.sta
         pen = 1 if (c.stagger and r.stagger == 'author') else 0

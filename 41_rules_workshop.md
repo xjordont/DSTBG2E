@@ -654,12 +654,12 @@ All figures: whole games, calibrated skill, the players choosing the resting pol
 | Ruleset | Games won, 1 / 2 / 3 / 4 characters |
 |---|---|
 | Official 2017 (the anchor) | 44% / 50% / 62% / 46% |
-| Author's manuscript, as written | 45% / 80% / 70% / 23% |
+| Author's manuscript, as written | 44% / 75% / 74% / 28% |
 | Health rule only (decision 1); bosses as printed; souls spent at a rest | 44% / 84% / 90% / 88% |
 | the same, Andre without a rest | 46% / 85% / 93% / 92% |
 | the same, Andre and the Firekeeper without a rest | 57% / 94% / 98% / 98% |
 
-The official row is 600 games a cell (±4), the health-rule row 800 (±3), the others 300 (±6).
+The official row is 600 games a cell (±4), the manuscript row 500 (±4), the health-rule row 800 (±3), the last two 300 (±6).
 
 **1. Enemy health +2 for each character beyond the second: kept.** It sets the length of fights (Level 3: about four rounds with three or four characters) and does little to the win rate.
 
@@ -731,7 +731,7 @@ Common to both, and unchanged from the author's decisions: enemy health +2 for e
 - **Win rate:** 46% to 57% at every party size, the same band as the official game under the same players. B cannot be levelled with whole steps of damage: at +1, three and four characters win 78% and 66%; at +2 they win 45% and 38%.
 - **Length of game:** 9 to 11 fights and 310 to 370 activations at every size. The official game needs 18 to 28 fights because encounters are refought for souls; a lone official game is almost twice as long as any other.
 - **Deaths against sparks:** in A the chance that someone dies in a Level 3 encounter rises from 18% for a lone character (for whom it loses the encounter) to 48% for four (for whom it costs a hollowing), while sparks fall from five to two.
-- **It is the author's manuscript with two numbers changed.** The manuscript's own table is +1 health for each character, +1 attack at three, faster enemies at two and a repeat at four, and wins 45% / 80% / 70% / 23%. A keeps its shape (a short table by party size), drops the movement bonus and the repeat, and makes the damage step larger.
+- **It is the author's manuscript with two numbers changed.** The manuscript's own table is +1 health for each character, +1 attack at three, faster enemies at two and a repeat at four, and wins 44% / 75% / 74% / 28%. A keeps its shape (a short table by party size), drops the movement bonus and the repeat, and makes the damage step larger.
 
 **Weaker play.** At a skill setting of 0.8 the official game falls to 21% / 26% / 42% / 26% and proposal A to 26% / 16% / 10% / 13%. A flat damage bonus punishes weaker play in larger parties harder than the official rules do. A is balanced for players who win the official game about half the time; for tables that win it less often, take one off each damage step (+1, +2, +2). That gentler table was not run at the weaker setting.
 
@@ -795,6 +795,6 @@ Every party is given the same souls for its stage and fights one random encounte
 
 Section 9.6's entry for enemy scaling, and the entry added in round six, now read as proposal A pending the author's choice: "Enemy health +2 for each character beyond the second. Every enemy and boss attack deals +2 damage with two characters and +3 with three or four. A lone character starts with six souls. Andre and the Firekeeper may be visited at the bonfire between encounters without a rest (section 13.4)."
 
-Corrections after the automated review of the pull request (2026-11-14): under the manuscript's rules a frostbitten character could still take the Rest action, and a hollow character who used an ember and then died still lost the encounter. Both are fixed and checked (58 checks pass). Both proposals were run again: A 57% / 55% / 46% / 52%, B 59% / 58% / 77% / 66%, against 57% / 55% / 46% / 50% and 59% / 58% / 78% / 66% in the table above, inside the sampling error. The other rows were not re-run.
+Corrections after the automated review of the pull request (2026-11-14): under the manuscript's rules a frostbitten character could still take the Rest action, and a hollow character who used an ember and then died still lost the encounter. Both are fixed and checked. Both proposals were run again: A 57% / 55% / 46% / 52%, B 59% / 58% / 77% / 66%, against 57% / 55% / 46% / 50% and 59% / 58% / 78% / 66% in the table above, inside the sampling error. A third: a staggered attacker was not one easier to dodge, which matters only where an enemy attacks again after being parried (the manuscript's repeat at four characters). Fixed and checked (59 checks pass); the manuscript row was run again with every fix and is the figure now shown (44% / 75% / 74% / 28%; it was 45% / 80% / 70% / 23% at 300 games). The proposals have no repeated attacks and were not re-run for it.
 
 To re-run: `python3 tools/sim/test_sim.py`; `python3 tools/sim/fights.py`; `python3 tools/sim/compare.py` (add `--skill 0.8` for weaker play).
