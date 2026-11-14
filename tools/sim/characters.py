@@ -157,6 +157,7 @@ class Economy:
     def __init__(self, party, rules, rng):
         self.party, self.r, self.rng = party, rules, rng
         self.pool = 0                                  # the shared soul cache of the official rules
+        self.row = []                                  # Andre's face-up cards, where the ruleset has them
         self.embers = len(party)                       # the manuscript's shop: ember cards equal to the number of characters
         self.inv = []                                  # the shared inventory of the official rules
         names = {c.name for c in party}
@@ -183,6 +184,10 @@ class Economy:
             kind = 'upgrade' if it['type'] == 'upgrade' else 'armour' if it['type'] == 'armour' else 'shield' if is_shield(it) else 'weapon'
             if want[kind] > 0: want[kind] -= 1; out.append(it); deck.remove(it)
         return out
+
+    def renew_row(self):
+        if self.r.treasure == 'row' and self.row:
+            self.deck = self.row + self.deck; self.row = []          # back under the deck; a new row is laid out
 
     def after_mini_boss(self):
         if self.r.treasure == 'author':
@@ -288,6 +293,10 @@ class Economy:
         """The shared cache of the official rules: look at some new cards, then put the souls where they add most,
         the weakest character first (any death loses the fight). Souls that buy nothing useful are kept."""
         r = self.r; shown = []
+        if r.treasure == 'row':
+            # a standing row of face-up cards at Andre's: a bought card is replaced at once, the row is renewed at a rest
+            while len(self.row) < r.shop_limit and self.deck: self.row.append(self.draw())
+            shown = self.row
         if r.treasure == 'shop4':
             shown = [x for x in (self.draw() for _ in range(r.shop_limit)) if x]
         elif r.treasure == 'draw':
@@ -310,6 +319,7 @@ class Economy:
                 if not cands: break
                 _, f, it, price, c, src = max(cands, key=lambda x: x[0])
                 src.remove(it); self.pool -= f[1] + price; share[id(c)] -= f[1] + price; self.equip(c, it, f[2], f[3])
+                if r.treasure == 'row' and src is shown and self.deck: shown.append(self.draw())
         if r.treasure == 'shop4': self.deck = shown + self.deck
 
     DRAW_SHARE = 0.3          # share of the cache spent on drawing treasure before levelling for it

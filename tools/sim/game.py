@@ -33,7 +33,7 @@ def play(n, rules, seed, table=None, classes=None):
     sparks = r.sparks(n)
     eco.spend()                                            # the party starts at the bonfire
     out = dict(win=False, rests=0, fights=0, char_turns=0, enemy_acts=0, rounds=0, lost_at=None, deaths=0,
-               by_level={}, sparks_left=0, souls=0)
+               by_level={}, sparks_left=0, souls=0, repeats=0, dec={})
     decks = {lv: rng.sample(ENCOUNTERS[str(lv)], len(ENCOUNTERS[str(lv)])) for lv in (1, 2, 3)}
     dropped_pool = None                                   # official: the cache lies on the tile where the party fell
 
@@ -46,7 +46,7 @@ def play(n, rules, seed, table=None, classes=None):
             if sparks <= 0: return False
             sparks -= 1; out['rests'] += 1
         for c in party: c.full_rest(); c.lost = False
-        spend(); return True
+        eco.renew_row(); spend(); return True
 
     for stage, boss in enumerate((rng.choice(MINIS), rng.choice(MAINS))):
         levels = BOSSES[boss]['levels']; cards = []
@@ -90,7 +90,9 @@ def play(n, rules, seed, table=None, classes=None):
                 boss_seen = True; f = Fight(here, r, rng, boss=boss, policy=t, n=n); lv = 'mini' if stage == 0 else 'main'
             else:
                 f = Fight(here, r, rng, enemies=cards[pos]['enemies'], policy=t, n=n); lv = levels[pos]
+            if not at_boss and ever[pos]: out['repeats'] += 1        # an encounter fought again after it was cleared: the grind
             ok = f.run(); fresh = False
+            for k, v in f.dec.items(): out['dec'][k] = out['dec'].get(k, 0) + v
             out['fights'] += 1; out['char_turns'] += f.char_turns; out['enemy_acts'] += f.enemy_acts; out['rounds'] += f.rounds
             out['deaths'] += f.deaths
             d = out['by_level'].setdefault(lv, dict(n=0, rounds=0, death=0, fail=0, turns=0))
@@ -104,7 +106,10 @@ def play(n, rules, seed, table=None, classes=None):
                     out['souls'] += r.boss_souls(n, sparks) if at_boss else r.souls(lv, n, first)
                 else:
                     for c in party:
-                        if not c.alive:
+                        simple = getattr(r, 'drop', 'manuscript') == 'simple'
+                        if simple and c.dropped and c.dropped[0] == (stage, pos):
+                            c.souls += c.dropped[1]; c.dropped = None      # the encounter is cleared: everyone takes their souls back
+                        elif not c.alive and not simple:
                             c.dropped = ((stage, pos), c.souls); c.souls = 0
                         elif c.dropped and c.dropped[0] == (stage, pos):
                             c.souls += c.dropped[1]; c.dropped = None
@@ -112,8 +117,9 @@ def play(n, rules, seed, table=None, classes=None):
                         c.souls += gain; c.earned += gain; out['souls'] += gain
                 # ---- treasure
                 if not at_boss and first:
-                    k = r.free_treasure(lv, n); k = int(k) + (rng.random() < k - int(k))
-                    cardsT = [eco.draw(1 if stage == 0 else 2) for _ in range(k * (n if r.treasure == 'author' else 1))]
+                    each = r.free_treasure in (None, 'each')             # one card for each character on a first clear
+                    k = 1.0 if each else r.free_treasure(lv, n); k = int(k) + (rng.random() < k - int(k))
+                    cardsT = [eco.draw(1 if stage == 0 else 2) for _ in range(k * (n if each else 1))]
                     eco.give(cardsT)
                 # ---- recovery
                 for c in party:

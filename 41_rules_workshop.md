@@ -268,6 +268,8 @@ Bosses are not scaled in either version: they already act after each character.
 
 ### 9.6 The settled ruleset, in one list
 
+> **Superseded in part by section 14.** Where this table and 14.5 or 14.8 differ, section 14 is the later decision.
+
 | Rule | Settled as |
 |---|---|
 | Endurance bar | ten spaces; a hollow character has eight |
@@ -617,6 +619,8 @@ Corrections after the automated review of the pull request (2026-11-14): a ripos
 
 ## 13. Round seven (2026-11-14): the simulator calibrated against the official game; the author's four decisions
 
+> **Section 14 carries this through to a final ruleset.** The calibration (13.1, 13.2) and the findings of 13.3 stand. Of the two proposals in 13.4, A's scaling table is confirmed in 14.6 and B is withdrawn. One correction: the 2022 rules were played here with the 2017 defence and stamina rules; see 14.1.
+
 **Author's direction.** On the four rules of 12.5: the health rule "is good"; the −1 attack against a lone character "is bad and unwieldy. It would be better to just buff the solo hero with starting souls like in the original rules"; boss health by thirds "seems off and is unwieldy ... the baseline makes sense to have 1 hero parties have boss's play as written on their card with increased scaling difficulty for each additional character"; "Shopping should be allowed without having to spend a spark. Check how other house rules handle this as well." And on the table of 12.4: "The following table cannot be accurate. I'd say the real win rate for 2017 and 2022 editions was 50-60% for all character counts. We need to review the [simulator] to ensure it has valid output for the base rules before we can rely on it for house rules."
 
 **The author was right, and section 12's win rates and its proposal are withdrawn.** The engine and the card data stand. What was wrong was the players in it.
@@ -798,3 +802,197 @@ Section 9.6's entry for enemy scaling, and the entry added in round six, now rea
 Corrections after the automated review of the pull request (2026-11-14): under the manuscript's rules a frostbitten character could still take the Rest action, and a hollow character who used an ember and then died still lost the encounter. Both are fixed and checked. Both proposals were run again: A 57% / 55% / 46% / 52%, B 59% / 58% / 77% / 66%, against 57% / 55% / 46% / 50% and 59% / 58% / 78% / 66% in the table above, inside the sampling error. A third: a staggered attacker was not one easier to dodge, which matters only where an enemy attacks again after being parried (the manuscript's repeat at four characters). Fixed and checked (59 checks pass); the manuscript row was run again with every fix and is the figure now shown (44% / 75% / 74% / 28%; it was 45% / 80% / 70% / 23% at 300 games). The proposals have no repeated attacks and were not re-run for it.
 
 To re-run: `python3 tools/sim/test_sim.py`; `python3 tools/sim/fights.py`; `python3 tools/sim/compare.py` (add `--skill 0.8` for weaker play).
+
+## 14. Round eight (2026-11-14): every rule decided, working outward from the official game
+
+**Author's direction.** "Boss turn order should be after each character activation like in the official 2017 and 2022 rules. ... sort out exactly which rules to use to create an amazing board game experience that most closely matches the goals as previously determined (tactical, balanced, interesting, fun, intuitive, simple). Ideally, the 2017 rules would have been excellent so no house ruling would be needed but they were 'grindy', uninteresting, unintuitive, and lacked tactical decision making. ... if a rule from either the 2017 or 2022 rules works well then it should be considered closely as our working rule with my original house rule manuscript as a close third default. Consider all the elements in the many variable house rules ... You can also search the internet for further discussion."
+
+### 14.1 Method
+
+1. **Order of preference for every rule:** the official rule (2017, then 2022) if it serves the goals; otherwise the manuscript's; otherwise the best idea from the house rules. A rule is replaced only when there is evidence that it fails a goal.
+2. **Evidence gathered this round** (all in `work/phase6/`):
+   - `web_research.md`: what reviewers, Steamforged's own designer notes and published house-rule lists say works and does not. Forums that refuse automated reading are listed there as not reached.
+   - `house_matrix.md`: the 28 readable house rulesets of round four, tabulated rule area by rule area with counts.
+   - `official_diff.md`: the 2017 and 2022 rulebooks compared rule by rule, with page numbers.
+3. **Testing.** The calibrated simulator of section 13 (official 2017 game won 44% to 62%), changed one module at a time starting from the official 2017 rules. Besides the win rate it now reports: fights in a game, how many of them repeat an encounter already cleared (the grind), enemy activations for each character turn (waiting), and how the players' choices are spread (how often a defence is a dodge or parry and not a block, how often an attack is a heavy one, how often a character steps out of reach).
+4. **Correction to section 13.** The 2022 rules had been played with the 2017 defence and stamina rules. The 2022 rulebook has one combined dodge-and-block roll and three stamina a turn; both are now modelled. The 2022 rules on the 2017 enemy cards then win 30% / 38% / 27% / 11%. That is still not a test of the 2022 sets, whose enemies, objectives, rewards and events are not modelled.
+
+### 14.2 What the evidence says about the official game
+
+| | What reviewers and players say | What the simulator shows |
+|---|---|---|
+| The grind | The most frequent complaint, in every review reached. Steamforged: the original "encouraged farming souls and treasure before each boss". | 16 of a lone character's 28 fights, and 6 of four characters' 18, repeat a cleared encounter. |
+| One death sends everyone back | Second most frequent. | With the grind already gone, removing it lifts three and four characters from 89% and 84% to 98% and 100%: it is what holds large parties back. |
+| Random treasure | "Pure luck"; unsuitable draws are common and each costs a soul. | The 2022 rulebook itself replaced the blind draw. |
+| Length | Two to three times the time on the box. | A lone official game takes about 650 activations of a model, and two to four characters about 370 to 420, against 300 to 360 at every size in the final ruleset. |
+| Waiting | Steamforged: "we heard players felt they had too much downtime". | 1.7 to 1.8 enemy activations for every character turn. |
+| What works | The endurance bar ("a huge win"), boss behaviour decks ("a highlight"), fixed enemy behaviour that makes a turn a puzzle. | Kept unchanged in everything below. |
+
+House rules converge on the same repairs: a shop in place of the blind draw (14 of 28), one death not ending the encounter (9), a parry or riposte (9), a spark or refreshed tokens for a boss kill (9), cleared encounters staying cleared (7), some reward for pressing on without resting (7).
+
+### 14.3 The ladder: from the official rules, one change at a time
+
+Games won with 1 / 2 / 3 / 4 characters; 300 games a cell (±6).
+
+| Step | Games won | Fights (of which repeats), 1 and 4 characters | Enemy activations per character turn, 4 characters |
+|---|---|---|---|
+| Official 2017 | 44% / 53% / 60% / 45% | 28 (16) and 18 (6) | 1.7 |
+| + cleared encounters stay cleared; souls 3 / 4 / 5 a character, 6 for a boss | 58% / 74% / 89% / 84% | 12 (0) and 11 (0) | 1.6 |
+| + the dead return hollow if the encounter is won | 60% / 84% / 98% / 100% | 12 and 10 | 1.6 |
+| + all enemies act, then all characters | 59% / 84% / 97% / 99% | 12 and 10 | 0.9 |
+| + the manuscript's turn and defence rules | 62% / 93% / 100% / 100% | 12 and 10 | 1.0 |
+| + one damage healed after a clear, not all | 55% / 94% / 100% / 100% | 12 and 10 | 1.0 |
+| + the manuscript's economy | 58% / 94% / 99% / 100% | 11 and 10 | 0.9 |
+
+**Reading.** The official game is balanced across party sizes only because of its two most disliked rules. The grind taxes everyone, and the party-wide death taxes large parties most. Take both away and a lone character is where the official game left it (58% to 60%) while larger parties win almost always, whichever round structure is used. So removing them obliges the ruleset to scale difficulty with party size by other means. That is what the manuscript's scaling table was for.
+
+### 14.4 Each remaining choice, tested on the candidate
+
+The candidate is the last row above with a scaling table added (enemy health +2 for each character beyond the second; +2 damage from every enemy and boss with two characters, +3 with three or four). Each row changes one rule back to its official form. Games won, then two measures of how varied play is.
+
+| Variant | Games won, 1 / 2 / 3 / 4 | Defences that are a dodge or parry, 2 and 4 characters | Turns ending with a step out of reach, 4 characters |
+|---|---|---|---|
+| Candidate with a shared soul cache and a face-up row of four cards at Andre's | 52% / 69% / 74% / 86% | 42% and 49% | 17% |
+| every block die counts (official) | 60% / 80% / 77% / 82% | 36% and 42% | 18% |
+| the flask is free and clears stamina too (official) | 64% / 78% / 82% / 83% | 43% and 49% | 19% |
+| the whole bar is cleared after a win (official) | 63% / 72% / 77% / 83% | 43% and 49% | 18% |
+| the 2022 combined defence roll | 63% / 66% / 71% / 73% | 24% and 26% | 17% |
+| the official 2017 turn and defence rules (two stamina, no Rest, dodge or block with nothing kept on a failed dodge, no parry) | 59% / 53% / 49% / 53% | 18% and 25% | 8% |
+| the official round: enemies before each character | 59% / 40% / 17% / 1% | 42% and 55% | 13% |
+| the manuscript's economy: personal souls and a stocked shop | 65% / 66% / 55% / 55% | 34% and 47% | 19% |
+| no choice between two encounter cards | 52% / 67% / 78% / 84% | 44% and 50% | 21% |
+
+- None of the single rules moves the win rate much except the round structure and the economy. They can be chosen on what they do to play, and the scaling table set afterwards.
+- **Every block die counting** lengthens a lone character's Level 3 fights from about 7 rounds to 10 (13 in a later run): a heavily armoured character becomes safe and slow. The manuscript's two highest dice keeps armour from making attacks harmless.
+- **The official 2017 turn rules** are balanced but flatter: a dodge is all or nothing, so it is rarely worth trying, and nobody steps away.
+- **The 2022 combined roll** removes the choice between dodging and blocking altogether.
+- **The official round** needs far less scaling (it scales itself), but doubles the enemy activations between a player's turns.
+
+### 14.5 The decisions
+
+| Rule | 2017 | 2022 | Manuscript | House rules | **Decision** | Why |
+|---|---|---|---|---|---|---|
+| Round in an encounter | all enemies, then one character, repeated | the same | all enemies in threat order, then all characters | 5 use all-then-all; two cite waiting as the reason | **Manuscript; the party chooses its order** | the official round is the downtime Steamforged itself reported; half as many enemy activations per turn; the party plans its turn together |
+| Bosses | boss acts before each character | the same | the same | | **Official** | the author's decision; a boss acting once a round is harmless to a large party (13.3) |
+| Aggro | the active character takes it | chosen at the start; the torch | the character who did the most damage | 6 pass it to the active character; 2 to the last attacker | **Manuscript as amended: the last character to deal damage** | with all characters acting together the official rule has no meaning; no counting |
+| Character turn | +2 stamina; move before or after attacking; attack with each hand | +3 stamina; upkeep and action phases | +1 stamina; walk and run; one major action: attack with each hand, Rest, drink, or ember | Rest as an action in 4 | **Manuscript** | Rest is a real choice each turn; with the official rules heavy attacks and dodges are simply paid for by the next turn's stamina |
+| Block and resist | every die counts | every die counts | the two highest dice | one caps at three dice | **Manuscript** | every die counting makes armoured characters safe and fights long (14.4) |
+| Dodge | 1 stamina; a failure takes full damage | rolled with the block dice at no cost; not a choice | 1 stamina; a failure still rolls the armour's dice; more dice for 2 stamina each | "failed dodge still blocks with armour" in 3 | **Manuscript** | keeps the choice the reviews praise, without 2017's all-or-nothing; 2022 moved the same way but removed the choice |
+| Parry | none | none | anything in the left hand, on the attacker's node | 9 add one | **Manuscript (as settled in 9.6)** | the most common house addition after the shop |
+| Death | any death defeats the party | the same | the dead return hollow if the encounter is won; lost if all die or a hollow character dies | 9 individual death; 6 hollowing | **Manuscript** | the second most frequent complaint about the official game |
+| What kills | a full bar | a cube that does not fit | a cube that does not fit | | **2022 and manuscript** | they agree |
+| After a clear | the whole bar is cleared | the same | all stamina and one damage | 3 clear everything; 7 reward pressing on | **Manuscript** | no effect on balance (14.4); it is what gives the flask, the ember and the rest something to decide |
+| Estus flask | free, during the turn; clears stamina and damage | the same | an action; clears damage | several weaken it | **Manuscript** | drinking costs the turn, as it does in the video game; the official flask is a free second bar |
+| Sparks | 6 minus the characters; reset after the mini-boss | the same; +1 after the mini-boss | the same; +1 for each boss | 7 fix the pool | **Official, with 2022's and the manuscript's +1** | balanced at every size once scaling is set (14.6) |
+| Re-fighting | every rest resets every encounter | the same; "for those of you that like the grind, it's still there" | cleared encounters may be skipped for 2 stamina each; reduced reward for repeats | 7 keep cleared encounters cleared | **A cleared encounter stays cleared. The party walks through it freely. It is not fought again.** | the grind is the first complaint; the manuscript's stamina toll punishes resting near a boss and its reduced reward keeps a reason to grind; both go |
+| The fog gate | none | a new bonfire after the mini-boss | a shortcut once a boss has been reached | | **Manuscript** | |
+| Souls for a clear | 2 a character, every time | printed on the card | 3 / 4 / 5 a character for Levels 1 / 2 / 3; 6 for a boss | doubled souls is the best-known house rule | **Manuscript** | the official 2 assumes re-fighting; the manuscript's figures give the same total without it |
+| Whose souls | one shared cache | the same | each character's own | 17 award souls per player | **Manuscript** | with individual death a character's own souls are what it risks; the shared cache also came out less even across party sizes (14.4) |
+| Dropped souls | the cache lies where the party fell; lost at a second defeat | on the failed card; the same | each dead character's lie on the tile until it clears that encounter | 7 let them be recovered | **The official mechanism, for each character:** a character who dies keeps its souls if the encounter is won; if it is lost, everyone's souls lie on that tile until it is cleared, and a second defeat first loses them | the manuscript's rule needs a cleared encounter to be fought again |
+| Treasure | blind draw, 1 soul | four cards shown, 1 soul each, once a visit | one card a character on a first clear; a stocked shop at 2 and 4 souls; sell for 1 | 14 use a shop | **Manuscript** | the blind draw is the third complaint; the manuscript's shop is visible from the start, so a character can level towards a card |
+| Visiting the bonfire | Andre and the Firekeeper without resting | every return costs a spark | only at a rest | most make it free | **Official 2017** | the author's decision of round seven; the manuscript's rule is what made it unwinnable in section 12 |
+| Level-up costs | 2 / 4 / 8 | the same | the same; a fourth tier at 8 | | **Official, with the manuscript's fourth tier** | |
+| Choosing the encounter | one card dealt face down to each tile | draw two, choose one | one card dealt to each tile; a gravestone may look and replace | | **2022: on first entering a tile, draw two cards of its level, choose one, return the other** | an official rule that adds a decision at no cost; no effect on balance (14.4) |
+| Enemy and boss scaling | none | none | health +1 each; +1 attack at three; faster at two; repeat at four | 2 multiply health by players | **A table (14.6)** | needed once the grind and the party-wide death are gone (14.3) |
+| A lone character | 16 souls | not stated | 6 souls | | **Manuscript: 6 souls** | 6 gives 65%; the official 16 is for a game with grinding |
+| Luck, heroic actions, conditions, pushes, traps | | | | | **As settled in 9.6** | not reopened |
+
+Count: of the 23 rules decided here, 14 are the manuscript's; 3 are the official rule unchanged (bosses, sparks, level-up costs); 3 more are official (what kills a character, where 2022 and the manuscript agree, and two the manuscript did not have: visiting the bonfire without a rest, and choosing between two encounter cards); 3 are new (no re-fighting, the simplified dropped souls, the scaling table). The official rule was the first choice each time. It lost where it is one of the faults the author named or one of the complaints of 14.2, and in most of those places the manuscript had already replaced it.
+
+### 14.6 The final ruleset, measured
+
+**The scaling table** (the only numbers that depend on party size):
+
+| Characters | Sparks | Enemy health | Damage of every enemy and boss attack | Starts with |
+|---|---|---|---|---|
+| 1 | 5 | as printed | as printed | 6 souls |
+| 2 | 4 | as printed | +2 | |
+| 3 | 3 | +2 | +3 | |
+| 4 | 2 | +4 | +3 | |
+
+| | 1 character | 2 | 3 | 4 | Official 2017 (1 / 2 / 3 / 4) |
+|---|---|---|---|---|---|
+| Games won (±3; 800 games a cell) | 65% | 65% | 59% | 58% | 44% / 50% / 62% / 46% |
+| at weaker play (skill 0.8) | 37% | 25% | 22% | 20% | 21% / 26% / 42% / 26% |
+| Fights in a game | 10.9 | 11.0 | 9.8 | 9.2 | 28 / 22 / 21 / 18 |
+| of which repeats | 0 | 0 | 0 | 0 | 16 / 12 / 9 / 6 |
+| Table time (activations) | 354 | 359 | 306 | 328 | 655 / 388 / 420 / 369 |
+| Rests used | 3.8 | 3.3 | 3.1 | 2.1 | 5.1 / 5.5 / 3.2 / 2.3 |
+| Level 3 encounter, rounds | 8.1 | 3.8 | 3.4 | 3.4 | 10.4 / 4.2 / 2.6 / 2.0 |
+| Level 3 encounter, someone dies | 10% | 22% | 42% | 49% | 21% / 21% / 28% / 29% |
+| Games lost at: encounters / mini-boss / main boss | 3% / 20% / 12% | 2% / 17% / 16% | 16% / 14% / 11% | 28% / 10% / 4% | |
+
+Against the goals:
+
+- **Balanced:** 58% to 65% at every party size. The official game under the same players spans 44% to 62%.
+- **Not grindy, and quick:** 9 to 11 fights and 300 to 360 activations at every size, no encounter fought twice. The official game takes 18 to 28 fights, a third to more than half of them repeats.
+- **Tactical:** against the official turn rules, about twice as many defences are a real choice of dodge or parry, and twice as many turns end with a step out of reach (14.4). The party orders its own turn and decides who draws the enemies.
+- **Fair:** the chance that someone dies in a Level 3 encounter rises with party size (10% to 49%) while what a death costs falls (the encounter for a lone character, a hollowing for the others) and sparks fall from five to two.
+- **Simple:** one table by party size, three lines long. No extra enemy turns, no repeats, no faster enemies, no stamina toll, no reduced rewards.
+
+**Single fights at equal strength** (see 12.3 for the method). Each cell: 1, 2, 3 and 4 characters.
+
+**Official 2017**
+
+| Stage | Cleared | Rounds | Someone dies |
+|---|---|---|---|
+| Level 1 | 98% / 94% / 98% / 97% | 4.0 / 2.3 / 1.5 / 1.2 | 2% / 6% / 2% / 3% |
+| Level 2 | 74% / 79% / 86% / 91% | 8.3 / 3.8 / 2.4 / 1.7 | 26% / 21% / 14% / 9% |
+| Mini-boss | 34% / 67% / 85% / 92% | 35.7 / 21.9 / 12.9 / 7.7 | 38% / 23% / 14% / 8% |
+| Level 3 | 62% / 80% / 86% / 84% | 11.8 / 4.2 / 2.5 / 1.8 | 36% / 20% / 14% / 16% |
+| Main boss | 24% / 57% / 67% / 71% | 16.3 / 7.8 / 4.8 / 3.3 | 72% / 42% / 33% / 29% |
+
+**Author's manuscript, as written**
+
+| Stage | Cleared | Rounds | Someone dies |
+|---|---|---|---|
+| Level 1 | 97% / 98% / 99% / 98% | 4.4 / 4.2 / 4.0 / 4.1 | 3% / 6% / 8% / 26% |
+| Level 2 | 70% / 87% / 94% / 94% | 9.0 / 7.7 / 5.3 / 3.8 | 30% / 18% / 16% / 23% |
+| Mini-boss | 47% / 83% / 97% / 100% | 35.6 / 20.9 / 10.0 / 5.7 | 26% / 24% / 21% / 19% |
+| Level 3 | 63% / 97% / 98% / 97% | 9.6 / 5.2 / 3.6 / 3.2 | 37% / 14% / 15% / 38% |
+| Main boss | 25% / 84% / 99% / 100% | 14.2 / 8.1 / 4.1 / 3.0 | 74% / 54% / 40% / 37% |
+
+**The final ruleset**
+
+| Stage | Cleared | Rounds | Someone dies |
+|---|---|---|---|
+| Level 1 | 97% / 98% / 95% / 96% | 4.4 / 2.5 / 3.9 / 5.8 | 3% / 8% / 27% / 41% |
+| Level 2 | 70% / 90% / 87% / 90% | 9.0 / 5.0 / 5.2 / 5.1 | 30% / 20% / 31% / 33% |
+| Mini-boss | 47% / 49% / 69% / 88% | 35.6 / 26.4 / 18.6 / 10.8 | 26% / 72% / 81% / 80% |
+| Level 3 | 63% / 90% / 96% / 98% | 9.6 / 4.9 / 3.6 / 3.3 | 37% / 25% / 32% / 32% |
+| Main boss | 25% / 42% / 66% / 90% | 14.2 / 8.3 / 4.8 / 3.4 | 74% / 85% / 88% / 90% |
+
+### 14.7 An alternative table for longer fights
+
+The author's target for a Level 3 encounter was four to seven rounds. The table above gives 3.4 to 3.8 for two to four characters and 8.1 for a lone character. More enemy health with gentler damage lengthens them:
+
+| Characters | Enemy health | Damage | Games won | Level 3 rounds |
+|---|---|---|---|---|
+| 2 | +2 | +1 | 56% | 5.5 |
+| 3 | +4 | +1, or +2 | 69%, or 42% | 4.7 |
+| 4 | +6 | +2 | 54% | 4.6 |
+
+It reaches the target and reads as one line for health (+2 for each character beyond the first), but three characters fall between two steps of damage, and the author approved the health rule as it stands. The table of 14.6 is recommended; this one is the answer if the fights prove too short at the table. 400 games a cell (±5).
+
+### 14.8 What changes from sections 9.6 and 13
+
+| Rule | Was | Now |
+|---|---|---|
+| Skipping cleared encounters | two stamina for each one skipped; reduced reward if fought again | walked through freely; never fought again |
+| Dropped souls | the manuscript's rule, character by character | kept if the encounter is won; left on the tile if it is lost; gone at a second defeat |
+| Encounter cards | one dealt face down to each tile | draw two on entering, choose one |
+| Scaling | proposal A or B of 13.4 | the table of 14.6 (A's, confirmed) |
+| Visiting the bonfire | A or B | Andre and the Firekeeper, without a rest |
+| Bosses | to confirm | after each character's turn |
+
+Everything else in 9.6 stands. Proposal B of 13.4 is withdrawn.
+
+### 14.9 What is not settled by this
+
+1. **The level is set by the author's recollection of the official game** (section 13.2) and every figure inherits it. The final ruleset is somewhat easier than the official game under the same players (58% to 65% against 44% to 62%). To make it harder, give a lone character 4 souls and add one to each damage step; the steps are coarse, about 20 points of win rate each.
+2. **A lone character's fights are long** (8 rounds at Level 3), as they are in the official game (10).
+3. **The gravestone's power to look at a face-down encounter card** has nothing to look at once cards are drawn on entry. It should look at the top card of an encounter deck.
+4. **Whose souls** is the closest call in 14.5: the official shared cache is simpler and would also work with a different scaling table.
+5. **Not modelled,** as before: terrain, traps, events, invaders, phantoms, mimics, the expansions' enemies, and the 2022 sets.
+
+To re-run: `python3 tools/sim/test_sim.py`; `python3 tools/sim/fights.py`; `python3 tools/sim/compare.py --only official2017 final`. The modules of 14.3 and 14.4 are named in `tools/sim/rules.py`.

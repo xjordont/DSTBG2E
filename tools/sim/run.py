@@ -33,7 +33,11 @@ def ci(p, n): return 1.96 * math.sqrt(max(p * (1 - p), 1e-9) / n)
 def summary(res):
     N = len(res); s = {}
     s['win'] = sum(x['win'] for x in res) / N; s['ci'] = ci(s['win'], N)
-    for k in ('rests', 'fights', 'rounds', 'char_turns', 'enemy_acts', 'deaths'): s[k] = sum(x[k] for x in res) / N
+    for k in ('rests', 'fights', 'rounds', 'char_turns', 'enemy_acts', 'deaths', 'repeats'): s[k] = sum(x[k] for x in res) / N
+    dec = {}
+    for x in res:
+        for k, v in x['dec'].items(): dec[k] = dec.get(k, 0) + v
+    s['dec'] = {k: v / N for k, v in dec.items()}
     s['time'] = s['char_turns'] + s['enemy_acts']
     lv = {}
     for x in res:

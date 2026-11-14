@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Whole-game comparison of rulesets, one to four characters. Reproduces the tables of 41_rules_workshop.md, section 13.
+"""Whole-game comparison of rulesets, one to four characters. Reproduces the tables of 41_rules_workshop.md, sections 13 and 14.
 
 For each ruleset and party size the simulated players first pick the resting policy that suits it (on one set of
 seeds), then that policy is measured on another set. Figures are means over `--games` games; the win rate carries a
@@ -22,12 +22,16 @@ B_DMG = [0, 0, 1, 1, 1]            # proposal B: +1 damage with two or more char
 PROPOSED_A = dict(HEALTH, atk=A_DMG, boss_atk=A_DMG, free_visit=True, solo_souls=6)       # Andre and the Firekeeper without a rest
 PROPOSED_B = dict(HEALTH, atk=B_DMG, boss_atk=B_DMG, free_visit='shop', solo_souls=10)    # Andre only without a rest
 PROPOSED = PROPOSED_A
+# Section 14: the final ruleset, built up from the official 2017 rules one module at a time (rules.py lists the modules)
+FINAL = dict(base='official2017', mods=['HOLLOW', 'ROUND_ALL', 'TURN_MS', 'ATTRITION', 'ECON_MS', 'NO_REFIGHT'],
+             choose_of_two=True, hp_add=[0, 0, 0, 2, 4], atk=A_DMG, boss_atk=A_DMG, solo_souls=6)
 SPECS = {
     'official2017': ('Official 2017 (the calibration anchor)', {'base': 'official2017'}),
     'official2022': ('Official 2022 rules on the 2017 enemy cards (not a valid test of the 2022 sets; see 13.2)', {'base': 'official2022'}),
     'manuscript': ("Author's manuscript, as written", {'base': 'manuscript'}),
     'health': ('Health rule only: bosses as printed, souls spent at a rest', dict(HEALTH, atk=[0] * 5)),
-    'A': ('Proposal A (Andre and the Firekeeper without a rest)', PROPOSED_A),
+    'final': ('The final ruleset (section 14)', FINAL),
+    'A': ('Proposal A of section 13 (Andre and the Firekeeper without a rest)', PROPOSED_A),
     'B': ('Proposal B (Andre only without a rest)', PROPOSED_B),
 }
 

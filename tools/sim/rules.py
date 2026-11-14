@@ -54,6 +54,7 @@ OFFICIAL_2022 = OFFICIAL_2017.but(
     name='Official 2022',
     souls=lambda level, n, first: n + _R22[level][0], free_treasure=lambda level, n: _R22[level][1],
     boss_souls=lambda n, sparks: 0, treasure='shop4', shop_limit=4, boss_spark='plus1', solo_souls=0, choose_of_two=True,
+    regen=3, defence='combined', lethal='overflow',      # 2022: three stamina a turn; one combined dodge-and-block roll
     free_visit=False,
 )
 
@@ -94,6 +95,9 @@ def make(spec):
     """spec: {'base': name, plus any Rules field; scaling may be given as per-party-size lists:
     hp_add=[_, n1, n2, n3, n4] (added health), hp_mul=[...] (health multiplier), atk=[...], reps=[...], move2=[...]}."""
     spec = dict(spec); r = BASES[spec.pop('base')]; kw = {}
+    merged = {}
+    for name in spec.pop('mods', []): merged.update(globals()[name])        # named rule modules, applied in order
+    merged.update(spec); spec = merged
     add = spec.pop('hp_add', None); mul = spec.pop('hp_mul', None)
     if add or mul:
         kw['hp'] = lambda h, n, add=add, mul=mul: int(round(h * (mul[n] if mul else 1))) + (add[n] if add else 0)
@@ -104,5 +108,29 @@ def make(spec):
         m = spec.pop('soul_mul'); base_souls = r.souls; base_boss = r.boss_souls
         kw['souls'] = lambda level, n, first: int(round(base_souls(level, n, first) * m))
         kw['boss_souls'] = lambda n, sparks: int(round(base_boss(n, sparks) * m))
+    if 'soul_lv' in spec:                                # souls a character for a first clear of Levels 1, 2, 3 and for a boss
+        t = spec.pop('soul_lv'); pooled = spec.get('pool', r.pool)
+        kw['souls'] = lambda level, n, first, t=t, pooled=pooled: (t[level - 1] // (1 if first else 2)) * (n if pooled else 1)
+        kw['boss_souls'] = lambda n, sparks, t=t, pooled=pooled: t[3] * (n if pooled else 1)
+    if 'tier4' in spec and spec['tier4']: kw['tier_cost'] = (2, 4, 8, 8)
     kw.update(spec)
     return r.but(**kw)
+
+
+# ---------------------------------------------------------------- rule modules, for building hybrids step by step
+NO_GRIND = dict(skip_cost=0, fog_gate=True, soul_lv=[3, 4, 5, 6])          # cleared encounters stay cleared; bigger rewards
+HOLLOW = dict(death='hollow', hollow_bar=8)                                # the dead return hollow if the encounter is won
+ROUND_ALL = dict(round='all', order='free', aggro='last')                  # all enemies, then all characters in any order
+TURN_MS = dict(regen=1, turn='major', estus='health', block='best2', dodge_fail='armour', dodge_extra=True, dodge_move=True,
+               parry='any', lethal='overflow', stagger='author', frost='author', poison='stack', bleed='author',
+               grip_reroll=True, scaling=True, tier4=5)                    # the manuscript's turn and defence rules
+# Dropped souls without re-fighting: a character who dies keeps its souls if the encounter is cleared; if the encounter
+# is failed, everyone's souls stay on the tile until it is cleared, and a second failure before then loses them.
+NO_REFIGHT = dict(skip_cost=0, drop='simple')
+DEFENCE_22 = dict(defence='combined')                                      # the 2022 combined dodge-and-block roll
+ECON_CACHE = dict(pool=True, treasure='row', shop_limit=4, soul_lv=[3, 4, 5, 6], free_treasure='each', skip_cost=0,
+                  fog_gate=True, boss_spark='plus1', free_visit=True, ember=False)   # shared cache; a card each on a first
+                                                                           # clear; four cards face up at Andre's, one soul each
+ATTRITION = dict(recover='sta+1')                                          # one damage healed after a clear, not all
+ECON_MS = dict(pool=False, treasure='author', free_treasure=None, soul_lv=[3, 4, 5, 6], skip_cost=2, fog_gate=True,
+               boss_spark='plus1', solo_souls=6, ember=True, free_visit=True)     # personal souls, treasure on the tile, shop

@@ -157,7 +157,7 @@ class Fight:
         self.party, self.r, self.rng, self.pol, self.log = party, rules, rng, policy or Policy(), log
         self.n = n or len(party);                      # scaling counts every character in the game, present or not
         self.seats = len(party); self.rounds = 0; self.char_turns = 0; self.enemy_acts = 0; self.deaths = 0
-        self.is_boss = boss is not None; self.dealt = {}
+        self.is_boss = boss is not None; self.dealt = {}; self.dec = {}
         self.boss_atk = rules.boss_atk(self.n) if hasattr(rules, 'boss_atk') else 0
         r = rules
         ents = list(ENTRY); rng.shuffle(ents)
@@ -254,6 +254,12 @@ class Fight:
             mixed = ((0, ps), (dmg, 1 - ps))
             opts.append((cost(mixed, sta1) - ps * gain + (1 - ps) * 1.0, 'parry', None))
         _, how, arg = min(opts, key=lambda o: o[0])
+        if getattr(r, 'defence', 'choice') == 'combined':
+            # the 2022 rule: dodge and block dice are rolled together at no cost; enough dodges and the attack misses,
+            # otherwise the block or resist pips still count
+            if k + pen <= 0 or sum(rng.random() < 0.5 for _ in range(nd)) >= k + pen:
+                self.dec['dodge'] = self.dec.get('dodge', 0) + 1; return
+            how, arg = 'block', 0
         hit = True; taken = 0
         if how == 'block':
             v = sum(sorted(roll(dice, rng))[-2:]) if r.block == 'best2' else sum(roll(dice, rng))
@@ -288,6 +294,7 @@ class Fight:
                 taken = max(0, dmg - max(0, v - pen))
             else:
                 taken = dmg
+        self.dec[how] = self.dec.get(how, 0) + 1
         self.say('   ', c.name, how, 'vs', dmg, '->', taken if hit else 'avoided')
         if hit:
             if taken >= 3 and c.ember and r.ember: taken -= 1
@@ -472,7 +479,8 @@ class Fight:
             val = 0.8 * (base - self.incoming(c, 0)) - self.pol.w_sta * (cost + 0.6 * gap) - 0.3 * sum(1 for i in range(cost) if budget - i <= 3)
             if val > best[0]: best = (val, node, cost)
         c.node = best[1]; c.sta += best[2]
-        if best[2] or best[1] != here: self.say('   ', c.name, 'steps back to', NODES[c.node])
+        if best[2] or best[1] != here:
+            self.dec['step'] = self.dec.get('step', 0) + 1; self.say('   ', c.name, 'steps back to', NODES[c.node])
 
     def char_turn(self, c):
         r, pol, rng = self.r, self.pol, self.rng
@@ -549,12 +557,13 @@ class Fight:
             if o['shaft'] and c.node == f.node: c.node = rng.choice(NBR[c.node])
             if run: c.ran = True
             c.sta += cost; used.add(hand); attacked = True
+            self.dec['heavy' if o['cost'] >= 2 else 'light'] = self.dec.get('heavy' if o['cost'] >= 2 else 'light', 0) + 1
             self.strike(c, f, o)
             if c.two_handed or not c.options['L' if hand == 'R' else 'R']: break
         if not attacked:
             foes = self.foes_alive()
             if foes and r.turn == 'major' and c.sta > 0 and not (c.frost and r.frost == 'author'):      # frostbite bars any recovery
-                c.sta = 0; self.say('  ', c.name, 'rests')            # the Rest action
+                c.sta = 0; self.dec['rest'] = self.dec.get('rest', 0) + 1; self.say('  ', c.name, 'rests')            # the Rest action
             elif foes:
                 f = min(foes, key=lambda f: DIST[c.node][f.node])
                 if DIST[c.node][f.node] > 1: c.node = step_to(c.node, f.node, rng); moved = True

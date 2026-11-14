@@ -73,9 +73,8 @@ if __name__ == '__main__':
     if a.specs:
         import json
         specs = json.load(open(a.specs)); show(table(specs, a.games, a.skill), specs); sys.exit(0)
-    from compare import PROPOSED_A, PROPOSED_B
+    from compare import FINAL
     specs = {'Official 2017': {'base': 'official2017'},
              "Author's manuscript, as written": {'base': 'manuscript'},
-             'Proposal A (section 13.4)': PROPOSED_A,
-             'Proposal B (section 13.4)': PROPOSED_B}
+             'The final ruleset (section 14)': FINAL}
     show(table(specs, a.games, a.skill), specs)

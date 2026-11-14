@@ -7,8 +7,8 @@ An unofficial, non-commercial fan rulebook: edited manuscript, final rulings, la
 | `31_final_dark_souls_the_board_game_second_edition_v2.pdf` | the book (screen edition, 124 pages); `…_v2_print.pdf` is the white-ground print edition |
 | `17_final_report.md` | what the finished book contains, what changed since version 1, and what is not perfect |
 | `40_bloat_audit.md` | the audit of the rules text against the author's manuscript: where the 57,000 added words are, how they got there, and what should come out |
-| `41_rules_workshop.md` | the open decisions: for each rule that differs from the author's manuscript, the author's version, the book's, what four house rulesets do, and a recommendation |
-| `tools/sim/` | the rules simulator of sections 12 and 13 of the workshop record (calibrated against the official 2017 game in section 13): the printed enemy, boss, encounter and equipment cards played move by move under the official 2017 and 2022 rules, the manuscript, and any variant; `test_sim.py` checks it against hand calculation |
+| `41_rules_workshop.md` | the rules workshop, round by round. **Section 14 is the current decision record:** every rule compared across the 2017 and 2022 official rules, the author's manuscript and 28 house rulesets, with the final ruleset and its test results |
+| `tools/sim/` | the rules simulator of sections 12 to 14 of the workshop record (calibrated against the official 2017 game in section 13; the final ruleset is tested in section 14): the printed enemy, boss, encounter and equipment cards played move by move under the official 2017 and 2022 rules, the manuscript, and any variant; `test_sim.py` checks it against hand calculation |
 | `06_final_rulings.md` | every rules question that was open, how it was settled, and on what evidence |
 | `10_manuscript_chapter_*.md`, `12_glossary.md` | the manuscript, one file per chapter |
 | `11_change_log.md` | every change to the source manuscript, with mechanical changes marked |
