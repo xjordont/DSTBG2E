@@ -163,6 +163,11 @@ def struck(rules, staggered):
 check('manuscript: a staggered enemy blocks one less', struck(M, False) == 1 and struck(M, True) == 2)
 check('official: stagger does not change an enemy\'s block', struck(R17, False) == 1 and struck(R17, True) == 1)
 
+# ---------------------------------------------------------------- a dead attacker's remaining attacks do not resolve
+c = Char('Knight', M); f = E.Fight([c], M, random.Random(0), enemies=['Hollow Soldier']); foe = f.foes[0]; foe.hp = 0; foe.node = c.node
+f.defend(foe, c, 9, False, 1); f.enemy_turn(foe)
+check('an enemy killed mid-activation (by a riposte) attacks no more', c.dmg == 0 and c.sta == 0 and c.alive, (c.dmg, c.sta))
+
 # ---------------------------------------------------------------- equipment data
 check('every starting item is met by its class at base stats',
       all(Char(k, R17).cost_to_meet(ITEMS[n]['req'])[0] == 0 for k, v in CLASSES.items() for n in v['start']))

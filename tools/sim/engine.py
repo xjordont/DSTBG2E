@@ -216,7 +216,7 @@ class Fight:
 
     def defend(self, src, c, dmg, magic, k, push=False, effects=(), parryable=True):
         """An attack of `dmg` (after scaling) with dodge difficulty k resolves against character c."""
-        if not c.alive: return
+        if not c.alive or src.hp <= 0: return          # a riposte or a backstab may have killed the attacker mid-activation
         r, pol, rng = self.r, self.pol, self.rng
         if not src.boss and rng.random() < pol.evade: return
         free = c.cap - c.dmg - c.sta
@@ -310,7 +310,7 @@ class Fight:
         r, rng = self.r, self.rng
         self.enemy_acts += 1
         for st in f.card['steps']:
-            if not self.live() or self.failed(): break
+            if not self.live() or self.failed() or f.hp <= 0: break
             if st['k'] == 'move':
                 n = st['n'] - (1 if f.frost else 0)
                 if st['n'] == 1 and r.move2(self.n): n += 1
