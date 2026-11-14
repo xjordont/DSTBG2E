@@ -173,6 +173,15 @@ a, b = Char('Knight', M), Char('Assassin', M); f = E.Fight([a, b], M, random.Ran
 before = f.aggro; f.strike(b, f.foes[0], dict(b.options['R'][0], dice='', mod=9))
 check('manuscript: a character who damages the boss takes the aggro token', before is a and f.aggro is b)
 
+# ---------------------------------------------------------------- frostbite bars the Rest action; an ember ends the hollow state
+c = Char('Knight', M); f = E.Fight([c], M, random.Random(0), boss='Boreal Outrider Knight'); c.options = {'R': [], 'L': []}
+c.sta = 5; c.frost = True; f.char_turn(c)
+check('manuscript: a frostbitten character recovers no stamina, by Rest or otherwise', c.sta == 5, c.sta)
+a, b = Char('Knight', M), Char('Warrior', M); a.hollow = True; a.ember_card = True; a.estus = False
+f = E.Fight([a, b], M, random.Random(0), enemies=['Hollow Soldier']); a.was_hollow = True; a.dmg = 6; f.char_turn(a)
+used = a.ember and not a.hollow; f.wound(a, 99)
+check('manuscript: a hollow character who embers and then dies does not lose the encounter', used and not a.alive and not f.failed())
+
 # ---------------------------------------------------------------- equipment data
 check('every starting item is met by its class at base stats',
       all(Char(k, R17).cost_to_meet(ITEMS[n]['req'])[0] == 0 for k, v in CLASSES.items() for n in v['start']))

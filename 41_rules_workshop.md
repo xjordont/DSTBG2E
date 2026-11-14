@@ -795,4 +795,6 @@ Every party is given the same souls for its stage and fights one random encounte
 
 Section 9.6's entry for enemy scaling, and the entry added in round six, now read as proposal A pending the author's choice: "Enemy health +2 for each character beyond the second. Every enemy and boss attack deals +2 damage with two characters and +3 with three or four. A lone character starts with six souls. Andre and the Firekeeper may be visited at the bonfire between encounters without a rest (section 13.4)."
 
+Corrections after the automated review of the pull request (2026-11-14): under the manuscript's rules a frostbitten character could still take the Rest action, and a hollow character who used an ember and then died still lost the encounter. Both are fixed and checked (58 checks pass). Both proposals were run again: A 57% / 55% / 46% / 52%, B 59% / 58% / 77% / 66%, against 57% / 55% / 46% / 50% and 59% / 58% / 78% / 66% in the table above, inside the sampling error. The other rows were not re-run.
+
 To re-run: `python3 tools/sim/test_sim.py`; `python3 tools/sim/fights.py`; `python3 tools/sim/compare.py` (add `--skill 0.8` for weaker play).

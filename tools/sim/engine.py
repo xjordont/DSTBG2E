@@ -487,7 +487,7 @@ class Fight:
         free = c.cap - c.dmg - c.sta
         # an ember card (the manuscript): an action that clears all damage and the hollow state and leaves the character embered
         if c.ember_card and (c.dmg >= pol.estus_at + 1 or (c.hollow and c.dmg >= 3)) and not c.estus:
-            c.ember_card = False; c.ember = True; c.dmg = 0; c.hollow = False
+            c.ember_card = False; c.ember = True; c.dmg = 0; c.hollow = False; c.was_hollow = False    # no longer hollow if it dies
             self.say('  ', c.name, 'uses an ember'); self.end_turn(c); return
         # the flask: drunk when death is near; where damage outlasts the encounter (the manuscript) also once badly hurt
         if c.estus and c.dmg >= 3 and (self.risk(free) > pol.estus_risk or (r.recover != 'all' and c.dmg >= pol.estus_at)):
@@ -552,7 +552,7 @@ class Fight:
             if c.two_handed or not c.options['L' if hand == 'R' else 'R']: break
         if not attacked:
             foes = self.foes_alive()
-            if foes and r.turn == 'major' and c.sta > 0:
+            if foes and r.turn == 'major' and c.sta > 0 and not (c.frost and r.frost == 'author'):      # frostbite bars any recovery
                 c.sta = 0; self.say('  ', c.name, 'rests')            # the Rest action
             elif foes:
                 f = min(foes, key=lambda f: DIST[c.node][f.node])
