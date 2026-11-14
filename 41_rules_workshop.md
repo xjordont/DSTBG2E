@@ -998,3 +998,32 @@ Everything else in 9.6 stands. Proposal B of 13.4 is withdrawn.
 Corrections after the automated review of the pull request (2026-11-14): a character who took the Rest action could still run when stepping out of reach, and the manuscript and settled presets had been left giving one treasure card to the party on a first clear where they should give one to each character (introduced with this round's changes; the final ruleset and every figure in sections 13 and 14 used the per-character reward). Both are fixed and checked. The final ruleset was run again: 65% / 65% / 59% / 58%, unchanged. A third: under the manuscript a successful dodge always moves the character one node, and the simulator moved it only off the attacker's own node. Fixed and checked (62 checks pass); the final ruleset was run once more (65% / 66% / 55% / 59%). A fourth and fifth: the Warrior's heroic action attacked without taking its step, so the Warrior struck from a node away; and a dodge could buy two extra dice where the manuscript allows one. Both are fixed and checked (64 checks pass). The final ruleset was run again and the table of 14.6 now shows that run (65% / 63% / 58% / 57%; the first run was 65% / 65% / 59% / 58%, all inside the sampling error). The Warrior's fault also touched the official rules, so the anchor was run again: 44% / 51% / 64% / 48%, against 44% / 50% / 62% / 46% in 13.2. The weaker-play row, the ladder and the module tests were not re-run. The manuscript as written, run again: 44% / 74% / 75% / 28%, against 44% / 75% / 74% / 28% in 13.3. A sixth and seventh: a character struck by an enemy's pushing move (the Large Hollow Soldier) was pushed to any adjacent node where it should be pushed away from the node the enemy left; and a replaced card was thrown away where it should return to the inventory, to be sold for one soul under the manuscript's rules or used by another character under the official ones (starting equipment cannot be sold). In passing, an enemy killed during another enemy's activation was still counted as activating, though it did nothing. All three are fixed and checked (67 checks pass). Four rows were run again with every fix: the final ruleset 68% / 64% / 55% / 57% (10.7 / 11.0 / 9.1 / 9.2 fights; 338 / 356 / 295 / 321 activations; Level 3 rounds 7.6 / 3.8 / 3.3 / 3.4), against 65% / 63% / 58% / 57% in the table of 14.6; the official anchor 40% / 52% / 65% / 52%, against 44% / 50% / 62% / 46% in 13.2; the manuscript as written 45% / 74% / 73% / 32%; the health rule alone 44% / 87% / 89% / 88%, against 44% / 84% / 90% / 88%. Every figure is within the sampling error of the one it replaces except the official game at four characters (six points up), and no conclusion changes. The tables keep the earlier runs. An eighth, on the author's ruling of how a riposte is played: the simulated players kept one space of the bar free after any riposte. They now fill the bar when the parried enemy is the last of the encounter, or when the riposte will probably kill it (an even chance or better) and no enemy still to act that turn can reach the character; otherwise they keep the space back as before. Checked (71 checks pass). The final ruleset and the manuscript were run again and did not move: 68% / 64% / 55% / 57% and 45% / 74% / 73% / 32%, with table time changed by one activation in one cell each. The case is rare.
 
 To re-run: `python3 tools/sim/test_sim.py`; `python3 tools/sim/fights.py`; `python3 tools/sim/compare.py --only official2017 final`. The modules of 14.3 and 14.4 are named in `tools/sim/rules.py`.
+
+## 15. The author's review of each rule (2026-11-14, in progress)
+
+The author is deciding each rule of 14.5 in turn. Decided so far, all as 14.5 has them: the round (all enemies, then all characters in the party's order), aggro (the last character to deal damage), the character's turn, the estus flask, block (the two highest dice), dodge, parry (anything in the left hand), what kills (a cube that does not fit), and sparks (six less the characters, one more for each boss). The riposte ruling is recorded in 14.9.
+
+### 15.1 Three points the author raised, tested
+
+1. **A hollow character who dies.** The manuscript fails the encounter at once. The author's suggestion: the character is lost until the next rest and the others fight on.
+2. **After a clear:** all stamina is removed for certain; one damage healed, or none?
+3. **Cleared encounters after a rest:** stay cleared and are walked through freely, or reset and may be rushed past for one damage on each character for each encounter rushed.
+
+Games won with 1 / 2 / 3 / 4 characters; 800 games a cell (±3). Each row changes the final ruleset of 14.6.
+
+| Variant | Games won | Rests | Someone dies in a Level 3 encounter |
+|---|---|---|---|
+| Final ruleset (14.6, latest run) | 68% / 64% / 55% / 57% | 3.7 / 3.3 / 3.1 / 2.1 | 7% / 24% / 35% / 48% |
+| A hollow death does not end the encounter | 68% / 64% / 62% / 68% | 3.7 / 3.3 / 3.0 / 2.0 | 7% / 23% / 39% / 50% |
+| No damage healed after a clear | 64% / 64% / 53% / 58% | 4.0 / 3.5 / 3.2 / 2.2 | 9% / 24% / 38% / 51% |
+| One damage for each encounter rushed | 62% / 55% / 51% / 47% | 4.0 / 3.6 / 3.2 / 2.2 | 16% / 30% / 45% / 53% |
+| Hollow death and rush toll | 62% / 55% / 52% / 62% | 4.0 / 3.6 / 3.1 / 2.1 | 16% / 30% / 46% / 50% |
+| Hollow death and no healing | 64% / 64% / 58% / 68% | 4.0 / 3.5 / 3.1 / 2.1 | 9% / 24% / 44% / 52% |
+| All three | 58% / 57% / 51% / 60% | 4.4 / 3.8 / 3.2 / 2.1 | 20% / 33% / 47% / 55% |
+
+- The hollow rule helps only parties of three and four (a lone character has no one left to fight on), and brings them level with the smaller parties.
+- Healing one damage or none makes no difference that the model can see. None is one rule fewer.
+- The rush toll makes the game six to ten points harder and adds about a third of a rest. With the other two it gives 51% to 60% at every size, the band the author gives for the official game.
+- In the model the simulated players never fight a cleared encounter again; whether that should be allowed, and for what reward, is a rules question the figures do not settle.
+
+To re-run: the variants are `death='lost'`, `heal_after=0` and `skip_dmg=1` added to `FINAL` in `tools/sim/compare.py`.

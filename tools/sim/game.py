@@ -68,7 +68,10 @@ def play(n, rules, seed, table=None, classes=None):
                 weak = sum(c._power for c in party) / n < goal
                 # a rest helps a weak party only if it can then earn or spend souls
                 can_grow = (r.skip_cost is None and pos > 0) or (eco.pool if r.pool else sum(c.souls for c in party)) >= 2 * n
-                if worn and (r.death == 'hollow' or at_boss) and (at_boss or sparks > t.reserve + 1): want = True
+                # where skipped encounters cost damage, a rest is worth it only if it heals more than the walk back costs
+                toll = getattr(r, 'skip_dmg', 0) * (0 if (at_boss or (r.fog_gate and boss_seen)) else pos)
+                if toll and not any(c.hollow or c.lost for c in party) and max(c.dmg for c in party) - toll < 3: worn = False
+                if worn and (r.death != 'party' or at_boss) and (at_boss or sparks > t.reserve + 1): want = True
                 if weak and can_grow: want = True
             if want and not fresh:
                 rest(); done = [False] * 4; fresh = True
@@ -80,7 +83,10 @@ def play(n, rules, seed, table=None, classes=None):
             if fv: eco.spend(levels=fv != 'shop')            # True = Andre and the Firekeeper; 'shop' = Andre only
             # ---- walk to the next fight
             if not at_boss and r.skip_cost is not None and ever[pos] and not done[pos]:
-                walk += r.skip_cost; done[pos] = True; pos += 1; continue        # skip a cleared encounter
+                walk += r.skip_cost; done[pos] = True; pos += 1                  # skip a cleared encounter
+                for c in party:                                                  # a toll in damage for rushing past it
+                    if not c.lost: c.dmg = min(c.cap - 1, c.dmg + getattr(r, 'skip_dmg', 0))
+                continue
             if not at_boss and done[pos]: pos += 1; continue
             for c in party:
                 c.sta = min(walk, c.cap - c.dmg - 1) if walk else c.sta

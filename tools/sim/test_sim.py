@@ -139,6 +139,13 @@ for name, rules in (('official 2017', R17), ('official 2022', RU.OFFICIAL_2022),
         b = invariants(rules, n, 40)
         check('invariants hold: %s, %d character%s' % (name, n, '' if n == 1 else 's'), not b, sorted(set(b)))
 
+# ---------------------------------------------------------------- the variants of the author's review (section 15)
+from compare import FINAL
+REVIEW = RU.make(dict(FINAL, death='lost', heal_after=0, skip_dmg=1))
+for n in (1, 4):
+    b = invariants(REVIEW, n, 30)
+    check('invariants hold: final ruleset with the review variants, %d character%s' % (n, '' if n == 1 else 's'), not b, sorted(set(b)))
+
 # ---------------------------------------------------------------- determinism and the death rules
 a = play(3, M, 11); b = play(3, M, 11)
 check('the same seed gives the same game', a == b)
