@@ -385,6 +385,19 @@ c = Char('Knight', R22); f = E.Fight([c], R22, random.Random(0), enemies=['Senti
 c.options = {'R': [], 'L': []}; c.sta = 5; f.char_turn(c)
 check('official 2022: a frostbitten character recovers one less stamina (two, not three)', frozen - c.sta == 1, (frozen, c.sta))
 
+# ---------------------------------------------------------------- a push-move keeps the target it began with
+wrong = moves = 0
+for s in range(100):
+    h = Char('Herald', R17); k = Char('Knight', R17); f = E.Fight([h, k], R17, random.Random(s), enemies=['Sentinel'], policy=E.Policy(evade=0.0))
+    foe = f.foes[0]; foe.node = h.node = E.IDX[(0, 0)]; k.node = E.IDX[(2, 0)]; f.aggro = k; orig = E.step_to
+    def spy(a, b, rng, h=h, orig=orig):
+        global wrong, moves
+        moves += 1; wrong += b != h.node; return orig(a, b, rng)
+    E.step_to = spy
+    try: f.enemy_turn(foe)
+    finally: E.step_to = orig
+check('a push-move follows the character it first targeted, wherever the push sends them', moves > 0 and wrong == 0, (moves, wrong))
+
 # ---------------------------------------------------------------- equipment data
 check('every starting item is met by its class at base stats',
       all(Char(k, R17).cost_to_meet(ITEMS[n]['req'])[0] == 0 for k, v in CLASSES.items() for n in v['start']))

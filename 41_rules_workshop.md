@@ -1116,6 +1116,8 @@ A fourth: where a weapon's highest stat requirements are tied, the manuscript le
 
 A fifth and sixth: a stagger token placed on an enemy by a parry came off at the end of that same activation under every ruleset, where the ruling of 9.6 keeps it to the end of the enemy's next turn (the manuscript as written and the official rules are left as they were); and the 2022 preset used the 2017 frostbite (a surcharge on moving and dodging) where the 2022 rule is one stamina less recovered. Both are fixed and checked (88 checks pass). Run again: the proposal with players who fight again 61% / 65% / 66% / 59%; the final ruleset of 14.6 66% / 69% / 64% / 62%; the 2022 rules on the 2017 cards 29% / 37% / 31% / 14%, against 30% / 38% / 27% / 11% in 13.2. None moved beyond the sampling error.
 
+A seventh: an enemy making a pushing move chose its target again after each push, where the manuscript fixes the target when the movement begins and has the enemy follow that character. Fixed and checked (89 checks pass). Run again: the proposal with players who fight again 61% / 65% / 66% / 58%; the official anchor 37% / 56% / 64% / 50%. Neither moved.
+
 ### 15.5 How the treasure is sorted
 
 The author asked whether the treasure should be split three ways by the kind of card (common and class; transposed; legendary and boss) in place of the manuscript's two tiers by stat requirement, and for a survey. The two reports are `work/phase6/treasure_split.md` (official rulebooks, manuscript, house rules, card counts) and `work/phase6/treasure_web.md` (online discussion; most forum pages could not be fetched, so the community part is thin).

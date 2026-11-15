@@ -367,8 +367,8 @@ class Fight:
                     if st.get('push'):
                         for c in self.live():
                             if c.node == f.node: c.node = rng.choice(NBR[c.node])       # shoved off the enemy's own node
-                        t = self.target(f, st['tgt'])
-                    if t is None or not self.live(): break
+                    # the target was fixed when the icon began; the enemy follows it wherever a push has sent it
+                    if t is None or not t.alive or not self.live(): break
                     if f.node == t.node: break
                     origin = f.node; f.node = step_to(f.node, t.node, rng)
                     if st.get('push'):
