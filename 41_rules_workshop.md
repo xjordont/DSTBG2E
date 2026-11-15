@@ -1128,6 +1128,8 @@ A thirteenth and fourteenth: a character with a spell in each hand could cast bo
 
 A fifteenth: a riposte could be made with a spell held in the right hand, which the manuscript forbids. Fixed and checked (97 checks pass). The proposal with players who fight again, run again: 60% / 66% / 62% / 58%, unchanged.
 
+A sixteenth: where only the two highest block dice count, the Knight's heroic die was added on top of them, so three dice counted. It now joins the pool and the two highest of all the dice are taken; the manuscript does not speak to this case, and this reading follows its rule that dice beyond the two highest are ignored (the author may rule otherwise). Under the official rules every die counts and nothing changes. Checked (99 checks pass). The proposal with players who fight again, run again: 55% / 61% / 66% / 56%, against 60% / 66% / 62% / 58%. This one did move: a lone character and a pair, who lean on the Knight, lose about five points.
+
 ### 15.5 How the treasure is sorted
 
 The author asked whether the treasure should be split three ways by the kind of card (common and class; transposed; legendary and boss) in place of the manuscript's two tiers by stat requirement, and for a survey. The two reports are `work/phase6/treasure_split.md` (official rulebooks, manuscript, house rules, card counts) and `work/phase6/treasure_web.md` (online discussion; most forum pages could not be fetched, so the community part is thin).

@@ -467,6 +467,25 @@ c = Char('Knight', M); c.tier = [0, 0, 4, 0]; c.R = ITEMS['Fireball']; c.refresh
 f = E.Fight([c], M, random.Random(0), enemies=['Sentinel']); foe = f.foes[0]; foe.node = c.node; hp0 = foe.hp; c.sta = 0; f.riposte(c, foe)
 check('manuscript: a spell is never used for a riposte', foe.hp == hp0 and c.sta == 0 and c.riposte_ev(foe) == 0, (hp0 - foe.hp, c.sta, c.riposte_ev(foe)))
 
+# ---------------------------------------------------------------- Stand Fast under the two-highest rule
+def knight_block(rules, top):
+    """A starting Knight blocks 8 with every die showing its highest face (top) or its lowest; returns the damage taken."""
+    c = Char('Knight', rules); f = E.Fight([c], rules, random.Random(0), enemies=['Sentinel'], policy=E.Policy(evade=0.0))
+    c.luck = False; c.dodge = 0; c.can_parry = False; foe = f.foes[0]; foe.node = E.IDX[(4, 4)]; c.node = E.IDX[(0, 0)]
+    class Fixed:
+        def choice(self, seq): return max(seq) if top else min(seq)
+        def random(self): return 0.99
+    f.rng = Fixed(); f.defend(foe, c, 8, False, 9)
+    return c.dmg, c.heroic, len(c.blk)
+
+
+dmgM, heroM, nM = knight_block(M, True); dmg17, hero17, n17 = knight_block(R17, True)
+check('manuscript: the Knight\'s heroic die is one of the pool, and still only the two highest dice count',
+      (not heroM) and nM == 2 and dmgM == 8 - sum(sorted([max(E.DIE[d]) for d in Char('Knight', M).blk] + [max(E.DIE['u'])])[-2:]),
+      (dmgM, nM))
+check('official: every die counts, the heroic die included',
+      (not hero17) and dmg17 == max(0, 8 - sum(max(E.DIE[d]) for d in Char('Knight', R17).blk) - max(E.DIE['u'])), (dmg17, n17))
+
 # ---------------------------------------------------------------- equipment data
 check('every starting item is met by its class at base stats',
       all(Char(k, R17).cost_to_meet(ITEMS[n]['req'])[0] == 0 for k, v in CLASSES.items() for n in v['start']))

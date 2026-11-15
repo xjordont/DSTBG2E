@@ -269,18 +269,19 @@ class Fight:
             how, arg = 'block', 0
         hit = True; taken = 0
         if how == 'block':
-            faces = roll(dice, rng); extra = 0
-            v = sum(sorted(faces)[-2:]) if r.block == 'best2' else sum(faces)
-            taken = max(0, dmg - max(0, v - pen))
+            faces = roll(dice, rng)
+            total = lambda: sum(sorted(faces)[-2:]) if r.block == 'best2' else sum(faces)
+            v = total(); taken = max(0, dmg - max(0, v - pen))
             if c.heroic and c.name == 'Knight' and not magic and (self.lethal(c, taken) or taken >= 2):     # a block roll only
-                c.heroic = False; extra = rng.choice(DIE['u']); v += extra; taken = max(0, dmg - max(0, v - pen))     # Stand Fast
+                # Stand Fast: one more blue die joins the roll; where only the two highest dice count, it is one of the pool
+                c.heroic = False; faces.append(rng.choice(DIE['u'])); dice = dice + 'u'
+                v = total(); taken = max(0, dmg - max(0, v - pen))
             if c.luck and faces and (self.lethal(c, taken) or taken >= pol.luck_at):
                 # luck: the official rules re-roll one die; the manuscript any or all of them, chosen at once
                 c.luck = False; worst = sorted(range(len(faces)), key=lambda j: faces[j] - sum(DIE[dice[j]]) / 6)
                 again = worst[:1] if getattr(r, 'luck', 'one') == 'one' else [j for j in worst if faces[j] < sum(DIE[dice[j]]) / 6] or worst[:1]
                 for j in again: faces[j] = rng.choice(DIE[dice[j]])
-                v = (sum(sorted(faces)[-2:]) if r.block == 'best2' else sum(faces)) + extra
-                taken = max(0, dmg - max(0, v - pen))
+                v = total(); taken = max(0, dmg - max(0, v - pen))
         else:
             dice_n, sta = arg if how == 'dodge' else (nd, sta1)
             c.sta += sta
