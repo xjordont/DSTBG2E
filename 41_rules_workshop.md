@@ -1126,6 +1126,8 @@ An eleventh and twelfth: an upgrade card found in an encounter was fitted at onc
 
 A thirteenth and fourteenth: a character with a spell in each hand could cast both in one turn, where the manuscript allows one spell attack a turn (the official rules set no such limit and are left alone); and when a weapon with an upgrade attached was sold, the bonus stayed on record against the weapon's name, where the manuscript sells Titanite with the weapon and returns any other upgrade to the inventory. Both are fixed and checked (96 checks pass). The proposal with players who fight again, run again: 59% / 66% / 61% / 59%, unchanged.
 
+A fifteenth: a riposte could be made with a spell held in the right hand, which the manuscript forbids. Fixed and checked (97 checks pass). The proposal with players who fight again, run again: 60% / 66% / 62% / 58%, unchanged.
+
 ### 15.5 How the treasure is sorted
 
 The author asked whether the treasure should be split three ways by the kind of card (common and class; transposed; legendary and boss) in place of the manuscript's two tiers by stat requirement, and for a survey. The two reports are `work/phase6/treasure_split.md` (official rulebooks, manuscript, house rules, card counts) and `work/phase6/treasure_web.md` (online discussion; most forum pages could not be fetched, so the community part is thin).

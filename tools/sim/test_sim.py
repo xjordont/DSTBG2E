@@ -462,6 +462,11 @@ check('manuscript: Titanite is sold with its weapon, pays nothing more, and its 
       c.souls == before + 1 and not c.plus and not c.up_cards and shard not in c.bag and sum(pile.count(shard) for pile in (eco.t1, eco.t2)) == 1,
       (c.souls - before, c.plus, [x['name'] for x in c.bag]))
 
+# ---------------------------------------------------------------- no riposte with a spell
+c = Char('Knight', M); c.tier = [0, 0, 4, 0]; c.R = ITEMS['Fireball']; c.refresh()
+f = E.Fight([c], M, random.Random(0), enemies=['Sentinel']); foe = f.foes[0]; foe.node = c.node; hp0 = foe.hp; c.sta = 0; f.riposte(c, foe)
+check('manuscript: a spell is never used for a riposte', foe.hp == hp0 and c.sta == 0 and c.riposte_ev(foe) == 0, (hp0 - foe.hp, c.sta, c.riposte_ev(foe)))
+
 # ---------------------------------------------------------------- equipment data
 check('every starting item is met by its class at base stats',
       all(Char(k, R17).cost_to_meet(ITEMS[n]['req'])[0] == 0 for k, v in CLASSES.items() for n in v['start']))

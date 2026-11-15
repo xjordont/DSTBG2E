@@ -104,6 +104,7 @@ class Char:
         self.two_handed = p['two']; self._power = power(p, self.r)
         best = 0.0
         for o in self.options['R']:
+            if o.get('spell'): continue                     # a riposte is never made with a spell
             if o['cost'] <= 2 and o['range'] == 0 or (o['cost'] <= 2 and not o['shaft']):
                 best = max(best, sum(x * q for x, q in attack_pmf(o['dice'], o['mod'], 1, o['repeat'])))
         self._rip = best
@@ -111,10 +112,11 @@ class Char:
     def scale_bonus(self, o): return 0                # stat scaling is already folded into each option's modifier
     def riposte_ev(self, foe): return self._rip
 
-    def best_option(self, foe, dist, budget, hand='R'):
+    def best_option(self, foe, dist, budget, hand='R', spells=True):
         best = None
         for o in self.options[hand]:
             if o['cost'] > budget or o['range'] < dist or (o['shaft'] and dist == 0): continue
+            if o.get('spell') and not spells: continue      # a riposte is never made with a spell
             ev = sum(x * q for x, q in attack_pmf(o['dice'], o['mod'], foe.resist if o['magic'] else foe.armor, o['repeat'])) - 0.4 * o['cost']
             if best is None or ev > best[0]: best = (ev, o)
         return best[1] if best else None

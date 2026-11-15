@@ -348,9 +348,9 @@ class Fight:
         encounter, or when the riposte will probably kill it and no enemy still to act this turn can reach the
         character. Keeping a space back is the player's caution, not a rule."""
         room = c.cap - c.dmg - c.sta
-        o = c.best_option(f, 0, room - 1, hand='R')
+        o = c.best_option(f, 0, room - 1, hand='R', spells=False)
         if self.r.lethal != 'full':                           # where a full bar kills, the last space is never spent
-            full = c.best_option(f, 0, room, hand='R')
+            full = c.best_option(f, 0, room, hand='R', spells=False)
             if full is not None and full is not o:
                 others = [x for x in self.foes_alive() if x is not f]
                 waiting = [x for x in others if x in getattr(self, 'to_act', others)]
