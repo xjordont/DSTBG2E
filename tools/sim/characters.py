@@ -81,8 +81,8 @@ class Char:
             up = plus.get(it['name']); bonus = 1 if up == 'mod' else 0; more = 'b' if up == 'die' else ''
             spell = it['name'] in SPELLS
             if getattr(r, 'scaling', True) and r.tier4 is not None and it['attacks'] and max(it['req']) > 0 and not spell:
-                i = max(range(4), key=lambda j: it['req'][j])
-                if self.value(i, tiers[i]) - it['req'][i] >= 10:
+                top = max(it['req'])                            # where requirements tie for the highest, any of them may be chosen
+                if any(self.value(j, tiers[j]) - top >= 10 for j in range(4) if it['req'][j] == top):
                     bonus += 1                                  # the manuscript's stat scaling: +1 at ten over the requirement
             for a in it['attacks']:
                 if not a['dice']: continue                     # support actions (healing, stamina) are not modelled

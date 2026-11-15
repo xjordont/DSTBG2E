@@ -1112,6 +1112,8 @@ A second correction the same day: the luck token re-rolled the whole pool of dic
 
 A third: the Knight's heroic action (an extra die after a block roll) was also used after a resist roll against magic. Fixed and checked (84 checks pass). Run again: the official anchor 37% / 56% / 63% / 52%; the proposal with players who fight again 60% / 62% / 65% / 56%. Neither moved beyond the sampling error.
 
+A fourth: where a weapon's highest stat requirements are tied, the manuscript lets the character scale it on any of the tied stats; the simulator looked only at the first. Fixed and checked (85 checks pass). The official rules have no stat scaling and are not touched. The proposal with players who fight again, run again: 61% / 65% / 66% / 58%, inside the sampling error of the last run. Taken together, the corrections of this section have moved the proposal from 59% / 59% / 62% / 54% to 61% / 65% / 66% / 58%: a few points easier at every size, which the last step of the review (a lone character's souls and the level of difficulty) can take back.
+
 ### 15.5 How the treasure is sorted
 
 The author asked whether the treasure should be split three ways by the kind of card (common and class; transposed; legendary and boss) in place of the manuscript's two tiers by stat requirement, and for a survey. The two reports are `work/phase6/treasure_split.md` (official rulebooks, manuscript, house rules, card counts) and `work/phase6/treasure_web.md` (online discussion; most forum pages could not be fetched, so the community part is thin).

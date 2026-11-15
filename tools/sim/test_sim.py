@@ -355,6 +355,20 @@ def stood(magic):
 
 check('Stand Fast is used after a block roll and never after a resist roll', stood(False) > 0 and stood(True) == 0, (stood(False), stood(True)))
 
+# ---------------------------------------------------------------- stat scaling with tied highest requirements
+sk = next(i for i in ITEMS.values() if i['type'] == 'hand' and i['attacks'] and i['name'] not in E.__dict__.get('SPELLS', ()) and max(i['req']) > 0
+          and sorted(i['req'])[-1] == sorted(i['req'])[-2] and i['attacks'][0]['dice'])
+c = Char('Knight', M); top = max(sk['req']); ties = [j for j in range(4) if sk['req'][j] == top]
+tiers = [0, 0, 0, 0]
+for j in range(4):
+    while c.value(j, tiers[j]) < sk['req'][j] and tiers[j] < 4: tiers[j] += 1
+base = [o['mod'] for o in c.profile(R=sk, L=False, tiers=tiers)['options']['R']]
+last = ties[-1]; up = list(tiers)
+while c.value(last, up[last]) - top < 10 and up[last] < 4: up[last] += 1
+if c.value(last, up[last]) - top >= 10 and not any(c.value(j, up[j]) - top >= 10 for j in ties[:-1]):
+    got = [o['mod'] for o in c.profile(R=sk, L=False, tiers=up)['options']['R']]
+    check('manuscript: a weapon scales on any of its tied highest requirements (%s)' % sk['name'], got == [m + 1 for m in base], (base, got))
+
 # ---------------------------------------------------------------- equipment data
 check('every starting item is met by its class at base stats',
       all(Char(k, R17).cost_to_meet(ITEMS[n]['req'])[0] == 0 for k, v in CLASSES.items() for n in v['start']))
