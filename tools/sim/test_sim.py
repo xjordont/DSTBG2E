@@ -398,6 +398,18 @@ for s in range(100):
     finally: E.step_to = orig
 check('a push-move follows the character it first targeted, wherever the push sends them', moves > 0 and wrong == 0, (moves, wrong))
 
+# ---------------------------------------------------------------- the official 2017 dodge: an optional step before the roll
+moved17 = failed_moved = 0
+for s in range(300):
+    c = Char('Assassin', R17); f = E.Fight([c], R17, random.Random(s), enemies=['Sentinel'], policy=E.Policy(evade=0.0))
+    c.heroic = c.luck = False; c.blk = c.res = ''; foe = f.foes[0]; c.node = foe.node = E.IDX[(2, 2)]; start = c.node
+    foe.card = dict(foe.card, steps=[dict(k='attack', tgt='nearest', range=0, dmg=6, magic=False, dodge=2)])    # an enemy that cannot follow
+    f.defend(foe, c, 6, False, 2)
+    if c.sta >= 1 and c.node != start:
+        moved17 += 1; failed_moved += c.dmg > 0
+check('official 2017: a dodging character can step one node before rolling, and has stepped even when the dodge fails',
+      moved17 > 0 and failed_moved > 0, (moved17, failed_moved))
+
 # ---------------------------------------------------------------- equipment data
 check('every starting item is met by its class at base stats',
       all(Char(k, R17).cost_to_meet(ITEMS[n]['req'])[0] == 0 for k, v in CLASSES.items() for n in v['start']))

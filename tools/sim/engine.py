@@ -259,7 +259,9 @@ class Fight:
             # the 2022 rule: dodge and block dice are rolled together at no cost; enough dodges and the attack misses,
             # otherwise the block or resist pips still count
             if k + pen <= 0 or sum(rng.random() < 0.5 for _ in range(nd)) >= k + pen:
-                self.dec['dodge'] = self.dec.get('dodge', 0) + 1; return
+                self.dec['dodge'] = self.dec.get('dodge', 0) + 1
+                if r.dodge_move == 'paid': self.reposition(c, min(1, free), False, count=False)     # 2022: may pay 1 stamina to move a node
+                return
             how, arg = 'block', 0
         hit = True; taken = 0
         if how == 'block':
@@ -278,6 +280,8 @@ class Fight:
         else:
             dice_n, sta = arg if how == 'dodge' else (nd, sta1)
             c.sta += sta
+            # 2017: having paid for the dodge the character can move one node, before the dice are rolled and whatever they show
+            if how == 'dodge' and r.dodge_move == 'before': self.reposition(c, 0, True, count=False)
             got = sum(rng.random() < 0.5 for _ in range(dice_n)); ok = got >= k + pen
             if not ok and c.luck and dice_n > got:
                 # luck re-rolls the failed dodge dice: one of them under the official rules, all of them under the manuscript
@@ -291,7 +295,7 @@ class Fight:
                     if c.heroic and c.name == 'Assassin' and src.hp > 0:                   # Backstab: a free attack after a dodge
                         o = c.best_option(src, DIST[c.node][src.node], 99, hand='R')
                         if o: c.heroic = False; self.strike(c, src, o)
-                if how != 'parry' and r.dodge_move:
+                if how != 'parry' and r.dodge_move is True:
                     # the manuscript: a successful dodge always moves the character one node. Off the attacker's own
                     # node if it is there; otherwise sideways, keeping its distance where the tile allows
                     d0 = DIST[c.node][src.node]
@@ -503,8 +507,9 @@ class Fight:
             self.say('   ', c.name, 'hits', t.name, 'with', o['name'], 'for', total, '(hp', max(0, t.hp), ')')
         return grand
 
-    def reposition(self, c, budget, walk_free):
-        """After acting, step out of the enemies' reach if that saves more damage than it costs in stamina."""
+    def reposition(self, c, budget, walk_free, count=True):
+        """After acting, step out of the enemies' reach if that saves more damage than it costs in stamina. Also used for
+        the optional step of an official dodge (count=False keeps it out of the tally of turns ending with a step)."""
         if not self.foes_alive() or budget < 0: return
         here = c.node; base = self.incoming(c, 0); best = (0.25, here, 0)
         reach = max([o['range'] for h in 'RL' for o in c.options[h]] or [0])
@@ -524,7 +529,7 @@ class Fight:
             val = 0.8 * (base - self.incoming(c, 0)) - self.pol.w_sta * (cost + 0.6 * gap) - 0.3 * sum(1 for i in range(cost) if budget - i <= 3)
             if val > best[0]: best = (val, node, cost)
         c.node = best[1]; c.sta += best[2]
-        if best[2] or best[1] != here:
+        if (best[2] or best[1] != here) and count:
             self.dec['step'] = self.dec.get('step', 0) + 1; self.say('   ', c.name, 'steps back to', NODES[c.node])
 
     def char_turn(self, c):

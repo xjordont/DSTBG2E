@@ -32,7 +32,7 @@ OFFICIAL_2017 = Rules(
     # the round: all enemies activate, then one character; and again for the next character
     round='alternate', order='seat', aggro='active', regen=2, turn='official',
     # defence: every block die counts; a failed dodge takes the full damage; no parry
-    block='sum', dodge_fail='full', dodge_extra=False, dodge_move=False, parry=False,
+    block='sum', dodge_fail='full', dodge_extra=False, dodge_move='before', parry=False,     # a dodge can move one node before the roll
     # death: any death defeats the party; a full bar kills; a win clears the whole bar
     death='party', lethal='full', recover='all', hollow_bar=10,
     # no enemy scaling
@@ -57,6 +57,7 @@ OFFICIAL_2022 = OFFICIAL_2017.but(
     boss_souls=lambda n, sparks: 0, treasure='shop4', shop_limit=4, boss_spark='plus1', solo_souls=0, choose_of_two=True,
     regen=3, defence='combined', lethal='overflow',      # 2022: three stamina a turn; one combined dodge-and-block roll
     free_visit=False,
+    dodge_move='paid',                                   # 2022: after a successful dodge, 1 stamina buys a move of one node
     frost='2022',                                        # 2022: a frostbitten character recovers one less stamina; no surcharge on moves
 )
 

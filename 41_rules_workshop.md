@@ -1118,6 +1118,8 @@ A fifth and sixth: a stagger token placed on an enemy by a parry came off at the
 
 A seventh: an enemy making a pushing move chose its target again after each push, where the manuscript fixes the target when the movement begins and has the enemy follow that character. Fixed and checked (89 checks pass). Run again: the proposal with players who fight again 61% / 65% / 66% / 58%; the official anchor 37% / 56% / 64% / 50%. Neither moved.
 
+An eighth: the official dodge was modelled without its move. In 2017 a character who pays for a dodge can move one node before the dice are rolled, whether or not the dodge succeeds; in 2022 a successful dodge lets the character pay one stamina to move one node. Both are now in the official presets, and the simulated player takes the step when it lowers the damage expected before its next turn. Checked (90 checks pass). Run again: the official anchor 37% / 55% / 64% / 54%; the 2022 rules on the 2017 cards 29% / 39% / 31% / 15%. Neither moved: against enemies that close the distance on their own activation, a single step rarely escapes anything. The manuscript's rules and the proposal are not touched.
+
 ### 15.5 How the treasure is sorted
 
 The author asked whether the treasure should be split three ways by the kind of card (common and class; transposed; legendary and boss) in place of the manuscript's two tiers by stat requirement, and for a survey. The two reports are `work/phase6/treasure_split.md` (official rulebooks, manuscript, house rules, card counts) and `work/phase6/treasure_web.md` (online discussion; most forum pages could not be fetched, so the community part is thin).
