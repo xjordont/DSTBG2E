@@ -16,6 +16,7 @@ class Table(Policy):
     ready3 = -9.0        # the same before a Level 3 encounter or the main boss: rest to grind or to spend souls
     worn_at = 5          # damage on any one character that justifies a rest between encounters
     grind = False        # fight a cleared encounter again where the rules let it be rushed past instead
+    regrind = 0          # the highest level of reset encounter fought again while a repeat still pays (0 = always rush)
 
 
 def danger(names): return sum(ENEMIES[n]['hp'] * max(s.get('dmg', 0) for s in ENEMIES[n]['steps']) for n in names)
@@ -59,7 +60,19 @@ def play(n, rules, seed, table=None, classes=None):
             if getattr(r, 'choose_of_two', False) and decks[lv]:
                 b = decks[lv].pop(); a, b = sorted((a, b), key=lambda e: danger(e['enemies'])); decks[lv].append(b)
             cards.append(a)
-        ever = [False] * 4; done = [False] * 4; boss_seen = False; pos = 0; walk = 0; fresh = True
+        clears = [0] * 4; must = [False] * 4; done = [False] * 4; boss_seen = False; pos = 0; walk = 0; fresh = True
+        tab = getattr(r, 'soul_tab', None)        # souls a character by which clear this is: first, second, third and later
+
+        def pay(lv, k):                           # k: how often the encounter has been cleared already
+            if tab is None: return r.souls(lv, n, k == 0)
+            return tab[min(k, len(tab) - 1)][lv - 1] * (n if r.pool else 1)
+
+        def rush_cost(k):                         # damage to each character for rushing past an encounter cleared k times
+            sd = getattr(r, 'skip_dmg', 0)
+            return sd[min(k, len(sd)) - 1] if isinstance(sd, (list, tuple)) else sd
+
+        def refight(i):                           # would the players fight reset encounter i again, not rush past it?
+            return t.grind or (tab is not None and levels[i] <= t.regrind and pay(levels[i], clears[i]) > 0)
         while True:
             at_boss = pos >= 4
             # ---- a voluntary rest before the next fight
@@ -71,25 +84,29 @@ def play(n, rules, seed, table=None, classes=None):
                 goal = t.ready3 if lvl in (3, 'main') else t.ready2 if lvl in (2, 'mini') else -99
                 weak = sum(c._power for c in party) / n < goal
                 # a rest helps a weak party only if it can then earn or spend souls
-                can_grow = (r.skip_cost is None and pos > 0) or (eco.pool if r.pool else sum(c.souls for c in party)) >= 2 * n
+                can_grow = (r.skip_cost is None and pos > 0) or (eco.pool if r.pool else sum(c.souls for c in party)) >= 2 * n \
+                    or any(clears[i] and refight(i) for i in range(4))
                 # where skipped encounters cost damage, a rest is worth it only if it heals more than the walk back costs
-                toll = getattr(r, 'skip_dmg', 0) * (0 if (at_boss or (r.fog_gate and boss_seen)) else pos)
+                toll = 0 if (at_boss or (r.fog_gate and boss_seen)) else sum(rush_cost(clears[i]) for i in range(pos) if not refight(i))
                 if toll and not any(c.hollow or c.lost for c in party) and max(c.dmg for c in party) - toll < 3: worn = False
                 if worn and (r.death != 'party' or at_boss) and (at_boss or sparks > t.reserve + 1): want = True
                 if weak and can_grow: want = True
             if want and not fresh:
                 rest(); done = [False] * 4; fresh = True
                 if r.skip_cost is None or not r.fog_gate: pos = 0
-                else: pos = 4 if boss_seen else 0
+                else: pos = 4 if (boss_seen and not any(clears[i] and refight(i) for i in range(4))) else 0
                 walk = 0
                 continue
             fv = getattr(r, 'free_visit', False)             # visiting the bonfire between encounters without resting:
             if fv: eco.spend(levels=fv != 'shop')            # True = Andre and the Firekeeper; 'shop' = Andre only
             # ---- walk to the next fight
-            if not at_boss and r.skip_cost is not None and ever[pos] and not done[pos] and not t.grind:
-                walk += r.skip_cost; done[pos] = True; pos += 1                  # skip a cleared encounter
-                for c in party:                                                  # a toll in damage for rushing past it
-                    if not c.lost: c.dmg = min(c.cap - 1, c.dmg + getattr(r, 'skip_dmg', 0))
+            if not at_boss and r.skip_cost is not None and clears[pos] and not must[pos] and not done[pos] and not refight(pos):
+                gate = r.fog_gate and boss_seen                                  # the shortcut: nothing to pass, nothing to pay
+                if not gate:
+                    walk += r.skip_cost                                          # skip a cleared encounter
+                    for c in party:                                              # a toll in damage for rushing past it
+                        if not c.lost: c.dmg = min(c.cap - 1, c.dmg + rush_cost(clears[pos]))
+                done[pos] = True; pos += 1
                 continue
             if not at_boss and done[pos]: pos += 1; continue
             for c in party:
@@ -100,7 +117,7 @@ def play(n, rules, seed, table=None, classes=None):
                 boss_seen = True; f = Fight(here, r, rng, boss=boss, policy=t, n=n); lv = 'mini' if stage == 0 else 'main'
             else:
                 f = Fight(here, r, rng, enemies=cards[pos]['enemies'], policy=t, n=n); lv = levels[pos]
-            if not at_boss and ever[pos]: out['repeats'] += 1        # an encounter fought again after it was cleared: the grind
+            if not at_boss and clears[pos]: out['repeats'] += 1      # an encounter fought again after it was cleared: the grind
             ok = f.run(); fresh = False
             for k, v in f.dec.items(): out['dec'][k] = out['dec'].get(k, 0) + v
             out['fights'] += 1; out['char_turns'] += f.char_turns; out['enemy_acts'] += f.enemy_acts; out['rounds'] += f.rounds
@@ -108,12 +125,13 @@ def play(n, rules, seed, table=None, classes=None):
             d = out['by_level'].setdefault(lv, dict(n=0, rounds=0, death=0, fail=0, turns=0))
             d['n'] += 1; d['rounds'] += f.rounds; d['death'] += f.deaths > 0; d['fail'] += not ok; d['turns'] += f.char_turns + f.enemy_acts
             if ok:
-                first = at_boss or not ever[pos]
+                first = at_boss or not clears[pos]
+                k = 0 if at_boss else clears[pos]
                 # ---- souls
                 if r.pool:
                     if dropped_pool and dropped_pool[0] == (stage, pos): eco.pool += dropped_pool[1]; dropped_pool = None
-                    eco.pool += r.boss_souls(n, sparks) if at_boss else r.souls(lv, n, first)
-                    out['souls'] += r.boss_souls(n, sparks) if at_boss else r.souls(lv, n, first)
+                    eco.pool += r.boss_souls(n, sparks) if at_boss else pay(lv, k)
+                    out['souls'] += r.boss_souls(n, sparks) if at_boss else pay(lv, k)
                 else:
                     for c in party:
                         simple = getattr(r, 'drop', 'manuscript') == 'simple'
@@ -123,7 +141,7 @@ def play(n, rules, seed, table=None, classes=None):
                             c.dropped = ((stage, pos), c.souls); c.souls = 0
                         elif c.dropped and c.dropped[0] == (stage, pos):
                             c.souls += c.dropped[1]; c.dropped = None
-                        gain = r.boss_souls(n, sparks) if at_boss else r.souls(lv, n, first)
+                        gain = r.boss_souls(n, sparks) if at_boss else pay(lv, k)
                         c.souls += gain; c.earned += gain; out['souls'] += gain
                 # ---- treasure
                 if not at_boss and first:
@@ -140,7 +158,7 @@ def play(n, rules, seed, table=None, classes=None):
                     else: c.dmg = max(0, c.dmg - getattr(r, 'heal_after', 1)); c.sta = 0
                     c.stagger = c.frost = c.bleed = False; c.poison = 0
                 if at_boss: break
-                ever[pos] = True; done[pos] = True; pos += 1
+                clears[pos] += 1; must[pos] = False; done[pos] = True; pos += 1
             else:
                 # ---- a failed encounter: souls are dropped and the party must rest
                 if r.pool:
@@ -151,8 +169,8 @@ def play(n, rules, seed, table=None, classes=None):
                 if not rest():
                     out['lost_at'] = lv; out['sparks_left'] = 0; return out
                 done = [False] * 4; fresh = True
-                if not at_boss: ever[pos] = False                                  # a failed encounter cannot be skipped
-                pos = 4 if (at_boss and r.fog_gate) else 0
+                if not at_boss: must[pos] = True                                   # a failed encounter cannot be skipped
+                pos = 4 if (at_boss and r.fog_gate and not any(clears[i] and refight(i) for i in range(4))) else 0
         # ---- the boss is dead
         if stage == 0:
             sparks = r.sparks(n) if r.boss_spark == 'reset' else sparks + 1

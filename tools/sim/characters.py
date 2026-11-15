@@ -176,6 +176,13 @@ class Economy:
             # the manuscript: every common, class and transposed card, split at a requirement of 25; legendaries join tier two
             pool = common + [i for i in cards if i['deck'] in ('class', 'transposed')]
             two = lambda i: max(i['req']) >= 25 or i['deck'] == 'transposed'
+            split = getattr(rules, 'deck_split', 'req')
+            if split in ('type', 'type_all', 'kind'):
+                # a split by kind of card, for comparison: common and class treasure in tier one, transposed (and the
+                # legendaries, later) in tier two; 'type' keeps only the cards of the classes in play, as the official game does
+                mine = (lambda i: True) if split == 'type_all' else (lambda i: i['cls'] in names)
+                pool = common + [i for i in cards if i['deck'] in ('class', 'transposed') and mine(i)]
+                two = lambda i: i['deck'] == 'transposed'
             self.t1 = [i for i in pool if not two(i)]; self.t2 = [i for i in pool if two(i)]
             rng.shuffle(self.t1); rng.shuffle(self.t2); self.legend = legend
             self.shop1 = self.stock(self.t1); self.shop2 = []
@@ -198,13 +205,19 @@ class Economy:
             self.deck = self.row + self.deck; self.row = []          # back under the deck; a new row is laid out
 
     def after_mini_boss(self):
-        if self.r.treasure == 'author':
+        if self.r.treasure == 'author' and getattr(self.r, 'deck_split', 'req') == 'kind':
+            # three sources by kind of card: one treasure deck (common and class cards, joined now by the legendaries),
+            # and the party's transposed cards laid out as the tier-two shop
+            self.t1 += self.shop1 + self.legend; self.rng.shuffle(self.t1); self.shop1 = self.stock(self.t1)
+            self.shop2 = list(self.t2); self.t2 = []
+        elif self.r.treasure == 'author':
             self.t1 += self.shop1; self.rng.shuffle(self.t1); self.shop1 = self.stock(self.t1); self.shop2 = self.stock(self.t2)
             self.t2 += self.legend; self.rng.shuffle(self.t2)
         else:
             self.deck += self.later; self.later = []; self.rng.shuffle(self.deck)
 
     def draw(self, tier=1):
+        if self.r.treasure == 'author' and getattr(self.r, 'deck_split', 'req') == 'kind': tier = 1      # one treasure deck
         deck = (self.t1 if tier == 1 else self.t2) if self.r.treasure == 'author' else self.deck
         return deck.pop() if deck else None
 

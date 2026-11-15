@@ -1063,3 +1063,67 @@ The author asked whether the stocked shop is the most balanced way. Each row cha
 - Between the manuscript's shop and the 2022 rule the figures do not choose. The difference is in play: the manuscript's shop is in view from the start, so a character can raise a stat towards a card; the 2022 offer changes at every visit.
 
 To re-run: `soul_rep=[...]` with the table policy `grind=True` for 15.2; `treasure='shop4'`, `'row'` (both with `shop_limit=4`) or `'draw'` (with `draw_cost=1`), or `free_treasure=0`, for 15.3.
+
+### 15.4 The respawn loop
+
+**Further decisions by the author:** the fog gate takes a party that has reached a boss straight back to it after a rest; one encounter card is dealt face down to each tile (not the 2022 draw of two); the stocked shop stays. And a direction: the game should keep the video game's loop. A rest respawns the encounters already cleared, and the party must fight through them again or dash past at a cost, so that pressing on and turning back are both real choices. The author's sketch: full pay and treasure for a first clear, less and no treasure for a second, one damage to rush an encounter cleared once, nothing to rush one cleared twice.
+
+All rows use the rules decided so far, with one card a tile. That last change moved the base: with players who always rush it is now 53% / 54% / 60% / 70% (it was 58% / 57% / 51% / 59% with the draw of two; the simulated players chose between two cards by a crude measure of danger that misleads a large party). 500 games a cell (±4). "Fight again" means the players fight every reset Level 1 and Level 2 encounter that still pays, and rush the rest; fighting Level 3 encounters again was never better.
+
+| Second clear pays | Always rush | Fight again | Fights in a game, fight again |
+|---|---|---|---|
+| nothing | 53% / 54% / 60% / 70% | (no reason to) | 11.4 / 11.0 / 9.7 / 9.3 |
+| 2 / 3 / 4 (one less) | the same | 64% / 69% / 71% / 79% | 15.2 / 15.4 / 14.4 / 13.9 |
+| 1 / 2 / 3 (two less) | the same | 59% / 60% / 61% / 71% | 15.3 / 15.2 / 14.1 / 13.5 |
+| 1 / 1 / 1 | the same | 51% / 60% / 58% / (not run) | 15.3 / 15.3 / 13.9 |
+
+- **One soul less** makes fighting again plainly right (9 to 15 points) and the whole game that much easier. A rest then pays, which is the official game's incentive to grind.
+- **Two souls less** leaves it a judgement: fighting again is worth a few points, rushing is nearly as good, and which is better depends on what the party needs. This is the version recommended.
+- **One soul flat** is not worth the fight.
+- The second clears add four or five fights a game but almost no table time (activations within 5%), because a party that has grown clears an early encounter in two or three rounds.
+- An encounter cleared twice is spent: it pays nothing more and is passed freely. So no encounter is fought more than twice for pay, and the extra fights are bounded at eight a game.
+
+**Four characters** win too often under any of these (about 70%), since the hollow rule and the single encounter card both favour a large party. Tested at four characters with two souls less, 600 games (±4), always rush and fight again:
+
+| Four characters | Games won | Level 3 rounds |
+|---|---|---|
+| health +4, damage +3 (the table of 14.6) | 70% and 71% | 3.5 |
+| health +4, damage +4 from enemies and bosses | 50% and 55% | 4.1 and 3.8 |
+| health +4, damage +4 from enemies, +3 from bosses | 59% and 65% | 4.1 and 3.8 |
+| health +6, damage +3 | 42% and 39% | 5.5 and 5.4 |
+
+**The proposal,** confirmed at 800 games a cell (±3). Damage added to every enemy and boss attack: +2 with two characters, +3 with three, +4 with four (the number of characters, for a party of two or more). Enemy health as before (+2 for each character beyond the second).
+
+| | 1 | 2 | 3 | 4 |
+|---|---|---|---|---|
+| Games won, always rush | 54% | 55% | 57% | 49% |
+| Games won, fight again | 59% | 59% | 62% | 54% |
+| Fights (of which second clears), fight again | 15.2 (4.7) | 15.1 (4.4) | 14.2 (4.4) | 12.9 (3.9) |
+| Table time, rush and fight again | 369 and 363 | 361 and 346 | 315 and 332 | 326 and 358 |
+| Rests | 4.6 | 3.8 | 3.2 | 2.2 |
+| Level 3 rounds | 7.9 | 4.4 | 3.7 | 3.8 |
+| Someone dies in a Level 3 encounter | 17% | 28% | 43% | 57% |
+
+To re-run: `python3 tools/sim/compare.py --only review --games 800 --probe 150`, and again with `--regrind 2`.
+
+### 15.5 How the treasure is sorted
+
+The author asked whether the treasure should be split three ways by the kind of card (common and class; transposed; legendary and boss) in place of the manuscript's two tiers by stat requirement, and for a survey. The two reports are `work/phase6/treasure_split.md` (official rulebooks, manuscript, house rules, card counts) and `work/phase6/treasure_web.md` (online discussion; most forum pages could not be fetched, so the community part is thin).
+
+- **Official 2017 and 2022** both sort by kind and by stage: the deck starts as the common cards and the class cards of the characters in play; the party's transposed cards and legendaries (five of ten in 2017) are shuffled in after the mini-boss; a mini-boss's treasure goes straight to the inventory.
+- **The manuscript** sorts by requirement: tier one below 25, tier two at 25 and above with every transposed card, five legendaries added later, boss treasure awarded. It does not limit class cards to the classes in play.
+- **House rules:** of 20 that touch treasure, four clearly keep separate decks: two by kind of item (weapons, armour, magic), one with a separate legendary deck, one by a requirement of 25 like the manuscript. None separates transposed from legendary, and none puts legendary with boss treasure in one pile.
+- **The cards (2017 core):** 53 common (16 need 25 or more), 20 class (14 need 25 or more), 20 transposed (all need 28 or more), 10 legendary (all need 27 or more, all weapons).
+- **What stands against three piles as three shops:** a legendary-and-boss pile is seven to nine weapons and cannot stock a shop by category; boss treasure is awarded, not drawn.
+
+A version of the author's idea that avoids those problems, tested: **one treasure deck** of the common cards and the class cards of the characters in play, which stocks the tier-one shop and gives the free card on a first clear, and which the five legendaries join after the mini-boss (found, never bought); **the party's transposed cards** laid out face up as the tier-two shop when the mini-boss falls; **boss treasure** awarded for the kill. With the proposal of 15.4 and players who fight again, 800 games (±3):
+
+| Treasure sorted | Games won |
+|---|---|
+| by requirement, two tiers (manuscript) | 59% / 59% / 62% / 54% |
+| by kind, as above | 64% / 68% / 62% / 56% |
+
+By kind is five to nine points easier for one and two characters and no different for three and four. It is quicker to set up (the cards are sorted by the mark in their corner, not by reading requirements), follows the official staging, and never offers a class card nobody can use. The manuscript's sort keeps the first shop to cards a starting character can soon equip and ties the price to what a card demands.
+
+To re-run: `--only review_kind --regrind 2`.
+

@@ -140,11 +140,23 @@ for name, rules in (('official 2017', R17), ('official 2022', RU.OFFICIAL_2022),
         check('invariants hold: %s, %d character%s' % (name, n, '' if n == 1 else 's'), not b, sorted(set(b)))
 
 # ---------------------------------------------------------------- the variants of the author's review (section 15)
-from compare import FINAL
+from compare import FINAL, REVIEW as REVIEW_SPEC
+from game import Table
 REVIEW = RU.make(dict(FINAL, death='lost', heal_after=0, skip_dmg=1))
 for n in (1, 4):
     b = invariants(REVIEW, n, 30)
     check('invariants hold: final ruleset with the review variants, %d character%s' % (n, '' if n == 1 else 's'), not b, sorted(set(b)))
+RV = RU.make(REVIEW_SPEC)
+rush = [play(2, RV, s, table=Table(skill=1.0)) for s in range(40)]
+again = [play(2, RV, s, table=Table(skill=1.0, regrind=2)) for s in range(40)]
+check('review rules: players who always rush fight no encounter twice; players who fight again do',
+      sum(x['repeats'] for x in rush) == 0 and sum(x['repeats'] for x in again) > 0, (sum(x['repeats'] for x in rush), sum(x['repeats'] for x in again)))
+check('review rules: no encounter pays more than twice (at most four repeats a stage with pay)',
+      all(x['repeats'] <= 8 + 2 * x['rests'] for x in again))
+kind = Economy([Char('Knight', RV), Char('Herald', RV)], RU.make(dict(REVIEW_SPEC, deck_split='kind')), random.Random(1))
+check('treasure by kind: tier one holds common and the party\'s class cards; tier two only its transposed cards',
+      all(i['deck'] in ('common', 'class') for i in kind.t1 + kind.shop1) and all(i['deck'] == 'transposed' and i['cls'] in ('Knight', 'Herald') for i in kind.t2)
+      and len(kind.t2) == 10, (len(kind.t1), len(kind.t2)))
 
 # ---------------------------------------------------------------- determinism and the death rules
 a = play(3, M, 11); b = play(3, M, 11)

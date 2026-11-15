@@ -25,23 +25,30 @@ PROPOSED = PROPOSED_A
 # Section 14: the final ruleset, built up from the official 2017 rules one module at a time (rules.py lists the modules)
 FINAL = dict(base='official2017', mods=['HOLLOW', 'ROUND_ALL', 'TURN_MS', 'ATTRITION', 'ECON_MS', 'NO_REFIGHT'],
              choose_of_two=True, hp_add=[0, 0, 0, 2, 4], atk=A_DMG, boss_atk=A_DMG, solo_souls=6)
+# Section 15: the rules as the author's review has them so far. Encounters reset at a rest: a second clear pays two
+# souls less and no treasure, a third nothing; rushing past costs one damage once, then nothing. One encounter card a tile.
+R_DMG = [0, 0, 2, 3, 4]            # every enemy and boss attack: +2 damage with two characters, +3 with three, +4 with four
+REVIEW = dict(FINAL, death='lost', heal_after=0, choose_of_two=False, soul_tab=[[3, 4, 5], [1, 2, 3], [0, 0, 0]],
+              skip_dmg=[1, 0], atk=R_DMG, boss_atk=R_DMG)
 SPECS = {
     'official2017': ('Official 2017 (the calibration anchor)', {'base': 'official2017'}),
     'official2022': ('Official 2022 rules on the 2017 enemy cards (not a valid test of the 2022 sets; see 13.2)', {'base': 'official2022'}),
     'manuscript': ("Author's manuscript, as written", {'base': 'manuscript'}),
     'health': ('Health rule only: bosses as printed, souls spent at a rest', dict(HEALTH, atk=[0] * 5)),
     'final': ('The final ruleset (section 14)', FINAL),
+    'review': ("The author's review so far (section 15); add --regrind 2 for players who fight reset encounters again", REVIEW),
+    'review_kind': ('The same with treasure sorted by kind of card (15.5)', dict(REVIEW, deck_split='kind')),
     'A': ('Proposal A of section 13 (Andre and the Firekeeper without a rest)', PROPOSED_A),
     'B': ('Proposal B (Andre only without a rest)', PROPOSED_B),
 }
 
 
-def show(key, skill, games, probe):
+def show(key, skill, games, probe, regrind=0):
     name, spec = SPECS[key]
     print('\n' + name)
     print('  chars  sparks  games won        rests  fights  table time   L3 rounds  L3 someone dies   lost at: encounter / mini-boss / main boss')
     for n in (1, 2, 3, 4):
-        s, pol = best(spec, n, skill, games=games, probe=probe)
+        s, pol = best(spec, n, skill, games=games, probe=probe, extra=dict(regrind=regrind))
         lost = s['lost']; enc = sum(v for k, v in lost.items() if k in ('1', '2', '3'))
         print('    %d      %d     %3.0f%% (+/-%2.0f)     %4.1f   %5.1f    %6.0f       %4.1f         %3.0f%%            %3.0f%% / %3.0f%% / %3.0f%%' % (
             n, 6 - n, 100 * s['win'], 100 * s['ci'], s['rests'], s['fights'], s['time'], s.get(('rounds', 3), 0),
@@ -51,5 +58,6 @@ def show(key, skill, games, probe):
 if __name__ == '__main__':
     ap = argparse.ArgumentParser(); ap.add_argument('--games', type=int, default=1500); ap.add_argument('--probe', type=int, default=300)
     ap.add_argument('--skill', type=float, default=1.0); ap.add_argument('--only', nargs='*')
+    ap.add_argument('--regrind', type=int, default=0, help='highest level of reset encounter the players fight again (0: always rush)')
     a = ap.parse_args()
-    for key in (a.only or SPECS): show(key, a.skill, a.games, a.probe)
+    for key in (a.only or SPECS): show(key, a.skill, a.games, a.probe, a.regrind)
