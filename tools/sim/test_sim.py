@@ -343,6 +343,18 @@ for s in range(300):
     if not c.luck and rolls: one_die.append(9 - c.dmg - sum(rolls[0]) <= max(max(E.DIE[d]) for d in c.blk) - min(rolls[0]))
 check('official: luck changes one block die only (the total rises by no more than one die can)', one_die and all(one_die), (len(one_die), sum(one_die)))
 
+# ---------------------------------------------------------------- the Knight's heroic action follows a block roll, not a resist roll
+def stood(magic):
+    used = 0
+    for s in range(60):
+        c = Char('Knight', R17); f = E.Fight([c], R17, random.Random(s), enemies=['Hollow Soldier'], policy=E.Policy(evade=0.0))
+        c.luck = False; c.dodge = 0; foe = f.foes[0]; foe.node = E.IDX[(4, 4)]; c.node = E.IDX[(0, 0)]
+        f.defend(foe, c, 8, magic, 9); used += not c.heroic
+    return used
+
+
+check('Stand Fast is used after a block roll and never after a resist roll', stood(False) > 0 and stood(True) == 0, (stood(False), stood(True)))
+
 # ---------------------------------------------------------------- equipment data
 check('every starting item is met by its class at base stats',
       all(Char(k, R17).cost_to_meet(ITEMS[n]['req'])[0] == 0 for k, v in CLASSES.items() for n in v['start']))

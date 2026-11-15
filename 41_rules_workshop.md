@@ -1110,6 +1110,8 @@ Correction after the automated review (2026-11-15): a sold card was removed from
 
 A second correction the same day: the luck token re-rolled the whole pool of dice under every ruleset. The official rules re-roll one die; the manuscript any or all of them, chosen at once. Each ruleset now does as it says (the manuscript's player re-rolls the dice that fell below their average). Fixed and checked (83 checks pass). Run again: the official anchor 38% / 57% / 61% / 49%, against 40% / 52% / 65% / 52% in the last run; the final ruleset of 14.6 67% / 69% / 63% / 60%; the proposal above with players who fight again 61% / 60% / 65% / 55%. A lone character under the official rules is the one figure that has drifted outside the author's band (44% when the model was calibrated, 38% now); the others are inside the sampling error of the runs they replace.
 
+A third: the Knight's heroic action (an extra die after a block roll) was also used after a resist roll against magic. Fixed and checked (84 checks pass). Run again: the official anchor 37% / 56% / 63% / 52%; the proposal with players who fight again 60% / 62% / 65% / 56%. Neither moved beyond the sampling error.
+
 ### 15.5 How the treasure is sorted
 
 The author asked whether the treasure should be split three ways by the kind of card (common and class; transposed; legendary and boss) in place of the manuscript's two tiers by stat requirement, and for a survey. The two reports are `work/phase6/treasure_split.md` (official rulebooks, manuscript, house rules, card counts) and `work/phase6/treasure_web.md` (online discussion; most forum pages could not be fetched, so the community part is thin).
