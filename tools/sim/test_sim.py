@@ -369,6 +369,22 @@ if c.value(last, up[last]) - top >= 10 and not any(c.value(j, up[j]) - top >= 10
     got = [o['mod'] for o in c.profile(R=sk, L=False, tiers=up)['options']['R']]
     check('manuscript: a weapon scales on any of its tied highest requirements (%s)' % sk['name'], got == [m + 1 for m in base], (base, got))
 
+# ---------------------------------------------------------------- a stagger from a parry; the 2022 frostbite
+def after_parry(rules):
+    c = Char('Knight', rules); f = E.Fight([c], rules, random.Random(0), enemies=['Sentinel']); foe = f.foes[0]
+    foe.stagger = True; foe.fresh = True; f.end_activation(foe); first = foe.stagger; f.end_activation(foe)
+    return first, foe.stagger
+
+
+check('settled rules: a stagger placed during an enemy\'s own turn lasts to the end of its next turn', after_parry(RU.SETTLED) == (True, False))
+check('manuscript as written: it comes off at the end of that same turn', after_parry(M) == (False, False))
+R22 = RU.OFFICIAL_2022
+c = Char('Knight', R22); f = E.Fight([c], R22, random.Random(0), enemies=['Sentinel']); f.foes[0].node = E.IDX[(4, 4)]; c.node = E.IDX[(0, 0)]
+c.options = {'R': [], 'L': []}; c.sta = 5; c.frost = True; f.char_turn(c); frozen = c.sta
+c = Char('Knight', R22); f = E.Fight([c], R22, random.Random(0), enemies=['Sentinel']); f.foes[0].node = E.IDX[(4, 4)]; c.node = E.IDX[(0, 0)]
+c.options = {'R': [], 'L': []}; c.sta = 5; f.char_turn(c)
+check('official 2022: a frostbitten character recovers one less stamina (two, not three)', frozen - c.sta == 1, (frozen, c.sta))
+
 # ---------------------------------------------------------------- equipment data
 check('every starting item is met by its class at base stats',
       all(Char(k, R17).cost_to_meet(ITEMS[n]['req'])[0] == 0 for k, v in CLASSES.items() for n in v['start']))

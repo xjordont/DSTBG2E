@@ -134,11 +134,12 @@ class Policy:
 
 class Foe:
     __slots__ = ('name', 'card', 'hp', 'max', 'node', 'stagger', 'frost', 'poison', 'bleed', 'boss', 'deck', 'discard',
-                 'heated', 'heat_cards', 'armor', 'resist', 'threat', 'weak', 'atk_bonus', 'seen')
+                 'heated', 'heat_cards', 'armor', 'resist', 'threat', 'weak', 'atk_bonus', 'seen', 'fresh')
 
     def __init__(self, name, card, hp, node, boss=False):
         self.name, self.card, self.hp, self.max, self.node, self.boss = name, card, hp, hp, node, boss
         self.stagger = self.frost = False; self.poison = 0; self.bleed = False
+        self.fresh = False                             # staggered during its own activation (by a parry)
         self.armor, self.resist, self.threat = card['armor'], card['resist'], card.get('threat', 10)
         self.deck = self.discard = self.heat_cards = None; self.heated = False; self.weak = False; self.atk_bonus = 0
         self.seen = set()
@@ -285,7 +286,7 @@ class Fight:
             if ok:
                 hit = False
                 if how == 'parry':
-                    src.stagger = True; self.riposte(c, src)
+                    src.stagger = True; src.fresh = True; self.riposte(c, src)     # placed during the attacker's own turn
                 else:
                     if c.heroic and c.name == 'Assassin' and src.hp > 0:                   # Backstab: a free attack after a dodge
                         o = c.best_option(src, DIST[c.node][src.node], 99, hand='R')
@@ -390,7 +391,15 @@ class Fight:
                     for c in ([x for x in self.live() if x.node == node] if st.get('node') else [t]):
                         self.defend(f, c, st['dmg'] + f.atk_bonus - (1 if f.stagger else 0), st['magic'], st['dodge'],
                                     push=st.get('push', False), parryable=not st.get('node'))
-        f.stagger = f.frost = False
+        self.end_activation(f)
+
+    def end_activation(self, f):
+        """Tokens come off at the end of a model's turn. Where the ruleset says so (the workshop's ruling, section 9.6), a
+        stagger token placed during the model's own turn stays until the end of its next one; under the manuscript as
+        written and the official rules it comes off at once."""
+        if f.fresh and getattr(self.r, 'stagger_hold', False): f.fresh = False
+        else: f.stagger = False; f.fresh = False
+        f.frost = False
 
     def boss_turn(self, f):
         r, rng = self.r, self.rng
@@ -413,7 +422,7 @@ class Fight:
                     if rng.random() < (self.pol.read_known if known else self.pol.read_new): continue    # out of the arc or the reach
                     self.defend(f, c, a['dmg'] + self.boss_atk - (1 if f.stagger else 0), a['magic'], card['dodge'], push=a['push'],
                                 effects=a['effects'], parryable=False)
-        f.stagger = f.frost = False
+        self.end_activation(f)
 
     def check_heat(self, f):
         if f.boss and not f.heated and 0 < f.hp <= f.card['heatup']:
@@ -521,7 +530,8 @@ class Fight:
     def char_turn(self, c):
         r, pol, rng = self.r, self.pol, self.rng
         self.char_turns += 1
-        if not (c.frost and r.frost == 'author'): c.sta = max(0, c.sta - r.regen)
+        # stamina at the start of the turn: none under the manuscript's frostbite, one less under the 2022 rules
+        if not (c.frost and r.frost == 'author'): c.sta = max(0, c.sta - max(0, r.regen - (1 if (c.frost and r.frost == '2022') else 0)))
         if r.aggro == 'active': self.aggro = c
         c.ran = False
         foes = self.foes_alive()

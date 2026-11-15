@@ -57,6 +57,7 @@ OFFICIAL_2022 = OFFICIAL_2017.but(
     boss_souls=lambda n, sparks: 0, treasure='shop4', shop_limit=4, boss_spark='plus1', solo_souls=0, choose_of_two=True,
     regen=3, defence='combined', lethal='overflow',      # 2022: three stamina a turn; one combined dodge-and-block roll
     free_visit=False,
+    frost='2022',                                        # 2022: a frostbitten character recovers one less stamina; no surcharge on moves
 )
 
 MANUSCRIPT = Rules(
@@ -84,7 +85,7 @@ MANUSCRIPT = Rules(
 
 # The ruleset settled in the workshop (section 9.6): the manuscript with the party choosing its turn order, aggro to
 # the last character to deal damage, parry with anything in the left slot, and the scaling under test.
-SETTLED = MANUSCRIPT.but(name='Settled (section 9.6)', order='free', aggro='last', parry='any',
+SETTLED = MANUSCRIPT.but(name='Settled (section 9.6)', order='free', aggro='last', parry='any', stagger_hold=True,
                          hp=lambda h, n: h + 2 * max(0, n - 2), atk=lambda n: n - 1, move2=lambda n: False,
                          reps=lambda n: 1)
 
@@ -127,7 +128,7 @@ HOLLOW = dict(death='hollow', hollow_bar=8)                                # the
 ROUND_ALL = dict(round='all', order='free', aggro='last')                  # all enemies, then all characters in any order
 TURN_MS = dict(regen=1, turn='major', estus='health', block='best2', dodge_fail='armour', dodge_extra=True, dodge_move=True,
                parry='any', lethal='overflow', stagger='author', frost='author', poison='stack', bleed='author',
-               grip_reroll=True, scaling=True, tier4=5, luck='any')                    # the manuscript's turn and defence rules
+               grip_reroll=True, scaling=True, tier4=5, luck='any', stagger_hold=True)                    # the manuscript's turn and defence rules
 # Dropped souls without re-fighting: a character who dies keeps its souls if the encounter is cleared; if the encounter
 # is failed, everyone's souls stay on the tile until it is cleared, and a second failure before then loses them.
 NO_REFIGHT = dict(skip_cost=0, drop='simple')
