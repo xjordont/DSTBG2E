@@ -23,6 +23,12 @@ REF_HITS = ((4, False, 1), (5, False, 1), (5, False, 2), (6, False, 1), (6, Fals
 def is_shield(it): return it is not None and it['type'] == 'hand' and not it['attacks']
 
 
+# Spell cards (sorceries, miracles, pyromancies). The manuscript never scales a spell with a stat and never counts it
+# as wielded two-handed, so it gains neither the +1 at ten over its requirement nor the grip reroll.
+SPELLS = {'Fireball', 'Soul Arrow', 'Soulstream', 'Heal', 'Heal Aid', 'Replenishment', 'Bountiful Light',
+          'Bountiful Sunlight', 'Force', 'Great Magic Weapon', 'Poison Mist'}
+
+
 class Char:
     def __init__(self, cls, rules):
         k = CLASSES[cls]
@@ -73,16 +79,17 @@ class Char:
             if not it: continue
             other = L if hand == 'R' else R
             up = plus.get(it['name']); bonus = 1 if up == 'mod' else 0; more = 'b' if up == 'die' else ''
-            if getattr(r, 'scaling', True) and r.tier4 is not None and it['attacks'] and max(it['req']) > 0:
+            spell = it['name'] in SPELLS
+            if getattr(r, 'scaling', True) and r.tier4 is not None and it['attacks'] and max(it['req']) > 0 and not spell:
                 i = max(range(4), key=lambda j: it['req'][j])
-                if self.value(i, tiers[i]) - it['req'][i] >= 10 and not (it['attacks'][0]['magic'] and it['attacks'][0]['range'] >= 2):
+                if self.value(i, tiers[i]) - it['req'][i] >= 10:
                     bonus += 1                                  # the manuscript's stat scaling: +1 at ten over the requirement
             for a in it['attacks']:
                 if not a['dice']: continue                     # support actions (healing, stamina) are not modelled
                 opts[hand].append(dict(name=it['name'], cost=a['cost'], dice=a['dice'] + more, mod=a['mod'] + bonus, magic=a['magic'],
                                        range=a['range'], repeat=a['repeat'], shaft=a['shaft'], ignore=a.get('ignore', False),
                                        node=a.get('node', False),
-                                       reroll=bool(getattr(r, 'grip_reroll', False) and (it['hands'] == 2 or other is None))))
+                                       reroll=bool(getattr(r, 'grip_reroll', False) and not spell and (it['hands'] == 2 or other is None))))
         p['options'] = opts
         p['mean_blk'] = sum(v * q for v, q in pmf_def(p['blk'], r.block)) - p['blk_pen']
         p['mean_res'] = sum(v * q for v, q in pmf_def(p['res'], r.block)) - p['res_pen']

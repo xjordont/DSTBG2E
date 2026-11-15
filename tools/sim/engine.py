@@ -536,7 +536,8 @@ class Fight:
             else: self.end_turn(c); return                           # a major action: the turn ends
         if c.heroic and c.name == 'Herald' and (sum(x.sta for x in self.live()) >= 2 * len(self.live())):
             c.heroic = False                                         # Perseverance: each character gains 2 stamina
-            for x in self.live(): x.sta = max(0, x.sta - 2)
+            for x in self.live():
+                if not (x.frost and r.frost == 'author'): x.sta = max(0, x.sta - 2)      # frostbite bars any recovery
         attacked = False; moved = False; rested = False
         used = set()
         wd = pol.w_death * (1.6 if (r.death == 'party' or c.hollow or len(self.live()) == 1) else 1.0)

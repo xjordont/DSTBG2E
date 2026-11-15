@@ -270,6 +270,15 @@ check('manuscript: replaced treasure returns to the bag; starting equipment does
 c = Char('Knight', R17); eco = Economy([c], R17, random.Random(1)); first = c.A; eco.equip(c, spare, c.tier, 'A')
 check('official: replaced equipment returns to the shared inventory', first in eco.inv)
 
+# ---------------------------------------------------------------- spells are never scaled or two-handed; frostbite and Perseverance
+c = Char('Knight', M); c.tier = [0, 0, 4, 0]; pr = c.profile(R=ITEMS['Soulstream'], L=False)
+check('manuscript: a spell gains no stat scaling and no grip reroll', all(o['mod'] == 0 and not o['reroll'] for o in pr['options']['R']) and len(pr['options']['R']) == 3)
+pr = c.profile(R=ITEMS['Long Sword'], L=False, tiers=[4, 4, 0, 0])
+check('manuscript: a weapon ten over its requirement gains +1, and the reroll in two hands', all(o['mod'] == 1 and o['reroll'] for o in pr['options']['R']))
+h = Char('Herald', M); k = Char('Knight', M); f = E.Fight([h, k], M, random.Random(0), enemies=['Sentinel'])
+f.foes[0].node = E.IDX[(4, 4)]; h.node = k.node = E.IDX[(0, 0)]; h.sta = k.sta = 5; k.frost = True; h.options = {'R': [], 'L': []}; f.char_turn(h)
+check('manuscript: Perseverance gives a frostbitten character no stamina', (not h.heroic) and k.sta == 5, (h.heroic, k.sta))
+
 # ---------------------------------------------------------------- equipment data
 check('every starting item is met by its class at base stats',
       all(Char(k, R17).cost_to_meet(ITEMS[n]['req'])[0] == 0 for k, v in CLASSES.items() for n in v['start']))
