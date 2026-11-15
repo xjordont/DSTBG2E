@@ -110,7 +110,9 @@ def make(spec):
         kw['boss_souls'] = lambda n, sparks: int(round(base_boss(n, sparks) * m))
     if 'soul_lv' in spec:                                # souls a character for a first clear of Levels 1, 2, 3 and for a boss
         t = spec.pop('soul_lv'); pooled = spec.get('pool', r.pool)
-        kw['souls'] = lambda level, n, first, t=t, pooled=pooled: (t[level - 1] // (1 if first else 2)) * (n if pooled else 1)
+        rep = spec.pop('soul_rep', None)                  # souls a character for fighting a cleared encounter again
+        kw['souls'] = lambda level, n, first, t=t, pooled=pooled, rep=rep: (
+            t[level - 1] if first else (rep[level - 1] if rep is not None else t[level - 1] // 2)) * (n if pooled else 1)
         kw['boss_souls'] = lambda n, sparks, t=t, pooled=pooled: t[3] * (n if pooled else 1)
     if 'tier4' in spec and spec['tier4']: kw['tier_cost'] = (2, 4, 8, 8)
     kw.update(spec)

@@ -274,6 +274,21 @@ class Economy:
         With levels=False only Andre is visited: cards may be bought and equipped, but no stat is raised."""
         r = self.r
         if r.pool: return self.spend_pool()
+        # where the cards for sale come from, with personal souls: the manuscript's two stocked shops, or (to compare
+        # them like for like) the official ways of selling treasure: a standing row, four cards a visit, or a blind draw
+        shown = None
+        if r.treasure == 'row':
+            while len(self.row) < r.shop_limit and self.deck: self.row.append(self.draw())
+            shops = ((self.row, 1),)
+        elif r.treasure == 'shop4':
+            shown = [x for x in (self.draw() for _ in range(r.shop_limit)) if x]; shops = ((shown, 1),)
+        elif r.treasure == 'draw':
+            shops = ()
+            for c in self.party:
+                for _ in range(int(c.souls * self.DRAW_SHARE + self.rng.random())):
+                    if not self.deck or c.souls < r.draw_cost: break
+                    c.souls -= r.draw_cost; c.bag.append(self.draw())
+        else: shops = ((self.shop1, 2), (self.shop2, 4))
         for c in self.party:
             if getattr(r, 'ember', False) and self.embers > 0 and not c.ember_card and not c.ember and c.souls >= 2:
                 c.souls -= 2; c.ember_card = True; self.embers -= 1            # an ember card: one each, tier-one price
@@ -282,19 +297,20 @@ class Economy:
                 for it in c.bag:
                     f = self.fit(c, it)
                     if f and f[0] > 0.05 and f[1] <= c.souls and (levels or f[1] == 0): cands.append((f[0] / (f[1] + 0.5), f, it, 0, c.bag))
-                for shop, price in ((self.shop1, 2), (self.shop2, 4)):
+                for shop, price in shops:
                     for it in shop:
                         f = self.fit(c, it)
                         if f and f[0] > 0.05 and f[1] + price <= c.souls and (levels or f[1] == 0): cands.append((f[0] / (f[1] + price + 0.5), f, it, price, shop))
                 if not cands: break
                 _, f, it, price, src = max(cands, key=lambda x: x[0])
                 src.remove(it); c.souls -= f[1] + price; self.equip(c, it, f[2], f[3])
+                if r.treasure == 'row' and src is self.row and self.deck: self.row.append(self.draw())
             for it in list(c.bag):                                   # sell what will never be used
                 f = self.fit(c, it)
                 if not f or f[0] <= 0.05: c.bag.remove(it); c.souls += 1
             # with souls left over and nothing to buy, raise the stat that brings the best card in hand or shop closer
             if levels and c.souls >= 2:
-                wants = [(self.fit(c, it), it) for it in c.bag + self.shop1 + self.shop2]
+                wants = [(self.fit(c, it), it) for it in c.bag + [x for shop, _ in shops for x in shop]]
                 wants = [(f, it) for f, it in wants if f and f[0] > 0.3 and f[1] > 0]
                 if wants:
                     f, it = max(wants, key=lambda x: x[0][0] / (x[0][1] + 1))
@@ -302,6 +318,7 @@ class Economy:
                         while c.tier[i] < f[2][i] and c.souls >= r.tier_cost[min(c.tier[i], len(r.tier_cost) - 1)]:
                             c.souls -= r.tier_cost[min(c.tier[i], len(r.tier_cost) - 1)]; c.tier[i] += 1
                     c.refresh()
+        if shown is not None: self.deck = shown + self.deck          # the cards not bought go back under the deck
 
     def spend_pool(self):
         """The shared cache of the official rules: look at some new cards, then put the souls where they add most,

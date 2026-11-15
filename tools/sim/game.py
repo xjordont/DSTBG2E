@@ -15,6 +15,7 @@ class Table(Policy):
     ready2 = -9.0        # party strength (mean `power`) wanted before a Level 2 encounter or the mini-boss; below it,
     ready3 = -9.0        # the same before a Level 3 encounter or the main boss: rest to grind or to spend souls
     worn_at = 5          # damage on any one character that justifies a rest between encounters
+    grind = False        # fight a cleared encounter again where the rules let it be rushed past instead
 
 
 def danger(names): return sum(ENEMIES[n]['hp'] * max(s.get('dmg', 0) for s in ENEMIES[n]['steps']) for n in names)
@@ -85,7 +86,7 @@ def play(n, rules, seed, table=None, classes=None):
             fv = getattr(r, 'free_visit', False)             # visiting the bonfire between encounters without resting:
             if fv: eco.spend(levels=fv != 'shop')            # True = Andre and the Firekeeper; 'shop' = Andre only
             # ---- walk to the next fight
-            if not at_boss and r.skip_cost is not None and ever[pos] and not done[pos]:
+            if not at_boss and r.skip_cost is not None and ever[pos] and not done[pos] and not t.grind:
                 walk += r.skip_cost; done[pos] = True; pos += 1                  # skip a cleared encounter
                 for c in party:                                                  # a toll in damage for rushing past it
                     if not c.lost: c.dmg = min(c.cap - 1, c.dmg + getattr(r, 'skip_dmg', 0))
@@ -127,7 +128,7 @@ def play(n, rules, seed, table=None, classes=None):
                 # ---- treasure
                 if not at_boss and first:
                     each = r.free_treasure in (None, 'each')             # one card for each character on a first clear
-                    k = 1.0 if each else r.free_treasure(lv, n); k = int(k) + (rng.random() < k - int(k))
+                    k = 1.0 if each else (r.free_treasure(lv, n) if callable(r.free_treasure) else r.free_treasure); k = int(k) + (rng.random() < k - int(k))
                     cardsT = [eco.draw(1 if stage == 0 else 2) for _ in range(k * (n if each else 1))]
                     eco.give(cardsT)
                 # ---- recovery

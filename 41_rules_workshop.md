@@ -1027,3 +1027,39 @@ Games won with 1 / 2 / 3 / 4 characters; 800 games a cell (±3). Each row change
 - In the model the simulated players never fight a cleared encounter again; whether that should be allowed, and for what reward, is a rules question the figures do not settle.
 
 To re-run: the variants are `death='lost'`, `heal_after=0` and `skip_dmg=1` added to `FINAL` in `tools/sim/compare.py`.
+
+**Decided by the author:** a hollow character who dies is lost until the next rest and the others fight on; no damage is healed after a clear; cleared encounters reset at a rest and may be rushed past for one damage on each character for each one rushed. Also decided as 14.5 has them: souls for a first clear (3 / 4 / 5 and 6 for a boss), each character's own souls, and dropped souls (kept on a win, left on the tile on a loss). These three rules together are the base for the tests below (58% / 57% / 51% / 60%).
+
+### 15.2 What fighting a reset encounter again should earn
+
+The author asked whether a repeat might pay one soul less than a first clear. Each row has the simulated players fight every reset encounter again instead of rushing past it. 800 games a cell (±3).
+
+| Play, and what a repeat earns | Games won | Fights in a game | Table time |
+|---|---|---|---|
+| Always rush; no re-fighting | 58% / 57% / 51% / 59% | 11.5 / 11.1 / 9.4 / 8.9 | 372 / 364 / 301 / 339 |
+| Always fight again; nothing | 31% / 39% / 41% / 53% | 23.6 / 19.2 / 15.5 / 13.5 | 506 / 406 / 364 / 404 |
+| Always fight again; half (1 / 2 / 2) | 42% / 56% / 55% / 61% | 23.6 / 19.3 / 16.3 / 14.0 | 482 / 383 / 348 / 388 |
+| Always fight again; one soul less (2 / 3 / 4) | 47% / 63% / 65% / 69% | 23.8 / 19.4 / 15.5 / 12.9 | 478 / 368 / 305 / 343 |
+
+- At one soul less, grinding is the better play for two to four characters (6 to 14 points more games won) and the fights in a game nearly double. That is the official game's fault brought back, and it favours large parties.
+- At half, grinding neither helps nor hurts a party, so it is a long way round to the same place; a lone character is worse off either way.
+- At nothing, fighting again is plainly worse than rushing, so nobody would.
+- The players here fight every reset encounter. A player who picked only the easy ones would do better than these rows show, so any reward that pays at all leans further towards the grind.
+
+### 15.3 Whether the manuscript's shop is the best way to hand out treasure
+
+The author asked whether the stocked shop is the most balanced way. Each row changes only how treasure is sold, with each character's own souls and one free card a character on a first clear kept throughout. 800 games a cell (±3).
+
+| Treasure | Games won | Lowest to highest |
+|---|---|---|
+| Manuscript: a stocked shop, 2 souls (tier one) and 4 (tier two) | 58% / 57% / 51% / 59% | 8 points |
+| Official 2022: four cards shown each visit, 1 soul each | 58% / 61% / 52% / 53% | 9 points |
+| Four cards face up, replaced as bought, 1 soul each | 50% / 53% / 46% / 55% | 9 points |
+| Official 2017: blind draw, 1 soul | 58% / 53% / 40% / 40% | 18 points |
+| Manuscript shop, but no free card on a first clear | 45% / 38% / 27% / 28% | 18 points |
+
+- The manuscript's shop is the most even across party sizes, level with the 2022 rule inside the sampling error. The blind draw is the worst and hurts large parties most.
+- The free card on a first clear matters more than which shop is used: without it large parties win half as often.
+- Between the manuscript's shop and the 2022 rule the figures do not choose. The difference is in play: the manuscript's shop is in view from the start, so a character can raise a stat towards a card; the 2022 offer changes at every visit.
+
+To re-run: `soul_rep=[...]` with the table policy `grind=True` for 15.2; `treasure='shop4'`, `'row'` (both with `shop_limit=4`) or `'draw'` (with `draw_cost=1`), or `free_treasure=0`, for 15.3.
