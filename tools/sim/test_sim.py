@@ -317,6 +317,32 @@ where = 't2' if (eco.t2 and eco.t2[0] is gem) else 't1' if (eco.t1 and eco.t1[0]
 check('manuscript: a sold card pays one soul and goes to the bottom of the treasure deck of its tier',
       gem not in c.bag and c.souls == before + 1 and where == ('t2' if max(gem['req']) >= 25 else 't1'), (where, c.souls - before))
 
+# ---------------------------------------------------------------- luck: one die under the official rules, any under the manuscript
+def luck_floor(rules, trials=400):
+    """The least damage a blocking Knight takes from 5 when luck is spent, over many seeds, and how often luck was used."""
+    least = 9; used = 0
+    for s in range(trials):
+        c = Char('Knight', rules); f = E.Fight([c], rules, random.Random(s), enemies=['Hollow Soldier'], policy=E.Policy(evade=0.0, luck_at=1))
+        c.heroic = False; c.dodge = 0; c.can_parry = False; foe = f.foes[0]; foe.node = E.IDX[(4, 4)]; c.node = E.IDX[(0, 0)]
+        f.defend(foe, c, 5, False, 9)
+        if not c.luck: used += 1
+        least = min(least, c.dmg)
+    return least, used
+
+
+check('luck is spent on a poor block under both rulesets', luck_floor(R17)[1] > 0 and luck_floor(M)[1] > 0)
+one_die = []
+for s in range(300):
+    c = Char('Knight', R17); f = E.Fight([c], R17, random.Random(s), enemies=['Hollow Soldier'], policy=E.Policy(evade=0.0, luck_at=1))
+    c.heroic = False; c.dodge = 0; foe = f.foes[0]; foe.node = E.IDX[(4, 4)]; c.node = E.IDX[(0, 0)]
+    rolls = []; orig = E.roll
+    def spy(dice, rng, rolls=rolls): rolls.append(orig(dice, rng)); return list(rolls[-1])
+    E.roll = spy
+    try: f.defend(foe, c, 9, False, 9)
+    finally: E.roll = orig
+    if not c.luck and rolls: one_die.append(9 - c.dmg - sum(rolls[0]) <= max(max(E.DIE[d]) for d in c.blk) - min(rolls[0]))
+check('official: luck changes one block die only (the total rises by no more than one die can)', one_die and all(one_die), (len(one_die), sum(one_die)))
+
 # ---------------------------------------------------------------- equipment data
 check('every starting item is met by its class at base stats',
       all(Char(k, R17).cost_to_meet(ITEMS[n]['req'])[0] == 0 for k, v in CLASSES.items() for n in v['start']))

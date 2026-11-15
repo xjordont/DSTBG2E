@@ -262,20 +262,26 @@ class Fight:
             how, arg = 'block', 0
         hit = True; taken = 0
         if how == 'block':
-            v = sum(sorted(roll(dice, rng))[-2:]) if r.block == 'best2' else sum(roll(dice, rng))
+            faces = roll(dice, rng); extra = 0
+            v = sum(sorted(faces)[-2:]) if r.block == 'best2' else sum(faces)
             taken = max(0, dmg - max(0, v - pen))
             if c.heroic and c.name == 'Knight' and (self.lethal(c, taken) or taken >= 2):
-                c.heroic = False; v += rng.choice(DIE['u']); taken = max(0, dmg - max(0, v - pen))     # Stand Fast
-            if c.luck and (self.lethal(c, taken) or taken >= pol.luck_at):
-                c.luck = False
-                v = sum(sorted(roll(dice, rng))[-2:]) if r.block == 'best2' else sum(roll(dice, rng))
+                c.heroic = False; extra = rng.choice(DIE['u']); v += extra; taken = max(0, dmg - max(0, v - pen))     # Stand Fast
+            if c.luck and faces and (self.lethal(c, taken) or taken >= pol.luck_at):
+                # luck: the official rules re-roll one die; the manuscript any or all of them, chosen at once
+                c.luck = False; worst = sorted(range(len(faces)), key=lambda j: faces[j] - sum(DIE[dice[j]]) / 6)
+                again = worst[:1] if getattr(r, 'luck', 'one') == 'one' else [j for j in worst if faces[j] < sum(DIE[dice[j]]) / 6] or worst[:1]
+                for j in again: faces[j] = rng.choice(DIE[dice[j]])
+                v = (sum(sorted(faces)[-2:]) if r.block == 'best2' else sum(faces)) + extra
                 taken = max(0, dmg - max(0, v - pen))
         else:
             dice_n, sta = arg if how == 'dodge' else (nd, sta1)
             c.sta += sta
-            ok = sum(rng.random() < 0.5 for _ in range(dice_n)) >= k + pen
-            if not ok and c.luck:
-                c.luck = False; ok = sum(rng.random() < 0.5 for _ in range(dice_n)) >= k + pen
+            got = sum(rng.random() < 0.5 for _ in range(dice_n)); ok = got >= k + pen
+            if not ok and c.luck and dice_n > got:
+                # luck re-rolls the failed dodge dice: one of them under the official rules, all of them under the manuscript
+                c.luck = False; n_again = 1 if getattr(r, 'luck', 'one') == 'one' else dice_n - got
+                got += sum(rng.random() < 0.5 for _ in range(n_again)); ok = got >= k + pen
             if ok:
                 hit = False
                 if how == 'parry':

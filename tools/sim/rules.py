@@ -38,6 +38,7 @@ OFFICIAL_2017 = Rules(
     # no enemy scaling
     hp=lambda h, n: h, atk=lambda n: 0, move2=lambda n: False, reps=lambda n: 1, push_once=False,
     stagger='official', frost='official', poison='single', bleed='official', ember=False, estus='full',
+    luck='one',                             # the luck token re-rolls one die of a roll
     # economy: one shared soul cache; two souls a character for an encounter; a boss pays a soul a character for
     # each spark left; a treasure card costs one soul, drawn blind; a lone character starts with sixteen souls
     pool=True, souls=lambda level, n, first: 2 * n, boss_souls=lambda n, sparks: n * sparks, solo_souls=16,
@@ -70,6 +71,7 @@ MANUSCRIPT = Rules(
     # enemy scaling, as the manuscript's table
     hp=plus(1), atk=lambda n: 1 if n >= 3 else 0, move2=lambda n: n >= 2, reps=lambda n: 2 if n >= 4 else 1, push_once=True,
     stagger='author', frost='author', poison='stack', bleed='author', ember=True, estus='health',
+    luck='any',                             # the luck token re-rolls any or all dice of a roll, chosen at once
     # economy: souls are personal; three, four, five for Levels 1, 2, 3 and six for a boss; a treasure card each on a
     # first clear; Andre's shop at two souls (tier one) and four (tier two); a lone character starts with six souls
     pool=False, souls=lambda level, n, first: {1: 3, 2: 4, 3: 5}[level] // (1 if first else 2), boss_souls=lambda n, sparks: 6,
@@ -125,7 +127,7 @@ HOLLOW = dict(death='hollow', hollow_bar=8)                                # the
 ROUND_ALL = dict(round='all', order='free', aggro='last')                  # all enemies, then all characters in any order
 TURN_MS = dict(regen=1, turn='major', estus='health', block='best2', dodge_fail='armour', dodge_extra=True, dodge_move=True,
                parry='any', lethal='overflow', stagger='author', frost='author', poison='stack', bleed='author',
-               grip_reroll=True, scaling=True, tier4=5)                    # the manuscript's turn and defence rules
+               grip_reroll=True, scaling=True, tier4=5, luck='any')                    # the manuscript's turn and defence rules
 # Dropped souls without re-fighting: a character who dies keeps its souls if the encounter is cleared; if the encounter
 # is failed, everyone's souls stay on the tile until it is cleared, and a second failure before then loses them.
 NO_REFIGHT = dict(skip_cost=0, drop='simple')
