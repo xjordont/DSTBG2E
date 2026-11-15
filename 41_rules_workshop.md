@@ -1106,7 +1106,7 @@ All rows use the rules decided so far, with one card a tile. That last change mo
 
 To re-run: `python3 tools/sim/compare.py --only review --games 800 --probe 150`, and again with `--regrind 2`.
 
-Correction after the automated review (2026-11-15): a sold card was removed from the game where the manuscript returns it to the bottom of the treasure deck of its tier. Fixed and checked (82 checks pass). Run again with the fix, the proposal with players who fight again gives 59% / 60% / 60% / 55%, against 59% / 59% / 62% / 54% in the table above, and the final ruleset of 14.6 gives 67% / 66% / 58% / 60%, against 68% / 64% / 55% / 57%: all inside the sampling error.
+Correction after the automated review (2026-11-15): a sold card was removed from the game where the manuscript returns it to the bottom of the treasure deck of its tier. Fixed and checked (81 checks pass). Run again with the fix, the proposal with players who fight again gives 59% / 60% / 60% / 55%, against 59% / 59% / 62% / 54% in the table above, and the final ruleset of 14.6 gives 67% / 66% / 58% / 60%, against 68% / 64% / 55% / 57%: all inside the sampling error.
 
 ### 15.5 How the treasure is sorted
 
