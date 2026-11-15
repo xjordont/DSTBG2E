@@ -410,6 +410,24 @@ for s in range(300):
 check('official 2017: a dodging character can step one node before rolling, and has stepped even when the dodge fails',
       moved17 > 0 and failed_moved > 0, (moved17, failed_moved))
 
+# ---------------------------------------------------------------- a dodged pushing attack does not push; 2017 frostbite on a retreat
+R22 = RU.OFFICIAL_2022; pushed_after_dodge = dodges = 0
+for s in range(300):
+    c = Char('Assassin', R22); f = E.Fight([c], R22, random.Random(s), enemies=['Large Hollow Soldier'], policy=E.Policy(evade=0.0))
+    c.heroic = c.luck = False; foe = f.foes[0]; foe.node = E.IDX[(0, 2)]; c.node = E.IDX[(2, 2)]; c.sta = c.cap - c.dmg     # no room to pay for a step
+    f.enemy_turn(foe)
+    if c.dmg == 0 and foe.node == E.IDX[(2, 2)]: dodges += 1; pushed_after_dodge += c.node != E.IDX[(2, 2)]
+check('official 2022: a character who dodges a pushing attack is not pushed', dodges > 0 and pushed_after_dodge == 0, (dodges, pushed_after_dodge))
+def retreat(frost):
+    c = Char('Knight', R17); f = E.Fight([c], R17, random.Random(0), enemies=['Hollow Soldier']); foe = f.foes[0]
+    foe.node = c.node = E.IDX[(2, 2)]; c.frost = frost; c.sta = 0; f.reposition(c, 9, True)
+    return E.DIST[c.node][E.IDX[(2, 2)]], c.sta
+
+
+(far0, sta0), (far1, sta1) = retreat(False), retreat(True)
+check('official 2017: a retreat costs a frostbitten character one more stamina for each node (or is not worth making)',
+      far0 > 0 and sta0 == far0 - 1 and sta1 == (2 * far1 - 1 if far1 else 0) and (far1 < far0 or sta1 > sta0), ((far0, sta0), (far1, sta1)))
+
 # ---------------------------------------------------------------- equipment data
 check('every starting item is met by its class at base stats',
       all(Char(k, R17).cost_to_meet(ITEMS[n]['req'])[0] == 0 for k, v in CLASSES.items() for n in v['start']))

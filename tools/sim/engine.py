@@ -217,11 +217,12 @@ class Fight:
             c.dmg += d
 
     def defend(self, src, c, dmg, magic, k, push=False, effects=(), parryable=True):
-        """An attack of `dmg` (after scaling) with dodge difficulty k resolves against character c."""
-        if not c.alive or src.hp <= 0: return          # a riposte or a backstab may have killed the attacker mid-activation
+        """An attack of `dmg` (after scaling) with dodge difficulty k resolves against character c. Returns whether the
+        character was hit (a blocked attack is a hit; a dodged or parried one is not)."""
+        if not c.alive or src.hp <= 0: return False    # a riposte or a backstab may have killed the attacker mid-activation
         r, pol, rng = self.r, self.pol, self.rng
         if src.stagger and r.stagger == 'author': k = max(0, k - 1)      # a staggered attacker is easier to dodge and parry
-        if not src.boss and rng.random() < pol.evade: return
+        if not src.boss and rng.random() < pol.evade: return False
         free = c.cap - c.dmg - c.sta
         pen = 1 if (c.stagger and r.stagger == 'author') else 0
         dice = c.res if magic else c.blk
@@ -261,7 +262,7 @@ class Fight:
             if k + pen <= 0 or sum(rng.random() < 0.5 for _ in range(nd)) >= k + pen:
                 self.dec['dodge'] = self.dec.get('dodge', 0) + 1
                 if r.dodge_move == 'paid': self.reposition(c, min(1, free), False, count=False)     # 2022: may pay 1 stamina to move a node
-                return
+                return False
             how, arg = 'block', 0
         hit = True; taken = 0
         if how == 'block':
@@ -281,7 +282,7 @@ class Fight:
             dice_n, sta = arg if how == 'dodge' else (nd, sta1)
             c.sta += sta
             # 2017: having paid for the dodge the character can move one node, before the dice are rolled and whatever they show
-            if how == 'dodge' and r.dodge_move == 'before': self.reposition(c, 0, True, count=False)
+            if how == 'dodge' and r.dodge_move == 'before': self.reposition(c, 0, True, count=False, frost=False)   # frostbite is charged on the dodge
             got = sum(rng.random() < 0.5 for _ in range(dice_n)); ok = got >= k + pen
             if not ok and c.luck and dice_n > got:
                 # luck re-rolls the failed dodge dice: one of them under the official rules, all of them under the manuscript
@@ -323,6 +324,7 @@ class Fight:
                         elif c.bleed: c.bleed = False; self.wound(c, 3)
                         else: c.bleed = True
                 if push and c.alive: c.node = step_away(c.node, src.node, rng) if c.node != src.node else rng.choice(NBR[c.node])
+        return hit
 
     def can_reach(self, f, c, slack=1):
         """Whether foe f has an attack that could land on character c in its coming activation."""
@@ -378,13 +380,14 @@ class Fight:
                     if st.get('push'):
                         for c in self.live():
                             if c.node != f.node: continue
+                            was_hit = True                                   # a push-move with no damage pushes everyone
                             if 'dmg' in st and (c not in struck or not r.push_once):
                                 struck.add(c)
-                                # the push itself is resolved below, away from the node the enemy left; a dodge
-                                # may already have taken the character off the node
-                                self.defend(f, c, st['dmg'] + f.atk_bonus - (1 if f.stagger else 0), st['magic'], st['dodge'],
-                                            push=False, parryable=False)
-                            if c.alive and c.node == f.node:
+                                # the push itself is resolved below, away from the node the enemy left. A character
+                                # who dodges is not hit and is not pushed, whether or not the dodge moved it
+                                was_hit = self.defend(f, c, st['dmg'] + f.atk_bonus - (1 if f.stagger else 0), st['magic'], st['dodge'],
+                                                      push=False, parryable=False)
+                            if was_hit and c.alive and c.node == f.node:
                                 far = [x for x in NBR[c.node] if DIST[x][origin] > DIST[c.node][origin]]
                                 c.node = rng.choice(far or NBR[c.node])
             else:
@@ -507,7 +510,7 @@ class Fight:
             self.say('   ', c.name, 'hits', t.name, 'with', o['name'], 'for', total, '(hp', max(0, t.hp), ')')
         return grand
 
-    def reposition(self, c, budget, walk_free, count=True):
+    def reposition(self, c, budget, walk_free, count=True, frost=True):
         """After acting, step out of the enemies' reach if that saves more damage than it costs in stamina. Also used for
         the optional step of an official dodge (count=False keeps it out of the tally of turns ending with a step)."""
         if not self.foes_alive() or budget < 0: return
@@ -523,6 +526,7 @@ class Fight:
         for node, steps in seen.items():
             if steps == 0: continue
             cost = steps - (1 if walk_free else 0)
+            if frost and c.frost and self.r.frost == 'official': cost += steps          # 2017 frostbite: one more for each walk or run
             if cost > budget: continue
             c.node = node
             gap = max(0, min(DIST[node][f.node] for f in self.foes_alive()) - reach - 1)       # running needed to return
