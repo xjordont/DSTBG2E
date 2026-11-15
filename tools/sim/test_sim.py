@@ -279,6 +279,23 @@ h = Char('Herald', M); k = Char('Knight', M); f = E.Fight([h, k], M, random.Rand
 f.foes[0].node = E.IDX[(4, 4)]; h.node = k.node = E.IDX[(0, 0)]; h.sta = k.sta = 5; k.frost = True; h.options = {'R': [], 'L': []}; f.char_turn(h)
 check('manuscript: Perseverance gives a frostbitten character no stamina', (not h.heroic) and k.sta == 5, (h.heroic, k.sta))
 
+# ---------------------------------------------------------------- setup: souls are spent before the first fight only where allowed
+import game as G
+def setup_spend(rules):
+    seen = []; orig = Economy.spend
+    def spy(self, levels=True): seen.append(1); return orig(self, levels)
+    Economy.spend = spy; first = E.Fight.run
+    class Stop(Exception): pass
+    def halt(self, *a, **k): raise Stop()
+    E.Fight.run = halt; G.Fight.run = halt
+    try: play(1, rules, 0)
+    except Stop: pass
+    finally: Economy.spend = orig; E.Fight.run = first; G.Fight.run = first
+    return len(seen)
+
+
+check('manuscript as written: no souls are spent at setup; official 2017: they may be', setup_spend(M) == 0 and setup_spend(R17) >= 1, (setup_spend(M), setup_spend(R17)))
+
 # ---------------------------------------------------------------- equipment data
 check('every starting item is met by its class at base stats',
       all(Char(k, R17).cost_to_meet(ITEMS[n]['req'])[0] == 0 for k, v in CLASSES.items() for n in v['start']))

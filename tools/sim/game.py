@@ -31,7 +31,10 @@ def play(n, rules, seed, table=None, classes=None):
         else: party[0].souls = r.solo_souls
     for c in party: c.dropped = None; c.lost = False
     sparks = r.sparks(n)
-    eco.spend()                                            # the party starts at the bonfire
+    # the party starts at the bonfire; souls held at setup may be spent there only where the ruleset allows a visit
+    # without a rest (the manuscript as written does not: a lone character's six souls wait for the first rest)
+    fv0 = getattr(r, 'free_visit', False)
+    if fv0: eco.spend(levels=fv0 != 'shop')
     out = dict(win=False, rests=0, fights=0, char_turns=0, enemy_acts=0, rounds=0, lost_at=None, deaths=0,
                by_level={}, sparks_left=0, souls=0, repeats=0, dec={})
     decks = {lv: rng.sample(ENCOUNTERS[str(lv)], len(ENCOUNTERS[str(lv)])) for lv in (1, 2, 3)}
