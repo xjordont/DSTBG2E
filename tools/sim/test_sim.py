@@ -440,6 +440,28 @@ for s in range(200):
     if c.dmg == 0 and c.sta == 0 and not c.heroic: stabbed += foe.hp < 99 or True
 check('official 2022: the Assassin\'s heroic attack follows a successful dodge', stabbed > 0, stabbed)
 
+# ---------------------------------------------------------------- one spell a turn; an upgrade goes with its sold weapon
+def casts(rules):
+    most = 0
+    for s in range(60):
+        c = Char('Knight', rules); c.tier = [0, 0, 4, 0] if rules.tier4 else [0, 0, 3, 0]; c.R = ITEMS['Soulstream']; c.L = ITEMS['Fireball']; c.refresh()
+        f = E.Fight([c], rules, random.Random(s), enemies=['Sentinel'], policy=E.Policy(kite=False)); foe = f.foes[0]; foe.hp = 999
+        foe.node = E.IDX[(2, 2)]; c.node = E.IDX[(0, 2)]; n0 = f.dec.get('heavy', 0) + f.dec.get('light', 0); f.char_turn(c)
+        most = max(most, f.dec.get('heavy', 0) + f.dec.get('light', 0) - n0)
+    return most
+
+
+check('manuscript: one spell attack in a turn; the official rules set no such limit', casts(M) == 1 and casts(R17) == 2, (casts(M), casts(R17)))
+c = Char('Knight', M); eco = Economy([c], M, random.Random(1)); sword = ITEMS['Balder Side Sword']; shard = ITEMS['Titanite Shard']
+for pile in (eco.t1, eco.t2, eco.shop1):
+    for card in (sword, shard):
+        while card in pile: pile.remove(card)
+c.R = sword; c.refresh(); eco.equip(c, shard, c.tier, 'U'); c.R = ITEMS['Long Sword']; c.refresh(); c.bag.append(sword); before = c.souls
+eco.sell(c, sword)
+check('manuscript: Titanite is sold with its weapon, pays nothing more, and its bonus goes with it',
+      c.souls == before + 1 and not c.plus and not c.up_cards and shard not in c.bag and sum(pile.count(shard) for pile in (eco.t1, eco.t2)) == 1,
+      (c.souls - before, c.plus, [x['name'] for x in c.bag]))
+
 # ---------------------------------------------------------------- equipment data
 check('every starting item is met by its class at base stats',
       all(Char(k, R17).cost_to_meet(ITEMS[n]['req'])[0] == 0 for k, v in CLASSES.items() for n in v['start']))

@@ -38,6 +38,7 @@ class Char:
         self.R, self.L, self.A = ITEMS[w], ITEMS[s], ITEMS[a]
         self.start = {w, s, a}                        # starting equipment: it cannot be sold
         self.bag = []; self.plus = {}                 # spare cards; weapon name -> upgrade bonus
+        self.up_cards = {}                            # weapon name -> the upgrade card attached to it
         self.souls = 0; self.earned = 0
         self.dmg = self.sta = 0; self.hollow = False; self.alive = True; self.was_hollow = False
         self.estus = self.luck = self.heroic = True; self.ember = False; self.ember_card = False
@@ -88,7 +89,7 @@ class Char:
                 if not a['dice']: continue                     # support actions (healing, stamina) are not modelled
                 opts[hand].append(dict(name=it['name'], cost=a['cost'], dice=a['dice'] + more, mod=a['mod'] + bonus, magic=a['magic'],
                                        range=a['range'], repeat=a['repeat'], shaft=a['shaft'], ignore=a.get('ignore', False),
-                                       node=a.get('node', False),
+                                       node=a.get('node', False), spell=spell,
                                        reroll=bool(getattr(r, 'grip_reroll', False) and not spell and (it['hands'] == 2 or other is None))))
         p['options'] = opts
         p['mean_blk'] = sum(v * q for v, q in pmf_def(p['blk'], r.block)) - p['blk_pen']
@@ -219,6 +220,15 @@ class Economy:
         else:
             self.deck += self.later; self.later = []; self.rng.shuffle(self.deck)
 
+    def sell(self, c, it):
+        """Character c sells card `it` from the bag for one soul. Titanite attached to a sold weapon is sold with it
+        and adds nothing; any other attached upgrade comes back to the inventory."""
+        c.bag.remove(it); c.souls += 1; self.sold(it)
+        up = c.up_cards.pop(it['name'], None)
+        if c.plus.pop(it['name'], None) is not None and up is not None:
+            if 'Titanite' in up['name']: self.sold(up)
+            else: c.bag.append(up)
+
     def sold(self, it):
         """A sold card goes face down to the bottom of the treasure deck it belongs to (cards are drawn from the end)."""
         if self.r.treasure == 'author': (self.t2 if self.tier_two(it) else self.t1).insert(0, it)
@@ -253,7 +263,7 @@ class Economy:
 
     def equip(self, c, it, tiers, slot):
         c.tier = list(tiers); out = []
-        if slot == 'U': c.plus[c.R['name']] = it['up']
+        if slot == 'U': c.plus[c.R['name']] = it['up']; c.up_cards[c.R['name']] = it
         elif slot == 'A': out.append(c.A); c.A = it
         elif slot == 'L': out.append(c.L); c.L = it
         else:
@@ -329,7 +339,7 @@ class Economy:
                 if r.treasure == 'row' and src is self.row and self.deck: self.row.append(self.draw())
             for it in list(c.bag):                                   # sell what will never be used
                 f = self.fit(c, it)
-                if not f or f[0] <= 0.05: c.bag.remove(it); c.souls += 1; self.sold(it)
+                if (not f or f[0] <= 0.05) and it in c.bag: self.sell(c, it)
             # with souls left over and nothing to buy, raise the stat that brings the best card in hand or shop closer
             if levels and c.souls >= 2:
                 wants = [(self.fit(c, it), it) for it in c.bag + [x for shop, _ in shops for x in shop]]

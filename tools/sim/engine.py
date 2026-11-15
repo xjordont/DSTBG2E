@@ -567,6 +567,7 @@ class Fight:
             for x in self.live():
                 if not (x.frost and r.frost == 'author'): x.sta = max(0, x.sta - 2)      # frostbite bars any recovery
         attacked = False; moved = False; rested = False
+        cast = False                                   # a spell has been used this turn (the manuscript allows one)
         used = set()
         wd = pol.w_death * (1.6 if (r.death == 'party' or c.hollow or len(self.live()) == 1) else 1.0)
         for attempt in (0, 1):
@@ -580,6 +581,7 @@ class Fight:
                 for hand in ('R', 'L'):
                     if hand in used: continue
                     for o in c.options[hand]:
+                        if cast and o.get('spell') and getattr(r, 'one_spell', False): continue
                         rg = o['range']
                         steps = max(0, d - rg) if attempt == 0 else (0 if d <= rg else 99)
                         if o['shaft'] and d - steps == 0:
@@ -616,7 +618,7 @@ class Fight:
                 c.node = step_to(c.node, f.node, rng) if not (o['shaft'] and DIST[c.node][f.node] == 1) else c.node
             if o['shaft'] and c.node == f.node: c.node = rng.choice(NBR[c.node])
             if run: c.ran = True
-            c.sta += cost; used.add(hand); attacked = True
+            c.sta += cost; used.add(hand); attacked = True; cast = cast or bool(o.get('spell'))
             self.dec['heavy' if o['cost'] >= 2 else 'light'] = self.dec.get('heavy' if o['cost'] >= 2 else 'light', 0) + 1
             self.strike(c, f, o)
             if c.two_handed or not c.options['L' if hand == 'R' else 'R']: break
