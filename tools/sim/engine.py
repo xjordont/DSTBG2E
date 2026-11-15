@@ -261,6 +261,9 @@ class Fight:
             # otherwise the block or resist pips still count
             if k + pen <= 0 or sum(rng.random() < 0.5 for _ in range(nd)) >= k + pen:
                 self.dec['dodge'] = self.dec.get('dodge', 0) + 1
+                if c.heroic and c.name == 'Assassin' and src.hp > 0:                       # Backstab: a free attack after a dodge
+                    o = c.best_option(src, DIST[c.node][src.node], 99, hand='R')
+                    if o: c.heroic = False; self.strike(c, src, o)
                 if r.dodge_move == 'paid': self.reposition(c, min(1, free), False, count=False)     # 2022: may pay 1 stamina to move a node
                 return False
             how, arg = 'block', 0

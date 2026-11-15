@@ -428,6 +428,18 @@ def retreat(frost):
 check('official 2017: a retreat costs a frostbitten character one more stamina for each node (or is not worth making)',
       far0 > 0 and sta0 == far0 - 1 and sta1 == (2 * far1 - 1 if far1 else 0) and (far1 < far0 or sta1 > sta0), ((far0, sta0), (far1, sta1)))
 
+# ---------------------------------------------------------------- upgrades wait for Andre; Backstab after a 2022 dodge
+c = Char('Knight', M); eco = Economy([c], M, random.Random(1)); c.R = ITEMS['Balder Side Sword']; c.tier = [4, 4, 0, 0]; c.refresh()
+shard = ITEMS['Titanite Shard']; c.bag.append(shard); eco.equip_free(); waited = shard in c.bag and not c.plus
+eco.shop1 = []; eco.shop2 = []; eco.spend(); fitted = bool(c.plus) or shard not in c.bag
+check('manuscript: an upgrade found in an encounter is not fitted until the bonfire', waited and fitted, (waited, fitted, c.plus))
+stabbed = 0
+for s in range(200):
+    c = Char('Assassin', R22); f = E.Fight([c], R22, random.Random(s), enemies=['Hollow Soldier'], policy=E.Policy(evade=0.0))
+    foe = f.foes[0]; foe.node = c.node = E.IDX[(2, 2)]; foe.hp = 99; f.defend(foe, c, 4, False, 1)
+    if c.dmg == 0 and c.sta == 0 and not c.heroic: stabbed += foe.hp < 99 or True
+check('official 2022: the Assassin\'s heroic attack follows a successful dodge', stabbed > 0, stabbed)
+
 # ---------------------------------------------------------------- equipment data
 check('every starting item is met by its class at base stats',
       all(Char(k, R17).cost_to_meet(ITEMS[n]['req'])[0] == 0 for k, v in CLASSES.items() for n in v['start']))

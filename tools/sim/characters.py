@@ -280,14 +280,15 @@ class Economy:
         self.equip_free()
 
     def equip_free(self):
-        """Between encounters cards may be swapped freely; only stats cost souls and need the bonfire."""
+        """Between encounters cards may be swapped freely; stats cost souls and need the bonfire, and so does the
+        fitting of an upgrade card."""
         for c in self.party:
             again = True
             while again:
                 again = False
                 for it in list(self.inv if self.r.pool else c.bag):
                     f = self.fit(c, it)
-                    if f and f[1] == 0 and f[0] > 0.05:
+                    if f and f[3] != 'U' and f[1] == 0 and f[0] > 0.05:      # an upgrade is fitted by Andre, at the bonfire
                         (self.inv if self.r.pool else c.bag).remove(it); self.equip(c, it, f[2], f[3]); again = True
 
     def spend(self, levels=True):
