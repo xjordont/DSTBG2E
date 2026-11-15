@@ -308,6 +308,15 @@ def setup_spend(rules):
 
 check('manuscript as written: no souls are spent at setup; official 2017: they may be', setup_spend(M) == 0 and setup_spend(R17) >= 1, (setup_spend(M), setup_spend(R17)))
 
+# ---------------------------------------------------------------- a sold card returns to the bottom of its treasure deck
+c = Char('Knight', M); eco = Economy([c], M, random.Random(1)); gem = ITEMS['Poison Gem']
+for pile in (eco.t1, eco.t2, eco.shop1):
+    while gem in pile: pile.remove(gem)
+c.bag.append(gem); before = c.souls; eco.spend()
+where = 't2' if (eco.t2 and eco.t2[0] is gem) else 't1' if (eco.t1 and eco.t1[0] is gem) else None
+check('manuscript: a sold card pays one soul and goes to the bottom of the treasure deck of its tier',
+      gem not in c.bag and c.souls == before + 1 and where == ('t2' if max(gem['req']) >= 25 else 't1'), (where, c.souls - before))
+
 # ---------------------------------------------------------------- equipment data
 check('every starting item is met by its class at base stats',
       all(Char(k, R17).cost_to_meet(ITEMS[n]['req'])[0] == 0 for k, v in CLASSES.items() for n in v['start']))

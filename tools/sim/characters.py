@@ -184,6 +184,9 @@ class Economy:
                 pool = common + [i for i in cards if i['deck'] in ('class', 'transposed') and mine(i)]
                 two = lambda i: i['deck'] == 'transposed'
             self.t1 = [i for i in pool if not two(i)]; self.t2 = [i for i in pool if two(i)]
+            # where a sold card goes: the bottom of the treasure deck of its tier (legendaries are tier two, except
+            # where one deck holds everything but the transposed cards)
+            self.tier_two = (lambda i: two(i)) if split == 'kind' else (lambda i: two(i) or i['deck'] == 'legendary')
             rng.shuffle(self.t1); rng.shuffle(self.t2); self.legend = legend
             self.shop1 = self.stock(self.t1); self.shop2 = []
         else:
@@ -215,6 +218,11 @@ class Economy:
             self.t2 += self.legend; self.rng.shuffle(self.t2)
         else:
             self.deck += self.later; self.later = []; self.rng.shuffle(self.deck)
+
+    def sold(self, it):
+        """A sold card goes face down to the bottom of the treasure deck it belongs to (cards are drawn from the end)."""
+        if self.r.treasure == 'author': (self.t2 if self.tier_two(it) else self.t1).insert(0, it)
+        else: self.deck.insert(0, it)
 
     def draw(self, tier=1):
         if self.r.treasure == 'author' and getattr(self.r, 'deck_split', 'req') == 'kind': tier = 1      # one treasure deck
@@ -320,7 +328,7 @@ class Economy:
                 if r.treasure == 'row' and src is self.row and self.deck: self.row.append(self.draw())
             for it in list(c.bag):                                   # sell what will never be used
                 f = self.fit(c, it)
-                if not f or f[0] <= 0.05: c.bag.remove(it); c.souls += 1
+                if not f or f[0] <= 0.05: c.bag.remove(it); c.souls += 1; self.sold(it)
             # with souls left over and nothing to buy, raise the stat that brings the best card in hand or shop closer
             if levels and c.souls >= 2:
                 wants = [(self.fit(c, it), it) for it in c.bag + [x for shop, _ in shops for x in shop]]
