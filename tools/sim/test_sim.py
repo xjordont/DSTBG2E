@@ -151,8 +151,11 @@ rush = [play(2, RV, s, table=Table(skill=1.0)) for s in range(40)]
 again = [play(2, RV, s, table=Table(skill=1.0, regrind=2)) for s in range(40)]
 check('review rules: players who always rush fight no encounter twice; players who fight again do',
       sum(x['repeats'] for x in rush) == 0 and sum(x['repeats'] for x in again) > 0, (sum(x['repeats'] for x in rush), sum(x['repeats'] for x in again)))
-check('review rules: no encounter pays more than twice (at most four repeats a stage with pay)',
-      all(x['repeats'] <= 8 + 2 * x['rests'] for x in again))
+RVr = RU.make(REVIEW_SPEC)
+check('review rules: every clear after the first pays 1 / 2 / 3 souls, however many there are; a first clear gives two treasure cards',
+      [RVr.soul_tab[min(k, len(RVr.soul_tab) - 1)] for k in (0, 1, 5)] == [[3, 4, 5], [1, 2, 3], [1, 2, 3]] and RVr.free_treasure == 2 and RVr.skip_dmg == 1)
+check('review rules: enemy health +3 for each character beyond the first, and no damage bonus',
+      [RVr.hp(1, n) for n in (1, 2, 3, 4)] == [1, 4, 7, 10] and [RVr.atk(n) for n in (1, 2, 3, 4)] == [0, 0, 0, 0])
 kind = Economy([Char('Knight', RV), Char('Herald', RV)], RU.make(dict(REVIEW_SPEC, deck_split='kind')), random.Random(1))
 check('treasure by kind: tier one holds common and the party\'s class cards; tier two only its transposed cards',
       all(i['deck'] in ('common', 'class') for i in kind.t1 + kind.shop1) and all(i['deck'] == 'transposed' and i['cls'] in ('Knight', 'Herald') for i in kind.t2)
@@ -480,9 +483,11 @@ def knight_block(rules, top):
 
 
 dmgM, heroM, nM = knight_block(M, True); dmg17, hero17, n17 = knight_block(R17, True)
-check('manuscript: the Knight\'s heroic die is one of the pool, and still only the two highest dice count',
-      (not heroM) and nM == 2 and dmgM == 8 - sum(sorted([max(E.DIE[d]) for d in Char('Knight', M).blk] + [max(E.DIE['u'])])[-2:]),
-      (dmgM, nM))
+dmgP, heroP, nP = knight_block(M.but(heroic_die='pool'), True)
+check('manuscript, by the author\'s ruling: the Knight\'s heroic die is added to the two highest block dice',
+      (not heroM) and nM == 2 and dmgM == max(0, 8 - sum(sorted(max(E.DIE[d]) for d in Char('Knight', M).blk)[-2:]) - max(E.DIE['u'])), (dmgM, nM))
+check('the other reading (the heroic die joins the pool and the two highest of all count) is still available',
+      (not heroP) and dmgP == 8 - sum(sorted([max(E.DIE[d]) for d in Char('Knight', M).blk] + [max(E.DIE['u'])])[-2:]), (dmgP, nP))
 check('official: every die counts, the heroic die included',
       (not hero17) and dmg17 == max(0, 8 - sum(max(E.DIE[d]) for d in Char('Knight', R17).blk) - max(E.DIE['u'])), (dmg17, n17))
 

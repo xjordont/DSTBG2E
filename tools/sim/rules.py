@@ -75,6 +75,7 @@ MANUSCRIPT = Rules(
     stagger='author', frost='author', poison='stack', bleed='author', ember=True, estus='health',
     luck='any',                             # the luck token re-rolls any or all dice of a roll, chosen at once
     one_spell=True,                         # at most one spell attack option in a turn
+    heroic_die='add',                       # the Knight's heroic die is added to the two highest block dice (the author's ruling)
     # economy: souls are personal; three, four, five for Levels 1, 2, 3 and six for a boss; a treasure card each on a
     # first clear; Andre's shop at two souls (tier one) and four (tier two); a lone character starts with six souls
     pool=False, souls=lambda level, n, first: {1: 3, 2: 4, 3: 5}[level] // (1 if first else 2), boss_souls=lambda n, sparks: 6,
@@ -130,7 +131,7 @@ HOLLOW = dict(death='hollow', hollow_bar=8)                                # the
 ROUND_ALL = dict(round='all', order='free', aggro='last')                  # all enemies, then all characters in any order
 TURN_MS = dict(regen=1, turn='major', estus='health', block='best2', dodge_fail='armour', dodge_extra=True, dodge_move=True,
                parry='any', lethal='overflow', stagger='author', frost='author', poison='stack', bleed='author',
-               grip_reroll=True, scaling=True, tier4=5, luck='any', stagger_hold=True, one_spell=True)                    # the manuscript's turn and defence rules
+               grip_reroll=True, scaling=True, tier4=5, luck='any', stagger_hold=True, one_spell=True, heroic_die='add')                    # the manuscript's turn and defence rules
 # Dropped souls without re-fighting: a character who dies keeps its souls if the encounter is cleared; if the encounter
 # is failed, everyone's souls stay on the tile until it is cleared, and a second failure before then loses them.
 NO_REFIGHT = dict(skip_cost=0, drop='simple')

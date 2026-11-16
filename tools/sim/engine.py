@@ -269,12 +269,15 @@ class Fight:
             how, arg = 'block', 0
         hit = True; taken = 0
         if how == 'block':
-            faces = roll(dice, rng)
-            total = lambda: sum(sorted(faces)[-2:]) if r.block == 'best2' else sum(faces)
+            faces = roll(dice, rng); bonus = [0]
+            total = lambda: (sum(sorted(faces)[-2:]) if r.block == 'best2' else sum(faces)) + bonus[0]
             v = total(); taken = max(0, dmg - max(0, v - pen))
             if c.heroic and c.name == 'Knight' and not magic and (self.lethal(c, taken) or taken >= 2):     # a block roll only
-                # Stand Fast: one more blue die joins the roll; where only the two highest dice count, it is one of the pool
-                c.heroic = False; faces.append(rng.choice(DIE['u'])); dice = dice + 'u'
+                # Stand Fast: one more blue die. Where only the two highest dice count, the author rules that this die is
+                # added to them (heroic_die='add'); the other reading puts it in the pool with the rest
+                c.heroic = False; die = rng.choice(DIE['u'])
+                if r.block == 'best2' and getattr(r, 'heroic_die', 'pool') == 'add': bonus[0] = die
+                else: faces.append(die); dice = dice + 'u'
                 v = total(); taken = max(0, dmg - max(0, v - pen))
             if c.luck and faces and (self.lethal(c, taken) or taken >= pol.luck_at):
                 # luck: the official rules re-roll one die; the manuscript any or all of them, chosen at once

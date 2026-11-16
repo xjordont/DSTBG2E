@@ -1151,3 +1151,71 @@ By kind is five to nine points easier for one and two characters and no differen
 
 To re-run: `--only review_kind --regrind 2`.
 
+### 15.6 The author's rulings on the loop, and scaling without large damage bonuses
+
+**Ruled by the author (2026-11-15):**
+
+1. Encounters reset every time a spark is used; there is no limit to how often one may be cleared.
+2. A first clear pays 3 / 4 / 5 souls to each character and two treasure cards to the party, whatever its size. Every later clear pays 1 / 2 / 3 souls and no treasure.
+3. A cleared encounter may always be rushed past for one damage to each character.
+4. At setup two treasure cards are dealt to each encounter tile, to show that it has not yet been cleared.
+5. The damage steps of 15.4 (+2 / +3 / +4) are rejected: they make the dodge too strong. The scaling of the manuscript is to be looked at again.
+6. Treasure stays in the manuscript's two tiers by requirement for now.
+7. The Knight's heroic die is added to the two highest block dice.
+
+**The author's objection to large damage bonuses is borne out.** Share of all defences that are a dodge or a parry, two to four characters: 22% to 27% with no scaling; 23% to 37% with the manuscript's scaling; 37% to 54% with +2 / +3 / +4. A dodge avoids all of an attack whatever its size, so the larger the attack the less a block is worth.
+
+**Where each party stands with these rulings and no scaling at all** (400 games, one fixed way of playing): a lone character wins 60%; two, three and four characters win 92% to 100%. **With the manuscript's own scaling** (health +1 a character, +1 damage at three, faster movement at two, attacks repeated at four): 85% / 82% / 63% for two to four.
+
+**Screening** (300 games a cell, ±6, one fixed way of playing, players fighting reset Level 1 and 2 encounters again). Games won with two / three / four characters:
+
+| Enemy health | Damage | Boss health | Games won | Level 3 rounds |
+|---|---|---|---|---|
+| +1 a character | +1 at three and four | as printed | 92% / 88% / 93% | 4.3 / 3.2 / 3.0 |
+| +1 a character | +1 at two and more | ×1.5 / 2 / 2.5 | 59% / 82% / 89% | 4.7 / 3.3 / 3.0 |
+| +2 a character | +1 at three and four | ×2 / 3 / 4 | 78% / 55% / 54% | 5.0 / 4.8 / 4.9 |
+| +2 a character | +1 at two and more | as printed | 45% / 71% / 75% | 5.4 / 5.0 / 4.7 |
+| +2 a character, faster movement | none | ×2 / 3 / 4 | 66% / 70% / 77% | 5.4 / 5.0 / 4.9 |
+| +3 a character | none | ×1.5 / 2 / 2.5 | 66% / 66% / 69% | 6.9 / 6.7 / 7.3 |
+| +3 a character | none | ×2 / 3 / 4 | 61% / 64% / 62% | 6.4 / 6.6 / 7.2 |
+| +3 a character | +1 at three and four | ×2 / 3 / 4 | 61% / 25% / 31% | 6.4 / 7.2 / 7.3 |
+
+Two characters are the awkward size: +2 health with no damage is too easy for them and +2 health with +1 damage too hard.
+
+**Two tables that work,** each confirmed with the players choosing their own way of playing.
+
+*Health only* (800 games a cell, ±3): each enemy has +3 health for each character beyond the first; a boss's health is multiplied by the number of characters (its heat-up point with it); no attack is changed.
+
+| | 1 | 2 | 3 | 4 |
+|---|---|---|---|---|
+| Games won, always rush | 64% | 62% | 61% | 62% |
+| Games won, fight Level 1 and 2 again | 48% | 62% | 65% | 62% |
+| Fights (of which repeats), fight again | 20.7 (11.3) | 16.4 (7.4) | 13.7 (5.4) | 12.2 (4.1) |
+| Table time (activations), rush and fight again | 333 and 375 | 522 and 583 | 696 and 756 | 855 and 956 |
+| Rests, rush | 3.9 | 3.3 | 2.8 | 2.0 |
+| Level 3 rounds, rush | 8.1 | 7.5 | 7.6 | 7.9 |
+| Someone dies in a Level 3 encounter, rush | 21% | 16% | 19% | 23% |
+| Share of defences that are a dodge or parry | 8% | 20% | 26% | 25% |
+| Games lost at: encounters / mini-boss / main boss, rush | 8 / 18 / 10% | 26 / 10 / 2% | 29 / 9 / 1% | 26 / 11 / 1% |
+
+*Shorter, with +1 damage* (500 games a cell, ±4, fight again): +1 damage on every enemy and boss attack with two or more characters; enemy health +1 with two characters, +4 with three, +6 with four; boss health ×1.5, ×2, ×2.5.
+
+| | 2 | 3 | 4 |
+|---|---|---|---|
+| Games won | 67% | 63% | 66% |
+| Table time | 389 | 521 | 693 |
+| Level 3 rounds | 4.4 | 4.9 | 4.7 |
+| Share of defences that are a dodge or parry | 31% | 37% | 39% |
+
+- **Health only** is the simpler to state and leaves the choice between blocking and dodging exactly as it is for a lone character. Every party size wins about as often and every fight lasts about as many rounds. Its cost is length: a round with four characters has four turns in it, the fights are not shortened to make up for that, and the game grows from about 330 activations alone to about 850 with four. A boss fight with four characters takes four times the activations of the same fight alone.
+- **The shorter table** saves a fifth to a third of that, at the price of a table to look up and a +1 that lifts the share of dodges somewhat.
+- **Length cannot be held level without large damage bonuses.** With more characters either the fights are cut short by enemies that hit much harder (the rejected table: 330 to 360 activations at every size, and half the defences a dodge) or the game has more turns in it.
+
+**On the loop as ruled.**
+
+- Fighting again is a choice and not a duty: for two to four characters it is level with rushing or a few points better, and for a lone character it is plainly worse (48% against 64%), because the fights cost more health than one or two souls repay. No party gains by grinding, and the number of sparks bounds it in any case.
+- Two treasure cards an encounter whatever the party's size is itself a scaling rule, and a strong one: a lone character now finds two cards an encounter where four characters find half a card each. It is part of every figure above.
+- One damage to rush, always, is simpler than a rule that frees an encounter after two clears, and tests no worse.
+
+To re-run: `python3 tools/sim/compare.py --only review --games 800 --probe 150` (health only; add `--regrind 2`), and `--only review_d1 --regrind 2` (the shorter table).
+

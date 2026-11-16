@@ -25,11 +25,15 @@ PROPOSED = PROPOSED_A
 # Section 14: the final ruleset, built up from the official 2017 rules one module at a time (rules.py lists the modules)
 FINAL = dict(base='official2017', mods=['HOLLOW', 'ROUND_ALL', 'TURN_MS', 'ATTRITION', 'ECON_MS', 'NO_REFIGHT'],
              choose_of_two=True, hp_add=[0, 0, 0, 2, 4], atk=A_DMG, boss_atk=A_DMG, solo_souls=6)
-# Section 15: the rules as the author's review has them so far. Encounters reset at a rest: a second clear pays two
-# souls less and no treasure, a third nothing; rushing past costs one damage once, then nothing. One encounter card a tile.
-R_DMG = [0, 0, 2, 3, 4]            # every enemy and boss attack: +2 damage with two characters, +3 with three, +4 with four
-REVIEW = dict(FINAL, death='lost', heal_after=0, choose_of_two=False, soul_tab=[[3, 4, 5], [1, 2, 3], [0, 0, 0]],
-              skip_dmg=[1, 0], atk=R_DMG, boss_atk=R_DMG)
+# Section 15: the rules as the author's review has them. Encounters reset at every rest. A first clear pays 3 / 4 / 5 souls
+# a character and two treasure cards to the party; every later clear pays 1 / 2 / 3 and no treasure. A cleared encounter
+# may always be rushed past for one damage to each character. One encounter card a tile. Scaling: see section 15.6.
+R_DMG = [0, 0, 2, 3, 4]            # the damage steps first proposed in 15.4, which the author rejected
+LOOP = dict(FINAL, death='lost', heal_after=0, choose_of_two=False, soul_tab=[[3, 4, 5], [1, 2, 3]], skip_dmg=1,
+            free_treasure=2, hp_add=[0] * 5, atk=[0] * 5, boss_atk=[0] * 5)            # the loop, with no scaling at all
+REVIEW = dict(LOOP, hp_add=[0, 0, 3, 6, 9], boss_mul=[1, 1, 2, 3, 4])     # health only: +3 an enemy for each extra character;
+                                                                         # a boss's health times the number of characters
+REVIEW_D1 = dict(LOOP, atk=[0, 0, 1, 1, 1], boss_atk=[0, 0, 1, 1, 1], hp_add=[0, 0, 1, 4, 6], boss_mul=[1, 1, 1.5, 2, 2.5])   # the shorter alternative
 SPECS = {
     'official2017': ('Official 2017 (the calibration anchor)', {'base': 'official2017'}),
     'official2022': ('Official 2022 rules on the 2017 enemy cards (not a valid test of the 2022 sets; see 13.2)', {'base': 'official2022'}),
@@ -37,7 +41,8 @@ SPECS = {
     'health': ('Health rule only: bosses as printed, souls spent at a rest', dict(HEALTH, atk=[0] * 5)),
     'final': ('The final ruleset (section 14)', FINAL),
     'review': ("The author's review so far (section 15); add --regrind 2 for players who fight reset encounters again", REVIEW),
-    'review_kind': ('The same with treasure sorted by kind of card (15.5)', dict(REVIEW, deck_split='kind')),
+    'review_d1': ('The shorter alternative of 15.6: +1 damage, less health', REVIEW_D1),
+    'review_kind': ('The review rules with treasure sorted by kind of card (15.5)', dict(REVIEW, deck_split='kind')),
     'A': ('Proposal A of section 13 (Andre and the Firekeeper without a rest)', PROPOSED_A),
     'B': ('Proposal B (Andre only without a rest)', PROPOSED_B),
 }
