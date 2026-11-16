@@ -55,7 +55,7 @@ def play(n, rules, seed, table=None, classes=None):
         eco.renew_row(); spend(); return True
 
     for stage, boss in enumerate((rng.choice(MINIS), rng.choice(MAINS))):
-        levels = BOSSES[boss]['levels']; cards = []
+        levels = BOSSES[boss]['levels']; cards = []; eco.boss_named(boss, stage)
         for lv in levels:
             a = decks[lv].pop()
             if getattr(r, 'choose_of_two', False) and decks[lv]:

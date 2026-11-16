@@ -11,22 +11,24 @@ from engine import pmf_def, attack_pmf, hit_stats, p_dodge
 HERE = os.path.dirname(os.path.abspath(__file__))
 GEAR = json.load(open(os.path.join(HERE, 'gear.json')))
 ITEMS, CLASSES = GEAR['items'], GEAR['classes']
-for _i in ITEMS.values():
-    if _i['type'] == 'upgrade':                      # Titanite Shard: +1 damage; four gems: one more black die
-        _t = _i.get('text') or ''
-        _i['up'] = 'mod' if '+1 damage' in _t else 'die' if 'gain 1 black die' in _t else None
+# The treasure of the other 2017 sets and every boss's treasure (gear_more.json), used where a ruleset says sets='all'.
+MORE = json.load(open(os.path.join(HERE, 'gear_more.json')))['items']
+for _i in list(ITEMS.values()) + list(MORE.values()):
+    if _i['type'] == 'upgrade':                      # Titanite (Shard, Scale, a boss's): +1 damage; four gems: one more black die
+        _t = _i.get('text') or ''                    # (an upgrade with any other text is carried in the decks but never fitted)
+        _i['up'] = 'mod' if _t.startswith("This weapon's attacks gain +1 damage") else 'die' if 'gain 1 black die' in _t else None
 CORE4 = ['Knight', 'Warrior', 'Herald', 'Assassin']
 REF_FOES = ((1, 1, 1), (1, 1, 5), (2, 1, 5), (2, 1, 10))            # (block, resist, health) of reference targets
 REF_HITS = ((4, False, 1), (5, False, 1), (5, False, 2), (6, False, 1), (6, False, 2), (4, True, 1), (5, True, 2))   # (damage, magic, dodge difficulty)
 
 
-def is_shield(it): return it is not None and it['type'] == 'hand' and not it['attacks']
+def is_shield(it): return it is not None and it['type'] == 'hand' and not it['attacks'] and it['name'] not in SPELLS
 
 
 # Spell cards (sorceries, miracles, pyromancies). The manuscript never scales a spell with a stat and never counts it
 # as wielded two-handed, so it gains neither the +1 at ten over its requirement nor the grip reroll.
 SPELLS = {'Fireball', 'Soul Arrow', 'Soulstream', 'Heal', 'Heal Aid', 'Replenishment', 'Bountiful Light',
-          'Bountiful Sunlight', 'Force', 'Great Magic Weapon', 'Poison Mist'}
+          'Bountiful Sunlight', 'Force', 'Great Magic Weapon', 'Poison Mist'} | {k for k, v in MORE.items() if v.get('spell')}
 
 
 class Char:
@@ -174,6 +176,11 @@ class Economy:
         self.carried = {}                              # upgrades on weapons lying in it: weapon name -> (bonus, upgrade card)
         names = {c.name for c in party}
         cards = [i for i in ITEMS.values() for _ in range(i.get('copies', 1))]
+        self.boss_loot = []
+        if getattr(rules, 'sets', 'core') == 'all':
+            # every owned set: the other sets' common, class, transposed and legendary cards join the core set's, whoever
+            # is playing; the treasure of the two bosses of this game is kept apart until the mini-boss falls
+            cards += [i for i in MORE.values() if i['deck'] != 'boss']
         common = [i for i in cards if i['deck'] == 'common']
         legend = rng.sample([i for i in cards if i['deck'] == 'legendary'], 5)
         if rules.treasure == 'author':
@@ -187,10 +194,14 @@ class Economy:
                 mine = (lambda i: True) if split == 'type_all' else (lambda i: i['cls'] in names)
                 pool = common + [i for i in cards if i['deck'] in ('class', 'transposed') and mine(i)]
                 two = lambda i: i['deck'] == 'transposed'
+            elif split == 'mid':
+                # between the two: common cards split at a requirement of 25; class cards tier one and transposed cards
+                # tier two whatever they ask for
+                two = lambda i: i['deck'] == 'transposed' or (i['deck'] == 'common' and max(i['req']) >= 25)
             self.t1 = [i for i in pool if not two(i)]; self.t2 = [i for i in pool if two(i)]
             # where a sold card goes: the bottom of the treasure deck of its tier (legendaries are tier two, except
             # where one deck holds everything but the transposed cards)
-            self.tier_two = (lambda i: two(i)) if split == 'kind' else (lambda i: two(i) or i['deck'] == 'legendary')
+            self.tier_two = (lambda i: two(i)) if split == 'kind' else (lambda i: two(i) or i['deck'] in ('legendary', 'boss'))
             rng.shuffle(self.t1); rng.shuffle(self.t2); self.legend = legend
             self.shop1 = self.stock(self.t1); self.shop2 = []
         else:
@@ -198,6 +209,15 @@ class Economy:
             self.deck = common + [i for i in cards if i['deck'] == 'class' and i['cls'] in names]
             self.later = [i for i in cards if i['deck'] == 'transposed' and i['cls'] in names] + legend
             rng.shuffle(self.deck)
+
+    def boss_named(self, boss, stage):
+        """The boss of this half of the game is chosen: with every set in play its treasure cards join tier two (the
+        mini-boss's with the legendaries once it falls, the main boss's as soon as it is known, which is then)."""
+        if getattr(self.r, 'sets', 'core') != 'all' or not getattr(self.r, 'boss_loot', True): return
+        loot = [i for i in MORE.values() if i['deck'] == 'boss' and i['boss'] == boss]
+        if stage == 0: self.boss_loot += loot; return
+        deck = (self.t1 if getattr(self.r, 'deck_split', 'req') == 'kind' else self.t2) if self.r.treasure == 'author' else self.deck
+        deck += loot; self.rng.shuffle(deck)
 
     def stock(self, deck):
         """Andre's shop: three weapons, three armour, two shields, two upgrades, two spells (here: five weapons or spells)."""
@@ -215,13 +235,13 @@ class Economy:
         if self.r.treasure == 'author' and getattr(self.r, 'deck_split', 'req') == 'kind':
             # three sources by kind of card: one treasure deck (common and class cards, joined now by the legendaries),
             # and the party's transposed cards laid out as the tier-two shop
-            self.t1 += self.shop1 + self.legend; self.rng.shuffle(self.t1); self.shop1 = self.stock(self.t1)
+            self.t1 += self.shop1 + self.legend + self.boss_loot; self.rng.shuffle(self.t1); self.shop1 = self.stock(self.t1)
             self.shop2 = list(self.t2); self.t2 = []
         elif self.r.treasure == 'author':
             self.t1 += self.shop1; self.rng.shuffle(self.t1); self.shop1 = self.stock(self.t1); self.shop2 = self.stock(self.t2)
-            self.t2 += self.legend; self.rng.shuffle(self.t2)
+            self.t2 += self.legend + self.boss_loot; self.rng.shuffle(self.t2)
         else:
-            self.deck += self.later; self.later = []; self.rng.shuffle(self.deck)
+            self.deck += self.later + self.boss_loot; self.later = []; self.rng.shuffle(self.deck)
 
     def sell(self, c, it):
         """Character c sells card `it` from the bag for one soul. Titanite attached to a sold weapon is sold with it

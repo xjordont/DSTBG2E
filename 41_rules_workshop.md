@@ -1548,3 +1548,168 @@ The proposal is about seven points harder than section 16 at every size (50% to 
 
 To re-run: `python3 tools/sim/compare.py --only review_gate --games 800 --probe 300 --bank 6` (and `--bank 10`; add `--regrind 2` for four characters).
 
+
+## 18. Every owned set in the decks; the simulator audited; bosses; the difficulty target (2026-11-16)
+
+The author's answers to section 17, and what was asked next:
+
+1. **Treasure is not limited to the classes in play.** All owned treasure from all owned sets is shuffled into its treasure deck. Only the starting equipment of characters not being played goes back in the box. The addition proposed in 17.1 ("only the classes in play") is withdrawn. Three ways of sorting the cards into two tiers were put up for comparison (18.2).
+2. **Spending (17.2) is accepted:** stats are raised only at a rest, the shop is open between encounters, sparks are six less the number of characters, and the fourth stat tier costs twelve souls in every kind of game.
+3. **The scaling table of 17.2 is accepted, and the rules are to say outright that a boss's health does not scale.** Asked: does that make bosses too easy (18.3)?
+4. **The target:** an average table should win 50% to 70% of its games; a table playing as well as the game allows about 80% (18.4).
+5. **The simulator is to be checked** for accuracy and for whether it holds every card and rule (18.1).
+
+### 18.1 The simulator, checked against the author's card tables
+
+**What was checked, and against what.** The author's two workbooks of card values (one a table of every 2017 treasure card with its dice, the other a list of every owned card with its requirements and each class's stats) and his sheet of encounter line-ups.
+
+| What | Result |
+|---|---|
+| The 116 starting and treasure cards of the core set: requirements, dice, modifiers, costs, range, slots | All found. **One wrong value: the Halberd asked for 15 strength; both workbooks say 18. Corrected.** One card (Carthus Curved Sword) differs from one workbook and agrees with the other; the first has its numbers one column out, so the simulator's value stands |
+| The four core classes: stats at every tier, threat | All agree |
+| The 36 core encounters: level and every enemy | All agree |
+| The upgrades | Titanite Shard (+1 damage) and the Heavy, Sharp, Crystal and Blessed Gems (one more black die) are played as printed |
+| Enemy and boss cards | The workbooks hold names only, no values. These rest on the check of section 12 |
+
+**A fault found on the way.** Three spells with no attack on them (Force, Great Magic Weapon, Poison Mist) were being counted as shields when the shop was stocked, so they could take one of its two shield places. Corrected. With this and the Halberd, the accepted rules (17.2) on the core cards now measure 51% / 50% / 49% / 53% for one to four characters, against 56% / 50% / 52% / 56% before; each figure is ±3 with the policy-pick noise of 15.8 on top.
+
+**What was added.** The treasure of the other 2017 sets and every boss's treasure, from the author's table (`tools/sim/gear_more.json`): 63 common cards (Darkroot, Explorers, Iron Keep, Phantoms, Characters), the 30 class and 30 transposed cards of the six other classes, 10 more legendary cards, and 56 boss treasure cards. The simulator now holds 305 cards. A ruleset with `sets='all'` puts them all in the decks whoever is playing; the treasure of the two bosses of the game joins tier two (18.2). Against the second workbook, 179 of the 189 added cards agree on requirements, eight are spelled differently there and could not be matched, and two disagree (Hawkwood's Shield, and the Thief's Covetous Silver Serpent Ring); the table with the dice was used for those.
+
+**What the simulator still does not hold.** Stated plainly, because every figure in this record carries these limits:
+
+- **The cards of the 2022 sets** (Tomb of Giants, Painted World of Ariamis: 190 treasure cards). The author's list gives their requirements and average values, not their dice, so they are counted in 18.2 but not played.
+- **The six other classes** (Cleric, Deprived, Mercenary, Pyromancer, Sorcerer, Thief). Their treasure is in the decks; nobody plays them. Every game is played by Knight, Warrior, Herald and Assassin.
+- **Most card text.** A card's dice, modifiers, costs, range, repeats, node attacks and requirements are played. Its text is not, apart from the upgrades above. So rings, six of the core set's gems, the conditions a character's weapon inflicts (bleed, poison, stagger, frostbite, push), healing and support spells, and the Herald's Talisman do nothing. In the core set that is 10 of 15 upgrade cards and 10 hand cards; in the other sets 20 of 23 upgrade cards and 8 hand cards. Such a card sits in a deck or the shop as a card nobody wants.
+- **Bosses.** Four mini-bosses (Gargoyle, Titanite Demon, Winged Knight, Boreal Outrider Knight) and one main boss (the Dancer). Ornstein and Smough, and every boss of the other sets, are not played.
+- **Enemies of the other sets,** and so their encounters.
+- **Terrain, traps, chests, events, invaders, mimics and crystal lizards.**
+- **The fourth stat tier** is tier three plus five, as the manuscript says; the reading "40, or tier three plus five, whichever is higher" is not used.
+
+What follows from this: the other sets bring 28 more cards that are dead weight in the simulator and would be worth something at a table, so the figures for every set are a little low. The figures on the core cards alone bound them from above.
+
+### 18.2 Sorting the treasure with every set in the decks
+
+The three ways:
+
+- **S0, by requirement (the manuscript).** A card that asks for 25 or more in any stat is tier two; so is every transposed card. The rest is tier one.
+- **S1, by kind (the author's idea).** Tier one is common and class treasure. Tier two is transposed treasure, five legendary cards drawn at random, and the treasure of the mini-boss and main boss of this game.
+- **S2, between the two.** Common cards split at 25. Class cards are always tier one, transposed cards always tier two.
+
+In all three the five legendary cards and the two bosses' treasure are tier two; that part of the author's idea is taken up in each, and tested so.
+
+**What the cards say.** Counted over all 365 common, class and transposed cards the author owns (the 2017 and the 2022 sets):
+
+| | Common (205) | Class (80) | Transposed (80) | Legendary (30) |
+|---|---|---|---|---|
+| Ask for less than 25 | 144 | 34 | 0 | 0 |
+| Ask for 25 or more | 61 | 46 | 80 | 30 |
+| Median highest requirement | 21 | 25 | 35 | 31 |
+
+Every transposed card asks for 25 or more, so the three ways agree on them. **They differ only on 107 cards: the 46 class cards and the 61 common cards that ask for 25 or more.** S0 puts all 107 in tier two, S1 all in tier one, S2 the 46 class cards in tier one.
+
+| | S0 by requirement | S1 by kind | S2 between |
+|---|---|---|---|
+| Tier one: cards | 178 | 285 | 224 |
+| of which ask for 25 or more | 0 | 107 | 46 |
+| Tier one: share one character can use within 6 souls of levels, average class | 56% | 40% | 46% |
+| the same, for someone in a party of 1 / 2 / 4 | 56 / 64 / 71% | 39 / 47 / 54% | 46 / 53 / 60% |
+| Tier two: cards (before legendaries and boss treasure) | 187 | 80 | 141 |
+| Tier two: share someone in a party of 1 / 2 / 4 can use within 14 souls of levels | 40 / 53 / 65% | 21 / 30 / 38% | 37 / 49 / 57% |
+
+The reason for S1's low second row: sorting by kind is the official game's way, and there it rests on the class filter. The official tier-two cards are the transposed cards *of the classes in play*, so nearly all of them fit somebody. With every class's cards in, 80 transposed cards are in tier two and only eight a character in play were made for that character. A lone character finds about one card in five of the second-half shop usable; a party of four, between them, fewer than two in five.
+
+**What the simulator says.** The accepted rules (17.2) with every 2017 set in the decks, 800 games a cell (±3), the policy picked on 300:
+
+| Games won | 1 | 2 | 3 | 4 |
+|---|---|---|---|---|
+| Core cards only, by requirement | 51% | 50% | 49% | 53% |
+| S0 every set, by requirement | 48% | 41% | 47% | 45% |
+| S1 every set, by kind | 56% | 48% | 41% | 44% |
+| S2 every set, between | 53% | 47% | 43% | 46% |
+
+| Table time (activations) | 1 | 2 | 3 | 4 |
+|---|---|---|---|---|
+| Core cards only | 305 | 365 | 395 | 482 |
+| S0 | 286 | 328 | 405 | 402 |
+| S1 | 257 | 367 | 423 | 535 |
+| S2 | 269 | 360 | 404 | 511 |
+
+- **No way of sorting is stronger or weaker.** The three average 45%, 47% and 47% over the four sizes, and no cell differs from another by more than the noise of the method. The choice does not touch balance; it can be made on feel.
+- **Every set in the decks costs about four points** against the core cards alone (49% to 53% becomes 41% to 56%), part of it the dead cards of 18.1.
+
+**Recommendation: S0, with the legendaries and boss treasure the author proposed.** The rule in one sentence: *tier two is every transposed card, five legendary cards drawn at random, the treasure of this game's mini-boss and main boss, and every other card that asks for 25 or more in a stat; everything else is tier one.*
+
+- It is the only one of the three in which most of what a party sees it can use, in both halves of the game, once every class's cards are in. That was the manuscript's reason for the line, and the ruling to shuffle everything in makes the reason stronger: the 25 line does the work the class filter did.
+- It prices by strength. Tier one costs two souls and tier two four. Under S1 the 61 strongest common cards and the 46 strongest class cards cost two souls beside a dagger.
+- It is one check a card: the number on it, or its kind.
+- It keeps what was wanted from sorting by kind: transposed, legendary and boss treasure are never in tier one.
+
+S2 is a fair second if class cards should all be early finds: it costs ten points of tier-one usability and keeps most of tier two's. S1 is the weakest on what a party can use and no stronger on anything measured.
+
+One detail to settle with it: when the five legendaries and the boss treasure join. Tested here: tier two's shop is stocked when the mini-boss falls, then the five legendaries and the mini-boss's treasure are shuffled into the tier-two deck, and the main boss's treasure too. They are found as treasure, never bought, which is how the author's forum post has the legendaries.
+
+### 18.3 Bosses at their printed health
+
+The accepted table adds nothing to a boss's health. Its attacks take the damage bonus (+0 / +1 / +2 / +2), and it acts before each character, so a party of four already faces four boss activations a round.
+
+| Accepted rules | 1 | 2 | 3 | 4 |
+|---|---|---|---|---|
+| Mini-boss: attempts failed (core cards / every set) | 54 / 42% | 40 / 37% | 40 / 43% | 37 / 24% |
+| Main boss: attempts failed | 54 / 64% | 50 / 58% | 46 / 43% | 18 / 19% |
+| Games lost at the main boss | 20 / 28% | 18 / 24% | 13 / 11% | 2 / 10% |
+| Games lost in an encounter | 8 / 12% | 18 / 20% | 23 / 23% | 33 / 26% |
+
+- **For one, two and three characters the bosses are not easy.** About two attempts in five at the mini-boss fail and about half at the main boss, and the main boss is where a small party most often loses the game.
+- **For four characters the main boss is the soft spot.** One attempt in five fails, against one in two for smaller parties. The game is not easier for it: four characters lose in the encounters instead, where three points of health on every enemy and two of damage bite hardest.
+
+Tested: boss health ×1.25 for three characters and ×1.5 for four (every set, S0).
+
+| | 3 | 4 |
+|---|---|---|
+| Games won, bosses as printed | 47% | 45% |
+| Games won, bosses scaled | 41% | 41% |
+| Main boss attempts failed | 43% → 52% | 19% → 31% |
+| Mini-boss attempts failed | 43% → 48% | 24% → 50% |
+| Table time | 405 → 440 | 402 → 559 |
+
+Scaling does stiffen the last fight at four, and it does more to the mini-boss, which becomes the wall (half of all attempts fail), and the game runs two fifths longer. **Recommendation: leave boss health as printed, and say so.** Suggested wording: *"A boss has the health printed on its card whatever the size of the party. Its attacks take the damage bonus of the table."* If play shows the last fight too soft at four, the narrow answer is health on the main boss alone for four characters; it was not tested.
+
+### 18.4 The difficulty target
+
+The simulator has one dial for how well a table plays what the model does not act out: positioning, and reading a boss's card order. At 1.0 it reproduces the official game as tables report it (section 13); that is the average table. At 1.3 the players side-step about four ordinary attacks in five and read 95% of the boss cards they have seen, which is as far as the dial goes. It cannot say what "optimal" is beyond that.
+
+The accepted rules, every 2017 set, sorted by requirement:
+
+| Games won, by skill | 1 | 2 | 3 | 4 |
+|---|---|---|---|---|
+| 0.70 | 15% | 7% | 6% | 6% |
+| 0.85 | 27% | 21% | 19% | 22% |
+| **1.00 (average)** | **48%** | **41%** | **47%** | **45%** |
+| 1.15 | 64% | 64% | 59% | 68% |
+| **1.30 (the best the dial has)** | **73%** | **78%** | **76%** | **81%** |
+
+- **The best play is on target** (73% to 81% against "about 80%").
+- **The average table is just under it** (41% to 48% against 50% to 70%; 49% to 53% on the core cards alone). The true figure with every set lies between the two.
+- **The game rewards skill steeply:** fifteen points of the dial are worth about twenty points of games won. A table a little below average will find these rules hard.
+
+Three ways of easing the average, each on its own (every set, S0, skill 1.0 unless said):
+
+| Games won | 1 | 2 | 3 | 4 | Table time |
+|---|---|---|---|---|---|
+| As accepted | 48% | 41% | 47% | 45% | 286 / 328 / 405 / 402 |
+| **E2: a first clear pays 4 / 5 / 6 souls** (3 / 4 / 5 now) | 52% | 51% | 54% | 56% | 264 / 305 / 372 / 376 |
+| E2 on the core cards alone | 52% | 57% | 59% | 64% | 288 / 317 / 355 / 361 |
+| E2 at skill 1.15 | 67% | 68% | 68% | 73% | |
+| E2 at skill 1.30 | 73% | 82% | 80% | 84% | |
+| E1: one more spark (seven less the characters) | 57% | 56% | 53% | 62% | 309 / 384 / 412 / 512 |
+| E1 at skill 0.85 | 34% | 32% | 21% | 34% | |
+| E1 at skill 1.15 | 70% | 71% | 68% | 79% | |
+| E1 at skill 1.30 | 80% | 82% | 83% | 89% | |
+| E3: one damage healed after a clear | 51% | 52% | 48% | 51% | 281 / 354 / 400 / 488 |
+| E1 and E2 together | 60% | 62% | 61% | 72% | 275 / 335 / 366 / 465 |
+
+**Recommendation: E2, one more soul for a first clear (4 / 5 / 6).** It sits closest to both halves of the target: the average table at 51% to 56% with every set (52% to 64% on the core cards), the best play at 73% to 84%. It is also the only one that shortens the game (by 6% to 8%). It leaves the sparks where the author put them, and it raises the souls a character carries into a fight by about one and a half (3.2 to 4.9 becomes 4.7 to 6.1), which is the push-your-luck the bonfire rule was brought back for. One more spark does more for the average table (53% to 62%) and overshoots at the top (80% to 89%), and the game runs longer for the extra rests. Healing one damage after a clear does least. Both together (60% to 72% for the average table) are more than the target asks.
+
+Not tested with it: whether a boss should then pay more than six souls, and whether a second clear should still pay 1 / 2 / 3.
+
+To re-run: `python3 tools/sim/compare.py --only all_req --games 800 --probe 300 --bank 6` (`all_kind`, `all_mid` for the other two ways; `--bank 10` for one character, `--regrind 2` for four; `--skill 1.15` and so on for 18.4).

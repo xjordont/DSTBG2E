@@ -41,6 +41,10 @@ REVIEW = dict(LOOP, hp_add=[0, 0, 1, 2, 3], atk=[0, 0, 1, 2, 2], boss_atk=[0, 0,
 # the characters, bosses keep their printed health, and the fourth stat tier costs twelve souls in every kind of game.
 REVIEW_GATE = dict(LOOP, hp_add=[0, 0, 1, 2, 3], atk=[0, 0, 1, 2, 2], boss_atk=[0, 0, 1, 2, 2], sparks=[0, 5, 4, 3, 2], solo_souls=6,
                    free_visit='shop', tier4=5, tier_cost=(2, 4, 8, 12))
+# Every owned set of 2017 in the treasure decks, whoever is playing (section 18), under the three ways of sorting them
+ALL_REQ = dict(REVIEW_GATE, sets='all', deck_split='req')          # by requirement: 25 or more is tier two, with the transposed cards
+ALL_KIND = dict(REVIEW_GATE, sets='all', deck_split='type_all')    # by kind: common and class tier one, transposed tier two
+ALL_MID = dict(REVIEW_GATE, sets='all', deck_split='mid')          # common cards split at 25, class cards tier one, transposed tier two
 REVIEW_TWICE = dict(LOOP, hp_add=[0, 0, 1, 2, 3], atk=[0, 0, 1, 1, 1], boss_atk=[0, 0, 1, 1, 1], reps=[1, 1, 1, 2, 2], sparks=SPARKS)
 REVIEW_HEALTH = dict(LOOP, hp_add=[0, 0, 3, 6, 9], boss_mul=[1, 1, 2, 3, 4])            # 15.6: health only (set aside: it lengthens the game)
 REVIEW_D1 = dict(LOOP, atk=[0, 0, 1, 1, 1], boss_atk=[0, 0, 1, 1, 1], hp_add=[0, 0, 1, 4, 6], boss_mul=[1, 1, 1.5, 2, 2.5])   # 15.6: the shorter alternative
@@ -52,6 +56,9 @@ SPECS = {
     'final': ('The final ruleset (section 14)', FINAL),
     'review': ("The author's review so far (section 15); add --regrind 2 for players who fight reset encounters again", REVIEW),
     'review_gate': ('17.2: stats are raised only at a rest; the shop is open between encounters (use --bank 6 or 10)', REVIEW_GATE),
+    'all_req': ('Section 18: every 2017 set in the decks, sorted by requirement (25 or more is tier two)', ALL_REQ),
+    'all_kind': ('Section 18: every 2017 set, sorted by kind (common and class / transposed)', ALL_KIND),
+    'all_mid': ('Section 18: every 2017 set, common cards split at 25, class cards tier one', ALL_MID),
     'author': ("The author's own table (15.7): health +1 a character, damage +0/+0/+1/+2, sparks 4/3/2/1", AUTHOR),
     'review_twice': ('15.7, the other candidate: +1 damage, enemies attack twice against three or more', REVIEW_TWICE),
     'review_health': ('15.6, set aside: health only, +3 an enemy for each extra character', REVIEW_HEALTH),

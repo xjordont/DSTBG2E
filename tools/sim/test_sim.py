@@ -538,6 +538,37 @@ check('every starting item is met by its class at base stats',
 check('stat costs: tier one 2, tier two 4, tier three 8', Char('Knight', R17).cost_to_meet([40, 0, 0, 0])[0] == 14)
 check('official deck: 56 common cards and five class cards a character',
       len(Economy([Char('Knight', R17)], R17, random.Random(0)).deck) == 61)
+check('Halberd asks for 18 strength and 31 faith (the author\'s card tables)', ITEMS['Halberd']['req'] == [18, 0, 0, 31], ITEMS['Halberd']['req'])
+
+# ---------------------------------------------------------------- every owned set: the other sets' and the bosses' treasure
+from characters import MORE, SPELLS, is_shield
+from collections import Counter
+from compare import ALL_REQ, ALL_KIND, ALL_MID
+kinds = Counter(v['deck'] for v in MORE.values())
+check('the other sets add 63 common, 30 class, 30 transposed and 10 legendary cards, and 56 boss treasure cards',
+      (kinds['common'], kinds['class'], kinds['transposed'], kinds['legendary'], kinds['boss']) == (63, 30, 30, 10, 56), dict(kinds))
+check('no card of the other sets shares a name with a core card, and none is starting equipment',
+      not set(MORE) & set(ITEMS) and 'starting' not in kinds)
+check('every transposed card asks for 25 or more in a stat', all(max(v['req']) >= 25 for d in (ITEMS, MORE) for v in d.values() if v['deck'] == 'transposed'))
+check('a spell with no attack is not counted as a shield', not is_shield(ITEMS['Force']) and not is_shield(MORE['Magic Barrier']) and is_shield(MORE['Buckler']))
+check('only Titanite and the gems are fitted: an upgrade with other text is carried but not played',
+      MORE['Titanite Scale']['up'] == 'mod' and MORE['Old Leo Ring']['up'] is None and MORE['Sanctum Priestess Tiara']['up'] is None
+      and MORE['Raw Gem']['up'] is None and ITEMS['Titanite Shard']['up'] == 'mod' and ITEMS['Heavy Gem']['up'] == 'die')
+sizes = {}
+for name, spec in (('req', ALL_REQ), ('kind', ALL_KIND), ('mid', ALL_MID)):
+    rr = RU.make(spec); e = Economy([Char('Knight', rr), Char('Herald', rr)], rr, random.Random(1))
+    one = e.t1 + e.shop1; e.boss_named('Gargoyle', 0); n2 = len(e.t2)
+    sizes[name] = (len(one), n2, sum(max(i['req']) >= 25 for i in one), sum(i['deck'] == 'class' for i in e.t2))
+    e.after_mini_boss(); e.boss_named('Dancer of the Boreal Valley', 1)
+    sizes[name] += (sum(i['deck'] == 'boss' for i in e.t2), sum(i['deck'] == 'legendary' for i in e.t2), len(e.shop2))
+check('every set, by requirement: 94 cards in tier one, none asking 25; 125 in tier two, thirty of them class cards; the two bosses\' six cards and five legendaries join after the mini-boss',
+      sizes['req'] == (94, 125, 0, 30, 6, 5, 12), sizes['req'])
+check('every set, by kind: 169 cards in tier one (common and class), the 50 transposed cards in tier two', sizes['kind'][:2] == (169, 50) and sizes['kind'][3] == 0, sizes['kind'])
+check('every set, the middle way: class cards all in tier one, common cards split at 25', sizes['mid'][:2] == (124, 95) and sizes['mid'][3] == 0, sizes['mid'])
+rc = RU.make(dict(ALL_REQ, sets='core')); e = Economy([Char('Knight', rc)], rc, random.Random(1)); e.boss_named('Gargoyle', 0)
+check('with the core set alone no other card and no boss treasure is in play', len(e.t1 + e.shop1 + e.t2) == 96 and not e.boss_loot, len(e.t1 + e.shop1 + e.t2))
+ga = [play(2, RU.make(ALL_REQ), s, table=Table(skill=1.0, bank=6)) for s in range(12)]
+check('a game with every set in play runs to its end', all(x['win'] or x['lost_at'] is not None for x in ga))
 
 print()
 print('%d checks failed' % len(FAILS) if FAILS else 'all checks passed')
