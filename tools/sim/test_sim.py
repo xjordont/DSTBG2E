@@ -492,6 +492,12 @@ check('the other reading (the heroic die joins the pool and the two highest of a
 check('official: every die counts, the heroic die included',
       (not hero17) and dmg17 == max(0, 8 - sum(max(E.DIE[d]) for d in Char('Knight', R17).blk) - max(E.DIE['u'])), (dmg17, n17))
 
+# ---------------------------------------------------------------- poison is not resolved once the encounter is cleared
+c = Char('Knight', R22); f = E.Fight([c], R22, random.Random(0), enemies=['Hollow Soldier']); foe = f.foes[0]
+c.dmg = c.cap; c.poison = 1; foe.hp = 0; f.end_turn(c); cleared_alive = c.alive
+c = Char('Knight', R22); f = E.Fight([c], R22, random.Random(0), enemies=['Hollow Soldier']); c.dmg = c.cap; c.poison = 1; f.end_turn(c)
+check('poison does not kill a character whose turn cleared the encounter, and does while an enemy stands', cleared_alive and not c.alive)
+
 # ---------------------------------------------------------------- equipment data
 check('every starting item is met by its class at base stats',
       all(Char(k, R17).cost_to_meet(ITEMS[n]['req'])[0] == 0 for k, v in CLASSES.items() for n in v['start']))

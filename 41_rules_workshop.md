@@ -1281,3 +1281,5 @@ Two characters need the +1: without it they win about 90%, with it 60% to 70%.
 - The second is the quickest of all and keeps dodging lower, because a second attack is another roll to block and another stamina to dodge, not a bigger hit. But it is swingy: with three characters someone dies in half the Level 3 encounters, and almost every lost game is lost in an ordinary encounter, not at a boss.
 - The first is recommended. `python3 tools/sim/compare.py --only review` re-runs it; `--only review_twice` the second; `--only author` the table as proposed.
 
+Correction after the automated review (2026-11-16): poison was still resolved at the end of a turn in which the character had killed the last enemy, where the encounter is cleared at that moment and conditions come off unresolved. Fixed and checked (102 checks pass). No enemy or boss of the core set modelled here inflicts poison, so no figure in this record is touched and nothing was re-run.
+

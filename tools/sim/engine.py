@@ -643,7 +643,8 @@ class Fight:
 
     def end_turn(self, c):
         r = self.r
-        if c.poison and c.alive:
+        # the encounter is cleared the moment the last enemy falls: conditions then come off without being resolved
+        if c.poison and c.alive and self.foes_alive():
             self.wound(c, c.poison if r.poison == 'stack' else 1); c.poison = max(0, c.poison - 1) if r.poison == 'stack' else 0
         c.stagger = False; c.frost = False
 
