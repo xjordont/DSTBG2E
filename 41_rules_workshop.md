@@ -1283,3 +1283,5 @@ Two characters need the +1: without it they win about 90%, with it 60% to 70%.
 
 Correction after the automated review (2026-11-16): poison was still resolved at the end of a turn in which the character had killed the last enemy, where the encounter is cleared at that moment and conditions come off unresolved. Fixed and checked (102 checks pass). No enemy or boss of the core set modelled here inflicts poison, so no figure in this record is touched and nothing was re-run.
 
+A second: under the 2022 combined defence roll the luck token could re-roll only a block die; it may now re-roll a failed dodge die when the roll is one dodge short and the blow would tell. Checked (103 checks pass). Only the 2022 preset is touched. Its row, run again: 32% / 28% / 33% / 16%, against 30% / 37% / 29% / 14%; two characters moved by more than the sampling error, and the row remains what 13.2 calls it, not a valid test of the 2022 sets.
+

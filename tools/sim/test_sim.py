@@ -498,6 +498,19 @@ c.dmg = c.cap; c.poison = 1; foe.hp = 0; f.end_turn(c); cleared_alive = c.alive
 c = Char('Knight', R22); f = E.Fight([c], R22, random.Random(0), enemies=['Hollow Soldier']); c.dmg = c.cap; c.poison = 1; f.end_turn(c)
 check('poison does not kill a character whose turn cleared the encounter, and does while an enemy stands', cleared_alive and not c.alive)
 
+# ---------------------------------------------------------------- 2022: luck may re-roll one dodge die of the combined roll
+class Script:
+    """Dice by script: random() gives the listed values in turn (then 0.99); choice() gives the lowest face."""
+    def __init__(self, vals): self.vals = list(vals)
+    def random(self): return self.vals.pop(0) if self.vals else 0.99
+    def choice(self, seq): return min(seq)
+
+
+c = Char('Assassin', R22); f = E.Fight([c], R22, random.Random(0), enemies=['Sentinel'], policy=E.Policy(evade=0.0)); foe = f.foes[0]
+foe.node = E.IDX[(4, 4)]; c.node = E.IDX[(0, 0)]; c.heroic = False; nd = c.dodge
+f.rng = Script([0.5, 0.99] + [0.1] * (nd - 1) + [0.1]); hit = f.defend(foe, c, 7, False, nd)     # (the evade check,) one die short, then luck succeeds
+check('official 2022: one dodge die short, luck re-rolls that die and the attack is dodged', hit is False and not c.luck and c.dmg == 0, (hit, c.luck, c.dmg))
+
 # ---------------------------------------------------------------- equipment data
 check('every starting item is met by its class at base stats',
       all(Char(k, R17).cost_to_meet(ITEMS[n]['req'])[0] == 0 for k, v in CLASSES.items() for n in v['start']))

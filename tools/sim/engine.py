@@ -255,11 +255,18 @@ class Fight:
             gain = c.riposte_ev(src) + 1.0                       # the riposte, and the stagger on the attacker
             mixed = ((0, ps), (dmg, 1 - ps))
             opts.append((cost(mixed, sta1) - ps * gain + (1 - ps) * 1.0, 'parry', None))
-        _, how, arg = min(opts, key=lambda o: o[0])
+        _, how, arg = min(opts, key=lambda o: o[0]); pre = None
         if getattr(r, 'defence', 'choice') == 'combined':
             # the 2022 rule: dodge and block dice are rolled together at no cost; enough dodges and the attack misses,
             # otherwise the block or resist pips still count
-            if k + pen <= 0 or sum(rng.random() < 0.5 for _ in range(nd)) >= k + pen:
+            need = k + pen; got = sum(rng.random() < 0.5 for _ in range(nd)); pre = roll(dice, rng)
+            if 0 < need == got + 1 and nd > got and c.luck:
+                # one dodge short, with every die on the table: luck may re-roll one die of the defence roll, and a failed
+                # dodge die is the one to pick when the block dice would let a telling blow through
+                through = max(0, dmg - max(0, (sum(sorted(pre)[-2:]) if r.block == 'best2' else sum(pre)) - pen))
+                if self.lethal(c, through) or through >= pol.luck_at:
+                    c.luck = False; got += rng.random() < 0.5
+            if need <= 0 or got >= need:
                 self.dec['dodge'] = self.dec.get('dodge', 0) + 1
                 if c.heroic and c.name == 'Assassin' and src.hp > 0:                       # Backstab: a free attack after a dodge
                     o = c.best_option(src, DIST[c.node][src.node], 99, hand='R')
@@ -269,7 +276,7 @@ class Fight:
             how, arg = 'block', 0
         hit = True; taken = 0
         if how == 'block':
-            faces = roll(dice, rng); bonus = [0]
+            faces = pre if pre is not None else roll(dice, rng); bonus = [0]      # the combined roll has its block dice already
             total = lambda: (sum(sorted(faces)[-2:]) if r.block == 'best2' else sum(faces)) + bonus[0]
             v = total(); taken = max(0, dmg - max(0, v - pen))
             if c.heroic and c.name == 'Knight' and not magic and (self.lethal(c, taken) or taken >= 2):     # a block roll only
