@@ -1392,3 +1392,159 @@ A boss's heat-up point is multiplied with its health. One spark is added each ti
 
 To re-run: `python3 tools/sim/compare.py --only review --games 800 --probe 300` (add `--regrind 2` for parties).
 
+## 17. Treasure sorting, and spending at the bonfire (2026-11-16)
+
+The author signed off section 16 for now and asked for two things: a decision on how the treasure is sorted, drawing on the community, the house rules, the manuscript and the author's own spreadsheets; and a fresh look at whether souls should be spendable only at a rest, with the fourth stat tier at twelve souls in every kind of game.
+
+### 17.1 How the treasure is sorted
+
+**The author's spreadsheets.** Two of the workbooks carry what the question needs: a table of 328 treasure cards from the 2017 sets with every requirement and, for each of ten classes, the souls of levelling that class needs to equip the card; and a table of 534 cards that adds the 2022 sets, with each class's stat values at every tier and a formula for the lowest stat tier at which a class can use a card. The cached results of that formula did not survive the export, so they were recomputed from the stat table.
+
+*The lowest stat tier at which some class meets every requirement, by kind of card (534 cards, every set, ten classes):*
+
+| Kind of card | Cards | Base stats | Tier one | Tier two | Tier three |
+|---|---|---|---|---|---|
+| Starting | 58 | 100% | | | |
+| Common | 205 | 25% | 31% | 39% | 5% |
+| Class | 80 | 6% | 25% | 68% | 1% |
+| Transposed | 80 | | | 26% | 74% |
+| Legendary | 30 | | | 67% | 33% |
+| Boss | 81 | 10% | 10% | 44% | 36% |
+
+- The kind of a card says little about when a common or class card can be used. Two class cards in three need a stat at tier two; nearly half the common cards do.
+- Transposed and legendary cards are late cards without exception: none can be used below tier two, and three transposed cards in four need tier three.
+
+*The manuscript's line at 25, tested on the 285 common and class cards:*
+
+| | Cards | Usable by a suited class at tier one or below | Needing tier two or more |
+|---|---|---|---|
+| Every requirement under 25 | 178 | 79% | 21% |
+| Some requirement of 25 or more | 107 | 0% | 100% |
+
+| Line at | Share of cards in tier one | Tier one usable at stat tier one or below | Tier two needing stat tier two or more |
+|---|---|---|---|
+| 20 | 30% | 100% | 73% |
+| 22 | 45% | 93% | 87% |
+| 24 | 58% | 84% | 100% |
+| **25** | **62%** | **79%** | **100%** |
+| 26 | 69% | 71% | 100% |
+| 28 | 76% | 65% | 100% |
+| 30 | 81% | 60% | 100% |
+
+The line at 25 puts no early card in the late deck and four early cards in five in the early deck. 24 does a little better and 26 clearly worse; 25 is where the author drew it, and where the Extended Rules draw it. The line holds in every set: 53% to 68% of each set's common and class cards fall under it, the 2022 sets included.
+
+*What a party can reach* (the 2017 core set, its four classes in play; souls of levelling for the best-placed character):
+
+| Deck | Cards | Weapons / armour / shields / upgrades / spells | Median souls to equip | Equippable for six souls or fewer |
+|---|---|---|---|---|
+| By requirement, tier one | 44 | 15 / 10 / 4 / 7 / 8 | 4 | 77% |
+| By requirement, tier two (with transposed) | 49 | 21 / 8 / 9 / 8 / 3 | 12 | 18% |
+| By kind, deck one (common and class) | 73 | 26 / 14 / 9 / 15 / 9 | 6 | 59% |
+| By kind, deck two (transposed) | 20 | 10 / 4 / 4 / 0 / 2 | 20 | 0% |
+
+With every 2017 set in the box the deck by kind grows to 136 cards of which 46% are within six souls; tier one by requirement to 78 cards of which 64% are. A lone Knight's transposed deck is five cards, none of them an upgrade or a spell, at a median of 26 souls of levelling each. A character earns about 13 to 15 souls before the mini-boss.
+
+**The community** (`work/phase6/treasure_community.md`; about 220 BoardGameGeek threads read through a data endpoint; Reddit, Facebook and Discord could not be reached, so those are search summaries or absent):
+
+| Way of sorting | Sources read directly | Second-hand |
+|---|---|---|
+| Tiers by a stat requirement | 3 (Jolly Souls at a total of 48; a ruleset with three decks split at 24; early Hollowed Edition at 24) | 3 |
+| By kind of item (weapons, armour, magic) | 5 (Hollowed Edition 1.3 among them) | 2 |
+| Price bands in one deck | 1 | 2 |
+| Draw more, keep one | 4 | 2 |
+| By kind of card (common and class; transposed; legendary and boss) | 0 | 0 |
+
+The complaints found are useless draws, decks diluted by expansions, the labour of setting up, and stat requirements that "made no sense". Nobody was found asking for a transposed deck. The one objection to stat tiers is that they lock strong treasure away, which is their purpose.
+
+**The house rulesets and the official rules** (`work/phase6/bonfire_and_treasure_local.md`, adding to `treasure_split.md`): the Extended Rules split two decks at a requirement of 25, with five legendaries in the second, as the manuscript does. Bare Essentials has four decks by level and charges the level in souls. Hollowed Edition has three decks by kind of item at one soul a card, with transposed and legendary cards shuffled in after the first boss. Both official editions keep one deck and add the party's transposed cards and the legendaries after the mini-boss.
+
+**Decision proposed: the manuscript's two tiers, by requirement, at 25.** It is the one scheme that sorts cards by when they can be used; the author's own numbers show it does so almost cleanly; it has the most support among rulesets that sort at all; and the simulator found no balance reason against it (15.5). Sorting by kind is easier on the eye and matches the printed card backs, but it puts two class cards in three out of early reach in the opening shop and makes a second shop of cards that need twenty souls of levelling to use. One addition is proposed, from the official rules: **only the class and transposed cards of the classes in play are used.** The manuscript does not say so, and with the Characters set in the box it would otherwise fill tier two with fifty transposed cards made for absent classes.
+
+With two treasure cards an encounter and twelve cards face up in the shop, a party sees about twenty of the 44 tier-one cards of the core set before the mini-boss, and about a quarter of them with every set in the box, which is the share the author estimated in 2022.
+
+### 17.2 Spending souls: at any time, or only at a rest
+
+**The question.** Section 16 lets the party visit Andre and the Firekeeper between encounters without resting. The author asks whether that removes the gamble of pressing on: if souls can always be spent at once, nothing is carried and nothing is at risk. The author's proposal: stats are raised only at a rest, which costs a spark; cards may still be bought between encounters; sparks go back to six less the characters to pay for it; and the fourth stat tier costs twelve souls in every kind of game.
+
+**How the rule got to where it is.** The manuscript as first written allowed nothing to be spent without a rest ("Characters cannot spend their hard-earned souls without resting at the bonfire"). In the author's forum thread of October 2022 the first position was that a spark to shop was "unnecessary"; after playing the 2022 rules the author wrote that not shopping between encounters "cut down on game-time, increased difficulty, and improved the push-your-luck mechanic", and that "I found myself resting a bit more out of fear of losing all those souls on the 4th encounter." In round seven of this workshop the bonfire was opened again, on the finding of section 12 that the manuscript's rule made the game unwinnable. **That finding does not stand:** section 12's win rates were withdrawn when the simulator was calibrated (13.1), and the question was never run again on the calibrated model until now.
+
+**The sources** (`work/phase6/bonfire_gating.md`, `bonfire_and_treasure_local.md`):
+
+| | Stats without a rest | Cards without a rest |
+|---|---|---|
+| Official 2017 | yes | yes |
+| Official 2022 | no: "Characters can only upgrade when they rest at the bonfire", and every return costs a spark | no |
+| The manuscript as first written | no | no |
+| House rulesets | 4 require a rest for stats (2 of them at the cost of a spark) | 3 require a rest for cards; 4 allow the shop only straight after a win |
+| House rulesets with both free | 6 | |
+| House rulesets that say nothing | 20 | |
+
+- The publisher's own account of the 2017 game is that the best play was to "farm souls and treasure by using each spark available"; the 2022 rule followed.
+- Design writing on press-your-luck games agrees on one condition: the choice to stop must cost something, or it is no choice. No source was found that discusses banking that costs nothing; the application to this rule is an inference.
+- On the video game, one essayist describes being "always careful to return to safety and spend my souls" once he has enough: the decision the author wants at the table.
+- No ruleset found splits the two as the author proposes (stats at a rest, cards freely), so that version rests on the tests below.
+
+**The tests.** Two new measures: the unspent souls a character carries into a fight, and the souls a character loses for good in a game. The simulated players may also go back to rest once they hold a set number of souls each. 500 games a cell (±4) unless stated.
+
+*On the scaling table of section 16 (damage +1 / +2 / +2, boss health ×1.5 / 2 / 2.5):*
+
+| | Games won | Rests | Souls carried into a fight | Souls lost a game |
+|---|---|---|---|---|
+| Section 16: spend freely; sparks 4 / 3 / 2 / 1 | 62% / 61% / 61% / 66% | 3.5 / 2.7 / 2.1 / 1.1 | 2.7 / 2.3 / 2.2 / 1.8 | 3.5 / 2.5 / 1.5 / 0.5 |
+| Stats at a rest, shop free; sparks 4 / 3 / 2 / 1 | 48% / 36% / 26% / 26% | 4.4 / 3.3 / 2.4 / 1.4 | 5.1 / 3.9 / 3.9 / 3.8 | 5.3 / 7.0 / 2.2 / 0.8 |
+| Stats at a rest, shop free; sparks 5 / 4 / 3 / 2 | 58% / 42% / 40% / 42% | 5.1 / 4.4 / 3.2 / 2.1 | 4.5 / 4.1 / 3.7 / 3.7 | 4.3 / 7.0 / 5.7 / 5.0 |
+| Stats and shop at a rest; sparks 5 / 4 / 3 / 2 | 53% / 36% / 29% / 32% | 4.8 / 4.2 / 3.2 / 2.1 | 5.8 / 4.1 / 4.1 / 3.8 | 5.7 / 7.9 / 4.3 / 6.6 |
+
+*With the author's own damage table (+0 / +0 / +1 / +2), sparks 5 / 4 / 3 / 2:*
+
+| | Games won |
+|---|---|
+| Stats at a rest, shop free; bosses as printed | 58% / 85% / 75% / 53% |
+| Stats and shop at a rest; bosses as printed | 53% / 83% / 73% / 50% |
+| Stats at a rest, shop free; boss health ×1.5 / 2 / 2.5 | 58% / 81% / 69% / 42% |
+
+*Tuned: damage +1 / +2 / +2, bosses at their printed health, sparks 5 / 4 / 3 / 2 (600 games, ±4):*
+
+| | Games won, two / three / four |
+|---|---|
+| Stats at a rest, shop free | 50% / 50% / 56% |
+| Stats and shop at a rest | 42% / 39% / 49% |
+
+**What the tests say.**
+
+- **The gamble is real.** Where stats need a rest, characters carry about twice the souls into each fight (about four against about two) and lose more of them over a game. Every spark is used, where a party that spends freely leaves one unused. The simulated players do best when they turn back to rest at six to ten unspent souls each: a threshold a table can argue about.
+- **It costs about twenty points of win rate on the table of section 16,** so the table has to give some back. Returning the sparks to six less the characters gives back about a third. Taking the boss's extra health away gives back the rest, and shortens the table by a column.
+- **Closing the shop as well costs a further seven to eleven points and adds nothing to what is at stake.** The souls carried are the same either way (4.0 against 4.2), because most cards need a stat raised before they can be used, so buying one is a poor way to hide souls. The author's instinct to leave the shop open is sound.
+- **The fourth tier at twelve souls changes nothing measurable** in a standard game (for one, three and four characters 62% / 60% / 66% with it against 62% / 61% / 66% without; the two-character figure of 53% in that run is the pick of a second-best campaign policy, see 15.8). It can be in every kind of game at no cost to balance.
+
+**Proposed.** Stats are raised only at a rest. Andre's shop stays open between encounters. Sparks are six less the characters, one more for each boss. The fourth stat tier costs twelve souls in the standard game and in campaigns. The scaling table loses its boss-health column:
+
+| Characters | Sparks | Enemy health | Damage on every enemy and boss attack |
+|---|---|---|---|
+| 1 | 5 | as printed | as printed |
+| 2 | 4 | +1 | +1 |
+| 3 | 3 | +2 | +2 |
+| 4 | 2 | +3 | +2 |
+
+Confirmed at 800 games a cell (±3), the campaign policy picked on 300 trial games, against section 16 measured the same way:
+
+| | 1 | 2 | 3 | 4 |
+|---|---|---|---|---|
+| **Proposed.** Games won | 56% | 50% | 52% | 56% |
+| Rests | 5.1 | 4.4 | 3.3 | 2.1 |
+| Fights | 10.6 | 9.9 | 9.3 | 13.1 |
+| Table time (activations) | 293 | 359 | 377 | 463 |
+| Level 3 rounds | 7.5 | 5.2 | 4.2 | 3.1 |
+| Souls carried into a fight | 4.5 | 2.8 | 3.4 | 3.9 |
+| Souls lost a game | 4.5 | 3.3 | 3.1 | 3.3 |
+| Lost at: encounters / mini-boss / main boss | 8 / 18 / 17% | 18 / 14 / 18% | 21 / 14 / 13% | 33 / 10 / 2% |
+| **Section 16.** Games won | 60% | 59% | 59% | 64% |
+| Rests | 3.5 | 2.8 | 2.1 | 1.0 |
+| Table time | 307 | 385 | 435 | 515 |
+| Souls carried into a fight | 2.7 | 2.3 | 2.1 | 1.8 |
+| Souls lost a game | 3.5 | 2.6 | 1.4 | 0.5 |
+
+The proposal is about seven points harder than section 16 at every size (50% to 56% against 59% to 64%) and a little shorter. It sits at the bottom of the band the author called right. If that is too hard, a lone character's souls or one point of damage at three characters will bring it back; neither was tuned here.
+
+To re-run: `python3 tools/sim/compare.py --only review_gate --games 800 --probe 300 --bank 6` (and `--bank 10`; add `--regrind 2` for four characters).
+

@@ -17,6 +17,7 @@ class Table(Policy):
     worn_at = 5          # damage on any one character that justifies a rest between encounters
     grind = False        # fight a cleared encounter again where the rules let it be rushed past instead
     regrind = 0          # the highest level of reset encounter fought again while a repeat still pays (0 = always rush)
+    bank = None          # rest to spend once the characters hold this many unspent souls each (where spending needs a rest)
 
 
 def danger(names): return sum(ENEMIES[n]['hp'] * max(s.get('dmg', 0) for s in ENEMIES[n]['steps']) for n in names)
@@ -38,7 +39,7 @@ def play(n, rules, seed, table=None, classes=None):
     fv0 = getattr(r, 'free_visit', False)
     if fv0: eco.spend(levels=fv0 != 'shop')
     out = dict(win=False, rests=0, fights=0, char_turns=0, enemy_acts=0, rounds=0, lost_at=None, deaths=0,
-               by_level={}, sparks_left=0, souls=0, repeats=0, dec={})
+               by_level={}, sparks_left=0, souls=0, repeats=0, dec={}, carried=0.0, souls_lost=0.0)
     decks = {lv: rng.sample(ENCOUNTERS[str(lv)], len(ENCOUNTERS[str(lv)])) for lv in (1, 2, 3)}
     dropped_pool = None                                   # official: the cache lies on the tile where the party fell
 
@@ -91,6 +92,9 @@ def play(n, rules, seed, table=None, classes=None):
                 if toll and not any(c.hollow or c.lost for c in party) and max(c.dmg for c in party) - toll < 3: worn = False
                 if worn and (r.death != 'party' or at_boss) and (at_boss or sparks > t.reserve + 1): want = True
                 if weak and can_grow: want = True
+                # where souls can only be spent at a rest, a party that holds enough of them goes back to bank them
+                if t.bank is not None and getattr(r, 'free_visit', False) is not True and not r.pool \
+                        and sum(c.souls for c in party) >= t.bank * n: want = True
             if want and not fresh:
                 rest(); done = [False] * 4; fresh = True
                 if r.skip_cost is None or not r.fog_gate: pos = 0
@@ -113,6 +117,7 @@ def play(n, rules, seed, table=None, classes=None):
                 c.sta = min(walk, c.cap - c.dmg - 1) if walk else c.sta
             walk = 0
             here = [c for c in party if not c.lost]
+            out['carried'] += (eco.pool if r.pool else sum(c.souls for c in party)) / n          # unspent souls taken into the fight
             if at_boss:
                 boss_seen = True; f = Fight(here, r, rng, boss=boss, policy=t, n=n); lv = 'mini' if stage == 0 else 'main'
             else:
@@ -165,6 +170,7 @@ def play(n, rules, seed, table=None, classes=None):
                     dropped_pool = ((stage, pos), eco.pool); eco.pool = 0
                 else:
                     for c in party:
+                        if c.dropped: out['souls_lost'] += c.dropped[1] / n                # a second defeat: the souls left behind are gone
                         c.dropped = ((stage, pos), c.souls); c.souls = 0
                 if not rest():
                     out['lost_at'] = lv; out['sparks_left'] = 0; return out

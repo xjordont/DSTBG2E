@@ -521,6 +521,17 @@ eco.inv.remove(sword); eco.equip(w, sword, w.tier, 'R'); mods = [o['mod'] for o 
 check('official: an upgraded weapon keeps its upgrade when another character takes it from the shared inventory',
       in_inv and mods == [m + 1 for m in mods0] and not eco.carried, (in_inv, mods0, mods))
 
+# ---------------------------------------------------------------- stats only at a rest (section 17.2)
+from compare import REVIEW_GATE
+RG = RU.make(REVIEW_GATE)
+check('17.2: stats are raised only at a rest, the shop is open between encounters, sparks six less the characters, tier four at twelve souls',
+      RG.free_visit == 'shop' and [RG.sparks(n) for n in (1, 2, 3, 4)] == [5, 4, 3, 2] and RG.tier_cost == (2, 4, 8, 12) and RG.tier4 == 5)
+c = Char('Knight', RG); eco = Economy([c], RG, random.Random(1)); c.souls = 20; t0 = list(c.tier); eco.spend(levels=False)
+check('17.2: a visit to Andre between encounters raises no stat', c.tier == t0, (t0, c.tier))
+g0 = [play(2, RG, s, table=Table(skill=1.0)) for s in range(30)]; g1 = [play(2, RG, s, table=Table(skill=1.0, bank=6)) for s in range(30)]
+check('17.2: a party that goes back to bank its souls rests more often', sum(x['rests'] for x in g1) > sum(x['rests'] for x in g0),
+      (sum(x['rests'] for x in g0), sum(x['rests'] for x in g1)))
+
 # ---------------------------------------------------------------- equipment data
 check('every starting item is met by its class at base stats',
       all(Char(k, R17).cost_to_meet(ITEMS[n]['req'])[0] == 0 for k, v in CLASSES.items() for n in v['start']))

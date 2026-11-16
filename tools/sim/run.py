@@ -34,6 +34,8 @@ def summary(res):
     N = len(res); s = {}
     s['win'] = sum(x['win'] for x in res) / N; s['ci'] = ci(s['win'], N)
     for k in ('rests', 'fights', 'rounds', 'char_turns', 'enemy_acts', 'deaths', 'repeats'): s[k] = sum(x[k] for x in res) / N
+    s['carried'] = sum(x.get('carried', 0) for x in res) / max(1, sum(x['fights'] for x in res))        # unspent souls a character takes into a fight
+    s['souls_lost'] = sum(x.get('souls_lost', 0) for x in res) / N                                    # souls a character loses for good in a game
     dec = {}
     for x in res:
         for k, v in x['dec'].items(): dec[k] = dec.get(k, 0) + v

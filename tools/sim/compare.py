@@ -37,6 +37,10 @@ SPARKS = [0, 4, 3, 2, 1]
 AUTHOR = dict(LOOP, hp_add=[0, 0, 1, 2, 3], atk=[0, 0, 0, 1, 2], boss_atk=[0, 0, 0, 1, 2], sparks=SPARKS)   # the author's table as proposed
 REVIEW = dict(LOOP, hp_add=[0, 0, 1, 2, 3], atk=[0, 0, 1, 2, 2], boss_atk=[0, 0, 1, 2, 2], boss_mul=[1, 1, 1.5, 2, 2.5], sparks=SPARKS,
               tier4=None, solo_souls=6)        # the standard game has three stat tiers; the fourth is for campaigns
+# Section 17.2: souls are spent on stats only at a rest; the shop stays open between encounters. Sparks go back to six less
+# the characters, bosses keep their printed health, and the fourth stat tier costs twelve souls in every kind of game.
+REVIEW_GATE = dict(LOOP, hp_add=[0, 0, 1, 2, 3], atk=[0, 0, 1, 2, 2], boss_atk=[0, 0, 1, 2, 2], sparks=[0, 5, 4, 3, 2], solo_souls=6,
+                   free_visit='shop', tier4=5, tier_cost=(2, 4, 8, 12))
 REVIEW_TWICE = dict(LOOP, hp_add=[0, 0, 1, 2, 3], atk=[0, 0, 1, 1, 1], boss_atk=[0, 0, 1, 1, 1], reps=[1, 1, 1, 2, 2], sparks=SPARKS)
 REVIEW_HEALTH = dict(LOOP, hp_add=[0, 0, 3, 6, 9], boss_mul=[1, 1, 2, 3, 4])            # 15.6: health only (set aside: it lengthens the game)
 REVIEW_D1 = dict(LOOP, atk=[0, 0, 1, 1, 1], boss_atk=[0, 0, 1, 1, 1], hp_add=[0, 0, 1, 4, 6], boss_mul=[1, 1, 1.5, 2, 2.5])   # 15.6: the shorter alternative
@@ -47,6 +51,7 @@ SPECS = {
     'health': ('Health rule only: bosses as printed, souls spent at a rest', dict(HEALTH, atk=[0] * 5)),
     'final': ('The final ruleset (section 14)', FINAL),
     'review': ("The author's review so far (section 15); add --regrind 2 for players who fight reset encounters again", REVIEW),
+    'review_gate': ('17.2: stats are raised only at a rest; the shop is open between encounters (use --bank 6 or 10)', REVIEW_GATE),
     'author': ("The author's own table (15.7): health +1 a character, damage +0/+0/+1/+2, sparks 4/3/2/1", AUTHOR),
     'review_twice': ('15.7, the other candidate: +1 damage, enemies attack twice against three or more', REVIEW_TWICE),
     'review_health': ('15.6, set aside: health only, +3 an enemy for each extra character', REVIEW_HEALTH),
@@ -57,12 +62,12 @@ SPECS = {
 }
 
 
-def show(key, skill, games, probe, regrind=0):
+def show(key, skill, games, probe, regrind=0, bank=None):
     name, spec = SPECS[key]
     print('\n' + name)
     print('  chars  sparks  games won        rests  fights  table time   L3 rounds  L3 someone dies   lost at: encounter / mini-boss / main boss')
     for n in (1, 2, 3, 4):
-        s, pol = best(spec, n, skill, games=games, probe=probe, extra=dict(regrind=regrind))
+        s, pol = best(spec, n, skill, games=games, probe=probe, extra=dict(regrind=regrind, bank=bank))
         lost = s['lost']; enc = sum(v for k, v in lost.items() if k in ('1', '2', '3'))
         print('    %d      %d     %3.0f%% (+/-%2.0f)     %4.1f   %5.1f    %6.0f       %4.1f         %3.0f%%            %3.0f%% / %3.0f%% / %3.0f%%' % (
             n, 6 - n, 100 * s['win'], 100 * s['ci'], s['rests'], s['fights'], s['time'], s.get(('rounds', 3), 0),
@@ -73,5 +78,6 @@ if __name__ == '__main__':
     ap = argparse.ArgumentParser(); ap.add_argument('--games', type=int, default=1500); ap.add_argument('--probe', type=int, default=300)
     ap.add_argument('--skill', type=float, default=1.0); ap.add_argument('--only', nargs='*')
     ap.add_argument('--regrind', type=int, default=0, help='highest level of reset encounter the players fight again (0: always rush)')
+    ap.add_argument('--bank', type=int, default=None, help='unspent souls a character at which the party rests to spend them')
     a = ap.parse_args()
-    for key in (a.only or SPECS): show(key, a.skill, a.games, a.probe, a.regrind)
+    for key in (a.only or SPECS): show(key, a.skill, a.games, a.probe, a.regrind, a.bank)
