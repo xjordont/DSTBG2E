@@ -503,28 +503,33 @@ class Fight:
         return 3.0 * per * phases + (6.0 if last else 0.0)
 
     def strike(self, c, f, o):
-        """Character c makes attack option o (already paid for) against foe f; a node attack hits every foe there."""
+        """Character c makes attack option o (already paid for) against foe f; a node attack hits every foe there. An
+        attack that repeats is resolved once for each repetition, and when its target has fallen the next repetition
+        may take another enemy within the attack's reach."""
         rng = self.rng; r = self.r; grand = 0
-        targets = [x for x in self.foes_alive() if x.node == f.node] if o.get('node') else [f]
-        dice = o['dice'] + ('b' if (f.boss and f.weak and o['range'] <= 1) else '')
-        rolls = []
         for _ in range(o['repeat']):
+            if f.hp <= 0:
+                near = [g for g in self.foes_alive() if DIST[c.node][g.node] <= o['range'] and not (o.get('shaft') and g.node == c.node)]
+                if not near: break
+                f = min(near, key=lambda g: (g.hp, -g.threat))       # the one most likely to fall to what is left
+            targets = [x for x in self.foes_alive() if x.node == f.node] if o.get('node') else [f]
+            dice = o['dice'] + ('b' if (f.boss and f.weak and o['range'] <= 1) else '')
             faces = roll(dice, rng)
             if o.get('reroll') and faces:                            # two-handed grip: one die may be rolled again
                 i = min(range(len(faces)), key=lambda j: faces[j] - sum(DIE[dice[j]]) / 6)
                 if faces[i] < sum(DIE[dice[i]]) / 6: faces[i] = rng.choice(DIE[dice[i]])
-            rolls.append(sum(faces) + o['mod'] - (1 if (c.stagger and r.stagger == 'author') else 0))
-        for t in targets:
-            guard = 0 if o.get('ignore') else t.resist if o['magic'] else t.armor
-            if t.stagger and r.stagger == 'author': guard = max(0, guard - 1)      # a staggered model blocks and resists one less
-            total = sum(max(0, v - guard) for v in rolls)
-            if total > 0:
-                if t.bleed and r.bleed == 'official': total += 2; t.bleed = False
-                t.hp -= total; self.dealt[c] = self.dealt.get(c, 0) + total; grand += total
-                # the manuscript: against a boss the token goes to whoever damaged it since its last turn
-                if r.aggro == 'last' or (r.aggro == 'most' and self.is_boss): self.aggro = c
-                self.check_heat(t)
-            self.say('   ', c.name, 'hits', t.name, 'with', o['name'], 'for', total, '(hp', max(0, t.hp), ')')
+            v = sum(faces) + o['mod'] - (1 if (c.stagger and r.stagger == 'author') else 0)
+            for t in targets:
+                guard = 0 if o.get('ignore') else t.resist if o['magic'] else t.armor
+                if t.stagger and r.stagger == 'author': guard = max(0, guard - 1)      # a staggered model blocks and resists one less
+                total = max(0, v - guard)
+                if total > 0:
+                    if t.bleed and r.bleed == 'official': total += 2; t.bleed = False
+                    t.hp -= total; self.dealt[c] = self.dealt.get(c, 0) + total; grand += total
+                    # the manuscript: against a boss the token goes to whoever damaged it since its last turn
+                    if r.aggro == 'last' or (r.aggro == 'most' and self.is_boss): self.aggro = c
+                    self.check_heat(t)
+                self.say('   ', c.name, 'hits', t.name, 'with', o['name'], 'for', total, '(hp', max(0, t.hp), ')')
         return grand
 
     def reposition(self, c, budget, walk_free, count=True, frost=True):

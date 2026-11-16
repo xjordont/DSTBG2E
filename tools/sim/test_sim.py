@@ -589,6 +589,18 @@ check('a resist roll takes the printed resist modifier', 0.6 < r1 - r0 <= 1.0, (
 d0, d1 = blocked(plain, dodge_first=True), blocked(iron, dodge_first=True)
 check('the armour roll after a failed dodge takes the armour\'s own modifier', 0.6 < d1 - d0 <= 1.0, (d0, d1))
 
+def twin_kills(far, trials=400):
+    """How often one light attack of the Gotthard Twinswords (two repetitions) fells two Hollow Soldiers."""
+    n = 0
+    for s in range(trials):
+        c = Char('Knight', RG); c.tier = [3, 3, 3, 3]; c.R = ITEMS['Gotthard Twinswords']; c.L = None; c.refresh()
+        f = E.Fight([c], RG, random.Random(s), enemies=['Hollow Soldier', 'Hollow Soldier'], policy=E.Policy(evade=0.0))
+        a, b = f.foes; c.node = a.node = E.IDX[(0, 0)]; b.node = E.IDX[(4, 4)] if far else a.node
+        f.strike(c, a, c.options['R'][0]); n += a.hp <= 0 and b.hp <= 0
+    return n / trials
+tk, tf = twin_kills(False), twin_kills(True)
+check('an attack that repeats takes a new target within reach when the first has fallen, and none out of reach', tk > 0.6 and tf == 0, (tk, tf))
+
 print()
 print('%d checks failed' % len(FAILS) if FAILS else 'all checks passed')
 sys.exit(1 if FAILS else 0)
