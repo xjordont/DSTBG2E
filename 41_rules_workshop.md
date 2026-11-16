@@ -1287,3 +1287,19 @@ A second: under the 2022 combined defence roll the luck token could re-roll only
 
 A third: under the shared inventory of the official rules an upgrade fitted to a weapon was lost to anyone else who took that weapon up. The upgrade now stays with the weapon. Checked (104 checks pass). Only the official presets share an inventory. The official anchor, run again: 41% / 55% / 68% / 54%, against 41% / 55% / 67% / 52%; it did not move.
 
+### 15.8 A lone character's souls, and the fourth stat tier
+
+Both on the working table of 15.7 (health +1 a character; damage +1 / +2 / +2; boss health ×1.5 / 2 / 2.5; sparks 4 / 3 / 2 / 1). 800 games a cell (±3).
+
+**Souls a lone character starts with:**
+
+| Souls | 0 | 3 | 6 | 9 | 12 |
+|---|---|---|---|---|---|
+| Games won | 46% | 55% | 59% | 68% | 74% |
+
+Six, the manuscript's figure, puts a lone character level with the parties (58% to 63%). Each three souls is worth about seven points.
+
+**The fourth stat tier** (eight souls, in the manuscript; the official game has three tiers outside its campaign rules). Without it: 60% / 59% / 59% / 64%. With it: 60% / 58% / 59% / 63%. It makes no difference that can be measured in a standard game: few characters have the souls to reach it before the main boss.
+
+**A caution on every figure in this section.** The simulated players pick their way of running the campaign (when to rest, how many sparks to hold back) from six candidates on a small trial of 150 games, and the six differ by up to twenty points for a small party. Where two of them are close on the trial, a change of a few games can flip the pick, and the measured rate with it: the same rules for two characters measured 58% in 15.7 and 52% in a later run that happened to pick the second-best candidate. Tried on 300 games each, the six give 54 / 58 / 37 / 52 / 27 / 46% for two characters, and the best of them holds at 58% over 800. So a figure here can sit a few points below the true best play, beyond its sampling error; it does not sit above it.
+

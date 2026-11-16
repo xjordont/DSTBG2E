@@ -39,6 +39,7 @@ OFFICIAL_2017 = Rules(
     hp=lambda h, n: h, atk=lambda n: 0, move2=lambda n: False, reps=lambda n: 1, push_once=False,
     stagger='official', frost='official', poison='single', bleed='official', ember=False, estus='full',
     luck='one',                             # the luck token re-rolls one die of a roll
+    scaling=False,                          # no bonus for a stat far above a weapon's requirement
     # economy: one shared soul cache; two souls a character for an encounter; a boss pays a soul a character for
     # each spark left; a treasure card costs one soul, drawn blind; a lone character starts with sixteen souls
     pool=True, souls=lambda level, n, first: 2 * n, boss_souls=lambda n, sparks: n * sparks, solo_souls=16,
