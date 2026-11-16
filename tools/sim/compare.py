@@ -35,7 +35,8 @@ LOOP = dict(FINAL, death='lost', heal_after=0, choose_of_two=False, soul_tab=[[3
 # fights, and sparks of five less the number of characters.
 SPARKS = [0, 4, 3, 2, 1]
 AUTHOR = dict(LOOP, hp_add=[0, 0, 1, 2, 3], atk=[0, 0, 0, 1, 2], boss_atk=[0, 0, 0, 1, 2], sparks=SPARKS)   # the author's table as proposed
-REVIEW = dict(LOOP, hp_add=[0, 0, 1, 2, 3], atk=[0, 0, 1, 2, 2], boss_atk=[0, 0, 1, 2, 2], boss_mul=[1, 1, 1.5, 2, 2.5], sparks=SPARKS)
+REVIEW = dict(LOOP, hp_add=[0, 0, 1, 2, 3], atk=[0, 0, 1, 2, 2], boss_atk=[0, 0, 1, 2, 2], boss_mul=[1, 1, 1.5, 2, 2.5], sparks=SPARKS,
+              tier4=None, solo_souls=6)        # the standard game has three stat tiers; the fourth is for campaigns
 REVIEW_TWICE = dict(LOOP, hp_add=[0, 0, 1, 2, 3], atk=[0, 0, 1, 1, 1], boss_atk=[0, 0, 1, 1, 1], reps=[1, 1, 1, 2, 2], sparks=SPARKS)
 REVIEW_HEALTH = dict(LOOP, hp_add=[0, 0, 3, 6, 9], boss_mul=[1, 1, 2, 3, 4])            # 15.6: health only (set aside: it lengthens the game)
 REVIEW_D1 = dict(LOOP, atk=[0, 0, 1, 1, 1], boss_atk=[0, 0, 1, 1, 1], hp_add=[0, 0, 1, 4, 6], boss_mul=[1, 1, 1.5, 2, 2.5])   # 15.6: the shorter alternative

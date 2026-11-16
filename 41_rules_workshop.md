@@ -1303,3 +1303,92 @@ Six, the manuscript's figure, puts a lone character level with the parties (58% 
 
 **A caution on every figure in this section.** The simulated players pick their way of running the campaign (when to rest, how many sparks to hold back) from six candidates on a small trial of 150 games, and the six differ by up to twenty points for a small party. Where two of them are close on the trial, a change of a few games can flip the pick, and the measured rate with it: the same rules for two characters measured 58% in 15.7 and 52% in a later run that happened to pick the second-best candidate. Tried on 300 games each, the six give 54 / 58 / 37 / 52 / 27 / 46% for two characters, and the best of them holds at 58% over 800. So a figure here can sit a few points below the true best play, beyond its sampling error; it does not sit above it.
 
+### 15.9 The last answers, and two questions on the table
+
+**Decided by the author (2026-11-16):** a lone character starts with six souls; the fourth stat tier belongs to campaign play only; level-up costs stay at 2 / 4 / 8; the level of difficulty is right as it stands; the scaling table of 15.7 stands for now and may be looked at again.
+
+The author asked whether four characters should add +3 or +4 to enemy health, and whether the damage bonus applies to bosses. Tested on the working table with three stat tiers; 800 games a cell (±3), the players' way of running the campaign picked on 300 trial games.
+
+| | Games won | Level 3 rounds | Lost at: encounters / mini-boss / main boss |
+|---|---|---|---|
+| Four characters, +3 health (the table) | 62% rushing, 64% fighting again | 3.3 | 13 / 20 / 3% |
+| Four characters, +4 health | 50% rushing, 53% fighting again | 4.1 | 26 / 18 / 3% |
+
+| Two / three / four characters | Games won | Lost at the mini-boss | Lost at the main boss |
+|---|---|---|---|
+| Bosses take the damage bonus (the table) | 59% / 59% / 64% | 17 / 18 / 20% | 12 / 9 / 3% |
+| The bonus on ordinary enemies only | 78% / 81% / 83% | 9 / 4 / 3% | 3 / 1 / 0% |
+
+- **+3 at four.** One point of enemy health is worth about eleven points of win rate to four characters. +3 leaves them a little above the other sizes (64% against 59% to 60%); +4 a little below (50% to 53%) and nearly doubles the games lost in ordinary encounters. +3 also keeps the rule to one line: +1 for each character beyond the first.
+- **Yes, bosses take the bonus,** and they need it. Without it parties win about 80% and almost never lose to a boss.
+
+## 16. The ruleset as decided (2026-11-16)
+
+This gathers every decision of sections 9.6, 14 and 15 into one place. It replaces the table of 14.6. Where the author's manuscript chapters say otherwise, they are to be brought into line in the rewrite.
+
+**The party and its resources**
+
+| Characters | Sparks | Enemy health | Damage on every enemy and boss attack | Boss health |
+|---|---|---|---|---|
+| 1 | 4 | as printed | as printed | as printed |
+| 2 | 3 | +1 | +1 | ×1.5 |
+| 3 | 2 | +2 | +2 | ×2 |
+| 4 | 1 | +3 | +2 | ×2.5 |
+
+A boss's heat-up point is multiplied with its health. One spark is added each time a boss is defeated. A lone character starts with six souls. Enemy movement is not scaled, and no attack is repeated.
+
+**The round**
+
+- An ordinary encounter: every enemy acts, in descending threat; then every character acts, in whatever order the party chooses.
+- A boss encounter: the boss acts before each character's turn, as in the official rules.
+- The aggro token passes to the last character to deal damage.
+
+**A character's turn**
+
+- Recover one stamina. Walk one node freely; run further for stamina.
+- One major action: attack (once with each hand), Rest, drink the estus flask, or use an ember.
+- The estus flask is an action and clears damage only.
+- At most one spell attack in a turn. A spell is never scaled, never two-handed, and never used for a riposte.
+- A weapon is scaled (+1) when the stat of its highest requirement exceeds that requirement by ten; where requirements tie, any of the tied stats will do.
+
+**Defence**
+
+- Block or resist: roll every die, keep the two highest. The Knight's heroic die is added to those two.
+- Dodge: one stamina. On a failure the armour's own dice are still rolled. One extra die may be bought for two more stamina. A successful dodge moves the character one node, and a character who dodges is not pushed.
+- Parry: with anything in the left hand, against an attacker on the same node, never against a boss. Success staggers the attacker and allows a riposte with the right-hand weapon. Failure is the full damage and stagger.
+- A stagger token placed during a model's own turn stays until the end of its next turn.
+- Luck re-rolls any or all dice of one roll, chosen at once.
+- A character dies when a cube does not fit on the bar; a bar that is exactly full is alive.
+
+**Death and recovery**
+
+- A character who dies returns hollow if the encounter is won.
+- A hollow character who dies is lost until the party next rests, and the others fight on. The encounter is failed only when every character is dead.
+- After a clear every character removes all stamina. No damage is healed.
+- Poison: one damage for each token at the end of the turn, then one token is removed. It is not resolved once the last enemy has fallen.
+
+**The road**
+
+- One encounter card is dealt face down to each tile, with two treasure cards on it.
+- A first clear pays each character 3 / 4 / 5 souls for Levels 1 / 2 / 3 and gives the party the two treasure cards. A boss pays six souls.
+- A rest costs a spark, restores every character, and resets every cleared encounter.
+- A reset encounter may be fought again for 1 / 2 / 3 souls each and no treasure, as often as the party likes, or rushed past for one damage to each character. An encounter the party has failed cannot be rushed.
+- Once the party has reached a boss, a rest returns it straight to the fog gate.
+- A character who dies keeps their souls if the encounter is won. If it is lost, everyone's souls lie on that tile until it is cleared, and a second defeat there first loses them.
+
+**The bonfire**
+
+- Blacksmith Andre and the Firekeeper may be visited between encounters without resting.
+- Souls are each character's own.
+- The shop is stocked face up in two tiers, at two and four souls; any card that is not starting equipment sells for one. The treasure decks are sorted by requirement, tier two at 25 and above (the author has left open whether to sort by kind of card instead; see 15.5).
+- Raising a stat costs 2 / 4 / 8 souls for tiers one to three. The fourth tier is for campaign play.
+- An upgrade is fitted at the bonfire. Titanite is sold with its weapon and adds nothing to the price; any other upgrade returns to the inventory.
+
+**Not reopened:** heroic actions, bleed, frostbite (no stamina is recovered), pushes, traps, embers, the two-handed re-roll, and the rest of 9.6.
+
+**Measured** (800 games a cell, ±3; a lone character rushing, parties fighting reset Level 1 and 2 encounters again): 60% / 59% / 59% / 64% of games won with one to four characters; 304 / 385 / 435 / 515 activations; Level 3 encounters of 8.1 / 4.5 / 3.6 / 3.2 rounds. The official 2017 game under the same players: 41% / 55% / 68% / 54%, in 672 / 530 / 419 / 370 activations.
+
+**Left open by the author:** how the treasure is sorted (by requirement, as above, or by kind); the scaling table, which may be revisited.
+
+To re-run: `python3 tools/sim/compare.py --only review --games 800 --probe 300` (add `--regrind 2` for parties).
+
