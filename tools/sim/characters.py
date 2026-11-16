@@ -75,6 +75,7 @@ class Char:
         p['blk'] = ''.join(x.get('block', '') for x in worn); p['res'] = ''.join(x.get('resist', '') for x in worn)
         p['arm_blk'] = A.get('block', '') if A else ''; p['arm_res'] = A.get('resist', '') if A else ''
         p['blk_pen'] = -sum(x.get('block_mod', 0) for x in worn); p['res_pen'] = -sum(x.get('resist_mod', 0) for x in worn)
+        p['arm_blk_pen'] = -A.get('block_mod', 0) if A else 0; p['arm_res_pen'] = -A.get('resist_mod', 0) if A else 0   # the armour's own, for a failed dodge
         p['dodge'] = sum(x.get('dodge', 0) for x in worn)
         p['two'] = bool(R and R['hands'] == 2)
         opts = {'R': [], 'L': []}
@@ -101,7 +102,7 @@ class Char:
 
     def refresh(self):
         p = self.profile()
-        for k in ('blk', 'res', 'arm_blk', 'arm_res', 'blk_pen', 'res_pen', 'dodge', 'options', 'mean_blk', 'mean_res', 'can_parry'):
+        for k in ('blk', 'res', 'arm_blk', 'arm_res', 'blk_pen', 'res_pen', 'arm_blk_pen', 'arm_res_pen', 'dodge', 'options', 'mean_blk', 'mean_res', 'can_parry'):
             setattr(self, k, p[k])
         self.two_handed = p['two']; self._power = power(p, self.r)
         best = 0.0
@@ -154,7 +155,7 @@ def power(p, r):
     taken = 0.0
     for dmg, magic, k in REF_HITS:
         dice = p['res'] if magic else p['blk']; pen = p['res_pen'] if magic else p['blk_pen']
-        blk = sum(d * q for d, q in hit_stats(dice, r.block, dmg, max(0, pen)))
+        blk = sum(d * q for d, q in hit_stats(dice, r.block, dmg, pen))        # a printed bonus counts as a printed penalty does
         if p['dodge'] > 0:
             ps = p_dodge(p['dodge'], k)
             adice = p['arm_res'] if magic else p['arm_blk']

@@ -570,6 +570,25 @@ check('with the core set alone no other card and no boss treasure is in play', l
 ga = [play(2, RU.make(ALL_REQ), s, table=Table(skill=1.0, bank=6)) for s in range(12)]
 check('a game with every set in play runs to its end', all(x['win'] or x['lost_at'] is not None for x in ga))
 
+def blocked(armour, trials=600, magic=False, dodge_first=False):
+    """Mean damage a Knight in `armour` takes from 6 with heroic action and luck spent: blocking, or after a failed dodge."""
+    tot = 0
+    for s in range(trials):
+        c = Char('Knight', RG); c.A = armour; c.refresh()
+        f = E.Fight([c], RG, random.Random(s), enemies=['Hollow Soldier'], policy=E.Policy(evade=0.0))
+        c.heroic = c.luck = False; c.can_parry = False; foe = f.foes[0]; foe.node = E.IDX[(4, 4)]; c.node = E.IDX[(0, 0)]
+        if dodge_first: c.blk = c.res = ''; c.dodge = 1                    # nothing to block with: the dodge is tried, and cannot succeed
+        else: c.dodge = 0
+        f.defend(foe, c, 6, magic, 9); tot += c.dmg
+    return tot / trials
+iron = MORE['Black Iron Armour']; plain = dict(iron, block_mod=0, resist_mod=0); best = dict(iron, block_mod=1, resist_mod=1)
+b0, b1, b2 = blocked(plain), blocked(iron), blocked(best)
+check('a block takes the modifier printed on the equipment: -1 lets about one more damage through, +1 about one less', 0.6 < b1 - b0 <= 1.0 and 0.5 < b0 - b2 <= 1.0, (b2, b0, b1))
+r0, r1 = blocked(plain, magic=True), blocked(iron, magic=True)
+check('a resist roll takes the printed resist modifier', 0.6 < r1 - r0 <= 1.0, (r0, r1))
+d0, d1 = blocked(plain, dodge_first=True), blocked(iron, dodge_first=True)
+check('the armour roll after a failed dodge takes the armour\'s own modifier', 0.6 < d1 - d0 <= 1.0, (d0, d1))
+
 print()
 print('%d checks failed' % len(FAILS) if FAILS else 'all checks passed')
 sys.exit(1 if FAILS else 0)

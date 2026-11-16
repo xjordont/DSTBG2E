@@ -227,6 +227,9 @@ class Fight:
         pen = 1 if (c.stagger and r.stagger == 'author') else 0
         dice = c.res if magic else c.blk
         adice = c.arm_res if magic else c.arm_blk
+        # a block or resist value also takes the modifier printed on the equipment (bpen: everything worn; apen: the
+        # armour alone, for the roll after a failed dodge); a dodge roll takes only the stagger
+        bpen = pen + (c.res_pen if magic else c.blk_pen); apen = pen + (c.arm_res_pen if magic else c.arm_blk_pen)
         wd = pol.w_death * (1.6 if (r.death == 'party' or c.hollow or len(self.live()) == 1) else 1.0)
 
         def cost(pmf, extra_sta):
@@ -236,11 +239,11 @@ class Fight:
             # stamina is cheap while the bar is open and dear once it crowds out room for damage
             crowd = sum(1.0 for i in range(extra_sta) if free - i <= 4)
             return e + wd * pl + pol.w_sta * extra_sta + 0.6 * crowd
-        opts = [(cost(hit_stats(dice, r.block, dmg, pen), 0), 'block', 0)]
+        opts = [(cost(hit_stats(dice, r.block, dmg, bpen), 0), 'block', 0)]
         sta1 = 1 + (1 if (c.frost and r.frost == 'official') else 0)
         room = free - (1 if r.lethal == 'full' else 0)
         nd = c.dodge
-        fail = hit_stats(adice, r.block, dmg, pen) if r.dodge_fail == 'armour' else ((dmg, 1.0),)
+        fail = hit_stats(adice, r.block, dmg, apen) if r.dodge_fail == 'armour' else ((dmg, 1.0),)
         tries = [(nd, sta1)]
         if r.dodge_extra:
             if nd + 1 <= 4: tries.append((nd + 1, sta1 + 2))          # one extra die a dodge, for two more stamina
@@ -263,7 +266,7 @@ class Fight:
             if 0 < need == got + 1 and nd > got and c.luck:
                 # one dodge short, with every die on the table: luck may re-roll one die of the defence roll, and a failed
                 # dodge die is the one to pick when the block dice would let a telling blow through
-                through = max(0, dmg - max(0, (sum(sorted(pre)[-2:]) if r.block == 'best2' else sum(pre)) - pen))
+                through = max(0, dmg - max(0, (sum(sorted(pre)[-2:]) if r.block == 'best2' else sum(pre)) - bpen))
                 if self.lethal(c, through) or through >= pol.luck_at:
                     c.luck = False; got += rng.random() < 0.5
             if need <= 0 or got >= need:
@@ -278,20 +281,20 @@ class Fight:
         if how == 'block':
             faces = pre if pre is not None else roll(dice, rng); bonus = [0]      # the combined roll has its block dice already
             total = lambda: (sum(sorted(faces)[-2:]) if r.block == 'best2' else sum(faces)) + bonus[0]
-            v = total(); taken = max(0, dmg - max(0, v - pen))
+            v = total(); taken = max(0, dmg - max(0, v - bpen))
             if c.heroic and c.name == 'Knight' and not magic and (self.lethal(c, taken) or taken >= 2):     # a block roll only
                 # Stand Fast: one more blue die. Where only the two highest dice count, the author rules that this die is
                 # added to them (heroic_die='add'); the other reading puts it in the pool with the rest
                 c.heroic = False; die = rng.choice(DIE['u'])
                 if r.block == 'best2' and getattr(r, 'heroic_die', 'pool') == 'add': bonus[0] = die
                 else: faces.append(die); dice = dice + 'u'
-                v = total(); taken = max(0, dmg - max(0, v - pen))
+                v = total(); taken = max(0, dmg - max(0, v - bpen))
             if c.luck and faces and (self.lethal(c, taken) or taken >= pol.luck_at):
                 # luck: the official rules re-roll one die; the manuscript any or all of them, chosen at once
                 c.luck = False; worst = sorted(range(len(faces)), key=lambda j: faces[j] - sum(DIE[dice[j]]) / 6)
                 again = worst[:1] if getattr(r, 'luck', 'one') == 'one' else [j for j in worst if faces[j] < sum(DIE[dice[j]]) / 6] or worst[:1]
                 for j in again: faces[j] = rng.choice(DIE[dice[j]])
-                v = total(); taken = max(0, dmg - max(0, v - pen))
+                v = total(); taken = max(0, dmg - max(0, v - bpen))
         else:
             dice_n, sta = arg if how == 'dodge' else (nd, sta1)
             c.sta += sta
@@ -320,7 +323,7 @@ class Fight:
                 taken = dmg; c.stagger = True
             elif r.dodge_fail == 'armour':
                 v = sum(sorted(roll(adice, rng))[-2:]) if r.block == 'best2' else sum(roll(adice, rng))
-                taken = max(0, dmg - max(0, v - pen))
+                taken = max(0, dmg - max(0, v - apen))
             else:
                 taken = dmg
         self.dec[how] = self.dec.get(how, 0) + 1

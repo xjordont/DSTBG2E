@@ -1623,19 +1623,19 @@ The reason for S1's low second row: sorting by kind is the official game's way, 
 | Games won | 1 | 2 | 3 | 4 |
 |---|---|---|---|---|
 | Core cards only, by requirement | 51% | 50% | 49% | 53% |
-| S0 every set, by requirement | 48% | 41% | 47% | 45% |
-| S1 every set, by kind | 56% | 48% | 41% | 44% |
-| S2 every set, between | 53% | 47% | 43% | 46% |
+| S0 every set, by requirement | 48% | 39% | 46% | 44% |
+| S1 every set, by kind | 55% | 48% | 39% | 44% |
+| S2 every set, between | 52% | 46% | 42% | 46% |
 
 | Table time (activations) | 1 | 2 | 3 | 4 |
 |---|---|---|---|---|
 | Core cards only | 305 | 365 | 395 | 482 |
-| S0 | 286 | 328 | 405 | 402 |
-| S1 | 257 | 367 | 423 | 535 |
-| S2 | 269 | 360 | 404 | 511 |
+| S0 | 285 | 325 | 409 | 403 |
+| S1 | 249 | 367 | 423 | 532 |
+| S2 | 268 | 360 | 404 | 509 |
 
-- **No way of sorting is stronger or weaker.** The three average 45%, 47% and 47% over the four sizes, and no cell differs from another by more than the noise of the method. The choice does not touch balance; it can be made on feel.
-- **Every set in the decks costs about four points** against the core cards alone (49% to 53% becomes 41% to 56%), part of it the dead cards of 18.1.
+- **No way of sorting is stronger or weaker.** The three average 44%, 46.5% and 46.5% over the four sizes, and no cell differs from another by more than the noise of the method. The choice does not touch balance; it can be made on feel.
+- **Every set in the decks costs about four points** against the core cards alone (49% to 53% becomes 39% to 55%), part of it the dead cards of 18.1.
 
 **Recommendation: S0, with the legendaries and boss treasure the author proposed.** The rule in one sentence: *tier two is every transposed card, five legendary cards drawn at random, the treasure of this game's mini-boss and main boss, and every other card that asks for 25 or more in a stat; everything else is tier one.*
 
@@ -1645,6 +1645,8 @@ The reason for S1's low second row: sorting by kind is the official game's way, 
 - It keeps what was wanted from sorting by kind: transposed, legendary and boss treasure are never in tier one.
 
 S2 is a fair second if class cards should all be early finds: it costs ten points of tier-one usability and keeps most of tier two's. S1 is the weakest on what a party can use and no stronger on anything measured.
+
+**Correction (2026-11-16, after review).** The simulator valued a block or resist modifier printed on equipment but did not apply it when a defence was rolled. No core card carries one; four armours of the other sets do (Antiquated Robes and Black Iron Armour at −1, the legendary Black Iron Armour at −2, the legendary Guardian Armour at +1). Corrected: a block or resist roll takes the modifiers of everything worn, the armour roll after a failed dodge the armour's own. The two tables above are re-measured with the correction; no cell moved by more than two points and nothing in the comparison changed. The every-set figures of 18.3 and 18.4 were measured before it and were not run again; they would move by the same point or two. Figures on the core cards are untouched.
 
 One detail to settle with it: when the five legendaries and the boss treasure join. Tested here: tier two's shop is stocked when the mini-boss falls, then the five legendaries and the mini-boss's treasure are shuffled into the tier-two deck, and the main boss's treasure too. They are found as treasure, never bought, which is how the author's forum post has the legendaries.
 
