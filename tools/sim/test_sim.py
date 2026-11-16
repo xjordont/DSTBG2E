@@ -601,6 +601,15 @@ def twin_kills(far, trials=400):
 tk, tf = twin_kills(False), twin_kills(True)
 check('an attack that repeats takes a new target within reach when the first has fallen, and none out of reach', tk > 0.6 and tf == 0, (tk, tf))
 
+def frozen_walk(frost, spent=9):
+    """A Knight with `spent` stamina on the bar and no attack it can afford walks towards a far enemy: (moved, stamina after)."""
+    c = Char('Knight', R17); f = E.Fight([c], R17, random.Random(3), enemies=['Hollow Soldier'], policy=E.Policy(evade=0.0, kite=False))
+    foe = f.foes[0]; c.node = E.IDX[(0, 0)]; foe.node = E.IDX[(4, 4)]; c.sta = spent; c.frost = frost; c.estus = c.luck = c.heroic = False
+    start = c.node; f.char_turn(c); return c.node != start, c.sta
+w0, w1, w2 = frozen_walk(False), frozen_walk(True), frozen_walk(True, spent=12)
+check('official 2017: the walk towards a far enemy costs a frostbitten character one stamina, and is not made when the bar is full',
+      w0[0] and w1[0] and w1[1] == w0[1] + 1 and not w2[0], (w0, w1, w2))
+
 print()
 print('%d checks failed' % len(FAILS) if FAILS else 'all checks passed')
 sys.exit(1 if FAILS else 0)

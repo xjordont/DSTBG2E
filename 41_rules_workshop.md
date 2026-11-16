@@ -1650,6 +1650,8 @@ S2 is a fair second if class cards should all be early finds: it costs ten point
 
 **Second correction (2026-11-16, after review).** An attack that repeats was resolved as one sum against its first target, so repetitions left over when that target fell were wasted. The manuscript (§10.3, Repeat) and the official rules let each repetition take its own target. Corrected: repetitions are resolved one at a time, and when the target has fallen the next takes another enemy within the attack's reach. Two core cards repeat (Avelyn and the Gotthard Twinswords, both legendary) and eleven of the other sets. Re-measured: the core row is unchanged (51% / 50% / 49% / 53%) and the S0 row reads 48% / 40% / 46% / 45%, no cell more than one point from the table above. The other rows were not run again.
 
+**Third correction (2026-11-16, after review).** Under the official 2017 rules a frostbitten character pays one more stamina each time it walks. One path did not charge it: the walk towards a far enemy made when no attack can be afforded. Corrected: the stamina is paid, and the walk is not made when the bar has no room for it. Only the official 2017 preset has this frostbite rule. Re-measured for one and two characters: 41% and 55%, as before, with every other column the same; the case is too rare to move a figure.
+
 One detail to settle with it: when the five legendaries and the boss treasure join. Tested here: tier two's shop is stocked when the mini-boss falls, then the five legendaries and the mini-boss's treasure are shuffled into the tier-two deck, and the main boss's treasure too. They are found as treasure, never bought, which is how the author's forum post has the legendaries.
 
 ### 18.3 Bosses at their printed health

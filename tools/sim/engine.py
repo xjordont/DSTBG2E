@@ -647,7 +647,11 @@ class Fight:
                 c.sta = 0; rested = True; self.dec['rest'] = self.dec.get('rest', 0) + 1; self.say('  ', c.name, 'rests')            # the Rest action
             elif foes:
                 f = min(foes, key=lambda f: DIST[c.node][f.node])
-                if DIST[c.node][f.node] > 1: c.node = step_to(c.node, f.node, rng); moved = True
+                # the approach is the free Walk; under the 2017 rules a frostbitten character pays one stamina for it,
+                # and stays where it is if the bar has no room for that
+                toll = 1 if (c.frost and r.frost == 'official') else 0
+                if DIST[c.node][f.node] > 1 and toll <= c.cap - c.dmg - c.sta - (1 if r.lethal == 'full' else 0):
+                    c.sta += toll; c.node = step_to(c.node, f.node, rng); moved = True
         # hit and run: official rules allow movement before or after attacking, not both; the manuscript has no such limit
         if pol.kite and self.foes_alive() and not self.is_boss and (r.turn != 'official' or not moved):
             free = c.cap - c.dmg - c.sta
