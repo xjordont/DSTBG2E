@@ -1219,3 +1219,65 @@ Two characters are the awkward size: +2 health with no damage is too easy for th
 
 To re-run: `python3 tools/sim/compare.py --only review --games 800 --probe 150` (health only; add `--regrind 2`), and `--only review_d1 --regrind 2` (the shorter table).
 
+### 15.7 The author's table
+
+The author set the health-only table of 15.6 aside ("let's not just bloat enemies with health prolonging encounters") and proposed: enemy health +1 for each character beyond the first (+0 / +1 / +2 / +3); damage +1 for each character beyond the second (+0 / +0 / +1 / +2); sparks five less the number of characters (4 / 3 / 2 / 1, one more for each boss as before). The author is unsure whether to scale enemy movement as the manuscript did.
+
+**The author's table as proposed** (500 games a cell, ±4; a lone character always rushes, parties fight Level 1 and 2 again):
+
+| | 1 | 2 | 3 | 4 |
+|---|---|---|---|---|
+| Games won | 62% | 92% | 89% | 78% |
+| Level 3 rounds | 8.0 | 4.5 | 3.4 | 3.1 |
+| Table time | 303 | 311 | 322 | 361 |
+| Share of defences that are a dodge or parry | 8% | 20% | 34% | 43% |
+
+It keeps the game short and level in length, but parties win far too often: two characters most of all, who have no damage bonus.
+
+- **Sparks of five less the characters** cost a lone character four points (66% to 62%) and parties two to eight. It is a fair, small tightening.
+- **Faster movement** (one-node moves become two) does little: 88% / 81% / 74% against 92% / 89% / 78%. It raises the chance that someone dies in a Level 3 encounter (5 / 12 / 25% to 11 / 25 / 44%) without changing who wins. It is left out.
+- **Boss health** matters most at four: ×1.5 / 2 / 2.5 gives 89% / 80% / 62%; ×2 / 3 / 4 gives 89% / 77% / 52%.
+
+**Small additions tested on the author's table** (health and sparks as proposed; 400 games, ±5; two / three / four characters):
+
+| Addition | Games won | Dodge or parry share |
+|---|---|---|
+| damage +1 / +1 / +2 | 70% / 89% / 78% | 30 / 34 / 43% |
+| damage +1 / +2 / +2 | 70% / 71% / 78% | 30 / 40 / 43% |
+| damage +1 / +1 / +2, boss health ×1.5 / 2 / 2.5 | 62% / 78% / 60% | 31 / 34 / 43% |
+| damage +0 / +1 / +1, attacks repeated at four (the manuscript without the movement) | 94% / 89% / 62% | 21 / 34 / 37% |
+| damage +1 / +1 / +1, attacks repeated at three and four | 70% / 56% / 62% | 30 / 35 / 37% |
+| no damage bonus, attacks repeated at two and more | 66% / 86% / 79% | 22 / 24 / 24% |
+
+Two characters need the +1: without it they win about 90%, with it 60% to 70%.
+
+**Two tables that hold,** confirmed at 800 games a cell (±3). Both keep the author's health (+1 a character) and sparks (4 / 3 / 2 / 1).
+
+*First: damage +1 with two characters and +2 with three or four; boss health ×1.5, ×2, ×2.5.*
+
+| | 1 | 2 | 3 | 4 |
+|---|---|---|---|---|
+| Games won, always rush | 60% | 58% | 55% | 63% |
+| Games won, fight Level 1 and 2 again | 45% | 58% | 59% | 58% |
+| Table time, rush | 304 | 372 | 435 | 512 |
+| Level 3 rounds, rush | 8.1 | 5.0 | 3.8 | 3.3 |
+| Someone dies in a Level 3 encounter | 20% | 21% | 29% | 28% |
+| Dodge or parry share | 8% | 30% | 42% | 44% |
+| Games lost at: encounters / mini-boss / main boss | 11 / 18 / 12% | 13 / 17 / 12% | 16 / 22 / 8% | 13 / 22 / 2% |
+
+*Second: damage +1 with two or more characters; every enemy attack in an ordinary encounter is made twice with three or four; bosses as printed but for the +1.*
+
+| | 2 | 3 | 4 |
+|---|---|---|---|
+| Games won, always rush | 66% | 50% | 62% |
+| Games won, fight Level 1 and 2 again | 68% | 55% | 60% |
+| Table time, rush | 322 | 242 | 269 |
+| Level 3 rounds, rush | 5.1 | 4.2 | 3.6 |
+| Someone dies in a Level 3 encounter | 21% | 53% | 44% |
+| Dodge or parry share | 29% | 36% | 37% |
+| Games lost at: encounters / mini-boss / main boss | 13 / 13 / 8% | 40 / 6 / 4% | 32 / 5 / 1% |
+
+- The first is the more even (55% to 63% at every size, whichever way the party plays) and loses its games in the same places a lone character does. It is the author's table with the damage moved one step earlier and a boss that grows with the party. Dodges and parries reach 42% to 44% of defences at three and four: more than a lone character's game, less than the rejected table's 47% to 54%, and the same as the author's own +2 at four.
+- The second is the quickest of all and keeps dodging lower, because a second attack is another roll to block and another stamina to dodge, not a bigger hit. But it is swingy: with three characters someone dies in half the Level 3 encounters, and almost every lost game is lost in an ordinary encounter, not at a boss.
+- The first is recommended. `python3 tools/sim/compare.py --only review` re-runs it; `--only review_twice` the second; `--only author` the table as proposed.
+

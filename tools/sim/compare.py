@@ -31,9 +31,14 @@ FINAL = dict(base='official2017', mods=['HOLLOW', 'ROUND_ALL', 'TURN_MS', 'ATTRI
 R_DMG = [0, 0, 2, 3, 4]            # the damage steps first proposed in 15.4, which the author rejected
 LOOP = dict(FINAL, death='lost', heal_after=0, choose_of_two=False, soul_tab=[[3, 4, 5], [1, 2, 3]], skip_dmg=1,
             free_treasure=2, hp_add=[0] * 5, atk=[0] * 5, boss_atk=[0] * 5)            # the loop, with no scaling at all
-REVIEW = dict(LOOP, hp_add=[0, 0, 3, 6, 9], boss_mul=[1, 1, 2, 3, 4])     # health only: +3 an enemy for each extra character;
-                                                                         # a boss's health times the number of characters
-REVIEW_D1 = dict(LOOP, atk=[0, 0, 1, 1, 1], boss_atk=[0, 0, 1, 1, 1], hp_add=[0, 0, 1, 4, 6], boss_mul=[1, 1, 1.5, 2, 2.5])   # the shorter alternative
+# Section 15.7, on the author's shape: +1 health an enemy for each character beyond the first, small damage steps, short
+# fights, and sparks of five less the number of characters.
+SPARKS = [0, 4, 3, 2, 1]
+AUTHOR = dict(LOOP, hp_add=[0, 0, 1, 2, 3], atk=[0, 0, 0, 1, 2], boss_atk=[0, 0, 0, 1, 2], sparks=SPARKS)   # the author's table as proposed
+REVIEW = dict(LOOP, hp_add=[0, 0, 1, 2, 3], atk=[0, 0, 1, 2, 2], boss_atk=[0, 0, 1, 2, 2], boss_mul=[1, 1, 1.5, 2, 2.5], sparks=SPARKS)
+REVIEW_TWICE = dict(LOOP, hp_add=[0, 0, 1, 2, 3], atk=[0, 0, 1, 1, 1], boss_atk=[0, 0, 1, 1, 1], reps=[1, 1, 1, 2, 2], sparks=SPARKS)
+REVIEW_HEALTH = dict(LOOP, hp_add=[0, 0, 3, 6, 9], boss_mul=[1, 1, 2, 3, 4])            # 15.6: health only (set aside: it lengthens the game)
+REVIEW_D1 = dict(LOOP, atk=[0, 0, 1, 1, 1], boss_atk=[0, 0, 1, 1, 1], hp_add=[0, 0, 1, 4, 6], boss_mul=[1, 1, 1.5, 2, 2.5])   # 15.6: the shorter alternative
 SPECS = {
     'official2017': ('Official 2017 (the calibration anchor)', {'base': 'official2017'}),
     'official2022': ('Official 2022 rules on the 2017 enemy cards (not a valid test of the 2022 sets; see 13.2)', {'base': 'official2022'}),
@@ -41,7 +46,10 @@ SPECS = {
     'health': ('Health rule only: bosses as printed, souls spent at a rest', dict(HEALTH, atk=[0] * 5)),
     'final': ('The final ruleset (section 14)', FINAL),
     'review': ("The author's review so far (section 15); add --regrind 2 for players who fight reset encounters again", REVIEW),
-    'review_d1': ('The shorter alternative of 15.6: +1 damage, less health', REVIEW_D1),
+    'author': ("The author's own table (15.7): health +1 a character, damage +0/+0/+1/+2, sparks 4/3/2/1", AUTHOR),
+    'review_twice': ('15.7, the other candidate: +1 damage, enemies attack twice against three or more', REVIEW_TWICE),
+    'review_health': ('15.6, set aside: health only, +3 an enemy for each extra character', REVIEW_HEALTH),
+    'review_d1': ('15.6, set aside: +1 damage, enemy health +1/+4/+6', REVIEW_D1),
     'review_kind': ('The review rules with treasure sorted by kind of card (15.5)', dict(REVIEW, deck_split='kind')),
     'A': ('Proposal A of section 13 (Andre and the Firekeeper without a rest)', PROPOSED_A),
     'B': ('Proposal B (Andre only without a rest)', PROPOSED_B),

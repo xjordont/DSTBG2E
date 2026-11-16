@@ -154,8 +154,9 @@ check('review rules: players who always rush fight no encounter twice; players w
 RVr = RU.make(REVIEW_SPEC)
 check('review rules: every clear after the first pays 1 / 2 / 3 souls, however many there are; a first clear gives two treasure cards',
       [RVr.soul_tab[min(k, len(RVr.soul_tab) - 1)] for k in (0, 1, 5)] == [[3, 4, 5], [1, 2, 3], [1, 2, 3]] and RVr.free_treasure == 2 and RVr.skip_dmg == 1)
-check('review rules: enemy health +3 for each character beyond the first, and no damage bonus',
-      [RVr.hp(1, n) for n in (1, 2, 3, 4)] == [1, 4, 7, 10] and [RVr.atk(n) for n in (1, 2, 3, 4)] == [0, 0, 0, 0])
+check('review rules: enemy health +1 for each character beyond the first, damage +0/+1/+2/+2, sparks five less the characters',
+      [RVr.hp(1, n) for n in (1, 2, 3, 4)] == [1, 2, 3, 4] and [RVr.atk(n) for n in (1, 2, 3, 4)] == [0, 1, 2, 2]
+      and [RVr.sparks(n) for n in (1, 2, 3, 4)] == [4, 3, 2, 1])
 kind = Economy([Char('Knight', RV), Char('Herald', RV)], RU.make(dict(REVIEW_SPEC, deck_split='kind')), random.Random(1))
 check('treasure by kind: tier one holds common and the party\'s class cards; tier two only its transposed cards',
       all(i['deck'] in ('common', 'class') for i in kind.t1 + kind.shop1) and all(i['deck'] == 'transposed' and i['cls'] in ('Knight', 'Herald') for i in kind.t2)
