@@ -171,6 +171,7 @@ class Economy:
         self.row = []                                  # Andre's face-up cards, where the ruleset has them
         self.embers = len(party)                       # the manuscript's shop: ember cards equal to the number of characters
         self.inv = []                                  # the shared inventory of the official rules
+        self.carried = {}                              # upgrades on weapons lying in it: weapon name -> (bonus, upgrade card)
         names = {c.name for c in party}
         cards = [i for i in ITEMS.values() for _ in range(i.get('copies', 1))]
         common = [i for i in cards if i['deck'] == 'common']
@@ -258,13 +259,18 @@ class Economy:
         elif it['hands'] == 2: tries = [('R', dict(R=it, L=False))]
         elif it['attacks']: tries = [('R', dict(R=it, L=(False if (c.L is None) else c.L))), ('L', dict(L=it))] if not c.two_handed else [('R', dict(R=it, L=False))]
         else: tries = [('L', dict(L=it))] if not c.two_handed else []
+        plus = None
+        if it['name'] in self.carried:                  # a weapon in the shared inventory keeps the upgrade fitted to it
+            plus = dict(c.plus); plus[it['name']] = self.carried[it['name']][0]
         for slot, kw in tries:
-            gain = power(c.profile(tiers=tiers, **kw), c.r) - c._power
+            gain = power(c.profile(tiers=tiers, plus=plus, **kw), c.r) - c._power
             if best is None or gain > best[0]: best = (gain, cost, tiers, slot)
         return best
 
     def equip(self, c, it, tiers, slot):
         c.tier = list(tiers); out = []
+        if slot != 'U' and it['name'] in self.carried:  # the upgrade comes with a weapon taken from the shared inventory
+            c.plus[it['name']], c.up_cards[it['name']] = self.carried.pop(it['name'])
         if slot == 'U': c.plus[c.R['name']] = it['up']; c.up_cards[c.R['name']] = it
         elif slot == 'A': out.append(c.A); c.A = it
         elif slot == 'L': out.append(c.L); c.L = it
@@ -275,7 +281,10 @@ class Economy:
         # where it may be sold (starting equipment cannot be sold, so it is simply set aside)
         for old in out:
             if not old: continue
-            if self.r.pool: self.inv.append(old)
+            if self.r.pool:
+                self.inv.append(old)
+                if old['name'] in c.plus:               # an upgrade stays on its weapon, whoever takes it up next
+                    self.carried[old['name']] = (c.plus.pop(old['name']), c.up_cards.pop(old['name'], None))
             elif old['name'] not in c.start: c.bag.append(old)
         c.refresh()
 

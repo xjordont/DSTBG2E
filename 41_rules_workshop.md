@@ -1285,3 +1285,5 @@ Correction after the automated review (2026-11-16): poison was still resolved at
 
 A second: under the 2022 combined defence roll the luck token could re-roll only a block die; it may now re-roll a failed dodge die when the roll is one dodge short and the blow would tell. Checked (103 checks pass). Only the 2022 preset is touched. Its row, run again: 32% / 28% / 33% / 16%, against 30% / 37% / 29% / 14%; two characters moved by more than the sampling error, and the row remains what 13.2 calls it, not a valid test of the 2022 sets.
 
+A third: under the shared inventory of the official rules an upgrade fitted to a weapon was lost to anyone else who took that weapon up. The upgrade now stays with the weapon. Checked (104 checks pass). Only the official presets share an inventory. The official anchor, run again: 41% / 55% / 68% / 54%, against 41% / 55% / 67% / 52%; it did not move.
+

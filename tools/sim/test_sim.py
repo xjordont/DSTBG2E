@@ -511,6 +511,16 @@ foe.node = E.IDX[(4, 4)]; c.node = E.IDX[(0, 0)]; c.heroic = False; nd = c.dodge
 f.rng = Script([0.5, 0.99] + [0.1] * (nd - 1) + [0.1]); hit = f.defend(foe, c, 7, False, nd)     # (the evade check,) one die short, then luck succeeds
 check('official 2022: one dodge die short, luck re-rolls that die and the attack is dodged', hit is False and not c.luck and c.dmg == 0, (hit, c.luck, c.dmg))
 
+# ---------------------------------------------------------------- an upgrade stays on a weapon passed through the shared inventory
+k = Char('Knight', R17); w = Char('Warrior', R17); eco = Economy([k, w], R17, random.Random(1))
+sword = ITEMS['Balder Side Sword']; shard = ITEMS['Titanite Shard']
+k.R = sword; k.refresh(); eco.equip(k, shard, k.tier, 'U'); eco.equip(k, ITEMS['Long Sword'], k.tier, 'R')
+in_inv = sword in eco.inv and 'Balder Side Sword' in eco.carried and 'Balder Side Sword' not in k.plus
+mods0 = [a['mod'] for a in sword['attacks'] if a['dice']]
+eco.inv.remove(sword); eco.equip(w, sword, w.tier, 'R'); mods = [o['mod'] for o in w.options['R']]
+check('official: an upgraded weapon keeps its upgrade when another character takes it from the shared inventory',
+      in_inv and mods == [m + 1 for m in mods0] and not eco.carried, (in_inv, mods0, mods))
+
 # ---------------------------------------------------------------- equipment data
 check('every starting item is met by its class at base stats',
       all(Char(k, R17).cost_to_meet(ITEMS[n]['req'])[0] == 0 for k, v in CLASSES.items() for n in v['start']))
