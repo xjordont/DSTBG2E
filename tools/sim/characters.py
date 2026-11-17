@@ -47,12 +47,12 @@ HEROIC = {
     'Warrior': ('a free step; the next range 0 attack costs no stamina and strikes the node', 'printed'),
     'Herald': ('each character gains 2 stamina', 'printed'),
     'Assassin': ('after a successful dodge, a free attack on the enemy dodged', 'printed'),
-    'Mercenary': ('Rapid Strike: one attack costs no stamina', 'community transcription, incomplete'),
-    'Sorcerer': ('Spell Fury: a magic attack reaches any distance and costs 3 less', 'community transcription'),
-    'Pyromancer': ('Explosive Crit: one attack gains a black die', "inferred from the Great Swamp Ring's text and the 2022 wording"),
-    'Cleric': ('this character and each character on the same or an adjacent node heals 2', '2022 rulebook wording'),
-    'Thief': ('heals 2 damage and recovers 2 stamina', '2022 rulebook wording, without its luck token'),
-    'Deprived': ('none played', 'not found'),
+    'Mercenary': ('Rapid Strike: one attack costs no stamina, even with a weapon already used this turn', 'the 2017 board, from one community transcription'),
+    'Sorcerer': ('Spell Fury: a magic attack reaches any distance and costs 3 less', 'the 2017 board, from one community transcription'),
+    'Pyromancer': ('Explosive Firepower: the next magic attack gains one more die', 'the 2022 board (official rulebooks); the 2017 board was not found'),
+    'Cleric': ('Keep the Faith: this character and each character on the same or an adjacent node heals 2', 'the 2022 board; the 2017 board was not found'),
+    'Thief': ('Lucky Break: heals 2 damage, recovers 2 stamina and readies its luck token', 'the 2022 board; the 2017 board was not found'),
+    'Deprived': ('none played', 'not found for either edition (two web searches, work/phase7/heroic_web.md)'),
 }
 
 # ---------------------------------------------------------------- what a card's text does

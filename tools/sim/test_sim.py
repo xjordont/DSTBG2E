@@ -709,12 +709,12 @@ s_, f = duel('Sorcerer', RG); foe = f.foes[0]; foe.node = E.IDX[(4, 4)]; s_.tier
 check('Spell Fury: the Sorcerer strikes an enemy across the tile without moving, and the token is spent', foe.hp < 50 and not s_.heroic and s_.node == E.IDX[(0, 0)], (foe.hp, s_.heroic, s_.node))
 m, f = duel('Mercenary', RG); m.options['R'] = [o for o in m.options['R'] if o['cost'] >= 2]; m.options['L'] = []; m.sta = 0; f.pol.kite = False; f.char_turn(m)
 check('Rapid Strike: the Mercenary makes its costly attack for no stamina', not m.heroic and m.sta == 0 and f.foes[0].hp < 50, (m.heroic, m.sta, f.foes[0].hp))
-py = Char('Pyromancer', RG); _, f = duel(None, RG, party=[py]); v = [o for o, hero, _ in f.variants(py, next(o for o in py.options['R'] + py.options['L'] if o['cost'] >= 2), 0)]
-check('Explosive Crit: one attack of the Pyromancer gains a black die', len(v) == 2 and v[1]['dice'] == v[0]['dice'] + 'b', [o['dice'] for o in v])
+py = Char('Pyromancer', RG); _, f = duel(None, RG, party=[py]); v = [o for o, hero, _ in f.variants(py, next(o for o in py.options['R'] + py.options['L'] if o['cost'] >= 2 and o['magic']), 0)]
+check('Explosive Firepower: one magic attack of the Pyromancer gains a black die', len(v) == 2 and v[1]['dice'] == v[0]['dice'] + 'b', [o['dice'] for o in v])
 cl, k = Char('Cleric', RG), Char('Knight', RG); (cl, k), f = duel(None, RG, party=[cl, k]); cl.dmg = 2; k.dmg = 5; f.pol.kite = False; f.char_turn(cl)
 check('the Cleric\'s heroic action heals two damage on itself and on a character within a node', (cl.dmg, k.dmg) <= (0, 3) and not cl.heroic, (cl.dmg, k.dmg, cl.heroic))
-th, f = duel('Thief', RG); th.dmg = 4; th.sta = 3; f.pol.kite = False; f.foes[0].node = E.IDX[(4, 4)]; h0 = th.heroic; f.char_turn(th)
-check('the Thief\'s heroic action heals two damage and gives back two stamina', h0 and not th.heroic and th.dmg <= 2, (th.dmg, th.sta))
+th, f = duel('Thief', RG); th.dmg = 4; th.sta = 3; th.luck = False; f.pol.kite = False; f.foes[0].node = E.IDX[(4, 4)]; h0 = th.heroic; f.char_turn(th)
+check('the Thief\'s heroic action heals two damage, gives back two stamina and readies the luck token', h0 and not th.heroic and th.dmg <= 2 and th.luck, (th.dmg, th.sta, th.luck))
 ra = RU.make(dict(ALL_REQ, roster='all')); gg = [play(3, ra, sd, table=Table(skill=1.0, bank=6)) for sd in range(40)]
 seen = {x for g_ in gg for x in g_['classes']}
 check('with every class in the roster, games of all ten classes run to their end', seen == set(ALL10) and all(g_['win'] or g_['lost_at'] is not None for g_ in gg), sorted(set(ALL10) - seen))

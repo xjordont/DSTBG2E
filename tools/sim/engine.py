@@ -866,7 +866,7 @@ class Fight:
             self.say('  ', c.name, 'uses an ember'); self.end_turn(c); return
         # heroic actions that mend: the Thief's own wounds and stamina, the Cleric's and its neighbours' wounds
         if c.heroic and c.name == 'Thief' and c.dmg >= 2 and (c.sta >= 2 or c.dmg >= 4):
-            self.hero(c); c.dmg = max(0, c.dmg - 2)
+            self.hero(c); c.dmg = max(0, c.dmg - 2); c.luck = True      # Lucky Break: and the luck token is readied
             if not barred: c.sta = max(0, c.sta - 2)
         if c.heroic and c.name == 'Cleric':
             near = [x for x in self.live() if DIST[c.node][x.node] <= 1]
@@ -1011,8 +1011,8 @@ class Fight:
         elif n == 'Sorcerer' and o['magic'] and (o['cost'] >= 3 or d > o['range']):
             # Spell Fury: a magic attack reaches any distance and costs three less
             yield dict(o, cost=max(0, o['cost'] - 3), range=9, mod=o['mod'] + (1 if 'dragoncrest' in c.traits else 0)), True, 0
-        elif n == 'Pyromancer' and o['cost'] >= 2:
-            yield dict(o, dice=o['dice'] + ('u' if 'swamp' in c.traits else 'b')), True, 0       # Explosive Crit: one more die
+        elif n == 'Pyromancer' and o['magic'] and o['cost'] >= 2:
+            yield dict(o, dice=o['dice'] + ('u' if 'swamp' in c.traits else 'b')), True, 0       # Explosive Firepower: a magic attack, one more die
 
     def end_turn(self, c):
         r = self.r; tr = c.traits
