@@ -508,6 +508,7 @@ class Fight:
                         f.node = step_away(f.node, t.node, rng); continue
                     if st.get('push'):
                         for c in self.live():
+                            if 'dmg' in st and 'im_push' in c.traits: continue          # a card that ignores the push of an enemy's attack
                             if c.node == f.node: c.node = rng.choice(NBR[c.node])       # shoved off the enemy's own node
                     # the target was fixed when the icon began; the enemy follows it wherever a push has sent it
                     if t is None or not t.alive or not self.live(): break

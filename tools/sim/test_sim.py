@@ -1110,6 +1110,17 @@ f.defend(f.foes[0], kt, 1, False, 9)
 check('damage from Armour of Thorns is damage its wearer deals: it is counted for the wearer and moves the aggro token to it',
       RG.aggro == 'last' and f.foes[0].hp == h0 - 1 and f.dealt.get(kt) == 1 and f.aggro is kt, (RG.aggro, h0 - f.foes[0].hp, f.dealt.get(kt), f.aggro.name))
 
+def shoved_at_start(shield, trials=40):
+    """As shoved(), with the Large Hollow Soldier beginning its damaging push-move on the Knight's own node: times moved."""
+    moved = 0
+    for sd in range(trials):
+        c = Char('Knight', R17); c.L = CARDS[shield]; c.refresh(); c.dodge = 0; c.can_parry = False
+        f = E.Fight([c], R17, random.Random(sd), enemies=['Large Hollow Soldier'], policy=E.Policy(evade=0.0))
+        c.node = f.foes[0].node = E.IDX[(2, 2)]; f.enemy_turn(f.foes[0]); moved += c.node != E.IDX[(2, 2)]
+    return moved
+sa0, sa1 = shoved_at_start('Kite Shield (Knight)'), shoved_at_start('Black Iron Greatshield')
+check('the Black Iron Greatshield also holds its bearer in place when a damaging push-move begins on its own node', sa0 == 40 and sa1 == 0, (sa0, sa1))
+
 print()
 print('%d checks failed' % len(FAILS) if FAILS else 'all checks passed')
 sys.exit(1 if FAILS else 0)
