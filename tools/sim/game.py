@@ -110,6 +110,10 @@ def play(n, rules, seed, table=None, classes=None):
     for stage, boss in enumerate((rng.choice([b for b in MINIS if in_play(r, 'bosses', BOSSES[b])]),
                                   rng.choice([b for b in MAINS if in_play(r, 'bosses', BOSSES[b])]))):
         levels = BOSSES[boss]['levels']; cards = []; eco.boss_named(boss, stage)
+        # the boss of this half of the game is on the table from its setup: what it blocks and resists is known, and the
+        # characters judge their weapons against it from now on
+        _ms = BOSSES[boss].get('models') or [BOSSES[boss]]
+        for c in party: c.heavy = (max(m['armor'] for m in _ms), max(m['resist'] for m in _ms)); c.refresh()
         out['mini' if stage == 0 else 'main'] = boss
         for lv in levels:
             a = decks[lv].pop()
@@ -174,11 +178,19 @@ def play(n, rules, seed, table=None, classes=None):
             here = [c for c in party if not c.lost]
             out['carried'] += (eco.pool if r.pool else sum(c.souls for c in party)) / n          # unspent souls taken into the fight
             if at_boss:
-                boss_seen = True; f = Fight(here, r, rng, boss=boss, policy=t, n=n); lv = 'mini' if stage == 0 else 'main'
+                boss_seen = True; lv = 'mini' if stage == 0 else 'main'
+                # the boss's data card is on the table: each character arms itself for it from its own inventory
+                bd = BOSSES[boss]; ms = bd.get('models') or [bd]
+                arms = [(c, c.rearm(max(m['armor'] for m in ms), max(m['resist'] for m in ms))) for c in here] if getattr(r, 'free_equip', False) else []
+                f = Fight(here, r, rng, boss=boss, policy=t, n=n)
             else:
                 f = Fight(here, r, rng, enemies=cards[pos]['enemies'], policy=t, n=n); lv = levels[pos]
             if not at_boss and clears[pos]: out['repeats'] += 1      # an encounter fought again after it was cleared: the grind
-            ok = f.run(); fresh = False
+            # a boss fight is played to its end: the round limit is there only to stop a fight that cannot end
+            ok = f.run(150) if at_boss else f.run(); fresh = False
+            if at_boss and f.rounds > 60: out['long_boss'] = out.get('long_boss', 0) + 1
+            if at_boss:
+                for c_, was in arms: c_.restore(was)       # back to the loadout it travels in
             for k, v in f.dec.items(): out['dec'][k] = out['dec'].get(k, 0) + v
             out['fights'] += 1; out['char_turns'] += f.char_turns; out['enemy_acts'] += f.enemy_acts; out['rounds'] += f.rounds
             out['deaths'] += f.deaths

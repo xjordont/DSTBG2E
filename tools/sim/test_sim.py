@@ -1033,6 +1033,39 @@ dm = [dead_mover(sd) for sd in range(30)]
 check('an enemy killed during its own push-move stops where it died: it takes no further step and pushes no one again',
       all(hp <= 0 and at == (2, 2) and far == 1 for hp, at, far in dm), dm[:3])
 
+rf = RU.make(dict(REVIEW_GATE, boss_add=[0, 0, 4, 8, 12]))
+def boss_now(rules, boss, n):
+    f = E.Fight([Char('Knight', rules) for _ in range(n)], rules, random.Random(1), boss=boss, policy=E.Policy(), n=n)
+    return [x.max for x in f.foes], f.foes[0].card.get('heatup')
+g1, g4, o1, o4, d1, d4 = (boss_now(rf, 'Gargoyle', 1), boss_now(rf, 'Gargoyle', 4), boss_now(rf, 'Ornstein & Smough', 1), boss_now(rf, 'Ornstein & Smough', 4),
+                          boss_now(rf, 'Old Dragonslayer', 1), boss_now(rf, 'Old Dragonslayer', 4))
+check('a flat boss health bonus: four more for each character beyond the first on every boss model, the heat-up point half of it; a boss with no heat-up point keeps none',
+      g1 == ([26], 12) and g4 == ([38], 18) and [b_ - a_ for a_, b_ in zip(o1[0], o4[0])] == [12, 12] and d4 == ([32], 0) and d1 == ([20], 0), (g1, g4, o1, o4, d1, d4))
+check('the accepted rules scale a boss\'s attacks as they scale an enemy\'s: +0 / +1 / +2 / +2', [(RG.atk(n), RG.boss_atk(n)) for n in (1, 2, 3, 4)] == [(0, 0), (1, 1), (2, 2), (2, 2)])
+
+# ---------------------------------------------------------------- arming for a known boss; pressing a fight that is going nowhere
+from characters import power as _power
+kn = Char('Knight', RG); kn.tier = [3, 3, 3, 3]; kn.R = CARDS['Fireball']; kn.L = None; kn.bag = [CARDS['Claymore']]; kn.refresh()
+was = kn.rearm(1, 4); armed = kn.R['name']; in_bag = [i['name'] for i in kn.bag]; kn.restore(was)
+check('before a boss that resists magic a character takes the sword from its inventory, and goes back to its own loadout afterwards',
+      was is not None and armed == 'Claymore' and in_bag == ['Fireball'] and kn.R['name'] == 'Fireball' and [i['name'] for i in kn.bag] == ['Claymore'], (armed, in_bag, kn.R['name']))
+kn.R = CARDS['Claymore']; kn.bag = [CARDS['Fireball']]; kn.refresh(); was = kn.rearm(4, 0); armed2 = kn.R['name']; kn.restore(was)
+check('and before one that blocks hard and resists nothing it takes the spell', armed2 == 'Fireball' and kn.R['name'] == 'Claymore', armed2)
+ka = Char('Knight', RG); ka.tier = [3, 3, 3, 3]; ka.R = CARDS['Fireball']; ka.refresh(); p_soft = ka._power; ka.heavy = (1, 5); ka.refresh()
+check('once the boss is named a loadout is judged against what that boss blocks and resists', ka._power < p_soft, (p_soft, ka._power))
+def pressed(seed):
+    """A Knight whose only weapon is a Fireball (a free attack that barely scratches, a costly one that wounds) against a
+    Boreal Outrider Knight with health to spare, for forty rounds: the choices it makes."""
+    c = Char('Knight', RG); c.tier = [1, 0, 2, 1]; c.R = CARDS['Fireball']; c.L = CARDS['Kite Shield (Knight)']; c.refresh()
+    f = E.Fight([c], RG, random.Random(seed), boss='Boreal Outrider Knight', policy=E.Policy(read_new=1.0, read_known=1.0), n=1); f.foes[0].hp = f.foes[0].max = 300
+    f.run(40); return f.dec.get('heavy', 0), f.dec.get('rest', 0), f.dec.get('light', 0)
+pr = [pressed(sd) for sd in range(8)]
+check('a fight that is going nowhere is pressed: the costly attack and a Rest between, in place of the free one for ever',
+      all(h >= 6 and rs >= 4 for h, rs, l in pr), pr)
+gb = [play(1, RG, sd, table=Table(skill=1.0, regrind=0, bank=10)) for sd in range(60)]
+check('a boss fight is played to its end and not cut off at sixty rounds: a long one is counted, and it is won or lost',
+      all(x['win'] or x['lost_at'] is not None for x in gb) and all(x.get('long_boss', 0) <= 2 for x in gb), sum(x.get('long_boss', 0) for x in gb))
+
 print()
 print('%d checks failed' % len(FAILS) if FAILS else 'all checks passed')
 sys.exit(1 if FAILS else 0)

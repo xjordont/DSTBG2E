@@ -79,6 +79,7 @@ MANUSCRIPT = Rules(
     heroic_die='add',                       # the Knight's heroic die is added to the two highest block dice (the author's ruling)
     catalyst=True,                          # spells are stored in a catalyst of their school and cast from it (4.3)
     revised=True,                           # the manuscript's card amendments are played (its appendices A and B)
+    free_equip=True,                        # outside an encounter cards move freely between the inventory and the slots (3.2)
     # economy: souls are personal; three, four, five for Levels 1, 2, 3 and six for a boss; a treasure card each on a
     # first clear; Andre's shop at two souls (tier one) and four (tier two); a lone character starts with six souls
     pool=False, souls=lambda level, n, first: {1: 3, 2: 4, 3: 5}[level] // (1 if first else 2), boss_souls=lambda n, sparks: 6,
@@ -110,7 +111,7 @@ def make(spec):
     add = spec.pop('hp_add', None); mul = spec.pop('hp_mul', None)
     if add or mul:
         kw['hp'] = lambda h, n, add=add, mul=mul: int(round(h * (mul[n] if mul else 1))) + (add[n] if add else 0)
-    for k in ('atk', 'reps', 'move2', 'sparks', 'boss_mul', 'boss_mul_main', 'boss_atk'):
+    for k in ('atk', 'reps', 'move2', 'sparks', 'boss_mul', 'boss_mul_main', 'boss_add', 'boss_atk'):
         if k in spec:
             v = spec.pop(k); kw[k] = lambda n, v=v: v[n]
     if 'soul_mul' in spec:
@@ -134,7 +135,7 @@ HOLLOW = dict(death='hollow', hollow_bar=8)                                # the
 ROUND_ALL = dict(round='all', order='free', aggro='last')                  # all enemies, then all characters in any order
 TURN_MS = dict(regen=1, turn='major', estus='health', block='best2', dodge_fail='armour', dodge_extra=True, dodge_move=True,
                parry='any', lethal='overflow', stagger='author', frost='author', poison='stack', bleed='author',
-               grip_reroll=True, scaling=True, tier4=5, luck='any', stagger_hold=True, one_spell=True, heroic_die='add', catalyst=True, revised=True)                    # the manuscript's turn and defence rules
+               grip_reroll=True, scaling=True, tier4=5, luck='any', stagger_hold=True, one_spell=True, heroic_die='add', catalyst=True, revised=True, free_equip=True)                    # the manuscript's turn and defence rules
 # Dropped souls without re-fighting: a character who dies keeps its souls if the encounter is cleared; if the encounter
 # is failed, everyone's souls stay on the tile until it is cleared, and a second failure before then loses them.
 NO_REFIGHT = dict(skip_cost=0, drop='simple')

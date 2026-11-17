@@ -242,7 +242,7 @@ class Char:
         tiers = tiers or self.tier; plus = self.plus if plus is None else plus; r = self.r
         spells = self.spells if spells is None else spells
         worn = [x for x in (A, R, L) if x]
-        p = dict(R=R, L=L, A=A, cls=self.name)
+        p = dict(R=R, L=L, A=A, cls=self.name, heavy=getattr(self, 'heavy', (3, 2)))
         traits = set()
         for x in worn: traits.update(text_traits(x, r))
         if A: traits.update(plus.get(A['name'], ()))                  # rings and the like, fitted to the armour
@@ -333,6 +333,32 @@ class Char:
         self._rip = best
 
     def scale_bonus(self, o): return 0                # stat scaling is already folded into each option's modifier
+
+    def rearm(self, block, resist):
+        """Before a boss whose block and resist are on its data card, the character takes from its own inventory the hand
+        cards that serve best against it (outside an encounter cards move freely between the inventory and the slots:
+        the manuscript, 3.2). Returns what to hand back to restore() after the fight, or None if nothing changed."""
+        r = self.r
+        pool = [x for x in (self.R, self.L) if x is not None] + [i for i in self.bag if i['type'] == 'hand' and self.meets(req_of(i, r))]
+        if len(pool) <= (self.R is not None) + (self.L is not None): return None
+        now = power(self.profile(), r, vs=(block, resist)); top = (now + 0.05, None)
+        for a in pool:
+            for b in [None] + [x for x in pool if x is not a]:
+                if a['hands'] == 2 and b is not None and 'offhand' not in text_traits(b, r): continue
+                if b is not None and b['hands'] == 2: continue
+                if (a is self.R and b is self.L): continue
+                got = power(self.profile(R=a, L=(b if b is not None else False)), r, vs=(block, resist))
+                if got > top[0]: top = (got, (a, b))
+        if top[1] is None: return None
+        was = (self.R, self.L, list(self.bag))
+        a, b = top[1]; held = [x for x in (self.R, self.L) if x is not None]
+        self.bag = [i for i in self.bag if i is not a and i is not b] + [x for x in held if x is not a and x is not b]
+        self.R, self.L = a, b; self.refresh()
+        return was
+
+    def restore(self, was):
+        if was is None: return
+        self.R, self.L, self.bag = was; self.refresh()
     def riposte_ev(self, foe): return self._rip
 
     def best_option(self, foe, dist, budget, hand='R', spells=True):
@@ -362,11 +388,12 @@ def sup_worth(o, n=2):
     return v - 0.12 * o['cost']
 
 
-def power(p, r):
+def power(p, r, vs=None):
     """A single figure for how strong a loadout is: the damage it deals in a turn against lightly, medium and heavily
     armoured targets, less the damage it lets through from a spread of attacks, plus what its support actions and the
     text of its cards are judged to be worth. Defence counts for more than offence, because a death costs the party
-    far more than a slow fight."""
+    far more than a slow fight. With vs=(block, resist) the damage is judged against that one target, a boss whose
+    data card the players can see, in place of the spread."""
     one_spell = getattr(r, 'one_spell', False)
 
     def best(block, resist, cap):
@@ -384,7 +411,8 @@ def power(p, r):
                     tot += hit; cost += o['cost']
                 if cost <= 5: top = max(top, tot - 0.3 * cost)
         return top
-    off = 0.25 * best(1, 1, 5) + 0.4 * best(2, 1, 10) + 0.35 * best(3, 2, 30)
+    hv = p.get('heavy', (3, 2))                             # the sturdy target: the boss the party knows it will meet, once it is named
+    off = best(vs[0], vs[1], 30) if vs else 0.25 * best(1, 1, 5) + 0.4 * best(2, 1, 10) + 0.35 * best(hv[0], hv[1], 30)
     quick = 0.0                                             # felling a one-health, block-two enemy with a cheap attack
     for hand in 'RL':
         for o in p['options'][hand]:
@@ -408,7 +436,7 @@ def power(p, r):
             price = 0.0 if 'dodge_free' in traits else 0.8 if 'dodge_dear' in traits else 0.4
             blk = min(blk, (1 - ps) * fail + price)
         taken += blk / len(REF_HITS)
-    return off + 0.8 * quick - 1.6 * taken
+    return off + (0.0 if vs else 0.8 * quick) - 1.6 * taken
 
 
 class Economy:

@@ -178,23 +178,27 @@ class Fight:
             c.guards = []; c.buff = None; c.hurt_by = set(); c.rolls = 0
         self.faraam = set()                            # who has used "once per encounter" card text
         self.idle = 0; self._hp = None                 # rounds in a row in which no enemy lost health
+        self.hist = []; self.slow = False
         self.last_before_foes = True                   # whether the character now acting is the last before the enemies act
         self.special = None; self.bdef = None; self.pair_done = False      # the two-model boss has had its shared turn this enemy phase
         if boss:
             b = BOSSES[boss]; mul = getattr(r, 'boss_mul', None)
             if b.get('kind') == 'main' and getattr(r, 'boss_mul_main', None): mul = r.boss_mul_main      # a scale for main bosses alone
             k = mul(self.n) if mul else 1
+            # a flat health bonus for each character beyond the first, as enemies have: every boss model gains it, and the
+            # heat-up point rises by half of it, so the fight keeps its shape
+            add = r.boss_add(self.n) if getattr(r, 'boss_add', None) else 0
             self.bdef = b; self.special = b.get('special')
             if self.special == 'pair':
                 # one boss fought as two models, each with its own health; one behaviour card a turn, on which both act
                 self.foes = []
                 for i, m in enumerate(b['models']):
-                    card = dict(armor=m['armor'], resist=m['resist'], heatup=0, hp=int(round(m['hp'] * k)))
+                    card = dict(armor=m['armor'], resist=m['resist'], heatup=0, hp=int(round(m['hp'] * k)) + add)
                     f = Foe(m['name'], card, card['hp'], IDX[(2, 0)] if i == 0 else IDX[(0, 0)], boss=True)
                     f.heat_cards = list(m['heat']); f.heal = int(round(m['heal'] * k)); f.deck = f.discard = None; self.foes.append(f)
                 self.pdeck = list(b['cards']); rng.shuffle(self.pdeck); self.pdeck = self.pdeck[:b['deck']]; self.pdiscard = []; self.pair_heat = False
             else:
-                if mul: b = dict(b, hp=int(round(b['hp'] * k)), heatup=int(round(b['heatup'] * k)))
+                if mul or add: b = dict(b, hp=int(round(b['hp'] * k)) + add, heatup=(int(round(b['heatup'] * k)) + (add + 1) // 2) if b['heatup'] else 0)
                 f = Foe(boss, b, b['hp'], IDX[(2, 0)], boss=True)
                 std = [c for c in b['cards'] if not c['heatup']]; rng.shuffle(std)
                 f.deck = std[:b['deck']]; f.discard = []; f.heat_cards = [c for c in b['cards'] if c['heatup']]
@@ -891,7 +895,8 @@ class Fight:
             free = c.cap - c.dmg - c.sta
             self.incoming(c); risk0 = self.risk(free)
             room = free - (1 if r.lethal == 'full' else 0)
-            best = None
+            best = None; best_ed = 0.0; top_ed = 0.0   # top_ed: the most any attack could do after a Rest, with the bar empty
+            full = c.cap - c.dmg - (1 if r.lethal == 'full' else 0)
             for f in foes:
                 d = DIST[c.node][f.node]
                 for hand in ('R', 'L'):
@@ -912,7 +917,11 @@ class Fight:
                             run, ran = w
                             cost = o['cost'] + run + (1 if (c.stagger and r.stagger == 'official') else 0) \
                                 + (1 if (f.boss and f.heated and f.name == 'Gargoyle' and d - steps == 0) else 0)
-                            if cost + o.get('self_dmg', 0) > room: continue
+                            if cost + o.get('self_dmg', 0) > room:
+                                if self.slow and not hero and cost + o.get('self_dmg', 0) <= full:
+                                    top_ed = max(top_ed, min(o['direct'], f.hp) if o.get('direct') else sum(min(x, f.hp) * p for x, p in attack_pmf(
+                                        o['dice'], o['mod'] + c.scale_bonus(o), 0 if o.get('ignore') else (f.resist if o['magic'] else f.armor), o['repeat'])))
+                                continue
                             last = len(foes) == 1; vk = self.kill_value(f, last)
                             if o.get('direct'): ed = min(o['direct'], f.hp); pk = 1.0 if o['direct'] >= f.hp else 0.0
                             else:
@@ -935,10 +944,14 @@ class Fight:
                                     ed += (sum(min(x, g.hp) * p for x, p in pg) / g.max * 0.5 * vg + sum(p for x, p in pg if x >= g.hp) * vg) / (0.5 * vk / f.max)
                             # the price of stamina: the added chance of dying before the next turn
                             danger = (self.risk(free - cost - o.get('self_dmg', 0)) - risk0) * (1 - pk if last else 1.0)
-                            score = (ed if f.boss else ed / f.max * 0.5 * vk) + pk * vk - pol.w_sta * cost - wd * danger - 1.0 * o.get('self_dmg', 0)
+                            score = (ed if f.boss else ed / f.max * 0.5 * vk) + pk * vk - (0.0 if self.slow else pol.w_sta * cost) - wd * danger - 1.0 * o.get('self_dmg', 0)
+                            top_ed = max(top_ed, ed)
                             if cost == 0 and ed > 0: score = max(score, 0.01)          # a free blow is never passed up
                             if self.idle >= 2 and ed > 0: score += 50.0                # nothing is being done: the fight must be forced, whatever the risk
-                            if best is None or score > best[0]: best = (score, f, hand, o, steps, cost, ran, hero)
+                            if best is None or score > best[0]: best = (score, f, hand, o, steps, cost, ran, hero); best_ed = ed
+            if (self.slow and best is not None and not used and best_ed < 0.5 * top_ed and r.turn == 'major' and c.sta > 0
+                    and not (c.frost and r.frost == 'author')):
+                break                                                # pressing: a Rest now, and the strong attack next turn
             for hand in ('R', 'L'):                                  # a hand that heals, steadies or lends stamina instead
                 if hand in used: continue
                 for o in c.support[hand]:
@@ -1036,6 +1049,9 @@ class Fight:
         hp = sum(f.hp for f in self.foes_alive())
         self.idle = self.idle + 1 if hp == self._hp else 0
         self._hp = hp
+        # a fight that is going nowhere: under three points of enemy health lost in the last five rounds. The party then
+        # presses: the strongest attack it has, whatever its stamina, and a Rest when the bar will not pay for it
+        self.hist.append(hp); self.slow = self.slow or (len(self.hist) > 5 and self.hist[-6] - hp < 3)     # once pressed, pressed to the end
 
     def run(self, max_rounds=60):
         r = self.r
