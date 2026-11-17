@@ -815,10 +815,14 @@ class Fight:
         for node, steps in seen.items():
             if steps == 0: continue
             tr = c.traits
-            if dodge and steps > 1: continue
-            run = max(0, steps - ((1 if dodge else 0 if 'no_walk' in tr else 2 if 'walk2' in tr else 1) if walk_free else 0))
-            if run and 'no_run' in tr and not dodge: continue
-            cost = run * (2 if ('run2' in tr and not dodge) else 1)
+            if dodge:
+                # one node, or two under a card that says a dodge carries two; free in 2017, one stamina in all in 2022
+                if steps > (2 if 'dodge2' in tr else 1): continue
+                run = 0; cost = 0 if walk_free else 1
+            else:
+                run = max(0, steps - ((0 if 'no_walk' in tr else 2 if 'walk2' in tr else 1) if walk_free else 0))
+                if run and 'no_run' in tr: continue
+                cost = run * (2 if 'run2' in tr else 1)
             if frost and c.frost and self.r.frost == 'official': cost += steps          # 2017 frostbite: one more for each walk or run
             if cost > budget: continue
             c.node = node

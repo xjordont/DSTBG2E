@@ -1095,9 +1095,10 @@ def dodge_step(armour, dodge, trials=40):
         f.reposition(c, 0, True, count=False, frost=False, dodge=dodge)
         d = E.DIST[c.node][E.IDX[(2, 2)]]; far = max(far, d); moved += d > 0
     return far, moved
-ds0, ds1, ds2 = dodge_step('Knight Armour', True), dodge_step('Dancer Armour', True), dodge_step('Dancer Armour', False)
-check('the step of an official dodge is one node whatever is worn: armour that lengthens the Walk lengthens a Walk and not a dodge',
-      'walk2' in text_traits(CARDS['Dancer Armour']) and ds0[0] == 1 and ds1[0] == 1 and ds1[1] > 0 and ds2[0] == 2, (ds0, ds1, ds2))
+ds0, ds1, ds2, ds3 = dodge_step('Knight Armour', True), dodge_step('Dancer Armour', True), dodge_step('Dancer Armour', False), dodge_step('Shadow Armour', True)
+check('the step of an official dodge is one node: armour that lengthens the Walk lengthens a Walk and not a dodge, and armour that says a dodge carries two nodes lengthens the dodge',
+      'walk2' in text_traits(CARDS['Dancer Armour']) and 'dodge2' in text_traits(CARDS['Shadow Armour']) and ds0[0] == 1 and ds1[0] == 1 and ds1[1] > 0 and ds2[0] == 2 and ds3[0] == 2,
+      (ds0, ds1, ds2, ds3))
 ro = RU.make({'base': 'official2017', 'sets': 'all'}); eo = Economy([Char('Knight', ro)], ro, random.Random(1)); d0 = len(eo.deck)
 eo.boss_named('Winged Knight', 0); eo.after_mini_boss(); got = sorted(i['name'] for i in eo.inv if i['deck'] == 'boss')
 eo.boss_named('Dancer of the Boreal Valley', 1)
