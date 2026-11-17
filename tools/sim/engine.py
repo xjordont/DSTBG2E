@@ -275,7 +275,7 @@ class Fight:
             ps = p_dodge(dice_n, k + pen_d)
             mixed = ((0, ps),) + tuple((d, p * (1 - ps)) for d, p in fail)
             opts.append((cost(mixed, sta), 'dodge', (dice_n, sta)))
-        par_sta, par_n = 1, c.dodge                     # a parry: one stamina, the dodge dice printed on the equipped cards and no more
+        par_sta, par_n = 1, c.parry_n                   # a parry: one stamina, the dodge dice printed on the equipped cards and no more
         if (r.parry and parryable and not push and c.can_parry and DIST[src.node][c.node] == 0 and par_sta <= room
                 and not src.boss):
             ps = p_dodge(par_n, k + pen_d)

@@ -229,7 +229,8 @@ class Char:
         p['arm_blk_pen'] = cal - (A.get('block_mod', 0) if A else 0); p['arm_res_pen'] = cal - (A.get('resist_mod', 0) if A else 0)   # the armour's own, for a failed dodge
         if A and 'steel' in traits and plus.get(A['name']):               # an armour that is stronger with a ring fitted
             for k in ('blk', 'res', 'arm_blk', 'arm_res'): p[k] += 'b'
-        p['dodge'] = 0 if 'no_dodge' in traits else sum(x.get('dodge', 0) for x in worn)
+        p['parry_n'] = sum(x.get('dodge', 0) for x in worn)               # a parry rolls the dodge dice printed on the cards, whatever forbids a dodge
+        p['dodge'] = 0 if 'no_dodge' in traits else p['parry_n']
         p['dodge_pen'] = cal
         p['two'] = bool(R and R['hands'] == 2)
         opts = {'R': [], 'L': []}; sup = {'R': [], 'L': []}
@@ -294,7 +295,7 @@ class Char:
 
     def refresh(self):
         p = self.profile()
-        for k in ('blk', 'res', 'arm_blk', 'arm_res', 'blk_pen', 'res_pen', 'arm_blk_pen', 'arm_res_pen', 'dodge', 'dodge_pen', 'options',
+        for k in ('blk', 'res', 'arm_blk', 'arm_res', 'blk_pen', 'res_pen', 'arm_blk_pen', 'arm_res_pen', 'dodge', 'parry_n', 'dodge_pen', 'options',
                   'support', 'mean_blk', 'mean_res', 'can_parry', 'traits'):
             setattr(self, k, p[k])
         self.two_handed = p['two']; self._power = power(p, self.r)

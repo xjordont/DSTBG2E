@@ -803,7 +803,7 @@ def thorns_after(rules, how):
     fails = lost = 0
     for sd in range(120):
         c, f = duel('Knight', rules, enemies=['Sentinel'], seed=sd); foe = f.foes[0]; c.traits = c.traits | {'thorns'}; c.luck = c.heroic = False
-        c.blk = c.res = ''; c.dodge = 1; c.can_parry = how == 'parry'; c._rip = 9.0 if how == 'parry' else 0.0
+        c.blk = c.res = ''; c.dodge = c.parry_n = 1; c.can_parry = how == 'parry'; c._rip = 9.0 if how == 'parry' else 0.0
         if how == 'bare': c.arm_blk = c.arm_res = ''
         f.dec = {}; d0 = c.dmg; f.defend(foe, c, 6, False, 1)
         if f.dec.get('parry' if how == 'parry' else 'dodge') and (c.dmg > d0 or not c.alive): fails += 1; lost += 50 - foe.hp
@@ -833,7 +833,7 @@ check('bleed damage set off by an attack that did no damage of its own is the at
 def parry_cost(armour):
     out = set()
     for sd in range(60):
-        c, f = duel('Knight', RG, enemies=['Hollow Soldier'], seed=sd); c.A = CARDS[armour]; c.refresh(); c.blk = c.res = ''; c.dodge = 1; c.can_parry = True
+        c, f = duel('Knight', RG, enemies=['Hollow Soldier'], seed=sd); c.A = CARDS[armour]; c.refresh(); c.blk = c.res = ''; c.dodge = c.parry_n = 1; c.can_parry = True
         c.luck = c.heroic = False; c._rip = 9.0; c.options = {'R': [], 'L': []}; f.dec = {}; f.defend(f.foes[0], c, 6, False, 1)
         if f.dec.get('parry'): out.add(c.sta)
     return out
@@ -888,6 +888,18 @@ def stag_heal(rules, stagger):
 check('official: a staggered character pays one more stamina for a support action, as for an attack; the workshop rules have no such surcharge',
       stag_heal(R17, False) == (0, 2) and stag_heal(R17, True) == (0, 3) and stag_heal(RG, True)[1] == stag_heal(RG, False)[1],
       (stag_heal(R17, False), stag_heal(R17, True), stag_heal(RG, True), stag_heal(RG, False)))
+
+c = Char('Assassin', RG); n0 = c.parry_n; c.A = CARDS["Havel's Armour"]; c.refresh()
+shield_dice = sum(x.get('dodge', 0) for x in (c.R, c.L) if x)
+check('armour that forbids dodging leaves the parry its printed dice: the dodge dice shown on the cards still equipped',
+      c.dodge == 0 and c.parry_n == shield_dice + CARDS["Havel's Armour"].get('dodge', 0) and n0 >= c.parry_n, (c.dodge, c.parry_n, n0))
+def havel_parries():
+    n = 0
+    for sd in range(80):
+        c, f = duel('Knight', RG, enemies=['Hollow Soldier'], seed=sd); c.A = CARDS["Havel's Armour"]; c.L = ITEMS['Target Shield']; c.tier = [4, 4, 4, 4]; c.refresh()
+        c.blk = c.res = ''; c.luck = c.heroic = False; c._rip = 9.0; f.dec = {}; f.defend(f.foes[0], c, 6, False, 1); n += f.dec.get('parry', 0)
+    return n
+check('a Knight in Havel\'s Armour with a Target Shield can still parry', ITEMS['Target Shield'].get('dodge', 0) >= 1 and havel_parries() > 0, (ITEMS['Target Shield'].get('dodge'), havel_parries()))
 
 print()
 print('%d checks failed' % len(FAILS) if FAILS else 'all checks passed')
