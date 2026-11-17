@@ -874,6 +874,21 @@ def mon_order(start):
     f.char_turn = spy; f.run(max_rounds=1); return acts[:2]
 check('the Mon Ring: every character acts before the enemies do, whichever seat the order begins at', mon_order(0) == [0, 0] and mon_order(1) == [0, 0], (mon_order(0), mon_order(1)))
 
+def mended(mender):
+    c, f = duel('Knight', RG); c.dmg = 4
+    if mender: c.traits = c.traits | {'mender'}
+    f.strike(c, f.foes[0], dict(c.options['R'][0], gain_hp=1)); a_ = c.dmg; c.traits = c.traits | {'sunprincess'}; f.end_turn(c); return a_, c.dmg
+check('the armour that adds one to healing does so for every heal its wearer\'s equipment gives: an attack that heals, a ring that heals',
+      mended(False) == (3, 2) and mended(True) == (2, 0), (mended(False), mended(True)))
+def stag_heal(rules, stagger):
+    k_, h_ = Char('Knight', rules), Char('Herald', rules); h_.L = ITEMS['Talisman']; h_.refresh()
+    h_.support['L'] = [dict(name='Great Heal', hand='L', cost=2, dice='', mod=0, magic=False, range=2, repeat=1, shaft=False, ignore=False, node=False, spell=True, reroll=False, sup=dict(who='one', hp=6, sta=0))]
+    (k_, h_), f = duel(None, rules, party=[k_, h_]); f.foes[0].node = E.IDX[(4, 4)]; f.pol.kite = False; k_.dmg = 5; h_.sta = 0; h_.heroic = h_.estus = False; h_.stagger = stagger
+    h_.options = {'R': [], 'L': []}; f.char_turn(h_); return k_.dmg, h_.sta
+check('official: a staggered character pays one more stamina for a support action, as for an attack; the workshop rules have no such surcharge',
+      stag_heal(R17, False) == (0, 2) and stag_heal(R17, True) == (0, 3) and stag_heal(RG, True)[1] == stag_heal(RG, False)[1],
+      (stag_heal(R17, False), stag_heal(R17, True), stag_heal(RG, True), stag_heal(RG, False)))
+
 print()
 print('%d checks failed' % len(FAILS) if FAILS else 'all checks passed')
 sys.exit(1 if FAILS else 0)

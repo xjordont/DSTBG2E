@@ -406,10 +406,16 @@ class Fight:
             elif e == 'frostbite': t.frost = True
             elif e == 'stagger': t.stagger = True; t.fresh = False
 
+    @staticmethod
+    def mend(c, n):
+        """Health that one of character c's equipment cards lets a character gain: one more where c wears the armour that
+        adds one to any such healing."""
+        return n + (1 if (n > 0 and 'mender' in c.traits) else 0)
+
     def hero(self, c):
         """The heroic action token is spent; cards that answer to it take effect."""
         c.heroic = False; tr = c.traits
-        if 'hero_hp' in tr: c.dmg = max(0, c.dmg - 1)
+        if 'hero_hp' in tr: c.dmg = max(0, c.dmg - self.mend(c, 1))
         if 'hero_sta' in tr and not (c.frost and self.r.frost == 'author'): c.sta = max(0, c.sta - 1)
         if 'hero_cleanse' in tr:
             for x in sorted(self.live(), key=lambda x: -(x.poison * 2 + x.bleed + x.frost + x.stagger)):
@@ -680,7 +686,7 @@ class Fight:
                 if o.get('fx'): self.afflict(t, o['fx'], by=c)       # a condition is placed by a hit, whatever damage it did
                 if o.get('push') and not t.boss and t.hp > 0:        # a boss is never pushed by a character
                     t.node = step_away(t.node, c.node, rng) if t.node != c.node else rng.choice(NBR[t.node])
-        if o.get('gain_hp'): c.dmg = max(0, c.dmg - o['gain_hp'])
+        if o.get('gain_hp'): c.dmg = max(0, c.dmg - self.mend(c, o['gain_hp']))
         if o.get('gain_sta') and not (c.frost and r.frost == 'author'): c.sta = max(0, c.sta - o['gain_sta'])
         if o.get('aggro') and self.live():                           # the token may be handed to another: the sturdiest takes it
             self.aggro = max(self.live(), key=lambda x: (x.mean_blk + 0.5 * x.dodge, x.cap - x.dmg - x.sta))
@@ -728,9 +734,8 @@ class Fight:
     def support(self, c, o, pick):
         r = self.r
         if 'sup' in o:
-            more = 1 if ('mender' in c.traits and o['sup']['hp']) else 0      # an armour that adds one to any healing its wearer gives
             for x in pick:
-                x.dmg = max(0, x.dmg - o['sup']['hp'] - more)
+                x.dmg = max(0, x.dmg - self.mend(c, o['sup']['hp']))     # with an armour that adds one to any healing its wearer gives
                 if not (x.frost and r.frost == 'author'): x.sta = max(0, x.sta - o['sup']['sta'])
         elif 'guard' in o:
             # a die lent "during the next enemy activation" (to its user, or to the party) lasts to the end of the next enemy
@@ -790,9 +795,9 @@ class Fight:
             regen = max(0, r.regen - (1 if (c.frost and r.frost == '2022') else 0))
             if any('chloranthy' in x.traits for x in self.live() if x.node == c.node): regen += 1
             if 'mask' in tr: regen += 1
-            if 'tinybeing' in tr and regen >= 1 and c.dmg > 0: regen -= 1; c.dmg -= 1      # one of the stamina traded for health
+            if 'tinybeing' in tr and regen >= 1 and c.dmg > 0: regen -= 1; c.dmg = max(0, c.dmg - self.mend(c, 1))      # one of the stamina traded for health
             c.sta = max(0, c.sta - regen)
-        if 'sanctus' in tr: c.dmg = max(0, c.dmg - 1)
+        if 'sanctus' in tr: c.dmg = max(0, c.dmg - self.mend(c, 1))
         if 'blessing' in tr and c.bless and c.dmg >= pol.estus_at + 1 and not c.estus:
             c.bless = False; c.dmg = 0; c.poison = 0; c.bleed = c.frost = c.stagger = False     # discarded for good: all damage and conditions off
         if 'blades' in tr and not c.luck and c.cap - c.dmg - c.sta >= 4: c.dmg += 1; c.luck = True
@@ -890,12 +895,13 @@ class Fight:
             for hand in ('R', 'L'):                                  # a hand that heals, steadies or lends stamina instead
                 if hand in used: continue
                 for o in c.support[hand]:
-                    if (cast and o.get('spell') and one_spell) or o['cost'] > room: continue
+                    sc = o['cost'] + (1 if (c.stagger and r.stagger == 'official') else 0)      # official stagger: one more stamina for any weapon action
+                    if (cast and o.get('spell') and one_spell) or sc > room: continue
                     if 'buff' in o and attacked: continue
                     val, pick = self.sup_plan(c, o)
                     if val <= 0.5 and not ('buff' in o and val > 0): continue
-                    score = val - pol.w_sta * o['cost'] - wd * (self.risk(free - o['cost']) - risk0) + (2.0 if 'buff' in o else 0.0)
-                    if best is None or score > best[0]: best = (score, pick, hand, o, 0, o['cost'], False, False)
+                    score = val - pol.w_sta * sc - wd * (self.risk(free - sc) - risk0) + (2.0 if 'buff' in o else 0.0)
+                    if best is None or score > best[0]: best = (score, pick, hand, o, 0, sc, False, False)
             if best is None or best[0] <= 0: break
             _, f, hand, o, steps, cost, ran, hero = best
             c.sta += cost; used.add(hand); cast = cast or bool(o.get('spell'))
@@ -951,10 +957,10 @@ class Fight:
     def end_turn(self, c):
         r = self.r; tr = c.traits
         if c.alive:
-            if 'sunprincess' in tr: c.dmg = max(0, c.dmg - 1)
-            if 'lothric' in tr: c.dmg = max(0, c.dmg - sum(1 for f in self.foes_alive() if f.node == c.node))
+            if 'sunprincess' in tr: c.dmg = max(0, c.dmg - self.mend(c, 1))
+            if 'lothric' in tr: c.dmg = max(0, c.dmg - self.mend(c, sum(1 for f in self.foes_alive() if f.node == c.node)))
             if c.rolls >= 2:
-                if 'pontiff' in tr: c.dmg = max(0, c.dmg - 1)
+                if 'pontiff' in tr: c.dmg = max(0, c.dmg - self.mend(c, 1))
                 if 'favour' in tr and not (c.frost and r.frost == 'author'): c.sta = max(0, c.sta - 1)
         # the encounter is cleared the moment the last enemy falls: conditions then come off without being resolved
         if c.poison and c.alive and self.foes_alive():
