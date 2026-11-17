@@ -14,8 +14,38 @@ def return_dropped(party):
     them. Returns how many souls came back."""
     back = 0
     for c in party:
-        if getattr(c, 'dropped', None): back += c.dropped[1]; c.souls += c.dropped[1]; c.dropped = None
+        if getattr(c, 'dropped', None): back += sum(c.dropped.values()); c.souls += sum(c.dropped.values()); c.dropped = {}
     return back
+
+
+def souls_cleared(party, r, tile):
+    """Dropped souls when the encounter on `tile` is cleared (each character's piles: {tile: souls}). Returns the souls lost.
+    The accepted rule (drop='simple'): everyone takes back what lies on this tile, the dead included. The manuscript (7.6):
+    a survivor takes back its own pile from this tile; a character who died here leaves the souls it held on the tile, and
+    any pile it had not yet reclaimed, here or elsewhere, goes back to the supply."""
+    lost = 0; simple = getattr(r, 'drop', 'manuscript') == 'simple'
+    for c in party:
+        if simple or c.alive:
+            c.souls += c.dropped.pop(tile, 0)
+        else:
+            lost += sum(c.dropped.values()); c.dropped = {tile: c.souls}; c.souls = 0
+    return lost
+
+
+def souls_failed(party, r, tile):
+    """Dropped souls when the encounter on `tile` is failed: every character's souls go onto the tile. Returns the souls lost.
+    The accepted rule: a second defeat on a tile loses what already lay there. The manuscript: a character's earlier piles
+    are lost only if that character died; a survivor's stay where they lie, and what it holds now is added on this tile."""
+    lost = 0; simple = getattr(r, 'drop', 'manuscript') == 'simple'
+    for c in party:
+        if simple:
+            lost += c.dropped.get(tile, 0); c.dropped[tile] = c.souls
+        elif not c.alive:
+            lost += sum(c.dropped.values()); c.dropped = {tile: c.souls}
+        else:
+            c.dropped[tile] = c.dropped.get(tile, 0) + c.souls
+        c.souls = 0
+    return lost
 
 
 def in_play(rules, what, card):
@@ -51,7 +81,7 @@ def play(n, rules, seed, table=None, classes=None):
     if n == 1:
         if r.pool: eco.pool = r.solo_souls
         else: party[0].souls = r.solo_souls
-    for c in party: c.dropped = None; c.lost = False
+    for c in party: c.dropped = {}; c.lost = False
     sparks = r.sparks(n)
     # the party starts at the bonfire; souls held at setup may be spent there only where the ruleset allows a visit
     # without a rest (the manuscript as written does not: a lone character's six souls wait for the first rest)
@@ -163,14 +193,8 @@ def play(n, rules, seed, table=None, classes=None):
                     eco.pool += r.boss_souls(n, sparks) if at_boss else pay(lv, k)
                     out['souls'] += r.boss_souls(n, sparks) if at_boss else pay(lv, k)
                 else:
+                    out['souls_lost'] += souls_cleared(party, r, (stage, pos)) / n
                     for c in party:
-                        simple = getattr(r, 'drop', 'manuscript') == 'simple'
-                        if simple and c.dropped and c.dropped[0] == (stage, pos):
-                            c.souls += c.dropped[1]; c.dropped = None      # the encounter is cleared: everyone takes their souls back
-                        elif not c.alive and not simple:
-                            c.dropped = ((stage, pos), c.souls); c.souls = 0
-                        elif c.dropped and c.dropped[0] == (stage, pos):
-                            c.souls += c.dropped[1]; c.dropped = None
                         gain = r.boss_souls(n, sparks) if at_boss else pay(lv, k)
                         c.souls += gain; c.earned += gain; out['souls'] += gain
                 if not at_boss:                                           # a ring that adds a soul to an encounter's reward
@@ -201,9 +225,7 @@ def play(n, rules, seed, table=None, classes=None):
                 if r.pool:
                     dropped_pool = ((stage, pos), eco.pool); eco.pool = 0
                 else:
-                    for c in party:
-                        if c.dropped: out['souls_lost'] += c.dropped[1] / n                # a second defeat: the souls left behind are gone
-                        c.dropped = ((stage, pos), c.souls); c.souls = 0
+                    out['souls_lost'] += souls_failed(party, r, (stage, pos)) / n
                 if not rest():
                     out['lost_at'] = lv; out['sparks_left'] = 0; return fin()
                 done = [False] * 4; fresh = True

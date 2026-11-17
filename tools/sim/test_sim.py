@@ -859,9 +859,9 @@ check('a die lent for the next enemy activation outlasts its holder\'s own turn 
 c, f = duel('Knight', RG); c.dodge = 0; c.can_parry = False; c.blk = ''; c.guards = [('o', '', 'enemy')]; f.defend(f.foes[0], c, 1, False, 9)
 check('a lent block die is rolled with the character\'s own', c.dmg == 0, c.dmg)
 
-a_, b_ = Char('Knight', M), Char('Herald', M); a_.souls = 2; a_.dropped = ((0, 2), 5); b_.souls = 1; b_.dropped = None
+a_, b_ = Char('Knight', M), Char('Herald', M); a_.souls = 2; a_.dropped = {(0, 2): 5}; b_.souls = 1; b_.dropped = {}
 back = G2.return_dropped([a_, b_])
-check('after the mini-boss, souls still lying on a tile go back to the character who dropped them', back == 5 and a_.souls == 7 and a_.dropped is None and b_.souls == 1, (back, a_.souls))
+check('after the mini-boss, souls still lying on a tile go back to the character who dropped them', back == 5 and a_.souls == 7 and a_.dropped == {} and b_.souls == 1, (back, a_.souls))
 gm = [play(3, M, sd, table=Table(skill=1.0)) for sd in range(150)]
 check('in whole games under the manuscript\'s rules some parties do get dropped souls back at that point', sum(x.get('returned', 0) for x in gm) > 0,
       (sum(1 for x in gm if x.get('returned')), sum(x.get('returned', 0) for x in gm)))
@@ -1000,6 +1000,27 @@ su, sk = sunset('Hollow Soldier'), sunset('Silver Knight Swordsman')
 check('the Sunset Shield pushes a Hollow that attacked its bearer on the same node whether the attack was blocked, dodged or parried; no other enemy',
       all(moved for (_, _, moved) in su) and any(not hit for (_, hit, _) in su) and any(hit for (_, hit, _) in su) and not any(moved for (_, _, moved) in sk),
       (dict(su), dict(sk)))
+
+# ---------------------------------------------------------------- dropped souls, pile by pile
+def piles(rules):
+    """The Knight dies in a cleared first encounter holding 5; the Herald dies in a cleared second holding 4; the third is failed
+    by the Herald's death while the Knight lives holding 3 and the Herald 2. Then the first tile is cleared with both alive."""
+    kn, he = Char('Knight', rules), Char('Herald', rules); kn.dropped = {}; he.dropped = {}; lost = 0
+    kn.souls, he.souls = 5, 1; kn.alive = False; lost += G2.souls_cleared([kn, he], rules, (0, 0)); kn.alive = True
+    kn.souls, he.souls = 0, 4; he.alive = False; lost += G2.souls_cleared([kn, he], rules, (0, 1)); he.alive = True
+    kn.souls, he.souls = 3, 2; he.alive = False; lost += G2.souls_failed([kn, he], rules, (0, 2)); he.alive = True
+    after_fail = (dict(kn.dropped), dict(he.dropped), lost)
+    lost += G2.souls_cleared([kn, he], rules, (0, 0))
+    return after_fail, kn.souls, he.souls, lost
+pm, ps = piles(M), piles(RG)
+kn = Char('Knight', RG); kn.dropped = {}; kn.souls = 5; kn.alive = False; G2.souls_cleared([kn], RG, (0, 0)); kept = (kn.souls, dict(kn.dropped))
+check('the manuscript: a survivor of a failed encounter keeps the pile it left elsewhere and drops what it holds on the failed tile; '
+      'a character who died loses the pile it had not reclaimed', pm[0] == ({(0, 0): 5, (0, 2): 3}, {(0, 2): 2}, 4) and pm[1:] == (5, 0, 4), pm)
+check('the accepted rule: the dead keep their souls when the encounter is won, and a failed encounter leaves everyone\'s on its tile',
+      ps[0] == ({(0, 2): 3}, {(0, 2): 2}, 0) and ps[3] == 0 and kept == (5, {}), (ps, kept))
+kn = Char('Knight', RG); kn.dropped = {(0, 2): 8, (1, 4): 2}; kn.souls = 1; l2 = G2.souls_failed([kn], RG, (0, 2))
+check('the accepted rule: a second defeat on the same tile loses what lay there, and nothing that lies on another tile',
+      l2 == 8 and kn.dropped == {(0, 2): 1, (1, 4): 2} and kn.souls == 0, (l2, kn.dropped))
 
 print()
 print('%d checks failed' % len(FAILS) if FAILS else 'all checks passed')
