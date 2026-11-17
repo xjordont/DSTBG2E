@@ -9,6 +9,15 @@ MINIS = [b for b, v in BOSSES.items() if v['kind'] == 'mini']
 MAINS = [b for b, v in BOSSES.items() if v['kind'] == 'main']
 
 
+def return_dropped(party):
+    """Setup after the mini-boss (the manuscript, 6.6): souls still lying on a tile go back to the characters who dropped
+    them. Returns how many souls came back."""
+    back = 0
+    for c in party:
+        if getattr(c, 'dropped', None): back += c.dropped[1]; c.souls += c.dropped[1]; c.dropped = None
+    return back
+
+
 def in_play(rules, what, card):
     """Whether a boss or an encounter card of this set is in the game: the core set's always, the others' where the
     ruleset says bosses='all' or encounters='all'."""
@@ -205,6 +214,7 @@ def play(n, rules, seed, table=None, classes=None):
             sparks = r.sparks(n) if r.boss_spark == 'reset' else sparks + 1
             if getattr(r, 'ember', False):
                 for c in party: c.ember = True               # the manuscript: each character is embered when a boss falls
+            if not r.pool: out['returned'] = return_dropped(party)      # before anything is spent at the bonfire
             eco.after_mini_boss(); rest(free=True)
     out['win'] = True; out['sparks_left'] = sparks
     out['power'] = sum(c._power for c in party) / n

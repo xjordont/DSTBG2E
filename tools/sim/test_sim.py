@@ -855,6 +855,13 @@ check('a die lent for the next enemy activation outlasts its holder\'s own turn 
 c, f = duel('Knight', RG); c.dodge = 0; c.can_parry = False; c.blk = ''; c.guards = [('o', '', 'enemy')]; f.defend(f.foes[0], c, 1, False, 9)
 check('a lent block die is rolled with the character\'s own', c.dmg == 0, c.dmg)
 
+a_, b_ = Char('Knight', M), Char('Herald', M); a_.souls = 2; a_.dropped = ((0, 2), 5); b_.souls = 1; b_.dropped = None
+back = G2.return_dropped([a_, b_])
+check('after the mini-boss, souls still lying on a tile go back to the character who dropped them', back == 5 and a_.souls == 7 and a_.dropped is None and b_.souls == 1, (back, a_.souls))
+gm = [play(3, M, sd, table=Table(skill=1.0)) for sd in range(150)]
+check('in whole games under the manuscript\'s rules some parties do get dropped souls back at that point', sum(x.get('returned', 0) for x in gm) > 0,
+      (sum(1 for x in gm if x.get('returned')), sum(x.get('returned', 0) for x in gm)))
+
 print()
 print('%d checks failed' % len(FAILS) if FAILS else 'all checks passed')
 sys.exit(1 if FAILS else 0)
