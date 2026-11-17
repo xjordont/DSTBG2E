@@ -172,7 +172,7 @@ class Char:
         self.dmg = self.sta = 0; self.hollow = False; self.alive = True; self.was_hollow = False
         self.estus = self.luck = self.heroic = True; self.ember = False; self.ember_card = False; self.mon = True
         self.node = 0; self.stagger = self.frost = self.bleed = False; self.poison = 0; self.ran = False
-        self.guard = ('', ''); self.buff = None; self.hurt_by = set(); self.rolls = 0
+        self.guards = []; self.buff = None; self.hurt_by = set(); self.rolls = 0     # guards: defence dice lent for a time (block, resist, until)
         self.bless = True                             # a card that is discarded for good when used has not been used
         self.A = next(x for x in kit if x['type'] == 'armour'); hands = [x for x in kit if x['type'] == 'hand']
         # three hand cards for two hands: the pair that makes the stronger character is carried, the third kept spare

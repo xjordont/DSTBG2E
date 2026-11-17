@@ -847,6 +847,14 @@ check('Ornstein and Smough take one shared turn an enemy phase even when one of 
 f.pair_done = False; f.pair_turn(s_)
 check('and at the next phase the survivor heats up and acts', f.pair_heat and f.enemy_acts == 2, (f.pair_heat, f.enemy_acts))
 
+k_, w_ = Char('Knight', RG), Char('Warrior', RG); (k_, w_), f = duel(None, RG, party=[k_, w_]); f.foes[0].node = E.IDX[(4, 4)]; f.pol.kite = False
+f.support(k_, dict(name='x', guard=dict(who='party', blk='b', res='b')), [k_, w_]); f.support(k_, dict(name='y', guard=dict(who='all', blk='u', res='')), [k_, w_])
+both = [g[2] for g in w_.guards]; f.char_turn(w_); after_turn = [g[2] for g in w_.guards]; f.foes_done(); after_foes = list(w_.guards) + list(k_.guards)
+check('a die lent for the next enemy activation outlasts its holder\'s own turn and goes when the enemies have acted; one lent until the next character activation goes when a character acts',
+      both == ['enemy', 'char'] and after_turn == ['enemy'] and after_foes == [], (both, after_turn, after_foes))
+c, f = duel('Knight', RG); c.dodge = 0; c.can_parry = False; c.blk = ''; c.guards = [('o', '', 'enemy')]; f.defend(f.foes[0], c, 1, False, 9)
+check('a lent block die is rolled with the character\'s own', c.dmg == 0, c.dmg)
+
 print()
 print('%d checks failed' % len(FAILS) if FAILS else 'all checks passed')
 sys.exit(1 if FAILS else 0)

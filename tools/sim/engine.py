@@ -165,9 +165,10 @@ class Fight:
         for i, c in enumerate(party):
             c.node = ents[i % 3] if self.pol.spread else ents[0]
             c.alive = True; c.stagger = c.frost = False; c.poison = 0; c.bleed = False; c.ran = False
-            c.guard = ('', ''); c.buff = None; c.hurt_by = set(); c.rolls = 0
+            c.guards = []; c.buff = None; c.hurt_by = set(); c.rolls = 0
         self.faraam = set()                            # who has used "once per encounter" card text
         self.idle = 0; self._hp = None                 # rounds in a row in which no enemy lost health
+        self.last_before_foes = True                   # whether the character now acting is the last before the enemies act
         self.special = None; self.bdef = None; self.pair_done = False      # the two-model boss has had its shared turn this enemy phase
         if boss:
             b = BOSSES[boss]; mul = getattr(r, 'boss_mul', None); k = mul(self.n) if mul else 1
@@ -240,7 +241,7 @@ class Fight:
         free = c.cap - c.dmg - c.sta
         pen = 1 if (c.stagger and r.stagger == 'author') else 0
         tr = c.traits
-        dice = (c.res if magic else c.blk) + c.guard[1 if magic else 0]      # with any die lent by a spell or a shield's action
+        dice = (c.res if magic else c.blk) + ''.join(g[1 if magic else 0] for g in c.guards)      # with any die lent by a spell or a shield's action
         adice = c.arm_res if magic else c.arm_blk
         # a block or resist value also takes the modifier printed on the equipment (bpen: everything worn; apen: the
         # armour alone, for the roll after a failed dodge); a dodge roll takes only the stagger
@@ -710,6 +711,9 @@ class Fight:
             return sum(need(x) for x in pick), pick
         if 'guard' in o:
             g = o['guard']; pick = [c] if g['who'] == 'self' else (self.live() if g['who'] == 'party' else live)
+            # a die lent "until the next character activation" is gone before any enemy acts unless this character is the
+            # last to act before the enemies do
+            if g['who'] == 'all' and not self.last_before_foes: return 0.0, pick
             return 0.45 * len(pick) * (0.6 if g['blk'] == '' or g['res'] == '' else 1.0), pick
         if 'gain_sta' in o: return (0.0 if barred(c) else 1.2 * self.pol.w_sta * min(o['gain_sta'], c.sta)), [c]
         if 'buff' in o:
@@ -728,7 +732,10 @@ class Fight:
                 x.dmg = max(0, x.dmg - o['sup']['hp'] - more)
                 if not (x.frost and r.frost == 'author'): x.sta = max(0, x.sta - o['sup']['sta'])
         elif 'guard' in o:
-            for x in pick: x.guard = (x.guard[0] + o['guard']['blk'], x.guard[1] + o['guard']['res'])
+            # a die lent "during the next enemy activation" (to its user, or to the party) lasts to the end of the next enemy
+            # phase; one lent "until the next character activation" (to all within range) goes when the next character acts
+            until = 'char' if o['guard']['who'] == 'all' else 'enemy'
+            for x in pick: x.guards.append((o['guard']['blk'], o['guard']['res'], until))
         elif 'gain_sta' in o: c.sta = max(0, c.sta - o['gain_sta'])
         elif 'buff' in o: c.buff = o['buff']
         self.say('   ', c.name, 'uses', o['name'], 'on', [x.name for x in pick])
@@ -774,7 +781,8 @@ class Fight:
     def char_turn(self, c):
         r, pol, rng = self.r, self.pol, self.rng
         self.char_turns += 1; tr = c.traits
-        c.guard = ('', ''); c.buff = None; c.rolls = 0
+        for x in self.party: x.guards = [g for g in x.guards if g[2] != 'char']     # a character activation begins
+        c.buff = None; c.rolls = 0
         # stamina at the start of the turn: none under the manuscript's frostbite, one less under the 2022 rules
         barred = c.frost and r.frost == 'author'
         if not barred:
@@ -964,6 +972,10 @@ class Fight:
             return sorted(live, key=lambda c: (c.mean_blk + c.dodge * 0.5, c.cap - c.dmg))
         return sorted(live, key=lambda c: -c.taunt)
 
+    def foes_done(self):
+        """An enemy phase has ended: dice lent to a character for the next enemy activation are spent."""
+        for x in self.party: x.guards = [g for g in x.guards if g[2] != 'enemy']
+
     def stalled(self):
         """Kept at the end of each round: how many rounds have passed with no enemy losing health. A party that only
         backs away from enemies it finds hard to hurt has to close and strike all the same."""
@@ -987,6 +999,7 @@ class Fight:
                         if self.over(): break
                         if f.hp <= 0: continue               # killed during another enemy's activation
                         (self.boss_turn if f.boss else self.enemy_turn)(f)
+                    self.foes_done()
                     if self.over(): break
                     for _k in range(self.seats):             # the next living character in seat order
                         c = self.party[self.turn_i % self.seats]; self.turn_i += 1
@@ -1003,10 +1016,14 @@ class Fight:
                     if self.over(): break
                     if f.hp <= 0: continue                   # killed during another enemy's activation
                     (self.boss_turn if f.boss else self.enemy_turn)(f)
+                self.foes_done()
                 if self.over(): break
-                for c in self.order():
+                turn = self.order()
+                for i, c in enumerate(turn):
                     if self.over(): break
+                    self.last_before_foes = i == len(turn) - 1
                     if c.alive: self.char_turn(c)
+                self.last_before_foes = True
                 first = None; self.stalled()
                 if r.aggro == 'most' and self.dealt:
                     top = max(self.dealt.values()); lead = [c for c, v in self.dealt.items() if v == top and c.alive]
