@@ -303,8 +303,9 @@ class Fight:
                 if r.dodge_move == 'paid': self.reposition(c, min(1, free), False, count=False)     # 2022: may pay 1 stamina to move a node
                 return False
             how, arg = 'block', 0
-        hit = True; taken = 0
+        hit = True; taken = 0; rolled = False            # whether block or resist dice were rolled against this attack
         if how == 'block':
+            rolled = True
             faces = pre if pre is not None else roll(dice, rng); bonus = [0]      # the combined roll has its block dice already
             total = lambda: (sum(sorted(faces)[-2:]) if r.block == 'best2' else sum(faces)) + bonus[0]
             v = total(); taken = max(0, dmg - max(0, v - bpen))
@@ -350,6 +351,7 @@ class Fight:
             elif how == 'parry':
                 taken = dmg; c.stagger = True
             elif r.dodge_fail == 'armour':
+                rolled = True
                 v = sum(sorted(roll(adice, rng))[-2:]) if r.block == 'best2' else sum(roll(adice, rng))
                 taken = max(0, dmg - max(0, v - apen))
             else:
@@ -374,7 +376,7 @@ class Fight:
                 if push and c.alive and 'im_push' not in tr:
                     c.node = step_away(c.node, src.node, rng) if c.node != src.node else rng.choice(NBR[c.node])
             if src.hp > 0 and shared:
-                if 'thorns' in tr: self.hurt(src, 1)                 # after a block or resist roll against an enemy in the node
+                if 'thorns' in tr and rolled: self.hurt(src, 1)                 # after a block or resist roll against an enemy in the node
                 if 'sunset' in tr and 'Hollow' in src.name and src.hp > 0 and c.alive: src.node = rng.choice(NBR[src.node])
         return hit
 
