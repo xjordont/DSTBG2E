@@ -1155,6 +1155,12 @@ t22 = thorns_2022()
 check('official 2022: the block dice are rolled with the dodge dice, so Armour of Thorns answers the roll even when the dodge succeeds',
       t22[0] > 20 and t22[0] == t22[1], t22)
 
+ks = Char('Knight', R17); ks.plus = {ks.A['name']: CARDS["Knight Slayer's Ring"]['up']}; ks.refresh()
+_, f = duel(None, R17, party=[ks], enemies=['Hollow Soldier', 'Hollow Soldier', 'Hollow Soldier']); ks.sta = 5
+f.strike(ks, f.foes[0], dict(ks.options['R'][0], dice='b', mod=9, node=True, repeat=1))
+check("the Knight Slayer's Ring gives one stamina for an attack that beats a defence by three, once for the attack however many enemies it strikes",
+      'knightslayer' in ks.traits and ks.sta == 4 and all(x.hp < 50 for x in f.foes), (ks.sta, [x.hp for x in f.foes]))
+
 print()
 print('%d checks failed' % len(FAILS) if FAILS else 'all checks passed')
 sys.exit(1 if FAILS else 0)

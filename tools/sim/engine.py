@@ -715,14 +715,14 @@ class Fight:
             if o.get('reroll') and faces:                            # two-handed grip: one die may be rolled again
                 i = min(range(len(faces)), key=lambda j: faces[j] - sum(DIE[dice[j]]) / 6)
                 if faces[i] < sum(DIE[dice[i]]) / 6: faces[i] = rng.choice(DIE[dice[i]])
-            v = sum(faces) + mod
+            v = sum(faces) + mod; slain = False
             for t in targets:
                 guard = 0 if o.get('ignore') else t.resist if o['magic'] else t.armor
                 if t.stagger and r.stagger == 'author': guard = max(0, guard - 1)      # a staggered model blocks and resists one less
                 lead = v + (1 if ('leo' in tr and t in c.hurt_by) else 0) + (o.get('vs_boss', 0) if t.boss else 0) \
                     + (o.get('vs_hollow', 0) if 'Hollow' in t.name else 0)
                 total = max(0, lead - guard)
-                if 'knightslayer' in tr and o['dice'] and lead - guard >= 3 and not (c.frost and r.frost == 'author'): c.sta = max(0, c.sta - 1)
+                if o['dice'] and lead - guard >= 3: slain = True
                 if total > 0:
                     if t.bleed and r.bleed == 'official': total += 2; t.bleed = False
                     t.hp -= total; self.dealt[c] = self.dealt.get(c, 0) + total; grand += total
@@ -736,6 +736,8 @@ class Fight:
                 if o.get('fx'): self.afflict(t, o['fx'], by=c)       # a condition is placed by a hit, whatever damage it did
                 if o.get('push') and not t.boss and t.hp > 0:        # a boss is never pushed by a character
                     t.node = step_away(t.node, c.node, rng) if t.node != c.node else rng.choice(NBR[t.node])
+            # "after you make an attack that exceeds an enemy's block or resist by 3 or more": once for the attack, however many it strikes
+            if slain and 'knightslayer' in tr and not (c.frost and r.frost == 'author'): c.sta = max(0, c.sta - 1)
         if o.get('gain_hp'): c.dmg = max(0, c.dmg - self.mend(c, o['gain_hp']))
         if o.get('gain_sta') and not (c.frost and r.frost == 'author'): c.sta = max(0, c.sta - o['gain_sta'])
         if o.get('aggro') and self.live():                           # the token may be handed to another: the sturdiest takes it
