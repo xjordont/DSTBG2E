@@ -1139,6 +1139,22 @@ sx_m = six_dice(RG)
 check('the manuscript rolls no dodge with more than four dice, however many the cards show: at difficulty four about one dodge in sixteen, where six dice would make one in three',
       10 <= sx_m < 50, sx_m)
 
+kf, f = duel('Knight', R17); kf.frost = True
+check('official 2017 frostbite charges one stamina for each node walked or run, and none for a node an attack\'s shift gives',
+      f.walk(kf, 2, 1) == (1, False) and f.walk(kf, 2, 0) == (3, True) and f.walk(kf, 1, 1) == (0, False), (f.walk(kf, 2, 1), f.walk(kf, 2, 0), f.walk(kf, 1, 1)))
+def thorns_2022(trials=60):
+    """Official 2022: a Knight in Armour of Thorns defends against a Sentinel on its node, block and dodge dice rolled together:
+    (attacks dodged, of those the Sentinel lost one health)."""
+    dodged = pricked = 0
+    for sd in range(trials):
+        c, f = duel('Knight', R22, enemies=['Sentinel'], seed=sd); c.A = CARDS['Armour of Thorns']; c.refresh(); c.dodge = 3; c.luck = c.heroic = False
+        foe = f.foes[0]; h0 = foe.hp; hit = f.defend(foe, c, 1, False, 1)
+        if not hit: dodged += 1; pricked += foe.hp == h0 - 1
+    return dodged, pricked
+t22 = thorns_2022()
+check('official 2022: the block dice are rolled with the dodge dice, so Armour of Thorns answers the roll even when the dodge succeeds',
+      t22[0] > 20 and t22[0] == t22[1], t22)
+
 print()
 print('%d checks failed' % len(FAILS) if FAILS else 'all checks passed')
 sys.exit(1 if FAILS else 0)

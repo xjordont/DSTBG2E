@@ -329,6 +329,8 @@ class Fight:
                     c.luck = False; got += rng.random() < 0.5
             if need <= 0 or got >= need:
                 self.dec['dodge'] = self.dec.get('dodge', 0) + 1
+                # the block or resist dice were rolled with the dodge dice: a card that answers such a roll answers this one
+                if 'thorns' in tr and src.hp > 0 and src.node == c.node: self.thorns(c, src)
                 if c.heroic and c.name == 'Assassin' and src.hp > 0:                       # Backstab: a free attack after a dodge
                     o = c.best_option(src, DIST[c.node][src.node], 99, hand='R')
                     if o: self.hero(c); self.strike(c, src, o)
@@ -412,12 +414,16 @@ class Fight:
                 if push and c.alive and 'im_push' not in tr:
                     c.node = step_away(c.node, src.node, rng) if c.node != src.node else rng.choice(NBR[c.node])
             if src.hp > 0 and shared:
-                if 'thorns' in tr and rolled:                                   # after a block or resist roll against an enemy in the node
-                    h0 = src.hp; self.hurt(src, 1)
-                    if c.alive and src.hp < h0:                                 # damage the wearer deals: it counts for the aggro token
-                        self.dealt[c] = self.dealt.get(c, 0) + h0 - src.hp
-                        if r.aggro == 'last' or (r.aggro == 'most' and self.is_boss): self.aggro = c
+                if 'thorns' in tr and rolled: self.thorns(c, src)               # after a block or resist roll against an enemy in the node
         return hit
+
+    def thorns(self, c, src):
+        """Armour of Thorns: one damage to an enemy on the wearer's node after the wearer rolls block or resist dice against
+        it. Damage the wearer deals: it counts for the aggro token."""
+        h0 = src.hp; self.hurt(src, 1)
+        if c.alive and src.hp < h0:
+            self.dealt[c] = self.dealt.get(c, 0) + h0 - src.hp
+            if self.r.aggro == 'last' or (self.r.aggro == 'most' and self.is_boss): self.aggro = c
 
     def hurt(self, f, d):
         """Damage to an enemy or boss that is not an attack roll (a condition, a card's text)."""
@@ -794,10 +800,12 @@ class Fight:
         """What moving `steps` nodes costs character c: (stamina, whether it ran), or None if its cards forbid it.
         One node is the free Walk, unless a card says none or two; `free` adds nodes given by a heroic action or a shift."""
         tr = c.traits
+        given = free                                    # nodes a shift icon or a heroic action gives: neither a Walk nor a Run
         free += 0 if 'no_walk' in tr else 2 if 'walk2' in tr else 1
         run = max(0, steps - free)
         if run and 'no_run' in tr: return None
-        return run * (2 if 'run2' in tr else 1) + (steps if (c.frost and self.r.frost == 'official') else 0), bool(run)
+        # 2017 frostbite: one more stamina for each node walked or run, and none for a node the attack's shift gives
+        return run * (2 if 'run2' in tr else 1) + (max(0, steps - given) if (c.frost and self.r.frost == 'official') else 0), bool(run)
 
     def reposition(self, c, budget, walk_free, count=True, frost=True, dodge=False):
         """After acting, step out of the enemies' reach if that saves more damage than it costs in stamina. Also used for
