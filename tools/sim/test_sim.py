@@ -1104,6 +1104,12 @@ eo.boss_named('Dancer of the Boreal Valley', 1)
 check('official rules with every set: the mini-boss\'s treasure goes to the inventory and not into the deck; a main boss\'s treasure is not dealt',
       len(got) == 3 and all('Winged Knight' in n_ or n_ for n_ in got) and not any(i['deck'] == 'boss' for i in eo.deck), (got, sum(i['deck'] == 'boss' for i in eo.deck)))
 
+kt, wt = Char('Knight', RG), Char('Warrior', RG); kt.A = CARDS['Armour of Thorns']; kt.refresh(); kt.dodge = 0; kt.can_parry = False
+(kt, wt), f = duel(None, RG, party=[kt, wt], enemies=['Sentinel']); f.aggro = wt; f.dealt = {}; h0 = f.foes[0].hp
+f.defend(f.foes[0], kt, 1, False, 9)
+check('damage from Armour of Thorns is damage its wearer deals: it is counted for the wearer and moves the aggro token to it',
+      RG.aggro == 'last' and f.foes[0].hp == h0 - 1 and f.dealt.get(kt) == 1 and f.aggro is kt, (RG.aggro, h0 - f.foes[0].hp, f.dealt.get(kt), f.aggro.name))
+
 print()
 print('%d checks failed' % len(FAILS) if FAILS else 'all checks passed')
 sys.exit(1 if FAILS else 0)

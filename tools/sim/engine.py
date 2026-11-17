@@ -411,7 +411,11 @@ class Fight:
                 if push and c.alive and 'im_push' not in tr:
                     c.node = step_away(c.node, src.node, rng) if c.node != src.node else rng.choice(NBR[c.node])
             if src.hp > 0 and shared:
-                if 'thorns' in tr and rolled: self.hurt(src, 1)                 # after a block or resist roll against an enemy in the node
+                if 'thorns' in tr and rolled:                                   # after a block or resist roll against an enemy in the node
+                    h0 = src.hp; self.hurt(src, 1)
+                    if c.alive and src.hp < h0:                                 # damage the wearer deals: it counts for the aggro token
+                        self.dealt[c] = self.dealt.get(c, 0) + h0 - src.hp
+                        if r.aggro == 'last' or (r.aggro == 'most' and self.is_boss): self.aggro = c
         return hit
 
     def hurt(self, f, d):
