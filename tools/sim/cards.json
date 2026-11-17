@@ -1,5 +1,5 @@
 {
- "note": "Card values (health, block, resist, damage, dodge difficulty, behaviour decks, encounter line-ups) are the printed values of the 2017 core set as recorded in the public DSBG-Shuffle data set (github.com/DanDuhon/DSBG-Shuffle); threat, range, movement and targeting were read from the card faces. Range 9 stands for unlimited range.",
+ "note": "Card values (health, block, resist, damage, dodge difficulty, behaviour decks, encounter line-ups) are the printed values of the 2017 core set as recorded in the public DSBG-Shuffle data set (github.com/DanDuhon/DSBG-Shuffle); threat, range, movement and targeting were read from the card faces. Range 9 stands for unlimited range. The other 2017 sets: enemy behaviour was read from re-drawn data cards and checked against a community table (work/phase7/enemy_cards_web.md); encounter line-ups are the author's, bosses' decks and special rules as the manuscript's chapter 17 states them. An encounter's crystal lizards are counted but not played.",
  "enemies": {
   "Hollow Soldier": {
    "threat": 5,
@@ -21,7 +21,8 @@
      "magic": false,
      "dodge": 1
     }
-   ]
+   ],
+   "set": "Core"
   },
   "Crossbow Hollow": {
    "threat": 2,
@@ -43,7 +44,8 @@
      "magic": true,
      "dodge": 1
     }
-   ]
+   ],
+   "set": "Core"
   },
   "Large Hollow Soldier": {
    "threat": 6,
@@ -61,7 +63,8 @@
      "magic": false,
      "dodge": 1
     }
-   ]
+   ],
+   "set": "Core"
   },
   "Sentinel": {
    "threat": 9,
@@ -85,7 +88,8 @@
      "magic": false,
      "dodge": 1
     }
-   ]
+   ],
+   "set": "Core"
   },
   "Silver Knight Greatbowman": {
    "threat": 3,
@@ -108,7 +112,8 @@
      "dir": "away",
      "tgt": "aggro"
     }
-   ]
+   ],
+   "set": "Core"
   },
   "Silver Knight Swordsman": {
    "threat": 7,
@@ -132,7 +137,332 @@
      "magic": false,
      "dodge": 2
     }
-   ]
+   ],
+   "set": "Core"
+  },
+  "Stone Guardian": {
+   "threat": 6,
+   "hp": 5,
+   "armor": 2,
+   "resist": 3,
+   "steps": [
+    {
+     "k": "move",
+     "n": 1,
+     "dir": "to",
+     "tgt": "aggro",
+     "push": true,
+     "dmg": 4,
+     "magic": false,
+     "dodge": 1
+    },
+    {
+     "k": "attack",
+     "tgt": "aggro",
+     "range": 1,
+     "dmg": 5,
+     "magic": false,
+     "dodge": 1,
+     "node": true,
+     "push": true
+    }
+   ],
+   "set": "Darkroot",
+   "conf": "high"
+  },
+  "Stone Knight": {
+   "threat": 7,
+   "hp": 5,
+   "armor": 3,
+   "resist": 2,
+   "steps": [
+    {
+     "k": "move",
+     "n": 1,
+     "dir": "to",
+     "tgt": "nearest"
+    },
+    {
+     "k": "attack",
+     "tgt": "nearest",
+     "range": 0,
+     "dmg": 5,
+     "magic": true,
+     "dodge": 1,
+     "push": true
+    }
+   ],
+   "set": "Darkroot",
+   "conf": "high"
+  },
+  "Demonic Foliage": {
+   "threat": 3,
+   "hp": 1,
+   "armor": 2,
+   "resist": 1,
+   "steps": [
+    {
+     "k": "move",
+     "n": 1,
+     "dir": "to",
+     "tgt": "nearest",
+     "push": true
+    },
+    {
+     "k": "attack",
+     "tgt": "nearest",
+     "range": 1,
+     "dmg": 5,
+     "magic": false,
+     "dodge": 1
+    }
+   ],
+   "set": "Darkroot",
+   "conf": "high"
+  },
+  "Mushroom Parent": {
+   "threat": 1,
+   "hp": 10,
+   "armor": 1,
+   "resist": 2,
+   "steps": [
+    {
+     "k": "move",
+     "n": 1,
+     "dir": "to",
+     "tgt": "nearest",
+     "push": true,
+     "dmg": 6,
+     "magic": false,
+     "dodge": 1,
+     "effects": [
+      "stagger"
+     ]
+    }
+   ],
+   "set": "Darkroot",
+   "conf": "high"
+  },
+  "Mushroom Child": {
+   "threat": 2,
+   "hp": 5,
+   "armor": 1,
+   "resist": 2,
+   "steps": [
+    {
+     "k": "move",
+     "n": 1,
+     "dir": "to",
+     "tgt": "nearest"
+    },
+    {
+     "k": "attack",
+     "tgt": "nearest",
+     "range": 0,
+     "dmg": 5,
+     "magic": false,
+     "dodge": 1
+    }
+   ],
+   "set": "Darkroot",
+   "conf": "high"
+  },
+  "Plow Scarecrow": {
+   "threat": 4,
+   "hp": 1,
+   "armor": 1,
+   "resist": 1,
+   "steps": [
+    {
+     "k": "move",
+     "n": 2,
+     "dir": "to",
+     "tgt": "aggro"
+    },
+    {
+     "k": "attack",
+     "tgt": "aggro",
+     "range": 1,
+     "dmg": 4,
+     "magic": false,
+     "dodge": 2
+    }
+   ],
+   "set": "Darkroot",
+   "conf": "high"
+  },
+  "Shears Scarecrow": {
+   "threat": 8,
+   "hp": 1,
+   "armor": 1,
+   "resist": 1,
+   "steps": [
+    {
+     "k": "move",
+     "n": 1,
+     "dir": "to",
+     "tgt": "nearest"
+    },
+    {
+     "k": "attack",
+     "tgt": "nearest",
+     "range": 0,
+     "dmg": 3,
+     "magic": false,
+     "dodge": 2,
+     "node": true,
+     "repeat": 2
+    }
+   ],
+   "set": "Darkroot",
+   "conf": "medium"
+  },
+  "Alonne Bow Knight": {
+   "threat": 2,
+   "hp": 1,
+   "armor": 1,
+   "resist": 1,
+   "steps": [
+    {
+     "k": "move",
+     "n": 2,
+     "dir": "away",
+     "tgt": "aggro"
+    },
+    {
+     "k": "attack",
+     "tgt": "aggro",
+     "range": 9,
+     "dmg": 4,
+     "magic": false,
+     "dodge": 2,
+     "push": true
+    }
+   ],
+   "set": "Iron Keep",
+   "conf": "high"
+  },
+  "Alonne Sword Knight": {
+   "threat": 5,
+   "hp": 1,
+   "armor": 2,
+   "resist": 2,
+   "steps": [
+    {
+     "k": "move",
+     "n": 2,
+     "dir": "to",
+     "tgt": "nearest"
+    },
+    {
+     "k": "attack",
+     "tgt": "nearest",
+     "range": 0,
+     "dmg": 5,
+     "magic": false,
+     "dodge": 1
+    }
+   ],
+   "set": "Iron Keep",
+   "conf": "high"
+  },
+  "Alonne Knight Captain": {
+   "threat": 8,
+   "hp": 5,
+   "armor": 2,
+   "resist": 2,
+   "steps": [
+    {
+     "k": "move",
+     "n": 2,
+     "dir": "to",
+     "tgt": "nearest"
+    },
+    {
+     "k": "attack",
+     "tgt": "nearest",
+     "range": 0,
+     "dmg": 5,
+     "magic": true,
+     "dodge": 1
+    }
+   ],
+   "set": "Iron Keep",
+   "conf": "high"
+  },
+  "Ironclad Soldier": {
+   "threat": 6,
+   "hp": 5,
+   "armor": 3,
+   "resist": 2,
+   "steps": [
+    {
+     "k": "move",
+     "n": 1,
+     "dir": "to",
+     "tgt": "nearest",
+     "push": true,
+     "dmg": 5,
+     "magic": false,
+     "dodge": 2,
+     "effects": [
+      "stagger"
+     ]
+    }
+   ],
+   "set": "Iron Keep",
+   "conf": "high"
+  },
+  "Firebomb Hollow": {
+   "threat": 2,
+   "hp": 1,
+   "armor": 1,
+   "resist": 1,
+   "steps": [
+    {
+     "k": "move",
+     "n": 1,
+     "dir": "to",
+     "tgt": "aggro"
+    },
+    {
+     "k": "attack",
+     "tgt": "aggro",
+     "range": 2,
+     "dmg": 3,
+     "magic": true,
+     "dodge": 1,
+     "node": true,
+     "push": true
+    }
+   ],
+   "set": "Explorers",
+   "conf": "high"
+  },
+  "Silver Knight Spearman": {
+   "threat": 8,
+   "hp": 1,
+   "armor": 2,
+   "resist": 1,
+   "steps": [
+    {
+     "k": "attack",
+     "tgt": "nearest",
+     "range": 1,
+     "dmg": 6,
+     "magic": false,
+     "dodge": 2
+    },
+    {
+     "k": "move",
+     "n": 1,
+     "dir": "to",
+     "tgt": "aggro",
+     "push": true
+    }
+   ],
+   "set": "Explorers",
+   "conf": "high"
   }
  },
  "encounters": {
@@ -142,7 +472,8 @@
     "enemies": [
      "Silver Knight Greatbowman",
      "Crossbow Hollow"
-    ]
+    ],
+    "set": "Core"
    },
    {
     "name": "Ashen Hollow",
@@ -150,7 +481,8 @@
      "Crossbow Hollow",
      "Hollow Soldier",
      "Hollow Soldier"
-    ]
+    ],
+    "set": "Core"
    },
    {
     "name": "Broken Passageway",
@@ -158,13 +490,15 @@
      "Silver Knight Swordsman",
      "Hollow Soldier",
      "Hollow Soldier"
-    ]
+    ],
+    "set": "Core"
    },
    {
     "name": "Dark Hollow",
     "enemies": [
      "Large Hollow Soldier"
-    ]
+    ],
+    "set": "Core"
    },
    {
     "name": "Forsaken Depths",
@@ -173,7 +507,8 @@
      "Crossbow Hollow",
      "Hollow Soldier",
      "Crossbow Hollow"
-    ]
+    ],
+    "set": "Core"
    },
    {
     "name": "Ghostly Keep",
@@ -181,7 +516,8 @@
      "Hollow Soldier",
      "Hollow Soldier",
      "Crossbow Hollow"
-    ]
+    ],
+    "set": "Core"
    },
    {
     "name": "Hollow Cave",
@@ -189,7 +525,8 @@
      "Hollow Soldier",
      "Hollow Soldier",
      "Hollow Soldier"
-    ]
+    ],
+    "set": "Core"
    },
    {
     "name": "Ruined Keep",
@@ -197,7 +534,8 @@
      "Crossbow Hollow",
      "Hollow Soldier",
      "Crossbow Hollow"
-    ]
+    ],
+    "set": "Core"
    },
    {
     "name": "Shattered Dungeon",
@@ -205,7 +543,8 @@
      "Hollow Soldier",
      "Crossbow Hollow",
      "Crossbow Hollow"
-    ]
+    ],
+    "set": "Core"
    },
    {
     "name": "The Deeps",
@@ -213,7 +552,8 @@
      "Silver Knight Swordsman",
      "Hollow Soldier",
      "Crossbow Hollow"
-    ]
+    ],
+    "set": "Core"
    },
    {
     "name": "The Forgotten",
@@ -221,7 +561,8 @@
      "Hollow Soldier",
      "Hollow Soldier",
      "Silver Knight Greatbowman"
-    ]
+    ],
+    "set": "Core"
    },
    {
     "name": "Unlighted Chamber",
@@ -229,7 +570,166 @@
      "Hollow Soldier",
      "Crossbow Hollow",
      "Silver Knight Swordsman"
-    ]
+    ],
+    "set": "Core"
+   },
+   {
+    "name": "Blackroot Well",
+    "enemies": [
+     "Demonic Foliage",
+     "Plow Scarecrow",
+     "Plow Scarecrow"
+    ],
+    "set": "Darkroot"
+   },
+   {
+    "name": "Fearful Woods",
+    "enemies": [
+     "Plow Scarecrow",
+     "Shears Scarecrow",
+     "Mushroom Child"
+    ],
+    "set": "Darkroot"
+   },
+   {
+    "name": "Leafy Grotto",
+    "enemies": [
+     "Shears Scarecrow",
+     "Plow Scarecrow",
+     "Demonic Foliage"
+    ],
+    "set": "Darkroot"
+   },
+   {
+    "name": "Misty Woods",
+    "enemies": [
+     "Shears Scarecrow",
+     "Shears Scarecrow",
+     "Plow Scarecrow"
+    ],
+    "set": "Darkroot"
+   },
+   {
+    "name": "Overgrown Caves",
+    "enemies": [
+     "Mushroom Child",
+     "Demonic Foliage"
+    ],
+    "set": "Darkroot",
+    "trap": true
+   },
+   {
+    "name": "Wild Glades",
+    "enemies": [
+     "Plow Scarecrow",
+     "Shears Scarecrow",
+     "Plow Scarecrow"
+    ],
+    "set": "Darkroot",
+    "trap": true
+   },
+   {
+    "name": "Burning Swamp",
+    "enemies": [
+     "Hollow Soldier",
+     "Crossbow Hollow",
+     "Firebomb Hollow"
+    ],
+    "set": "Explorers",
+    "trap": true
+   },
+   {
+    "name": "Halls of the Forsworn",
+    "enemies": [
+     "Large Hollow Soldier",
+     "Firebomb Hollow",
+     "Hollow Soldier"
+    ],
+    "set": "Explorers",
+    "trap": true
+   },
+   {
+    "name": "Lothric Castle",
+    "enemies": [
+     "Hollow Soldier",
+     "Firebomb Hollow",
+     "Firebomb Hollow"
+    ],
+    "set": "Explorers",
+    "trap": true
+   },
+   {
+    "name": "Unholy Tunnels",
+    "enemies": [
+     "Silver Knight Spearman",
+     "Hollow Soldier",
+     "Firebomb Hollow"
+    ],
+    "set": "Explorers"
+   },
+   {
+    "name": "Wicked Vault",
+    "enemies": [
+     "Silver Knight Spearman",
+     "Firebomb Hollow"
+    ],
+    "set": "Explorers"
+   },
+   {
+    "name": "Blazing Plaza",
+    "enemies": [
+     "Alonne Sword Knight",
+     "Crossbow Hollow",
+     "Crossbow Hollow"
+    ],
+    "set": "Iron Keep"
+   },
+   {
+    "name": "Burning Hold",
+    "enemies": [
+     "Alonne Bow Knight",
+     "Hollow Soldier",
+     "Crossbow Hollow"
+    ],
+    "set": "Iron Keep"
+   },
+   {
+    "name": "Charred Keep",
+    "enemies": [
+     "Hollow Soldier",
+     "Crossbow Hollow",
+     "Hollow Soldier",
+     "Alonne Bow Knight"
+    ],
+    "set": "Iron Keep"
+   },
+   {
+    "name": "Flaming Passageway",
+    "enemies": [
+     "Alonne Bow Knight",
+     "Alonne Sword Knight"
+    ],
+    "set": "Iron Keep",
+    "trap": true
+   },
+   {
+    "name": "Furnace Room",
+    "enemies": [
+     "Alonne Sword Knight",
+     "Crossbow Hollow",
+     "Alonne Bow Knight"
+    ],
+    "set": "Iron Keep"
+   },
+   {
+    "name": "Threshold Bridge",
+    "enemies": [
+     "Alonne Bow Knight",
+     "Hollow Soldier",
+     "Crossbow Hollow"
+    ],
+    "set": "Iron Keep",
+    "trap": true
    }
   ],
   "2": [
@@ -240,7 +740,8 @@
      "Silver Knight Swordsman",
      "Silver Knight Greatbowman",
      "Silver Knight Swordsman"
-    ]
+    ],
+    "set": "Core"
    },
    {
     "name": "Burned Gardens",
@@ -248,7 +749,8 @@
      "Large Hollow Soldier",
      "Silver Knight Swordsman",
      "Silver Knight Swordsman"
-    ]
+    ],
+    "set": "Core"
    },
    {
     "name": "Demon Ruins",
@@ -256,7 +758,8 @@
      "Silver Knight Greatbowman",
      "Silver Knight Swordsman",
      "Large Hollow Soldier"
-    ]
+    ],
+    "set": "Core"
    },
    {
     "name": "Forgotten Gorge",
@@ -266,7 +769,8 @@
      "Silver Knight Greatbowman",
      "Hollow Soldier",
      "Silver Knight Greatbowman"
-    ]
+    ],
+    "set": "Core"
    },
    {
     "name": "High Wall of Lothric",
@@ -275,7 +779,8 @@
      "Hollow Soldier",
      "Hollow Soldier",
      "Crossbow Hollow"
-    ]
+    ],
+    "set": "Core"
    },
    {
     "name": "Lightless Passage",
@@ -284,14 +789,16 @@
      "Hollow Soldier",
      "Hollow Soldier",
      "Hollow Soldier"
-    ]
+    ],
+    "set": "Core"
    },
    {
     "name": "Lost Labyrinth",
     "enemies": [
      "Large Hollow Soldier",
      "Large Hollow Soldier"
-    ]
+    ],
+    "set": "Core"
    },
    {
     "name": "Prison Tower",
@@ -299,13 +806,15 @@
      "Silver Knight Swordsman",
      "Silver Knight Greatbowman",
      "Silver Knight Swordsman"
-    ]
+    ],
+    "set": "Core"
    },
    {
     "name": "Sentinel's Wrath",
     "enemies": [
      "Sentinel"
-    ]
+    ],
+    "set": "Core"
    },
    {
     "name": "Sunrise Pass",
@@ -313,7 +822,8 @@
      "Silver Knight Greatbowman",
      "Silver Knight Greatbowman",
      "Large Hollow Soldier"
-    ]
+    ],
+    "set": "Core"
    },
    {
     "name": "Temple of the Deeps",
@@ -323,7 +833,8 @@
      "Crossbow Hollow",
      "Hollow Soldier",
      "Crossbow Hollow"
-    ]
+    ],
+    "set": "Core"
    },
    {
     "name": "Weathered Peak",
@@ -333,7 +844,162 @@
      "Crossbow Hollow",
      "Silver Knight Greatbowman",
      "Hollow Soldier"
-    ]
+    ],
+    "set": "Core"
+   },
+   {
+    "name": "Black Bog",
+    "enemies": [
+     "Demonic Foliage",
+     "Shears Scarecrow",
+     "Demonic Foliage",
+     "Plow Scarecrow"
+    ],
+    "set": "Darkroot"
+   },
+   {
+    "name": "Boggy Hollow",
+    "enemies": [
+     "Stone Guardian",
+     "Mushroom Child"
+    ],
+    "set": "Darkroot"
+   },
+   {
+    "name": "Haunted Ruins",
+    "enemies": [
+     "Stone Knight",
+     "Demonic Foliage"
+    ],
+    "set": "Darkroot"
+   },
+   {
+    "name": "Murky Roots",
+    "enemies": [
+     "Mushroom Parent",
+     "Mushroom Child"
+    ],
+    "set": "Darkroot",
+    "trap": true
+   },
+   {
+    "name": "Stone Hollow",
+    "enemies": [
+     "Plow Scarecrow",
+     "Shears Scarecrow",
+     "Stone Guardian"
+    ],
+    "set": "Darkroot"
+   },
+   {
+    "name": "Withered Thicket",
+    "enemies": [
+     "Mushroom Parent",
+     "Mushroom Child",
+     "Plow Scarecrow"
+    ],
+    "set": "Darkroot"
+   },
+   {
+    "name": "Lost Grotto",
+    "enemies": [
+     "Silver Knight Spearman",
+     "Silver Knight Greatbowman",
+     "Silver Knight Spearman"
+    ],
+    "set": "Explorers"
+   },
+   {
+    "name": "Spirit Tomb",
+    "enemies": [
+     "Silver Knight Swordsman",
+     "Silver Knight Spearman",
+     "Silver Knight Greatbowman"
+    ],
+    "set": "Explorers"
+   },
+   {
+    "name": "Sunken Stairwell",
+    "enemies": [
+     "Silver Knight Greatbowman",
+     "Silver Knight Swordsman",
+     "Silver Knight Spearman"
+    ],
+    "set": "Explorers"
+   },
+   {
+    "name": "Unhallowed Caves",
+    "enemies": [
+     "Silver Knight Spearman",
+     "Silver Knight Spearman",
+     "Firebomb Hollow"
+    ],
+    "set": "Explorers",
+    "trap": true
+   },
+   {
+    "name": "Void Pit, The",
+    "enemies": [
+     "Firebomb Hollow",
+     "Firebomb Hollow",
+     "Large Hollow Soldier",
+     "Firebomb Hollow"
+    ],
+    "set": "Explorers",
+    "trap": true
+   },
+   {
+    "name": "Brass Sanctum",
+    "enemies": [
+     "Alonne Knight Captain",
+     "Alonne Bow Knight",
+     "Alonne Bow Knight"
+    ],
+    "set": "Iron Keep"
+   },
+   {
+    "name": "Bronze Spire",
+    "enemies": [
+     "Alonne Bow Knight",
+     "Ironclad Soldier"
+    ],
+    "set": "Iron Keep"
+   },
+   {
+    "name": "Iron Depths",
+    "enemies": [
+     "Alonne Bow Knight",
+     "Alonne Bow Knight",
+     "Alonne Knight Captain"
+    ],
+    "set": "Iron Keep",
+    "trap": true
+   },
+   {
+    "name": "Pyre of Souls",
+    "enemies": [
+     "Ironclad Soldier",
+     "Crossbow Hollow"
+    ],
+    "set": "Iron Keep",
+    "trap": true
+   },
+   {
+    "name": "Searing Hallway",
+    "enemies": [
+     "Ironclad Soldier",
+     "Alonne Sword Knight"
+    ],
+    "set": "Iron Keep"
+   },
+   {
+    "name": "Smouldering Labyrinth",
+    "enemies": [
+     "Alonne Knight Captain",
+     "Alonne Bow Knight",
+     "Alonne Sword Knight"
+    ],
+    "set": "Iron Keep"
    }
   ],
   "3": [
@@ -346,7 +1012,8 @@
      "Large Hollow Soldier",
      "Silver Knight Greatbowman",
      "Silver Knight Greatbowman"
-    ]
+    ],
+    "set": "Core"
    },
    {
     "name": "Central Irithyll",
@@ -354,7 +1021,8 @@
      "Large Hollow Soldier",
      "Sentinel",
      "Large Hollow Soldier"
-    ]
+    ],
+    "set": "Core"
    },
    {
     "name": "Desecrated Church",
@@ -365,7 +1033,8 @@
      "Large Hollow Soldier",
      "Silver Knight Swordsman",
      "Silver Knight Greatbowman"
-    ]
+    ],
+    "set": "Core"
    },
    {
     "name": "Dilapidated Bridge",
@@ -376,14 +1045,16 @@
      "Large Hollow Soldier",
      "Hollow Soldier",
      "Crossbow Hollow"
-    ]
+    ],
+    "set": "Core"
    },
    {
     "name": "Empty Crypt",
     "enemies": [
      "Sentinel",
      "Sentinel"
-    ]
+    ],
+    "set": "Core"
    },
    {
     "name": "Lost Shrine",
@@ -394,7 +1065,8 @@
      "Silver Knight Swordsman",
      "Silver Knight Greatbowman",
      "Silver Knight Greatbowman"
-    ]
+    ],
+    "set": "Core"
    },
    {
     "name": "Perished Depths",
@@ -404,7 +1076,8 @@
      "Hollow Soldier",
      "Crossbow Hollow",
      "Crossbow Hollow"
-    ]
+    ],
+    "set": "Core"
    },
    {
     "name": "Pit of the Dead",
@@ -412,7 +1085,8 @@
      "Sentinel",
      "Sentinel",
      "Silver Knight Greatbowman"
-    ]
+    ],
+    "set": "Core"
    },
    {
     "name": "Profane Shrine",
@@ -423,7 +1097,8 @@
      "Large Hollow Soldier",
      "Hollow Soldier",
      "Hollow Soldier"
-    ]
+    ],
+    "set": "Core"
    },
    {
     "name": "Silent Tombs",
@@ -433,7 +1108,8 @@
      "Silver Knight Swordsman",
      "Large Hollow Soldier",
      "Silver Knight Greatbowman"
-    ]
+    ],
+    "set": "Core"
    },
    {
     "name": "Untended Graves",
@@ -442,7 +1118,8 @@
      "Silver Knight Greatbowman",
      "Sentinel",
      "Silver Knight Swordsman"
-    ]
+    ],
+    "set": "Core"
    },
    {
     "name": "Wretched Gardens",
@@ -450,7 +1127,194 @@
      "Sentinel",
      "Silver Knight Greatbowman",
      "Large Hollow Soldier"
-    ]
+    ],
+    "set": "Core"
+   },
+   {
+    "name": "Abandoned Tower",
+    "enemies": [
+     "Demonic Foliage",
+     "Plow Scarecrow",
+     "Plow Scarecrow",
+     "Stone Knight",
+     "Plow Scarecrow"
+    ],
+    "set": "Darkroot",
+    "trap": true
+   },
+   {
+    "name": "Corpselight Fens",
+    "enemies": [
+     "Stone Knight",
+     "Demonic Foliage",
+     "Stone Guardian",
+     "Demonic Foliage"
+    ],
+    "set": "Darkroot"
+   },
+   {
+    "name": "Dark Woods",
+    "enemies": [
+     "Stone Guardian",
+     "Stone Guardian",
+     "Stone Knight"
+    ],
+    "set": "Darkroot"
+   },
+   {
+    "name": "Desolate Hinterland",
+    "enemies": [
+     "Stone Knight",
+     "Mushroom Parent",
+     "Mushroom Child"
+    ],
+    "set": "Darkroot"
+   },
+   {
+    "name": "Hydra Lake",
+    "enemies": [
+     "Mushroom Parent",
+     "Demonic Foliage",
+     "Mushroom Child",
+     "Stone Knight"
+    ],
+    "set": "Darkroot"
+   },
+   {
+    "name": "Sodden Mire",
+    "enemies": [
+     "Demonic Foliage",
+     "Plow Scarecrow",
+     "Plow Scarecrow",
+     "Demonic Foliage",
+     "Plow Scarecrow",
+     "Stone Knight"
+    ],
+    "set": "Darkroot",
+    "trap": true
+   },
+   {
+    "name": "Gallery of the Hidden Warrior",
+    "enemies": [
+     "Silver Knight Spearman",
+     "Silver Knight Spearman",
+     "Silver Knight Greatbowman",
+     "Silver Knight Spearman",
+     "Silver Knight Greatbowman",
+     "Silver Knight Greatbowman"
+    ],
+    "set": "Explorers"
+   },
+   {
+    "name": "Giant's Keep",
+    "enemies": [
+     "Silver Knight Spearman",
+     "Silver Knight Swordsman",
+     "Silver Knight Greatbowman",
+     "Silver Knight Spearman",
+     "Silver Knight Swordsman"
+    ],
+    "set": "Explorers"
+   },
+   {
+    "name": "Hidden Chamber",
+    "enemies": [
+     "Sentinel",
+     "Firebomb Hollow",
+     "Firebomb Hollow",
+     "Crossbow Hollow",
+     "Large Hollow Soldier"
+    ],
+    "set": "Explorers",
+    "trap": true
+   },
+   {
+    "name": "Refuge of Silence",
+    "enemies": [
+     "Large Hollow Soldier",
+     "Silver Knight Spearman",
+     "Firebomb Hollow",
+     "Large Hollow Soldier",
+     "Silver Knight Spearman",
+     "Firebomb Hollow"
+    ],
+    "set": "Explorers"
+   },
+   {
+    "name": "Scarlet Battlement",
+    "enemies": [
+     "Large Hollow Soldier",
+     "Firebomb Hollow",
+     "Hollow Soldier",
+     "Large Hollow Soldier",
+     "Silver Knight Spearman",
+     "Firebomb Hollow"
+    ],
+    "set": "Explorers",
+    "trap": true
+   },
+   {
+    "name": "Castle Aflame",
+    "enemies": [
+     "Alonne Sword Knight",
+     "Ironclad Soldier",
+     "Alonne Bow Knight",
+     "Alonne Knight Captain"
+    ],
+    "set": "Iron Keep"
+   },
+   {
+    "name": "Hollowed Threshold",
+    "enemies": [
+     "Alonne Bow Knight",
+     "Alonne Knight Captain",
+     "Alonne Bow Knight",
+     "Alonne Bow Knight",
+     "Alonne Knight Captain"
+    ],
+    "set": "Iron Keep"
+   },
+   {
+    "name": "Melting Gallery",
+    "enemies": [
+     "Alonne Knight Captain",
+     "Alonne Knight Captain",
+     "Alonne Knight Captain"
+    ],
+    "set": "Iron Keep",
+    "trap": true
+   },
+   {
+    "name": "Shrine of the Torch",
+    "enemies": [
+     "Alonne Sword Knight",
+     "Alonne Sword Knight",
+     "Alonne Knight Captain",
+     "Alonne Bow Knight",
+     "Alonne Bow Knight"
+    ],
+    "set": "Iron Keep"
+   },
+   {
+    "name": "Smoking Gallery",
+    "enemies": [
+     "Alonne Sword Knight",
+     "Alonne Sword Knight",
+     "Alonne Sword Knight",
+     "Alonne Bow Knight",
+     "Alonne Knight Captain"
+    ],
+    "set": "Iron Keep"
+   },
+   {
+    "name": "Sweltering Sanctum",
+    "enemies": [
+     "Ironclad Soldier",
+     "Ironclad Soldier",
+     "Alonne Bow Knight"
+    ],
+    "set": "Iron Keep",
+    "trap": true
    }
   ]
  },
@@ -581,7 +1445,8 @@
       }
      ]
     }
-   ]
+   ],
+   "set": "Core"
   },
   "Titanite Demon": {
    "kind": "mini",
@@ -709,7 +1574,8 @@
       }
      ]
     }
-   ]
+   ],
+   "set": "Core"
   },
   "Winged Knight": {
    "kind": "mini",
@@ -837,7 +1703,8 @@
       }
      ]
     }
-   ]
+   ],
+   "set": "Core"
   },
   "Boreal Outrider Knight": {
    "kind": "mini",
@@ -975,7 +1842,8 @@
       }
      ]
     }
-   ]
+   ],
+   "set": "Core"
   },
   "Dancer of the Boreal Valley": {
    "kind": "main",
@@ -1170,6 +2038,1534 @@
        "magic": true,
        "push": false,
        "effects": []
+      }
+     ]
+    }
+   ],
+   "set": "Core"
+  },
+  "Old Dragonslayer": {
+   "kind": "mini",
+   "hp": 20,
+   "heatup": 0,
+   "armor": 2,
+   "resist": 2,
+   "deck": 4,
+   "levels": [
+    1,
+    1,
+    1,
+    2
+   ],
+   "cards": [
+    {
+     "name": "Darkness Bolt",
+     "dodge": 3,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 4,
+       "magic": true,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Spear Lunge",
+     "dodge": 2,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 5,
+       "magic": false,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Leaping Darkness",
+     "dodge": 1,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 4,
+       "magic": true,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Skewering Charge",
+     "dodge": 1,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 4,
+       "magic": false,
+       "push": true,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Spear Sweep",
+     "dodge": 2,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 4,
+       "magic": false,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Darkness Falls",
+     "dodge": 1,
+     "repeat": 1,
+     "heatup": true,
+     "attacks": [
+      {
+       "dmg": 5,
+       "magic": true,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Massive Sweep",
+     "dodge": 2,
+     "repeat": 1,
+     "heatup": true,
+     "attacks": [
+      {
+       "dmg": 5,
+       "magic": false,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Lunging Combo",
+     "dodge": 2,
+     "repeat": 1,
+     "heatup": true,
+     "attacks": [
+      {
+       "dmg": 5,
+       "magic": false,
+       "push": false,
+       "effects": []
+      },
+      {
+       "dmg": 5,
+       "magic": false,
+       "push": false,
+       "effects": []
+      }
+     ]
+    }
+   ],
+   "set": "Explorers",
+   "special": "dragonslayer"
+  },
+  "Artorias": {
+   "kind": "main",
+   "hp": 25,
+   "heatup": 15,
+   "armor": 3,
+   "resist": 3,
+   "deck": 5,
+   "levels": [
+    3,
+    3,
+    3,
+    3
+   ],
+   "cards": [
+    {
+     "name": "Steadfast Leap",
+     "dodge": 2,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 5,
+       "magic": false,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Somersault Slam",
+     "dodge": 1,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 5,
+       "magic": true,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Overhead Cleave",
+     "dodge": 1,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 6,
+       "magic": false,
+       "push": false,
+       "effects": [
+        "stagger"
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Charging Slash",
+     "dodge": 1,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 6,
+       "magic": false,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Heavy Thrust",
+     "dodge": 2,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 5,
+       "magic": false,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Spinning Slash",
+     "dodge": 2,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 5,
+       "magic": false,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Abyss Sludge",
+     "dodge": 1,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 6,
+       "magic": true,
+       "push": false,
+       "effects": [
+        "stagger"
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Wrath of the Abyss",
+     "dodge": 1,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 6,
+       "magic": true,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Somersault Strike",
+     "dodge": 2,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 5,
+       "magic": false,
+       "push": true,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Retreating Strike",
+     "dodge": 2,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 5,
+       "magic": false,
+       "push": false,
+       "effects": [
+        "stagger"
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Abyss Assault",
+     "dodge": 2,
+     "repeat": 1,
+     "heatup": true,
+     "attacks": [
+      {
+       "dmg": 5,
+       "magic": false,
+       "push": true,
+       "effects": []
+      },
+      {
+       "dmg": 5,
+       "magic": true,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Leaping Fury",
+     "dodge": 2,
+     "repeat": 1,
+     "heatup": true,
+     "attacks": [
+      {
+       "dmg": 5,
+       "magic": false,
+       "push": true,
+       "effects": []
+      },
+      {
+       "dmg": 6,
+       "magic": false,
+       "push": true,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Lunging Cleave",
+     "dodge": 2,
+     "repeat": 1,
+     "heatup": true,
+     "attacks": [
+      {
+       "dmg": 5,
+       "magic": false,
+       "push": true,
+       "effects": []
+      },
+      {
+       "dmg": 6,
+       "magic": false,
+       "push": false,
+       "effects": []
+      }
+     ]
+    }
+   ],
+   "set": "Darkroot",
+   "special": "artorias"
+  },
+  "Great Grey Wolf Sif": {
+   "kind": "main",
+   "hp": 36,
+   "heatup": 19,
+   "armor": 2,
+   "resist": 3,
+   "deck": 5,
+   "levels": [
+    2,
+    3,
+    3,
+    3
+   ],
+   "cards": [
+    {
+     "name": "Dashing Slice",
+     "dodge": 2,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 7,
+       "magic": false,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Spinning Slash",
+     "dodge": 1,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 6,
+       "magic": false,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Sword Slam",
+     "dodge": 2,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 6,
+       "magic": false,
+       "push": false,
+       "effects": [
+        "stagger"
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Evasive Strike",
+     "dodge": 1,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 6,
+       "magic": false,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Upward Slash",
+     "dodge": 2,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 7,
+       "magic": false,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Pouncing Assault",
+     "dodge": 2,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 6,
+       "magic": false,
+       "push": true,
+       "effects": [
+        "stagger"
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Slashing Assault",
+     "dodge": 1,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 5,
+       "magic": false,
+       "push": false,
+       "effects": []
+      },
+      {
+       "dmg": 5,
+       "magic": false,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Sidestep Cleave",
+     "dodge": 2,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 6,
+       "magic": false,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Sidestep Slash",
+     "dodge": 2,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 6,
+       "magic": false,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Slashing Retreat",
+     "dodge": 1,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 5,
+       "magic": false,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Feral Onslaught",
+     "dodge": 2,
+     "repeat": 2,
+     "heatup": true,
+     "attacks": [
+      {
+       "dmg": 6,
+       "magic": false,
+       "push": false,
+       "effects": [
+        "stagger"
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Cyclone Strikes",
+     "dodge": 2,
+     "repeat": 2,
+     "heatup": true,
+     "attacks": [
+      {
+       "dmg": 7,
+       "magic": false,
+       "push": false,
+       "effects": [
+        "stagger"
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Savage Retreat",
+     "dodge": 2,
+     "repeat": 3,
+     "heatup": true,
+     "attacks": [
+      {
+       "dmg": 6,
+       "magic": false,
+       "push": false,
+       "effects": [
+        "stagger"
+       ]
+      }
+     ]
+    }
+   ],
+   "set": "Darkroot",
+   "special": "sif",
+   "cool": [
+    {
+     "name": "Limping Strike",
+     "dodge": 1,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 2,
+       "magic": false,
+       "push": false,
+       "effects": []
+      }
+     ]
+    }
+   ]
+  },
+  "Sir Alonne": {
+   "kind": "main",
+   "hp": 26,
+   "heatup": 12,
+   "armor": 3,
+   "resist": 3,
+   "deck": 5,
+   "levels": [
+    2,
+    2,
+    2,
+    3
+   ],
+   "cards": [
+    {
+     "name": "Lunging Slash Combo",
+     "dodge": 2,
+     "repeat": 2,
+     "heatup": true,
+     "attacks": [
+      {
+       "dmg": 6,
+       "magic": false,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Triple Slash Combo",
+     "dodge": 2,
+     "repeat": 3,
+     "heatup": true,
+     "attacks": [
+      {
+       "dmg": 5,
+       "magic": false,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Stabbing Slash Combo",
+     "dodge": 2,
+     "repeat": 2,
+     "heatup": true,
+     "attacks": [
+      {
+       "dmg": 6,
+       "magic": false,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Fast Katana Lunge",
+     "dodge": 2,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 5,
+       "magic": false,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Charging Katana Slash",
+     "dodge": 1,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 6,
+       "magic": false,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Charging Katana Lunge",
+     "dodge": 2,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 6,
+       "magic": false,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Dark Wave",
+     "dodge": 2,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 5,
+       "magic": true,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Life Drain",
+     "dodge": 1,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 7,
+       "magic": true,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Double Slash Combo",
+     "dodge": 1,
+     "repeat": 2,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 5,
+       "magic": false,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Left Sidestep Slash",
+     "dodge": 1,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 6,
+       "magic": false,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Stab & Slash Combo",
+     "dodge": 1,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 5,
+       "magic": false,
+       "push": false,
+       "effects": []
+      },
+      {
+       "dmg": 5,
+       "magic": false,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Right Sidestep Slash",
+     "dodge": 1,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 6,
+       "magic": false,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Katana Plunge",
+     "dodge": 2,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 6,
+       "magic": false,
+       "push": false,
+       "effects": []
+      }
+     ]
+    }
+   ],
+   "set": "Iron Keep"
+  },
+  "Smelter Demon": {
+   "kind": "main",
+   "hp": 22,
+   "heatup": 11,
+   "armor": 4,
+   "resist": 3,
+   "deck": 5,
+   "levels": [
+    2,
+    2,
+    3,
+    3
+   ],
+   "cards": [
+    {
+     "name": "Double Sweep",
+     "dodge": 1,
+     "repeat": 2,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 6,
+       "magic": false,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Overhead Chop",
+     "dodge": 2,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 6,
+       "magic": false,
+       "push": false,
+       "effects": [
+        "stagger"
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Fiery Blast",
+     "dodge": 2,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 5,
+       "magic": true,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Leaping Impalement Strike",
+     "dodge": 2,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 4,
+       "magic": false,
+       "push": true,
+       "effects": []
+      },
+      {
+       "dmg": 4,
+       "magic": false,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Sweeping Slash",
+     "dodge": 1,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 6,
+       "magic": false,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Lunging Strike",
+     "dodge": 1,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 7,
+       "magic": false,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Flaming Impalement Strike",
+     "dodge": 2,
+     "repeat": 1,
+     "heatup": true,
+     "attacks": [
+      {
+       "dmg": 4,
+       "magic": false,
+       "push": true,
+       "effects": []
+      },
+      {
+       "dmg": 4,
+       "magic": true,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Fiery Explosion",
+     "dodge": 2,
+     "repeat": 1,
+     "heatup": true,
+     "attacks": [
+      {
+       "dmg": 6,
+       "magic": true,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Flaming Double Sweep",
+     "dodge": 1,
+     "repeat": 2,
+     "heatup": true,
+     "attacks": [
+      {
+       "dmg": 6,
+       "magic": true,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Flaming Sweeping Slash",
+     "dodge": 1,
+     "repeat": 1,
+     "heatup": true,
+     "attacks": [
+      {
+       "dmg": 6,
+       "magic": true,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Flaming Overhead Chop",
+     "dodge": 2,
+     "repeat": 1,
+     "heatup": true,
+     "attacks": [
+      {
+       "dmg": 6,
+       "magic": true,
+       "push": false,
+       "effects": [
+        "stagger"
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Flame Wave",
+     "dodge": 2,
+     "repeat": 1,
+     "heatup": true,
+     "attacks": [
+      {
+       "dmg": 5,
+       "magic": true,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Flaming Lunging Strike",
+     "dodge": 1,
+     "repeat": 1,
+     "heatup": true,
+     "attacks": [
+      {
+       "dmg": 7,
+       "magic": true,
+       "push": false,
+       "effects": []
+      }
+     ]
+    }
+   ],
+   "set": "Iron Keep",
+   "special": "smelter"
+  },
+  "The Pursuer": {
+   "kind": "main",
+   "hp": 28,
+   "heatup": 12,
+   "armor": 3,
+   "resist": 2,
+   "deck": 8,
+   "levels": [
+    2,
+    3,
+    3,
+    3
+   ],
+   "cards": [
+    {
+     "name": "Wide Blade Swing 1",
+     "dodge": 1,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 4,
+       "magic": false,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Wide Blade Swing 2",
+     "dodge": 1,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 4,
+       "magic": false,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Wide Blade Swing 3",
+     "dodge": 1,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 4,
+       "magic": false,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Stabbing Strike 1",
+     "dodge": 1,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 5,
+       "magic": false,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Stabbing Strike 2",
+     "dodge": 1,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 5,
+       "magic": false,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Rising Blade Swing",
+     "dodge": 2,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 5,
+       "magic": false,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Overhead Cleave",
+     "dodge": 1,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 5,
+       "magic": false,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Cursed Impale",
+     "dodge": 1,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 5,
+       "magic": true,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Dark Magic",
+     "dodge": 2,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 4,
+       "magic": true,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Shield Bash",
+     "dodge": 2,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 4,
+       "magic": false,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Shield Smash",
+     "dodge": 1,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 6,
+       "magic": false,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Forward Dash",
+     "dodge": 0,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": []
+    },
+    {
+     "name": "Back Dash",
+     "dodge": 0,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": []
+    }
+   ],
+   "set": "Explorers",
+   "special": "pursuer"
+  },
+  "Ornstein & Smough": {
+   "kind": "main",
+   "deck": 5,
+   "levels": [
+    2,
+    3,
+    3,
+    3
+   ],
+   "set": "Core",
+   "special": "pair",
+   "hp": 50,
+   "heatup": 0,
+   "armor": 3,
+   "resist": 3,
+   "cards": [
+    {
+     "name": "Gliding Stab & Hammer Smash",
+     "parts": {
+      "Ornstein": {
+       "dodge": 3,
+       "repeat": 1,
+       "attacks": [
+        {
+         "dmg": 5,
+         "magic": false,
+         "push": false,
+         "effects": []
+        }
+       ]
+      },
+      "Smough": {
+       "dodge": 1,
+       "repeat": 1,
+       "attacks": [
+        {
+         "dmg": 5,
+         "magic": false,
+         "push": false,
+         "effects": []
+        }
+       ]
+      }
+     },
+     "heatup": false
+    },
+    {
+     "name": "Evasive Sweep & Trampling Charge",
+     "parts": {
+      "Ornstein": {
+       "dodge": 2,
+       "repeat": 1,
+       "attacks": [
+        {
+         "dmg": 4,
+         "magic": false,
+         "push": false,
+         "effects": []
+        }
+       ]
+      },
+      "Smough": {
+       "dodge": 1,
+       "repeat": 1,
+       "attacks": [
+        {
+         "dmg": 5,
+         "magic": false,
+         "push": true,
+         "effects": []
+        }
+       ]
+      }
+     },
+     "heatup": false
+    },
+    {
+     "name": "Spear Slam & Hammer Sweep",
+     "parts": {
+      "Ornstein": {
+       "dodge": 1,
+       "repeat": 1,
+       "attacks": [
+        {
+         "dmg": 5,
+         "magic": false,
+         "push": false,
+         "effects": []
+        }
+       ]
+      },
+      "Smough": {
+       "dodge": 1,
+       "repeat": 1,
+       "attacks": [
+        {
+         "dmg": 5,
+         "magic": false,
+         "push": false,
+         "effects": []
+        }
+       ]
+      }
+     },
+     "heatup": false
+    },
+    {
+     "name": "Swiping Combo & Bonzai Drop",
+     "parts": {
+      "Ornstein": {
+       "dodge": 1,
+       "repeat": 2,
+       "attacks": [
+        {
+         "dmg": 5,
+         "magic": false,
+         "push": false,
+         "effects": []
+        }
+       ]
+      },
+      "Smough": {
+       "dodge": 2,
+       "repeat": 1,
+       "attacks": [
+        {
+         "dmg": 5,
+         "magic": false,
+         "push": true,
+         "effects": []
+        }
+       ]
+      }
+     },
+     "heatup": false
+    },
+    {
+     "name": "Lightning Bolt & Jumping Slam",
+     "parts": {
+      "Ornstein": {
+       "dodge": 1,
+       "repeat": 1,
+       "attacks": [
+        {
+         "dmg": 5,
+         "magic": true,
+         "push": false,
+         "effects": []
+        }
+       ]
+      },
+      "Smough": {
+       "dodge": 1,
+       "repeat": 1,
+       "attacks": [
+        {
+         "dmg": 6,
+         "magic": false,
+         "push": false,
+         "effects": []
+        }
+       ]
+      }
+     },
+     "heatup": false
+    }
+   ],
+   "models": [
+    {
+     "name": "Ornstein",
+     "hp": 20,
+     "armor": 3,
+     "resist": 3,
+     "heal": 10,
+     "heat": [
+      {
+       "name": "Charged Swiping Combo",
+       "dodge": 1,
+       "repeat": 3,
+       "heatup": true,
+       "attacks": [
+        {
+         "dmg": 5,
+         "magic": true,
+         "push": false,
+         "effects": []
+        }
+       ]
+      },
+      {
+       "name": "Charged Bolt",
+       "dodge": 3,
+       "repeat": 1,
+       "heatup": true,
+       "attacks": [
+        {
+         "dmg": 6,
+         "magic": true,
+         "push": false,
+         "effects": []
+        }
+       ]
+      },
+      {
+       "name": "Electric Clash",
+       "dodge": 2,
+       "repeat": 1,
+       "heatup": true,
+       "attacks": [
+        {
+         "dmg": 6,
+         "magic": true,
+         "push": false,
+         "effects": []
+        }
+       ]
+      },
+      {
+       "name": "Lightning Stab",
+       "dodge": 1,
+       "repeat": 1,
+       "heatup": true,
+       "attacks": [
+        {
+         "dmg": 7,
+         "magic": true,
+         "push": false,
+         "effects": []
+        }
+       ]
+      },
+      {
+       "name": "High Voltage",
+       "dodge": 1,
+       "repeat": 1,
+       "heatup": true,
+       "attacks": [
+        {
+         "dmg": 6,
+         "magic": true,
+         "push": false,
+         "effects": []
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Smough",
+     "hp": 30,
+     "armor": 2,
+     "resist": 2,
+     "heal": 15,
+     "heat": [
+      {
+       "name": "Electric Hammer Smash",
+       "dodge": 1,
+       "repeat": 1,
+       "heatup": true,
+       "attacks": [
+        {
+         "dmg": 6,
+         "magic": true,
+         "push": false,
+         "effects": []
+        }
+       ]
+      },
+      {
+       "name": "Lightning Sweep",
+       "dodge": 1,
+       "repeat": 1,
+       "heatup": true,
+       "attacks": [
+        {
+         "dmg": 6,
+         "magic": true,
+         "push": false,
+         "effects": []
+        }
+       ]
+      },
+      {
+       "name": "Jumping Volt Slam",
+       "dodge": 2,
+       "repeat": 1,
+       "heatup": true,
+       "attacks": [
+        {
+         "dmg": 5,
+         "magic": true,
+         "push": false,
+         "effects": []
+        }
+       ]
+      },
+      {
+       "name": "Electric Bonzai Drop",
+       "dodge": 1,
+       "repeat": 1,
+       "heatup": true,
+       "attacks": [
+        {
+         "dmg": 7,
+         "magic": true,
+         "push": false,
+         "effects": []
+        }
+       ]
+      },
+      {
+       "name": "Charged Charge",
+       "dodge": 2,
+       "repeat": 1,
+       "heatup": true,
+       "attacks": [
+        {
+         "dmg": 6,
+         "magic": true,
+         "push": false,
+         "effects": []
+        }
+       ]
       }
      ]
     }

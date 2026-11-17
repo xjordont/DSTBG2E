@@ -9,6 +9,12 @@ MINIS = [b for b, v in BOSSES.items() if v['kind'] == 'mini']
 MAINS = [b for b, v in BOSSES.items() if v['kind'] == 'main']
 
 
+def in_play(rules, what, card):
+    """Whether a boss or an encounter card of this set is in the game: the core set's always, the others' where the
+    ruleset says bosses='all' or encounters='all'."""
+    return card.get('set', 'Core') == 'Core' or getattr(rules, what, 'core') == 'all'
+
+
 class Table(Policy):
     """How the simulated players run the campaign side of the game."""
     reserve = 1          # sparks kept back for another try at a boss before any voluntary rest
@@ -44,7 +50,9 @@ def play(n, rules, seed, table=None, classes=None):
     if fv0: eco.spend(levels=fv0 != 'shop')
     out = dict(win=False, rests=0, fights=0, char_turns=0, enemy_acts=0, rounds=0, lost_at=None, deaths=0,
                by_level={}, sparks_left=0, souls=0, repeats=0, dec={}, carried=0.0, souls_lost=0.0, classes=list(cls))
-    decks = {lv: rng.sample(ENCOUNTERS[str(lv)], len(ENCOUNTERS[str(lv)])) for lv in (1, 2, 3)}
+    decks = {}
+    for lv in (1, 2, 3):
+        pool = [e for e in ENCOUNTERS[str(lv)] if in_play(r, 'encounters', e)]; decks[lv] = rng.sample(pool, len(pool))
     dropped_pool = None                                   # official: the cache lies on the tile where the party fell
 
     def spend():
@@ -58,8 +66,10 @@ def play(n, rules, seed, table=None, classes=None):
         for c in party: c.full_rest(); c.lost = False
         eco.renew_row(); spend(); return True
 
-    for stage, boss in enumerate((rng.choice(MINIS), rng.choice(MAINS))):
+    for stage, boss in enumerate((rng.choice([b for b in MINIS if in_play(r, 'bosses', BOSSES[b])]),
+                                  rng.choice([b for b in MAINS if in_play(r, 'bosses', BOSSES[b])]))):
         levels = BOSSES[boss]['levels']; cards = []; eco.boss_named(boss, stage)
+        out['mini' if stage == 0 else 'main'] = boss
         for lv in levels:
             a = decks[lv].pop()
             if getattr(r, 'choose_of_two', False) and decks[lv]:

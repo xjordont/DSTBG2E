@@ -134,7 +134,7 @@ class Policy:
 
 class Foe:
     __slots__ = ('name', 'card', 'hp', 'max', 'node', 'stagger', 'frost', 'poison', 'bleed', 'boss', 'deck', 'discard',
-                 'heated', 'heat_cards', 'armor', 'resist', 'threat', 'weak', 'atk_bonus', 'seen', 'fresh')
+                 'heated', 'heat_cards', 'armor', 'resist', 'threat', 'weak', 'atk_bonus', 'seen', 'fresh', 'heal', 'surges')
 
     def __init__(self, name, card, hp, node, boss=False):
         self.name, self.card, self.hp, self.max, self.node, self.boss = name, card, hp, hp, node, boss
@@ -142,7 +142,7 @@ class Foe:
         self.fresh = False                             # staggered during its own activation (by a parry)
         self.armor, self.resist, self.threat = card['armor'], card['resist'], card.get('threat', 10)
         self.deck = self.discard = self.heat_cards = None; self.heated = False; self.weak = False; self.atk_bonus = 0
-        self.seen = set()
+        self.seen = set(); self.heal = 0; self.surges = 0
 
     @property
     def alive(self): return self.hp > 0
@@ -167,13 +167,25 @@ class Fight:
             c.alive = True; c.stagger = c.frost = False; c.poison = 0; c.bleed = False; c.ran = False
             c.guard = ('', ''); c.buff = None; c.hurt_by = set(); c.rolls = 0
         self.faraam = set()                            # who has used "once per encounter" card text
+        self.idle = 0; self._hp = None                 # rounds in a row in which no enemy lost health
+        self.special = None; self.bdef = None
         if boss:
-            b = BOSSES[boss]; mul = getattr(r, 'boss_mul', None)
-            if mul: b = dict(b, hp=int(round(b['hp'] * mul(self.n))), heatup=int(round(b['heatup'] * mul(self.n))))
-            f = Foe(boss, b, b['hp'], IDX[(2, 0)], boss=True)
-            std = [c for c in b['cards'] if not c['heatup']]; rng.shuffle(std)
-            f.deck = std[:b['deck']]; f.discard = []; f.heat_cards = [c for c in b['cards'] if c['heatup']]
-            self.foes = [f]
+            b = BOSSES[boss]; mul = getattr(r, 'boss_mul', None); k = mul(self.n) if mul else 1
+            self.bdef = b; self.special = b.get('special')
+            if self.special == 'pair':
+                # one boss fought as two models, each with its own health; one behaviour card a turn, on which both act
+                self.foes = []
+                for i, m in enumerate(b['models']):
+                    card = dict(armor=m['armor'], resist=m['resist'], heatup=0, hp=int(round(m['hp'] * k)))
+                    f = Foe(m['name'], card, card['hp'], IDX[(2, 0)] if i == 0 else IDX[(0, 0)], boss=True)
+                    f.heat_cards = list(m['heat']); f.heal = int(round(m['heal'] * k)); f.deck = f.discard = None; self.foes.append(f)
+                self.pdeck = list(b['cards']); rng.shuffle(self.pdeck); self.pdeck = self.pdeck[:b['deck']]; self.pdiscard = []; self.pair_heat = False
+            else:
+                if mul: b = dict(b, hp=int(round(b['hp'] * k)), heatup=int(round(b['heatup'] * k)))
+                f = Foe(boss, b, b['hp'], IDX[(2, 0)], boss=True)
+                std = [c for c in b['cards'] if not c['heatup']]; rng.shuffle(std)
+                f.deck = std[:b['deck']]; f.discard = []; f.heat_cards = [c for c in b['cards'] if c['heatup']]
+                self.foes = [f]
         else:
             sp = rng.sample(SPAWN, 2); self.foes = []
             for i, name in enumerate(enemies):
@@ -455,7 +467,7 @@ class Fight:
                                 # the push itself is resolved below, away from the node the enemy left. A character
                                 # who dodges is not hit and is not pushed, whether or not the dodge moved it
                                 was_hit = self.defend(f, c, st['dmg'] + f.atk_bonus - (1 if f.stagger else 0), st['magic'], st['dodge'],
-                                                      push=False, parryable=False)
+                                                      push=False, effects=st.get('effects', ()), parryable=False)
                             if was_hit and c.alive and c.node == f.node:
                                 far = [x for x in NBR[c.node] if DIST[x][origin] > DIST[c.node][origin]]
                                 c.node = rng.choice(far or NBR[c.node])
@@ -481,34 +493,80 @@ class Fight:
             stack = self.r.poison == 'stack'
             self.hurt(f, f.poison if stack else 1); f.poison = max(0, f.poison - 1) if stack else 0
 
+    def boss_cards(self, f):
+        """The behaviours this boss model may still show: its part of each card in the deck and the discard pile."""
+        cards = (self.pdeck + self.pdiscard) if self.special == 'pair' else (f.deck + f.discard)
+        return [c['parts'][f.name] if 'parts' in c else c for c in cards]
+
     def boss_turn(self, f):
         r, rng = self.r, self.rng
+        if self.special == 'pair': return self.pair_turn(f)
         self.enemy_acts += 1
-        if not f.deck:
-            f.deck = f.discard; f.discard = []
-            if r.boss_reshuffle: rng.shuffle(f.deck)
-        card = f.deck.pop(0); f.discard.append(card)
-        known = card['name'] in f.seen; f.seen.add(card['name'])
-        f.weak = rng.random() < (self.WEAK_KNOWN if known else self.WEAK)
+        for _ in range(2 if self.special == 'pursuer' else 1):       # the Pursuer draws and resolves two cards a turn
+            if not self.live() or self.failed() or f.hp <= 0: break
+            if not f.deck:
+                f.deck = f.discard; f.discard = []
+                if r.boss_reshuffle: rng.shuffle(f.deck)
+            card = f.deck.pop(0); f.discard.append(card)
+            known = card['name'] in f.seen; f.seen.add(card['name'])
+            f.weak = rng.random() < (self.WEAK_KNOWN if known else self.WEAK)
+            self.resolve(f, card, known)
+        self.end_activation(f)
+
+    def pair_turn(self, f):
+        """Ornstein and Smough: one card is drawn and each living model acts on its own part of it. When the first of
+        them falls the survivor heats up at the start of the next turn: its own heat-up cards become the deck and it
+        regains health (10 for Ornstein, 15 for Smough), to no more than it began with."""
+        rng = self.rng; models = [m for m in self.foes if m.hp > 0]
+        if not models or f is not models[0]: return                  # the turn is taken once, when the first living model comes up
+        self.enemy_acts += 1
+        if len(models) == 1 and not self.pair_heat:
+            m = models[0]; self.pair_heat = True; m.heated = True
+            self.pdeck = list(m.heat_cards); rng.shuffle(self.pdeck); self.pdiscard = []; m.seen = set()
+            m.hp = min(m.max, m.hp + m.heal)
+        if not self.pdeck:
+            self.pdeck = self.pdiscard; self.pdiscard = []
+            if self.r.boss_reshuffle: rng.shuffle(self.pdeck)
+        card = self.pdeck.pop(0); self.pdiscard.append(card)
+        for m in models:
+            if m.hp <= 0 or not self.live() or self.failed(): continue
+            known = card['name'] in m.seen; m.seen.add(card['name'])
+            m.weak = rng.random() < (self.WEAK_KNOWN if known else self.WEAK)
+            self.resolve(m, card['parts'][m.name] if 'parts' in card else card, known)
+            self.end_activation(m)
+
+    def resolve(self, f, card, known):
+        """A boss model resolves the attacks of one behaviour card."""
+        rng = self.rng
+        bonus = self.boss_atk + (1 if (self.special == 'pursuer' and f.heated) else 0)      # the Pursuer hits one harder once heated up
         for _ in range(card['repeat']):
             for a in card['attacks']:
                 live = self.live()
-                if not live or self.failed(): break
+                if not live or self.failed() or f.hp <= 0: break
                 t = self.aggro if (self.aggro.alive and rng.random() < 0.5) else self.target(f, 'nearest')
                 for _s in range(2):                                 # bosses close on their target before striking
                     f.node = step_to(f.node, t.node, rng)
                 victims = [t] + [c for c in live if c is not t and DIST[f.node][c.node] <= 1 and rng.random() < self.ARC]
                 for c in victims:
                     if rng.random() < (self.pol.read_known if known else self.pol.read_new): continue    # out of the arc or the reach
-                    self.defend(f, c, a['dmg'] + self.boss_atk - (1 if f.stagger else 0), a['magic'], card['dodge'], push=a['push'],
+                    self.defend(f, c, a['dmg'] + bonus - (1 if f.stagger else 0), a['magic'], card['dodge'], push=a['push'],
                                 effects=a['effects'], parryable=False)
-        self.end_activation(f)
 
     def check_heat(self, f):
-        if f.boss and not f.heated and 0 < f.hp <= f.card['heatup']:
-            f.heated = True
-            f.deck = f.deck + f.discard + [self.rng.choice(f.heat_cards)]; f.discard = []; self.rng.shuffle(f.deck)
-            f.seen = set()                              # the order is new: the pattern has to be learned again
+        """A boss heats up when its health reaches the point on its card: one heat-up card joins the deck, which is
+        shuffled. Some bosses do it their own way (the manuscript, chapter 17)."""
+        if not f.boss or f.hp <= 0 or self.special == 'pair': return
+        rng = self.rng; sp = self.special
+        if sp == 'sif' and f.hp <= 3 and not f.surges:
+            f.surges = 1; f.deck = list(self.bdef['cool']); f.discard = []; f.seen = set(); return     # Sif, near death: one weak card from now on
+        if f.heated or not f.card.get('heatup') or f.hp > f.card['heatup']: return
+        f.heated = True
+        if sp == 'artorias':                                         # two cards go at random; all his heat-up cards come in
+            pool = f.deck + f.discard; rng.shuffle(pool); pool = pool[2:] + list(f.heat_cards)
+        elif sp == 'smelter': pool = rng.sample(f.heat_cards, min(5, len(f.heat_cards)))     # a new deck of five heat-up cards
+        else: pool = f.deck + f.discard + ([rng.choice(f.heat_cards)] if f.heat_cards else [])
+        f.deck = pool; f.discard = []; rng.shuffle(f.deck)
+        f.seen = set()                              # the order is new: the pattern has to be learned again
 
     # -------------------------------------------------------------- character turn
     def incoming(self, c, slack=1):
@@ -527,11 +585,12 @@ class Fight:
             mean += times * share * e1; var += times * (share * e2 - (share * e1) ** 2)
         for f in self.foes_alive():
             if f.boss:
-                cards = f.deck + f.discard
+                cards = self.boss_cards(f)
                 p_me = (0.5 if self.aggro is c else 0.0) + 0.5 / n
                 p_me = (p_me + self.ARC * (1 - p_me)) * (1 - self.pol.read_new)
+                draws = 2 if self.special == 'pursuer' else 1
                 for k in cards:
-                    for a in k['attacks']: add(p_me, a['dmg'] + self.boss_atk, a['magic'], phases * k['repeat'] / len(cards))
+                    for a in k['attacks']: add(p_me, a['dmg'] + self.boss_atk, a['magic'], draws * phases * k['repeat'] / len(cards))
                 continue
             closing = sum(s['n'] for s in f.card['steps'] if s['k'] == 'move' and s['dir'] == 'to')
             nearest = self.target(f, 'nearest') is c
@@ -597,6 +656,8 @@ class Fight:
                     t.hp -= total; self.dealt[c] = self.dealt.get(c, 0) + total; grand += total
                     # the manuscript: against a boss the token goes to whoever damaged it since its last turn
                     if r.aggro == 'last' or (r.aggro == 'most' and self.is_boss): self.aggro = c
+                    if self.special == 'dragonslayer' and t.boss and total >= 4 and t.surges < 3 and t.hp > 0:
+                        t.surges += 1; t.deck.insert(0, rng.choice(t.heat_cards))      # a heavy blow brings a heat-up card to the top of its deck
                     self.check_heat(t)
                 elif o.get('hollow'): c.luck = True                  # a gem that readies luck when the blow does nothing
                 self.say('   ', c.name, 'hits', t.name, 'with', o['name'], 'for', total, '(hp', max(0, t.hp), ')')
@@ -794,6 +855,7 @@ class Fight:
                             danger = (self.risk(free - cost - o.get('self_dmg', 0)) - risk0) * (1 - pk if last else 1.0)
                             score = (ed if f.boss else ed / f.max * 0.5 * vk) + pk * vk - pol.w_sta * cost - wd * danger - 1.0 * o.get('self_dmg', 0)
                             if cost == 0 and ed > 0: score = max(score, 0.01)          # a free blow is never passed up
+                            if self.idle >= 2 and ed > 0: score += 50.0                # nothing is being done: the fight must be forced, whatever the risk
                             if best is None or score > best[0]: best = (score, f, hand, o, steps, cost, ran, hero)
             for hand in ('R', 'L'):                                  # a hand that heals, steadies or lends stamina instead
                 if hand in used: continue
@@ -881,6 +943,13 @@ class Fight:
             return sorted(live, key=lambda c: (c.mean_blk + c.dodge * 0.5, c.cap - c.dmg))
         return sorted(live, key=lambda c: -c.taunt)
 
+    def stalled(self):
+        """Kept at the end of each round: how many rounds have passed with no enemy losing health. A party that only
+        backs away from enemies it finds hard to hurt has to close and strike all the same."""
+        hp = sum(f.hp for f in self.foes_alive())
+        self.idle = self.idle + 1 if hp == self._hp else 0
+        self._hp = hp
+
     def run(self, max_rounds=60):
         r = self.r
         for c in self.party: c.was_hollow = c.hollow
@@ -903,6 +972,7 @@ class Fight:
                         if c.alive: break
                     if c.alive: self.char_turn(c)
                     if first is not None and self.turn_i % self.seats == 0: first = None      # every character has had the free turn
+                self.stalled()
         else:
             while not self.over() and self.rounds < max_rounds:
                 self.rounds += 1; self.dealt = {}
@@ -916,7 +986,7 @@ class Fight:
                 for c in self.order():
                     if self.over(): break
                     if c.alive: self.char_turn(c)
-                first = None
+                first = None; self.stalled()
                 if r.aggro == 'most' and self.dealt:
                     top = max(self.dealt.values()); lead = [c for c, v in self.dealt.items() if v == top and c.alive]
                     if len(lead) == 1: self.aggro = lead[0]

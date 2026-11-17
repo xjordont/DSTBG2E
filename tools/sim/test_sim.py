@@ -719,6 +719,53 @@ ra = RU.make(dict(ALL_REQ, roster='all')); gg = [play(3, ra, sd, table=Table(ski
 seen = {x for g_ in gg for x in g_['classes']}
 check('with every class in the roster, games of all ten classes run to their end', seen == set(ALL10) and all(g_['win'] or g_['lost_at'] is not None for g_ in gg), sorted(set(ALL10) - seen))
 
+# ---------------------------------------------------------------- the other sets' enemies, encounters and bosses
+import game as G2
+core_e = sum(1 for lv in '123' for e in E.ENCOUNTERS[lv] if e['set'] == 'Core'); all_e = sum(len(E.ENCOUNTERS[lv]) for lv in '123')
+check('36 core encounters and 51 of Darkroot, Iron Keep and Explorers; every enemy on them has a card', core_e == 36 and all_e == 87
+      and all(x in E.ENEMIES for lv in '123' for e in E.ENCOUNTERS[lv] for x in e['enemies']), (core_e, all_e))
+check('by default only the core set\'s bosses and encounters are in a game',
+      [b for b in G2.MAINS if G2.in_play(RG, 'bosses', E.BOSSES[b])] == ['Dancer of the Boreal Valley', 'Ornstein & Smough']
+      and len([b for b in G2.MINIS if G2.in_play(RG, 'bosses', E.BOSSES[b])]) == 4 and len(G2.MINIS) == 5 and len(G2.MAINS) == 7)
+def boss_fight(name, seed=0, rules=RG):
+    c = Char('Knight', rules); f = E.Fight([c], rules, random.Random(seed), boss=name, policy=E.Policy(evade=0.0, read_new=0.0, read_known=0.0)); return c, f
+c, f = boss_fight('Ornstein & Smough'); o_, s_ = f.foes
+n0 = len(f.pdeck); f.pair_turn(o_); f.pair_turn(s_)
+check('Ornstein and Smough: two models with their own health, one card drawn a turn for both', (o_.max, s_.max) == (20, 30) and len(f.pdeck) == n0 - 1 and f.enemy_acts == 1, (n0, len(f.pdeck), f.enemy_acts))
+s_.hp = 0; o_.hp = 5; f.pair_turn(o_)
+check('when Smough falls Ornstein regains ten health and fights on from his own five heat-up cards', o_.hp == 15 and f.pair_heat and len(f.pdeck) + len(f.pdiscard) == 5
+      and all(k.get('heatup') for k in f.pdeck + f.pdiscard), (o_.hp, len(f.pdeck)))
+c, f = boss_fight('Ornstein & Smough'); o_, s_ = f.foes; o_.hp = 0; s_.hp = 20; f.pair_turn(s_)
+check('when Ornstein falls Smough regains fifteen, to no more than he began with', s_.hp == 30, s_.hp)
+c, f = boss_fight('Great Grey Wolf Sif'); b_ = f.foes[0]; b_.hp = 3; f.check_heat(b_); f.boss_turn(b_); f.boss_turn(b_)
+check('Sif at three health or less plays Limping Strike and nothing else', [k['name'] for k in b_.deck + b_.discard] == ['Limping Strike'], [k['name'] for k in b_.deck + b_.discard])
+c, f = boss_fight('Artorias'); b_ = f.foes[0]; b_.hp = b_.card['heatup']; f.check_heat(b_)
+check('Artorias heats up by losing two cards and gaining all three heat-up cards', len(b_.deck) == 5 - 2 + 3 and sum(k['heatup'] for k in b_.deck) == 3, len(b_.deck))
+c, f = boss_fight('Smelter Demon'); b_ = f.foes[0]; b_.hp = b_.card['heatup']; f.check_heat(b_)
+check('the Smelter Demon heats up into a deck of five heat-up cards', len(b_.deck) == 5 and all(k['heatup'] for k in b_.deck))
+c, f = boss_fight('Old Dragonslayer'); b_ = f.foes[0]; n0 = len(b_.deck)
+for _ in range(5): f.strike(c, b_, dict(c.options['R'][0], dice='', mod=4 + b_.armor))
+check('the Old Dragonslayer: the first three blows of four or more each put a heat-up card on top of its deck', len(b_.deck) == n0 + 3 and b_.surges == 3 and b_.deck[0]['heatup'], (n0, len(b_.deck)))
+c, f = boss_fight('The Pursuer'); b_ = f.foes[0]; n0 = len(b_.deck); f.boss_turn(b_)
+check('the Pursuer draws and resolves two cards a turn, from a deck of eight', n0 == 8 and len(b_.deck) == 6 and len(b_.discard) == 2, (n0, len(b_.deck)))
+c = Char('Knight', RG); f = E.Fight([c], RG, random.Random(4), enemies=['Mushroom Parent'], policy=E.Policy(evade=0.0)); m_ = f.foes[0]
+m_.node = E.NBR[c.node][0]; c.dodge = 0; c.can_parry = False; f.enemy_turn(m_)
+check('a Mushroom Parent has no attack of its own: its move pushes, wounds and staggers', all(s_['k'] == 'move' for s_ in m_.card['steps']) and c.stagger and c.node != m_.node, (c.stagger, c.dmg))
+bad = []
+for lv in '123':
+    for e_ in E.ENCOUNTERS[lv]:
+        if e_['set'] == 'Core': continue
+        k_, w_ = Char('Knight', RG), Char('Warrior', RG)
+        for x_ in (k_, w_): x_.tier = [2, 2, 2, 2]; x_.R = ITEMS['Halberd'] if x_ is k_ else x_.R; x_.L = None if x_ is k_ else x_.L; x_.refresh()
+        f = E.Fight([k_, w_], RG, random.Random(1), enemies=e_['enemies'], policy=E.Policy(skill=1.0)); f.run()
+        if not f.over(): bad.append(e_['name'])
+check('every encounter of the other sets plays to an end', not bad, bad)
+k_ = Char('Knight', RG); f = E.Fight([k_], RG, random.Random(2), enemies=['Ironclad Soldier'], policy=E.Policy(skill=1.0)); f.run(max_rounds=12)
+check('a character who can hurt a heavily armoured enemy only with its costly attack does not back away for ever', f.dec.get('heavy', 0) >= 3, dict(f.dec))
+rw = RU.make(dict(ALL_REQ, roster='all', bosses='all', encounters='all')); gw = [play(2, rw, sd, table=Table(skill=1.0, bank=6)) for sd in range(40)]
+check('games with every class, boss, encounter and card of the 2017 sets run to their end, and meet bosses of other sets',
+      all(x['win'] or x['lost_at'] is not None for x in gw) and len({x.get('main') for x in gw}) >= 4, sorted({str(x.get('main')) for x in gw}))
+
 print()
 print('%d checks failed' % len(FAILS) if FAILS else 'all checks passed')
 sys.exit(1 if FAILS else 0)
