@@ -268,6 +268,7 @@ class Fight:
         tries = [(nd, sta1)]
         if r.dodge_extra:
             if nd + 1 <= 4: tries.append((nd + 1, sta1 + 2))          # one extra die a dodge, for two more stamina
+        if 'no_dodge' in tr: tries = []                               # equipment that says the character cannot dodge: no dodge at all
         for dice_n, sta in tries:
             if sta > room or (dice_n <= 0 and k > 0): continue
             ps = p_dodge(dice_n, k + pen_d)
@@ -357,6 +358,7 @@ class Fight:
         self.say('   ', c.name, how, 'vs', dmg, '->', taken if hit else 'avoided')
         if hit:
             if taken >= 3 and c.ember and r.ember: taken -= 1
+            shared = src.node == c.node                              # where they stood when the roll was made, before any push
             self.wound(c, taken)
             if taken > 0: c.hurt_by.add(src)
             if c.alive:
@@ -371,7 +373,7 @@ class Fight:
                         else: c.bleed = True
                 if push and c.alive and 'im_push' not in tr:
                     c.node = step_away(c.node, src.node, rng) if c.node != src.node else rng.choice(NBR[c.node])
-            if src.hp > 0 and src.node == c.node:
+            if src.hp > 0 and shared:
                 if 'thorns' in tr: self.hurt(src, 1)                 # after a block or resist roll against an enemy in the node
                 if 'sunset' in tr and 'Hollow' in src.name and src.hp > 0 and c.alive: src.node = rng.choice(NBR[src.node])
         return hit
@@ -379,6 +381,7 @@ class Fight:
     def hurt(self, f, d):
         """Damage to an enemy or boss that is not an attack roll (a condition, a card's text)."""
         if d <= 0 or f.hp <= 0: return
+        if f.bleed and self.r.bleed == 'official': d += 2; f.bleed = False      # official: any damage suffered sets the bleed off
         f.hp -= d; self.check_heat(f)
 
     def afflict(self, t, fx):
@@ -630,8 +633,9 @@ class Fight:
                 self.hurt(f, o['direct']); self.dealt[c] = self.dealt.get(c, 0) + o['direct']; grand = o['direct']
             return grand
         node0 = f.node
-        for _ in range(o['repeat']):
-            if f.hp <= 0:
+        reach = lambda g: DIST[c.node][g.node] <= o['range'] and not (o.get('shaft') and g.node == c.node)
+        for rep_i in range(o['repeat']):
+            if f.hp <= 0 or (rep_i and not reach(f)):                # fallen, or pushed out of reach by the repetition before
                 if o.get('same') == 'enemy': break                   # every repetition is aimed at the one enemy
                 near = [g for g in self.foes_alive() if DIST[c.node][g.node] <= o['range'] and not (o.get('shaft') and g.node == c.node)]
                 if o.get('same') == 'node': near = [g for g in near if g.node == node0]

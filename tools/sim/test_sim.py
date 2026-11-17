@@ -786,6 +786,18 @@ def tear(dmg):
     c, f = duel('Knight', RG, seed=5); c.traits = c.traits | {'redtear'}; c.dmg = dmg; foe = f.foes[0]; f.strike(c, foe, dict(c.options['R'][0], dice='b', mod=9)); return 50 - foe.hp
 check('the Red Tearstone Ring adds a damage only with four or more damage cubes on the bar', tear(4) == tear(3) + 1 and tear(0) == tear(3), (tear(0), tear(3), tear(4)))
 
+# ---------------------------------------------------------------- review of the card-text code
+c, f = duel('Assassin', RG); c.A = CARDS["Havel's Armour"]; c.refresh(); c.luck = c.heroic = False; c.can_parry = False; tried = 0
+for sd in range(60):
+    f.rng = random.Random(sd); c.sta = 0; c.dmg = 0; c.alive = True; f.dec = {}; f.defend(f.foes[0], c, 6, True, 1); tried += f.dec.get('dodge', 0)
+check('armour that says its wearer cannot dodge allows no dodge at all, not even with a die paid for', tried == 0, tried)
+c, f = duel('Knight', RG, enemies=['Sentinel']); foe = f.foes[0]; f.strike(c, foe, dict(c.options['R'][0], dice='', mod=foe.armor + 2, repeat=2, push=True))
+check('a repetition is not made against an enemy the one before pushed out of reach', 50 - foe.hp == 2 and foe.node != c.node, 50 - foe.hp)
+c, f = duel('Knight', R17, enemies=['Sentinel']); foe = f.foes[0]; foe.poison = 1; foe.bleed = True; f.end_activation(foe)
+check('official: poison damage sets off a bleed token on an enemy', foe.hp == 47 and not foe.bleed, (foe.hp, foe.bleed))
+c, f = duel('Knight', R17, enemies=['Sentinel']); foe = f.foes[0]; c.traits = c.traits | {'thorns'}; c.dodge = 0; c.can_parry = False; f.defend(foe, c, 1, False, 9, push=True)
+check('Armour of Thorns answers an attack from its wearer\'s node even when the attack pushes the wearer away', foe.hp == 49 and c.node != foe.node, (foe.hp, c.node == foe.node))
+
 print()
 print('%d checks failed' % len(FAILS) if FAILS else 'all checks passed')
 sys.exit(1 if FAILS else 0)
