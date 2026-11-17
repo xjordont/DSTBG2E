@@ -56,6 +56,10 @@ OWNED = dict(ALL_REQ, **WORLD)
 WORLD_22 = dict(roster='all', bosses='all22', encounters='all22')
 OWNED_20 = dict(ALL_MID, **WORLD)
 OWNED_20_22 = dict(ALL_MID, **WORLD_22)
+TUNING_20 = dict(sparks=[0, 4, 3, 2, 1], boss_add=[0, 0, 4, 8, 12])      # five less the characters; a boss gains 4 health a character beyond the first
+PROPOSED_20 = dict(OWNED_20, **TUNING_20)
+PROPOSED_20_CORE = dict(REVIEW_GATE, **TUNING_20)
+PROPOSED_20_22 = dict(OWNED_20_22, **TUNING_20)
 PROPOSED_19 = dict(OWNED, sparks=[0, 5, 4, 2, 1], boss_mul=[1, 1, 1, 1.25, 1.5])
 # Section 19.8, with the manuscript's card amendments played: sparks five less the number of characters, the same boss health
 TUNING_198 = dict(sparks=[0, 4, 3, 2, 1], boss_mul=[1, 1, 1, 1.25, 1.5])
@@ -79,6 +83,10 @@ SPECS = {
     'proposed19': ('Section 19: the same with sparks 5/4/2/1 and boss health x1.25 / x1.5 for three and four characters', PROPOSED_19),
     'proposed198': ('Section 19.8: everything owned, sparks 4/3/2/1 and boss health x1.25 / x1.5 for three and four characters', PROPOSED_198),
     'proposed198_core': ('Section 19.8: the same tuning on the core set alone', PROPOSED_198_CORE),
+    'owned20': ('Section 20: accepted rules, every 2017 set, all treasure, the between split', OWNED_20),
+    'proposed20': ('Section 20: the same with sparks 4/3/2/1 and boss health +4 a character beyond the first', PROPOSED_20),
+    'proposed20_core': ('Section 20: that tuning on the core set alone', PROPOSED_20_CORE),
+    'proposed20_22': ('Section 20: that tuning with the 2022 sets\' enemies, encounters and bosses in, as printed', PROPOSED_20_22),
     'author': ("The author's own table (15.7): health +1 a character, damage +0/+0/+1/+2, sparks 4/3/2/1", AUTHOR),
     'review_twice': ('15.7, the other candidate: +1 damage, enemies attack twice against three or more', REVIEW_TWICE),
     'review_health': ('15.6, set aside: health only, +3 an enemy for each extra character', REVIEW_HEALTH),
