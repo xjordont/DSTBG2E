@@ -12,6 +12,7 @@ Usage:
 """
 import argparse, os, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import rules as RU
 from run import best
 
 # Section 13. Common to both proposals: enemy health +2 for each character beyond the second; bosses as printed for a
@@ -47,6 +48,10 @@ WORLD = dict(roster='all', bosses='all', encounters='all')
 ALL_REQ = dict(REVIEW_GATE, sets='all', deck_split='req')          # by requirement: 25 or more is tier two, with the transposed cards
 ALL_KIND = dict(REVIEW_GATE, sets='all', deck_split='type_all')    # by kind: common and class tier one, transposed tier two
 ALL_MID = dict(REVIEW_GATE, sets='all', deck_split='mid')          # common cards split at 25, class cards tier one, transposed tier two
+# Section 19: everything owned (every set's cards, class, boss and encounter), sorted by requirement; and the same with the
+# tuning proposed for three and four characters (one spark fewer each, boss health x1.25 and x1.5)
+OWNED = dict(ALL_REQ, **WORLD)
+PROPOSED_19 = dict(OWNED, sparks=[0, 5, 4, 2, 1], boss_mul=[1, 1, 1, 1.25, 1.5])
 REVIEW_TWICE = dict(LOOP, hp_add=[0, 0, 1, 2, 3], atk=[0, 0, 1, 1, 1], boss_atk=[0, 0, 1, 1, 1], reps=[1, 1, 1, 2, 2], sparks=SPARKS)
 REVIEW_HEALTH = dict(LOOP, hp_add=[0, 0, 3, 6, 9], boss_mul=[1, 1, 2, 3, 4])            # 15.6: health only (set aside: it lengthens the game)
 REVIEW_D1 = dict(LOOP, atk=[0, 0, 1, 1, 1], boss_atk=[0, 0, 1, 1, 1], hp_add=[0, 0, 1, 4, 6], boss_mul=[1, 1, 1.5, 2, 2.5])   # 15.6: the shorter alternative
@@ -61,6 +66,8 @@ SPECS = {
     'all_req': ('Section 18: every 2017 set in the decks, sorted by requirement (25 or more is tier two)', ALL_REQ),
     'all_kind': ('Section 18: every 2017 set, sorted by kind (common and class / transposed)', ALL_KIND),
     'all_mid': ('Section 18: every 2017 set, common cards split at 25, class cards tier one', ALL_MID),
+    'owned': ('Section 19: the accepted rules with everything owned (every set, class, boss and encounter)', OWNED),
+    'proposed19': ('Section 19: the same with sparks 5/4/2/1 and boss health x1.25 / x1.5 for three and four characters', PROPOSED_19),
     'author': ("The author's own table (15.7): health +1 a character, damage +0/+0/+1/+2, sparks 4/3/2/1", AUTHOR),
     'review_twice': ('15.7, the other candidate: +1 damage, enemies attack twice against three or more', REVIEW_TWICE),
     'review_health': ('15.6, set aside: health only, +3 an enemy for each extra character', REVIEW_HEALTH),
@@ -79,7 +86,7 @@ def show(key, skill, games, probe, regrind=0, bank=None):
         s, pol = best(spec, n, skill, games=games, probe=probe, extra=dict(regrind=regrind, bank=bank))
         lost = s['lost']; enc = sum(v for k, v in lost.items() if k in ('1', '2', '3'))
         print('    %d      %d     %3.0f%% (+/-%2.0f)     %4.1f   %5.1f    %6.0f       %4.1f         %3.0f%%            %3.0f%% / %3.0f%% / %3.0f%%' % (
-            n, 6 - n, 100 * s['win'], 100 * s['ci'], s['rests'], s['fights'], s['time'], s.get(('rounds', 3), 0),
+            n, RU.make(spec).sparks(n), 100 * s['win'], 100 * s['ci'], s['rests'], s['fights'], s['time'], s.get(('rounds', 3), 0),
             100 * s.get(('death', 3), 0), 100 * enc, 100 * lost.get('mini', 0), 100 * lost.get('main', 0)))
 
 

@@ -1719,3 +1719,204 @@ Three ways of easing the average, each on its own (every set, S0, skill 1.0 unle
 Not tested with it: whether a boss should then pay more than six souls, and whether a second clear should still pay 1 / 2 / 3.
 
 To re-run: `python3 tools/sim/compare.py --only all_req --games 800 --probe 300 --bank 6` (`all_kind`, `all_mid` for the other two ways; `--bank 10` for one character, `--regrind 2` for four; `--skill 1.15` and so on for 18.4).
+
+## 19. The simulator completed, and the three open decisions on it (2026-11-17)
+
+The author's answers to section 18: on treasure sorting and boss health, "help me decide; use all resources"; on difficulty, "isn't this decided already?"; on the simulator, "yes: make it robust and complete". The order followed here: complete the simulator, check its calibration, then settle the three decisions on it. The rules are decided (sections 16, 17.2, 18); what section 18 left open was whether those rules land in the band the author set, and that could not be judged while most card text did nothing.
+
+### 19.1 What the simulator now holds
+
+| | Section 18 | Now |
+|---|---|---|
+| Treasure and starting cards | 305 (2017 sets) | 491: the 2017 sets, and the 164 treasure cards of Tomb of Giants and Painted World of Ariamis |
+| Card text | Titanite and four gems | Every text printed on a card is played or listed as not played with its reason: of 153 cards with a text of their own, 141 are played. Every attack's conditions (bleed, poison, frostbite, stagger), push and shift are played; so are the 28 healing and support actions |
+| Upgrades | One on a weapon | As many as the card has slots, on weapons and on armour (rings) |
+| Spells | Equipped in a hand | Stored in a catalyst of their school, three to a catalyst, as the manuscript's 4.3 has it |
+| Classes | Knight, Warrior, Herald, Assassin | All ten, with their own stats, starting cards and heroic actions |
+| Enemies | 6 (core) | 19: twelve of Darkroot, Iron Keep and Explorers, and the Shears Scarecrow at lower confidence |
+| Encounters | 36 (core) | 87: the 51 of Darkroot, Iron Keep and Explorers added |
+| Bosses | 4 mini-bosses, the Dancer | 5 mini-bosses and 7 main bosses: Ornstein and Smough (two models on one deck), the Old Dragonslayer, Artorias, Sif, Sir Alonne, the Smelter Demon and the Pursuer, each with the special rule chapter 17 gives it |
+| Checks | 123 | 179 |
+
+**Where the data comes from, and how sure it is.**
+
+- **Card dice, conditions and text, 2017 sets:** the author's own table of card values. High.
+- **The six other classes' stats and starting cards:** the author's tables. High.
+- **Their heroic actions:** no printed character board could be read. The Mercenary's and the Sorcerer's are community transcriptions of the 2017 boards; the Pyromancer's is inferred from the Great Swamp Ring's text and the 2022 wording; the Cleric's and the Thief's are the 2022 rulebook's wording for the same class; the Deprived's was not found and none is played. **The author can settle all six from his own boards in a minute; the wording used is in `tools/sim/characters.py` (HEROIC).**
+- **Enemy behaviour of the other sets** (threat, movement, targets, range): read from re-drawn data cards in a public data set and checked against a community table; the six core enemies read the same way agree with the simulator's own earlier reading on every point (`work/phase7/enemy_cards_web.md`). High for twelve, medium for the Shears Scarecrow.
+- **Encounter line-ups of the other sets:** the author's table; 48 of 51 agree with the public list, two differ in the name only, one in a count (Sodden Mire: three Plow Scarecrows in the author's table, two in the public list; the author's is used).
+- **Bosses:** health, defences and behaviour decks from the public data set already used for the core set; special rules from the manuscript's chapter 17.
+- **2022 treasure:** 126 of the 164 cards are reprints of cards already held and are played with those values. The 38 new cards take their dice from a community table that was not checked against the cards. Medium.
+
+**What it still does not hold.**
+
+- **Mega bosses, the 2022 sets' bosses, enemies and encounters,** and so the treasure of those bosses (it is never dealt).
+- **Terrain and traps** (gravestones, barrels, chests, pillars, trap tokens), **invaders, mimics and crystal lizards.** An encounter's lizards are counted in the data and not played.
+- **Boss movement and arcs.** A boss's attacks, dodge difficulties, repeats, conditions, heat-up and special deck rules are played; where it stands and which arc it strikes are not. The skill setting stands for how well players use them.
+- **Twelve cards' text,** each for a stated reason: six concern traps, five are mega-boss treasure that a standard game never deals, one is a choice between characters that the simulated players do not make.
+- **The backup slot of the official rules.** The manuscript has catalysts instead and those are played; the official presets play without a backup slot, as before.
+- **Where a 2022 reprint differs from the 2017 printing,** the 2017 values are used.
+- **The Sellsword Twinblade as two weapons.** It is played as the one card its values describe.
+
+**Faults found and corrected on the way** (each with a check): spells with no attack counted as shields in the shop; a repeated attack's leftover repetitions wasted on a dead target, and made against a target pushed out of reach; equipment modifiers not applied to defence rolls; a paid dodge die allowed to a character whose armour forbids dodging; official bleed not set off by poison; Armour of Thorns silenced by a push; a party that could barely hurt an armoured enemy backing away from it for ever.
+
+### 19.2 The calibration, checked again
+
+Playing the text of the cards makes every ruleset easier; adding Ornstein and Smough to the core set's bosses makes the official game harder. The official 2017 game at the same skill setting as before (1.0) is now won 47% / 51% / 56% / 36% for one to four characters (600 games a cell; it was 44% / 50% / 62% / 46%). The anchor is the author's experience that it is won 50% to 60% of the time. One to three characters are on it; four are below it, losing a quarter of their games at the main boss. The setting is kept at 1.0.
+
+### 19.3 What the completed simulator says about the accepted rules
+
+800 games a cell (±3), the campaign policy picked on 300, skill 1.0.
+
+| Games won | 1 | 2 | 3 | 4 |
+|---|---|---|---|---|
+| The core set alone: its cards, four classes, six bosses, 36 encounters | 69% | 63% | 63% | 67% |
+| The core set with all ten classes | 64% | 72% | 71% | 77% |
+| **Everything owned:** every set's cards, class, boss and encounter | **52%** | **64%** | **69%** | **82%** |
+
+| Table time (activations) | 1 | 2 | 3 | 4 |
+|---|---|---|---|---|
+| The core set alone | 296 | 305 | 326 | 356 |
+| Everything owned | 267 | 329 | 382 | 443 |
+
+- **Section 18's worry is gone.** There the accepted rules measured 41% to 53% and an easing was recommended (a first clear paying 4 / 5 / 6 souls). With the cards' text played they measure 52% to 82%. **The easing is withdrawn; nothing needs to be made easier.**
+- **On the core set alone the accepted rules are flat and inside the band** (63% to 69%).
+- **With everything owned, large parties pull ahead:** 52% alone, 82% with four. The more classes, cards and support spells there are, the more a large party makes of them. This is the one thing left to tune (19.6).
+
+### 19.4 Decision 1: how the treasure is sorted
+
+The three ways of 18.2, on everything owned.
+
+| | S0 by requirement | S1 by kind | S2 between |
+|---|---|---|---|
+| Tier one: cards | 167 | 283 | 213 |
+| of which ask for 25 or more | 0 | 116 | 46 |
+| Tier one: share someone in a party of 1 / 2 / 4 can use within 6 souls of levels | 52 / 61 / 70% | 35 / 44 / 50% | 42 / 50 / 57% |
+| Tier two: cards | 196 | 80 | 150 |
+| Tier two: share someone in a party of 1 / 2 / 4 can use within 14 souls of levels | 39 / 53 / 64% | 21 / 30 / 38% | 37 / 48 / 58% |
+| Games won, 1 / 2 / 3 / 4 | 52 / 64 / 69 / 82% | 51 / 64 / 69 / 78% | 51 / 62 / 64 / 80% |
+| Cards bought in a game | 4.9 / 7.2 / 9.7 / 12.9 | 4.3 / 6.0 / 7.9 / 10.5 | 4.7 / 6.6 / 8.3 / 11.9 |
+| Treasure cards in use at the end | 4.5 / 7.0 / 9.6 / 12.5 | 4.0 / 6.1 / 8.4 / 10.9 | 4.3 / 6.5 / 8.6 / 11.8 |
+
+**Recommendation, firm: S0.** *Tier two is every transposed card, five legendary cards drawn at random, the treasure of this game's mini-boss and main boss, and every other card that asks for 25 or more in a stat. Everything else is tier one.*
+
+1. **It does not change who wins.** The three are within the noise of one another at every size. The choice is free to be made on how the game feels.
+2. **More of what the party sees is worth having.** Under S0 the party buys 15% to 23% more cards from the shop than under S1 and ends the game using 12% to 15% more treasure. Under S1 two cards in five of tier one cannot be used for half a game.
+3. **The reason sorting by kind works in the official game does not survive the ruling to shuffle everything in.** The official decks hold only the class cards of the classes in play, so a tier of transposed cards is a tier of cards made for the party. With ten classes' cards in, eight transposed cards in every eighty are made for any one character. The 25 line does what the class filter did.
+4. **Price follows strength.** Tier one costs two souls and tier two four. Under S1 the strongest common and class cards cost two souls beside a dagger.
+5. **It keeps what the author wanted from sorting by kind:** transposed, legendary and boss treasure are never in tier one.
+6. **It is the author's own rule,** and one check a card: its kind, or the highest number on it.
+
+What it costs: a sort by number takes a little longer at setup than a sort by kind, once. S2 is the fair second and loses about half of S0's advantage in tier one.
+
+### 19.5 Decision 2: bosses at their printed health
+
+Boss attempts failed, by boss and party size, on everything owned (S0, skill 1.0; about 100 to 250 attempts a cell):
+
+| Mini-boss | 1 | 2 | 3 | 4 |
+|---|---|---|---|---|
+| Boreal Outrider Knight | 54% | 38% | 31% | 17% |
+| Titanite Demon | 24% | 21% | 27% | 22% |
+| Winged Knight | 20% | 27% | 27% | 19% |
+| Gargoyle | 13% | 6% | 4% | 1% |
+| Old Dragonslayer | 6% | 1% | 1% | 0% |
+
+| Main boss | 1 | 2 | 3 | 4 |
+|---|---|---|---|---|
+| Ornstein and Smough | 66% | 60% | 56% | 23% |
+| Great Grey Wolf Sif | 54% | 41% | 41% | 13% |
+| Dancer of the Boreal Valley | 52% | 46% | 34% | 13% |
+| Artorias | 50% | 37% | 33% | 11% |
+| The Pursuer | 44% | 17% | 18% | 7% |
+| Smelter Demon | 42% | 32% | 32% | 9% |
+| Sir Alonne | 41% | 31% | 26% | 6% |
+
+- **Yes: with printed health the main bosses are too easy for four characters, every one of them.** A lone character fails about half its attempts at a main boss; four characters fail about one in eight. Three characters sit between. Section 18 saw this for the Dancer alone; it holds for all seven.
+- **The mini-bosses differ more from each other than by party size.** The Gargoyle and the Old Dragonslayer are easy at every size as the simulator plays them (no repeated attacks, low resistance); the Boreal Outrider Knight is the hard one, and hardest for one character.
+- **A finding to flag: the Boreal Outrider Knight against a lone character.** On the core set alone a lone character fails 84% of its attempts, in fights of fifty rounds. The cause is the manuscript's frostbite (no stamina recovered by any means) under a boss that acts before every character turn: the token comes back each round and the character never recovers. It is the rules working as written, and it may be harsher than intended for one character.
+
+Tested, on everything owned:
+
+| | 2 | 3 | 4 | Table time |
+|---|---|---|---|---|
+| Bosses as printed (accepted) | 64% | 69% | 82% | 329 / 382 / 443 |
+| Boss health ×1.25 for three, ×1.5 for four | | 67% | 76% | – / 421 / 538 |
+| Boss health +20% a character beyond the first | 60% | 65% | 75% | 356 / 444 / 553 |
+
+Health on the bosses makes the last fight at four a fight again (main-boss attempts failed 12% → 19%) and moves the game six points, for a game a fifth longer at four. It is the right tool for the bosses and not enough for the game. See 19.6.
+
+### 19.6 Decision 3: difficulty, with everything owned
+
+The rules are decided; what is open is one tuning. On everything owned the accepted rules give an average table 52% / 64% / 69% / 82%. The band is 50% to 70%, with the best play near 80%. One and two characters are in it. Three are at its top; four are over it.
+
+What was tried for three and four characters (S0, everything owned, skill 1.0):
+
+| | 1 | 2 | 3 | 4 | Table time, 3 / 4 |
+|---|---|---|---|---|---|
+| Accepted | 52% | 64% | 69% | 82% | 382 / 443 |
+| Sparks five less the characters (4 / 3 / 2 / 1) | 40% | 56% | 61% | 69% | 377 / 387 |
+| Boss health ×1.25 / ×1.5 | | | 67% | 76% | 421 / 538 |
+| **Sparks 5 / 4 / 2 / 1, boss health ×1.25 / ×1.5 at three and four** | 52% | 64% | **56%** | **60%** | 418 / 448 |
+| Enemy health +3 / +5 at three and four, boss health as above | | | 49% | 52% | 438 / 616 |
+| Enemies act twice a round against four, boss health ×1.5 | | | | 33% | – / 389 |
+| Damage +3 against four, boss health ×1.5 | | | | 57% | – / 532 |
+
+- **A spark is worth eight to thirteen points at every size.** It is the cleanest dial there is, and it shortens the game where health lengthens it.
+- **More enemy health overshoots and bloats** (four characters: 52%, and a game two fifths longer). Enemies acting twice is far too much. Damage +3 works on the win rate and raises the share of defences that are dodges to 58%, which the author has already ruled out.
+The two tools that are left, each alone and together, for three and four characters, on everything owned and on the core set alone:
+
+| Games won, 3 / 4 characters | Everything owned | Core set alone |
+|---|---|---|
+| Accepted | 69% / 82% | 63% / 67% |
+| Boss health ×1.25 / ×1.5 | 67% / 76% | 59% / 65% |
+| Sparks 2 / 1 (one fewer each) | 61% / 69% | 51% / 49% |
+| **Both** | **56% / 60%** | 45% / 52% |
+
+Both together, on everything owned, across skill (one and two characters are as accepted):
+
+| Games won, by skill | 1 | 2 | 3 | 4 |
+|---|---|---|---|---|
+| 0.85 | 32% | 35% | 20% | 18% |
+| **1.00 (average)** | **52%** | **64%** | **56%** | **60%** |
+| 1.15 | 60% | 77% | 71% | 75% |
+| **1.30 (the best the dial has)** | **75%** | **86%** | **84%** | **85%** |
+
+Without the boss health the best play at three and four is 88% and 90%.
+
+**Recommendation.**
+
+1. **Boss health ×1.25 for three characters and ×1.5 for four: yes, in every game.** It answers decision 2, it is safe whatever is in the box (59% / 65% on the core set alone, still inside the band), and it puts the weight where a large party is strongest. It replaces "a boss's health does not scale" in section 18. Suggested wording: *"A boss has the health printed on its card for one or two characters, a quarter more for three and half as much again for four, rounded to the nearest whole number; its heat-up point rises in step. Ornstein and Smough each gain it. Its attacks take the damage bonus of the table."*
+2. **One spark fewer for three and four characters (5 / 4 / 2 / 1) when everything owned is in play: yes for the author's table.** With both, an average table wins 52% to 64% at every size and the best play 75% to 86%, which is the target. It also shortens the game rather than lengthening it.
+3. **The honest limit:** no one tuning sits in the middle of the band for both a full collection and the core set alone. A large party gains more from every class and card that is added: on the core set alone the spark cut is too much (51% / 49%). The author's ruling is that everything owned is shuffled in, so the tuning is made for that. If the book is also to serve a table with the core set alone, the spark line belongs with the content that causes it: *six less the number of characters; with the classes of the Characters set in play, one fewer for three or four characters.* That is content gated by an expansion, which the author's standing rule allows. The decision is the author's.
+
+The scaling table as it would stand:
+
+| Characters | Sparks | Enemy health | Damage on every enemy and boss attack | Boss health |
+|---|---|---|---|---|
+| 1 | 5 | as printed | as printed | as printed |
+| 2 | 4 | +1 | +1 | as printed |
+| 3 | 2 | +2 | +2 | ×1.25 |
+| 4 | 1 | +3 | +2 | ×1.5 |
+
+### 19.7 What else the completed simulator shows
+
+Games won by a party that includes the class (everything owned, accepted rules, S0):
+
+| | 1 | 2 | 3 | 4 |
+|---|---|---|---|---|
+| Thief | 65% | 78% | 82% | 87% |
+| Knight | 63% | 66% | 68% | 81% |
+| Warrior | 60% | 66% | 72% | 86% |
+| Mercenary | 57% | 69% | 73% | 81% |
+| Cleric | 55% | 63% | 65% | 78% |
+| Assassin | 54% | 70% | 75% | 84% |
+| Herald | 46% | 54% | 58% | 75% |
+| Pyromancer | 42% | 64% | 66% | 83% |
+| Sorcerer | 42% | 59% | 68% | 85% |
+| Deprived | 32% | 54% | 67% | 77% |
+
+- **In a party no class stands out by more than the noise allows**, apart from the Thief at the top and the Herald at the bottom. **Alone, the classes differ widely:** the Deprived and the two casters win 32% to 42%, the Thief, Knight and Warrior 60% to 65%. That is as the classes are meant (the Deprived starts weakest), and it means the lone-character figure of 52% is an average over very different games. About 80 games stand behind each single-character cell.
+- **The Thief's lead and the Deprived's figure rest partly on heroic actions whose wording is not established** (19.1). They should be read again once the author has confirmed the six boards.
+- **Treasure is turned over fast:** a party finds about 14 cards in a game, buys 5 to 13 and sells 11 to 14. Most of what is found is sold. That is the price of shuffling every set in, and it is the same under all three ways of sorting.
+
+To re-run: `python3 tools/sim/compare.py --only owned --games 800 --probe 300 --bank 6` for the accepted rules on everything owned, `--only proposed19` for the proposal (`--bank 10` for one character, `--regrind 2` for four, `--skill 1.3` and so on), `--only review_gate` for the core set alone.
