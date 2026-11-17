@@ -5,7 +5,7 @@ import math, os, random, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import engine as E
 import rules as RU
-from characters import Char, Economy, ITEMS, CLASSES
+from characters import Char, Economy, ITEMS, CLASSES, CARDS
 from game import play
 
 FAILS = []
@@ -282,7 +282,9 @@ c = Char('Knight', M); eco = Economy([c], M, random.Random(1)); first = c.A
 spare = next(it for it in ITEMS.values() if it['type'] == 'armour' and it['name'] not in c.start)
 other = next(it for it in ITEMS.values() if it['type'] == 'armour' and it is not spare and it['name'] not in c.start)
 eco.equip(c, spare, c.tier, 'A'); kept_start = first in c.bag; eco.equip(c, other, c.tier, 'A')
-check('manuscript: replaced treasure returns to the bag; starting equipment does not', (not kept_start) and c.bag == [spare], [x['name'] for x in c.bag])
+eco.shop1 = []; eco.shop2 = []; c.souls = 0; eco.spend()
+check('manuscript: replaced treasure returns to the bag; starting equipment is kept there and never sold',
+      kept_start and (first in c.bag or c.A is first), [x['name'] for x in c.bag])
 c = Char('Knight', R17); eco = Economy([c], R17, random.Random(1)); first = c.A; eco.equip(c, spare, c.tier, 'A')
 check('official: replaced equipment returns to the shared inventory', first in eco.inv)
 
@@ -534,7 +536,7 @@ check('17.2: a party that goes back to bank its souls rests more often', sum(x['
 
 # ---------------------------------------------------------------- equipment data
 check('every starting item is met by its class at base stats',
-      all(Char(k, R17).cost_to_meet(ITEMS[n]['req'])[0] == 0 for k, v in CLASSES.items() for n in v['start']))
+      all(Char(k, R17).cost_to_meet(CARDS[n]['req'])[0] == 0 for k, v in CLASSES.items() for n in v['start']))
 check('stat costs: tier one 2, tier two 4, tier three 8', Char('Knight', R17).cost_to_meet([40, 0, 0, 0])[0] == 14)
 check('official deck: 56 common cards and five class cards a character',
       len(Economy([Char('Knight', R17)], R17, random.Random(0)).deck) == 61)
@@ -547,13 +549,18 @@ from compare import ALL_REQ, ALL_KIND, ALL_MID
 kinds = Counter(v['deck'] for v in MORE.values())
 check('the other sets add 63 common, 30 class, 30 transposed and 10 legendary cards, and 56 boss treasure cards',
       (kinds['common'], kinds['class'], kinds['transposed'], kinds['legendary'], kinds['boss']) == (63, 30, 30, 10, 56), dict(kinds))
-check('no card of the other sets shares a name with a core card, and none is starting equipment',
-      not set(MORE) & set(ITEMS) and 'starting' not in kinds)
+_ra = RU.make(ALL_REQ); _ea = Economy([Char('Knight', _ra)], _ra, random.Random(2))
+check('no card of the other sets shares a name with a core card; the 22 starting cards of the six other classes are in no treasure deck',
+      not set(MORE) & set(ITEMS) and kinds['starting'] == 22 and not any(i['deck'] == 'starting' for i in _ea.t1 + _ea.t2 + _ea.shop1))
 check('every transposed card asks for 25 or more in a stat', all(max(v['req']) >= 25 for d in (ITEMS, MORE) for v in d.values() if v['deck'] == 'transposed'))
 check('a spell with no attack is not counted as a shield', not is_shield(ITEMS['Force']) and not is_shield(MORE['Magic Barrier']) and is_shield(MORE['Buckler']))
-check('only Titanite and the gems are fitted: an upgrade with other text is carried but not played',
-      MORE['Titanite Scale']['up'] == 'mod' and MORE['Old Leo Ring']['up'] is None and MORE['Sanctum Priestess Tiara']['up'] is None
-      and MORE['Raw Gem']['up'] is None and ITEMS['Titanite Shard']['up'] == 'mod' and ITEMS['Heavy Gem']['up'] == 'die')
+from characters import TRAITS, NOT_PLAYED, CARDS as _CARDS
+_texts = {(v.get('text') or '').rstrip('.') for v in _CARDS.values() if v.get('text')}
+check('every text printed on a card is either played or listed as not played with its reason', not (_texts - set(TRAITS) - set(NOT_PLAYED)),
+      sorted(_texts - set(TRAITS) - set(NOT_PLAYED)))
+check('an upgrade card carries the traits its text gives; one whose text is not played is never fitted',
+      MORE['Titanite Scale']['up'] == ('mod',) and MORE['Old Leo Ring']['up'] == ('leo',) and MORE['Raw Gem']['up'] == ('w_raw',)
+      and ITEMS['Titanite Shard']['up'] == ('mod',) and ITEMS['Heavy Gem']['up'] == ('die',) and MORE['Binoculars']['up'] is None)
 sizes = {}
 for name, spec in (('req', ALL_REQ), ('kind', ALL_KIND), ('mid', ALL_MID)):
     rr = RU.make(spec); e = Economy([Char('Knight', rr), Char('Herald', rr)], rr, random.Random(1))
@@ -609,6 +616,108 @@ def frozen_walk(frost, spent=9):
 w0, w1, w2 = frozen_walk(False), frozen_walk(True), frozen_walk(True, spent=12)
 check('official 2017: the walk towards a far enemy costs a frostbitten character one stamina, and is not made when the bar is full',
       w0[0] and w1[0] and w1[1] == w0[1] + 1 and not w2[0], (w0, w1, w2))
+
+# ---------------------------------------------------------------- the text of the cards: conditions, upgrades, rings, spells
+from characters import ALL10, text_traits
+def duel(cls, rules, enemies=('Hollow Soldier',), seed=1, boss=None, party=None, **pol):
+    cs = party or [Char(cls, rules)]
+    f = E.Fight(cs, rules, random.Random(seed), enemies=None if boss else list(enemies), boss=boss, policy=E.Policy(evade=0.0, **pol))
+    for c in cs: c.node = E.IDX[(0, 0)]
+    for x in f.foes: x.node = E.IDX[(0, 0)]; x.hp = x.max = 50
+    return (cs[0] if not party else cs), f
+hit0 = lambda c, **kw: dict(c.options['R'][0], dice='', mod=0, **kw)        # a blow that lands and does no damage of its own
+c, f = duel('Knight', RG); foe = f.foes[0]; f.strike(c, foe, hit0(c, fx=['bleed'])); one = (foe.bleed, foe.hp); f.strike(c, foe, hit0(c, fx=['bleed']))
+check('the workshop rules: a bleed token alone does nothing; a second one deals three damage and both come off', one == (True, 50) and foe.hp == 47 and not foe.bleed, (one, foe.hp))
+c, f = duel('Knight', R17); foe = f.foes[0]; f.strike(c, foe, hit0(c, fx=['bleed'])); f.strike(c, foe, dict(c.options['R'][0], dice='', mod=3))
+check('official: a bleeding enemy takes two more from the next damage it suffers', foe.hp == 50 - (3 - foe.armor) - 2 and not foe.bleed, foe.hp)
+c, f = duel('Knight', RG); foe = f.foes[0]; f.strike(c, foe, hit0(c, fx=['poison'])); f.strike(c, foe, hit0(c, fx=['poison'])); f.end_activation(foe); a1 = (foe.hp, foe.poison); f.end_activation(foe)
+check('the workshop rules: poison stacks; a damage a token at the end of the enemy\'s turn, and one token comes off', a1 == (48, 1) and foe.hp == 47 and foe.poison == 0, (a1, foe.hp))
+c, f = duel('Knight', R17); foe = f.foes[0]; f.strike(c, foe, hit0(c, fx=['poison'])); f.strike(c, foe, hit0(c, fx=['poison'])); f.end_activation(foe)
+check('official: poison is one damage at the end of the enemy\'s activation, then it is gone', foe.hp == 49 and foe.poison == 0, (foe.hp, foe.poison))
+c, f = duel('Knight', RG); foe = f.foes[0]; f.strike(c, foe, hit0(c, fx=['stagger'], push=True))
+check('a weapon that staggers and pushes: the enemy is staggered and stands on another node', foe.stagger and foe.node != c.node)
+c, f = duel('Knight', RG, boss='Gargoyle'); foe = f.foes[0]; f.strike(c, foe, hit0(c, push=True, fx=['poison']))
+check('a boss takes a condition and is never pushed by a character', foe.node == c.node and foe.poison == 1)
+c = Char('Knight', RG); c.R = ITEMS['Halberd']; c.L = None; c.tier = [4, 4, 4, 4]; c.refresh(); base = [dict(o) for o in c.options['R']]
+def with_ups(*names):
+    c.plus = {'Halberd': sum((CARDS[n]['up'] for n in names), ())}; c.refresh(); return c.options['R']
+g = with_ups('Blood Gem', 'Lightning Gem')
+check('gems: Blood Gem adds bleed and Lightning Gem makes the attacks magical, on a weapon with two upgrade slots',
+      ITEMS['Halberd']['slots'] == 2 and all('bleed' in o['fx'] and o['magic'] for o in g))
+g = with_ups('Raw Gem', 'Simple Gem')
+check('gems: Raw Gem adds two damage for two stamina; Simple Gem takes one stamina off the dearest attack',
+      [o['mod'] - b['mod'] for o, b in zip(g, base)] == [2, 2] and [o['cost'] - b['cost'] for o, b in zip(g, base)] == [2, 1], [(o['cost'], o['mod']) for o in g])
+c.plus = {}; c.refresh(); eco = Economy([c], RG, random.Random(1)); eco.shop1 = []; eco.shop2 = []
+c.bag += [ITEMS['Titanite Shard'], ITEMS['Titanite Shard'], ITEMS['Titanite Shard']]; c.souls = 0; eco.spend()
+check('a weapon takes as many upgrades as it has slots, and no more', len(c.up_cards.get('Halberd', [])) == 2 and c.plus['Halberd'] == ('mod', 'mod'), c.up_cards)
+c = Char('Knight', RG); cap0 = c.cap; d0 = [o['dice'] for o in c.options['R']]; c.plus = {c.A['name']: CARDS['Hornet Ring']['up'] + CARDS['Life Ring']['up']}; c.refresh()
+check('rings are fitted to the armour: the Hornet Ring adds an orange die at -2 to every attack, the Life Ring a place for one more cube',
+      [o['dice'] for o in c.options['R']] == [x + 'o' for x in d0] and c.cap == cap0 + 1, (c.cap, [o['dice'] for o in c.options['R']]))
+c = Char('Assassin', RG); n0 = c.dodge; c.A = CARDS["Havel's Armour"]; c.refresh()
+check("Havel's Armour: no dodge dice at all, whatever else is worn", n0 > 0 and c.dodge == 0 and 'no_walk' in c.traits)
+def dodge_cost(armour):
+    c, f = duel('Assassin', RG); c.A = CARDS[armour]; c.L = None; c.refresh(); c.blk = c.res = c.arm_blk = c.arm_res = ''; c.luck = c.heroic = False; c.can_parry = False
+    f.defend(f.foes[0], c, 6, False, 0); return c.sta
+check('the price of a dodge follows the armour: one stamina, none in Black Leather Armour, two in Eastern Armour',
+      (dodge_cost('Assassin Armour'), dodge_cost('Black Leather Armour'), dodge_cost('Eastern Armour')) == (1, 0, 2),
+      (dodge_cost('Assassin Armour'), dodge_cost('Black Leather Armour'), dodge_cost('Eastern Armour')))
+def poisoned(shield):
+    c, f = duel('Knight', RG); c.L = CARDS[shield]; c.refresh(); c.dodge = 0; c.can_parry = False; f.defend(f.foes[0], c, 9, False, 9, effects=('poison', 'bleed')); return c.poison, c.bleed
+check('the Spider Shield keeps poison off, and nothing else', poisoned('Spider Shield') == (0, True) and poisoned('Kite Shield (Knight)') == (1, True), (poisoned('Spider Shield'), poisoned('Kite Shield (Knight)')))
+c, f = duel('Knight', RG); c.plus = {c.A['name']: CARDS['Blue Tearstone Ring']['up'] + CARDS['Sun Princess Ring']['up']}; c.refresh(); c.sta = 3; c.dodge = 0; c.can_parry = False
+f.defend(f.foes[0], c, 9, False, 9); s1 = c.sta; d1 = c.dmg; f.end_turn(c)
+check('the Blue Tearstone Ring gives a stamina back after damage; the Sun Princess Ring heals one at the end of the activation', s1 == 2 and d1 > 0 and c.dmg == d1 - 1, (s1, d1, c.dmg))
+# catalysts and stored spells
+h = Char('Herald', RG); h.tier = [0, 0, 0, 2]; h.L = ITEMS['Talisman']; h.spells = [ITEMS['Heal']]; h.refresh()
+ho = Char('Herald', R17); ho.tier = [0, 0, 0, 2]; ho.L = ITEMS['Talisman']; ho.spells = [ITEMS['Heal']]; ho.refresh()
+check('the manuscript: a talisman in the hand gives the actions of a miracle stored in it; the official rules have no catalysts',
+      any(o['name'] == 'Heal' for o in h.support['L']) and not any(o['name'] == 'Heal' for o in ho.support['L']))
+h.tier = [0, 0, 0, 0]; h.refresh()
+check('a stored spell whose requirement is not met gives nothing', not any(o['name'] == 'Heal' for o in h.support['L']))
+k = Char('Knight', RG); h = Char('Herald', RG); h.tier = [0, 0, 0, 2]; h.L = ITEMS['Talisman']; h.spells = [ITEMS['Heal']]; h.refresh()
+(k, h), f = duel(None, RG, party=[k, h]); k.dmg = 6; h.sta = 0; f.foes[0].node = E.IDX[(4, 4)]; h.heroic = False; f.char_turn(h)
+check('a Herald with Heal stored in the talisman heals a badly wounded Knight within range', k.dmg == 2 and f.dec.get('support') == 1, (k.dmg, f.dec))
+eco = Economy([h], RG, random.Random(1)); fit = eco.fit(h, MORE['Med Heal'])
+check('a miracle found as treasure is valued as a spell to store in the talisman', fit is not None and fit[3] == 'S', fit)
+# attacks with text
+c, f = duel('Knight', RG, enemies=['Hollow Soldier'] * 3); a, b, d = f.foes; b.node = E.IDX[(1, 1)]; d.node = E.IDX[(4, 4)]
+f.strike(c, a, dict(c.options['R'][0], dice='', mod=5, area=1))
+check('an attack that hits every enemy within range 1 leaves a farther one alone', a.hp < 50 and b.hp < 50 and d.hp == 50, (a.hp, b.hp, d.hp))
+c, f = duel('Knight', RG, enemies=['Hollow Soldier'] * 2); a, b = f.foes; a.hp = 1
+f.strike(c, a, dict(c.options['R'][0], dice='', mod=5, repeat=3, same='enemy'))
+check('repetitions that must all be aimed at one enemy stop when it falls', a.hp <= 0 and b.hp == 50, (a.hp, b.hp))
+c, f = duel('Knight', RG, enemies=['Hollow Soldier'] * 2); a, b = f.foes; f.strike(c, a, dict(c.options['R'][0], dice='', mod=0, direct=3)); both = a.hp
+b.node = E.IDX[(4, 4)]; f.strike(c, a, dict(c.options['R'][0], dice='', mod=0, direct=3))
+check('Rapport: three damage to an enemy that shares its node with another, nothing to one that stands alone', both == 47 and a.hp == 47, (both, a.hp))
+c, f = duel('Knight', RG); c.dmg = 3; f.strike(c, f.foes[0], dict(c.options['R'][0], gain_hp=1, self_dmg=0)); g1 = c.dmg; f.strike(c, f.foes[0], dict(c.options['R'][0], self_dmg=4))
+check('an attack that heals its user, and one that costs it health', g1 == 2 and c.dmg == 6, (g1, c.dmg))
+c = Char('Thief', RG)
+check('the Iron Round Shield stays in the hand beside a two-handed bow', c.R['hands'] == 2 and c.L is not None and 'offhand' in text_traits(c.L), (c.R['name'], c.L and c.L['name']))
+# the act-first ring
+def first_blood(ring):
+    tot = 0
+    for sd in range(20):
+        c, f = duel('Knight', RG, seed=sd); c.blk = c.arm_blk = ''; c.dodge = 0; c.can_parry = False
+        if ring: c.plus = {c.A['name']: CARDS['Mon Ring']['up']}; c.traits = c.traits | {'mon'}; c.mon = True
+        f.foes[0].hp = 1; f.run(max_rounds=1); tot += c.dmg
+    return tot
+check('the Mon Ring: the party acts before the enemies once, so an enemy that falls to the first blow never strikes', first_blood(True) == 0 and first_blood(False) > 0, (first_blood(True), first_blood(False)))
+# the six other classes and their heroic actions
+check('ten classes: each starts with its own cards and can meet their requirements',
+      len(ALL10) == 10 and all(Char(k, RG).R is not None and Char(k, RG).A is not None for k in ALL10))
+s_, f = duel('Sorcerer', RG); foe = f.foes[0]; foe.node = E.IDX[(4, 4)]; s_.tier = [0, 0, 0, 0]; s_.sta = 0; s_.node = E.IDX[(0, 0)]; f.pol.kite = False; f.char_turn(s_)
+check('Spell Fury: the Sorcerer strikes an enemy across the tile without moving, and the token is spent', foe.hp < 50 and not s_.heroic and s_.node == E.IDX[(0, 0)], (foe.hp, s_.heroic, s_.node))
+m, f = duel('Mercenary', RG); m.options['R'] = [o for o in m.options['R'] if o['cost'] >= 2]; m.options['L'] = []; m.sta = 0; f.pol.kite = False; f.char_turn(m)
+check('Rapid Strike: the Mercenary makes its costly attack for no stamina', not m.heroic and m.sta == 0 and f.foes[0].hp < 50, (m.heroic, m.sta, f.foes[0].hp))
+py = Char('Pyromancer', RG); _, f = duel(None, RG, party=[py]); v = [o for o, hero, _ in f.variants(py, next(o for o in py.options['R'] + py.options['L'] if o['cost'] >= 2), 0)]
+check('Explosive Crit: one attack of the Pyromancer gains a black die', len(v) == 2 and v[1]['dice'] == v[0]['dice'] + 'b', [o['dice'] for o in v])
+cl, k = Char('Cleric', RG), Char('Knight', RG); (cl, k), f = duel(None, RG, party=[cl, k]); cl.dmg = 2; k.dmg = 5; f.pol.kite = False; f.char_turn(cl)
+check('the Cleric\'s heroic action heals two damage on itself and on a character within a node', (cl.dmg, k.dmg) <= (0, 3) and not cl.heroic, (cl.dmg, k.dmg, cl.heroic))
+th, f = duel('Thief', RG); th.dmg = 4; th.sta = 3; f.pol.kite = False; f.foes[0].node = E.IDX[(4, 4)]; h0 = th.heroic; f.char_turn(th)
+check('the Thief\'s heroic action heals two damage and gives back two stamina', h0 and not th.heroic and th.dmg <= 2, (th.dmg, th.sta))
+ra = RU.make(dict(ALL_REQ, roster='all')); gg = [play(3, ra, sd, table=Table(skill=1.0, bank=6)) for sd in range(40)]
+seen = {x for g_ in gg for x in g_['classes']}
+check('with every class in the roster, games of all ten classes run to their end', seen == set(ALL10) and all(g_['win'] or g_['lost_at'] is not None for g_ in gg), sorted(set(ALL10) - seen))
 
 print()
 print('%d checks failed' % len(FAILS) if FAILS else 'all checks passed')

@@ -1,34 +1,144 @@
 #!/usr/bin/env python3
 """Characters, equipment and the bonfire economy for the rules simulator.
 
-A character carries real equipment cards (gear.json): a right-hand item, a left-hand item and armour. Its combat
-profile (block, resist and dodge dice, attack options) is derived from those cards. At the bonfire the simulated
-players spend souls by a greedy rule: take whichever purchase or level-up buys the most `power` per soul.
+A character carries real equipment cards (gear.json, gear_more.json): a right-hand item, a left-hand item and armour,
+with upgrade cards fitted to them and spells stored in a catalyst. Its combat profile (block, resist and dodge dice,
+attack and support options, the traits its cards' text gives it) is derived from those cards. At the bonfire the
+simulated players spend souls by a greedy rule: take whichever purchase or level-up buys the most `power` per soul.
 """
 import json, os
 from engine import pmf_def, attack_pmf, hit_stats, p_dodge
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 GEAR = json.load(open(os.path.join(HERE, 'gear.json')))
-ITEMS, CLASSES = GEAR['items'], GEAR['classes']
-# The treasure of the other 2017 sets and every boss's treasure (gear_more.json), used where a ruleset says sets='all'.
-MORE = json.load(open(os.path.join(HERE, 'gear_more.json')))['items']
-for _i in list(ITEMS.values()) + list(MORE.values()):
-    if _i['type'] == 'upgrade':                      # Titanite (Shard, Scale, a boss's): +1 damage; four gems: one more black die
-        _t = _i.get('text') or ''                    # (an upgrade with any other text is carried in the decks but never fitted)
-        _i['up'] = 'mod' if _t.startswith("This weapon's attacks gain +1 damage") else 'die' if 'gain 1 black die' in _t else None
+ITEMS = GEAR['items']
+# The treasure of the other 2017 sets, every boss's treasure and the six other classes (gear_more.json). The treasure is
+# used where a ruleset says sets='all'; the classes can be played under any ruleset.
+_MORE = json.load(open(os.path.join(HERE, 'gear_more.json')))
+MORE = _MORE['items']
+CLASSES = dict(GEAR['classes']); CLASSES.update(_MORE['classes'])
+CARDS = dict(ITEMS); CARDS.update(MORE)
 CORE4 = ['Knight', 'Warrior', 'Herald', 'Assassin']
+ALL10 = CORE4 + sorted(_MORE['classes'])
+STURDY = ('Knight', 'Warrior')                       # the classes a lone player or a pair is assumed to include
+# The heroic action of each class as the engine plays it, and how well its wording is established. The four core
+# classes are as printed. Of the six others no printed board could be read: three rest on community transcriptions of
+# the 2017 boards, two on the 2022 rulebook's wording for the same class, and the Deprived's could not be found at all.
+HEROIC = {
+    'Knight': ('after a block roll, one more blue die', 'printed'),
+    'Warrior': ('a free step; the next range 0 attack costs no stamina and strikes the node', 'printed'),
+    'Herald': ('each character gains 2 stamina', 'printed'),
+    'Assassin': ('after a successful dodge, a free attack on the enemy dodged', 'printed'),
+    'Mercenary': ('Rapid Strike: one attack costs no stamina', 'community transcription, incomplete'),
+    'Sorcerer': ('Spell Fury: a magic attack reaches any distance and costs 3 less', 'community transcription'),
+    'Pyromancer': ('Explosive Crit: one attack gains a black die', "inferred from the Great Swamp Ring's text and the 2022 wording"),
+    'Cleric': ('this character and each character on the same or an adjacent node heals 2', '2022 rulebook wording'),
+    'Thief': ('heals 2 damage and recovers 2 stamina', '2022 rulebook wording, without its luck token'),
+    'Deprived': ('none played', 'not found'),
+}
+
+# ---------------------------------------------------------------- what a card's text does
+# Every text printed on a card of the 2017 sets, and the trait or traits it gives. A trait is a short key that the
+# profile below or the engine acts on. A text in NOT_PLAYED is carried on its card and does nothing, for the reason given.
+TRAITS = {
+    'You cannot dodge': ('no_dodge',),
+    'You cannot dodge or walk': ('no_dodge', 'no_walk'),
+    'You cannot dodge or run': ('no_dodge', 'no_run'),
+    'You can dodge without spending stamina': ('dodge_free',),
+    'Dodging costs you 2 Stamina (instead of 1)': ('dodge_dear',),
+    'You can dodge attacks from Alonne Knights without spending Stamina': ('alonne',),
+    'You gain +1 dodge against Hollows': ('vs_hollow',),
+    'You gain 1 dodge against boss arc attacks': ('vs_boss',),
+    'You gain 2 dodge if the attacker is 2 or more nodes away': ('vs_far',),
+    'When you dodge, you may move 2 nodes (instead of 1)': ('dodge2',),
+    'When you walk, you may move 2 nodes (instead of 1)': ('walk2',),
+    'When you run, it costs 2 stamina per node (instead of 1)': ('run2',),
+    'You are immune to Bleed': ('im_bleed',),
+    'You are immune to Poison': ('im_poison',),
+    'You are immune to Frostbite': ('im_frost',),
+    'You are immune to Bleed and Poison': ('im_bleed', 'im_poison'),
+    "Ignore push icons on Enemies' physical and magical attack behaviours": ('im_push',),
+    'You can equip this in one hand while you have a two-handed weapon in your other hand': ('offhand',),
+    'Reduce the stat requirements of your armour upgrade by 2': ('ring_ease',),
+    'When you make an AOE attack, reduce the stamina cost by 1': ('aoe_cheap',),
+    'Your highest-stamina one-handed attack costs -1 stamina': ('royal',),
+    'Your attacks gain 1 orange die -2': ('hornet',),
+    'Your magic attacks gain +1 damage': ('tiara',),
+    'Your magic attacks cost -2 Stamina; when you make a magic attack you suffer 1 Damage': ('duskcrown',),
+    'Your magic attacks cost +1 Stamina but gain 1 black die': ('manus',),
+    'You suffer -1 success on each Block, Resist, and Dodge roll, but gain +1 success on each Attack roll': ('calamity',),
+    'Your range 0 attacks gain push': ('minotaur',),
+    'You can place a cube here instead of on your endurance bar (remove the cube when an encounter ends)': ('life',),
+    'After you suffer damage from an enemy attack, gain 1 stamina': ('tearstone',),
+    'Characters in your node gain 3 stamina at the start of their activations (instead of 2)': ('chloranthy',),
+    'At the start of your activation, you may gain 1 stamina and 1 health (instead of 2 stamina)': ('tinybeing',),
+    'When you end your activation, gain 1 health': ('sunprincess',),
+    'When you end your activation, gain 1 health for each enemy on your node': ('lothric',),
+    'At the start of your activation, gain 1 health': ('sanctus',),
+    'At the end of your activation, if you made two or more attack rolls, gain 1 Health': ('pontiff',),
+    'At the end of your activation, if you made two or more attack rolls, gain 1 stamina': ('favour',),
+    "After you make an attack that exceeds an enemy's Block or Resist value by 3 or more, gain 1 stamina": ('knightslayer',),
+    'At the start of your activation, you may suffer 1 damage to flip your Luck token to the ready side': ('blades',),
+    'Your attacks gain +1 damage against enemies that damaged you during the last enemy activation': ('leo',),
+    'After you make a block or resist roll against an enemy in your node, it suffers 1 damage': ('thorns',),
+    'After a Hollow on your node attacks you, you may push that Hollow': ('sunset',),
+    "Once per encounter at the end of another character's activation, you may take the Aggro token": ('faraam',),
+    'When you use your heroic ability, gain 1 health': ('hero_hp',),
+    'When you use your heroic ability, gain 1 stamina': ('hero_sta',),
+    'When you use your heroic ability, you may remove one condition token from a character': ('hero_cleanse',),
+    'Encounters reward the party with 1 additional soul': ('serpent',),
+    'If the party defeats an encounter and does not open a chest, add 1 card from the treasure deck to the inventory': ('serpent2',),
+    'You may roll your dodge dice before you decide whether to dodge of block/resist': ('wolf',),
+    "Once per spark, the party may take their first activation before the enemies' first activation": ('mon',),
+    'When you use the Spell Fury heroic ability, your attack deals +1 damage': ('dragoncrest',),
+    'When you use the Explosive Crit heroic ability, instead of gaining a black die, you gain a blue die': ('swamp',),
+    # upgrades fitted to a weapon
+    "This weapon's attacks gain +1 damage": ('mod',),
+    "This weapon's attacks gain 1 black die": ('die',),
+    "This weapon's attacks gain Bleed": ('w_bleed',),
+    "This weapon's attacks gain Poison": ('w_poison',),
+    "This weapon's attacks gain Magic": ('w_magic',),
+    "Reduce the cost of this weapon's highest stamina attack by 1 stamina": ('w_simple',),
+    "This weapon's attacks gain +2 damage but cost +2 stamina": ('w_raw',),
+    "This weapon's attacks gain +1 damage and magic": ('mod', 'w_magic'),
+    "This weapon's 0 range attacks gain 1 range and magic": ('w_flash',),
+    "If this weapon's attack deals 0 damage, you may flip your Luck token to the ready side": ('w_hollow',),
+}
+NOT_PLAYED = {
+    'You gain +1 dodge against traps': 'traps are not played',
+    'At the start of each trapped encounter, you may look at 2 trap tokens': 'traps are not played',
+    'You can use one-handed magic attacks in your backup slot as if they were equipped': 'the backup slot is not played (the manuscript has catalysts instead)',
+    'Tier 3 for each of your stats is 40 while you have this equipped': "a mega boss's treasure: never dealt in a standard game",
+    'You may place this character on any entry node (not just entry nodes aligned with the tile you moved from)': "a mega boss's treasure; tile entry is not played",
+    'You may look at face-down encounter cards': "a mega boss's treasure; the players do not scout",
+    'During your activation, you may discard this card to end an encounter and return to the Bonfire tile': "a mega boss's treasure: never dealt in a standard game",
+    'You may discard this card to replace an encounter card with a random encounter card of the same level': "a mega boss's treasure: never dealt in a standard game",
+    'Immediately gain an Ember token and discard this card': 'embers are handled by the ruleset, not as a treasure card',
+}
+# What a trait the dice do not show is worth, in the units of `power` (a judgement; varied in the robustness runs)
+TRAIT_VALUE = dict(sunprincess=0.8, sanctus=0.8, lothric=0.4, tinybeing=0.5, tearstone=0.4, chloranthy=0.6, favour=0.3, pontiff=0.4,
+                   knightslayer=0.3, blades=0.5, leo=0.4, thorns=0.4, sunset=0.1, faraam=0.2, hero_hp=0.15, hero_sta=0.15, hero_cleanse=0.1,
+                   serpent=0.6, serpent2=0.8, wolf=0.5, mon=0.4, life=0.6, im_bleed=0.15, im_poison=0.15, im_frost=0.1, im_push=0.1,
+                   dodge2=0.1, walk2=0.3, run2=-0.2, no_walk=-0.5, no_run=-0.3, vs_hollow=0.15, vs_boss=0.2, vs_far=0.2, alonne=0.05,
+                   w_hollow=0.2, dragoncrest=0.2, swamp=0.2)
+FX_VALUE = dict(bleed=0.5, poison=0.6, stagger=0.4, frostbite=0.15)
+
+
+def text_traits(it):
+    """The traits a card's own text gives (an upgrade card's traits are those it gives the card it is fitted to)."""
+    return TRAITS.get((it.get('text') or '').rstrip('.'), ()) if it else ()
+
+
+for _i in CARDS.values():
+    if _i['type'] == 'upgrade': _i['up'] = text_traits(_i) or None      # None: carried in the decks but never fitted
+SPELLS = {k for k, v in CARDS.items() if v.get('spell')}               # sorceries, miracles, pyromancies: never scaled, never two-handed
 REF_FOES = ((1, 1, 1), (1, 1, 5), (2, 1, 5), (2, 1, 10))            # (block, resist, health) of reference targets
 REF_HITS = ((4, False, 1), (5, False, 1), (5, False, 2), (6, False, 1), (6, False, 2), (4, True, 1), (5, True, 2))   # (damage, magic, dodge difficulty)
+EXTRA = ('fx', 'push', 'shift', 'gain_hp', 'gain_sta', 'self_dmg', 'ember_mod', 'area', 'same', 'aggro', 'direct', 'sup', 'guard', 'buff')
 
 
-def is_shield(it): return it is not None and it['type'] == 'hand' and not it['attacks'] and it['name'] not in SPELLS
-
-
-# Spell cards (sorceries, miracles, pyromancies). The manuscript never scales a spell with a stat and never counts it
-# as wielded two-handed, so it gains neither the +1 at ten over its requirement nor the grip reroll.
-SPELLS = {'Fireball', 'Soul Arrow', 'Soulstream', 'Heal', 'Heal Aid', 'Replenishment', 'Bountiful Light',
-          'Bountiful Sunlight', 'Force', 'Great Magic Weapon', 'Poison Mist'} | {k for k, v in MORE.items() if v.get('spell')}
+def is_shield(it): return it is not None and it['type'] == 'hand' and not it['attacks'] and it['name'] not in SPELLS and not it.get('catalyst')
+def has_dice(it): return it is not None and it['type'] == 'hand' and any(a['dice'] for a in it['attacks'])
 
 
 class Char:
@@ -36,20 +146,33 @@ class Char:
         k = CLASSES[cls]
         self.name, self.r, self.base, self.taunt = cls, rules, k['stats'], k['taunt']
         self.tier = [0, 0, 0, 0]
-        w, s, a = k['start']
-        self.R, self.L, self.A = ITEMS[w], ITEMS[s], ITEMS[a]
-        self.start = {w, s, a}                        # starting equipment: it cannot be sold
-        self.bag = []; self.plus = {}                 # spare cards; weapon name -> upgrade bonus
-        self.up_cards = {}                            # weapon name -> the upgrade card attached to it
+        kit = [CARDS[x] for x in k['start']] + ([CARDS['Talisman']] if cls == 'Herald' else [])
+        self.start = {x['name'] for x in kit}         # starting equipment: it cannot be sold
+        self.bag = []; self.plus = {}                 # spare cards; card name -> the traits its fitted upgrades give
+        self.up_cards = {}                            # card name -> the upgrade cards fitted to it
+        self.spells = []                              # spells kept for a catalyst (the manuscript, 4.3)
         self.souls = 0; self.earned = 0
         self.dmg = self.sta = 0; self.hollow = False; self.alive = True; self.was_hollow = False
-        self.estus = self.luck = self.heroic = True; self.ember = False; self.ember_card = False
+        self.estus = self.luck = self.heroic = True; self.ember = False; self.ember_card = False; self.mon = True
         self.node = 0; self.stagger = self.frost = self.bleed = False; self.poison = 0; self.ran = False
+        self.guard = ('', ''); self.buff = None; self.hurt_by = set(); self.rolls = 0
+        self.A = next(x for x in kit if x['type'] == 'armour'); hands = [x for x in kit if x['type'] == 'hand']
+        # three hand cards for two hands: the pair that makes the stronger character is carried, the third kept spare
+        best = None
+        for R in hands:
+            if not has_dice(R): continue
+            for L in [None] + [x for x in hands if x is not R]:
+                if L is not None and R['hands'] == 2 and 'offhand' not in text_traits(L): continue
+                if L is not None and L['hands'] == 2: continue
+                self.R, self.L = R, L; v = power(self.profile(), rules)
+                if best is None or v > best[0] + 1e-9: best = (v, R, L)
+        _, self.R, self.L = best
+        self.bag = [x for x in hands if x is not self.R and x is not self.L]
         self.refresh()
 
     # ---------------------------------------------------------------- stats and requirements
     @property
-    def cap(self): return self.r.hollow_bar if self.hollow else self.r.bar
+    def cap(self): return (self.r.hollow_bar if self.hollow else self.r.bar) + (1 if 'life' in self.traits else 0)
 
     def value(self, i, t):
         return self.base[i][min(t, 3)] + (self.r.tier4 if (t >= 4 and self.r.tier4) else 0)
@@ -65,36 +188,80 @@ class Char:
                 tot += self.r.tier_cost[min(tiers[i], len(self.r.tier_cost) - 1)]; tiers[i] += 1
         return tot, tiers
 
+    def meets(self, req, tiers=None):
+        tiers = tiers or self.tier
+        return all(self.value(i, tiers[i]) >= req[i] for i in range(4))
+
     # ---------------------------------------------------------------- combat profile
-    def profile(self, R=None, L=None, A=None, tiers=None, plus=None):
+    def profile(self, R=None, L=None, A=None, tiers=None, plus=None, spells=None):
         R = self.R if R is None else R; L = self.L if L is None else L; A = self.A if A is None else A
         if L is False: L = None
         tiers = tiers or self.tier; plus = self.plus if plus is None else plus; r = self.r
+        spells = self.spells if spells is None else spells
         worn = [x for x in (A, R, L) if x]
-        p = dict(R=R, L=L, A=A)
+        p = dict(R=R, L=L, A=A, cls=self.name)
+        traits = set()
+        for x in worn: traits.update(text_traits(x))
+        if A: traits.update(plus.get(A['name'], ()))                  # rings and the like, fitted to the armour
+        p['traits'] = traits
+        cal = 1 if 'calamity' in traits else 0
         p['blk'] = ''.join(x.get('block', '') for x in worn); p['res'] = ''.join(x.get('resist', '') for x in worn)
         p['arm_blk'] = A.get('block', '') if A else ''; p['arm_res'] = A.get('resist', '') if A else ''
-        p['blk_pen'] = -sum(x.get('block_mod', 0) for x in worn); p['res_pen'] = -sum(x.get('resist_mod', 0) for x in worn)
-        p['arm_blk_pen'] = -A.get('block_mod', 0) if A else 0; p['arm_res_pen'] = -A.get('resist_mod', 0) if A else 0   # the armour's own, for a failed dodge
-        p['dodge'] = sum(x.get('dodge', 0) for x in worn)
+        p['blk_pen'] = cal - sum(x.get('block_mod', 0) for x in worn); p['res_pen'] = cal - sum(x.get('resist_mod', 0) for x in worn)
+        p['arm_blk_pen'] = cal - (A.get('block_mod', 0) if A else 0); p['arm_res_pen'] = cal - (A.get('resist_mod', 0) if A else 0)   # the armour's own, for a failed dodge
+        p['dodge'] = 0 if 'no_dodge' in traits else sum(x.get('dodge', 0) for x in worn)
+        p['dodge_pen'] = cal
         p['two'] = bool(R and R['hands'] == 2)
-        opts = {'R': [], 'L': []}
+        opts = {'R': [], 'L': []}; sup = {'R': [], 'L': []}
         for hand, it in (('R', R), ('L', L)):
             if not it: continue
             other = L if hand == 'R' else R
-            up = plus.get(it['name']); bonus = 1 if up == 'mod' else 0; more = 'b' if up == 'die' else ''
-            spell = it['name'] in SPELLS
-            if getattr(r, 'scaling', False) and it['attacks'] and max(it['req']) > 0 and not spell:
-                top = max(it['req'])                            # where requirements tie for the highest, any of them may be chosen
-                if any(self.value(j, tiers[j]) - top >= 10 for j in range(4) if it['req'][j] == top):
-                    bonus += 1                                  # the manuscript's stat scaling: +1 at ten over the requirement
-            for a in it['attacks']:
-                if not a['dice']: continue                     # support actions (healing, stamina) are not modelled
-                opts[hand].append(dict(name=it['name'], cost=a['cost'], dice=a['dice'] + more, mod=a['mod'] + bonus, magic=a['magic'],
-                                       range=a['range'], repeat=a['repeat'], shaft=a['shaft'], ignore=a.get('ignore', False),
-                                       node=a.get('node', False), spell=spell,
-                                       reroll=bool(getattr(r, 'grip_reroll', False) and not spell and (it['hands'] == 2 or other is None))))
-        p['options'] = opts
+            wt = plus.get(it['name'], ()) if it is not A else ()
+            cards = [it]
+            if it.get('catalyst') and getattr(r, 'catalyst', False):
+                # a catalyst gives the attack options of up to three stored spells of its school, if their requirements are met
+                cards += [x for x in spells if x.get('school') == it['catalyst'] and self.meets(x['req'], tiers)][:3]
+            mine = []
+            for card in cards:
+                spell = card['name'] in SPELLS; own = card is it
+                bonus = 0
+                if getattr(r, 'scaling', False) and has_dice(card) and max(card['req']) > 0 and not spell:
+                    top = max(card['req'])                        # where requirements tie for the highest, any of them may be chosen
+                    if any(self.value(j, tiers[j]) - top >= 10 for j in range(4) if card['req'][j] == top):
+                        bonus = 1                                 # the manuscript's stat scaling: +1 at ten over the requirement
+                for a in card['attacks']:
+                    o = dict(name=card['name'], hand=hand, cost=a['cost'], dice=a['dice'], mod=a['mod'], magic=a['magic'], range=a['range'],
+                             repeat=a['repeat'], shaft=a['shaft'], ignore=a.get('ignore', False), node=a.get('node', False), spell=spell,
+                             reroll=bool(getattr(r, 'grip_reroll', False) and not spell and (card['hands'] == 2 or other is None)))
+                    for k in EXTRA:
+                        if k in a: o[k] = list(a[k]) if k == 'fx' else a[k]
+                    if not (a['dice'] or o.get('fx') or o.get('direct')):
+                        if any(k in o for k in ('sup', 'guard', 'buff', 'gain_sta')): sup[hand].append(o)
+                        continue                                  # a text that is not played leaves nothing to do
+                    if a['dice']:
+                        o['mod'] += bonus
+                        if own:                                   # upgrades fitted to this weapon
+                            o['mod'] += wt.count('mod') + 2 * wt.count('w_raw'); o['dice'] += 'b' * wt.count('die'); o['cost'] += 2 * wt.count('w_raw')
+                            if 'w_bleed' in wt: o['fx'] = o.get('fx', []) + ['bleed']
+                            if 'w_poison' in wt: o['fx'] = o.get('fx', []) + ['poison']
+                            if 'w_magic' in wt: o['magic'] = True
+                            if 'w_flash' in wt and o['range'] == 0: o['range'] = 1; o['magic'] = True
+                            if 'w_hollow' in wt: o['hollow'] = True
+                        if 'hornet' in traits: o['dice'] += 'o'; o['mod'] -= 2
+                        if 'calamity' in traits: o['mod'] += 1
+                        if o['magic']:
+                            if 'tiara' in traits: o['mod'] += 1
+                            if 'manus' in traits: o['cost'] += 1; o['dice'] += 'b'
+                            if 'duskcrown' in traits: o['cost'] = max(0, o['cost'] - 2); o['self_dmg'] = o.get('self_dmg', 0) + 1
+                        if o['range'] == 0 and 'minotaur' in traits: o['push'] = True
+                        if o['node'] and 'aoe_cheap' in traits: o['cost'] = max(0, o['cost'] - 1)
+                    opts[hand].append(o); mine.append((o, own))
+            own_opts = [o for o, own in mine if own and o['dice']]
+            if 'w_simple' in wt and own_opts: top = max(own_opts, key=lambda o: o['cost']); top['cost'] = max(0, top['cost'] - 1)
+        if 'royal' in traits:
+            one = [o for h, it in (('R', R), ('L', L)) if it and it['hands'] == 1 for o in opts[h] if o['dice'] and o['name'] == it['name']]
+            if one: top = max(one, key=lambda o: o['cost']); top['cost'] = max(0, top['cost'] - 1)
+        p['options'] = opts; p['support'] = sup
         p['mean_blk'] = sum(v * q for v, q in pmf_def(p['blk'], r.block)) - p['blk_pen']
         p['mean_res'] = sum(v * q for v, q in pmf_def(p['res'], r.block)) - p['res_pen']
         p['can_parry'] = bool(r.parry and L and not p['two'] and (is_shield(L) or r.parry == 'any'))
@@ -102,7 +269,8 @@ class Char:
 
     def refresh(self):
         p = self.profile()
-        for k in ('blk', 'res', 'arm_blk', 'arm_res', 'blk_pen', 'res_pen', 'arm_blk_pen', 'arm_res_pen', 'dodge', 'options', 'mean_blk', 'mean_res', 'can_parry'):
+        for k in ('blk', 'res', 'arm_blk', 'arm_res', 'blk_pen', 'res_pen', 'arm_blk_pen', 'arm_res_pen', 'dodge', 'dodge_pen', 'options',
+                  'support', 'mean_blk', 'mean_res', 'can_parry', 'traits'):
             setattr(self, k, p[k])
         self.two_handed = p['two']; self._power = power(p, self.r)
         best = 0.0
@@ -118,7 +286,7 @@ class Char:
     def best_option(self, foe, dist, budget, hand='R', spells=True):
         best = None
         for o in self.options[hand]:
-            if o['cost'] > budget or o['range'] < dist or (o['shaft'] and dist == 0): continue
+            if o['cost'] + o.get('self_dmg', 0) > budget or o['range'] < dist or (o['shaft'] and dist == 0) or o.get('direct'): continue
             if o.get('spell') and not spells: continue      # a riposte is never made with a spell
             ev = sum(x * q for x, q in attack_pmf(o['dice'], o['mod'], foe.resist if o['magic'] else foe.armor, o['repeat'])) - 0.4 * o['cost']
             if best is None or ev > best[0]: best = (ev, o)
@@ -126,41 +294,67 @@ class Char:
 
     # ---------------------------------------------------------------- the bonfire
     def full_rest(self):
-        self.dmg = self.sta = 0; self.hollow = False; self.alive = True; self.estus = self.luck = self.heroic = True
+        self.dmg = self.sta = 0; self.hollow = False; self.alive = True; self.estus = self.luck = self.heroic = True; self.mon = True
         self.stagger = self.frost = self.bleed = False; self.poison = 0
+
+
+def sup_worth(o, n=2):
+    """What a support action is worth as a standing option, in the units of `power`: healing most, stamina less."""
+    v = 0.0
+    if 'sup' in o:
+        wide = {'one': 1.0, 'two': 1.3, 'all': 1.5, 'others': 1.2, 'node': 1.3}[o['sup']['who']]
+        v = (0.45 * min(4, o['sup']['hp']) + 0.12 * min(4, o['sup']['sta'])) * wide
+    elif 'guard' in o: v = 0.35
+    elif 'buff' in o: v = 0.3 + 0.2 * o['buff']['mod']
+    elif 'gain_sta' in o: v = 0.12 * o['gain_sta']
+    return v - 0.12 * o['cost']
 
 
 def power(p, r):
     """A single figure for how strong a loadout is: the damage it deals in a turn against lightly, medium and heavily
-    armoured targets, less the damage it lets through from a spread of attacks. Defence counts for more than offence,
-    because a death costs the party far more than a slow fight."""
+    armoured targets, less the damage it lets through from a spread of attacks, plus what its support actions and the
+    text of its cards are judged to be worth. Defence counts for more than offence, because a death costs the party
+    far more than a slow fight."""
+    one_spell = getattr(r, 'one_spell', False)
+
     def best(block, resist, cap):
         top = 0.0
         for ro in p['options']['R'] or [None]:
             for lo in ([None] + p['options']['L']):
+                if one_spell and ro and lo and ro.get('spell') and lo.get('spell'): continue
                 tot = 0.0; cost = 0
                 for o in (ro, lo):
                     if o is None: continue
+                    if o.get('direct'): tot += min(o['direct'], cap) * 0.6; cost += o['cost']; continue
                     pm = attack_pmf(o['dice'], o['mod'], 0 if o['ignore'] else (resist if o['magic'] else block), o['repeat'])
-                    tot += sum(min(x, cap) * q for x, q in pm); cost += o['cost']
+                    hit = sum(min(x, cap) * q for x, q in pm) * (1.3 if o.get('area') else 1.0)
+                    hit += sum(FX_VALUE[k] for k in o.get('fx', ())) + 0.1 * bool(o.get('push')) + 0.5 * o.get('gain_hp', 0) - 0.8 * o.get('self_dmg', 0)
+                    tot += hit; cost += o['cost']
                 if cost <= 5: top = max(top, tot - 0.3 * cost)
         return top
     off = 0.25 * best(1, 1, 5) + 0.4 * best(2, 1, 10) + 0.35 * best(3, 2, 30)
     quick = 0.0                                             # felling a one-health, block-two enemy with a cheap attack
     for hand in 'RL':
         for o in p['options'][hand]:
-            if o['cost'] <= 2:
+            if o['cost'] <= 2 and o['dice']:
                 quick = max(quick, sum(q for x, q in attack_pmf(o['dice'], o['mod'], 1 if o['magic'] else 2, o['repeat']) if x >= 1))
     if any(o['range'] >= 1 for h in 'RL' for o in p['options'][h]): off += 0.15
+    if not any(o['dice'] or o.get('direct') for h in 'RL' for o in p['options'][h]): off -= 3.0     # no way to wound an enemy at all
+    for hand in 'RL':                                       # a hand that can heal or steady the party: its best action, and a little for a second
+        w = sorted((sup_worth(o) for o in p['support'][hand]), reverse=True)
+        if w: off += max(0.0, 0.6 * w[0]) + (max(0.0, 0.2 * w[1]) if len(w) > 1 else 0.0)
+    traits = p['traits']
+    off += sum(TRAIT_VALUE.get(t, 0.0) for t in traits if not (t == 'dragoncrest' and p['cls'] != 'Sorcerer') and not (t == 'swamp' and p['cls'] != 'Pyromancer'))
     taken = 0.0
     for dmg, magic, k in REF_HITS:
         dice = p['res'] if magic else p['blk']; pen = p['res_pen'] if magic else p['blk_pen']
         blk = sum(d * q for d, q in hit_stats(dice, r.block, dmg, pen))        # a printed bonus counts as a printed penalty does
         if p['dodge'] > 0:
-            ps = p_dodge(p['dodge'], k)
+            ps = p_dodge(p['dodge'], k + p['dodge_pen'])
             adice = p['arm_res'] if magic else p['arm_blk']
-            fail = sum(d * q for d, q in hit_stats(adice, r.block, dmg, 0)) if r.dodge_fail == 'armour' else dmg
-            blk = min(blk, (1 - ps) * fail + 0.4)
+            fail = sum(d * q for d, q in hit_stats(adice, r.block, dmg, p['arm_res_pen'] if magic else p['arm_blk_pen'])) if r.dodge_fail == 'armour' else dmg
+            price = 0.0 if 'dodge_free' in traits else 0.8 if 'dodge_dear' in traits else 0.4
+            blk = min(blk, (1 - ps) * fail + price)
         taken += blk / len(REF_HITS)
     return off + 0.8 * quick - 1.6 * taken
 
@@ -248,8 +442,8 @@ class Economy:
         """Character c sells card `it` from the bag for one soul. Titanite attached to a sold weapon is sold with it
         and adds nothing; any other attached upgrade comes back to the inventory."""
         c.bag.remove(it); c.souls += 1; self.sold(it)
-        up = c.up_cards.pop(it['name'], None)
-        if c.plus.pop(it['name'], None) is not None and up is not None:
+        ups = c.up_cards.pop(it['name'], []); c.plus.pop(it['name'], None)
+        for up in ups:
             if 'Titanite' in up['name']: self.sold(up)
             else: c.bag.append(up)
 
@@ -268,18 +462,31 @@ class Economy:
         """Best use of card `it` by character c: (gain in power, souls of levelling needed, tiers after, slot)."""
         best = None
         if it['type'] == 'upgrade':
-            got = c.cost_to_meet(it['req'])
-            if got is None or not it.get('up') or not c.R or not c.R['attacks'] or c.R.get('slots', 0) < 1 or c.R['name'] in c.plus: return None
-            plus = dict(c.plus); plus[c.R['name']] = it['up']
+            # an upgrade goes on the right-hand weapon or on the armour, while that card has a free upgrade slot
+            tgt = self.up_target(c, it)
+            if tgt is None: return None
+            req = [max(0, x - 2) for x in it['req']] if (tgt is c.A and 'ring_ease' in c.traits) else it['req']
+            got = c.cost_to_meet(req)
+            if got is None: return None
+            plus = dict(c.plus); plus[tgt['name']] = plus.get(tgt['name'], ()) + it['up']
             gain = power(c.profile(tiers=got[1], plus=plus), c.r) - c._power
             return (gain, got[0], got[1], 'U')
         got = c.cost_to_meet(it['req'])
         if got is None: return None
         cost, tiers = got
+        off = 'offhand' in text_traits(it)               # a shield that may sit beside a two-handed weapon
+        keep = c.L if (c.L is not None and 'offhand' in text_traits(c.L)) else False
         if it['type'] == 'armour': tries = [('A', dict(A=it))]
-        elif it['hands'] == 2: tries = [('R', dict(R=it, L=False))]
-        elif it['attacks']: tries = [('R', dict(R=it, L=(False if (c.L is None) else c.L))), ('L', dict(L=it))] if not c.two_handed else [('R', dict(R=it, L=False))]
-        else: tries = [('L', dict(L=it))] if not c.two_handed else []
+        elif it['hands'] == 2: tries = [('R', dict(R=it, L=keep))]
+        elif has_dice(it) or (it['attacks'] and not it.get('catalyst')):
+            tries = [('R', dict(R=it, L=(False if (c.L is None) else c.L))), ('L', dict(L=it))] if not c.two_handed else [('R', dict(R=it, L=False))]
+        else: tries = [('L', dict(L=it))] if (not c.two_handed or off) else []
+        if it.get('spell') and getattr(self.r, 'catalyst', False) and it not in c.spells:
+            # a spell may be stored in a catalyst of its school that the character carries, taking no hand
+            held = [x for x in (c.R, c.L) if x and x.get('catalyst') == it.get('school')]
+            if held and sum(1 for x in c.spells if x.get('school') == it.get('school')) < 3:
+                gain = power(c.profile(tiers=tiers, spells=c.spells + [it]), c.r) - c._power
+                best = (gain, cost, tiers, 'S')
         plus = None
         if it['name'] in self.carried:                  # a weapon in the shared inventory keeps the upgrade fitted to it
             plus = dict(c.plus); plus[it['name']] = self.carried[it['name']][0]
@@ -292,12 +499,15 @@ class Economy:
         c.tier = list(tiers); out = []
         if slot != 'U' and it['name'] in self.carried:  # the upgrade comes with a weapon taken from the shared inventory
             c.plus[it['name']], c.up_cards[it['name']] = self.carried.pop(it['name'])
-        if slot == 'U': c.plus[c.R['name']] = it['up']; c.up_cards[c.R['name']] = it
+        if slot == 'U':
+            tgt = self.up_target(c, it)
+            c.plus[tgt['name']] = c.plus.get(tgt['name'], ()) + it['up']; c.up_cards.setdefault(tgt['name'], []).append(it)
+        elif slot == 'S': c.spells.append(it)
         elif slot == 'A': out.append(c.A); c.A = it
         elif slot == 'L': out.append(c.L); c.L = it
         else:
             out.append(c.R); c.R = it
-            if it['hands'] == 2: out.append(c.L); c.L = None
+            if it['hands'] == 2 and not (c.L is not None and 'offhand' in text_traits(c.L)): out.append(c.L); c.L = None
         # a replaced card goes back to the inventory: the shared one of the official rules, or the character's own,
         # where it may be sold (starting equipment cannot be sold, so it is simply set aside)
         for old in out:
@@ -306,8 +516,16 @@ class Economy:
                 self.inv.append(old)
                 if old['name'] in c.plus:               # an upgrade stays on its weapon, whoever takes it up next
                     self.carried[old['name']] = (c.plus.pop(old['name']), c.up_cards.pop(old['name'], None))
-            elif old['name'] not in c.start: c.bag.append(old)
+            else: c.bag.append(old)                     # starting equipment is kept too: it can be taken up again, never sold
         c.refresh()
+
+    def up_target(self, c, it):
+        """The card an upgrade would be fitted to: the armour for an armour upgrade, the right-hand weapon otherwise;
+        None when the upgrade is not played, there is no such card, or its upgrade slots are full."""
+        if not it.get('up'): return None
+        tgt = c.A if it.get('on') == 'armour' else (c.R if has_dice(c.R) else None)
+        if tgt is None or tgt.get('slots', 0) <= len(c.up_cards.get(tgt['name'], ())): return None
+        return tgt
 
     def give(self, cards):
         """Treasure found: each card goes to whoever gains most from it (free to equip if requirements are met)."""
@@ -369,7 +587,8 @@ class Economy:
                 _, f, it, price, src = max(cands, key=lambda x: x[0])
                 src.remove(it); c.souls -= f[1] + price; self.equip(c, it, f[2], f[3])
                 if r.treasure == 'row' and src is self.row and self.deck: self.row.append(self.draw())
-            for it in list(c.bag):                                   # sell what will never be used
+            for it in list(c.bag):                                   # sell what will never be used (never starting equipment)
+                if it['name'] in c.start: continue
                 f = self.fit(c, it)
                 if (not f or f[0] <= 0.05) and it in c.bag: self.sell(c, it)
             # with souls left over and nothing to buy, raise the stat that brings the best card in hand or shop closer

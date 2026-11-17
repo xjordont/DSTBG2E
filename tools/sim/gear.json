@@ -1,5 +1,5 @@
 {
-"note": "Printed values of the 2017 core set's starting equipment and treasure cards (boss treasure left out), compiled from two independently maintained community card databases and checked against the card images in the official rulebooks where those are legible; see 41_rules_workshop.md, section 12, for the sources and the cards that rest on one source. req = strength, dexterity, intelligence, faith. Dice: b black, u blue, o orange.",
+"note": "Printed values of the 2017 core set's starting equipment and treasure cards (boss treasure left out), compiled from two independently maintained community card databases and checked against the card images in the official rulebooks where those are legible; see 41_rules_workshop.md, section 12, for the sources and the cards that rest on one source. req = strength, dexterity, intelligence, faith. Dice: b black, u blue, o orange. Conditions, text and support actions were added from the author's table of card values (fx: conditions an attack inflicts; push; shift: nodes of movement with the attack; sup: what a support action gives and to whom).",
 "classes": {
 "Knight": {
 "stats": [
@@ -188,7 +188,8 @@
 "resist": "",
 "dodge": 0,
 "block_mod": 0,
-"resist_mod": 0
+"resist_mod": 0,
+"shield": false
 },
 "Kite Shield (Knight)": {
 "name": "Kite Shield (Knight)",
@@ -210,7 +211,8 @@
 "resist": "",
 "dodge": 0,
 "block_mod": 0,
-"resist_mod": 0
+"resist_mod": 0,
+"shield": true
 },
 "Knight Armour": {
 "name": "Knight Armour",
@@ -279,7 +281,8 @@
 "resist": "",
 "dodge": 0,
 "block_mod": 0,
-"resist_mod": 0
+"resist_mod": 0,
+"shield": false
 },
 "Round Shield": {
 "name": "Round Shield",
@@ -301,7 +304,8 @@
 "resist": "",
 "dodge": 0,
 "block_mod": 0,
-"resist_mod": 0
+"resist_mod": 0,
+"shield": true
 },
 "Northern Armour": {
 "name": "Northern Armour",
@@ -370,7 +374,8 @@
 "resist": "",
 "dodge": 0,
 "block_mod": 0,
-"resist_mod": 0
+"resist_mod": 0,
+"shield": false
 },
 "Target Shield": {
 "name": "Target Shield",
@@ -392,7 +397,8 @@
 "resist": "",
 "dodge": 1,
 "block_mod": 0,
-"resist_mod": 0
+"resist_mod": 0,
+"shield": true
 },
 "Assassin Armour": {
 "name": "Assassin Armour",
@@ -461,7 +467,8 @@
 "resist": "",
 "dodge": 0,
 "block_mod": 0,
-"resist_mod": 0
+"resist_mod": 0,
+"shield": false
 },
 "Kite Shield (Herald)": {
 "name": "Kite Shield (Herald)",
@@ -483,7 +490,8 @@
 "resist": "",
 "dodge": 0,
 "block_mod": 0,
-"resist_mod": 0
+"resist_mod": 0,
+"shield": true
 },
 "Talisman": {
 "name": "Talisman",
@@ -500,12 +508,51 @@
 "conf": "high",
 "type": "hand",
 "hands": 1,
-"attacks": [],
+"attacks": [
+{
+"cost": 0,
+"dice": "",
+"mod": 0,
+"magic": false,
+"range": 0,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false,
+"text": "All characters within range gain 1 stamina",
+"sup": {
+"who": "all",
+"hp": 0,
+"sta": 1
+}
+},
+{
+"cost": 3,
+"dice": "",
+"mod": 0,
+"magic": false,
+"range": 0,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false,
+"text": "One character within range gains 6 stamina",
+"sup": {
+"who": "one",
+"hp": 0,
+"sta": 6
+}
+}
+],
 "block": "",
 "resist": "",
 "dodge": 0,
 "block_mod": 0,
-"resist_mod": 0
+"resist_mod": 0,
+"shield": false,
+"catalyst": "miracle"
 },
 "Herald Armour": {
 "name": "Herald Armour",
@@ -596,7 +643,8 @@
 "resist": "",
 "dodge": 1,
 "block_mod": 0,
-"resist_mod": 0
+"resist_mod": 0,
+"shield": false
 },
 "Balder Side Sword": {
 "name": "Balder Side Sword",
@@ -636,14 +684,16 @@
 "node": false,
 "shaft": false,
 "heal": 0,
-"ignore": false
+"ignore": false,
+"shift": 1
 }
 ],
 "block": "",
 "resist": "b",
 "dodge": 0,
 "block_mod": 0,
-"resist_mod": 0
+"resist_mod": 0,
+"shield": false
 },
 "Black Armour": {
 "name": "Black Armour",
@@ -687,7 +737,9 @@
 "resist": "uu",
 "dodge": 0,
 "block_mod": 0,
-"resist_mod": 0
+"resist_mod": 0,
+"text": "Ignore push icons on Enemies' physical and magical attack behaviours",
+"shield": true
 },
 "Blessed Gem": {
 "name": "Blessed Gem",
@@ -707,7 +759,7 @@
 "attacks": [],
 "up": null,
 "on": "weapon",
-"text": "This weapon's attacks gain 1 black die."
+"text": "This weapon's attacks gain 1 black die"
 },
 "Blood Gem": {
 "name": "Blood Gem",
@@ -727,7 +779,7 @@
 "attacks": [],
 "up": null,
 "on": "weapon",
-"text": "This weapon's attacks gain Bleed."
+"text": "This weapon's attacks gain Bleed"
 },
 "Blue Tearstone Ring": {
 "name": "Blue Tearstone Ring",
@@ -747,7 +799,7 @@
 "attacks": [],
 "up": null,
 "on": "armour",
-"text": "After you suffer damage from an enemy attack, gain 1 stamina."
+"text": "After you suffer damage from an enemy attack, gain 1 stamina"
 },
 "Bountiful Light": {
 "name": "Bountiful Light",
@@ -766,6 +818,24 @@
 "hands": 1,
 "attacks": [
 {
+"cost": 2,
+"dice": "",
+"mod": 0,
+"magic": false,
+"range": 1,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false,
+"text": "Up to two characters within range gain 2 stamina",
+"sup": {
+"who": "two",
+"hp": 0,
+"sta": 2
+}
+},
+{
 "cost": 4,
 "dice": "",
 "mod": 0,
@@ -774,15 +844,24 @@
 "repeat": 1,
 "node": false,
 "shaft": false,
-"heal": 2,
-"ignore": false
+"heal": 0,
+"ignore": false,
+"text": "Up to two characters within range gain 2 health",
+"sup": {
+"who": "two",
+"hp": 2,
+"sta": 0
+}
 }
 ],
 "block": "",
 "resist": "",
 "dodge": 0,
 "block_mod": 0,
-"resist_mod": 0
+"resist_mod": 0,
+"shield": false,
+"spell": true,
+"school": "miracle"
 },
 "Bountiful Sunlight": {
 "name": "Bountiful Sunlight",
@@ -799,12 +878,52 @@
 "conf": "high",
 "type": "hand",
 "hands": 1,
-"attacks": [],
+"attacks": [
+{
+"cost": 0,
+"dice": "",
+"mod": 0,
+"magic": false,
+"range": 3,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false,
+"text": "One character within range gains 6 stamina",
+"sup": {
+"who": "one",
+"hp": 0,
+"sta": 6
+}
+},
+{
+"cost": 3,
+"dice": "",
+"mod": 0,
+"magic": false,
+"range": 3,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false,
+"text": "All other characters within range gain 6 stamina",
+"sup": {
+"who": "others",
+"hp": 0,
+"sta": 6
+}
+}
+],
 "block": "",
 "resist": "",
 "dodge": 0,
 "block_mod": 0,
-"resist_mod": 0
+"resist_mod": 0,
+"shield": false,
+"spell": true,
+"school": "pyromancy"
 },
 "Brigand Axe": {
 "name": "Brigand Axe",
@@ -851,7 +970,8 @@
 "resist": "b",
 "dodge": 0,
 "block_mod": 0,
-"resist_mod": 0
+"resist_mod": 0,
+"shield": false
 },
 "Broadsword": {
 "name": "Broadsword",
@@ -891,7 +1011,8 @@
 "node": false,
 "shaft": false,
 "heal": 0,
-"ignore": false
+"ignore": false,
+"shift": 1
 },
 {
 "cost": 4,
@@ -903,14 +1024,16 @@
 "node": false,
 "shaft": false,
 "heal": 0,
-"ignore": false
+"ignore": false,
+"shift": 1
 }
 ],
 "block": "b",
 "resist": "b",
 "dodge": 0,
 "block_mod": 0,
-"resist_mod": 0
+"resist_mod": 0,
+"shield": false
 },
 "Caestus": {
 "name": "Caestus",
@@ -950,14 +1073,16 @@
 "node": false,
 "shaft": false,
 "heal": 0,
-"ignore": false
+"ignore": false,
+"text": "This attack can be used while this item is in the backup slot"
 }
 ],
 "block": "",
 "resist": "",
 "dodge": 0,
 "block_mod": 0,
-"resist_mod": 0
+"resist_mod": 0,
+"shield": false
 },
 "Carthus Curved Sword": {
 "name": "Carthus Curved Sword",
@@ -985,7 +1110,8 @@
 "node": false,
 "shaft": false,
 "heal": 0,
-"ignore": false
+"ignore": false,
+"shift": 1
 },
 {
 "cost": 3,
@@ -997,14 +1123,16 @@
 "node": false,
 "shaft": false,
 "heal": 0,
-"ignore": false
+"ignore": false,
+"shift": 1
 }
 ],
 "block": "",
 "resist": "",
 "dodge": 1,
 "block_mod": 0,
-"resist_mod": 0
+"resist_mod": 0,
+"shield": false
 },
 "Cathedral Knight Armour": {
 "name": "Cathedral Knight Armour",
@@ -1046,7 +1174,7 @@
 "attacks": [],
 "up": null,
 "on": "armour",
-"text": "Characters in your node gain 3 \u2b1bstamina at the start of their activations (instead of 2)"
+"text": "Characters in your node gain 3 stamina at the start of their activations (instead of 2)"
 },
 "Claymore": {
 "name": "Claymore",
@@ -1093,7 +1221,8 @@
 "resist": "",
 "dodge": 0,
 "block_mod": 0,
-"resist_mod": 0
+"resist_mod": 0,
+"shield": false
 },
 "Composite Bow": {
 "name": "Composite Bow",
@@ -1140,7 +1269,8 @@
 "resist": "",
 "dodge": 1,
 "block_mod": 0,
-"resist_mod": 0
+"resist_mod": 0,
+"shield": false
 },
 "Court Sorcerer Robes": {
 "name": "Court Sorcerer Robes",
@@ -1182,7 +1312,7 @@
 "attacks": [],
 "up": null,
 "on": "weapon",
-"text": "This weapon's attacks gain 1 black die."
+"text": "This weapon's attacks gain 1 black die"
 },
 "Dark Sword": {
 "name": "Dark Sword",
@@ -1234,14 +1364,16 @@
 "node": false,
 "shaft": false,
 "heal": 0,
-"ignore": false
+"ignore": false,
+"shift": 1
 }
 ],
 "block": "",
 "resist": "",
 "dodge": 0,
 "block_mod": 0,
-"resist_mod": 0
+"resist_mod": 0,
+"shield": false
 },
 "Deacon Robes": {
 "name": "Deacon Robes",
@@ -1285,7 +1417,8 @@
 "resist": "u",
 "dodge": 0,
 "block_mod": 0,
-"resist_mod": 0
+"resist_mod": 0,
+"shield": true
 },
 "Dragonslayer's Axe": {
 "name": "Dragonslayer's Axe",
@@ -1325,14 +1458,16 @@
 "node": false,
 "shaft": false,
 "heal": 0,
-"ignore": false
+"ignore": false,
+"shift": 1
 }
 ],
 "block": "",
 "resist": "b",
 "dodge": 0,
 "block_mod": 0,
-"resist_mod": 0
+"resist_mod": 0,
+"shield": false
 },
 "Dragon Tooth": {
 "name": "Dragon Tooth",
@@ -1373,13 +1508,28 @@
 "shaft": false,
 "heal": 0,
 "ignore": false
+},
+{
+"cost": 0,
+"dice": "",
+"mod": 0,
+"magic": false,
+"range": 1,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false,
+"text": "Gain 2 stamina",
+"gain_sta": 2
 }
 ],
 "block": "b",
 "resist": "u",
 "dodge": 0,
 "block_mod": 0,
-"resist_mod": 0
+"resist_mod": 0,
+"shield": false
 },
 "Drake Sword": {
 "name": "Drake Sword",
@@ -1438,7 +1588,8 @@
 "resist": "",
 "dodge": 0,
 "block_mod": 0,
-"resist_mod": 0
+"resist_mod": 0,
+"shield": false
 },
 "Drang Armour": {
 "name": "Drang Armour",
@@ -1482,7 +1633,8 @@
 "resist": "",
 "dodge": 1,
 "block_mod": 0,
-"resist_mod": 0
+"resist_mod": 0,
+"shield": true
 },
 "East-West Shield": {
 "name": "East-West Shield",
@@ -1504,7 +1656,8 @@
 "resist": "u",
 "dodge": 1,
 "block_mod": 0,
-"resist_mod": 0
+"resist_mod": 0,
+"shield": true
 },
 "Effigy Shield": {
 "name": "Effigy Shield",
@@ -1526,7 +1679,9 @@
 "resist": "b",
 "dodge": 0,
 "block_mod": 0,
-"resist_mod": 0
+"resist_mod": 0,
+"text": "You can equip this in one hand while you have a two-handed weapon in your other hand",
+"shield": true
 },
 "Elite Knight Armour": {
 "name": "Elite Knight Armour",
@@ -1570,7 +1725,9 @@
 "resist": "bb",
 "dodge": 1,
 "block_mod": 0,
-"resist_mod": 0
+"resist_mod": 0,
+"text": "You can equip this in one hand while you have a two-handed weapon in your other hand",
+"shield": true
 },
 "Exile Armour": {
 "name": "Exile Armour",
@@ -1639,7 +1796,8 @@
 "resist": "u",
 "dodge": 0,
 "block_mod": 0,
-"resist_mod": 0
+"resist_mod": 0,
+"shield": false
 },
 "Fallen Knight Armour": {
 "name": "Fallen Knight Armour",
@@ -1683,7 +1841,8 @@
 "resist": "u",
 "dodge": 0,
 "block_mod": 0,
-"resist_mod": 0
+"resist_mod": 0,
+"text": "Once per encounter at the end of another character's activation, you may take the Aggro token"
 },
 "Fireball": {
 "name": "Fireball",
@@ -1730,7 +1889,10 @@
 "resist": "",
 "dodge": 0,
 "block_mod": 0,
-"resist_mod": 0
+"resist_mod": 0,
+"shield": false,
+"spell": true,
+"school": "sorcery"
 },
 "Firebombs": {
 "name": "Firebombs",
@@ -1758,14 +1920,16 @@
 "node": true,
 "shaft": false,
 "heal": 0,
-"ignore": false
+"ignore": false,
+"push": true
 }
 ],
 "block": "",
 "resist": "",
 "dodge": 0,
 "block_mod": 0,
-"resist_mod": 0
+"resist_mod": 0,
+"shield": false
 },
 "Firelink Armour": {
 "name": "Firelink Armour",
@@ -1804,12 +1968,29 @@
 "conf": "medium",
 "type": "hand",
 "hands": 1,
-"attacks": [],
+"attacks": [
+{
+"cost": 2,
+"dice": "",
+"mod": 0,
+"magic": false,
+"range": 2,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false,
+"push": true
+}
+],
 "block": "",
 "resist": "",
 "dodge": 0,
 "block_mod": 0,
-"resist_mod": 0
+"resist_mod": 0,
+"shield": false,
+"spell": true,
+"school": "sorcery"
 },
 "Fume Ultra Greatsword": {
 "name": "Fume Ultra Greatsword",
@@ -1868,7 +2049,8 @@
 "resist": "b",
 "dodge": 0,
 "block_mod": 0,
-"resist_mod": 0
+"resist_mod": 0,
+"shield": false
 },
 "Golden Wing Crest Shield": {
 "name": "Golden Wing Crest Shield",
@@ -1903,7 +2085,8 @@
 "resist": "u",
 "dodge": 0,
 "block_mod": 0,
-"resist_mod": 0
+"resist_mod": 0,
+"shield": true
 },
 "Gotthard Twinswords": {
 "name": "Gotthard Twinswords",
@@ -1962,7 +2145,8 @@
 "resist": "b",
 "dodge": 0,
 "block_mod": 0,
-"resist_mod": 0
+"resist_mod": 0,
+"shield": false
 },
 "Grass Crest Shield": {
 "name": "Grass Crest Shield",
@@ -1979,12 +2163,32 @@
 "conf": "medium",
 "type": "hand",
 "hands": 1,
-"attacks": [],
+"attacks": [
+{
+"cost": 0,
+"dice": "",
+"mod": 0,
+"magic": false,
+"range": 1,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false,
+"text": "One character within range gains 1 stamina",
+"sup": {
+"who": "one",
+"hp": 0,
+"sta": 1
+}
+}
+],
 "block": "u",
 "resist": "o",
 "dodge": 0,
 "block_mod": 0,
-"resist_mod": 0
+"resist_mod": 0,
+"shield": true
 },
 "Greataxe": {
 "name": "Greataxe",
@@ -2043,7 +2247,8 @@
 "resist": "",
 "dodge": 0,
 "block_mod": 0,
-"resist_mod": 0
+"resist_mod": 0,
+"shield": false
 },
 "Great Mace": {
 "name": "Great Mace",
@@ -2090,7 +2295,8 @@
 "resist": "b",
 "dodge": 0,
 "block_mod": 0,
-"resist_mod": 0
+"resist_mod": 0,
+"shield": false
 },
 "Great Machete": {
 "name": "Great Machete",
@@ -2149,7 +2355,8 @@
 "resist": "b",
 "dodge": 0,
 "block_mod": 0,
-"resist_mod": 0
+"resist_mod": 0,
+"shield": false
 },
 "Great Magic Weapon": {
 "name": "Great Magic Weapon",
@@ -2166,12 +2373,50 @@
 "conf": "high",
 "type": "hand",
 "hands": 1,
-"attacks": [],
+"attacks": [
+{
+"cost": 0,
+"dice": "",
+"mod": 0,
+"magic": false,
+"range": 0,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false,
+"text": "Your attacks are magical this activation",
+"buff": {
+"magic": true,
+"mod": 0
+}
+},
+{
+"cost": 2,
+"dice": "",
+"mod": 0,
+"magic": false,
+"range": 0,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false,
+"text": "Your attacks gain +1 and are magical this activation",
+"buff": {
+"magic": true,
+"mod": 1
+}
+}
+],
 "block": "",
 "resist": "",
 "dodge": 0,
 "block_mod": 0,
-"resist_mod": 0
+"resist_mod": 0,
+"shield": false,
+"spell": true,
+"school": "pyromancy"
 },
 "Great Wooden Hammer": {
 "name": "Great Wooden Hammer",
@@ -2218,7 +2463,8 @@
 "resist": "",
 "dodge": 0,
 "block_mod": 0,
-"resist_mod": 0
+"resist_mod": 0,
+"shield": false
 },
 "Halberd": {
 "name": "Halberd",
@@ -2265,7 +2511,8 @@
 "resist": "",
 "dodge": 0,
 "block_mod": 0,
-"resist_mod": 0
+"resist_mod": 0,
+"shield": false
 },
 "Hard Leather Armour": {
 "name": "Hard Leather Armour",
@@ -2314,8 +2561,14 @@
 "repeat": 1,
 "node": false,
 "shaft": false,
-"heal": 1,
-"ignore": false
+"heal": 0,
+"ignore": false,
+"text": "One character within range gains 1 stamina and 1 health",
+"sup": {
+"who": "one",
+"hp": 1,
+"sta": 1
+}
 },
 {
 "cost": 3,
@@ -2326,15 +2579,24 @@
 "repeat": 1,
 "node": false,
 "shaft": false,
-"heal": 4,
-"ignore": false
+"heal": 0,
+"ignore": false,
+"text": "One character within range gains 4 health",
+"sup": {
+"who": "one",
+"hp": 4,
+"sta": 0
+}
 }
 ],
 "block": "",
 "resist": "",
 "dodge": 0,
 "block_mod": 0,
-"resist_mod": 0
+"resist_mod": 0,
+"shield": false,
+"spell": true,
+"school": "miracle"
 },
 "Heal Aid": {
 "name": "Heal Aid",
@@ -2361,15 +2623,24 @@
 "repeat": 1,
 "node": false,
 "shaft": false,
-"heal": 1,
-"ignore": false
+"heal": 0,
+"ignore": false,
+"text": "One character within range gains 1 stamina and 1 health",
+"sup": {
+"who": "one",
+"hp": 1,
+"sta": 1
+}
 }
 ],
 "block": "",
 "resist": "",
 "dodge": 0,
 "block_mod": 0,
-"resist_mod": 0
+"resist_mod": 0,
+"shield": false,
+"spell": true,
+"school": "miracle"
 },
 "Heavy Gem": {
 "name": "Heavy Gem",
@@ -2389,7 +2660,7 @@
 "attacks": [],
 "up": null,
 "on": "weapon",
-"text": "This weapon's attacks gain 1 black die."
+"text": "This weapon's attacks gain 1 black die"
 },
 "Hornet Ring": {
 "name": "Hornet Ring",
@@ -2409,7 +2680,7 @@
 "attacks": [],
 "up": null,
 "on": "armour",
-"text": "Your attacks gain an additional orange die but get -2 total damage."
+"text": "Your attacks gain 1 orange die -2"
 },
 "Knight Slayer's Ring": {
 "name": "Knight Slayer's Ring",
@@ -2429,7 +2700,7 @@
 "attacks": [],
 "up": null,
 "on": "armour",
-"text": "After you make an attack that exceeds an enemy's Block or Resist value by 3 or more, gain 1 stamina."
+"text": "After you make an attack that exceeds an enemy's Block or Resist value by 3 or more, gain 1 stamina"
 },
 "Kukris": {
 "name": "Kukris",
@@ -2446,12 +2717,29 @@
 "conf": "high",
 "type": "hand",
 "hands": 1,
-"attacks": [],
+"attacks": [
+{
+"cost": 0,
+"dice": "",
+"mod": 0,
+"magic": false,
+"range": 1,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false,
+"fx": [
+"bleed"
+]
+}
+],
 "block": "",
 "resist": "",
 "dodge": 0,
 "block_mod": 0,
-"resist_mod": 0
+"resist_mod": 0,
+"shield": false
 },
 "Lightning Gem": {
 "name": "Lightning Gem",
@@ -2471,7 +2759,7 @@
 "attacks": [],
 "up": null,
 "on": "weapon",
-"text": "This weapon's attacks gain Magic."
+"text": "This weapon's attacks gain Magic"
 },
 "Lothric Knight Armour": {
 "name": "Lothric Knight Armour",
@@ -2493,7 +2781,8 @@
 "resist": "u",
 "dodge": 0,
 "block_mod": 0,
-"resist_mod": 0
+"resist_mod": 0,
+"text": "When you end your activation, gain 1 health for each enemy on your node"
 },
 "Lothric's Holy Sword": {
 "name": "Lothric's Holy Sword",
@@ -2521,7 +2810,8 @@
 "node": false,
 "shaft": false,
 "heal": 0,
-"ignore": false
+"ignore": false,
+"text": "One character within range 1 gains 1 stamina"
 },
 {
 "cost": 3,
@@ -2533,14 +2823,16 @@
 "node": false,
 "shaft": false,
 "heal": 0,
-"ignore": false
+"ignore": false,
+"text": "One character within range 1 gains 1 stamina"
 }
 ],
 "block": "",
 "resist": "b",
 "dodge": 0,
 "block_mod": 0,
-"resist_mod": 0
+"resist_mod": 0,
+"shield": false
 },
 "Lucerne": {
 "name": "Lucerne",
@@ -2568,7 +2860,8 @@
 "node": false,
 "shaft": false,
 "heal": 0,
-"ignore": false
+"ignore": false,
+"shift": 1
 },
 {
 "cost": 4,
@@ -2580,14 +2873,16 @@
 "node": false,
 "shaft": false,
 "heal": 0,
-"ignore": false
+"ignore": false,
+"shift": 1
 }
 ],
 "block": "b",
 "resist": "b",
 "dodge": 1,
 "block_mod": 0,
-"resist_mod": 0
+"resist_mod": 0,
+"shield": false
 },
 "Master's Attire": {
 "name": "Master's Attire",
@@ -2668,7 +2963,8 @@
 "resist": "",
 "dodge": 0,
 "block_mod": 0,
-"resist_mod": 0
+"resist_mod": 0,
+"shield": false
 },
 "Morning Star": {
 "name": "Morning Star",
@@ -2715,7 +3011,8 @@
 "resist": "b",
 "dodge": 0,
 "block_mod": 0,
-"resist_mod": 0
+"resist_mod": 0,
+"shield": false
 },
 "Murakumo": {
 "name": "Murakumo",
@@ -2762,7 +3059,8 @@
 "resist": "",
 "dodge": 1,
 "block_mod": 0,
-"resist_mod": 0
+"resist_mod": 0,
+"shield": false
 },
 "Partizan": {
 "name": "Partizan",
@@ -2803,13 +3101,32 @@
 "shaft": true,
 "heal": 0,
 "ignore": false
+},
+{
+"cost": 0,
+"dice": "",
+"mod": 0,
+"magic": false,
+"range": 1,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false,
+"text": "All characters within range gain 2 stamina",
+"sup": {
+"who": "all",
+"hp": 0,
+"sta": 2
+}
 }
 ],
 "block": "u",
 "resist": "b",
 "dodge": 0,
 "block_mod": 0,
-"resist_mod": 0
+"resist_mod": 0,
+"shield": false
 },
 "Pierce Shield": {
 "name": "Pierce Shield",
@@ -2844,7 +3161,8 @@
 "resist": "",
 "dodge": 0,
 "block_mod": 0,
-"resist_mod": 0
+"resist_mod": 0,
+"shield": true
 },
 "Poison Gem": {
 "name": "Poison Gem",
@@ -2864,7 +3182,7 @@
 "attacks": [],
 "up": null,
 "on": "weapon",
-"text": "This weapon's attacks gain Poison."
+"text": "This weapon's attacks gain Poison"
 },
 "Poison Mist": {
 "name": "Poison Mist",
@@ -2881,12 +3199,46 @@
 "conf": "medium",
 "type": "hand",
 "hands": 1,
-"attacks": [],
+"attacks": [
+{
+"cost": 1,
+"dice": "",
+"mod": 0,
+"magic": false,
+"range": 1,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false,
+"fx": [
+"poison"
+]
+},
+{
+"cost": 3,
+"dice": "",
+"mod": 0,
+"magic": false,
+"range": 1,
+"repeat": 1,
+"node": true,
+"shaft": false,
+"heal": 0,
+"ignore": false,
+"fx": [
+"poison"
+]
+}
+],
 "block": "",
 "resist": "",
 "dodge": 0,
 "block_mod": 0,
-"resist_mod": 0
+"resist_mod": 0,
+"shield": false,
+"spell": true,
+"school": "sorcery"
 },
 "Rapier": {
 "name": "Rapier",
@@ -2933,7 +3285,8 @@
 "resist": "",
 "dodge": 0,
 "block_mod": 0,
-"resist_mod": 0
+"resist_mod": 0,
+"shield": false
 },
 "Reinforced Club": {
 "name": "Reinforced Club",
@@ -2980,7 +3333,8 @@
 "resist": "",
 "dodge": 0,
 "block_mod": 0,
-"resist_mod": 0
+"resist_mod": 0,
+"shield": false
 },
 "Replenishment": {
 "name": "Replenishment",
@@ -2999,23 +3353,50 @@
 "hands": 1,
 "attacks": [
 {
+"cost": 0,
+"dice": "",
+"mod": 0,
+"magic": false,
+"range": 0,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false,
+"text": "All characters within range gain 1 stamina",
+"sup": {
+"who": "all",
+"hp": 0,
+"sta": 1
+}
+},
+{
 "cost": 2,
 "dice": "",
 "mod": 0,
 "magic": false,
-"range": 1,
+"range": 0,
 "repeat": 1,
 "node": false,
 "shaft": false,
-"heal": 1,
-"ignore": false
+"heal": 0,
+"ignore": false,
+"text": "All characters within range gain 1 health",
+"sup": {
+"who": "all",
+"hp": 1,
+"sta": 0
+}
 }
 ],
 "block": "",
 "resist": "",
 "dodge": 0,
 "block_mod": 0,
-"resist_mod": 0
+"resist_mod": 0,
+"shield": false,
+"spell": true,
+"school": "miracle"
 },
 "Rotten Ghru Dagger": {
 "name": "Rotten Ghru Dagger",
@@ -3043,7 +3424,10 @@
 "node": false,
 "shaft": false,
 "heal": 0,
-"ignore": false
+"ignore": false,
+"fx": [
+"poison"
+]
 },
 {
 "cost": 3,
@@ -3055,14 +3439,18 @@
 "node": false,
 "shaft": false,
 "heal": 0,
-"ignore": false
+"ignore": false,
+"fx": [
+"poison"
+]
 }
 ],
 "block": "",
 "resist": "",
 "dodge": 0,
 "block_mod": 0,
-"resist_mod": 0
+"resist_mod": 0,
+"shield": false
 },
 "Saint Bident": {
 "name": "Saint Bident",
@@ -3103,13 +3491,32 @@
 "shaft": true,
 "heal": 0,
 "ignore": false
+},
+{
+"cost": 0,
+"dice": "",
+"mod": 0,
+"magic": false,
+"range": 1,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false,
+"text": "One character within range gains 2 stamina",
+"sup": {
+"who": "one",
+"hp": 0,
+"sta": 2
+}
 }
 ],
 "block": "b",
 "resist": "b",
 "dodge": 0,
 "block_mod": 0,
-"resist_mod": 0
+"resist_mod": 0,
+"shield": false
 },
 "Santier's Spear": {
 "name": "Santier's Spear",
@@ -3149,7 +3556,8 @@
 "node": true,
 "shaft": false,
 "heal": 0,
-"ignore": false
+"ignore": false,
+"shift": 1
 },
 {
 "cost": 4,
@@ -3168,7 +3576,8 @@
 "resist": "",
 "dodge": 0,
 "block_mod": 0,
-"resist_mod": 0
+"resist_mod": 0,
+"shield": false
 },
 "Scimitar": {
 "name": "Scimitar",
@@ -3215,7 +3624,8 @@
 "resist": "",
 "dodge": 0,
 "block_mod": 0,
-"resist_mod": 0
+"resist_mod": 0,
+"shield": false
 },
 "Shadow Armour": {
 "name": "Shadow Armour",
@@ -3237,7 +3647,8 @@
 "resist": "",
 "dodge": 2,
 "block_mod": 0,
-"resist_mod": 0
+"resist_mod": 0,
+"text": "When you dodge, you may move 2 nodes (instead of 1)"
 },
 "Sharp Gem": {
 "name": "Sharp Gem",
@@ -3257,7 +3668,7 @@
 "attacks": [],
 "up": null,
 "on": "weapon",
-"text": "This weapon's attacks gain 1 black die."
+"text": "This weapon's attacks gain 1 black die"
 },
 "Shortsword": {
 "name": "Shortsword",
@@ -3304,7 +3715,8 @@
 "resist": "",
 "dodge": 0,
 "block_mod": 0,
-"resist_mod": 0
+"resist_mod": 0,
+"shield": false
 },
 "Silver Eagle Kite Shield": {
 "name": "Silver Eagle Kite Shield",
@@ -3326,7 +3738,8 @@
 "resist": "",
 "dodge": 0,
 "block_mod": 0,
-"resist_mod": 0
+"resist_mod": 0,
+"shield": true
 },
 "Silver Knight Shield": {
 "name": "Silver Knight Shield",
@@ -3373,7 +3786,8 @@
 "resist": "",
 "dodge": 0,
 "block_mod": 0,
-"resist_mod": 0
+"resist_mod": 0,
+"shield": true
 },
 "Silver Knight Straight Sword": {
 "name": "Silver Knight Straight Sword",
@@ -3420,7 +3834,8 @@
 "resist": "",
 "dodge": 1,
 "block_mod": 0,
-"resist_mod": 0
+"resist_mod": 0,
+"shield": false
 },
 "Simple Gem": {
 "name": "Simple Gem",
@@ -3440,7 +3855,7 @@
 "attacks": [],
 "up": null,
 "on": "weapon",
-"text": "Reduce the cost of this weapon's highest-stamina attack by 1 stamina."
+"text": "Reduce the cost of this weapon's highest stamina attack by 1 stamina"
 },
 "Sorcerer's Staff": {
 "name": "Sorcerer's Staff",
@@ -3499,7 +3914,9 @@
 "resist": "u",
 "dodge": 1,
 "block_mod": 0,
-"resist_mod": 0
+"resist_mod": 0,
+"shield": false,
+"catalyst": "sorcery"
 },
 "Soul Arrow": {
 "name": "Soul Arrow",
@@ -3546,7 +3963,10 @@
 "resist": "",
 "dodge": 0,
 "block_mod": 0,
-"resist_mod": 0
+"resist_mod": 0,
+"shield": false,
+"spell": true,
+"school": "sorcery"
 },
 "Soulstream": {
 "name": "Soulstream",
@@ -3605,7 +4025,10 @@
 "resist": "",
 "dodge": 0,
 "block_mod": 0,
-"resist_mod": 0
+"resist_mod": 0,
+"shield": false,
+"spell": true,
+"school": "sorcery"
 },
 "Spider Shield": {
 "name": "Spider Shield",
@@ -3627,7 +4050,9 @@
 "resist": "",
 "dodge": 0,
 "block_mod": 0,
-"resist_mod": 0
+"resist_mod": 0,
+"text": "You are immune to Poison",
+"shield": true
 },
 "Spiked Mace": {
 "name": "Spiked Mace",
@@ -3686,7 +4111,8 @@
 "resist": "b",
 "dodge": 0,
 "block_mod": 0,
-"resist_mod": 0
+"resist_mod": 0,
+"shield": false
 },
 "Spotted Whip": {
 "name": "Spotted Whip",
@@ -3714,7 +4140,10 @@
 "node": false,
 "shaft": false,
 "heal": 0,
-"ignore": false
+"ignore": false,
+"fx": [
+"poison"
+]
 },
 {
 "cost": 3,
@@ -3726,14 +4155,18 @@
 "node": false,
 "shaft": false,
 "heal": 0,
-"ignore": false
+"ignore": false,
+"fx": [
+"poison"
+]
 }
 ],
 "block": "",
 "resist": "",
 "dodge": 1,
 "block_mod": 0,
-"resist_mod": 0
+"resist_mod": 0,
+"shield": false
 },
 "Sunless Armour": {
 "name": "Sunless Armour",
@@ -3796,13 +4229,32 @@
 "shaft": false,
 "heal": 0,
 "ignore": false
+},
+{
+"cost": 0,
+"dice": "",
+"mod": 0,
+"magic": false,
+"range": 0,
+"repeat": 1,
+"node": false,
+"shaft": false,
+"heal": 0,
+"ignore": false,
+"text": "Party bonus during the next enemy activation (1 black block die, 1 black resist die)",
+"guard": {
+"who": "party",
+"blk": "b",
+"res": "b"
+}
 }
 ],
 "block": "",
 "resist": "",
 "dodge": 0,
 "block_mod": 0,
-"resist_mod": 0
+"resist_mod": 0,
+"shield": false
 },
 "Sun Princess Ring": {
 "name": "Sun Princess Ring",
@@ -3822,7 +4274,7 @@
 "attacks": [],
 "up": null,
 "on": "armour",
-"text": "When you end your activation, gain 1 health."
+"text": "When you end your activation, gain 1 health"
 },
 "Sunset Armour": {
 "name": "Sunset Armour",
@@ -3891,7 +4343,8 @@
 "resist": "",
 "dodge": 0,
 "block_mod": 0,
-"resist_mod": 0
+"resist_mod": 0,
+"shield": false
 },
 "Tiny Being's Ring": {
 "name": "Tiny Being's Ring",
@@ -3911,7 +4364,7 @@
 "attacks": [],
 "up": null,
 "on": "armour",
-"text": "At the start of your activation, you may gain 1 \u2b1bstamina and 1 \ud83d\udfe5health (instead of 2 \u2b1bstamina)"
+"text": "At the start of your activation, you may gain 1 stamina and 1 health (instead of 2 stamina)"
 },
 "Titanite Shard": {
 "name": "Titanite Shard",
@@ -3931,7 +4384,7 @@
 "attacks": [],
 "up": "dmg1",
 "on": "weapon",
-"text": "This weapon's attacks gain +1 damage."
+"text": "This weapon's attacks gain +1 damage"
 },
 "Twin Dragon Greatshield": {
 "name": "Twin Dragon Greatshield",
@@ -3953,7 +4406,8 @@
 "resist": "u",
 "dodge": 0,
 "block_mod": 0,
-"resist_mod": 0
+"resist_mod": 0,
+"shield": true
 },
 "Umbral Dagger": {
 "name": "Umbral Dagger",
@@ -4012,7 +4466,8 @@
 "resist": "",
 "dodge": 1,
 "block_mod": 0,
-"resist_mod": 0
+"resist_mod": 0,
+"shield": false
 },
 "Warpick": {
 "name": "Warpick",
@@ -4059,7 +4514,8 @@
 "resist": "",
 "dodge": 0,
 "block_mod": 0,
-"resist_mod": 0
+"resist_mod": 0,
+"shield": false
 },
 "Washing Pole": {
 "name": "Washing Pole",
@@ -4111,14 +4567,18 @@
 "node": false,
 "shaft": true,
 "heal": 0,
-"ignore": false
+"ignore": false,
+"fx": [
+"bleed"
+]
 }
 ],
 "block": "",
 "resist": "",
 "dodge": 1,
 "block_mod": 0,
-"resist_mod": 0
+"resist_mod": 0,
+"shield": false
 },
 "Winged Spear": {
 "name": "Winged Spear",
@@ -4165,7 +4625,8 @@
 "resist": "b",
 "dodge": 0,
 "block_mod": 0,
-"resist_mod": 0
+"resist_mod": 0,
+"shield": false
 },
 "Worker Armour": {
 "name": "Worker Armour",
@@ -4234,7 +4695,8 @@
 "resist": "",
 "dodge": 0,
 "block_mod": 0,
-"resist_mod": 0
+"resist_mod": 0,
+"shield": false
 }
 }
 }

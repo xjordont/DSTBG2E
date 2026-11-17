@@ -3,7 +3,7 @@
 the main boss, under any ruleset of rules.py. Returns what happened, for the tables in 41_rules_workshop.md."""
 import random
 from engine import Fight, Policy, ENCOUNTERS, BOSSES, ENEMIES
-from characters import Char, Economy, CORE4
+from characters import Char, Economy, CORE4, ALL10
 
 MINIS = [b for b, v in BOSSES.items() if v['kind'] == 'mini']
 MAINS = [b for b, v in BOSSES.items() if v['kind'] == 'main']
@@ -26,8 +26,12 @@ def danger(names): return sum(ENEMIES[n]['hp'] * max(s.get('dmg', 0) for s in EN
 def play(n, rules, seed, table=None, classes=None):
     rng = random.Random(seed); r = rules; t = table or Table()
     # players pick their classes: a lone character is a Knight or a Warrior; a pair includes one of them
-    cls = classes or ([rng.choice(CORE4[:2])] if n == 1 else rng.sample(CORE4, n))
-    if n == 2 and not classes and not set(cls) & set(CORE4[:2]): cls[0] = rng.choice(CORE4[:2])
+    # (with roster='all' any of the ten classes is as likely as any other, at every party size)
+    if classes: cls = classes
+    elif getattr(r, 'roster', 'core') == 'all': cls = rng.sample(ALL10, n)
+    else:
+        cls = [rng.choice(CORE4[:2])] if n == 1 else rng.sample(CORE4, n)
+        if n == 2 and not set(cls) & set(CORE4[:2]): cls[0] = rng.choice(CORE4[:2])
     party = [Char(c, r) for c in cls]; eco = Economy(party, r, rng)
     if n == 1:
         if r.pool: eco.pool = r.solo_souls
@@ -39,7 +43,7 @@ def play(n, rules, seed, table=None, classes=None):
     fv0 = getattr(r, 'free_visit', False)
     if fv0: eco.spend(levels=fv0 != 'shop')
     out = dict(win=False, rests=0, fights=0, char_turns=0, enemy_acts=0, rounds=0, lost_at=None, deaths=0,
-               by_level={}, sparks_left=0, souls=0, repeats=0, dec={}, carried=0.0, souls_lost=0.0)
+               by_level={}, sparks_left=0, souls=0, repeats=0, dec={}, carried=0.0, souls_lost=0.0, classes=list(cls))
     decks = {lv: rng.sample(ENCOUNTERS[str(lv)], len(ENCOUNTERS[str(lv)])) for lv in (1, 2, 3)}
     dropped_pool = None                                   # official: the cache lies on the tile where the party fell
 
@@ -148,11 +152,18 @@ def play(n, rules, seed, table=None, classes=None):
                             c.souls += c.dropped[1]; c.dropped = None
                         gain = r.boss_souls(n, sparks) if at_boss else pay(lv, k)
                         c.souls += gain; c.earned += gain; out['souls'] += gain
+                if not at_boss:                                           # a ring that adds a soul to an encounter's reward
+                    for c in party:
+                        if 'serpent' in c.traits and c.alive:
+                            if r.pool: eco.pool += 1
+                            else: c.souls += 1
+                            out['souls'] += 1; break
                 # ---- treasure
                 if not at_boss and first:
                     each = r.free_treasure in (None, 'each')             # one card for each character on a first clear
                     k = 1.0 if each else (r.free_treasure(lv, n) if callable(r.free_treasure) else r.free_treasure); k = int(k) + (rng.random() < k - int(k))
                     cardsT = [eco.draw(1 if stage == 0 else 2) for _ in range(k * (n if each else 1))]
+                    if any('serpent2' in c.traits and c.alive for c in party): cardsT.append(eco.draw(1 if stage == 0 else 2))   # one more card
                     eco.give(cardsT)
                 # ---- recovery
                 for c in party:

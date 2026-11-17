@@ -165,6 +165,8 @@ class Fight:
         for i, c in enumerate(party):
             c.node = ents[i % 3] if self.pol.spread else ents[0]
             c.alive = True; c.stagger = c.frost = False; c.poison = 0; c.bleed = False; c.ran = False
+            c.guard = ('', ''); c.buff = None; c.hurt_by = set(); c.rolls = 0
+        self.faraam = set()                            # who has used "once per encounter" card text
         if boss:
             b = BOSSES[boss]; mul = getattr(r, 'boss_mul', None)
             if mul: b = dict(b, hp=int(round(b['hp'] * mul(self.n))), heatup=int(round(b['heatup'] * mul(self.n))))
@@ -225,7 +227,8 @@ class Fight:
         if not src.boss and rng.random() < pol.evade: return False
         free = c.cap - c.dmg - c.sta
         pen = 1 if (c.stagger and r.stagger == 'author') else 0
-        dice = c.res if magic else c.blk
+        tr = c.traits
+        dice = (c.res if magic else c.blk) + c.guard[1 if magic else 0]      # with any die lent by a spell or a shield's action
         adice = c.arm_res if magic else c.arm_blk
         # a block or resist value also takes the modifier printed on the equipment (bpen: everything worn; apen: the
         # armour alone, for the roll after a failed dodge); a dodge roll takes only the stagger
@@ -240,29 +243,39 @@ class Fight:
             crowd = sum(1.0 for i in range(extra_sta) if free - i <= 4)
             return e + wd * pl + pol.w_sta * extra_sta + 0.6 * crowd
         opts = [(cost(hit_stats(dice, r.block, dmg, bpen), 0), 'block', 0)]
-        sta1 = 1 + (1 if (c.frost and r.frost == 'official') else 0)
+        # the price of a dodge, and the dodge dice, as the cards worn change them
+        sta1 = 0 if ('dodge_free' in tr or ('alonne' in tr and 'Alonne' in src.name)) else 2 if 'dodge_dear' in tr else 1
+        sta1 += 1 if (c.frost and r.frost == 'official') else 0
         room = free - (1 if r.lethal == 'full' else 0)
         nd = c.dodge
+        if 'no_dodge' not in tr:
+            nd += (1 if ('vs_hollow' in tr and 'Hollow' in src.name) else 0) + (1 if ('vs_boss' in tr and src.boss) else 0) \
+                + (2 if ('vs_far' in tr and DIST[src.node][c.node] >= 2) else 0)
+        pen_d = pen + c.dodge_pen                       # what a dodge roll is short by: stagger, and a card that takes a success away
         fail = hit_stats(adice, r.block, dmg, apen) if r.dodge_fail == 'armour' else ((dmg, 1.0),)
         tries = [(nd, sta1)]
         if r.dodge_extra:
             if nd + 1 <= 4: tries.append((nd + 1, sta1 + 2))          # one extra die a dodge, for two more stamina
         for dice_n, sta in tries:
             if sta > room or (dice_n <= 0 and k > 0): continue
-            ps = p_dodge(dice_n, k + pen)
+            ps = p_dodge(dice_n, k + pen_d)
             mixed = ((0, ps),) + tuple((d, p * (1 - ps)) for d, p in fail)
             opts.append((cost(mixed, sta), 'dodge', (dice_n, sta)))
         if (r.parry and parryable and not push and c.can_parry and DIST[src.node][c.node] == 0 and sta1 <= room
                 and not src.boss):
-            ps = p_dodge(nd, k + pen)
+            ps = p_dodge(nd, k + pen_d)
             gain = c.riposte_ev(src) + 1.0                       # the riposte, and the stagger on the attacker
             mixed = ((0, ps), (dmg, 1 - ps))
             opts.append((cost(mixed, sta1) - ps * gain + (1 - ps) * 1.0, 'parry', None))
-        _, how, arg = min(opts, key=lambda o: o[0]); pre = None
+        _, how, arg = min(opts, key=lambda o: o[0]); pre = None; peek = None
+        if 'wolf' in tr and nd > 0 and sta1 <= room and getattr(r, 'defence', 'choice') != 'combined':
+            # the dodge dice are rolled before the choice is made: a roll that would dodge is taken, any other is a block
+            got = sum(rng.random() < 0.5 for _ in range(nd)); peek = got >= k + pen_d
+            how, arg = ('dodge', (nd, sta1)) if peek else ('block', 0)
         if getattr(r, 'defence', 'choice') == 'combined':
             # the 2022 rule: dodge and block dice are rolled together at no cost; enough dodges and the attack misses,
             # otherwise the block or resist pips still count
-            need = k + pen; got = sum(rng.random() < 0.5 for _ in range(nd)); pre = roll(dice, rng)
+            need = k + pen_d; got = sum(rng.random() < 0.5 for _ in range(nd)); pre = roll(dice, rng)
             if 0 < need == got + 1 and nd > got and c.luck:
                 # one dodge short, with every die on the table: luck may re-roll one die of the defence roll, and a failed
                 # dodge die is the one to pick when the block dice would let a telling blow through
@@ -273,7 +286,7 @@ class Fight:
                 self.dec['dodge'] = self.dec.get('dodge', 0) + 1
                 if c.heroic and c.name == 'Assassin' and src.hp > 0:                       # Backstab: a free attack after a dodge
                     o = c.best_option(src, DIST[c.node][src.node], 99, hand='R')
-                    if o: c.heroic = False; self.strike(c, src, o)
+                    if o: self.hero(c); self.strike(c, src, o)
                 if r.dodge_move == 'paid': self.reposition(c, min(1, free), False, count=False)     # 2022: may pay 1 stamina to move a node
                 return False
             how, arg = 'block', 0
@@ -285,7 +298,7 @@ class Fight:
             if c.heroic and c.name == 'Knight' and not magic and (self.lethal(c, taken) or taken >= 2):     # a block roll only
                 # Stand Fast: one more blue die. Where only the two highest dice count, the author rules that this die is
                 # added to them (heroic_die='add'); the other reading puts it in the pool with the rest
-                c.heroic = False; die = rng.choice(DIE['u'])
+                self.hero(c); die = rng.choice(DIE['u'])
                 if r.block == 'best2' and getattr(r, 'heroic_die', 'pool') == 'add': bonus[0] = die
                 else: faces.append(die); dice = dice + 'u'
                 v = total(); taken = max(0, dmg - max(0, v - bpen))
@@ -300,11 +313,12 @@ class Fight:
             c.sta += sta
             # 2017: having paid for the dodge the character can move one node, before the dice are rolled and whatever they show
             if how == 'dodge' and r.dodge_move == 'before': self.reposition(c, 0, True, count=False, frost=False)   # frostbite is charged on the dodge
-            got = sum(rng.random() < 0.5 for _ in range(dice_n)); ok = got >= k + pen
+            got = sum(rng.random() < 0.5 for _ in range(dice_n)); ok = got >= k + pen_d
+            if peek: ok = True                              # the roll was seen before the dodge was chosen
             if not ok and c.luck and dice_n > got:
                 # luck re-rolls the failed dodge dice: one of them under the official rules, all of them under the manuscript
                 c.luck = False; n_again = 1 if getattr(r, 'luck', 'one') == 'one' else dice_n - got
-                got += sum(rng.random() < 0.5 for _ in range(n_again)); ok = got >= k + pen
+                got += sum(rng.random() < 0.5 for _ in range(n_again)); ok = got >= k + pen_d
             if ok:
                 hit = False
                 if how == 'parry':
@@ -312,13 +326,14 @@ class Fight:
                 else:
                     if c.heroic and c.name == 'Assassin' and src.hp > 0:                   # Backstab: a free attack after a dodge
                         o = c.best_option(src, DIST[c.node][src.node], 99, hand='R')
-                        if o: c.heroic = False; self.strike(c, src, o)
+                        if o: self.hero(c); self.strike(c, src, o)
                 if how != 'parry' and r.dodge_move is True:
                     # the manuscript: a successful dodge always moves the character one node. Off the attacker's own
                     # node if it is there; otherwise sideways, keeping its distance where the tile allows
                     d0 = DIST[c.node][src.node]
                     same = [x for x in NBR[c.node] if DIST[x][src.node] == max(1, d0)]
                     c.node = rng.choice(same or [x for x in NBR[c.node] if x != src.node] or NBR[c.node])
+                    if 'dodge2' in tr: c.node = step_away(c.node, src.node, rng)       # a card that lets the dodge carry two nodes
             elif how == 'parry':
                 taken = dmg; c.stagger = True
             elif r.dodge_fail == 'armour':
@@ -331,17 +346,54 @@ class Fight:
         if hit:
             if taken >= 3 and c.ember and r.ember: taken -= 1
             self.wound(c, taken)
+            if taken > 0: c.hurt_by.add(src)
             if c.alive:
+                if taken > 0 and 'tearstone' in tr: c.sta = max(0, c.sta - 1)
                 for e in effects:
                     if e == 'stagger': c.stagger = True
-                    elif e == 'frostbite': c.frost = True
-                    elif e == 'poison': c.poison = c.poison + 1 if r.poison == 'stack' else 1
-                    elif e == 'bleed':
+                    elif e == 'frostbite' and 'im_frost' not in tr: c.frost = True
+                    elif e == 'poison' and 'im_poison' not in tr: c.poison = c.poison + 1 if r.poison == 'stack' else 1
+                    elif e == 'bleed' and 'im_bleed' not in tr:
                         if r.bleed == 'official': c.bleed = True
                         elif c.bleed: c.bleed = False; self.wound(c, 3)
                         else: c.bleed = True
-                if push and c.alive: c.node = step_away(c.node, src.node, rng) if c.node != src.node else rng.choice(NBR[c.node])
+                if push and c.alive and 'im_push' not in tr:
+                    c.node = step_away(c.node, src.node, rng) if c.node != src.node else rng.choice(NBR[c.node])
+            if src.hp > 0 and src.node == c.node:
+                if 'thorns' in tr: self.hurt(src, 1)                 # after a block or resist roll against an enemy in the node
+                if 'sunset' in tr and 'Hollow' in src.name and src.hp > 0 and c.alive: src.node = rng.choice(NBR[src.node])
         return hit
+
+    def hurt(self, f, d):
+        """Damage to an enemy or boss that is not an attack roll (a condition, a card's text)."""
+        if d <= 0 or f.hp <= 0: return
+        f.hp -= d; self.check_heat(f)
+
+    def afflict(self, t, fx):
+        """Conditions placed on an enemy or boss by a character's attack that hit it, under the ruleset's condition rules."""
+        r = self.r
+        for e in fx:
+            if t.hp <= 0: return
+            if e == 'bleed':
+                if r.bleed == 'official': t.bleed = True             # the next damage it suffers is two higher
+                elif t.bleed: t.bleed = False; self.hurt(t, 3)       # the manuscript: a second token deals three damage at once
+                else: t.bleed = True
+            elif e == 'poison': t.poison = t.poison + 1 if r.poison == 'stack' else 1
+            elif e == 'frostbite': t.frost = True
+            elif e == 'stagger': t.stagger = True; t.fresh = False
+
+    def hero(self, c):
+        """The heroic action token is spent; cards that answer to it take effect."""
+        c.heroic = False; tr = c.traits
+        if 'hero_hp' in tr: c.dmg = max(0, c.dmg - 1)
+        if 'hero_sta' in tr and not (c.frost and self.r.frost == 'author'): c.sta = max(0, c.sta - 1)
+        if 'hero_cleanse' in tr:
+            for x in sorted(self.live(), key=lambda x: -(x.poison * 2 + x.bleed + x.frost + x.stagger)):
+                if x.poison: x.poison = 0
+                elif x.bleed: x.bleed = False
+                elif x.frost: x.frost = False
+                elif x.stagger: x.stagger = False
+                break
 
     def can_reach(self, f, c, slack=1):
         """Whether foe f has an attack that could land on character c in its coming activation."""
@@ -414,7 +466,7 @@ class Fight:
                     node = t.node
                     for c in ([x for x in self.live() if x.node == node] if st.get('node') else [t]):
                         self.defend(f, c, st['dmg'] + f.atk_bonus - (1 if f.stagger else 0), st['magic'], st['dodge'],
-                                    push=st.get('push', False), parryable=not st.get('node'))
+                                    push=st.get('push', False), effects=st.get('effects', ()), parryable=not st.get('node'))
         self.end_activation(f)
 
     def end_activation(self, f):
@@ -424,6 +476,10 @@ class Fight:
         if f.fresh and getattr(self.r, 'stagger_hold', False): f.fresh = False
         else: f.stagger = False; f.fresh = False
         f.frost = False
+        if f.poison and f.hp > 0 and self.live():
+            # poison: one damage and the token comes off (official); a damage a token, one token off (the workshop's ruling)
+            stack = self.r.poison == 'stack'
+            self.hurt(f, f.poison if stack else 1); f.poison = max(0, f.poison - 1) if stack else 0
 
     def boss_turn(self, f):
         r, rng = self.r, self.rng
@@ -505,32 +561,107 @@ class Fight:
     def strike(self, c, f, o):
         """Character c makes attack option o (already paid for) against foe f; a node attack hits every foe there. An
         attack that repeats is resolved once for each repetition, and when its target has fallen the next repetition
-        may take another enemy within the attack's reach."""
-        rng = self.rng; r = self.r; grand = 0
+        may take another enemy within the attack's reach. Conditions and the other things printed on the attack follow."""
+        rng = self.rng; r = self.r; grand = 0; tr = c.traits
+        if c.buff and o['dice'] and not o.get('spell'): o = dict(o, magic=True, mod=o['mod'] + c.buff['mod'])   # a weapon made magical this turn
+        mod = o['mod'] + (o.get('ember_mod', 0) if c.ember else 0) - (1 if (c.stagger and r.stagger == 'author') else 0)
+        if o.get('direct'):                                          # a fixed amount of damage, no roll: only on an enemy that shares its node
+            if any(g is not f and g.node == f.node for g in self.foes_alive()):
+                self.hurt(f, o['direct']); self.dealt[c] = self.dealt.get(c, 0) + o['direct']; grand = o['direct']
+            return grand
+        node0 = f.node
         for _ in range(o['repeat']):
             if f.hp <= 0:
+                if o.get('same') == 'enemy': break                   # every repetition is aimed at the one enemy
                 near = [g for g in self.foes_alive() if DIST[c.node][g.node] <= o['range'] and not (o.get('shaft') and g.node == c.node)]
+                if o.get('same') == 'node': near = [g for g in near if g.node == node0]
                 if not near: break
                 f = min(near, key=lambda g: (g.hp, -g.threat))       # the one most likely to fall to what is left
-            targets = [x for x in self.foes_alive() if x.node == f.node] if o.get('node') else [f]
-            dice = o['dice'] + ('b' if (f.boss and f.weak and o['range'] <= 1) else '')
-            faces = roll(dice, rng)
+            if o.get('area'): targets = [x for x in self.foes_alive() if DIST[c.node][x.node] <= o['area'] and not (o.get('shaft') and x.node == c.node)]
+            elif o.get('node'): targets = [x for x in self.foes_alive() if x.node == f.node]
+            else: targets = [f]
+            dice = o['dice'] + ('b' if (f.boss and f.weak and o['range'] <= 1 and o['dice']) else '')
+            faces = roll(dice, rng); c.rolls += 1
             if o.get('reroll') and faces:                            # two-handed grip: one die may be rolled again
                 i = min(range(len(faces)), key=lambda j: faces[j] - sum(DIE[dice[j]]) / 6)
                 if faces[i] < sum(DIE[dice[i]]) / 6: faces[i] = rng.choice(DIE[dice[i]])
-            v = sum(faces) + o['mod'] - (1 if (c.stagger and r.stagger == 'author') else 0)
+            v = sum(faces) + mod
             for t in targets:
                 guard = 0 if o.get('ignore') else t.resist if o['magic'] else t.armor
                 if t.stagger and r.stagger == 'author': guard = max(0, guard - 1)      # a staggered model blocks and resists one less
-                total = max(0, v - guard)
+                lead = v + (1 if ('leo' in tr and t in c.hurt_by) else 0)
+                total = max(0, lead - guard)
+                if 'knightslayer' in tr and o['dice'] and lead - guard >= 3 and not (c.frost and r.frost == 'author'): c.sta = max(0, c.sta - 1)
                 if total > 0:
                     if t.bleed and r.bleed == 'official': total += 2; t.bleed = False
                     t.hp -= total; self.dealt[c] = self.dealt.get(c, 0) + total; grand += total
                     # the manuscript: against a boss the token goes to whoever damaged it since its last turn
                     if r.aggro == 'last' or (r.aggro == 'most' and self.is_boss): self.aggro = c
                     self.check_heat(t)
+                elif o.get('hollow'): c.luck = True                  # a gem that readies luck when the blow does nothing
                 self.say('   ', c.name, 'hits', t.name, 'with', o['name'], 'for', total, '(hp', max(0, t.hp), ')')
+                if o.get('fx'): self.afflict(t, o['fx'])             # a condition is placed by a hit, whatever damage it did
+                if o.get('push') and not t.boss and t.hp > 0:        # a boss is never pushed by a character
+                    t.node = step_away(t.node, c.node, rng) if t.node != c.node else rng.choice(NBR[t.node])
+        if o.get('gain_hp'): c.dmg = max(0, c.dmg - o['gain_hp'])
+        if o.get('gain_sta') and not (c.frost and r.frost == 'author'): c.sta = max(0, c.sta - o['gain_sta'])
+        if o.get('aggro') and self.live():                           # the token may be handed to another: the sturdiest takes it
+            self.aggro = max(self.live(), key=lambda x: (x.mean_blk + 0.5 * x.dodge, x.cap - x.dmg - x.sta))
+        if o.get('self_dmg'): self.wound(c, o['self_dmg'])
         return grand
+
+    # -------------------------------------------------------------- support actions
+    def sup_plan(self, c, o):
+        """What a support action would do now: (worth in points of damage, who receives it)."""
+        r = self.r; live = [x for x in self.live() if DIST[c.node][x.node] <= o['range']]
+        barred = lambda x: x.frost and r.frost == 'author'           # frostbite bars any recovery of stamina
+        if 'sup' in o:
+            s = o['sup']
+
+            def need(x):
+                hp = min(s['hp'], x.dmg); st = 0 if barred(x) else min(s['sta'], x.sta)
+                return hp * (1.8 if x.cap - x.dmg - x.sta <= 3 else 1.0) + 1.2 * self.pol.w_sta * st
+            who = s['who']
+            if who == 'one': pick = sorted(live, key=need)[-1:]
+            elif who == 'two': pick = sorted(live, key=need)[-2:]
+            elif who == 'others': pick = [x for x in live if x is not c]
+            elif who == 'node':
+                nodes = {x.node for x in live}
+                pick = max(([x for x in live if x.node == nd] for nd in nodes), key=lambda g: sum(need(x) for x in g)) if nodes else []
+            else: pick = live
+            return sum(need(x) for x in pick), pick
+        if 'guard' in o:
+            g = o['guard']; pick = [c] if g['who'] == 'self' else (self.live() if g['who'] == 'party' else live)
+            return 0.45 * len(pick) * (0.6 if g['blk'] == '' or g['res'] == '' else 1.0), pick
+        if 'gain_sta' in o: return (0.0 if barred(c) else 1.2 * self.pol.w_sta * min(o['gain_sta'], c.sta)), [c]
+        if 'buff' in o:
+            # an attack with the other hand becomes magical (and stronger): worth the block it gets past
+            foes = self.foes_alive(); other = c.options['L' if o['hand'] == 'R' else 'R']
+            if not foes or not [x for x in other if x['dice'] and not x['magic'] and not x.get('spell')]: return 0.0, [c]
+            f = min(foes, key=lambda f: DIST[c.node][f.node])
+            return 0.9 * max(0, f.armor - f.resist + o['buff']['mod']), [c]
+        return 0.0, []
+
+    def support(self, c, o, pick):
+        r = self.r
+        if 'sup' in o:
+            for x in pick:
+                x.dmg = max(0, x.dmg - o['sup']['hp'])
+                if not (x.frost and r.frost == 'author'): x.sta = max(0, x.sta - o['sup']['sta'])
+        elif 'guard' in o:
+            for x in pick: x.guard = (x.guard[0] + o['guard']['blk'], x.guard[1] + o['guard']['res'])
+        elif 'gain_sta' in o: c.sta = max(0, c.sta - o['gain_sta'])
+        elif 'buff' in o: c.buff = o['buff']
+        self.say('   ', c.name, 'uses', o['name'], 'on', [x.name for x in pick])
+
+    def walk(self, c, steps, free=0):
+        """What moving `steps` nodes costs character c: (stamina, whether it ran), or None if its cards forbid it.
+        One node is the free Walk, unless a card says none or two; `free` adds nodes given by a heroic action or a shift."""
+        tr = c.traits
+        free += 0 if 'no_walk' in tr else 2 if 'walk2' in tr else 1
+        run = max(0, steps - free)
+        if run and 'no_run' in tr: return None
+        return run * (2 if 'run2' in tr else 1) + (steps if (c.frost and self.r.frost == 'official') else 0), bool(run)
 
     def reposition(self, c, budget, walk_free, count=True, frost=True):
         """After acting, step out of the enemies' reach if that saves more damage than it costs in stamina. Also used for
@@ -547,7 +678,10 @@ class Fight:
             frontier = nxt
         for node, steps in seen.items():
             if steps == 0: continue
-            cost = steps - (1 if walk_free else 0)
+            tr = c.traits
+            run = max(0, steps - ((0 if 'no_walk' in tr else 2 if 'walk2' in tr else 1) if walk_free else 0))
+            if run and 'no_run' in tr: continue
+            cost = run * (2 if 'run2' in tr else 1)
             if frost and c.frost and self.r.frost == 'official': cost += steps          # 2017 frostbite: one more for each walk or run
             if cost > budget: continue
             c.node = node
@@ -560,9 +694,17 @@ class Fight:
 
     def char_turn(self, c):
         r, pol, rng = self.r, self.pol, self.rng
-        self.char_turns += 1
+        self.char_turns += 1; tr = c.traits
+        c.guard = ('', ''); c.buff = None; c.rolls = 0
         # stamina at the start of the turn: none under the manuscript's frostbite, one less under the 2022 rules
-        if not (c.frost and r.frost == 'author'): c.sta = max(0, c.sta - max(0, r.regen - (1 if (c.frost and r.frost == '2022') else 0)))
+        barred = c.frost and r.frost == 'author'
+        if not barred:
+            regen = max(0, r.regen - (1 if (c.frost and r.frost == '2022') else 0))
+            if any('chloranthy' in x.traits for x in self.live() if x.node == c.node): regen += 1
+            if 'tinybeing' in tr and regen >= 1 and c.dmg > 0: regen -= 1; c.dmg -= 1      # one of the stamina traded for health
+            c.sta = max(0, c.sta - regen)
+        if 'sanctus' in tr: c.dmg = max(0, c.dmg - 1)
+        if 'blades' in tr and not c.luck and c.cap - c.dmg - c.sta >= 4: c.dmg += 1; c.luck = True
         if r.aggro == 'active': self.aggro = c
         c.ran = False
         foes = self.foes_alive()
@@ -575,6 +717,16 @@ class Fight:
         if c.ember_card and (c.dmg >= pol.estus_at + 1 or (c.hollow and c.dmg >= 3)) and not c.estus:
             c.ember_card = False; c.ember = True; c.dmg = 0; c.hollow = False; c.was_hollow = False    # no longer hollow if it dies
             self.say('  ', c.name, 'uses an ember'); self.end_turn(c); return
+        # heroic actions that mend: the Thief's own wounds and stamina, the Cleric's and its neighbours' wounds
+        if c.heroic and c.name == 'Thief' and c.dmg >= 2 and (c.sta >= 2 or c.dmg >= 4):
+            self.hero(c); c.dmg = max(0, c.dmg - 2)
+            if not barred: c.sta = max(0, c.sta - 2)
+        if c.heroic and c.name == 'Cleric':
+            near = [x for x in self.live() if DIST[c.node][x.node] <= 1]
+            if sum(min(2, x.dmg) for x in near) >= min(3, 2 * len(self.live())):
+                self.hero(c)
+                for x in near: x.dmg = max(0, x.dmg - 2)
+        free = c.cap - c.dmg - c.sta
         # the flask: drunk when death is near; where damage outlasts the encounter (the manuscript) also once badly hurt
         if c.estus and c.dmg >= 3 and (self.risk(free) > pol.estus_risk or (r.recover != 'all' and c.dmg >= pol.estus_at)):
             c.estus = False; c.dmg = 0
@@ -582,76 +734,105 @@ class Fight:
             if r.estus == 'full': c.sta = 0; free = c.cap
             else: self.end_turn(c); return                           # a major action: the turn ends
         if c.heroic and c.name == 'Herald' and (sum(x.sta for x in self.live()) >= 2 * len(self.live())):
-            c.heroic = False                                         # Perseverance: each character gains 2 stamina
+            self.hero(c)                                             # Perseverance: each character gains 2 stamina
             for x in self.live():
                 if not (x.frost and r.frost == 'author'): x.sta = max(0, x.sta - 2)      # frostbite bars any recovery
         attacked = False; moved = False; rested = False
         cast = False                                   # a spell has been used this turn (the manuscript allows one)
         used = set()
         wd = pol.w_death * (1.6 if (r.death == 'party' or c.hollow or len(self.live()) == 1) else 1.0)
+        one_spell = getattr(r, 'one_spell', False)
         for attempt in (0, 1):
             foes = self.foes_alive()
             if not foes: break
             free = c.cap - c.dmg - c.sta
             self.incoming(c); risk0 = self.risk(free)
+            room = free - (1 if r.lethal == 'full' else 0)
             best = None
             for f in foes:
                 d = DIST[c.node][f.node]
                 for hand in ('R', 'L'):
                     if hand in used: continue
-                    for o in c.options[hand]:
-                        if cast and o.get('spell') and getattr(r, 'one_spell', False): continue
-                        rg = o['range']
-                        steps = max(0, d - rg) if attempt == 0 else (0 if d <= rg else 99)
-                        if o['shaft'] and d - steps == 0:
-                            if attempt: continue
-                            steps = 1
-                        if steps == 99: continue
-                        surge = c.heroic and c.name == 'Warrior' and rg == 0 and o['cost'] >= 2      # free step, free node attack
-                        if surge: o = dict(o, cost=0, node=True)
-                        # one step is the free Walk; the Warrior's heroic action gives one more free step
-                        run = max(0, steps - 1 - (1 if surge else 0)) + (steps if (c.frost and r.frost == 'official') else 0)
-                        cost = o['cost'] + run + (1 if (c.stagger and r.stagger == 'official') else 0) \
-                            + (1 if (f.boss and f.heated and f.name == 'Gargoyle' and d - steps == 0) else 0)
-                        room = free - (1 if r.lethal == 'full' else 0)
-                        if cost > room: continue
-                        pm = attack_pmf(o['dice'], o['mod'] + c.scale_bonus(o), f.resist if o['magic'] else f.armor, o['repeat'])
-                        ed = sum(min(x, f.hp) * p for x, p in pm); pk = sum(p for x, p in pm if x >= f.hp)
-                        last = len(foes) == 1; vk = self.kill_value(f, last)
-                        if o.get('node') and not f.boss:
-                            for g in foes:
-                                if g is not f and g.node == f.node:
+                    for base in c.options[hand]:
+                        if cast and base.get('spell') and one_spell: continue
+                        for o, hero, hstep in self.variants(c, base, d):
+                            rg = o['range']
+                            steps = max(0, d - rg) if attempt == 0 else (0 if d <= rg else 99)
+                            if o['shaft'] and d - steps == 0:
+                                if attempt: continue
+                                steps = 1
+                            if steps == 99: continue
+                            if o.get('direct') and not any(g is not f and g.node == f.node for g in foes): continue
+                            # one step is the free Walk; a heroic action or a shift printed on the attack may give more
+                            w = self.walk(c, steps, hstep + o.get('shift', 0))
+                            if w is None: continue
+                            run, ran = w
+                            cost = o['cost'] + run + (1 if (c.stagger and r.stagger == 'official') else 0) \
+                                + (1 if (f.boss and f.heated and f.name == 'Gargoyle' and d - steps == 0) else 0)
+                            if cost + o.get('self_dmg', 0) > room: continue
+                            last = len(foes) == 1; vk = self.kill_value(f, last)
+                            if o.get('direct'): ed = min(o['direct'], f.hp); pk = 1.0 if o['direct'] >= f.hp else 0.0
+                            else:
+                                guard = 0 if o.get('ignore') else (f.resist if o['magic'] else f.armor)
+                                pm = attack_pmf(o['dice'], o['mod'] + c.scale_bonus(o), guard, o['repeat'])
+                                ed = sum(min(x, f.hp) * p for x, p in pm); pk = sum(p for x, p in pm if x >= f.hp)
+                                # what a condition adds while the enemy lives: bleed and poison as damage to come
+                                fx = o.get('fx', ())
+                                if fx and pk < 0.9:
+                                    more = (3.0 if (f.bleed and r.bleed != 'official') else 1.0) * ('bleed' in fx) + 1.0 * ('poison' in fx) \
+                                        + 0.6 * ('stagger' in fx) + 0.2 * ('frostbite' in fx)
+                                    ed += (1 - pk) * min(more, max(0.0, f.hp - ed) + 0.6)
+                                if o.get('gain_hp') and c.dmg: ed += 0.8 * min(o['gain_hp'], c.dmg)
+                            others = [g for g in foes if g is not f and ((o.get('area') and DIST[c.node][g.node] <= o['area'])
+                                                                         or (o.get('node') and g.node == f.node and not o.get('area')))]
+                            if others and not f.boss and not o.get('direct'):
+                                for g in others:
                                     pg = attack_pmf(o['dice'], o['mod'], g.resist if o['magic'] else g.armor, o['repeat'])
                                     vg = self.kill_value(g, False)
                                     ed += (sum(min(x, g.hp) * p for x, p in pg) / g.max * 0.5 * vg + sum(p for x, p in pg if x >= g.hp) * vg) / (0.5 * vk / f.max)
-                        # the price of stamina: the added chance of dying before the next turn
-                        danger = (self.risk(free - cost) - risk0) * (1 - pk if last else 1.0)
-                        score = (ed if f.boss else ed / f.max * 0.5 * vk) + pk * vk - pol.w_sta * cost - wd * danger
-                        if cost == 0 and ed > 0: score = max(score, 0.01)          # a free blow is never passed up
-                        if best is None or score > best[0]: best = (score, f, hand, o, steps, cost, run, surge)
+                            # the price of stamina: the added chance of dying before the next turn
+                            danger = (self.risk(free - cost - o.get('self_dmg', 0)) - risk0) * (1 - pk if last else 1.0)
+                            score = (ed if f.boss else ed / f.max * 0.5 * vk) + pk * vk - pol.w_sta * cost - wd * danger - 1.0 * o.get('self_dmg', 0)
+                            if cost == 0 and ed > 0: score = max(score, 0.01)          # a free blow is never passed up
+                            if best is None or score > best[0]: best = (score, f, hand, o, steps, cost, ran, hero)
+            for hand in ('R', 'L'):                                  # a hand that heals, steadies or lends stamina instead
+                if hand in used: continue
+                for o in c.support[hand]:
+                    if (cast and o.get('spell') and one_spell) or o['cost'] > room: continue
+                    if 'buff' in o and attacked: continue
+                    val, pick = self.sup_plan(c, o)
+                    if val <= 0.5 and not ('buff' in o and val > 0): continue
+                    score = val - pol.w_sta * o['cost'] - wd * (self.risk(free - o['cost']) - risk0) + (2.0 if 'buff' in o else 0.0)
+                    if best is None or score > best[0]: best = (score, pick, hand, o, 0, o['cost'], False, False)
             if best is None or best[0] <= 0: break
-            _, f, hand, o, steps, cost, run, surge = best
-            if surge: c.heroic = False
+            _, f, hand, o, steps, cost, ran, hero = best
+            c.sta += cost; used.add(hand); cast = cast or bool(o.get('spell'))
+            if isinstance(f, list):                                  # a support action
+                self.support(c, o, f); self.dec['support'] = self.dec.get('support', 0) + 1
+                continue
+            if hero: self.hero(c)
             if steps: moved = True
             for _ in range(steps):
                 c.node = step_to(c.node, f.node, rng) if not (o['shaft'] and DIST[c.node][f.node] == 1) else c.node
             if o['shaft'] and c.node == f.node: c.node = rng.choice(NBR[c.node])
-            if run: c.ran = True
-            c.sta += cost; used.add(hand); attacked = True; cast = cast or bool(o.get('spell'))
+            if ran: c.ran = True
+            attacked = True
             self.dec['heavy' if o['cost'] >= 2 else 'light'] = self.dec.get('heavy' if o['cost'] >= 2 else 'light', 0) + 1
             self.strike(c, f, o)
-            if c.two_handed or not c.options['L' if hand == 'R' else 'R']: break
+            if not c.alive: self.end_turn(c); return                 # an attack that costs health can be the last
+            other = 'L' if hand == 'R' else 'R'
+            if not (c.options[other] or c.support[other]): break
         if not attacked:
             foes = self.foes_alive()
-            if foes and r.turn == 'major' and c.sta > 0 and not (c.frost and r.frost == 'author'):      # frostbite bars any recovery
+            if foes and r.turn == 'major' and c.sta > 0 and not used and not (c.frost and r.frost == 'author'):      # frostbite bars any recovery
                 c.sta = 0; rested = True; self.dec['rest'] = self.dec.get('rest', 0) + 1; self.say('  ', c.name, 'rests')            # the Rest action
             elif foes:
                 f = min(foes, key=lambda f: DIST[c.node][f.node])
                 # the approach is the free Walk; under the 2017 rules a frostbitten character pays one stamina for it,
                 # and stays where it is if the bar has no room for that
-                toll = 1 if (c.frost and r.frost == 'official') else 0
-                if DIST[c.node][f.node] > 1 and toll <= c.cap - c.dmg - c.sta - (1 if r.lethal == 'full' else 0):
-                    c.sta += toll; c.node = step_to(c.node, f.node, rng); moved = True
+                w = self.walk(c, 1)
+                if DIST[c.node][f.node] > 1 and w is not None and w[0] <= c.cap - c.dmg - c.sta - (1 if r.lethal == 'full' else 0):
+                    c.sta += w[0]; c.node = step_to(c.node, f.node, rng); moved = True
         # hit and run: official rules allow movement before or after attacking, not both; the manuscript has no such limit
         if pol.kite and self.foes_alive() and not self.is_boss and (r.turn != 'official' or not moved):
             free = c.cap - c.dmg - c.sta
@@ -660,12 +841,38 @@ class Fight:
             self.reposition(c, budget, walk_free=not moved)
         self.end_turn(c)
 
+    def variants(self, c, o, d):
+        """An attack option as it stands, and as a heroic action would change it: (option, heroic action used, free nodes)."""
+        yield o, False, 0
+        if not c.heroic or not o['dice']: return
+        n = c.name
+        if n == 'Warrior' and o['range'] == 0 and o['cost'] >= 2:
+            yield dict(o, cost=0, node=True), True, 1                # a free step; the attack costs nothing and strikes the node
+        elif n == 'Mercenary' and o['cost'] >= 2:
+            yield dict(o, cost=0), True, 0                           # Rapid Strike: an attack that costs no stamina
+        elif n == 'Sorcerer' and o['magic'] and (o['cost'] >= 3 or d > o['range']):
+            # Spell Fury: a magic attack reaches any distance and costs three less
+            yield dict(o, cost=max(0, o['cost'] - 3), range=9, mod=o['mod'] + (1 if 'dragoncrest' in c.traits else 0)), True, 0
+        elif n == 'Pyromancer' and o['cost'] >= 2:
+            yield dict(o, dice=o['dice'] + ('u' if 'swamp' in c.traits else 'b')), True, 0       # Explosive Crit: one more die
+
     def end_turn(self, c):
-        r = self.r
+        r = self.r; tr = c.traits
+        if c.alive:
+            if 'sunprincess' in tr: c.dmg = max(0, c.dmg - 1)
+            if 'lothric' in tr: c.dmg = max(0, c.dmg - sum(1 for f in self.foes_alive() if f.node == c.node))
+            if c.rolls >= 2:
+                if 'pontiff' in tr: c.dmg = max(0, c.dmg - 1)
+                if 'favour' in tr and not (c.frost and r.frost == 'author'): c.sta = max(0, c.sta - 1)
         # the encounter is cleared the moment the last enemy falls: conditions then come off without being resolved
         if c.poison and c.alive and self.foes_alive():
             self.wound(c, c.poison if r.poison == 'stack' else 1); c.poison = max(0, c.poison - 1) if r.poison == 'stack' else 0
-        c.stagger = False; c.frost = False
+        c.stagger = False; c.frost = False; c.hurt_by = set()
+        # a card that lets its wearer take the aggro token, once an encounter, when another character's turn ends
+        for x in self.live():
+            if x is not c and 'faraam' in x.traits and id(x) not in self.faraam and self.aggro is not x and self.aggro.alive \
+                    and x.mean_blk + 0.5 * x.dodge > self.aggro.mean_blk + 0.5 * self.aggro.dodge + 0.3:
+                self.faraam.add(id(x)); self.aggro = x; break
 
     # -------------------------------------------------------------- the fight
     def order(self):
@@ -677,13 +884,15 @@ class Fight:
     def run(self, max_rounds=60):
         r = self.r
         for c in self.party: c.was_hollow = c.hollow
+        first = next((c for c in self.party if 'mon' in c.traits and c.mon), None)      # a card that lets the party act first, once a spark
+        if first is not None: first.mon = False
         if (self.is_boss and getattr(r, 'boss_round', 'alternate') == 'alternate') or (not self.is_boss and r.round == 'alternate'):
             while not self.over() and self.rounds < max_rounds:
                 self.rounds += 1
                 for _ in range(self.seats):
                     if self.over(): break
                     self.to_act = set(self.foes_alive())
-                    for f in sorted(self.foes_alive(), key=lambda f: -f.threat):
+                    for f in ([] if first is not None else sorted(self.foes_alive(), key=lambda f: -f.threat)):
                         self.to_act.discard(f)
                         if self.over(): break
                         if f.hp <= 0: continue               # killed during another enemy's activation
@@ -693,11 +902,12 @@ class Fight:
                         c = self.party[self.turn_i % self.seats]; self.turn_i += 1
                         if c.alive: break
                     if c.alive: self.char_turn(c)
+                    if first is not None and self.turn_i % self.seats == 0: first = None      # every character has had the free turn
         else:
             while not self.over() and self.rounds < max_rounds:
                 self.rounds += 1; self.dealt = {}
                 self.to_act = set(self.foes_alive())
-                for f in sorted(self.foes_alive(), key=lambda f: (-f.threat, min(DIST[f.node][c.node] for c in self.live()))):
+                for f in ([] if first is not None else sorted(self.foes_alive(), key=lambda f: (-f.threat, min(DIST[f.node][c.node] for c in self.live())))):
                     self.to_act.discard(f)
                     if self.over(): break
                     if f.hp <= 0: continue                   # killed during another enemy's activation
@@ -706,6 +916,7 @@ class Fight:
                 for c in self.order():
                     if self.over(): break
                     if c.alive: self.char_turn(c)
+                first = None
                 if r.aggro == 'most' and self.dealt:
                     top = max(self.dealt.values()); lead = [c for c, v in self.dealt.items() if v == top and c.alive]
                     if len(lead) == 1: self.aggro = lead[0]
