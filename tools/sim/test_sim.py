@@ -965,6 +965,21 @@ q3 = turn_start(RG, ("Tiny Being's Ring",), dmg=2); q4 = turn_start(RG, armour='
 check('the amended Tiny Being\'s Ring takes one damage off at the start of the turn and costs no stamina; the Mask of the Child, left as printed, gives one stamina more than the turn\'s own',
       q3[:2] == (q0[0], 1) and q0[0] - q4[0] == 1, (q0, q3, q4))
 
+def shoved(shield, trials=40):
+    """A Knight with the shield in hand stands in the path of a Large Hollow Soldier's damaging push-move and cannot dodge:
+    (times it was moved, times it was struck)."""
+    moved = hit = 0
+    for sd in range(trials):
+        c = Char('Knight', R17); c.L = CARDS[shield]; c.refresh(); c.dodge = 0; c.can_parry = False
+        f = E.Fight([c], R17, random.Random(sd), enemies=['Large Hollow Soldier'], policy=E.Policy(evade=0.0))
+        c.node = E.IDX[(2, 2)]; f.foes[0].node = E.IDX[(2, 0)]; calls = []; d0 = f.defend
+        f.defend = lambda *a, **k: (calls.append(1), d0(*a, **k))[1]
+        f.enemy_turn(f.foes[0]); moved += c.node != E.IDX[(2, 2)]; hit += bool(calls)
+    return moved, hit
+sh0, sh1 = shoved('Kite Shield (Knight)'), shoved('Black Iron Greatshield')
+check('the Black Iron Greatshield ignores the push of a damaging push-move as it does that of an attack: its bearer is struck and stays put',
+      sh0 == (40, 40) and sh1 == (0, 40), (sh0, sh1))
+
 print()
 print('%d checks failed' % len(FAILS) if FAILS else 'all checks passed')
 sys.exit(1 if FAILS else 0)

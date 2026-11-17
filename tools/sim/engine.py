@@ -504,6 +504,10 @@ class Fight:
                                 # who dodges is not hit and is not pushed, whether or not the dodge moved it
                                 was_hit = self.defend(f, c, st['dmg'] + f.atk_bonus - (1 if f.stagger else 0), st['magic'], st['dodge'],
                                                       push=False, effects=st.get('effects', ()), parryable=False)
+                            # a card that ignores the push icons of enemy attacks: the damage and conditions of a
+                            # damaging push-move still land and its wearer stays where it stands; a push-move with no
+                            # damage is not an attack and pushes it all the same
+                            if 'dmg' in st and 'im_push' in c.traits: continue
                             if was_hit and c.alive and c.node == f.node:
                                 far = [x for x in NBR[c.node] if DIST[x][origin] > DIST[c.node][origin]]
                                 c.node = rng.choice(far or NBR[c.node])
