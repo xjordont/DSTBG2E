@@ -1724,6 +1724,8 @@ To re-run: `python3 tools/sim/compare.py --only all_req --games 800 --probe 300 
 
 The author's answers to section 18: on treasure sorting and boss health, "help me decide; use all resources"; on difficulty, "isn't this decided already?"; on the simulator, "yes: make it robust and complete". The order followed here: complete the simulator, check its calibration, then settle the three decisions on it. The rules are decided (sections 16, 17.2, 18); what section 18 left open was whether those rules land in the band the author set, and that could not be judged while most card text did nothing.
 
+**Read 19.8 first.** After this section was written the manuscript's own card amendments (its appendices A and B) were found not to be played. They are now, and 19.8 gives every headline figure again with them. The game is about eight points easier with them, so the win rates and the tuning of 19.3, 19.5 and 19.6 are superseded there. The treasure-sorting recommendation of 19.4 stands.
+
 ### 19.1 What the simulator now holds
 
 | | Section 18 | Now |
@@ -1757,6 +1759,7 @@ The author's answers to section 18: on treasure sorting and boss health, "help m
 - **The backup slot of the official rules.** The manuscript has catalysts instead and those are played; the official presets play without a backup slot, as before.
 - **Where a 2022 reprint differs from the 2017 printing,** the 2017 values are used.
 - **The Sellsword Twinblade as two weapons.** It is played as the one card its values describe.
+- **Some of the manuscript's amended cards** (19.8): Titanite Chunk and Titanite Slab, Four-Pronged Plough, Manikin Claws, Crescent Axe, and the revised data cards of the 2022 enemies and bosses. Their values are not in the repository.
 
 **Faults found and corrected on the way** (each with a check): spells with no attack counted as shields in the shop; a repeated attack's leftover repetitions wasted on a dead target, and made against a target pushed out of reach; equipment modifiers not applied to defence rolls; a paid dodge die allowed to a character whose armour forbids dodging; official bleed not set off by poison; Armour of Thorns silenced by a push; a party that could barely hurt an armoured enemy backing away from it for ever.
 
@@ -1922,3 +1925,146 @@ Games won by a party that includes the class (everything owned, accepted rules, 
 **Corrections after review (2026-11-17), and the headline figures run again.** Nine faults in the new card-text and boss code were found by the review of this pull request and corrected, each with a check (187 checks pass): a paid dodge die allowed under armour that forbids dodging; a repetition made against an enemy pushed out of reach; official bleed not set off by poison on an enemy; Armour of Thorns silenced by a push, and set off by defences that roll no block or resist dice; an upgrade's requirements ignored when its weapon was taken from the official shared inventory; the Blue Tearstone Ring giving stamina back under frostbite; a parry priced and rolled as a dodge is under cards that change dodging; bleed damage not counted for the attacker when the aggro token is assigned; and Ornstein and Smough able to act twice in a phase when one of them died during their shared turn. With all but the last in, the headline rows were run again: the accepted rules on everything owned 51% / 64% / 69% / 82% (52% / 64% / 69% / 82% above), the proposal for three and four characters 56% / 61% (56% / 60%), the accepted rules on the core set alone 69% / 63% / 63% / 67% (unchanged). No figure moved by more than a point and no conclusion changes. The other tables of this section were not run again. The last correction came after this run; it matters only when one of the two dies from a condition during their own turn.
 
 To re-run: `python3 tools/sim/compare.py --only owned --games 800 --probe 300 --bank 6` for the accepted rules on everything owned, `--only proposed19` for the proposal (`--bank 10` for one character, `--regrind 2` for four, `--skill 1.3` and so on), `--only review_gate` for the core set alone.
+
+### 19.8 The manuscript's own card amendments, and every figure run again (2026-11-17)
+
+**This subsection supersedes the win rates and the tuning of 19.3, 19.5 and 19.6.** The recommendation of 19.4 stands. The figures above it are kept as the record of what was measured with the cards as printed.
+
+**What was missing.** The manuscript changes cards as well as rules, in its appendices (`10_manuscript_chapter_23_appendices.md`), and the simulator had been playing the author's rules with the cards as printed. It was found while checking a review finding on the Chloranthy Ring. The author's rulesets now play the amendments (`tools/sim/amendments.json`, switched on by `revised=True`); the official presets play every card as printed.
+
+| Amendment | Played now |
+|---|---|
+| Appendix A: the stat requirements of 60 weapons replaced | 58 of them: requirements, the sort at 25 and scaling all follow the revised values. Four-Pronged Plough and Manikin Claws are not among the simulator's cards |
+| Appendix B, Additional Treasure: the 34 cards new in the 2022 sets are added | 24 join the decks and Blue Titanite joins the legendary cards. Nine are treasure of the 2022 bosses, which the simulator does not play; Crescent Axe is not in its card list. **No reprint is added a second time:** the decks hold 243 cards, not 363 |
+| Appendix B, Revised Treasure | Carthus Milkring, Chloranthy Ring, Tiny Being's Ring, Wolf Ring, Covetous Silver Serpent Ring and Blue Titanite are played as rewritten. Black Leather Armour, Eastern Armour, Mon Ring, Sellsword Twinblades and Demon Titanite were already played as the amendment has them. Titanite Chunk and Titanite Slab are not held and not played |
+| Appendix B, the revised data cards of twelve 2022 enemies and four 2022 bosses | Not played: the appendix names the revised cards and their values are not in the repository |
+
+**What it changes: the game is about eight points easier.** Accepted rules, 800 games a cell (±3), skill 1.0.
+
+| Games won | 1 | 2 | 3 | 4 |
+|---|---|---|---|---|
+| Everything owned, cards as printed (19.3) | 51% | 64% | 69% | 82% |
+| **Everything owned, cards as amended** | **59%** | **72%** | **78%** | **83%** |
+| The core set alone, cards as printed (19.3) | 69% | 63% | 63% | 67% |
+| **The core set alone, cards as amended** | **77%** | **73%** | **70%** | **74%** |
+| The core set with all ten classes, as amended (was 64 / 72 / 71 / 77%) | 72% | 74% | 74% | 80% |
+
+| Table time (activations) | 1 | 2 | 3 | 4 |
+|---|---|---|---|---|
+| Everything owned, as amended | 250 | 308 | 353 | 426 |
+| The core set alone, as amended | 264 | 266 | 291 | 341 |
+
+- **The cause is Appendix A.** On the core set alone, for one and three characters: as printed 69% / 63%; with the rewritten rings only 71% / 62%; with the revised requirements only 76% / 70%; with both 77% / 70%.
+- **The revision moves requirements onto Strength and Dexterity,** so the classes built on those stats can use far more of what they find. Of the 49 revised weapons of the 2017 sets, the number a class can wield within eight souls of levels:
+
+| | Knight | Warrior | Herald | Deprived | Mercenary | Assassin | Thief | Cleric | Pyromancer | Sorcerer |
+|---|---|---|---|---|---|---|---|---|---|---|
+| As printed | 9 | 10 | 11 | 17 | 12 | 12 | 12 | 10 | 11 | 13 |
+| As revised | 25 | 22 | 24 | 27 | 20 | 17 | 16 | 15 | 10 | 12 |
+
+- **The review fixes made since the last re-run change nothing.** With the amendments switched off the accepted rules on everything owned measure 51% / 64% / 69% / 82%, the figures of 19.3 to the point. Those fixes, each with a check: one shared turn a phase for Ornstein and Smough; lent defence dice that expire; dropped souls returned after the mini-boss; Rapport's aggro and the Mon Ring's opening count; the official stagger surcharge on support actions and the mender's bonus on every heal; parry dice kept under armour that forbids dodging; the Chloranthy Ring and the Mask of the Child giving three stamina in place of two and not one more each; a card that ignores push icons no longer moved by a damaging push-move; the Sunset Shield pushing a Hollow after any attack, hit or not. 213 checks pass. The last two came after these runs; each concerns one shield.
+- **The calibration is unmoved:** the official 2017 game, which plays the cards as printed, is won 47% / 50% / 56% / 38%.
+
+**Decision 1 (treasure sorting) stands.** The three ways again, on everything owned with the cards as amended:
+
+| | S0 by requirement | S1 by kind | S2 between |
+|---|---|---|---|
+| Tier one: cards | 108 | 192 | 138 |
+| of which ask for 25 or more | 0 | 84 | 30 |
+| Tier one: share someone in a party of 1 / 2 / 4 can use within 6 souls of levels | 53 / 62 / 71% | 35 / 43 / 50% | 43 / 51 / 59% |
+| Tier two: cards | 135 | 51 | 105 |
+| Tier two: share someone in a party of 1 / 2 / 4 can use within 14 souls of levels | 39 / 53 / 64% | 22 / 34 / 44% | 37 / 49 / 59% |
+| Games won, 1 / 2 / 3 / 4 | 59 / 72 / 78 / 83% | 55 / 70 / 76 / 82% | 62 / 70 / 78 / 84% |
+| Cards bought in a game, 1 / 2 / 3 | 5.0 / 7.6 / 10.0 | 4.2 / 6.5 / 8.5 | 4.9 / 7.1 / 9.6 |
+| Treasure cards in use at the end, 1 / 2 / 3 | 4.7 / 7.5 / 10.1 | 3.8 / 6.5 / 8.8 | 4.6 / 7.0 / 9.6 |
+
+The three are still within the noise of one another on games won. Under S0 the party buys 17% to 19% more from the shop than under S1 and ends the game using 15% to 24% more treasure. **S0, by requirement, as worded in 19.4.** (Four characters are left out of the last two rows: the policy picked for S2 at four plays more fights, so its counts are not like for like.)
+
+**Decision 2 (bosses at printed health) stands, more strongly.** With the cards as amended a lone character fails 26% to 59% of its attempts at a main boss and four characters 3% to 14%:
+
+| Main boss, attempts failed | 1 | 2 | 3 | 4 |
+|---|---|---|---|---|
+| Ornstein and Smough | 59% | 50% | 31% | 11% |
+| Great Grey Wolf Sif | 49% | 35% | 30% | 14% |
+| Artorias | 44% | 41% | 34% | 12% |
+| Dancer of the Boreal Valley | 44% | 29% | 22% | 5% |
+| Smelter Demon | 36% | 23% | 25% | 8% |
+| Sir Alonne | 32% | 26% | 14% | 4% |
+| The Pursuer | 26% | 14% | 17% | 3% |
+
+The mini-bosses again differ more from one another than by party size (Boreal Outrider Knight 51 / 31 / 22 / 22%; Titanite Demon 19 / 18 / 21 / 19%; Winged Knight 25 / 23 / 21 / 16%; Gargoyle 13 / 3 / 3 / 0%; Old Dragonslayer 8 / 1 / 1 / 1%). The Boreal Outrider Knight against a lone character on the core set alone still fails 79% of attempts, in fights of fifty rounds (19.5).
+
+**Decision 3 (difficulty): the tuning moves one step.** With the cards as amended the accepted rules give an average table 59% / 72% / 78% / 83% on everything owned and 77% / 73% / 70% / 74% on the core set alone. The band is 50% to 70% with the best play near 80%. Two, three and four characters are now over it on everything owned, and every size is at or over its top on the core set alone. The proposal of 19.6 (sparks 5 / 4 / 2 / 1) is no longer enough: 59% / 72% / 62% / 64%, and 82% / 89% / 87% / 90% at the best play.
+
+What was tried, all with the cards as amended (800 games a cell, ±3):
+
+| Everything owned, games won | 1 | 2 | 3 | 4 | Table time |
+|---|---|---|---|---|---|
+| Accepted (sparks 5 / 4 / 3 / 2, bosses as printed) | 59% | 72% | 78% | 83% | 250 / 308 / 353 / 426 |
+| 19.6: sparks 5 / 4 / 2 / 1, boss health ×1.25 / ×1.5 at three and four | 59% | 72% | 62% | 64% | – / – / 393 / 434 |
+| **A. Sparks 4 / 3 / 2 / 1, boss health ×1.25 / ×1.5 at three and four** | **52%** | **61%** | **62%** | **64%** | 233 / 299 / 393 / 434 |
+| B. Sparks 4 / 3 / 2 / 1, every boss a quarter more health for each character beyond the first | 52% | 60% | 60% | 60% | 233 / 328 / 428 / 460 |
+| C. Sparks 4 / 3 / 2 / 1, main bosses only, a quarter more for each character beyond the first | 52% | 60% | 64% | 68% | 233 / 310 / 387 / 415 |
+| D. Sparks 4 / 3 / 2 / 1, main bosses only, half as much again for each character beyond the first | 52% | 59% | 59% | 62% | 233 / 321 / 420 / 452 |
+
+| | A | B | D |
+|---|---|---|---|
+| The core set alone, 1 / 2 / 3 / 4 | 70 / 68 / 55 / 62% | 70 / 63 / 55 / 60% | 70 / 61 / 54 / 57% |
+| Everything owned at the best play (skill 1.3) | 76 / 85 / 87 / 90% | 76 / 78 / 84 / 87% | 76 / 82 / 84 / 86% |
+| Longest boss fights for three characters, in rounds | Boreal Outrider Knight 28, Titanite Demon 28, Winged Knight 26 | 31, 32, 30 | Smelter Demon 33, Ornstein and Smough 26, Sir Alonne 25 |
+
+A across skill, on everything owned:
+
+| Games won, by skill | 1 | 2 | 3 | 4 |
+|---|---|---|---|---|
+| 0.85 | 37% | 34% | 28% | 25% |
+| **1.00 (average)** | **52%** | **61%** | **62%** | **64%** |
+| 1.15 | 61% | 78% | 78% | 79% |
+| **1.30 (the best the dial has)** | **76%** | **85%** | **87%** | **90%** |
+
+**Recommendation.**
+
+1. **Sparks: five less the number of characters (4 / 3 / 2 / 1), in every game.** One spark fewer than the accepted rule at every size. Where it is measured alone (one and two characters) it is worth seven and eleven points; it shortens the game; and with it one line serves both a full collection (52% to 64%) and the core set alone (55% to 70%). **The suggestion in 19.6 to gate the spark line by expansion is withdrawn:** it is no longer needed.
+2. **Boss health ×1.25 for three characters and ×1.5 for four (A), as 19.6 has it.** Every option above lands the average table inside the band, and they differ from one another by about the noise. A is chosen because it is the shortest game and leaves two characters, who do not need it, alone. Its cost is the best play at three and four, which measures 87% and 90% against a target near 80%.
+3. **If the author's table finds large parties too easy, B is the next step:** *a boss has a quarter more health than printed for each character beyond the first.* It is one sentence, flat at 60% for two to four characters, and brings the best play to 78% / 84% / 87%. It makes the game about a tenth longer for three characters and boss fights of thirty rounds common. D puts the same weight on the last fight alone and makes the Smelter Demon a fight of 33 rounds for three. Health is the tool the author set aside in 15.6 for lengthening the game, so A stays the recommendation.
+4. **The best play cannot sit at 80% while the average sits at 60%.** On this dial the best play is about 25 points above the average (18 to 27) at every size and under every option. An average near 55% goes with a best play near 80%; an average near 62% with one near 87%. The dial's top is a ceiling of the model and not a measured table, so the average is the figure to steer by.
+5. **A lone character** wins 52% with four sparks and 59% with five (best play 76% and 82%); on the core set alone 70% and 77%. Four keeps the rule to one line and is recommended. Five for a lone character is the alternative if the author plays alone on everything owned.
+
+The scaling table as it would stand:
+
+| Characters | Sparks | Enemy health | Damage on every enemy and boss attack | Boss health |
+|---|---|---|---|---|
+| 1 | 4 | as printed | as printed | as printed |
+| 2 | 3 | +1 | +1 | as printed |
+| 3 | 2 | +2 | +2 | ×1.25 |
+| 4 | 1 | +3 | +2 | ×1.5 |
+
+**Classes, with the cards as amended.** Games won by a party that includes the class, on everything owned (accepted rules; under tuning A in brackets):
+
+| | 1 | 2 | 3 | 4 |
+|---|---|---|---|---|
+| Warrior | 77% (67) | 81% (72) | 82% (69) | 84% (67) |
+| Cleric | 72% (59) | 70% (61) | 73% (59) | 81% (62) |
+| Thief | 70% (64) | 84% (79) | 86% (71) | 90% (71) |
+| Assassin | 69% (59) | 76% (66) | 80% (67) | 86% (71) |
+| Mercenary | 65% (57) | 76% (66) | 82% (66) | 82% (66) |
+| Knight | 62% (57) | 74% (58) | 78% (59) | 80% (63) |
+| Herald | 54% (52) | 64% (53) | 72% (57) | 80% (60) |
+| Sorcerer | 47% (37) | 71% (60) | 81% (57) | 84% (63) |
+| Pyromancer | 44% (41) | 67% (57) | 79% (59) | 85% (61) |
+| Deprived | 29% (25) | 54% (40) | 69% (55) | 79% (62) |
+
+The revised requirements lift the Warrior, the Cleric and the Assassin most (alone: 57% → 77%, 55% → 72%, 51% → 69%) and leave the casters and the Deprived where they were. For three and four characters the classes sit within about fifteen points of one another under tuning A, the Thief and the Warrior ahead and the Deprived behind. Alone they still differ widely, and about 80 games stand behind each single-character cell.
+
+**Questions for the author.**
+
+1. **Treasure sorting:** by requirement (S0), as 19.4 words it?
+2. **Sparks:** five less the number of characters, in every game?
+3. **Boss health:** ×1.25 for three characters and ×1.5 for four (A), or a quarter more for each character beyond the first (B)?
+4. **Reprints.** Appendix B adds only the cards that are new in the 2022 sets. The ruling of section 18 that all owned treasure is shuffled in could also be read to add the second copies of the 126 reprints. The simulator follows the appendix. Is that the intent?
+5. **Mask of the Child** is added by Appendix B as printed: "3 stamina … (instead of 2)". Under a turn that recovers one stamina it is played as two in place of one. Is that the conversion, or should Appendix B rewrite it as it rewrites the Chloranthy Ring?
+6. **The six heroic actions** (19.1): the wording on the author's own boards for the Mercenary, Sorcerer, Pyromancer, Cleric, Thief and Deprived.
+7. **The Boreal Outrider Knight against a lone character** (19.5): 79% of attempts fail on the core set alone, in fights of fifty rounds, because the manuscript's frostbite bars all recovery under a boss that acts before every character turn. As intended?
+8. **Cards the simulator cannot play without their values:** the revised data cards of the twelve 2022 enemies and four 2022 bosses, Titanite Chunk and Titanite Slab, Four-Pronged Plough, Manikin Claws and Crescent Axe. If the author has them, the 2022 sets can be brought in.
+
+To re-run: `python3 tools/sim/compare.py --only owned --games 800 --probe 300 --bank 6` for the accepted rules on everything owned with the cards as amended, `--only proposed198` for tuning A and `--only proposed198_core` for it on the core set alone (`--bank 10` for one character, `--regrind 2` for four, `--skill 1.3` and so on); add `revised=False` to a spec to play the cards as printed.
