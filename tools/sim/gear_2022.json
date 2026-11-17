@@ -1218,6 +1218,57 @@
 "text": "Encounters reward the party with 1 additional soul",
 "type": "upgrade"
 },
+"Crescent Axe [TOG]": {
+"attacks": [
+{
+"cost": 0,
+"dice": "u",
+"heal": 0,
+"ignore": false,
+"magic": false,
+"mod": 0,
+"node": false,
+"range": 1,
+"repeat": 1,
+"shaft": true
+},
+{
+"cost": 4,
+"dice": "uu",
+"heal": 0,
+"ignore": false,
+"magic": false,
+"mod": 1,
+"node": false,
+"range": 1,
+"repeat": 1,
+"shaft": true
+}
+],
+"block": "",
+"block_mod": 0,
+"boss": null,
+"boss_kind": null,
+"cls": null,
+"conf": "community",
+"copies": 1,
+"deck": "common",
+"dodge": 0,
+"hands": 1,
+"name": "Crescent Axe [TOG]",
+"req": [
+22,
+17,
+0,
+15
+],
+"resist": "",
+"resist_mod": 0,
+"set": "Tomb of Giants",
+"shield": false,
+"slots": 2,
+"type": "hand"
+},
 "Cresent Axe [TOG]": {
 "attacks": [
 {

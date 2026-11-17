@@ -547,8 +547,8 @@ from characters import MORE, SPELLS, is_shield
 from collections import Counter
 from compare import ALL_REQ, ALL_KIND, ALL_MID
 kinds = Counter(v['deck'] for v in MORE.values())
-check('the other sets add 63 common, 30 class, 30 transposed and 10 legendary cards, and 56 boss treasure cards',
-      (kinds['common'], kinds['class'], kinds['transposed'], kinds['legendary'], kinds['boss']) == (63, 30, 30, 10, 56), dict(kinds))
+check('the other sets add 65 common, 30 class, 30 transposed and 10 legendary cards, and 56 boss treasure cards',
+      (kinds['common'], kinds['class'], kinds['transposed'], kinds['legendary'], kinds['boss']) == (65, 30, 30, 10, 56), dict(kinds))
 _ra = RU.make(dict(ALL_REQ, sets='2017')); _ea = Economy([Char('Knight', _ra)], _ra, random.Random(2))
 check('no card of the other sets shares a name with a core card; the 22 starting cards of the six other classes are in no treasure deck',
       not set(MORE) & set(ITEMS) and kinds['starting'] == 22 and not any(i['deck'] == 'starting' for i in _ea.t1 + _ea.t2 + _ea.shop1))
@@ -568,10 +568,10 @@ for name, spec in (('req', ALL_REQ), ('kind', ALL_KIND), ('mid', ALL_MID)):
     sizes[name] = (len(one), n2, sum(max(req_of(i, rr)) >= 25 for i in one), sum(i['deck'] == 'class' for i in e.t2))
     e.after_mini_boss(); e.boss_named('Dancer of the Boreal Valley', 1)
     sizes[name] += (sum(i['deck'] == 'boss' for i in e.t2), sum(i['deck'] == 'legendary' for i in e.t2), len(e.shop2))
-check('every set, by requirement (as the manuscript revises the requirements): 95 cards in tier one, none asking 25; 124 in tier two, thirty of them class cards; the two bosses\' six cards and five legendaries join after the mini-boss',
-      sizes['req'] == (95, 124, 0, 30, 6, 5, 12), sizes['req'])
-check('every set, by kind: 169 cards in tier one (common and class), the 50 transposed cards in tier two', sizes['kind'][:2] == (169, 50) and sizes['kind'][3] == 0, sizes['kind'])
-check('every set, the middle way: class cards all in tier one, common cards split at 25', sizes['mid'][:2] == (125, 94) and sizes['mid'][3] == 0, sizes['mid'])
+check('every set, by requirement (as the manuscript revises the requirements): 97 cards in tier one, none asking 25; 124 in tier two, thirty of them class cards; the two bosses\' six cards and five legendaries join after the mini-boss',
+      sizes['req'] == (97, 124, 0, 30, 6, 5, 12), sizes['req'])
+check('every set, by kind: 171 cards in tier one (common and class), the 50 transposed cards in tier two', sizes['kind'][:2] == (171, 50) and sizes['kind'][3] == 0, sizes['kind'])
+check('every set, the middle way: class cards all in tier one, common cards split at 25', sizes['mid'][:2] == (127, 94) and sizes['mid'][3] == 0, sizes['mid'])
 rc = RU.make(dict(ALL_REQ, sets='core')); e = Economy([Char('Knight', rc)], rc, random.Random(1)); e.boss_named('Gargoyle', 0)
 check('with the core set alone no other card and no boss treasure is in play', len(e.t1 + e.shop1 + e.t2) == 96 and not e.boss_loot, len(e.t1 + e.shop1 + e.t2))
 ga = [play(2, RU.make(ALL_REQ), s, table=Table(skill=1.0, bank=6)) for s in range(12)]
@@ -722,11 +722,13 @@ check('with every class in the roster, games of all ten classes run to their end
 # ---------------------------------------------------------------- the other sets' enemies, encounters and bosses
 import game as G2
 core_e = sum(1 for lv in '123' for e in E.ENCOUNTERS[lv] if e['set'] == 'Core'); all_e = sum(len(E.ENCOUNTERS[lv]) for lv in '123')
-check('36 core encounters and 51 of Darkroot, Iron Keep and Explorers; every enemy on them has a card', core_e == 36 and all_e == 87
+sets_e = Counter(e['set'] for lv in '123' for e in E.ENCOUNTERS[lv])
+check('36 core encounters, 51 of Darkroot, Iron Keep and Explorers, 6 of the Executioner\'s Chariot and 27 each of the two 2022 sets; every enemy on them has a card',
+      core_e == 36 and all_e == 147 and sets_e["The Executioner's Chariot"] == 6 and sets_e['Tomb of Giants'] == 27 and sets_e['Painted World of Ariamis'] == 27 and len(E.ENEMIES) == 33
       and all(x in E.ENEMIES for lv in '123' for e in E.ENCOUNTERS[lv] for x in e['enemies']), (core_e, all_e))
 check('by default only the core set\'s bosses and encounters are in a game',
       [b for b in G2.MAINS if G2.in_play(RG, 'bosses', E.BOSSES[b])] == ['Dancer of the Boreal Valley', 'Ornstein & Smough']
-      and len([b for b in G2.MINIS if G2.in_play(RG, 'bosses', E.BOSSES[b])]) == 4 and len(G2.MINIS) == 5 and len(G2.MAINS) == 7)
+      and len([b for b in G2.MINIS if G2.in_play(RG, 'bosses', E.BOSSES[b])]) == 4 and len(G2.MINIS) == 7 and len(G2.MAINS) == 9)
 def boss_fight(name, seed=0, rules=RG):
     c = Char('Knight', rules); f = E.Fight([c], rules, random.Random(seed), boss=name, policy=E.Policy(evade=0.0, read_new=0.0, read_known=0.0)); return c, f
 c, f = boss_fight('Ornstein & Smough'); o_, s_ = f.foes
@@ -769,17 +771,17 @@ check('games with every class, boss, encounter and card of the 2017 sets run to 
 # ---------------------------------------------------------------- the 2022 sets' treasure
 from characters import Y22
 k22 = Counter((v['conf'], v['deck']) for v in Y22.values())
-check('the 2022 sets: 164 treasure cards, 126 of them reprints of cards the simulator already holds, 38 new', len(Y22) == 164
-      and sum(v for (c_, d_), v in k22.items() if c_ == 'reprint') == 126 and sum(v for (c_, d_), v in k22.items() if c_ == 'community') == 38, dict(k22))
+check('the 2022 sets: 165 treasure cards, 126 of them reprints of cards the simulator already holds, 39 new', len(Y22) == 165
+      and sum(v for (c_, d_), v in k22.items() if c_ == 'reprint') == 126 and sum(v for (c_, d_), v in k22.items() if c_ == 'community') == 39, dict(k22))
 check('a reprint is played with the values of the card it reprints', all(v['req'] == CARDS[k.split(' [')[0]]['req'] for k, v in Y22.items()
       if v['conf'] == 'reprint' and k.split(' [')[0] in CARDS and CARDS[k.split(' [')[0]].get('cls') in (None, v.get('cls'))))
 ry = RU.make(ALL_REQ); ey = Economy([Char('Knight', ry)], ry, random.Random(1)); r7 = RU.make(dict(ALL_REQ, sets='2017')); e7 = Economy([Char('Knight', r7)], r7, random.Random(1))
 n_all = len(ey.t1 + ey.shop1 + ey.t2); n_17 = len(e7.t1 + e7.shop1 + e7.t2)
-check('with every set in the decks the manuscript adds the 24 common, class and transposed cards that are new in the 2022 sets, and no reprint a second time',
-      n_all - n_17 == 24 and not any(i['name'] in Y22 and not Y22[i['name']]['added_ms'] for i in ey.t1 + ey.shop1 + ey.t2), (n_17, n_all))
+check('with every set in the decks the manuscript adds the 25 common, class and transposed cards that are new in the 2022 sets, and no reprint a second time',
+      n_all - n_17 == 25 and not any(i['name'] in Y22 and not Y22[i['name']]['added_ms'] for i in ey.t1 + ey.shop1 + ey.t2), (n_17, n_all))
 rp = RU.make(dict(ALL_REQ, revised=False)); ep = Economy([Char('Knight', rp)], rp, random.Random(1)); rp7 = RU.make(dict(ALL_REQ, sets='2017', revised=False)); ep7 = Economy([Char('Knight', rp7)], rp7, random.Random(1))
-check('with the cards played as printed every 2022 card joins: 144 more than the 2017 sets alone',
-      len(ep.t1 + ep.shop1 + ep.t2) - len(ep7.t1 + ep7.shop1 + ep7.t2) == 144, (len(ep7.t1 + ep7.shop1 + ep7.t2), len(ep.t1 + ep.shop1 + ep.t2)))
+check('with the cards played as printed every 2022 card joins: 145 more than the 2017 sets alone',
+      len(ep.t1 + ep.shop1 + ep.t2) - len(ep7.t1 + ep7.shop1 + ep7.t2) == 145, (len(ep7.t1 + ep7.shop1 + ep7.t2), len(ep.t1 + ep.shop1 + ep.t2)))
 c = Char('Knight', RG); c.R = ITEMS['Halberd']; c.L = None; c.tier = [4, 4, 4, 4]; c.refresh(); eco = Economy([c], RG, random.Random(1))
 scale = next(v for v in Y22.values() if v.get('size') == 2); c.bag = [scale, ITEMS['Titanite Shard']]; eco.shop1 = []; eco.shop2 = []; eco.spend()
 check('an upgrade that occupies two slots leaves no room for another on a two-slot weapon', len(c.up_cards.get('Halberd', [])) == 1, [x['name'] for x in c.up_cards.get('Halberd', [])])
@@ -906,8 +908,8 @@ def havel_parries():
 check('a Knight in Havel\'s Armour with a Target Shield can still parry', ITEMS['Target Shield'].get('dodge', 0) >= 1 and havel_parries() > 0, (ITEMS['Target Shield'].get('dodge'), havel_parries()))
 
 # ---------------------------------------------------------------- the manuscript's card amendments (its appendices A and B)
-check('the manuscript revises the requirements of sixty weapons; fifty-eight of them are cards the simulator holds',
-      len(AMEND['req']) == 60 and len({k.split(' (')[0].split(' [')[0] for k, v in CARDS.items() if 'req_ms' in v and v['type'] == 'hand'}) == 58)
+check('the manuscript revises the requirements of sixty weapons, and the simulator holds all sixty',
+      len(AMEND['req']) == 60 and len({k.split(' (')[0].split(' [')[0] for k, v in CARDS.items() if 'req_ms' in v and v['type'] == 'hand'}) == 60)
 check('the revised requirements are played under the manuscript and the accepted rules, the printed ones under the official rules',
       req_of(ITEMS['Halberd'], M) == [31, 18, 0, 0] == req_of(ITEMS['Halberd'], RG) and req_of(ITEMS['Halberd'], R17) == ITEMS['Halberd']['req'] == [18, 0, 0, 31],
       (req_of(ITEMS['Halberd'], M), req_of(ITEMS['Halberd'], R17)))
@@ -1065,6 +1067,18 @@ check('a fight that is going nowhere is pressed: the costly attack and a Rest be
 gb = [play(1, RG, sd, table=Table(skill=1.0, regrind=0, bank=10)) for sd in range(60)]
 check('a boss fight is played to its end and not cut off at sixty rounds: a long one is counted, and it is won or lost',
       all(x['win'] or x['lost_at'] is not None for x in gb) and all(x.get('long_boss', 0) <= 2 for x in gb), sum(x.get('long_boss', 0) for x in gb))
+
+# ---------------------------------------------------------------- the 2022 sets' enemies, encounters and bosses
+r22w = RU.make(dict(ALL_MID, roster='all', bosses='all', encounters='all')); g22 = [play(3, r22w, sd, table=Table(skill=1.0, bank=6)) for sd in range(60)]
+check('games with the 2022 sets in run to their end and meet their bosses',
+      all(x['win'] or x['lost_at'] is not None for x in g22) and {x.get('mini') for x in g22} & {'Black Knight', 'Heavy Knight'}
+      and {x.get('main') for x in g22} & {'Gravelord Nito', 'Crossbreed Priscilla'}, sorted({str(x.get('mini')) for x in g22}))
+e22 = Economy([Char('Knight', r22w)], r22w, random.Random(1)); e22.boss_named('Black Knight', 0)
+check('a 2022 boss\'s own treasure is dealt when it is the boss of the game: the cards the manuscript adds',
+      sorted(i['name'] for i in e22.boss_loot) == ['Black Knight Halberd [TOG]', 'Black Knight Shield [TOG]'], [i['name'] for i in e22.boss_loot])
+cd_ = E.ENEMIES['Crow Demon']['steps']; ss_ = E.ENEMIES['Skeleton Soldier']['steps']
+check('a leap is played as a move of four nodes; the Skeleton Soldier\'s only act is a push-move for two damage and bleed',
+      cd_[0]['n'] == 4 and cd_[0]['dmg'] == 6 and ss_ == [dict(k='move', n=1, dir='to', tgt='nearest', push=True, dmg=2, magic=False, dodge=ss_[0]['dodge'], effects=['bleed'])], (cd_, ss_))
 
 print()
 print('%d checks failed' % len(FAILS) if FAILS else 'all checks passed')

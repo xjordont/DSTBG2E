@@ -1,5 +1,5 @@
 {
- "note": "Card values (health, block, resist, damage, dodge difficulty, behaviour decks, encounter line-ups) are the printed values of the 2017 core set as recorded in the public DSBG-Shuffle data set (github.com/DanDuhon/DSBG-Shuffle); threat, range, movement and targeting were read from the card faces. Range 9 stands for unlimited range. The other 2017 sets: enemy behaviour was read from re-drawn data cards and checked against a community table (work/phase7/enemy_cards_web.md); encounter line-ups are the author's, bosses' decks and special rules as the manuscript's chapter 17 states them. An encounter's crystal lizards are counted but not played.",
+ "note": "Card values (health, block, resist, damage, dodge difficulty, behaviour decks, encounter line-ups) are the printed values of the 2017 core set as recorded in the public DSBG-Shuffle data set (github.com/DanDuhon/DSBG-Shuffle); threat, range, movement and targeting were read from the card faces. Range 9 stands for unlimited range. The other 2017 sets: enemy behaviour was read from re-drawn data cards and checked against a community table (work/phase7/enemy_cards_web.md); encounter line-ups are the author's, bosses' decks and special rules as the manuscript's chapter 17 states them. An encounter's crystal lizards are counted but not played. The 2022 sets and the Executioner's Chariot: enemy cards read from re-drawn data cards and a community table (work/phase7/cards_2022_web.md), as printed for the 2022 rules and not as the manuscript's revised cards, whose values are not to hand; a leap is played as a move of four nodes and Resurrect is not played. Encounter line-ups of the two 2022 sets are the public data set's and their printed special rules and objectives are not played; the Executioner's Chariot line-ups are the author's. The four 2022 bosses are played from the public behaviour data under the general boss rules (a deck of four for a mini-boss, five for a main boss), without any special rule of their own.",
  "enemies": {
   "Hollow Soldier": {
    "threat": 5,
@@ -463,6 +463,348 @@
    ],
    "set": "Explorers",
    "conf": "high"
+  },
+  "Skeleton Soldier": {
+   "threat": 5,
+   "hp": 1,
+   "armor": 2,
+   "resist": 1,
+   "steps": [
+    {
+     "k": "move",
+     "n": 1,
+     "dir": "to",
+     "tgt": "nearest",
+     "push": true,
+     "dmg": 2,
+     "magic": false,
+     "dodge": 1,
+     "effects": [
+      "bleed"
+     ]
+    }
+   ],
+   "set": "Tomb of Giants",
+   "conf": "high"
+  },
+  "Skeleton Archer": {
+   "threat": 3,
+   "hp": 1,
+   "armor": 1,
+   "resist": 1,
+   "steps": [
+    {
+     "k": "attack",
+     "tgt": "aggro",
+     "range": 9,
+     "dmg": 4,
+     "magic": false,
+     "dodge": 1
+    },
+    {
+     "k": "move",
+     "n": 2,
+     "dir": "away",
+     "tgt": "aggro"
+    }
+   ],
+   "set": "Tomb of Giants",
+   "conf": "high"
+  },
+  "Skeleton Beast": {
+   "threat": 6,
+   "hp": 5,
+   "armor": 2,
+   "resist": 2,
+   "steps": [
+    {
+     "k": "move",
+     "n": 1,
+     "dir": "to",
+     "tgt": "nearest",
+     "push": true,
+     "dmg": 4,
+     "magic": false,
+     "dodge": 2
+    },
+    {
+     "k": "move",
+     "n": 1,
+     "dir": "to",
+     "tgt": "nearest",
+     "push": true,
+     "dmg": 4,
+     "magic": false,
+     "dodge": 2
+    }
+   ],
+   "set": "Tomb of Giants",
+   "conf": "medium"
+  },
+  "Giant Skeleton Soldier": {
+   "threat": 2,
+   "hp": 5,
+   "armor": 1,
+   "resist": 1,
+   "steps": [
+    {
+     "k": "move",
+     "n": 1,
+     "dir": "to",
+     "tgt": "nearest"
+    },
+    {
+     "k": "attack",
+     "tgt": "nearest",
+     "range": 1,
+     "dmg": 5,
+     "magic": false,
+     "dodge": 1,
+     "push": true
+    }
+   ],
+   "set": "Tomb of Giants",
+   "conf": "high"
+  },
+  "Giant Skeleton Archer": {
+   "threat": 1,
+   "hp": 5,
+   "armor": 1,
+   "resist": 1,
+   "steps": [
+    {
+     "k": "move",
+     "n": 1,
+     "dir": "away",
+     "tgt": "nearest"
+    },
+    {
+     "k": "attack",
+     "tgt": "aggro",
+     "range": 9,
+     "dmg": 5,
+     "magic": false,
+     "dodge": 2,
+     "push": true
+    }
+   ],
+   "set": "Tomb of Giants",
+   "conf": "high"
+  },
+  "Necromancer": {
+   "threat": 7,
+   "hp": 5,
+   "armor": 1,
+   "resist": 2,
+   "steps": [
+    {
+     "k": "attack",
+     "tgt": "aggro",
+     "range": 9,
+     "dmg": 3,
+     "magic": true,
+     "dodge": 1,
+     "node": true
+    }
+   ],
+   "set": "Tomb of Giants",
+   "conf": "high"
+  },
+  "Bonewheel Skeleton": {
+   "threat": 7,
+   "hp": 1,
+   "armor": 1,
+   "resist": 1,
+   "steps": [
+    {
+     "k": "move",
+     "n": 1,
+     "dir": "to",
+     "tgt": "nearest",
+     "push": true,
+     "dmg": 4,
+     "magic": false,
+     "dodge": 2
+    },
+    {
+     "k": "move",
+     "n": 1,
+     "dir": "to",
+     "tgt": "nearest",
+     "push": true,
+     "dmg": 4,
+     "magic": false,
+     "dodge": 2
+    }
+   ],
+   "set": "Painted World of Ariamis",
+   "conf": "medium"
+  },
+  "Crow Demon": {
+   "threat": 9,
+   "hp": 5,
+   "armor": 1,
+   "resist": 2,
+   "steps": [
+    {
+     "k": "move",
+     "n": 4,
+     "dir": "to",
+     "tgt": "aggro",
+     "push": true,
+     "dmg": 6,
+     "magic": false,
+     "dodge": 2
+    }
+   ],
+   "set": "Painted World of Ariamis",
+   "conf": "medium"
+  },
+  "Engorged Zombie": {
+   "threat": 8,
+   "hp": 1,
+   "armor": 2,
+   "resist": 2,
+   "steps": [
+    {
+     "k": "move",
+     "n": 1,
+     "dir": "to",
+     "tgt": "nearest"
+    },
+    {
+     "k": "attack",
+     "tgt": "nearest",
+     "range": 0,
+     "dmg": 4,
+     "magic": true,
+     "dodge": 1
+    }
+   ],
+   "set": "Painted World of Ariamis",
+   "conf": "high"
+  },
+  "Phalanx": {
+   "threat": 4,
+   "hp": 5,
+   "armor": 1,
+   "resist": 1,
+   "steps": [
+    {
+     "k": "attack",
+     "tgt": "nearest",
+     "range": 1,
+     "dmg": 5,
+     "magic": false,
+     "dodge": 1,
+     "node": true
+    },
+    {
+     "k": "move",
+     "n": 1,
+     "dir": "to",
+     "tgt": "aggro"
+    }
+   ],
+   "set": "Painted World of Ariamis",
+   "conf": "medium"
+  },
+  "Phalanx Hollow": {
+   "threat": 4,
+   "hp": 1,
+   "armor": 1,
+   "resist": 1,
+   "steps": [
+    {
+     "k": "attack",
+     "tgt": "nearest",
+     "range": 1,
+     "dmg": 4,
+     "magic": false,
+     "dodge": 1
+    },
+    {
+     "k": "move",
+     "n": 1,
+     "dir": "to",
+     "tgt": "aggro"
+    }
+   ],
+   "set": "Painted World of Ariamis",
+   "conf": "high"
+  },
+  "Snow Rat": {
+   "threat": 1,
+   "hp": 1,
+   "armor": 0,
+   "resist": 1,
+   "steps": [
+    {
+     "k": "move",
+     "n": 4,
+     "dir": "to",
+     "tgt": "aggro"
+    },
+    {
+     "k": "attack",
+     "tgt": "aggro",
+     "range": 0,
+     "dmg": 3,
+     "magic": false,
+     "dodge": 1,
+     "effects": [
+      "poison"
+     ]
+    }
+   ],
+   "set": "Painted World of Ariamis",
+   "conf": "medium"
+  },
+  "Black Hollow Mage": {
+   "threat": 8,
+   "hp": 5,
+   "armor": 2,
+   "resist": 3,
+   "steps": [
+    {
+     "k": "attack",
+     "tgt": "aggro",
+     "range": 9,
+     "dmg": 4,
+     "magic": true,
+     "dodge": 2
+    }
+   ],
+   "set": "The Executioner's Chariot",
+   "conf": "medium"
+  },
+  "Falchion Skeleton": {
+   "threat": 4,
+   "hp": 1,
+   "armor": 1,
+   "resist": 1,
+   "steps": [
+    {
+     "k": "move",
+     "n": 2,
+     "dir": "to",
+     "tgt": "nearest"
+    },
+    {
+     "k": "attack",
+     "tgt": "nearest",
+     "range": 0,
+     "dmg": 3,
+     "magic": false,
+     "dodge": 1,
+     "push": true,
+     "effects": [
+      "bleed"
+     ]
+    }
+   ],
+   "set": "The Executioner's Chariot",
+   "conf": "high"
   }
  },
  "encounters": {
@@ -730,6 +1072,200 @@
     ],
     "set": "Iron Keep",
     "trap": true
+   },
+   {
+    "name": "Quiet Graveyard",
+    "enemies": [
+     "Falchion Skeleton",
+     "Silver Knight Greatbowman",
+     "Hollow Soldier"
+    ],
+    "set": "The Executioner's Chariot"
+   },
+   {
+    "name": "Silent Pathway",
+    "enemies": [
+     "Falchion Skeleton",
+     "Hollow Soldier",
+     "Crossbow Hollow"
+    ],
+    "set": "The Executioner's Chariot",
+    "trap": true
+   },
+   {
+    "name": "Cloak and Feathers",
+    "enemies": [
+     "Crow Demon"
+    ],
+    "set": "Painted World of Ariamis",
+    "rules": true
+   },
+   {
+    "name": "Frozen Sentries",
+    "enemies": [
+     "Phalanx Hollow",
+     "Phalanx Hollow"
+    ],
+    "set": "Painted World of Ariamis",
+    "rules": true
+   },
+   {
+    "name": "No Safe Haven",
+    "enemies": [
+     "Snow Rat",
+     "Snow Rat",
+     "Engorged Zombie"
+    ],
+    "set": "Painted World of Ariamis",
+    "rules": true
+   },
+   {
+    "name": "Painted Passage",
+    "enemies": [
+     "Snow Rat",
+     "Snow Rat",
+     "Phalanx Hollow"
+    ],
+    "set": "Painted World of Ariamis"
+   },
+   {
+    "name": "Promised Respite",
+    "enemies": [
+     "Phalanx Hollow",
+     "Snow Rat",
+     "Snow Rat",
+     "Engorged Zombie"
+    ],
+    "set": "Painted World of Ariamis",
+    "objective": true
+   },
+   {
+    "name": "Roll Out",
+    "enemies": [
+     "Bonewheel Skeleton",
+     "Bonewheel Skeleton"
+    ],
+    "set": "Painted World of Ariamis",
+    "rules": true
+   },
+   {
+    "name": "Skittering Frenzy",
+    "enemies": [
+     "Snow Rat",
+     "Snow Rat"
+    ],
+    "set": "Painted World of Ariamis",
+    "rules": true,
+    "objective": true
+   },
+   {
+    "name": "The First Bastion",
+    "enemies": [
+     "Snow Rat",
+     "Snow Rat",
+     "Phalanx Hollow",
+     "Engorged Zombie"
+    ],
+    "set": "Painted World of Ariamis",
+    "rules": true,
+    "objective": true
+   },
+   {
+    "name": "Unseen Scurrying",
+    "enemies": [
+     "Snow Rat",
+     "Snow Rat"
+    ],
+    "set": "Painted World of Ariamis"
+   },
+   {
+    "name": "Abandoned Storeroom",
+    "enemies": [
+     "Giant Skeleton Soldier"
+    ],
+    "set": "Tomb of Giants",
+    "rules": true,
+    "objective": true
+   },
+   {
+    "name": "Bridge Too Far",
+    "enemies": [
+     "Skeleton Soldier",
+     "Skeleton Archer",
+     "Skeleton Soldier"
+    ],
+    "set": "Tomb of Giants",
+    "rules": true,
+    "objective": true
+   },
+   {
+    "name": "Dark Resurrection",
+    "enemies": [
+     "Skeleton Soldier",
+     "Necromancer",
+     "Skeleton Soldier",
+     "Skeleton Soldier",
+     "Necromancer"
+    ],
+    "set": "Tomb of Giants",
+    "objective": true
+   },
+   {
+    "name": "Deathly Magic",
+    "enemies": [
+     "Skeleton Soldier",
+     "Skeleton Soldier",
+     "Necromancer"
+    ],
+    "set": "Tomb of Giants",
+    "rules": true
+   },
+   {
+    "name": "Grave Matters",
+    "enemies": [
+     "Skeleton Soldier",
+     "Skeleton Archer",
+     "Skeleton Soldier",
+     "Skeleton Archer"
+    ],
+    "set": "Tomb of Giants",
+    "rules": true
+   },
+   {
+    "name": "Last Rites",
+    "enemies": [
+     "Skeleton Soldier",
+     "Skeleton Soldier"
+    ],
+    "set": "Tomb of Giants",
+    "rules": true,
+    "objective": true
+   },
+   {
+    "name": "Puppet Master",
+    "enemies": [
+     "Giant Skeleton Soldier",
+     "Necromancer"
+    ],
+    "set": "Tomb of Giants",
+    "rules": true
+   },
+   {
+    "name": "Rain of Filth",
+    "enemies": [
+     "Skeleton Archer",
+     "Skeleton Archer"
+    ],
+    "set": "Tomb of Giants",
+    "rules": true
+   },
+   {
+    "name": "The Beast From the Depths",
+    "enemies": [
+     "Skeleton Beast"
+    ],
+    "set": "Tomb of Giants",
+    "rules": true
    }
   ],
   "2": [
@@ -1000,6 +1536,250 @@
      "Alonne Sword Knight"
     ],
     "set": "Iron Keep"
+   },
+   {
+    "name": "Mausoleum Ruins",
+    "enemies": [
+     "Large Hollow Soldier",
+     "Falchion Skeleton",
+     "Crossbow Hollow",
+     "Crossbow Hollow"
+    ],
+    "set": "The Executioner's Chariot"
+   },
+   {
+    "name": "Misty Burial Site",
+    "enemies": [
+     "Crossbow Hollow",
+     "Silver Knight Swordsman",
+     "Hollow Soldier",
+     "Falchion Skeleton"
+    ],
+    "set": "The Executioner's Chariot",
+    "trap": true
+   },
+   {
+    "name": "Abandoned and Forgotten",
+    "enemies": [
+     "Phalanx Hollow",
+     "Engorged Zombie",
+     "Crow Demon"
+    ],
+    "set": "Painted World of Ariamis",
+    "rules": true,
+    "objective": true
+   },
+   {
+    "name": "Cold Snap",
+    "enemies": [
+     "Snow Rat",
+     "Snow Rat",
+     "Phalanx Hollow",
+     "Engorged Zombie",
+     "Phalanx Hollow"
+    ],
+    "set": "Painted World of Ariamis",
+    "rules": true,
+    "objective": true
+   },
+   {
+    "name": "Corrupted Hovel",
+    "enemies": [
+     "Snow Rat",
+     "Engorged Zombie",
+     "Phalanx Hollow",
+     "Engorged Zombie"
+    ],
+    "set": "Painted World of Ariamis",
+    "rules": true
+   },
+   {
+    "name": "Distant Tower",
+    "enemies": [
+     "Phalanx Hollow",
+     "Phalanx Hollow",
+     "Snow Rat",
+     "Bonewheel Skeleton",
+     "Bonewheel Skeleton",
+     "Crow Demon"
+    ],
+    "set": "Painted World of Ariamis",
+    "rules": true,
+    "objective": true
+   },
+   {
+    "name": "Gnashing Beaks",
+    "enemies": [
+     "Snow Rat",
+     "Snow Rat",
+     "Phalanx Hollow",
+     "Phalanx Hollow",
+     "Crow Demon",
+     "Crow Demon"
+    ],
+    "set": "Painted World of Ariamis",
+    "rules": true,
+    "objective": true
+   },
+   {
+    "name": "Inhospitable Ground",
+    "enemies": [
+     "Snow Rat",
+     "Engorged Zombie",
+     "Phalanx"
+    ],
+    "set": "Painted World of Ariamis",
+    "rules": true
+   },
+   {
+    "name": "Monstrous Maw",
+    "enemies": [
+     "Snow Rat"
+    ],
+    "set": "Painted World of Ariamis",
+    "rules": true
+   },
+   {
+    "name": "Skeletal Spokes",
+    "enemies": [
+     "Engorged Zombie",
+     "Engorged Zombie",
+     "Bonewheel Skeleton",
+     "Bonewheel Skeleton"
+    ],
+    "set": "Painted World of Ariamis",
+    "rules": true,
+    "objective": true
+   },
+   {
+    "name": "Snowblind",
+    "enemies": [
+     "Phalanx Hollow",
+     "Bonewheel Skeleton",
+     "Phalanx Hollow",
+     "Crow Demon"
+    ],
+    "set": "Painted World of Ariamis"
+   },
+   {
+    "name": "Altar of Bones",
+    "enemies": [
+     "Skeleton Soldier",
+     "Giant Skeleton Archer",
+     "Skeleton Soldier",
+     "Skeleton Archer",
+     "Giant Skeleton Soldier"
+    ],
+    "set": "Tomb of Giants",
+    "rules": true,
+    "objective": true
+   },
+   {
+    "name": "Far From the Sun",
+    "enemies": [
+     "Skeleton Soldier",
+     "Giant Skeleton Soldier",
+     "Skeleton Soldier",
+     "Necromancer",
+     "Skeleton Soldier"
+    ],
+    "set": "Tomb of Giants",
+    "rules": true
+   },
+   {
+    "name": "In Deep Water",
+    "enemies": [
+     "Giant Skeleton Archer",
+     "Skeleton Soldier",
+     "Skeleton Soldier",
+     "Skeleton Soldier",
+     "Skeleton Archer",
+     "Skeleton Archer"
+    ],
+    "set": "Tomb of Giants",
+    "rules": true,
+    "objective": true
+   },
+   {
+    "name": "Lost Chapel",
+    "enemies": [
+     "Skeleton Soldier",
+     "Skeleton Soldier",
+     "Necromancer",
+     "Skeleton Archer",
+     "Skeleton Archer",
+     "Necromancer",
+     "Skeleton Soldier",
+     "Skeleton Beast"
+    ],
+    "set": "Tomb of Giants",
+    "rules": true,
+    "objective": true
+   },
+   {
+    "name": "Maze of the Dead",
+    "enemies": [
+     "Skeleton Soldier",
+     "Necromancer",
+     "Skeleton Beast",
+     "Skeleton Archer",
+     "Skeleton Soldier",
+     "Skeleton Soldier"
+    ],
+    "set": "Tomb of Giants",
+    "rules": true,
+    "objective": true
+   },
+   {
+    "name": "Pitch Black",
+    "enemies": [
+     "Skeleton Archer",
+     "Necromancer",
+     "Skeleton Soldier",
+     "Skeleton Soldier",
+     "Skeleton Soldier",
+     "Necromancer"
+    ],
+    "set": "Tomb of Giants",
+    "rules": true
+   },
+   {
+    "name": "The Abandoned Chest",
+    "enemies": [
+     "Skeleton Soldier",
+     "Skeleton Soldier",
+     "Skeleton Archer",
+     "Necromancer",
+     "Giant Skeleton Soldier",
+     "Giant Skeleton Archer"
+    ],
+    "set": "Tomb of Giants",
+    "rules": true,
+    "objective": true
+   },
+   {
+    "name": "The Mass Grave",
+    "enemies": [
+     "Giant Skeleton Soldier",
+     "Skeleton Soldier",
+     "Skeleton Soldier",
+     "Giant Skeleton Soldier"
+    ],
+    "set": "Tomb of Giants",
+    "rules": true,
+    "objective": true
+   },
+   {
+    "name": "Urns of the Fallen",
+    "enemies": [
+     "Skeleton Archer",
+     "Skeleton Soldier",
+     "Skeleton Soldier",
+     "Skeleton Archer",
+     "Skeleton Soldier"
+    ],
+    "set": "Tomb of Giants",
+    "rules": true
    }
   ],
   "3": [
@@ -1315,6 +2095,275 @@
     ],
     "set": "Iron Keep",
     "trap": true
+   },
+   {
+    "name": "Corrupted Crypt",
+    "enemies": [
+     "Falchion Skeleton",
+     "Black Hollow Mage",
+     "Large Hollow Soldier",
+     "Crossbow Hollow"
+    ],
+    "set": "The Executioner's Chariot"
+   },
+   {
+    "name": "Desolate Cemetery",
+    "enemies": [
+     "Falchion Skeleton",
+     "Silver Knight Greatbowman",
+     "Falchion Skeleton",
+     "Black Hollow Mage"
+    ],
+    "set": "The Executioner's Chariot",
+    "trap": true
+   },
+   {
+    "name": "Central Plaza",
+    "enemies": [
+     "Phalanx Hollow",
+     "Phalanx Hollow",
+     "Phalanx Hollow",
+     "Engorged Zombie",
+     "Engorged Zombie",
+     "Snow Rat",
+     "Snow Rat",
+     "Crow Demon"
+    ],
+    "set": "Painted World of Ariamis",
+    "rules": true
+   },
+   {
+    "name": "Corvian Host",
+    "enemies": [
+     "Phalanx Hollow",
+     "Phalanx Hollow",
+     "Crow Demon",
+     "Phalanx Hollow",
+     "Phalanx Hollow",
+     "Crow Demon",
+     "Crow Demon",
+     "Crow Demon"
+    ],
+    "set": "Painted World of Ariamis",
+    "rules": true,
+    "objective": true
+   },
+   {
+    "name": "Deathly Freeze",
+    "enemies": [
+     "Snow Rat",
+     "Snow Rat",
+     "Engorged Zombie",
+     "Phalanx Hollow",
+     "Bonewheel Skeleton",
+     "Bonewheel Skeleton",
+     "Engorged Zombie"
+    ],
+    "set": "Painted World of Ariamis",
+    "rules": true
+   },
+   {
+    "name": "Draconic Decay",
+    "enemies": [
+     "Bonewheel Skeleton",
+     "Bonewheel Skeleton",
+     "Engorged Zombie",
+     "Crow Demon",
+     "Phalanx Hollow",
+     "Phalanx Hollow"
+    ],
+    "set": "Painted World of Ariamis",
+    "rules": true,
+    "objective": true
+   },
+   {
+    "name": "Eye of the Storm",
+    "enemies": [
+     "Phalanx Hollow",
+     "Phalanx Hollow",
+     "Phalanx Hollow",
+     "Phalanx Hollow",
+     "Engorged Zombie",
+     "Phalanx"
+    ],
+    "set": "Painted World of Ariamis",
+    "rules": true
+   },
+   {
+    "name": "Frozen Revolutions",
+    "enemies": [
+     "Snow Rat",
+     "Snow Rat",
+     "Phalanx Hollow",
+     "Phalanx Hollow",
+     "Phalanx Hollow",
+     "Phalanx Hollow",
+     "Bonewheel Skeleton",
+     "Bonewheel Skeleton"
+    ],
+    "set": "Painted World of Ariamis",
+    "rules": true,
+    "objective": true
+   },
+   {
+    "name": "The Last Bastion",
+    "enemies": [
+     "Phalanx",
+     "Crow Demon"
+    ],
+    "set": "Painted World of Ariamis",
+    "rules": true
+   },
+   {
+    "name": "Trecherous Tower",
+    "enemies": [
+     "Phalanx Hollow",
+     "Phalanx Hollow",
+     "Phalanx Hollow",
+     "Engorged Zombie",
+     "Crow Demon"
+    ],
+    "set": "Painted World of Ariamis",
+    "rules": true,
+    "objective": true
+   },
+   {
+    "name": "Velka's Chosen",
+    "enemies": [
+     "Engorged Zombie",
+     "Engorged Zombie",
+     "Crow Demon",
+     "Snow Rat",
+     "Snow Rat"
+    ],
+    "set": "Painted World of Ariamis",
+    "rules": true
+   },
+   {
+    "name": "A Trusty Ally",
+    "enemies": [
+     "Skeleton Archer",
+     "Skeleton Soldier",
+     "Skeleton Archer",
+     "Giant Skeleton Soldier",
+     "Skeleton Soldier",
+     "Skeleton Soldier",
+     "Skeleton Beast"
+    ],
+    "set": "Tomb of Giants",
+    "rules": true,
+    "objective": true
+   },
+   {
+    "name": "Death's Precipice",
+    "enemies": [
+     "Skeleton Archer",
+     "Skeleton Soldier",
+     "Skeleton Soldier",
+     "Giant Skeleton Archer",
+     "Giant Skeleton Soldier",
+     "Giant Skeleton Archer",
+     "Giant Skeleton Soldier",
+     "Skeleton Beast"
+    ],
+    "set": "Tomb of Giants",
+    "rules": true
+   },
+   {
+    "name": "Giant's Coffin",
+    "enemies": [
+     "Giant Skeleton Soldier",
+     "Giant Skeleton Archer",
+     "Giant Skeleton Soldier",
+     "Giant Skeleton Archer",
+     "Giant Skeleton Archer",
+     "Giant Skeleton Soldier"
+    ],
+    "set": "Tomb of Giants",
+    "rules": true
+   },
+   {
+    "name": "Honour Guard",
+    "enemies": [
+     "Skeleton Soldier",
+     "Skeleton Archer",
+     "Skeleton Soldier",
+     "Skeleton Soldier",
+     "Skeleton Archer"
+    ],
+    "set": "Tomb of Giants",
+    "rules": true
+   },
+   {
+    "name": "Lakeview Refuge",
+    "enemies": [
+     "Necromancer",
+     "Skeleton Soldier",
+     "Skeleton Soldier",
+     "Skeleton Archer",
+     "Skeleton Archer",
+     "Necromancer",
+     "Giant Skeleton Archer",
+     "Giant Skeleton Soldier",
+     "Skeleton Beast",
+     "Skeleton Soldier"
+    ],
+    "set": "Tomb of Giants",
+    "rules": true,
+    "objective": true
+   },
+   {
+    "name": "Last Shred of Light",
+    "enemies": [
+     "Skeleton Beast",
+     "Skeleton Soldier",
+     "Skeleton Archer",
+     "Giant Skeleton Archer"
+    ],
+    "set": "Tomb of Giants",
+    "rules": true,
+    "objective": true
+   },
+   {
+    "name": "Skeleton Overlord",
+    "enemies": [
+     "Giant Skeleton Soldier",
+     "Skeleton Soldier",
+     "Skeleton Soldier"
+    ],
+    "set": "Tomb of Giants",
+    "rules": true
+   },
+   {
+    "name": "The Locked Grave",
+    "enemies": [
+     "Giant Skeleton Archer",
+     "Skeleton Soldier",
+     "Giant Skeleton Soldier",
+     "Necromancer",
+     "Giant Skeleton Archer",
+     "Skeleton Archer",
+     "Skeleton Archer",
+     "Skeleton Beast"
+    ],
+    "set": "Tomb of Giants",
+    "rules": true,
+    "objective": true
+   },
+   {
+    "name": "The Skeleton Ball",
+    "enemies": [
+     "Necromancer",
+     "Giant Skeleton Archer",
+     "Skeleton Archer",
+     "Giant Skeleton Soldier",
+     "Giant Skeleton Archer",
+     "Necromancer",
+     "Skeleton Soldier",
+     "Skeleton Soldier"
+    ],
+    "set": "Tomb of Giants",
+    "rules": true
    }
   ]
  },
@@ -3570,6 +4619,754 @@
      ]
     }
    ]
+  },
+  "Black Knight": {
+   "kind": "mini",
+   "hp": 20,
+   "heatup": 10,
+   "armor": 3,
+   "resist": 2,
+   "deck": 4,
+   "levels": [
+    1,
+    1,
+    2,
+    2
+   ],
+   "cards": [
+    {
+     "name": "Overhead Swing",
+     "dodge": 2,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 4,
+       "magic": false,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Heavy Slash",
+     "dodge": 1,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 5,
+       "magic": false,
+       "push": false,
+       "effects": [
+        "stagger"
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Backswing",
+     "dodge": 1,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 5,
+       "magic": false,
+       "push": false,
+       "effects": [
+        "stagger"
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Vicious Hack",
+     "dodge": 1,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 5,
+       "magic": false,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Defensive Strike",
+     "dodge": 2,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 5,
+       "magic": false,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Wide Swing",
+     "dodge": 2,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 4,
+       "magic": false,
+       "push": false,
+       "effects": [
+        "stagger"
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Massive Swing",
+     "dodge": 2,
+     "repeat": 1,
+     "heatup": true,
+     "attacks": [
+      {
+       "dmg": 5,
+       "magic": false,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Hacking Slash",
+     "dodge": 2,
+     "repeat": 1,
+     "heatup": true,
+     "attacks": [
+      {
+       "dmg": 5,
+       "magic": false,
+       "push": false,
+       "effects": [
+        "stagger"
+       ]
+      },
+      {
+       "dmg": 4,
+       "magic": false,
+       "push": true,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Charge",
+     "dodge": 2,
+     "repeat": 1,
+     "heatup": true,
+     "attacks": [
+      {
+       "dmg": 6,
+       "magic": false,
+       "push": false,
+       "effects": [
+        "stagger"
+       ]
+      }
+     ]
+    }
+   ],
+   "set": "Tomb of Giants",
+   "conf": "community"
+  },
+  "Heavy Knight": {
+   "kind": "mini",
+   "hp": 25,
+   "heatup": 15,
+   "armor": 2,
+   "resist": 2,
+   "deck": 4,
+   "levels": [
+    1,
+    1,
+    2,
+    2
+   ],
+   "cards": [
+    {
+     "name": "Defensive Swipe",
+     "dodge": 3,
+     "repeat": 1,
+     "heatup": true,
+     "attacks": [
+      {
+       "dmg": 4,
+       "magic": false,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Charging Chop",
+     "dodge": 2,
+     "repeat": 1,
+     "heatup": true,
+     "attacks": [
+      {
+       "dmg": 6,
+       "magic": false,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Defensive Chop",
+     "dodge": 2,
+     "repeat": 1,
+     "heatup": true,
+     "attacks": [
+      {
+       "dmg": 5,
+       "magic": false,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Overhead Chop",
+     "dodge": 1,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 5,
+       "magic": false,
+       "push": false,
+       "effects": [
+        "stagger"
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Shield Swipe",
+     "dodge": 2,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 4,
+       "magic": false,
+       "push": false,
+       "effects": [
+        "stagger"
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Double Slash",
+     "dodge": 1,
+     "repeat": 2,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 4,
+       "magic": false,
+       "push": false,
+       "effects": [
+        "stagger"
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Slashing Blade",
+     "dodge": 1,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 4,
+       "magic": false,
+       "push": false,
+       "effects": [
+        "stagger"
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Double Chop",
+     "dodge": 1,
+     "repeat": 2,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 5,
+       "magic": false,
+       "push": false,
+       "effects": [
+        "stagger"
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Shield Smash",
+     "dodge": 3,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 4,
+       "magic": false,
+       "push": false,
+       "effects": [
+        "stagger"
+       ]
+      }
+     ]
+    }
+   ],
+   "set": "Painted World of Ariamis",
+   "conf": "community"
+  },
+  "Gravelord Nito": {
+   "kind": "main",
+   "hp": 30,
+   "heatup": 15,
+   "armor": 2,
+   "resist": 2,
+   "deck": 5,
+   "levels": [
+    2,
+    2,
+    3,
+    3
+   ],
+   "cards": [
+    {
+     "name": "Gravelord Greatsword",
+     "dodge": 1,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 4,
+       "magic": false,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Death Wave",
+     "dodge": 1,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 5,
+       "magic": true,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Miasma",
+     "dodge": 2,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 3,
+       "magic": true,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Sword Slam",
+     "dodge": 2,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 5,
+       "magic": false,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Sword Sweep",
+     "dodge": 1,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 5,
+       "magic": false,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Deathly Thrust",
+     "dodge": 1,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 5,
+       "magic": false,
+       "push": false,
+       "effects": [
+        "poison"
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Death Grip",
+     "dodge": 2,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 5,
+       "magic": false,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Deathly Strike",
+     "dodge": 1,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 5,
+       "magic": false,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Toxicity",
+     "dodge": 1,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 4,
+       "magic": false,
+       "push": false,
+       "effects": [
+        "poison"
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Entropy",
+     "dodge": 1,
+     "repeat": 2,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 4,
+       "magic": false,
+       "push": false,
+       "effects": [
+        "poison"
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Creeping Death",
+     "dodge": 1,
+     "repeat": 3,
+     "heatup": true,
+     "attacks": [
+      {
+       "dmg": 5,
+       "magic": false,
+       "push": true,
+       "effects": [
+        "poison"
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Death's Embrace",
+     "dodge": 2,
+     "repeat": 1,
+     "heatup": true,
+     "attacks": [
+      {
+       "dmg": 5,
+       "magic": false,
+       "push": false,
+       "effects": [
+        "poison"
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Lunging Cleave",
+     "dodge": 2,
+     "repeat": 2,
+     "heatup": true,
+     "attacks": [
+      {
+       "dmg": 5,
+       "magic": false,
+       "push": false,
+       "effects": [
+        "poison"
+       ]
+      }
+     ]
+    }
+   ],
+   "set": "Tomb of Giants",
+   "conf": "community"
+  },
+  "Crossbreed Priscilla": {
+   "kind": "main",
+   "hp": 40,
+   "heatup": 25,
+   "armor": 2,
+   "resist": 1,
+   "deck": 5,
+   "levels": [
+    2,
+    2,
+    3,
+    3
+   ],
+   "cards": [
+    {
+     "name": "Icy Blast",
+     "dodge": 2,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 5,
+       "magic": true,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Flanking Slash",
+     "dodge": 1,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 5,
+       "magic": false,
+       "push": false,
+       "effects": [
+        "bleed"
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Scything Withdrawal",
+     "dodge": 2,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 5,
+       "magic": false,
+       "push": false,
+       "effects": [
+        "bleed"
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Blizzard",
+     "dodge": 1,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 5,
+       "magic": true,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Scythe Strike",
+     "dodge": 2,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 5,
+       "magic": false,
+       "push": false,
+       "effects": [
+        "bleed"
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Scythe Slash",
+     "dodge": 1,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 5,
+       "magic": false,
+       "push": false,
+       "effects": [
+        "bleed"
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Snowstorm",
+     "dodge": 2,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 4,
+       "magic": true,
+       "push": false,
+       "effects": []
+      }
+     ]
+    },
+    {
+     "name": "Backslash",
+     "dodge": 1,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 5,
+       "magic": false,
+       "push": false,
+       "effects": [
+        "bleed"
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Mournful Gaze",
+     "dodge": 3,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 3,
+       "magic": true,
+       "push": false,
+       "effects": [
+        "frostbite"
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Scything Lunge",
+     "dodge": 2,
+     "repeat": 1,
+     "heatup": false,
+     "attacks": [
+      {
+       "dmg": 4,
+       "magic": false,
+       "push": false,
+       "effects": [
+        "bleed"
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Double Lunge",
+     "dodge": 2,
+     "repeat": 2,
+     "heatup": true,
+     "attacks": [
+      {
+       "dmg": 6,
+       "magic": false,
+       "push": false,
+       "effects": [
+        "bleed"
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Double Strike",
+     "dodge": 2,
+     "repeat": 2,
+     "heatup": true,
+     "attacks": [
+      {
+       "dmg": 6,
+       "magic": false,
+       "push": false,
+       "effects": [
+        "bleed"
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Double Slash",
+     "dodge": 1,
+     "repeat": 2,
+     "heatup": true,
+     "attacks": [
+      {
+       "dmg": 5,
+       "magic": false,
+       "push": false,
+       "effects": [
+        "bleed"
+       ]
+      }
+     ]
+    }
+   ],
+   "set": "Painted World of Ariamis",
+   "conf": "community"
   }
  }
 }

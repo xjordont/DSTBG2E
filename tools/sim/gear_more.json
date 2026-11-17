@@ -3343,6 +3343,57 @@
 "slots": 1,
 "type": "hand"
 },
+"Four-Pronged Plough": {
+"attacks": [
+{
+"cost": 1,
+"dice": "u",
+"heal": 0,
+"ignore": false,
+"magic": false,
+"mod": 0,
+"node": false,
+"range": 1,
+"repeat": 1,
+"shaft": true
+},
+{
+"cost": 3,
+"dice": "uu",
+"heal": 0,
+"ignore": false,
+"magic": false,
+"mod": 0,
+"node": false,
+"range": 1,
+"repeat": 1,
+"shaft": true
+}
+],
+"block": "b",
+"block_mod": 0,
+"boss": null,
+"boss_kind": null,
+"cls": null,
+"conf": "community",
+"copies": 1,
+"deck": "common",
+"dodge": 0,
+"hands": 2,
+"name": "Four-Pronged Plough",
+"req": [
+23,
+0,
+0,
+23
+],
+"resist": "b",
+"resist_mod": 0,
+"set": "Darkroot",
+"shield": false,
+"slots": 1,
+"type": "hand"
+},
 "Four-Pronged Plow": {
 "attacks": [
 {
@@ -5167,6 +5218,59 @@
 "resist": "",
 "resist_mod": 0,
 "set": "Characters",
+"shield": false,
+"slots": 1,
+"type": "hand"
+},
+"Manikin Claws": {
+"attacks": [
+{
+"cost": 2,
+"dice": "bb",
+"heal": 0,
+"ignore": false,
+"magic": false,
+"mod": 0,
+"node": false,
+"range": 0,
+"repeat": 2,
+"shaft": false,
+"shift": 1
+},
+{
+"cost": 4,
+"dice": "uu",
+"heal": 0,
+"ignore": false,
+"magic": false,
+"mod": 0,
+"node": false,
+"range": 0,
+"repeat": 2,
+"shaft": false,
+"shift": 1
+}
+],
+"block": "",
+"block_mod": 0,
+"boss": null,
+"boss_kind": null,
+"cls": null,
+"conf": "community",
+"copies": 1,
+"deck": "common",
+"dodge": 0,
+"hands": 2,
+"name": "Manikin Claws",
+"req": [
+0,
+24,
+24,
+0
+],
+"resist": "",
+"resist_mod": 0,
+"set": "Darkroot",
 "shield": false,
 "slots": 1,
 "type": "hand"

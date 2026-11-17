@@ -497,6 +497,8 @@ class Economy:
         mini-boss's with the legendaries once it falls, the main boss's as soon as it is known, which is then)."""
         if getattr(self.r, 'sets', 'core') not in ('2017', 'all') or not getattr(self.r, 'boss_loot', True): return
         loot = [i for i in MORE.values() if i['deck'] == 'boss' and i['boss'] == boss]
+        if getattr(self.r, 'sets', 'core') == 'all':    # a 2022 boss's own treasure (as printed, every card; as amended, the cards the manuscript adds)
+            loot += [i for i in Y22.values() if deck_of(i, self.r) == 'boss' and i.get('boss') == boss and (i['added_ms'] or not revised(self.r))]
         if stage == 0: self.boss_loot += loot; return
         deck = (self.t1 if getattr(self.r, 'deck_split', 'req') == 'kind' else self.t2) if self.r.treasure == 'author' else self.deck
         deck += loot; self.rng.shuffle(deck)
