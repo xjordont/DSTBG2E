@@ -1022,6 +1022,17 @@ kn = Char('Knight', RG); kn.dropped = {(0, 2): 8, (1, 4): 2}; kn.souls = 1; l2 =
 check('the accepted rule: a second defeat on the same tile loses what lay there, and nothing that lies on another tile',
       l2 == 8 and kn.dropped == {(0, 2): 1, (1, 4): 2} and kn.souls == 0, (l2, kn.dropped))
 
+def dead_mover(seed):
+    """A Large Hollow Soldier on its last point of health makes its two-node push-move into a Knight in Armour of Thorns, with a
+    second character elsewhere: (its health, where it lies, where the Knight stands) after the turn."""
+    a, b = Char('Knight', M), Char('Herald', M); a.A = CARDS['Armour of Thorns']; a.refresh(); a.dodge = 0; a.can_parry = False
+    f = E.Fight([a, b], M, random.Random(seed), enemies=['Large Hollow Soldier'], policy=E.Policy(evade=0.0))
+    foe = f.foes[0]; a.node = E.IDX[(2, 2)]; b.node = E.IDX[(4, 4)]; foe.node = E.IDX[(2, 0)]; foe.hp = 1
+    f.enemy_turn(foe); return foe.hp, E.NODES[foe.node], E.DIST[a.node][E.IDX[(2, 2)]]
+dm = [dead_mover(sd) for sd in range(30)]
+check('an enemy killed during its own push-move stops where it died: it takes no further step and pushes no one again',
+      all(hp <= 0 and at == (2, 2) and far == 1 for hp, at, far in dm), dm[:3])
+
 print()
 print('%d checks failed' % len(FAILS) if FAILS else 'all checks passed')
 sys.exit(1 if FAILS else 0)

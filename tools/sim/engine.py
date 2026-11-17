@@ -495,6 +495,7 @@ class Fight:
                 if t is None: break
                 struck = set()
                 for _ in range(max(0, n)):
+                    if f.hp <= 0: break                 # killed on the way (thorns, a backstab): a dead model moves and pushes no further
                     if st['dir'] == 'away':
                         f.node = step_away(f.node, t.node, rng); continue
                     if st.get('push'):
@@ -506,6 +507,7 @@ class Fight:
                     origin = f.node; f.node = step_to(f.node, t.node, rng)
                     if st.get('push'):
                         for c in self.live():
+                            if f.hp <= 0: break
                             if c.node != f.node: continue
                             was_hit = True                                   # a push-move with no damage pushes everyone
                             if 'dmg' in st and (c not in struck or not r.push_once):
