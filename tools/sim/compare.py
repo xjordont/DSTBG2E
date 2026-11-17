@@ -51,6 +51,11 @@ ALL_MID = dict(REVIEW_GATE, sets='all', deck_split='mid')          # common card
 # Section 19: everything owned (every set's cards, class, boss and encounter), sorted by requirement; and the same with the
 # tuning proposed for three and four characters (one spark fewer each, boss health x1.25 and x1.5)
 OWNED = dict(ALL_REQ, **WORLD)
+# Section 20: the author's choice of treasure split (between), on every 2017 set; WORLD_22 adds the 2022 sets' enemies,
+# encounters and bosses as printed for the 2022 rules, which the workshop keeps apart
+WORLD_22 = dict(roster='all', bosses='all22', encounters='all22')
+OWNED_20 = dict(ALL_MID, **WORLD)
+OWNED_20_22 = dict(ALL_MID, **WORLD_22)
 PROPOSED_19 = dict(OWNED, sparks=[0, 5, 4, 2, 1], boss_mul=[1, 1, 1, 1.25, 1.5])
 # Section 19.8, with the manuscript's card amendments played: sparks five less the number of characters, the same boss health
 TUNING_198 = dict(sparks=[0, 4, 3, 2, 1], boss_mul=[1, 1, 1, 1.25, 1.5])

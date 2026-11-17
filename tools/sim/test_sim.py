@@ -1069,7 +1069,9 @@ check('a boss fight is played to its end and not cut off at sixty rounds: a long
       all(x['win'] or x['lost_at'] is not None for x in gb) and all(x.get('long_boss', 0) <= 2 for x in gb), sum(x.get('long_boss', 0) for x in gb))
 
 # ---------------------------------------------------------------- the 2022 sets' enemies, encounters and bosses
-r22w = RU.make(dict(ALL_MID, roster='all', bosses='all', encounters='all')); g22 = [play(3, r22w, sd, table=Table(skill=1.0, bank=6)) for sd in range(60)]
+r22w = RU.make(dict(ALL_MID, roster='all', bosses='all22', encounters='all22')); g22 = [play(3, r22w, sd, table=Table(skill=1.0, bank=6)) for sd in range(60)]
+g17 = [play(3, RU.make(dict(ALL_MID, roster='all', bosses='all', encounters='all')), sd, table=Table(skill=1.0, bank=6)) for sd in range(40)]
+check('the 2022 sets\' bosses are met only where a ruleset asks for them by name', not ({x.get('mini') for x in g17} | {x.get('main') for x in g17}) & {'Black Knight', 'Heavy Knight', 'Gravelord Nito', 'Crossbreed Priscilla'})
 check('games with the 2022 sets in run to their end and meet their bosses',
       all(x['win'] or x['lost_at'] is not None for x in g22) and {x.get('mini') for x in g22} & {'Black Knight', 'Heavy Knight'}
       and {x.get('main') for x in g22} & {'Gravelord Nito', 'Crossbreed Priscilla'}, sorted({str(x.get('mini')) for x in g22}))

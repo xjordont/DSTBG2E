@@ -48,10 +48,18 @@ def souls_failed(party, r, tile):
     return lost
 
 
+SETS_2022 = ('Tomb of Giants', 'Painted World of Ariamis')
+
+
 def in_play(rules, what, card):
-    """Whether a boss or an encounter card of this set is in the game: the core set's always, the others' where the
-    ruleset says bosses='all' or encounters='all'."""
-    return card.get('set', 'Core') == 'Core' or getattr(rules, what, 'core') == 'all'
+    """Whether a boss or an encounter card of this set is in the game: the core set's always; the other 2017 sets' where
+    the ruleset says bosses='all' or encounters='all'; the two 2022 sets' only where it says 'all22'. The 2022 sets'
+    enemies and bosses are held as printed for the 2022 rules and their encounters' printed rules are not played, so they
+    are kept apart from what the workshop measures (section 20)."""
+    st = card.get('set', 'Core'); how = getattr(rules, what, 'core')
+    if st == 'Core': return True
+    if st in SETS_2022: return how == 'all22'
+    return how in ('all', 'all22')
 
 
 class Table(Policy):
