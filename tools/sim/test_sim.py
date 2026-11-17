@@ -862,6 +862,18 @@ gm = [play(3, M, sd, table=Table(skill=1.0)) for sd in range(150)]
 check('in whole games under the manuscript\'s rules some parties do get dropped souls back at that point', sum(x.get('returned', 0) for x in gm) > 0,
       (sum(1 for x in gm if x.get('returned')), sum(x.get('returned', 0) for x in gm)))
 
+k_, p_ = Char('Knight', RG), Char('Pyromancer', RG); (k_, p_), f = duel(None, RG, party=[k_, p_], enemies=['Sentinel', 'Hollow Soldier']); f.aggro = k_; f.dealt = {}
+f.strike(p_, f.foes[0], dict(p_.options['R'][0], dice='', mod=0, direct=3))
+check('Rapport\'s damage moves the aggro token as any damage does', f.foes[0].hp == 47 and f.aggro is p_ and f.dealt.get(p_) == 3, (f.foes[0].hp, f.aggro.name))
+def mon_order(start):
+    # official order (an enemy phase before each character): with the ring, how many enemy activations come before both characters have acted
+    a_, b_ = Char('Knight', R17), Char('Warrior', R17); a_.traits = a_.traits | {'mon'}; a_.mon = True; a_._first = start
+    f = E.Fight([a_, b_], R17, random.Random(5), enemies=['Hollow Soldier'], policy=E.Policy(evade=0.0)); f.foes[0].hp = f.foes[0].max = 99
+    acts = []; turn0 = f.char_turn
+    def spy(c): acts.append(f.enemy_acts); turn0(c)
+    f.char_turn = spy; f.run(max_rounds=1); return acts[:2]
+check('the Mon Ring: every character acts before the enemies do, whichever seat the order begins at', mon_order(0) == [0, 0] and mon_order(1) == [0, 0], (mon_order(0), mon_order(1)))
+
 print()
 print('%d checks failed' % len(FAILS) if FAILS else 'all checks passed')
 sys.exit(1 if FAILS else 0)

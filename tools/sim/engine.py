@@ -640,6 +640,7 @@ class Fight:
         if o.get('direct'):                                          # a fixed amount of damage, no roll: only on an enemy that shares its node
             if any(g is not f and g.node == f.node for g in self.foes_alive()):
                 self.hurt(f, o['direct']); self.dealt[c] = self.dealt.get(c, 0) + o['direct']; grand = o['direct']
+                if r.aggro == 'last' or (r.aggro == 'most' and self.is_boss): self.aggro = c      # damage dealt, as by any attack
             return grand
         node0 = f.node
         reach = lambda g: DIST[c.node][g.node] <= o['range'] and not (o.get('shaft') and g.node == c.node)
@@ -988,6 +989,7 @@ class Fight:
         for c in self.party: c.was_hollow = c.hollow
         first = next((c for c in self.party if 'mon' in c.traits and c.mon), None)      # a card that lets the party act first, once a spark
         if first is not None: first.mon = False
+        opening = self.seats                           # character turns still to come before the enemies' first activation
         if (self.is_boss and getattr(r, 'boss_round', 'alternate') == 'alternate') or (not self.is_boss and r.round == 'alternate'):
             while not self.over() and self.rounds < max_rounds:
                 self.rounds += 1
@@ -1005,7 +1007,8 @@ class Fight:
                         c = self.party[self.turn_i % self.seats]; self.turn_i += 1
                         if c.alive: break
                     if c.alive: self.char_turn(c)
-                    if first is not None and self.turn_i % self.seats == 0: first = None      # every character has had the free turn
+                    opening -= 1
+                    if first is not None and opening <= 0: first = None      # every character has had the free turn, wherever the order began
                 self.stalled()
         else:
             while not self.over() and self.rounds < max_rounds:
