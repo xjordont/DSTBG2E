@@ -52,6 +52,10 @@ ALL_MID = dict(REVIEW_GATE, sets='all', deck_split='mid')          # common card
 # tuning proposed for three and four characters (one spark fewer each, boss health x1.25 and x1.5)
 OWNED = dict(ALL_REQ, **WORLD)
 PROPOSED_19 = dict(OWNED, sparks=[0, 5, 4, 2, 1], boss_mul=[1, 1, 1, 1.25, 1.5])
+# Section 19.8, with the manuscript's card amendments played: sparks five less the number of characters, the same boss health
+TUNING_198 = dict(sparks=[0, 4, 3, 2, 1], boss_mul=[1, 1, 1, 1.25, 1.5])
+PROPOSED_198 = dict(OWNED, **TUNING_198)
+PROPOSED_198_CORE = dict(REVIEW_GATE, **TUNING_198)
 REVIEW_TWICE = dict(LOOP, hp_add=[0, 0, 1, 2, 3], atk=[0, 0, 1, 1, 1], boss_atk=[0, 0, 1, 1, 1], reps=[1, 1, 1, 2, 2], sparks=SPARKS)
 REVIEW_HEALTH = dict(LOOP, hp_add=[0, 0, 3, 6, 9], boss_mul=[1, 1, 2, 3, 4])            # 15.6: health only (set aside: it lengthens the game)
 REVIEW_D1 = dict(LOOP, atk=[0, 0, 1, 1, 1], boss_atk=[0, 0, 1, 1, 1], hp_add=[0, 0, 1, 4, 6], boss_mul=[1, 1, 1.5, 2, 2.5])   # 15.6: the shorter alternative
@@ -68,6 +72,8 @@ SPECS = {
     'all_mid': ('Section 18: every 2017 set, common cards split at 25, class cards tier one', ALL_MID),
     'owned': ('Section 19: the accepted rules with everything owned (every set, class, boss and encounter)', OWNED),
     'proposed19': ('Section 19: the same with sparks 5/4/2/1 and boss health x1.25 / x1.5 for three and four characters', PROPOSED_19),
+    'proposed198': ('Section 19.8: everything owned, sparks 4/3/2/1 and boss health x1.25 / x1.5 for three and four characters', PROPOSED_198),
+    'proposed198_core': ('Section 19.8: the same tuning on the core set alone', PROPOSED_198_CORE),
     'author': ("The author's own table (15.7): health +1 a character, damage +0/+0/+1/+2, sparks 4/3/2/1", AUTHOR),
     'review_twice': ('15.7, the other candidate: +1 damage, enemies attack twice against three or more', REVIEW_TWICE),
     'review_health': ('15.6, set aside: health only, +3 an enemy for each extra character', REVIEW_HEALTH),
