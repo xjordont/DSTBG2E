@@ -289,6 +289,7 @@ class Fight:
         if 'no_dodge' not in tr:
             nd += (1 if ('vs_hollow' in tr and 'Hollow' in src.name) else 0) + (1 if ('vs_boss' in tr and src.boss) else 0) \
                 + (2 if ('vs_far' in tr and DIST[src.node][c.node] >= 2) else 0)
+        if r.dodge_extra: nd = min(nd, 4)               # the manuscript, 9.5: no dodge is rolled with more than four dice, however they come
         pen_d = pen + c.dodge_pen                       # what a dodge roll is short by: stagger, and a card that takes a success away
         mk = 1 if 'milk' in tr else 0                   # the amended Carthus Milkring: one more dodge icon on a dodge (not on a parry)
         wolf = 'wolf_ms' in tr                          # the amended Wolf Ring: one stamina to roll the dodge dice again, once a dodge

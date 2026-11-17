@@ -1128,6 +1128,17 @@ h1 = sen.hp; f.rng = random.Random(7); f.strike(kb, sen, o_); after_turn = h1 - 
 check('a weapon made magical for this activation is so until the turn ends, and not for a riposte in the enemies\' turn',
       kb.buff is None and with_buff - after_turn == 2 + sen.armor - sen.resist, (with_buff, after_turn, sen.armor, sen.resist))
 
+def six_dice(rules, trials=400):
+    """A Knight whose cards show six dodge dice dodges an attack of difficulty four: dodges made."""
+    made = 0
+    for sd in range(trials):
+        c, f = duel('Knight', rules, seed=sd); c.dodge = 6; c.blk = c.res = c.arm_blk = c.arm_res = ''; c.luck = c.heroic = False; c.can_parry = False; c.sta = 0
+        made += not f.defend(f.foes[0], c, 9, False, 4)
+    return made
+sx_m = six_dice(RG)
+check('the manuscript rolls no dodge with more than four dice, however many the cards show: at difficulty four about one dodge in sixteen, where six dice would make one in three',
+      10 <= sx_m < 50, sx_m)
+
 print()
 print('%d checks failed' % len(FAILS) if FAILS else 'all checks passed')
 sys.exit(1 if FAILS else 0)
