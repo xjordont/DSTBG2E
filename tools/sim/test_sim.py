@@ -798,18 +798,20 @@ check('official: poison damage sets off a bleed token on an enemy', foe.hp == 47
 c, f = duel('Knight', R17, enemies=['Sentinel']); foe = f.foes[0]; c.traits = c.traits | {'thorns'}; c.dodge = 0; c.can_parry = False; f.defend(foe, c, 1, False, 9, push=True)
 check('Armour of Thorns answers an attack from its wearer\'s node even when the attack pushes the wearer away', foe.hp == 49 and c.node != foe.node, (foe.hp, c.node == foe.node))
 
-def thorns_after(how_rules, parry):
-    # damage the attacker takes from Armour of Thorns when the defence was a failed parry (manuscript) or a failed dodge that rolls nothing (official)
-    lost = 0
-    for sd in range(40):
-        c, f = duel('Knight', how_rules, enemies=['Sentinel'], seed=sd); foe = f.foes[0]; c.traits = c.traits | {'thorns'}; c.luck = c.heroic = False
-        if parry: c.blk = c.res = ''; c.dodge = 1; c.can_parry = True; c._rip = 9.0
-        else: c.blk = c.res = c.arm_blk = c.arm_res = ''; c.dodge = 1; c.can_parry = False
-        f.dec = {}; f.defend(foe, c, 6, False, 3)
-        if f.dec.get('parry' if parry else 'dodge'): lost += 50 - foe.hp
-    return lost
+def thorns_after(rules, how):
+    """Failed defences of the given kind over many seeds, and the health the attacker lost to Armour of Thorns in them."""
+    fails = lost = 0
+    for sd in range(120):
+        c, f = duel('Knight', rules, enemies=['Sentinel'], seed=sd); foe = f.foes[0]; c.traits = c.traits | {'thorns'}; c.luck = c.heroic = False
+        c.blk = c.res = ''; c.dodge = 1; c.can_parry = how == 'parry'; c._rip = 9.0 if how == 'parry' else 0.0
+        if how == 'bare': c.arm_blk = c.arm_res = ''
+        f.dec = {}; d0 = c.dmg; f.defend(foe, c, 6, False, 1)
+        if f.dec.get('parry' if how == 'parry' else 'dodge') and (c.dmg > d0 or not c.alive): fails += 1; lost += 50 - foe.hp
+    return fails, lost
+tp, td, ta = thorns_after(RG, 'parry'), thorns_after(R17, 'bare'), thorns_after(RG, 'dodge')
 check('Armour of Thorns answers only a defence that rolled block or resist dice: not a failed parry, not an official failed dodge',
-      thorns_after(RG, True) == 0 and thorns_after(R17, False) == 0, (thorns_after(RG, True), thorns_after(R17, False)))
+      tp[0] >= 10 and tp[1] == 0 and td[0] >= 10 and td[1] == 0, (tp, td))
+check('and it does answer a manuscript failed dodge, which rolls the armour\'s dice', ta[0] >= 10 and ta[1] == ta[0], ta)
 
 print()
 print('%d checks failed' % len(FAILS) if FAILS else 'all checks passed')
