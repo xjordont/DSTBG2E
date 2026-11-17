@@ -20,6 +20,22 @@ CLASSES = dict(GEAR['classes']); CLASSES.update(_MORE['classes'])
 # The treasure of the 2022 sets the author owns (gear_2022.json): in the decks where a ruleset says sets='all'.
 Y22 = json.load(open(os.path.join(HERE, 'gear_2022.json')))['items']
 CARDS = dict(ITEMS); CARDS.update(MORE); CARDS.update(Y22)
+# The author's card amendments (the manuscript's appendices A and B; amendments.json): played where a ruleset says
+# revised=True, which the manuscript and every ruleset built on its turn rules do. The official presets play the cards as printed.
+AMEND = json.load(open(os.path.join(HERE, 'amendments.json')))
+_base = lambda k: k.split(' (')[0].split(' [')[0]
+for _k, _v in CARDS.items():
+    _b = _base(_k)
+    if _b in AMEND['req'] and _v['type'] == 'hand': _v['req_ms'] = AMEND['req'][_b]
+    if _b in AMEND['cards']:
+        for _f, _x in AMEND['cards'][_b].items(): _v[_f + '_ms'] = _x
+    if _b in AMEND['traits']: _v['traits_ms'] = tuple(AMEND['traits'][_b])
+for _k, _v in Y22.items(): _v['added_ms'] = _base(_k) in AMEND['added'] or _base(_k).replace('Armour', 'Armor') in AMEND['added']
+
+
+def revised(r): return bool(getattr(r, 'revised', False))
+def req_of(it, r): return it['req_ms'] if (revised(r) and 'req_ms' in it) else it['req']
+def deck_of(it, r): return it['deck_ms'] if (revised(r) and 'deck_ms' in it) else it['deck']
 CORE4 = ['Knight', 'Warrior', 'Herald', 'Assassin']
 ALL10 = CORE4 + sorted(_MORE['classes'])
 STURDY = ('Knight', 'Warrior')                       # the classes a lone player or a pair is assumed to include
@@ -137,13 +153,22 @@ TRAIT_VALUE = dict(sunprincess=0.8, sanctus=0.8, lothric=0.4, tinybeing=0.5, tea
                    knightslayer=0.3, blades=0.5, leo=0.4, thorns=0.4, sunset=0.1, faraam=0.2, hero_hp=0.15, hero_sta=0.15, hero_cleanse=0.1,
                    serpent=0.6, serpent2=0.8, wolf=0.5, mon=0.4, life=0.6, im_bleed=0.15, im_poison=0.15, im_frost=0.1, im_push=0.1,
                    dodge2=0.1, walk2=0.3, run2=-0.2, no_walk=-0.5, no_run=-0.3, vs_hollow=0.15, vs_boss=0.2, vs_far=0.2, alonne=0.05,
-                   w_hollow=0.2, dragoncrest=0.2, swamp=0.2, redtear=0.3, blessing=0.8, mender=0.2, weak_blue=0.15, mask=0.6)
+                   w_hollow=0.2, dragoncrest=0.2, swamp=0.2, redtear=0.3, blessing=0.8, mender=0.2, weak_blue=0.15, mask=0.6,
+                   milk=0.5, chlor_ms=0.6, tiny_ms=0.8, wolf_ms=0.4)
 FX_VALUE = dict(bleed=0.5, poison=0.6, stagger=0.4, frostbite=0.15)
 
 
-def text_traits(it):
-    """The traits a card's own text gives (an upgrade card's traits are those it gives the card it is fitted to)."""
-    return TRAITS.get((it.get('text') or '').rstrip('.'), ()) if it else ()
+def text_traits(it, r=None):
+    """The traits a card's own text gives (an upgrade card's traits are those it gives the card it is fitted to). Under a
+    ruleset that plays the author's amendments, a card whose text the manuscript replaces gives the traits of the new text."""
+    if not it: return ()
+    if revised(r) and 'traits_ms' in it: return it['traits_ms']
+    return TRAITS.get((it.get('text') or '').rstrip('.'), ())
+
+
+def up_of(it, r):
+    """The traits an upgrade card gives the card it is fitted to under ruleset r; None if its text is not played."""
+    return (it['traits_ms'] if (revised(r) and 'traits_ms' in it) else it.get('up')) or None
 
 
 for _i in CARDS.values():
@@ -180,7 +205,7 @@ class Char:
         for R in hands:
             if not has_dice(R): continue
             for L in [None] + [x for x in hands if x is not R]:
-                if L is not None and R['hands'] == 2 and 'offhand' not in text_traits(L): continue
+                if L is not None and R['hands'] == 2 and 'offhand' not in text_traits(L, rules): continue
                 if L is not None and L['hands'] == 2: continue
                 self.R, self.L = R, L; v = power(self.profile(), rules)
                 if best is None or v > best[0] + 1e-9: best = (v, R, L)
@@ -219,7 +244,7 @@ class Char:
         worn = [x for x in (A, R, L) if x]
         p = dict(R=R, L=L, A=A, cls=self.name)
         traits = set()
-        for x in worn: traits.update(text_traits(x))
+        for x in worn: traits.update(text_traits(x, r))
         if A: traits.update(plus.get(A['name'], ()))                  # rings and the like, fitted to the armour
         p['traits'] = traits
         cal = 1 if 'calamity' in traits else 0
@@ -241,14 +266,15 @@ class Char:
             cards = [it]
             if it.get('catalyst') and getattr(r, 'catalyst', False):
                 # a catalyst gives the attack options of up to three stored spells of its school, if their requirements are met
-                cards += [x for x in spells if x.get('school') == it['catalyst'] and self.meets(x['req'], tiers)][:3]
+                cards += [x for x in spells if x.get('school') == it['catalyst'] and self.meets(req_of(x, r), tiers)][:3]
             mine = []
             for card in cards:
                 spell = card['name'] in SPELLS; own = card is it
                 bonus = 0
-                if getattr(r, 'scaling', False) and has_dice(card) and max(card['req']) > 0 and not spell:
-                    top = max(card['req'])                        # where requirements tie for the highest, any of them may be chosen
-                    if any(self.value(j, tiers[j]) - top >= 10 for j in range(4) if card['req'][j] == top):
+                cr = req_of(card, r)                              # the requirements the ruleset plays: revised where the manuscript revises them
+                if getattr(r, 'scaling', False) and has_dice(card) and max(cr) > 0 and not spell:
+                    top = max(cr)                                 # where requirements tie for the highest, any of them may be chosen
+                    if any(self.value(j, tiers[j]) - top >= 10 for j in range(4) if cr[j] == top):
                         bonus = 1                                 # the manuscript's stat scaling: +1 at ten over the requirement
                 for a in card['attacks']:
                     o = dict(name=card['name'], hand=hand, cost=a['cost'], dice=a['dice'], mod=a['mod'], magic=a['magic'], range=a['range'],
@@ -269,7 +295,7 @@ class Char:
                             if 'w_flash' in wt and o['range'] == 0: o['range'] = 1; o['magic'] = True
                             if 'w_hollow' in wt: o['hollow'] = True
                             if 'w_boss2' in wt: o['vs_boss'] = 2 * wt.count('w_boss2')
-                            own_t = text_traits(card)                 # what the weapon's own text adds to its attacks
+                            own_t = text_traits(card, r)              # what the weapon's own text adds to its attacks
                             if 'w_vs_hollow' in own_t: o['vs_hollow'] = 1
                             if 'w_selfbleed' in own_t: o['self_fx'] = ['bleed']
                         if 'hornet' in traits: o['dice'] += 'o'; o['mod'] -= 2
@@ -404,13 +430,17 @@ class Economy:
             # every owned set: the other sets' common, class, transposed and legendary cards join the core set's, whoever
             # is playing; the treasure of the two bosses of this game is kept apart until the mini-boss falls
             cards += [i for i in MORE.values() if i['deck'] != 'boss']
-        if sets == 'all': cards += [i for i in Y22.values() if i['deck'] != 'boss']      # and the 2022 sets' cards
+        if sets == 'all':
+            # the 2022 sets' cards. The manuscript adds the cards that are new in those sets (its Additional Treasure)
+            # and does not add their reprints of older cards a second time; as printed, every card joins
+            cards += [i for i in Y22.values() if deck_of(i, rules) != 'boss' and (i['added_ms'] or not revised(rules))]
+        if revised(rules): cards = [dict(i, deck=deck_of(i, rules)) if 'deck_ms' in i else i for i in cards]
         common = [i for i in cards if i['deck'] == 'common']
         legend = rng.sample([i for i in cards if i['deck'] == 'legendary'], 5)
         if rules.treasure == 'author':
             # the manuscript: every common, class and transposed card, split at a requirement of 25; legendaries join tier two
             pool = common + [i for i in cards if i['deck'] in ('class', 'transposed')]
-            two = lambda i: max(i['req']) >= 25 or i['deck'] == 'transposed'
+            two = lambda i: max(req_of(i, rules)) >= 25 or i['deck'] == 'transposed'
             split = getattr(rules, 'deck_split', 'req')
             if split in ('type', 'type_all', 'kind'):
                 # a split by kind of card, for comparison: common and class treasure in tier one, transposed (and the
@@ -421,7 +451,7 @@ class Economy:
             elif split == 'mid':
                 # between the two: common cards split at a requirement of 25; class cards tier one and transposed cards
                 # tier two whatever they ask for
-                two = lambda i: i['deck'] == 'transposed' or (i['deck'] == 'common' and max(i['req']) >= 25)
+                two = lambda i: i['deck'] == 'transposed' or (i['deck'] == 'common' and max(req_of(i, rules)) >= 25)
             self.t1 = [i for i in pool if not two(i)]; self.t2 = [i for i in pool if two(i)]
             # where a sold card goes: the bottom of the treasure deck of its tier (legendaries are tier two, except
             # where one deck holds everything but the transposed cards)
@@ -494,20 +524,21 @@ class Economy:
             # an upgrade goes on the right-hand weapon or on the armour, while that card has a free upgrade slot
             tgt = self.up_target(c, it)
             if tgt is None: return None
-            req = [max(0, x - 2) for x in it['req']] if (tgt is c.A and 'ring_ease' in c.traits) else it['req']
+            req = req_of(it, self.r)
+            if tgt is c.A and 'ring_ease' in c.traits: req = [max(0, x - 2) for x in req]
             got = c.cost_to_meet(req)
             if got is None: return None
-            plus = dict(c.plus); plus[tgt['name']] = plus.get(tgt['name'], ()) + it['up']
+            plus = dict(c.plus); plus[tgt['name']] = plus.get(tgt['name'], ()) + up_of(it, self.r)
             gain = power(c.profile(tiers=got[1], plus=plus), c.r) - c._power
             return (gain, got[0], got[1], 'U')
-        req = it['req']
+        req = req_of(it, self.r)
         if it['name'] in self.carried:                  # an upgrade that comes with the card must be met as well as the card
-            for up in (self.carried[it['name']][1] or ()): req = [max(x, y) for x, y in zip(req, up['req'])]
+            for up in (self.carried[it['name']][1] or ()): req = [max(x, y) for x, y in zip(req, req_of(up, self.r))]
         got = c.cost_to_meet(req)
         if got is None: return None
         cost, tiers = got
-        off = 'offhand' in text_traits(it)               # a shield that may sit beside a two-handed weapon
-        keep = c.L if (c.L is not None and 'offhand' in text_traits(c.L)) else False
+        off = 'offhand' in text_traits(it, self.r)       # a shield that may sit beside a two-handed weapon
+        keep = c.L if (c.L is not None and 'offhand' in text_traits(c.L, self.r)) else False
         if it['type'] == 'armour': tries = [('A', dict(A=it))]
         elif it['hands'] == 2: tries = [('R', dict(R=it, L=keep))]
         elif has_dice(it) or (it['attacks'] and not it.get('catalyst')):
@@ -533,13 +564,13 @@ class Economy:
             c.plus[it['name']], c.up_cards[it['name']] = self.carried.pop(it['name'])
         if slot == 'U':
             tgt = self.up_target(c, it)
-            c.plus[tgt['name']] = c.plus.get(tgt['name'], ()) + it['up']; c.up_cards.setdefault(tgt['name'], []).append(it)
+            c.plus[tgt['name']] = c.plus.get(tgt['name'], ()) + up_of(it, self.r); c.up_cards.setdefault(tgt['name'], []).append(it)
         elif slot == 'S': c.spells.append(it)
         elif slot == 'A': out.append(c.A); c.A = it
         elif slot == 'L': out.append(c.L); c.L = it
         else:
             out.append(c.R); c.R = it
-            if it['hands'] == 2 and not (c.L is not None and 'offhand' in text_traits(c.L)): out.append(c.L); c.L = None
+            if it['hands'] == 2 and not (c.L is not None and 'offhand' in text_traits(c.L, self.r)): out.append(c.L); c.L = None
         # a replaced card goes back to the inventory: the shared one of the official rules, or the character's own,
         # where it may be sold (starting equipment cannot be sold, so it is simply set aside)
         for old in out:
@@ -562,7 +593,7 @@ class Economy:
     def up_target(self, c, it):
         """The card an upgrade would be fitted to: the armour for an armour upgrade, the right-hand weapon otherwise;
         None when the upgrade is not played, there is no such card, or its upgrade slots are full."""
-        if not it.get('up'): return None
+        if not up_of(it, self.r): return None
         tgt = c.A if it.get('on') == 'armour' else (c.R if has_dice(c.R) else None)
         if tgt is None: return None
         used = sum(x.get('size', 1) for x in c.up_cards.get(tgt['name'], ()))     # an upgrade takes one slot; one card of 2022 takes two

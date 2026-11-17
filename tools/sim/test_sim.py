@@ -554,7 +554,7 @@ check('no card of the other sets shares a name with a core card; the 22 starting
       not set(MORE) & set(ITEMS) and kinds['starting'] == 22 and not any(i['deck'] == 'starting' for i in _ea.t1 + _ea.t2 + _ea.shop1))
 check('every transposed card asks for 25 or more in a stat', all(max(v['req']) >= 25 for d in (ITEMS, MORE) for v in d.values() if v['deck'] == 'transposed'))
 check('a spell with no attack is not counted as a shield', not is_shield(ITEMS['Force']) and not is_shield(MORE['Magic Barrier']) and is_shield(MORE['Buckler']))
-from characters import TRAITS, NOT_PLAYED, CARDS as _CARDS
+from characters import TRAITS, NOT_PLAYED, CARDS as _CARDS, req_of, up_of, deck_of, AMEND
 _texts = {(v.get('text') or '').rstrip('.') for v in _CARDS.values() if v.get('text')}
 check('every text printed on a card is either played or listed as not played with its reason', not (_texts - set(TRAITS) - set(NOT_PLAYED)),
       sorted(_texts - set(TRAITS) - set(NOT_PLAYED)))
@@ -565,13 +565,13 @@ sizes = {}
 for name, spec in (('req', ALL_REQ), ('kind', ALL_KIND), ('mid', ALL_MID)):
     rr = RU.make(dict(spec, sets='2017')); e = Economy([Char('Knight', rr), Char('Herald', rr)], rr, random.Random(1))
     one = e.t1 + e.shop1; e.boss_named('Gargoyle', 0); n2 = len(e.t2)
-    sizes[name] = (len(one), n2, sum(max(i['req']) >= 25 for i in one), sum(i['deck'] == 'class' for i in e.t2))
+    sizes[name] = (len(one), n2, sum(max(req_of(i, rr)) >= 25 for i in one), sum(i['deck'] == 'class' for i in e.t2))
     e.after_mini_boss(); e.boss_named('Dancer of the Boreal Valley', 1)
     sizes[name] += (sum(i['deck'] == 'boss' for i in e.t2), sum(i['deck'] == 'legendary' for i in e.t2), len(e.shop2))
-check('every set, by requirement: 94 cards in tier one, none asking 25; 125 in tier two, thirty of them class cards; the two bosses\' six cards and five legendaries join after the mini-boss',
-      sizes['req'] == (94, 125, 0, 30, 6, 5, 12), sizes['req'])
+check('every set, by requirement (as the manuscript revises the requirements): 95 cards in tier one, none asking 25; 124 in tier two, thirty of them class cards; the two bosses\' six cards and five legendaries join after the mini-boss',
+      sizes['req'] == (95, 124, 0, 30, 6, 5, 12), sizes['req'])
 check('every set, by kind: 169 cards in tier one (common and class), the 50 transposed cards in tier two', sizes['kind'][:2] == (169, 50) and sizes['kind'][3] == 0, sizes['kind'])
-check('every set, the middle way: class cards all in tier one, common cards split at 25', sizes['mid'][:2] == (124, 95) and sizes['mid'][3] == 0, sizes['mid'])
+check('every set, the middle way: class cards all in tier one, common cards split at 25', sizes['mid'][:2] == (125, 94) and sizes['mid'][3] == 0, sizes['mid'])
 rc = RU.make(dict(ALL_REQ, sets='core')); e = Economy([Char('Knight', rc)], rc, random.Random(1)); e.boss_named('Gargoyle', 0)
 check('with the core set alone no other card and no boss treasure is in play', len(e.t1 + e.shop1 + e.t2) == 96 and not e.boss_loot, len(e.t1 + e.shop1 + e.t2))
 ga = [play(2, RU.make(ALL_REQ), s, table=Table(skill=1.0, bank=6)) for s in range(12)]
@@ -775,7 +775,11 @@ check('a reprint is played with the values of the card it reprints', all(v['req'
       if v['conf'] == 'reprint' and k.split(' [')[0] in CARDS and CARDS[k.split(' [')[0]].get('cls') in (None, v.get('cls'))))
 ry = RU.make(ALL_REQ); ey = Economy([Char('Knight', ry)], ry, random.Random(1)); r7 = RU.make(dict(ALL_REQ, sets='2017')); e7 = Economy([Char('Knight', r7)], r7, random.Random(1))
 n_all = len(ey.t1 + ey.shop1 + ey.t2); n_17 = len(e7.t1 + e7.shop1 + e7.t2)
-check('with every set in the decks the 2022 cards join them: 144 more common, class and transposed cards than the 2017 sets alone', n_all - n_17 == 144, (n_17, n_all))
+check('with every set in the decks the manuscript adds the 24 common, class and transposed cards that are new in the 2022 sets, and no reprint a second time',
+      n_all - n_17 == 24 and not any(i['name'] in Y22 and not Y22[i['name']]['added_ms'] for i in ey.t1 + ey.shop1 + ey.t2), (n_17, n_all))
+rp = RU.make(dict(ALL_REQ, revised=False)); ep = Economy([Char('Knight', rp)], rp, random.Random(1)); rp7 = RU.make(dict(ALL_REQ, sets='2017', revised=False)); ep7 = Economy([Char('Knight', rp7)], rp7, random.Random(1))
+check('with the cards played as printed every 2022 card joins: 144 more than the 2017 sets alone',
+      len(ep.t1 + ep.shop1 + ep.t2) - len(ep7.t1 + ep7.shop1 + ep7.t2) == 144, (len(ep7.t1 + ep7.shop1 + ep7.t2), len(ep.t1 + ep.shop1 + ep.t2)))
 c = Char('Knight', RG); c.R = ITEMS['Halberd']; c.L = None; c.tier = [4, 4, 4, 4]; c.refresh(); eco = Economy([c], RG, random.Random(1))
 scale = next(v for v in Y22.values() if v.get('size') == 2); c.bag = [scale, ITEMS['Titanite Shard']]; eco.shop1 = []; eco.shop2 = []; eco.spend()
 check('an upgrade that occupies two slots leaves no room for another on a two-slot weapon', len(c.up_cards.get('Halberd', [])) == 1, [x['name'] for x in c.up_cards.get('Halberd', [])])
@@ -900,6 +904,66 @@ def havel_parries():
         c.blk = c.res = ''; c.luck = c.heroic = False; c._rip = 9.0; f.dec = {}; f.defend(f.foes[0], c, 6, False, 1); n += f.dec.get('parry', 0)
     return n
 check('a Knight in Havel\'s Armour with a Target Shield can still parry', ITEMS['Target Shield'].get('dodge', 0) >= 1 and havel_parries() > 0, (ITEMS['Target Shield'].get('dodge'), havel_parries()))
+
+# ---------------------------------------------------------------- the manuscript's card amendments (its appendices A and B)
+check('the manuscript revises the requirements of sixty weapons; fifty-eight of them are cards the simulator holds',
+      len(AMEND['req']) == 60 and len({k.split(' (')[0].split(' [')[0] for k, v in CARDS.items() if 'req_ms' in v and v['type'] == 'hand'}) == 58)
+check('the revised requirements are played under the manuscript and the accepted rules, the printed ones under the official rules',
+      req_of(ITEMS['Halberd'], M) == [31, 18, 0, 0] == req_of(ITEMS['Halberd'], RG) and req_of(ITEMS['Halberd'], R17) == ITEMS['Halberd']['req'] == [18, 0, 0, 31],
+      (req_of(ITEMS['Halberd'], M), req_of(ITEMS['Halberd'], R17)))
+def can_wield(rules, tiers):
+    c = Char('Knight', rules); return c.meets(req_of(ITEMS['Halberd'], rules), list(tiers))
+check('a character meets a weapon by the requirements its ruleset plays: a Knight of 40 STR and 19 DEX wields the Halberd as revised (31 STR, 18 DEX), not as printed (18 STR, 31 FTH)',
+      can_wield(RG, [3, 1, 0, 0]) and not can_wield(R17, [3, 1, 0, 0]) and can_wield(R17, [1, 0, 0, 3]) and not can_wield(RG, [1, 0, 0, 3]))
+moved = [k for k, v in CARDS.items() if 'req_ms' in v and v['deck'] == 'common' and (max(v['req']) >= 25) != (max(v['req_ms']) >= 25)]
+ra = RU.make(dict(ALL_REQ, sets='2017')); ea = Economy([Char('Knight', ra)], ra, random.Random(1)); t1n = {i['name'] for i in ea.t1 + ea.shop1}; t2n = {i['name'] for i in ea.t2}
+check('a card is sorted into its tier by the requirements as revised', all((k in t2n) == (max(CARDS[k]['req_ms']) >= 25) for k in moved if k in t1n | t2n), moved)
+bt = CARDS['Blue Titanite [TOG]']
+check('Blue Titanite as amended: legendary treasure asking 25 INT; as printed, the Black Knight\'s boss treasure asking 20',
+      (deck_of(bt, RG), req_of(bt, RG), deck_of(bt, R17), req_of(bt, R17)) == ('legendary', [0, 0, 25, 0], 'boss', [0, 0, 20, 0]))
+check('the rings the manuscript rewrites give their new text under its rules and their printed text under the official ones',
+      [up_of(CARDS[n], RG) for n in ('Carthus Milkring', 'Chloranthy Ring', "Tiny Being's Ring", 'Wolf Ring')] == [('milk',), ('chlor_ms',), ('tiny_ms',), ('wolf_ms',)]
+      and [up_of(CARDS[n], R17) for n in ('Carthus Milkring', 'Chloranthy Ring', "Tiny Being's Ring", 'Wolf Ring')] == [('dodge_free',), ('chloranthy',), ('tinybeing',), ('wolf',)])
+def ring_dodges(rules, ring, k, trials=300, dodge=None, luck=False):
+    """A Knight wearing the ring dodges an attack of difficulty k: (dodges made, stamina paid) over the trials."""
+    made = paid = 0
+    for sd in range(trials):
+        c, f = duel('Knight', rules, seed=sd); c.plus = {c.A['name']: up_of(CARDS[ring], rules)} if ring else {}; c.refresh()
+        if dodge is not None: c.dodge = dodge
+        c.blk = c.res = c.arm_blk = c.arm_res = ''; c.luck = luck; c.heroic = False; c.can_parry = False; c.sta = 0
+        made += not f.defend(f.foes[0], c, 6, False, k); paid += c.sta
+    return made, paid
+m0, m1, m2 = ring_dodges(RG, None, 1, dodge=0), ring_dodges(RG, 'Carthus Milkring', 1, dodge=0), ring_dodges(R17, 'Carthus Milkring', 1, dodge=1)
+check('the amended Carthus Milkring adds one dodge icon: a dodge of difficulty one succeeds with no dice, at the usual stamina (without the ring a die must be bought); as printed the dodge is free',
+      m0[0] < 200 and m0[1] == 900 and m1 == (300, 300) and m2[1] == 0 and 100 < m2[0] < 200, (m0, m1, m2))
+RGX = RU.make(dict(REVIEW_GATE, dodge_extra=False)); w0, w1 = ring_dodges(RGX, None, 1, dodge=1), ring_dodges(RGX, 'Wolf Ring', 1, dodge=1)
+check('the amended Wolf Ring: a failed dodge roll is made again for one stamina, once (about three dodges in four with one die, and a second stamina on about half of them)',
+      100 < w0[0] < 200 and w0[1] == 300 and 195 < w1[0] < 255 and 400 < w1[1] < 500, (w0, w1))
+def turn_start(rules, rings=(), armour=None, sta=6, dmg=0, mate=False):
+    """A Knight with stamina and damage on the bar begins a turn with the enemy out of reach and no attack to make: (stamina, damage)
+    after the turn's recovery, and the stamina of a second Knight on the same node."""
+    c = Char('Knight', rules); o = Char('Knight', rules)
+    if armour: c.A = CARDS[armour]
+    c.plus = {c.A['name']: sum((up_of(CARDS[n], rules) for n in rings), ())}; c.refresh()
+    f = E.Fight([c, o], rules, random.Random(2), enemies=['Hollow Soldier'], policy=E.Policy(evade=0.0, kite=False))
+    f.foes[0].node = E.IDX[(4, 4)]; c.node = o.node = E.IDX[(0, 0)]
+    if not mate: o.node = E.IDX[(0, 4)]
+    c.sta = o.sta = sta; c.dmg = dmg; c.estus = c.luck = c.heroic = False; c.options = {'R': [], 'L': []}; c.support = {'R': [], 'L': []}
+    seen = []; inc = f.incoming                   # the bars are read as the turn's recovery ends, before anything is done with the turn
+    f.incoming = lambda ch: (seen.append((c.sta, c.dmg, o.sta)), inc(ch))[1]
+    f.char_turn(c); return seen[0]
+p0, p1, p2, p3 = turn_start(R17), turn_start(R17, ('Chloranthy Ring',), mate=True), turn_start(R17, armour='Mask of the Child [TOG]'), turn_start(R17, ('Chloranthy Ring',), armour='Mask of the Child [TOG]')
+check('official: the Chloranthy Ring and the Mask of the Child each give three stamina in place of two, and the two together still three',
+      (p0[0], p1[0], p2[0], p3[0]) == (4, 3, 3, 3) and p1[2] == 6, (p0, p1, p2, p3))
+p4 = turn_start(R17, ("Tiny Being's Ring",), dmg=2); p5 = turn_start(R17, ("Tiny Being's Ring",), dmg=0)
+check('official: the Tiny Being\'s Ring trades the turn\'s two stamina for one stamina and one health, when there is damage to take off',
+      p4[:2] == (5, 1) and p5[:2] == (4, 0), (p4, p5))
+q0, q1, q2 = turn_start(RG), turn_start(RG, ('Chloranthy Ring',), mate=True), turn_start(RG, ('Chloranthy Ring',))
+check('the amended Chloranthy Ring: at the start of the wearer\'s turn the wearer and a character on its node each recover one stamina, on top of the turn\'s own; a character elsewhere none',
+      q0[0] - q1[0] == 1 and q1[2] == 5 and q2[2] == 6, (q0, q1, q2))
+q3 = turn_start(RG, ("Tiny Being's Ring",), dmg=2); q4 = turn_start(RG, armour='Mask of the Child [TOG]')
+check('the amended Tiny Being\'s Ring takes one damage off at the start of the turn and costs no stamina; the Mask of the Child, left as printed, gives one stamina more than the turn\'s own',
+      q3[:2] == (q0[0], 1) and q0[0] - q4[0] == 1, (q0, q3, q4))
 
 print()
 print('%d checks failed' % len(FAILS) if FAILS else 'all checks passed')

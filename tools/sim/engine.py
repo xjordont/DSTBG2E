@@ -50,6 +50,16 @@ def p_dodge(n, k):
     return sum(comb(n, i) for i in range(k, n + 1)) / 2 ** n
 
 
+def p_dodge_again(n, k):
+    """The same chance where the dice that failed may all be rolled once more (and the chance that they have to be)."""
+    if k <= 0: return 1.0, 0.0
+    if n < k: return 0.0, 0.0
+    from math import comb
+    first = p_dodge(n, k)
+    second = sum(comb(n, g) / 2 ** n * p_dodge(n - g, k - g) for g in range(0, k))
+    return first + second, 1 - first
+
+
 @functools.lru_cache(None)
 def hit_stats(dice, mode, dmg, pen):
     """Damage distribution of an attack of `dmg` against a defence roll (minus `pen` for stagger)."""
@@ -265,16 +275,20 @@ class Fight:
             nd += (1 if ('vs_hollow' in tr and 'Hollow' in src.name) else 0) + (1 if ('vs_boss' in tr and src.boss) else 0) \
                 + (2 if ('vs_far' in tr and DIST[src.node][c.node] >= 2) else 0)
         pen_d = pen + c.dodge_pen                       # what a dodge roll is short by: stagger, and a card that takes a success away
+        mk = 1 if 'milk' in tr else 0                   # the amended Carthus Milkring: one more dodge icon on a dodge (not on a parry)
+        wolf = 'wolf_ms' in tr                          # the amended Wolf Ring: one stamina to roll the dodge dice again, once a dodge
         fail = hit_stats(adice, r.block, dmg, apen) if r.dodge_fail == 'armour' else ((dmg, 1.0),)
         tries = [(nd, sta1)]
         if r.dodge_extra:
             if nd + 1 <= 4: tries.append((nd + 1, sta1 + 2))          # one extra die a dodge, for two more stamina
         if 'no_dodge' in tr: tries = []                               # equipment that says the character cannot dodge: no dodge at all
         for dice_n, sta in tries:
-            if sta > room or (dice_n <= 0 and k > 0): continue
-            ps = p_dodge(dice_n, k + pen_d)
+            need_d = k + pen_d - mk
+            if sta > room or (dice_n <= 0 and need_d > 0): continue
+            ps = p_dodge(dice_n, need_d); again = 0.0
+            if wolf and sta + 1 <= room: ps, again = p_dodge_again(dice_n, need_d)
             mixed = ((0, ps),) + tuple((d, p * (1 - ps)) for d, p in fail)
-            opts.append((cost(mixed, sta), 'dodge', (dice_n, sta)))
+            opts.append((cost(mixed, sta) + pol.w_sta * again, 'dodge', (dice_n, sta)))
         par_sta, par_n = 1, c.parry_n                   # a parry: one stamina, the dodge dice printed on the equipped cards and no more
         if (r.parry and parryable and not push and c.can_parry and DIST[src.node][c.node] == 0 and par_sta <= room
                 and not src.boss):
@@ -290,7 +304,7 @@ class Fight:
         if getattr(r, 'defence', 'choice') == 'combined':
             # the 2022 rule: dodge and block dice are rolled together at no cost; enough dodges and the attack misses,
             # otherwise the block or resist pips still count
-            need = k + pen_d; got = sum(rng.random() < 0.5 for _ in range(nd)); pre = roll(dice, rng)
+            need = k + pen_d - mk; got = sum(rng.random() < 0.5 for _ in range(nd)); pre = roll(dice, rng)
             if 0 < need == got + 1 and nd > got and c.luck:
                 # one dodge short, with every die on the table: luck may re-roll one die of the defence roll, and a failed
                 # dodge die is the one to pick when the block dice would let a telling blow through
@@ -329,12 +343,16 @@ class Fight:
             c.sta += sta
             # 2017: having paid for the dodge the character can move one node, before the dice are rolled and whatever they show
             if how == 'dodge' and r.dodge_move == 'before': self.reposition(c, 0, True, count=False, frost=False)   # frostbite is charged on the dodge
-            got = sum(rng.random() < 0.5 for _ in range(dice_n)); ok = got >= k + pen_d
+            need = k + pen_d - (mk if how == 'dodge' else 0)
+            got = sum(rng.random() < 0.5 for _ in range(dice_n)); ok = got >= need
             if peek: ok = True                              # the roll was seen before the dodge was chosen
+            if not ok and wolf and how == 'dodge' and dice_n >= need and sta + 1 <= room:
+                c.sta += 1; self.dec['wolf'] = self.dec.get('wolf', 0) + 1          # the amended Wolf Ring: the failed dice once more
+                got += sum(rng.random() < 0.5 for _ in range(dice_n - got)); ok = got >= need
             if not ok and c.luck and dice_n > got:
                 # luck re-rolls the failed dodge dice: one of them under the official rules, all of them under the manuscript
                 c.luck = False; n_again = 1 if getattr(r, 'luck', 'one') == 'one' else dice_n - got
-                got += sum(rng.random() < 0.5 for _ in range(n_again)); ok = got >= k + pen_d
+                got += sum(rng.random() < 0.5 for _ in range(n_again)); ok = got >= need
             if ok:
                 hit = False
                 if how == 'parry':
@@ -792,11 +810,24 @@ class Fight:
         # stamina at the start of the turn: none under the manuscript's frostbite, one less under the 2022 rules
         barred = c.frost and r.frost == 'author'
         if not barred:
-            regen = max(0, r.regen - (1 if (c.frost and r.frost == '2022') else 0))
-            if any('chloranthy' in x.traits for x in self.live() if x.node == c.node): regen += 1
-            if 'mask' in tr: regen += 1
-            if 'tinybeing' in tr and regen >= 1 and c.dmg > 0: regen -= 1; c.dmg = max(0, c.dmg - self.mend(c, 1))      # one of the stamina traded for health
+            regen = r.regen
+            more = 'mask' in tr or any('chloranthy' in x.traits for x in self.live() if x.node == c.node)
+            if more:
+                # "3 stamina (instead of 2)": the printed amount stands in place of the turn's own, so two such cards give
+                # three and not four. Where the turn's recovery is not the printed two (the manuscript's one), a card the
+                # manuscript leaves as printed gives one more than the turn's, the same step up
+                regen = max(regen, 3) if r.regen == 2 else regen + 1
+            regen = max(0, regen - (1 if (c.frost and r.frost == '2022') else 0))
+            if 'tinybeing' in tr and c.dmg > 0 and (regen <= 2 or c.sta <= 1):
+                # "1 stamina and 1 health (instead of 2 stamina)": taken in place of the whole of the turn's recovery
+                regen = min(regen, 1 if r.regen >= 2 else 0); c.dmg = max(0, c.dmg - self.mend(c, 1))
             c.sta = max(0, c.sta - regen)
+        if 'chlor_ms' in tr:
+            # the amended Chloranthy Ring: at the start of the wearer's turn the wearer and every other character on its node
+            # recover one stamina, on top of the turn's own (frostbite under the manuscript bars any recovery)
+            for x in self.live():
+                if x.node == c.node and not (x.frost and r.frost == 'author'): x.sta = max(0, x.sta - 1)
+        if 'tiny_ms' in tr and c.dmg > 0: c.dmg = max(0, c.dmg - self.mend(c, 1))      # the amended Tiny Being's Ring: one damage off
         if 'sanctus' in tr: c.dmg = max(0, c.dmg - self.mend(c, 1))
         if 'blessing' in tr and c.bless and c.dmg >= pol.estus_at + 1 and not c.estus:
             c.bless = False; c.dmg = 0; c.poison = 0; c.bleed = c.frost = c.stagger = False     # discarded for good: all damage and conditions off
