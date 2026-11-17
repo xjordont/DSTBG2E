@@ -168,7 +168,7 @@ class Fight:
             c.guard = ('', ''); c.buff = None; c.hurt_by = set(); c.rolls = 0
         self.faraam = set()                            # who has used "once per encounter" card text
         self.idle = 0; self._hp = None                 # rounds in a row in which no enemy lost health
-        self.special = None; self.bdef = None
+        self.special = None; self.bdef = None; self.pair_done = False      # the two-model boss has had its shared turn this enemy phase
         if boss:
             b = BOSSES[boss]; mul = getattr(r, 'boss_mul', None); k = mul(self.n) if mul else 1
             self.bdef = b; self.special = b.get('special')
@@ -529,8 +529,8 @@ class Fight:
         them falls the survivor heats up at the start of the next turn: its own heat-up cards become the deck and it
         regains health (10 for Ornstein, 15 for Smough), to no more than it began with."""
         rng = self.rng; models = [m for m in self.foes if m.hp > 0]
-        if not models or f is not models[0]: return                  # the turn is taken once, when the first living model comes up
-        self.enemy_acts += 1
+        if not models or self.pair_done: return                      # one shared turn an enemy phase, whichever model's call comes first
+        self.pair_done = True; self.enemy_acts += 1
         if len(models) == 1 and not self.pair_heat:
             m = models[0]; self.pair_heat = True; m.heated = True
             self.pdeck = list(m.heat_cards); rng.shuffle(self.pdeck); self.pdiscard = []; m.seen = set()
@@ -981,7 +981,7 @@ class Fight:
                 self.rounds += 1
                 for _ in range(self.seats):
                     if self.over(): break
-                    self.to_act = set(self.foes_alive())
+                    self.to_act = set(self.foes_alive()); self.pair_done = False
                     for f in ([] if first is not None else sorted(self.foes_alive(), key=lambda f: -f.threat)):
                         self.to_act.discard(f)
                         if self.over(): break
@@ -997,7 +997,7 @@ class Fight:
         else:
             while not self.over() and self.rounds < max_rounds:
                 self.rounds += 1; self.dealt = {}
-                self.to_act = set(self.foes_alive())
+                self.to_act = set(self.foes_alive()); self.pair_done = False
                 for f in ([] if first is not None else sorted(self.foes_alive(), key=lambda f: (-f.threat, min(DIST[f.node][c.node] for c in self.live())))):
                     self.to_act.discard(f)
                     if self.over(): break

@@ -732,7 +732,7 @@ def boss_fight(name, seed=0, rules=RG):
 c, f = boss_fight('Ornstein & Smough'); o_, s_ = f.foes
 n0 = len(f.pdeck); f.pair_turn(o_); f.pair_turn(s_)
 check('Ornstein and Smough: two models with their own health, one card drawn a turn for both', (o_.max, s_.max) == (20, 30) and len(f.pdeck) == n0 - 1 and f.enemy_acts == 1, (n0, len(f.pdeck), f.enemy_acts))
-s_.hp = 0; o_.hp = 5; f.pair_turn(o_)
+s_.hp = 0; o_.hp = 5; f.pair_done = False; f.pair_turn(o_)
 check('when Smough falls Ornstein regains ten health and fights on from his own five heat-up cards', o_.hp == 15 and f.pair_heat and len(f.pdeck) + len(f.pdiscard) == 5
       and all(k.get('heatup') for k in f.pdeck + f.pdiscard), (o_.hp, len(f.pdeck)))
 c, f = boss_fight('Ornstein & Smough'); o_, s_ = f.foes; o_.hp = 0; s_.hp = 20; f.pair_turn(s_)
@@ -839,6 +839,13 @@ def parry_cost(armour):
     return out
 check('a parry costs one stamina whatever the armour says about the price of a dodge',
       parry_cost('Black Leather Armour') == {1} and parry_cost('Eastern Armour') == {1}, (parry_cost('Black Leather Armour'), parry_cost('Eastern Armour')))
+
+c, f = boss_fight('Ornstein & Smough'); o_, s_ = f.foes; o_.hp = 1; o_.poison = 1; n0 = len(f.pdeck); f.pair_done = False
+f.pair_turn(o_); dead = o_.hp <= 0; f.pair_turn(s_)                 # the two calls of one enemy phase: Ornstein dies of poison at the end of the shared turn
+check('Ornstein and Smough take one shared turn an enemy phase even when one of them dies during it; the survivor heats up at the next',
+      dead and f.enemy_acts == 1 and not f.pair_heat and len(f.pdeck) == n0 - 1 and s_.hp == s_.max, (dead, f.enemy_acts, f.pair_heat))
+f.pair_done = False; f.pair_turn(s_)
+check('and at the next phase the survivor heats up and acts', f.pair_heat and f.enemy_acts == 2, (f.pair_heat, f.enemy_acts))
 
 print()
 print('%d checks failed' % len(FAILS) if FAILS else 'all checks passed')
