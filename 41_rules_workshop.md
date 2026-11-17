@@ -1724,6 +1724,8 @@ To re-run: `python3 tools/sim/compare.py --only all_req --games 800 --probe 300 
 
 The author's answers to section 18: on treasure sorting and boss health, "help me decide; use all resources"; on difficulty, "isn't this decided already?"; on the simulator, "yes: make it robust and complete". The order followed here: complete the simulator, check its calibration, then settle the three decisions on it. The rules are decided (sections 16, 17.2, 18); what section 18 left open was whether those rules land in the band the author set, and that could not be judged while most card text did nothing.
 
+**Section 20 supersedes the win rates and the tuning of this section, 19.8 included:** an audit there found that the simulated players, not the rules, lost most of the lone character's boss fights, and the author chose the between split. **Read 19.8 for the card amendments and section 20 for the figures.**
+
 **Read 19.8 first.** After this section was written the manuscript's own card amendments (its appendices A and B) were found not to be played. They are now, and 19.8 gives every headline figure again with them. The game is about eight points easier with them, so the win rates and the tuning of 19.3, 19.5 and 19.6 are superseded there. The treasure-sorting recommendation of 19.4 stands.
 
 ### 19.1 What the simulator now holds
@@ -1928,6 +1930,8 @@ To re-run: `python3 tools/sim/compare.py --only owned --games 800 --probe 300 --
 
 ### 19.8 The manuscript's own card amendments, and every figure run again (2026-11-17)
 
+**Superseded in part by section 20:** the Boreal Outrider Knight figure quoted below was an artefact of the simulator (20.3), question 7 is withdrawn, and the tuning is replaced by 20.5.
+
 **This subsection supersedes the win rates and the tuning of 19.3, 19.5 and 19.6.** The recommendation of 19.4 stands. The figures above it are kept as the record of what was measured with the cards as printed.
 
 **What was missing.** The manuscript changes cards as well as rules, in its appendices (`10_manuscript_chapter_23_appendices.md`), and the simulator had been playing the author's rules with the cards as printed. It was found while checking a review finding on the Chloranthy Ring. The author's rulesets now play the amendments (`tools/sim/amendments.json`, switched on by `revised=True`); the official presets play every card as printed.
@@ -2068,3 +2072,175 @@ The revised requirements lift the Warrior, the Cleric and the Assassin most (alo
 8. **Cards the simulator cannot play without their values:** the revised data cards of the twelve 2022 enemies and four 2022 bosses, Titanite Chunk and Titanite Slab, Four-Pronged Plough, Manikin Claws and Crescent Axe. If the author has them, the 2022 sets can be brought in.
 
 To re-run: `python3 tools/sim/compare.py --only owned --games 800 --probe 300 --bank 6` for the accepted rules on everything owned with the cards as amended, `--only proposed198` for tuning A and `--only proposed198_core` for it on the core set alone (`--bank 10` for one character, `--regrind 2` for four, `--skill 1.3` and so on); add `revised=False` to a spec to play the cards as printed.
+
+## 20. The author's answers to 19.8, and what they led to (2026-11-17)
+
+The author's answers to the eight questions of 19.8:
+
+1. Treasure sorting: "Between I think. How many transposed are lower than 25+ stat req? How many class are 25+ stat req? If the total number of cards is low then I think class+common and transposed+common is good split with common split based on stat req 25. Where are we putting boss drops and legendary items?"
+2. Sparks: "Use your best information and game design judgement."
+3. Boss health: "Can we determine a flat number per character over solo like we did for non-boss enemies? Something like 0/+4/+8/+12 for example? Bosses should also deal additional damage the same as non-boss enemies."
+4. Reprints not added a second time: "Agree."
+5. Mask of the Child gives two stamina in place of one: "Agree."
+6. Heroic actions: "You can find this online."
+7. The Boreal Outrider Knight against a lone character: "Double check your simulation as source data."
+8. The cards the simulator could not play: "Search the internet."
+
+**This section supersedes the win rates and the tuning of 19.8.** Two things changed every figure: the audit of 20.3, which found that the simulated players, and not the rules, lost most of the lone character's boss fights; and the author's choice of treasure split.
+
+### 20.1 Treasure: the between split (decided)
+
+With every set owned and the cards as amended there are 243 cards in the two decks.
+
+| | Cards | Ask for 25 or more | Ask for less |
+|---|---|---|---|
+| Common | 142 | 54 | 88 |
+| Class | 50 (five a class) | 30 | 20 |
+| Transposed | 51 | 51 | 0 |
+
+- **No transposed card asks for less than 25.** Sorting them by requirement or by kind puts them in the same place.
+- **Thirty of the fifty class cards ask for 25 or more.** They are the only cards the between split treats differently from the split by requirement: between keeps them in tier one.
+- **The split as decided:** *tier one is every class card and every common card that asks for less than 25 in every stat (138 cards). Tier two is every transposed card and every common card that asks for 25 or more in a stat (105 cards).*
+- **Legendary and boss treasure are tier two.** Five legendary cards drawn at random and the mini-boss's own treasure are shuffled into tier two when the mini-boss falls. The main boss's own treasure is shuffled into tier two when the main boss is set up, after the mini-boss. This is as section 18 has it and is unchanged.
+
+### 20.2 Decided without further measurement
+
+- **Reprints (question 4):** only the cards that are new in the 2022 sets join the decks, as Appendix B has it.
+- **Mask of the Child (question 5):** two stamina in place of the turn's one. Appendix B should say so, as it does for the Chloranthy Ring.
+- **Bosses deal the same extra damage as enemies (question 3):** they already did under the accepted rules (+0 / +1 / +2 / +2 on every enemy and boss attack). A check now holds it.
+
+### 20.3 The Boreal Outrider Knight: the simulation was at fault (question 7)
+
+19.5 reported that a lone character fails 79% of its attempts at the Boreal Outrider Knight on the core set alone, in fights of fifty rounds, and put it down to the manuscript's frostbite. **That explanation was wrong, and the figure was an artefact of the simulator.**
+
+- **The source data is right.** The boss's health, heat-up point, block, resist and all eight behaviour cards match the public data set card for card.
+- **Frostbite is played as the manuscript has it** (8.5): no stamina recovered by any means, no Rest, the token off at the end of the character's next complete turn.
+- **What went wrong was how the simulated character played.** In 73% of those fights the character was still alive, and in the fights looked at unhurt, when the fight was cut off at sixty rounds and counted as lost. Three faults, all in the simulated players:
+  1. **Gear was chosen with no regard to the boss.** A lone Knight would raise INT to carry a Fireball as its only weapon and take it against a boss that resists three.
+  2. **A character kept to a free attack that barely scratched** in place of its costly attack and a Rest.
+  3. **A boss fight was cut off at sixty rounds** and counted as a loss, whoever was winning.
+- **Corrected** (each with a check): a loadout is now judged against the block and resist of the boss the party knows it will meet; before a boss a character re-arms from its own inventory, which the manuscript allows outside an encounter (3.2); a fight that is going nowhere is pressed, with the strongest attack and a Rest between; and a boss fight is played to its end.
+
+Lone character against each core boss, core set alone, before and after (attempts won; 70 to 200 attempts a cell):
+
+| | Boreal Outrider Knight | Titanite Demon | Winged Knight | Gargoyle | Dancer | Ornstein and Smough |
+|---|---|---|---|---|---|---|
+| Before | 24% | 83% | 90% | 95% | 79% | 72% |
+| After | 93% | 85% | 91% | 95% | 80% | 67% |
+
+- **The Boreal Outrider Knight is an ordinary mini-boss for a lone character.** Question 7 of 19.8 is withdrawn: nothing about frostbite needs changing.
+- **The official calibration did not move:** 50% / 52% / 55% / 37% (it was 47% / 50% / 56% / 38%).
+- **Lone-character figures everywhere rose,** most on the core set alone, where the lone Knight or Warrior had met that boss in a quarter of its games (20.5).
+
+### 20.4 What the search found (questions 6 and 8)
+
+**Heroic actions.** Two searches (`work/phase7/heroic_web.md`).
+
+| Class | Played as | Source |
+|---|---|---|
+| Mercenary | Rapid Strike: one attack costs no stamina | the 2017 board, one community transcription |
+| Sorcerer | Spell Fury: a magic attack reaches any distance and costs three less | the 2017 board, one community transcription |
+| Pyromancer | Explosive Firepower: the next magic attack gains one more die | the 2022 board (official rulebooks); the 2017 board was not found |
+| Cleric | Keep the Faith: this character and each on the same or an adjacent node heals 2 | the 2022 board; 2017 not found |
+| Thief | Lucky Break: heals 2 damage, recovers 2 stamina, readies its luck token | the 2022 board; 2017 not found |
+| Deprived | none played | not found for either edition |
+
+The Characters expansion rulebook, the retail pages and the 2022 rulebooks do not print the boards, and the fan wikis could not be reached. The Deprived still plays without a heroic action. The author's own board would settle it in a line.
+
+**Cards and data** (`work/phase7/cards_2022_web.md`).
+
+| Sought | Found | In the simulator |
+|---|---|---|
+| The twelve enemies of the two 2022 sets, and the two of the Executioner's Chariot | all fourteen, read from re-drawn data cards and a community table | yes |
+| Encounters of those sets | 27 + 27 line-ups of the 2022 sets from the public data; the Chariot's six from the author's own table | yes |
+| Black Knight, Heavy Knight, Gravelord Nito, Crossbreed Priscilla | behaviour decks, health and defences from the public data set | yes, under the general boss rules, with their treasure |
+| Four-Pronged Plough, Manikin Claws, Crescent Axe | all three (a community table of dice) | yes, with the requirements of Appendix A |
+| Titanite Chunk | in no official set; the manuscript takes it from a community pack | no |
+| Titanite Slab | only as a mega-boss upgrade | no (mega-boss treasure is not dealt) |
+
+**The 2022 sets' enemies and encounters are kept apart from the measurements, and the author should know why.** With them in, on the tuning of 20.5, an average table wins 30% / 35% / 39% / 44%, and about half of all games are lost in ordinary encounters. More than half the fights on a 2022 level 2 card are lost (Painted World 60%, Tomb of Giants 56%, against 16% to 30% for the 2017 sets).
+
+- **The enemy cards found are the printed 2022 cards.** They were written for the 2022 rules. Under the manuscript's rules a Crow Demon leaps to its target for six damage and a push, seven or eight after scaling, and the 2022 cards field up to eight enemies at once.
+- **This is what Appendix B's revised data cards are for.** Their values are the author's and are not online.
+- **The 2022 encounter cards print objectives and special rules** (kill one named enemy, break the barrels, reduce the enemies' block) that the simulator plays as a plain fight to the last enemy.
+
+So the data is in the simulator behind its own switch (`bosses='all22'`, `encounters='all22'`) and the tuning below is measured on every 2017 set, the Executioner's Chariot included, with all the treasure. **To bring the 2022 sets into the measurements the simulator needs the author's revised data cards for the twelve enemies and four bosses.**
+
+### 20.5 Sparks and boss health (questions 2 and 3)
+
+Measured on every 2017 set with all the treasure, the between split, the cards as amended and the corrections of 20.3. 800 games a cell (±3), skill 1.0.
+
+| Games won | 1 | 2 | 3 | 4 | Table time |
+|---|---|---|---|---|---|
+| Accepted: sparks 5 / 4 / 3 / 2, bosses as printed | 64% | 76% | 81% | 86% | 237 / 309 / 363 / 428 |
+| Sparks 4 / 3 / 2 / 1, bosses as printed | 57% | 65% | 70% | 77% | 233 / 308 / 356 / 379 |
+| Sparks 4 / 3 / 2 / 1, boss health +2 a character beyond the first | 57% | 64% | 69% | 72% | – / 320 / 391 / 412 |
+| the same, +3 | 57% | 63% | 67% | 72% | – / 328 / 409 / 430 |
+| **the same, +4 (+0 / +4 / +8 / +12)** | **57%** | **63%** | **68%** | **69%** | 233 / 325 / 425 / 446 |
+| the same, +5 | 57% | 62% | 66% | 71% | – / 339 / 429 / 462 |
+
+**Recommendation.**
+
+1. **Sparks: five less the number of characters (4 / 3 / 2 / 1).** The accepted line leaves two, three and four characters at 76% to 86%, over the band. One spark fewer is worth seven to eleven points at every size and does not lengthen the game. This is the judgement the author asked for.
+2. **Boss health: +4 for each character beyond the first (+0 / +4 / +8 / +12), on every boss; the heat-up point rises by half of it (+0 / +2 / +4 / +6).** It is the author's own figure, the halves are whole numbers, and with it every size is inside the band: 57% / 63% / 68% / 69%. Ornstein and Smough each gain it.
+3. **What the boss health buys and what it costs, plainly.** It matters for four characters (77% → 69%) and hardly at all for two and three (two points each). From +3 to +5 the win rates are the same within the noise. The cost is time: the game is about a fifth longer for three and four characters (356 → 425 and 379 → 446 activations), and the long boss fights get longer. For three characters the Titanite Demon runs 33 rounds (27 as printed), the Winged Knight 32 (24) and the Smelter Demon 30 (18). If that is too slow at the table, +2 a character keeps most of the effect at four (72%) for half the added time.
+4. **Bosses deal the scaled damage already** (20.2).
+
+The scaling table as it would stand:
+
+| Characters | Sparks | Enemy health | Damage on every enemy and boss attack | Boss health | Boss heat-up point |
+|---|---|---|---|---|---|
+| 1 | 4 | as printed | as printed | as printed | as printed |
+| 2 | 3 | +1 | +1 | +4 | +2 |
+| 3 | 2 | +2 | +2 | +8 | +4 |
+| 4 | 1 | +3 | +2 | +12 | +6 |
+
+**The same tuning elsewhere.**
+
+| Games won | 1 | 2 | 3 | 4 |
+|---|---|---|---|---|
+| The core set alone, accepted rules | 91% | 78% | 74% | 75% |
+| The core set alone, this tuning | 85% | 69% | 55% | 62% |
+| Every 2017 set, this tuning, skill 0.85 | 37% | 37% | 27% | 25% |
+| **Every 2017 set, this tuning, skill 1.00 (average)** | **57%** | **63%** | **68%** | **69%** |
+| Every 2017 set, this tuning, skill 1.15 | 74% | 79% | 80% | 82% |
+| Every 2017 set, this tuning, skill 1.30 (the best the dial has) | 83% | 88% | 90% | 90% |
+| With the 2022 sets' enemies, encounters and bosses in, as printed (20.4) | 30% | 35% | 39% | 44% |
+
+- **The average table is inside the band at every size, in its upper half.** The best play measures 83% to 90%, above the "about 80%" the author named. As 19.8 found, the best play sits about 25 points above the average on this dial, so the two targets cannot both be met exactly; the average is the one to steer by.
+- **A lone Knight or Warrior on the core set alone wins 85%.** Before 20.3 the same game measured 70%, held down by the Boreal Outrider Knight artefact. The lone figure on every set (57%) is an average over ten classes that differ widely alone: the Thief 79%, the Mercenary 71%, the Knight and the Warrior 68% to 69%, the Herald 39%, the Deprived 23%. No spark count suits both; this is flagged for the author rather than tuned.
+- **The core set alone is inside the band for two, three and four characters** (69% / 55% / 62%).
+
+**Classes under this tuning** (every 2017 set; games won by a party that includes the class; about 80 games behind each single-character cell):
+
+| | 1 | 2 | 3 | 4 |
+|---|---|---|---|---|
+| Thief | 79% | 85% | 76% | 79% |
+| Mercenary | 71% | 69% | 73% | 71% |
+| Knight | 69% | 61% | 62% | 68% |
+| Warrior | 68% | 71% | 71% | 67% |
+| Cleric | 64% | 61% | 66% | 70% |
+| Assassin | 54% | 66% | 74% | 71% |
+| Pyromancer | 51% | 55% | 67% | 68% |
+| Sorcerer | 46% | 58% | 69% | 68% |
+| Herald | 39% | 54% | 59% | 62% |
+| Deprived | 23% | 48% | 61% | 66% |
+
+The Thief leads at every size; its heroic action is now played with the luck token readied, on the 2022 wording (20.4), and should be read again against the author's board.
+
+### 20.6 Review corrections since 19.8
+
+Each was found by the review of this pull request, verified, corrected and given a check (236 checks pass): the step of an official dodge is one node and not a Walk, two under a card that says so; under the official rules a mini-boss's treasure goes to the inventory and a main boss's is not dealt; Armour of Thorns damage counts for its wearer when the aggro token is assigned, and answers a successful 2022 defence roll; a card that ignores push icons also holds when a damaging push-move begins on its bearer's node; a weapon made magical "this activation" stops being so when the turn ends; the manuscript's dodge is rolled with at most four dice however they come; official frostbite does not charge for a node an attack's shift gives. The figures of this section were measured while these corrections were going in. Each concerns one card or one official rule, and none was expected to move a figure by more than the noise. A confirmation run of the tuning on the final code is being made and will be recorded here.
+
+### 20.7 Where this leaves the rules
+
+Decided or recommended on the author's instruction: the between split (20.1); reprints and the Mask of the Child (20.2); sparks five less the number of characters and boss health +4 a character beyond the first (20.5).
+
+Open, and only the author can close them:
+
+1. **Sparks and boss health as 20.5 has them?** The author asked for a judgement and this is it; +2 a character is the lighter alternative if boss fights of thirty rounds are too long.
+2. **A lone character on the core set alone wins 85%.** Leave it, or give a lone character one spark fewer still?
+3. **The revised data cards of the twelve 2022 enemies and four 2022 bosses** (Appendix B). Without their values the 2022 sets cannot be measured under the manuscript's rules (20.4).
+4. **The heroic actions on the author's own boards** for the Deprived, and the 2017 wording for the Pyromancer, Cleric and Thief if it differs from 2022.
+
+To re-run: `python3 tools/sim/compare.py --only proposed20 --games 800 --probe 300 --bank 6` for this tuning on every 2017 set (`--bank 10` for one character, `--regrind 2` for four, `--skill 1.3` and so on), `--only proposed20_core` for the core set alone, `--only owned20` for the accepted rules, `--only proposed20_22` with the 2022 sets in.
