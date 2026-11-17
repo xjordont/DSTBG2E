@@ -394,6 +394,7 @@ class Economy:
         self.embers = len(party)                       # the manuscript's shop: ember cards equal to the number of characters
         self.inv = []                                  # the shared inventory of the official rules
         self.carried = {}                              # upgrades on weapons lying in it: weapon name -> (bonus, upgrade card)
+        self.n_found = self.n_bought = self.n_sold = 0  # treasure cards found, bought and sold in this game
         names = {c.name for c in party}
         cards = [i for i in ITEMS.values() for _ in range(i.get('copies', 1))]
         self.boss_loot = []
@@ -468,7 +469,7 @@ class Economy:
     def sell(self, c, it):
         """Character c sells card `it` from the bag for one soul. Titanite attached to a sold weapon is sold with it
         and adds nothing; any other attached upgrade comes back to the inventory."""
-        c.bag.remove(it); c.souls += 1; self.sold(it)
+        c.bag.remove(it); c.souls += 1; self.sold(it); self.n_sold += 1
         ups = c.up_cards.pop(it['name'], []); c.plus.pop(it['name'], None)
         for up in ups:
             if 'Titanite' in up['name']: self.sold(up)
@@ -546,6 +547,14 @@ class Economy:
             else: c.bag.append(old)                     # starting equipment is kept too: it can be taken up again, never sold
         c.refresh()
 
+    def in_use(self):
+        """Treasure cards the party is using: equipped, fitted as upgrades or stored as spells (starting cards apart)."""
+        n = 0
+        for c in self.party:
+            n += sum(1 for x in (c.R, c.L, c.A) if x and x['name'] not in c.start) + len(c.spells)
+            n += sum(len(c.up_cards.get(x['name'], ())) for x in (c.R, c.L, c.A) if x)
+        return n
+
     def up_target(self, c, it):
         """The card an upgrade would be fitted to: the armour for an armour upgrade, the right-hand weapon otherwise;
         None when the upgrade is not played, there is no such card, or its upgrade slots are full."""
@@ -560,6 +569,7 @@ class Economy:
         """Treasure found: each card goes to whoever gains most from it (free to equip if requirements are met)."""
         for it in cards:
             if it is None: continue
+            self.n_found += 1
             if self.r.pool: self.inv.append(it); continue
             fits = [(self.fit(c, it), c) for c in self.party]
             fits = [(f, c) for f, c in fits if f]
@@ -614,7 +624,7 @@ class Economy:
                         if f and f[0] > 0.05 and f[1] + price <= c.souls and (levels or f[1] == 0): cands.append((f[0] / (f[1] + price + 0.5), f, it, price, shop))
                 if not cands: break
                 _, f, it, price, src = max(cands, key=lambda x: x[0])
-                src.remove(it); c.souls -= f[1] + price; self.equip(c, it, f[2], f[3])
+                src.remove(it); c.souls -= f[1] + price; self.equip(c, it, f[2], f[3]); self.n_bought += 1 if price else 0
                 if r.treasure == 'row' and src is self.row and self.deck: self.row.append(self.draw())
             for it in list(c.bag):                                   # sell what will never be used (never starting equipment)
                 if it['name'] in c.start: continue

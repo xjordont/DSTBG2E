@@ -50,6 +50,8 @@ def play(n, rules, seed, table=None, classes=None):
     if fv0: eco.spend(levels=fv0 != 'shop')
     out = dict(win=False, rests=0, fights=0, char_turns=0, enemy_acts=0, rounds=0, lost_at=None, deaths=0,
                by_level={}, sparks_left=0, souls=0, repeats=0, dec={}, carried=0.0, souls_lost=0.0, classes=list(cls))
+    def fin():
+        out.update(found=eco.n_found, bought=eco.n_bought, sold=eco.n_sold, in_use=eco.in_use()); return out
     decks = {}
     for lv in (1, 2, 3):
         pool = [e for e in ENCOUNTERS[str(lv)] if in_play(r, 'encounters', e)]; decks[lv] = rng.sample(pool, len(pool))
@@ -194,7 +196,7 @@ def play(n, rules, seed, table=None, classes=None):
                         if c.dropped: out['souls_lost'] += c.dropped[1] / n                # a second defeat: the souls left behind are gone
                         c.dropped = ((stage, pos), c.souls); c.souls = 0
                 if not rest():
-                    out['lost_at'] = lv; out['sparks_left'] = 0; return out
+                    out['lost_at'] = lv; out['sparks_left'] = 0; return fin()
                 done = [False] * 4; fresh = True
                 if not at_boss: must[pos] = True                                   # a failed encounter cannot be skipped
                 pos = 4 if (at_boss and r.fog_gate and not any(clears[i] and refight(i) for i in range(4))) else 0
@@ -206,4 +208,4 @@ def play(n, rules, seed, table=None, classes=None):
             eco.after_mini_boss(); rest(free=True)
     out['win'] = True; out['sparks_left'] = sparks
     out['power'] = sum(c._power for c in party) / n
-    return out
+    return fin()
