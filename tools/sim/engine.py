@@ -364,7 +364,7 @@ class Fight:
             self.wound(c, taken)
             if taken > 0: c.hurt_by.add(src)
             if c.alive:
-                if taken > 0 and 'tearstone' in tr: c.sta = max(0, c.sta - 1)
+                if taken > 0 and 'tearstone' in tr and not (c.frost and r.frost == 'author'): c.sta = max(0, c.sta - 1)     # frostbite bars any recovery
                 for e in effects:
                     if e == 'stagger': c.stagger = True
                     elif e == 'frostbite' and 'im_frost' not in tr: c.frost = True

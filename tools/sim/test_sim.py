@@ -819,6 +819,13 @@ need = lambda f: None if f is None else [w.value(i, f[2][i]) for i in range(4)]
 check('official: a weapon taken from the shared inventory with a gem fitted asks for the gem\'s stats as well as its own',
       bare is not None and (geared is None or need(geared)[2] >= gem['req'][2]) and need(bare)[2] < gem['req'][2], (need(bare), need(geared), gem['req']))
 
+def tearstone(rules, frost):
+    c, f = duel('Knight', rules, enemies=['Sentinel']); c.traits = c.traits | {'tearstone'}; c.sta = 3; c.frost = frost; c.dodge = 0; c.can_parry = False
+    f.defend(f.foes[0], c, 9, False, 9); return c.sta, c.dmg > 0
+check('the manuscript\'s frostbite bars the stamina the Blue Tearstone Ring gives back; without frostbite, and under the official rules, it is given',
+      tearstone(RG, True) == (3, True) and tearstone(RG, False) == (2, True) and tearstone(R17, True) == (2, True),
+      (tearstone(RG, True), tearstone(RG, False), tearstone(R17, True)))
+
 print()
 print('%d checks failed' % len(FAILS) if FAILS else 'all checks passed')
 sys.exit(1 if FAILS else 0)
