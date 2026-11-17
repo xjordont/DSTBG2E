@@ -181,7 +181,9 @@ class Fight:
         self.last_before_foes = True                   # whether the character now acting is the last before the enemies act
         self.special = None; self.bdef = None; self.pair_done = False      # the two-model boss has had its shared turn this enemy phase
         if boss:
-            b = BOSSES[boss]; mul = getattr(r, 'boss_mul', None); k = mul(self.n) if mul else 1
+            b = BOSSES[boss]; mul = getattr(r, 'boss_mul', None)
+            if b.get('kind') == 'main' and getattr(r, 'boss_mul_main', None): mul = r.boss_mul_main      # a scale for main bosses alone
+            k = mul(self.n) if mul else 1
             self.bdef = b; self.special = b.get('special')
             if self.special == 'pair':
                 # one boss fought as two models, each with its own health; one behaviour card a turn, on which both act

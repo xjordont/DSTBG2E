@@ -980,6 +980,14 @@ sh0, sh1 = shoved('Kite Shield (Knight)'), shoved('Black Iron Greatshield')
 check('the Black Iron Greatshield ignores the push of a damaging push-move as it does that of an attack: its bearer is struck and stays put',
       sh0 == (40, 40) and sh1 == (0, 40), (sh0, sh1))
 
+rm = RU.make(dict(REVIEW_GATE, boss_mul_main=[1, 1, 1.25, 1.5, 1.75]))
+def boss_hp(rules, boss, n):
+    return E.Fight([Char('Knight', rules) for _ in range(n)], rules, random.Random(1), boss=boss, policy=E.Policy(), n=n).foes[0].max
+check('a scale set for main bosses alone leaves a mini-boss at its printed health',
+      boss_hp(rm, 'Gargoyle', 4) == boss_hp(RG, 'Gargoyle', 4) and boss_hp(rm, 'Dancer of the Boreal Valley', 4) == int(round(1.75 * boss_hp(RG, 'Dancer of the Boreal Valley', 1)))
+      and boss_hp(rm, 'Dancer of the Boreal Valley', 1) == boss_hp(RG, 'Dancer of the Boreal Valley', 1),
+      (boss_hp(rm, 'Gargoyle', 4), boss_hp(RG, 'Gargoyle', 4), boss_hp(rm, 'Dancer of the Boreal Valley', 4), boss_hp(RG, 'Dancer of the Boreal Valley', 1)))
+
 print()
 print('%d checks failed' % len(FAILS) if FAILS else 'all checks passed')
 sys.exit(1 if FAILS else 0)
