@@ -1122,6 +1122,12 @@ def shoved_at_start(shield, trials=40):
 sa0, sa1 = shoved_at_start('Kite Shield (Knight)'), shoved_at_start('Black Iron Greatshield')
 check('the Black Iron Greatshield also holds its bearer in place when a damaging push-move begins on its own node', sa0 == 40 and sa1 == 0, (sa0, sa1))
 
+kb, f = duel('Knight', RG, enemies=['Sentinel']); kb.buff = dict(mod=2); o_ = dict(kb.options['R'][0], dice='b', mod=5); sen = f.foes[0]
+f.rng = random.Random(7); f.strike(kb, sen, o_); with_buff = 50 - sen.hp; f.end_turn(kb)
+h1 = sen.hp; f.rng = random.Random(7); f.strike(kb, sen, o_); after_turn = h1 - sen.hp
+check('a weapon made magical for this activation is so until the turn ends, and not for a riposte in the enemies\' turn',
+      kb.buff is None and with_buff - after_turn == 2 + sen.armor - sen.resist, (with_buff, after_turn, sen.armor, sen.resist))
+
 print()
 print('%d checks failed' % len(FAILS) if FAILS else 'all checks passed')
 sys.exit(1 if FAILS else 0)

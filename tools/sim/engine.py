@@ -1027,6 +1027,7 @@ class Fight:
 
     def end_turn(self, c):
         r = self.r; tr = c.traits
+        c.buff = None                                   # a weapon made magical "this activation": over with the turn, before any riposte
         if c.alive:
             if 'sunprincess' in tr: c.dmg = max(0, c.dmg - self.mend(c, 1))
             if 'lothric' in tr: c.dmg = max(0, c.dmg - self.mend(c, sum(1 for f in self.foes_alive() if f.node == c.node)))
