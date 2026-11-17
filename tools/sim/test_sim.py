@@ -1080,6 +1080,28 @@ cd_ = E.ENEMIES['Crow Demon']['steps']; ss_ = E.ENEMIES['Skeleton Soldier']['ste
 check('a leap is played as a move of four nodes; the Skeleton Soldier\'s only act is a push-move for two damage and bleed',
       cd_[0]['n'] == 4 and cd_[0]['dmg'] == 6 and ss_ == [dict(k='move', n=1, dir='to', tgt='nearest', push=True, dmg=2, magic=False, dodge=ss_[0]['dodge'], effects=['bleed'])], (cd_, ss_))
 
+# ---------------------------------------------------------------- review: the step of a dodge; official boss treasure
+def dodge_step(armour, dodge, trials=40):
+    """Official 2017: a Knight in this armour, an enemy on its node, steps away with nothing to spend: as the step of a
+    dodge, or as an ordinary Walk. The furthest it ends from where it stood, and how often it moved."""
+    far = 0; moved = 0
+    for sd in range(trials):
+        c = Char('Knight', R17); c.A = CARDS[armour]; c.refresh()
+        f = E.Fight([c], R17, random.Random(sd), enemies=['Sentinel'], policy=E.Policy(evade=0.0))
+        c.node = E.IDX[(2, 2)]; f.foes[0].node = E.IDX[(2, 2)]
+        f.incoming = lambda ch, *a_: 6.0 - 2.0 * E.DIST[ch.node][E.IDX[(2, 2)]]       # the further away, the safer
+        f.reposition(c, 0, True, count=False, frost=False, dodge=dodge)
+        d = E.DIST[c.node][E.IDX[(2, 2)]]; far = max(far, d); moved += d > 0
+    return far, moved
+ds0, ds1, ds2 = dodge_step('Knight Armour', True), dodge_step('Dancer Armour', True), dodge_step('Dancer Armour', False)
+check('the step of an official dodge is one node whatever is worn: armour that lengthens the Walk lengthens a Walk and not a dodge',
+      'walk2' in text_traits(CARDS['Dancer Armour']) and ds0[0] == 1 and ds1[0] == 1 and ds1[1] > 0 and ds2[0] == 2, (ds0, ds1, ds2))
+ro = RU.make({'base': 'official2017', 'sets': 'all'}); eo = Economy([Char('Knight', ro)], ro, random.Random(1)); d0 = len(eo.deck)
+eo.boss_named('Winged Knight', 0); eo.after_mini_boss(); got = sorted(i['name'] for i in eo.inv if i['deck'] == 'boss')
+eo.boss_named('Dancer of the Boreal Valley', 1)
+check('official rules with every set: the mini-boss\'s treasure goes to the inventory and not into the deck; a main boss\'s treasure is not dealt',
+      len(got) == 3 and all('Winged Knight' in n_ or n_ for n_ in got) and not any(i['deck'] == 'boss' for i in eo.deck), (got, sum(i['deck'] == 'boss' for i in eo.deck)))
+
 print()
 print('%d checks failed' % len(FAILS) if FAILS else 'all checks passed')
 sys.exit(1 if FAILS else 0)

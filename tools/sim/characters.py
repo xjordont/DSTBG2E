@@ -496,6 +496,7 @@ class Economy:
         """The boss of this half of the game is chosen: with every set in play its treasure cards join tier two (the
         mini-boss's with the legendaries once it falls, the main boss's as soon as it is known, which is then)."""
         if getattr(self.r, 'sets', 'core') not in ('2017', 'all') or not getattr(self.r, 'boss_loot', True): return
+        if self.r.treasure != 'author' and stage == 1: return       # official: a main boss's treasure is for campaign play only
         loot = [i for i in MORE.values() if i['deck'] == 'boss' and i['boss'] == boss]
         if getattr(self.r, 'sets', 'core') == 'all':    # a 2022 boss's own treasure (as printed, every card; as amended, the cards the manuscript adds)
             loot += [i for i in Y22.values() if deck_of(i, self.r) == 'boss' and i.get('boss') == boss and (i['added_ms'] or not revised(self.r))]
@@ -525,7 +526,9 @@ class Economy:
             self.t1 += self.shop1; self.rng.shuffle(self.t1); self.shop1 = self.stock(self.t1); self.shop2 = self.stock(self.t2)
             self.t2 += self.legend + self.boss_loot; self.rng.shuffle(self.t2)
         else:
-            self.deck += self.later + self.boss_loot; self.later = []; self.rng.shuffle(self.deck)
+            # official: the transposed and legendary cards join the deck; the mini-boss's own treasure goes to the inventory
+            self.deck += self.later; self.later = []; self.rng.shuffle(self.deck)
+            self.give(self.boss_loot); self.boss_loot = []
 
     def sell(self, c, it):
         """Character c sells card `it` from the bag for one soul. Titanite attached to a sold weapon is sold with it

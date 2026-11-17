@@ -331,7 +331,7 @@ class Fight:
                 if c.heroic and c.name == 'Assassin' and src.hp > 0:                       # Backstab: a free attack after a dodge
                     o = c.best_option(src, DIST[c.node][src.node], 99, hand='R')
                     if o: self.hero(c); self.strike(c, src, o)
-                if r.dodge_move == 'paid': self.reposition(c, min(1, free), False, count=False)     # 2022: may pay 1 stamina to move a node
+                if r.dodge_move == 'paid': self.reposition(c, min(1, free), False, count=False, dodge=True)     # 2022: may pay 1 stamina to move a node
                 return False
             how, arg = 'block', 0
         hit = True; taken = 0; rolled = False            # whether block or resist dice were rolled against this attack
@@ -357,7 +357,7 @@ class Fight:
             dice_n, sta = arg if how == 'dodge' else (par_n, par_sta)
             c.sta += sta
             # 2017: having paid for the dodge the character can move one node, before the dice are rolled and whatever they show
-            if how == 'dodge' and r.dodge_move == 'before': self.reposition(c, 0, True, count=False, frost=False)   # frostbite is charged on the dodge
+            if how == 'dodge' and r.dodge_move == 'before': self.reposition(c, 0, True, count=False, frost=False, dodge=True)   # frostbite is charged on the dodge
             need = k + pen_d - (mk if how == 'dodge' else 0)
             got = sum(rng.random() < 0.5 for _ in range(dice_n)); ok = got >= need
             if peek: ok = True                              # the roll was seen before the dodge was chosen
@@ -793,9 +793,10 @@ class Fight:
         if run and 'no_run' in tr: return None
         return run * (2 if 'run2' in tr else 1) + (steps if (c.frost and self.r.frost == 'official') else 0), bool(run)
 
-    def reposition(self, c, budget, walk_free, count=True, frost=True):
+    def reposition(self, c, budget, walk_free, count=True, frost=True, dodge=False):
         """After acting, step out of the enemies' reach if that saves more damage than it costs in stamina. Also used for
-        the optional step of an official dodge (count=False keeps it out of the tally of turns ending with a step)."""
+        the optional step of an official dodge (count=False keeps it out of the tally of turns ending with a step). The
+        step of a dodge is neither a Walk nor a Run: one node, and no card that changes walking or running applies to it."""
         if not self.foes_alive() or budget < 0: return
         here = c.node; base = self.incoming(c, 0); best = (0.25, here, 0)
         reach = max([o['range'] for h in 'RL' for o in c.options[h]] or [0])
@@ -809,9 +810,10 @@ class Fight:
         for node, steps in seen.items():
             if steps == 0: continue
             tr = c.traits
-            run = max(0, steps - ((0 if 'no_walk' in tr else 2 if 'walk2' in tr else 1) if walk_free else 0))
-            if run and 'no_run' in tr: continue
-            cost = run * (2 if 'run2' in tr else 1)
+            if dodge and steps > 1: continue
+            run = max(0, steps - ((1 if dodge else 0 if 'no_walk' in tr else 2 if 'walk2' in tr else 1) if walk_free else 0))
+            if run and 'no_run' in tr and not dodge: continue
+            cost = run * (2 if ('run2' in tr and not dodge) else 1)
             if frost and c.frost and self.r.frost == 'official': cost += steps          # 2017 frostbite: one more for each walk or run
             if cost > budget: continue
             c.node = node
