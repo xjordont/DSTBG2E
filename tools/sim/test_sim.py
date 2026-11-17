@@ -813,6 +813,12 @@ check('Armour of Thorns answers only a defence that rolled block or resist dice:
       tp[0] >= 10 and tp[1] == 0 and td[0] >= 10 and td[1] == 0, (tp, td))
 check('and it does answer a manuscript failed dodge, which rolls the armour\'s dice', ta[0] >= 10 and ta[1] == ta[0], ta)
 
+w = Char('Warrior', R17); eco = Economy([w], R17, random.Random(1)); sword = ITEMS['Balder Side Sword']; gem = ITEMS['Crystal Gem']
+eco.inv.append(sword); bare = eco.fit(w, sword); eco.carried[sword['name']] = (gem['up'], [gem]); geared = eco.fit(w, sword)
+need = lambda f: None if f is None else [w.value(i, f[2][i]) for i in range(4)]
+check('official: a weapon taken from the shared inventory with a gem fitted asks for the gem\'s stats as well as its own',
+      bare is not None and (geared is None or need(geared)[2] >= gem['req'][2]) and need(bare)[2] < gem['req'][2], (need(bare), need(geared), gem['req']))
+
 print()
 print('%d checks failed' % len(FAILS) if FAILS else 'all checks passed')
 sys.exit(1 if FAILS else 0)

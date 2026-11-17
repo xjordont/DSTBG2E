@@ -499,7 +499,10 @@ class Economy:
             plus = dict(c.plus); plus[tgt['name']] = plus.get(tgt['name'], ()) + it['up']
             gain = power(c.profile(tiers=got[1], plus=plus), c.r) - c._power
             return (gain, got[0], got[1], 'U')
-        got = c.cost_to_meet(it['req'])
+        req = it['req']
+        if it['name'] in self.carried:                  # an upgrade that comes with the card must be met as well as the card
+            for up in (self.carried[it['name']][1] or ()): req = [max(x, y) for x, y in zip(req, up['req'])]
+        got = c.cost_to_meet(req)
         if got is None: return None
         cost, tiers = got
         off = 'offhand' in text_traits(it)               # a shield that may sit beside a two-handed weapon
