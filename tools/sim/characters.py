@@ -17,7 +17,9 @@ ITEMS = GEAR['items']
 _MORE = json.load(open(os.path.join(HERE, 'gear_more.json')))
 MORE = _MORE['items']
 CLASSES = dict(GEAR['classes']); CLASSES.update(_MORE['classes'])
-CARDS = dict(ITEMS); CARDS.update(MORE)
+# The treasure of the 2022 sets the author owns (gear_2022.json): in the decks where a ruleset says sets='all'.
+Y22 = json.load(open(os.path.join(HERE, 'gear_2022.json')))['items']
+CARDS = dict(ITEMS); CARDS.update(MORE); CARDS.update(Y22)
 CORE4 = ['Knight', 'Warrior', 'Herald', 'Assassin']
 ALL10 = CORE4 + sorted(_MORE['classes'])
 STURDY = ('Knight', 'Warrior')                       # the classes a lone player or a pair is assumed to include
@@ -103,6 +105,19 @@ TRAITS = {
     "This weapon's attacks gain +1 damage and magic": ('mod', 'w_magic'),
     "This weapon's 0 range attacks gain 1 range and magic": ('w_flash',),
     "If this weapon's attack deals 0 damage, you may flip your Luck token to the ready side": ('w_hollow',),
+    # texts that come with the 2022 sets (wording from a community table of card values)
+    "This weapon's attacks gain +1 damage. If this weapon is a boss treasure, reduce the cost of its highest-stamina attack by 1 stamina": ('mod',),
+    "This weapon's attacks gain +2 damage against bosses. This upgrade occupies 2 slots": ('w_boss2',),
+    "This weapon gains 1 upgrade slot. This weapon's attacks gain Magic": ('w_magic',),
+    'This weapon gains +1 damage against Hollows': ('w_vs_hollow',),
+    'After you attack with this weapon, you suffer Bleed': ('w_selfbleed',),
+    'All of your attacks gain +1 damage while you have four or more damage cubes on your endurance bar': ('redtear',),
+    'During your activation, you may permanently discard this card to remove all damage and conditions from your character': ('blessing',),
+    'This armor gains 1 physical BLK and 1 magical BLK if it has an equipped ring': ('steel',),
+    'When one of your equipment cards allows a character to gain health, they gain +1 health': ('mender',),
+    "When you attack an enemy's weak arc, instead of gaining an additional 1 BLK, gain an additional 1 BLU": ('weak_blue',),
+    'When you make a magical attack, reduce the stamina cost by 1': ('xanthous',),
+    'You may gain 3 stamina at the start of your activation (instead of 2)': ('mask',),
 }
 NOT_PLAYED = {
     'You gain +1 dodge against traps': 'traps are not played',
@@ -114,13 +129,15 @@ NOT_PLAYED = {
     'During your activation, you may discard this card to end an encounter and return to the Bonfire tile': "a mega boss's treasure: never dealt in a standard game",
     'You may discard this card to replace an encounter card with a random encounter card of the same level': "a mega boss's treasure: never dealt in a standard game",
     'Immediately gain an Ember token and discard this card': 'embers are handled by the ruleset, not as a treasure card',
+    'Once during each of your activation, you may look at one trap token in this encounter and return it face down': 'traps are not played',
+    'When a character in your node would suffer damage, you can suffer the damage instead': 'a choice between characters that the simulated players do not make',
 }
 # What a trait the dice do not show is worth, in the units of `power` (a judgement; varied in the robustness runs)
 TRAIT_VALUE = dict(sunprincess=0.8, sanctus=0.8, lothric=0.4, tinybeing=0.5, tearstone=0.4, chloranthy=0.6, favour=0.3, pontiff=0.4,
                    knightslayer=0.3, blades=0.5, leo=0.4, thorns=0.4, sunset=0.1, faraam=0.2, hero_hp=0.15, hero_sta=0.15, hero_cleanse=0.1,
                    serpent=0.6, serpent2=0.8, wolf=0.5, mon=0.4, life=0.6, im_bleed=0.15, im_poison=0.15, im_frost=0.1, im_push=0.1,
                    dodge2=0.1, walk2=0.3, run2=-0.2, no_walk=-0.5, no_run=-0.3, vs_hollow=0.15, vs_boss=0.2, vs_far=0.2, alonne=0.05,
-                   w_hollow=0.2, dragoncrest=0.2, swamp=0.2)
+                   w_hollow=0.2, dragoncrest=0.2, swamp=0.2, redtear=0.3, blessing=0.8, mender=0.2, weak_blue=0.15, mask=0.6)
 FX_VALUE = dict(bleed=0.5, poison=0.6, stagger=0.4, frostbite=0.15)
 
 
@@ -156,6 +173,7 @@ class Char:
         self.estus = self.luck = self.heroic = True; self.ember = False; self.ember_card = False; self.mon = True
         self.node = 0; self.stagger = self.frost = self.bleed = False; self.poison = 0; self.ran = False
         self.guard = ('', ''); self.buff = None; self.hurt_by = set(); self.rolls = 0
+        self.bless = True                             # a card that is discarded for good when used has not been used
         self.A = next(x for x in kit if x['type'] == 'armour'); hands = [x for x in kit if x['type'] == 'hand']
         # three hand cards for two hands: the pair that makes the stronger character is carried, the third kept spare
         best = None
@@ -209,6 +227,8 @@ class Char:
         p['arm_blk'] = A.get('block', '') if A else ''; p['arm_res'] = A.get('resist', '') if A else ''
         p['blk_pen'] = cal - sum(x.get('block_mod', 0) for x in worn); p['res_pen'] = cal - sum(x.get('resist_mod', 0) for x in worn)
         p['arm_blk_pen'] = cal - (A.get('block_mod', 0) if A else 0); p['arm_res_pen'] = cal - (A.get('resist_mod', 0) if A else 0)   # the armour's own, for a failed dodge
+        if A and 'steel' in traits and plus.get(A['name']):               # an armour that is stronger with a ring fitted
+            for k in ('blk', 'res', 'arm_blk', 'arm_res'): p[k] += 'b'
         p['dodge'] = 0 if 'no_dodge' in traits else sum(x.get('dodge', 0) for x in worn)
         p['dodge_pen'] = cal
         p['two'] = bool(R and R['hands'] == 2)
@@ -247,12 +267,17 @@ class Char:
                             if 'w_magic' in wt: o['magic'] = True
                             if 'w_flash' in wt and o['range'] == 0: o['range'] = 1; o['magic'] = True
                             if 'w_hollow' in wt: o['hollow'] = True
+                            if 'w_boss2' in wt: o['vs_boss'] = 2 * wt.count('w_boss2')
+                            own_t = text_traits(card)                 # what the weapon's own text adds to its attacks
+                            if 'w_vs_hollow' in own_t: o['vs_hollow'] = 1
+                            if 'w_selfbleed' in own_t: o['self_fx'] = ['bleed']
                         if 'hornet' in traits: o['dice'] += 'o'; o['mod'] -= 2
                         if 'calamity' in traits: o['mod'] += 1
                         if o['magic']:
                             if 'tiara' in traits: o['mod'] += 1
                             if 'manus' in traits: o['cost'] += 1; o['dice'] += 'b'
                             if 'duskcrown' in traits: o['cost'] = max(0, o['cost'] - 2); o['self_dmg'] = o.get('self_dmg', 0) + 1
+                            if 'xanthous' in traits: o['cost'] = max(0, o['cost'] - 1)
                         if o['range'] == 0 and 'minotaur' in traits: o['push'] = True
                         if o['node'] and 'aoe_cheap' in traits: o['cost'] = max(0, o['cost'] - 1)
                     opts[hand].append(o); mine.append((o, own))
@@ -372,10 +397,12 @@ class Economy:
         names = {c.name for c in party}
         cards = [i for i in ITEMS.values() for _ in range(i.get('copies', 1))]
         self.boss_loot = []
-        if getattr(rules, 'sets', 'core') == 'all':
+        sets = getattr(rules, 'sets', 'core')
+        if sets in ('2017', 'all'):
             # every owned set: the other sets' common, class, transposed and legendary cards join the core set's, whoever
             # is playing; the treasure of the two bosses of this game is kept apart until the mini-boss falls
             cards += [i for i in MORE.values() if i['deck'] != 'boss']
+        if sets == 'all': cards += [i for i in Y22.values() if i['deck'] != 'boss']      # and the 2022 sets' cards
         common = [i for i in cards if i['deck'] == 'common']
         legend = rng.sample([i for i in cards if i['deck'] == 'legendary'], 5)
         if rules.treasure == 'author':
@@ -408,7 +435,7 @@ class Economy:
     def boss_named(self, boss, stage):
         """The boss of this half of the game is chosen: with every set in play its treasure cards join tier two (the
         mini-boss's with the legendaries once it falls, the main boss's as soon as it is known, which is then)."""
-        if getattr(self.r, 'sets', 'core') != 'all' or not getattr(self.r, 'boss_loot', True): return
+        if getattr(self.r, 'sets', 'core') not in ('2017', 'all') or not getattr(self.r, 'boss_loot', True): return
         loot = [i for i in MORE.values() if i['deck'] == 'boss' and i['boss'] == boss]
         if stage == 0: self.boss_loot += loot; return
         deck = (self.t1 if getattr(self.r, 'deck_split', 'req') == 'kind' else self.t2) if self.r.treasure == 'author' else self.deck
@@ -524,7 +551,9 @@ class Economy:
         None when the upgrade is not played, there is no such card, or its upgrade slots are full."""
         if not it.get('up'): return None
         tgt = c.A if it.get('on') == 'armour' else (c.R if has_dice(c.R) else None)
-        if tgt is None or tgt.get('slots', 0) <= len(c.up_cards.get(tgt['name'], ())): return None
+        if tgt is None: return None
+        used = sum(x.get('size', 1) for x in c.up_cards.get(tgt['name'], ()))     # an upgrade takes one slot; one card of 2022 takes two
+        if tgt.get('slots', 0) - used < it.get('size', 1): return None
         return tgt
 
     def give(self, cards):

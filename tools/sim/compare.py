@@ -41,7 +41,9 @@ REVIEW = dict(LOOP, hp_add=[0, 0, 1, 2, 3], atk=[0, 0, 1, 2, 2], boss_atk=[0, 0,
 # the characters, bosses keep their printed health, and the fourth stat tier costs twelve souls in every kind of game.
 REVIEW_GATE = dict(LOOP, hp_add=[0, 0, 1, 2, 3], atk=[0, 0, 1, 2, 2], boss_atk=[0, 0, 1, 2, 2], sparks=[0, 5, 4, 3, 2], solo_souls=6,
                    free_visit='shop', tier4=5, tier_cost=(2, 4, 8, 12))
-# Every owned set of 2017 in the treasure decks, whoever is playing (section 18), under the three ways of sorting them
+# Every owned set in the treasure decks, whoever is playing (sections 18 and 19), under the three ways of sorting them.
+# sets='2017' keeps to the 2017 sets; sets='all' adds the 2022 sets' cards. WORLD adds every class, boss and encounter.
+WORLD = dict(roster='all', bosses='all', encounters='all')
 ALL_REQ = dict(REVIEW_GATE, sets='all', deck_split='req')          # by requirement: 25 or more is tier two, with the transposed cards
 ALL_KIND = dict(REVIEW_GATE, sets='all', deck_split='type_all')    # by kind: common and class tier one, transposed tier two
 ALL_MID = dict(REVIEW_GATE, sets='all', deck_split='mid')          # common cards split at 25, class cards tier one, transposed tier two

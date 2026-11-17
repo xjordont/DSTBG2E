@@ -549,7 +549,7 @@ from compare import ALL_REQ, ALL_KIND, ALL_MID
 kinds = Counter(v['deck'] for v in MORE.values())
 check('the other sets add 63 common, 30 class, 30 transposed and 10 legendary cards, and 56 boss treasure cards',
       (kinds['common'], kinds['class'], kinds['transposed'], kinds['legendary'], kinds['boss']) == (63, 30, 30, 10, 56), dict(kinds))
-_ra = RU.make(ALL_REQ); _ea = Economy([Char('Knight', _ra)], _ra, random.Random(2))
+_ra = RU.make(dict(ALL_REQ, sets='2017')); _ea = Economy([Char('Knight', _ra)], _ra, random.Random(2))
 check('no card of the other sets shares a name with a core card; the 22 starting cards of the six other classes are in no treasure deck',
       not set(MORE) & set(ITEMS) and kinds['starting'] == 22 and not any(i['deck'] == 'starting' for i in _ea.t1 + _ea.t2 + _ea.shop1))
 check('every transposed card asks for 25 or more in a stat', all(max(v['req']) >= 25 for d in (ITEMS, MORE) for v in d.values() if v['deck'] == 'transposed'))
@@ -563,7 +563,7 @@ check('an upgrade card carries the traits its text gives; one whose text is not 
       and ITEMS['Titanite Shard']['up'] == ('mod',) and ITEMS['Heavy Gem']['up'] == ('die',) and MORE['Binoculars']['up'] is None)
 sizes = {}
 for name, spec in (('req', ALL_REQ), ('kind', ALL_KIND), ('mid', ALL_MID)):
-    rr = RU.make(spec); e = Economy([Char('Knight', rr), Char('Herald', rr)], rr, random.Random(1))
+    rr = RU.make(dict(spec, sets='2017')); e = Economy([Char('Knight', rr), Char('Herald', rr)], rr, random.Random(1))
     one = e.t1 + e.shop1; e.boss_named('Gargoyle', 0); n2 = len(e.t2)
     sizes[name] = (len(one), n2, sum(max(i['req']) >= 25 for i in one), sum(i['deck'] == 'class' for i in e.t2))
     e.after_mini_boss(); e.boss_named('Dancer of the Boreal Valley', 1)
@@ -765,6 +765,26 @@ check('a character who can hurt a heavily armoured enemy only with its costly at
 rw = RU.make(dict(ALL_REQ, roster='all', bosses='all', encounters='all')); gw = [play(2, rw, sd, table=Table(skill=1.0, bank=6)) for sd in range(40)]
 check('games with every class, boss, encounter and card of the 2017 sets run to their end, and meet bosses of other sets',
       all(x['win'] or x['lost_at'] is not None for x in gw) and len({x.get('main') for x in gw}) >= 4, sorted({str(x.get('main')) for x in gw}))
+
+# ---------------------------------------------------------------- the 2022 sets' treasure
+from characters import Y22
+k22 = Counter((v['conf'], v['deck']) for v in Y22.values())
+check('the 2022 sets: 164 treasure cards, 126 of them reprints of cards the simulator already holds, 38 new', len(Y22) == 164
+      and sum(v for (c_, d_), v in k22.items() if c_ == 'reprint') == 126 and sum(v for (c_, d_), v in k22.items() if c_ == 'community') == 38, dict(k22))
+check('a reprint is played with the values of the card it reprints', all(v['req'] == CARDS[k.split(' [')[0]]['req'] for k, v in Y22.items()
+      if v['conf'] == 'reprint' and k.split(' [')[0] in CARDS and CARDS[k.split(' [')[0]].get('cls') in (None, v.get('cls'))))
+ry = RU.make(ALL_REQ); ey = Economy([Char('Knight', ry)], ry, random.Random(1)); r7 = RU.make(dict(ALL_REQ, sets='2017')); e7 = Economy([Char('Knight', r7)], r7, random.Random(1))
+n_all = len(ey.t1 + ey.shop1 + ey.t2); n_17 = len(e7.t1 + e7.shop1 + e7.t2)
+check('with every set in the decks the 2022 cards join them: 144 more common, class and transposed cards than the 2017 sets alone', n_all - n_17 == 144, (n_17, n_all))
+c = Char('Knight', RG); c.R = ITEMS['Halberd']; c.L = None; c.tier = [4, 4, 4, 4]; c.refresh(); eco = Economy([c], RG, random.Random(1))
+scale = next(v for v in Y22.values() if v.get('size') == 2); c.bag = [scale, ITEMS['Titanite Shard']]; eco.shop1 = []; eco.shop2 = []; eco.spend()
+check('an upgrade that occupies two slots leaves no room for another on a two-slot weapon', len(c.up_cards.get('Halberd', [])) == 1, [x['name'] for x in c.up_cards.get('Halberd', [])])
+c, f = duel('Knight', RG, boss='Gargoyle'); foe = f.foes[0]; f.strike(c, foe, dict(c.options['R'][0], dice='', mod=foe.armor, vs_boss=2)); hb = 50 - foe.hp
+c, f = duel('Knight', RG); foe = f.foes[0]; f.strike(c, foe, dict(c.options['R'][0], dice='', mod=foe.armor, vs_boss=2, vs_hollow=1))
+check('damage against bosses counts against a boss only; damage against Hollows against a Hollow', hb == 2 and 50 - foe.hp == 1, (hb, 50 - foe.hp))
+def tear(dmg):
+    c, f = duel('Knight', RG, seed=5); c.traits = c.traits | {'redtear'}; c.dmg = dmg; foe = f.foes[0]; f.strike(c, foe, dict(c.options['R'][0], dice='b', mod=9)); return 50 - foe.hp
+check('the Red Tearstone Ring adds a damage only with four or more damage cubes on the bar', tear(4) == tear(3) + 1 and tear(0) == tear(3), (tear(0), tear(3), tear(4)))
 
 print()
 print('%d checks failed' % len(FAILS) if FAILS else 'all checks passed')

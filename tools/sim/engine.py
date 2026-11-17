@@ -624,6 +624,7 @@ class Fight:
         rng = self.rng; r = self.r; grand = 0; tr = c.traits
         if c.buff and o['dice'] and not o.get('spell'): o = dict(o, magic=True, mod=o['mod'] + c.buff['mod'])   # a weapon made magical this turn
         mod = o['mod'] + (o.get('ember_mod', 0) if c.ember else 0) - (1 if (c.stagger and r.stagger == 'author') else 0)
+        if 'redtear' in tr and c.dmg >= 4 and o['dice']: mod += 1     # a ring that rewards fighting on while badly hurt
         if o.get('direct'):                                          # a fixed amount of damage, no roll: only on an enemy that shares its node
             if any(g is not f and g.node == f.node for g in self.foes_alive()):
                 self.hurt(f, o['direct']); self.dealt[c] = self.dealt.get(c, 0) + o['direct']; grand = o['direct']
@@ -639,7 +640,7 @@ class Fight:
             if o.get('area'): targets = [x for x in self.foes_alive() if DIST[c.node][x.node] <= o['area'] and not (o.get('shaft') and x.node == c.node)]
             elif o.get('node'): targets = [x for x in self.foes_alive() if x.node == f.node]
             else: targets = [f]
-            dice = o['dice'] + ('b' if (f.boss and f.weak and o['range'] <= 1 and o['dice']) else '')
+            dice = o['dice'] + (('u' if 'weak_blue' in tr else 'b') if (f.boss and f.weak and o['range'] <= 1 and o['dice']) else '')
             faces = roll(dice, rng); c.rolls += 1
             if o.get('reroll') and faces:                            # two-handed grip: one die may be rolled again
                 i = min(range(len(faces)), key=lambda j: faces[j] - sum(DIE[dice[j]]) / 6)
@@ -648,7 +649,8 @@ class Fight:
             for t in targets:
                 guard = 0 if o.get('ignore') else t.resist if o['magic'] else t.armor
                 if t.stagger and r.stagger == 'author': guard = max(0, guard - 1)      # a staggered model blocks and resists one less
-                lead = v + (1 if ('leo' in tr and t in c.hurt_by) else 0)
+                lead = v + (1 if ('leo' in tr and t in c.hurt_by) else 0) + (o.get('vs_boss', 0) if t.boss else 0) \
+                    + (o.get('vs_hollow', 0) if 'Hollow' in t.name else 0)
                 total = max(0, lead - guard)
                 if 'knightslayer' in tr and o['dice'] and lead - guard >= 3 and not (c.frost and r.frost == 'author'): c.sta = max(0, c.sta - 1)
                 if total > 0:
@@ -669,6 +671,9 @@ class Fight:
         if o.get('aggro') and self.live():                           # the token may be handed to another: the sturdiest takes it
             self.aggro = max(self.live(), key=lambda x: (x.mean_blk + 0.5 * x.dodge, x.cap - x.dmg - x.sta))
         if o.get('self_dmg'): self.wound(c, o['self_dmg'])
+        if 'bleed' in o.get('self_fx', ()) and c.alive and 'im_bleed' not in tr:      # a weapon that makes its wielder bleed
+            if r.bleed == 'official' or not c.bleed: c.bleed = True
+            else: c.bleed = False; self.wound(c, 3)
         return grand
 
     # -------------------------------------------------------------- support actions
@@ -706,8 +711,9 @@ class Fight:
     def support(self, c, o, pick):
         r = self.r
         if 'sup' in o:
+            more = 1 if ('mender' in c.traits and o['sup']['hp']) else 0      # an armour that adds one to any healing its wearer gives
             for x in pick:
-                x.dmg = max(0, x.dmg - o['sup']['hp'])
+                x.dmg = max(0, x.dmg - o['sup']['hp'] - more)
                 if not (x.frost and r.frost == 'author'): x.sta = max(0, x.sta - o['sup']['sta'])
         elif 'guard' in o:
             for x in pick: x.guard = (x.guard[0] + o['guard']['blk'], x.guard[1] + o['guard']['res'])
@@ -762,9 +768,12 @@ class Fight:
         if not barred:
             regen = max(0, r.regen - (1 if (c.frost and r.frost == '2022') else 0))
             if any('chloranthy' in x.traits for x in self.live() if x.node == c.node): regen += 1
+            if 'mask' in tr: regen += 1
             if 'tinybeing' in tr and regen >= 1 and c.dmg > 0: regen -= 1; c.dmg -= 1      # one of the stamina traded for health
             c.sta = max(0, c.sta - regen)
         if 'sanctus' in tr: c.dmg = max(0, c.dmg - 1)
+        if 'blessing' in tr and c.bless and c.dmg >= pol.estus_at + 1 and not c.estus:
+            c.bless = False; c.dmg = 0; c.poison = 0; c.bleed = c.frost = c.stagger = False     # discarded for good: all damage and conditions off
         if 'blades' in tr and not c.luck and c.cap - c.dmg - c.sta >= 4: c.dmg += 1; c.luck = True
         if r.aggro == 'active': self.aggro = c
         c.ran = False
