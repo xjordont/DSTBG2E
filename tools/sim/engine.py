@@ -246,10 +246,19 @@ class Fight:
     def defend(self, src, c, dmg, magic, k, push=False, effects=(), parryable=True):
         """An attack of `dmg` (after scaling) with dodge difficulty k resolves against character c. Returns whether the
         character was hit (a blocked attack is a hit; a dodged or parried one is not)."""
+        shared = src.node == c.node; self._made = False
+        hit = self._defend(src, c, dmg, magic, k, push, effects, parryable)
+        # a card that answers the attack itself, hit or not: "After a Hollow on your node attacks you, you may push that Hollow"
+        if self._made and shared and 'sunset' in c.traits and 'Hollow' in src.name and src.hp > 0 and c.alive:
+            src.node = step_away(src.node, c.node, self.rng) if c.node != src.node else self.rng.choice(NBR[src.node])
+        return hit
+
+    def _defend(self, src, c, dmg, magic, k, push, effects, parryable):
         if not c.alive or src.hp <= 0: return False    # a riposte or a backstab may have killed the attacker mid-activation
         r, pol, rng = self.r, self.pol, self.rng
         if src.stagger and r.stagger == 'author': k = max(0, k - 1)      # a staggered attacker is easier to dodge and parry
         if not src.boss and rng.random() < pol.evade: return False
+        self._made = True                               # the attack is made: from here on it is blocked, dodged, parried or taken
         free = c.cap - c.dmg - c.sta
         pen = 1 if (c.stagger and r.stagger == 'author') else 0
         tr = c.traits
@@ -399,7 +408,6 @@ class Fight:
                     c.node = step_away(c.node, src.node, rng) if c.node != src.node else rng.choice(NBR[c.node])
             if src.hp > 0 and shared:
                 if 'thorns' in tr and rolled: self.hurt(src, 1)                 # after a block or resist roll against an enemy in the node
-                if 'sunset' in tr and 'Hollow' in src.name and src.hp > 0 and c.alive: src.node = rng.choice(NBR[src.node])
         return hit
 
     def hurt(self, f, d):

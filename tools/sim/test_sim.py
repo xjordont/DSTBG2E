@@ -988,6 +988,19 @@ check('a scale set for main bosses alone leaves a mini-boss at its printed healt
       and boss_hp(rm, 'Dancer of the Boreal Valley', 1) == boss_hp(RG, 'Dancer of the Boreal Valley', 1),
       (boss_hp(rm, 'Gargoyle', 4), boss_hp(RG, 'Gargoyle', 4), boss_hp(rm, 'Dancer of the Boreal Valley', 4), boss_hp(RG, 'Dancer of the Boreal Valley', 1)))
 
+def sunset(enemy, trials=80):
+    """A Knight with the Sunset Shield is attacked by an enemy on its node: outcomes seen, as (how defended, hit, attacker moved off)."""
+    seen = Counter()
+    for sd in range(trials):
+        c, f = duel('Knight', RG, enemies=(enemy,), seed=sd); c.L = CARDS['Sunset Shield']; c.refresh(); c.luck = c.heroic = False
+        c.can_parry = True; c.parry_n = 2; foe = f.foes[0]; hit = f.defend(foe, c, 4, False, 1)
+        seen[(max(f.dec, key=f.dec.get), hit, foe.node != E.IDX[(0, 0)])] += 1
+    return seen
+su, sk = sunset('Hollow Soldier'), sunset('Silver Knight Swordsman')
+check('the Sunset Shield pushes a Hollow that attacked its bearer on the same node whether the attack was blocked, dodged or parried; no other enemy',
+      all(moved for (_, _, moved) in su) and any(not hit for (_, hit, _) in su) and any(hit for (_, hit, _) in su) and not any(moved for (_, _, moved) in sk),
+      (dict(su), dict(sk)))
+
 print()
 print('%d checks failed' % len(FAILS) if FAILS else 'all checks passed')
 sys.exit(1 if FAILS else 0)
