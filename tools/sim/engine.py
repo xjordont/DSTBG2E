@@ -274,12 +274,13 @@ class Fight:
             ps = p_dodge(dice_n, k + pen_d)
             mixed = ((0, ps),) + tuple((d, p * (1 - ps)) for d, p in fail)
             opts.append((cost(mixed, sta), 'dodge', (dice_n, sta)))
-        if (r.parry and parryable and not push and c.can_parry and DIST[src.node][c.node] == 0 and sta1 <= room
+        par_sta, par_n = 1, c.dodge                     # a parry: one stamina, the dodge dice printed on the equipped cards and no more
+        if (r.parry and parryable and not push and c.can_parry and DIST[src.node][c.node] == 0 and par_sta <= room
                 and not src.boss):
-            ps = p_dodge(nd, k + pen_d)
+            ps = p_dodge(par_n, k + pen_d)
             gain = c.riposte_ev(src) + 1.0                       # the riposte, and the stagger on the attacker
             mixed = ((0, ps), (dmg, 1 - ps))
-            opts.append((cost(mixed, sta1) - ps * gain + (1 - ps) * 1.0, 'parry', None))
+            opts.append((cost(mixed, par_sta) - ps * gain + (1 - ps) * 1.0, 'parry', None))
         _, how, arg = min(opts, key=lambda o: o[0]); pre = None; peek = None
         if 'wolf' in tr and nd > 0 and sta1 <= room and getattr(r, 'defence', 'choice') != 'combined':
             # the dodge dice are rolled before the choice is made: a roll that would dodge is taken, any other is a block
@@ -323,7 +324,7 @@ class Fight:
                 for j in again: faces[j] = rng.choice(DIE[dice[j]])
                 v = total(); taken = max(0, dmg - max(0, v - bpen))
         else:
-            dice_n, sta = arg if how == 'dodge' else (nd, sta1)
+            dice_n, sta = arg if how == 'dodge' else (par_n, par_sta)
             c.sta += sta
             # 2017: having paid for the dodge the character can move one node, before the dice are rolled and whatever they show
             if how == 'dodge' and r.dodge_move == 'before': self.reposition(c, 0, True, count=False, frost=False)   # frostbite is charged on the dodge
@@ -386,14 +387,19 @@ class Fight:
         if f.bleed and self.r.bleed == 'official': d += 2; f.bleed = False      # official: any damage suffered sets the bleed off
         f.hp -= d; self.check_heat(f)
 
-    def afflict(self, t, fx):
-        """Conditions placed on an enemy or boss by a character's attack that hit it, under the ruleset's condition rules."""
+    def afflict(self, t, fx, by=None):
+        """Conditions placed on an enemy or boss by a character's attack that hit it, under the ruleset's condition rules.
+        Bleed damage set off by the attack counts as damage dealt by the attacker `by` (the manuscript, 8.5)."""
         r = self.r
         for e in fx:
             if t.hp <= 0: return
             if e == 'bleed':
                 if r.bleed == 'official': t.bleed = True             # the next damage it suffers is two higher
-                elif t.bleed: t.bleed = False; self.hurt(t, 3)       # the manuscript: a second token deals three damage at once
+                elif t.bleed:                                        # the manuscript: a second token deals three damage at once
+                    t.bleed = False; self.hurt(t, 3)
+                    if by is not None:
+                        self.dealt[by] = self.dealt.get(by, 0) + 3
+                        if r.aggro == 'last' or (r.aggro == 'most' and self.is_boss): self.aggro = by
                 else: t.bleed = True
             elif e == 'poison': t.poison = t.poison + 1 if r.poison == 'stack' else 1
             elif e == 'frostbite': t.frost = True
@@ -669,7 +675,7 @@ class Fight:
                     self.check_heat(t)
                 elif o.get('hollow'): c.luck = True                  # a gem that readies luck when the blow does nothing
                 self.say('   ', c.name, 'hits', t.name, 'with', o['name'], 'for', total, '(hp', max(0, t.hp), ')')
-                if o.get('fx'): self.afflict(t, o['fx'])             # a condition is placed by a hit, whatever damage it did
+                if o.get('fx'): self.afflict(t, o['fx'], by=c)       # a condition is placed by a hit, whatever damage it did
                 if o.get('push') and not t.boss and t.hp > 0:        # a boss is never pushed by a character
                     t.node = step_away(t.node, c.node, rng) if t.node != c.node else rng.choice(NBR[t.node])
         if o.get('gain_hp'): c.dmg = max(0, c.dmg - o['gain_hp'])

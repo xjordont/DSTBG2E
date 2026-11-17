@@ -826,6 +826,20 @@ check('the manuscript\'s frostbite bars the stamina the Blue Tearstone Ring give
       tearstone(RG, True) == (3, True) and tearstone(RG, False) == (2, True) and tearstone(R17, True) == (2, True),
       (tearstone(RG, True), tearstone(RG, False), tearstone(R17, True)))
 
+k_, w_ = Char('Knight', RG), Char('Warrior', RG); (k_, w_), f = duel(None, RG, party=[k_, w_], enemies=['Sentinel']); foe = f.foes[0]; foe.bleed = True; f.aggro = w_; f.dealt = {}
+f.strike(k_, foe, dict(k_.options['R'][0], dice='', mod=0, fx=['bleed']))
+check('bleed damage set off by an attack that did no damage of its own is the attacker\'s: it is counted and the aggro token follows',
+      foe.hp == 47 and f.dealt.get(k_) == 3 and f.aggro is k_, (foe.hp, f.dealt.get(k_), f.aggro.name))
+def parry_cost(armour):
+    out = set()
+    for sd in range(60):
+        c, f = duel('Knight', RG, enemies=['Hollow Soldier'], seed=sd); c.A = CARDS[armour]; c.refresh(); c.blk = c.res = ''; c.dodge = 1; c.can_parry = True
+        c.luck = c.heroic = False; c._rip = 9.0; c.options = {'R': [], 'L': []}; f.dec = {}; f.defend(f.foes[0], c, 6, False, 1)
+        if f.dec.get('parry'): out.add(c.sta)
+    return out
+check('a parry costs one stamina whatever the armour says about the price of a dodge',
+      parry_cost('Black Leather Armour') == {1} and parry_cost('Eastern Armour') == {1}, (parry_cost('Black Leather Armour'), parry_cost('Eastern Armour')))
+
 print()
 print('%d checks failed' % len(FAILS) if FAILS else 'all checks passed')
 sys.exit(1 if FAILS else 0)
