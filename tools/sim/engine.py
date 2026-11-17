@@ -1048,7 +1048,7 @@ class Fight:
         # the encounter is cleared the moment the last enemy falls: conditions then come off without being resolved
         if c.poison and c.alive and self.foes_alive():
             self.wound(c, c.poison if r.poison == 'stack' else 1); c.poison = max(0, c.poison - 1) if r.poison == 'stack' else 0
-        c.stagger = False; c.frost = False; c.hurt_by = set()
+        c.stagger = False; c.frost = False
         # a card that lets its wearer take the aggro token, once an encounter, when another character's turn ends
         for x in self.live():
             if x is not c and 'faraam' in x.traits and id(x) not in self.faraam and self.aggro is not x and self.aggro.alive \
@@ -1076,6 +1076,12 @@ class Fight:
         # presses: the strongest attack it has, whatever its stamina, and a Rest when the bar will not pay for it
         self.hist.append(hp); self.slow = self.slow or (len(self.hist) > 5 and self.hist[-6] - hp < 3)     # once pressed, pressed to the end
 
+    def enemy_phase(self):
+        """The enemies' activations begin. What each character remembers of who damaged it is of the last enemy phase
+        only (a ring that answers "enemies that damaged you during the last enemy activation"), so it starts afresh here."""
+        self.to_act = set(self.foes_alive()); self.pair_done = False
+        for c in self.party: c.hurt_by = set()
+
     def run(self, max_rounds=60):
         r = self.r
         for c in self.party: c.was_hollow = c.hollow
@@ -1087,7 +1093,7 @@ class Fight:
                 self.rounds += 1
                 for _ in range(self.seats):
                     if self.over(): break
-                    self.to_act = set(self.foes_alive()); self.pair_done = False
+                    self.enemy_phase()
                     for f in ([] if first is not None else sorted(self.foes_alive(), key=lambda f: -f.threat)):
                         self.to_act.discard(f)
                         if self.over(): break
@@ -1105,7 +1111,7 @@ class Fight:
         else:
             while not self.over() and self.rounds < max_rounds:
                 self.rounds += 1; self.dealt = {}
-                self.to_act = set(self.foes_alive()); self.pair_done = False
+                self.enemy_phase()
                 for f in ([] if first is not None else sorted(self.foes_alive(), key=lambda f: (-f.threat, min(DIST[f.node][c.node] for c in self.live())))):
                     self.to_act.discard(f)
                     if self.over(): break

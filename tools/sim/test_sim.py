@@ -1161,6 +1161,13 @@ f.strike(ks, f.foes[0], dict(ks.options['R'][0], dice='b', mod=9, node=True, rep
 check("the Knight Slayer's Ring gives one stamina for an attack that beats a defence by three, once for the attack however many enemies it strikes",
       'knightslayer' in ks.traits and ks.sta == 4 and all(x.hp < 50 for x in f.foes), (ks.sta, [x.hp for x in f.foes]))
 
+kl, wl = Char('Knight', R17), Char('Warrior', R17); kl.plus = {kl.A['name']: CARDS['Old Leo Ring']['up']}; kl.refresh(); kl.dodge = 0; kl.can_parry = False
+(kl, wl), f = duel(None, R17, party=[kl, wl], enemies=['Sentinel']); sen = f.foes[0]; kl.blk = kl.arm_blk = ''
+f.enemy_phase(); f.defend(sen, kl, 3, False, 9); marked = sen in kl.hurt_by; f.end_turn(wl); kept = sen in kl.hurt_by
+f.enemy_phase(); stale = sen in kl.hurt_by
+check('the Old Leo Ring remembers who damaged its wearer in the last enemy phase only: through another character\'s turn, and not into the next enemy phase',
+      'leo' in kl.traits and marked and kept and not stale, (marked, kept, stale))
+
 print()
 print('%d checks failed' % len(FAILS) if FAILS else 'all checks passed')
 sys.exit(1 if FAILS else 0)
