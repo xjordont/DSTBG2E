@@ -51,7 +51,8 @@ Terrain is placed as the *encounter card* shows. A *rest* at the *bonfire* never
 ### Gravestones
 
 - Models cannot *walk*, *run*, *dodge* or be *pushed* onto a *node* containing a *gravestone* {{icon:ast-0017-gravestone}}.
-- When an encounter containing a gravestone is *cleared*, the party may look at one face-down encounter card or *event card* on any tile. It then either puts the card back or replaces it with the top card of the deck that card came from.
+- When an encounter containing a gravestone is *cleared*, the party may reveal one hidden card of its choice: the top card of either treasure deck, or one face-down encounter card or *event card* on any tile.
+- A treasure card revealed this way goes back on top of its deck or to the bottom of it. An encounter card or event card goes back on its tile or is replaced with the top card of its deck.
 - A rest does not change a gravestone.
 
 ### Barrels

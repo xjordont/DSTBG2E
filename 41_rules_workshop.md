@@ -2344,6 +2344,7 @@ Each is one sentence in the book and can be changed in a line.
 | 16 | §16.3 | A boss attack without the area icon targets one character within range, in whatever arc that character stands | the author's chapter gave arcs to area attacks only |
 | 17 | §17 | Bosses with nothing to say beyond their cards have no entry or one line (Sir Alonne; Gargoyle, Titanite Demon, Boreal Outrider Knight, Winged Knight, Dancer; Black Knight, Gravelord Nito, Crossbreed Priscilla, Heavy Knight); Vordt resolves Frostbreath at the start of its first turn after heating up | heat-up is now immediate |
 | 18 | §19 | The lines that let a party add other sets' encounter cards to a campaign, or swap its mega-bosses, are removed | no optional rules |
+| 19 | §5.5 | A gravestone reveals the top card of either treasure deck, or a face-down encounter or event card. The author's fourth choice, the top card of the next boss's behaviour deck, is left out | §15.2 builds a boss's deck afresh each time its encounter begins, so there is no deck to look at beforehand; the author to say whether the deck is built at setup instead |
 
 ### 22.3 Facts still not confirmed
 
