@@ -113,7 +113,7 @@ The shops are restocked at no other time.
 
 1. Draw four encounter tiles at random. Lay them with the *bonfire* tile and the mini-boss tile in a grid of two tiles by three, with the bonfire tile and the mini-boss tile in opposite corners.
 2. Turn each encounter tile so that two of its doorways open onto neighbouring tiles. This makes a single road from the bonfire tile, through the four encounter tiles one after another, to the mini-boss tile.
-3. Place the mini-boss's model, data card and behaviour cards on the mini-boss tile.
+3. Place the mini-boss's model and data card on the mini-boss tile and build its behaviour deck (see §15.2).
 4. Place the *fog gate* token at the doorway of the mini-boss tile (see §15.1).
 
 ### Encounter Cards
@@ -138,7 +138,7 @@ When the *mini-boss* has been defeated and the party has *rested* (see §16.5), 
 3. Clear the remaining tokens from the encounter tiles.
 4. Shuffle the four encounter tiles and flip each to its other side. Lay them in a straight line that starts at the *bonfire* tile and ends at the main-boss tile, which is the two boss tiles joined as one.
 5. Place the *fog gate* token as before.
-6. Place the main-boss's model, *data card* and *behaviour cards* on the main-boss tile.
+6. Place the main-boss's model and *data card* on the main-boss tile and build its behaviour deck (see §15.2).
 7. Shuffle the Level 1, Level 2 and Level 3 encounter cards of the main-boss's set and deal one of the right level face down to each encounter tile.
     - The main-boss's data card gives the levels.
     - The levels rise from the tile beside the bonfire tile towards the main-boss tile.
@@ -161,5 +161,5 @@ This setup is used only if the party chose a *mega-boss*. It follows the defeat 
 7. Place all character models on the bonfire tile.
 8. The party fights the Level 4 encounter as it fought the encounters before it.
 9. Once the Level 4 encounter is *cleared*, the party has one last chance to rest at the bonfire, for a *spark*, before it challenges the mega-boss.
-10. Flip the game board to its mega-boss side and place the mega-boss model on the marked *node*. Set its *data card* and *heat-up* cards beside the game board and shuffle its *behaviour cards*.
+10. Flip the game board to its mega-boss side and place the mega-boss model on the marked *node*. Set its *data card* and *heat-up* cards beside the game board and build its behaviour deck (see §15.2).
 11. The party fights the mega-boss, with the special rules of that boss (see §17).

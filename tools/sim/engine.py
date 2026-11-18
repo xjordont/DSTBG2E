@@ -1108,6 +1108,27 @@ class Fight:
                     opening -= 1
                     if first is not None and opening <= 0: first = None      # every character has had the free turn, wherever the order began
                 self.stalled()
+        elif r.round == 'ladder' and not self.is_boss:
+            # one ladder of threat, lowest first: the enemies of a value act, then the characters of that value
+            while not self.over() and self.rounds < max_rounds:
+                self.rounds += 1; self.dealt = {}
+                self.enemy_phase()
+                near = lambda f: min(DIST[f.node][c.node] for c in self.live())
+                rung = [(f.threat, 0, near(f), i, f) for i, f in enumerate(self.foes_alive())] + [(c.taunt, 1, 0, i, c) for i, c in enumerate(self.live())]
+                rung.sort(key=lambda t: t[:4])
+                for j, (_, kind, _, _, a) in enumerate(rung):
+                    if self.over(): break
+                    if kind == 0:
+                        self.to_act.discard(a)
+                        if first is not None or a.hp <= 0: continue      # a free opening turn for the party; or killed before it acted
+                        (self.boss_turn if a.boss else self.enemy_turn)(a)
+                    elif a.alive:
+                        later = [x for _, k, _, _, x in rung[j + 1:] if k == 0 and x.hp > 0]
+                        nxt = rung[j + 1][1] if j + 1 < len(rung) else 0      # the round wraps to the lowest enemy
+                        self.last_before_foes = nxt == 0 and (bool(later) or j + 1 >= len(rung))
+                        self.char_turn(a)
+                self.foes_done(); self.last_before_foes = True
+                first = None; self.stalled()
         else:
             while not self.over() and self.rounds < max_rounds:
                 self.rounds += 1; self.dealt = {}

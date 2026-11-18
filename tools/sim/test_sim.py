@@ -568,10 +568,10 @@ for name, spec in (('req', ALL_REQ), ('kind', ALL_KIND), ('mid', ALL_MID)):
     sizes[name] = (len(one), n2, sum(max(req_of(i, rr)) >= 25 for i in one), sum(i['deck'] == 'class' for i in e.t2))
     e.after_mini_boss(); e.boss_named('Dancer of the Boreal Valley', 1)
     sizes[name] += (sum(i['deck'] == 'boss' for i in e.t2), sum(i['deck'] == 'legendary' for i in e.t2), len(e.shop2))
-check('every set, by requirement (as the manuscript revises the requirements): 97 cards in tier one, none asking 25; 124 in tier two, thirty of them class cards; the two bosses\' six cards and five legendaries join after the mini-boss',
-      sizes['req'] == (97, 124, 0, 30, 6, 5, 12), sizes['req'])
+check('every set, by requirement (as the manuscript revises the requirements): 96 cards in tier one, none asking 25; 125 in tier two, thirty of them class cards; the two bosses\' six cards and five legendaries join after the mini-boss',
+      sizes['req'] == (96, 125, 0, 30, 6, 5, 12), sizes['req'])
 check('every set, by kind: 171 cards in tier one (common and class), the 50 transposed cards in tier two', sizes['kind'][:2] == (171, 50) and sizes['kind'][3] == 0, sizes['kind'])
-check('every set, the middle way: class cards all in tier one, common cards split at 25', sizes['mid'][:2] == (127, 94) and sizes['mid'][3] == 0, sizes['mid'])
+check('every set, the middle way: class cards all in tier one, common cards split at 25', sizes['mid'][:2] == (126, 95) and sizes['mid'][3] == 0, sizes['mid'])
 rc = RU.make(dict(ALL_REQ, sets='core')); e = Economy([Char('Knight', rc)], rc, random.Random(1)); e.boss_named('Gargoyle', 0)
 check('with the core set alone no other card and no boss treasure is in play', len(e.t1 + e.shop1 + e.t2) == 96 and not e.boss_loot, len(e.t1 + e.shop1 + e.t2))
 ga = [play(2, RU.make(ALL_REQ), s, table=Table(skill=1.0, bank=6)) for s in range(12)]

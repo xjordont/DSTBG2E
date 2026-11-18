@@ -4,74 +4,70 @@ The stat requirements below replace those printed on the weapons listed. A weapo
 
 ## Revised Requirements
 
-A 0 is no requirement in that stat. Tier is 1 for *tier one* and 2 for *tier two*.
+A 0 is no requirement in that stat.
 
-| Weapon | STR | DEX | INT | FTH | Tier |
-|---|---|---|---|---|---|
-| Avelyn | 23 | 30 | 0 | 0 | 2 |
-| Bewitched Alonne Sword | 18 | 24 | 0 | 0 | 1 |
-| Black Knight Greataxe | 32 | 20 | 0 | 0 | 2 |
-| Black Knight Halberd | 32 | 18 | 0 | 0 | 2 |
-| Brigand Axe | 19 | 16 | 0 | 0 | 1 |
-| Butcher Knife | 24 | 0 | 0 | 0 | 1 |
-| Caestus | 12 | 10 | 0 | 0 | 1 |
-| Carthus Curved Greatsword | 25 | 35 | 0 | 0 | 2 |
-| Carthus Curved Sword | 19 | 30 | 0 | 0 | 2 |
-| Chariot Lance | 22 | 33 | 0 | 0 | 2 |
-| Claws | 12 | 20 | 0 | 0 | 1 |
-| Crystal Straight Sword | 21 | 30 | 0 | 0 | 2 |
-| Dark Silver Tracer | 12 | 26 | 0 | 0 | 2 |
-| Dragon Tooth | 40 | 25 | 0 | 0 | 2 |
-| Drake Sword | 27 | 17 | 0 | 0 | 2 |
-| Drakewing Ultra Greatsword | 33 | 23 | 0 | 0 | 2 |
-| East-West Shield | 28 | 0 | 0 | 0 | 2 |
-| Falchion | 17 | 30 | 0 | 0 | 2 |
-| Four-Pronged Plough | 23 | 18 | 0 | 0 | 1 |
-| Giant's Halberd | 27 | 16 | 0 | 0 | 2 |
-| Gold Tracer | 25 | 35 | 0 | 0 | 2 |
-| Gravelord Sword | 32 | 18 | 0 | 0 | 2 |
-| Great Mace | 28 | 0 | 0 | 0 | 2 |
-| Halberd | 31 | 18 | 0 | 0 | 2 |
-| Irithyll Rapier | 24 | 24 | 0 | 0 | 1 |
-| Irithyll Straight Sword | 23 | 23 | 0 | 0 | 1 |
-| Lifehunt Scythe | 32 | 23 | 0 | 0 | 2 |
-| Lucerne | 22 | 31 | 0 | 0 | 2 |
-| Mace | 16 | 0 | 0 | 0 | 1 |
-| Manikin Claws | 14 | 24 | 0 | 0 | 1 |
-| Morning Star | 16 | 0 | 0 | 0 | 1 |
-| Murakumo | 27 | 17 | 0 | 0 | 2 |
-| Onikiri and Ubadachi | 26 | 36 | 0 | 0 | 2 |
-| Painting Guardian Curved Sword | 18 | 26 | 0 | 0 | 2 |
-| Parrying Dagger | 10 | 18 | 0 | 0 | 1 |
-| Partizan | 28 | 17 | 0 | 0 | 2 |
-| Pike | 23 | 16 | 0 | 0 | 1 |
-| Poison Throwing Knives | 0 | 14 | 0 | 0 | 1 |
-| Priscilla's Dagger | 0 | 31 | 0 | 0 | 2 |
-| Rapier | 14 | 21 | 0 | 0 | 1 |
-| Reinforced Club | 23 | 0 | 0 | 0 | 1 |
-| Rotten Ghru Dagger | 17 | 17 | 0 | 0 | 1 |
-| Rotten Ghru Spear | 12 | 21 | 0 | 0 | 1 |
-| Royal Dirk | 18 | 31 | 0 | 0 | 2 |
-| Scimitar | 18 | 20 | 0 | 0 | 1 |
-| Shield Crossbow | 33 | 20 | 0 | 0 | 2 |
-| Shotel | 26 | 29 | 0 | 0 | 2 |
-| Silver Knight Spear | 22 | 26 | 0 | 0 | 2 |
-| Silver Knight Straight Sword | 16 | 22 | 0 | 0 | 1 |
-| Spiked Mace | 32 | 22 | 0 | 0 | 2 |
-| Spotted Whip | 23 | 30 | 0 | 0 | 2 |
-| Sunlight Straight Sword | 15 | 15 | 0 | 0 | 1 |
-| Throwing Knives | 0 | 14 | 0 | 0 | 1 |
-| Uchigatana | 14 | 32 | 0 | 0 | 2 |
-| Umbral Dagger | 18 | 35 | 0 | 0 | 2 |
-| Vordt's Great Hammer | 33 | 0 | 0 | 0 | 2 |
-| Warden Twinblades | 17 | 26 | 0 | 0 | 2 |
-| Washing Pole | 37 | 21 | 0 | 0 | 2 |
-| Winged Knight Halberd | 32 | 16 | 0 | 0 | 2 |
-| Winged Spear | 20 | 22 | 0 | 0 | 1 |
-
-## Treasure Type
-
-The Tier column sorts each weapon by its requirements, as *common treasure* is sorted. A listed *class treasure* card is *tier one* and a listed *transposed treasure* card is *tier two*, whatever the column shows. A listed *legendary treasure* or *boss treasure* card joins the tier two deck only when setup calls for it (see §6.2).
+| Weapon | STR | DEX | INT | FTH |
+|---|---|---|---|---|
+| Avelyn | 23 | 30 | 0 | 0 |
+| Bewitched Alonne Sword | 18 | 24 | 0 | 0 |
+| Black Knight Greataxe | 32 | 20 | 0 | 0 |
+| Black Knight Halberd | 32 | 18 | 0 | 0 |
+| Brigand Axe | 19 | 16 | 0 | 0 |
+| Butcher Knife | 25 | 0 | 0 | 0 |
+| Caestus | 0 | 15 | 0 | 0 |
+| Carthus Curved Greatsword | 19 | 30 | 0 | 0 |
+| Carthus Curved Sword | 25 | 35 | 0 | 0 |
+| Chariot Lance | 22 | 33 | 0 | 0 |
+| Claws | 0 | 20 | 0 | 0 |
+| Crystal Straight Sword | 21 | 30 | 0 | 0 |
+| Dark Silver Tracer | 0 | 25 | 0 | 0 |
+| Dragon Tooth | 40 | 25 | 0 | 0 |
+| Drake Sword | 27 | 17 | 0 | 0 |
+| Drakewing Ultra Greatsword | 33 | 23 | 0 | 0 |
+| East-West Shield | 28 | 0 | 0 | 0 |
+| Falchion | 37 | 30 | 0 | 0 |
+| Four-Pronged Plough | 23 | 18 | 0 | 0 |
+| Giant's Halberd | 27 | 16 | 0 | 0 |
+| Gold Tracer | 25 | 35 | 0 | 0 |
+| Gravelord Sword | 32 | 18 | 0 | 0 |
+| Great Mace | 28 | 0 | 0 | 0 |
+| Halberd | 31 | 18 | 0 | 0 |
+| Irithyll Rapier | 24 | 24 | 0 | 0 |
+| Irithyll Straight Sword | 23 | 23 | 0 | 0 |
+| Lifehunt Scythe | 32 | 23 | 0 | 0 |
+| Lucerne | 22 | 31 | 0 | 0 |
+| Mace | 16 | 0 | 0 | 0 |
+| Manikin Claws | 24 | 24 | 0 | 0 |
+| Morning Star | 16 | 0 | 0 | 0 |
+| Murakumo | 27 | 17 | 0 | 0 |
+| Onikiri and Ubadachi | 26 | 36 | 0 | 0 |
+| Painting Guardian Curved Sword | 18 | 26 | 0 | 0 |
+| Parrying Dagger | 14 | 21 | 0 | 0 |
+| Partizan | 28 | 17 | 0 | 0 |
+| Pike | 23 | 16 | 0 | 0 |
+| Poison Throwing Knives | 0 | 14 | 0 | 0 |
+| Priscilla's Dagger | 0 | 31 | 0 | 0 |
+| Rapier | 14 | 21 | 0 | 0 |
+| Reinforced Club | 23 | 0 | 0 | 0 |
+| Rotten Ghru Dagger | 17 | 17 | 0 | 0 |
+| Rotten Ghru Spear | 12 | 21 | 0 | 0 |
+| Royal Dirk | 18 | 31 | 0 | 0 |
+| Scimitar | 18 | 20 | 0 | 0 |
+| Shield Crossbow | 33 | 20 | 0 | 0 |
+| Shotel | 26 | 29 | 0 | 0 |
+| Silver Knight Spear | 22 | 26 | 0 | 0 |
+| Silver Knight Straight Sword | 16 | 22 | 0 | 0 |
+| Spiked Mace | 32 | 22 | 0 | 0 |
+| Spotted Whip | 23 | 30 | 0 | 0 |
+| Sunlight Straight Sword | 15 | 15 | 0 | 0 |
+| Throwing Knives | 0 | 14 | 0 | 0 |
+| Uchigatana | 14 | 32 | 0 | 0 |
+| Umbral Dagger | 18 | 35 | 0 | 0 |
+| Vordt's Great Hammer | 33 | 0 | 0 | 0 |
+| Warden Twinblades | 17 | 25 | 0 | 0 |
+| Washing Pole | 37 | 21 | 0 | 0 |
+| Winged Knight Halberd | 32 | 16 | 0 | 0 |
+| Winged Spear | 20 | 22 | 0 | 0 |
 
 # Appendix B. Card Amendments
 

@@ -12,7 +12,9 @@ The token stays on the bonfire tile until the boss is defeated. In a campaign th
 
 A boss is a single large model with far more health and attack power than other enemies and a special ability of its own; it follows the rules for enemies except as this chapter and the next state. There are three types of boss: *mini-boss*, *main-boss* and *mega-boss*.
 
-Each time a boss encounter begins, place the character models on the *entry nodes* of the boss tile and the boss model on its *spawn node*, facing the adjacent *node* nearest the entry nodes. Build the boss's behaviour deck and place it face down beside the tile (see §15.5). Set the boss's health dial to its starting health. Give the *aggro* token to the character with the highest *threat*.
+A boss's behaviour deck is built when the boss is set up on its tile, and built afresh each time the party *rests* after losing to that boss (see §15.5). It lies face down beside the tile.
+
+Each time a boss encounter begins, place the character models on the *entry nodes* of the boss tile and the boss model on its *spawn node*, facing the adjacent *node* nearest the entry nodes. Set the boss's health dial to its starting health. Give the *aggro* token to the character with the highest *threat*.
 
 ## 15.3 Boss Tiles
 
