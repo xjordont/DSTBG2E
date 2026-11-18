@@ -5,19 +5,22 @@ and against the headings actually present in drafted chapters; checks each draft
 against the map. Exit 1 on any broken reference."""
 import re, glob, pathlib, sys
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-brief = (ROOT / 'work/phase2a/DRAFTING_BRIEF.md').read_text(encoding='utf-8')
+brief = (ROOT / 'work/phase12/REWRITE_BRIEF.md').read_text(encoding='utf-8')
 mapblock = brief.split('## 4. Section map')[1].split('## 5.')[0]
-valid = {'Appendix A', 'Appendix B'}
-mapped = {}   # 'N.M' -> title from the brief
+valid = {'Appendix A', 'Appendix B'} | {str(n) for n in range(1, 23)}   # every chapter number is a target
+mapped = {}   # 'N.M' -> title from the brief; 'N' -> chapter title
+budget = {}   # file stem number ('00'..'23', 'glossary') -> word budget
 for ln in mapblock.splitlines():
-    m = re.match(r'^§(\d+) ([^:(]+?)(?: \(|:|$)', ln.strip())
-    if m:
-        valid.add(m.group(1)); mapped[m.group(1)] = m.group(2).strip()
-        for s, t in re.findall(r'(\d+\.\d+) ([^·()\n]+?)(?= ·| \(|$)', ln):
-            valid.add(s); mapped[s] = t.strip()
+    m = re.match(r'^\*\*§(\d+) ([^*]+)\*\*', ln.strip())
+    if not m: continue
+    valid.add(m.group(1)); mapped[m.group(1)] = m.group(2).strip()
+    body = ln.split(':', 1)[1] if ':' in ln else ''
+    body = re.split(r'\. (?:Owns|A packing|See the|One compact|Does not|Says)', body)[0]
+    for s_, t in re.findall(r'(\d+\.\d+) ([^·()\n]+?)(?= ·| \(|\.? *$|\. )', body):
+        valid.add(s_); mapped[s_] = t.strip().rstrip('.')
 # Chapters whose H2s the brief leaves to the author ("numbered H2s of your choosing" / "unless needed"):
 # their drafted headings extend the map instead of being checked against it.
-EXTENSIBLE = {'13', '14', '22'}
+EXTENSIBLE = {'13', '14', '20', '22'}
 bad, warn = [], []
 present = {}
 if '--files' in sys.argv:   # explicit list (paths relative to the repo root); default: every chapter file on disk
