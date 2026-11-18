@@ -120,7 +120,8 @@ The shops are restocked at no other time.
 
 1. Shuffle the Level 1 {{icon:ast-0007-encounter-level-1}}, Level 2 {{icon:ast-0011-encounter-level-2}} and Level 3 {{icon:ast-0015-encounter-level-3}} *encounter cards* of the mini-boss's set into three decks.
     - Encounter decks hold only the encounter cards of the set the next boss comes from.
-    - If that set has no encounter cards of these levels, use those of a core set.
+    - Only encounter cards that list enemies and terrain and nothing more are used. The encounter cards printed in Tomb of Giants, Painted World of Ariamis and The Sunless City are left in the box.
+    - If the boss's set has no encounter cards that can be used, use those of the core set.
 2. Deal one encounter card of the right level face down to each encounter tile.
     - The mini-boss's data card gives the levels.
     - The levels rise from the tile beside the bonfire tile towards the mini-boss tile.

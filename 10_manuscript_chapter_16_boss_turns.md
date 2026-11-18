@@ -2,7 +2,7 @@
 
 ## 16.1 Overview
 
-During a boss encounter the boss always takes its turn first, and it takes a turn before each character's turn: the boss, one character, the boss again, a second character, and so on. The characters take their turns in any order the party chooses, but no character takes another turn until every other character has taken an equal number.
+A boss encounter is fought in the rounds of any encounter (see §7.5). Each round any enemies and *invaders* on the tile act first, then the boss takes one turn, then every character takes a turn in ascending *threat*, then any *summon*.
 
 Draw the top card of the behaviour deck at the start of every boss turn. The boss's actions are decided by resolving each icon on the *behaviour card* from left to right. When the right-most icon is resolved, the boss's turn ends and the card is placed face up on the discard pile.
 

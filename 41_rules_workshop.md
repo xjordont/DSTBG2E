@@ -2413,3 +2413,65 @@ Supplied on 2026-11-18: the rulebooks again, the November 2022 errata sheet, the
 - **The printed requirements on the treasure sheets agree with the restored Appendix A** wherever a listed weapon is visible (Falchion 37 / 30 / 0 / 23, Carthus Curved Sword 0 / 35 / 25 / 0, Caestus 0 / 0 / 15 / 0, Warden Twinblades 17 / 25 / 17 / 0, Carthus Curved Greatsword 0 / 30 / 19 / 0).
 - **Not yet used:** the 2022 enemy and boss cards and the encounter cards, as printed. They are the cards 20.4 found online and kept out of the measurements, because the manuscript revises them (Appendix B) and the revised values are still not among the files.
 
+## 24. One round for every encounter; the 2017 encounter structure only (2026-11-18)
+
+The author: "for consistency of mechanics we should have a universal round structure across all encounters. Each normal enemy in ascending threat, invaders, bosses, each character in ascending threat, and finally summons. In solo there would be no scaling but invaders, normal enemies, and bosses would have scaling based on 2/3/4 characters playing." And: "Be sure we are not using the 2022 versions setup or encounter structure. Use the simpler 2017 encounter cards and structure."
+
+### 24.1 The round, as now written (§7.5)
+
+1. Each enemy, in ascending threat.
+2. Each invader.
+3. The boss.
+4. Each character, in ascending threat.
+5. Each summon.
+
+A boss and an invader therefore act once a round, where they acted before or after every character's turn. This supersedes the boss round of 14.5 and the summon and invader turns of 8.1 (A14) and 9.6, and the enemies' descending order.
+
+### 24.2 What it needs from the scaling
+
+A boss that acts once a round makes one attack while two, three or four characters each take a turn, so the scaling of 21.3 no longer holds it (13.3 had found the same). Measured on every 2017 set, 400 games a cell (±5) unless noted, the enemies' scaling unchanged:
+
+| Boss health | Boss damage | Games won, 2 / 3 / 4 | Table time |
+|---|---|---|---|
+| Section 23, a boss before each character: +4 a character; +1 / +2 / +2 | | 58–64% / 65–67% / 69–72% | 337 / 415 / 454 |
+| +4 a character | +1 / +2 / +2 | 68% / 79% / 82% | 283 / 323 / 329 |
+| ×1.5 / ×2 / ×2.5 | +1 / +2 / +2 | 62% / 72% / 76% | 316 / 392 / 397 |
+| ×2 / ×3 / ×4 | +1 / +2 / +2 | 62% / 68% / 72% | 355 / 496 / 491 |
+| **+4 a character** | **+2 / +3 / +4** (600 games, ±4) | **60% / 68% / 69%** | **293 / 335 / 339** |
+| ×1.5 / ×2 / ×2.5 | +2 / +3 / +4 | 52% / 63% / 58% | 337 / 408 / 410 |
+| ×2 / ×3 / ×4 | +2 / +3 / +4 | 51% / 58% / 49% | 358 / 500 / 500 |
+| +4 a character | +2 / +4 / +6 | 60% / 64% / 48% | 295 / 332 / 340 |
+| ×1.5 / ×2 / ×2.5 | +2 / +4 / +6 | 52% / 57% / 33% | 337 / 407 / 399 |
+
+- **Health alone does not do it.** Multiplying a boss's health by the number of characters brings three and four characters to about 70% and makes the game half as long again.
+- **Damage does, at no cost in time.** With the boss's health as it was (+4 a character) and its damage raised by the number of characters (+2 / +3 / +4), every party size is where section 21 left it: 60% / 68% / 69%, main-boss attempts failed 43% / 33% / 13% (they were 43% / 35% / 11%). The game is a fifth to a quarter shorter in activations, because a boss takes one turn a round and not one for each character.
+- A lone character meets everything as printed, as the author asked. Its game is the same game as before (one character, so the boss acted once a round already); 53% on 400 games, against 57%, inside the noise.
+
+**The table as settled:**
+
+| Characters | Sparks | Enemy health | Enemy attack damage | Boss health | Boss heat-up point | Boss attack damage |
+|---|---|---|---|---|---|---|
+| 1 | 4 | as printed | as printed | as printed | as printed | as printed |
+| 2 | 3 | +1 | +1 | +4 | +2 | +2 |
+| 3 | 2 | +2 | +2 | +8 | +4 | +3 |
+| 4 | 1 | +3 | +2 | +12 | +6 | +4 |
+
+The boss columns apply to every boss model, to a mimic and to an invader. Summons and crystal lizards are not scaled.
+
+**What the author should know about it.**
+
+- **Boss damage of +3 and +4 is large.** A boss attack printed at 5 or 6 lands for 9 or 10 on a bar of ten. The author turned down +2 / +3 / +4 on ordinary enemies in 15.6 because it makes the dodge the only sound defence. Here it is on bosses alone; the share of defences that are a dodge or a parry is 49% / 56% / 57% over the whole game, against 48% / 55% / 55% before. A boss's one attack a round is now the event of the round.
+- **A boss's deck comes round more slowly.** It draws one card a round, so with four characters its pattern takes four times as many character turns to learn as before.
+- **Invaders are not in the simulator.** They take the boss columns by the same reasoning (they have a boss's deck and now act once a round). This is judgement, not measurement.
+- **Boss rules that counted turns** read on in the new round without change (the Four Kings' arrivals, Vordt's Frostbreath, Manus's Overextended, the Chariot's track). The Chariot's own enemies act as enemies, then the Chariot as the boss.
+- **Player versus player** now runs in ascending threat like every other encounter.
+
+To re-run: `python3 tools/sim/compare.py --only settled23 settled --games 600 --probe 200 --bank 6`.
+
+### 24.3 The 2017 structure only
+
+The book's road, tiles, face-down encounter cards and "kill every enemy" encounters were already the 2017 structure, and its campaigns use 2017 cards throughout. Two things let the 2022 structure in, and both are closed:
+
+- **Encounter cards.** The component list counted the encounter cards printed in the 2022 core sets, and §6.5 would have had a party shuffle them for a boss of those sets. Those cards carry objectives, timers, trials and rewards of their own. They are now left in the box (§2.6, §6.5); a boss of a 2022 set is reached through the core set's encounter cards. The enemies of the 2022 sets (Appendix B) therefore appear only where the party has encounter cards of the 2017 kind that list them.
+- **Event cards are the one 2022 component still used,** by the author's direction of 8.2 (C3), dealt one to a tile as the author's own manuscript dealt its event cards. Many of the printed cards speak of things the 2017 structure does not have (a soul cache, shortcuts, timers, a second encounter card on a space); §7.5 maps what it can and discards the rest. If the instruction above is meant to cover them too, they come out in four sentences.
+

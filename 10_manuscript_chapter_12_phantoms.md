@@ -1,6 +1,6 @@
 # 12. Phantoms
 
-With the Phantoms expansion, *summons* and *invaders* are in play. Neither is scaled for party size.
+With the Phantoms expansion, *summons* and *invaders* are in play.
 
 ## 12.1 Summons
 
@@ -11,7 +11,7 @@ With the Phantoms expansion, *summons* and *invaders* are in play. Neither is sc
 3. Set the summon's health dial to the starting health {{icon:ast-0029-starting-health}} on its data card.
 4. Shuffle all of the summon's *behaviour cards* to form its behaviour deck.
 5. Place the summon's model on the boss tile's *entry node* after the characters have placed their models.
-6. The summon takes a turn after each character's turn.
+6. The summon takes one turn each round, after every character has acted (see §7.5). A summon is not scaled for party size.
 7. On each of its turns, draw the top card of the summon's behaviour deck and resolve its icons from left to right. When the deck runs out, turn the discard pile face down without shuffling to form a new deck.
 
 The summon does only what its cards say:
@@ -46,7 +46,8 @@ An *invader* is a hostile *phantom* that joins one encounter and hunts the chara
 
 ### Invader Combat
 
-- The invader takes a turn after each character's turn. It takes no turn in *threat* order with the other enemies, so it acts far more often than they do.
+- The invader takes one turn each round, after the other enemies and before the characters (see §7.5).
+- An invader's health, heat-up point and attacks are raised for party size as a boss's are (see §8.3).
 - On its turn, draw the top card of the invader's behaviour deck and resolve its icons from left to right, as for a boss (see §16.1).
 - An invader has no *heat-up* cards. When its health reaches the heat-up point {{icon:ast-0030-heat-up-point}} on its data card, one of its unused behaviour cards, taken at random, serves as its heat-up card (see §15.5).
 - Characters attack an invader as any other enemy, against the *block* and *resist* values {{icon:ast-0028-block-resist-shield}} on its data card. Damage is marked on its health dial.

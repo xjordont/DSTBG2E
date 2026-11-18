@@ -164,12 +164,12 @@ An *encounter card* shows the level, enemies, terrain and *traps* of one encount
 
 | Encounter cards | Core | Expansions |
 |---|---|---|
-| Level 1 | 12 | 37 |
-| Level 2 | 12 | 37 |
-| Level 3 | 12 | 37 |
+| Level 1 | 12 | 19 |
+| Level 2 | 12 | 19 |
+| Level 3 | 12 | 19 |
 | Level 4 | 0 | 40 |
 
-In all, 187 encounter cards. Of each of Levels 1 to 3, Darkroot and Iron Keep hold six cards each, Explorers five, Executioner's Chariot two, and PWA and ToG nine each. Level 4 cards come only with the mega-bosses.
+In all, 133 encounter cards. Of each of Levels 1 to 3, Darkroot and Iron Keep hold six cards each, Explorers five and Executioner's Chariot two. Level 4 cards come only with the mega-bosses. The encounter cards printed in PWA, ToG and The Sunless City, which carry objectives, special rules and rewards of their own, are not used.
 
 - 30x *Event cards* in each of PWA, ToG and The Sunless City, of three kinds: immediate, consumable and rendezvous
 - 5x *Ambush cards* (Explorers), each showing Treasure or Mimic

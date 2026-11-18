@@ -1134,7 +1134,8 @@ class Fight:
             while not self.over() and self.rounds < max_rounds:
                 self.rounds += 1; self.dealt = {}
                 self.enemy_phase()
-                for f in ([] if first is not None else sorted(self.foes_alive(), key=lambda f: (-f.threat, min(DIST[f.node][c.node] for c in self.live())))):
+                up = 1 if getattr(r, 'enemy_order', 'desc') == 'asc' else -1      # enemies in ascending threat where the ruleset says so
+                for f in ([] if first is not None else sorted(self.foes_alive(), key=lambda f: (f.boss, up * f.threat, min(DIST[f.node][c.node] for c in self.live())))):
                     self.to_act.discard(f)
                     if self.over(): break
                     if f.hp <= 0: continue                   # killed during another enemy's activation

@@ -82,7 +82,7 @@ Terms set in *italics* in this book are listed here with the section that gives 
 
 **Hollow.** Said of a character who has died and returned weaker, with two hollow cubes filling spaces of the endurance bar (see §7.2).
 
-**Invader.** A hostile phantom of the Phantoms expansion that joins one encounter and takes a turn after each character's turn (see §12.2).
+**Invader.** A hostile phantom of the Phantoms expansion that joins one encounter and acts after the other enemies (see §12.2).
 
 **Inventory.** The stack of face-down treasure cards a character keeps beside the dashboard, closed for the length of every encounter (see §3.2).
 

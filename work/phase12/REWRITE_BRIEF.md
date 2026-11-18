@@ -43,22 +43,24 @@ Everything here is decided. Where the author's chapter differs, write this. Wher
 
 ### 3.1 Party size
 
-| Characters | Sparks | Enemy health | Damage of every enemy and boss attack | Boss health | Boss heat-up point |
-|---|---|---|---|---|---|
-| 1 | 4 | as printed | as printed | as printed | as printed |
-| 2 | 3 | +1 | +1 | +4 | +2 |
-| 3 | 2 | +2 | +2 | +8 | +4 |
-| 4 | 1 | +3 | +2 | +12 | +6 |
+| Characters | Sparks | Enemy health | Enemy attack damage | Boss health | Boss heat-up point | Boss attack damage |
+|---|---|---|---|---|---|---|
+| 1 | 4 | as printed | as printed | as printed | as printed | as printed |
+| 2 | 3 | +1 | +1 | +4 | +2 | +2 |
+| 3 | 2 | +2 | +2 | +8 | +4 | +3 |
+| 4 | 1 | +3 | +2 | +12 | +6 | +4 |
+
+(Table as ruled 2026-11-18, section 24 of 41_rules_workshop.md: the boss columns apply to bosses, mimics and invaders; summons and crystal lizards are not scaled.)
 
 - This table replaces the author's whole scaling table. Enemy movement is never scaled and no attack is repeated because of party size.
-- "Boss" here is every mini-boss, main-boss and mega-boss model, and a mimic. Ornstein and Smough each gain the boss health. Invaders and summons are not scaled at all.
+- "Boss" here is every mini-boss, main-boss and mega-boss model, and a mimic. Ornstein and Smough each gain the boss health. Invaders take the boss columns. Summons and crystal lizards are not scaled.
 - Sparks at the start: five less the number of characters. One spark is added each time a boss is defeated. Sparks are gained no other way.
 - A character adventuring alone starts with six souls.
 
 ### 3.2 The round
 
-- Ordinary encounter: every enemy takes a turn, in descending threat (the author's tie-breaks stand); then every character takes a turn, in ascending threat (lowest first; ruled 2026-11-18, see section 23 of 41_rules_workshop.md). There is no first player token.
-- Boss encounter: the boss takes a turn before each character's turn.
+- (Superseded by the line below.) There is no first player token.
+- Every encounter has the same round (ruled 2026-11-18, section 24 of 41_rules_workshop.md): each enemy in ascending threat, each invader, the boss, each character in ascending threat, each summon. A boss and an invader act once a round.
 - Aggro: at the start of an encounter the token goes to the character with the highest threat. After that it passes to the last character to deal damage. If no one deals damage it stays.
 
 ### 3.3 A character's turn

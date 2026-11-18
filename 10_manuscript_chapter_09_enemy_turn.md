@@ -2,7 +2,7 @@
 
 ## 9.1 Overview
 
-Each round of an encounter begins with every enemy model taking a turn, highest *threat* first (see §7.5), before the characters take theirs.
+Each round of an encounter begins with every enemy model taking a turn, lowest *threat* first, before the characters take theirs (see §7.5).
 
 Non-boss enemies follow the behaviour icons on their *data cards*. Bosses follow the icons on their *behaviour cards* instead. All behaviour icons are resolved from left to right. An enemy's behaviour can be as simple as one attack or can hold several moves and attacks. If an icon has no target or cannot otherwise be carried out, it is skipped and the next icon to the right is resolved. If the data card shows the *repeat* icon {{icon:ast-0061-repeat-behaviour-or-attack}}, the enemy resolves all of its icons the number of times shown. An enemy's turn ends once all of its icons have been resolved.
 

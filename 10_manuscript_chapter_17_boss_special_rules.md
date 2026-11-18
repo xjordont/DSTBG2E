@@ -153,7 +153,7 @@ The Chariot is a *mega-boss* fought in two parts. Until its *heat-up* it follows
 
 **Before the heat-up.** The front of the data card shows no starting health {{icon:ast-0029-starting-health}}, no *block* and no *resist*. The Chariot cannot be attacked or damaged, and nothing a character does affects it.
 
-Before each character's turn, every enemy model on the board takes a turn, in descending *threat* (see §7.5): the Chariot, each Black Hollow Mage and each Falchion Skeleton.
+Each round the Black Hollow Mages and the Falchion Skeletons take their turns as enemies, then the Chariot takes its turn as the boss (see §7.5).
 
 On its turn the Chariot resolves the top card of the track deck. The track deck is never shuffled: the four cards are resolved in order, and card 1 follows card 4.
 
@@ -238,7 +238,7 @@ The Wind Up icon on the Last Giant's cards is resolved as for the Asylum Demon (
 
 ### Manus, Father of the Abyss
 
-- **Overextended.** At the end of each of Manus's turns, each character may spend one *stamina* to move to an adjacent node, before the next character's turn begins. This movement counts as a *run*.
+- **Overextended.** At the end of each of Manus's turns, each character may spend one *stamina* to move to an adjacent node, before the characters' turns begin. This movement counts as a *run*.
 - An attack with the *shaft* icon does not target a character on Manus's own node (see §10.3), whichever *arc* that character stands in.
 - Manus has a heat-up of its own. When its health reaches its heat-up point, take two of its heat-up cards at random, without looking at them. Place one face down on top of the behaviour deck and the other beneath the discard pile. Do not shuffle. The first is the next card Manus draws; the second is the first card drawn after the discard pile is next turned over.
 

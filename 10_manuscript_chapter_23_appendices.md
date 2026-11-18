@@ -108,7 +108,7 @@ Blacksmith Andre exchanges a Titanite Shard for a Titanite Chunk, or a Titanite 
 
 ## Enemy Data Cards
 
-Each enemy below is played from the revised *data card* of the same name.
+Each enemy below is played from the revised *data card* of the same name. These enemies appear only where an *encounter card* of the kind this book uses lists them (see §6.5); the encounter cards printed in their own sets are not used.
 
 | Set | Enemies |
 |---|---|

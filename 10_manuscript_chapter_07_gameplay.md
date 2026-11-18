@@ -63,15 +63,18 @@
 
 ### Encounter Turn Order
 
-An encounter is fought in rounds.
+Every encounter is fought in rounds, and every round runs in the same order. A step with no model to act is passed over.
 
-1. Each enemy model takes a turn, one by one, in descending threat.
+1. Each enemy model takes a turn, one by one, in ascending threat: the lowest first.
    - If several enemies share a threat value, the one closest to a character takes its turn first.
    - If those enemies are equally close, the one with the most wound tokens takes its turn first.
    - If they are still tied, the players decide.
-2. Each character takes a turn, one by one, in ascending threat: the lowest first, the highest last.
-3. The aggro token passes to the last character to deal damage. If no character deals damage, it stays where it is.
-4. Rounds continue until every enemy model or every character is dead.
+2. Each *invader* takes a turn (see §12.2).
+3. The boss takes a turn (see §16.1).
+4. Each character takes a turn, one by one, in ascending threat: the lowest first, the highest last.
+5. Each *summon* takes a turn (see §12.1).
+
+The aggro token passes to the last character to deal damage. If no character deals damage, it stays where it is. Rounds continue until every enemy model or every character is dead.
 
 ### Encounter Resolution
 

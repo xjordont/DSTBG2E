@@ -171,7 +171,7 @@ Needs the core set and the Phantoms and Vordt of the Boreal Valley expansions. T
 
 - Both invaders join the encounter every time the party enters it, until both are killed in one visit.
 - An encounter *cleared* before both are killed is fought again, the Level 4 encounter included, and cannot be skipped.
-- The second invader is placed on a node adjacent to the first, chosen by the players. Each has its own behaviour deck and takes a turn after each character's turn, in the order the players choose. A spare health dial records the second's health.
+- The second invader is placed on a node adjacent to the first, chosen by the players. Each has its own behaviour deck and takes its turn each round, in the order the players choose. A spare health dial records the second's health.
 - The *souls* and treasure cards of both are given when the second is killed.
 - The section ends when the encounter is cleared with both invaders killed.
 

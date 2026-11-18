@@ -584,6 +584,18 @@ _ct, _et = _fl.char_turn, _fl.enemy_turn
 _fl.char_turn = lambda c: (_seen.append(c.name), _ct(c))[1]; _fl.enemy_turn = lambda f: (_seen.append(f.name), _et(f))[1]
 _fl.run(max_rounds=1)
 check('the ladder round: enemies and characters on one ladder of ascending threat, an enemy before a character of its value', _seen[:4] == ['Crossbow Hollow', 'Thief', 'Sentinel', 'Knight'], _seen[:4])
+# the one round of section 24: enemies in ascending threat, the boss once, then the characters in ascending threat
+_ru = RU.make(dict(ALL_REQ, order='asc', enemy_order='asc', boss_round='once')); _su = []
+_pu = [Char('Knight', _ru), Char('Thief', _ru)]; _fu = E.Fight(_pu, _ru, random.Random(1), enemies=['Sentinel', 'Crossbow Hollow'])
+_cu, _eu = _fu.char_turn, _fu.enemy_turn
+_fu.char_turn = lambda c: (_su.append(c.name), _cu(c))[1]; _fu.enemy_turn = lambda f: (_su.append(f.name), _eu(f))[1]
+_fu.run(max_rounds=1)
+check('the one round: enemies in ascending threat, then characters in ascending threat', _su[:4] == ['Crossbow Hollow', 'Sentinel', 'Thief', 'Knight'], _su[:4])
+_sb = []; _pb = [Char('Knight', _ru), Char('Thief', _ru), Char('Herald', _ru)]; _fb = E.Fight(_pb, _ru, random.Random(2), boss='Gargoyle')
+_cb, _bb = _fb.char_turn, _fb.boss_turn
+_fb.char_turn = lambda c: (_sb.append('c'), _cb(c))[1]; _fb.boss_turn = lambda f: (_sb.append('B'), _bb(f))[1]
+_fb.run(max_rounds=2)
+check('the one round against a boss: the boss acts once, then every character', ''.join(_sb[:8]) == 'BcccBccc', ''.join(_sb[:8]))
 ga = [play(2, RU.make(ALL_REQ), s, table=Table(skill=1.0, bank=6)) for s in range(12)]
 check('a game with every set in play runs to its end', all(x['win'] or x['lost_at'] is not None for x in ga))
 
