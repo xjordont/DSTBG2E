@@ -57,7 +57,7 @@ Everything here is decided. Where the author's chapter differs, write this. Wher
 
 ### 3.2 The round
 
-- Ordinary encounter: every enemy takes a turn, in descending threat (the author's tie-breaks stand); then every character takes a turn, in any order the party chooses each round. There is no first player token.
+- Ordinary encounter: every enemy takes a turn, in descending threat (the author's tie-breaks stand); then every character takes a turn, in ascending threat (lowest first; ruled 2026-11-18, see section 23 of 41_rules_workshop.md). There is no first player token.
 - Boss encounter: the boss takes a turn before each character's turn.
 - Aggro: at the start of an encounter the token goes to the character with the highest threat. After that it passes to the last character to deal damage. If no one deals damage it stays.
 

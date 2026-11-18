@@ -125,7 +125,7 @@ The shops are restocked at no other time.
     - The mini-boss's data card gives the levels.
     - The levels rise from the tile beside the bonfire tile towards the mini-boss tile.
 3. Deal two *tier one* treasure cards face down onto each encounter card.
-4. With Tomb of Giants or Painted World of Ariamis, shuffle the *event cards* and deal one face down to each encounter tile.
+4. With Tomb of Giants, Painted World of Ariamis or The Sunless City, shuffle the *event cards* and deal one face down to each encounter tile.
 5. With the Explorers expansion, deal one *ambush card* at random face down beside each encounter tile (see §13).
 6. With the Phantoms expansion, *invader* tokens are placed on the encounter cards when an *embered* character provokes an invasion (see §12.2).
 

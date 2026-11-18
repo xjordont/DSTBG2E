@@ -2348,7 +2348,7 @@ Each is one sentence in the book and can be changed in a line.
 
 ### 22.3 Facts still not confirmed
 
-- The number of event cards in each 2022 core set is given as 30, from the Tomb of Giants rulebook; the Painted World of Ariamis count was not checked.
+- ~~The number of event cards in the Painted World of Ariamis set was not checked.~~ Confirmed from the author's card sheets (section 23): 30 in each 2022 core set.
 - **Appendix A: the author's ten values are restored** (Butcher Knife 25 / 0, Caestus 0 / 15, Carthus Curved Greatsword 19 / 30, Carthus Curved Sword 25 / 35, Claws 0 / 20, Dark Silver Tracer 0 / 25, Falchion 37 / 30, Manikin Claws 24 / 24, Parrying Dagger 14 / 21, Warden Twinblades 17 / 25). The first draft had changed them as supposed slips. Set beside the printed cards they are not slips: the author's table keeps each card's printed figures and moves them onto Strength and Dexterity (the Falchion is printed 37 / 30 / 0 / 23, the Carthus Curved Sword 0 / 35 / 25 / 0, the Claws 0 / 20 / 20 / 0). The Tier column and the note under it, which the author's table did not have and which misread class, legendary and boss cards, are removed; §6.2 sorts the decks. The Butcher Knife is tier two again, so the decks of 20.1 hold 137 and 106 cards. The simulator plays the restored values (`tools/sim/amendments.json`); the settled rules measured again on 400 games a cell (±5): 58% / 62% / 66% / 65%, against 57% / 63% / 68% / 69%, no change beyond the noise.
 - **The 2022 errata sheet** (supplied by the author, November 2022) agrees with the book and the simulator where they meet: the Mask of the Child gives one more stamina at the start of the turn, and the stat tracks of the six classes it lists are the simulator's to the point. It also corrects the Skeleton Soldier's attack range to 0.
 - Appendix B names revised data cards for twelve 2022 enemies and four 2022 bosses and gives no values for them (20.4).
@@ -2357,4 +2357,59 @@ Each is one sentence in the book and can be changed in a line.
 ### 22.4 Next
 
 The layout: the build was made for a book of 124 pages and this one is near 50. It waits for the author's word, and for any of the judgements of 22.2 the author wants changed first.
+
+## 23. Boss scaling and the order of a round, tested again; the author's card sheets (2026-11-18)
+
+The author asked two things and supplied the printed components.
+
+1. "Are bosses taking a turn after each character acts? If that is the best ruling then we probably don't need to scale bosses at all", since enemy scaling exists to offset the characters all acting between enemy phases.
+2. Whether enemies and characters should act on one ladder of ascending threat: the enemies of threat 1, then the characters of threat 1, then the enemies of threat 2, and so on. No debate over who acts first, and the Knight and Warrior held back by acting late. "Please workshop this idea ... If so then let's implement it."
+
+All figures: every 2017 set, the between split, the restored requirements of Appendix A, 600 games a cell (±3 to ±4), skill 1.0. To re-run: `python3 tools/sim/compare.py --only settled21 settled ladder --games 600 --probe 200 --bank 6` (`--bank 10` for one character, `--regrind 2` for four).
+
+### 23.1 Bosses: the scaling stays
+
+Yes: a boss takes a turn before each character's turn. That keeps the number of boss attacks per character turn the same at every party size. It does not keep the fight the same. A boss's printed health is worn down by every character, so the fight lasts as many character turns as it does for one character, and the attacks the boss makes in that time are shared among two, three or four endurance bars, estus flasks, luck tokens and heroic actions.
+
+| Games won | 2 | 3 | 4 | Main boss attempts failed, 2 / 3 / 4 |
+|---|---|---|---|---|
+| **As settled** (boss health +4 a character, boss damage +1 / +2 / +2) | 58% | 67% | 72% | 43% / 35% / 11% |
+| Bosses not scaled at all | 78% | 84% | 87% | 20% / 4% / 1% |
+| Boss damage scaled, health as printed | 68% | 72% | 77% | 35% / 29% / 7% |
+| Boss health scaled, damage as printed | 75% | 81% | 87% | 21% / 7% / 1% |
+
+A lone character fails 40% of its attempts at a main boss. With no boss scaling four characters fail 1%, and every party size sits at 78% to 87%, above the band. **The scaling of 21.3 stands.** The damage does most of the work; the health keeps the last fight a fight for four.
+
+### 23.2 The order of a round
+
+Enemy threat runs 1 to 9 on the printed cards and the ten classes are printed 1 to 10 (Deprived 1, Thief 2, Cleric 3, Herald 4, Sorcerer 5, Pyromancer 6, Mercenary 7, Assassin 8, Warrior 9, Knight 10), so the ladder can be played from the cards as they are.
+
+| Games won | 1 | 2 | 3 | 4 | Table time |
+|---|---|---|---|---|---|
+| Settled in section 21: all enemies, then the characters in any order the party chooses | 57% | 58% | 67% | 72% | 227 / 337 / 415 / 454 |
+| **All enemies, then the characters in ascending threat** | 57% | 64% | 65% | 69% | 227 / 344 / 413 / 450 |
+| The author's ladder, scaling as settled | 60% | 69% | 71% | 72% | 225 / 318 / 435 / 434 |
+| The ladder, enemy damage as printed | | 80% | 82% | 85% | |
+| The ladder, enemies not scaled at all | | 87% | 90% | 90% | |
+
+What the ladder does:
+
+- **It does not replace scaling.** An enemy still acts once a round however many characters there are; without the scaling parties win 87% to 90%.
+- **It is a few points easier than the settled round, not harder** (+3 to +8 for two and three characters). A character of low threat acts before most enemies in the first round, and kills are no harder to line up.
+- **It does not hold back the Knight and Warrior, and they are not the classes that need it.** In parties the Thief leads under every order (74% to 79% settled; 81% to 88% on the ladder), and the Knight and Warrior sit in the middle (53% to 76% settled; 65% to 77% on the ladder). The classes the ladder helps most are those of low threat.
+- **It turns aggro upside down.** Aggro passes to the last character to deal damage. On the ladder the Thief strikes at 2 and holds the token while every enemy of threat 3 to 9 acts; the Knight takes it back at 10, only for the enemies of threat 1 and 2. The lightest characters draw most of the attacks.
+- **Invaders and summons** are built to act after each character's turn, with a boss's health and deck. Acting once a round at the end of the ladder would leave an invader a fraction of its threat. They keep their own rule.
+
+What is right in the idea is the fixed order. With aggro going to the last character to deal damage, a party that chooses its order has one good answer almost every round, to let its sturdiest character strike last, and the simulated players already play that way. Ascending threat fixes nearly the same order without a discussion: supports first (Cleric 3, Herald 4), then the casters, then the fighters, the Knight last, holding the enemies' attention as a character of threat 10 ought to. It measures the same as the settled round at every party size.
+
+**Decided, on the author's instruction to implement what the workshop supports:** *all enemies act in descending threat; then the characters act in ascending threat, the lowest first.* The ladder is not adopted. §7.5 is changed by one sentence, and the simulator's `settled` ruleset plays it (`settled21` keeps the earlier one; `ladder` the author's). A character can still shed the aggro token by dealing no damage that round. Boss encounters are unchanged, and player versus player keeps the author's descending order.
+
+### 23.3 The author's card sheets and rulebooks
+
+Supplied on 2026-11-18: the rulebooks again, the November 2022 errata sheet, the rulebook of a third 2022 core set (The Sunless City), and photographs of the dashboards, data cards, behaviour cards, treasure, encounter and event cards.
+
+- **Heroic actions, from the ten printed dashboards.** All nine that the simulator played are as it played them (20.4): Stand Fast, Berserk Charge, Perseverance, Backstab, Rapid Strike, Spell Fury, Explosive Firepower, Keep the Faith, Lucky Break. **The Deprived's, which no source had: Combat Versatility,** once a spark at the start of its turn the Deprived may change equipment as if it had visited Blacksmith Andre. The simulator does not play it; its characters already re-arm between encounters, so the effect on the figures is small.
+- **Event cards:** 30 in each of the three 2022 core sets, of the three kinds the rule of §7.5 names. The book now names The Sunless City beside the other two for event cards.
+- **The printed requirements on the treasure sheets agree with the restored Appendix A** wherever a listed weapon is visible (Falchion 37 / 30 / 0 / 23, Carthus Curved Sword 0 / 35 / 25 / 0, Caestus 0 / 0 / 15 / 0, Warden Twinblades 17 / 25 / 17 / 0, Carthus Curved Greatsword 0 / 30 / 19 / 0).
+- **Not yet used:** the 2022 enemy and boss cards and the encounter cards, as printed. They are the cards 20.4 found online and kept out of the measurements, because the manuscript revises them (Appendix B) and the revised values are still not among the files.
 

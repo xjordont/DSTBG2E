@@ -1060,6 +1060,7 @@ class Fight:
         live = self.live()
         if self.r.order == 'free':                     # the party chooses: the sturdiest acts last and keeps the enemies' eyes
             return sorted(live, key=lambda c: (c.mean_blk + c.dodge * 0.5, c.cap - c.dmg))
+        if self.r.order == 'asc': return sorted(live, key=lambda c: c.taunt)     # fixed: lowest threat first
         return sorted(live, key=lambda c: -c.taunt)
 
     def foes_done(self):

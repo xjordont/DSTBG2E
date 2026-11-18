@@ -574,6 +574,16 @@ check('every set, by kind: 171 cards in tier one (common and class), the 50 tran
 check('every set, the middle way: class cards all in tier one, common cards split at 25', sizes['mid'][:2] == (126, 95) and sizes['mid'][3] == 0, sizes['mid'])
 rc = RU.make(dict(ALL_REQ, sets='core')); e = Economy([Char('Knight', rc)], rc, random.Random(1)); e.boss_named('Gargoyle', 0)
 check('with the core set alone no other card and no boss treasure is in play', len(e.t1 + e.shop1 + e.t2) == 96 and not e.boss_loot, len(e.t1 + e.shop1 + e.t2))
+# the fixed order of section 23: characters in ascending threat; and the ladder that was tried beside it
+_ra = RU.make(dict(ALL_REQ, order='asc')); _pa = [Char('Knight', _ra), Char('Thief', _ra), Char('Herald', _ra)]
+_fa = E.Fight(_pa, _ra, random.Random(1), enemies=['Hollow Soldier'])
+check('characters act in ascending threat where the ruleset says so: Thief (2), Herald (4), Knight (10)', [c.name for c in _fa.order()] == ['Thief', 'Herald', 'Knight'], [c.name for c in _fa.order()])
+_rl = RU.make(dict(ALL_REQ, round='ladder', order='threat')); _seen = []
+_pl = [Char('Knight', _rl), Char('Thief', _rl)]; _fl = E.Fight(_pl, _rl, random.Random(1), enemies=['Crossbow Hollow', 'Sentinel'])
+_ct, _et = _fl.char_turn, _fl.enemy_turn
+_fl.char_turn = lambda c: (_seen.append(c.name), _ct(c))[1]; _fl.enemy_turn = lambda f: (_seen.append(f.name), _et(f))[1]
+_fl.run(max_rounds=1)
+check('the ladder round: enemies and characters on one ladder of ascending threat, an enemy before a character of its value', _seen[:4] == ['Crossbow Hollow', 'Thief', 'Sentinel', 'Knight'], _seen[:4])
 ga = [play(2, RU.make(ALL_REQ), s, table=Table(skill=1.0, bank=6)) for s in range(12)]
 check('a game with every set in play runs to its end', all(x['win'] or x['lost_at'] is not None for x in ga))
 

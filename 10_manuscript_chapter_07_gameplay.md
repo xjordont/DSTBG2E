@@ -51,7 +51,7 @@
    - A *failed* encounter cannot be skipped. Once reset, it must be fought.
 3. The characters enter the tile by placing their models on its *entry nodes* (see §5.1). No more than three characters may start on the same node.
 4. Reveal the tile's encounter card. With the Phantoms expansion, flip the tile's *invader* token first (see §12.2).
-5. With a 2022 core set (Tomb of Giants or Painted World of Ariamis), reveal the tile's *event card* the first time the party enters the tile.
+5. With a 2022 core set (Tomb of Giants, Painted World of Ariamis or The Sunless City), reveal the tile's *event card* the first time the party enters the tile.
    - An immediate card is resolved and discarded.
    - A consumable card is taken by one character.
    - A rendezvous card stays on the tile and applies to that encounter.
@@ -69,7 +69,7 @@ An encounter is fought in rounds.
    - If several enemies share a threat value, the one closest to a character takes its turn first.
    - If those enemies are equally close, the one with the most wound tokens takes its turn first.
    - If they are still tied, the players decide.
-2. Each character takes a turn, in any order the party chooses each round.
+2. Each character takes a turn, one by one, in ascending threat: the lowest first, the highest last.
 3. The aggro token passes to the last character to deal damage. If no character deals damage, it stays where it is.
 4. Rounds continue until every enemy model or every character is dead.
 
