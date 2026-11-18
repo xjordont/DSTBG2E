@@ -2308,3 +2308,51 @@ Measured on every 2017 set, an average table wins 57% / 63% / 68% / 69% for one 
 ### 21.5 Next
 
 No rules question is open. The manuscript rewrite (about 29,000 words, the author's terse voice) and the layout after it wait for the author's word to begin.
+
+## 22. The manuscript rewritten to the settled rules (2026-11-18)
+
+The author's word: "do the whole manuscript rewrite all at once. Use your best judgment as a professional game designer and rule book editor if there is any uncertainty."
+
+### 22.1 What was done
+
+- Every chapter, the glossary and the F.A.Q. were written afresh from the author's own chapters (`work/phase2a/source/`), to the ruleset of 21.3, in the author's register. The earlier text was used only for facts the author had asked to have added (boss entries, four campaigns, appendix data). The brief every chapter was written to is `work/phase12/REWRITE_BRIEF.md`: the settled rules, the section map, the owner of each rule and a word budget per chapter.
+- **Length: 27,468 words** (the author wrote 20,500; the earlier text was 77,500; the audit's target was about 29,000). By part: front matter and chapters 1 to 16, 15,558; boss special rules 3,792; campaign play and campaigns 3,396; player versus player 458; glossary 2,082 (92 one-line entries); F.A.Q. 405 (ten answers); appendices 1,777.
+- **Checked:** by script, no style violation and no broken cross-reference (`tools/style_check.py`, `tools/xref_check.py`, now reading the section map of the rewrite brief), and every file inside its budget (`tools/word_budget.py`). Each chapter was compared with the author's chapter by its writer, and the whole book was then read against the brief by a reviewer who had not written any of it; the contradictions it found, with the brief and between chapters, and the misdirected references are corrected or ruled on in 22.2. The appendix tables were compared with the earlier file by script: 60 weapon rows identical, all 123 card, enemy and boss names present.
+- **Not done:** the layout. The two PDFs in the repository are still the earlier text.
+
+### 22.2 Judgements made in the rewrite, for the author to overturn
+
+Each is one sentence in the book and can be changed in a line.
+
+| # | Where | What the book now says | Why |
+|---|---|---|---|
+| 1 | §7.1, §16.5, §20 | Player versus player is fought after every boss in every game of two or more characters, the final boss included | section 10.1, the author's last word on it; the author's chapter names the champion after the final boss |
+| 2 | §18.6 | Campaign stat costs are 4 / 8 / 16 / 24 | "stat costs doubled" (9.6); twelve for the fourth tier (17.2) would have put it below the third tier's 16 in a campaign |
+| 3 | §18.5 | In a campaign a reset encounter fought again pays 0 / 1 / 2 souls | "rewards one lower", applied to every reward |
+| 4 | §11.4, §18.6 | Every card that is not starting equipment sells for one soul, boss treasure included, in both kinds of game | section 16; the author's price tables had 6 and 4 for boss treasure |
+| 5 | §7.5 | The party cannot skip a reset encounter while any character's bar is full | the one damage of a skip has nowhere to go |
+| 6 | §10.1 | Minor actions may be taken before or after the major action; a character who runs cannot rest that turn, and one who rests cannot then run | stepping away after a blow is a tactical choice, and it is how the measured game was played |
+| 7 | §8.3, §12, §13, §14 | Invaders, summons and crystal lizards are not scaled; a mimic is scaled and fought as a mini-boss, but killing one is not the defeat of a boss (no six souls, spark, player versus player or free rest) | the author's chapters, and the boss rewards would otherwise be farmed from chests |
+| 8 | §6.5 | Encounter decks hold the cards of the set the next boss comes from; a set with no Level 1 to 3 cards uses a core set's | the author's default, with no option beside it |
+| 9 | §9.6 | A parry is paid for and rolled as a dodge, the extra die included | one rule for both rolls |
+| 10 | §7.2, §7.5 | If the aggro holder dies the token passes to the living character with the highest threat; soul rewards are paid to characters who died in the encounter too | holes a first game would meet |
+| 11 | §12.1 | An advanced summon may be called before a main-boss or a mega-boss | the author's chapter |
+| 12 | §18.8 | Transposition is allowed during any rest once the first section has ended | the author's chapter asked for a rest paid for with a spark; the difference is not worth a rule |
+| 13 | §17.1 | The Twin Gargoyles are fought one after the other with the one Gargoyle model and dial | the core set has one model |
+| 14 | §18.1 | A campaign section with no boss ends when its last encounter is first cleared, and the party then rests free | six of the sixteen campaigns have such a section and the author's rule named only bosses |
+| 15 | §8.2 | The Phalanx is three Phalanx Hollow models on one node that move, attack and take wounds as one enemy | 9.1; nothing else in the supplied files says how it is played |
+| 16 | §16.3 | A boss attack without the area icon targets one character within range, in whatever arc that character stands | the author's chapter gave arcs to area attacks only |
+| 17 | §17 | Bosses with nothing to say beyond their cards have no entry or one line (Sir Alonne; Gargoyle, Titanite Demon, Boreal Outrider Knight, Winged Knight, Dancer; Black Knight, Gravelord Nito, Crossbreed Priscilla, Heavy Knight); Vordt resolves Frostbreath at the start of its first turn after heating up | heat-up is now immediate |
+| 18 | §19 | The lines that let a party add other sets' encounter cards to a campaign, or swap its mega-bosses, are removed | no optional rules |
+
+### 22.3 Facts still not confirmed
+
+- The number of event cards in each 2022 core set is given as 30, from the Tomb of Giants rulebook; the Painted World of Ariamis count was not checked.
+- Appendix A keeps the earlier text's values for ten weapons where they differ from the author's original table (Butcher Knife, Caestus, Carthus Curved Greatsword, Carthus Curved Sword, Claws, Dark Silver Tracer, Falchion, Manikin Claws, Parrying Dagger, Warden Twinblades).
+- Appendix B names revised data cards for twelve 2022 enemies and four 2022 bosses and gives no values for them (20.4).
+- The Deprived's heroic action and the first-edition wording of three others (20.4) do not affect the text: heroic actions are read from the dashboards.
+
+### 22.4 Next
+
+The layout: the build was made for a book of 124 pages and this one is near 50. It waits for the author's word, and for any of the judgements of 22.2 the author wants changed first.
+
