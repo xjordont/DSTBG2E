@@ -2244,3 +2244,67 @@ Open, and only the author can close them:
 4. **The heroic actions on the author's own boards** for the Deprived, and the 2017 wording for the Pyromancer, Cleric and Thief if it differs from 2022.
 
 To re-run: `python3 tools/sim/compare.py --only proposed20 --games 800 --probe 300 --bank 6` for this tuning on every 2017 set (`--bank 10` for one character, `--regrind 2` for four, `--skill 1.3` and so on), `--only proposed20_core` for the core set alone, `--only owned20` for the accepted rules, `--only proposed20_22` with the 2022 sets in.
+
+## 21. The author's answers to 20.7, and the rules as settled (2026-11-18)
+
+The author's answers to the four questions of 20.7:
+
+1. Sparks and boss health: "Use your best judgment and game design logic to make this decision."
+2. The lone character on the core set alone: "Balancing by less sparks is very awkward. I think it's fine to have some classes stronger than others."
+3. and 4. The revised 2022 data cards and the heroic actions: "No please search internet for this information. If not available just omit it from your analysis."
+
+And, after the workshop had read answer 2 as a case against the spark cut as a whole and begun to measure the game with the official spark line: **"Keep 4/3/2/1 sparks."**
+
+### 21.1 Decided
+
+- **Sparks: five less the number of characters (4 / 3 / 2 / 1).** The author's decision.
+- **Boss health: +4 for each character beyond the first (+0 / +4 / +8 / +12) on every boss, the heat-up point rising by half of it (+0 / +2 / +4 / +6).** The judgement the author asked for, as 20.5 argues it: it is the author's own figure, the halves are whole numbers, it puts every party size inside the band, and it gives the last fight back to a party of four, which otherwise fails one main-boss attempt in twelve.
+- **The lone character is left as it is.** A lone Knight or Warrior on the core set alone wins 85%, and the classes differ widely alone. The author accepts that some classes are stronger than others; no rule is added for it.
+- **The revised 2022 cards and the missing heroic actions are left out of the analysis.** A third search found no community update pack, no first-edition conversion of the 2022 enemies or bosses, no Titanite Chunk, and no further heroic action text (`work/phase7/community_pack_web.md`). So the measured game is every 2017 set with all the treasure; the 2022 sets' enemies, encounters and bosses are outside it; the Deprived plays without a heroic action; and the Pyromancer, Cleric and Thief play the 2022 wording.
+
+### 21.2 Why the spark line stays: what was measured before the author's last message
+
+With the official spark line the party's size cannot be balanced by boss health alone without long games (every 2017 set, the between split, 800 games a cell, ±3):
+
+| Games won | 1 | 2 | 3 | 4 | Table time |
+|---|---|---|---|---|---|
+| Sparks 5 / 4 / 3 / 2, bosses as printed | 64% | 76% | 81% | 86% | 237 / 309 / 363 / 428 |
+| Sparks 5 / 4 / 3 / 2, boss health +4 a character beyond the first | 64% | 75% | 76% | 82% | 237 / 333 / 411 / 520 |
+| Sparks 5 / 4 / 3 / 2, boss health +8 | | 74% | 72% | 78% | – / 350 / 467 / 618 |
+| Sparks 5 / 4 / 3 / 2, boss health +4, enemy health one step more for two or more characters | | 55% | 62% | not run | – / 357 / 446 / – |
+| **Sparks 4 / 3 / 2 / 1, boss health +4 (settled)** | **57%** | **63%** | **68%** | **69%** | 233 / 325 / 425 / 446 |
+
+- **Boss health alone does not bring large parties into the band,** and +8 makes the game for four half as long again as the settled rules (618 against 446 activations).
+- **Tougher enemies do it and overshoot for two,** and lengthen every fight.
+- **The spark line does it and shortens the game.** The run was stopped at the author's message; the rows above are what it had finished.
+
+### 21.3 The rules as settled
+
+The ruleset is section 16, as amended by 17.2 (spending), section 18 (every owned set's treasure in the decks), section 20 and this section. The amendments of sections 20 and 21, in one place:
+
+- **Treasure decks (20.1):** tier one is every class card and every common card that asks for less than 25 in every stat. Tier two is every transposed card and every common card that asks for 25 or more. Five legendary cards drawn at random and the mini-boss's own treasure join tier two when the mini-boss falls; the main boss's own treasure joins it when the main boss is set up. The cards new in the 2022 sets are added; their reprints are not added a second time.
+- **Scaling:**
+
+| Characters | Sparks | Enemy health | Damage on every enemy and boss attack | Boss health | Boss heat-up point |
+|---|---|---|---|---|---|
+| 1 | 4 | as printed | as printed | as printed | as printed |
+| 2 | 3 | +1 | +1 | +4 | +2 |
+| 3 | 2 | +2 | +2 | +8 | +4 |
+| 4 | 1 | +3 | +2 | +12 | +6 |
+
+  One spark is added each time a boss is defeated, as before. Ornstein and Smough each gain the boss health.
+- **Mask of the Child:** two stamina in place of the turn's one (Appendix B is to say so).
+- **Frostbite stays as the manuscript has it** (20.3).
+- **No rule is added for a lone character or for the stronger classes.**
+
+Measured on every 2017 set, an average table wins 57% / 63% / 68% / 69% for one to four characters and the best play 83% / 88% / 90% / 90% (20.5). To re-run: `python3 tools/sim/compare.py --only settled --games 800 --probe 300 --bank 6` (`--bank 10` for one character, `--regrind 2` for four).
+
+### 21.4 What the figures do not cover
+
+- **The 2022 sets' enemies, encounters and bosses** (20.4), mega-bosses, invaders, terrain and traps, and boss movement and arcs (19.1).
+- **The Deprived's heroic action,** and the 2018 wording for the Pyromancer, Cleric and Thief.
+- **Real tables.** The skill setting is calibrated so that the official 2017 game is won about half the time; the figures are comparisons between rulesets on that footing and not forecasts of a given group.
+
+### 21.5 Next
+
+No rules question is open. The manuscript rewrite (about 29,000 words, the author's terse voice) and the layout after it wait for the author's word to begin.

@@ -85,6 +85,7 @@ SPECS = {
     'proposed198_core': ('Section 19.8: the same tuning on the core set alone', PROPOSED_198_CORE),
     'owned20': ('Section 20: accepted rules, every 2017 set, all treasure, the between split', OWNED_20),
     'proposed20': ('Section 20: the same with sparks 4/3/2/1 and boss health +4 a character beyond the first', PROPOSED_20),
+    'settled': ('Section 21: the rules as settled (the between split, sparks 4/3/2/1, boss health +4 a character beyond the first), every 2017 set', PROPOSED_20),
     'proposed20_core': ('Section 20: that tuning on the core set alone', PROPOSED_20_CORE),
     'proposed20_22': ('Section 20: that tuning with the 2022 sets\' enemies, encounters and bosses in, as printed', PROPOSED_20_22),
     'author': ("The author's own table (15.7): health +1 a character, damage +0/+0/+1/+2, sparks 4/3/2/1", AUTHOR),
