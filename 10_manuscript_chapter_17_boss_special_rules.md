@@ -35,7 +35,7 @@ Some behaviour cards of Great Grey Wolf Sif, Artorias and the Pursuer show a *do
 
 ### Ornstein and Smough
 
-One *main-boss*, two models. Dragon Slayer Ornstein and Executioner Smough each have a data card and a health dial of their own, and each gains the boss health (see §8.3).
+One *main-boss*, two models. Dragon Slayer Ornstein and Executioner Smough each have a data card and a health dial of their own.
 
 - Ornstein starts on the main-boss *spawn node* and Smough on the *mini-boss* spawn node.
 - Each boss turn draws one card. Ornstein resolves the behaviour printed for Ornstein, then Smough the one printed for Smough. The range, the dodge difficulty, the arcs and the *weak arcs* {{icon:ast-0041-weak-boss-arc}} printed with a behaviour apply to its model alone.
@@ -46,7 +46,7 @@ One *main-boss*, two models. Dragon Slayer Ornstein and Executioner Smough each 
 
 ### Twin Gargoyles
 
-Where a campaign *section* lists the Twin Gargoyles, two Gargoyles are fought one after the other as one mini-boss encounter. The one model and health dial serve for both, and each Gargoyle gains the boss health (see §8.3).
+Where a campaign *section* lists the Twin Gargoyles, two Gargoyles are fought one after the other as one mini-boss encounter. The one model and health dial serve for both.
 
 - When the first Gargoyle falls, return its model to the spawn node, set the dial to its starting health and build a new behaviour deck. Play goes on in the same order.
 - The characters keep their nodes, cubes and tokens, and the dead stay out.
@@ -123,11 +123,7 @@ The Old Dragonslayer is played with the Dragon Slayer Ornstein model of the core
 
 The Hungry *Mimic* and the Voracious Mimic are fought by the mimic rules (see §13).
 
-## 17.7 Tomb of Giants
-
-The Black Knight and Gravelord Nito are played from the replacement *data cards* and *behaviour cards* listed in the card amendments (see Appendix B). Neither has a special rule.
-
-## 17.8 Black Dragon Kalameet
+## 17.7 Black Dragon Kalameet
 
 Kalameet's model starts on the *mega-boss* *spawn node*, facing the centre of the board.
 
@@ -143,7 +139,7 @@ When a strafe icon is resolved:
 
 A character on the landing node is attacked only if the card also marks that node.
 
-## 17.9 Executioner's Chariot
+## 17.8 Executioner's Chariot
 
 The Chariot is a *mega-boss* fought in two parts. Until its *heat-up* it follows a fixed track and cannot be harmed. Afterwards it is fought as any boss.
 
@@ -153,7 +149,7 @@ The Chariot is a *mega-boss* fought in two parts. Until its *heat-up* it follows
 
 **Before the heat-up.** The front of the data card shows no starting health {{icon:ast-0029-starting-health}}, no *block* and no *resist*. The Chariot cannot be attacked or damaged, and nothing a character does affects it.
 
-Each round the Black Hollow Mages and the Falchion Skeletons take their turns as enemies, then the Chariot takes its turn as the boss (see §7.5).
+Before each character's turn, every enemy model on the board takes a turn, in descending *threat* (see §7.5): the Chariot, each Black Hollow Mage and each Falchion Skeleton.
 
 On its turn the Chariot resolves the top card of the track deck. The track deck is never shuffled: the four cards are resolved in order, and card 1 follows card 4.
 
@@ -179,13 +175,11 @@ From then on the skeletal horse is fought as any boss, against the block and res
 
 **Raise Skeleton.** This icon is printed on the Black Hollow Mage's data card and is resolved the same way in every encounter. Count the enemies on the tile whose names include the word "Skeleton". If there are fewer than at the start of the encounter, the players choose one such enemy killed during the encounter and place its model, with no wound tokens, on the enemy spawn node nearest to that Black Hollow Mage. The players choose between nodes that are equally near. Otherwise the icon has no effect.
 
-## 17.10 Bosses of Other Expansions
-
-Crossbreed Priscilla and the Heavy Knight, of the Painted World of Ariamis, are played from the replacement *data cards* and *behaviour cards* listed in the card amendments (see Appendix B). Neither has a special rule.
+## 17.9 Bosses of Other Expansions
 
 ### The Four Kings
 
-The Four Kings are one *mega-boss* with four models, the kings numbered one to four, who enter the encounter one at a time. Each king has a health dial of its own (see §8.3), and the identifier token on a model's base shows which dial that is. The data card shows no *heat-up* point: the Four Kings never heat up.
+The Four Kings are one *mega-boss* with four models, the kings numbered one to four, who enter the encounter one at a time. Each king has a health dial of its own, and the identifier token on a model's base shows which dial that is. The data card shows no *heat-up* point: the Four Kings never heat up.
 
 - King one starts on the mega-boss *spawn node*. The other three models wait beside the board.
 - Each boss turn draws one behaviour card, and every king in play resolves the whole card, in numerical order.
@@ -238,7 +232,7 @@ The Wind Up icon on the Last Giant's cards is resolved as for the Asylum Demon (
 
 ### Manus, Father of the Abyss
 
-- **Overextended.** At the end of each of Manus's turns, each character may spend one *stamina* to move to an adjacent node, before the characters' turns begin. This movement counts as a *run*.
+- **Overextended.** At the end of each of Manus's turns, each character may spend one *stamina* to move to an adjacent node, before the next character's turn begins. This movement counts as a *run*.
 - An attack with the *shaft* icon does not target a character on Manus's own node (see §10.3), whichever *arc* that character stands in.
 - Manus has a heat-up of its own. When its health reaches its heat-up point, take two of its heat-up cards at random, without looking at them. Place one face down on top of the behaviour deck and the other beneath the discard pile. Do not shuffle. The first is the next card Manus draws; the second is the first card drawn after the discard pile is next turned over.
 

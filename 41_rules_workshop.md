@@ -2475,3 +2475,73 @@ The book's road, tiles, face-down encounter cards and "kill every enemy" encount
 - **Encounter cards.** The component list counted the encounter cards printed in the 2022 core sets, and §6.5 would have had a party shuffle them for a boss of those sets. Those cards carry objectives, timers, trials and rewards of their own. They are now left in the box (§2.6, §6.5); a boss of a 2022 set is reached through the core set's encounter cards. The enemies of the 2022 sets (Appendix B) therefore appear only where the party has encounter cards of the 2017 kind that list them.
 - **Event cards are the one 2022 component still used,** by the author's direction of 8.2 (C3), dealt one to a tile as the author's own manuscript dealt its event cards. Many of the printed cards speak of things the 2017 structure does not have (a soul cache, shortcuts, timers, a second encounter card on a space); §7.5 maps what it can and discards the rest. If the instruction above is meant to cover them too, they come out in four sentences.
 
+## 25. The author's ruling of 2026-11-19: the round and the bosses go back; 2022 content out; the custom events deck in
+
+"I changed my mind. Characters should act in the order of their choosing each round like in my original manuscript. Enemies should act in descending threat as in the 2017 rules. Bosses and invaders should act between each characters turn like in my original manuscript and the official rules. No scaling for bosses, invaders, or summons. Remove the 2022 event deck. The only elements used from 2022 sets are new or updated item cards; they are only used if the players happen to own 2022 set(s). We will use the attached custom events deck and rules if the players have that content available."
+
+**Section 24 is withdrawn, and the fixed order of section 23 with it.**
+
+### 25.1 The rules as they now stand
+
+- **The round:** every enemy in descending threat; then every character, in any order the party chooses each round. Aggro passes to the last character to deal damage.
+- **A boss** takes a turn before each character's turn. **An invader and a summon** take a turn after each character's turn.
+- **Scaling:**
+
+| Characters | Sparks | Enemy health | Enemy attack damage |
+|---|---|---|---|
+| 1 | 4 | as printed | as printed |
+| 2 | 3 | +1 | +1 |
+| 3 | 2 | +2 | +2 |
+| 4 | 1 | +3 | +2 |
+
+  Bosses, mimics, invaders, summons and crystal lizards are never scaled.
+- Everything else is as sections 21 and 22 left it.
+
+### 25.2 What the figures say about it
+
+Measured on every 2017 set, the between split, the restored Appendix A (600 games a cell, ±3 to ±4, skill 1.0; `python3 tools/sim/compare.py --only settled --games 600 --probe 200 --bank 6`):
+
+| Games won | 1 | 2 | 3 | 4 | Main boss attempts failed |
+|---|---|---|---|---|---|
+| Section 21 (bosses scaled) | 57% | 58–63% | 67–68% | 69–72% | 40% / 43% / 35% / 11% |
+| **As ruled (bosses as printed)** | **57%** | **78%** | **84%** | **87%** | 40% / 20% / 4% / 1% |
+
+**With bosses as printed, parties of two to four win 78% to 87%, above the band of 50% to 70% the author set in 18.4, and a party of four almost never loses to a boss.** A lone character is unchanged. This is the author's ruling and it is written into the book as given; the figures are recorded so that the choice is made with them in view.
+
+If the band still matters, the one lever that does not touch a boss is ordinary enemies (400 games a cell, ±5; bosses as printed throughout):
+
+| Enemy health | Enemy damage | Games won, 2 / 3 / 4 | Table time |
+|---|---|---|---|
+| +1 / +2 / +3 (as ruled) | +1 / +2 / +2 | 78% / 84% / 87% | 301 / 317 / 349 |
+| +2 / +3 / +4 | +1 / +2 / +2 | 52% / 69% / 78% | 326 / 370 / 390 |
+| +2 / +3 / +4 | +1 / +2 / +3 | 52% / 69% / 62% | 326 / 370 / 358 |
+| **+2 / +4 / +6** (two for each character beyond the first) | +1 / +2 / +2 | **52% / 53% / 56%** | 326 / 378 / 447 |
+
+Two health for each character beyond the first puts every party size in the band on one line of rule. Its cost is the shape of the game: nearly every lost game is then lost in an ordinary encounter (about 40% of games) and almost none to a boss. **Not applied; the author to say.**
+
+### 25.3 The 2022 sets: treasure cards only
+
+- Out of the book: the enemies of Tomb of Giants and Painted World of Ariamis, the Black Knight, Gravelord Nito, the Heavy Knight and Crossbreed Priscilla, their data and behaviour cards (Appendix B's last two sections), their encounter cards, and the event cards. §17 loses its Tomb of Giants section and is renumbered (17.7 Black Dragon Kalameet, 17.8 Executioner's Chariot, 17.9 Bosses of Other Expansions). The six classes those sets reprint are listed under the Characters expansion alone.
+- Kept: Appendix A, and Appendix B's added and revised treasure, used where the party owns a 2022 set.
+- **A judgement:** ten of the added cards are printed as the treasure of the four bosses now out of the game (Black Knight Halberd, Black Knight Shield, Blue Titanite, Gravelord Sword, Gravelord Sword Dance, Greatsword, Lifehunt Scythe, Priscilla's Dagger, Steel Armour, Tower Shield). They are made legendary treasure, as the author's own amendment had already made Blue Titanite. Otherwise they would never enter a game.
+
+### 25.4 The custom events deck (Events Expansion II, a community expansion)
+
+Supplied by the author: an eight-page rules insert, 49 event cards (11 of Level 1, 23 of Level 2, 15 of Level 3; 28 carry a discard icon), 8 trap cards and 14 treasure cards (six Purging Stone and eight others). All three files are images without text; the cards were transcribed for this work and the transcript is not kept in the repository. This is the deck the author's original manuscript meant by its levelled event cards and special trap cards.
+
+Written into the book, in play when the players have it:
+
+- **Setup (§6.5, §6.2):** three event decks by level and one trap deck; one event card of the encounter's level face down beside each encounter card. Two Purging Stone cards and the Red Tearstone Ring are common treasure; the other treasure cards wait for the event cards that name them.
+- **Play (§7.5, Event Cards):** the card is revealed each time the party enters the tile. At a reset the revealed cards are gathered, those with the discard icon set aside until a boss is defeated, the others shuffled back, and new cards dealt. The six cards that bring a figure to the bonfire are removed once resolved; Yuria's and Patches' wares are as the insert has them. One Hollowing card at a time.
+- **Trap cards (§5.5):** the first trap token of an encounter that is not blank is replaced by a trap card, laid towards the doorway the party entered by, blocked or resisted with the armour's dice alone.
+- **Words the cards use that this book does not:** the party's souls are paid or shared by the characters as they choose; the treasure deck is the deck of the current tier; a party "defeated" or "perished" has failed the encounter; an activation is a turn; health gained is damage removed; taunt is threat.
+
+**Judgements and things the insert leaves open:**
+
+- The insert's three "alternative play" ideas are left out (no optional rules).
+- A Hollowing card "limits stamina bars to 9, 8 or 7". It is read as a cap on the endurance bar, not as more hollow cubes; a hollow character (eight spaces) is touched only by Hollowing III.
+- The cards never name their condition icons. They are the standard poison, bleed, frostbite, stagger and push icons; one trap card and one event card draw the poison icon differently from the others, and it is read as poison.
+- Several cards assume things this game does differently (a card that hands over an "inactive" boss's treasure, one that sets the characters on one another, one that places a mini-boss in an encounter). They are played as written with the mapping above; none is rewritten here.
+- A trap card is taken to attack characters only. The book's trap tokens hit every model on their node.
+- The expansion's Mask of the Child and Red Tearstone Ring share their names with cards of the 2022 sets and read differently. Appendix B's wording governs the Mask of the Child; both Red Tearstone Rings stand as printed.
+

@@ -66,7 +66,7 @@ Terms set in *italics* in this book are listed here with the section that gives 
 
 **Estus flask.** The character token, with a ready side and a used side, that is flipped when the character drinks estus (see §3.5).
 
-**Event card.** A card of a 2022 core set, revealed when the party first enters its tile (see §7.5).
+**Event card.** A card of the Events Expansion, dealt beside an encounter card and revealed when the party enters its tile (see §7.5).
 
 **Failed.** Said of an encounter that the party has lost because every one of its characters is dead (see §7.5).
 
@@ -82,7 +82,7 @@ Terms set in *italics* in this book are listed here with the section that gives 
 
 **Hollow.** Said of a character who has died and returned weaker, with two hollow cubes filling spaces of the endurance bar (see §7.2).
 
-**Invader.** A hostile phantom of the Phantoms expansion that joins one encounter and acts after the other enemies (see §12.2).
+**Invader.** A hostile phantom of the Phantoms expansion that joins one encounter and takes a turn after each character's turn (see §12.2).
 
 **Inventory.** The stack of face-down treasure cards a character keeps beside the dashboard, closed for the length of every encounter (see §3.2).
 
@@ -164,7 +164,7 @@ Terms set in *italics* in this book are listed here with the section that gives 
 
 **Terrain node.** A node marked with a terrain symbol, where terrain is placed at the start of an encounter (see §5.1).
 
-**Threat.** The value on a dashboard or data card that orders enemy and character turns and decides who first holds the aggro token (see §7.5).
+**Threat.** The value on a dashboard or data card that orders enemy turns and decides who first holds the aggro token (see §7.5).
 
 **Tier one.** The lower of the two grades of treasure deck and shop, in use from the start of the game (see §6.2).
 

@@ -75,7 +75,9 @@ The cards below are added to the game or replace the printed cards of the same n
 
 ## Additional Treasure
 
-Only the cards below are added from the 2022 sets, Tomb of Giants and Painted World of Ariamis. They are the cards new in those sets. A reprint is not added a second time (see §6.2).
+Treasure cards are the only part of the sets published in 2022 that this game uses, and only where the party owns such a set. Only the cards below are added. They are the cards new in those sets; a reprint is not added a second time (see §6.2). The enemies, bosses, encounter cards and event cards of those sets are not used.
+
+Ten of the cards are printed as the *boss treasure* of bosses this game does not use: Black Knight Halberd, Black Knight Shield, Blue Titanite, Gravelord Sword, Gravelord Sword Dance, Greatsword, Lifehunt Scythe, Priscilla's Dagger, Steel Armour and Tower Shield. They are *legendary treasure* here.
 
 | Added | Cards |
 |---|---|
@@ -105,23 +107,3 @@ Where a card has two printings, the one with the rules text given here is used. 
 | Wolf Ring | After rolling a dodge, the wearer may pay 1 stamina to reroll any or all of the dice, once for each dodge. | |
 
 Blacksmith Andre exchanges a Titanite Shard for a Titanite Chunk, or a Titanite Chunk for a Titanite Slab, when the character holds the new card. The new card takes the upgrade slot of the old. A replaced Titanite Shard goes to the bottom of the *tier one* deck, a replaced Titanite Chunk to the bottom of the tier two deck. A weapon that holds a Titanite Chunk or a Titanite Slab asks for 25 STR and 25 DEX as well as its own requirements.
-
-## Enemy Data Cards
-
-Each enemy below is played from the revised *data card* of the same name. These enemies appear only where an *encounter card* of the kind this book uses lists them (see §6.5); the encounter cards printed in their own sets are not used.
-
-| Set | Enemies |
-|---|---|
-| Painted World of Ariamis | Bonewheel Skeleton, Crow Demon, Engorged Zombie, Phalanx, Phalanx Hollow, Snow Rat |
-| Tomb of Giants | Giant Skeleton Archer, Giant Skeleton Soldier, Necromancer, Skeleton Archer, Skeleton Beast, Skeleton Soldier |
-
-## Boss Data and Behaviour Cards
-
-Each boss below is played from the revised *data card* and the revised *behaviour cards* of the same name. Any special rules are with the bosses (see §17.7, §17.10).
-
-| Boss | Kind | Set |
-|---|---|---|
-| Black Knight | *Mini-boss* | Tomb of Giants |
-| Crossbreed Priscilla | *Main-boss* | Painted World of Ariamis |
-| Gravelord Nito | Main-boss | Tomb of Giants |
-| Heavy Knight | Mini-boss | Painted World of Ariamis |

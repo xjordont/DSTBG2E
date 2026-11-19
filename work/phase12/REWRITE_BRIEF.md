@@ -43,24 +43,24 @@ Everything here is decided. Where the author's chapter differs, write this. Wher
 
 ### 3.1 Party size
 
-| Characters | Sparks | Enemy health | Enemy attack damage | Boss health | Boss heat-up point | Boss attack damage |
-|---|---|---|---|---|---|---|
-| 1 | 4 | as printed | as printed | as printed | as printed | as printed |
-| 2 | 3 | +1 | +1 | +4 | +2 | +2 |
-| 3 | 2 | +2 | +2 | +8 | +4 | +3 |
-| 4 | 1 | +3 | +2 | +12 | +6 | +4 |
+| Characters | Sparks | Enemy health | Enemy attack damage |
+|---|---|---|---|
+| 1 | 4 | as printed | as printed |
+| 2 | 3 | +1 | +1 |
+| 3 | 2 | +2 | +2 |
+| 4 | 1 | +3 | +2 |
 
-(Table as ruled 2026-11-18, section 24 of 41_rules_workshop.md: the boss columns apply to bosses, mimics and invaders; summons and crystal lizards are not scaled.)
+(Table as ruled 2026-11-19, section 25 of 41_rules_workshop.md: bosses, mimics, invaders, summons and crystal lizards are never scaled.)
 
 - This table replaces the author's whole scaling table. Enemy movement is never scaled and no attack is repeated because of party size.
-- "Boss" here is every mini-boss, main-boss and mega-boss model, and a mimic. Ornstein and Smough each gain the boss health. Invaders take the boss columns. Summons and crystal lizards are not scaled.
+- Bosses, mimics, invaders, summons and crystal lizards are never scaled.
 - Sparks at the start: five less the number of characters. One spark is added each time a boss is defeated. Sparks are gained no other way.
 - A character adventuring alone starts with six souls.
 
 ### 3.2 The round
 
-- (Superseded by the line below.) There is no first player token.
-- Every encounter has the same round (ruled 2026-11-18, section 24 of 41_rules_workshop.md): each enemy in ascending threat, each invader, the boss, each character in ascending threat, each summon. A boss and an invader act once a round.
+- Ordinary encounter: every enemy takes a turn in descending threat; then every character, in any order the party chooses each round. There is no first player token.
+- Boss encounter: the boss takes a turn before each character's turn. An invader and a summon take a turn after each character's turn.
 - Aggro: at the start of an encounter the token goes to the character with the highest threat. After that it passes to the last character to deal damage. If no one deals damage it stays.
 
 ### 3.3 A character's turn
@@ -119,7 +119,7 @@ Everything here is decided. Where the author's chapter differs, write this. Wher
 - Chests: one treasure card of the current tier is placed face down under each chest when the encounter is set up, and is taken when the encounter is cleared (mimics: section 3.11).
 - The fog gate: the first time the party reaches a boss, the fog gate token moves to the bonfire tile. From then on the party may go straight from the bonfire to the boss, or walk the road again for souls. In a campaign the fog gate gives no shortcut.
 - Encounter decks hold only the encounter cards of the set the next boss comes from. The party chooses its bosses; nothing is chosen at random.
-- With a 2022 core set (Tomb of Giants or Painted World of Ariamis) event cards are used: shuffle them and deal one face down to each encounter tile. When the party first enters the tile, reveal it: an immediate card is resolved and discarded, a consumable card is taken by one character, a rendezvous card stays and applies to that encounter. Where a card names a soul cache, it means the characters' souls, shared as the party chooses; the inventory is a character of the party's choice; the next encounter is the tile the card lies on. A card that still cannot be applied is discarded.
+- Event cards are those of the community Events Expansion II, in play when the players have it (ruled 2026-11-19, section 25 of 41_rules_workshop.md); nothing of the 2022 sets is used but their new treasure cards.
 - A gravestone lets the party reveal one hidden card: the top card of either treasure deck or of the next boss's behaviour deck (put back on top or on the bottom), or a face-down encounter card or event card on any tile (put back or replaced with the top card of its deck).
 - Traps: placed as the author wrote. A trap is sprung when a character moves or is pushed onto its node and hits every model on that node, enemies included. A character may dodge it (trap damage cannot be blocked or resisted); a character who dodges a trap stays on the node.
 
@@ -208,7 +208,7 @@ Use these headings exactly. A chapter owns the rules named after its sections.
 
 **§16 Boss Turns** (915 words): 16.1 Overview · 16.2 Boss Movement and Symbols · 16.3 Boss Attacks · 16.4 Boss Aggro · 16.5 Boss Death. Owns: the boss's turn before each character's turn, boss movement symbols, boss aggro (one sentence), section 3.10 of this brief. Characters defend against a boss as against an enemy (§9); do not restate §9.
 
-**§17 Boss Special Rules** (3,950 words): 17.1 Rules Common to Several Bosses · 17.2 Core Set · 17.3 Asylum Demon and Stray Demon · 17.4 Darkroot · 17.5 Iron Keep · 17.6 Explorers · 17.7 Tomb of Giants · 17.8 Black Dragon Kalameet · 17.9 Executioner's Chariot · 17.10 Bosses of Other Expansions. See the special instructions in your assignment.
+**§17 Boss Special Rules** (3,950 words): 17.1 Rules Common to Several Bosses · 17.2 Core Set · 17.3 Asylum Demon and Stray Demon · 17.4 Darkroot · 17.5 Iron Keep · 17.6 Explorers · 17.7 Black Dragon Kalameet · 17.8 Executioner's Chariot · 17.9 Bosses of Other Expansions. See the special instructions in your assignment.
 
 **§18 Campaign Play** (1,415 words): 18.1 Setup · 18.2 The Fog Gate · 18.3 Sparks · 18.4 Adding and Dropping Players · 18.5 Encounter Rewards · 18.6 The Bonfire · 18.7 Bonfire Ascetic · 18.8 Transposition. Owns: section 3.13 of this brief.
 

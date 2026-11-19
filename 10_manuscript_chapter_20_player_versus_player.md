@@ -13,7 +13,7 @@ After each boss is defeated (*mini-boss*, *main-boss* and *mega-boss*), a player
 
 ## 20.2 The Fight
 
-- Characters take turns in ascending *threat* order, as in any encounter. A die roll settles each tie before the first turn.
+- Characters take turns in descending *threat* order. A die roll settles each tie before the first turn.
 - A character's turn is the same as in any encounter. Attacks are made against other characters.
 - Where a card or a *heroic action* names an enemy, it means another character.
 - The attacker's roll is the attack value. The defender *blocks*, *resists*, *dodges* or parries as against an enemy's attack (see §9).

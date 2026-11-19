@@ -11,7 +11,7 @@ A model is hit by an attack so long as the attack was in *range* and the model d
 Each enemy type has a *data card*. It gives what is needed to take that enemy's turn and to resolve a character's attack against it:
 
 1. Name.
-2. *Threat* {{icon:ast-0026-threat-level}}. Enemies with lower threat take their turn first (see §7.5).
+2. *Threat* {{icon:ast-0026-threat-level}}. Enemies with higher threat take their turn first.
 3. Attack *range* {{icon:ast-0060-attack-range}}. The maximum range at which the enemy can attack a character.
 4. *Dodge difficulty* {{icon:ast-0062-dodge}}. How hard the enemy's attacks are to *dodge*.
 5. *Block* and *resist* values {{icon:ast-0028-block-resist-shield}}. Block reduces the damage the enemy suffers from physical attacks; resist reduces the damage it suffers from magical attacks.
@@ -22,26 +22,23 @@ Each enemy type has a *data card*. It gives what is needed to take that enemy's 
 
 When an enemy suffers damage, place one wound token on the base of its model for each point of damage not prevented by its block or resist. The enemy dies when its wound tokens equal its scaled health (see §8.3) and is removed from the tile.
 
-The Phalanx of Painted World of Ariamis has no model of its own. Three Phalanx Hollow models on one node stand for it, and it moves, attacks and takes wounds as one enemy.
-
 ## 8.3 Scaling
 
-Enemies, *invaders* and bosses grow stronger with the number of characters in the game. Dead characters are counted. A character adventuring alone meets everything as printed.
+Enemies grow stronger with the number of characters in the game. Dead characters are counted.
 
-| Characters | Sparks | Enemy health | Enemy attack damage | Boss health | Boss heat-up point | Boss attack damage |
-|---|---|---|---|---|---|---|
-| 1 | 4 | as printed | as printed | as printed | as printed | as printed |
-| 2 | 3 | +1 | +1 | +4 | +2 | +2 |
-| 3 | 2 | +2 | +2 | +8 | +4 | +3 |
-| 4 | 1 | +3 | +2 | +12 | +6 | +4 |
+| Characters | Sparks | Enemy health | Enemy attack damage |
+|---|---|---|---|
+| 1 | 4 | as printed | as printed |
+| 2 | 3 | +1 | +1 |
+| 3 | 2 | +2 | +2 |
+| 4 | 1 | +3 | +2 |
 
 - The *sparks* are those the party starts with (see §7.4).
-- The damage is added to every attack, and to the damage value of a *push-move*.
-- The boss columns apply to every *mini-boss*, *main-boss* and *mega-boss* model, to a *mimic* and to an invader. Ornstein and Smough each gain the boss health.
-- *Summons* and *crystal lizards* are not scaled.
+- The damage is added to every enemy attack, and to the damage value of a *push-move*.
+- Bosses, *mimics*, *invaders*, *summons* and *crystal lizards* are never scaled. They are played as printed at every party size.
 - Nothing else printed on a *data card* changes.
 
-*Example.* With three characters, a Hollow Soldier printed with 1 health and an attack of 4 has 3 health and an attack of 6. A boss printed with 20 health, a *heat-up* point of 8 and an attack of 5 has 28 health, heats up at 12 and attacks for 8.
+*Example.* With three characters, a Hollow Soldier printed with 1 health and an attack of 4 has 3 health and an attack of 6. A boss is the same boss for one character or four.
 
 ## 8.4 Pushing
 

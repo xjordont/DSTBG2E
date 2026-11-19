@@ -1,6 +1,6 @@
 # 2. Game Components
 
-Each entry names the set that supplies it. PWA is the Painted World of Ariamis set and ToG is the Tomb of Giants set.
+Each entry names the set that supplies it. Of the sets published in 2022 (Tomb of Giants, Painted World of Ariamis, The Sunless City) only the treasure cards are used, and only those that are new or revised (see Appendix B).
 
 ## 2.1 Characters
 
@@ -10,12 +10,12 @@ Each character has a model, a character dashboard, three or four *starting equip
 - Warrior (Core)
 - Knight (Core)
 - Assassin (Core)
-- Sorcerer (Characters or PWA)
-- Deprived (Characters or PWA)
-- Mercenary (Characters or PWA)
-- Cleric (Characters or ToG)
-- Pyromancer (Characters or ToG)
-- Thief (Characters or ToG)
+- Sorcerer (Characters)
+- Deprived (Characters)
+- Mercenary (Characters)
+- Cleric (Characters)
+- Pyromancer (Characters)
+- Thief (Characters)
 
 The Characters expansion also holds 10x Armour set models, which represent armour treasure cards and have no effect on play.
 
@@ -27,34 +27,23 @@ Each enemy has a *data card* and the number of models listed.
 - 3x Alonne Knight Captain (Iron Keep)
 - 3x Alonne Sword Knight (Iron Keep)
 - 2x Black Hollow Mage (Executioner's Chariot)
-- 2x Bonewheel Skeleton (PWA)
 - 3x Crossbow Hollow (Core)
-- 2x Crow Demon (PWA)
 - 2x Crystal Lizard (Iron Keep)
 - 2x Demonic Foliage (Darkroot)
-- 2x Engorged Zombie (PWA)
 - 4x Falchion Skeleton (Executioner's Chariot)
 - 3x Firebomb Hollow (Explorers)
-- 2x Giant Skeleton Archer {{icon:ast-0019-giant-skeleton-archer}} (ToG)
-- 2x Giant Skeleton Soldier {{icon:ast-0016-giant-skeleton-soldier}} (ToG)
 - 3x Hollow Soldier (Core)
 - 3x Ironclad Soldier (Iron Keep)
 - 2x Large Hollow Soldier (Core)
 - 2x Mimic (Explorers), with the Hungry Mimic and Voracious Mimic data cards, 14x Mimic *behaviour cards* and 1x Mimic health dial
 - 1x Mushroom Child (Darkroot)
 - 1x Mushroom Parent (Darkroot)
-- 2x Necromancer {{icon:ast-0024-necromancer}} (ToG)
-- 5x Phalanx Hollow (three placed together show the Phalanx) (PWA)
 - 3x Plow Scarecrow (Darkroot)
 - 2x Sentinel (Core)
 - 3x Shears Scarecrow (Darkroot)
 - 3x Silver Knight Greatbowman (Core)
 - 3x Silver Knight Spearman (Explorers)
 - 3x Silver Knight Swordsman (Core)
-- 3x Skeleton Archer {{icon:ast-0012-skeleton-archer}} (ToG)
-- 1x Skeleton Beast {{icon:ast-0022-skeleton-beast}} (ToG)
-- 3x Skeleton Soldier {{icon:ast-0008-skeleton-soldier}} (ToG)
-- 2x Snow Rat (PWA)
 - 2x Stone Guardian (Darkroot)
 - 2x Stone Knight (Darkroot)
 
@@ -65,10 +54,8 @@ Each *mini-boss*, *main-boss* and *mega-boss* has a model, a health dial, a *dat
 ### Mini-Bosses
 
 - Asylum Demon (Asylum Demon)
-- Black Knight (ToG)
 - Boreal Outrider Knight (Core)
 - Gargoyle (Core)
-- Heavy Knight (PWA)
 - Old Dragonslayer (Explorers; uses the Dragon Slayer Ornstein model)
 - Titanite Demon (Core)
 - Winged Knight (Core)
@@ -76,9 +63,7 @@ Each *mini-boss*, *main-boss* and *mega-boss* has a model, a health dial, a *dat
 ### Main-Bosses
 
 - Artorias (Darkroot)
-- Crossbreed Priscilla (PWA)
 - Dancer of the Boreal Valley (Core)
-- Gravelord Nito (ToG)
 - Great Grey Wolf Sif (Darkroot)
 - Ornstein and Smough (Core): two models, Dragon Slayer Ornstein and Executioner Smough, each with a data card and a health dial, sharing one behaviour deck
 - Pursuer (Explorers)
@@ -169,9 +154,9 @@ An *encounter card* shows the level, enemies, terrain and *traps* of one encount
 | Level 3 | 12 | 19 |
 | Level 4 | 0 | 40 |
 
-In all, 133 encounter cards. Of each of Levels 1 to 3, Darkroot and Iron Keep hold six cards each, Explorers five and Executioner's Chariot two. Level 4 cards come only with the mega-bosses. The encounter cards printed in PWA, ToG and The Sunless City, which carry objectives, special rules and rewards of their own, are not used.
+In all, 133 encounter cards. Of each of Levels 1 to 3, Darkroot and Iron Keep hold six cards each, Explorers five and Executioner's Chariot two. Level 4 cards come only with the mega-bosses.
 
-- 30x *Event cards* in each of PWA, ToG and The Sunless City, of three kinds: immediate, consumable and rendezvous
+- Events Expansion II, a community expansion: 49x *Event cards* in three levels, 8x Trap cards and 14x treasure cards
 - 5x *Ambush cards* (Explorers), each showing Treasure or Mimic
 
 ## 2.7 Dice

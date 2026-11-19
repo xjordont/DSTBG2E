@@ -43,7 +43,7 @@ A boss *data card* holds much the same information as an enemy data card, but it
 - The special ability gives the boss a theme and often a power of its own (see §17).
 - The encounter levels are those of the encounters on the road to that boss (see §6.5).
 
-A boss's starting health, heat-up point and attack damage are raised for the number of characters (see §8.3).
+A boss is not scaled for the number of characters: its health, its heat-up point and its attacks are as printed at every party size.
 
 ## 15.5 Boss Behaviour Cards
 

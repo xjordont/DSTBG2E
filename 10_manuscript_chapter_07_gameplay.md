@@ -51,30 +51,24 @@
    - A *failed* encounter cannot be skipped. Once reset, it must be fought.
 3. The characters enter the tile by placing their models on its *entry nodes* (see §5.1). No more than three characters may start on the same node.
 4. Reveal the tile's encounter card. With the Phantoms expansion, flip the tile's *invader* token first (see §12.2).
-5. With a 2022 core set (Tomb of Giants, Painted World of Ariamis or The Sunless City), reveal the tile's *event card* the first time the party enters the tile.
-   - An immediate card is resolved and discarded.
-   - A consumable card is taken by one character.
-   - A rendezvous card stays on the tile and applies to that encounter.
-   - Where a card names a soul cache, it means the characters' souls, shared as the party chooses. The *inventory* is a character of the party's choice. The next encounter is the tile the card lies on.
-   - A card that still cannot be applied is discarded.
+5. With the Events Expansion, reveal the tile's *event card* and resolve it (see Event Cards, below).
 6. Place the enemy models on the *spawn nodes* and the terrain on the *terrain nodes* that the encounter card shows. Each icon on the card matches the icon printed on a node of the tile.
 7. Place one face-down treasure card under each *chest* {{icon:ast-0009-treasure-chest}} placed for the first time. Draw from the *tier one* treasure deck before the *mini-boss* is defeated and from the *tier two* treasure deck afterwards.
 8. Place the *aggro* token on the character with the highest *threat* {{icon:ast-0059-taunt}}. The party settles a tie.
 
 ### Encounter Turn Order
 
-Every encounter is fought in rounds, and every round runs in the same order. A step with no model to act is passed over.
+An encounter is fought in rounds.
 
-1. Each enemy model takes a turn, one by one, in ascending threat: the lowest first.
+1. Each enemy model takes a turn, one by one, in descending threat.
    - If several enemies share a threat value, the one closest to a character takes its turn first.
    - If those enemies are equally close, the one with the most wound tokens takes its turn first.
    - If they are still tied, the players decide.
-2. Each *invader* takes a turn (see §12.2).
-3. The boss takes a turn (see §16.1).
-4. Each character takes a turn, one by one, in ascending threat: the lowest first, the highest last.
-5. Each *summon* takes a turn (see §12.1).
+2. Each character takes a turn, in any order the party chooses each round.
+3. The aggro token passes to the last character to deal damage. If no character deals damage, it stays where it is.
+4. Rounds continue until every enemy model or every character is dead.
 
-The aggro token passes to the last character to deal damage. If no character deals damage, it stays where it is. Rounds continue until every enemy model or every character is dead.
+A boss and an *invader* take their turns between the characters' turns (see §16.1, §12.2).
 
 ### Encounter Resolution
 
@@ -107,6 +101,18 @@ The aggro token passes to the last character to deal damage. If no character dea
 - *Estus flask*, *luck* and *heroic action* tokens are not restored.
 - The hollow cubes of a character who was already hollow stay.
 - The party then goes on to the next tile. Before it does, it may rest at the bonfire or visit Blacksmith Andre (see §11.4).
+
+### Event Cards
+
+The Events Expansion II is a community expansion. If the players have it, its cards are in play.
+
+- The event card beside an encounter card is revealed each time the party enters that tile, and is resolved as its text says. Its effect lasts for that encounter unless the card gives another end.
+- When the encounters are *reset*, gather every revealed event card. A card with the discard icon is set aside. The others are shuffled back into the decks of their levels. Then deal a new card of the right level face down in place of each card gathered.
+- When a boss is defeated, the cards set aside are shuffled back into their decks.
+- Six event cards bring a figure to the *bonfire* and are removed from the game once resolved: Rebirth, Maiden of the Sable Church, Loyal Swindler, Transposition, Draw Out True Strength and The Great Deceiver.
+- Yuria sells no more than four Purging Stone cards for each boss, and gives the Irreverent Morion Blade as her card says. Patches sells Divine Blessing, Great Heal Excerpt and the Horsehoof Ring, and afterwards the Masks of the Mother, the Father and the Child.
+- A Hollowing card limits every character's *endurance bar* to the number of spaces it names. Only one Hollowing card applies at a time.
+- Where a card has the party pay or gain *souls*, the characters pay or share them as they choose. The treasure deck is the deck of the current tier. A party that is defeated or perishes has *failed* the encounter. An activation is a turn, health gained is damage removed, and taunt is *threat*.
 
 ## 7.6 Souls
 
