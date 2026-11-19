@@ -608,7 +608,11 @@
     }
    ],
    "set": "Tomb of Giants",
-   "conf": "high"
+   "conf": "high",
+   "resurrect": {
+    "name": "Skeleton Soldier",
+    "models": 3
+   }
   },
   "Bonewheel Skeleton": {
    "threat": 7,

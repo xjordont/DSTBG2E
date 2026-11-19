@@ -98,7 +98,14 @@ def play(n, rules, seed, table=None, classes=None):
     out = dict(win=False, rests=0, fights=0, char_turns=0, enemy_acts=0, rounds=0, lost_at=None, deaths=0,
                by_level={}, sparks_left=0, souls=0, repeats=0, dec={}, carried=0.0, souls_lost=0.0, classes=list(cls))
     def fin():
-        out.update(found=eco.n_found, bought=eco.n_bought, sold=eco.n_sold, in_use=eco.in_use()); return out
+        # how the characters end the game holding their weapons: a one-handed weapon alone in two hands, a two-handed
+        # weapon with something in the other hand, a shield carried
+        grip = lambda f: sum(1 for c in party if f(c)) / len(party)
+        out.update(found=eco.n_found, bought=eco.n_bought, sold=eco.n_sold, in_use=eco.in_use(),
+                   g_one2=grip(lambda c: c.R is not None and c.R['hands'] == 1 and c.L is None),
+                   g_two1=grip(lambda c: c.R is not None and c.R['hands'] == 2 and c.L is not None),
+                   g_two2=grip(lambda c: c.R is not None and c.R['hands'] == 2 and c.L is None),
+                   g_shield=grip(lambda c: c.L is not None and c.L.get('shield'))); return out
     decks = {}
     for lv in (1, 2, 3):
         pool = [e for e in ENCOUNTERS[str(lv)] if in_play(r, 'encounters', e)]; decks[lv] = rng.sample(pool, len(pool))

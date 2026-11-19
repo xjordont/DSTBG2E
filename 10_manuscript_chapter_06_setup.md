@@ -15,8 +15,7 @@
 
 All treasure cards of every set the party owns are used. Only the *starting equipment* of characters not being played returns to the box.
 
-- From the sets published in 2022, only the treasure cards that are new in those sets are added (see Appendix B). A reprint is not added twice. Nothing else of those sets is used.
-- With the Events Expansion, two of its Purging Stone cards and its Red Tearstone Ring are *common treasure*. Its other treasure cards are set aside for the event cards that name them (see §7.5).
+- From Tomb of Giants and Painted World of Ariamis, only the treasure cards that are new in those sets are added (see Appendix B). A reprint is not added twice.
 - Where Appendix A lists a weapon, the stat requirements given there are used in place of those printed on the card (see Appendix A).
 
 Every treasure card is of one of six types.
@@ -122,11 +121,13 @@ The shops are restocked at no other time.
 1. Shuffle the Level 1 {{icon:ast-0007-encounter-level-1}}, Level 2 {{icon:ast-0011-encounter-level-2}} and Level 3 {{icon:ast-0015-encounter-level-3}} *encounter cards* of the mini-boss's set into three decks.
     - Encounter decks hold only the encounter cards of the set the next boss comes from.
     - If the boss's set has no encounter cards of these levels, use those of the core set.
+    - The enemies of Tomb of Giants and Painted World of Ariamis appear only on the print-and-play encounter decks of those sets. At the start of setup, players who have a print-and-play deck and the enemies of its set decide whether it replaces the printed encounter decks. If it does, every encounter card of that stage, at every level, comes from it. A print-and-play card and a printed card are never shuffled together.
+    - With the Black Knight or Gravelord Nito, the print-and-play deck is the Tomb of Giants deck; with the Heavy Knight or Crossbreed Priscilla, the Painted World deck. For any other boss the players may choose either, or neither.
 2. Deal one encounter card of the right level face down to each encounter tile.
     - The mini-boss's data card gives the levels.
     - The levels rise from the tile beside the bonfire tile towards the mini-boss tile.
 3. Deal two *tier one* treasure cards face down onto each encounter card.
-4. With the Events Expansion, sort the *event cards* into three decks by level and shuffle each; shuffle the trap cards into a deck of their own. Deal one event card of the encounter's level face down beside each encounter card.
+4. With the events deck, shuffle the *event cards* of each level into a deck of their own and the trap cards into another, and lay the item cards face up beside the bonfire tile. Deal one event card of the encounter's level face down beside each encounter card.
 5. With the Explorers expansion, deal one *ambush card* at random face down beside each encounter tile (see §13).
 6. With the Phantoms expansion, *invader* tokens are placed on the encounter cards when an *embered* character provokes an invasion (see §12.2).
 
@@ -135,7 +136,7 @@ The shops are restocked at no other time.
 When the *mini-boss* has been defeated and the party has *rested* (see §16.5), set up the road to the *main-boss*.
 
 1. Return any dropped *souls* to the characters who dropped them.
-2. Return the used *encounter cards* to the box and every *event card* to the deck of its level. Gather any *ambush cards* and shuffle them.
+2. Return the used *encounter cards* to the box, and every *event card* that does not lie beside the bonfire tile to the deck of its level. Gather any *ambush cards* and shuffle them.
 3. Clear the remaining tokens from the encounter tiles.
 4. Shuffle the four encounter tiles and flip each to its other side. Lay them in a straight line that starts at the *bonfire* tile and ends at the main-boss tile, which is the two boss tiles joined as one.
 5. Place the *fog gate* token as before.
@@ -154,7 +155,7 @@ When the *mini-boss* has been defeated and the party has *rested* (see §16.5), 
 This setup is used only if the party chose a *mega-boss*. It follows the defeat of the *main-boss* and the party's *rest* (see §16.5).
 
 1. Return any dropped *souls* to the characters who dropped them.
-2. Return the used *encounter cards*, encounter tiles and boss tiles to the box, and every *event card* to the deck of its level.
+2. Return the used *encounter cards*, encounter tiles and boss tiles to the box, and every *event card* that does not lie beside the bonfire tile to the deck of its level.
 3. Restock both *shops* (see §6.3).
 4. Place the mega-boss's game board beside the *bonfire* tile with its Level 4 encounter side up. Place the *fog gate* token at its entrance.
 5. Shuffle the mega-boss's Level 4 encounter cards and deal one face down onto the game board. No event card is used for this encounter.

@@ -22,6 +22,8 @@ Each enemy type has a *data card*. It gives what is needed to take that enemy's 
 
 When an enemy suffers damage, place one wound token on the base of its model for each point of damage not prevented by its block or resist. The enemy dies when its wound tokens equal its scaled health (see §8.3) and is removed from the tile.
 
+The Phalanx of Painted World of Ariamis has no model of its own. Three Phalanx Hollow models on one node stand for it, and it moves, attacks and takes wounds as one enemy.
+
 ## 8.3 Scaling
 
 Enemies grow stronger with the number of characters in the game. Dead characters are counted.

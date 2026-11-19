@@ -36,7 +36,7 @@
 
 - The party begins with *sparks* equal to five less the number of characters.
 - Each boss defeated adds one spark.
-- Sparks cannot be gained by any other means.
+- Sparks cannot be gained by any other means, unless an *event card* gives one.
 - A *rest* at the *bonfire* costs one spark (see §11.2).
 
 ## 7.5 Encounters
@@ -51,7 +51,7 @@
    - A *failed* encounter cannot be skipped. Once reset, it must be fought.
 3. The characters enter the tile by placing their models on its *entry nodes* (see §5.1). No more than three characters may start on the same node.
 4. Reveal the tile's encounter card. With the Phantoms expansion, flip the tile's *invader* token first (see §12.2).
-5. With the Events Expansion, reveal the tile's *event card* and resolve it (see Event Cards, below).
+5. With the events deck, reveal the tile's *event card* (see Event Cards, below).
 6. Place the enemy models on the *spawn nodes* and the terrain on the *terrain nodes* that the encounter card shows. Each icon on the card matches the icon printed on a node of the tile.
 7. Place one face-down treasure card under each *chest* {{icon:ast-0009-treasure-chest}} placed for the first time. Draw from the *tier one* treasure deck before the *mini-boss* is defeated and from the *tier two* treasure deck afterwards.
 8. Place the *aggro* token on the character with the highest *threat* {{icon:ast-0059-taunt}}. The party settles a tie.
@@ -104,15 +104,17 @@ A boss and an *invader* take their turns between the characters' turns (see §16
 
 ### Event Cards
 
-The Events Expansion II is a community expansion. If the players have it, its cards are in play.
+The events deck is a print-and-play module of this book: 48 event cards, 8 trap cards and 9 item cards. If the players have it, it is in play. A card overrides this book where the two differ.
 
-- The event card beside an encounter card is revealed each time the party enters that tile, and is resolved as its text says. Its effect lasts for that encounter unless the card gives another end.
-- When the encounters are *reset*, gather every revealed event card. A card with the discard icon is set aside. The others are shuffled back into the decks of their levels. Then deal a new card of the right level face down in place of each card gathered.
-- When a boss is defeated, the cards set aside are shuffled back into their decks.
-- Six event cards bring a figure to the *bonfire* and are removed from the game once resolved: Rebirth, Maiden of the Sable Church, Loyal Swindler, Transposition, Draw Out True Strength and The Great Deceiver.
-- Yuria sells no more than four Purging Stone cards for each boss, and gives the Irreverent Morion Blade as her card says. Patches sells Divine Blessing, Great Heal Excerpt and the Horsehoof Ring, and afterwards the Masks of the Mother, the Father and the Child.
-- A Hollowing card limits every character's *endurance bar* to the number of spaces it names. Only one Hollowing card applies at a time.
-- Where a card has the party pay or gain *souls*, the characters pay or share them as they choose. The treasure deck is the deck of the current tier. A party that is defeated or perishes has *failed* the encounter. An activation is a turn, health gained is damage removed, and taunt is *threat*.
+- The event card beside an *encounter card* is revealed with it and applies from then on.
+- **Lingering.** The card stays beside its encounter card and applies whenever that encounter is fought.
+- **Once.** The card is discarded when the party leaves the tile, unless its text lays it elsewhere.
+- A *reset* changes no event card. When a boss is defeated, the discarded cards and the cards on the tiles return to their decks (see §6.6).
+- Where a card speaks of the treasure deck, it means the deck of the current tier.
+- A visitor's card stays beside the *bonfire* tile until its text removes it.
+- Item cards lie face up beside the bonfire tile as the wares. They are gained only as event cards say, are never sold, and return to the wares when discarded.
+- No card of the module ever enters a treasure deck, an encounter deck, a behaviour deck or the *shop*, and no other card enters a deck of the module.
+- In a campaign the event cards return to their decks only when a *section* ends, and the visitor Ludleth deals no cards: while he is at the bonfire, *transposition* costs no *souls* (see §18.8).
 
 ## 7.6 Souls
 

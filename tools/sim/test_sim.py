@@ -5,7 +5,7 @@ import math, os, random, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import engine as E
 import rules as RU
-from characters import Char, Economy, ITEMS, CLASSES, CARDS
+from characters import Char, Economy, ITEMS, CLASSES, CARDS, text_traits as CH_traits
 from game import play
 
 FAILS = []
@@ -596,6 +596,18 @@ _cb, _bb = _fb.char_turn, _fb.boss_turn
 _fb.char_turn = lambda c: (_sb.append('c'), _cb(c))[1]; _fb.boss_turn = lambda f: (_sb.append('B'), _bb(f))[1]
 _fb.run(max_rounds=2)
 check('the one round against a boss: the boss acts once, then every character', ''.join(_sb[:8]) == 'BcccBccc', ''.join(_sb[:8]))
+# the grips of section 26
+_rg = RU.make(dict(ALL_REQ, grip_die='only', one_hand='sta2')); _kn = Char('Knight', _rg)
+_sw = next(x for x in (_kn.R, _kn.L) if x and x['hands'] == 1 and x['attacks'] and x['attacks'][0]['dice'])
+_with = [o['dice'] for o in _kn.profile(R=_sw, L=next(x for x in (_kn.R, _kn.L, *_kn.bag) if x and x is not _sw))['options']['R'] if o['name'] == _sw['name']]
+_alone = [o for o in _kn.profile(R=_sw, L=False)['options']['R'] if o['name'] == _sw['name']]
+check('a one-handed weapon gripped in both hands rolls one black die more, and has no reroll', [o['dice'] for o in _alone] == [d + 'b' for d in _with] and not any(o['reroll'] for o in _alone), ([o['dice'] for o in _alone], _with))
+_two = next(i for i in ITEMS.values() if i['type'] == 'hand' and i['hands'] == 2 and i['attacks'] and i['attacks'][0]['dice'])
+_sh = next(i for i in ITEMS.values() if i['type'] == 'hand' and i.get('shield') and 'offhand' not in CH_traits(i, _rg))
+_c1 = [o for o in _kn.profile(R=_two, L=False)['options']['R'] if o['name'] == _two['name']]
+_c2 = [o for o in _kn.profile(R=_two, L=_sh)['options']['R'] if o['name'] == _two['name']]
+check('a two-handed weapon swung in one hand costs two more stamina and has no reroll', [o['cost'] for o in _c2] == [o['cost'] + 2 for o in _c1] and all(o['reroll'] for o in _c1) and not any(o['reroll'] for o in _c2),
+      ([o['cost'] for o in _c1], [o['cost'] for o in _c2]))
 ga = [play(2, RU.make(ALL_REQ), s, table=Table(skill=1.0, bank=6)) for s in range(12)]
 check('a game with every set in play runs to its end', all(x['win'] or x['lost_at'] is not None for x in ga))
 

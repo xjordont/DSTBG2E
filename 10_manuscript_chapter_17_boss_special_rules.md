@@ -123,7 +123,18 @@ The Old Dragonslayer is played with the Dragon Slayer Ornstein model of the core
 
 The Hungry *Mimic* and the Voracious Mimic are fought by the mimic rules (see §13).
 
-## 17.7 Black Dragon Kalameet
+## 17.7 Tomb of Giants
+
+The Black Knight and Gravelord Nito are played from their printed *data cards* and *behaviour cards* (see Appendix B). Each card's special ability applies as printed.
+
+### Gravelord Nito
+
+- Nito does not fight alone. Set up his encounter with two Skeleton Soldiers and one Giant Skeleton Soldier on the *mini-boss* *spawn node* of the main-boss tile.
+- Before each character's turn, every model takes a turn in descending *threat*: Nito, then his enemies (see §7.5).
+- The Gravelord's Call: when Nito heats up, return each of those three enemies that has been killed to the mini-boss spawn node, at full health.
+- The encounter is won when Nito is defeated, whatever enemies remain.
+
+## 17.8 Black Dragon Kalameet
 
 Kalameet's model starts on the *mega-boss* *spawn node*, facing the centre of the board.
 
@@ -139,7 +150,7 @@ When a strafe icon is resolved:
 
 A character on the landing node is attacked only if the card also marks that node.
 
-## 17.8 Executioner's Chariot
+## 17.9 Executioner's Chariot
 
 The Chariot is a *mega-boss* fought in two parts. Until its *heat-up* it follows a fixed track and cannot be harmed. Afterwards it is fought as any boss.
 
@@ -175,7 +186,13 @@ From then on the skeletal horse is fought as any boss, against the block and res
 
 **Raise Skeleton.** This icon is printed on the Black Hollow Mage's data card and is resolved the same way in every encounter. Count the enemies on the tile whose names include the word "Skeleton". If there are fewer than at the start of the encounter, the players choose one such enemy killed during the encounter and place its model, with no wound tokens, on the enemy spawn node nearest to that Black Hollow Mage. The players choose between nodes that are equally near. Otherwise the icon has no effect.
 
-## 17.9 Bosses of Other Expansions
+## 17.10 Bosses of Other Expansions
+
+### Heavy Knight and Crossbreed Priscilla
+
+The Heavy Knight and Crossbreed Priscilla, of Painted World of Ariamis, are played from their printed *data cards* and *behaviour cards* (see Appendix B). Each card's special ability applies as printed.
+
+Priscilla begins her encounter invisible, and becomes invisible again each time her discard pile is turned over to renew her behaviour deck. She becomes visible the moment an attack damages her. While she is invisible, Snowblind applies: no attack gains the extra die for a *weak arc*.
 
 ### The Four Kings
 

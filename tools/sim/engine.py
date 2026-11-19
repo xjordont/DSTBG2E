@@ -204,7 +204,7 @@ class Fight:
                 f.deck = std[:b['deck']]; f.discard = []; f.heat_cards = [c for c in b['cards'] if c['heatup']]
                 self.foes = [f]
         else:
-            sp = rng.sample(SPAWN, 2); self.foes = []
+            sp = rng.sample(SPAWN, 2); self.foes = []; self.spawn = sp
             for i, name in enumerate(enemies):
                 card = ENEMIES[name]
                 f = Foe(name, card, r.hp(card['hp'], self.n), sp[0] if i < (len(enemies) + 1) // 2 else sp[1])
@@ -555,6 +555,14 @@ class Fight:
         written and the official rules it comes off at once."""
         if f.fresh and getattr(self.r, 'stagger_hold', False): f.fresh = False
         else: f.stagger = False; f.fresh = False
+        # resurrect (the 2022 cards): at the end of its turn the enemy places a named model on the enemy spawn node
+        # nearest to it, unless every model of that kind is already in play
+        back = f.card.get('resurrect')
+        if back and f.hp > 0 and self.live() and getattr(self, 'spawn', None):
+            if sum(1 for x in self.foes_alive() if x.name == back['name']) < back['models']:
+                card = ENEMIES[back['name']]
+                g = Foe(back['name'], card, self.r.hp(card['hp'], self.n), min(self.spawn, key=lambda nd: DIST[f.node][nd]))
+                g.atk_bonus = self.r.atk(self.n); self.foes.append(g)
         f.frost = False
         if f.poison and f.hp > 0 and self.live():
             # poison: one damage and the token comes off (official); a damage a token, one token off (the workshop's ruling)

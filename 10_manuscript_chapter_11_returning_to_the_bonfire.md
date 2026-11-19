@@ -75,6 +75,5 @@ Before the party sets out after a *rest*, *reset* every *cleared* and *failed* e
 2. Set aside any enemy models left on the encounter tiles.
 3. Do not move terrain: *chests*, *gravestones*, *barrels* and *traps* stay where they are.
 4. Leave treasure cards and dropped *souls* on their tiles.
-5. With the Events Expansion, gather the revealed event cards and deal new ones (see §7.5).
 
 The party then moves to the encounter tile closest to the *bonfire*, where the encounter begins (see §7.5). Once the *fog gate* token lies on the bonfire tile, the party may go straight to the boss instead (see §15.1).

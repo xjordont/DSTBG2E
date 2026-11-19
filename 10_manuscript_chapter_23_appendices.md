@@ -75,9 +75,7 @@ The cards below are added to the game or replace the printed cards of the same n
 
 ## Additional Treasure
 
-Treasure cards are the only part of the sets published in 2022 that this game uses, and only where the party owns such a set. Only the cards below are added. They are the cards new in those sets; a reprint is not added a second time (see §6.2). The enemies, bosses, encounter cards and event cards of those sets are not used.
-
-Ten of the cards are printed as the *boss treasure* of bosses this game does not use: Black Knight Halberd, Black Knight Shield, Blue Titanite, Gravelord Sword, Gravelord Sword Dance, Greatsword, Lifehunt Scythe, Priscilla's Dagger, Steel Armour and Tower Shield. They are *legendary treasure* here.
+Only the cards below are added from Tomb of Giants and Painted World of Ariamis. They are the cards new in those sets. A reprint is not added a second time (see §6.2).
 
 | Added | Cards |
 |---|---|
@@ -107,3 +105,38 @@ Where a card has two printings, the one with the rules text given here is used. 
 | Wolf Ring | After rolling a dodge, the wearer may pay 1 stamina to reroll any or all of the dice, once for each dodge. | |
 
 Blacksmith Andre exchanges a Titanite Shard for a Titanite Chunk, or a Titanite Chunk for a Titanite Slab, when the character holds the new card. The new card takes the upgrade slot of the old. A replaced Titanite Shard goes to the bottom of the *tier one* deck, a replaced Titanite Chunk to the bottom of the tier two deck. A weapon that holds a Titanite Chunk or a Titanite Slab asks for 25 STR and 25 DEX as well as its own requirements.
+
+## Enemy Data Cards
+
+The twelve enemies of Tomb of Giants and Painted World of Ariamis are played from their printed *data cards*, with the party-size scaling of every enemy (see §8.3). They appear only on the print-and-play *encounter cards* of their sets (see §6.5); the encounter cards printed in those sets are not used.
+
+| Enemy | Set | Models | Threat | Health | Block | Resist |
+|---|---|---|---|---|---|---|
+| Giant Skeleton Archer | Tomb of Giants | 2 | 1 | 5 | 1 | 1 |
+| Giant Skeleton Soldier | Tomb of Giants | 2 | 2 | 5 | 1 | 1 |
+| Necromancer | Tomb of Giants | 2 | 7 | 5 | 1 | 2 |
+| Skeleton Archer | Tomb of Giants | 3 | 3 | 1 | 1 | 1 |
+| Skeleton Beast | Tomb of Giants | 1 | 6 | 5 | 2 | 2 |
+| Skeleton Soldier | Tomb of Giants | 3 | 5 | 1 | 2 | 1 |
+| Bonewheel Skeleton | Painted World of Ariamis | 2 | 7 | 1 | 1 | 1 |
+| Crow Demon | Painted World of Ariamis | 2 | 9 | 5 | 1 | 2 |
+| Engorged Zombie | Painted World of Ariamis | 2 | 8 | 1 | 2 | 2 |
+| Phalanx | Painted World of Ariamis | three Phalanx Hollow | 4 | 5 | 1 | 1 |
+| Phalanx Hollow | Painted World of Ariamis | 5 | 4 | 1 | 1 | 1 |
+| Snow Rat | Painted World of Ariamis | 2 | 1 | 1 | 0 | 1 |
+
+- The Skeleton Soldier's attack has a *range* of 0, not the 1 first printed.
+- The leap and resurrect icons are explained with the enemy turn (see §9.2, §9.3).
+
+## Boss Data and Behaviour Cards
+
+The four bosses of the same sets are played from their printed data cards and behaviour cards. Their cards print no encounter levels; use those below. Bosses are never scaled (see §8.3).
+
+| Boss | Kind | Set | Health | Heat-up point | Block | Resist | Deck size | Encounter levels |
+|---|---|---|---|---|---|---|---|---|
+| Black Knight | *Mini-boss* | Tomb of Giants | 20 | 10 | 3 | 2 | 4 | 1, 1, 2, 2 |
+| Heavy Knight | Mini-boss | Painted World of Ariamis | 25 | 15 | 2 | 2 | 4 | 1, 1, 2, 2 |
+| Gravelord Nito | *Main-boss* | Tomb of Giants | 30 | 15 | 2 | 2 | 5 | 2, 2, 3, 3 |
+| Crossbreed Priscilla | Main-boss | Painted World of Ariamis | 40 | 25 | 2 | 1 | 5 | 2, 2, 3, 3 |
+
+Their special rules are with the bosses (see §17.7, §17.10).

@@ -38,6 +38,10 @@ If the movement icon includes the *push* icon {{icon:ast-0058-push-affected-enem
 
 If the push icon includes a number {{icon:ast-0031-push-with-damage-satellite-glyph}}, the push-move is also a physical attack with that number as its attack value. It attacks each character it pushes, whether from the enemy's own node or from a node the enemy enters. A character is attacked once for that push-move, however many nodes the movement covers. The character defends before being pushed, and a successful *dodge* avoids the push.
 
+### Leap
+
+Some enemies of Tomb of Giants and Painted World of Ariamis leap. An enemy whose movement icon shows the *leap* icon in place of a number is placed on its target's *node*, however far away the target is. If the leap is also a push-move, it pushes and attacks the characters on that node only.
+
 ## 9.3 Enemy Attacks
 
 The attack icon {{icon:ast-0037-enemy-attack-composite-symbol}} shows the attack an enemy makes. Crossed swords mark a physical attack and a white circle {{icon:ast-0042-deal-magical-damage}} marks a magical attack. The number in the centre of the icon is the attack value. Smaller icons beside it modify the attack.
@@ -50,6 +54,10 @@ The attack icon {{icon:ast-0037-enemy-attack-composite-symbol}} shows the attack
 A character attacked by an enemy must decide how to defend: *block* or *resist*, *dodge*, or *parry*. The enemy's attack value is fixed, so the character's dice decide the result. Only an attack with a damage value can be dodged or parried.
 
 When a character is hit, place the damage, then resolve the push, then place the condition token.
+
+### Resurrect
+
+The Necromancer of Tomb of Giants shows the resurrect icon, a skeletal hand. At the end of each of its turns, place a Skeleton Soldier on the enemy *spawn node* closest to the Necromancer. If all three Skeleton Soldier models are on the tile, nothing is placed. A Skeleton Soldier placed this way must be killed like any other before the encounter is *cleared*.
 
 ## 9.4 Block and Resist
 

@@ -2545,3 +2545,96 @@ Written into the book, in play when the players have it:
 - A trap card is taken to attack characters only. The book's trap tokens hit every model on their node.
 - The expansion's Mask of the Child and Red Tearstone Ring share their names with cards of the 2022 sets and read differently. Appendix B's wording governs the Mask of the Child; both Red Tearstone Rings stand as printed.
 
+
+## 26. Weapon grips; the 2022 enemies and bosses back in; the print-and-play modules (2026-11-19)
+
+The author asked for four things: rules for a one-handed weapon in two hands and a two-handed weapon in one; the Tomb of Giants and Painted World of Ariamis enemies and their four bosses in the book with their data in Appendix B; the events deck rewritten for this ruleset as a print-and-play add-on whose cards never share a deck with printed cards; and two print-and-play encounter decks in the 2017 pattern for those enemies, with a rule for choosing them at setup. This section supersedes 25.3 and 25.4.
+
+### 26.1 Weapon grips (§10.4, §3.2)
+
+The author's two ideas were each measured against the rules of section 25 (300 games a cell; win rate for one, two and three characters; the last columns are the share of characters holding each grip when the game ends).
+
+| Rule tried | Win 1 / 2 / 3 | One-hander in two hands | Two-hander in one hand |
+|---|---|---|---|
+| Section 25 (a reroll for a two-handed weapon in both hands; nothing else) | 53% / 78% / 82% | 0% / 0% / 0% | 30% / 21% / 20% |
+| One-hander alone: one more black die and the reroll | 57% / 82% / 91% | 7% / 14% / 10% | 18% / 13% / 16% |
+| **One-hander alone: one more black die, no reroll** | 56% / 79% / 90% | 9% / 14% / 12% | 19% / 14% / 13% |
+| **Two-hander in one hand: two more stamina an attack** | 55% / 78% / 82% | 0% | 33% / 26% / 24% |
+| Two-hander in one hand: Strength 15 over the requirement | 54% / 78% / 82% | 0% | 37% / 24% / 24% |
+| **Both rules in bold together (as written)** | 55% / 78% / 90% | 8% / 14% / 12% | 25% / 16% / 17% |
+
+- **One-handed weapon in two hands: one more black die, and no reroll.** The die makes an empty off-hand a real choice against a shield (shield use falls from about 58% of characters to about 45%) and a black die is the plainest unit the game has. Giving the reroll as well made it strictly better than a two-handed weapon's grip for no reason; the die alone is enough.
+- **Two-handed weapon in one hand: two more stamina an attack, and no reroll.** Both of the author's costs measured the same. Stamina was chosen because it is paid at the table where the choice is made and needs no arithmetic against the dashboard, and because a flat 15 Strength shuts the option to every class but the strongest until late in the game.
+- A card whose own text lets it be equipped beside a two-handed weapon is exempt from both parts, or those cards would be blank. The "two-hander in one hand" columns include those cards, which is why they do not start at zero.
+- **Cost to the difficulty target:** with the black die, three characters win 90%, eight points more than before (the intervals are about four points each way). One and two characters do not move outside the noise. Four characters were not measured with the grips. This widens the gap 25.2 already reported between a lone character and a large party; the lever offered there (enemy health +2 for each character beyond the first) is still not applied.
+
+### 26.2 Tomb of Giants and Painted World of Ariamis: enemies and bosses back in
+
+Back in the book, undoing 25.3: the twelve enemies of the two sets, the Black Knight, Gravelord Nito, the Heavy Knight and Crossbreed Priscilla (§2, §17.7, §17.10, Appendix B). With the bosses back, their ten treasure cards are boss treasure again as printed, and the judgement of 25.3 that made them legendary is withdrawn. Blue Titanite stays legendary by the author's own amendment. The printed 2022 encounter cards and event cards are still not used.
+
+- **Appendix B** carries a table of the twelve enemies (models, threat, health, block, resist) and a table of the four bosses (health, heat-up point, block, resist, deck size). The values are those of the author's card sheets and the appendix of commit 6ab1a54. The behaviour itself is read from the printed cards; the appendix does not reprint it.
+- **Scaling:** the enemies are scaled like any enemy (§8.3); the four bosses, like every boss, are not.
+- **Leap (§9.2) and resurrect (§9.3)** are the two icons the 2017 rules do not have. Resurrect is bounded by the three Skeleton Soldier models, so it cannot run for ever.
+
+**Designed here, not transcribed, and the author's to overturn:**
+
+| Rule | Why |
+|---|---|
+| Encounter levels for the four bosses' roads (mini-bosses 1, 1, 2, 2; main-bosses 2, 2, 3, 3) | The 2022 cards print no 2017-style levels. These are the levels of the core set's mini-boss and main-boss cards. |
+| Gravelord Nito fights with two Skeleton Soldiers and one Giant Skeleton Soldier, which act with him before each character's turn and return when he heats up | His printed cards call on skeletons the 2022 encounter places for him. The 2017 structure places nothing, so the escort is fixed in §17.7. |
+| Crossbreed Priscilla is invisible at the start and each time her deck is renewed, and visible once damaged; while she is invisible no attack gains the weak-arc die | No Painted World rulebook is among the sources. This is the reading of her card that needs no rulebook; if the printed rule differs, §17.10 is to be corrected. |
+
+None of the four bosses has been fought in the simulator at these values since they came back; the win rates in 25.2 are for the 2017 bosses.
+
+### 26.3 The events deck: a module of the book
+
+The community Events Expansion II (25.4) was written for another ruleset. Rather than a page of mappings, the deck is now rewritten for this one and shipped with the book: `pnp/events/` (card texts in `cards.json`, the module's own rules in `rules.md`, and `design_notes.md`, which lists every original card and what became of it). None of the community deck's art or layout is used.
+
+- **48 event cards**, 16 of each level (the original had 11, 23 and 15). 17 are **Lingering** (a property of the place: the card stays and applies at every fight there) and 31 are **Once** (discarded when the party leaves the tile). Three original cards were replaced outright because they cannot be played here: one fought two tiles as one, one needed five models of an enemy that has three, and one set the characters on each other outside §20.
+- **A reset changes no event card.** The original gathered, set aside and redealt cards at every rest. A Once card being gone already stops a reward being taken twice, and no Lingering card gives souls or treasure, so a reset encounter cannot be farmed through one.
+- **8 trap cards.** A trap card hits every model on its marked nodes, enemies included, as trap tokens do (§5.5).
+- **9 item cards** (Purging Stone four times, and five others), which lie face up beside the bonfire tile as the wares. Three of the original's treasure cards were dropped because they share a name with a printed card and read differently (Red Tearstone Ring, Divine Blessing, Mask of the Child).
+- **The separation rule (§7.5):** no card of the module ever enters a treasure deck, an encounter deck, a behaviour deck or the shop, and no printed card enters a deck of the module. Home-printed cards can be told from printed ones by their backs, and this is the whole of the remedy: they are never in the same deck. The original shuffled its treasure into the common treasure.
+- Every card was rewritten to this book's terms (souls are each character's own; treasure deck of the current tier; hollow as two cubes; a rest costs a spark), and costs were set against this economy. `design_notes.md` gives the reason card by card.
+- Mask of the Father now reads: the wearer wields a two-handed weapon in one hand at no extra stamina cost, and cannot dodge. It is the one module card that touches 26.1.
+
+**Not measured:** the simulator does not play event cards. Every balance statement about them is reasoning from the economy, as `design_notes.md` says.
+
+### 26.4 Print-and-play encounter decks (§6.5, §2.6)
+
+Two decks, `pnp/encounters/`, each of 27 encounter cards (nine of each level) and a key card, in the layout of the 2017 mini cards: two spawn nodes with up to three enemies each, two terrain nodes, the level and a trap marker.
+
+**The rule (§6.5):** at the start of setup, players who have a deck and the enemies of its set decide whether it replaces the printed encounter decks. If it does, every encounter card of that stage comes from it. With the Black Knight or Gravelord Nito the deck is the Tomb of Giants deck; with the Heavy Knight or Crossbreed Priscilla, the Painted World deck; for any other boss the players may choose either, or neither. A print-and-play card and a printed card are never shuffled together.
+
+**How they were balanced.** Each candidate was fought as a single encounter by parties of one to four characters equipped as the simulator equips a party at that level (`tools/sim/encounter_score.py`; 200 fights a cell for the decks, 150 for the core set), and given one score: the damage a surviving character carries out, plus 5 times the share of fights in which a character died, plus 10 times the share of fights lost, averaged over the four party sizes. The 36 printed core encounters were scored the same way, and the decks were chosen to sit inside their range.
+
+| Score (lowest / median / highest) | Level 1 | Level 2 | Level 3 |
+|---|---|---|---|
+| Core set, printed (12 a level) | 0.1 / 1.2 / 2.3 | 0.2 / 2.2 / 5.1 | 1.5 / 2.4 / 4.2 |
+| Tomb of Giants deck | 0.3 / 1.1 / 2.1 | 1.4 / 2.5 / 4.3 | 1.9 / 2.7 / 3.5 |
+| Painted World deck | 0.2 / 0.8 / 1.8 | 0.6 / 2.1 / 2.4 | 1.1 / 2.5 / 4.0 |
+
+What the scoring found, and what was done about it:
+
+- **The Necromancer snowballs against a lone character.** A fight with one Necromancer is won by a lone character about 35% to 45% of the time, against 84% or more for two characters. The printed core set has the same shape in its hardest cards (Sentinel encounters, 40% to 51% alone). The deck holds three Necromancer cards and none with two: the first draft's Level 3 card with two Necromancers scored 5.4 (a lone character won 15%) and was replaced by Gallery of Bones.
+- **The Crow Demon is a Level 3 enemy.** Its leap, push and dodge difficulty make any card with it score 2.5 or more, and with a second Crow Demon above 5. It appears only at Level 3, one to a card.
+- **The other Painted World enemies are fragile.** Without a Crow Demon the deck cannot score much above 2 within the model counts. Its Level 2 is therefore narrower than the core set's, and one Level 3 card (Last Rank, the Phalanx with both Bonewheel Skeletons and an Engorged Zombie, 1.1) sits a little under the core set's softest (1.5). A second soft Level 3 card (0.7) was replaced by Rot and Ruin (1.6).
+- Model limits are respected on every card (the Phalanx is three of the five Phalanx Hollow models and stands alone on its node; every Necromancer card leaves a Skeleton Soldier model to raise).
+- Three cards a deck carry the trap marker, one at each level.
+
+**The icons.** The Tomb of Giants cards use the set's own six enemy icons, already among the book's assets. No icon artwork for the six Painted World enemies is held (the author's card sheets came as pictures in the conversation, not as files), so that deck shows each enemy by a monogram (BW, CD, EZ, PX, PH, SR) with a key card. If the author supplies the Painted World rulebook or the card sheets as files, the icons can be cut from them and the deck rebuilt with one command.
+
+**Not measured:** terrain and trap placement on the cards (the score is of the enemies alone), and the decks played over a whole game.
+
+### 26.5 Files and checks
+
+- `pnp/README.md` (printing: 100%, double-sided, flip on the long edge; every sheet of fronts is followed by its backs); six PDFs, Letter and A4; `tools/build_pnp.py` and `tools/build_pnp_encounters.py` rebuild them from the JSON files.
+- Simulator: the grips (`grip_die`, `one_hand`), resurrect, and the weapon-grip counters; `settled` in `tools/sim/compare.py` is the ruleset of this section. `tools/sim/test_sim.py` passes.
+- Manuscript: §2, §3.2, §5.5, §6.2, §6.5 to §6.7, §7.4, §7.5, §8.2, §8.3, §9.2, §9.3, §10.4, §17.7 to §17.10, Appendix B and the glossary. Style 0 violations, cross-references 0 broken, 28,472 words of a 28,905 budget.
+
+### 26.6 Open, for the author
+
+1. The large-party win rate (78% to 90% for two and three characters) against a target of about 80% at best play; the health lever of 25.2 stands ready.
+2. Priscilla's invisibility and Nito's escort, if the printed rules are to be followed more closely.
+3. Painted World icon artwork, as files.
+4. The Deprived's heroic action is still not played in the simulator.

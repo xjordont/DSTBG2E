@@ -1,0 +1,450 @@
+{
+ "deck": "Tomb of Giants",
+ "code": "ToG",
+ "note": "These cards replace the encounter cards printed in the set. A Necromancer raises Skeleton Soldiers.",
+ "cards": [
+  {
+   "id": "TG1-01",
+   "name": "Lone Giant",
+   "level": 1,
+   "spawn1": [
+    "Giant Skeleton Soldier"
+   ],
+   "spawn2": [],
+   "terrain1": "gravestone",
+   "terrain2": null,
+   "trap": false
+  },
+  {
+   "id": "TG1-02",
+   "name": "Rattling Dark",
+   "level": 1,
+   "spawn1": [
+    "Skeleton Soldier"
+   ],
+   "spawn2": [
+    "Skeleton Archer",
+    "Skeleton Archer"
+   ],
+   "terrain1": "barrel",
+   "terrain2": null,
+   "trap": false
+  },
+  {
+   "id": "TG1-03",
+   "name": "Bone Pit",
+   "level": 1,
+   "spawn1": [
+    "Skeleton Soldier",
+    "Skeleton Soldier"
+   ],
+   "spawn2": [
+    "Skeleton Archer"
+   ],
+   "terrain1": null,
+   "terrain2": "barrel",
+   "trap": false
+  },
+  {
+   "id": "TG1-04",
+   "name": "Watcher in the Dark",
+   "level": 1,
+   "spawn1": [],
+   "spawn2": [
+    "Giant Skeleton Archer"
+   ],
+   "terrain1": "chest",
+   "terrain2": null,
+   "trap": false
+  },
+  {
+   "id": "TG1-05",
+   "name": "Archers' Gallery",
+   "level": 1,
+   "spawn1": [
+    "Skeleton Archer",
+    "Skeleton Archer"
+   ],
+   "spawn2": [
+    "Skeleton Archer"
+   ],
+   "terrain1": "barrel",
+   "terrain2": "barrel",
+   "trap": false
+  },
+  {
+   "id": "TG1-06",
+   "name": "Marrow Hall",
+   "level": 1,
+   "spawn1": [
+    "Skeleton Soldier",
+    "Skeleton Soldier"
+   ],
+   "spawn2": [
+    "Skeleton Archer",
+    "Skeleton Archer"
+   ],
+   "terrain1": "gravestone",
+   "terrain2": "barrel",
+   "trap": true
+  },
+  {
+   "id": "TG1-07",
+   "name": "Shallow Graves",
+   "level": 1,
+   "spawn1": [
+    "Skeleton Soldier",
+    "Skeleton Soldier"
+   ],
+   "spawn2": [
+    "Skeleton Soldier"
+   ],
+   "terrain1": "gravestone",
+   "terrain2": null,
+   "trap": false
+  },
+  {
+   "id": "TG1-08",
+   "name": "Restless Dead",
+   "level": 1,
+   "spawn1": [
+    "Skeleton Soldier",
+    "Skeleton Soldier"
+   ],
+   "spawn2": [
+    "Giant Skeleton Soldier"
+   ],
+   "terrain1": null,
+   "terrain2": null,
+   "trap": false
+  },
+  {
+   "id": "TG1-09",
+   "name": "Tomb Sentry",
+   "level": 1,
+   "spawn1": [
+    "Skeleton Soldier"
+   ],
+   "spawn2": [
+    "Giant Skeleton Archer"
+   ],
+   "terrain1": "chest",
+   "terrain2": "barrel",
+   "trap": false
+  },
+  {
+   "id": "TG2-01",
+   "name": "Charnel Vault",
+   "level": 2,
+   "spawn1": [
+    "Giant Skeleton Soldier"
+   ],
+   "spawn2": [
+    "Giant Skeleton Soldier"
+   ],
+   "terrain1": "barrel",
+   "terrain2": null,
+   "trap": false
+  },
+  {
+   "id": "TG2-02",
+   "name": "Ossuary",
+   "level": 2,
+   "spawn1": [
+    "Skeleton Soldier",
+    "Skeleton Soldier",
+    "Skeleton Soldier"
+   ],
+   "spawn2": [
+    "Skeleton Archer",
+    "Skeleton Archer"
+   ],
+   "terrain1": "gravestone",
+   "terrain2": null,
+   "trap": false
+  },
+  {
+   "id": "TG2-03",
+   "name": "Bonefield",
+   "level": 2,
+   "spawn1": [
+    "Giant Skeleton Soldier",
+    "Skeleton Soldier"
+   ],
+   "spawn2": [
+    "Skeleton Soldier",
+    "Skeleton Archer"
+   ],
+   "terrain1": null,
+   "terrain2": "barrel",
+   "trap": false
+  },
+  {
+   "id": "TG2-04",
+   "name": "Beast's Lair",
+   "level": 2,
+   "spawn1": [
+    "Skeleton Beast"
+   ],
+   "spawn2": [],
+   "terrain1": "chest",
+   "terrain2": null,
+   "trap": false
+  },
+  {
+   "id": "TG2-05",
+   "name": "Grave Wardens",
+   "level": 2,
+   "spawn1": [
+    "Skeleton Soldier",
+    "Skeleton Soldier"
+   ],
+   "spawn2": [
+    "Giant Skeleton Archer"
+   ],
+   "terrain1": "barrel",
+   "terrain2": "gravestone",
+   "trap": false
+  },
+  {
+   "id": "TG2-06",
+   "name": "Giants' Causeway",
+   "level": 2,
+   "spawn1": [
+    "Giant Skeleton Soldier"
+   ],
+   "spawn2": [
+    "Giant Skeleton Archer"
+   ],
+   "terrain1": null,
+   "terrain2": null,
+   "trap": true
+  },
+  {
+   "id": "TG2-07",
+   "name": "Death's Marksmen",
+   "level": 2,
+   "spawn1": [
+    "Skeleton Soldier",
+    "Skeleton Archer"
+   ],
+   "spawn2": [
+    "Giant Skeleton Archer",
+    "Skeleton Archer"
+   ],
+   "terrain1": "barrel",
+   "terrain2": "barrel",
+   "trap": false
+  },
+  {
+   "id": "TG2-08",
+   "name": "Open Tomb",
+   "level": 2,
+   "spawn1": [
+    "Necromancer"
+   ],
+   "spawn2": [],
+   "terrain1": "gravestone",
+   "terrain2": "chest",
+   "trap": false
+  },
+  {
+   "id": "TG2-09",
+   "name": "Necromancer's Study",
+   "level": 2,
+   "spawn1": [
+    "Skeleton Soldier"
+   ],
+   "spawn2": [
+    "Necromancer"
+   ],
+   "terrain1": "barrel",
+   "terrain2": null,
+   "trap": false
+  },
+  {
+   "id": "TG3-01",
+   "name": "Titan Bones",
+   "level": 3,
+   "spawn1": [
+    "Giant Skeleton Soldier",
+    "Giant Skeleton Soldier"
+   ],
+   "spawn2": [
+    "Skeleton Beast"
+   ],
+   "terrain1": null,
+   "terrain2": "barrel",
+   "trap": false
+  },
+  {
+   "id": "TG3-02",
+   "name": "Bone Tide",
+   "level": 3,
+   "spawn1": [
+    "Giant Skeleton Soldier",
+    "Skeleton Soldier",
+    "Skeleton Soldier"
+   ],
+   "spawn2": [
+    "Giant Skeleton Soldier",
+    "Skeleton Soldier",
+    "Skeleton Archer"
+   ],
+   "terrain1": "gravestone",
+   "terrain2": null,
+   "trap": false
+  },
+  {
+   "id": "TG3-03",
+   "name": "Charnel Host",
+   "level": 3,
+   "spawn1": [
+    "Skeleton Beast",
+    "Skeleton Soldier",
+    "Skeleton Soldier"
+   ],
+   "spawn2": [
+    "Skeleton Soldier",
+    "Skeleton Archer",
+    "Skeleton Archer"
+   ],
+   "terrain1": "barrel",
+   "terrain2": "barrel",
+   "trap": false
+  },
+  {
+   "id": "TG3-04",
+   "name": "Sentinels of the Deep",
+   "level": 3,
+   "spawn1": [
+    "Giant Skeleton Soldier",
+    "Giant Skeleton Soldier"
+   ],
+   "spawn2": [
+    "Giant Skeleton Archer"
+   ],
+   "terrain1": "chest",
+   "terrain2": null,
+   "trap": false
+  },
+  {
+   "id": "TG3-05",
+   "name": "Hunting Pack",
+   "level": 3,
+   "spawn1": [
+    "Skeleton Beast"
+   ],
+   "spawn2": [
+    "Giant Skeleton Archer",
+    "Skeleton Archer",
+    "Skeleton Archer"
+   ],
+   "terrain1": null,
+   "terrain2": "gravestone",
+   "trap": false
+  },
+  {
+   "id": "TG3-06",
+   "name": "Rite of Raising",
+   "level": 3,
+   "spawn1": [
+    "Skeleton Soldier",
+    "Skeleton Soldier"
+   ],
+   "spawn2": [
+    "Necromancer"
+   ],
+   "terrain1": "gravestone",
+   "terrain2": "gravestone",
+   "trap": false
+  },
+  {
+   "id": "TG3-07",
+   "name": "Arrow Storm",
+   "level": 3,
+   "spawn1": [
+    "Skeleton Archer",
+    "Skeleton Archer",
+    "Skeleton Archer"
+   ],
+   "spawn2": [
+    "Giant Skeleton Archer",
+    "Giant Skeleton Archer"
+   ],
+   "terrain1": "barrel",
+   "terrain2": null,
+   "trap": true
+  },
+  {
+   "id": "TG3-08",
+   "name": "Killing Ground",
+   "level": 3,
+   "spawn1": [
+    "Skeleton Beast"
+   ],
+   "spawn2": [
+    "Giant Skeleton Archer",
+    "Giant Skeleton Archer"
+   ],
+   "terrain1": null,
+   "terrain2": null,
+   "trap": false
+  },
+  {
+   "id": "TG3-09",
+   "name": "Gallery of Bones",
+   "level": 3,
+   "spawn1": [
+    "Skeleton Beast",
+    "Giant Skeleton Soldier"
+   ],
+   "spawn2": [
+    "Skeleton Archer",
+    "Skeleton Archer",
+    "Skeleton Archer"
+   ],
+   "terrain1": "chest",
+   "terrain2": "gravestone",
+   "trap": false
+  }
+ ],
+ "enemies": [
+  {
+   "name": "Skeleton Soldier",
+   "models": "3 models",
+   "threat": 5,
+   "health": 1
+  },
+  {
+   "name": "Skeleton Archer",
+   "models": "3 models",
+   "threat": 3,
+   "health": 1
+  },
+  {
+   "name": "Giant Skeleton Soldier",
+   "models": "2 models",
+   "threat": 2,
+   "health": 5
+  },
+  {
+   "name": "Giant Skeleton Archer",
+   "models": "2 models",
+   "threat": 1,
+   "health": 5
+  },
+  {
+   "name": "Skeleton Beast",
+   "models": "1 model",
+   "threat": 6,
+   "health": 5
+  },
+  {
+   "name": "Necromancer",
+   "models": "2 models",
+   "threat": 7,
+   "health": 5
+  }
+ ]
+}

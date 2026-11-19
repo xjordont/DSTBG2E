@@ -1,0 +1,845 @@
+{
+ "events": [
+  {
+   "id": "E1-01",
+   "name": "Sunken Bog",
+   "level": 1,
+   "keyword": "Lingering",
+   "kind": "hindrance",
+   "text": "Each walk costs one stamina. A walk paid for in this way is still a walk: it is not a run and does not prevent the rest action.",
+   "origin": "Sunken Bog"
+  },
+  {
+   "id": "E1-02",
+   "name": "Stagnant Pools",
+   "level": 1,
+   "keyword": "Lingering",
+   "kind": "hindrance",
+   "text": "A character who ends a turn on the node where that turn began gains one poison token. Place it after the turn's conditions have taken effect.",
+   "origin": "Stagnate Pools"
+  },
+  {
+   "id": "E1-03",
+   "name": "Fatal Gaffe",
+   "level": 1,
+   "keyword": "Lingering",
+   "kind": "hindrance",
+   "text": "Whenever a character's attack deals no damage to any enemy, the attacker is pushed one node, as if hit by a push-attack from the enemy targeted. The players choose among several targets.",
+   "origin": "Fatal Gaffe"
+  },
+  {
+   "id": "E1-04",
+   "name": "Ameliorated Resolve",
+   "level": 1,
+   "keyword": "Lingering",
+   "kind": "hindrance",
+   "text": "Each enemy of threat 5 or less moves one node further for each movement icon it resolves.",
+   "origin": "Ameliorated Resolve"
+  },
+  {
+   "id": "E1-05",
+   "name": "Hollowing I",
+   "level": 1,
+   "keyword": "Once",
+   "kind": "curse",
+   "text": "If a character dies in this encounter, lay this card beside the bonfire tile when the encounter ends. The next rest removes no hollow cubes: a hollow character leaves that rest hollow. Discard this card after that rest.",
+   "origin": "Hollowing I"
+  },
+  {
+   "id": "E1-06",
+   "name": "Dreadful Gloom",
+   "level": 1,
+   "keyword": "Lingering",
+   "kind": "twist",
+   "text": "The range of every attack and effect, of characters and enemies alike, is one lower, to no less than 0. Infinite range is unchanged.",
+   "origin": "Dreadful Gloom"
+  },
+  {
+   "id": "E1-07",
+   "name": "Unsure Footing",
+   "level": 1,
+   "keyword": "Lingering",
+   "kind": "twist",
+   "text": "The nodes along the tile edge opposite the entry nodes are a crumbling ledge. A model on one of them that an attack or a push-move pushes is not moved: it stumbles and suffers 2 damage, which block and resist do not reduce.",
+   "origin": "Unsure Footing"
+  },
+  {
+   "id": "E1-08",
+   "name": "Royal Atheneum",
+   "level": 1,
+   "keyword": "Once",
+   "kind": "twist",
+   "text": "The character with the highest INT (the party settles a tie) may reveal cards from the treasure deck until a spell appears, take it and shuffle the rest back. If so, every enemy magical attack has 1 more damage in this encounter.",
+   "origin": "Royal Atheneum"
+  },
+  {
+   "id": "E1-09",
+   "name": "Perilous Impediment",
+   "level": 1,
+   "keyword": "Once",
+   "kind": "twist",
+   "text": "The party may choose one character who is not embered: that character becomes embered without discarding a card. If so, every enemy in this encounter has 1 more health and deals 1 more damage.",
+   "origin": "Perilous Impediment"
+  },
+  {
+   "id": "E1-10",
+   "name": "Cramped Quarters",
+   "level": 1,
+   "keyword": "Lingering",
+   "kind": "twist",
+   "text": "The node model limit on this tile is two in place of three, for characters and enemies alike. It does not apply while the characters are placed on the entry nodes.",
+   "origin": "new"
+  },
+  {
+   "id": "E1-11",
+   "name": "Lost Antiquities",
+   "level": 1,
+   "keyword": "Once",
+   "kind": "boon",
+   "text": "Reveal the top three cards of the treasure deck and lay them beside the tile. Once in this encounter, one character may spend 4 stamina during their turn to take one of them. When the encounter ends, shuffle the others back into that deck.",
+   "origin": "Lost Antiquities"
+  },
+  {
+   "id": "E1-12",
+   "name": "Exploration I",
+   "level": 1,
+   "keyword": "Once",
+   "kind": "boon",
+   "text": "One character may pay 1 soul. If so, the party looks at one face-down encounter card on any tile and at the face-down event card beside it, then puts both back as they were.",
+   "origin": "Exploration I"
+  },
+  {
+   "id": "E1-13",
+   "name": "Judgement",
+   "level": 1,
+   "keyword": "Lingering",
+   "kind": "boon",
+   "text": "Place each enemy model killed beside the dashboard of the character whose attack killed it. When one character first has three, every enemy of threat 6 or less cowers: in its next turn it resolves no icons and moves two nodes away from the character holding the aggro token.",
+   "origin": "Judgement"
+  },
+  {
+   "id": "E1-14",
+   "name": "Purging Monument",
+   "level": 1,
+   "keyword": "Once",
+   "kind": "boon",
+   "text": "The party takes one Purging Stone from the wares, if one is there, for a character of its choice. Each hollow character may then pay 1 soul to remove their own hollow cubes.",
+   "origin": "new"
+  },
+  {
+   "id": "E1-15",
+   "name": "Loyal Swindler",
+   "level": 1,
+   "keyword": "Once",
+   "kind": "visitor",
+   "text": "Lay this card beside the bonfire tile. After each first clear, one character may pay 1 soul to send Greirat pillaging: add a black cube here and roll a black die. 1 or 2: that character takes the top card of the treasure deck. 0, or a third cube: remove this card from the game.",
+   "origin": "Loyal Swindler"
+  },
+  {
+   "id": "E1-16",
+   "name": "Draw Out True Strength",
+   "level": 1,
+   "keyword": "Once",
+   "kind": "visitor",
+   "text": "Lay this card beside the bonfire tile. During a rest, once hollow cubes are removed, a character who is not hollow may have Yoel raise one stat one tier, to tier two at most, at no cost. That character places two hollow cubes, and a black cube here. At three, turn this card face down.",
+   "origin": "Draw Out True Strength"
+  },
+  {
+   "id": "E2-01",
+   "name": "Sinking Slog",
+   "level": 2,
+   "keyword": "Lingering",
+   "kind": "hindrance",
+   "text": "Each walk costs one stamina and is still a walk. Each dodge and each parry costs one stamina more.",
+   "origin": "Sinking Slog"
+  },
+  {
+   "id": "E2-02",
+   "name": "Lacerations",
+   "level": 2,
+   "keyword": "Lingering",
+   "kind": "hindrance",
+   "text": "Whenever a character suffers 3 or more damage from one enemy attack, that character gains a bleed token.",
+   "origin": "Lacerations"
+  },
+  {
+   "id": "E2-03",
+   "name": "Combat's Blight",
+   "level": 2,
+   "keyword": "Lingering",
+   "kind": "hindrance",
+   "text": "Whenever an enemy attack hits a character who holds no poison token, that character gains one poison token.",
+   "origin": "Combat's Blight"
+  },
+  {
+   "id": "E2-04",
+   "name": "Morbid Enkindling",
+   "level": 2,
+   "keyword": "Lingering",
+   "kind": "hindrance",
+   "text": "Each time this encounter is fought, the first two enemy models killed rise again at once: remove their wound tokens and condition tokens and place each on the spawn node where it began. Killed a second time, a model stays dead.",
+   "origin": "Morbid Enkindling"
+  },
+  {
+   "id": "E2-05",
+   "name": "Hollowing II",
+   "level": 2,
+   "keyword": "Once",
+   "kind": "curse",
+   "text": "If a character dies in this encounter, lay this card beside the bonfire tile when the encounter ends. While it lies there, no rest removes hollow cubes. Return it to its deck when a boss is defeated.",
+   "origin": "Hollowing II"
+  },
+  {
+   "id": "E2-06",
+   "name": "Veiled Figure",
+   "level": 2,
+   "keyword": "Once",
+   "kind": "twist",
+   "text": "Once in this encounter, one character may spend 4 stamina during their turn and roll a black die. On 2 the party takes the top card of the treasure deck. On 1 that character recovers one more stamina at the start of each turn until the encounter ends. On 0 that character suffers 3 damage.",
+   "origin": "Veiled Figure"
+  },
+  {
+   "id": "E2-07",
+   "name": "Tribute of Might",
+   "level": 2,
+   "keyword": "Once",
+   "kind": "twist",
+   "text": "The character with the highest STR (the party settles a tie) may reveal cards from the treasure deck until a card that asks for 20 STR or more appears, take it and shuffle the rest back. If so, every enemy has 1 more health in this encounter.",
+   "origin": "Tribute of Might"
+  },
+  {
+   "id": "E2-08",
+   "name": "Skilled Relief",
+   "level": 2,
+   "keyword": "Once",
+   "kind": "twist",
+   "text": "The character with the highest DEX (the party settles a tie) may reveal cards from the treasure deck until a card that asks for 20 DEX or more appears, take it and shuffle the rest back. If so, every enemy has 1 more attack range in this encounter.",
+   "origin": "Skilled Relief"
+  },
+  {
+   "id": "E2-09",
+   "name": "Looming Tribulations",
+   "level": 2,
+   "keyword": "Once",
+   "kind": "twist",
+   "text": "Discard this card and reveal the top two cards of the Level 2 event deck in its place. Both apply to this tile, and each stays or goes by its own keyword.",
+   "origin": "Looming Tribulations"
+  },
+  {
+   "id": "E2-10",
+   "name": "Reinforcements",
+   "level": 2,
+   "keyword": "Once",
+   "kind": "twist",
+   "text": "When the last enemy is killed, before the encounter is cleared, the party may call a second wave: place every enemy the encounter card shows again. The characters stay where they are and do not recover. Once that wave is killed too, each character gains the encounter's soul reward a second time.",
+   "origin": "Reinforcements"
+  },
+  {
+   "id": "E2-11",
+   "name": "Exploration II",
+   "level": 2,
+   "keyword": "Once",
+   "kind": "boon",
+   "text": "One character may pay 1 soul. If so, the party looks at one face-down encounter card on any tile and at the face-down event card beside it. It may then put that event card on the bottom of its deck and deal the top card in its place, unseen.",
+   "origin": "Exploration II"
+  },
+  {
+   "id": "E2-12",
+   "name": "Propitious Cartographer",
+   "level": 2,
+   "keyword": "Once",
+   "kind": "boon",
+   "text": "Before any enemy is placed, the party may slip past. The encounter is not fought: turn its card face down. It gives no souls and no treasure, is not cleared and keeps its treasure cards. The party goes on to the next tile.",
+   "origin": "Propitious Cartographer"
+  },
+  {
+   "id": "E2-13",
+   "name": "Vitiated Boon",
+   "level": 2,
+   "keyword": "Once",
+   "kind": "boon",
+   "text": "The first time a character who is not hollow would die in this encounter, that character does not die. Remove all damage cubes, stamina cubes and condition tokens from the character and place two hollow cubes: the character is hollow and fights on.",
+   "origin": "Vitiated Boon"
+  },
+  {
+   "id": "E2-14",
+   "name": "Thinned Ranks",
+   "level": 2,
+   "keyword": "Once",
+   "kind": "boon",
+   "text": "The enemy with the lowest threat on the encounter card is not placed: one model only, chosen by the players if several are tied.",
+   "origin": "new"
+  },
+  {
+   "id": "E2-15",
+   "name": "Rebirth",
+   "level": 2,
+   "keyword": "Once",
+   "kind": "visitor",
+   "text": "Lay this card beside the bonfire tile. During a rest, a character may pay Rosaria 3 souls to be reborn: move every stat cube back to its base space and take back the souls those tiers cost. The character may spend them at the Firekeeper in the same rest.",
+   "origin": "Rebirth"
+  },
+  {
+   "id": "E2-16",
+   "name": "Maiden of the Sable Church",
+   "level": 2,
+   "keyword": "Once",
+   "kind": "visitor",
+   "text": "Lay this card beside the bonfire tile. Whenever the party is not in an encounter, Yuria sells a Purging Stone from the wares for 1 soul. She sells the Irreverent Morion Blade to a hollow character for 4 souls, or gives it to one if Yoel's card lies face down beside the bonfire tile.",
+   "origin": "Maiden of the Sable Church"
+  },
+  {
+   "id": "E3-01",
+   "name": "Wintry Bite",
+   "level": 3,
+   "keyword": "Lingering",
+   "kind": "hindrance",
+   "text": "A character who ends a turn on the node where that turn began gains a frostbite token. Place it after the turn's conditions have taken effect. It stays until the end of that character's next turn.",
+   "origin": "Wintry Bite"
+  },
+  {
+   "id": "E3-02",
+   "name": "Waning Grit",
+   "level": 3,
+   "keyword": "Lingering",
+   "kind": "hindrance",
+   "text": "Whenever an enemy attack damages a character and leaves eight or more cubes of any kind on that character's endurance bar, the character gains a stagger token.",
+   "origin": "Waning Grit"
+  },
+  {
+   "id": "E3-03",
+   "name": "Emboldened Regiment",
+   "level": 3,
+   "keyword": "Lingering",
+   "kind": "hindrance",
+   "text": "Each enemy of threat 5 or less resolves all of its behaviour icons twice in each of its turns.",
+   "origin": "Emboldened Regiment"
+  },
+  {
+   "id": "E3-04",
+   "name": "Lunar Reflection",
+   "level": 3,
+   "keyword": "Lingering",
+   "kind": "hindrance",
+   "text": "Every enemy magical attack has 1 more damage. Every character attack that does magical damage has 1 less on its attack value.",
+   "origin": "Lunar Reflection"
+  },
+  {
+   "id": "E3-05",
+   "name": "Hollowing III",
+   "level": 3,
+   "keyword": "Once",
+   "kind": "curse",
+   "text": "A character who dies in this encounter is lost, hollow or not, and stays lost until the party next rests. Such a character does not return hollow when the encounter is cleared.",
+   "origin": "Hollowing III"
+  },
+  {
+   "id": "E3-06",
+   "name": "Perilous Perch",
+   "level": 3,
+   "keyword": "Lingering",
+   "kind": "twist",
+   "text": "The nodes along the tile edge opposite the entry nodes are a sheer drop. A model on one of them that an attack or a push-move pushes is not moved: it falls. A character who falls dies. An enemy that falls is killed. An invader cannot fall.",
+   "origin": "Perilous Perch"
+  },
+  {
+   "id": "E3-07",
+   "name": "Avaricious Outfit",
+   "level": 3,
+   "keyword": "Once",
+   "kind": "twist",
+   "text": "Each character may take the top card of the treasure deck. A character who does suffers 1 more damage from every enemy attack that damages them in this encounter.",
+   "origin": "Avaricious Outfit"
+  },
+  {
+   "id": "E3-08",
+   "name": "Divine Endowment",
+   "level": 3,
+   "keyword": "Once",
+   "kind": "twist",
+   "text": "The character with the highest FTH (the party settles a tie) may reveal cards from the treasure deck until a card that asks for 20 FTH or more appears, take it and shuffle the rest back. If so, a character who drinks estus in this encounter removes only 4 damage cubes.",
+   "origin": "Divine Endowment"
+  },
+  {
+   "id": "E3-09",
+   "name": "Impending Struggle",
+   "level": 3,
+   "keyword": "Once",
+   "kind": "twist",
+   "text": "The party may choose one character who is not embered: that character becomes embered without discarding a card. If so, every enemy in this encounter has 2 more health and deals 1 more damage, and each character gains 2 more souls when it is cleared.",
+   "origin": "Impending Struggle"
+  },
+  {
+   "id": "E3-10",
+   "name": "Champion of Ash",
+   "level": 3,
+   "keyword": "Once",
+   "kind": "twist",
+   "text": "When the enemies are placed, put a black cube on the base of the one with the highest threat; the players choose among equals. It has 3 more health and deals 1 more damage. When it is killed, each character gains 2 souls and the party takes the top card of the treasure deck.",
+   "origin": "new"
+  },
+  {
+   "id": "E3-11",
+   "name": "Enduring Ambition",
+   "level": 3,
+   "keyword": "Once",
+   "kind": "boon",
+   "text": "When this encounter is cleared: if the spark dial shows 0, add one spark to it. Otherwise each character gains 1 soul for each spark on the dial.",
+   "origin": "Enduring Ambition"
+  },
+  {
+   "id": "E3-12",
+   "name": "Exploration III",
+   "level": 3,
+   "keyword": "Once",
+   "kind": "boon",
+   "text": "One character may pay 1 soul. If so, the party looks at the top three cards of the next boss's behaviour deck and puts them back in the same order.",
+   "origin": "Exploration III"
+  },
+  {
+   "id": "E3-13",
+   "name": "Illusory Wall",
+   "level": 3,
+   "keyword": "Once",
+   "kind": "boon",
+   "text": "When this encounter is cleared, the party may open one or two hidden chests, one after the other. For each, roll a green die. Dodge icon: the party takes the top card of the treasure deck. Blank: each character places 2 damage cubes, or as many as fit on the endurance bar.",
+   "origin": "new"
+  },
+  {
+   "id": "E3-14",
+   "name": "Contest of Arms",
+   "level": 3,
+   "keyword": "Once",
+   "kind": "boon",
+   "text": "Place each enemy model killed beside the dashboard of the character whose attack killed it. When the encounter is cleared, the character with the most models gains 4 souls. If several are tied for the most, each of them gains 2 souls.",
+   "origin": "new"
+  },
+  {
+   "id": "E3-15",
+   "name": "The Great Deceiver",
+   "level": 3,
+   "keyword": "Once",
+   "kind": "visitor",
+   "text": "Each character places 1 damage cube if the endurance bar has room: Patches has kicked the party into a pit. Lay this card beside the bonfire tile. Whenever the party is not in an encounter, Patches sells the Horsehoof Ring, the Great Heal Excerpt and both Masks from the wares for 4 souls each.",
+   "origin": "The Great Deceiver"
+  },
+  {
+   "id": "E3-16",
+   "name": "Transposition",
+   "level": 3,
+   "keyword": "Once",
+   "kind": "visitor",
+   "text": "Lay this card beside the bonfire tile with three random legendary treasure cards from outside the treasure decks, face up. Whenever the party is not in an encounter, a character may pay Ludleth 6 souls and return one of their treasure cards, not starting equipment, to the box to take one of the three.",
+   "origin": "Transposition"
+  }
+ ],
+ "traps": [
+  {
+   "id": "T-01",
+   "name": "Rolling Boulder",
+   "nodes": [
+    "OXO",
+    "OO",
+    "OXO",
+    "OO",
+    "OXO"
+   ],
+   "levels": {
+    "1": {
+     "damage": 3,
+     "type": "physical",
+     "dodge": 1,
+     "effect": "push"
+    },
+    "2": {
+     "damage": 3,
+     "type": "physical",
+     "dodge": 2,
+     "effect": "push"
+    },
+    "3": {
+     "damage": 4,
+     "type": "physical",
+     "dodge": 2,
+     "effect": "push"
+    }
+   },
+   "origin": "Rolling Boulder"
+  },
+  {
+   "id": "T-02",
+   "name": "Toxic Vapour",
+   "nodes": [
+    "OOO",
+    "OO",
+    "OXX",
+    "XX",
+    "XXX"
+   ],
+   "levels": {
+    "1": {
+     "damage": 1,
+     "type": "physical",
+     "dodge": 1,
+     "effect": "poison"
+    },
+    "2": {
+     "damage": 1,
+     "type": "physical",
+     "dodge": 2,
+     "effect": "poison"
+    },
+    "3": {
+     "damage": 2,
+     "type": "physical",
+     "dodge": 2,
+     "effect": "poison"
+    }
+   },
+   "origin": "Toxic Vapor"
+  },
+  {
+   "id": "T-03",
+   "name": "Enveloping Slag",
+   "nodes": [
+    "XXX",
+    "OO",
+    "XOX",
+    "OO",
+    "XXX"
+   ],
+   "levels": {
+    "1": {
+     "damage": 2,
+     "type": "magical",
+     "dodge": 1,
+     "effect": null
+    },
+    "2": {
+     "damage": 3,
+     "type": "magical",
+     "dodge": 1,
+     "effect": null
+    },
+    "3": {
+     "damage": 3,
+     "type": "magical",
+     "dodge": 2,
+     "effect": null
+    }
+   },
+   "origin": "Enveloping Slag"
+  },
+  {
+   "id": "T-04",
+   "name": "Collapsed Ceiling",
+   "nodes": [
+    "OOO",
+    "XX",
+    "OXO",
+    "XX",
+    "OOO"
+   ],
+   "levels": {
+    "1": {
+     "damage": 3,
+     "type": "physical",
+     "dodge": 1,
+     "effect": "push"
+    },
+    "2": {
+     "damage": 4,
+     "type": "physical",
+     "dodge": 1,
+     "effect": "push"
+    },
+    "3": {
+     "damage": 4,
+     "type": "physical",
+     "dodge": 2,
+     "effect": "push"
+    }
+   },
+   "origin": "Collapsed Ceiling"
+  },
+  {
+   "id": "T-05",
+   "name": "Sandworm Ambush",
+   "nodes": [
+    "OOX",
+    "XO",
+    "XOO",
+    "OX",
+    "OXO"
+   ],
+   "levels": {
+    "1": {
+     "damage": 3,
+     "type": "physical",
+     "dodge": 1,
+     "effect": "bleed"
+    },
+    "2": {
+     "damage": 3,
+     "type": "physical",
+     "dodge": 2,
+     "effect": "bleed"
+    },
+    "3": {
+     "damage": 4,
+     "type": "physical",
+     "dodge": 2,
+     "effect": "bleed"
+    }
+   },
+   "origin": "Sandworm Ambush"
+  },
+  {
+   "id": "T-06",
+   "name": "Blazing Pyres",
+   "nodes": [
+    "OOO",
+    "XO",
+    "XOX",
+    "OO",
+    "XOX"
+   ],
+   "levels": {
+    "1": {
+     "damage": 3,
+     "type": "magical",
+     "dodge": 1,
+     "effect": null
+    },
+    "2": {
+     "damage": 3,
+     "type": "magical",
+     "dodge": 2,
+     "effect": null
+    },
+    "3": {
+     "damage": 4,
+     "type": "magical",
+     "dodge": 2,
+     "effect": null
+    }
+   },
+   "origin": "Blazing Pyres"
+  },
+  {
+   "id": "T-07",
+   "name": "Howling Tempest",
+   "nodes": [
+    "OXX",
+    "XO",
+    "XOX",
+    "OX",
+    "XOO"
+   ],
+   "levels": {
+    "1": {
+     "damage": 1,
+     "type": "physical",
+     "dodge": 1,
+     "effect": "frostbite"
+    },
+    "2": {
+     "damage": 2,
+     "type": "physical",
+     "dodge": 1,
+     "effect": "frostbite"
+    },
+    "3": {
+     "damage": 2,
+     "type": "physical",
+     "dodge": 2,
+     "effect": "frostbite"
+    }
+   },
+   "origin": "Howling Tempest"
+  },
+  {
+   "id": "T-08",
+   "name": "Noxious Sanctum",
+   "nodes": [
+    "XXX",
+    "XX",
+    "OXO",
+    "XX",
+    "OOO"
+   ],
+   "levels": {
+    "1": {
+     "damage": 1,
+     "type": "magical",
+     "dodge": 1,
+     "effect": "stagger"
+    },
+    "2": {
+     "damage": 2,
+     "type": "magical",
+     "dodge": 1,
+     "effect": "stagger"
+    },
+    "3": {
+     "damage": 2,
+     "type": "magical",
+     "dodge": 2,
+     "effect": "stagger"
+    }
+   },
+   "origin": "Noxious Sanctum"
+  }
+ ],
+ "items": [
+  {
+   "id": "I-01",
+   "name": "Purging Stone",
+   "copies": 4,
+   "slot": "consumable",
+   "requirements": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "range": null,
+   "attacks": [],
+   "block": "-",
+   "resist": "-",
+   "dodge": 0,
+   "upgrade_slots": 0,
+   "text": "Whenever the party is not in an encounter, a character may discard this card to remove all of their own hollow cubes. The card returns to the wares.",
+   "obtained": "Bought from Yuria for 1 soul (E2-16, Maiden of the Sable Church); one is handed over by E1-14, Purging Monument."
+  },
+  {
+   "id": "I-02",
+   "name": "Irreverent Morion Blade",
+   "copies": 1,
+   "slot": "two-handed",
+   "requirements": [
+    16,
+    21,
+    0,
+    12
+   ],
+   "range": 0,
+   "attacks": [
+    {
+     "cost": 0,
+     "dice": "2 black",
+     "modifier": 0,
+     "magic": false,
+     "effects": [
+      "bleed"
+     ]
+    },
+    {
+     "cost": 3,
+     "dice": "2 black + 1 blue",
+     "modifier": 0,
+     "magic": false,
+     "effects": [
+      "bleed"
+     ]
+    }
+   ],
+   "block": "-",
+   "resist": "-",
+   "dodge": 0,
+   "upgrade_slots": 1,
+   "text": "Each attack has +1 on its attack value for every 3 damage cubes on the wielder's endurance bar, and +1 more while the wielder is hollow, to no more than +3. A Blood Gem cannot be fitted.",
+   "obtained": "Bought from Yuria by a hollow character for 4 souls, or for nothing once Yoel is dead (E2-16, Maiden of the Sable Church)."
+  },
+  {
+   "id": "I-03",
+   "name": "Horsehoof Ring",
+   "copies": 1,
+   "slot": "ring (occupies an upgrade slot of armour)",
+   "requirements": [
+    20,
+    12,
+    0,
+    0
+   ],
+   "range": null,
+   "attacks": [],
+   "block": "-",
+   "resist": "-",
+   "dodge": 0,
+   "upgrade_slots": 0,
+   "text": "Whenever the wearer's attack hits an enemy and deals no damage to it, place a stagger token on that enemy.",
+   "obtained": "Bought from Patches for 4 souls (E3-15, The Great Deceiver)."
+  },
+  {
+   "id": "I-04",
+   "name": "Great Heal Excerpt",
+   "copies": 1,
+   "slot": "spell",
+   "requirements": [
+    0,
+    0,
+    0,
+    13
+   ],
+   "range": 1,
+   "attacks": [
+    {
+     "cost": 2,
+     "dice": "-",
+     "modifier": 0,
+     "magic": false,
+     "effects": [
+      "see below"
+     ]
+    }
+   ],
+   "block": "-",
+   "resist": "-",
+   "dodge": 0,
+   "upgrade_slots": 0,
+   "text": "Miracle. One character within range removes 4 damage cubes. Then turn this card face down: it cannot be cast while face down. A rest turns it face up.",
+   "obtained": "Bought from Patches for 4 souls (E3-15, The Great Deceiver)."
+  },
+  {
+   "id": "I-05",
+   "name": "Mask of the Mother",
+   "copies": 1,
+   "slot": "upgrade (occupies an upgrade slot of armour)",
+   "requirements": [
+    0,
+    0,
+    12,
+    19
+   ],
+   "range": null,
+   "attacks": [],
+   "block": "-",
+   "resist": "-",
+   "dodge": 0,
+   "upgrade_slots": 0,
+   "text": "At the end of the wearer's turn, if another character is on the wearer's node or an adjacent node, the wearer removes 1 damage cube.",
+   "obtained": "Bought from Patches for 4 souls (E3-15, The Great Deceiver)."
+  },
+  {
+   "id": "I-06",
+   "name": "Mask of the Father",
+   "copies": 1,
+   "slot": "upgrade (occupies an upgrade slot of armour)",
+   "requirements": [
+    30,
+    16,
+    0,
+    0
+   ],
+   "range": null,
+   "attacks": [],
+   "block": "-",
+   "resist": "-",
+   "dodge": 0,
+   "upgrade_slots": 0,
+   "text": "The wearer wields a two-handed weapon in one hand at no extra stamina cost. The wearer cannot dodge.",
+   "obtained": "Bought from Patches for 4 souls (E3-15, The Great Deceiver)."
+  }
+ ]
+}

@@ -1,0 +1,462 @@
+{
+ "deck": "Painted World of Ariamis",
+ "code": "PW",
+ "note": "These cards replace the encounter cards printed in the set. A Phalanx stands alone on its spawn node.",
+ "cards": [
+  {
+   "id": "PW1-01",
+   "name": "Frozen Sentries",
+   "level": 1,
+   "spawn1": [
+    "Phalanx Hollow"
+   ],
+   "spawn2": [
+    "Phalanx Hollow"
+   ],
+   "terrain1": "barrel",
+   "terrain2": null,
+   "trap": false
+  },
+  {
+   "id": "PW1-02",
+   "name": "Rat Run",
+   "level": 1,
+   "spawn1": [
+    "Snow Rat"
+   ],
+   "spawn2": [
+    "Snow Rat"
+   ],
+   "terrain1": null,
+   "terrain2": "barrel",
+   "trap": false
+  },
+  {
+   "id": "PW1-03",
+   "name": "Snowbound Yard",
+   "level": 1,
+   "spawn1": [
+    "Phalanx Hollow",
+    "Phalanx Hollow"
+   ],
+   "spawn2": [
+    "Snow Rat"
+   ],
+   "terrain1": "gravestone",
+   "terrain2": null,
+   "trap": false
+  },
+  {
+   "id": "PW1-04",
+   "name": "Spoke and Rot",
+   "level": 1,
+   "spawn1": [
+    "Bonewheel Skeleton"
+   ],
+   "spawn2": [
+    "Engorged Zombie"
+   ],
+   "terrain1": null,
+   "terrain2": null,
+   "trap": false
+  },
+  {
+   "id": "PW1-05",
+   "name": "Wheel in the Snow",
+   "level": 1,
+   "spawn1": [
+    "Bonewheel Skeleton"
+   ],
+   "spawn2": [
+    "Phalanx Hollow",
+    "Snow Rat"
+   ],
+   "terrain1": "barrel",
+   "terrain2": "barrel",
+   "trap": false
+  },
+  {
+   "id": "PW1-06",
+   "name": "Rat Catcher",
+   "level": 1,
+   "spawn1": [
+    "Bonewheel Skeleton"
+   ],
+   "spawn2": [
+    "Snow Rat",
+    "Snow Rat"
+   ],
+   "terrain1": "chest",
+   "terrain2": null,
+   "trap": false
+  },
+  {
+   "id": "PW1-07",
+   "name": "Thawing Dead",
+   "level": 1,
+   "spawn1": [
+    "Engorged Zombie",
+    "Engorged Zombie"
+   ],
+   "spawn2": [
+    "Snow Rat"
+   ],
+   "terrain1": "gravestone",
+   "terrain2": "barrel",
+   "trap": false
+  },
+  {
+   "id": "PW1-08",
+   "name": "Wheel House",
+   "level": 1,
+   "spawn1": [
+    "Bonewheel Skeleton"
+   ],
+   "spawn2": [
+    "Bonewheel Skeleton"
+   ],
+   "terrain1": null,
+   "terrain2": "barrel",
+   "trap": true
+  },
+  {
+   "id": "PW1-09",
+   "name": "Feast of Rats",
+   "level": 1,
+   "spawn1": [
+    "Phalanx Hollow",
+    "Phalanx Hollow",
+    "Phalanx Hollow"
+   ],
+   "spawn2": [
+    "Snow Rat",
+    "Snow Rat"
+   ],
+   "terrain1": "chest",
+   "terrain2": "gravestone",
+   "trap": false
+  },
+  {
+   "id": "PW2-01",
+   "name": "Phalanx March",
+   "level": 2,
+   "spawn1": [
+    "Phalanx"
+   ],
+   "spawn2": [
+    "Phalanx Hollow",
+    "Phalanx Hollow"
+   ],
+   "terrain1": "barrel",
+   "terrain2": null,
+   "trap": false
+  },
+  {
+   "id": "PW2-02",
+   "name": "Rot Hall",
+   "level": 2,
+   "spawn1": [
+    "Engorged Zombie",
+    "Phalanx Hollow"
+   ],
+   "spawn2": [
+    "Engorged Zombie",
+    "Phalanx Hollow"
+   ],
+   "terrain1": null,
+   "terrain2": "barrel",
+   "trap": false
+  },
+  {
+   "id": "PW2-03",
+   "name": "Plague Run",
+   "level": 2,
+   "spawn1": [
+    "Snow Rat",
+    "Snow Rat"
+   ],
+   "spawn2": [
+    "Engorged Zombie",
+    "Phalanx Hollow"
+   ],
+   "terrain1": "gravestone",
+   "terrain2": null,
+   "trap": false
+  },
+  {
+   "id": "PW2-04",
+   "name": "Grinding Wheels",
+   "level": 2,
+   "spawn1": [
+    "Phalanx"
+   ],
+   "spawn2": [
+    "Bonewheel Skeleton",
+    "Bonewheel Skeleton"
+   ],
+   "terrain1": "chest",
+   "terrain2": null,
+   "trap": false
+  },
+  {
+   "id": "PW2-05",
+   "name": "Rolling Dead",
+   "level": 2,
+   "spawn1": [
+    "Bonewheel Skeleton",
+    "Engorged Zombie"
+   ],
+   "spawn2": [
+    "Bonewheel Skeleton",
+    "Engorged Zombie"
+   ],
+   "terrain1": "barrel",
+   "terrain2": "barrel",
+   "trap": false
+  },
+  {
+   "id": "PW2-06",
+   "name": "Rat Wheels",
+   "level": 2,
+   "spawn1": [
+    "Bonewheel Skeleton",
+    "Bonewheel Skeleton"
+   ],
+   "spawn2": [
+    "Snow Rat",
+    "Snow Rat"
+   ],
+   "terrain1": null,
+   "terrain2": null,
+   "trap": true
+  },
+  {
+   "id": "PW2-07",
+   "name": "Avalanche",
+   "level": 2,
+   "spawn1": [
+    "Bonewheel Skeleton",
+    "Bonewheel Skeleton"
+   ],
+   "spawn2": [
+    "Phalanx Hollow",
+    "Phalanx Hollow",
+    "Phalanx Hollow"
+   ],
+   "terrain1": "barrel",
+   "terrain2": "gravestone",
+   "trap": false
+  },
+  {
+   "id": "PW2-08",
+   "name": "Painted Guard",
+   "level": 2,
+   "spawn1": [
+    "Phalanx"
+   ],
+   "spawn2": [
+    "Engorged Zombie",
+    "Engorged Zombie",
+    "Bonewheel Skeleton"
+   ],
+   "terrain1": "gravestone",
+   "terrain2": "chest",
+   "trap": false
+  },
+  {
+   "id": "PW2-09",
+   "name": "Plague Hall",
+   "level": 2,
+   "spawn1": [
+    "Engorged Zombie",
+    "Engorged Zombie",
+    "Snow Rat"
+   ],
+   "spawn2": [
+    "Snow Rat",
+    "Phalanx Hollow",
+    "Phalanx Hollow"
+   ],
+   "terrain1": "barrel",
+   "terrain2": null,
+   "trap": false
+  },
+  {
+   "id": "PW3-01",
+   "name": "Last Rank",
+   "level": 3,
+   "spawn1": [
+    "Phalanx"
+   ],
+   "spawn2": [
+    "Bonewheel Skeleton",
+    "Bonewheel Skeleton",
+    "Engorged Zombie"
+   ],
+   "terrain1": null,
+   "terrain2": "barrel",
+   "trap": false
+  },
+  {
+   "id": "PW3-02",
+   "name": "Rot and Ruin",
+   "level": 3,
+   "spawn1": [
+    "Bonewheel Skeleton",
+    "Bonewheel Skeleton",
+    "Engorged Zombie"
+   ],
+   "spawn2": [
+    "Engorged Zombie",
+    "Phalanx Hollow",
+    "Snow Rat"
+   ],
+   "terrain1": "gravestone",
+   "terrain2": null,
+   "trap": false
+  },
+  {
+   "id": "PW3-03",
+   "name": "White Out",
+   "level": 3,
+   "spawn1": [
+    "Bonewheel Skeleton",
+    "Bonewheel Skeleton",
+    "Snow Rat"
+   ],
+   "spawn2": [
+    "Snow Rat",
+    "Phalanx Hollow",
+    "Phalanx Hollow"
+   ],
+   "terrain1": "barrel",
+   "terrain2": "barrel",
+   "trap": false
+  },
+  {
+   "id": "PW3-04",
+   "name": "Charnel Wheel",
+   "level": 3,
+   "spawn1": [
+    "Bonewheel Skeleton",
+    "Bonewheel Skeleton",
+    "Engorged Zombie"
+   ],
+   "spawn2": [
+    "Engorged Zombie",
+    "Snow Rat",
+    "Snow Rat"
+   ],
+   "terrain1": "chest",
+   "terrain2": null,
+   "trap": true
+  },
+  {
+   "id": "PW3-05",
+   "name": "Crow's Roost",
+   "level": 3,
+   "spawn1": [
+    "Crow Demon"
+   ],
+   "spawn2": [],
+   "terrain1": null,
+   "terrain2": "gravestone",
+   "trap": false
+  },
+  {
+   "id": "PW3-06",
+   "name": "Carrion Call",
+   "level": 3,
+   "spawn1": [
+    "Crow Demon"
+   ],
+   "spawn2": [
+    "Snow Rat"
+   ],
+   "terrain1": "gravestone",
+   "terrain2": "gravestone",
+   "trap": false
+  },
+  {
+   "id": "PW3-07",
+   "name": "Feathers and Shields",
+   "level": 3,
+   "spawn1": [
+    "Crow Demon"
+   ],
+   "spawn2": [
+    "Phalanx"
+   ],
+   "terrain1": "barrel",
+   "terrain2": null,
+   "trap": false
+  },
+  {
+   "id": "PW3-08",
+   "name": "Crow's Thrall",
+   "level": 3,
+   "spawn1": [
+    "Crow Demon"
+   ],
+   "spawn2": [
+    "Phalanx Hollow"
+   ],
+   "terrain1": null,
+   "terrain2": null,
+   "trap": false
+  },
+  {
+   "id": "PW3-09",
+   "name": "Black Feathers",
+   "level": 3,
+   "spawn1": [
+    "Crow Demon"
+   ],
+   "spawn2": [
+    "Snow Rat",
+    "Snow Rat"
+   ],
+   "terrain1": "chest",
+   "terrain2": "gravestone",
+   "trap": false
+  }
+ ],
+ "enemies": [
+  {
+   "name": "Bonewheel Skeleton",
+   "models": "2 models",
+   "threat": 7,
+   "health": 1
+  },
+  {
+   "name": "Crow Demon",
+   "models": "2 models",
+   "threat": 9,
+   "health": 5
+  },
+  {
+   "name": "Engorged Zombie",
+   "models": "2 models",
+   "threat": 8,
+   "health": 1
+  },
+  {
+   "name": "Phalanx",
+   "models": "3 Phalanx Hollow",
+   "threat": 4,
+   "health": 5
+  },
+  {
+   "name": "Phalanx Hollow",
+   "models": "5 models",
+   "threat": 4,
+   "health": 1
+  },
+  {
+   "name": "Snow Rat",
+   "models": "2 models",
+   "threat": 1,
+   "health": 1
+  }
+ ]
+}

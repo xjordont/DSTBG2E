@@ -35,6 +35,17 @@ for _k, _v in Y22.items(): _v['added_ms'] = _base(_k) in AMEND['added'] or _base
 
 def revised(r): return bool(getattr(r, 'revised', False))
 def req_of(it, r): return it['req_ms'] if (revised(r) and 'req_ms' in it) else it['req']
+
+
+def beside(char, R, L, r):
+    """May the two-handed card R be carried with the card L in the other hand? Always if L's own text allows it. Under a
+    ruleset that lets a two-handed weapon be wielded in one hand (one_hand): 'sta2' always, its attacks costing two more
+    stamina; 'str15' if the character's Strength is fifteen or more above the weapon's Strength requirement."""
+    if 'offhand' in text_traits(L, r): return True
+    mode = getattr(r, 'one_hand', None)
+    if mode == 'sta2': return True
+    if mode == 'str15': return char.value(0, char.tier[0]) >= req_of(R, r)[0] + 15
+    return False
 def deck_of(it, r): return it['deck_ms'] if (revised(r) and 'deck_ms' in it) else it['deck']
 CORE4 = ['Knight', 'Warrior', 'Herald', 'Assassin']
 ALL10 = CORE4 + sorted(_MORE['classes'])
@@ -205,7 +216,7 @@ class Char:
         for R in hands:
             if not has_dice(R): continue
             for L in [None] + [x for x in hands if x is not R]:
-                if L is not None and R['hands'] == 2 and 'offhand' not in text_traits(L, rules): continue
+                if L is not None and R['hands'] == 2 and not beside(self, R, L, rules): continue
                 if L is not None and L['hands'] == 2: continue
                 self.R, self.L = R, L; v = power(self.profile(), rules)
                 if best is None or v > best[0] + 1e-9: best = (v, R, L)
@@ -257,7 +268,7 @@ class Char:
         p['parry_n'] = sum(x.get('dodge', 0) for x in worn)               # a parry rolls the dodge dice printed on the cards, whatever forbids a dodge
         p['dodge'] = 0 if 'no_dodge' in traits else p['parry_n']
         p['dodge_pen'] = cal
-        p['two'] = bool(R and R['hands'] == 2)
+        p['two'] = bool(R and R['hands'] == 2 and not (L is not None and 'offhand' not in text_traits(L, r)))      # a two-handed weapon swung in one hand leaves the other free
         opts = {'R': [], 'L': []}; sup = {'R': [], 'L': []}
         for hand, it in (('R', R), ('L', L)):
             if not it: continue
@@ -279,7 +290,14 @@ class Char:
                 for a in card['attacks']:
                     o = dict(name=card['name'], hand=hand, cost=a['cost'], dice=a['dice'], mod=a['mod'], magic=a['magic'], range=a['range'],
                              repeat=a['repeat'], shaft=a['shaft'], ignore=a.get('ignore', False), node=a.get('node', False), spell=spell,
-                             reroll=bool(getattr(r, 'grip_reroll', False) and not spell and (card['hands'] == 2 or other is None)))
+                             reroll=bool(getattr(r, 'grip_reroll', False) and not spell and (card['hands'] == 2 or other is None)
+                                         and not (card['hands'] == 1 and other is None and getattr(r, 'grip_die', None) == 'only')
+                                         and not (card['hands'] == 2 and other is not None and 'offhand' not in text_traits(other, r))))
+                    if a['dice'] and not spell and card['hands'] == 1 and other is None and getattr(r, 'grip_die', None):
+                        o['dice'] += 'b'                          # a one-handed weapon gripped in both hands: one black die more
+                    if (a['dice'] and card['hands'] == 2 and other is not None and 'offhand' not in text_traits(other, r)
+                            and getattr(r, 'one_hand', None) == 'sta2'):
+                        o['cost'] += 2                            # a two-handed weapon swung in one hand: two more stamina
                     for k in EXTRA:
                         if k in a: o[k] = list(a[k]) if k == 'fx' else a[k]
                     if not (a['dice'] or o.get('fx') or o.get('direct')):
@@ -344,7 +362,7 @@ class Char:
         now = power(self.profile(), r, vs=(block, resist)); top = (now + 0.05, None)
         for a in pool:
             for b in [None] + [x for x in pool if x is not a]:
-                if a['hands'] == 2 and b is not None and 'offhand' not in text_traits(b, r): continue
+                if a['hands'] == 2 and b is not None and not beside(self, a, b, r): continue
                 if b is not None and b['hands'] == 2: continue
                 if (a is self.R and b is self.L): continue
                 got = power(self.profile(R=a, L=(b if b is not None else False)), r, vs=(block, resist))
@@ -573,10 +591,14 @@ class Economy:
         off = 'offhand' in text_traits(it, self.r)       # a shield that may sit beside a two-handed weapon
         keep = c.L if (c.L is not None and 'offhand' in text_traits(c.L, self.r)) else False
         if it['type'] == 'armour': tries = [('A', dict(A=it))]
-        elif it['hands'] == 2: tries = [('R', dict(R=it, L=keep))]
+        elif it['hands'] == 2:
+            tries = [('R', dict(R=it, L=keep))]
+            if keep is False and c.L is not None and beside(c, it, c.L, self.r): tries.append(('R', dict(R=it, L=c.L)))     # swung in one hand, the other kept
         elif has_dice(it) or (it['attacks'] and not it.get('catalyst')):
-            tries = [('R', dict(R=it, L=(False if (c.L is None) else c.L))), ('L', dict(L=it))] if not c.two_handed else [('R', dict(R=it, L=False))]
-        else: tries = [('L', dict(L=it))] if (not c.two_handed or off) else []
+            # 'R1': in the right hand with the left hand emptied (a one-handed weapon gripped in both hands)
+            tries = [('R', dict(R=it, L=(False if (c.L is None) else c.L))), ('L', dict(L=it))] if not c.two_handed else [('R1', dict(R=it, L=False))]
+            if not c.two_handed and c.L is not None and getattr(self.r, 'grip_die', None): tries.append(('R1', dict(R=it, L=False)))
+        else: tries = [('L', dict(L=it))] if (not c.two_handed or off or (c.R is not None and c.R['hands'] == 2 and beside(c, c.R, it, self.r))) else []
         if it.get('spell') and getattr(self.r, 'catalyst', False) and it not in c.spells:
             # a spell may be stored in a catalyst of its school that the character carries, taking no hand
             held = [x for x in (c.R, c.L) if x and x.get('catalyst') == it.get('school')]
@@ -603,7 +625,10 @@ class Economy:
         elif slot == 'L': out.append(c.L); c.L = it
         else:
             out.append(c.R); c.R = it
-            if it['hands'] == 2 and not (c.L is not None and 'offhand' in text_traits(c.L, self.r)): out.append(c.L); c.L = None
+            if slot == 'R1' and c.L is not None: out.append(c.L); c.L = None
+            if it['hands'] == 2 and c.L is not None and 'offhand' not in text_traits(c.L, self.r):
+                keepL = beside(c, it, c.L, self.r) and power(c.profile(), self.r) >= power(c.profile(L=False), self.r)
+                if not keepL: out.append(c.L); c.L = None
         # a replaced card goes back to the inventory: the shared one of the official rules, or the character's own,
         # where it may be sold (starting equipment cannot be sold, so it is simply set aside)
         for old in out:
