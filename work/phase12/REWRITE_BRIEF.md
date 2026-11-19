@@ -46,9 +46,9 @@ Everything here is decided. Where the author's chapter differs, write this. Wher
 | Characters | Sparks | Enemy health | Enemy attack damage |
 |---|---|---|---|
 | 1 | 4 | as printed | as printed |
-| 2 | 3 | +1 | +1 |
-| 3 | 2 | +2 | +2 |
-| 4 | 1 | +3 | +2 |
+| 2 | 3 | +2 | +1 |
+| 3 | 2 | +4 | +2 |
+| 4 | 1 | +6 | +2 |
 
 (Table as ruled 2026-11-19, section 25 of 41_rules_workshop.md: bosses, mimics, invaders, summons and crystal lizards are never scaled.)
 
@@ -70,7 +70,7 @@ Everything here is decided. Where the author's chapter differs, write this. Wher
 - One major action: attack (one attack option from the left weapon slot, the right, or both); *rest* (remove all stamina; only if the character did not run this turn); drink estus (remove all damage cubes, flip the token; it clears no stamina); ember (discard an ember card from the back-up slot).
 - At most one spell attack a turn. A spell is never scaled, never two-handed and never used for a riposte.
 - Stat scaling: a weapon's attacks gain +1 to the attack value while the character's stat for that weapon's highest stat requirement is ten or more above the requirement. Where two requirements tie for highest, either stat qualifies.
-- Grip (ruled in section 26 of 41_rules_workshop.md): a two-handed weapon held in both hands may reroll any single die after the roll. A one-handed weapon equipped with nothing in the other weapon slot is gripped in both hands: one more black die on each attack, no reroll. A two-handed weapon may be wielded in one hand with a one-handed card in the other weapon slot: each of its attacks costs two more stamina and has no reroll. A card whose text lets it sit beside a two-handed weapon adds no cost and takes away no reroll.
+- Two-handed attacks (section 27 of 41_rules_workshop.md): an attack with a two-handed weapon may reroll any single die after the roll, and a one-handed weapon equipped with nothing in the other weapon slot gains the same reroll. Nothing else: no extra die, and a two-handed weapon leaves the other weapon slot empty unless a card's text says otherwise.
 - Luck: flip the token to reroll any or all dice of one attack or defence roll, chosen at once; the new results stand.
 - Heroic actions are printed on the dashboards and are not listed in the book. A heroic action is a minor action unless its text gives another moment.
 
@@ -119,7 +119,7 @@ Everything here is decided. Where the author's chapter differs, write this. Wher
 - Chests: one treasure card of the current tier is placed face down under each chest when the encounter is set up, and is taken when the encounter is cleared (mimics: section 3.11).
 - The fog gate: the first time the party reaches a boss, the fog gate token moves to the bonfire tile. From then on the party may go straight from the bonfire to the boss, or walk the road again for souls. In a campaign the fog gate gives no shortcut.
 - Encounter decks hold only the encounter cards of the set the next boss comes from. The party chooses its bosses; nothing is chosen at random.
-- Event cards are those of the book's own print-and-play events deck (`pnp/events/`: 48 event cards, 8 trap cards, 9 item cards), in play when the players have it. Keywords Lingering and Once; a reset changes no event card; no module card ever enters a printed deck or the shop (section 26 of 41_rules_workshop.md). From the 2022 sets the book uses the Tomb of Giants and Painted World of Ariamis enemies, the Black Knight, Gravelord Nito, the Heavy Knight and Crossbreed Priscilla (Appendix B, §17.7, §17.10) and the new treasure cards; their printed encounter cards and event cards are not used. Two print-and-play encounter decks in the 2017 pattern (`pnp/encounters/`, 27 cards each) may replace the printed encounter decks, decided at the start of setup (§6.5); never mixed with printed cards.
+- Event cards are those of the community Events Expansion II (49 event cards, 8 trap cards, 14 treasure cards), printed from `pnp/events/` with five cards' text changed (`pnp/events/edits.json`), in play when the players have it; its rules are in §7.5 (section 27 of 41_rules_workshop.md). Its treasure cards never enter a treasure deck or the shop. From the 2022 sets the book uses the Tomb of Giants and Painted World of Ariamis enemies, the Black Knight, Gravelord Nito, the Heavy Knight and Crossbreed Priscilla (Appendix B, §17.7, §17.10) and the new treasure cards; their printed encounter cards and event cards are not used. Two print-and-play encounter decks in the 2017 pattern (`pnp/encounters/`, 27 cards each) may replace the printed encounter decks, decided at the start of setup (§6.5); never mixed with printed cards.
 - A gravestone lets the party reveal one hidden card: the top card of either treasure deck or of the next boss's behaviour deck (put back on top or on the bottom), or a face-down encounter card or event card on any tile (put back or replaced with the top card of its deck).
 - Traps: placed as the author wrote. A trap is sprung when a character moves or is pushed onto its node and hits every model on that node, enemies included. A character may dodge it (trap damage cannot be blocked or resisted); a character who dodges a trap stays on the node.
 

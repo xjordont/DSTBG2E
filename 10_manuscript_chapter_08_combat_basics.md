@@ -31,9 +31,9 @@ Enemies grow stronger with the number of characters in the game. Dead characters
 | Characters | Sparks | Enemy health | Enemy attack damage |
 |---|---|---|---|
 | 1 | 4 | as printed | as printed |
-| 2 | 3 | +1 | +1 |
-| 3 | 2 | +2 | +2 |
-| 4 | 1 | +3 | +2 |
+| 2 | 3 | +2 | +1 |
+| 3 | 2 | +4 | +2 |
+| 4 | 1 | +6 | +2 |
 
 - The *sparks* are those the party starts with (see §7.4).
 - The damage is added to every enemy attack, and to the damage value of a *push-move*.

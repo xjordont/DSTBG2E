@@ -66,7 +66,7 @@ Terms set in *italics* in this book are listed here with the section that gives 
 
 **Estus flask.** The character token, with a ready side and a used side, that is flipped when the character drinks estus (see §3.5).
 
-**Event card.** A card of the print-and-play events deck, dealt beside an encounter card and revealed with it (see §7.5).
+**Event card.** A card of the Events Expansion, dealt beside an encounter card and revealed when the party enters its tile (see §7.5).
 
 **Failed.** Said of an encounter that the party has lost because every one of its characters is dead (see §7.5).
 

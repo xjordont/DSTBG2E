@@ -51,7 +51,7 @@
    - A *failed* encounter cannot be skipped. Once reset, it must be fought.
 3. The characters enter the tile by placing their models on its *entry nodes* (see §5.1). No more than three characters may start on the same node.
 4. Reveal the tile's encounter card. With the Phantoms expansion, flip the tile's *invader* token first (see §12.2).
-5. With the events deck, reveal the tile's *event card* (see Event Cards, below).
+5. With the Events Expansion, reveal the tile's *event card* (see Event Cards, below).
 6. Place the enemy models on the *spawn nodes* and the terrain on the *terrain nodes* that the encounter card shows. Each icon on the card matches the icon printed on a node of the tile.
 7. Place one face-down treasure card under each *chest* {{icon:ast-0009-treasure-chest}} placed for the first time. Draw from the *tier one* treasure deck before the *mini-boss* is defeated and from the *tier two* treasure deck afterwards.
 8. Place the *aggro* token on the character with the highest *threat* {{icon:ast-0059-taunt}}. The party settles a tie.
@@ -104,17 +104,17 @@ A boss and an *invader* take their turns between the characters' turns (see §16
 
 ### Event Cards
 
-The events deck is a print-and-play module of this book: 48 event cards, 8 trap cards and 9 item cards. If the players have it, it is in play. A card overrides this book where the two differ.
+The Events Expansion II is a community expansion of 49 event cards, 8 trap cards and 14 treasure cards. If the players have it, it is in play. Its cards are used as printed, but for five whose text is changed in the print-and-play file kept with this book. A card overrides this book where the two differ.
 
-- The event card beside an *encounter card* is revealed with it and applies from then on.
-- **Lingering.** The card stays beside its encounter card and applies whenever that encounter is fought.
-- **Once.** The card is discarded when the party leaves the tile, unless its text lays it elsewhere.
-- A *reset* changes no event card. When a boss is defeated, the discarded cards and the cards on the tiles return to their decks (see §6.6).
-- Where a card speaks of the treasure deck, it means the deck of the current tier.
-- A visitor's card stays beside the *bonfire* tile until its text removes it.
-- Item cards lie face up beside the bonfire tile as the wares. They are gained only as event cards say, are never sold, and return to the wares when discarded.
-- No card of the module ever enters a treasure deck, an encounter deck, a behaviour deck or the *shop*, and no other card enters a deck of the module.
-- In a campaign the event cards return to their decks only when a *section* ends, and the visitor Ludleth deals no cards: while he is at the bonfire, *transposition* costs no *souls* (see §18.8).
+- The event card beside an *encounter card* is revealed each time the party enters that tile and is resolved as its text says. Its effect lasts for that encounter unless the card gives another end.
+- When the encounters are *reset*, gather every revealed event card. A card with the discard icon is set aside until a boss is defeated. The others are shuffled back into the decks of their levels. Then deal a new card face down to each of those encounters that has never been *cleared*. A cleared encounter has no event card.
+- Six cards bring a traveller to the *bonfire*: Rebirth, Maiden of the Sable Church, Loyal Swindler, Transposition, Draw Out True Strength and The Great Deceiver. Such a card stays beside the bonfire tile for the rest of the game. A traveller is visited whenever the party may visit Blacksmith Andre.
+- The expansion's treasure cards never enter a treasure deck or the *shop*. All six Purging Stones are Yuria's, and she sells no more than four for each boss. Patches sells the Red Tearstone Ring, Divine Blessing, Great Heal Excerpt and the Horsehoof Ring, and the three Masks once his card allows.
+- A Hollowing card limits each character's *endurance bar* to the number of spaces it names, *hollow* cubes included. Only one Hollowing card applies at a time. A Purging Stone removes that limit, and every hollow cube, from the character who uses it.
+- A node diagram is read with the foot of the card towards the *entry nodes*.
+- A card that calls for an *invader* or a *mimic* is discarded and replaced if the players lack the Phantoms or the Explorers expansion.
+- A cost in *souls* is paid by one character, and a reward in souls goes to each character. The treasure deck is the deck of the current tier. A party that is defeated or perishes has *failed* the encounter. An activation is a turn, health gained is damage removed, a stamina bar is the endurance bar, taunt is *threat*, and both green icons are *poison*.
+- Reparations is fought by the rules of player versus player (see §20.2). Dying in it carries no penalty, and the encounter is then cleared.
 
 ## 7.6 Souls
 

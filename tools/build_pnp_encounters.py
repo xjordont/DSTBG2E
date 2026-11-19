@@ -2,12 +2,13 @@
 """The print-and-play encounter decks (Tomb of Giants, Painted World of Ariamis): mini cards in the layout of the
 printed 2017 encounter cards. Called by build_pnp.py; reads pnp/encounters/<deck>.json."""
 import html, json, pathlib
-from build_pnp import ROOT, MINI, PAPER, icon, font_face, sheet_css, sheets, back, BASE_CSS, EVENT_CSS, LEVEL_ICON
+from build_pnp import ROOT, uri, MINI, PAPER, icon, font_face, sheet_css, sheets, back, BASE_CSS, EVENT_CSS, LEVEL_ICON
 
 ENEMY_ICON = {'Skeleton Soldier': 'ast-0008-skeleton-soldier', 'Skeleton Archer': 'ast-0012-skeleton-archer', 'Giant Skeleton Soldier': 'ast-0016-giant-skeleton-soldier',
               'Giant Skeleton Archer': 'ast-0019-giant-skeleton-archer', 'Skeleton Beast': 'ast-0022-skeleton-beast', 'Necromancer': 'ast-0024-necromancer'}
-# no icon artwork of the Painted World enemies is held: they are shown by a monogram until it is
-MONOGRAM = {'Bonewheel Skeleton': 'BW', 'Crow Demon': 'CD', 'Engorged Zombie': 'EZ', 'Phalanx': 'PX', 'Phalanx Hollow': 'PH', 'Snow Rat': 'SR'}
+# the Painted World icons are cut from a community sheet of 2017-style encounter cards (pnp/encounters/icons)
+PWA_ICON = {'Bonewheel Skeleton': 'pwa-bonewheel-skeleton', 'Crow Demon': 'pwa-crow-demon', 'Engorged Zombie': 'pwa-engorged-zombie', 'Phalanx': 'pwa-phalanx',
+            'Phalanx Hollow': 'pwa-phalanx-hollow', 'Snow Rat': 'pwa-snow-rat'}
 TERRAIN_ICON = {'barrel': 'ast-0013-barrel', 'chest': 'ast-0009-treasure-chest', 'gravestone': 'ast-0017-gravestone'}
 
 CSS = """
@@ -18,7 +19,7 @@ CSS = """
 .en .slot { flex: 0 0 7.6mm; width: 7.6mm; height: 7.6mm; border-radius: 50%; background: #d9d4c6; display: flex; align-items: center; justify-content: center; overflow: hidden; }
 .en .slot.empty { background: #8d8a80; opacity: 0.45; } .en .slot img { height: 8.3mm; } .en .slot.t img { height: 8mm; }
 .en .slot span { font-family: 'Cinzel', serif; font-weight: 700; font-size: 6.6pt; color: #1b1b1b; letter-spacing: -0.02em; }
-.en .slot.mono { border: 0.35mm solid #b9a36a; background: #e4decd; }
+.en .slot.pwa img { width: 7.6mm; height: 7.6mm; flex: none; } .lg .slot.pwa img { width: 6mm; height: 6mm; flex: none; }
 .en .lv { position: absolute; left: 2mm; bottom: 2.6mm; } .en .lv img { height: 7.2mm; }
 .en .trap { position: absolute; left: 11.5mm; right: 11.5mm; bottom: 4.6mm; text-align: center; } .en .trap img { height: 2.4mm; margin: 0 0.3mm; }
 .en .set { position: absolute; right: 2.2mm; bottom: 3.1mm; width: 6.6mm; height: 6.6mm; border-radius: 50%; border: 0.3mm solid #b9a36a; display: flex; align-items: center; justify-content: center;
@@ -26,7 +27,7 @@ CSS = """
 .en .id { position: absolute; left: 0; right: 0; bottom: 0.7mm; text-align: center; font-family: 'Cinzel', serif; font-size: 3.4pt; letter-spacing: 0.1em; color: #9a9485; }
 .lg { background: #f5f0e6; } .lg .name { text-align: center; font-size: 6.6pt; padding: 2mm 1mm 1mm; } .lg table { width: 37mm; margin: 0 2mm; border-collapse: collapse; font-size: 5.3pt; }
 .lg td { padding: 0.35mm 0.5mm; border-top: 0.12mm solid #b8ad98; vertical-align: middle; line-height: 1.1; } .lg td.i { width: 7mm; } .lg .slot { width: 6mm; height: 6mm; border-radius: 50%; background: #d9d4c6; display: flex; align-items: center; justify-content: center; overflow: hidden; }
-.lg .slot img { height: 6.6mm; } .lg .slot span { font-family: 'Cinzel', serif; font-weight: 700; font-size: 5.2pt; } .lg .slot.mono { border: 0.3mm solid #b9a36a; background: #e4decd; }
+.lg .slot img { height: 6.6mm; } .lg .slot span { font-family: 'Cinzel', serif; font-weight: 700; font-size: 5.2pt; }
 .lg .note { font-size: 4.9pt; line-height: 1.15; padding: 1mm 2.2mm 0; text-align: center; color: #3c372d; }
 """
 
@@ -34,7 +35,7 @@ CSS = """
 def slot(name):
     if name is None: return '<div class="slot empty"></div>'
     if name in ENEMY_ICON: return f'<div class="slot">{icon(ENEMY_ICON[name], "")}</div>'
-    if name in MONOGRAM: return f'<div class="slot mono"><span>{MONOGRAM[name]}</span></div>'
+    if name in PWA_ICON: return f'<div class="slot pwa"><img src="{uri(ROOT / "pnp/encounters/icons" / (PWA_ICON[name] + ".png"))}" alt=""></div>'
     return f'<div class="slot t">{icon(TERRAIN_ICON[name], "")}</div>'
 
 

@@ -2638,3 +2638,101 @@ What the scoring found, and what was done about it:
 2. Priscilla's invisibility and Nito's escort, if the printed rules are to be followed more closely.
 3. Painted World icon artwork, as files.
 4. The Deprived's heroic action is still not played in the simulator.
+
+## 27. The author's ruling of 2026-11-19 (second): grips out, enemy health +2 a character, the original event cards (2026-11-19)
+
+The author ruled on three things after section 26, and supplied a table of dice averages and six sheets of community 2017-style encounter cards for Tomb of Giants and Painted World of Ariamis. Sections 26.1 and 26.3 are withdrawn.
+
+### 27.1 Weapon grips: one reroll, nothing else (§10.4, §3.2)
+
+"Remove those weapon grip rules. I think just giving two handed weapons and one-handed weapons wielded without the other hand equipped both a reroll of one damage die is sufficient."
+
+- §10.4 is the author's own paragraph again: an attack with a two-handed weapon may reroll any single die, and a one-handed weapon equipped with nothing in the other weapon slot gains the same reroll.
+- The extra black die and the two-handed weapon wielded in one hand are gone. A two-handed weapon leaves the other weapon slot empty unless a card's own text says otherwise (§3.2).
+- The dice averages the author supplied (black 1.17, blue 1.83, orange 2.5) are the simulator's dice.
+
+### 27.2 Enemy health +2 for each character beyond the first (§8.3)
+
+"Apply enemy health +2 per character beyond the first character."
+
+| Characters | Sparks | Enemy health | Enemy attack damage |
+|---|---|---|---|
+| 1 | 4 | as printed | as printed |
+| 2 | 3 | +2 | +1 |
+| 3 | 2 | +4 | +2 |
+| 4 | 1 | +6 | +2 |
+
+Bosses, mimics, invaders, summons and crystal lizards are still not scaled. Measured with the rules of this section (300 games a cell, every 2017 set, best play):
+
+| Characters | Games won | Rests | Time (min) | Lost in an encounter / to the mini-boss / to the main-boss | Boss attempts failed, mini / main |
+|---|---|---|---|---|---|
+| 1 | 58% (± 6) | 4.3 | 227 | 23% / 5% / 14% | 19% / 42% |
+| 2 | 52% (± 6) | 3.3 | 330 | 38% / 5% / 5% | 16% / 22% |
+| 3 | 53% (± 6) | 2.2 | 372 | 42% / 2% / 3% | 9% / 14% |
+| 4 | 55% (± 6) | 1.6 | 443 | 42% / 2% / 1% | 3% / 2% |
+
+- Every party size is now inside the author's band of 50% to 70%, and within six points of each other. Before this line two to four characters won 78% to 87%.
+- The cost, as 25.2 said: a party of two or more now loses nearly all its lost games in ordinary encounters, and an unscaled boss is a formality for four characters (2% of main-boss attempts fail). A game with four characters runs about seven and a half hours of simulated table time.
+- These figures are the simulated players at their best. The author's "about 80% at optimal play" is not what the simulator shows for any party size; it shows 52% to 58%.
+
+### 27.3 The events deck: the maker's own cards, five text boxes changed (§7.5, §5.5, §6.5, §2.6)
+
+"I want to use the event expansion cards I uploaded with the same art and minimal required edits to the card text to make the rules cohesive with this ruleset."
+
+The rewritten text-only deck of 26.3 is removed from the repository. The module is now the community Events Expansion II itself (49 event cards, 8 trap cards, 14 treasure cards), laid out for home printing from its maker's files with its art, frames and backs untouched: `pnp/events/events_expansion_letter.pdf` and `events_expansion_a4.pdf`.
+
+**The test for changing a card:** a card is changed only if, as printed, it cannot be played under this book without a ruling made for that one card. Whatever one line of the book can settle for many cards at once is settled in the book. 66 of the 71 cards are reproduced exactly, printed misspellings included.
+
+| Card | As printed | As changed | Why |
+|---|---|---|---|
+| Fatal Gaffe | "…fails to make an enemy suffer damage, gain [push icon]." | "…fails to make an enemy suffer damage, that enemy pushes the character." | The card does not say who gains the push or which way it goes. |
+| Reinforcements | "…Use both tiles for combat and the party recovers 1 additional stamina…" | "…Use both tiles for combat (facing nodes on their shared edge are adjacent) and the party recovers 1 additional stamina…" | No rule lets a model cross from one tile to another. |
+| Undead Settlement | "Replace this encounter with 5 Hollow Soldiers and 1 Silver Knight Bowman." | "Replace this encounter with 3 Hollow Soldiers, 2 Crossbow Hollows and 1 Silver Knight Greatbowman." | The game has three Hollow Soldier models and no Silver Knight Bowman. |
+| Vitiated Boon | "If a character perishes this encounter, stave off death. Each character saved this way now suffers 1 damage at the end of their activation. Remove this condition when the party is next defeated." | "The first time each character would die this encounter, they remove all damage cubes instead. Each character saved this way now suffers 1 damage at the end of their turn. Remove this condition when the party next fails an encounter." | In the official game one death ends the encounter; here a character dies alone, so the card must say what the saved character is left with, and how often. |
+| Propitious Cartographer | "The party may choose to move to any other tile… Move all characters to the newly chosen tile and begin the encounter normally." | "The party may choose to turn back to the bonfire tile. If the party decides to turn back, discard this card and the current encounter card. Draw an event card and an encounter card and place them both on the tile the party is exiting." | The encounters here are fought in order along one road; there is no other tile to move to. |
+
+How a card is changed: the text box is the same artwork on every event card and its text is darker than its parchment, so a high percentile of the 49 boxes at each pixel gives the box with no text on it. That clean box is laid over the card's own, and the new text is set in Alegreya, which is the face the cards use (SIL Open Font Licence; `assets/fonts/alegreya/`). `pnp/events/edits.json` holds the five changes; `tools/build_pnp_events.py` builds the files.
+
+**Settled in the book for all cards (§7.5):**
+
+- The expansion's own handling of a reset is kept (revealed cards gathered, discard-icon cards set aside until a boss falls, the rest shuffled back, new cards dealt), with one change for this game's economy: a new card is dealt only to an encounter that has never been cleared. An encounter fought again is fought without an event card, so no card that hands out treasure, souls or a spark can be fished for by fighting old encounters.
+- The six traveller cards stay beside the bonfire tile; a traveller is visited whenever Andre may be.
+- **The rule of 26.3 that home-printed cards never share a deck with printed ones is kept.** The expansion shuffles two Purging Stones and its Red Tearstone Ring into the treasure deck. Here all six Purging Stones are Yuria's (still four at most for each boss) and the Red Tearstone Ring joins Patches' first wares.
+- Hollowing limits the endurance bar to the spaces the card names, hollow cubes included; a Purging Stone removes the limit and the user's hollow cubes.
+- A card that needs an invader or a mimic is replaced if the players lack Phantoms or Explorers.
+- A cost in souls is paid by one character and a reward in souls goes to each; five words of the cards are mapped to the book's; both green icons are poison.
+- Reparations is fought by the player versus player rules (§20.2).
+- Trap cards (§5.5) still hit every model on a marked node, enemies included, as this book's trap tokens do. The expansion has them hit characters only.
+
+**Left as printed although weak or odd, because they can be played:** Draw Out True Strength (a spark for one stat tier), The Great Deceiver (the Masks need four stolen chests), Sunken Bog and Sinking Slog (harsh with one stamina a turn), Loyal Swindler (about five free treasure cards on average). The expansion's Mask of the Child shares its name with a 2022 card that Appendix B revises; Appendix B's text governs both, and the two read almost alike.
+
+**The art.** The cards carry the work of the expansion's maker and of the artists its insert credits, and Dark Souls concept art. They are reproduced at the author's instruction for the author's own table. The maker's three PDFs are kept out of the repository like every other source (`.gitignore`); their SHA-256 sums are f86796b5…e17 (event and trap cards), d1740502…340e (treasure cards) and 6325a875…4f7a (rules insert). Passing the print files on to others is a matter for the maker's leave.
+
+**Not measured:** the simulator plays no event card.
+
+### 27.4 The encounter decks: Painted World icons, and the uploaded community cards
+
+- The six Painted World enemy icons are cut from the community sheets the author uploaded and cleaned to two tones (`pnp/encounters/icons/`). The Painted World deck now shows them in place of the monograms; its key card stays as a reference.
+- Both decks were scored again under 27.2. They stay inside the printed core set's range, with one Painted World Level 3 card (Last Rank) a little under its softest:
+
+| Score (lowest / median / highest) | Level 1 | Level 2 | Level 3 |
+|---|---|---|---|
+| Core set, printed | 0.2 / 2.7 / 5.6 | 0.3 / 4.0 / 9.4 | 1.8 / 3.1 / 5.0 |
+| Tomb of Giants deck | 0.4 / 2.8 / 4.6 | 2.0 / 3.5 / 7.4 | 2.3 / 3.2 / 4.3 |
+| Painted World deck | 0.4 / 1.8 / 2.7 | 1.0 / 2.9 / 4.0 | 1.4 / 2.7 / 4.7 |
+
+- **The uploaded Painted World cards (24) scored the same way:** Level 1 0.4 / 2.1 / 10.4, Level 2 1.1 / 3.7 / 11.3, Level 3 2.2 / 9.6 / 13.2. Every card of theirs with a Crow Demon is far outside the core set's range under this ruleset: the lone Crow Demon of their Level 1 card is beaten by 19% of lone characters and 61% of parties of four, and their Level 3 card with two Crow Demons by 5% and 38%. Their cards without a Crow Demon sit where this book's do. This bears out 26.4: the Crow Demon belongs at Level 3, one to a card. Two of their Level 3 cards (Frozen Revolutions and The Last Bastion) print the same enemies.
+- The 15 uploaded Tomb of Giants cards were not scored: they carry no names, and the sheet is too coarse to tell a Skeleton Soldier's icon from an archer's with certainty.
+- §6.5 speaks of "a print-and-play deck", so players who would rather use the community cards may; the book's own decks are the ones balanced for it.
+- Card size: the book's encounter cards are 41 x 63 mm, the size retailers list for this game's small cards. The uploaded sheets print at about 44 x 63.5 mm.
+
+### 27.5 Files and checks
+
+- Simulator: `settled` in `tools/sim/compare.py` is this section; `settled26` keeps the withdrawn grips. Three new checks; `tools/sim/test_sim.py` passes.
+- Manuscript: §2.6, §3.2, §5.5, §6.5, §7.5, §8.3, §10.4 and the glossary. Style 0 violations, cross-references 0 broken.
+
+### 27.6 Open, for the author
+
+1. Four characters and an unscaled boss: 2% of main-boss attempts fail. If the boss is to stay a threat for a full table, boss health is the lever section 20 measured.
+2. Priscilla's invisibility and Nito's escort (26.2) are still this book's design.
+3. The layout of the rulebook itself has not been rebuilt; the repository's rulebook PDFs still hold the old text.

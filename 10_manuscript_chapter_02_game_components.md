@@ -171,7 +171,7 @@ An *encounter card* shows the level, enemies, terrain and *traps* of one encount
 
 In all, 133 encounter cards. Of each of Levels 1 to 3, Darkroot and Iron Keep hold six cards each, Explorers five and Executioner's Chariot two. Level 4 cards come only with the mega-bosses.
 
-- Events deck, a print-and-play module of this book: 48x *Event cards* (16 of each level), 8x Trap cards and 9x Item cards
+- Events Expansion II, a community expansion printed at home: 49x *Event cards* in three levels, 8x Trap cards and 14x treasure cards
 - Encounter decks, print-and-play modules of this book: 27x encounter cards for ToG and 27x for PWA (9 of each level), each with a key card
 - 5x *Ambush cards* (Explorers), each showing Treasure or Mimic
 

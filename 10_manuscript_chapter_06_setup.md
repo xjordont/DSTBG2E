@@ -127,7 +127,7 @@ The shops are restocked at no other time.
     - The mini-boss's data card gives the levels.
     - The levels rise from the tile beside the bonfire tile towards the mini-boss tile.
 3. Deal two *tier one* treasure cards face down onto each encounter card.
-4. With the events deck, shuffle the *event cards* of each level into a deck of their own and the trap cards into another, and lay the item cards face up beside the bonfire tile. Deal one event card of the encounter's level face down beside each encounter card.
+4. With the Events Expansion, shuffle the *event cards* of each level into a deck of their own and the trap cards into another, and set its treasure cards aside (see §7.5). Deal one event card of the encounter's level face down beside each encounter card.
 5. With the Explorers expansion, deal one *ambush card* at random face down beside each encounter tile (see §13).
 6. With the Phantoms expansion, *invader* tokens are placed on the encounter cards when an *embered* character provokes an invasion (see §12.2).
 

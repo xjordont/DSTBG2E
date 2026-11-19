@@ -61,12 +61,7 @@ The *repeat* icon {{icon:ast-0061-repeat-behaviour-or-attack}} lets the characte
 
 ## 10.4 Two-Handed Attacks
 
-A character with a *two-handed* weapon is decidedly on the offensive.
-
-- An attack with a two-handed weapon {{icon:ast-0045-two-handed-weapon}} held in both hands may reroll any single die after the roll.
-- A one-handed weapon {{icon:ast-0043-one-handed-weapon}} *equipped* with nothing in the other weapon slot is gripped in both hands. Each of its attacks rolls one more black die {{icon:ast-0051-black-dice}}.
-- A two-handed weapon may be wielded in one hand, with a one-handed card in the other weapon slot. Each of its attacks then costs two more *stamina* and has no reroll.
-- A card whose text lets it be equipped beside a two-handed weapon adds no stamina cost and takes away no reroll.
+A character with a *two-handed* weapon is decidedly on the offensive. An attack with a two-handed weapon {{icon:ast-0045-two-handed-weapon}} may reroll any single die after the roll. A one-handed weapon {{icon:ast-0043-one-handed-weapon}} *equipped* with nothing in the other weapon slot is wielded two-handed and gains the same reroll.
 
 ## 10.5 Stat Scaling
 

@@ -596,7 +596,7 @@ _cb, _bb = _fb.char_turn, _fb.boss_turn
 _fb.char_turn = lambda c: (_sb.append('c'), _cb(c))[1]; _fb.boss_turn = lambda f: (_sb.append('B'), _bb(f))[1]
 _fb.run(max_rounds=2)
 check('the one round against a boss: the boss acts once, then every character', ''.join(_sb[:8]) == 'BcccBccc', ''.join(_sb[:8]))
-# the grips of section 26
+# the grips of section 26 (withdrawn in section 27; the options stay in the simulator)
 _rg = RU.make(dict(ALL_REQ, grip_die='only', one_hand='sta2')); _kn = Char('Knight', _rg)
 _sw = next(x for x in (_kn.R, _kn.L) if x and x['hands'] == 1 and x['attacks'] and x['attacks'][0]['dice'])
 _with = [o['dice'] for o in _kn.profile(R=_sw, L=next(x for x in (_kn.R, _kn.L, *_kn.bag) if x and x is not _sw))['options']['R'] if o['name'] == _sw['name']]
@@ -608,6 +608,17 @@ _c1 = [o for o in _kn.profile(R=_two, L=False)['options']['R'] if o['name'] == _
 _c2 = [o for o in _kn.profile(R=_two, L=_sh)['options']['R'] if o['name'] == _two['name']]
 check('a two-handed weapon swung in one hand costs two more stamina and has no reroll', [o['cost'] for o in _c2] == [o['cost'] + 2 for o in _c1] and all(o['reroll'] for o in _c1) and not any(o['reroll'] for o in _c2),
       ([o['cost'] for o in _c1], [o['cost'] for o in _c2]))
+# section 27: one reroll for a two-handed weapon and for a one-handed weapon with the other weapon slot empty; nothing else
+from compare import SPECS as _SP
+from characters import beside as CH_beside
+_r27 = RU.make(dict(_SP['settled'][1])); _k27 = Char('Knight', _r27)
+_a27 = [o for o in _k27.profile(R=_sw, L=False)['options']['R'] if o['name'] == _sw['name']]
+_w27 = [o for o in _k27.profile(R=_sw, L=next(x for x in (_k27.R, _k27.L, *_k27.bag) if x and x['name'] != _sw['name']))['options']['R'] if o['name'] == _sw['name']]
+check('settled: a one-handed weapon with the other slot empty has a reroll and no extra die; with the other slot filled it has neither',
+      all(o['reroll'] for o in _a27) and not any(o['reroll'] for o in _w27) and [o['dice'] for o in _a27] == [o['dice'] for o in _w27], ([o['dice'] for o in _a27], [o['dice'] for o in _w27]))
+_t27 = [o for o in _k27.profile(R=_two, L=False)['options']['R'] if o['name'] == _two['name']]
+check('settled: a two-handed weapon has a reroll and cannot be carried beside a card whose text does not allow it', all(o['reroll'] for o in _t27) and not CH_beside(_k27, _two, _sh, _r27))
+check('settled: enemy health is +2 for each character beyond the first, and bosses are not scaled', [_r27.hp(5, n) for n in (1, 2, 3, 4)] == [5, 7, 9, 11] and not any(_r27.boss_add(n) or _r27.boss_atk(n) for n in (1, 2, 3, 4)), [_r27.hp(5, n) for n in (1, 2, 3, 4)])
 ga = [play(2, RU.make(ALL_REQ), s, table=Table(skill=1.0, bank=6)) for s in range(12)]
 check('a game with every set in play runs to its end', all(x['win'] or x['lost_at'] is not None for x in ga))
 

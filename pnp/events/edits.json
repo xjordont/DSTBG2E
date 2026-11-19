@@ -1,0 +1,25 @@
+{
+ "note": "The only cards of Events Expansion II whose text is changed. Every other card is reproduced exactly as its maker printed it. 'page' is the page of sources/events_expansion/EventsExpansion_EventsCards_V2-2.pdf.",
+ "edits": [
+  {"page": 13, "name": "Fatal Gaffe",
+   "original": "Whenever a character's attack fails to make an enemy suffer damage, gain [push icon].",
+   "text": "Whenever a character’s attack fails to make an enemy suffer damage, that enemy pushes the character.",
+   "reason": "The card does not say who gains the push icon or which way the push goes."},
+  {"page": 33, "name": "Reinforcements",
+   "original": "Flip an adjacent face down encounter card. Treat the active encounter and the adjacent encounter as 1. Use both tiles for combat and the party recovers 1 additional stamina. Gain 5 souls per character upon victory (only if 2 encounters were combined).",
+   "text": "Flip an adjacent face down encounter card. Treat the active encounter and the adjacent encounter as 1. Use both tiles for combat (facing nodes on their shared edge are adjacent) and the party recovers 1 additional stamina. Gain 5 souls per character upon victory (only if 2 encounters were combined).",
+   "reason": "No rule of the game lets a model cross from one tile to another during an encounter; the card needs one."},
+  {"page": 39, "name": "Undead Settlement",
+   "original": "Replace this encounter with 5 Hollow Soldiers and 1 Silver Knight Bowman.",
+   "text": "Replace this encounter with 3 Hollow Soldiers, 2 Crossbow Hollows and 1 Silver Knight Greatbowman.",
+   "reason": "The game has three Hollow Soldier models, and no Silver Knight Bowman."},
+  {"page": 51, "name": "Vitiated Boon",
+   "original": "If a character perishes this encounter, stave off death. Each character saved this way now suffers 1 damage at the end of their activation. Remove this condition when the party is next defeated.",
+   "text": "The first time each character would die this encounter, they remove all damage cubes instead. Each character saved this way now suffers 1 damage at the end of their turn. Remove this condition when the party next fails an encounter.",
+   "reason": "In the official game one death ends the encounter; here a character dies alone, so the card must say what staving off death leaves that character with, and how often."},
+  {"page": 59, "name": "Propitious Cartographer",
+   "original": "The party may choose to move to any other tile. If the party decides to move, discard this card and the current encounter card. Draw an event card and an encounter card and place them both on the tile the party is exiting. Move all characters to the newly chosen tile and begin the encounter normally.",
+   "text": "The party may choose to turn back to the bonfire tile. If the party decides to turn back, discard this card and the current encounter card. Draw an event card and an encounter card and place them both on the tile the party is exiting.",
+   "reason": "The encounters of this game are fought in order along one road, so there is no other tile to move to."}
+ ]
+}

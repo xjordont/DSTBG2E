@@ -1,12 +1,12 @@
 # Print-and-play modules
 
-Three modules of the rulebook that are printed at home. None of their cards is ever shuffled with a card of the printed game: each has its own decks and its own card backs.
+Three modules printed at home. None of their cards is ever shuffled with a card of the printed game.
 
 | Module | Files | Cards | Card size |
 |---|---|---|---|
-| Events deck | `events/events_deck_letter.pdf`, `events/events_deck_a4.pdf` | 48 event cards (16 of each level), 8 trap cards, 9 item cards | events and traps 63.5 x 88.9 mm (poker); items 41 x 63 mm (mini) |
-| Tomb of Giants encounter deck | `encounters/tomb_of_giants_letter.pdf`, `..._a4.pdf` | 27 encounter cards (9 of each level) and a key card | 41 x 63 mm (mini), the size of the printed encounter cards |
-| Painted World of Ariamis encounter deck | `encounters/painted_world_letter.pdf`, `..._a4.pdf` | 27 encounter cards (9 of each level) and a key card | 41 x 63 mm (mini) |
+| Events Expansion II (a community expansion, laid out here for printing) | `events/events_expansion_letter.pdf`, `events/events_expansion_a4.pdf` | 49 event cards, 8 trap cards, 14 treasure cards | events and traps 63.5 x 88.9 mm; treasure cards 45.3 x 66.2 mm, the trim their maker's crop marks give |
+| Tomb of Giants encounter deck | `encounters/tomb_of_giants_letter.pdf`, `..._a4.pdf` | 27 encounter cards (9 of each level) and a key card | 41 x 63 mm |
+| Painted World of Ariamis encounter deck | `encounters/painted_world_letter.pdf`, `..._a4.pdf` | 27 encounter cards (9 of each level) and a key card | 41 x 63 mm |
 
 ## Printing
 
@@ -14,12 +14,15 @@ Three modules of the rulebook that are printed at home. None of their cards is e
 - Card stock of 200 g/m2 or more, or plain paper in opaque sleeves with a playing card behind each.
 - Cut along the grey card edges.
 
-## Rules
+## Events Expansion II
 
-- Events deck: §7.5 (Event Cards), §5.5 (trap cards) and §6.5 (setup) of the rulebook. The card texts are in `events/cards.json`; `events/design_notes.md` records how each card differs from the community Events Expansion II it grew out of.
-- Encounter decks: §6.5 of the rulebook (the choice of decks), §9.2 and §9.3 (leap and resurrect) and Appendix B (the enemies). The cards are in `encounters/*.json`.
-- The Painted World enemies are shown by monograms (BW, CD, EZ, PX, PH, SR) with a key card, because no icon artwork for them is held; the Tomb of Giants cards use the set's own icons.
+- The cards are the expansion's own, with its art, frames and backs. Five event cards have changed text, listed with the reasons in `events/edits.json`: Fatal Gaffe, Reinforcements, Undead Settlement, Vitiated Boon and Propitious Cartographer. The other 66 cards are exactly as their maker printed them.
+- Rules: §7.5 (Event Cards), §5.5 (trap cards) and §6.5 (setup) of the rulebook. The expansion's own rules insert is not needed.
+- The cards carry the work of the expansion's maker and of the artists its insert credits. The print files are for the table of the person who printed them; passing them on is a matter for the maker's leave.
+- Rebuilding needs the maker's two card PDFs in `sources/events_expansion/` (sources are not kept in the repository): `python3 tools/build_pnp.py events`.
 
-## Rebuilding
+## Encounter decks
 
-`python3 tools/build_pnp.py` rebuilds every PDF from the JSON files. `python3 tools/sim/encounter_score.py core` and `... FILE.json` score encounters against the printed core set.
+- Rules: §6.5 of the rulebook (the choice of decks), §9.2 and §9.3 (leap and resurrect) and Appendix B (the enemies). The cards are in `encounters/*.json`.
+- The Tomb of Giants cards use the set's own enemy icons. The Painted World icons (`encounters/icons/`) are cut from a community sheet of 2017-style encounter cards.
+- `python3 tools/build_pnp.py encounters` rebuilds the PDFs. `python3 tools/sim/encounter_score.py core` and `... FILE.json` score encounters against the printed core set.

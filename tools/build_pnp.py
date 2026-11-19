@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
-"""Build the print-and-play modules: the events deck and the two encounter decks.
+"""Build the print-and-play modules: the Events Expansion and the two encounter decks.
 
 Usage: python3 tools/build_pnp.py [events] [encounters] [--paper letter|a4|both]
 
-Reads pnp/events/cards.json and pnp/encounters/<deck>.json and writes PDFs beside them. Card fronts are laid out
-on a grid with cut marks; each sheet of fronts is followed by a sheet of backs, so the file prints double-sided
-(flip on the long edge). The backs differ by deck, which is what keeps these cards apart from the printed game's."""
+events: tools/build_pnp_events.py lays out the Events Expansion II cards from their maker's files, with the text
+changes of pnp/events/edits.json. encounters: tools/build_pnp_encounters.py builds pnp/encounters/<deck>.json.
+Card fronts are laid out on a grid; each sheet of fronts is followed by a sheet of backs, so a file prints
+double-sided (flip on the long edge). This module holds the layout helpers the encounter decks use."""
 import argparse, base64, html, json, pathlib, sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
@@ -107,83 +108,19 @@ LEVEL_ICON = {1: 'ast-0007-encounter-level-1', 2: 'ast-0011-encounter-level-2', 
 EFFECT_ICON = {'poison': 'ast-0065-poison', 'bleed': 'ast-0063-bleed', 'frostbite': 'ast-0064-frostbite', 'stagger': 'ast-0066-stagger', 'push': 'ast-0058-push-affected-enemies'}
 
 
-def event_front(e):
-    long = ' long' if len(e['text'].split()) > 44 else ''
-    return (f'<div class="card ev{long}"><div class="head"><div class="lvl">{icon(LEVEL_ICON[e["level"]], "")}</div><div class="name">{esc(e["name"])}</div></div>'
-            f'<div class="tag {e["keyword"].lower()}">{esc(e["keyword"])}</div><div class="kind">{esc(e["kind"])}</div>'
-            f'<div class="text"><p>{esc(e["text"])}</p></div><div class="foot">Events deck · Level {e["level"]} · {e["id"]}</div></div>')
-
-
-def trap_svg(nodes):
-    # five rows from the far edge (top) to the doorway (bottom): 3, 2, 3, 2, 3 nodes
-    rows = list(reversed(nodes)); parts = ['<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">']
-    for r, row in enumerate(rows):
-        y = 10 + r * 20; xs = (16, 50, 84) if len(row) == 3 else (33, 67)
-        for x, ch in zip(xs, row):
-            if ch == 'X':
-                for a in range(4):
-                    parts.append(f'<polygon points="{x},{y - 12} {x - 3},{y - 6.5} {x + 3},{y - 6.5}" fill="#c8641c" transform="rotate({45 + 90 * a} {x} {y})"/>')
-                parts.append(f'<circle cx="{x}" cy="{y}" r="6.6" fill="#e9973a" stroke="#7a3a0c" stroke-width="1.4"/>')
-            else:
-                parts.append(f'<circle cx="{x}" cy="{y}" r="5.6" fill="none" stroke="#9c8f77" stroke-width="1.3"/>')
-    return ''.join(parts) + '</svg>'
-
-
-def trap_front(t):
-    rows = []
-    for lv in ('1', '2', '3'):
-        v = t['levels'][lv]; fx = v.get('effect')
-        kind = 'magical ' + icon('ast-0042-deal-magical-damage') if v['type'] == 'magical' else 'physical'
-        rows.append(f'<tr><td class="l">{icon(LEVEL_ICON[int(lv)], "")}</td><td><b>{v["damage"]}</b> {kind}</td>'
-                    f'<td>{icon("ast-0062-dodge")} dodge <b>{v["dodge"]}</b></td><td>{(icon(EFFECT_ICON[fx]) + " " + fx) if fx else "&ndash;"}</td></tr>')
-    return (f'<div class="card tr"><div class="head"><div class="sub">Trap card</div><div class="name">{esc(t["name"])}</div></div>{trap_svg(t["nodes"])}'
-            f'<div class="entry">&#9660; entry nodes &#9660;</div><table>{"".join(rows)}</table><div class="foot">Events deck · {t["id"]}</div></div>')
-
-
-def item_front(i, k):
-    req = ''.join(f'<span>{n} <b>{v}</b></span>' for n, v in zip(('STR', 'DEX', 'INT', 'FTH'), i['requirements']))
-    atk = ''
-    for a in i.get('attacks') or []:
-        bits = [a['dice']] if a.get('dice') and a['dice'] != '-' else []
-        if a.get('modifier'): bits.append(('+' if a['modifier'] > 0 else '') + str(a['modifier']))
-        if a.get('magic'): bits.append('magical')
-        bits += list(a.get('effects') or [])
-        atk += f'<div class="atk"><b>[{a["cost"]}]</b> {esc(", ".join(bits))}</div>'
-    rng = '' if i.get('range') is None else f'range {i["range"]} · '
-    stats = f'{rng}block {i["block"]} · resist {i["resist"]} · dodge {i["dodge"]} · slots {i["upgrade_slots"]}' if i['slot'].split()[0] in ('one-handed', 'two-handed', 'armour') else rng.rstrip(' ·')
-    return (f'<div class="card it"><div class="head"><div class="name">{esc(i["name"])}</div><div class="slot">{esc(i["slot"])}</div></div><div class="req">{req}</div>{atk}'
-            f'<div class="text">{esc(i["text"])}</div><div class="stats">{esc(stats)}</div><div class="foot">Events deck · {i["id"]}{"abcdefgh"[k] if i["copies"] > 1 else ""}</div></div>')
-
-
 def back(title, sub, glyph=None, letter=None, mini=False):
     inner = icon(glyph, '') if glyph else f'<span>{letter}</span>'
     return f'<div class="card back{" mini" if mini else ""}"><div class="ring">{inner}</div><div class="t1">{title}</div><div class="t2">{sub}</div></div>'
 
 
-def build_events(paper):
-    from weasyprint import HTML
-    data = json.loads((ROOT / 'pnp/events/cards.json').read_text(encoding='utf-8'))
-    fronts = [(event_front(e), ('ev', e['level'])) for e in sorted(data['events'], key=lambda e: e['id'])] + [(trap_front(t), ('tr', 0)) for t in data['traps']]
-    def back_of(k):
-        return back('Event', f'Level {k[1]}', LEVEL_ICON[k[1]]) if k[0] == 'ev' else back('Trap', 'Events deck', 'ast-0021-trapped-encounter')
-    body = sheets(fronts, back_of, 3, 3)
-    items = [(item_front(i, k), ('it', 0)) for i in data['items'] for k in range(i['copies'])]
-    css = font_face() + BASE_CSS + EVENT_CSS + sheet_css(paper, POKER, 3, 3)
-    doc = f'<html><head><meta charset="utf-8"><style>{css}</style></head><body>{"".join(body)}</body></html>'
-    out = ROOT / f'pnp/events/events_deck_{paper}.pdf'
-    main = HTML(string=doc, base_url=str(ROOT)).render()
-    css2 = font_face() + BASE_CSS + EVENT_CSS + sheet_css(paper, MINI, 4, 4)
-    body2 = sheets(items, lambda k: back('Item', 'Events deck', letter='I', mini=True), 4, 4)
-    extra = HTML(string=f'<html><head><meta charset="utf-8"><style>{css2}</style></head><body>{"".join(body2)}</body></html>', base_url=str(ROOT)).render()
-    main.copy(main.pages + extra.pages).write_pdf(str(out))
-    return out
-
-
 if __name__ == '__main__':
     ap = argparse.ArgumentParser(); ap.add_argument('what', nargs='*', default=['events', 'encounters']); ap.add_argument('--paper', default='both')
     a = ap.parse_args(); papers = ['letter', 'a4'] if a.paper == 'both' else [a.paper]
+    if 'events' in a.what:
+        import build_pnp_events
+        prepared = build_pnp_events.prepare()
+        for p in papers: print(build_pnp_events.build_events(p, prepared))
     for p in papers:
-        if 'events' in a.what: print(build_events(p))
         if 'encounters' in a.what:
             try:
                 from build_pnp_encounters import build_encounters
