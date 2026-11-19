@@ -1,6 +1,6 @@
 # 1. Introduction
 
-Dark Souls: The Board Game, Second Edition is a cooperative dungeon crawl for one to four players. Each player controls one character of a party of one to four characters. The party's goal is to defeat a *mini-boss* and then a *main-boss*, both chosen by the players before the adventure starts. The players may also choose a *mega-boss* to face last.
+Dark Souls: The Board Game, Second Edition is a cooperative dungeon crawl for one to four players. Each player controls one or more characters of a party of one to four. The party's goal is to defeat a *mini-boss* and then a *main-boss*, both chosen by the players before the adventure starts. The players may also choose a *mega-boss* to face last.
 
 To succeed, the characters must learn their enemies' behaviours, train their skills, seek out powerful weapons and work together through increasingly treacherous encounters.
 

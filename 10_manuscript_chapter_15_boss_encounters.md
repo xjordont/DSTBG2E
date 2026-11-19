@@ -10,7 +10,7 @@ The token stays on the bonfire tile until the boss is defeated. In a campaign th
 
 ## 15.2 Overview
 
-A boss is a single large model with far more health and attack power than other enemies and a special ability of its own; it follows the rules for enemies except as this chapter and the next state. There are three types of boss: *mini-boss*, *main-boss* and *mega-boss*.
+A boss is a single large model with far more health and attack power than other enemies and a special ability of its own; it follows the rules for enemies except as chapters 15 to 17 state. There are three types of boss: *mini-boss*, *main-boss* and *mega-boss*.
 
 A boss's behaviour deck is built when the boss is set up on its tile, and built afresh each time the party *rests* after losing to that boss (see §15.5). It lies face down beside the tile.
 

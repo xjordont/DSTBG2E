@@ -28,7 +28,7 @@ In a campaign the *fog gate* gives no shortcut to the boss. The fog gate token i
 
 The party starts a campaign with *sparks* equal to five less the number of characters, as in the standard game. That number is also the most sparks the party may hold.
 
-Each time a *mini-boss*, *main-boss* or *mega-boss* is defeated, the party gains one spark, never above the maximum. The party *rests* without spending a spark only when a *section* ends (see §18.1). After a boss that is not the last of its section a rest costs a spark. Sparks cannot be bought and are gained in no other way, except when a player leaves (see §18.4).
+Each time a *mini-boss*, *main-boss* or *mega-boss* is defeated, the party gains one spark, never above the maximum. The party *rests* without spending a spark only when a *section* ends (see §18.1). After a boss that is not the last of its section a rest costs a spark. Sparks cannot be bought and are gained in no other way, except when a player leaves (see §18.4) or an *event card* gives one, never above the maximum.
 
 ## 18.4 Adding and Dropping Players
 
@@ -61,7 +61,7 @@ Each reward is paid in *souls* to each character.
 
 ## 18.6 The Bonfire
 
-The *bonfire* works as in the standard game (see §11). In a campaign stats cost more at the Firekeeper, so that the characters grow at the pace of a longer journey, and the *shop* is stocked differently. While it *rests*, the party may also burn the *bonfire ascetic* (see §18.7) and transpose *boss treasure* (see §18.8).
+The *bonfire* works as in the standard game (see §11). In a campaign stats cost more at the Firekeeper and the *shop* is stocked differently. While it *rests*, the party may also burn the *bonfire ascetic* (see §18.7) and transpose *boss treasure* (see §18.8).
 
 ### Stat Tier Costs
 
@@ -94,7 +94,7 @@ The shop follows the standard game, with these changes.
 
 ## 18.7 Bonfire Ascetic
 
-In a campaign, defeating a boss does not open *tier two* treasure. The party opens it by burning the *bonfire ascetic*, and must judge when better equipment is worth stronger enemies.
+In a campaign, defeating a boss does not open *tier two* treasure. The party opens it by burning the *bonfire ascetic*.
 
 - The bonfire ascetic is burnt once in a campaign, while the party *rests* at the *bonfire*.
 - It costs 16 *souls* in all, paid by the characters in any combination.

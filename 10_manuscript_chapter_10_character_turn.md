@@ -4,7 +4,7 @@
 
 1. Recover one *stamina*.
 2. Take any of the *minor actions*, in any order, before or after the major action.
-   - *Walk*: move to an adjacent *node* at no cost.
+   - *Walk*, once a turn: move to an adjacent *node* at no cost.
    - *Run*: move one further node for each stamina spent.
    - Equip: swap equipment cards among the *back-up slot*, the weapon slots and the armour slot. The *inventory* is closed during an encounter.
    - *Heroic action*: carry out the ability on the dashboard and flip the heroic action token face down.
@@ -25,7 +25,7 @@ A character moves from *node* to node in four ways during an encounter.
 - *Dodge*: a successful dodge moves the character to an adjacent node (see §9.5).
 - *Shift*: some attack options move the character as part of the attack.
 
-Every movement must end on a node the character is allowed to enter (see §5.2). A character may move into a node already at the *node model limit* but must at once *push* a friendly model out of it (see §5.3).
+Every movement must end on a node the character is allowed to enter (see §5.2). A character may move into a node already at the *node model limit* but must at once *push* a model out of it, a friendly one if there is one (see §5.3).
 
 ## 10.3 Character Attacks
 
@@ -37,7 +37,7 @@ All weapons do physical damage. An attack option marked with the magical damage 
 
 Many weapons simply deal damage. Some have special abilities given in the text on their cards or by icons: the magical damage icon, the *push* icon {{icon:ast-0058-push-affected-enemies}} (see §8.4), the *condition* icons and the icons below.
 
-*Example.* The Knight faces a Hollow Soldier with 2 health and a block of 1 on an adjacent *node*. The Knight holds a sword with a range of 1 and nothing in the other weapon slot. The Knight pays one stamina for one of its attack options and rolls two black dice, which show 0 and 2. Wielding the sword *two-handed*, the Knight rerolls the 0 and gets 1. The attack value is 3. Less the block of 1, the Hollow Soldier takes two wound tokens and dies.
+*Example.* In a game with two characters, the Knight faces a Hollow Soldier with 3 health and a block of 1 on an adjacent *node*. The Knight holds a sword with a range of 1 and nothing in the other weapon slot. The Knight pays one stamina for one of its attack options and rolls two black dice, which show 0 and 2. Wielding the sword *two-handed*, the Knight rerolls the 0 and gets 2. The attack value is 4. Less the block of 1, the Hollow Soldier takes three wound tokens and dies.
 
 ### Range
 

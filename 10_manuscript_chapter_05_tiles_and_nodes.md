@@ -24,7 +24,7 @@ Models do not block movement. Some terrain does (see §5.5). No model leaves the
 
 Several models may share a *node*, but only three at a time, however many of them are friendly or enemy models. This is the *node model limit*.
 
-- If a model moves onto a node that already holds three models, the players must *push* one of those three off the node (see §8.4).
+- If a model moves onto a node that already holds three models, the players must *push* one of those three to an adjacent node of their choice (see §8.4).
 - When the model moving in is a character, the players must push a friendly model if there is one.
 - When the model moving in is an enemy, the players must push another enemy model if there is one.
 
@@ -46,7 +46,7 @@ Terrain and other models do not block range.
 
 ## 5.5 Terrain
 
-Terrain is placed as the *encounter card* shows. A *rest* at the *bonfire* never moves a terrain piece or a *trap* token; what else it does is stated for each below (see §11.2).
+Terrain is placed as the *encounter card* shows. A *rest* at the *bonfire* never moves a terrain piece or a *trap* token; what else it does is stated for each below (see §11.5).
 
 ### Gravestones
 
@@ -75,6 +75,6 @@ Terrain is placed as the *encounter card* shows. A *rest* at the *bonfire* never
 - If several encounters have traps there may be too few tokens. Fill the basic nodes furthest from the tile's entry first and stop when the tokens run out.
 - A trap token is blank or shows a damage value and a *dodge difficulty*. Traps do not affect movement.
 - When a character moves or is pushed onto a node with a face-down trap token, flip the token. A blank token does nothing. Otherwise the trap is sprung and hits every model on that node, enemies included, for the damage shown.
-- A character may dodge a trap (see §9.5). Trap damage cannot be *blocked* or *resisted*. A character who dodges a trap stays on the node.
+- A character may dodge a trap (see §9.5). The damage of a trap token cannot be *blocked* or *resisted*. A character who dodges a trap stays on the node.
 - A rest turns every face-up trap token face down on its node.
 - With the Events Expansion, the first trap token of an encounter that is flipped and is not blank is not resolved. Draw the top trap card instead and lay it with its foot towards the *entry nodes*. It hits every model on a node it marks, enemies included, with the damage and dodge difficulty it gives for the encounter's level. A character may dodge it and stays on the node, or *blocks* or *resists* it with the armour card and its *upgrades* alone. An enemy subtracts its block or resist. A model that is hit takes the condition shown, or is *pushed* to an adjacent node of the players' choice. Then shuffle the card back into the trap deck.

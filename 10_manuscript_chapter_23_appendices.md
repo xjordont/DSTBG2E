@@ -96,7 +96,7 @@ Where a card has two printings, the one with the rules text given here is used. 
 | Covetous Silver Serpent Ring | The wearer gains 1 more soul with the reward for each *cleared* encounter. | |
 | Demon Titanite | As printed. | The revised card is used. Requirements and treasure type as printed. |
 | Eastern Armour | The wearer pays 2 stamina to dodge in place of 1. | |
-| Mask of the Child | At the start of the wearer's turn, the wearer recovers 2 stamina in place of the turn's 1. | |
+| Mask of the Child | At the start of the wearer's turn, the wearer recovers 2 stamina in place of the turn's 1. | This text also replaces that of the Events Expansion II card of the same name. |
 | Mon Ring | As printed, and: the effect is used only while the card is face up, and using it turns the card face down. | A *rest* turns the card face up. |
 | Sellsword Twinblades | As printed. | The one-handed card is used. A two-handed card of this name returns to the box. |
 | Tiny Being's Ring | At the start of the wearer's turn, the wearer removes 1 damage cube. | |
@@ -108,7 +108,7 @@ Blacksmith Andre exchanges a Titanite Shard for a Titanite Chunk, or a Titanite 
 
 ## Enemy Data Cards
 
-The twelve enemies of Tomb of Giants and Painted World of Ariamis are played from their printed *data cards*, with the party-size scaling of every enemy (see §8.3). They appear only on the print-and-play *encounter cards* of their sets (see §6.5); the encounter cards printed in those sets are not used.
+The 12 enemies of Tomb of Giants and Painted World of Ariamis are played from their printed *data cards*, with the party-size scaling of every enemy (see §8.3). They appear only on the print-and-play *encounter cards* of their sets (see §6.5) and in Gravelord Nito's encounter (see §17.7); the encounter cards and event cards printed in those sets are not used.
 
 | Enemy | Set | Models | Threat | Health | Block | Resist |
 |---|---|---|---|---|---|---|
@@ -121,7 +121,7 @@ The twelve enemies of Tomb of Giants and Painted World of Ariamis are played fro
 | Bonewheel Skeleton | Painted World of Ariamis | 2 | 7 | 1 | 1 | 1 |
 | Crow Demon | Painted World of Ariamis | 2 | 9 | 5 | 1 | 2 |
 | Engorged Zombie | Painted World of Ariamis | 2 | 8 | 1 | 2 | 2 |
-| Phalanx | Painted World of Ariamis | three Phalanx Hollow | 4 | 5 | 1 | 1 |
+| Phalanx | Painted World of Ariamis | 3x Phalanx Hollow | 4 | 5 | 1 | 1 |
 | Phalanx Hollow | Painted World of Ariamis | 5 | 4 | 1 | 1 | 1 |
 | Snow Rat | Painted World of Ariamis | 2 | 1 | 1 | 0 | 1 |
 

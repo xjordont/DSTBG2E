@@ -1,6 +1,6 @@
 # 2. Game Components
 
-Each entry names the set that supplies it. PWA is the Painted World of Ariamis set and ToG is the Tomb of Giants set. Of those two sets this game uses the enemies, the bosses and the new treasure cards; their encounter cards and event cards are not used (see Appendix B).
+Each entry names the set that supplies it. PWA is the Painted World of Ariamis set and ToG is the Tomb of Giants set. Of those two sets this game uses the characters, the enemies, the bosses and the new treasure cards; their encounter cards and event cards are not used (see Appendix B).
 
 ## 2.1 Characters
 
@@ -156,7 +156,7 @@ Kirk, Knight of Thorns and Longfinger Kirk share one model.
 | *Legendary treasure* | 10 | 20 |
 | *Boss treasure* | 18 | 48 |
 
-In all, 519 treasure cards. The table does not count the 12x *Invader* treasure cards (Phantoms) or the 3x Titanite Scale cards (Iron Keep).
+In all, 519 treasure cards. The table does not count the 12x *Invader* treasure cards (Phantoms) or the 3x Titanite Scale cards (Iron Keep). *Ember* cards are common treasure.
 
 ## 2.6 Encounter, Event and Ambush Cards
 

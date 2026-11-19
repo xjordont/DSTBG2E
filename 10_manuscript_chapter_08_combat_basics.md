@@ -40,7 +40,7 @@ Enemies grow stronger with the number of characters in the game. Dead characters
 - Bosses, *mimics*, *invaders*, *summons* and *crystal lizards* are never scaled. They are played as printed at every party size.
 - Nothing else printed on a *data card* changes.
 
-*Example.* With three characters, a Hollow Soldier printed with 1 health and an attack of 4 has 3 health and an attack of 6. A boss is the same boss for one character or four.
+*Example.* With three characters, a Hollow Soldier printed with 1 health and an attack of 4 has 5 health and an attack of 6. A boss is the same boss for one character or four.
 
 ## 8.4 Pushing
 
@@ -48,7 +48,7 @@ Movements and attacks marked with the *push* icon {{icon:ast-0058-push-affected-
 
 A boss cannot be pushed by a character. A boss is pushed only when another boss model moves onto its node.
 
-Each model hit by a push-attack is pushed to the adjacent node most directly opposite the attacker. If several adjacent nodes are equally opposite, the players choose one. A model on a corner node that is pushed towards the corner stays where it is. If the attacker is on the same node as the model it hits, the players choose any adjacent node.
+Each model hit by a push-attack is pushed to the adjacent node most directly opposite the attacker. If several adjacent nodes are equally opposite, the players choose one. A model pushed towards a corner, or towards a node it cannot enter, stays where it is. If the attacker is on the same node as the model it hits, the players choose any adjacent node.
 
 An enemy making a push-move first moves each character on its own node to an adjacent node chosen by the players. The enemy then moves one node in the direction its card gives. If it enters a node that contains characters, each of them is pushed to the adjacent node most directly opposite the node the enemy came from; if several nodes are equally opposite, the players choose. A push-move of several nodes repeats all of this for each node.
 

@@ -66,7 +66,7 @@ Terms set in *italics* in this book are listed here with the section that gives 
 
 **Estus flask.** The character token, with a ready side and a used side, that is flipped when the character drinks estus (see §3.5).
 
-**Event card.** A card of the Events Expansion, dealt beside an encounter card and revealed when the party enters its tile (see §7.5).
+**Event card.** A card of the Events Expansion II, dealt beside an encounter card and revealed when the party enters its tile (see §7.5).
 
 **Failed.** Said of an encounter that the party has lost because every one of its characters is dead (see §7.5).
 
@@ -86,7 +86,7 @@ Terms set in *italics* in this book are listed here with the section that gives 
 
 **Inventory.** The stack of face-down treasure cards a character keeps beside the dashboard, closed for the length of every encounter (see §3.2).
 
-**Leap.** A boss movement that places the boss directly on its target's node and pushes the characters there off it (see §16.2).
+**Leap.** A movement that places an enemy or a boss directly on its target's node. A boss's leap pushes the characters there off it; an enemy's leap pushes them only if it is also a push-move (see §9.2, §16.2).
 
 **Legendary treasure.** A treasure card of the rarest type, marked with an orange light under a treasure chest at its top right (see §6.2).
 
@@ -94,15 +94,15 @@ Terms set in *italics* in this book are listed here with the section that gives 
 
 **Luck.** The character token, with a ready and a used side, flipped to reroll dice of one attack or defence roll (see §3.5).
 
-**Main-boss.** The boss fought after the mini-boss, on both boss tiles; the final boss unless the party chose a mega-boss (see §15.2).
+**Main-boss.** The boss fought after the mini-boss, on both boss tiles; the final boss unless the party chose a mega-boss (see §15.3).
 
 **Major action.** The single main action of a character's turn, such as an attack, a rest, drinking estus or using an ember (see §10.1).
 
-**Mega-boss.** A boss with a game board of its own, fought last if the party chose one at setup (see §15.2).
+**Mega-boss.** A boss with a game board of its own, fought last if the party chose one at setup (see §15.3).
 
 **Mimic.** An Explorers enemy that may hide in a chest and is fought as a mini-boss when the chest is opened (see §13).
 
-**Mini-boss.** The first boss the party faces, fought on the single mini-boss tile at the end of the first road (see §15.2).
+**Mini-boss.** The first boss the party faces, fought on the single mini-boss tile at the end of the first road (see §15.3).
 
 **Minor action.** An action of a character's turn that may be taken beside the major action: walk, run, equip or heroic action (see §10.1).
 

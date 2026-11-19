@@ -130,7 +130,7 @@ The Black Knight and Gravelord Nito are played from their printed *data cards* a
 ### Gravelord Nito
 
 - Nito does not fight alone. Set up his encounter with two Skeleton Soldiers and one Giant Skeleton Soldier on the *mini-boss* *spawn node* of the main-boss tile.
-- Before each character's turn, every model takes a turn in descending *threat*: Nito, then his enemies (see §7.5).
+- Before each character's turn, every enemy model takes a turn in descending *threat*: Nito, then his skeletons (see §7.5).
 - The Gravelord's Call: when Nito heats up, return each of those three enemies that has been killed to the mini-boss spawn node, at full health.
 - The encounter is won when Nito is defeated, whatever enemies remain.
 

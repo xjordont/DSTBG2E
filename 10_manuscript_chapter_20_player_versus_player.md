@@ -31,7 +31,7 @@ After each boss is defeated (*mini-boss*, *main-boss* and *mega-boss*), a player
 - After each character's turn, that character's player places one *trap* token face down on an outermost free *node* of the tile.
 - A free node holds no model, token or terrain. The outermost nodes are those along the edges of the tile; once the edges are full, the next ring inwards is used.
 - A character who moves or is pushed onto a trap token flips it and must dodge the trap (see §5.5).
-- A character who fails to dodge a trap dies at once. The damage on the token is not used.
+- A character who fails to dodge a trap dies at once. The damage on the token is not used, and no trap card is drawn.
 - A dead character's model is removed from the tile.
 
 ## 20.3 Victory

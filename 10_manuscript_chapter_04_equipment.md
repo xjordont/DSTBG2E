@@ -32,7 +32,7 @@ Dice are shown by colour, as black {{icon:ast-0051-black-dice}}, blue {{icon:ast
 
 *Upgrade* cards enhance equipment. There are two types: those marked with a sword {{icon:ast-0044-weapon-upgrade}}, which may only be fitted to weapons, and those marked with plate mail {{icon:ast-0046-armour-upgrade}}, which may only be fitted to armour.
 
-- Upgrades are fitted to equipment and taken off it only by Blacksmith Andre (see §11.4).
+- Upgrades are fitted to equipment only by Blacksmith Andre (see §11.4).
 - A card holds no more upgrades than it has upgrade slots. A weapon with two upgrade slots takes up to two weapon upgrade cards.
 
 An upgrade card that shows a magic scroll is a *spell*, and Andre does not fit it.

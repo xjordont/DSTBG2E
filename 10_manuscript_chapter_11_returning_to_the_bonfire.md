@@ -45,7 +45,7 @@ The *bonfire* is a safe haven in an otherwise treacherous world. Two strangers w
 
 - Blacksmith Andre may be visited whenever the party is not in an encounter, without resting: to buy, to sell and to fit *upgrades*.
 - Andre attaches weapon upgrade cards {{icon:ast-0044-weapon-upgrade}} from a character's *inventory* to that character's *equipped* weapon cards, and armour upgrade cards {{icon:ast-0046-armour-upgrade}} to equipped armour.
-- An upgrade is fitted only where the equipment has a free upgrade slot and the character meets the upgrade card's stat requirements (see §4.2).
+- An upgrade is fitted only where the equipment has a free upgrade slot and the character meets the upgrade card's stat requirements (see §4.1).
 - Andre charges no *souls* for fitting an upgrade.
 - A visit to Andre resets nothing. The party goes on from the tile it had reached.
 
@@ -54,7 +54,7 @@ The *bonfire* is a safe haven in an otherwise treacherous world. Two strangers w
 - The cards of the *shop* lie face up. The *tier one* shop is open from the start of the game and the *tier two* shop from the defeat of the *mini-boss* (see §6.3).
 - A character may buy any card in the shop at the price in the table below. The card goes into the character's inventory.
 - A card bought is not replaced. Shops are restocked only when a boss is defeated.
-- Any card that is not *starting equipment* sells for one soul and goes to the bottom of its treasure deck.
+- Any card that is not *starting equipment* sells for one soul and goes to the bottom of its treasure deck, or to the box if it came from no deck.
 - Starting equipment cannot be sold.
 - A sold *ember* card returns to the tier one shop.
 - *Titanite* stays on its weapon and is sold with it for no extra souls.
@@ -73,7 +73,7 @@ Before the party sets out after a *rest*, *reset* every *cleared* and *failed* e
 
 1. Flip every face-up *encounter card* face down. A black cube stays on its card.
 2. Set aside any enemy models left on the encounter tiles.
-3. Do not move terrain: *chests*, *gravestones*, *barrels* and *traps* stay where they are.
+3. Do not move terrain. Return each destroyed *barrel* to its node and turn each face-up *trap* token face down (see §5.5).
 4. Leave treasure cards and dropped *souls* on their tiles.
 
 The party then moves to the encounter tile closest to the *bonfire*, where the encounter begins (see §7.5). Once the *fog gate* token lies on the bonfire tile, the party may go straight to the boss instead (see §15.1).

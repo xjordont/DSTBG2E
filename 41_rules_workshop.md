@@ -2736,3 +2736,120 @@ How a card is changed: the text box is the same artwork on every event card and 
 1. Four characters and an unscaled boss: 2% of main-boss attempts fail. If the boss is to stay a threat for a full table, boss health is the lever section 20 measured.
 2. Priscilla's invisibility and Nito's escort (26.2) are still this book's design.
 3. The layout of the rulebook itself has not been rebuilt; the repository's rulebook PDFs still hold the old text.
+
+## 28. Publication review, and the balance of three rulesets at every party size (2026-11-19)
+
+The author asked for the manuscript to be checked for publication and for consistency with the decisions on record, and for the balance of the current manuscript, the original manuscript and the official 2017 rules to be compared across party sizes, with the outliers named and the simplest remedy proposed.
+
+### 28.1 The review
+
+Three independent readers each read a third of the book in full (chapters 0 to 8; 9 to 17; 18 to 23 with the glossary and the print-and-play files) against section 3 of the brief and the rulings of sections 25 to 27, and cross-checked every rule stated in more than one place. None found a sentence that contradicts a ruling of sections 25 to 27, a leftover of a withdrawn rule, a placeholder, a broken table or a banned word. Between them they reported about 50 smaller defects (several found twice); each was checked against the text before anything was changed.
+
+**Corrected (errors a player would meet):**
+
+| Where | What was wrong | Now |
+|---|---|---|
+| §8.3 example | A Hollow Soldier with three characters had "3 health"; the table of section 27 gives 5 | 5 health |
+| §10.3 example | A Hollow Soldier "with 2 health", which no party size gives | Two characters, 3 health; the arithmetic redone |
+| §7.5, §16.4 | The aggro token passed at the end of the round in one chapter and at once, and only for damage "to the boss", in the other | It passes whenever a character deals damage, in both |
+| §10.1 | Nothing limited the free walk to once a turn | "once a turn" |
+| §11.5 against §5.5 | The reset said barrels and traps "stay where they are"; §5.5 restores barrels and turns traps face down | §11.5 says what §5.5 says |
+| §5.5 | "Trap damage cannot be blocked", two bullets above a trap card that can be | The limit is stated for trap tokens |
+| §7.5 | The expansion's 14 treasure cards were listed as 13, and Yuria and Patches were not tied to their cards | The Irreverent Morion Blade and both card names added |
+| §7.7, §6.7 | "Each boss's own treasure cards are found in the tier two deck", which is untrue of a mega-boss; the mega-boss's undealt card had no home | Mini-boss and main-boss named; the rest return to the box |
+| §6.6 | Invader tokens placed "as in the first setup", which places none | Removed; §12.2 places them |
+| §13 | A chest left closed for fear of a mimic still gave up its card under §7.5 | The card stays under the closed chest; a chest on a tile with no ambush card holds treasure |
+| §17.7 | Nito's escort rule read "every model takes a turn" | "every enemy model" |
+| §18.3, §20.2 | The campaign's spark rule and the PvP trap rule each ignored the Events Expansion | One clause each |
+| §19 | Dragon campaign both required Darkroot and allowed for its absence; bracketed names were said to be encounter cards where some are invaders | Reworded |
+| Appendix B | Said the 2022 enemies appear only on print-and-play cards (Nito's escort also uses them); nothing told the reader which Mask of the Child text governs | Both stated |
+| Glossary | Leap was defined for bosses only; the three boss entries cited the wrong section | Reworded and re-pointed |
+
+Also corrected: cross-references that pointed at a section which did not hold the rule (§15.2 for building a behaviour deck, which is §15.5; §11.2 for terrain at a rest, which is §11.5; §4.2 for an upgrade's requirements, which is §4.1; and others); a push towards a node that cannot be entered; a push off a full node; the dodge result defined; the summon's entry node; what to do when blank invader tokens run out; where a sold card with no deck goes; ember cards placed among the common treasure in §2.5; two sentences of design rationale cut from §18.
+
+**The brief corrected, not the book:** the brief still said a summon is called before "a mini-boss or main-boss" and that the Twin Gargoyles are two models. The book follows judgements 11 and 13 of section 22.2 (an advanced summon before a mega-boss too; one Gargoyle model fought twice), which the author has not overturned.
+
+**Left as they are, with the reason:**
+
+- "Sparks cannot be gained by any other means, unless an event card gives one" (§7.4) differs from the brief's words on purpose: two cards of the Events Expansion give a spark.
+- Demon Titanite in Appendix B says "the revised card is used" without quoting it, and "Four-Pronged Plough" may be printed "Plow". Both need the cards in hand.
+- "This movement counts as a run" in two boss rules (§17.3, §17.10) has no stated consequence outside the character's own turn. It is the author's wording.
+- First-use italics are missed in about eight places. The style check passes; the layout pass will catch them.
+
+Checks after the changes: style 0 violations, cross-references 0 broken, 28,763 words of 28,905.
+
+**Not ready, and outside the text:** the rulebook PDFs in the repository still hold the earlier text. The layout has to be rebuilt from these chapters before anything is published.
+
+### 28.2 Three rulesets at every party size
+
+Simulated players at their best, 500 games a cell (± 4). "Core" is the core box alone: its four classes, six bosses, encounters and treasure. The official rules and the original manuscript are played as the simulator was calibrated to them in sections 12 and 13.
+
+| Games won | 1 | 2 | 3 | 4 | Spread |
+|---|---|---|---|---|---|
+| Official 2017 rules, core | 50% | 53% | 56% | 37% | 19 |
+| Original manuscript, core | 83% | 93% | 91% | 46% | 47 |
+| Current manuscript, core | 82% | 59% | 41% | 42% | 41 |
+| Current manuscript, every 2017 set | 56% | 51% | 53% | 54% | 5 |
+
+| | 1 | 2 | 3 | 4 |
+|---|---|---|---|---|
+| **Table time, minutes** | | | | |
+| Official 2017, core | 616 | 398 | 321 | 287 |
+| Original manuscript, core | 257 | 273 | 274 | 204 |
+| Current, core | 220 | 276 | 260 | 354 |
+| Current, every set | 228 | 328 | 377 | 440 |
+| **Encounters fought in a game** | | | | |
+| Official 2017, core | 29 | 23 | 19 | 16 |
+| Original manuscript, core | 11 | 10 | 10 | 8 |
+| Current, core | 11 | 9 | 7 | 9 |
+| **Main-boss attempts failed** | | | | |
+| Official 2017, core | 71% | 61% | 51% | 61% |
+| Original manuscript, core | 38% | 14% | 8% | 9% |
+| Current, core | 32% | 26% | 9% | 3% |
+| Current, every set | 41% | 23% | 11% | 2% |
+| **Games lost in an ordinary encounter** | | | | |
+| Official 2017, core | 20% | 23% | 24% | 36% |
+| Original manuscript, core | 5% | 3% | 8% | 43% |
+| Current, core | 4% | 32% | 54% | 55% |
+| Current, every set | 25% | 38% | 42% | 44% |
+
+What each ruleset is:
+
+- **Official 2017.** About even odds for one to three characters and poor for four, bought with grind: two to three times as many encounters as either manuscript, and ten hours for a lone character. Its bosses are walls (Ornstein and Smough turn back 68% to 86% of attempts).
+- **The original manuscript.** It removed the grind and with it the difficulty: one to three characters win 83% to 93%. Four characters fall off a cliff to 46%: 43% of their games are lost in an ordinary encounter, against 3% to 8% for smaller parties.
+- **The current manuscript.** A third to a half of the official game's encounters, about four to seven hours, and on every 2017 set a win rate within five points at every party size. It is the only one of the three that is level across party sizes, and only on that pool.
+
+### 28.3 The outliers in the current manuscript
+
+1. **The core box alone, three and four characters: 41% and 42%.** The table of section 27 was tuned on every 2017 set. On the core box, with its small treasure pool and its Sentinels and Silver Knights carrying +4 and +6 health, more than half of all games are lost in an ordinary encounter. Most tables own only the core box, so this is the outlier that matters most.
+2. **A lone Knight or Warrior: about 80%.** A lone character wins 82% on the core box because only those two classes are sent out alone there. On every set the lone figure of 56% is an average of very different games: Cleric, Warrior, Thief, Knight and Assassin win 64% to 80% alone; Deprived, Pyromancer and Herald 29% to 40% (about 50 games each, ± 13).
+3. **Where games are lost.** A lone character loses to bosses (41% of main-boss attempts fail); four characters lose to ordinary encounters and almost never to a boss (2%). The win rates are level; what the game is about is not.
+4. **Classes** (every set, all party sizes together): the Thief wins 67% to 78% of its games and the Warrior 51% to 79%; the Deprived 27% to 47% and the Herald 36% to 49%. The Deprived's figure is too low by an unknown amount, because its heroic action is still not played in the simulator.
+5. **Bosses** (every set): the Old Dragonslayer turns back 6% of lone characters and almost no party; Ornstein and Smough 58% and the Dancer 51% of lone characters. The Titanite Demon is the one boss that gets harder with company (16% alone, 26% for three) and is the longest fight in the game (39 rounds for three).
+6. **Length for four:** seven hours and twenty minutes on every set, twice a lone game.
+
+### 28.4 The simplest change
+
+Tested first, and rejected: giving bosses health for party size again while easing ordinary enemies (400 games a cell, every set). It moves the difficulty to the boss as intended and costs two to four hours.
+
+| Tried | Won, 2 / 3 / 4 | Time for four |
+|---|---|---|
+| Enemy health +1 a character, boss health x the number of characters | 70% / 73% / 57% | 705 |
+| Enemy health +1 a character, boss health +50% a character | 72% / 79% / 82% | 546 |
+| Enemy health +2 a character, boss health +50% a character | 49% / 48% / 48% | 563 |
+| Enemy health as printed, boss health x the number of characters | 83% / 92% / 90% | 652 |
+
+**Proposed: enemy health +2 / +3 / +5 for two, three and four characters, in place of +2 / +4 / +6.** Two numbers in the table of §8.3; nothing else changes.
+
+| Games won | 1 | 2 | 3 | 4 |
+|---|---|---|---|---|
+| Now, core | 82% | 59% | 41% | 42% |
+| **Proposed, core** | 82% | 59% | **55%** | **50%** |
+| Now, every set | 56% | 51% | 53% | 54% |
+| **Proposed, every set** | 56% | 51% | **69%** | **62%** |
+
+- Every party of two or more is then inside the author's band of 50% to 70% on both pools, where today the core box sits at 41% and 42% for three and four. The price is three characters on every set at the top of the band.
+- A variant gives the same win rates within a point and a shorter game for four: enemy health +2 / +3 / +4 with enemy damage +1 / +2 / +3, which can be said as one sentence ("with two or more characters, every enemy has extra health equal to the number of characters and extra damage one less than that"). Four characters then play 358 minutes on every set, not 418, and 273 on the core box, not 330. It hits harder: +3 damage for four.
+- Neither touches outliers 2 to 5. A lone character's odds are set by the class chosen, which reads as a choice of difficulty and is best said so in a sentence of §6.1. The boss that four characters cannot lose to follows from the ruling that bosses are not scaled; the cheapest remedy measured for it is boss damage, not boss health (23.1), and it is the author's to reopen. The class and boss figures come from the printed cards and dashboards.
+
+**Not applied.** The table of §8.3 is the author's ruling of section 27 and stands until the author says otherwise.

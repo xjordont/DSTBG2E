@@ -4,8 +4,8 @@ With the Explorers expansion, any *chest* {{icon:ast-0009-treasure-chest}} may h
 
 When the last enemy falls in an encounter that holds an unopened chest, the characters stay on their *nodes* and do not yet recover. The encounter is not yet *cleared*, and none of its *souls* or treasure is collected. The party decides whether to open the chest or to leave it for fear of a mimic. If it cannot agree, the character holding the *aggro* token decides.
 
-- **Leave it closed.** The encounter is cleared and the characters recover (see §7.5).
-- **Open it.** Reveal the tile's ambush card.
+- **Leave it closed.** The encounter is cleared and the characters recover (see §7.5). The chest stays closed, with its treasure card under it.
+- **Open it.** Reveal the tile's ambush card. A chest on a tile with no ambush card holds treasure.
 
 If the ambush card shows treasure, flip the chest to its open side. The party takes the treasure card under it, the encounter is cleared and the characters recover.
 

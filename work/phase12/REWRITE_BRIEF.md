@@ -148,11 +148,11 @@ Mega-boss stage: the author's steps, except that death works there as everywhere
 
 ### 3.11 Expansion content (in play whenever owned)
 
-- **Summons (Phantoms):** only an embered character may summon, at the fog gate before a mini-boss or main-boss, for two souls. The summon takes a turn after each character's turn. The author's steps otherwise. Include in four sentences how a summon is targeted and damaged by the boss (the v2 chapter has this; condense it).
+- **Summons (Phantoms):** only an embered character may summon, at the fog gate before a boss, for two souls (a standard summon before a mini-boss, an advanced one before a main-boss or mega-boss; judgement 11 of section 22.2). The summon takes a turn after each character's turn. The author's steps otherwise. Include in four sentences how a summon is targeted and damaged by the boss (the v2 chapter has this; condense it).
 - **Invaders (Phantoms):** the author's rules. The invader token is flipped when the party enters the tile, before the encounter card is revealed. The invader takes a turn after each character's turn.
 - **Mimics (Explorers):** the author's rules, with these: the characters do not recover before the fight; if the party loses to the mimic, it chooses on its next clear whether to open the chest again. A party that leaves the chest closed recovers as after any clear.
 - **Crystal lizards (Iron Keep):** the character who kills a lizard takes a Titanite Scale at once.
-- **Two-model bosses:** Ornstein and Smough, and the Twin Gargoyles in a campaign, are two models with a health dial each, played from their cards. About 80 words each.
+- **Two-model bosses:** Ornstein and Smough are two models with a health dial each, played from their cards. The Twin Gargoyles of a campaign are fought one after the other with the one model and dial (judgement 13 of section 22.2). About 80 words each.
 - **Phalanx:** there is no Phalanx model. The Phalanx is shown by three Phalanx Hollow models placed together. One line in the component list.
 
 ### 3.12 Player versus player

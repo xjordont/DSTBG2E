@@ -51,7 +51,7 @@
    - A *failed* encounter cannot be skipped. Once reset, it must be fought.
 3. The characters enter the tile by placing their models on its *entry nodes* (see §5.1). No more than three characters may start on the same node.
 4. Reveal the tile's encounter card. With the Phantoms expansion, flip the tile's *invader* token first (see §12.2).
-5. With the Events Expansion, reveal the tile's *event card* (see Event Cards, below).
+5. With the Events Expansion, reveal the tile's *event card*.
 6. Place the enemy models on the *spawn nodes* and the terrain on the *terrain nodes* that the encounter card shows. Each icon on the card matches the icon printed on a node of the tile.
 7. Place one face-down treasure card under each *chest* {{icon:ast-0009-treasure-chest}} placed for the first time. Draw from the *tier one* treasure deck before the *mini-boss* is defeated and from the *tier two* treasure deck afterwards.
 8. Place the *aggro* token on the character with the highest *threat* {{icon:ast-0059-taunt}}. The party settles a tie.
@@ -65,8 +65,9 @@ An encounter is fought in rounds.
    - If those enemies are equally close, the one with the most wound tokens takes its turn first.
    - If they are still tied, the players decide.
 2. Each character takes a turn, in any order the party chooses each round.
-3. The aggro token passes to the last character to deal damage. If no character deals damage, it stays where it is.
-4. Rounds continue until every enemy model or every character is dead.
+3. Rounds continue until every enemy model or every character is dead.
+
+Whenever a character deals damage, the aggro token passes to that character. If no character deals damage, it stays where it is.
 
 A boss and an *invader* take their turns between the characters' turns (see §16.1, §12.2).
 
@@ -109,7 +110,7 @@ The Events Expansion II is a community expansion of 49 event cards, 8 trap cards
 - The event card beside an *encounter card* is revealed each time the party enters that tile and is resolved as its text says. Its effect lasts for that encounter unless the card gives another end.
 - When the encounters are *reset*, gather every revealed event card. A card with the discard icon is set aside until a boss is defeated. The others are shuffled back into the decks of their levels. Then deal a new card face down to each of those encounters that has never been *cleared*. A cleared encounter has no event card.
 - Six cards bring a traveller to the *bonfire*: Rebirth, Maiden of the Sable Church, Loyal Swindler, Transposition, Draw Out True Strength and The Great Deceiver. Such a card stays beside the bonfire tile for the rest of the game. A traveller is visited whenever the party may visit Blacksmith Andre.
-- The expansion's treasure cards never enter a treasure deck or the *shop*. All six Purging Stones are Yuria's, and she sells no more than four for each boss. Patches sells the Red Tearstone Ring, Divine Blessing, Great Heal Excerpt and the Horsehoof Ring, and the three Masks once his card allows.
+- The expansion's treasure cards never enter a treasure deck or the *shop*. All six Purging Stones are Yuria's (Maiden of the Sable Church): she sells no more than four for each boss and gives the Irreverent Morion Blade as her card says. Patches (The Great Deceiver) sells the Red Tearstone Ring, Divine Blessing, Great Heal Excerpt and the Horsehoof Ring, and the three Masks once his card allows.
 - A Hollowing card limits each character's *endurance bar* to the number of spaces it names, *hollow* cubes included. Only one Hollowing card applies at a time. A Purging Stone removes that limit, and every hollow cube, from the character who uses it.
 - A node diagram is read with the foot of the card towards the *entry nodes*.
 - A card that calls for an *invader* or a *mimic* is discarded and replaced if the players lack the Phantoms or the Explorers expansion.
@@ -145,4 +146,4 @@ The Events Expansion II is a community expansion of 49 event cards, 8 trap cards
 - A treasure card goes into the *inventory* of the character who takes it.
 - With the Explorers expansion, a chest may hide a *mimic*. The party decides whether to open the chest before it recovers or collects any reward (see §13).
 - With the Iron Keep expansion, a *crystal lizard* killed during the encounter gives *Titanite* (see §14).
-- In the standard game no treasure card is handed over for defeating a boss. Each boss's own treasure cards are found in the *tier two* treasure deck.
+- In the standard game no treasure card is handed over for defeating a boss. The mini-boss's and the main-boss's own treasure cards are found in the *tier two* treasure deck.

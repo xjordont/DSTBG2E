@@ -57,7 +57,7 @@ When a character is hit, place the damage, then resolve the push, then place the
 
 ### Resurrect
 
-The Necromancer of Tomb of Giants shows the resurrect icon, a skeletal hand. At the end of each of its turns, place a Skeleton Soldier on the enemy *spawn node* closest to the Necromancer. If all three Skeleton Soldier models are on the tile, nothing is placed. A Skeleton Soldier placed this way must be killed like any other before the encounter is *cleared*.
+The Necromancer of Tomb of Giants shows the resurrect icon, a skeletal hand. At the end of each of its turns, place a Skeleton Soldier on the enemy *spawn node* closest to the Necromancer. If all three Skeleton Soldier models are on the tile, nothing is placed. A Skeleton Soldier placed this way must be killed like any other before the encounter is *cleared*. The Black Hollow Mage's Raise Skeleton icon is explained with its boss (see §17.9).
 
 ## 9.4 Block and Resist
 
@@ -74,7 +74,7 @@ The Necromancer of Tomb of Giants shows the resurrect icon, a skeletal hand. At 
 - Before rolling, the character may spend two more stamina, three in all, to add one die. A dodge is never rolled with more than four dice.
 - Against a dodge difficulty of zero the dodge succeeds without a roll and needs no dodge dice.
 
-If the dodge result equals or exceeds the dodge difficulty, the attack does not hit.
+The dodge result is the number of dodge icons rolled. If it equals or exceeds the dodge difficulty, the attack does not hit.
 
 - No damage is taken.
 - No *condition* is applied.

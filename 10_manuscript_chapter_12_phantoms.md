@@ -10,7 +10,7 @@ With the Phantoms expansion, *summons* and *invaders* are in play. Neither is sc
 2. The party must agree on one of the drawn summons. The other cards are returned, and the souls stay spent.
 3. Set the summon's health dial to the starting health {{icon:ast-0029-starting-health}} on its data card.
 4. Shuffle all of the summon's *behaviour cards* to form its behaviour deck.
-5. Place the summon's model on the boss tile's *entry node* after the characters have placed their models.
+5. Place the summon's model on an *entry node* of the boss tile, chosen by the party, after the characters have placed their models.
 6. The summon takes a turn after each character's turn.
 7. On each of its turns, draw the top card of the summon's behaviour deck and resolve its icons from left to right. When the deck runs out, turn the discard pile face down without shuffling to form a new deck.
 
@@ -33,7 +33,7 @@ An *invader* is a hostile *phantom* that joins one encounter and hunts the chara
 
 1. *Embered* characters provoke an invader, once before the *mini-boss* is defeated and once after it. The invader is provoked as soon as any character is embered while face-down *encounter cards* lie on the tiles.
 2. Draw one invader token at random from the supply: a standard invader before the mini-boss is defeated, an advanced invader after it.
-3. Shuffle it with enough blank invader tokens to make one token for each face-down encounter card.
+3. Shuffle it with enough blank invader tokens to make one token for each face-down encounter card. Any other tokens serve as blanks if these run out.
 4. Place one token face down on each face-down encounter card.
 5. When the party enters an encounter tile, flip its invader token face up before the encounter card is revealed.
 

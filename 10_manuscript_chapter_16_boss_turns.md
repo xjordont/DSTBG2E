@@ -34,7 +34,7 @@ Each character attacked defends as against an enemy's attack (see §9.4, §9.5).
 
 ## 16.4 Boss Aggro
 
-A *behaviour card* may name as its target the character holding the *aggro* token, which passes to the last character to deal damage to the boss and stays where it is after a turn in which no damage is dealt.
+A *behaviour card* may name as its target the character holding the *aggro* token, which passes to each character who deals damage and stays where it is while no damage is dealt (see §7.5).
 
 ## 16.5 Boss Death
 

@@ -1,6 +1,6 @@
 # 19. Campaigns
 
-Each campaign names the sets it needs and lists its sections. Encounters are given by level, in order from the *bonfire*. A name in brackets after a level is the *encounter card* placed on that tile. For the Twin Gargoyles, see §17.1.
+Each campaign names the sets it needs and lists its sections. Encounters are given by level, in order from the *bonfire*. A name in brackets after a level is the *encounter card* placed on that tile, or the *invader* that joins it where the campaign says so. For the Twin Gargoyles, see §17.1.
 
 ## 19.1 The First Journey
 
@@ -107,7 +107,7 @@ Needs the core set and the Darkroot, Explorers, Vordt of the Boreal Valley and E
 
 ## 19.10 Into the Depths
 
-Needs the core set, the Darkroot expansion and the Gaping Dragon expansion. Without Darkroot, the Dancer of the Boreal Valley replaces Artorias and the Level 1 to 3 encounter decks use the core set alone.
+Needs the core set and the Gaping Dragon expansion, and uses the Darkroot expansion if the players have it. Without Darkroot, the Dancer of the Boreal Valley replaces Artorias and the Level 1 to 3 encounter decks use the core set alone.
 
 | Section | Encounters | Boss |
 |---|---|---|
