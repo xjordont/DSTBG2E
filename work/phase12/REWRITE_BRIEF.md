@@ -47,8 +47,8 @@ Everything here is decided. Where the author's chapter differs, write this. Wher
 |---|---|---|---|
 | 1 | 4 | as printed | as printed |
 | 2 | 3 | +2 | +1 |
-| 3 | 2 | +4 | +2 |
-| 4 | 1 | +6 | +2 |
+| 3 | 2 | +3 | +2 |
+| 4 | 1 | +4 | +3 |
 
 (Table as ruled 2026-11-19, section 25 of 41_rules_workshop.md: bosses, mimics, invaders, summons and crystal lizards are never scaled.)
 

@@ -2853,3 +2853,37 @@ Tested first, and rejected: giving bosses health for party size again while easi
 - Neither touches outliers 2 to 5. A lone character's odds are set by the class chosen, which reads as a choice of difficulty and is best said so in a sentence of §6.1. The boss that four characters cannot lose to follows from the ruling that bosses are not scaled; the cheapest remedy measured for it is boss damage, not boss health (23.1), and it is the author's to reopen. The class and boss figures come from the printed cards and dashboards.
 
 **Not applied.** The table of §8.3 is the author's ruling of section 27 and stands until the author says otherwise.
+
+## 29. The author's ruling of 2026-11-20: enemy health +2 / +3 / +4, enemy damage +1 / +2 / +3; bosses not scaled
+
+"I thought we had agreed on health +2 / +3 / +4 with damage +1 / +2 / +3. Bosses really ought not scale."
+
+This is the variant of 28.4. It replaces the table of 27.2 (+2 / +4 / +6 health, which followed "enemy health +2 per character beyond the first") and the proposal of 28.4.
+
+| Characters | Sparks | Enemy health | Enemy attack damage |
+|---|---|---|---|
+| 1 | 4 | as printed | as printed |
+| 2 | 3 | +2 | +1 |
+| 3 | 2 | +3 | +2 |
+| 4 | 1 | +4 | +3 |
+
+Bosses, mimics, invaders, summons and crystal lizards are not scaled. Written into §8.3 with its example (a Hollow Soldier with three characters has 4 health and an attack of 6), the brief and the simulator (`settled`; `settled27` keeps the table it replaces).
+
+Measured as written, 500 games a cell (± 4), best play:
+
+| | 1 | 2 | 3 | 4 |
+|---|---|---|---|---|
+| **Games won, every 2017 set** | 56% | 51% | 69% | 63% |
+| **Games won, core box alone** | 82% | 59% | 56% | 49% |
+| Table time in minutes, every set | 228 | 328 | 367 | 356 |
+| Table time in minutes, core | 220 | 276 | 238 | 274 |
+| Games lost in an ordinary encounter, every set | 25% | 38% | 24% | 33% |
+| Main-boss attempts failed, every set | 41% | 23% | 12% | 3% |
+
+- Every party of two or more is inside the band of 50% to 70% on both pools but for four characters on the core box, at 49% (41% and 42% for three and four before).
+- A game for four is an hour and a half shorter than under 27.2 on every set (356 minutes against 440) and no longer the longest.
+- Unchanged by this table: a lone Knight or Warrior wins about 80%, and four characters fail 3% of their attempts at a main boss.
+
+The print-and-play encounter decks, scored again under this table (lowest / median / highest): core set 0.2 / 2.7 / 4.7, 0.3 / 4.0 / 8.4, 1.9 / 3.0 / 4.8 for Levels 1 to 3; Tomb of Giants 0.4 / 2.6 / 4.0, 1.9 / 3.3 / 7.2, 2.2 / 3.1 / 4.3; Painted World 0.3 / 1.7 / 2.6, 0.8 / 2.7 / 3.5, 1.3 / 2.7 / 4.7. Both decks stay inside the core set's range, with the one soft Painted World Level 3 card as before.
+
+Checks: style 0 violations, cross-references 0 broken, `tools/sim/test_sim.py` passes.
