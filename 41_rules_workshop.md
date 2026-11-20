@@ -2913,3 +2913,79 @@ A lone character has no extra sparks: four is "five less the number of character
 - The author's standard of 18.4 was 50% to 70% on average and about 80% at best play. A lone Knight on the core box, played at the simulator's best, is at that mark.
 
 Nothing is changed.
+
+## 31. The Knight and the Warrior; every pair of enemy health and damage scaling; health multiplied by the party (2026-11-20)
+
+The author asked why the Knight and the Warrior are so strong and whether their heroic actions are the cause; whether the Knight's extra die ought to join the pool so that still only the two highest count; for every enemy health and damage scaling to be analysed for the best amount, with the worry that +3 damage tips play from armour to dodging; and whether multiplying enemy health by the number of characters, as many house rules do, is viable. Sparks (five less the characters) and the lone character's six souls are to stay.
+
+### 31.1 The Knight and the Warrior
+
+What the dashboards say. **Knight (Stand Fast):** once per spark, after a block roll, roll one more blue die and add it to the roll. **Warrior (Berserk Charge):** once per spark, during his turn, move one node without spending stamina; the next range 0 attack he makes costs no stamina and strikes the whole node.
+
+The simulator has played the Knight's die as **added on top of the two highest** since the ruling of section 16 (item 7). The book never said so; an FAQ entry now does (§22), since §9.4 by itself reads "further dice are ignored".
+
+| A lone character wins (400 games, ± 5) | Core box | Every set |
+|---|---|---|
+| Knight, die added to the two highest (as ruled) | 84% | 67% |
+| Knight, die joins the pool, two highest count (the author's question) | 79% | 56% |
+| Knight, no heroic action at all | 77% | 54% |
+| Warrior, as printed | 82% | 70% |
+| Warrior, no heroic action at all | 78% | 64% |
+| Herald / Assassin, as printed | 68% / 67% | 40% / 51% |
+
+- **The heroic actions are not why.** Without any heroic action the Knight still wins 77% and the Warrior 78% alone on the core box. The cause is the starting kit. The Knight starts with the best block in the game (a blue and a black die, 3.0 on average, against 2.3 for the Warrior and Herald and 1.2 for six other classes) and a free attack on a blue die. The Warrior starts with a free attack on two black dice, the hardest free hit of any class.
+- **The pool reading would nearly delete the Knight's ability** (79% against 77% with none) and would take him from 67% to 56% on every set, where he is not high. It lowers the core-box figure by five points, inside the noise.
+- **Neither class is strong in company.** The four core classes together win 47% on the core box as played, 48% with the Knight's die in the pool, 47% and 46% with the Knight's or the Warrior's heroic action removed. A Knight and Herald pair wins 44%; a Warrior and Herald pair 57%.
+
+**Recommendation: no change to either, and no FAQ for the Warrior.** His ability is worth four to six points alone and nothing in a party, and its printed wording leaves nothing open. The simulator has a switch for these tests (`no_heroic`); the ruleset does not use it.
+
+### 31.2 Every pair of enemy health and damage scaling
+
+122 cells: for two, three and four characters, every sensible pair of added health and added damage, and health multiplied, on every 2017 set and on the core box alone (300 games a cell, ± 5 to 6, best play; bosses as printed). The whole grid is in `work/phase12/scaling_grid_2026-11-20.tsv`.
+
+**Damage scaling and the dodge.** The share of defences that are dodges or parries depends on the damage column and hardly at all on health:
+
+| Enemy damage | Every set | Core box |
+|---|---|---|
+| A lone character (no scaling) | 35% | 12% |
+| +0 | 36% to 41% | 22% to 27% |
+| +1 | 43% to 49% | 28% to 39% |
+| +2 | 48% to 55% | 33% to 49% |
+| +3 | 52% to 56% | 39% to 50% |
+
+The author's worry is borne out. The first point of damage moves the dodge share by about eight points, each further point by three or four, and at +3 more than half of all defences are dodges.
+
+**Health alone (no damage scaling)** keeps the armour game exactly as it is for one character and costs the evening:
+
+| Health only | Won, every set / core | Minutes, every set / core |
+|---|---|---|
+| Two characters, +3 | 61% / 77% | 405 / 357 |
+| Three characters, +6 | 70% / 73% | 558 / 440 |
+| Four characters, +8 | 72% / 66% | 681 / 580 |
+| Four characters, +10 | 53% / 56% | 759 / 642 |
+
+A game for four in the band needs +8 to +10 health and runs eleven to thirteen hours.
+
+**Health multiplied by the number of characters: not viable here.**
+
+| Health x characters | Won, 2 / 3 / 4, every set | Core box | Minutes for four |
+|---|---|---|---|
+| Damage as printed | 80% / 87% / 90% | 88% / 89% / 89% | 573 |
+| Damage +1 | 65% / 76% / 81% | 75% / 80% / 74% | 523 |
+
+It fails twice over. Most enemies have one health, and four times one is four, which is less than the +6 a flat table gives them, so the game is far too easy; the few large enemies (a Sentinel of ten becomes forty) take the time. The rule suits the official game, where one death ends the encounter; it does not suit this one.
+
+**The tables that put every party in the band on both pools** (confirmed at 500 games a cell, ± 4):
+
+| | Won, 2 / 3 / 4, every set | Core box | Minutes, every set | Core box | Dodge share, every set | Core box |
+|---|---|---|---|---|---|---|
+| **A. As ruled in section 29:** health +2 / +3 / +4, damage +1 / +2 / +3 | 51% / 69% / 63% | 59% / 56% / 49% | 328 / 367 / 356 | 276 / 238 / 274 | 45% / 50% / 54% | 30% / 36% / 46% |
+| **B. Health +2 a character beyond the first, damage +1 for any party:** +2 / +4 / +6, +1 / +1 / +1 | 51% / 67% / 69% | 59% / 61% / 61% | 328 / 366 / 511 | 276 / 348 / 423 | 45% / 45% / 46% | 30% / 35% / 36% |
+
+- **B is the better balance.** Every party of two or more is in the band on both pools, the core box is level to within two points, and the dodge share stays at 45% whatever the size of the party, so armour is worth to four characters what it is worth to two.
+- **B is one sentence:** with two or more characters, every enemy has +1 attack damage, and +2 health for each character beyond the first.
+- **B's price is the length of a game for four:** about two and a half hours more than A on either pool. For two characters the tables are the same; for three they take the same time on every set, and B is longer on the core box.
+- A stays the shorter game, with the core box's four characters at 49% and the dodge share at 54%.
+- Nothing in between does better. Four characters at +5 health and +2 damage win 61% on every set and 48% on the core box; at +4 and +2, 80% and 60%.
+
+**Not applied.** The table of §8.3 is the author's ruling of section 29 and stands until the author chooses.

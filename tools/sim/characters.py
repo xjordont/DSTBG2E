@@ -207,6 +207,7 @@ class Char:
         self.souls = 0; self.earned = 0
         self.dmg = self.sta = 0; self.hollow = False; self.alive = True; self.was_hollow = False
         self.estus = self.luck = self.heroic = True; self.ember = False; self.ember_card = False; self.mon = True
+        if cls in getattr(rules, 'no_heroic', ()): self.heroic = False      # a test switch: the class plays without its heroic action
         self.node = 0; self.stagger = self.frost = self.bleed = False; self.poison = 0; self.ran = False
         self.guards = []; self.buff = None; self.hurt_by = set(); self.rolls = 0     # guards: defence dice lent for a time (block, resist, until)
         self.bless = True                             # a card that is discarded for good when used has not been used
@@ -391,6 +392,7 @@ class Char:
     # ---------------------------------------------------------------- the bonfire
     def full_rest(self):
         self.dmg = self.sta = 0; self.hollow = False; self.alive = True; self.estus = self.luck = self.heroic = True; self.mon = True
+        if self.name in getattr(self.r, 'no_heroic', ()): self.heroic = False
         self.stagger = self.frost = self.bleed = False; self.poison = 0
 
 

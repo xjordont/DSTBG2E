@@ -4,6 +4,8 @@
 
 **Does a failed dodge let the full damage through?** No. The attack hits, but the character still rolls the *block* or *resist* dice of the armour card and its *upgrades*, and keeps the two highest results (see §9.5).
 
+**Does the Knight's extra block die count beyond the two highest?** Yes. A die that a *heroic action* adds to a *block* roll is added to the two highest results (see §9.4).
+
 **When may a character parry?** A *parry* needs a weapon or shield in the left weapon slot, so a character wielding a weapon *two-handed* cannot parry, and the attacker must be on the character's *node*. A boss cannot be parried (see §9.6).
 
 **Does drinking estus clear stamina?** No. A character who chooses to *drink estus* removes all damage cubes, and stamina cubes stay. The *rest* action removes all stamina cubes (see §10.1).
