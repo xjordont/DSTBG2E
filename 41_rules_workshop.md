@@ -2887,3 +2887,29 @@ Measured as written, 500 games a cell (± 4), best play:
 The print-and-play encounter decks, scored again under this table (lowest / median / highest): core set 0.2 / 2.7 / 4.7, 0.3 / 4.0 / 8.4, 1.9 / 3.0 / 4.8 for Levels 1 to 3; Tomb of Giants 0.4 / 2.6 / 4.0, 1.9 / 3.3 / 7.2, 2.2 / 3.1 / 4.3; Painted World 0.3 / 1.7 / 2.6, 0.8 / 2.7 / 3.5, 1.3 / 2.7 / 4.7. Both decks stay inside the core set's range, with the one soft Painted World Level 3 card as before.
 
 Checks: style 0 violations, cross-references 0 broken, `tools/sim/test_sim.py` passes.
+
+## 30. Why a lone character wins so often on the core box, and whether to take a spark away (2026-11-20)
+
+The author asked why the core box alone shows 82% for one character (section 29), and whether the lone character's extra sparks ought to be revoked.
+
+A lone character has no extra sparks: four is "five less the number of characters". The one thing only a lone character gets is six starting souls. Both were tested (400 games a cell, ± 5; 600 for "any of the ten classes", ± 4; best play).
+
+| Games won by a lone character | Core box: Knight | Warrior | Herald | Assassin | Every set: Knight | Warrior | Any of the ten classes |
+|---|---|---|---|---|---|---|---|
+| **As written** (4 sparks, 6 souls) | 84% | 82% | 68% | 67% | 64% | 66% | 53% |
+| 3 sparks | 79% | 78% | 50% | 59% | 48% | 56% | 46% |
+| No starting souls | 72% | 71% | 47% | 48% | 49% | 54% | 37% |
+| 3 sparks and no starting souls | 61% | 58% | 37% | 36% | 36% | 42% | 28% |
+
+**Why the figure is high.** Two things, and neither is the sparks.
+
+1. The 82% is a Knight or a Warrior. The simulator sends only those two out alone on the core box, as most players would. A lone Herald or Assassin wins 67% to 68% there.
+2. The core box is the gentlest pool for one character. The same Knight wins 84% on the core box and 64% with every set: on the core box 6% of his games are lost in an ordinary encounter, with every set 21%.
+
+**Whether to take something away: no.**
+
+- A spark fewer barely touches the two classes that are high (84% to 79%, 82% to 78%) and drops everything else: the Herald to 50%, and a lone character on every set to 46%, under the band.
+- Taking the six souls costs more and in the wrong place: a lone character on every set falls to 37%, and the losses move into the first encounters, where a character with no souls to spend has nothing to buy.
+- The author's standard of 18.4 was 50% to 70% on average and about 80% at best play. A lone Knight on the core box, played at the simulator's best, is at that mark.
+
+Nothing is changed.
