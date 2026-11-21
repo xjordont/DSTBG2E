@@ -1,0 +1,194 @@
+/* Dark Souls: The Board Game, Second Edition — rulebook stylesheet (WeasyPrint 70).
+   Grid: US Letter, two columns, 16 pt gutter. One continuous flow per chapter; nothing spans the
+   columns inside a chapter. Wide material sits under the chapter banner, at the chapter's end, or in a
+   reference chapter set as one wide column. Editions: body.screen (parchment ground) and body.print
+   (white ground); only colours differ, never metrics. */
+
+@font-face { font-family: "Cinzel"; font-weight: 400; src: url("../assets/fonts/static/Cinzel-Regular.ttf"); }
+@font-face { font-family: "Cinzel"; font-weight: 600; src: url("../assets/fonts/static/Cinzel-SemiBold.ttf"); }
+@font-face { font-family: "Cinzel"; font-weight: 700; src: url("../assets/fonts/static/Cinzel-Bold.ttf"); }
+@font-face { font-family: "Libre Caslon Text"; font-weight: 400; font-style: normal; src: url("../assets/fonts/static/LibreCaslonText-Regular.ttf"); }
+@font-face { font-family: "Libre Caslon Text"; font-weight: 700; font-style: normal; src: url("../assets/fonts/static/LibreCaslonText-Bold.ttf"); }
+@font-face { font-family: "Libre Caslon Text"; font-weight: 400; font-style: italic; src: url("../assets/fonts/static/LibreCaslonText-Italic.ttf"); }
+@font-face { font-family: "Libre Caslon Text"; font-weight: 700; font-style: italic; src: url("../assets/fonts/static/LibreCaslonText-BoldItalic.ttf"); }
+
+/* ---------- page ---------- */
+@page {
+  size: letter;
+  margin: 52pt 46pt 50pt 46pt;
+  @top-left { content: string(chapter, first-except); font: 600 6.6pt "Cinzel"; letter-spacing: 0.09em; color: #5d5349; vertical-align: bottom; padding-bottom: 9pt; }
+  @top-right { content: string(section, first); font: 600 6.6pt "Cinzel"; letter-spacing: 0.09em; color: #5d5349; vertical-align: bottom; padding-bottom: 9pt; }
+  @bottom-center { content: counter(page); font: 600 8pt "Cinzel"; color: #231f20; vertical-align: top; padding-top: 12pt;
+                   width: 150pt; text-align: center;
+                   background: url("../assets/ornaments/ast-0075-knot-square.png") left 26pt top 13pt / 7pt 7pt no-repeat,
+                               url("../assets/ornaments/ast-0075-knot-square.png") right 26pt top 13pt / 7pt 7pt no-repeat; }
+}
+@page cover { margin: 0; @top-left { content: none } @top-right { content: none } @bottom-center { content: none; background: none } }
+@page front { @top-left { content: none } @top-right { content: none } }
+body.screen { --ground: #f4f2ea; --tint: rgba(156, 129, 65, 0.11); --tint2: rgba(35, 31, 32, 0.05); --rule: #9c8141; }
+body.print  { --ground: #ffffff; --tint: rgba(156, 129, 65, 0.07); --tint2: rgba(35, 31, 32, 0.035); --rule: #9c8141; }
+
+/* ---------- type ---------- */
+html { font-family: "Libre Caslon Text", "Liberation Serif", serif; font-size: 8.9pt; line-height: 12.2pt; color: #231f20;
+       hyphenate-character: "-"; hyphenate-limit-chars: 7 4 4; font-variant-numeric: lining-nums; font-variant-ligatures: common-ligatures no-discretionary-ligatures no-historical-ligatures; font-feature-settings: "dlig" 0, "hlig" 0; }
+body { margin: 0; }
+p, li { margin: 0; orphans: 2; widows: 2; text-align: justify; hyphens: auto; }
+p + p, .keep + p { margin-top: 4.4pt; }
+strong { font-weight: 700; }
+em { font-style: italic; }
+th em, h1 em, h2 em, h3 em, .toc em, .exlabel em { font-style: normal; }
+.sym { font-family: "Cinzel"; font-weight: 600; font-size: 0.92em; }
+a { color: inherit; text-decoration: none; }
+a.xref { color: #5a4416; }
+.xl { white-space: nowrap; }
+img.icon { height: 1.12em; width: auto; vertical-align: -0.22em; margin: 0 0.1em; }
+
+/* ---------- chapter frame ---------- */
+.chapter { break-before: page; }
+.banner { background-color: #110f0e;
+          background-image: linear-gradient(90deg, rgba(17,15,14,0.90) 0%, rgba(17,15,14,0.78) 60%, rgba(17,15,14,0.55) 100%), url("../build/tex/lava_scales_clean.jpg");
+          background-size: cover; background-position: center 55%;
+          color: #f4f2ea; padding: 15pt 18pt 14pt 18pt; margin: 0 0 11pt 0; display: flex; align-items: center; }
+.banner .badge { font: 700 25pt/1 "Cinzel"; color: #110f0e; background: #c9ad6a; min-width: 42pt; height: 42pt; line-height: 42pt; text-align: center; border-radius: 50%; margin-right: 14pt; flex: none; }
+.banner .badge.letter { font-size: 22pt; }
+.banner .ktitle { flex: 1; }
+.banner .kicker { font: 600 6.8pt "Cinzel"; letter-spacing: 0.22em; text-transform: uppercase; color: #c9ad6a; margin-bottom: 3pt; }
+.banner h1 { font: 700 19pt/1.12 "Cinzel"; letter-spacing: 0.03em; margin: 0; color: #f4f2ea; string-set: chapter attr(data-running), section ""; bookmark-level: 1; bookmark-label: attr(data-bookmark); }
+.intro { font-style: italic; font-size: 10pt; line-height: 13.8pt; max-width: 400pt; margin: 2pt auto 12pt auto; text-align: center; hyphens: manual; }
+.intro p { text-align: center; hyphens: manual; }
+.flow { columns: 2; column-gap: 16pt; }
+.flow.single { columns: 1; max-width: 392pt; margin: 4pt auto 0 auto; font-size: 10pt; line-height: 14pt; }
+.flow.ref { columns: 1; }
+.flow.ref p { max-width: 430pt; }
+.flow.small { font-size: 8.5pt; line-height: 11.6pt; }
+.endmark { text-align: center; margin: 14pt 0 0 0; break-before: avoid; }
+.endmark img { width: 150pt; height: auto; opacity: 0.75; }
+/* chapter banner with a painting behind the title (set per chapter in the tuning file, key `header`) */
+.banner.art { align-items: flex-end; padding: 0 18pt 13pt 18pt; background-color: #090807; }
+.banner.art .badge { box-shadow: 0 0 0 2.2pt rgba(9,8,7,0.55); }
+/* hero image on the chapter banner: a product render standing on the banner's foot, free to rise above its head */
+.banner { position: relative; }
+.banner img.hero { position: absolute; }
+/* gallery at the foot of a chapter's last page (sizes and the top margin are computed by the build) */
+.endpanel { break-inside: avoid; break-before: avoid; text-align: center; }
+.prow { display: table; margin: 0 auto; }
+.pf { display: table-cell; vertical-align: bottom; padding: 0 9pt; text-align: center; }
+.pf img { display: block; margin: 0 auto; }
+.pc.pcall { height: auto; margin-top: 7pt; font-size: 6.2pt; }
+.pc { font: 600 6.1pt/8pt "Cinzel"; letter-spacing: 0.13em; text-transform: uppercase; color: #6b5f4a; margin: 4pt auto 0 auto; height: 15pt; text-align: center; hyphens: none; }
+
+/* ---------- headings ---------- */
+h2 { font: 600 10.4pt/1.2 "Cinzel"; letter-spacing: 0.02em; margin: 10pt 0 4.4pt 0; padding-bottom: 2.4pt; border-bottom: 0.5pt solid var(--rule);
+     break-after: avoid; string-set: section content(text); bookmark-level: 2; hyphens: manual; text-align: left; }
+h2 .secnum { color: #7a622b; margin-right: 0.2em; }
+.sec:first-child > h2:first-child { margin-top: 0; }
+h3 { font: 600 8.1pt/1.2 "Cinzel"; letter-spacing: 0.07em; text-transform: uppercase; margin: 7.5pt 0 2.8pt 0; break-after: avoid; bookmark-level: 3; hyphens: manual; text-align: left; color: #3a322b; }
+h4 { font: italic 700 8.9pt/1.25 "Libre Caslon Text"; margin: 6pt 0 2pt 0; break-after: avoid; bookmark-level: none; }
+h3.long { font-size: 7.7pt; letter-spacing: 0.025em; }
+h2 + p, h3 + p { orphans: 3; }
+h2.attop, h3.attop { margin-top: 0; }
+h2.forcecol, h3.forcecol { break-before: column; }
+/* a section that starts a column or a page stands flush with the head of the column beside it */
+.sec.newcol > h2:first-child, .sec.newpage > h2:first-child { margin-top: 0; }
+.keep { break-inside: avoid; }
+/* numbered sections that start a new page or column (decided by the build from measured positions) */
+.sec.newpage { break-before: page; }
+.sec.newcol { break-before: column; }
+/* illustration in the room a section break leaves at the foot of a column */
+.plate { break-inside: avoid; break-before: avoid; text-align: center; }
+.plate img { display: block; margin: 0 auto; }
+.plate .pc { height: auto; margin-top: 4pt; }
+
+/* ---------- blocks ---------- */
+.example { background: var(--tint); border-left: 1.6pt solid var(--rule); padding: 4.4pt 6.5pt 4.6pt 7pt; margin: 5.5pt 0; box-decoration-break: clone; font-size: 8.5pt; line-height: 11.6pt; }
+.example.short { break-inside: avoid; }
+.example p { text-align: left; hyphens: manual; orphans: 4; widows: 4; }
+.exlabel { font: 600 6.9pt "Cinzel"; letter-spacing: 0.12em; text-transform: uppercase; color: #7a622b; margin-right: 0.5em; }
+p.defn > strong:first-child { font-weight: 700; }
+ul, ol { margin: 3.4pt 0 3.4pt 0; padding-left: 13pt; }
+ul { list-style: none; }
+ul > li { position: relative; margin-top: 1.7pt; }
+ul > li::before { content: ""; position: absolute; left: -9.6pt; top: 0.47em; width: 3.1pt; height: 3.1pt; background: #7a622b; transform: rotate(45deg); }
+ol { list-style: none; counter-reset: step; padding-left: 15pt; }
+ol > li { counter-increment: step; position: relative; margin-top: 2.2pt; }
+ol > li::before { content: counter(step) "."; position: absolute; left: -15pt; width: 12pt; text-align: right; font: 700 8.3pt "Libre Caslon Text"; color: #3a322b; }
+li > p { margin: 0; }
+li > p + p { margin-top: 2pt; }
+p.substep { padding-left: 21pt; position: relative; text-align: left; }
+p.substep .sn { position: absolute; left: 0; font-weight: 700; color: #3a322b; }
+li ul, li ol { margin: 1.5pt 0 1.5pt 0; }
+
+/* ---------- tables ---------- */
+.tablewrap { margin: 6pt 0 6.5pt 0; }
+table { border-collapse: collapse; width: 100%; font-size: 8.1pt; line-height: 10.6pt; }
+table.nobreak { break-inside: avoid; }
+thead { display: table-header-group; }
+tr { break-inside: avoid; }
+tbody tr:last-child, tbody tr:nth-child(2) { break-before: avoid; }
+th { font: 600 6.5pt/1.25 "Cinzel"; letter-spacing: 0.06em; text-transform: uppercase; text-align: left; color: #f4f2ea; background: #231f20; padding: 3.2pt 4.5pt 2.8pt 4.5pt; vertical-align: bottom; hyphens: manual; }
+td { padding: 2.6pt 4.5pt; vertical-align: top; border-bottom: 0.4pt solid rgba(35,31,32,0.28); text-align: left; hyphens: manual; }
+tbody tr:nth-child(even) td { background: var(--tint2); }
+td.num, th.num { text-align: center; }
+td.nw { white-space: nowrap; }
+td:first-child, th:first-child { hyphens: manual; }
+p.tablenote { font-style: italic; font-size: 8.2pt; margin-top: 2pt; }
+
+/* ---------- figures ---------- */
+figure { margin: 6pt 0 7pt 0; break-inside: avoid; text-align: center; }
+figure img { max-width: 100%; height: auto; }
+figcaption { font-style: italic; font-size: 7.6pt; line-height: 10pt; text-align: left; margin-top: 3pt; hyphens: manual; }
+.topfig, .endfig { margin: 0 0 10pt 0; text-align: center; }
+.topfig figure, .endfig figure { margin: 0 auto; }
+.topfig figcaption, .endfig figcaption { text-align: center; max-width: 430pt; margin-left: auto; margin-right: auto; }
+figure.legend figcaption { columns: 2; column-gap: 12pt; text-align: left; }
+
+/* ---------- glossary and F.A.Q. ---------- */
+p.gloss { margin-top: 3.6pt; text-align: left; hyphens: manual; padding-left: 8pt; text-indent: -8pt; }
+p.gloss > strong:first-child { font-weight: 700; }
+p.faq-q { margin-top: 6pt; font-weight: 700; text-align: left; hyphens: manual; break-after: avoid; }
+p.faq-a { margin-top: 1.6pt; }
+p.faq-q .ql, p.faq-a .ql { font: 700 7.4pt "Cinzel"; color: #7a622b; margin-right: 0.4em; }
+
+/* ---------- cover and front matter ---------- */
+.cover { page: cover; width: 8.5in; height: 11in; background: #070605 url("../assets/art/ast-0118-core-2017-front-cover-composition.png") center top / cover no-repeat; color: #f4f2ea; text-align: center; position: relative; overflow: hidden; }
+.cover .cscales { display: none; }
+.cover .cscales { position: absolute; left: -0.3in; right: -0.3in; top: 4.4in; height: 5.6in;
+                  background-image: radial-gradient(ellipse 38% 44% at 50% 46%, rgba(11,10,9,0) 0%, rgba(11,10,9,0.35) 45%, rgba(11,10,9,0.86) 78%, rgba(11,10,9,1) 100%), url("../build/tex/lava_scales_clean.jpg");
+                  background-size: cover; background-position: center; }
+.cover .ctitle { position: absolute; left: 1.4in; right: 1.4in; top: 5.28in; padding: 16pt 0 20pt 0; background: radial-gradient(ellipse closest-side, rgba(7,6,5,0.82) 0%, rgba(7,6,5,0.6) 55%, rgba(7,6,5,0) 100%); }
+/* the title is the logo in the cover art; its words stay in the text layer for search and screen readers */
+.cover .c1 { font: 700 1pt/1pt "Cinzel"; color: transparent; }
+.cover .c2 { font: 600 1pt/1pt "Cinzel"; color: transparent; }
+.cover .crule { width: 2.7in; margin: 0 auto 17pt auto; border-top: 0.8pt solid #c9ad6a; height: 0; }
+.cover .c3 { font: 600 12.5pt/1.2 "Cinzel"; letter-spacing: 0.36em; color: #c9ad6a; padding-left: 0.36em; }
+.cover .cfoot { position: absolute; left: 0; right: 0; bottom: 0.62in; font: 400 8pt "Cinzel"; letter-spacing: 0.22em; color: rgba(244,242,234,0.8); }
+.front { page: front; break-before: page; }
+.front h1.ft { font: 700 17pt/1.15 "Cinzel"; letter-spacing: 0.05em; text-align: center; margin: 0 0 4pt 0; string-set: chapter "", section ""; bookmark-level: 1; }
+.front .ftrule { width: 160pt; margin: 9pt auto 16pt auto; text-align: center; }
+#contents .ftrule { margin-bottom: 11pt; }
+.front .ftrule img { width: 160pt; opacity: 0.8; }
+.foreword { max-width: 372pt; margin: 76pt auto 0 auto; font-size: 10.2pt; line-height: 14.6pt; }
+.foreword p + p { margin-top: 7pt; }
+/* the credits stand near the foot of the foreword page (the foreword is a fixed text; three lines of slack remain) */
+.colophon { max-width: 372pt; margin: 190pt auto 0 auto; font-size: 8.3pt; line-height: 11.6pt; text-align: center; color: #3a322b; }
+.colophon p { text-align: center; hyphens: manual; }
+.colophon p + p { margin-top: 5pt; }
+.toc { columns: 3; column-gap: 15pt; margin-top: 4pt; font-size: 7.9pt; line-height: 10.15pt; }
+.toc .tc { break-inside: avoid; margin: 0 0 5.4pt 0; }
+.toc .tch { font: 600 7.5pt/1.25 "Cinzel"; letter-spacing: 0.04em; display: block; position: relative; padding-right: 15pt; padding-left: 15pt; text-indent: 0; margin-bottom: 1.2pt; }
+.toc .tch .tn { position: absolute; left: 0; top: 0; width: 15pt; color: #7a622b; }
+.toc .ts { display: block; padding: 0 15pt 0 15pt; text-align: left; }
+.toc a::after { content: leader(". ") "\00a0" target-counter(attr(href), page); margin-right: -15pt; font-family: "Libre Caslon Text"; font-weight: 400; letter-spacing: 0; }
+
+/* ---------- icon reference and back cover ---------- */
+.ikgrid { columns: 2; column-gap: 40pt; margin: 8pt 34pt 0 34pt; }
+.ik { break-inside: avoid; display: block; position: relative; padding: 3.3pt 0 3.3pt 34pt; min-height: 12pt; margin: 0 0 1.5pt 0; font-size: 9.4pt; line-height: 12pt; text-align: left; border-bottom: 0.4pt solid rgba(35,31,32,0.14); }
+.ik img { position: absolute; left: 2pt; top: 1.2pt; height: 16.4pt; width: 23pt; object-fit: contain; }
+.ik span { display: block; text-align: left; }
+@page backcover { margin: 0; @top-left { content: none } @top-right { content: none } @bottom-center { content: none; background: none } }
+.backcover { page: backcover; break-before: page; width: 8.5in; height: 11in; background: #0b0a09 url("../assets/textures/ast-0143-back-cover-dark-stone-bg.png") center / cover no-repeat; position: relative; }
+.backcover .bc { position: absolute; left: 2.25in; right: 2.25in; top: 4.05in; text-align: center; color: #231f20; }
+.backcover img.bcart { position: absolute; left: 2.5in; width: 3.5in; top: 1.55in; border: 0.7pt solid #9c8141; padding: 3pt; background: #110f0e; }
+.backcover.withart .bc { top: 6.25in; }
+.backcover .bc1 { font: italic 400 11.4pt/16.6pt "Libre Caslon Text"; text-align: center; hyphens: manual; }
+.backcover .bc2 { font: 600 9.6pt/14pt "Cinzel"; letter-spacing: 0.08em; text-align: center; margin-top: 22pt; hyphens: manual; }

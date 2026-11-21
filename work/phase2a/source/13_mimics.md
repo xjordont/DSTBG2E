@@ -1,0 +1,13 @@
+<!-- manuscript.md lines 2039–2050 ; chapter "MIMICS" -->
+# MIMICS
+
+Players with the Encounters expansion set available may choose whether they wish to include mimics in their game during setup. Groups with new players should default to leaving mimics out as they can be quite punishing. Experienced players should include mimics to ensure they are challenged. The following rules assume the play with the Explorers expansion set including mimics.
+
+After defeating an encounter that contains an unopened chest, characters do not recover normally and remain in their current node. Characters must collectively decide whether they wish to open the chest or leave it be out of fear of encountering a mimic. If the characters cannot agree, the character with the *aggro* token makes the final decision. If the characters elect to leave the chest alone, they proceed to recover all stamina and two damage normally. The then are faced with the typical option of continuing onto the next encounter or returning to rest at the bonfire for the cost of one *spark.*
+
+However, if the characters wish to open the chest, they must reveal one an *ambush* card to determine if the chest is a lurking mimic. If the *ambush* card shows treasure, the characters receive a total of one tier appropriate treasure which they must assign per normal treasure chest rules. If the *ambush* card shows a mimic, an additional min-boss encounter ensues before the party can claim their treasure. If the characters have already defeated their previously chosen mini-boss, then the Voracious Mimic’s data and encounter cards are used. If the characters have not yet defeated their previously chosen mini-boss, then the Hungry Mimic’s data and encounter cards are used.
+
+Characters remain on the nodes they occupied at the end of the encounter containing the chest. The mimic will take its turn first. Refer to “**Boss Encounter**” rules for more details on how to manage the mimic’s behaviour cards. The only difference is that the mimic does not have specific *heat-up* behaviour cards and instead just shuffles in one unused normal behaviour card when it heats-up. If the characters kill the mimic, they gain two tier appropriate treasures (instead of one), and may mark the encounter *cleared.*. If the encounter is *cleared* then the characters may return to repeat the encounter again but do not encounter the mimic a second time. If the mimic kills all of the characters, the encounter is *failed*, and the characters will encounter the mimic next time they complete the normal encounter in which the mimic lives. However, once the mimic has been fought once, it must be fought again at the end of the encounter until it is killed.
+
+#  
+

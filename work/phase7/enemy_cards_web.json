@@ -1,0 +1,568 @@
+{
+ "Stone Guardian": {
+  "threat": 6,
+  "steps": [
+   {
+    "k": "move",
+    "n": 1,
+    "dir": "to",
+    "tgt": "aggro",
+    "push": true,
+    "push_dmg": 4
+   },
+   {
+    "k": "attack",
+    "tgt": "aggro",
+    "range": 1,
+    "node": true,
+    "push": true,
+    "repeat": 1,
+    "dmg": 5,
+    "magic": false,
+    "dodge": 1,
+    "effects": []
+   }
+  ],
+  "source": "DSBG-Shuffle repo image lib/dsbg_shuffle_images/enemies/<name> - data.jpg (community re-creation of the printed data card, read by eye) + icon legend from official Core rulebook pp.24-25, 40; cross-checked with community spreadsheet 'DSBG - Enemy & Equipment' (Enemies sheet) and DSBG-Shuffle behaviors.py",
+  "confidence": "high",
+  "expansion": "Darkroot",
+  "notes": ""
+ },
+ "Stone Knight": {
+  "threat": 7,
+  "steps": [
+   {
+    "k": "move",
+    "n": 1,
+    "dir": "to",
+    "tgt": "nearest",
+    "push": false
+   },
+   {
+    "k": "attack",
+    "tgt": "nearest",
+    "range": 0,
+    "node": false,
+    "push": true,
+    "repeat": 1,
+    "dmg": 5,
+    "magic": true,
+    "dodge": 1,
+    "effects": []
+   }
+  ],
+  "source": "DSBG-Shuffle repo image lib/dsbg_shuffle_images/enemies/<name> - data.jpg (community re-creation of the printed data card, read by eye) + icon legend from official Core rulebook pp.24-25, 40; cross-checked with community spreadsheet 'DSBG - Enemy & Equipment' (Enemies sheet) and DSBG-Shuffle behaviors.py",
+  "confidence": "high",
+  "expansion": "Darkroot",
+  "notes": ""
+ },
+ "Demonic Foliage": {
+  "threat": 3,
+  "steps": [
+   {
+    "k": "move",
+    "n": 1,
+    "dir": "to",
+    "tgt": "nearest",
+    "push": true
+   },
+   {
+    "k": "attack",
+    "tgt": "nearest",
+    "range": 1,
+    "node": false,
+    "push": false,
+    "repeat": 1,
+    "dmg": 5,
+    "magic": false,
+    "dodge": 1,
+    "effects": []
+   }
+  ],
+  "source": "DSBG-Shuffle repo image lib/dsbg_shuffle_images/enemies/<name> - data.jpg (community re-creation of the printed data card, read by eye) + icon legend from official Core rulebook pp.24-25, 40; cross-checked with community spreadsheet 'DSBG - Enemy & Equipment' (Enemies sheet) and DSBG-Shuffle behaviors.py",
+  "confidence": "high",
+  "expansion": "Darkroot",
+  "notes": ""
+ },
+ "Mushroom Parent": {
+  "threat": 1,
+  "steps": [
+   {
+    "k": "move",
+    "n": 1,
+    "dir": "to",
+    "tgt": "nearest",
+    "push": true,
+    "push_dmg": 6,
+    "effects": [
+     "stagger"
+    ]
+   }
+  ],
+  "source": "DSBG-Shuffle repo image lib/dsbg_shuffle_images/enemies/<name> - data.jpg (community re-creation of the printed data card, read by eye) + icon legend from official Core rulebook pp.24-25, 40; cross-checked with community spreadsheet 'DSBG - Enemy & Equipment' (Enemies sheet) and DSBG-Shuffle behaviors.py",
+  "confidence": "high",
+  "expansion": "Darkroot",
+  "notes": "No attack step (range shown as a dash). Damage 6 is the push damage on the movement."
+ },
+ "Mushroom Child": {
+  "threat": 2,
+  "steps": [
+   {
+    "k": "move",
+    "n": 1,
+    "dir": "to",
+    "tgt": "nearest",
+    "push": false
+   },
+   {
+    "k": "attack",
+    "tgt": "nearest",
+    "range": 0,
+    "node": false,
+    "push": false,
+    "repeat": 1,
+    "dmg": 5,
+    "magic": false,
+    "dodge": 1,
+    "effects": []
+   }
+  ],
+  "source": "DSBG-Shuffle repo image lib/dsbg_shuffle_images/enemies/<name> - data.jpg (community re-creation of the printed data card, read by eye) + icon legend from official Core rulebook pp.24-25, 40; cross-checked with community spreadsheet 'DSBG - Enemy & Equipment' (Enemies sheet) and DSBG-Shuffle behaviors.py",
+  "confidence": "high",
+  "expansion": "Darkroot",
+  "notes": ""
+ },
+ "Plow Scarecrow": {
+  "threat": 4,
+  "steps": [
+   {
+    "k": "move",
+    "n": 2,
+    "dir": "to",
+    "tgt": "aggro",
+    "push": false
+   },
+   {
+    "k": "attack",
+    "tgt": "aggro",
+    "range": 1,
+    "node": false,
+    "push": false,
+    "repeat": 1,
+    "dmg": 4,
+    "magic": false,
+    "dodge": 2,
+    "effects": []
+   }
+  ],
+  "source": "DSBG-Shuffle repo image lib/dsbg_shuffle_images/enemies/<name> - data.jpg (community re-creation of the printed data card, read by eye) + icon legend from official Core rulebook pp.24-25, 40; cross-checked with community spreadsheet 'DSBG - Enemy & Equipment' (Enemies sheet) and DSBG-Shuffle behaviors.py",
+  "confidence": "high",
+  "expansion": "Darkroot",
+  "notes": ""
+ },
+ "Shears Scarecrow": {
+  "threat": 8,
+  "steps": [
+   {
+    "k": "move",
+    "n": 1,
+    "dir": "to",
+    "tgt": "nearest",
+    "push": false
+   },
+   {
+    "k": "attack",
+    "tgt": "nearest",
+    "range": 0,
+    "node": true,
+    "push": false,
+    "repeat": 2,
+    "dmg": 3,
+    "magic": false,
+    "dodge": 2,
+    "effects": []
+   }
+  ],
+  "source": "DSBG-Shuffle repo image lib/dsbg_shuffle_images/enemies/<name> - data.jpg (community re-creation of the printed data card, read by eye) + icon legend from official Core rulebook pp.24-25, 40; cross-checked with community spreadsheet 'DSBG - Enemy & Equipment' (Enemies sheet) and DSBG-Shuffle behaviors.py",
+  "confidence": "medium",
+  "expansion": "Darkroot",
+  "notes": "Repeat 2 comes from DSBG-Shuffle behaviors.py and the spreadsheet (Repeat Actions=2); the card image shows no repeat icon, so which steps repeat (attack only, or move+attack) is unverified."
+ },
+ "Alonne Bow Knight": {
+  "threat": 2,
+  "steps": [
+   {
+    "k": "move",
+    "n": 2,
+    "dir": "away",
+    "tgt": "aggro",
+    "push": false
+   },
+   {
+    "k": "attack",
+    "tgt": "aggro",
+    "range": 9,
+    "node": false,
+    "push": true,
+    "repeat": 1,
+    "dmg": 4,
+    "magic": false,
+    "dodge": 2,
+    "effects": []
+   }
+  ],
+  "source": "DSBG-Shuffle repo image lib/dsbg_shuffle_images/enemies/<name> - data.jpg (community re-creation of the printed data card, read by eye) + icon legend from official Core rulebook pp.24-25, 40; cross-checked with community spreadsheet 'DSBG - Enemy & Equipment' (Enemies sheet) and DSBG-Shuffle behaviors.py",
+  "confidence": "high",
+  "expansion": "Iron Keep",
+  "notes": ""
+ },
+ "Alonne Sword Knight": {
+  "threat": 5,
+  "steps": [
+   {
+    "k": "move",
+    "n": 2,
+    "dir": "to",
+    "tgt": "nearest",
+    "push": false
+   },
+   {
+    "k": "attack",
+    "tgt": "nearest",
+    "range": 0,
+    "node": false,
+    "push": false,
+    "repeat": 1,
+    "dmg": 5,
+    "magic": false,
+    "dodge": 1,
+    "effects": []
+   }
+  ],
+  "source": "DSBG-Shuffle repo image lib/dsbg_shuffle_images/enemies/<name> - data.jpg (community re-creation of the printed data card, read by eye) + icon legend from official Core rulebook pp.24-25, 40; cross-checked with community spreadsheet 'DSBG - Enemy & Equipment' (Enemies sheet) and DSBG-Shuffle behaviors.py",
+  "confidence": "high",
+  "expansion": "Iron Keep",
+  "notes": ""
+ },
+ "Alonne Knight Captain": {
+  "threat": 8,
+  "steps": [
+   {
+    "k": "move",
+    "n": 2,
+    "dir": "to",
+    "tgt": "nearest",
+    "push": false
+   },
+   {
+    "k": "attack",
+    "tgt": "nearest",
+    "range": 0,
+    "node": false,
+    "push": false,
+    "repeat": 1,
+    "dmg": 5,
+    "magic": true,
+    "dodge": 1,
+    "effects": []
+   }
+  ],
+  "source": "DSBG-Shuffle repo image lib/dsbg_shuffle_images/enemies/<name> - data.jpg (community re-creation of the printed data card, read by eye) + icon legend from official Core rulebook pp.24-25, 40; cross-checked with community spreadsheet 'DSBG - Enemy & Equipment' (Enemies sheet) and DSBG-Shuffle behaviors.py",
+  "confidence": "high",
+  "expansion": "Iron Keep",
+  "notes": ""
+ },
+ "Ironclad Soldier": {
+  "threat": 6,
+  "steps": [
+   {
+    "k": "move",
+    "n": 1,
+    "dir": "to",
+    "tgt": "nearest",
+    "push": true,
+    "push_dmg": 5,
+    "effects": [
+     "stagger"
+    ]
+   }
+  ],
+  "source": "DSBG-Shuffle repo image lib/dsbg_shuffle_images/enemies/<name> - data.jpg (community re-creation of the printed data card, read by eye) + icon legend from official Core rulebook pp.24-25, 40; cross-checked with community spreadsheet 'DSBG - Enemy & Equipment' (Enemies sheet) and DSBG-Shuffle behaviors.py",
+  "confidence": "high",
+  "expansion": "Iron Keep",
+  "notes": "No attack step (range dash). 5 is push damage on the movement; dodge 2."
+ },
+ "Firebomb Hollow": {
+  "threat": 2,
+  "steps": [
+   {
+    "k": "move",
+    "n": 1,
+    "dir": "to",
+    "tgt": "aggro",
+    "push": false
+   },
+   {
+    "k": "attack",
+    "tgt": "aggro",
+    "range": 2,
+    "node": true,
+    "push": true,
+    "repeat": 1,
+    "dmg": 3,
+    "magic": true,
+    "dodge": 1,
+    "effects": []
+   }
+  ],
+  "source": "DSBG-Shuffle repo image lib/dsbg_shuffle_images/enemies/<name> - data.jpg (community re-creation of the printed data card, read by eye) + icon legend from official Core rulebook pp.24-25, 40; cross-checked with community spreadsheet 'DSBG - Enemy & Equipment' (Enemies sheet) and DSBG-Shuffle behaviors.py",
+  "confidence": "high",
+  "expansion": "Explorers",
+  "notes": "Printed range is 2, outside your 0/1/9 set."
+ },
+ "Silver Knight Spearman": {
+  "threat": 8,
+  "steps": [
+   {
+    "k": "attack",
+    "tgt": "nearest",
+    "range": 1,
+    "node": false,
+    "push": false,
+    "repeat": 1,
+    "dmg": 6,
+    "magic": false,
+    "dodge": 2,
+    "effects": []
+   },
+   {
+    "k": "move",
+    "n": 1,
+    "dir": "to",
+    "tgt": "aggro",
+    "push": true
+   }
+  ],
+  "source": "DSBG-Shuffle repo image lib/dsbg_shuffle_images/enemies/<name> - data.jpg (community re-creation of the printed data card, read by eye) + icon legend from official Core rulebook pp.24-25, 40; cross-checked with community spreadsheet 'DSBG - Enemy & Equipment' (Enemies sheet) and DSBG-Shuffle behaviors.py",
+  "confidence": "high",
+  "expansion": "Explorers",
+  "notes": "Attack comes first (left), then the move with push (no damage number)."
+ },
+ "Mimic": {
+  "threat": 4,
+  "steps": [
+   {
+    "k": "move",
+    "n": 2,
+    "dir": "to",
+    "tgt": "aggro",
+    "push": false
+   },
+   {
+    "k": "attack",
+    "tgt": "aggro",
+    "range": 1,
+    "node": false,
+    "push": true,
+    "repeat": 1,
+    "dmg": 6,
+    "magic": false,
+    "dodge": 2,
+    "effects": []
+   }
+  ],
+  "source": "DSBG-Shuffle repo image lib/dsbg_shuffle_images/enemies/<name> - data.jpg (community re-creation of the printed data card, read by eye) + icon legend from official Core rulebook pp.24-25, 40; cross-checked with community spreadsheet 'DSBG - Enemy & Equipment' (Enemies sheet) and DSBG-Shuffle behaviors.py",
+  "confidence": "medium",
+  "expansion": "Sunless City / Explorers (see notes)",
+  "notes": "Image + DSBG-Shuffle damage only: the spreadsheet has no stat row for plain Mimic, and DSBG-Shuffle lists it under The Sunless City."
+ },
+ "Hungry Mimic": {
+  "threat": 10,
+  "steps": [],
+  "source": "DSBG-Shuffle repo image lib/dsbg_shuffle_images/enemies/<name> - data.jpg (community re-creation of the printed data card, read by eye) + icon legend from official Core rulebook pp.24-25, 40; cross-checked with community spreadsheet 'DSBG - Enemy & Equipment' (Enemies sheet) and DSBG-Shuffle behaviors.py",
+  "confidence": "medium",
+  "expansion": "Explorers",
+  "notes": "Mini-boss style: data card has threat 10, behaviour deck size 4, a heat-up icon and the 'Loot the Body' text, but no movement or attack icons; behaviour lives on boss behaviour cards (not obtained)."
+ },
+ "Voracious Mimic": {
+  "threat": 10,
+  "steps": [],
+  "source": "DSBG-Shuffle repo image lib/dsbg_shuffle_images/enemies/<name> - data.jpg (community re-creation of the printed data card, read by eye) + icon legend from official Core rulebook pp.24-25, 40; cross-checked with community spreadsheet 'DSBG - Enemy & Equipment' (Enemies sheet) and DSBG-Shuffle behaviors.py",
+  "confidence": "medium",
+  "expansion": "Explorers",
+  "notes": "As Hungry Mimic; same card layout, threat 10, deck size 4."
+ },
+ "Crystal Lizard": {
+  "threat": 1,
+  "steps": [
+   {
+    "k": "move",
+    "n": 1,
+    "dir": "away",
+    "tgt": "nearest",
+    "push": false
+   }
+  ],
+  "source": "Community spreadsheet Enemies sheet (Threat 1, Move -1, no damage) + official Iron Keep rulebook p.5 (does not actively attack the party). No data card image found in DSBG-Shuffle.",
+  "confidence": "low",
+  "expansion": "Iron Keep",
+  "notes": "Not an Explorers enemy; it is in Iron Keep. Move away 1 from nearest is from the spreadsheet only; no card image to confirm."
+ },
+ "Hollow Soldier": {
+  "threat": 5,
+  "steps": [
+   {
+    "k": "move",
+    "n": 1,
+    "dir": "to",
+    "tgt": "nearest",
+    "push": false
+   },
+   {
+    "k": "attack",
+    "tgt": "nearest",
+    "range": 0,
+    "node": false,
+    "push": false,
+    "repeat": 1,
+    "dmg": 4,
+    "magic": false,
+    "dodge": 1,
+    "effects": []
+   }
+  ],
+  "source": "DSBG-Shuffle repo image lib/dsbg_shuffle_images/enemies/<name> - data.jpg (community re-creation of the printed data card, read by eye) + icon legend from official Core rulebook pp.24-25, 40; cross-checked with community spreadsheet 'DSBG - Enemy & Equipment' (Enemies sheet) and DSBG-Shuffle behaviors.py",
+  "confidence": "high",
+  "expansion": "Core",
+  "notes": "Matches the printed sample card on official Core rulebook p.24."
+ },
+ "Crossbow Hollow": {
+  "threat": 2,
+  "steps": [
+   {
+    "k": "move",
+    "n": 1,
+    "dir": "away",
+    "tgt": "aggro",
+    "push": false
+   },
+   {
+    "k": "attack",
+    "tgt": "aggro",
+    "range": 9,
+    "node": false,
+    "push": false,
+    "repeat": 1,
+    "dmg": 3,
+    "magic": true,
+    "dodge": 1,
+    "effects": []
+   }
+  ],
+  "source": "DSBG-Shuffle repo image lib/dsbg_shuffle_images/enemies/<name> - data.jpg (community re-creation of the printed data card, read by eye) + icon legend from official Core rulebook pp.24-25, 40; cross-checked with community spreadsheet 'DSBG - Enemy & Equipment' (Enemies sheet) and DSBG-Shuffle behaviors.py",
+  "confidence": "high",
+  "expansion": "Core",
+  "notes": "Magic damage type comes from DSBG-Shuffle and the spreadsheet; the card image cannot show it."
+ },
+ "Large Hollow Soldier": {
+  "threat": 6,
+  "steps": [
+   {
+    "k": "move",
+    "n": 1,
+    "dir": "to",
+    "tgt": "nearest",
+    "push": true,
+    "push_dmg": 5
+   }
+  ],
+  "source": "DSBG-Shuffle repo image lib/dsbg_shuffle_images/enemies/<name> - data.jpg (community re-creation of the printed data card, read by eye) + icon legend from official Core rulebook pp.24-25, 40; cross-checked with community spreadsheet 'DSBG - Enemy & Equipment' (Enemies sheet) and DSBG-Shuffle behaviors.py",
+  "confidence": "high",
+  "expansion": "Core",
+  "notes": "No attack step (range dash)."
+ },
+ "Sentinel": {
+  "threat": 9,
+  "steps": [
+   {
+    "k": "move",
+    "n": 1,
+    "dir": "to",
+    "tgt": "nearest",
+    "push": true
+   },
+   {
+    "k": "attack",
+    "tgt": "nearest",
+    "range": 1,
+    "node": true,
+    "push": false,
+    "repeat": 1,
+    "dmg": 6,
+    "magic": false,
+    "dodge": 1,
+    "effects": []
+   }
+  ],
+  "source": "DSBG-Shuffle repo image lib/dsbg_shuffle_images/enemies/<name> - data.jpg (community re-creation of the printed data card, read by eye) + icon legend from official Core rulebook pp.24-25, 40; cross-checked with community spreadsheet 'DSBG - Enemy & Equipment' (Enemies sheet) and DSBG-Shuffle behaviors.py",
+  "confidence": "high",
+  "expansion": "Core",
+  "notes": ""
+ },
+ "Silver Knight Swordsman": {
+  "threat": 7,
+  "steps": [
+   {
+    "k": "move",
+    "n": 2,
+    "dir": "to",
+    "tgt": "nearest",
+    "push": false
+   },
+   {
+    "k": "attack",
+    "tgt": "nearest",
+    "range": 0,
+    "node": true,
+    "push": true,
+    "repeat": 1,
+    "dmg": 5,
+    "magic": false,
+    "dodge": 2,
+    "effects": []
+   }
+  ],
+  "source": "DSBG-Shuffle repo image lib/dsbg_shuffle_images/enemies/<name> - data.jpg (community re-creation of the printed data card, read by eye) + icon legend from official Core rulebook pp.24-25, 40; cross-checked with community spreadsheet 'DSBG - Enemy & Equipment' (Enemies sheet) and DSBG-Shuffle behaviors.py",
+  "confidence": "high",
+  "expansion": "Core",
+  "notes": ""
+ },
+ "Silver Knight Greatbowman": {
+  "threat": 3,
+  "steps": [
+   {
+    "k": "attack",
+    "tgt": "aggro",
+    "range": 9,
+    "node": true,
+    "push": false,
+    "repeat": 1,
+    "dmg": 4,
+    "magic": false,
+    "dodge": 1,
+    "effects": []
+   },
+   {
+    "k": "move",
+    "n": 1,
+    "dir": "away",
+    "tgt": "aggro",
+    "push": false
+   }
+  ],
+  "source": "DSBG-Shuffle repo image lib/dsbg_shuffle_images/enemies/<name> - data.jpg (community re-creation of the printed data card, read by eye) + icon legend from official Core rulebook pp.24-25, 40; cross-checked with community spreadsheet 'DSBG - Enemy & Equipment' (Enemies sheet) and DSBG-Shuffle behaviors.py",
+  "confidence": "high",
+  "expansion": "Core",
+  "notes": "Attack first (left), then the move."
+ }
+}

@@ -1,6 +1,6 @@
 # 04 — Completion Backlog (Class A)
 
-Every unfinished, stub, half-written or placeholder section of the manuscript, with a full proposed completion. Drafted by Phase 1 Agent E; merged by the lead editor. Every entry is `[PROPOSED]` and awaits approval at Gate 1 (see `01_audit_report.md` §4 and §7). After approval the text is integrated untagged into the Class B chapters.
+Every unfinished, stub, half-written or placeholder section of the manuscript, with a full proposed completion. Drafted by Phase 1 Agent E; merged by the lead editor. Every entry was `[PROPOSED]` at Gate 1 and was **approved in full on 2026-11-10** (see `05_gate1_decisions.md`; `01_audit_report.md` §4 and §7). The text is integrated untagged into the Class B chapters during Phase 2A; where an approved open-question answer alters a draft, the chapter file governs.
 
 ---
 
@@ -29,7 +29,7 @@ Every unfinished, stub, half-written or placeholder section of the manuscript, w
 - Design rationale: The footer text is the only surviving source and already matches the manuscript's terminology (damage cubes, endurance bar, major action). Making the Ember token the fourth type resolves the "three types / four tokens" contradiction without changing play. "Health" in the Major Action list is replaced by the manuscript's own unit (damage cubes) so the action text and the token text agree.
 - Mechanical impact: None on play. Clarifies that Estus does not clear hollow markers or conditions (both already stated indirectly in Death & Hollowing and Conditions).
 - Follow-on changes required: Delete the DOCX footer paragraph. Character Setup step 5 (line 997) stands. Add "Estus flask" to the Glossary (CMP-0002). Regenerate TOC.
-- Status: awaiting-approval
+- Status: approved (Gate 1, 2026-11-10 — see 05_gate1_decisions.md)
 
 ---
 
@@ -280,7 +280,7 @@ Every unfinished, stub, half-written or placeholder section of the manuscript, w
 - Design rationale: Every definition restates a rule the manuscript already makes, in the manuscript's own terms, so the glossary never becomes a second rulebook that drifts from the first; the opening line makes the chapter subordinate to the rules text. Terms the manuscript uses without defining (event card, lost, pillar token) are tagged and tied to the CMP that defines them. Expansion-specific terms (strafe card, track behaviour card, calamity, corrosion) are included because the manuscript already uses or lists them.
 - Mechanical impact: None; definitions only. Two definitions resolve ambiguities the body leaves open and are therefore marked: the aggro token's movement in standard encounters ("most wound tokens") and the summon's turn timing (after the characters each round, per Summons › Phantoms step 6).
 - Follow-on changes required: Italicisation pass across the body so that the set of italicised terms equals the set of headwords (Phase 2A). Add "Pillar token", "Event card" and "Ambush card" to Game Components (CMP-0012). Convert bracketed chapter names to section numbers at layout.
-- Status: awaiting-approval
+- Status: approved (Gate 1, 2026-11-10 — see 05_gate1_decisions.md)
 
 ---
 
@@ -404,7 +404,7 @@ Every unfinished, stub, half-written or placeholder section of the manuscript, w
 - Design rationale: Each question is one the body leaves open or answers in two places. Answers restate the governing rule and name the chapter so the F.A.Q. never carries a rule of its own; the four rulings the body does not reach (aggro on death, basic-game joining, Level 4 reset, zero-spark forced rest) are tagged and routed to their CMP. The official FAQ's rulings on dodge-with-zero-dice and failed-dodge pushes are compatible with the manuscript and are reflected; its ruling that a push from a boss attack ignores arcs conflicts with the manuscript's Character Arc Movement text and is not adopted. The O&S answer is limited to what the Core rulebook supports (one data card, one dial, one deck).
 - Mechanical impact: None beyond the tagged rulings; those are resolved in CMP-0006, CMP-0010, CMP-0019, CMP-0020 and CMP-0023.
 - Follow-on changes required: Delete the empty heading at line 3100. Cross-reference section numbers at layout. If any tagged CMP is rejected, delete or amend the corresponding answer.
-- Status: awaiting-approval
+- Status: approved (Gate 1, 2026-11-10 — see 05_gate1_decisions.md)
 
 ---
 
@@ -556,7 +556,7 @@ Every unfinished, stub, half-written or placeholder section of the manuscript, w
 - Design rationale: The appendix is written so that a reader who owns the pack knows exactly which published card each pack card displaces and how to sort it, using only this book's vocabulary. Card texts are drafted from the manuscript's notes and follow the book's action grammar (start-of-turn triggers, stamina costs, deck returns). The two unexplained notes (Demon Titanite; "per floor") are translated and tagged rather than silently invented. The weapon list is unchanged except for one typographical normalisation ("Onikiri And Ubadachi" → "and"); tiers are computed from the ≥25 rule in Setup. "Skeleton Beast" follows the Tomb of Giants rulebook's component name; the component list (line 469, "Skeletal Beast") is to be aligned.
 - Mechanical impact: Titanite Chunk/Slab chaining (Shard → Chunk → Slab) is now explicit; Wolf Ring reroll is limited to once per dodge; Covetous Silver Serpent Ring is tied to encounter clear rewards; Mon Ring is limited to once per rest. Tier assignments move nineteen revised weapons into tier one and forty-one into tier two.
 - Follow-on changes required: Align Game Components › Enemies line 469 ("Skeletal Beast" → "Skeleton Beast"). Delete the stray comment marker at line 3154 and the duplicate Chloranthy entry. Confirm Demon Titanite and Mon Ring intent with the author. Confirm the "Painted World of Ariamis" and "Tomb of Giants" set names for the pack cards. Layout: set the table as a true table; consider landscape or two-column.
-- Status: awaiting-approval
+- Status: approved (Gate 1, 2026-11-10 — see 05_gate1_decisions.md)
 
 ---
 
@@ -676,7 +676,7 @@ Every unfinished, stub, half-written or placeholder section of the manuscript, w
 - Design rationale: Every drafted rule is taken from a supplied booklet and recast in the manuscript's turn structure (the Chariot's "enemy activation" becomes the enemy turn that follows each character's turn; the aggro token goes to the highest-threat character as the manuscript requires rather than to "one of the characters"). Two official steps are deliberately dropped because the manuscript's own design supersedes them: the per-gravestone reveal of behaviour cards at boss setup (the manuscript's Gravestones rule awards a scry on clearing instead) and the official Calamity removal-on-damage (the manuscript's Conditions chapter keeps Calamity to the end of the encounter). Artorias, Smelter Demon, Old Dragonslayer, Pursuer and the Mimics are drafted from explicit booklet or card text. Sif's cool-down and O&S's pairing live on data cards that were not supplied, so the entries state the boundary rather than invent. The Twin Gargoyles rule is an adaptation of the Core campaign footnote to the manuscript's boss-death sequence and is tagged.
 - Mechanical impact: Kalameet and the Chariot become playable from this book alone. The Pursuer's double activation and the Chariot's unattackable first phase are significant difficulty rules now stated. The "two boss models" rule generalises the manuscript's existing boss-pushes-boss text.
 - Follow-on changes required: Add strafe cards, track behaviour cards, mega-boss setup card, pillar tokens and Level 4 encounter cards to Game Components (CMP-0012). Add "The Last Giant" to Game Components › Mega-bosses or remove it from Big Game Hunting (CMP-0008). Obtain the missing booklets to unblock nine entries. Delete the empty heading at line 2215.
-- Status: awaiting-approval
+- Status: approved (Gate 1, 2026-11-10 — see 05_gate1_decisions.md)
 
 ---
 
@@ -704,7 +704,7 @@ Every unfinished, stub, half-written or placeholder section of the manuscript, w
 - Design rationale: The definition takes the three uses of "lost" as given and makes them one state. It keeps the manuscript's rule that a *hollow* death fails the encounter, so "lost" is a label for the interval between that death and the forced rest, and for permanent removal in the mega-boss fight. The zero-spark case is the one gap the body leaves (the forced rest cannot be paid); the ruling follows the manuscript's own loss condition rather than letting survivors continue without the lost character.
 - Mechanical impact: None where sparks remain. With zero sparks, a hollow death now ends the game explicitly; previously the outcome was undefined.
 - Follow-on changes required: Glossary entry "Lost" (CMP-0002) loses its [PROPOSED] tag on approval. F.A.Q. entries on forced rest and mega-boss death (CMP-0003) align. CMP-0020 carries the zero-spark rule into Encounter Recovery.
-- Status: awaiting-approval
+- Status: approved (Gate 1, 2026-11-10 — see 05_gate1_decisions.md)
 
 ---
 
@@ -743,7 +743,7 @@ Every unfinished, stub, half-written or placeholder section of the manuscript, w
 - Design rationale: Each completion supplies the word the sentence's structure demands and that the surrounding rules confirm (zero health; rest; the tier two deck, as Legendary Treasure line 1025 already states; deck size; terrain; one ambush card). "Encounter card" in the phantom and invader turn steps is corrected to "behaviour card" because the phantom and invader rules draw from behaviour decks, not encounter cards.
 - Mechanical impact: None; restores intended text.
 - Follow-on changes required: None beyond substitution. Glossary (CMP-0002) and CMP-0018 reference the corrected phantom steps.
-- Status: awaiting-approval
+- Status: approved (Gate 1, 2026-11-10 — see 05_gate1_decisions.md)
 
 ---
 
@@ -785,7 +785,7 @@ Every unfinished, stub, half-written or placeholder section of the manuscript, w
 - Design rationale: The Setup paragraph is rewritten to describe what the CAMPAIGNS chapter actually contains and to state the one procedure the chapter never gives: how a section is laid out and ended. The first Facing the Abyss copy is kept because its section lists match the Darkroot booklet; the two preambles are merged so neither requirement nor encounter-source statement is lost. The doubled Gargoyle is confirmed deliberate by the Core rulebook and is kept, with the back-to-back rule made explicit in CMP-0005. The Last Giant is a published mega-boss and is kept in the campaign; adding it to the component list is the smaller change. Official spellings are taken from the Core and Phantoms booklets; "Earthen" follows the game location, since the Explorers booklet itself prints the typo.
 - Mechanical impact: Section completion now explicitly grants a free rest and restock but no spark when a section ends in a named encounter (Facing the Abyss Section One, Playing with Fire Section One, A Hollow Pursuit Section Two). The Undead Colosseum gains its missing Level 4 encounter before Vordt.
 - Follow-on changes required: Delete the empty headings at lines 2400 and 3036. Regenerate TOC (seven campaigns are missing from it). CMP-0022 adds The Undead Colosseum's special rules; CMP-0021 adds Kalameet's campaign section. Demon Hunting Section One deliberately has no Bonfire Tile (line 2608 explains); confirm with the author.
-- Status: awaiting-approval
+- Status: approved (Gate 1, 2026-11-10 — see 05_gate1_decisions.md)
 
 ---
 
@@ -870,7 +870,7 @@ Every unfinished, stub, half-written or placeholder section of the manuscript, w
 - Design rationale: Every mechanic is the manuscript's own, applied symmetrically: the defender rolls exactly as against an enemy (two highest dice; armour-only after a failed dodge; parry conditions and stagger results from Enemy Turn › Parry & Riposte), and the attacker's fixed enemy-style dodge difficulty is replaced by the manuscript's stamina-cost table. The outermost-node ring rule gives the trap bullet a definite meaning that shrinks the arena and ends stalemates. Simultaneous death yields no winner so the carry-over bonus cannot be awarded twice. The bonus is tracked with a wound token because wound tokens are otherwise unused on characters and no new component is needed. "A riposte may not be parried" prevents an endless chain of parries between two shield-bearers.
 - Mechanical impact: PvP becomes fully playable. The only numeric additions are the trap death rule (already in the bullets) and the cumulative +1 bonus tracking. Terrain is kept on the tile (the bullets remove only enemies and traps), which keeps gravestones and chests as cover.
 - Follow-on changes required: Delete the empty heading at line 3096. Add "Resting at the *bonfire*" after PvP to Returning to the Bonfire line 1908 (already states it). Glossary entries Dodge difficulty and Riposte (CMP-0002) reference this chapter. If the editor prefers a dedicated marker to the wound token, add "4x PvP victory tokens" to Game Components.
-- Status: awaiting-approval
+- Status: approved (Gate 1, 2026-11-10 — see 05_gate1_decisions.md)
 
 ---
 
@@ -908,7 +908,7 @@ Every unfinished, stub, half-written or placeholder section of the manuscript, w
 - Design rationale: Half rounded down is chosen over "one fewer" because the manuscript's stated aim is to remove grinding: at one fewer, repeating a Level 3 encounter would pay 4 souls per character, barely less than clearing it. Half makes repeats worth taking only when a character must retrieve dropped souls or wants a safe route to the boss. Rounding down keeps every value a whole number and never reduces a reward to zero. The alternative (one fewer: 2/3/4/5 and 1/2/3/4) is recorded here for the editor's decision.
 - Mechanical impact: Repeat clears pay 1–3 souls (basic) or 1–2 souls (campaign) per character. Dropped-soul recovery is unaffected.
 - Follow-on changes required: F.A.Q. answer on reduced rewards (CMP-0003) matches. Line 2243 ("reduced by one compared to the basic game") stands and refers to the full reward only; add "The reduced reward is half the campaign full reward, rounded down" after it.
-- Status: awaiting-approval
+- Status: approved (Gate 1, 2026-11-10 — see 05_gate1_decisions.md)
 
 ---
 
@@ -922,7 +922,7 @@ Every unfinished, stub, half-written or placeholder section of the manuscript, w
 - Design rationale: Removal is recommended over definition. Threat order already fixes the first character, so a first-player token would duplicate information the dashboards carry; the Core rulebook's First Activation token existed only because its turn order went clockwise, which this edition has abandoned. Defining the token would also require adding a component. The tie rule supplies the one thing the token's position would have recorded.
 - Mechanical impact: None.
 - Follow-on changes required: Remove "first player" from the italicised-term inventory; no Glossary entry. Renumber Encounter Start.
-- Status: awaiting-approval
+- Status: approved (Gate 1, 2026-11-10 — see 05_gate1_decisions.md)
 
 ---
 
@@ -977,7 +977,7 @@ Every unfinished, stub, half-written or placeholder section of the manuscript, w
 - Design rationale: Items (a), (b), (e) and (f) are inventories and descriptions drawn from the supplied booklets, matched to the manuscript's existing lists. Item (d) resolves "mega-boss Items" as the mega-boss's own treasure cards, the only cards an expansion supplies that fit the phrase, and gives the Level 4 tile a reward in place of the per-character tier two cards the generic setup would otherwise deal. Item (c) is a new subsystem: the manuscript dealt, revealed and scried event cards without ever stating their effect, and the only published event cards (Tomb of Giants) work differently; the paragraph is the minimum needed for the component to function (when revealed, duration, reset, what a Special Trap card is, where no event is used) and does not design any card.
 - Mechanical impact: Event cards gain a definite timing and reset. Level 4 encounters award one mega-boss treasure card instead of one tier two card per character (a reduction of up to three cards). Component counts allow the Game Components chapter to be checked against the boxes.
 - Follow-on changes required: Decision needed on (c): confirm that the author's event deck exists (print-and-play in the Community Update Pack?) and supply card texts, or delete every event-card reference (lines 659–667, 939, 1133, 1161, 1181, 1269). Confirm (d) with the author. Glossary entries Event card and Ambush card (CMP-0002). Campaign Play: state whether campaign Level 4 encounters also receive a mega-boss item.
-- Status: awaiting-approval
+- Status: approved (Gate 1, 2026-11-10 — see 05_gate1_decisions.md)
 
 ---
 
@@ -1021,7 +1021,7 @@ Every unfinished, stub, half-written or placeholder section of the manuscript, w
 - Design rationale: Option A keeps a foreword's function (why the edition exists, what changed) without first person, process notes or grievance; its description of the changes is drawn from the manuscript's own chapters. Option B assumes the Notes chapter is cut and folds the one necessary sentence (the glossary promise) into the Introduction, preserving the original closing line. The credits block names the same contributors, drops "Konami" (the Dark Souls rights-holders are Bandai Namco and FromSoftware, as every supplied booklet states) and adds the fan-work disclaimer the original front matter lacks.
 - Mechanical impact: None.
 - Follow-on changes required: Editor decision on OQ-01 (A or B). Whichever is chosen, delete lines 371–381. Confirm the contributor list and the handle "PittedPanda" with the author. Regenerate TOC.
-- Status: awaiting-approval
+- Status: approved (Gate 1, 2026-11-10 — see 05_gate1_decisions.md)
 
 ---
 
@@ -1054,7 +1054,7 @@ Every unfinished, stub, half-written or placeholder section of the manuscript, w
 - Design rationale: One procedure, in one chapter, with the other two passages reduced to pointers so no second version can drift. The aggro holder is chosen as tie-breaker in every case because Treasure Rewards and Mimics both already use it and a random draw adds a step. Recovery after leaving the chest follows Encounter Recovery (one damage cube) rather than the Mimics chapter's "two damage". The mimic replacing the chest token on its node follows the Explorers booklet ("the mimic returns to its terrain node") and gives the mimic a defined starting node, which the manuscript never states. "Each later time… they may again choose" resolves the manuscript's two incompatible sentences (fought "next time they complete the encounter" versus "must be fought again until it is killed") in favour of choice, since the characters can always decline to open the chest.
 - Mechanical impact: Recovery after declining a chest is one damage cube, not two. The mimic starts on the chest node (previously undefined). Everything else is unchanged.
 - Follow-on changes required: Delete the empty heading at line 2049. Glossary entries Chest, Mimic, Ambush card (CMP-0002) align. CMP-0005 holds the mimic's special rules.
-- Status: awaiting-approval
+- Status: approved (Gate 1, 2026-11-10 — see 05_gate1_decisions.md)
 
 ---
 
@@ -1064,7 +1064,7 @@ Every unfinished, stub, half-written or placeholder section of the manuscript, w
 - Design rationale: Titanite Scale is the physical card in the Iron Keep box and the name the chapter that owns the rule uses. Titanite Chunk carries tier two requirements that a low-stat character who killed the lizard does not necessarily meet, and the Community Update Pack defines it as a shop-sorted upgrade, not a reward. The three-card limit follows the Iron Keep booklet and prevents an undefined state when the supply runs out.
 - Mechanical impact: Lizard rewards are capped at three per game.
 - Follow-on changes required: Glossary entry Crystal lizard and Titanite (CMP-0002) name Titanite Scale. Delete the empty heading at line 2059.
-- Status: awaiting-approval
+- Status: approved (Gate 1, 2026-11-10 — see 05_gate1_decisions.md)
 
 ---
 
@@ -1087,7 +1087,7 @@ Every unfinished, stub, half-written or placeholder section of the manuscript, w
 - Design rationale: Structural fix with no rule change; the second heading names what the bullets define. "Occupies no equipment slot of its own" states what "as if equipped" implies and answers a question the Equipment Slots section otherwise leaves open.
 - Mechanical impact: None.
 - Follow-on changes required: Glossary entry Catalyst (CMP-0002). Regenerate TOC.
-- Status: awaiting-approval
+- Status: approved (Gate 1, 2026-11-10 — see 05_gate1_decisions.md)
 
 ---
 
@@ -1097,7 +1097,7 @@ Every unfinished, stub, half-written or placeholder section of the manuscript, w
 - Design rationale: The rule is written as an icon rule and is harmless if generalised; the added sentence keeps it findable under the only bosses known to use it while covering any other card.
 - Mechanical impact: None.
 - Follow-on changes required: None. BLOCKED only for confirming other users of the icon (Asylum Demon booklet).
-- Status: awaiting-approval
+- Status: approved (Gate 1, 2026-11-10 — see 05_gate1_decisions.md)
 
 ---
 
@@ -1121,7 +1121,7 @@ Every unfinished, stub, half-written or placeholder section of the manuscript, w
 - Design rationale: The procedure keeps the manuscript's cost (two *souls* per draw, paid by *embered* characters) and its choice among drawn cards, and states what was implied: one card per paying character, unused cards returned. Defence by dice follows the Phantoms booklet, which gives summons character-style block, resist and dodge values; the two-highest-dice rule is the manuscript's. The free *dodge* reflects that phantoms have no endurance bar. The Shift and Distract icons are taken from the booklet; Distract is reworded so it works with the manuscript's boss-aggro rule (aggro moves to whoever damages the boss) by applying only to the boss's next turn. Timing "after the last character" follows the manuscript's step 6 rather than the official after-each-character rule.
 - Mechanical impact: Summoning now has a defined draw count; phantoms defend with dice; Distract and Shift become usable. No change to cost.
 - Follow-on changes required: Add phantom components to Game Components (CMP-0012). Glossary entries Summon, Phantom, Shift (CMP-0002). F.A.Q. entry on phantom timing (CMP-0003).
-- Status: awaiting-approval
+- Status: approved (Gate 1, 2026-11-10 — see 05_gate1_decisions.md)
 
 ---
 
@@ -1139,7 +1139,7 @@ Every unfinished, stub, half-written or placeholder section of the manuscript, w
 - Design rationale: The two passages are made to say one thing: resting resets every encounter's enemies, but the *cleared* mark survives and keeps the skip option open; failing an encounter strips the mark. This is the reading under which both Encounter Resolution bullets and the Encounter Start skip rule remain true, and it matches the manuscript's anti-grinding design (a cleared tile is a toll, not a wall).
 - Mechanical impact: *Failed* encounters lose their *cleared* status (previously undefined). Otherwise none.
 - Follow-on changes required: F.A.Q. entry on skipping after a rest (CMP-0003) matches. Delete the empty heading at line 1959.
-- Status: awaiting-approval
+- Status: approved (Gate 1, 2026-11-10 — see 05_gate1_decisions.md)
 
 ---
 
@@ -1149,7 +1149,7 @@ Every unfinished, stub, half-written or placeholder section of the manuscript, w
 - Design rationale: The manuscript's loss condition and its forced-rest rule otherwise contradict each other in the *hollow*-death case. The Core rulebook resolves the same case by ending the game when a character dies at zero sparks; this edition's version is narrower (only a forced rest triggers it), which preserves the manuscript's rule that surviving characters may still win if no rest is forced.
 - Mechanical impact: Defines a previously undefined end state. With the voluntary rest already impossible at zero sparks, play is otherwise unchanged.
 - Follow-on changes required: Coordinated with CMP-0006 (Lost) and the F.A.Q. (CMP-0003).
-- Status: awaiting-approval
+- Status: approved (Gate 1, 2026-11-10 — see 05_gate1_decisions.md)
 
 ---
 
@@ -1173,7 +1173,7 @@ Every unfinished, stub, half-written or placeholder section of the manuscript, w
 - Design rationale: Direct adaptation of the supplied booklet's campaign section to the manuscript's list format and boss-rank labels. The Darkroot encounter note is added because the section is set in the Royal Wood and the Darkroot campaign already uses that location; it is optional so the section stays playable with core and Kalameet only.
 - Mechanical impact: Adds one optional section; no rules change.
 - Follow-on changes required: The Setup paragraph's "thirteen campaigns" count is unchanged (the section is an extension). Boss Special Rules › Black Dragon Kalameet (CMP-0005) and Level 4 rules (CMP-0023) apply.
-- Status: awaiting-approval
+- Status: approved (Gate 1, 2026-11-10 — see 05_gate1_decisions.md)
 
 ---
 
@@ -1187,7 +1187,7 @@ Every unfinished, stub, half-written or placeholder section of the manuscript, w
 - Design rationale: The three rules are the campaign's identity in the supplied booklet and are adapted to the manuscript's terms (*cleared*/*failed*, skipping cost, campaign table). The soul uplift is expressed relative to this edition's table rather than as the booklet's flat number, so that Level 4 encounters are not paid less than ordinary ones; the choice is tagged for decision.
 - Mechanical impact: No grinding is possible in this campaign; soul income per encounter rises by two.
 - Follow-on changes required: Section Six list fix (CMP-0008). Vordt's special rules remain BLOCKED (CMP-0005).
-- Status: awaiting-approval
+- Status: approved (Gate 1, 2026-11-10 — see 05_gate1_decisions.md)
 
 ---
 
@@ -1203,4 +1203,4 @@ Every unfinished, stub, half-written or placeholder section of the manuscript, w
 - Design rationale: Taken from the two supplied mega-boss booklets, which state these rules identically, and limited to what the manuscript's setup steps do not already say. The "not fought again" rule is the one that matters most in play: without it the Level 4 encounter would be a repeatable 6-soul farm immediately before the final boss.
 - Mechanical impact: Level 4 encounters cannot be grinded; four entry nodes instead of three.
 - Follow-on changes required: Glossary entry Encounter level (CMP-0002); F.A.Q. entry on Level 4 reset (CMP-0003) loses its [PROPOSED] tag on approval; CMP-0012 (e) defines the game board placement.
-- Status: awaiting-approval
+- Status: approved (Gate 1, 2026-11-10 — see 05_gate1_decisions.md)

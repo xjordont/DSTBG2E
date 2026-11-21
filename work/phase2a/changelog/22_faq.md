@@ -1,0 +1,148 @@
+### CH-22-001 · §22 F.A.Q.
+- Type: completion
+- Before: "# F.A.Q." (empty heading, manuscript line 3098)
+- After: a chapter of 50 questions and answers in seven sections (22.1 Characters and Actions … 22.7 Campaign Play), each answer restating a rule and citing its owning section
+- Rationale: The chapter was a stub. The approved draft is carried in the book's voice; every answer is aligned with the chapters as drafted, and the opening paragraph makes the chapter subordinate to them.
+- Source: CMP-0003, F-046; Gate 1 — OQ-18
+
+### CH-22-002 · §22.2 Attack and Defence
+- Type: correction
+- Before: (CMP-0003 draft) "In a four-character game, does the added Repeat apply to push-moves and push-attacks? No. The scaling Repeat is added only to attack icons"
+- After: "With four characters, does the increase of one to enemy attack values apply to a push-move that deals damage? Yes."
+- Rationale: The Repeat 2 scaling row was deleted at Gate 1; the question is recast for the rule that replaced it (§8.3).
+- Source: Gate 1 — OQ-07; B-003
+
+### CH-22-003 · §22.6 Phantoms, Mimics, and Crystal Lizards
+- Type: correction
+- Before: (CMP-0003 draft) "When does a summon act in a boss encounter? After the last character in threat order has taken their turn … once per round"
+- After: "After each character's turn and before the boss's next turn (see §12.1, Summon Turns)."
+- Rationale: Gate 1 adopted the after-each-character cadence.
+- Source: Gate 1 — OQ-32; A-020, D-002
+
+### CH-22-004 · §22.4 Encounters, Souls, and the Bonfire
+- Type: correction
+- Before: (CMP-0003 draft) "Skipping costs every character two stamina cubes per encounter skipped … a hollow character (six spaces)"
+- After: "Each character places one stamina cube for each encounter skipped, to a maximum of three … A hollow character has eight usable spaces"
+- Rationale: Skip cost and endurance bar follow the Gate 1 answers.
+- Source: Gate 1 — OQ-10, OQ-08
+
+### CH-22-005 · §22 F.A.Q. (entries added)
+- Type: completion
+- Before: new text
+- After: thirteen further entries: running more than once; scaling threshold; poison with several tokens; enemies and traps; a cleared-then-failed encounter; Twin Gargoyles; character order in a boss encounter; death in a mega-boss encounter; boss aggro; invaders and clearing; the bonfire ascetic; the fog gate in campaign play; the campaign spark maximum
+- Rationale: Each restates a Gate 1 decision or a ruling made while drafting (OQ-13, OQ-14, OQ-19, OQ-22, OQ-25, OQ-26; CH-07-051; CH-12-033) that players are likely to ask about; none adds a rule.
+- Source: Gate 1; chapters 05, 07, 08, 10, 12, 16, 17, 18
+
+### CH-22-006 · §22.1 Characters and Actions
+- Type: clarification
+- Before: (CMP-0003 draft) "In the basic game a new character joins on the same terms, while the characters are resting at the bonfire."
+- After: "Yes, while the characters are on the bonfire tile and at the cost of one spark … (see §18.4)."
+- Rationale: The rule's home is §18.4, which states that it applies in the standard game as well; the F.A.Q. cites it.
+- Source: CMP-0003
+
+### CH-22-007 · §22 F.A.Q. (invaders)
+- Type: correction
+- Before: "**A.** Yes. While the invader is on the tile, the encounter is not cleared (see §12.2, End of an Invasion)."
+- After: "**A.** Not always. While the invader is on the tile, the encounter is not cleared. It is cleared when every enemy model, the invader included, has been killed, or when the invader has vanished and every other enemy model has been killed (see §12.2, End of an Invasion)."
+- Rationale: §12.2 also clears the encounter when the invader has vanished and every other enemy model is dead.
+- Source: QA-004 (example and consistency verification)
+
+### CH-22-008 · §22.2
+- Type: ruling
+- Before: "**A.** No. A parry requires a shield in the left weapon slot. A weapon that bears"
+- After: "**A.** No. A parry requires a shield in a weapon slot. A weapon that bears"
+- Rationale: [MECHANICAL CHANGE] Follows §9.6 as changed by combat-E22.
+- Source: final rulings, combat-E34 (`06_final_rulings.md`); As combat-E22.
+
+### CH-22-009 · §22.2
+- Type: ruling
+- Before: "Each of its attack options then adds one to its attack value. Spells are never scaled (see §10.5)."
+- After: "Each of its attack options then adds one to its attack value. A weapon whose stat requirements are all zero is never scaled, and spells are never scaled (see §10.5)."
+- Rationale: [MECHANICAL CHANGE] Follows §10.5 as changed by combat-E29.
+- Source: final rulings, combat-E35 (`06_final_rulings.md`); As combat-E29.
+
+### CH-22-010 · §22.1
+- Type: ruling
+- Before: "**A.** Only to burn the *bonfire ascetic*, which the party pays for together (see §18.7). Every other cost is paid from the acting character's own souls: the Firekeeper's stat tiers, Blacksmith Andre's cards, a *summon*, and *transposition* (see §7.6)."
+- After: "**A.** Only in campaign play, to burn the *bonfire ascetic* or to buy back a *spark*, which the party pays for together (see §18.3; §18.7). Every other cost is paid from the acting character's own souls: the Firekeeper's stat tiers, Blacksmith Andre's cards, a *summon*, and *transposition* (see §7.6)."
+- Rationale: [MECHANICAL CHANGE] F.A.Q. follows §18.3 and §18.7.
+- Source: final rulings, campaign-E23 (`06_final_rulings.md`); As campaign-E18.
+
+### CH-22-011 · §22.6
+- Type: clarification
+- Before: "**A.** Not always. While the invader is on the tile, the encounter is not cleared. It is cleared when every enemy model, the invader included, has been killed, or when the invader has vanished and every other enemy model has been killed (see §12.2, End of an Invasion)."
+- After: "**A.** Yes, unless it vanishes. The encounter is not cleared while the invader is on the tile, and the invader leaves the tile only when it is killed or when the death of a character makes it vanish (see §12.2, End of an Invasion)."
+- Rationale: Same rule, answered the way the question is asked and in the words of §12.2 as amended.
+- Source: final rulings, phantom-E40 (`06_final_rulings.md`); Follows phantom-E11.
+
+### CH-22-012 · §22.6
+- Type: ruling
+- Before: "**A.** The mimic encounter is failed, and with it the encounter that held the chest. The mimic returns to its chest, and the characters must rest at the bonfire. Each later time that encounter is cleared, the party again decides whether to open the chest (see §13.4)."
+- After: "**A.** The mimic encounter is failed, and with it the encounter that held the chest. The mimic returns to its chest, and the characters must rest at the bonfire. Each later time that encounter is cleared, the party again decides whether to open the chest (see §13.4).
+
+**Q.** Do the characters recover before a mimic is fought?
+
+**A.** They remove their stamina cubes and nothing else. Each character keeps their damage cubes and condition tokens, and a character who died in the cleared encounter stays dead. The recovery and the rewards of the cleared encounter follow the mimic's death (see §13.2; §13.3)."
+- Rationale: [MECHANICAL CHANGE] Players who know the published rule expect a full recovery before the mimic; the answer states this book's rule as amended.
+- Source: final rulings, phantom-E41 (`06_final_rulings.md`); Follows phantom-E19.
+
+### CH-22-013 · §22.1
+- Type: ruling
+- Before: "**Q.** Which weapon slot is the left weapon slot, and which is the right?
+
+**A.** The left weapon slot is the weapon slot on the left of the dashboard as its player reads it, and the right weapon slot is the one on the right. A character moves cards between them only by the Equip minor action during an encounter (see §3.2; §10.1).
+
+"
+- After: ""
+- Rationale: After the parry ruling (combat-E22) no rule depends on which weapon slot is which, so the question is withdrawn.
+- Source: final rulings, lead-E11 (`06_final_rulings.md`); combat memo, cross-cluster effects
+
+### CH-22-014 · §22.4
+- Type: clarification
+- Before: "**Q.** Who holds the aggro token when its holder dies?"
+- After: "**Q.** May the party return to the bonfire tile without resting?
+
+**A.** No. The party returns to the bonfire tile only to rest (see §11.1).
+
+**Q.** Who holds the aggro token when its holder dies?"
+- Rationale: States the consequence of core-E36 where players will look for it.
+- Source: final rulings, lead-E12 (`06_final_rulings.md`); core memo, cross-cluster effects
+
+### CH-22-015 · §22.5
+- Type: ruling
+- Before: "**A.** One boss with two models. The models share one data card, one health dial, and one behaviour deck, and the boss heats up once. Each behaviour card names the model that acts. A character who attacks either model attacks the boss, and the weak-arc die is judged against the arcs of the model attacked (see §17.2)."
+- After: "**A.** One boss with two boss models. Each model has its own data card and health dial, the two share one behaviour deck, and both act on each boss turn. When the first model is defeated the boss heats up: the survivor's heat-up cards become the behaviour deck, and the survivor regains health. The boss is defeated when both models have been defeated (see §17.2)."
+- Rationale: [MECHANICAL CHANGE] Keeps the F.A.Q. in step with boss-E10.
+- Source: final rulings, boss-E46 (`06_final_rulings.md`); follows boss-E10
+
+### CH-22-016 · §22.5
+- Type: clarification
+- Before: "**Q.** A campaign section lists the Gargoyle twice. Are the two fights separate encounters?"
+- After: "**Q.** When a boss heats up, is its discard pile shuffled as well?
+
+**A.** Yes. At the start of the boss's next turn the behaviour deck and the discard pile are gathered, one heat-up card taken at random is added, and all the cards are shuffled to form a new behaviour deck. The order learned before the heat-up is lost (see §15.5, Heat-Up).
+
+**Q.** A campaign section lists the Gargoyle twice. Are the two fights separate encounters?"
+- Rationale: The most asked question about boss fights now has its answer in the F.A.Q.; the rule itself is boss-E01.
+- Source: final rulings, boss-E48 (`06_final_rulings.md`); BoardGameGeek thread 1819893 (search summary); follows boss-E01
+
+### CH-22-017 · §22.1
+- Type: correction
+- Before: "**A.** Yes, while the characters are on the bonfire tile and at the cost of one *spark*. The new character begins with starting equipment, base stats, and no souls (see §18.4)."
+- After: "**A.** Yes, while the characters are on the bonfire tile, no encounter is in progress, and the spark dial shows one or more. The party spends one *spark* for each player who joins. The new character begins with starting equipment, base stats, and no souls (see §18.4)."
+- Rationale: The answer omitted two conditions of §18.4: no encounter in progress, and a spark dial that shows one or more.
+- Source: final rulings, VB-014 (`06_final_rulings.md`); independent verification, work/phase3/verify_b.md
+
+### CH-22-018 · §22.6
+- Type: correction
+- Before: "**A.** Yes. The invader vanishes at once and awards nothing, and the encounter continues against the remaining enemy models. The invader does not return (see §12.2, Combat with an Invader)."
+- After: "**A.** Yes, unless that death fails the encounter. The invader vanishes at once and awards nothing, and the encounter continues against the remaining enemy models. The invader does not return, unless a campaign states otherwise (see §12.2, Combat with an Invader; §12.2, End of an Invasion)."
+- Rationale: The death of a hollow or last character fails the encounter; the rule that the invader does not return, and its campaign exception, stand under End of an Invasion.
+- Source: final rulings, VB-015 (`06_final_rulings.md`); independent verification, work/phase3/verify_b.md
+
+### CH-22-019 · §22.5
+- Type: correction
+- Before: "**A.** Yes. The character is pushed to a valid adjacent node in the arc in which the character is placed. If a wall leaves no such node, the character is pushed to a valid adjacent node that touches the wall (see §15.6, Characters and Arcs)."
+- After: "**A.** Yes, except after a *leap*. The character is pushed to a valid adjacent node in the arc in which the character is placed. If a wall leaves no such node, the character is pushed to a valid adjacent node that touches the wall. The push that follows a leap is not limited by arcs (see §15.6, Characters and Arcs; §16.2, Leap)."
+- Rationale: The cited section excepts the push that follows a leap.
+- Source: final rulings, VB-016 (`06_final_rulings.md`); independent verification, work/phase3/verify_b.md

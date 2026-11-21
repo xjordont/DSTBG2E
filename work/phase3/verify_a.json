@@ -1,0 +1,314 @@
+[
+  {
+    "id": "VA-001",
+    "file": "10_manuscript_chapter_01_introduction.md",
+    "section": "§1",
+    "old": "The bonfire's *sparks* are few, and every rest spends one (see §7.4).",
+    "new": "The bonfire's *sparks* are few, and every rest spends one, except the rest that follows the defeat of a boss (see §7.4).",
+    "rationale": "§7.4 and §11.2 make the rest that follows a boss's defeat free of any spark."
+  },
+  {
+    "id": "VA-002",
+    "file": "10_manuscript_chapter_02_game_components.md",
+    "section": "§2.3",
+    "old": "A boss fought with several models has a health dial for each of them (see §17.1).",
+    "new": "A boss fought with several models that stand on separate nodes has a health dial for each of them (see §17.1); the two models of the Executioner's Chariot share one health dial (see §17.9).",
+    "rationale": "§2.9 and §17.9 give the Executioner's Chariot two models and one health dial, and §17.1 limits the rule to models on separate nodes."
+  },
+  {
+    "id": "VA-003",
+    "file": "10_manuscript_chapter_02_game_components.md",
+    "section": "§2.8",
+    "old": "- 2x Boss tiles (Core), the mini-boss tile and the main-boss tile",
+    "new": "- 2x Boss tiles (Core): the mini-boss tile, and a second boss tile that is joined to it to form the main-boss tile",
+    "rationale": "§15.3, §6.6 step 6 and the glossary entry Boss tile make the main-boss tile the two boss tiles joined as one, not the second tile."
+  },
+  {
+    "id": "VA-004",
+    "file": "10_manuscript_chapter_03_characters.md",
+    "section": "§3.1",
+    "old": "takes the *aggro* token at the start of each encounter (see §7.5, Encounter Turn Order).",
+    "new": "takes the *aggro* token at the start of each encounter (see §7.5, Encounter Start; §7.5, Encounter Turn Order).",
+    "rationale": "The placing of the aggro token at the start of an encounter is stated in §7.5, Encounter Start, step 10, not under Encounter Turn Order."
+  },
+  {
+    "id": "VA-005",
+    "file": "10_manuscript_chapter_03_characters.md",
+    "section": "§3.3",
+    "old": "A weapon whose highest stat requirement the character's stat exceeds by five or more is *scaled* (see §10.5).",
+    "new": "A weapon whose highest stat requirement the character's value in that stat exceeds by five or more is *scaled*; a weapon whose stat requirements are all zero is never scaled (see §10.5).",
+    "rationale": "§10.5 never scales a weapon whose four stat requirements are all zero, and compares only the relevant stat."
+  },
+  {
+    "id": "VA-006",
+    "file": "10_manuscript_chapter_05_tiles_and_nodes.md",
+    "section": "§5.1",
+    "old": "Tiles are joined so that a doorway of each tile faces a doorway of the tile beside it (see §6.5).",
+    "new": "Tiles are joined so that a doorway of each tile faces a doorway of the tile that follows it on the route; a tile that merely lies beside another is not joined to it (see §6.5).",
+    "rationale": "The route is a chain of any shape (§6.5 steps 3 and 4), so a tile may lie beside a tile that is not next on the route and shares no doorway with it."
+  },
+  {
+    "id": "VA-007",
+    "file": "10_manuscript_chapter_05_tiles_and_nodes.md",
+    "section": "§5.3",
+    "old": "Then the Gargoyle moves onto a node that holds the Knight, the Herald, and the Assassin; the boss does not count towards the limit, so no model is pushed.",
+    "new": "In a later boss encounter the Gargoyle moves onto a node that holds the Knight, the Herald, and the Assassin; the boss does not count towards the limit, so no model is pushed.",
+    "rationale": "A boss encounter holds no Hollow Soldier (§15.2), and the Herald has just been pushed off the node, so the two halves of the example cannot be one scene."
+  },
+  {
+    "id": "VA-008",
+    "file": "10_manuscript_chapter_05_tiles_and_nodes.md",
+    "section": "§5.5",
+    "old": "There are five kinds: *gravestones*, *barrels*, *chests*, and pillars, which are placed on *terrain nodes* as the *encounter card* directs, and traps, which are dealt to *basic nodes* (see §7.5, Encounter Start).",
+    "new": "There are five kinds: *gravestones*, *barrels*, and *chests*, which are placed on *terrain nodes* as the *encounter card* directs (see §7.5, Encounter Start); pillars, which are placed on the pillar nodes of one game board (see §5.5, Pillars); and traps, which are dealt to *basic nodes* (see §5.5, Traps).",
+    "rationale": "§5.5, Pillars and §17.3 place pillar tokens on the four pillar nodes at the start of a boss encounter, to which no encounter card is dealt (§15.2)."
+  },
+  {
+    "id": "VA-009",
+    "file": "10_manuscript_chapter_06_setup.md",
+    "section": "§6.1",
+    "old": "sets the scaling of enemy health and attack values (see §8.3)",
+    "new": "sets the scaling of enemy health, movement, and attack values (see §8.3)",
+    "rationale": "The table of §8.3 scales enemy movement as well as health and attack value."
+  },
+  {
+    "id": "VA-010",
+    "file": "10_manuscript_chapter_06_setup.md",
+    "section": "§6.2",
+    "old": "Every *treasure card* belongs to one of six types (see §2.5), and its type and its stat requirements (see §4.1) decide which deck, if any, it enters.",
+    "new": "The *treasure cards* from which the decks are built are of the six types set out below, and a card's type and its stat requirements (see §4.1) decide which deck, if any, it enters; the number of cards of each type is given with the components (see §2.5). An *ember card*, an *invader*'s treasure card, and a Titanite Scale card are of none of the six types and enter neither deck (see §2.9; §4.4).",
+    "rationale": "§2.5, §4.4, §7.7 and §11.4 count ember cards, invader treasure cards and Titanite Scale cards as treasure cards, and none of them is one of the six types; §2.5 names no sixth type."
+  },
+  {
+    "id": "VA-011",
+    "file": "10_manuscript_chapter_06_setup.md",
+    "section": "§6.2",
+    "old": "**Common treasure.** A treasure card that is not starting equipment, class-specific, transposed, legendary, or boss treasure.",
+    "new": "**Common treasure.** A treasure card that is not starting equipment, class-specific, transposed, legendary, or boss treasure, and is not an *ember card*, an *invader*'s treasure card, or a Titanite Scale card.",
+    "rationale": "As written the catch-all makes invader treasure cards and Titanite Scale cards common treasure and puts them in the decks, against §11.4, §12.2 and §14, which keep them outside every treasure deck."
+  },
+  {
+    "id": "VA-012",
+    "file": "10_manuscript_chapter_06_setup.md",
+    "section": "§6.2",
+    "old": "1. Set aside every boss treasure card, every legendary treasure card, every ember card, and every starting equipment card that is not equipped.",
+    "new": "1. Set aside every boss treasure card, every legendary treasure card, every ember card, every *invader*'s treasure card, every Titanite Scale card, and every starting equipment card that is not equipped.",
+    "rationale": "Step 3 sorts every card not set aside into the decks; §11.4, §12.2 and §14 require invader treasure cards and Titanite Scale cards to stay out of them."
+  },
+  {
+    "id": "VA-013",
+    "file": "10_manuscript_chapter_06_setup.md",
+    "section": "§6.3",
+    "old": "including rings and *titanite*.",
+    "new": "including rings and *Titanite*.",
+    "rationale": "The glossary and §4.1, §4.2 and §11.4 spell the term *Titanite*."
+  },
+  {
+    "id": "VA-014",
+    "file": "10_manuscript_chapter_06_setup.md",
+    "section": "§6.5",
+    "old": "Encounter levels increase from the tile adjacent to the bonfire tile towards the boss tile.",
+    "new": "Encounter levels increase along the route, from the first encounter tile after the bonfire tile to the last encounter tile before the boss tile.",
+    "rationale": "In a folded chain, such as the two rows of three of §6.5 step 3, two encounter tiles lie beside the bonfire tile, so 'the tile adjacent to the bonfire tile' names no single tile."
+  },
+  {
+    "id": "VA-016",
+    "file": "10_manuscript_chapter_06_setup.md",
+    "section": "§6.6",
+    "old": "19. Exploration resumes from the encounter tile adjacent to the bonfire tile (see §11.5).",
+    "new": "19. Exploration resumes from the first encounter tile of the route (see §11.5).",
+    "rationale": "As VA-014: with a route of any shape the first encounter tile is fixed by the chain, not by lying beside the bonfire tile."
+  },
+  {
+    "id": "VA-017",
+    "file": "10_manuscript_chapter_07_gameplay.md",
+    "section": "§7.4",
+    "old": "In the standard game sparks cannot be gained in any other way; campaign play varies these rules (see §18.3).",
+    "new": "In the standard game sparks are gained in no other way, except when a player leaves the game (see §18.4); campaign play varies these rules (see §18.3).",
+    "rationale": "§18.4 gives the party one spark when a player leaves, and applies to a standard game in progress as well as to a campaign."
+  },
+  {
+    "id": "VA-018",
+    "file": "10_manuscript_chapter_07_gameplay.md",
+    "section": "§7.5",
+    "old": "The characters begin at the encounter tile adjacent to the *bonfire* tile and advance one tile at a time towards the boss tile.",
+    "new": "The characters begin at the first encounter tile of the route, the tile that follows the *bonfire* tile in the chain (see §6.5), and advance one tile at a time along the route towards the boss tile.",
+    "rationale": "As VA-014: with a route of any shape two encounter tiles may lie beside the bonfire tile."
+  },
+  {
+    "id": "VA-019",
+    "file": "10_manuscript_chapter_07_gameplay.md",
+    "section": "§7.5, Encounter Start",
+    "old": "6. If the encounter card shows the trap icon, deal *trap tokens* (see §5.5, Traps).",
+    "new": "6. If the encounter card shows the trap icon and the encounter is set up for the first time, deal *trap tokens* (see §5.5, Traps).",
+    "rationale": "§5.5, Traps deals trap tokens only the first time the encounter is set up and never again after a reset; step 9 already carries the same limit for chests."
+  },
+  {
+    "id": "VA-020",
+    "file": "10_manuscript_chapter_07_gameplay.md",
+    "section": "§7.5, Encounter Start",
+    "old": "on the character with the highest *threat* {{icon:ast-0026-threat-level}}.",
+    "new": "on the character with the highest *threat* {{icon:ast-0059-taunt}}.",
+    "rationale": "§3.1 prints a character's threat with the Taunt icon of the dashboard; ast-0026 is the threat icon of enemy, boss and phantom data cards (the asset manifest entry for §7.5 moves with it)."
+  },
+  {
+    "id": "VA-021",
+    "file": "10_manuscript_chapter_07_gameplay.md",
+    "section": "§7.5, Encounter Recovery",
+    "old": "Recovery does not ready the *estus flask*, *luck*, or *heroic action* tokens, and does not remove the hollow cubes of a character who was already hollow; only resting at the bonfire does so (see §11.2).",
+    "new": "Recovery does not ready the *estus flask*, *luck*, or *heroic action* tokens, which only resting at the bonfire readies (see §11.2). It does not remove the hollow cubes of a character who was already hollow, which are removed only by resting at the bonfire or by becoming *embered* (see §7.2).",
+    "rationale": "§7.2 and §7.3 step 3 remove hollow cubes when a character becomes embered as well as at a rest."
+  },
+  {
+    "id": "VA-022",
+    "file": "10_manuscript_chapter_08_combat_basics.md",
+    "section": "§8.1",
+    "old": "bears the push icon and targets the Knight and the Herald, who share a node within its range.",
+    "new": "bears the node icon and the push icon and targets the Knight and the Herald, who share a node within its range.",
+    "rationale": "By §8.1 and §9.3 an enemy attack has one target unless it bears the node icon; the push icon adds none."
+  },
+  {
+    "id": "VA-023",
+    "file": "10_manuscript_chapter_08_combat_basics.md",
+    "section": "§8.4",
+    "old": "The enemy then moves its second node, which holds no character, and no model is pushed.",
+    "new": "The enemy's movement targets the Herald, and its path turns at that node, so the second node it enters is not the node to which the Knight was pushed. That node holds no character, and no model is attacked or pushed.",
+    "rationale": "By §9.2, Push-Move the enemy moves on towards its target, and a character pushed directly away along the enemy's path is entered and attacked again, as the example of §9.2 shows; the stated outcome needs a target and a path that the example did not give."
+  },
+  {
+    "id": "VA-027",
+    "file": "10_manuscript_chapter_11_returning_to_the_bonfire.md",
+    "section": "§11.5",
+    "old": "After the reset the characters leave the bonfire tile and enter the encounter tile adjacent to it, where that tile's encounter begins (see §7.5, Encounter Start).",
+    "new": "After the reset the characters leave the bonfire tile and enter the first encounter tile of the route, where that tile's encounter begins (see §7.5, Encounter Start).",
+    "rationale": "As VA-014: with a route of any shape two encounter tiles may lie beside the bonfire tile."
+  },
+  {
+    "id": "VA-028",
+    "file": "12_glossary.md",
+    "section": "§21, Attack option",
+    "old": "**Attack option.** One line of a weapon or spell card, showing a stamina cost, dice and modifiers. Using an attack option is the *Attack* major action.",
+    "new": "**Attack option.** One line of a weapon or spell card, showing a stamina cost, the dice to roll, any fixed modifier, and any attack icons (see §4.1, Card Anatomy). A character uses one attack option for each attack of the *Attack* major action and for a *riposte* (see §10.3; §9.6).",
+    "rationale": "By §10.3 the Attack major action may use an attack option of each weapon slot, and by §9.6 a riposte uses an attack option and is not the Attack major action."
+  },
+  {
+    "id": "VA-029",
+    "file": "12_glossary.md",
+    "section": "§21, Common treasure",
+    "old": "**Common treasure.** A treasure card that is not starting, class-specific, transposed, legendary or boss treasure.",
+    "new": "**Common treasure.** A treasure card that is not starting equipment, class-specific, transposed, legendary, or boss treasure, and is not an *ember card*, an *invader*'s treasure card, or a Titanite Scale card.",
+    "rationale": "Companion of VA-011: the definition must not sweep cards that §11.4, §12.2 and §14 keep outside the treasure decks into common treasure."
+  },
+  {
+    "id": "VA-030",
+    "file": "12_glossary.md",
+    "section": "§21, Encounter level",
+    "old": "and increase from the tile adjacent to the bonfire tile towards the boss tile (see §6.5).",
+    "new": "and increase along the route from the first encounter tile to the last (see §6.5).",
+    "rationale": "As VA-014: with a route of any shape two encounter tiles may lie beside the bonfire tile."
+  },
+  {
+    "id": "VA-031",
+    "file": "12_glossary.md",
+    "section": "§21, Enemy scaling",
+    "old": "The adjustment of every enemy to the number of characters fixed at setup:",
+    "new": "The adjustment of every enemy to the number of characters taking part in the game, which changes only when a player joins or leaves (see §18.4):",
+    "rationale": "§8.3 as now written lets the number change when a player joins or leaves a game in progress (§18.4); it is not fixed at setup."
+  },
+  {
+    "id": "VA-032",
+    "file": "12_glossary.md",
+    "section": "§21, Main-boss",
+    "old": "Its defeat wins the standard game unless a mega-boss is in play (see §6.6; §15.3).",
+    "new": "Its defeat wins the standard game unless a mega-boss is in play (see §6.6; §7.1; §15.3).",
+    "rationale": "The victory is stated in §7.1 (and §6.7), not in §6.6 or §15.3."
+  },
+  {
+    "id": "VA-033",
+    "file": "10_manuscript_chapter_05_tiles_and_nodes.md",
+    "section": "§5.1",
+    "old": "the *boss* is placed there at the start of its encounter (see §15.3).",
+    "new": "the *boss* is placed there at the start of its encounter, unless its special rules name another node (see §15.3; §17).",
+    "rationale": "§15.3 now excepts a boss whose special rules name another node (the Old Iron King is placed on an Iron King node, §17.10)."
+  },
+  {
+    "id": "VA-034",
+    "file": "10_manuscript_chapter_06_setup.md",
+    "section": "§6.5, Optional Rules",
+    "old": "- Player versus player (PvP) encounters follow the defeat of each boss (see §20.1).",
+    "new": "- Player versus player (PvP) encounters follow the defeat of each boss or, in campaign play, of each boss whose defeat completes a *section* (see §20.1).",
+    "rationale": "§20.1 and §18.1 now limit the PvP encounter in campaign play to a boss whose defeat completes a section, and §18.1 sends campaign players to this list."
+  },
+  {
+    "id": "VA-035",
+    "file": "10_manuscript_chapter_07_gameplay.md",
+    "section": "§7.1",
+    "old": "If the party chose player versus player (PvP) during setup, a PvP *encounter* is fought after each boss is defeated (see §20).",
+    "new": "If the party chose player versus player (PvP) during setup, a PvP *encounter* is fought after each boss is defeated or, in campaign play, after each boss whose defeat completes a *section* (see §20.1; §18.1, Player versus Player Encounters).",
+    "rationale": "As VA-034: §20.1 and §18.1 limit the PvP encounter in campaign play."
+  },
+  {
+    "id": "VA-036",
+    "file": "12_glossary.md",
+    "section": "§21, Boss spawn node",
+    "old": "The boss model is placed on it at the start of every boss encounter (see §15.3).",
+    "new": "The boss model is placed on it at the start of every boss encounter, unless the boss's special rules name another node: the Asylum Demon, a mini-boss, is placed on the mega-boss spawn node of its expansion's game board (see §15.3; §17.3).",
+    "rationale": "§15.3 now carries the exception for special rules, and §17.3 places the Asylum Demon mini-boss on a mega-boss spawn node."
+  },
+  {
+    "id": "VA-037",
+    "file": "12_glossary.md",
+    "section": "§21, Boss tile",
+    "old": "A mini-boss encounter is fought on the mini-boss tile alone; a main-boss encounter is fought on both boss tiles joined as one tile, the main-boss tile.",
+    "new": "A mini-boss encounter is fought on the mini-boss tile alone, unless the mini-boss's special rules name another tile, as for the Asylum Demon (see §17.3); a main-boss encounter is fought on both boss tiles joined as one tile, the main-boss tile.",
+    "rationale": "§15.3 and §17.3 fight the Asylum Demon mini-boss on its expansion's game board, not on the mini-boss tile."
+  },
+  {
+    "id": "VA-038",
+    "file": "12_glossary.md",
+    "section": "§21, Invasion",
+    "old": "no more than one is provoked before the mini-boss is defeated and no more than one after it (see §12.2).",
+    "new": "no more than one is provoked before the mini-boss is defeated and no more than one after it; in campaign play, no more than one is provoked in each *section* (see §12.2; §18.1).",
+    "rationale": "§12.2 and §18.1 set the limit in campaign play at one invasion in each section; the entry gave only the standard game's limit."
+  },
+  {
+    "id": "VA-039",
+    "file": "12_glossary.md",
+    "section": "§21, Mimic",
+    "old": "the Hungry Mimic (before the mini-boss is defeated) or the Voracious Mimic (afterwards) is fought in a *mimic encounter*.",
+    "new": "the Hungry Mimic (before the mini-boss is defeated; in campaign play, while the current tier is tier one) or the Voracious Mimic (afterwards) is fought in a *mimic encounter*.",
+    "rationale": "§13.2 chooses the mimic in campaign play by the current tier, not by the mini-boss's defeat."
+  },
+  {
+    "id": "VA-040",
+    "file": "12_glossary.md",
+    "section": "§21, Spark (glossary N to Z, outside verifier A's half; companion of VA-001)",
+    "old": "and spends one each time the characters rest at the *bonfire* (see §7.4).",
+    "new": "and spends one each time the characters rest at the *bonfire*, except at the rest that follows the defeat of a boss (see §7.4).",
+    "rationale": "§7.4 and §11.2 make the rest that follows a boss's defeat free of any spark."
+  },
+  {
+    "id": "VA-041",
+    "file": "12_glossary.md",
+    "section": "§21, Threat (glossary N to Z, outside verifier A's half; companion of VA-004)",
+    "old": "the players settle ties (see §3.1; §7.5, Encounter Turn Order).",
+    "new": "the players settle ties (see §3.1; §7.5, Encounter Start; §7.5, Encounter Turn Order).",
+    "rationale": "The placing of the aggro token and the settling of ties are stated in §7.5, Encounter Start, step 10."
+  },
+  {
+    "id": "VA-042",
+    "file": "12_glossary.md",
+    "section": "§21, Relevant stat (glossary N to Z, outside verifier A's half; companion of VA-005)",
+    "old": "A weapon is *scaled* by comparing the character's relevant stat with that requirement (see §10.5).",
+    "new": "A weapon is *scaled* by comparing the character's relevant stat with that requirement; a weapon whose stat requirements are all zero has no relevant stat (see §10.5).",
+    "rationale": "§10.5 gives a weapon whose four stat requirements are all zero no relevant stat, where the entry would let the character choose among four tied stats."
+  },
+  {
+    "id": "VA-043",
+    "file": "12_glossary.md",
+    "section": "§21, PvP encounter (glossary N to Z, outside verifier A's half; companion of VA-034)",
+    "old": "after each boss's defeat and before the rest that follows it.",
+    "new": "after each boss's defeat (in campaign play, only a defeat that completes a *section*) and before the rest that follows it.",
+    "rationale": "§20.1 and §18.1 limit the PvP encounter in campaign play to a boss whose defeat completes a section."
+  }
+]
