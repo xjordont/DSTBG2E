@@ -218,6 +218,8 @@ class Fight:
 
     def failed(self):
         if self.r.death == 'party': return self.deaths > 0
+        _fd = getattr(self.r, 'fail_dead', None)                 # a test lever: the encounter is failed once this many characters are dead
+        if _fd: return sum(1 for c in self.party if not c.alive) >= min(_fd[min(4, len(self.party))], len(self.party))
         if self.r.death == 'lost': return not self.live()        # a hollow character who dies is lost until the next rest
         return not self.live() or any((not c.alive) and c.was_hollow for c in self.party)
 
@@ -1151,10 +1153,22 @@ class Fight:
                 self.foes_done()
                 if self.over(): break
                 turn = self.order()
+                # a test lever (enemy_every=k): in an ordinary encounter the enemies take their turns again after every
+                # k-th character turn of the round, so a large party does not act unanswered
+                every = 0 if self.is_boss else getattr(r, 'enemy_every', 0)
                 for i, c in enumerate(turn):
                     if self.over(): break
-                    self.last_before_foes = i == len(turn) - 1
+                    again = bool(every) and (i + 1) % every == 0 and i < len(turn) - 1
+                    self.last_before_foes = i == len(turn) - 1 or again
                     if c.alive: self.char_turn(c)
+                    if again and not self.over():
+                        self.enemy_phase()
+                        for f in sorted(self.foes_alive(), key=lambda f: (f.boss, up * f.threat, min(DIST[f.node][x.node] for x in self.live()))):
+                            self.to_act.discard(f)
+                            if self.over(): break
+                            if f.hp <= 0: continue
+                            (self.boss_turn if f.boss else self.enemy_turn)(f)
+                        self.foes_done()
                 self.last_before_foes = True
                 first = None; self.stalled()
                 if r.aggro == 'most' and self.dealt:

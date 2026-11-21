@@ -2989,3 +2989,55 @@ It fails twice over. Most enemies have one health, and four times one is four, w
 - Nothing in between does better. Four characters at +5 health and +2 damage win 61% on every set and 48% on the core box; at +4 and +2, 80% and 60%.
 
 **Not applied.** The table of §8.3 is the author's ruling of section 29 and stands until the author chooses.
+
+## 32. Other levers for party size under "all enemies, then all characters" (2026-11-21)
+
+The author asked whether any lever not yet considered would balance party size better in a ruleset where every enemy acts and then every character acts, wanting the simplest, most intuitive rule with the least book-keeping that keeps the tactics balanced.
+
+### 32.1 What a larger party gains in this round
+
+Two things, and they compound.
+
+1. **Burst.** Every character acts before any enemy acts again. Most enemies have one health, so a party of three or four clears the small ones in its first run of turns and they never attack at all.
+2. **Redundancy.** An encounter is failed only when every character is dead, and each character brings an endurance bar, an estus flask and a luck token.
+
+A lever works only if it answers one of these. Seven families were tested on both card pools (300 games a cell, ± 5 to 6; the data is in `work/phase12/lever_tests_2026-11-21.tsv`).
+
+### 32.2 What was tested
+
+Games won by two / three / four characters, every 2017 set, then the core box.
+
+| Lever | With no stat scaling | With one flat line for any party (+2 health, +1 damage) | Verdict |
+|---|---|---|---|
+| **Stat table B of 31.2** (health +2 a character beyond the first, damage +1) | | 51 / 67 / 69; 59 / 61 / 61 | The reference |
+| Enemies act again after every second character turn | 91 / 97 / 99; 98 / 99 / 100 | 51 / 66 / 82; 59 / 68 / 77 | Nothing alone; helps with stats |
+| Enemies act before every character turn (the official tempo) | 73 / 91 / 90; 90 / 96 / 97 | (with +1 health a character: 62 / 59 / 41; 70 / 61 / 37) | Too easy alone; uneven with stats |
+| The official tempo with health x the number of characters | 49 / 35 / 14; 59 / 38 / 19 | | Too hard: the house rule fits only the official game |
+| Endurance bar two spaces shorter for each character beyond the first | 75 / 74 / 28; 93 / 87 / 41 | | A cliff at four |
+| Encounter cards one level higher for three or four | – / 91 / 96; – / 93 / 96 | – / 53 / 71; – / 28 / 45 | Weak alone; swings between pools |
+| Every enemy attack made twice against three or four | – / 96 / 98; – / 96 / 100 | – / 45 / 81; – / 47 / 70 | Uneven |
+| Encounter failed once half the party is dead | 56 / 95 / 90; 78 / 99 / 94 | 17 / 82 / 69; 19 / 73 / 81 | Breaks two characters, barely touches four |
+| Encounter failed at the first death (the official rule) | 56 / 71 / 43; 78 / 77 / 63 | | Uneven, and undoes the hollow rule |
+
+**The finding.** Without more health, nothing else matters: unscaled enemies die in the party's first run of turns, so letting them act more often, hit twice or end the encounter sooner changes little (91% to 100% won). Health is the lever that keeps an enemy alive long enough to be an enemy; a point of damage makes the survivors count. Every structural lever either does nothing alone or, once health is added, lands unevenly across party sizes.
+
+### 32.3 The one alternative with a real advantage
+
+Letting the enemies act again after the second character's turn, with a nearly flat table (confirmed at 500 games a cell, ± 4):
+
+| | Won, 2 / 3 / 4, every set | Core box | Minutes, every set | Core box | Dodge share for four |
+|---|---|---|---|---|---|
+| **B.** Health +2 / +4 / +6, damage +1 | 51 / 67 / 69 | 59 / 61 / 61 | 328 / 366 / 511 | 276 / 348 / 423 | 46% / 36% |
+| **C.** Enemies act again after every second character turn; health +2 / +2 / +3, damage +1 | 51 / 66 / 67 | 59 / 68 / 59 | 328 / 314 / 399 | 276 / 283 / 308 | 48% / 36% |
+| A. As the book stands: health +2 / +3 / +4, damage +1 / +2 / +3 | 51 / 69 / 63 | 59 / 56 / 49 | 328 / 367 / 356 | 276 / 238 / 274 | 54% / 46% |
+
+- C matches B's balance and its hold on the dodge share, and a game for four is nearly two hours shorter than under B, because enemies need less health to matter when they are not left waiting for four turns.
+- C costs a sentence of structure ("after the second character's turn of a round, every enemy still alive takes a turn again") and a second enemy phase to run in every round for three or four. It is no longer strictly "all enemies, then all characters".
+
+### 32.4 Recommendation
+
+Within the round the author wants, **B is the answer**: one sentence, no table to consult beyond "+2 health for each character beyond the first, +1 damage for any party", nothing to track, and armour worth the same at every party size. C is the choice only if the length of a game for four matters more than keeping the round whole. Nothing else tested is better than either.
+
+Not tested, because the simulator does not model them: sharing estus flasks or luck tokens across the party, and placing more enemy models. The second is the cleanest lever in theory (enemies in proportion to characters keeps every ratio as it is for one character) and is ruled out by the model counts of the game.
+
+**Not applied.** The simulator keeps the four test levers as switches (`enemy_every`, `level_up`, `fail_dead`, `no_heroic`); the ruleset uses none of them.

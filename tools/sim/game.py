@@ -125,6 +125,8 @@ def play(n, rules, seed, table=None, classes=None):
     for stage, boss in enumerate((rng.choice([b for b in MINIS if in_play(r, 'bosses', BOSSES[b])]),
                                   rng.choice([b for b in MAINS if in_play(r, 'bosses', BOSSES[b])]))):
         levels = BOSSES[boss]['levels']; cards = []; eco.boss_named(boss, stage)
+        _lu = getattr(r, 'level_up', None)                # a test lever: a larger party walks a road of higher encounter levels
+        if _lu and _lu[n]: levels = [min(3, l + _lu[n]) for l in levels]
         # the boss of this half of the game is on the table from its setup: what it blocks and resists is known, and the
         # characters judge their weapons against it from now on
         _ms = BOSSES[boss].get('models') or [BOSSES[boss]]
