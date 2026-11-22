@@ -2664,7 +2664,7 @@ The author ruled on three things after section 26, and supplied a table of dice 
 
 Bosses, mimics, invaders, summons and crystal lizards are still not scaled. Measured with the rules of this section (300 games a cell, every 2017 set, best play):
 
-| Characters | Games won | Rests | Time (min) | Lost in an encounter / to the mini-boss / to the main-boss | Boss attempts failed, mini / main |
+| Characters | Games won | Rests | Table time (turns) | Lost in an encounter / to the mini-boss / to the main-boss | Boss attempts failed, mini / main |
 |---|---|---|---|---|---|
 | 1 | 58% (± 6) | 4.3 | 227 | 23% / 5% / 14% | 19% / 42% |
 | 2 | 52% (± 6) | 3.3 | 330 | 38% / 5% / 5% | 16% / 22% |
@@ -2672,7 +2672,7 @@ Bosses, mimics, invaders, summons and crystal lizards are still not scaled. Meas
 | 4 | 55% (± 6) | 1.6 | 443 | 42% / 2% / 1% | 3% / 2% |
 
 - Every party size is now inside the author's band of 50% to 70%, and within six points of each other. Before this line two to four characters won 78% to 87%.
-- The cost, as 25.2 said: a party of two or more now loses nearly all its lost games in ordinary encounters, and an unscaled boss is a formality for four characters (2% of main-boss attempts fail). A game with four characters runs about seven and a half hours of simulated table time.
+- The cost, as 25.2 said: a party of two or more now loses nearly all its lost games in ordinary encounters, and an unscaled boss is a formality for four characters (2% of main-boss attempts fail). A game with four characters takes 443 turns, nearly twice a lone game's 227.
 - These figures are the simulated players at their best. The author's "about 80% at optimal play" is not what the simulator shows for any party size; it shows 52% to 58%.
 
 ### 27.3 The events deck: the maker's own cards, five text boxes changed (§7.5, §5.5, §6.5, §2.6)
@@ -2793,7 +2793,7 @@ Simulated players at their best, 500 games a cell (± 4). "Core" is the core box
 
 | | 1 | 2 | 3 | 4 |
 |---|---|---|---|---|
-| **Table time, minutes** | | | | |
+| **Table time (character turns plus enemy activations)** | | | | |
 | Official 2017, core | 616 | 398 | 321 | 287 |
 | Original manuscript, core | 257 | 273 | 274 | 204 |
 | Current, core | 220 | 276 | 260 | 354 |
@@ -2815,9 +2815,9 @@ Simulated players at their best, 500 games a cell (± 4). "Core" is the core box
 
 What each ruleset is:
 
-- **Official 2017.** About even odds for one to three characters and poor for four, bought with grind: two to three times as many encounters as either manuscript, and ten hours for a lone character. Its bosses are walls (Ornstein and Smough turn back 68% to 86% of attempts).
+- **Official 2017.** About even odds for one to three characters and poor for four, bought with grind: two to three times as many encounters as either manuscript, and 616 turns for a lone character, nearly three times either manuscript's. Its bosses are walls (Ornstein and Smough turn back 68% to 86% of attempts).
 - **The original manuscript.** It removed the grind and with it the difficulty: one to three characters win 83% to 93%. Four characters fall off a cliff to 46%: 43% of their games are lost in an ordinary encounter, against 3% to 8% for smaller parties.
-- **The current manuscript.** A third to a half of the official game's encounters, about four to seven hours, and on every 2017 set a win rate within five points at every party size. It is the only one of the three that is level across party sizes, and only on that pool.
+- **The current manuscript.** A third to a half of the official game's encounters, 228 to 440 turns, and on every 2017 set a win rate within five points at every party size. It is the only one of the three that is level across party sizes, and only on that pool.
 
 ### 28.3 The outliers in the current manuscript
 
@@ -2826,11 +2826,11 @@ What each ruleset is:
 3. **Where games are lost.** A lone character loses to bosses (41% of main-boss attempts fail); four characters lose to ordinary encounters and almost never to a boss (2%). The win rates are level; what the game is about is not.
 4. **Classes** (every set, all party sizes together): the Thief wins 67% to 78% of its games and the Warrior 51% to 79%; the Deprived 27% to 47% and the Herald 36% to 49%. The Deprived's figure is too low by an unknown amount, because its heroic action is still not played in the simulator.
 5. **Bosses** (every set): the Old Dragonslayer turns back 6% of lone characters and almost no party; Ornstein and Smough 58% and the Dancer 51% of lone characters. The Titanite Demon is the one boss that gets harder with company (16% alone, 26% for three) and is the longest fight in the game (39 rounds for three).
-6. **Length for four:** seven hours and twenty minutes on every set, twice a lone game.
+6. **Length for four:** 440 turns on every set, twice a lone game's 228.
 
 ### 28.4 The simplest change
 
-Tested first, and rejected: giving bosses health for party size again while easing ordinary enemies (400 games a cell, every set). It moves the difficulty to the boss as intended and costs two to four hours.
+Tested first, and rejected: giving bosses health for party size again while easing ordinary enemies (400 games a cell, every set). It moves the difficulty to the boss as intended and adds 100 to 270 turns to a game for four.
 
 | Tried | Won, 2 / 3 / 4 | Time for four |
 |---|---|---|
@@ -2849,7 +2849,7 @@ Tested first, and rejected: giving bosses health for party size again while easi
 | **Proposed, every set** | 56% | 51% | **69%** | **62%** |
 
 - Every party of two or more is then inside the author's band of 50% to 70% on both pools, where today the core box sits at 41% and 42% for three and four. The price is three characters on every set at the top of the band.
-- A variant gives the same win rates within a point and a shorter game for four: enemy health +2 / +3 / +4 with enemy damage +1 / +2 / +3, which can be said as one sentence ("with two or more characters, every enemy has extra health equal to the number of characters and extra damage one less than that"). Four characters then play 358 minutes on every set, not 418, and 273 on the core box, not 330. It hits harder: +3 damage for four.
+- A variant gives the same win rates within a point and a shorter game for four: enemy health +2 / +3 / +4 with enemy damage +1 / +2 / +3, which can be said as one sentence ("with two or more characters, every enemy has extra health equal to the number of characters and extra damage one less than that"). Four characters then play 358 turns on every set, not 418, and 273 on the core box, not 330. It hits harder: +3 damage for four.
 - Neither touches outliers 2 to 5. A lone character's odds are set by the class chosen, which reads as a choice of difficulty and is best said so in a sentence of §6.1. The boss that four characters cannot lose to follows from the ruling that bosses are not scaled; the cheapest remedy measured for it is boss damage, not boss health (23.1), and it is the author's to reopen. The class and boss figures come from the printed cards and dashboards.
 
 **Not applied.** The table of §8.3 is the author's ruling of section 27 and stands until the author says otherwise.
@@ -2875,13 +2875,13 @@ Measured as written, 500 games a cell (± 4), best play:
 |---|---|---|---|---|
 | **Games won, every 2017 set** | 56% | 51% | 69% | 63% |
 | **Games won, core box alone** | 82% | 59% | 56% | 49% |
-| Table time in minutes, every set | 228 | 328 | 367 | 356 |
-| Table time in minutes, core | 220 | 276 | 238 | 274 |
+| Table time in turns, every set | 228 | 328 | 367 | 356 |
+| Table time in turns, core | 220 | 276 | 238 | 274 |
 | Games lost in an ordinary encounter, every set | 25% | 38% | 24% | 33% |
 | Main-boss attempts failed, every set | 41% | 23% | 12% | 3% |
 
 - Every party of two or more is inside the band of 50% to 70% on both pools but for four characters on the core box, at 49% (41% and 42% for three and four before).
-- A game for four is an hour and a half shorter than under 27.2 on every set (356 minutes against 440) and no longer the longest.
+- A game for four is a fifth shorter than under 27.2 on every set (356 turns against 440) and no longer the longest.
 - Unchanged by this table: a lone Knight or Warrior wins about 80%, and four characters fail 3% of their attempts at a main boss.
 
 The print-and-play encounter decks, scored again under this table (lowest / median / highest): core set 0.2 / 2.7 / 4.7, 0.3 / 4.0 / 8.4, 1.9 / 3.0 / 4.8 for Levels 1 to 3; Tomb of Giants 0.4 / 2.6 / 4.0, 1.9 / 3.3 / 7.2, 2.2 / 3.1 / 4.3; Painted World 0.3 / 1.7 / 2.6, 0.8 / 2.7 / 3.5, 1.3 / 2.7 / 4.7. Both decks stay inside the core set's range, with the one soft Painted World Level 3 card as before.
@@ -2957,18 +2957,18 @@ The author's worry is borne out. The first point of damage moves the dodge share
 
 **Health alone (no damage scaling)** keeps the armour game exactly as it is for one character and costs the evening:
 
-| Health only | Won, every set / core | Minutes, every set / core |
+| Health only | Won, every set / core | Turns, every set / core |
 |---|---|---|
 | Two characters, +3 | 61% / 77% | 405 / 357 |
 | Three characters, +6 | 70% / 73% | 558 / 440 |
 | Four characters, +8 | 72% / 66% | 681 / 580 |
 | Four characters, +10 | 53% / 56% | 759 / 642 |
 
-A game for four in the band needs +8 to +10 health and runs eleven to thirteen hours.
+A game for four in the band needs +8 to +10 health and runs 640 to 760 turns, about twice its length under table A.
 
 **Health multiplied by the number of characters: not viable here.**
 
-| Health x characters | Won, 2 / 3 / 4, every set | Core box | Minutes for four |
+| Health x characters | Won, 2 / 3 / 4, every set | Core box | Turns for four |
 |---|---|---|---|
 | Damage as printed | 80% / 87% / 90% | 88% / 89% / 89% | 573 |
 | Damage +1 | 65% / 76% / 81% | 75% / 80% / 74% | 523 |
@@ -2977,14 +2977,14 @@ It fails twice over. Most enemies have one health, and four times one is four, w
 
 **The tables that put every party in the band on both pools** (confirmed at 500 games a cell, ± 4):
 
-| | Won, 2 / 3 / 4, every set | Core box | Minutes, every set | Core box | Dodge share, every set | Core box |
+| | Won, 2 / 3 / 4, every set | Core box | Turns, every set | Core box | Dodge share, every set | Core box |
 |---|---|---|---|---|---|---|
 | **A. As ruled in section 29:** health +2 / +3 / +4, damage +1 / +2 / +3 | 51% / 69% / 63% | 59% / 56% / 49% | 328 / 367 / 356 | 276 / 238 / 274 | 45% / 50% / 54% | 30% / 36% / 46% |
 | **B. Health +2 a character beyond the first, damage +1 for any party:** +2 / +4 / +6, +1 / +1 / +1 | 51% / 67% / 69% | 59% / 61% / 61% | 328 / 366 / 511 | 276 / 348 / 423 | 45% / 45% / 46% | 30% / 35% / 36% |
 
 - **B is the better balance.** Every party of two or more is in the band on both pools, the core box is level to within two points, and the dodge share stays at 45% whatever the size of the party, so armour is worth to four characters what it is worth to two.
 - **B is one sentence:** with two or more characters, every enemy has +1 attack damage, and +2 health for each character beyond the first.
-- **B's price is the length of a game for four:** about two and a half hours more than A on either pool. For two characters the tables are the same; for three they take the same time on every set, and B is longer on the core box.
+- **B's price is the length of a game for four:** about 150 turns more than A on either pool (511 against 356, and 423 against 274). For two characters the tables are the same; for three they take the same time on every set, and B is longer on the core box.
 - A stays the shorter game, with the core box's four characters at 49% and the dodge share at 54%.
 - Nothing in between does better. Four characters at +5 health and +2 damage win 61% on every set and 48% on the core box; at +4 and +2, 80% and 60%.
 
@@ -3025,13 +3025,13 @@ Games won by two / three / four characters, every 2017 set, then the core box.
 
 Letting the enemies act again after the second character's turn, with a nearly flat table (confirmed at 500 games a cell, ± 4):
 
-| | Won, 2 / 3 / 4, every set | Core box | Minutes, every set | Core box | Dodge share for four |
+| | Won, 2 / 3 / 4, every set | Core box | Turns, every set | Core box | Dodge share for four |
 |---|---|---|---|---|---|
 | **B.** Health +2 / +4 / +6, damage +1 | 51 / 67 / 69 | 59 / 61 / 61 | 328 / 366 / 511 | 276 / 348 / 423 | 46% / 36% |
 | **C.** Enemies act again after every second character turn; health +2 / +2 / +3, damage +1 | 51 / 66 / 67 | 59 / 68 / 59 | 328 / 314 / 399 | 276 / 283 / 308 | 48% / 36% |
 | A. As the book stands: health +2 / +3 / +4, damage +1 / +2 / +3 | 51 / 69 / 63 | 59 / 56 / 49 | 328 / 367 / 356 | 276 / 238 / 274 | 54% / 46% |
 
-- C matches B's balance and its hold on the dodge share, and a game for four is nearly two hours shorter than under B, because enemies need less health to matter when they are not left waiting for four turns.
+- C matches B's balance and its hold on the dodge share, and a game for four is about a fifth shorter than under B (399 turns against 511), because enemies need less health to matter when they are not left waiting for four turns.
 - C costs a sentence of structure ("after the second character's turn of a round, every enemy still alive takes a turn again") and a second enemy phase to run in every round for three or four. It is no longer strictly "all enemies, then all characters".
 
 ### 32.4 Recommendation
@@ -3041,3 +3041,67 @@ Within the round the author wants, **B is the answer**: one sentence, no table t
 Not tested, because the simulator does not model them: sharing estus flasks or luck tokens across the party, and placing more enemy models. The second is the cleanest lever in theory (enemies in proportion to characters keeps every ratio as it is for one character) and is ruled out by the model counts of the game.
 
 **Not applied.** The simulator keeps the four test levers as switches (`enemy_every`, `level_up`, `fail_dead`, `no_heroic`); the ruleset uses none of them.
+
+## 33. Scaling ladders: one new thing for each party size (2026-11-22)
+
+The author asked to keep workshopping the scaling, "considering every possibility", and whether the original manuscript's way of giving each party size a different bonus, each built on the last, ought to come back.
+
+**A correction first.** Sections 27 to 32 gave the length of a game in "minutes" and turned it into hours. The simulator's figure is a count: character turns plus enemy activations in a game. It is a fair measure of one ruleset against another and it is not a clock. Those sections now say "turns", and every claim of hours has been removed. Under any rule that makes each enemy attack twice, the count also leaves out the second defence roll.
+
+### 33.1 The first rung has to be large
+
+With two characters only three things land in the band on both card pools (every 2017 set, then the core box):
+
+| Two characters | Won | Dodge share |
+|---|---|---|
+| +2 health, +1 damage | 51% / 59% | 45% / 30% |
+| +1 health, +2 damage | 55% / 67% | 49% / 33% |
+| +1 health, every enemy attack made twice | 52% / 64% | 38% / 22% |
+
+The author's example of "+1 health for two characters" by itself wins 87% and 93%. Whatever the ladder, its first rung carries two things.
+
+### 33.2 What each perk is worth
+
+Each perk was added to a table that was a little too easy without it (300 games a cell, ± 5 to 6; all the cells are in `work/phase12/ladder_tests_2026-11-22.tsv`).
+
+| Perk | What it did | Verdict |
+|---|---|---|
+| Enemy block and resist +1 | Two characters fall from 78% to 14% | Far too strong: it halves what the party's weaker attacks do |
+| Enemy dodge difficulty +1 | Worth about 20 points; the dodge share falls to 21% to 24%, below a lone character's 35% | Overcorrects: armour becomes the only defence |
+| Enemies move one node further (the original manuscript's perk) | Worth 13 to 40 points on every set and 6 to 19 on the core box, most at two characters | Works from three characters up; no change to the dodge share |
+| Every enemy attack made twice (the manuscript's perk for four) | Worth 30 to 60 points; the dodge share stays at 36% to 38% | Works at every size with health alone, at the cost of rolling every defence twice |
+| A second enemy phase after the second character's turn | Section 32 | Works; bends the round |
+| The original manuscript's ladder as it was (+1 health and movement; +1 damage at three; attacks twice at four) | 70% / 84% / 74%; 87% / 96% / 84% | Too easy at every size under the current rules |
+
+### 33.3 The ladders that work
+
+Confirmed at 500 games a cell (± 4). Won by two / three / four characters; turns in a game; share of defences that are dodges, for four.
+
+| Ladder | Every set | Core box | Turns, every set | Core box | Dodge share for four |
+|---|---|---|---|---|---|
+| **A. The book today.** Each extra character: +1 health and +1 damage on top of +2 and +1 | 51 / 69 / 63 | 59 / 56 / 49 | 328 / 367 / 356 | 276 / 238 / 274 | 54% / 46% |
+| **B. Health only climbs.** +2 health for each extra character; +1 damage for any party | 51 / 67 / 69 | 59 / 61 / 61 | 328 / 366 / 511 | 276 / 348 / 423 | 46% / 36% |
+| **C. A second enemy phase.** Two: +2 health, +1 damage. Three: the enemies act again after the second character's turn. Four: +1 health | 51 / 66 / 67 | 59 / 68 / 59 | 328 / 314 / 399 | 276 / 283 / 308 | 48% / 36% |
+| **D. The manuscript's ladder, retuned.** Two: +2 health, +1 damage. Three: +1 health and enemies move one node further. Four: +2 health | 51 / 61 / 54 | 59 / 65 / 58 | 328 / 329 / 387 | 276 / 313 / 354 | 48% / 37% |
+| **E. Repeat.** Any party: every enemy attack is made twice. Health +1 / +3 / +5 | 52 / 60 / 52 | 64 / 58 / 51 | 264 / 291 / 374 | 234 / 283 / 336 | 38% / 26% |
+
+D as a table:
+
+| Characters | Sparks | Enemy health | Enemy attack damage | Enemy movement |
+|---|---|---|---|---|
+| 1 | 4 | as printed | as printed | as printed |
+| 2 | 3 | +2 | +1 | as printed |
+| 3 | 2 | +3 | +1 | a movement of 1 becomes 2 |
+| 4 | 1 | +5 | +1 | a movement of 1 becomes 2 |
+
+- **D is the most level of the ladders that keep the round whole.** Every party of two or more wins 51% to 65% on both pools (A spans 49% to 69%, B 51% to 69%). The dodge share holds at 45% to 48%, as under B. A game for four takes 387 turns, a quarter fewer than B's 511 and a tenth more than A's 356.
+- D is the author's own pattern: each size adds one thing to the last, and the thing added at three is the original manuscript's.
+- D's cost is a third column to remember from three characters up, and a movement rule that falls hardest on characters who keep their distance.
+- **E is the most level of all and keeps armour and dodge exactly where they are for one character** (38% against 35%). It is also the heaviest to play: every enemy attack is resolved twice, which the turn count does not show, and more characters die in a game for four (6.9 against 5.5 under D).
+- As simulated, the movement perk moves an enemy two nodes where its card shows a movement of one, and changes no other movement.
+
+### 33.4 Recommendation
+
+**D**, if a third column is acceptable: it is the best balance found that leaves the round as the author wants it, it costs four players little more table time than the book today, and it is built the way the original manuscript was. **B** stays the choice if one sentence matters more than the length of a game for four.
+
+**Not applied.** The table of §8.3 is still the ruling of section 29. The simulator keeps the perks as test switches (`move2`, `reps`, `enemy_every`, `dodge_up`, `armor_up`); the ruleset uses none of them.

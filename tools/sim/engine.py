@@ -144,14 +144,14 @@ class Policy:
 
 class Foe:
     __slots__ = ('name', 'card', 'hp', 'max', 'node', 'stagger', 'frost', 'poison', 'bleed', 'boss', 'deck', 'discard',
-                 'heated', 'heat_cards', 'armor', 'resist', 'threat', 'weak', 'atk_bonus', 'seen', 'fresh', 'heal', 'surges')
+                 'heated', 'heat_cards', 'armor', 'resist', 'threat', 'weak', 'atk_bonus', 'dd_bonus', 'seen', 'fresh', 'heal', 'surges')
 
     def __init__(self, name, card, hp, node, boss=False):
         self.name, self.card, self.hp, self.max, self.node, self.boss = name, card, hp, hp, node, boss
         self.stagger = self.frost = False; self.poison = 0; self.bleed = False
         self.fresh = False                             # staggered during its own activation (by a parry)
         self.armor, self.resist, self.threat = card['armor'], card['resist'], card.get('threat', 10)
-        self.deck = self.discard = self.heat_cards = None; self.heated = False; self.weak = False; self.atk_bonus = 0
+        self.deck = self.discard = self.heat_cards = None; self.heated = False; self.weak = False; self.atk_bonus = 0; self.dd_bonus = 0
         self.seen = set(); self.heal = 0; self.surges = 0
 
     @property
@@ -208,13 +208,19 @@ class Fight:
             for i, name in enumerate(enemies):
                 card = ENEMIES[name]
                 f = Foe(name, card, r.hp(card['hp'], self.n), sp[0] if i < (len(enemies) + 1) // 2 else sp[1])
-                f.atk_bonus = r.atk(self.n); self.foes.append(f)
+                f.atk_bonus = r.atk(self.n); self.scale_more(f); self.foes.append(f)
         self.aggro = max(party, key=lambda c: c.taunt)
         self.turn_i = getattr(party[0], '_first', 0) % self.seats      # official: who activates first carries over
 
     # -------------------------------------------------------------- helpers
     def live(self): return [c for c in self.party if c.alive]
     def foes_alive(self): return [f for f in self.foes if f.hp > 0]
+
+    def scale_more(self, f):
+        """Test levers for party size: an ordinary enemy's dodge difficulty (dodge_up) and its block and resist (armor_up)."""
+        du = getattr(self.r, 'dodge_up', None); au = getattr(self.r, 'armor_up', None); n = min(4, self.n)
+        if du: f.dd_bonus = du[n]
+        if au and au[n]: f.armor += au[n]; f.resist += au[n]
 
     def failed(self):
         if self.r.death == 'party': return self.deaths > 0
@@ -532,7 +538,7 @@ class Fight:
                                 struck.add(c)
                                 # the push itself is resolved below, away from the node the enemy left. A character
                                 # who dodges is not hit and is not pushed, whether or not the dodge moved it
-                                was_hit = self.defend(f, c, st['dmg'] + f.atk_bonus - (1 if f.stagger else 0), st['magic'], st['dodge'],
+                                was_hit = self.defend(f, c, st['dmg'] + f.atk_bonus - (1 if f.stagger else 0), st['magic'], st['dodge'] + f.dd_bonus,
                                                       push=False, effects=st.get('effects', ()), parryable=False)
                             # a card that ignores the push icons of enemy attacks: the damage and conditions of a
                             # damaging push-move still land and its wearer stays where it stands; a push-move with no
@@ -547,7 +553,7 @@ class Fight:
                     if t is None or DIST[f.node][t.node] > st['range']: break
                     node = t.node
                     for c in ([x for x in self.live() if x.node == node] if st.get('node') else [t]):
-                        self.defend(f, c, st['dmg'] + f.atk_bonus - (1 if f.stagger else 0), st['magic'], st['dodge'],
+                        self.defend(f, c, st['dmg'] + f.atk_bonus - (1 if f.stagger else 0), st['magic'], st['dodge'] + f.dd_bonus,
                                     push=st.get('push', False), effects=st.get('effects', ()), parryable=not st.get('node'))
         self.end_activation(f)
 
@@ -564,7 +570,7 @@ class Fight:
             if sum(1 for x in self.foes_alive() if x.name == back['name']) < back['models']:
                 card = ENEMIES[back['name']]
                 g = Foe(back['name'], card, self.r.hp(card['hp'], self.n), min(self.spawn, key=lambda nd: DIST[f.node][nd]))
-                g.atk_bonus = self.r.atk(self.n); self.foes.append(g)
+                g.atk_bonus = self.r.atk(self.n); self.scale_more(g); self.foes.append(g)
         f.frost = False
         if f.poison and f.hp > 0 and self.live():
             # poison: one damage and the token comes off (official); a damage a token, one token off (the workshop's ruling)
