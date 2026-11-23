@@ -28,15 +28,16 @@ The Phalanx of Painted World of Ariamis has no model of its own. Three Phalanx H
 
 Enemies grow stronger with the number of characters in the game. Dead characters are counted.
 
-| Characters | Sparks | Enemy health | Enemy attack damage |
-|---|---|---|---|
-| 1 | 4 | as printed | as printed |
-| 2 | 3 | +2 | +1 |
-| 3 | 2 | +3 | +2 |
-| 4 | 1 | +4 | +3 |
+| Characters | Sparks | Enemy health | Enemy attack damage | Enemy movement |
+|---|---|---|---|---|
+| 1 | 4 | as printed | as printed | as printed |
+| 2 | 3 | +2 | +1 | as printed |
+| 3 | 2 | +3 | +2 | as printed |
+| 4 | 1 | +4 | +2 | +1 |
 
 - The *sparks* are those the party starts with (see §7.4).
 - The damage is added to every enemy attack, and to the damage value of a *push-move*.
+- The movement is added to every enemy movement that shows a number (see §9.2). A *leap* is not changed.
 - Bosses, *mimics*, *invaders*, *summons* and *crystal lizards* are never scaled. They are played as printed at every party size.
 - Nothing else printed on a *data card* changes.
 

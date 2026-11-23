@@ -514,6 +514,8 @@ class Fight:
             if st['k'] == 'move':
                 n = st['n'] - (1 if f.frost else 0)
                 if st['n'] == 1 and r.move2(self.n): n += 1
+                _mu = getattr(r, 'move_up', None)             # every numbered enemy movement is this many nodes further (a leap is not numbered)
+                if _mu and st['n'] < 4: n += _mu[min(4, self.n)]
                 t = self.target(f, st['tgt'])
                 if t is None: break
                 struck = set()

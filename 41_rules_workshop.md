@@ -3105,3 +3105,64 @@ D as a table:
 **D**, if a third column is acceptable: it is the best balance found that leaves the round as the author wants it, it costs four players little more table time than the book today, and it is built the way the original manuscript was. **B** stays the choice if one sentence matters more than the length of a game for four.
 
 **Not applied.** The table of §8.3 is still the ruling of section 29. The simulator keeps the perks as test switches (`move2`, `reps`, `enemy_every`, `dodge_up`, `armor_up`); the ruleset uses none of them.
+
+## 34. The author's ruling of 2026-11-23: health +2 / +3 / +4, damage +1 / +2 / +2, movement +1 for four
+
+The author answered section 33 with a table of their own, and it is written into §8.3:
+
+| Characters | Sparks | Enemy health | Enemy attack damage | Enemy movement |
+|---|---|---|---|---|
+| 1 | 4 | as printed | as printed | as printed |
+| 2 | 3 | +2 | +1 | as printed |
+| 3 | 2 | +3 | +2 | as printed |
+| 4 | 1 | +4 | +2 | +1 |
+
+It replaces the table of section 29. Against that table the fourth row trades its third point of damage for a node of movement. Bosses, mimics, invaders, summons and crystal lizards are still not scaled.
+
+**How the movement is read (§8.3).** "The movement is added to every enemy movement that shows a number. A leap is not changed." The other reading, that only a movement of 1 becomes 2, was measured as well and plays the same within a point or two: 24 of the 33 enemy cards move one node, seven move two.
+
+**Measured** (500 games a cell, ± 4, best play; the rows for two and three characters are those of section 29, which this table does not change):
+
+| | 1 | 2 | 3 | 4 |
+|---|---|---|---|---|
+| Games won, every 2017 set | 56% | 51% | 69% | 54% |
+| Games won, core box alone | 82% | 59% | 56% | 48% |
+| Turns in a game, every set | 228 | 328 | 367 | 326 |
+| Turns in a game, core box | 220 | 276 | 238 | 278 |
+| Share of defences that are dodges, every set | 35% | 45% | 50% | 53% |
+
+- Four characters win 54% on every set, where the table of section 29 gave 63%, and 48% on the core box, where it gave 49%. Their game is a little shorter (326 turns against 356).
+- The dodge share for four is 53%, as it was with +3 damage (54%): the movement brings more enemies into reach, and that does as much for dodging as the damage it replaced.
+- Every party of two or more is in the band of 50% to 70% but four characters on the core box, at 48%.
+
+### 34.1 What the movement does to the Tomb of Giants deck, and a slip of mine it uncovered
+
+The print-and-play decks were scored again under this table. The Painted World deck stays in the core set's range. The Tomb of Giants deck did not, for two reasons.
+
+1. **The Skeleton Soldier attacks by moving.** Its card is a push-move with a damage value: it must enter a character's node to hurt it. One node more of movement lets it do that almost every turn. Against four characters three of the deck's Level 1 cards collapsed: Shallow Graves (three Skeleton Soldiers) from 94% won by three characters to 19% by four, Restless Dead to 47%, Marrow Hall to 46%. No core set card behaves like this, which is why the win rates above, measured on the 2017 sets, do not show it. **Any encounter built on Skeleton Soldiers is much harder for four characters than for three under this table.**
+2. **A lone character and the Necromancer.** When the extra black die of section 26 was withdrawn in section 27, a lone character's chance against a Level 2 Necromancer fell from 43% to 13% to 15%. I reported only the range of scores at the time, in which the cards still sat, and did not see it. The hardest core set card for a lone character is won 38% to 40% of the time.
+
+Six cards of the Tomb of Giants deck are changed, and its PDFs rebuilt:
+
+| Card | Was | Now |
+|---|---|---|
+| Marrow Hall (Level 1, trap) | two Skeleton Soldiers; two Skeleton Archers | two Skeleton Archers; a Giant Skeleton Soldier |
+| Shallow Graves (Level 1) | three Skeleton Soldiers | two Skeleton Soldiers |
+| Restless Dead (Level 1) | two Skeleton Soldiers; a Giant Skeleton Soldier | a Skeleton Soldier; a Giant Skeleton Soldier |
+| Open Tomb (Level 2) | a Necromancer | two Giant Skeleton Archers |
+| Necromancer's Study, now Sunken Ossuary (Level 2) | a Skeleton Soldier; a Necromancer | a Giant Skeleton Soldier; a Giant Skeleton Archer and a Skeleton Archer |
+| Rite of Raising (Level 3) | two Skeleton Soldiers; a Necromancer | a Skeleton Soldier; a Necromancer |
+
+The Necromancer now appears on one card, at Level 3, as the Crow Demon appears only at Level 3 in the other deck. The deck under this table, with the core set beside it (lowest / median / highest score; 200 games a cell for the deck, 150 for the others):
+
+| | Level 1 | Level 2 | Level 3 |
+|---|---|---|---|
+| Core set, printed | 0.4 / 2.4 / 4.6 | 0.6 / 4.0 / 8.0 | 1.9 / 2.9 / 4.8 |
+| Tomb of Giants deck | 0.4 / 2.7 / 3.8 | 1.9 / 3.9 / 5.1 | 2.2 / 3.3 / 4.0 |
+| Painted World deck | 0.3 / 2.0 / 2.9 | 0.8 / 3.4 / 4.0 | 1.5 / 2.7 / 4.4 |
+
+The hardest card left for a lone character is Rite of Raising, won 38% of the time, level with the core set's hardest. The hardest left for four characters are the two Level 1 cards with two Skeleton Soldiers, won 70% and 78%.
+
+**For the author to weigh:** Gravelord Nito's escort (§17.7) is two Skeleton Soldiers and a Giant Skeleton Soldier. They are enemies, so with four characters they have the movement too. That fight has not been simulated.
+
+Simulator: `settled` is this table and `settled29` the one it replaces; a `move_up` option carries the movement. Checks: `tools/sim/test_sim.py` passes, style 0 violations, cross-references 0 broken.

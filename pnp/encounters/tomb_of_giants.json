@@ -77,12 +77,11 @@
    "name": "Marrow Hall",
    "level": 1,
    "spawn1": [
-    "Skeleton Soldier",
-    "Skeleton Soldier"
-   ],
-   "spawn2": [
     "Skeleton Archer",
     "Skeleton Archer"
+   ],
+   "spawn2": [
+    "Giant Skeleton Soldier"
    ],
    "terrain1": "gravestone",
    "terrain2": "barrel",
@@ -96,9 +95,7 @@
     "Skeleton Soldier",
     "Skeleton Soldier"
    ],
-   "spawn2": [
-    "Skeleton Soldier"
-   ],
+   "spawn2": [],
    "terrain1": "gravestone",
    "terrain2": null,
    "trap": false
@@ -108,7 +105,6 @@
    "name": "Restless Dead",
    "level": 1,
    "spawn1": [
-    "Skeleton Soldier",
     "Skeleton Soldier"
    ],
    "spawn2": [
@@ -241,22 +237,25 @@
    "name": "Open Tomb",
    "level": 2,
    "spawn1": [
-    "Necromancer"
+    "Giant Skeleton Archer"
    ],
-   "spawn2": [],
+   "spawn2": [
+    "Giant Skeleton Archer"
+   ],
    "terrain1": "gravestone",
    "terrain2": "chest",
    "trap": false
   },
   {
    "id": "TG2-09",
-   "name": "Necromancer's Study",
+   "name": "Sunken Ossuary",
    "level": 2,
    "spawn1": [
-    "Skeleton Soldier"
+    "Giant Skeleton Soldier"
    ],
    "spawn2": [
-    "Necromancer"
+    "Giant Skeleton Archer",
+    "Skeleton Archer"
    ],
    "terrain1": "barrel",
    "terrain2": null,
@@ -349,7 +348,6 @@
    "name": "Rite of Raising",
    "level": 3,
    "spawn1": [
-    "Skeleton Soldier",
     "Skeleton Soldier"
    ],
    "spawn2": [

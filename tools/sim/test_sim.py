@@ -618,7 +618,7 @@ check('settled: a one-handed weapon with the other slot empty has a reroll and n
       all(o['reroll'] for o in _a27) and not any(o['reroll'] for o in _w27) and [o['dice'] for o in _a27] == [o['dice'] for o in _w27], ([o['dice'] for o in _a27], [o['dice'] for o in _w27]))
 _t27 = [o for o in _k27.profile(R=_two, L=False)['options']['R'] if o['name'] == _two['name']]
 check('settled: a two-handed weapon has a reroll and cannot be carried beside a card whose text does not allow it', all(o['reroll'] for o in _t27) and not CH_beside(_k27, _two, _sh, _r27))
-check('settled: enemy health is +2 / +3 / +4 and enemy damage +1 / +2 / +3 for two, three and four characters, and bosses are not scaled', [_r27.hp(5, n) for n in (1, 2, 3, 4)] == [5, 7, 8, 9] and [_r27.atk(n) for n in (1, 2, 3, 4)] == [0, 1, 2, 3] and not any(_r27.boss_add(n) or _r27.boss_atk(n) for n in (1, 2, 3, 4)), ([_r27.hp(5, n) for n in (1, 2, 3, 4)], [_r27.atk(n) for n in (1, 2, 3, 4)]))
+check('settled: enemy health +2 / +3 / +4, enemy damage +1 / +2 / +2, enemy movement +1 with four characters, and bosses are not scaled', [_r27.hp(5, n) for n in (1, 2, 3, 4)] == [5, 7, 8, 9] and [_r27.atk(n) for n in (1, 2, 3, 4)] == [0, 1, 2, 2] and list(_r27.move_up) == [0, 0, 0, 0, 1] and not any(_r27.boss_add(n) or _r27.boss_atk(n) for n in (1, 2, 3, 4)), ([_r27.hp(5, n) for n in (1, 2, 3, 4)], [_r27.atk(n) for n in (1, 2, 3, 4)]))
 ga = [play(2, RU.make(ALL_REQ), s, table=Table(skill=1.0, bank=6)) for s in range(12)]
 check('a game with every set in play runs to its end', all(x['win'] or x['lost_at'] is not None for x in ga))
 
