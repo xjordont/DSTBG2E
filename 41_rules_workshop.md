@@ -3228,3 +3228,25 @@ The six card changes of 34.1 stay. Three were made for the movement bonus and ar
 Deck scores under this table (lowest / median / highest): core set 0.2 / 2.3 / 4.5, 0.2 / 3.7 / 7.8, 1.8 / 2.8 / 4.5; Tomb of Giants 0.5 / 2.2 / 3.0, 1.9 / 3.2 / 4.7, 2.1 / 2.8 / 3.8; Painted World 0.3 / 1.5 / 2.4, 0.9 / 2.5 / 3.3, 1.2 / 2.5 / 4.0.
 
 Checks: `tools/sim/test_sim.py` passes, style 0 violations, cross-references 0 broken. The simulator keeps every lever tested as a switch (`move_up`, `move2`, `reps`, `enemy_every`, `respawn`, `dodge_up`, `armor_up`, `level_up`, `fail_dead`); the ruleset uses none of them.
+
+## 36. Why bosses are easy for larger parties when the boss round is the official one (2026-11-23)
+
+The author asked why boss fights are unbalanced across party sizes when the turn structure is the same as in the original rules.
+
+The boss round is the same: the boss acts before each character's turn. The condition for losing is not, and that is what kept the official game level.
+
+1. **The boss makes the same number of attacks whatever the party.** Its health is not scaled, so it takes about the same number of character turns to bring down, and it acts once for each of them. Measured under the settled rules, a main-boss fight lasts 16.8, 12.6 and 8.9 rounds for two, three and four characters, which is 34, 38 and 36 boss turns.
+2. **Those attacks are shared.** About 17 boss turns fall to each of two characters, 13 to each of three and 9 to each of four, and every character brings an endurance bar, an estus flask, a luck token and a heroic action to meet them.
+3. **In the official game the first death loses the encounter; here only the last one does.** Under the official rule every added character is one more way to lose, which cancels the first two points: the official game's main bosses turn back 71%, 61%, 51% and 61% of attempts for one to four characters (28.2). Under this book's rule (a dead character sits out and the rest fight on) nothing cancels them, and the figures run 41%, 23%, 11% and 2%.
+
+Tested by giving boss encounters alone the official condition, with everything else as settled (400 games a cell, ± 5, every 2017 set):
+
+| A boss encounter is failed | Games lost to a boss, 2 / 3 / 4 characters | Games won |
+|---|---|---|
+| when every character is dead (as settled) | 11% / 8% / 4% | 52% / 68% / 70% |
+| at the first death (the official rule) | 25% / 33% / 53% | 38% / 41% / 17% |
+| once half the party is dead | 25% / 8% / 19% | 38% / 66% / 55% |
+
+With the official condition the slope turns over: the more characters, the more games a boss takes, as in the official game, where four characters fare worst. The losing condition is the cause.
+
+No rule is changed. The simulator keeps the test as a switch (`boss_fail_dead`).

@@ -240,6 +240,7 @@ class Fight:
     def failed(self):
         if self.r.death == 'party': return self.deaths > 0
         _fd = getattr(self.r, 'fail_dead', None)                 # a test lever: the encounter is failed once this many characters are dead
+        if self.is_boss and getattr(self.r, 'boss_fail_dead', None): _fd = self.r.boss_fail_dead      # the same, for boss encounters only
         if _fd: return sum(1 for c in self.party if not c.alive) >= min(_fd[min(4, len(self.party))], len(self.party))
         if self.r.death == 'lost': return not self.live()        # a hollow character who dies is lost until the next rest
         return not self.live() or any((not c.alive) and c.was_hollow for c in self.party)
