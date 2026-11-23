@@ -3166,3 +3166,65 @@ The hardest card left for a lone character is Rite of Raising, won 38% of the ti
 **For the author to weigh:** Gravelord Nito's escort (§17.7) is two Skeleton Soldiers and a Giant Skeleton Soldier. They are enemies, so with four characters they have the movement too. That fight has not been simulated.
 
 Simulator: `settled` is this table and `settled29` the one it replaces; a `move_up` option carries the movement. Checks: `tools/sim/test_sim.py` passes, style 0 violations, cross-references 0 broken.
+
+## 35. The party-size table as designed (2026-11-23)
+
+The author, on seeing section 34: "It looks like additional move is broken? Design the best possible balancing table and mechanisms for character count."
+
+### 35.1 The movement bonus is withdrawn
+
+It is not broken in the sense of a fault; it is the wrong kind of lever. What it does depends on each enemy's card and not on the party. For most enemies it is worth a few points. For an enemy that attacks by moving into a character's node (the Skeleton Soldier) it is the difference between hitting now and then and hitting every turn, and three encounters went from 94% won by three characters to 19% to 47% by four (34.1). It also did nothing for the worry that brought it in: the dodge share for four stayed at 53%.
+
+### 35.2 One more mechanism tested: reinforcements
+
+The cleanest lever in theory is enemies in proportion to characters, and it can be had with the models on the table by letting killed enemies return (300 games a cell, ± 5 to 6; `work/phase12/reinforcement_tests_2026-11-23.tsv`). Won by every 2017 set / the core box:
+
+| Reinforcements | Two characters | Three | Four |
+|---|---|---|---|
+| The first killed return (one / three / three), with +1 health and +1 damage | 51 / 61 | 62 / 58 | 84 / 73 |
+| The first killed return (none / two / three), with +2 health and +1 damage | 51 / 59 | 56 / 46 | 56 / 53 |
+| Every enemy returns once, with +1 health and +1 damage | 9 / 13 | 60 / 57 | 83 / 76 |
+| Every enemy returns once, with +2 health and +1 damage | – | 32 / 27 | 64 / 51 |
+
+Reinforcements are a strong lever and keep enemies near their printed health. They do not make a better table: each return is worth fifteen to twenty-five points, so no simple count fits all three party sizes; more characters die (seven to eight a game for three, against five to six); a game for four is no shorter than under the other candidates; and every returned model needs a marker. Not adopted.
+
+### 35.3 The design
+
+| Characters | Sparks | Enemy health | Enemy attack damage |
+|---|---|---|---|
+| 1 | 4 | as printed | as printed |
+| 2 | 3 | +2 | +1 |
+| 3 | 2 | +4 | +1 |
+| 4 | 1 | +6 | +1 |
+
+**In one sentence: with two or more characters, every enemy has +1 attack damage, and +2 health for each character beyond the first.** Bosses, mimics, invaders, summons and crystal lizards are not scaled. This is table B of sections 31 to 33. It is written into §8.3 with its example, the brief and the simulator (`settled`; `settled34` keeps the table it replaces).
+
+Why this one, after eleven mechanisms and some four hundred measured cells:
+
+1. **Health is the lever that does the work.** A larger party is safer because it kills small enemies before they act. Only more health keeps an enemy alive long enough to be one (32.2). Everything else tested either did nothing without health or landed unevenly once health was added.
+2. **One point of damage, and no more.** Without it two characters cannot be brought into the band short of +3 health and a much longer game. Beyond it, each point moves play from armour to the dodge: 45% of defences are dodges at +1, 50% at +2, 54% at +3 (31.2). At +1 for every party the share is the same for two, three and four characters.
+3. **It is level.** Measured as written (500 games a cell, ± 4, best play):
+
+| | 1 | 2 | 3 | 4 |
+|---|---|---|---|---|
+| Games won, every 2017 set | 56% | 51% | 70% | 69% |
+| Games won, core box alone | 82% | 59% | 61% | 61% |
+| Share of defences that are dodges, every set | 35% | 45% | 46% | 46% |
+| Turns in a game, every set | 228 | 328 | 413 | 511 |
+| Turns in a game, core box | 220 | 276 | 348 | 423 |
+
+   Every party of two or more is in the band of 50% to 70% on both pools, and the core box, where the earlier tables put three and four characters at 41% to 49%, is level to within two points.
+4. **Nothing depends on the card.** Health and damage do the same thing to every enemy. Both print-and-play decks sit inside the core set's range under it with no cliff at any party size: the hardest card for four characters is won 99% of the time in either deck and 89% in the core set, and the hardest for a lone character 37% (Tomb of Giants), 53% (Painted World) and 36% (core set).
+5. **Nothing to track and nothing to look up.** No column beyond health and damage, no second enemy phase, no markers.
+
+**What it costs.** A game for four is the longest of the candidates: 511 turns on every set against 356 under the table of section 29, and enemies of one health carry seven wound tokens. The one design that matches this balance in fewer turns is the second enemy phase of 32.3 (399 turns), at the price of a round that is no longer "all enemies, then all characters"; it is there if the author wants it.
+
+**What it does not change.** A lone Knight or Warrior wins about 80% on the core box (section 30), and four characters fail 2% to 3% of their attempts at a main boss, which follows from the ruling that bosses are not scaled.
+
+### 35.4 The Tomb of Giants deck
+
+The six card changes of 34.1 stay. Three were made for the movement bonus and are no longer needed for it; they leave Level 1 a little gentler (0.5 / 2.2 / 3.0 against the core set's 0.2 / 2.3 / 4.5) and are kept, since the cards are printed. The other three keep a lone character from meeting a Necromancer before Level 3 and are needed under any table.
+
+Deck scores under this table (lowest / median / highest): core set 0.2 / 2.3 / 4.5, 0.2 / 3.7 / 7.8, 1.8 / 2.8 / 4.5; Tomb of Giants 0.5 / 2.2 / 3.0, 1.9 / 3.2 / 4.7, 2.1 / 2.8 / 3.8; Painted World 0.3 / 1.5 / 2.4, 0.9 / 2.5 / 3.3, 1.2 / 2.5 / 4.0.
+
+Checks: `tools/sim/test_sim.py` passes, style 0 violations, cross-references 0 broken. The simulator keeps every lever tested as a switch (`move_up`, `move2`, `reps`, `enemy_every`, `respawn`, `dodge_up`, `armor_up`, `level_up`, `fail_dead`); the ruleset uses none of them.

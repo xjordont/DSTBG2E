@@ -222,6 +222,21 @@ class Fight:
         if du: f.dd_bonus = du[n]
         if au and au[n]: f.armor += au[n]; f.resist += au[n]
 
+    def reinforce(self):
+        """A test lever (respawn=[..]): in an ordinary encounter the first enemies killed return to the nearest enemy spawn
+        node with no wounds, at the end of the character turn in which they fell, so many times for the party's size."""
+        rs = getattr(self.r, 'respawn', None)
+        if not rs or self.is_boss or not getattr(self, 'spawn', None): return
+        if not hasattr(self, '_resp'):
+            k = rs[min(4, self.n)]; self._each = k == 'each'; self._resp = 99 if self._each else k; self._gone = set(); self._back = set()
+        for f in list(self.foes):
+            if self._resp <= 0: break
+            if self._each and id(f) in self._back: continue          # 'each': every enemy returns once, and a returned enemy does not return again
+            if f.hp <= 0 and id(f) not in self._gone and not f.boss:
+                self._gone.add(id(f)); self._resp -= 1
+                g = Foe(f.name, f.card, f.max, min(self.spawn, key=lambda nd: DIST[f.node][nd]))
+                g.atk_bonus = f.atk_bonus; self.scale_more(g); self.foes.append(g); self._back.add(id(g))
+
     def failed(self):
         if self.r.death == 'party': return self.deaths > 0
         _fd = getattr(self.r, 'fail_dead', None)                 # a test lever: the encounter is failed once this many characters are dead
@@ -1169,6 +1184,7 @@ class Fight:
                     again = bool(every) and (i + 1) % every == 0 and i < len(turn) - 1
                     self.last_before_foes = i == len(turn) - 1 or again
                     if c.alive: self.char_turn(c)
+                    self.reinforce()
                     if again and not self.over():
                         self.enemy_phase()
                         for f in sorted(self.foes_alive(), key=lambda f: (f.boss, up * f.threat, min(DIST[f.node][x.node] for x in self.live()))):
