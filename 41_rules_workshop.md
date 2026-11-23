@@ -3239,14 +3239,38 @@ The boss round is the same: the boss acts before each character's turn. The cond
 2. **Those attacks are shared.** About 17 boss turns fall to each of two characters, 13 to each of three and 9 to each of four, and every character brings an endurance bar, an estus flask, a luck token and a heroic action to meet them.
 3. **In the official game the first death loses the encounter; here only the last one does.** Under the official rule every added character is one more way to lose, which cancels the first two points: the official game's main bosses turn back 71%, 61%, 51% and 61% of attempts for one to four characters (28.2). Under this book's rule (a dead character sits out and the rest fight on) nothing cancels them, and the figures run 41%, 23%, 11% and 2%.
 
-Tested by giving boss encounters alone the official condition, with everything else as settled (400 games a cell, ± 5, every 2017 set):
+Tested by giving boss encounters alone the official condition, with everything else as settled (400 games a cell, ± 5, every 2017 set; run again on 2026-11-23 with every outcome counted, after the author pointed out that the first table of this section showed two columns that did not add up to 100%: it had left out the games lost in an ordinary encounter).
 
-| A boss encounter is failed | Games lost to a boss, 2 / 3 / 4 characters | Games won |
-|---|---|---|
-| when every character is dead (as settled) | 11% / 8% / 4% | 52% / 68% / 70% |
-| at the first death (the official rule) | 25% / 33% / 53% | 38% / 41% / 17% |
-| once half the party is dead | 25% / 8% / 19% | 38% / 66% / 55% |
+**Every game ends in one of four ways, and the four add up to the 400 played:**
 
-With the official condition the slope turns over: the more characters, the more games a boss takes, as in the official game, where four characters fare worst. The losing condition is the cause.
+| A boss encounter is failed | Characters | Won | Lost in an ordinary encounter | Lost to the mini-boss | Lost to the main-boss |
+|---|---|---|---|---|---|
+| when every character is dead (as settled) | 1 | 218 | 93 | 19 | 70 |
+| | 2 | 207 | 151 | 20 | 22 |
+| | 3 | 270 | 100 | 11 | 19 |
+| | 4 | 278 | 106 | 8 | 8 |
+| at the first death (the official rule) | 2 | 151 | 148 | 34 | 67 |
+| | 3 | 165 | 103 | 48 | 84 |
+| | 4 | 69 | 117 | 132 | 82 |
+| once half the party is dead | 3 | 264 | 101 | 18 | 17 |
+| | 4 | 218 | 106 | 32 | 44 |
+
+(One character is the same under all three; two characters are the same under the second and third.)
+
+**Each boss fight is won or lost, and the two add up to the fights fought.** A game can hold several attempts at the same boss, because a lost attempt costs a spark and is tried again.
+
+| A boss encounter is failed | Characters | Mini-boss fights: won / lost | Share lost | Main-boss fights: won / lost | Share lost |
+|---|---|---|---|---|---|
+| when every character is dead (as settled) | 1 | 330 / 76 | 19% | 218 / 167 | 43% |
+| | 2 | 264 / 45 | 15% | 207 / 61 | 23% |
+| | 3 | 310 / 11 | 3% | 270 / 19 | 7% |
+| | 4 | 289 / 8 | 3% | 278 / 8 | 3% |
+| at the first death (the official rule) | 2 | 250 / 103 | 29% | 151 / 162 | 52% |
+| | 3 | 256 / 132 | 34% | 165 / 231 | 58% |
+| | 4 | 153 / 132 | 46% | 69 / 82 | 54% |
+| once half the party is dead | 3 | 286 / 43 | 13% | 264 / 81 | 23% |
+| | 4 | 265 / 32 | 11% | 218 / 44 | 17% |
+
+Fight for fight, the official condition makes a main boss about as hard for two, three or four characters (52%, 58%, 54% lost) as it is for one (43%), where the settled rule lets it fall away to 3%. The losing condition is the cause. That four characters lose so many more whole games under the official condition (331 of 400) is the same per-fight odds meeting one spark where a lone character has four.
 
 No rule is changed. The simulator keeps the test as a switch (`boss_fail_dead`).
