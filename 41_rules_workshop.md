@@ -3274,3 +3274,41 @@ Tested by giving boss encounters alone the official condition, with everything e
 Fight for fight, the official condition makes a main boss about as hard for two, three or four characters (52%, 58%, 54% lost) as it is for one (43%), where the settled rule lets it fall away to 3%. The losing condition is the cause. That four characters lose so many more whole games under the official condition (331 of 400) is the same per-fight odds meeting one spark where a lone character has four.
 
 No rule is changed. The simulator keeps the test as a switch (`boss_fail_dead`).
+
+## 37. Balancing boss and mini-boss fights for party size (2026-11-23)
+
+The author asked what to do about it. Eight options were measured on both card pools (400 games a cell, ± 5; the choice confirmed at 500, ± 4; `work/phase12/boss_tests_2026-11-23.tsv`). The measure is the share of fights lost, which is what a party meets at the fog gate. For one character it is 19% of mini-boss fights and 43% of main-boss fights on every 2017 set, and 9% and 32% on the core box.
+
+| Option | Main-boss fights lost, 2 / 3 / 4, every set | Core box | Games won, every set | Core box |
+|---|---|---|---|---|
+| As settled (failed when every character is dead) | 23 / 9 / 3 | 26 / 10 / 2 | 52 / 70 / 70 | 60 / 60 / 61 |
+| Boss health x1.5 for three, x2 for four | 23 / 7 / 4 | 26 / 13 / 2 | 52 / 67 / 64 | 60 / 57 / 56 |
+| Boss damage +1 for three and four | 23 / 25 / 6 | 26 / 23 / 7 | 52 / 63 / 63 | 60 / 54 / 57 |
+| Boss damage +1 for three, +2 for four | 23 / 25 / 7 | 26 / 23 / 13 | 52 / 63 / 60 | 60 / 54 / 47 |
+| Boss damage +1 for any party | 39 / 25 / 6 | 43 / 23 / 7 | 48 / 63 / 63 | 48 / 54 / 57 |
+| **A boss encounter is failed when two characters are dead** | **23 / 21 / 17** | **26 / 24 / 25** | 52 / 67 / 54 | 60 / 56 / 43 |
+| The same, with boss damage +1 for three and four | 23 / 40 / 36 | 26 / 43 / 43 | 52 / 54 / 35 | 60 / 46 / 26 |
+
+- **Boss health does nothing.** Half as much again, or twice as much, and four characters still lose 2% to 4% of their fights; it adds a hundred turns to their game. More health means more boss attacks, and they are shared out as before.
+- **Boss damage mends three characters and not four.** One point brings three to the level of two. Four lose 6% to 13% even with two points, because four bars soak it up.
+- **The condition for losing is the only thing that levels all three.** "A boss encounter is failed when two characters are dead" leaves one and two characters exactly as they are (for two it is the present rule) and brings three and four to the level of two: 23%, 21% and 17% of main-boss fights lost on every set, and 26%, 24% and 25% on the core box. It changes no number on any boss card, which keeps the author's ruling that bosses are not scaled.
+
+**Its cost, and the remedy.** Four characters have one spark, so a boss that turns back one fight in five takes games: 54% won on every set and 43% on the core box. The difficulty has moved from the road to the boss, so the road for four can give some back. With enemy health +5 for four in place of +6 (confirmed at 500 games):
+
+| With the two-dead rule | 1 | 2 | 3 | 4 |
+|---|---|---|---|---|
+| Enemy health | as printed | +2 | +4 | **+5** |
+| Games won, every set | 56% | 52% | 66% | 62% |
+| Games won, core box | 82% | 60% | 57% | 49% |
+| Mini-boss fights lost, every set / core | 19% / 9% | 15% / 9% | 13% / 18% | 9% / 10% |
+| Main-boss fights lost, every set / core | 43% / 32% | 23% / 26% | 21% / 23% | 17% / 21% |
+| Turns in a game, every set | 228 | 326 | 403 | 440 |
+
+- Every party of two or more is in the band on both pools but four characters on the core box at 49%, and a main boss is about as hard for four as for two.
+- A game for four is 440 turns, against 511 as the book stands: a seventh shorter, because the road is lighter.
+- With +4 for four the same rule gives 74% and 58% won in 393 turns, a point or two more forgiving of bosses (12% and 15% lost).
+- A lone character still has the hardest boss fights and four sparks to spend on them.
+
+**Recommendation.** One sentence in §15 or §7.5: "A boss encounter is failed when two characters are dead." And one number in §8.3: enemy health +5 for four characters. Ordinary encounters keep their rule (failed when every character is dead).
+
+**Not applied.** It changes when an encounter is lost, which is the author's to decide.
