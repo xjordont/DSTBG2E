@@ -47,8 +47,8 @@ Everything here is decided. Where the author's chapter differs, write this. Wher
 |---|---|---|---|
 | 1 | 4 | as printed | as printed |
 | 2 | 3 | +2 | +1 |
-| 3 | 2 | +4 | +1 |
-| 4 | 1 | +6 | +1 |
+| 3 | 2 | +3 | +1 |
+| 4 | 1 | +3 | +1 |
 
 (Table as ruled 2026-11-19, section 25 of 41_rules_workshop.md: bosses, mimics, invaders, summons and crystal lizards are never scaled.)
 
@@ -98,8 +98,8 @@ Everything here is decided. Where the author's chapter differs, write this. Wher
 
 - A character who dies is removed from the encounter (model beside the bonfire), discards the ember token and keeps their souls.
 - If the encounter is won, each character who died in it returns hollow: all damage, stamina and condition tokens removed, two hollow cubes placed. Tokens (estus, luck, heroic action) are not restored.
-- A hollow character who dies is *lost* until the party next rests. The others fight on.
-- An encounter is *failed* only when every character is dead. The party must then spend a spark and rest. If no spark remains, the players lose the game.
+- A hollow character who dies is *lost* until the party next rests.
+- An encounter is *failed* when two characters have died in it, or when its last character dies (section 38 of 41_rules_workshop.md; one rule for every encounter, bosses included). The party must then spend a spark and rest. If no spark remains, the players lose the game.
 - After an encounter is *cleared*, every surviving character removes all stamina cubes and all condition tokens. No damage is healed. Tokens are not restored and hollow cubes stay.
 - Hollow cubes are removed only by a rest or by an ember.
 - Embering: the author's rules, with one change. An embered character cannot buy or use an ember card; one already held is kept. There is no limit on ember cards carried. When a boss is defeated every character becomes embered.

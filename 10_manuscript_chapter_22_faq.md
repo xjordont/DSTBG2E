@@ -10,7 +10,7 @@
 
 **Does drinking estus clear stamina?** No. A character who chooses to *drink estus* removes all damage cubes, and stamina cubes stay. The *rest* action removes all stamina cubes (see §10.1).
 
-**Does a character who dies lose their souls?** No. The character keeps their *souls* and, if the encounter is *cleared*, returns *hollow*. Souls are dropped only when an encounter is *failed*, which takes the death of every character (see §7.2, §7.6).
+**Does a character who dies lose their souls?** No. The character keeps their *souls* and, if the encounter is *cleared*, returns *hollow*. Souls are dropped only when an encounter is *failed*, which takes the death of two characters or of the last one (see §7.5, §7.6).
 
 **Is damage healed when an encounter is cleared?** No. Each surviving character removes all stamina cubes and *condition* tokens, and nothing more. *Estus flask*, *luck* and *heroic action* tokens are not restored (see §7.5).
 

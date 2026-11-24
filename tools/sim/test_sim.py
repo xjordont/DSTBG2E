@@ -618,7 +618,13 @@ check('settled: a one-handed weapon with the other slot empty has a reroll and n
       all(o['reroll'] for o in _a27) and not any(o['reroll'] for o in _w27) and [o['dice'] for o in _a27] == [o['dice'] for o in _w27], ([o['dice'] for o in _a27], [o['dice'] for o in _w27]))
 _t27 = [o for o in _k27.profile(R=_two, L=False)['options']['R'] if o['name'] == _two['name']]
 check('settled: a two-handed weapon has a reroll and cannot be carried beside a card whose text does not allow it', all(o['reroll'] for o in _t27) and not CH_beside(_k27, _two, _sh, _r27))
-check('settled: enemy health +2 for each character beyond the first, enemy damage +1 for any party, no other scaling, and bosses are not scaled', [_r27.hp(5, n) for n in (1, 2, 3, 4)] == [5, 7, 9, 11] and [_r27.atk(n) for n in (1, 2, 3, 4)] == [0, 1, 1, 1] and not getattr(_r27, 'move_up', None) and not any(_r27.boss_add(n) or _r27.boss_atk(n) for n in (1, 2, 3, 4)), ([_r27.hp(5, n) for n in (1, 2, 3, 4)], [_r27.atk(n) for n in (1, 2, 3, 4)]))
+check('settled: enemy health +2 / +3 / +3, enemy damage +1 for any party, no other scaling, and bosses are not scaled', [_r27.hp(5, n) for n in (1, 2, 3, 4)] == [5, 7, 8, 8] and [_r27.atk(n) for n in (1, 2, 3, 4)] == [0, 1, 1, 1] and not getattr(_r27, 'move_up', None) and not any(_r27.boss_add(n) or _r27.boss_atk(n) for n in (1, 2, 3, 4)), ([_r27.hp(5, n) for n in (1, 2, 3, 4)], [_r27.atk(n) for n in (1, 2, 3, 4)]))
+_p3 = [Char(c, _r27) for c in ('Knight', 'Warrior', 'Herald')]; _f3 = E.Fight(_p3, _r27, random.Random(1), enemies=['Hollow Soldier'])
+_p3[0].alive = False; _one = _f3.failed(); _p3[1].alive = False
+check('settled: an encounter is failed when two characters are dead, and not at the first death', (not _one) and _f3.failed())
+_p2 = [Char(c, _r27) for c in ('Knight', 'Herald')]; _f2 = E.Fight(_p2, _r27, random.Random(1), enemies=['Hollow Soldier']); _p2[0].alive = False
+_p1 = [Char('Knight', _r27)]; _f1 = E.Fight(_p1, _r27, random.Random(1), enemies=['Hollow Soldier']); _p1[0].alive = False
+check('settled: two characters fail when both are dead, a lone character when that one is dead', (not _f2.failed()) and _f1.failed())
 ga = [play(2, RU.make(ALL_REQ), s, table=Table(skill=1.0, bank=6)) for s in range(12)]
 check('a game with every set in play runs to its end', all(x['win'] or x['lost_at'] is not None for x in ga))
 

@@ -32,15 +32,15 @@ Enemies grow stronger with the number of characters in the game. Dead characters
 |---|---|---|---|
 | 1 | 4 | as printed | as printed |
 | 2 | 3 | +2 | +1 |
-| 3 | 2 | +4 | +1 |
-| 4 | 1 | +6 | +1 |
+| 3 | 2 | +3 | +1 |
+| 4 | 1 | +3 | +1 |
 
 - The *sparks* are those the party starts with (see §7.4).
 - The damage is added to every enemy attack, and to the damage value of a *push-move*.
 - Bosses, *mimics*, *invaders*, *summons* and *crystal lizards* are never scaled. They are played as printed at every party size.
 - Nothing else printed on a *data card* changes.
 
-*Example.* With three characters, a Hollow Soldier printed with 1 health and an attack of 4 has 5 health and an attack of 5. A boss is the same boss for one character or four.
+*Example.* With three characters, a Hollow Soldier printed with 1 health and an attack of 4 has 4 health and an attack of 5. A boss is the same boss for one character or four.
 
 ## 8.4 Pushing
 

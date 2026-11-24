@@ -26,6 +26,6 @@ If the party kills the mimic:
 - The encounter is cleared and the characters recover. Killing a mimic is not the defeat of a boss, and nothing that follows a boss's defeat applies (see §16.5).
 - The encounter may be fought again like any other, and the mimic does not return.
 
-If the mimic kills every character, the encounter is *failed*. The mimic's model is removed, the chest stays closed, and the ambush card stays face up.
+If the encounter is *failed* against the mimic, the mimic's model is removed, the chest stays closed, and the ambush card stays face up.
 
 A chest that was left closed, or whose mimic beat the party, may be opened each time the party later clears that encounter. The choice is the party's every time. A mimic that is met again is set up afresh, at full health.

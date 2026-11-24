@@ -17,7 +17,7 @@
 - If the encounter is *cleared*, the characters who died in it return *hollow* (see §7.5).
   - A hollow character has two hollow cubes on the *endurance bar* (see §3.4).
   - Hollow cubes are removed only by a *rest* at the bonfire or by an ember.
-- A hollow character who dies is *lost* until the party next rests at the bonfire. The other characters fight on.
+- A hollow character who dies is *lost* until the party next rests at the bonfire.
 
 ## 7.3 Embering
 
@@ -65,7 +65,7 @@ An encounter is fought in rounds.
    - If those enemies are equally close, the one with the most wound tokens takes its turn first.
    - If they are still tied, the players decide.
 2. Each character takes a turn, in any order the party chooses each round.
-3. Rounds continue until every enemy model or every character is dead.
+3. Rounds continue until every enemy model is dead or the encounter is *failed*.
 
 Whenever a character deals damage, the aggro token passes to that character. If no character deals damage, it stays where it is.
 
@@ -74,7 +74,7 @@ A boss and an *invader* take their turns between the characters' turns (see §16
 ### Encounter Resolution
 
 - An encounter is cleared when every enemy model has been killed.
-- An encounter is failed only when every character is dead.
+- An encounter is failed when two characters have died in it, or when its last character dies.
 - An encounter is on its first clear while the two treasure cards dealt to its tile still lie there. They stay on the tile until the party takes them.
 - When an encounter is cleared, resolve it as follows.
   1. Each character takes back any souls of their own that lie on the tile.

@@ -68,7 +68,7 @@ Terms set in *italics* in this book are listed here with the section that gives 
 
 **Event card.** A card of the Events Expansion II, dealt beside an encounter card and revealed when the party enters its tile (see §7.5).
 
-**Failed.** Said of an encounter that the party has lost because every one of its characters is dead (see §7.5).
+**Failed.** Said of an encounter that the party has lost because two characters have died in it, or its last character (see §7.5).
 
 **Fog gate.** The token at a boss tile's doorway, which becomes a shortcut from the bonfire once the party has passed it (see §15.1).
 
