@@ -6,7 +6,7 @@ Every boss is played from its *data card* and its *behaviour cards* (see §15.4)
 
 ### Setup
 
-The bosses in this table are set up as it shows. A behaviour deck given here takes the place of the usual one (see §15.5). "4 of 10" means four cards drawn at random from the ten; the cards not drawn go back to the box. Every deck and pile is shuffled unless the table says otherwise. A set shown as Own is the expansion that bears the boss's name.
+The bosses in this table are set up as it shows, and again each time their encounter is *failed*. A behaviour deck given here takes the place of the usual one (see §15.5). "4 of 10" means four cards drawn at random from the ten; the cards not drawn go back to the box. Every deck and pile is shuffled unless the table says otherwise. A set shown as Own is the expansion that bears the boss's name.
 
 | Boss | Set | Behaviour deck | Also set out |
 |---|---|---|---|
@@ -22,10 +22,6 @@ The bosses in this table are set up as it shows. A behaviour deck given here tak
 | Old Iron King | Own | 3 of 6 standard cards and the 3 Fire Beam cards | The 3 heat-up cards; the 6 Beam cards as a Beam deck |
 | Vordt of the Boreal Valley | Own | Movement deck: 4 of 6 standard movement cards. Attack deck: 3 of 6 standard attack cards | The 2 heat-up movement cards and the 2 heat-up attack cards, as two piles; Frostbreath, face down |
 
-### Dodge Difficulty 0
-
-Some behaviour cards of Great Grey Wolf Sif, Artorias and the Pursuer show a *dodge difficulty* of 0. A *dodge* against such a card costs its one *stamina* and succeeds without a roll. No dodge dice are needed.
-
 ### Marked-Node Attacks
 
 **Marked-node attack.** An attack that strikes the nodes marked on a card, in place of an *arc* and a *range*. Every character on a marked node is attacked, and each defends on their own.
@@ -40,7 +36,6 @@ One *main-boss*, two models. Dragon Slayer Ornstein and Executioner Smough each 
 - Ornstein starts on the main-boss *spawn node* and Smough on the *mini-boss* spawn node.
 - Each boss turn draws one card. Ornstein resolves the behaviour printed for Ornstein, then Smough the one printed for Smough. The range, the dodge difficulty, the arcs and the *weak arcs* {{icon:ast-0041-weak-boss-arc}} printed with a behaviour apply to its model alone.
 - A character's attack is made against one model. A character on a model's node stands in that model's arcs.
-- A model that moves onto the other's node pushes it to an adjacent node of the players' choice.
 - Neither data card shows a heat-up point {{icon:ast-0030-heat-up-point}}. When the first model falls, remove it and return the deck and its discard pile to the box. Shuffle the survivor's heat-up cards as the new deck, and raise its health by 10 if it is Ornstein or by 15 if it is Smough, never above its starting health.
 - The boss is defeated when both models have fallen.
 
@@ -49,14 +44,14 @@ One *main-boss*, two models. Dragon Slayer Ornstein and Executioner Smough each 
 Where a campaign *section* lists the Twin Gargoyles, two Gargoyles are fought one after the other as one mini-boss encounter. The one model and health dial serve for both.
 
 - When the first Gargoyle falls, return its model to the spawn node, set the dial to its starting health and build a new behaviour deck. Play goes on in the same order.
-- The characters keep their nodes, cubes and tokens, and the dead stay out.
+- The characters keep their nodes, cubes and tokens, and a dead character stays out.
 - Each Gargoyle heats up at its own heat-up point.
 - The rewards of a defeated boss are given once, when the second Gargoyle falls (see §16.5).
-- If the encounter is *failed*, both Gargoyles are fought again.
+- If the encounter is failed, both Gargoyles are fought again.
 
 ## 17.2 Core Set
 
-The Gargoyle, the Titanite Demon, the Boreal Outrider Knight, the Winged Knight and the Dancer of the Boreal Valley have no special rules. Ornstein and Smough and the Twin Gargoyles have rules of their own (see §17.1).
+Ornstein and Smough and the Twin Gargoyles have rules of their own (see §17.1).
 
 ## 17.3 Asylum Demon and Stray Demon
 
@@ -64,7 +59,7 @@ The Asylum Demon is a *mini-boss* and the Stray Demon a *mega-boss*. Both are fo
 
 ### Pillars of Woe
 
-When either boss encounter is set up, place one pillar token on each of the four pillar *nodes* of the board. Pillars block movement: no model may enter a pillar's node or be *pushed* onto it.
+Pillars block movement: no model may enter a pillar's *node* or be *pushed* onto it.
 
 When the Asylum Demon or the Stray Demon makes a physical attack with the area icon {{icon:ast-0038-area-attack-icon}}, check for pillar tokens within the area of the attack: within its *range* and in one of its attack *arcs* (see §16.3).
 
@@ -74,15 +69,14 @@ When the Asylum Demon or the Stray Demon makes a physical attack with the area i
 
 One attack may smash several pillars, and one character may be hit by several shattering pillars at once.
 
-The node of a destroyed pillar is a *basic node* for the rest of the encounter. When the party rests at the *bonfire*, return the destroyed pillars to their nodes.
+The node of a destroyed pillar is a *basic node* for the rest of the encounter.
 
 ### Wind Up
 
-When the Wind Up icon is resolved, each character may spend one *stamina* to move at once to an adjacent node. This movement counts as a *run*. The icon works the same on the cards of any other boss.
+When the Wind Up icon is resolved, each character may spend one *stamina* to move at once to an adjacent node. The icon works the same on the cards of any other boss.
 
 ## 17.4 Darkroot
 
-Some *behaviour cards* of Sif and of Artorias show a *dodge difficulty* of 0 (see §17.1).
 
 ### Great Grey Wolf Sif
 
@@ -115,7 +109,6 @@ The Old Dragonslayer is played with the Dragon Slayer Ornstein model of the core
 
 ### Pursuer
 
-- Some of the Pursuer's *behaviour cards* show a *dodge difficulty* of 0 (see §17.1).
 - Each turn the Pursuer draws and resolves two behaviour cards, one after the other. If the deck is empty when either card is due, turn the discard pile over first. The *weak arcs* are those of the second card.
 - From its heat-up until the encounter ends, every attack on its behaviour cards has +1 to the attack value.
 
@@ -138,8 +131,7 @@ The Black Knight and Gravelord Nito are played from their printed *data cards* a
 
 Kalameet's model starts on the *mega-boss* *spawn node*, facing the centre of the board.
 
-- Mark of Calamity and Hellfire Blast are in every behaviour deck built for Kalameet. Hellfire Barrage is its only *heat-up* card.
-- An attack with the *calamity* icon gives one calamity token to each character it hits (see §8.5).
+- Hellfire Barrage is Kalameet's only *heat-up* card.
 - The strafe icon is a magical {{icon:ast-0042-deal-magical-damage}} marked-node attack (see §17.1). It uses the attack value and the *dodge difficulty* of the *behaviour card* that shows the icon.
 
 When a strafe icon is resolved:
@@ -152,7 +144,7 @@ A character on the landing node is attacked only if the card also marks that nod
 
 ## 17.9 Executioner's Chariot
 
-The Chariot is a *mega-boss* fought in two parts. Until its *heat-up* it follows a fixed track and cannot be harmed. Afterwards it is fought as any boss.
+The Chariot is a *mega-boss* fought in two parts, before and after its *heat-up*.
 
 - Its two models, the skeletal horse and the chariot, share one *node*, move together and count as one boss model. They share one double-sided *data card* and one health dial.
 - The centre of the Chariot's board is a wall. Nodes on opposite sides of it are not adjacent, *range* is counted around it, and no model may move, *dodge* or be *pushed* into it.
@@ -200,7 +192,7 @@ The Four Kings are one *mega-boss* with four models, the kings numbered one to f
 
 - King one starts on the mega-boss *spawn node*. The other three models wait beside the board.
 - Each boss turn draws one behaviour card, and every king in play resolves the whole card, in numerical order.
-- A character's attack is made against one king, and a king that moves onto another's *node* pushes it, as for Ornstein and Smough (see §17.1).
+- A character's attack is made against one king, as for Ornstein and Smough (see §17.1).
 - A king whose health dial reaches zero is removed from the board. The boss is defeated when all four kings have fallen.
 
 **Royal Summons.** The first three times the behaviour deck is empty at the start of a boss turn, the next king arrives. Do this in place of turning the discard pile over:
@@ -210,14 +202,13 @@ The Four Kings are one *mega-boss* with four models, the kings numbered one to f
 3. Add two cards, taken at random and unseen, from the pile of the king just placed.
 4. Shuffle these cards to form the new behaviour deck.
 
-The boss turn then goes on: draw the top card of the new deck, and every king in play resolves it. A summons does not wait for the earlier kings to fall.
+The boss turn then goes on with the new deck. A summons does not wait for the earlier kings to fall.
 
 If no king is in play at the start of a boss turn and no summons is due, draw the top card of the behaviour deck and discard it without effect. Each living character removes one damage cube, and the boss turn ends.
 
 ### Gaping Dragon
 
-- Both Stomach Slam cards and one random heat-up card are in every behaviour deck built for the Gaping Dragon. When it heats up, one of the three remaining heat-up cards joins the deck in the usual way.
-- An attack with the *corrosion* icon gives one corrosion token to each character it hits (see §8.5).
+- When the Gaping Dragon heats up, one of the three remaining heat-up cards joins the deck in the usual way.
 - Crawling Charge is never part of the behaviour deck. When the crawl icon is resolved, the Gaping Dragon at once resolves every icon on Crawling Charge, from left to right, with the *range* and the *dodge difficulty* printed on that card. Its turn then ends: no further icon of the drawn behaviour card is resolved. The drawn card, and not Crawling Charge, still shows the *weak arcs*.
 
 ### Guardian Dragon
@@ -249,7 +240,7 @@ The Wind Up icon on the Last Giant's cards is resolved as for the Asylum Demon (
 
 ### Manus, Father of the Abyss
 
-- **Overextended.** At the end of each of Manus's turns, each character may spend one *stamina* to move to an adjacent node, before the next character's turn begins. This movement counts as a *run*.
+- **Overextended.** At the end of each of Manus's turns, each character may spend one *stamina* to move to an adjacent node.
 - An attack with the *shaft* icon does not target a character on Manus's own node (see §10.3), whichever *arc* that character stands in.
 - Manus has a heat-up of its own. When its health reaches its heat-up point, take two of its heat-up cards at random, without looking at them. Place one face down on top of the behaviour deck and the other beneath the discard pile. Do not shuffle. The first is the next card Manus draws; the second is the first card drawn after the discard pile is next turned over.
 

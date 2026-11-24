@@ -20,10 +20,10 @@ The dashboard shows everything specific to the character's class:
 
 ## 3.2 Equipment Slots
 
-Each dashboard has four equipment slots: an armour slot, a left weapon slot, a right weapon slot and a *back-up slot*. Each slot holds only cards of its own type.
+Each dashboard has four equipment slots: an armour slot, a left weapon slot, a right weapon slot and a *back-up slot*.
 
 - **Armour slot.** One armour card, marked with the armour icon {{icon:ast-0047-armour}}.
-- **Weapon slots.** One weapon card each, marked with the one-handed weapon icon {{icon:ast-0043-one-handed-weapon}} or the *two-handed* weapon icon {{icon:ast-0045-two-handed-weapon}}. While a two-handed weapon is in one weapon slot, the other weapon slot must stay empty. While a one-handed weapon is in one weapon slot, the other may hold another one-handed weapon.
+- **Weapon slots.** One weapon card each, marked with the one-handed weapon icon {{icon:ast-0043-one-handed-weapon}} or the *two-handed* weapon icon {{icon:ast-0045-two-handed-weapon}}. While a two-handed weapon is in one weapon slot, the other must stay empty unless a card's text says otherwise. While a one-handed weapon is in one weapon slot, the other may hold another one-handed weapon.
 - **Back-up slot.** Up to two treasure cards of any type. These cards are at hand during an encounter but are not *equipped*.
 
 Only the cards in the armour slot and the weapon slots are equipped.
@@ -38,11 +38,11 @@ The stat progression track shows the character's strength (STR), dexterity (DEX)
 
 Each stat has a row of four spaces: a base space, then one space each for stat tiers one, two and three. Each space is printed with the value of the stat at that tier.
 
-Every character begins with a white stat cube in the base space of each of the four stats. The value of a stat is the number printed in the space that holds its cube. Each time a stat is raised, its cube moves one space to the right (see §11.3).
+The value of a stat is the number printed in the space that holds its white stat cube. Each time a stat is raised, its cube moves one space to the right (see §11.3).
 
 ## 3.4 Endurance Bar
 
-The *endurance bar* tracks a character's *stamina* and damage. It has ten spaces. The bar begins empty and fills with stamina cubes (black) and damage cubes (red) during play. It may be filled with stamina cubes, with damage cubes, or with any mix of the two.
+The *endurance bar* tracks a character's *stamina* and damage. It has ten spaces. The bar begins empty and fills with stamina cubes (black) and damage cubes (red) during play.
 
 - When a character spends stamina, they place that number of stamina cubes on the bar, starting from the leftmost free space.
 - When a character suffers damage, they place that number of damage cubes on the bar, starting from the rightmost free space.
@@ -60,8 +60,6 @@ If a character must place a damage cube and there is no free space, the characte
 Each character has four tokens: *heroic action*, *luck*, *estus flask* and *ember*.
 
 The heroic action, luck and estus flask tokens each have a ready side and a used side. The ready side has the brighter colours. A token's effect is available only while its ready side is face up. The token is flipped to its used side when the character uses the effect.
-
-Characters begin the game with the heroic action, luck and estus flask tokens ready on their dashboards. An ember token waits beside each dashboard until the character becomes *embered* (see §7.3).
 
 ### Heroic Action
 

@@ -1,81 +1,81 @@
 # Appendix A. Weapon Stat Revisions
 
-The stat requirements below replace those printed on the weapons listed. A weapon not listed keeps its printed requirements.
+The stat requirements below replace those printed on the weapons listed.
 
 ## Revised Requirements
 
-A 0 is no requirement in that stat.
+A 0 is no requirement in that stat. No weapon listed has an INT or FTH requirement.
 
-| Weapon | STR | DEX | INT | FTH |
-|---|---|---|---|---|
-| Avelyn | 23 | 30 | 0 | 0 |
-| Bewitched Alonne Sword | 18 | 24 | 0 | 0 |
-| Black Knight Greataxe | 32 | 20 | 0 | 0 |
-| Black Knight Halberd | 32 | 18 | 0 | 0 |
-| Brigand Axe | 19 | 16 | 0 | 0 |
-| Butcher Knife | 25 | 0 | 0 | 0 |
-| Caestus | 0 | 15 | 0 | 0 |
-| Carthus Curved Greatsword | 19 | 30 | 0 | 0 |
-| Carthus Curved Sword | 25 | 35 | 0 | 0 |
-| Chariot Lance | 22 | 33 | 0 | 0 |
-| Claws | 0 | 20 | 0 | 0 |
-| Crystal Straight Sword | 21 | 30 | 0 | 0 |
-| Dark Silver Tracer | 0 | 25 | 0 | 0 |
-| Dragon Tooth | 40 | 25 | 0 | 0 |
-| Drake Sword | 27 | 17 | 0 | 0 |
-| Drakewing Ultra Greatsword | 33 | 23 | 0 | 0 |
-| East-West Shield | 28 | 0 | 0 | 0 |
-| Falchion | 37 | 30 | 0 | 0 |
-| Four-Pronged Plough | 23 | 18 | 0 | 0 |
-| Giant's Halberd | 27 | 16 | 0 | 0 |
-| Gold Tracer | 25 | 35 | 0 | 0 |
-| Gravelord Sword | 32 | 18 | 0 | 0 |
-| Great Mace | 28 | 0 | 0 | 0 |
-| Halberd | 31 | 18 | 0 | 0 |
-| Irithyll Rapier | 24 | 24 | 0 | 0 |
-| Irithyll Straight Sword | 23 | 23 | 0 | 0 |
-| Lifehunt Scythe | 32 | 23 | 0 | 0 |
-| Lucerne | 22 | 31 | 0 | 0 |
-| Mace | 16 | 0 | 0 | 0 |
-| Manikin Claws | 24 | 24 | 0 | 0 |
-| Morning Star | 16 | 0 | 0 | 0 |
-| Murakumo | 27 | 17 | 0 | 0 |
-| Onikiri and Ubadachi | 26 | 36 | 0 | 0 |
-| Painting Guardian Curved Sword | 18 | 26 | 0 | 0 |
-| Parrying Dagger | 14 | 21 | 0 | 0 |
-| Partizan | 28 | 17 | 0 | 0 |
-| Pike | 23 | 16 | 0 | 0 |
-| Poison Throwing Knives | 0 | 14 | 0 | 0 |
-| Priscilla's Dagger | 0 | 31 | 0 | 0 |
-| Rapier | 14 | 21 | 0 | 0 |
-| Reinforced Club | 23 | 0 | 0 | 0 |
-| Rotten Ghru Dagger | 17 | 17 | 0 | 0 |
-| Rotten Ghru Spear | 12 | 21 | 0 | 0 |
-| Royal Dirk | 18 | 31 | 0 | 0 |
-| Scimitar | 18 | 20 | 0 | 0 |
-| Shield Crossbow | 33 | 20 | 0 | 0 |
-| Shotel | 26 | 29 | 0 | 0 |
-| Silver Knight Spear | 22 | 26 | 0 | 0 |
-| Silver Knight Straight Sword | 16 | 22 | 0 | 0 |
-| Spiked Mace | 32 | 22 | 0 | 0 |
-| Spotted Whip | 23 | 30 | 0 | 0 |
-| Sunlight Straight Sword | 15 | 15 | 0 | 0 |
-| Throwing Knives | 0 | 14 | 0 | 0 |
-| Uchigatana | 14 | 32 | 0 | 0 |
-| Umbral Dagger | 18 | 35 | 0 | 0 |
-| Vordt's Great Hammer | 33 | 0 | 0 | 0 |
-| Warden Twinblades | 17 | 25 | 0 | 0 |
-| Washing Pole | 37 | 21 | 0 | 0 |
-| Winged Knight Halberd | 32 | 16 | 0 | 0 |
-| Winged Spear | 20 | 22 | 0 | 0 |
+| Weapon | STR | DEX |
+|---|---|---|
+| Avelyn | 23 | 30 |
+| Bewitched Alonne Sword | 18 | 24 |
+| Black Knight Greataxe | 32 | 20 |
+| Black Knight Halberd | 32 | 18 |
+| Brigand Axe | 19 | 16 |
+| Butcher Knife | 25 | 0 |
+| Caestus | 0 | 15 |
+| Carthus Curved Greatsword | 19 | 30 |
+| Carthus Curved Sword | 25 | 35 |
+| Chariot Lance | 22 | 33 |
+| Claws | 0 | 20 |
+| Crystal Straight Sword | 21 | 30 |
+| Dark Silver Tracer | 0 | 25 |
+| Dragon Tooth | 40 | 25 |
+| Drake Sword | 27 | 17 |
+| Drakewing Ultra Greatsword | 33 | 23 |
+| East-West Shield | 28 | 0 |
+| Falchion | 37 | 30 |
+| Four-Pronged Plough | 23 | 18 |
+| Giant's Halberd | 27 | 16 |
+| Gold Tracer | 25 | 35 |
+| Gravelord Sword | 32 | 18 |
+| Great Mace | 28 | 0 |
+| Halberd | 31 | 18 |
+| Irithyll Rapier | 24 | 24 |
+| Irithyll Straight Sword | 23 | 23 |
+| Lifehunt Scythe | 32 | 23 |
+| Lucerne | 22 | 31 |
+| Mace | 16 | 0 |
+| Manikin Claws | 24 | 24 |
+| Morning Star | 16 | 0 |
+| Murakumo | 27 | 17 |
+| Onikiri and Ubadachi | 26 | 36 |
+| Painting Guardian Curved Sword | 18 | 26 |
+| Parrying Dagger | 14 | 21 |
+| Partizan | 28 | 17 |
+| Pike | 23 | 16 |
+| Poison Throwing Knives | 0 | 14 |
+| Priscilla's Dagger | 0 | 31 |
+| Rapier | 14 | 21 |
+| Reinforced Club | 23 | 0 |
+| Rotten Ghru Dagger | 17 | 17 |
+| Rotten Ghru Spear | 12 | 21 |
+| Royal Dirk | 18 | 31 |
+| Scimitar | 18 | 20 |
+| Shield Crossbow | 33 | 20 |
+| Shotel | 26 | 29 |
+| Silver Knight Spear | 22 | 26 |
+| Silver Knight Straight Sword | 16 | 22 |
+| Spiked Mace | 32 | 22 |
+| Spotted Whip | 23 | 30 |
+| Sunlight Straight Sword | 15 | 15 |
+| Throwing Knives | 0 | 14 |
+| Uchigatana | 14 | 32 |
+| Umbral Dagger | 18 | 35 |
+| Vordt's Great Hammer | 33 | 0 |
+| Warden Twinblades | 17 | 25 |
+| Washing Pole | 37 | 21 |
+| Winged Knight Halberd | 32 | 16 |
+| Winged Spear | 20 | 22 |
 
 # Appendix B. Card Amendments
 
-The cards below are added to the game or replace the printed cards of the same name. A replaced card returns to the box. Whatever is not amended here is as printed.
+The cards below are added to the game, or are played with the text given here in place of the text printed on them. Whatever is not amended here is as printed.
 
 ## Additional Treasure
 
-Only the cards below are added from Tomb of Giants and Painted World of Ariamis. They are the cards new in those sets. A reprint is not added a second time (see §6.2).
+Only the cards below are added from Tomb of Giants and Painted World of Ariamis (see §6.2).
 
 | Added | Cards |
 |---|---|
@@ -94,7 +94,6 @@ Where a card has two printings, the one with the rules text given here is used. 
 | Carthus Milkring | The wearer adds 1 to the dodge icons {{icon:ast-0062-dodge}} rolled for a dodge. | |
 | Chloranthy Ring | At the start of the wearer's turn, the wearer and every other character on the wearer's *node* each recover 1 stamina in addition to the turn's 1. | |
 | Covetous Silver Serpent Ring | The wearer gains 1 more soul with the reward for each *cleared* encounter. | |
-| Demon Titanite | As printed. | The revised card is used. Requirements and treasure type as printed. |
 | Eastern Armour | The wearer pays 2 stamina to dodge in place of 1. | |
 | Mask of the Child | At the start of the wearer's turn, the wearer recovers 2 stamina in place of the turn's 1. | This text also replaces that of the Events Expansion II card of the same name. |
 | Mon Ring | As printed, and: the effect is used only while the card is face up, and using it turns the card face down. | A *rest* turns the card face up. |
@@ -130,7 +129,7 @@ The 12 enemies of Tomb of Giants and Painted World of Ariamis are played from th
 
 ## Boss Data and Behaviour Cards
 
-The four bosses of the same sets are played from their printed data cards and behaviour cards. Their cards print no encounter levels; use those below. Bosses are never scaled (see §8.3).
+The four bosses of the same sets are played from their printed data cards and behaviour cards. Their cards print no encounter levels; use those below.
 
 | Boss | Kind | Set | Health | Heat-up point | Block | Resist | Deck size | Encounter levels |
 |---|---|---|---|---|---|---|---|---|

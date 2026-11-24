@@ -76,7 +76,7 @@ Terms set in *italics* in this book are listed here with the section that gives 
 
 **Gravestone.** A terrain piece no model may enter, which lets the party inspect a face-down card once its encounter is cleared (see §5.5).
 
-**Heat-up.** The moment a boss's health first reaches its heat-up point, when a heat-up card is shuffled into its behaviour deck (see §15.5).
+**Heat-up.** The moment a boss's health first falls to its heat-up point or below, when a heat-up card is shuffled into its behaviour deck (see §15.5).
 
 **Heroic action.** The ability printed on a character's dashboard, used by flipping the heroic action token to its used side (see §3.5).
 
@@ -86,7 +86,7 @@ Terms set in *italics* in this book are listed here with the section that gives 
 
 **Inventory.** The stack of face-down treasure cards a character keeps beside the dashboard, closed for the length of every encounter (see §3.2).
 
-**Leap.** A movement that places an enemy or a boss directly on its target's node. A boss's leap pushes the characters there off it; an enemy's leap pushes them only if it is also a push-move (see §9.2, §16.2).
+**Leap.** A movement that places an enemy or a boss directly on its target's node, however far away (see §9.2, §16.2).
 
 **Legendary treasure.** A treasure card of the rarest type, marked with an orange light under a treasure chest at its top right (see §6.2).
 

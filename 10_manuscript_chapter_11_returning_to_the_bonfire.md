@@ -19,7 +19,7 @@ The *bonfire* is a safe haven in an otherwise treacherous world. Two strangers w
   2. Remove all damage cubes and *stamina* cubes from every character.
   3. Remove all *condition* tokens.
   4. Remove all *hollow* cubes.
-  5. Flip *luck*, *estus flask* and *heroic action* tokens face up.
+  5. Flip *luck*, *estus flask* and *heroic action* tokens to their ready sides.
   6. The characters may pay the Firekeeper to raise their stats.
   7. *Reset* every *cleared* and failed encounter (see §11.5).
 
@@ -57,8 +57,7 @@ The *bonfire* is a safe haven in an otherwise treacherous world. Two strangers w
 - Any card that is not *starting equipment* sells for one soul and goes to the bottom of its treasure deck, or to the box if it came from no deck.
 - Starting equipment cannot be sold.
 - A sold *ember* card returns to the tier one shop.
-- *Titanite* stays on its weapon and is sold with it for no extra souls.
-- Any other upgrade attached to a sold card returns to the character's inventory.
+- An upgrade fitted to a sold card stays on it or returns to the inventory as its rule states (see §4.2).
 
 ### Shop Price Table
 
@@ -73,7 +72,8 @@ Before the party sets out after a *rest*, *reset* every *cleared* and *failed* e
 
 1. Flip every face-up *encounter card* face down. A black cube stays on its card.
 2. Set aside any enemy models left on the encounter tiles.
-3. Do not move terrain. Return each destroyed *barrel* to its node and turn each face-up *trap* token face down (see §5.5).
+3. Do not move terrain. Return each destroyed *barrel* to its node and turn each face-up *trap* token face down.
 4. Leave treasure cards and dropped *souls* on their tiles.
+5. With the Events Expansion II, gather the revealed *event cards* (see §7.5).
 
 The party then moves to the encounter tile closest to the *bonfire*, where the encounter begins (see §7.5). Once the *fog gate* token lies on the bonfire tile, the party may go straight to the boss instead (see §15.1).

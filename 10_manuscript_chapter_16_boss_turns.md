@@ -2,7 +2,7 @@
 
 ## 16.1 Overview
 
-During a boss encounter the boss always takes its turn first, and it takes a turn before each character's turn: the boss, one character, the boss again, a second character, and so on. The characters take their turns in any order the party chooses, but no character takes another turn until every other character has taken an equal number.
+During a boss encounter the boss takes a turn before each character's turn. The characters take their turns in any order the party chooses, but none takes another turn until every other character has taken as many.
 
 Draw the top card of the behaviour deck at the start of every boss turn. The boss's actions are decided by resolving each icon on the *behaviour card* from left to right. When the right-most icon is resolved, the boss's turn ends and the card is placed face up on the discard pile.
 
@@ -26,7 +26,7 @@ A boss moves by the rules for enemy movement (see §9.2), with these exceptions.
 A boss attacks by the rules for enemy attacks (see §9.3), but its attacks may bear further icons with more powerful effects. Each attack on a *behaviour card* shows the boss's four *arcs* as normal (black) {{icon:ast-0039-neutral-boss-arc}}, attack (green) {{icon:ast-0040-attack-boss-arc}} or weak (red).
 
 - **Area.** The area icon {{icon:ast-0038-area-attack-icon}} shows that the boss attacks whole arcs and not one character. The boss does not change its facing when it attacks: it attacks every character within *range* who is on a *node* in one of its attack arcs. A node that is split, with only half of it in an attack arc, is still attacked.
-- **Repeat.** The *repeat* icon {{icon:ast-0061-repeat-behaviour-or-attack}} works like the one on a character's equipment: the boss resolves its whole behaviour card the number of times shown before its turn ends.
+- **Repeat.** With the *repeat* icon {{icon:ast-0061-repeat-behaviour-or-attack}} the boss resolves its whole behaviour card the number of times shown.
 
 An attack without the area icon targets one character within range, in whatever arc that character stands.
 
@@ -34,7 +34,7 @@ Each character attacked defends as against an enemy's attack (see §9.4, §9.5).
 
 ## 16.4 Boss Aggro
 
-A *behaviour card* may name as its target the character holding the *aggro* token, which passes to each character who deals damage and stays where it is while no damage is dealt (see §7.5).
+A *behaviour card* may name as its target the character holding the *aggro* token (see §7.5).
 
 ## 16.5 Boss Death
 
@@ -47,5 +47,3 @@ When the boss's health dial is reduced to zero, the boss is defeated and the enc
 5. Give each character an *ember* token: every character is now *embered*.
 6. The party returns to the *bonfire* and *rests* without spending a spark.
 7. Set up the next stage: after the *mini-boss* (see §6.6) or after the *main-boss* (see §6.7).
-
-The end of step 6 is often a good point to stop when time is short. The players carry on with step 7 that day or another.

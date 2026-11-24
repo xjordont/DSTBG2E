@@ -14,23 +14,7 @@ The movement icon {{icon:ast-0033-enemy-movement-composite-symbol}} shows how an
 - The number in the arrow is how many *nodes* the enemy moves in that direction.
 - The small icon at the top right gives the target character: a skull for the character with the *aggro* token, a ring {{icon:ast-0032-target-nearest-character}} for the nearest character.
 
-An enemy told to move towards a character whose node it already shares does not move. An enemy told to move away from a character who is already at the greatest distance does not move. When two nodes would take an enemy equally close to where it is going, the players choose which node it enters. The nearest character is found at the start of a movement, not at each node.
-
-### Towards Aggro
-
-The enemy moves the number of nodes shown closer to the character with the aggro token.
-
-### Away from Aggro
-
-The enemy moves the number of nodes shown farther from the character with the aggro token.
-
-### Towards Nearest
-
-The enemy moves the number of nodes shown closer to the nearest character. If two or more characters are tied for nearest, the enemy moves towards the one with the aggro token. If the character with the aggro token is not among them, it moves towards the one with the higher *threat*.
-
-### Away from Nearest
-
-The enemy moves the number of nodes shown farther from the nearest character. If two or more characters are tied for nearest, the enemy moves away from the one with the aggro token or, if that character is not among them, from the one with the higher threat.
+An enemy told to move towards a character whose node it already shares does not move. An enemy told to move away from a character who is already at the greatest distance does not move. When two nodes would take an enemy equally close to where it is going, the players choose which node it enters. The nearest character is found at the start of a movement, not at each node. If two or more characters are tied for nearest, the target is the one with the aggro token or, if that character is not among them, the one with the highest *threat*.
 
 ### Push-Move
 
@@ -63,7 +47,7 @@ The Necromancer of Tomb of Giants shows the resurrect icon, a skeletal hand. At 
 
 - *Block* dice {{icon:ast-0048-block}} are used against physical attacks. *Resist* dice {{icon:ast-0050-resist}} are used against magical attacks.
 - Roll every die of that type shown on the character's *equipped* cards.
-- Keep the two highest results and add any fixed modifiers. Further dice are ignored.
+- Keep the two highest results and add any fixed modifiers. Further dice are ignored, but a die added by a *heroic action* is added to those two.
 - The damage is the attack value less that sum. The character places that many damage cubes on the *endurance bar* (see §3.4).
 - If the sum equals or exceeds the attack value, the character takes no damage.
 
@@ -92,7 +76,7 @@ If the dodge result is less than the dodge difficulty, the attack hits.
 
 A character may *parry* an attack only when all of these hold.
 
-- The character has a weapon or shield in the left weapon slot. A character wielding a weapon *two-handed* cannot parry.
+- The character has a weapon or shield in the left weapon slot and is not wielding a weapon *two-handed* (see §10.4).
 - The attacker is on the character's *node*.
 - The attacker is not a boss.
 - The attack is not a *push-attack*, a *push-move*, an *area-of-effect* attack or a node attack.

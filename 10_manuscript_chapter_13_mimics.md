@@ -9,7 +9,7 @@ When the last enemy falls in an encounter that holds an unopened chest, the char
 
 If the ambush card shows treasure, flip the chest to its open side. The party takes the treasure card under it, the encounter is cleared and the characters recover.
 
-If the ambush card shows a mimic, a *mini-boss* encounter is fought at once, before any recovery and before the party can claim its treasure.
+If the ambush card shows a mimic, the encounter goes on and the mimic is fought at once as a *mini-boss*.
 
 1. Take the Hungry Mimic's *data card* and *behaviour cards* if the party's chosen mini-boss has not yet been defeated, and the Voracious Mimic's if it has.
 2. Shuffle the behaviour cards and deal as many as the deck size {{icon:ast-0027-behaviour-deck-size}} on the data card to form the mimic's behaviour deck. Set the other cards aside.
@@ -18,7 +18,7 @@ If the ambush card shows a mimic, a *mini-boss* encounter is fought at once, bef
 5. Leave every character on the node they occupied when the last enemy fell, with the damage, *stamina* and *conditions* they carry. A character who died in the encounter stays out of the fight.
 6. The mimic takes the first turn.
 
-A mimic is fought as a mini-boss by every rule. The only difference is that it has no *heat-up* cards: when it heats up, one of its unused behaviour cards is shuffled in instead.
+A mimic follows the rules for a mini-boss (see §15.2), except that it has no *heat-up* cards: when it heats up, one of its unused behaviour cards, taken at random, is shuffled in instead.
 
 If the party kills the mimic:
 
@@ -28,4 +28,4 @@ If the party kills the mimic:
 
 If the encounter is *failed* against the mimic, the mimic's model is removed, the chest stays closed, and the ambush card stays face up.
 
-A chest that was left closed, or whose mimic beat the party, may be opened each time the party later clears that encounter. The choice is the party's every time. A mimic that is met again is set up afresh, at full health.
+A chest left closed, or one whose mimic was not killed, may be opened each time the party later clears that encounter. A mimic met again is set up afresh.

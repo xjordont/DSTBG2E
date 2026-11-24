@@ -2,7 +2,7 @@
 
 ## 4.1 Equipment Cards
 
-Equipment cards are the weapons, *spells*, shields, armour and items that a character equips to improve their abilities in combat. A card with the one-handed weapon icon {{icon:ast-0043-one-handed-weapon}} or the *two-handed* weapon icon {{icon:ast-0045-two-handed-weapon}} is a weapon, unless the centre of the card shows a scroll beneath a spell icon: that card is a spell. A card with the armour icon {{icon:ast-0047-armour}} is armour.
+Equipment cards are the weapons, *spells*, shields, armour and items that a character equips to improve their abilities in combat. A card with the one-handed weapon icon {{icon:ast-0043-one-handed-weapon}} or the *two-handed* weapon icon {{icon:ast-0045-two-handed-weapon}} is a weapon, unless it is a spell (see §4.3). A card with the armour icon {{icon:ast-0047-armour}} is armour.
 
 Each equipment card shows the following.
 
@@ -33,12 +33,12 @@ Dice are shown by colour, as black {{icon:ast-0051-black-dice}}, blue {{icon:ast
 *Upgrade* cards enhance equipment. There are two types: those marked with a sword {{icon:ast-0044-weapon-upgrade}}, which may only be fitted to weapons, and those marked with plate mail {{icon:ast-0046-armour-upgrade}}, which may only be fitted to armour.
 
 - Upgrades are fitted to equipment only by Blacksmith Andre (see §11.4).
-- A card holds no more upgrades than it has upgrade slots. A weapon with two upgrade slots takes up to two weapon upgrade cards.
+- A card holds no more upgrades than it has upgrade slots.
 
 An upgrade card that shows a magic scroll is a *spell*, and Andre does not fit it.
 
 - The character casts an upgrade spell onto their equipment as a *major action*, in the same way as an attack spell.
-- The upgrade spell must be in one of the character's weapon slots or stored in their catalyst.
+- The upgrade spell must be in one of the character's weapon slots or stored in their catalyst (see §4.3).
 - It is attached to a weapon or armour card *equipped* by the same character.
 - It stays attached for the rest of the encounter. When the encounter ends it returns to the character's *inventory*.
 

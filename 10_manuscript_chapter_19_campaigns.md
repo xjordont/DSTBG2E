@@ -1,6 +1,6 @@
 # 19. Campaigns
 
-Each campaign names the sets it needs and lists its sections. Encounters are given by level, in order from the *bonfire*. A name in brackets after a level is the *encounter card* placed on that tile, or the *invader* that joins it where the campaign says so. For the Twin Gargoyles, see §17.1.
+A name in brackets after a level is the *encounter card* placed on that tile, or the *invader* that joins it where the campaign says so. For the Twin Gargoyles, see §17.1.
 
 ## 19.1 The First Journey
 

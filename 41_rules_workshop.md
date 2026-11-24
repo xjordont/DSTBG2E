@@ -3312,3 +3312,82 @@ The author asked what to do about it. Eight options were measured on both card p
 **Recommendation.** One sentence in §15 or §7.5: "A boss encounter is failed when two characters are dead." And one number in §8.3: enemy health +5 for four characters. Ordinary encounters keep their rule (failed when every character is dead).
 
 **Not applied.** It changes when an encounter is lost, which is the author's to decide.
+
+## 38. The rules finalised (2026-11-24)
+
+The author: "Use your best game design skills and judgment to finalize all outstanding rules decisions. Test each decision to ensure balance. Prefer terse elegant intuitive rules that require less book keeping. Ensure all rules work cohesively together without contradictions or confusion. Refining the final rules should remove redundant rules and aim to have unified rulings when possible."
+
+### 38.1 One losing condition for every encounter
+
+Section 37 found that only the condition for losing levels boss fights across party sizes, and proposed it for bosses alone, with ordinary encounters keeping theirs. Two conditions for one event is the kind of doubling the author asked to be rid of, so the single form was tested: **an encounter is failed when two characters have died in it, or when its last character dies**, ordinary or boss alike (400 games a cell, ± 5; `work/phase12/unified_failure_tests_2026-11-24.tsv`). For one or two characters this is the rule they already had.
+
+| Enemy health for three / four (damage +1) | Won, 3 / 4, every set | Core box | Turns, every set |
+|---|---|---|---|
+| +2 / +2 | 82% / 70% | 72% / 81% | 302 / 284 |
+| **+3 / +3** | **68% / 69%** | **60% / 62%** | 341 / 312 |
+| +4 / +4 | 52% / 57% | 47% / 49% | 365 / 338 |
+| +4 / +5 | 52% / 39% | 47% / 35% | 365 / 334 |
+
+With one rule doing the work that health had been doing, the table shrinks:
+
+| Characters | Sparks | Enemy health | Enemy attack damage |
+|---|---|---|---|
+| 1 | 4 | as printed | as printed |
+| 2 | 3 | +2 | +1 |
+| 3 | 2 | +3 | +1 |
+| 4 | 1 | +3 | +1 |
+
+Confirmed as written (500 games a cell, ± 4, best play):
+
+| | 1 | 2 | 3 | 4 |
+|---|---|---|---|---|
+| Games won, every 2017 set | 56% | 51% | 68% | 68% |
+| Games won, core box alone | 82% | 59% | 62% | 62% |
+| Turns in a game, every set | 228 | 328 | 340 | 310 |
+| Turns in a game, core box | 220 | 276 | 287 | 286 |
+| Share of defences that are dodges, every set | 35% | 45% | 46% | 45% |
+| Mini-boss fights lost, every set / core | 18% / 9% | 15% / 10% | 16% / 15% | 6% / 5% |
+| Main-boss fights lost, every set / core | 41% / 32% | 23% / 26% | 19% / 20% | 10% / 13% |
+
+Against the table of section 35 (health +2 / +4 / +6, an encounter failed only when every character is dead):
+
+- **Balance:** the same band on both pools (51% to 68%, and 59% to 62% on the core box).
+- **Length:** a game for four takes 310 turns where it took 511, and a game for three 340 where it took 413. The length of a game no longer grows with the party.
+- **Bosses:** four characters lose 10% to 13% of their main-boss fights where they lost 2% to 3%, and three lose 19% to 20% where they lost 8% to 9%. No number on a boss card is changed.
+- **Book-keeping:** an enemy carries at most three more wound tokens, not six.
+- **Play:** a second death ends the fight, so a wounded companion is worth protecting; the first death still returns hollow when the encounter is cleared, as before.
+
+The simulated players do not yet play to the new condition (they do not shield a companion who is close to death), so real tables will do a little better than these figures.
+
+Both print-and-play decks sit inside the core set's range under it (lowest / median / highest score): core set 0.2 / 2.2 / 3.7, 0.2 / 3.3 / 7.1, 1.6 / 2.7 / 4.4; Tomb of Giants 0.4 / 1.8 / 2.8, 1.9 / 3.1 / 4.3, 2.1 / 2.6 / 3.7; Painted World 0.3 / 1.3 / 1.9, 0.8 / 2.3 / 3.1, 1.1 / 2.5 / 3.9. The hardest card for a lone character is won 36% of the time in the core set, 37% in the Tomb of Giants deck and 53% in the Painted World deck; no card is lost by more than one party of four in sixteen.
+
+### 38.2 The four bosses of the 2022 sets, fought at last
+
+Every boss was fought alone by parties of equal strength (300 fights a cell, `tools/sim/fights.py`'s method; the figures compare bosses with each other and are not the chances met in a whole game, where a party arrives worn):
+
+| Share of fights lost by 1 / 2 / 3 / 4 characters | |
+|---|---|
+| Mini-bosses of the 2017 sets, from easiest to hardest | 5 / 0 / 0 / 0 (Old Dragonslayer) to 48 / 5 / 0 / 0 (Winged Knight) |
+| Black Knight | 29 / 2 / 1 / 0 |
+| Heavy Knight | 23 / 1 / 1 / 1 |
+| Main bosses of the 2017 sets, from easiest to hardest | 48 / 4 / 2 / 2 (The Pursuer) to 87 / 28 / 19 / 13 (Ornstein and Smough) |
+| Crossbreed Priscilla | 66 / 14 / 6 / 6 |
+| Gravelord Nito, without his escort | 28 / 0 / 0 / 0 |
+
+The Black Knight, the Heavy Knight and Priscilla sit among their 2017 peers. Nito fought alone is far the easiest main boss, which is the case for the escort of §17.7; the simulator does not place the escort, so that rule stands on judgement. Priscilla's invisibility is not played either.
+
+### 38.3 The smaller matters, settled
+
+| Matter | Settled as | Why |
+|---|---|---|
+| The Knight's extra block die (31.1) | Added to the two highest (the ruling of section 16), stated in the FAQ | The pool reading leaves the ability worth two points in a hundred |
+| The Warrior's heroic action | As printed | Worth four to six points alone, nothing in a party, and its wording leaves nothing open |
+| A lone character's four sparks and six souls (section 30) | Kept | Removing either drops every class but the two strongest out of the band |
+| Enemy movement for party size (sections 34, 35) | Never | Its effect depends on the enemy's card, not on the party |
+| Boss health and damage for party size (section 37) | Never | Health does nothing; damage mends three characters and not four; the losing condition does both |
+| Gravelord Nito's escort, Crossbreed Priscilla's invisibility (26.2) | As written in §17 | The first is supported by 38.2; the second is the reading of her card that needs no rulebook |
+| Demon Titanite and the Four-Pronged Plough in Appendix B | Left | Both need the printed cards in hand |
+
+### 38.4 Skills searched for and what was taken from them
+
+The author asked for Claude skills useful to the task. A web search found community skills for rulebook writing, rulebook editing, board game design and technical writing; none is published by Anthropic. Their full instruction files sit in repositories outside this session's reach or behind a paywall, and third-party instruction files are not installed unread. What their public pages state was read as reference, and the sound parts were written down as `work/phase12/REVIEW_RUBRIC.md`: three rules (clarity over brevity, sequential disclosure, one term for one thing) and seven failure modes (terminology drift, forward reference without foundation, phantom condition, permission gap, buried exception, setup or teardown gap, written against meant), with this book's own rule that each rule has one owner. The final review of 38.5 was run to that rubric.

@@ -15,9 +15,8 @@
   - Place the character model on its side next to the *bonfire*.
   - If the character held the *aggro* token, it passes to the living character with the highest *threat*.
 - If the encounter is *cleared*, the characters who died in it return *hollow* (see §7.5).
-  - A hollow character has two hollow cubes on the *endurance bar* (see §3.4).
   - Hollow cubes are removed only by a *rest* at the bonfire or by an ember.
-- A hollow character who dies is *lost* until the party next rests at the bonfire.
+- A hollow character who dies is *lost*: out of play until the party next rests at the bonfire.
 
 ## 7.3 Embering
 
@@ -51,8 +50,8 @@
    - A *failed* encounter cannot be skipped. Once reset, it must be fought.
 3. The characters enter the tile by placing their models on its *entry nodes* (see §5.1). No more than three characters may start on the same node.
 4. Reveal the tile's encounter card. With the Phantoms expansion, flip the tile's *invader* token first (see §12.2).
-5. With the Events Expansion, reveal the tile's *event card*.
-6. Place the enemy models on the *spawn nodes* and the terrain on the *terrain nodes* that the encounter card shows. Each icon on the card matches the icon printed on a node of the tile.
+5. With the Events Expansion II, reveal the tile's *event card*.
+6. Place the enemy models on the *spawn nodes* and the terrain on the *terrain nodes* that the encounter card shows. Each icon on the card matches the icon printed on a node of the tile. Deal *trap* tokens to a trapped encounter that has none yet (see §5.5).
 7. Place one face-down treasure card under each *chest* {{icon:ast-0009-treasure-chest}} placed for the first time. Draw from the *tier one* treasure deck before the *mini-boss* is defeated and from the *tier two* treasure deck afterwards.
 8. Place the *aggro* token on the character with the highest *threat* {{icon:ast-0059-taunt}}. The party settles a tie.
 
@@ -80,7 +79,7 @@ A boss and an *invader* take their turns between the characters' turns (see §16
   1. Each character takes back any souls of their own that lie on the tile.
   2. Each character gains the soul reward for the encounter's level, those who died in the encounter included.
   3. On a first clear, the party takes the tile's two treasure cards. A reset encounter fought again gives no treasure.
-  4. The party takes the treasure card under each unopened chest.
+  4. The party takes the treasure card under each chest it opens (see §5.5).
   5. Mark the encounter card with a black cube.
   6. The characters recover.
 - When an encounter is failed, resolve it as follows.
@@ -105,7 +104,7 @@ A boss and an *invader* take their turns between the characters' turns (see §16
 
 ### Event Cards
 
-The Events Expansion II is a community expansion of 49 event cards, 8 trap cards and 14 treasure cards. If the players have it, it is in play. Its cards are used as printed, but for five whose text is changed in the print-and-play file kept with this book. A card overrides this book where the two differ.
+The Events Expansion II (see §2.6) is in play if the players have it. Its cards are used as printed, but for five whose text is changed in the print-and-play file kept with this book. A card overrides this book where the two differ.
 
 - The event card beside an *encounter card* is revealed each time the party enters that tile and is resolved as its text says. Its effect lasts for that encounter unless the card gives another end.
 - When the encounters are *reset*, gather every revealed event card. A card with the discard icon is set aside until a boss is defeated. The others are shuffled back into the decks of their levels. Then deal a new card face down to each of those encounters that has never been *cleared*. A cleared encounter has no event card.
@@ -140,10 +139,7 @@ The Events Expansion II is a community expansion of 49 event cards, 8 trap cards
 
 ## 7.7 Treasure Rewards
 
-- The first time an encounter is *cleared*, the party takes the two treasure cards dealt face down to its tile at setup (see §6.5).
-- When an encounter with an unopened *chest* is cleared, flip the chest token to its open side and take the treasure card under it.
 - The party decides which character takes each card. If it cannot agree, the character holding the *aggro* token decides. This holds for every shared reward in the book.
 - A treasure card goes into the *inventory* of the character who takes it.
 - With the Explorers expansion, a chest may hide a *mimic*. The party decides whether to open the chest before it recovers or collects any reward (see §13).
 - With the Iron Keep expansion, a *crystal lizard* killed during the encounter gives *Titanite* (see §14).
-- In the standard game no treasure card is handed over for defeating a boss. The mini-boss's and the main-boss's own treasure cards are found in the *tier two* treasure deck.

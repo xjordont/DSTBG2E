@@ -43,4 +43,4 @@ After each boss is defeated (*mini-boss*, *main-boss* and *mega-boss*), a player
 - The last character alive wins.
 - A win after any boss but the final boss gives the winner +1 to the attack value of every attack in later PvP encounters, and nowhere else.
 - The winner after the final boss is the champion of the game.
-- When the PvP encounter ends, return the *trap* tokens to the supply. The steps that follow the boss's defeat then carry on.
+- When the PvP encounter ends, return the *trap* tokens to the supply and restore each character as at its start. The steps that follow the boss's defeat then carry on.

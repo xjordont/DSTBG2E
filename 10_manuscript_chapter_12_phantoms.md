@@ -1,6 +1,6 @@
 # 12. Phantoms
 
-With the Phantoms expansion, *summons* and *invaders* are in play. Neither is scaled for party size.
+With the Phantoms expansion, *summons* and *invaders* are in play.
 
 ## 12.1 Summons
 
@@ -12,7 +12,7 @@ With the Phantoms expansion, *summons* and *invaders* are in play. Neither is sc
 4. Shuffle all of the summon's *behaviour cards* to form its behaviour deck.
 5. Place the summon's model on an *entry node* of the boss tile, chosen by the party, after the characters have placed their models.
 6. The summon takes a turn after each character's turn.
-7. On each of its turns, draw the top card of the summon's behaviour deck and resolve its icons from left to right. When the deck runs out, turn the discard pile face down without shuffling to form a new deck.
+7. On each of its turns, draw and resolve the top card of the summon's behaviour deck as for a boss (see §16.1).
 
 The summon does only what its cards say:
 
@@ -21,7 +21,7 @@ The summon does only what its cards say:
 - A distract icon makes the boss treat the summon as the holder of the *aggro* token during the boss's next turn.
 - The special ability on its data card applies as printed.
 
-The boss treats a summon as a character: the summon counts when a behaviour targets the nearest character or compares *threat*, and a summon that is hit is *pushed* and takes *conditions*. A summon never holds the aggro token, and the damage it deals does not move the token. Against each attack the players choose the summon's defence and roll the dice on its data card: it *blocks* or *resists* with the two highest results, or it *dodges* at no cost. A failed dodge lets the full damage through, and each point of damage lowers the health dial by one.
+A summon's death never counts towards a *failed* encounter. The boss targets a summon as it does a character: the summon counts when a behaviour targets the nearest character or compares *threat*, and a summon that is hit is *pushed* and takes *conditions*. A summon never holds the aggro token, and the damage it deals does not move the token. Against each attack the players choose the summon's defence and roll the dice on its data card: it *blocks* or *resists* with the two highest results, or it *dodges* at no cost. A failed dodge lets the full damage through, and each point of damage lowers the health dial by one.
 
 The summon is removed from play when its health dial reaches zero or when the encounter ends.
 
@@ -46,11 +46,11 @@ An *invader* is a hostile *phantom* that joins one encounter and hunts the chara
 
 ### Invader Combat
 
-- The invader takes a turn after each character's turn. It takes no turn in *threat* order with the other enemies, so it acts far more often than they do.
+- The invader takes a turn after each character's turn, and none in *threat* order with the other enemies.
 - On its turn, draw the top card of the invader's behaviour deck and resolve its icons from left to right, as for a boss (see §16.1).
 - An invader has no *heat-up* cards. When its health reaches the heat-up point {{icon:ast-0030-heat-up-point}} on its data card, one of its unused behaviour cards, taken at random, serves as its heat-up card (see §15.5).
 - Characters attack an invader as any other enemy, against the *block* and *resist* values {{icon:ast-0028-block-resist-shield}} on its data card. Damage is marked on its health dial.
 - The encounter is not *cleared* while the invader is on the tile.
 - If any character dies, the invader vanishes at once and gives no reward.
-- The invader dies when its health dial reaches zero. At once each character gains *souls*, three for a standard invader and four for an advanced one, and the party takes the invader's treasure card.
+- The invader dies when its health dial reaches zero. At once each character gains the invader's *souls* (see §7.6) and the party takes its treasure card.
 - An invader that has been met does not return when its encounter is *reset*.

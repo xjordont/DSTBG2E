@@ -7,25 +7,19 @@
    - *Walk*, once a turn: move to an adjacent *node* at no cost.
    - *Run*: move one further node for each stamina spent.
    - Equip: swap equipment cards among the *back-up slot*, the weapon slots and the armour slot. The *inventory* is closed during an encounter.
-   - *Heroic action*: carry out the ability on the dashboard and flip the heroic action token face down.
+   - *Heroic action*: carry out the ability on the dashboard and flip the heroic action token to its used side.
 3. Take one *major action*.
    - Attack: use one attack option from the left weapon slot, the right, or both.
    - *Rest*: remove all stamina cubes. A character who runs in a turn cannot rest in it, and a character who rests cannot then run.
-   - *Drink estus*: remove all damage cubes and flip the *estus flask* token face down. Stamina cubes stay.
-   - *Ember*: discard an ember card from the back-up slot and place the ember token on the dashboard.
+   - *Drink estus*: remove all damage cubes and flip the *estus flask* token to its used side. Stamina cubes stay.
+   - *Ember*: discard an ember card from the back-up slot to become *embered* (see §7.3).
+   - Cast an upgrade *spell* (see §4.2).
 
 At the end of the turn the character's *conditions* take effect (see §8.5).
 
 ## 10.2 Character Movement
 
-A character moves from *node* to node in four ways during an encounter.
-
-- *Walk*: one node, as a *minor action*.
-- *Run*: further nodes at one *stamina* each, as many as the character is able to pay for.
-- *Dodge*: a successful dodge moves the character to an adjacent node (see §9.5).
-- *Shift*: some attack options move the character as part of the attack.
-
-Every movement must end on a node the character is allowed to enter (see §5.2). A character may move into a node already at the *node model limit* but must at once *push* a model out of it, a friendly one if there is one (see §5.3).
+During an encounter a character moves from *node* to node by a *walk*, a *run*, a *dodge* or a *shift*. Movement is limited by terrain (see §5.5) and by the *node model limit* (see §5.3).
 
 ## 10.3 Character Attacks
 
