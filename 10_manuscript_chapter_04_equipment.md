@@ -73,4 +73,4 @@ An upgrade card that shows a magic scroll is a *spell*, and Andre does not fit i
 - There is no limit on the number of ember cards a character may carry.
 - An ember card may be kept in the *inventory*, but it must be in the *back-up slot* to be used during an encounter.
 - During an encounter, discarding an ember card is the character's *major action*. Between encounters it may be discarded from the back-up slot at any time.
-- A character who discards an ember card places an ember token on their dashboard and becomes embered (see §7.3).
+- A character who discards an ember card becomes embered (see §7.3).

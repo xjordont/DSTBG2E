@@ -18,7 +18,7 @@ If the ambush card shows a mimic, the encounter goes on and the mimic is fought 
 5. Leave every character on the node they occupied when the last enemy fell, with the damage, *stamina* and *conditions* they carry. A character who died in the encounter stays out of the fight.
 6. The mimic takes the first turn.
 
-A mimic follows the rules for a mini-boss (see §15.2), except that it has no *heat-up* cards: when it heats up, one of its unused behaviour cards, taken at random, is shuffled in instead.
+A mimic follows the rules for a mini-boss (see §15, §16), except that it has no *heat-up* cards: when it heats up, one of its unused behaviour cards, taken at random, is shuffled in instead.
 
 If the party kills the mimic:
 

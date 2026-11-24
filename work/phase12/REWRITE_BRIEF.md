@@ -54,7 +54,7 @@ Everything here is decided. Where the author's chapter differs, write this. Wher
 
 - This table replaces the author's whole scaling table. Enemy movement is never scaled and no attack is repeated because of party size.
 - Bosses, mimics, invaders, summons and crystal lizards are never scaled.
-- Sparks at the start: five less the number of characters. One spark is added each time a boss is defeated. Sparks are gained no other way.
+- Sparks at the start: five less the number of characters. One spark is added each time a boss is defeated. Sparks are gained no other way, unless an event card gives one.
 - A character adventuring alone starts with six souls.
 
 ### 3.2 The round
@@ -163,7 +163,7 @@ Fought after every boss in every game with two or more characters. The author's 
 
 The author's chapter, with these:
 
-- Sparks: start at five less the number of characters; that number is also the maximum; one is gained for each boss defeated, never above the maximum; never bought. The party rests free only after the last boss of a section.
+- Sparks: start at five less the number of characters; that number is also the maximum; one is gained for each boss defeated, never above the maximum; never bought. The party rests free only when a section ends.
 - Every soul reward is one lower than in the standard game (first clear 2 / 3 / 4; a reset encounter fought again 0 / 1 / 2; Level 4 encounters and bosses 5). Stat costs are doubled (4 / 8 / 16 / 24).
 - Reset encounters: fought again or skipped as in section 3.7.
 - Treasure: two cards a tile as in section 3.7, from tier one until the bonfire ascetic is burnt.
@@ -218,7 +218,7 @@ Use these headings exactly. A chapter owns the rules named after its sections.
 
 **§21 Glossary** (`12_glossary.md`; 2,200 words): one line per term with its section number.
 
-**§22 F.A.Q.** (400 words; no numbered sections): ten answers.
+**§22 F.A.Q.** (400 words; no numbered sections): two answers, a failed dodge and the souls of a dead character. An answer the rules already give is not repeated here.
 
 **Appendix A. Weapon Stat Revisions · Appendix B. Card Amendments** (`10_manuscript_chapter_23_appendices.md`; 1,400 words).
 

@@ -29,12 +29,14 @@ The bosses in this table are set up as it shows, and again each time their encou
 - The cards that mark the nodes form a deck of their own. Each attack reveals the top card and discards it once resolved. When that deck is empty, turn its discard pile face down without shuffling.
 - Where a rule of this chapter places a boss model on a node, the other models on that node are *pushed* off it as after a *leap* (see §16.2).
 
+## 17.2 Core Set
+
 ### Ornstein and Smough
 
 One *main-boss*, two models. Dragon Slayer Ornstein and Executioner Smough each have a data card and a health dial of their own.
 
 - Ornstein starts on the main-boss *spawn node* and Smough on the *mini-boss* spawn node.
-- Each boss turn draws one card. Ornstein resolves the behaviour printed for Ornstein, then Smough the one printed for Smough. The range, the dodge difficulty, the arcs and the *weak arcs* {{icon:ast-0041-weak-boss-arc}} printed with a behaviour apply to its model alone.
+- Each boss turn draws one card. Ornstein resolves the behaviour printed for Ornstein, then Smough the one printed for Smough. The range, the *dodge difficulty*, the arcs and the *weak arcs* {{icon:ast-0041-weak-boss-arc}} printed with a behaviour apply to its model alone.
 - A character's attack is made against one model. A character on a model's node stands in that model's arcs.
 - Neither data card shows a heat-up point {{icon:ast-0030-heat-up-point}}. When the first model falls, remove it and return the deck and its discard pile to the box. Shuffle the survivor's heat-up cards as the new deck, and raise its health by 10 if it is Ornstein or by 15 if it is Smough, never above its starting health.
 - The boss is defeated when both models have fallen.
@@ -48,10 +50,6 @@ Where a campaign *section* lists the Twin Gargoyles, two Gargoyles are fought on
 - Each Gargoyle heats up at its own heat-up point.
 - The rewards of a defeated boss are given once, when the second Gargoyle falls (see §16.5).
 - If the encounter is failed, both Gargoyles are fought again.
-
-## 17.2 Core Set
-
-Ornstein and Smough and the Twin Gargoyles have rules of their own (see §17.1).
 
 ## 17.3 Asylum Demon and Stray Demon
 
@@ -73,10 +71,9 @@ The node of a destroyed pillar is a *basic node* for the rest of the encounter.
 
 ### Wind Up
 
-When the Wind Up icon is resolved, each character may spend one *stamina* to move at once to an adjacent node. The icon works the same on the cards of any other boss.
+When the Wind Up icon is resolved, each character may spend one *stamina* to move at once to an adjacent node. This movement counts as a *run*. The icon works the same on the cards of any other boss.
 
 ## 17.4 Darkroot
-
 
 ### Great Grey Wolf Sif
 
@@ -109,12 +106,8 @@ The Old Dragonslayer is played with the Dragon Slayer Ornstein model of the core
 
 ### Pursuer
 
-- Each turn the Pursuer draws and resolves two behaviour cards, one after the other. If the deck is empty when either card is due, turn the discard pile over first. The *weak arcs* are those of the second card.
+- Each turn the Pursuer draws and resolves two *behaviour cards*, one after the other. If the deck is empty when either card is due, turn the discard pile over first. The *weak arcs* are those of the second card.
 - From its heat-up until the encounter ends, every attack on its behaviour cards has +1 to the attack value.
-
-### Mimics
-
-The Hungry *Mimic* and the Voracious Mimic are fought by the mimic rules (see §13).
 
 ## 17.7 Tomb of Giants
 
@@ -192,12 +185,12 @@ The Four Kings are one *mega-boss* with four models, the kings numbered one to f
 
 - King one starts on the mega-boss *spawn node*. The other three models wait beside the board.
 - Each boss turn draws one behaviour card, and every king in play resolves the whole card, in numerical order.
-- A character's attack is made against one king, as for Ornstein and Smough (see §17.1).
+- A character's attack is made against one king, as for Ornstein and Smough (see §17.2).
 - A king whose health dial reaches zero is removed from the board. The boss is defeated when all four kings have fallen.
 
 **Royal Summons.** The first three times the behaviour deck is empty at the start of a boss turn, the next king arrives. Do this in place of turning the discard pile over:
 
-1. Place the next king in numerical order on the mega-boss spawn node, facing as a boss faces at the start of its encounter, and set its health dial to its starting health. The models already on that node are pushed off it (see §17.1).
+1. Place the next king in numerical order on the mega-boss spawn node, facing as a boss faces at the start of its encounter, and set its health dial to its starting health. The models already on that *node* are *pushed* off it as after a *leap* (see §16.2).
 2. Turn the discard pile face down, remove one of its cards at random without looking at it, and return that card to the box.
 3. Add two cards, taken at random and unseen, from the pile of the king just placed.
 4. Shuffle these cards to form the new behaviour deck.
@@ -208,7 +201,7 @@ If no king is in play at the start of a boss turn and no summons is due, draw th
 
 ### Gaping Dragon
 
-- When the Gaping Dragon heats up, one of the three remaining heat-up cards joins the deck in the usual way.
+- When the Gaping Dragon heats up, one of the three heat-up cards set out beside it joins the deck in the usual way (see §15.5).
 - Crawling Charge is never part of the behaviour deck. When the crawl icon is resolved, the Gaping Dragon at once resolves every icon on Crawling Charge, from left to right, with the *range* and the *dodge difficulty* printed on that card. Its turn then ends: no further icon of the drawn behaviour card is resolved. The drawn card, and not Crawling Charge, still shows the *weak arcs*.
 
 ### Guardian Dragon
@@ -240,7 +233,7 @@ The Wind Up icon on the Last Giant's cards is resolved as for the Asylum Demon (
 
 ### Manus, Father of the Abyss
 
-- **Overextended.** At the end of each of Manus's turns, each character may spend one *stamina* to move to an adjacent node.
+- **Overextended.** At the end of each of Manus's turns, each character may spend one *stamina* to move to an adjacent node. This movement counts as a *run*.
 - An attack with the *shaft* icon does not target a character on Manus's own node (see §10.3), whichever *arc* that character stands in.
 - Manus has a heat-up of its own. When its health reaches its heat-up point, take two of its heat-up cards at random, without looking at them. Place one face down on top of the behaviour deck and the other beneath the discard pile. Do not shuffle. The first is the next card Manus draws; the second is the first card drawn after the discard pile is next turned over.
 

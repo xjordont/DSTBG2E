@@ -30,7 +30,7 @@ A boss attacks by the rules for enemy attacks (see §9.3), but its attacks may b
 
 An attack without the area icon targets one character within range, in whatever arc that character stands.
 
-Each character attacked defends as against an enemy's attack (see §9.4, §9.5). A boss cannot be parried.
+Each character attacked defends as against an enemy's attack (see §9.4, §9.5).
 
 ## 16.4 Boss Aggro
 

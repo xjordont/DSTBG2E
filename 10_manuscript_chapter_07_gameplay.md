@@ -2,7 +2,7 @@
 
 ## 7.1 Objective and Loss Conditions
 
-- The players win if any character survives to defeat the final boss. The victory is shared.
+- The players win when the final boss is defeated. The victory is shared.
 - The final boss is the *main-boss*, or the *mega-boss* if the party chose one at setup.
 - With two or more characters, a player versus player (PvP) encounter is fought after every boss (see §20).
 - The players lose if an encounter is *failed* and no *spark* remains.
@@ -15,7 +15,7 @@
   - Place the character model on its side next to the *bonfire*.
   - If the character held the *aggro* token, it passes to the living character with the highest *threat*.
 - If the encounter is *cleared*, the characters who died in it return *hollow* (see §7.5).
-  - Hollow cubes are removed only by a *rest* at the bonfire or by an ember.
+  - Hollow cubes are removed by a *rest* at the bonfire or by an ember.
 - A hollow character who dies is *lost*: out of play until the party next rests at the bonfire.
 
 ## 7.3 Embering
@@ -26,7 +26,6 @@
   - Place the ember token on the character's dashboard.
 - While a character is embered:
   - If the character suffers three or more damage from one attack, reduce that damage by one.
-  - The character cannot buy or use an ember card (see §4.4).
   - With the Phantoms expansion, the character may call a *summon* before a boss encounter (see §12.1) and provokes *invaders* (see §12.2).
 - The ember token stays on the dashboard until the character dies.
 - When a boss is defeated, every character becomes embered without discarding a card.
@@ -76,7 +75,7 @@ A boss and an *invader* take their turns between the characters' turns (see §16
 - An encounter is failed when two characters have died in it, or when its last character dies.
 - An encounter is on its first clear while the two treasure cards dealt to its tile still lie there. They stay on the tile until the party takes them.
 - When an encounter is cleared, resolve it as follows.
-  1. Each character takes back any souls of their own that lie on the tile.
+  1. Each character takes back their dropped souls (see §7.6).
   2. Each character gains the soul reward for the encounter's level, those who died in the encounter included.
   3. On a first clear, the party takes the tile's two treasure cards. A reset encounter fought again gives no treasure.
   4. The party takes the treasure card under each chest it opens (see §5.5).
@@ -97,7 +96,7 @@ A boss and an *invader* take their turns between the characters' turns (see §16
 - Each character who died in a cleared encounter and is not *lost* returns *hollow*.
   - Place the character model upright with the surviving characters.
   - Remove all damage cubes, stamina cubes and condition tokens.
-  - Place two hollow cubes on the two rightmost spaces of the endurance bar.
+  - Place two hollow cubes on the endurance bar (see §3.4).
 - *Estus flask*, *luck* and *heroic action* tokens are not restored.
 - The hollow cubes of a character who was already hollow stay.
 - The party then goes on to the next tile. Before it does, it may rest at the bonfire or visit Blacksmith Andre (see §11.4).
@@ -139,7 +138,7 @@ The Events Expansion II (see §2.6) is in play if the players have it. Its cards
 
 ## 7.7 Treasure Rewards
 
-- The party decides which character takes each card. If it cannot agree, the character holding the *aggro* token decides. This holds for every shared reward in the book.
+- The party decides which character takes each treasure card it gains. If it cannot agree, the character holding the *aggro* token decides. This holds for every shared reward in the book.
 - A treasure card goes into the *inventory* of the character who takes it.
-- With the Explorers expansion, a chest may hide a *mimic*. The party decides whether to open the chest before it recovers or collects any reward (see §13).
+- With the Explorers expansion, a *chest* may hide a *mimic*. The party decides whether to open the chest before it recovers or collects any reward (see §13).
 - With the Iron Keep expansion, a *crystal lizard* killed during the encounter gives *Titanite* (see §14).

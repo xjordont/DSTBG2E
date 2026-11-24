@@ -6,15 +6,15 @@ Once the party has reached a boss encounter it must pass through the *fog gate*,
 
 The first time the party passes through the fog gate, move the fog gate token from the doorway to the *bonfire* tile. From then on the party may go from the bonfire tile straight to the boss encounter, or travel the road again through its encounter tiles for *souls*.
 
-The token stays on the bonfire tile until the boss is defeated. In a campaign the fog gate gives no shortcut.
+The token stays on the bonfire tile until the boss is defeated.
 
 ## 15.2 Overview
 
 A boss is a single large model with far more health and attack power than other enemies and a special ability of its own; it follows the rules for enemies except as chapters 15 to 17 state. There are three types of boss: *mini-boss*, *main-boss* and *mega-boss*.
 
-A boss's behaviour deck is built when the boss is set up on its tile, and built afresh each time its encounter is *failed* (see §15.5). It lies face down beside the tile.
+A boss's behaviour deck is built when the boss is set up on its tile, and built afresh each time its encounter is *failed* (see §15.5). It lies face down beside the tile. Some bosses are set up differently (see §17.1).
 
-Each time a boss encounter begins, place the character models on the *entry nodes* of the boss tile and the boss model on its *spawn node*, facing the adjacent *node* nearest the entry nodes. Set the boss's health dial to its starting health. Give the *aggro* token to the character with the highest *threat*.
+Each time a boss encounter begins, place the character models on the *entry nodes* of the boss tile and the boss model on its *spawn node*, facing the adjacent *node* nearest the entry nodes. Set the boss's health dial to its starting health. Place the *aggro* token as in any encounter (see §7.5).
 
 ## 15.3 Boss Tiles
 

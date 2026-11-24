@@ -53,7 +53,7 @@ The *bonfire* is a safe haven in an otherwise treacherous world. Two strangers w
 
 - The cards of the *shop* lie face up. The *tier one* shop is open from the start of the game and the *tier two* shop from the defeat of the *mini-boss* (see §6.3).
 - A character may buy any card in the shop at the price in the table below. The card goes into the character's inventory.
-- A card bought is not replaced. Shops are restocked only when a boss is defeated.
+- A card bought is not replaced until the shops are restocked (see §6.3).
 - Any card that is not *starting equipment* sells for one soul and goes to the bottom of its treasure deck, or to the box if it came from no deck.
 - Starting equipment cannot be sold.
 - A sold *ember* card returns to the tier one shop.

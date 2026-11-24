@@ -75,7 +75,6 @@ The *bonfire* works as in the standard game (see §11), with the changes below. 
 The *shop* follows the standard game, with these changes.
 
 - The *tier one* and *tier two* shops are restocked only when a *section* ends. In a section with several bosses, only the last boss restocks them.
-- The tier two shop is stocked only once the party has burnt the bonfire ascetic.
 - No *legendary treasure* or boss treasure card is ever added to a treasure deck.
 - Legendary treasure is gained only by *transposition*.
 

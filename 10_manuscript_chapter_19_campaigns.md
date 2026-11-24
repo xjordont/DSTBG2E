@@ -1,6 +1,6 @@
 # 19. Campaigns
 
-A name in brackets after a level is the *encounter card* placed on that tile, or the *invader* that joins it where the campaign says so. For the Twin Gargoyles, see §17.1.
+A name in brackets after a level is the *encounter card* placed on that tile, or the *invader* that joins it where the campaign says so. Where a section lists the Twin Gargoyles, two are fought (see §17.2).
 
 ## 19.1 The First Journey
 
@@ -188,7 +188,7 @@ Needs the core set and the Asylum Demon, Guardian Dragon, Gaping Dragon and Blac
 
 - Encounters pay no *souls*. Bosses and *invaders* pay as in any campaign (see §18.5).
 - Clearing a Level 4 encounter gives one *spark*, never above the maximum.
-- A *cleared* Level 4 encounter and a defeated mega-boss are not fought again.
+- A defeated mega-boss is not fought again.
 - Section Five is fought in the order Level 4 encounter, Stray Demon, Level 4 encounter, Black Dragon Kalameet. The Stray Demon's defeat does not end the section.
 - At the start of each section, before leaving the *bonfire* tile, each character raises stats at no cost:
   - Sections One and Two: two stats from the base tier to stat tier one, then one from stat tier one to two.

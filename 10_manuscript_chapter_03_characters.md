@@ -59,7 +59,7 @@ If a character must place a damage cube and there is no free space, the characte
 
 Each character has four tokens: *heroic action*, *luck*, *estus flask* and *ember*.
 
-The heroic action, luck and estus flask tokens each have a ready side and a used side. The ready side has the brighter colours. A token's effect is available only while its ready side is face up. The token is flipped to its used side when the character uses the effect.
+The heroic action, luck and estus flask tokens each have a ready side and a used side. The ready side has the brighter colours. A token's effect is available only while its ready side shows. The token is flipped to its used side when the character uses the effect.
 
 ### Heroic Action
 
@@ -75,4 +75,4 @@ A character flips their estus flask token to the used side to *drink estus*, the
 
 ### Ember
 
-The ember token marks an *embered* character. It is placed face up on the dashboard when the character becomes embered and goes back to the supply when the character stops being embered (see §7.3).
+The ember token marks an *embered* character. It is placed on the dashboard when the character becomes embered and returns beside the dashboard when the character stops being embered (see §7.3).

@@ -30,7 +30,7 @@ At most three models, friendly or enemy, may share a *node*. This is the *node m
 
 Bosses have a limit of their own.
 
-- Only one boss model may ever be on a node. If a boss moves onto a node that already holds a boss, the players must push the boss that was there first.
+- Only one boss model may ever be on a node. If a boss moves onto a node that already holds a boss, the players must push the boss that was there first to an adjacent node of their choice.
 - A boss does not count towards the limit of three. A node may hold one boss and three characters.
 
 ## 5.4 Range

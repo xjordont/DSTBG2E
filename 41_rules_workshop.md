@@ -3380,7 +3380,7 @@ The Black Knight, the Heavy Knight and Priscilla sit among their 2017 peers. Nit
 
 | Matter | Settled as | Why |
 |---|---|---|
-| The Knight's extra block die (31.1) | Added to the two highest (the ruling of section 16), stated in the FAQ | The pool reading leaves the ability worth two points in a hundred |
+| The Knight's extra block die (31.1) | Added to the two highest (the ruling of section 16), stated in §9.4 | The pool reading leaves the ability worth two points in a hundred |
 | The Warrior's heroic action | As printed | Worth four to six points alone, nothing in a party, and its wording leaves nothing open |
 | A lone character's four sparks and six souls (section 30) | Kept | Removing either drops every class but the two strongest out of the band |
 | Enemy movement for party size (sections 34, 35) | Never | Its effect depends on the enemy's card, not on the party |
@@ -3391,3 +3391,49 @@ The Black Knight, the Heavy Knight and Priscilla sit among their 2017 peers. Nit
 ### 38.4 Skills searched for and what was taken from them
 
 The author asked for Claude skills useful to the task. A web search found community skills for rulebook writing, rulebook editing, board game design and technical writing; none is published by Anthropic. Their full instruction files sit in repositories outside this session's reach or behind a paywall, and third-party instruction files are not installed unread. What their public pages state was read as reference, and the sound parts were written down as `work/phase12/REVIEW_RUBRIC.md`: three rules (clarity over brevity, sequential disclosure, one term for one thing) and seven failure modes (terminology drift, forward reference without foundation, phantom condition, permission gap, buried exception, setup or teardown gap, written against meant), with this book's own rule that each rule has one owner. The final review of 38.5 was run to that rubric.
+
+### 38.5 The manuscript consolidated
+
+The author asked for rules that work together without contradiction, for redundant rules to go and for unified rulings where they are possible. The book was read three times to the rubric of 38.4.
+
+**First reading: one owner for each rule.** Three editors, each given a third of the book and the brief, listed every rule stated in more than one place, every leftover of a withdrawn rule and every sentence that explained a decision. They returned 84 findings, and 123 edits were made from them. A rule stated twice now stands once, in the section a player reads when the rule is needed, and the other place points to it. The FAQ fell from ten answers to two: eight of its answers repeated a rule in the words of the rule. The table of Appendix A lost the columns that served the grips of section 26. The book went from 28,805 words to 26,803.
+
+**Second reading: what the cuts cost.** Two checks were run on the result, each by a reader who had not made the cuts.
+
+| Check | Method | Result |
+|---|---|---|
+| Coverage | Every rule of the brief, 216 in all, looked for in the book | 203 stated once and correctly; none missing; 11 still stated twice; 2 worded differently from the brief; 3 details lost; 1 contradiction |
+| Structure | Every chapter read in full against the text before the cuts | 14 defects left by the cuts, 4 older ones |
+
+All of it was mended with 42 further edits. The ones that touch a rule:
+
+| Finding | Mended by |
+|---|---|
+| "This movement counts as a run" had been cut from Wind Up and from Manus's Overextended. It is the author's rule, and the arc rules of §15.6 depend on it | Restored in both |
+| Hollow cubes were removed "only" by a rest or an ember, and by a Purging Stone in §7.5 | "Only" removed; the stone's rule stays with the stone |
+| A second boss pushed off a node: the choice of node had been lost | "To an adjacent node of their choice" restored |
+| After the mini-boss, "the right level" pointed at a step that names the mini-boss's card | The step now names the main-boss's data card |
+| The four bosses of the 2022 sets print no encounter levels, and setup did not say where they are | The setup step points to Appendix B |
+| A party with a boss of the 2022 sets and no print-and-play deck had no encounter deck named | The step that sends a set without encounter cards to the core set now names those two sets |
+| The decks of the bosses in the setup table of §17.1 were reached from nowhere in setup | §15.2 points to the table |
+| "The players win if any character survives to defeat the final boss" belonged to the old losing condition | "The players win when the final boss is defeated" |
+| The ember token went "back to the supply", which setup never makes | It returns beside the dashboard, where setup puts it |
+| Demon Titanite had lost its row in Appendix B | Restored |
+
+The rest were pointers that had lost their target, italics that had lost their first use, a section left holding only a pointer (Ornstein and Smough and the Twin Gargoyles now stand under §17.2, the core set, and the empty heading for mimics in §17.6 is gone) and the eleven restatements, each replaced by a pointer or cut.
+
+Two findings were not taken as given. The checker's cure for the Purging Stone was to name it in §7.2, which puts a rule of an optional module into the core rules; removing one word does the same work. And the pointer from §2 to Appendix B was kept, because the appendix still says how those two sets are used.
+
+**The state of the book.**
+
+| Measure | Result |
+|---|---|
+| Words | 26,760 of 28,905 |
+| Style check | 0 violations |
+| Cross-references | 0 broken, 131 targets |
+| Simulator tests | All passed, the settled ruleset among them |
+| Rules of the brief missing from the book | None |
+
+No rule changed in either reading, so the figures of 38.1 and 38.2 stand.
+
+**What is not done.** The rulebook PDF has not been laid out again from these chapters. Demon Titanite and the Four-Pronged Plough are still "as printed" until the cards are in hand. The simulated players do not play to the two-dead condition (they do not pull a wounded character back to save the encounter), so real tables are likely to do a little better than the figures. Gravelord Nito's escort and Crossbreed Priscilla's invisibility are not simulated; 38.2 gives the case for the first.

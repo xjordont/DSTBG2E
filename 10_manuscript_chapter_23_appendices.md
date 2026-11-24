@@ -94,6 +94,7 @@ Where a card has two printings, the one with the rules text given here is used. 
 | Carthus Milkring | The wearer adds 1 to the dodge icons {{icon:ast-0062-dodge}} rolled for a dodge. | |
 | Chloranthy Ring | At the start of the wearer's turn, the wearer and every other character on the wearer's *node* each recover 1 stamina in addition to the turn's 1. | |
 | Covetous Silver Serpent Ring | The wearer gains 1 more soul with the reward for each *cleared* encounter. | |
+| Demon Titanite | As printed. | The revised card is used. Requirements and treasure type as printed. |
 | Eastern Armour | The wearer pays 2 stamina to dodge in place of 1. | |
 | Mask of the Child | At the start of the wearer's turn, the wearer recovers 2 stamina in place of the turn's 1. | This text also replaces that of the Events Expansion II card of the same name. |
 | Mon Ring | As printed, and: the effect is used only while the card is face up, and using it turns the card face down. | A *rest* turns the card face up. |
@@ -107,7 +108,7 @@ Blacksmith Andre exchanges a Titanite Shard for a Titanite Chunk, or a Titanite 
 
 ## Enemy Data Cards
 
-The 12 enemies of Tomb of Giants and Painted World of Ariamis are played from their printed *data cards*, with the party-size scaling of every enemy (see §8.3). They appear only on the print-and-play *encounter cards* of their sets (see §6.5) and in Gravelord Nito's encounter (see §17.7); the encounter cards and event cards printed in those sets are not used.
+The 12 enemies of Tomb of Giants and Painted World of Ariamis are played from their printed *data cards*, with the party-size scaling of every enemy (see §8.3). They appear only on the print-and-play *encounter cards* of their sets (see §6.5) and in Gravelord Nito's encounter (see §17.7).
 
 | Enemy | Set | Models | Threat | Health | Block | Resist |
 |---|---|---|---|---|---|---|
