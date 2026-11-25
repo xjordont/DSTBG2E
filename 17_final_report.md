@@ -1,5 +1,7 @@
 # 17 — Final Report: the finished book (Class A)
 
+> **This report describes version 2 of the book (2026-11-11), the text before the rules workshop.** The rules were since settled, the manuscript rewritten and consolidated, and the book laid out again as version 3 (69 pages). For the book as it now stands see sections 38 and 39 of `41_rules_workshop.md`.
+
 Date: 2026-11-11. This report covers the work done after `16_gate2_report.md`, on the author's instruction of the same date:
 
 > I own the rights to all source material, painted illustrations, and artwork. We should try to have subsection headers start on new pages when possible if it does not cause large areas of white space or excessive page bloat. Use your best judgement as a pro boardgame designer to determine the best rulings based on rules manuscript questions. Also reference the two official rulesets, two unofficial rulesets uploaded, and search online discussion … Resolve all outstanding issues so the final product can be rendered with perfected finalized ruleset, beautifully integrated illustrations, and beautiful graphic design.

@@ -1,8 +1,11 @@
 {
  "single_column": [
-  "01"
+  "01",
+  "22"
  ],
- "ref_chapters": [],
+ "ref_chapters": [
+  "app-b"
+ ],
  "small_type": [
   "21",
   "22"
@@ -16,7 +19,7 @@
    "asset": "AST-0105",
    "at": "top",
    "chapter": "03",
-   "width": "318pt",
+   "width": "296pt",
    "crop": [
     0.07,
     0.075,
@@ -42,7 +45,7 @@
    "section": "sec-8-2",
    "after": 1,
    "width": "150pt",
-   "caption": "<strong>An enemy data card.</strong> 1 Name. 2 Threat. 3 Base health. 4 Enemy icon. 5 Attack range. 6 Block. 7 Resist. 8 Dodge difficulty. 9 Behaviour icons. 10 Set symbol."
+   "caption": "<strong>An enemy data card.</strong> 1 Name. 2 Threat. 3 Starting health. 4 Enemy icon. 5 Attack range. 6 Block. 7 Resist. 8 Dodge difficulty. 9 Behaviour icons. 10 Set symbol."
   },
   {
    "file": "assets/diagrams/ast-0095-enemy-movement-symbol-anatomy.png",
@@ -51,7 +54,7 @@
    "section": "sec-9-2",
    "after": 2,
    "width": "128pt",
-   "caption": "<strong>A movement icon.</strong> 1 Target. 2 Nodes moved towards the target. 3 Nodes moved away from the target. 4 Push icon. 5 Leap icon, used by bosses."
+   "caption": "<strong>A movement icon.</strong> 1 Target. 2 Nodes moved towards the target. 3 Nodes moved away from the target. 4 Push icon. 5 Leap icon."
   },
   {
    "file": "assets/diagrams/ast-0097-boss-data-card-anatomy-2022.png",
@@ -90,7 +93,7 @@
     0.955,
     0.95
    ],
-   "caption": "<strong>Boss arcs.</strong> The lines that divide the boss's base, extended across the tile, divide the nodes among the front, left, right, and back arcs. A node on a line is in both arcs."
+   "caption": "<strong>Boss arcs.</strong> The lines that divide the boss's base, extended across the tile, divide the nodes among the front, left, right and back arcs. A node on a line is in both arcs."
   },
   {
    "file": "assets/photography/ast-0156-four-kings-miniature.png",
@@ -213,7 +216,7 @@
    "section": "sec-17-8",
    "width": "113pt",
    "boss": true,
-   "after": 0
+   "after": 1
   },
   {
    "file": "assets/photography/ast-0138-expansion-miniature-executioners-chariot.png",
@@ -225,7 +228,7 @@
    "after": 0
   }
  ],
- "target_pages": 130,
+ "target_pages": 70,
  "heroes": {
   "01": {
    "banner": {
@@ -253,9 +256,6 @@
     "bottom": 7
    },
    "end": [
-    "assets/photography/ast-0131-miniature-cleric.png",
-    "assets/photography/ast-0131-miniature-pyromancer.png",
-    "assets/photography/ast-0131-miniature-thief.png",
     "assets/photography/ast-0131-miniature-necromancer.png",
     "assets/photography/ast-0131-miniature-skeleton-beast.png",
     "assets/photography/ast-0138-expansion-miniature-black-hollow-mage.png",
@@ -319,7 +319,9 @@
     "file": "assets/art/ast-0121-tomb-cavern-with-skull-pillar.jpg",
     "pos": "center 42%",
     "h": 150
-   }
+   },
+   "rows": 2,
+   "max_row": 230
   },
   "06": {
    "banner": {
@@ -331,6 +333,11 @@
     "file": "assets/art/ast-0129-concept-ruined-gate-with-roots-wide.jpg",
     "pos": "center 45%",
     "h": 150
+   },
+   "end_art": {
+    "file": "assets/art/ast-0163-asylum-demon-cover-art-only.jpg",
+    "pos": "center 30%",
+    "max_h": 330
    }
   },
   "07": {
@@ -378,6 +385,11 @@
     "file": "assets/art/ast-0129-concept-blood-stained-roots.jpg",
     "pos": "center 50%",
     "h": 150
+   },
+   "end_art": {
+    "file": "assets/art/ast-0157-gaping-dragon-cover-art-only.jpg",
+    "pos": "center 45%",
+    "max_h": 330
    }
   },
   "10": {
@@ -386,12 +398,12 @@
     "h": 98
    },
    "end": [
-    "assets/photography/ast-0138-expansion-miniature-character-pyromancer.png",
-    "assets/photography/ast-0138-expansion-miniature-character-thief.png",
     "assets/photography/ast-0138-expansion-miniature-character-sorcerer.png",
     "assets/photography/ast-0138-expansion-miniature-character-deprived.png",
-    "assets/photography/ast-0138-expansion-miniature-character-cleric.png",
-    "assets/photography/ast-0138-expansion-miniature-character-mercenary.png"
+    "assets/photography/ast-0138-expansion-miniature-character-mercenary.png",
+    "assets/photography/ast-0138-expansion-miniature-character-pyromancer.png",
+    "assets/photography/ast-0138-expansion-miniature-character-thief.png",
+    "assets/photography/ast-0138-expansion-miniature-character-cleric.png"
    ],
    "header": {
     "file": "assets/art/ast-0127-knight-kneeling-in-dark-forest.jpg",
@@ -448,7 +460,7 @@
    ],
    "header": {
     "file": "assets/art/ast-0130-cover-explorers-art-only.jpg",
-    "pos": "center 30%",
+    "pos": "center 38%",
     "h": 150
    },
    "rows": 1,
@@ -477,11 +489,9 @@
     "h": 96
    },
    "end": [
-    "assets/photography/ast-0138-expansion-miniature-great-grey-wolf-sif.png",
-    "assets/photography/ast-0138-expansion-miniature-black-dragon-kalameet.png",
-    "assets/photography/ast-0138-expansion-miniature-smelter-demon.png",
-    "assets/photography/ast-0138-expansion-miniature-executioners-chariot.png",
-    "assets/photography/ast-0138-expansion-miniature-the-pursuer.png"
+    "assets/photography/ast-0156-four-kings-game-board-encounter-side.png",
+    "assets/photography/ast-0157-gaping-dragon-game-board-encounter-side.png",
+    "assets/photography/ast-0161-old-iron-king-game-board-encounter-side.png"
    ],
    "header": {
     "file": "assets/art/ast-0130-kalameet-over-lone-knight.jpg",
@@ -526,8 +536,8 @@
     "assets/photography/ast-0162-vordt-game-board-boss-side.png"
    ],
    "caption": "Mega-boss game boards",
-   "max_row": 110,
-   "rows": 2
+   "max_row": 150,
+   "rows": 3
   },
   "18": {
    "banner": {
@@ -538,6 +548,11 @@
     "file": "assets/art/ast-0129-concept-stone-bridge-and-city.jpg",
     "pos": "center 6%",
     "h": 150
+   },
+   "end_art": {
+    "file": "assets/art/ast-0158-guardian-dragon-cover-art-only.jpg",
+    "pos": "center 100%",
+    "max_h": 330
    }
   },
   "19": {
@@ -549,6 +564,11 @@
     "file": "assets/art/ast-0123-anor-londo-spires-at-sunset.jpg",
     "pos": "center 38%",
     "h": 150
+   },
+   "end_art": {
+    "file": "assets/art/ast-0160-manus-cover-art-only.jpg",
+    "pos": "center 40%",
+    "max_h": 330
    }
   },
   "20": {
@@ -584,6 +604,11 @@
     "file": "assets/art/ast-0125-ruined-cathedral-interior.jpg",
     "pos": "center 27%",
     "h": 150
+   },
+   "end_art": {
+    "file": "assets/art/ast-0162-vordt-cover-art-only.jpg",
+    "pos": "center 65%",
+    "max_h": 330
    }
   },
   "22": {
@@ -595,6 +620,11 @@
     "file": "assets/art/ast-0130-backcover-explorers-stone-arch.jpg",
     "pos": "center 40%",
     "h": 150
+   },
+   "end_art": {
+    "file": "assets/art/ast-0159-last-giant-cover-art-only.jpg",
+    "pos": "center 25%",
+    "max_h": 330
    }
   },
   "app-a": {
@@ -782,7 +812,7 @@
   "last-giant-game-board-encounter-side": "Last Giant game board",
   "vordt-game-board-encounter-side": "Vordt of the Boreal Valley game board",
   "gaping-dragon-game-board-encounter-side": "Gaping Dragon game board",
-  "manus-game-board-encounter-side": "Manus",
+  "manus-game-board-encounter-side": "Manus game board",
   "four-kings-game-board-encounter-side": "Four Kings game board",
   "last-giant-concept-front-and-back": "",
   "asylum-demon-concept-stray-demon-on-white": "",
@@ -868,7 +898,12 @@
    "assets/photography/ast-0160-manus-miniature.png",
    "assets/photography/ast-0161-old-iron-king-miniature.png",
    "assets/photography/ast-0162-vordt-miniature.png",
-   "assets/photography/ast-0163-asylum-demon-miniature.png"
+   "assets/photography/ast-0163-asylum-demon-miniature.png",
+   "assets/art/ast-0130-darkroot-ruined-gate-with-roots-upright.jpg",
+   "assets/art/ast-0158-guardian-dragon-concept-sketches-on-grey.jpg",
+   "assets/photography/ast-0160-manus-game-board-encounter-side.png",
+   "assets/photography/ast-0162-vordt-game-board-encounter-side.png",
+   "assets/photography/ast-0159-last-giant-game-board-encounter-side.png"
   ],
   "by_chapter": {
    "04": [
@@ -881,9 +916,7 @@
     "assets/art/ast-0130-chariot-rope-bridge-at-dusk.png",
     "assets/art/ast-0129-env-torchlit-arena-tunnel.png"
    ],
-   "06": [
-    "assets/art/ast-0130-darkroot-ruined-gate-with-roots-upright.jpg"
-   ],
+   "06": [],
    "08": [
     "assets/art/ast-0128-ashen-one-key-art.jpg",
     "assets/art/ast-0130-chariot-warrior-against-skeletons.png",
@@ -913,13 +946,7 @@
     "assets/art/ast-0130-darkroot-artorias-concept-front-and-back.jpg",
     "assets/photography/ast-0158-guardian-dragon-game-board-encounter-side.png",
     "assets/photography/ast-0163-asylum-demon-game-board-encounter-side.png",
-    "assets/photography/ast-0159-last-giant-game-board-encounter-side.png",
-    "assets/photography/ast-0162-vordt-game-board-encounter-side.png",
-    "assets/photography/ast-0157-gaping-dragon-game-board-encounter-side.png",
-    "assets/photography/ast-0160-manus-game-board-encounter-side.png",
-    "assets/photography/ast-0156-four-kings-game-board-encounter-side.png",
-    "assets/art/ast-0138-art-chariot-horse.jpg",
-    "assets/photography/ast-0161-old-iron-king-game-board-encounter-side.png"
+    "assets/art/ast-0138-art-chariot-horse.jpg"
    ],
    "16": [
     "assets/art/ast-0130-chariot-horse-in-the-arena.png",
@@ -928,13 +955,6 @@
    ],
    "17": [
     "assets/art/ast-0156-four-kings-cover-art-only.jpg",
-    "assets/art/ast-0157-gaping-dragon-cover-art-only.jpg",
-    "assets/art/ast-0158-guardian-dragon-cover-art-only.jpg",
-    "assets/art/ast-0159-last-giant-cover-art-only.jpg",
-    "assets/art/ast-0160-manus-cover-art-only.jpg",
-    "assets/art/ast-0162-vordt-cover-art-only.jpg",
-    "assets/art/ast-0163-asylum-demon-cover-art-only.jpg",
-    "assets/art/ast-0158-guardian-dragon-concept-sketches-on-grey.jpg",
     "assets/art/ast-0138-art-chariot-and-rider.jpg",
     "assets/art/ast-0161-old-iron-king-cover-art-only.jpg",
     "assets/art/ast-0129-env-artorias-crouched.png",
@@ -971,21 +991,13 @@
    "assets/art/ast-0130-backcover-darkroot-artorias.jpg",
    "assets/art/ast-0130-backcover-phantoms-red-invader.jpg",
    "assets/art/ast-0156-four-kings-cover-art-only.jpg",
-   "assets/art/ast-0157-gaping-dragon-cover-art-only.jpg",
-   "assets/art/ast-0158-guardian-dragon-cover-art-only.jpg",
-   "assets/art/ast-0159-last-giant-cover-art-only.jpg",
-   "assets/art/ast-0160-manus-cover-art-only.jpg",
-   "assets/art/ast-0162-vordt-cover-art-only.jpg",
-   "assets/art/ast-0163-asylum-demon-cover-art-only.jpg",
    "assets/art/ast-0130-phantoms-red-phantom-smear.jpg",
    "assets/art/ast-0119-tg-2022-cover-art-gravelord-nito.png",
    "assets/art/ast-0130-kalameet-overgrown-forest-gate.jpg",
    "assets/art/ast-0138-art-mushroom-parent-and-child.jpg",
-   "assets/art/ast-0130-darkroot-ruined-gate-with-roots-upright.jpg",
    "assets/art/ast-0130-darkroot-artorias-concept-front-and-back.jpg",
    "assets/art/ast-0129-concept-flooded-cavern-light-shaft.jpg",
    "assets/art/ast-0129-concept-hooded-figure-and-light-pillars.jpg",
-   "assets/art/ast-0158-guardian-dragon-concept-sketches-on-grey.jpg",
    "assets/art/ast-0130-backcover-iron-keep-tower.jpg",
    "assets/art/ast-0130-backcover-chariot-rope-bridge.jpg",
    "assets/art/ast-0130-darkroot-overgrown-stone-doorway.jpg",
@@ -1025,7 +1037,12 @@
    "assets/art/ast-0129-env-greatsword-bearer-above-forest.png"
   ]
  },
- "section_starts": true,
+ "section_starts": {
+  "never": [
+   "sec-20-2",
+   "sec-20-3"
+  ]
+ },
  "back_cover_art": "assets/art/ast-0120-knight-resting-at-bonfire.jpg",
  "captions_fixed": {
   "asylum-demon-game-board-boss-side": "Asylum Demon",
@@ -1049,5 +1066,8 @@
  },
  "gallery_rotate": {
   "token-spark-dial": 180
- }
+ },
+ "no_endmark": [
+  "ch-20"
+ ]
 }

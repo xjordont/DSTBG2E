@@ -28,19 +28,19 @@ A boss *data card* holds much the same information as an enemy data card, but it
 
 1. Name
 2. *Threat* {{icon:ast-0026-threat-level}}
-3. Behaviour deck size {{icon:ast-0027-behaviour-deck-size}}
-4. *Heat-up* point {{icon:ast-0030-heat-up-point}}
-5. *Block* and *resist* values {{icon:ast-0028-block-resist-shield}}
-6. Special ability
-7. Encounter levels
-8. Starting health {{icon:ast-0029-starting-health}}
-9. Boss type icon (mini, main or mega)
+3. Starting health {{icon:ast-0029-starting-health}}
+4. Boss type icon (mini, main or mega)
+5. Behaviour deck size {{icon:ast-0027-behaviour-deck-size}}
+6. *Block* {{icon:ast-0028-block-resist-shield}}
+7. *Resist*
+8. *Heat-up* point {{icon:ast-0030-heat-up-point}}
+9. Special ability
 10. Set symbol
 
 - Threat, block and resist work as they do on an enemy data card (see §8.2).
 - A boss's health is tracked on its health dial in place of wound tokens.
 - The special ability gives the boss a theme and often a power of its own (see §17).
-- The encounter levels are those of the encounters on the road to that boss (see §6.5).
+- A card of the 2017 sets also prints the levels of the encounters on the road to that boss (see §6.5).
 
 A boss is never scaled (see §8.3).
 

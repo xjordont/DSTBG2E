@@ -22,7 +22,8 @@ cands = json.loads((ROOT / 'layout/art_candidates.json').read_text(encoding='utf
 headers = {h['header']['file'] for h in tun.get('heroes', {}).values() if h.get('header')}
 skip = set(tun.get('plates', {}).get('never', []))
 # a picture already shown in a chapter's closing gallery or as a figure is not set again as an illustration
-shown = {f for h in tun.get('heroes', {}).values() for f in h.get('end', [])} | {f.get('file') for f in tun.get('figures', [])}
+shown = ({f for h in tun.get('heroes', {}).values() for f in h.get('end', [])} | {f.get('file') for f in tun.get('figures', [])}
+         | {h['end_art']['file'] for h in tun.get('heroes', {}).values() if h.get('end_art')})
 
 
 def chapter_key(s):

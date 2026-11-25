@@ -84,7 +84,8 @@ def pandoc(md):
 
 
 MISSING_ICONS = set()
-NO_ENDMARK = set()   # chapters whose closing ornament would otherwise sit alone on a new page
+NO_ENDMARK = set(TUNING.get('no_endmark', []))   # chapters whose closing ornament would otherwise sit alone on a new page (or, set in
+                                                 # the tuning file, would push the chapter's text off its opening page)
 END_FREE = {}         # chapter id -> points of empty page under its closing ornament (measured on the first pass)
 NO_PANEL = set()      # chapters whose gallery did not fit after all (verified on the second pass)
 PAGE_FOOT = 742.0     # y of the foot of the text block, in points (792 - 50)
@@ -154,6 +155,18 @@ def end_panel(soup, cid, key):
     pool = spec.get('end') or []
     free = END_FREE.get(cid, 0)
     avail = free - 22
+    art = spec.get('end_art')
+    if not pool and art and cid not in NO_PANEL and avail >= 130:
+        # a chapter with no product pictures of its own closes on a painting, set across both columns and
+        # cropped to the room left under the closing ornament
+        h = min(avail - 8, float(art.get('max_h', 330)))
+        panel = soup.new_tag('div', id=f'panel-{cid}'); panel['class'] = ['endpanel', 'endart']
+        spare = free - h - 6
+        panel['style'] = f'margin-top:{max(12.0, spare if spare < 70 else 20.0):.1f}pt'
+        im = soup.new_tag('img', src=art['file'], alt='')
+        im['style'] = f"width:520pt;height:{h:.1f}pt;object-fit:cover;object-position:{art.get('pos', 'center')}"
+        panel.append(im)
+        return panel
     if not pool or cid in NO_PANEL or avail < 92:
         return None
     width, pad, cap_h, gap = 520.0, 18.0, 19.0, 12.0
@@ -395,6 +408,11 @@ class Chapter:
         for t in soup.find_all('table'):
             rows = t.find_all('tr')
             if len(rows) <= 10: t['class'] = 'nobreak'
+            # in a reference chapter the sentence that introduces a table stays with it, so that a heading and its
+            # sentence are not left at the foot of one page with the table at the head of the next
+            prev = t.find_previous_sibling()
+            if prev is not None and prev.name == 'p' and t.find_parent(class_='ref'):
+                prev['class'] = (prev.get('class') or []) + ['keepnext']
             for cell in t.find_all(['td', 'th']):
                 cell.attrs.pop('style', None)
                 if re.fullmatch(r'[+−\-]?\d+([./:–]\d+)*( → \d+)?|—|-|∞', cell.get_text(strip=True) or ''):

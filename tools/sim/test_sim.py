@@ -625,6 +625,25 @@ check('settled: an encounter is failed when two characters are dead, and not at 
 _p2 = [Char(c, _r27) for c in ('Knight', 'Herald')]; _f2 = E.Fight(_p2, _r27, random.Random(1), enemies=['Hollow Soldier']); _p2[0].alive = False
 _p1 = [Char('Knight', _r27)]; _f1 = E.Fight(_p1, _r27, random.Random(1), enemies=['Hollow Soldier']); _p1[0].alive = False
 check('settled: two characters fail when both are dead, a lone character when that one is dead', (not _f2.failed()) and _f1.failed())
+# the players know the rule: with one of three dead, the next death is the one that fails the encounter
+_q3 = [Char(c, _r27) for c in ('Knight', 'Warrior', 'Herald')]; _g3 = E.Fight(_q3, _r27, random.Random(1), enemies=['Hollow Soldier'])
+_before = _g3.fatal(_q3[1]); _q3[0].alive = False; _after = _g3.fatal(_q3[1]); _g3.pol.count_dead = False; _blind = _g3.fatal(_q3[1])
+check('settled: a death is feared as the failing one once one character of three is dead, and by players who count the dead only', (not _before) and _after and not _blind, (_before, _after, _blind))
+# Gravelord Nito (17.7): two Skeleton Soldiers, scaled as enemies; they return when he heats up; he alone decides the fight
+_n3 = [Char(c, _r27) for c in ('Knight', 'Warrior', 'Herald')]; _fn = E.Fight(_n3, _r27, random.Random(1), boss='Gravelord Nito')
+_nito = _fn.foes[0]; _esc = _fn.escort
+check('Nito is set up with two Skeleton Soldiers, scaled for the party like any enemy, and is not scaled himself',
+      [e.name for e in _esc] == ['Skeleton Soldier'] * 2 and all(e.max == _r27.hp(E.ENEMIES['Skeleton Soldier']['hp'], 3) and e.atk_bonus == 1 for e in _esc)
+      and _nito.max == E.BOSSES['Gravelord Nito']['hp'], ([e.name for e in _esc], [e.max for e in _esc], _nito.max))
+for e in _esc: e.hp = 0
+_dead = not _fn.won(); _nito.hp = _nito.card['heatup']; _fn.check_heat(_nito); _back = all(e.hp == e.max for e in _esc)
+_nito.hp = 0; _won = _fn.won() and any(e.hp > 0 for e in _esc)
+check('Nito: killing the escort does not win; his heat-up returns the dead at full health; his death wins whatever remains', _dead and _back and _won, (_dead, _back, _won))
+# Crossbreed Priscilla (17.10): invisible until an attack damages her, and again when her deck is renewed; no weak arc meanwhile
+_fp = E.Fight([Char('Knight', _r27)], _r27, random.Random(1), boss='Crossbreed Priscilla'); _pr = _fp.foes[0]
+_v0 = _pr.veil; _fo = E.Fight([Char('Knight', _r27)], _r27, random.Random(1), boss='Artorias').foes[0].veil
+_pr.veil = False; _pr.discard = _pr.deck; _pr.deck = []; _fp.boss_turn(_pr)
+check('Priscilla begins invisible and is invisible again when her discard pile is turned over; other bosses never are', _v0 and _pr.veil and not _fo, (_v0, _pr.veil, _fo))
 ga = [play(2, RU.make(ALL_REQ), s, table=Table(skill=1.0, bank=6)) for s in range(12)]
 check('a game with every set in play runs to its end', all(x['win'] or x['lost_at'] is not None for x in ga))
 

@@ -3385,7 +3385,7 @@ The Black Knight, the Heavy Knight and Priscilla sit among their 2017 peers. Nit
 | A lone character's four sparks and six souls (section 30) | Kept | Removing either drops every class but the two strongest out of the band |
 | Enemy movement for party size (sections 34, 35) | Never | Its effect depends on the enemy's card, not on the party |
 | Boss health and damage for party size (section 37) | Never | Health does nothing; damage mends three characters and not four; the losing condition does both |
-| Gravelord Nito's escort, Crossbreed Priscilla's invisibility (26.2) | As written in §17 | The first is supported by 38.2; the second is the reading of her card that needs no rulebook |
+| Gravelord Nito's escort, Crossbreed Priscilla's invisibility (26.2) | As written in §17 (the escort was cut to two Skeleton Soldiers in 39.2) | The first is supported by 38.2; the second is the reading of her card that needs no rulebook |
 | Demon Titanite and the Four-Pronged Plough in Appendix B | Left | Both need the printed cards in hand |
 
 ### 38.4 Skills searched for and what was taken from them
@@ -3436,4 +3436,104 @@ Two findings were not taken as given. The checker's cure for the Purging Stone w
 
 No rule changed in either reading, so the figures of 38.1 and 38.2 stand.
 
-**What is not done.** The rulebook PDF has not been laid out again from these chapters. Demon Titanite and the Four-Pronged Plough are still "as printed" until the cards are in hand. The simulated players do not play to the two-dead condition (they do not pull a wounded character back to save the encounter), so real tables are likely to do a little better than the figures. Gravelord Nito's escort and Crossbreed Priscilla's invisibility are not simulated; 38.2 gives the case for the first.
+**What is not done** (the first, third and fourth of these were done the next day; see section 39). The rulebook PDF has not been laid out again from these chapters. Demon Titanite and the Four-Pronged Plough are still "as printed" until the cards are in hand. The simulated players do not play to the two-dead condition (they do not pull a wounded character back to save the encounter), so real tables are likely to do a little better than the figures. Gravelord Nito's escort and Crossbreed Priscilla's invisibility are not simulated; 38.2 gives the case for the first.
+
+
+## 39. The book finished (2026-11-25)
+
+The author's instruction was to finish everything. Section 38.5 listed four things not done. Three of them could be done without the printed cards, and were.
+
+### 39.1 Players who know the losing condition
+
+The simulated players of sections 37 and 38 feared a death more only when it was the last character's. Under the rule of 38.1 the second death fails the encounter, and players at a table know it. The players now count the dead (`Policy.count_dead`): once one character of three or four has fallen, each of the others weighs its own death as the one that loses the encounter. Every cell was measured both ways, 500 games each, on the same seeds (`python3 tools/sim/measure_settled.py game`).
+
+| | Characters | Won, players who do not count | Won, players who count | Turns | Main-boss fights lost |
+|---|---|---|---|---|---|
+| Every 2017 set | 1 | 56% | 56% | 228 | 41% |
+| | 2 | 51% | 51% | 328 | 23% |
+| | 3 | 64% | 67% | 343 | 18% |
+| | 4 | 68% | 72% | 319 | 7% |
+| Core box | 1 | 84% | 84% | 218 | 30% |
+| | 2 | 59% | 59% | 276 | 26% |
+| | 3 | 62% | 61% | 288 | 21% |
+| | 4 | 62% | 60% | 287 | 14% |
+
+Turns and boss fights are those of the players who count. Each figure is good to four points. One and two characters are unchanged, as they must be: with two characters the second death was already the last. Three and four move by no more than the error of the measurement. The caution in 38.5, that real tables would do better than the figures, is withdrawn: knowing the rule changes little, because a character in danger was already playing for its life. The rows of players who do not count repeat section 38 on the same seeds, which shows the change to the simulator altered nothing else.
+
+Every cell but one is inside the author's band of 50 to 70 in a hundred or within the error of it. The one is a lone character with the core box, which the author chose to keep with its sparks and souls (section 30).
+
+### 39.2 Gravelord Nito's escort, fought
+
+The simulator now sets Nito up as §17.7 says: his escort on the mini-boss spawn node, scaled as enemies, taking their turns with him before each character's turn, returned at full health when he heats up, and the fight won when he falls. Each party was equipped as for a main boss (`fights.BUDGET`) and fought him 500 times.
+
+| Nito's escort | Fights lost, 1 / 2 / 3 / 4 characters |
+|---|---|
+| None | 28 / 1 / 1 / 0 |
+| Two Skeleton Soldiers and a Giant Skeleton Soldier (as written until today) | 76 / 45 / 26 / 13 |
+| The same, acting once a round | 76 / 16 / 4 / 0 |
+| The same, not scaled | 76 / 18 / 8 / 2 |
+| The same, not returning at his heat-up | 58 / 17 / 10 / 5 |
+| Three Skeleton Soldiers | 66 / 29 / 12 / 8 |
+| A Skeleton Soldier and a Giant Skeleton Soldier | 70 / 27 / 11 / 5 |
+| **Two Skeleton Soldiers** | **51 / 12 / 5 / 2** |
+| The other eight main bosses, mean | 69 / 12 / 6 / 4 |
+| The other eight main bosses, range | 49 to 85 / 6 to 27 / 2 to 15 / 1 to 15 |
+
+The escort as written made Nito the hardest main boss by a wide margin for two and three characters, harder than Ornstein and Smough. **The escort is now two Skeleton Soldiers.** For two, three and four characters that is the mean of his peers to a point; alone he is at the easy end of their range, beside the Pursuer. It is also the smallest change: one enemy fewer to set up, one data card in place of two, and no new exception. The other mending options each add a rule (an escort that acts once a round, or is not scaled) or take away the thing the fight is named for (the Gravelord's Call).
+
+§17.7 is changed in two places and nothing else in the book refers to the number.
+
+### 39.3 Crossbreed Priscilla's invisibility, fought
+
+Priscilla now begins invisible, loses it to the first attack that damages her, and regains it each time her deck is renewed; while she is invisible no attack has the die of a weak arc.
+
+| Priscilla | Fights lost, 1 / 2 / 3 / 4 characters |
+|---|---|
+| Always visible | 67 / 13 / 5 / 4 |
+| Invisible as written | 69 / 14 / 5 / 3 |
+
+The rule costs the party one weak-arc die a deck and is worth a point or two. It stands as written.
+
+### 39.4 The rulebook laid out again
+
+The book of 2026-11-12 was 124 pages of the text before the rewrite. It is replaced by version 3: `31_final_dark_souls_the_board_game_second_edition_v3.pdf` (screen) and `…_v3_print.pdf` (print), 69 pages each, built from the final chapters by the same pipeline (`30_pdf_production_notes.md`). Both pass the automated checks (`32_pdf_qa_report.md`): every passage of the manuscript is in the PDF, every link resolves, no text leaves the margins, no picture is shown twice.
+
+A text a third of the length needed four things the pipeline did not have, and one change to the manuscript.
+
+| Need | What was done |
+|---|---|
+| The boss setup table of §17.1 has four columns of running text and could not be set in a column of 252 pt | The table became a list, one entry for each boss: its deck, and what is set out beside it. The column that named each boss's set went: chapter 2 gives it |
+| The seven-column tables of Appendix B overran their column | Appendix B is set in one wide column |
+| Six chapters ended on half a page of bare parchment, having no product pictures of their own | Each closes on one of six mega-boss paintings the book had not used, set across both columns |
+| Chapter 20 opened on a banner and an empty page, because its closing ornament would not fit under its text | The ornament is left off, as it already is in three chapters, and its sections are not moved to new columns; the chapter is one page |
+
+**The independent review.** A reader who had not seen the book before went through all 70 pages of the first build. The verdict: the typesetting is sound, the contents page is accurate, nothing is clipped or overlapping, and two errors mislead the reader. Every finding of the first two ranks was acted on.
+
+| Finding | Rank | Done |
+|---|---|---|
+| The numbered list beside the enemy data card (§8.2) did not match the numbers on the card: the list was in the manuscript's order, the picture in the card's | High | The list follows the card: ten items, block and resist apart |
+| The same for the boss data card (§15.4), whose list also numbered "encounter levels", which the card pictured does not print | High | The list follows the card; the encounter levels are a sentence under it |
+| Chapter 20's opening page nearly empty | Medium | One page, as above |
+| The painting behind chapter 6's title set again on the next page; a dragon's concept sheet and its painting 8 pages apart; two miniatures in two galleries; three game boards whose two "sides" are the same photograph | Medium | One of each pair withdrawn; the galleries of chapters 2, 10 and 15 changed |
+| §17.8's heading at the foot of a column with only its miniature under it | Medium | The miniature follows the section's first sentence |
+| Chapters 5 and 17 ending on small galleries and a third of a page bare | Medium | The galleries are set larger |
+| The last item of the dashboard's list alone at the head of a column | Medium | The dashboard is set a little smaller and the list keeps to one column |
+| A dragon's head cut by the edge of its panel; a knight's head lost in chapter 13's banner | Medium | Both cropped again |
+| The word space before an italic term narrower than the others on justified lines (1.6 pt against 3.7 on the worst line) | Low | A hairline of margin on italic runs: the renderer's fault, lessened and not cured |
+| The two FAQ answers set in two columns with their heads out of line | Low | One centred column |
+| Game-board captions of two patterns | Low | One |
+
+Left as they are, with the reason: the boss miniatures of chapter 17 carry no caption because each stands under the heading that names it; first-use italics in the tables of Appendix B follow the book's rule for glossary terms; the back cover repeats the bonfire painting on purpose; the Four Kings' board is nearly black because the board is; 18 columns end 60 to 130 pt short where a table, an example or a kept heading would not fit and no picture is small enough, which is the pipeline's rule since version 2.
+
+The manuscript after these changes: 26,692 words; style check 0 violations; cross-references 0 broken.
+
+### 39.5 What remains
+
+| Matter | State |
+|---|---|
+| Demon Titanite and the Four-Pronged Plough (Appendices A and B) | "As printed" until the cards are in hand. Nothing else in the book waits on a printed component |
+| The Painted World of Ariamis rulebook | Never supplied. Priscilla is played from her cards and the rule of §17.10, now tested (39.3) |
+| Print-and-play Events Expansion II | Reproduced from its maker's files for the author's own table at the author's request; passing the print files on needs the maker's leave |
+| A press run | The PDFs are sRGB without bleed; `30_pdf_production_notes.md` §5 says what a printer must add |
+
+No rule is open, no measurement is owed, and the book in the repository is the book of the rules as finalised.

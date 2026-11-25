@@ -12,13 +12,14 @@ Each enemy type has a *data card*. It gives what is needed to take that enemy's 
 
 1. Name.
 2. *Threat* {{icon:ast-0026-threat-level}}. Enemies with higher threat take their turn first.
-3. Attack *range* {{icon:ast-0060-attack-range}}. The maximum range at which the enemy can attack a character.
-4. *Dodge difficulty* {{icon:ast-0062-dodge}}. How hard the enemy's attacks are to *dodge*.
-5. *Block* and *resist* values {{icon:ast-0028-block-resist-shield}}. Block reduces the damage the enemy suffers from physical attacks; resist reduces the damage it suffers from magical attacks.
-6. Behaviour icons. The movement icons {{icon:ast-0033-enemy-movement-composite-symbol}} and attack icons {{icon:ast-0037-enemy-attack-composite-symbol}} that determine what the enemy does during its turn.
-7. Starting health {{icon:ast-0029-starting-health}}. The damage the enemy can suffer before it is killed in a game with one character.
-8. Enemy icon.
-9. Set symbol.
+3. Starting health {{icon:ast-0029-starting-health}}. The damage the enemy can suffer before it is killed in a game with one character.
+4. Enemy icon.
+5. Attack *range* {{icon:ast-0060-attack-range}}. The maximum range at which the enemy can attack a character.
+6. *Block* {{icon:ast-0028-block-resist-shield}}. Reduces the damage the enemy suffers from physical attacks.
+7. *Resist*. Reduces the damage the enemy suffers from magical attacks.
+8. *Dodge difficulty* {{icon:ast-0062-dodge}}. How hard the enemy's attacks are to *dodge*.
+9. Behaviour icons. The movement icons {{icon:ast-0033-enemy-movement-composite-symbol}} and attack icons {{icon:ast-0037-enemy-attack-composite-symbol}} that determine what the enemy does during its turn.
+10. Set symbol.
 
 When an enemy suffers damage, place one wound token on the base of its model for each point of damage not prevented by its block or resist. The enemy dies when its wound tokens equal its scaled health (see §8.3) and is removed from the tile.
 

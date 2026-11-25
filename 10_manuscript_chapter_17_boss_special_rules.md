@@ -6,21 +6,19 @@ Every boss is played from its *data card* and its *behaviour cards* (see §15.4)
 
 ### Setup
 
-The bosses in this table are set up as it shows, and again each time their encounter is *failed*. A behaviour deck given here takes the place of the usual one (see §15.5). "4 of 10" means four cards drawn at random from the ten; the cards not drawn go back to the box. Every deck and pile is shuffled unless the table says otherwise. A set shown as Own is the expansion that bears the boss's name.
+Each boss listed here is set up as its entry says, and again each time its encounter is *failed*. A behaviour deck given here takes the place of the usual one (see §15.5). "4 of 10" means four cards drawn at random from the ten; the cards not drawn go back to the box. Every deck and pile is shuffled unless its entry says otherwise.
 
-| Boss | Set | Behaviour deck | Also set out |
-|---|---|---|---|
-| Ornstein and Smough | Core | The 5 paired cards | Each model's 5 *heat-up* cards, as a pile of its own |
-| Great Grey Wolf Sif | Darkroot | As the data card | Limping Strike, set aside |
-| Asylum Demon, Stray Demon | Asylum Demon | As the data card | 4 pillar tokens, one on each pillar *node* |
-| Black Dragon Kalameet | Own | 4 of 10 standard cards, Mark of Calamity and Hellfire Blast | Hellfire Barrage, set aside; the 8 strafe cards as a strafe deck |
-| Executioner's Chariot | Own | Track deck: Death Race 1 to 4 in order, 1 on top, not shuffled | Heat-up deck: 4 of 9 standard cards and 1 of 3 heat-up cards, shuffled together and set aside; 2x Black Hollow Mage and 4x Falchion Skeleton |
-| The Four Kings | Own | 4 of 8 standard cards | The second, third and fourth king cards, as three piles of 4 |
-| Gaping Dragon | Own | 3 of 7 standard cards, 1 of 4 heat-up cards and both Stomach Slam cards | Crawling Charge, face up beside the data card; the other 3 heat-up cards |
-| Guardian Dragon | Own | 5 of 9 standard cards | Both Cage Grasp Inferno cards, set aside; the 4 Fiery Breath cards as a Fiery Breath deck |
-| The Last Giant | Own | 3 of 5 standard cards and 3 of 5 Arm cards | Falling Slam, set aside; the 5 heat-up cards |
-| Old Iron King | Own | 3 of 6 standard cards and the 3 Fire Beam cards | The 3 heat-up cards; the 6 Beam cards as a Beam deck |
-| Vordt of the Boreal Valley | Own | Movement deck: 4 of 6 standard movement cards. Attack deck: 3 of 6 standard attack cards | The 2 heat-up movement cards and the 2 heat-up attack cards, as two piles; Frostbreath, face down |
+- **Ornstein and Smough.** Deck: the 5 paired cards. Beside it: each model's 5 *heat-up* cards, as a pile of its own.
+- **Great Grey Wolf Sif.** Deck: as the data card. Beside it: Limping Strike.
+- **Asylum Demon, Stray Demon.** Deck: as the data card. On the board: 4 pillar tokens, one on each pillar *node*.
+- **Black Dragon Kalameet.** Deck: 4 of 10 standard cards, Mark of Calamity and Hellfire Blast. Beside it: Hellfire Barrage; the 8 strafe cards as a strafe deck.
+- **Executioner's Chariot.** Track deck: Death Race 1 to 4 in order, 1 on top, not shuffled. Beside it: 4 of 9 standard cards and 1 of 3 heat-up cards, shuffled together as the heat-up deck. On the board: 2x Black Hollow Mage and 4x Falchion Skeleton.
+- **The Four Kings.** Deck: 4 of 8 standard cards. Beside it: the second, third and fourth king cards, as three piles of 4.
+- **Gaping Dragon.** Deck: 3 of 7 standard cards, 1 of 4 heat-up cards and both Stomach Slam cards. Beside it: Crawling Charge, face up; the other 3 heat-up cards.
+- **Guardian Dragon.** Deck: 5 of 9 standard cards. Beside it: both Cage Grasp Inferno cards; the 4 Fiery Breath cards as a Fiery Breath deck.
+- **The Last Giant.** Deck: 3 of 5 standard cards and 3 of 5 Arm cards. Beside it: Falling Slam; the 5 heat-up cards.
+- **Old Iron King.** Deck: 3 of 6 standard cards and the 3 Fire Beam cards. Beside it: the 3 heat-up cards; the 6 Beam cards as a Beam deck.
+- **Vordt of the Boreal Valley.** Movement deck: 4 of 6 standard movement cards. Attack deck: 3 of 6 standard attack cards. Beside them: the 2 heat-up movement cards and the 2 heat-up attack cards, as two piles; Frostbreath, face down.
 
 ### Marked-Node Attacks
 
@@ -115,9 +113,9 @@ The Black Knight and Gravelord Nito are played from their printed *data cards* a
 
 ### Gravelord Nito
 
-- Nito does not fight alone. Set up his encounter with two Skeleton Soldiers and one Giant Skeleton Soldier on the *mini-boss* *spawn node* of the main-boss tile.
+- Nito does not fight alone. Set up his encounter with two Skeleton Soldiers on the *mini-boss* *spawn node* of the main-boss tile.
 - Before each character's turn, every enemy model takes a turn in descending *threat*: Nito, then his skeletons (see §7.5).
-- The Gravelord's Call: when Nito heats up, return each of those three enemies that has been killed to the mini-boss spawn node, at full health.
+- The Gravelord's Call: when Nito heats up, return each Skeleton Soldier that has been killed to the mini-boss spawn node, at full health.
 - The encounter is won when Nito is defeated, whatever enemies remain.
 
 ## 17.8 Black Dragon Kalameet

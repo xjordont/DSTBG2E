@@ -119,6 +119,7 @@ class Policy:
     """How the simulated players decide. Every number here is a judgement, varied in the robustness runs."""
     caution = 1.0        # stamina kept free, as a multiple of the damage expected before the next turn
     w_death = 14.0       # how much a death is feared, in points of damage (raised when a death ends the encounter)
+    count_dead = True    # the players know that the next death fails the encounter and play for it (False: the players of sections 37 and 38)
     w_sta = 0.4          # what a point of stamina is worth, in points of damage
     estus_at = 5         # drink when this much damage is on the bar (where damage is not cleared by a win)
     estus_risk = 0.2     # or when the chance of dying before the next turn is above this
@@ -144,7 +145,7 @@ class Policy:
 
 class Foe:
     __slots__ = ('name', 'card', 'hp', 'max', 'node', 'stagger', 'frost', 'poison', 'bleed', 'boss', 'deck', 'discard',
-                 'heated', 'heat_cards', 'armor', 'resist', 'threat', 'weak', 'atk_bonus', 'dd_bonus', 'seen', 'fresh', 'heal', 'surges')
+                 'heated', 'heat_cards', 'armor', 'resist', 'threat', 'weak', 'atk_bonus', 'dd_bonus', 'seen', 'fresh', 'heal', 'surges', 'veil')
 
     def __init__(self, name, card, hp, node, boss=False):
         self.name, self.card, self.hp, self.max, self.node, self.boss = name, card, hp, hp, node, boss
@@ -152,10 +153,16 @@ class Foe:
         self.fresh = False                             # staggered during its own activation (by a parry)
         self.armor, self.resist, self.threat = card['armor'], card['resist'], card.get('threat', 10)
         self.deck = self.discard = self.heat_cards = None; self.heated = False; self.weak = False; self.atk_bonus = 0; self.dd_bonus = 0
-        self.seen = set(); self.heal = 0; self.surges = 0
+        self.seen = set(); self.heal = 0; self.surges = 0; self.veil = False
 
     @property
     def alive(self): return self.hp > 0
+
+
+# the manuscript, 17.7: Gravelord Nito is set up with these enemies, and his heat-up returns the dead among them
+ESCORT = {'Gravelord Nito': ('Skeleton Soldier', 'Skeleton Soldier')}
+# the manuscript, 17.10: invisible at the start and whenever the deck is renewed, until an attack damages her; no weak arc meanwhile
+VEILED = {'Crossbreed Priscilla'}
 
 
 class Fight:
@@ -180,6 +187,7 @@ class Fight:
         self.idle = 0; self._hp = None                 # rounds in a row in which no enemy lost health
         self.hist = []; self.slow = False
         self.last_before_foes = True                   # whether the character now acting is the last before the enemies act
+        self.escort = []
         self.special = None; self.bdef = None; self.pair_done = False      # the two-model boss has had its shared turn this enemy phase
         if boss:
             b = BOSSES[boss]; mul = getattr(r, 'boss_mul', None)
@@ -202,7 +210,14 @@ class Fight:
                 f = Foe(boss, b, b['hp'], IDX[(2, 0)], boss=True)
                 std = [c for c in b['cards'] if not c['heatup']]; rng.shuffle(std)
                 f.deck = std[:b['deck']]; f.discard = []; f.heat_cards = [c for c in b['cards'] if c['heatup']]
-                self.foes = [f]
+                self.foes = [f]; f.veil = boss in VEILED and getattr(r, 'veil', True)
+                # the escort is of ordinary enemies, scaled for the party. Test levers: escort=False or a list of names,
+                # escort_scaled=False, escort_round='once' (the escort acts before the round's first character only),
+                # escort_call=False (the dead do not return at the heat-up)
+                esc = getattr(r, 'escort', True); scaled = getattr(r, 'escort_scaled', True)
+                for name in (ESCORT.get(boss, ()) if esc is True else (esc or ()) if boss in ESCORT else ()):
+                    card = ENEMIES[name]; e = Foe(name, card, r.hp(card['hp'], self.n) if scaled else card['hp'], IDX[(0, 0)])
+                    e.atk_bonus = r.atk(self.n) if scaled else 0; self.scale_more(e); self.foes.append(e); self.escort.append(e)
         else:
             sp = rng.sample(SPAWN, 2); self.foes = []; self.spawn = sp
             for i, name in enumerate(enemies):
@@ -239,13 +254,29 @@ class Fight:
 
     def failed(self):
         if self.r.death == 'party': return self.deaths > 0
-        _fd = getattr(self.r, 'fail_dead', None)                 # a test lever: the encounter is failed once this many characters are dead
-        if self.is_boss and getattr(self.r, 'boss_fail_dead', None): _fd = self.r.boss_fail_dead      # the same, for boss encounters only
-        if _fd: return sum(1 for c in self.party if not c.alive) >= min(_fd[min(4, len(self.party))], len(self.party))
+        at = self.fail_at()                                      # the settled rule: failed once this many characters are dead
+        if at is not None: return sum(1 for c in self.party if not c.alive) >= at
         if self.r.death == 'lost': return not self.live()        # a hollow character who dies is lost until the next rest
         return not self.live() or any((not c.alive) and c.was_hollow for c in self.party)
 
-    def over(self): return self.failed() or not self.foes_alive()
+    def fail_at(self):
+        """How many dead characters fail this encounter, where the rules count them (None where they do not)."""
+        fd = getattr(self.r, 'fail_dead', None)
+        if self.is_boss and getattr(self.r, 'boss_fail_dead', None): fd = self.r.boss_fail_dead
+        return min(fd[min(4, len(self.party))], len(self.party)) if fd else None
+
+    def fatal(self, c):
+        """Would this character's death fail the encounter? The players fear such a death more (Policy.w_death)."""
+        if self.r.death == 'party' or len(self.live()) == 1 or c.hollow: return True      # a hollow character who dies is lost
+        at = self.fail_at()
+        return at is not None and getattr(self.pol, 'count_dead', True) and sum(1 for x in self.party if not x.alive) + 1 >= at
+
+    def won(self):
+        """Every enemy is dead; or, where a boss has an escort, the boss is (the manuscript, 17.7)."""
+        if self.escort: return not any(f.boss and f.hp > 0 for f in self.foes)
+        return not self.foes_alive()
+
+    def over(self): return self.failed() or self.won()
 
     def say(self, *a):
         if self.log is not None: self.log.append(' '.join(str(x) for x in a))
@@ -295,7 +326,7 @@ class Fight:
         # a block or resist value also takes the modifier printed on the equipment (bpen: everything worn; apen: the
         # armour alone, for the roll after a failed dodge); a dodge roll takes only the stagger
         bpen = pen + (c.res_pen if magic else c.blk_pen); apen = pen + (c.arm_res_pen if magic else c.arm_blk_pen)
-        wd = pol.w_death * (1.6 if (r.death == 'party' or c.hollow or len(self.live()) == 1) else 1.0)
+        wd = pol.w_death * (1.6 if self.fatal(c) else 1.0)
 
         def cost(pmf, extra_sta):
             lim = free - extra_sta
@@ -609,6 +640,7 @@ class Fight:
             if not f.deck:
                 f.deck = f.discard; f.discard = []
                 if r.boss_reshuffle: rng.shuffle(f.deck)
+                if f.name in VEILED and getattr(r, 'veil', True): f.veil = True
             card = f.deck.pop(0); f.discard.append(card)
             known = card['name'] in f.seen; f.seen.add(card['name'])
             f.weak = rng.random() < (self.WEAK_KNOWN if known else self.WEAK)
@@ -663,6 +695,8 @@ class Fight:
             f.surges = 1; f.deck = list(self.bdef['cool']); f.discard = []; f.seen = set(); return     # Sif, near death: one weak card from now on
         if f.heated or not f.card.get('heatup') or f.hp > f.card['heatup']: return
         f.heated = True
+        for e in (self.escort if getattr(self.r, 'escort_call', True) else ()):      # The Gravelord's Call: the dead of his escort return at full health
+            if e.hp <= 0: e.hp = e.max; e.node = IDX[(0, 0)]; e.stagger = e.frost = e.bleed = False; e.poison = 0
         if sp == 'artorias':                                         # two cards go at random; all his heat-up cards come in
             pool = f.deck + f.discard; rng.shuffle(pool); pool = pool[2:] + list(f.heat_cards)
         elif sp == 'smelter': pool = rng.sample(f.heat_cards, min(5, len(f.heat_cards)))     # a new deck of five heat-up cards
@@ -744,7 +778,7 @@ class Fight:
             if o.get('area'): targets = [x for x in self.foes_alive() if DIST[c.node][x.node] <= o['area'] and not (o.get('shaft') and x.node == c.node)]
             elif o.get('node'): targets = [x for x in self.foes_alive() if x.node == f.node]
             else: targets = [f]
-            dice = o['dice'] + (('u' if 'weak_blue' in tr else 'b') if (f.boss and f.weak and o['range'] <= 1 and o['dice']) else '')
+            dice = o['dice'] + (('u' if 'weak_blue' in tr else 'b') if (f.boss and f.weak and not f.veil and o['range'] <= 1 and o['dice']) else '')
             faces = roll(dice, rng); c.rolls += 1
             if o.get('reroll') and faces:                            # two-handed grip: one die may be rolled again
                 i = min(range(len(faces)), key=lambda j: faces[j] - sum(DIE[dice[j]]) / 6)
@@ -759,7 +793,7 @@ class Fight:
                 if o['dice'] and lead - guard >= 3: slain = True
                 if total > 0:
                     if t.bleed and r.bleed == 'official': total += 2; t.bleed = False
-                    t.hp -= total; self.dealt[c] = self.dealt.get(c, 0) + total; grand += total
+                    t.hp -= total; self.dealt[c] = self.dealt.get(c, 0) + total; grand += total; t.veil = False
                     # the manuscript: against a boss the token goes to whoever damaged it since its last turn
                     if r.aggro == 'last' or (r.aggro == 'most' and self.is_boss): self.aggro = c
                     if self.special == 'dragonslayer' and t.boss and total >= 4 and t.surges < 3 and t.hp > 0:
@@ -943,7 +977,7 @@ class Fight:
         attacked = False; moved = False; rested = False
         cast = False                                   # a spell has been used this turn (the manuscript allows one)
         used = set()
-        wd = pol.w_death * (1.6 if (r.death == 'party' or c.hollow or len(self.live()) == 1) else 1.0)
+        wd = pol.w_death * (1.6 if self.fatal(c) else 1.0)
         one_spell = getattr(r, 'one_spell', False)
         for attempt in (0, 1):
             foes = self.foes_alive()
@@ -1126,13 +1160,15 @@ class Fight:
         if (self.is_boss and getattr(r, 'boss_round', 'alternate') == 'alternate') or (not self.is_boss and r.round == 'alternate'):
             while not self.over() and self.rounds < max_rounds:
                 self.rounds += 1
-                for _ in range(self.seats):
+                esc_once = getattr(r, 'escort_round', 'each') == 'once'
+                for _i in range(self.seats):
                     if self.over(): break
                     self.enemy_phase()
                     for f in ([] if first is not None else sorted(self.foes_alive(), key=lambda f: -f.threat)):
                         self.to_act.discard(f)
                         if self.over(): break
                         if f.hp <= 0: continue               # killed during another enemy's activation
+                        if esc_once and _i and not f.boss: continue
                         (self.boss_turn if f.boss else self.enemy_turn)(f)
                     self.foes_done()
                     if self.over(): break
@@ -1200,4 +1236,4 @@ class Fight:
                     top = max(self.dealt.values()); lead = [c for c, v in self.dealt.items() if v == top and c.alive]
                     if len(lead) == 1: self.aggro = lead[0]
         for c in self.party: c._first = self.turn_i
-        return (not self.failed()) and not self.foes_alive()
+        return (not self.failed()) and self.won()

@@ -1,5 +1,7 @@
 # 14 — Open Issues (Class A)
 
+> **Status on 2026-11-25: no rule is open.** The list below is that of 2026-11-11, before the rules workshop. What remains now is in section 39.5 of `41_rules_workshop.md`: two cards to be checked against their printed text (Demon Titanite, Four-Pronged Plough), and the Painted World of Ariamis rulebook, never supplied.
+
 Status on 2026-11-11: **no rules question is open.** The 22 lead questions and every item of the per-chapter lists that stood in this file were answered under the author's delegation; the answers, the evidence, and the changes made are in `06_final_rulings.md`, and each change is an entry in `11_change_log.md`. The earlier form of this file is in the repository history, and the per-chapter lists it was built from remain in `work/phase2a/issues/`.
 
 What remains are facts about printed components that the supplied files cannot confirm. None blocks play; each is stated in the book in the safest form the evidence allows. They are listed in `06_final_rulings.md`, section 7. The chief ones:
