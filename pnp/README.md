@@ -18,7 +18,7 @@ Three modules printed at home. None of their cards is ever shuffled with a card 
 
 - The cards are the expansion's own, with its art, frames and backs. Five event cards have changed text, listed with the reasons in `events/edits.json`: Fatal Gaffe, Reinforcements, Undead Settlement, Vitiated Boon and Propitious Cartographer. The other 66 cards are exactly as their maker printed them.
 - Rules: §7.5 (Event Cards), §5.5 (trap cards) and §6.5 (setup) of the rulebook. The expansion's own rules insert is not needed.
-- The cards carry the work of the expansion's maker and of the artists its insert credits. The print files are for the table of the person who printed them; passing them on is a matter for the maker's leave.
+- The cards carry the work of the expansion's maker and of the artists its insert credits. The author holds the rights to use and publish them (statement of 2026-11-26), so the print files may be passed on with the book.
 - Rebuilding needs the maker's two card PDFs in `sources/events_expansion/` (sources are not kept in the repository): `python3 tools/build_pnp.py events`.
 
 ## Encounter decks

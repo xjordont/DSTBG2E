@@ -26,7 +26,7 @@ A 0 is no requirement in that stat. No weapon listed has an INT or FTH requireme
 | Drakewing Ultra Greatsword | 33 | 23 |
 | East-West Shield | 28 | 0 |
 | Falchion | 37 | 30 |
-| Four-Pronged Plough | 23 | 18 |
+| Four-Pronged Plow | 23 | 18 |
 | Giant's Halberd | 27 | 16 |
 | Gold Tracer | 25 | 35 |
 | Gravelord Sword | 32 | 18 |
@@ -94,7 +94,7 @@ Where a card has two printings, the one with the rules text given here is used. 
 | Carthus Milkring | The wearer adds 1 to the dodge icons {{icon:ast-0062-dodge}} rolled for a dodge. | |
 | Chloranthy Ring | At the start of the wearer's turn, the wearer and every other character on the wearer's *node* each recover 1 stamina in addition to the turn's 1. | |
 | Covetous Silver Serpent Ring | The wearer gains 1 more soul with the reward for each *cleared* encounter. | |
-| Demon Titanite | As printed. | The revised card is used. Requirements and treasure type as printed. |
+| Demon Titanite | As printed. | Where the party owns two printings, the Painted World of Ariamis one is used. |
 | Eastern Armour | The wearer pays 2 stamina to dodge in place of 1. | |
 | Mask of the Child | At the start of the wearer's turn, the wearer recovers 2 stamina in place of the turn's 1. | This text also replaces that of the Events Expansion II card of the same name. |
 | Mon Ring | As printed, and: the effect is used only while the card is face up, and using it turns the card face down. | A *rest* turns the card face up. |

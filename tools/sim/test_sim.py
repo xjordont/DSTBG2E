@@ -629,11 +629,11 @@ check('settled: two characters fail when both are dead, a lone character when th
 _q3 = [Char(c, _r27) for c in ('Knight', 'Warrior', 'Herald')]; _g3 = E.Fight(_q3, _r27, random.Random(1), enemies=['Hollow Soldier'])
 _before = _g3.fatal(_q3[1]); _q3[0].alive = False; _after = _g3.fatal(_q3[1]); _g3.pol.count_dead = False; _blind = _g3.fatal(_q3[1])
 check('settled: a death is feared as the failing one once one character of three is dead, and by players who count the dead only', (not _before) and _after and not _blind, (_before, _after, _blind))
-# Gravelord Nito (17.7): two Skeleton Soldiers, scaled as enemies; they return when he heats up; he alone decides the fight
+# Gravelord Nito (17.7): two Skeleton Soldiers and a Giant Skeleton Soldier, scaled as enemies; they return when he heats up; he alone decides the fight
 _n3 = [Char(c, _r27) for c in ('Knight', 'Warrior', 'Herald')]; _fn = E.Fight(_n3, _r27, random.Random(1), boss='Gravelord Nito')
 _nito = _fn.foes[0]; _esc = _fn.escort
-check('Nito is set up with two Skeleton Soldiers, scaled for the party like any enemy, and is not scaled himself',
-      [e.name for e in _esc] == ['Skeleton Soldier'] * 2 and all(e.max == _r27.hp(E.ENEMIES['Skeleton Soldier']['hp'], 3) and e.atk_bonus == 1 for e in _esc)
+check('Nito is set up with two Skeleton Soldiers and a Giant Skeleton Soldier, scaled for the party like any enemy, and is not scaled himself',
+      [e.name for e in _esc] == ['Skeleton Soldier', 'Skeleton Soldier', 'Giant Skeleton Soldier'] and all(e.max == _r27.hp(E.ENEMIES[e.name]['hp'], 3) and e.atk_bonus == 1 for e in _esc)
       and _nito.max == E.BOSSES['Gravelord Nito']['hp'], ([e.name for e in _esc], [e.max for e in _esc], _nito.max))
 for e in _esc: e.hp = 0
 _dead = not _fn.won(); _nito.hp = _nito.card['heatup']; _fn.check_heat(_nito); _back = all(e.hp == e.max for e in _esc)

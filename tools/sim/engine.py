@@ -160,7 +160,7 @@ class Foe:
 
 
 # the manuscript, 17.7: Gravelord Nito is set up with these enemies, and his heat-up returns the dead among them
-ESCORT = {'Gravelord Nito': ('Skeleton Soldier', 'Skeleton Soldier')}
+ESCORT = {'Gravelord Nito': ('Skeleton Soldier', 'Skeleton Soldier', 'Giant Skeleton Soldier')}
 # the manuscript, 17.10: invisible at the start and whenever the deck is renewed, until an attack damages her; no weak arc meanwhile
 VEILED = {'Crossbreed Priscilla'}
 

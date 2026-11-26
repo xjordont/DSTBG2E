@@ -23,7 +23,7 @@ Pages: 69 · size 612 x 792 pt · links 2445 · passages 971
 | PASS | No table row alone at the head or foot of a column | 32 tables, 2 broken across columns; lone rows [] |
 | PASS | Every asset marked placed in the manifest is present in the book | 242 placed (215 files); absent [] |
 | PASS | Every extracted file that is not placed states why, and none held for provenance is used | 281 files not placed; without a reason []; used but not marked []; held but used [] |
-| INFO | Measured line length (full body lines) | median 56 characters, mean 55.9, n=326 |
+| INFO | Measured line length (full body lines) | median 56 characters, mean 56.0, n=326 |
 
 **QA PASSED**
 # PDF QA — 31_final_dark_souls_the_board_game_second_edition_v3_print.pdf
@@ -51,6 +51,6 @@ Pages: 69 · size 612 x 792 pt · links 2445 · passages 971
 | PASS | No table row alone at the head or foot of a column | 32 tables, 2 broken across columns; lone rows [] |
 | PASS | Every asset marked placed in the manifest is present in the book | 242 placed (215 files); absent [] |
 | PASS | Every extracted file that is not placed states why, and none held for provenance is used | 281 files not placed; without a reason []; used but not marked []; held but used [] |
-| INFO | Measured line length (full body lines) | median 56 characters, mean 55.9, n=326 |
+| INFO | Measured line length (full body lines) | median 56 characters, mean 56.0, n=326 |
 
 **QA PASSED**

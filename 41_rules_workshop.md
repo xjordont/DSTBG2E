@@ -3537,3 +3537,45 @@ The manuscript after these changes: 26,692 words; style check 0 violations; cros
 | A press run | The PDFs are sRGB without bleed; `30_pdf_production_notes.md` §5 says what a printer must add |
 
 No rule is open, no measurement is owed, and the book in the repository is the book of the rules as finalised.
+
+
+## 40. The author's decisions of 2026-11-26
+
+The author read section 39 and decided four things. Each overrides what stands above it.
+
+**A principle, to be kept in every later change: the game is played with the published components as they are, wherever that is possible.** A rule that needs fewer, other or altered components than the boxes hold is a last resort.
+
+### 40.1 Gravelord Nito's escort stays as written
+
+The escort is again two Skeleton Soldiers and one Giant Skeleton Soldier (§17.7), as it stood before 39.2. The simulator and its tests follow. The measurement is kept for the table that plays him (500 fights a cell, parties equipped as for a main boss):
+
+| | Fights lost, 1 / 2 / 3 / 4 characters |
+|---|---|
+| Nito with his escort as written | 79 / 47 / 28 / 12 |
+| The other eight main bosses, mean | 69 / 12 / 6 / 4 |
+| Ornstein and Smough, the hardest of them | 85 / 27 / 15 / 15 |
+
+He is the hardest main boss for two and three characters, and about as hard as Ornstein and Smough for one and four. That is the author's choice: a Gravelord who is meant to be feared, set up from the models in his own box (Tomb of Giants holds three Skeleton Soldiers and two Giant Skeleton Soldiers).
+
+### 40.2 The two cards that waited on the print
+
+Neither is a fan-made card. Both are published cards that the author's own manuscript lists, and neither needs anything more.
+
+| Card | What it is | Settled |
+|---|---|---|
+| Four-Pronged Plough | The weapon of the Darkroot expansion (the scarecrows' pitchfork), in the manuscript's table of weapon requirements | The card is printed "Four-Pronged Plow", as the author's card table and the community rules both spell it and as the same set's Plow Scarecrow is printed. Appendix A now uses the printed name |
+| Demon Titanite | An upgrade card. The manuscript lists it under "Errata/Updated" with no change beside it, among cards that have an older and a newer printing | Played as printed. Where a party owns two printings, the Painted World of Ariamis one is used, which is all the manuscript's list can mean. The row of Appendix B says so in words a party can act on whichever printing it holds |
+
+The community card list gives the Painted World printing as: "This weapon's attacks gain +1 damage. If this weapon is a boss treasure, reduce the cost of its highest-stamina attack by 1 stamina." The book does not quote it, because the card was not seen and the book never needs more than "as printed".
+
+### 40.3 Rights
+
+The author holds unlimited rights to use and publish all Dark Souls: The Board Game materials and the Events Expansion materials (statement of 2026-11-26). The cautions of sections 27 and 39.5 about passing on the Events Expansion II print files are withdrawn, and `pnp/README.md` says so.
+
+### 40.4 Printing
+
+The book is for fans to print at home. Nothing is owed to a press: the notes for a printer in `30_pdf_production_notes.md` §5 stay as information only. The print edition (`…_v3_print.pdf`) is the one for home printing: white ground, US Letter, and it prints on A4 with "fit to page".
+
+### 40.5 State
+
+The book was rebuilt with these changes and keeps the name of version 3 (69 pages; both editions pass the automated checks). Manuscript 26,702 words; style check 0 violations; cross-references 0 broken; simulator tests pass. Nothing waits on a printed component, a measurement or a decision.
