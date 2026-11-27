@@ -88,7 +88,7 @@ Everything here is decided. Where the author's chapter differs, write this. Wher
 - Bleed, calamity and corrosion: as the author wrote them.
 - Poison: tokens stack. At the end of its turn a model suffers one damage for each poison token, then removes one token. Poison is not resolved once the last enemy has fallen.
 - Frostbite: a frostbitten character recovers no stamina by any means and cannot take the rest action; a frostbitten enemy moves one node less. Removed at the end of the model's turn.
-- Stagger: −1 to attack, block, resist and dodge. Removed at the end of the model's turn.
+- Stagger: −1 to attack, block, resist and dodge (a character: each attack value, the sum of each block or resist roll, each dodge result; an enemy: each attack value, its block, its resist and its dodge difficulty). Removed at the end of the model's turn.
 - A stagger or frostbite token placed during a model's own turn stays until the end of its next turn.
 - Pushes: the author's rules. A boss cannot be pushed by a character.
 - A push-move that shows a damage value attacks each character it pushes once for that push-move, however many nodes it covers. The character may defend; a dodge avoids the push.
@@ -130,7 +130,7 @@ Everything here is decided. Where the author's chapter differs, write this. Wher
 - **Blacksmith Andre may be visited whenever the party is not in an encounter, without resting:** to buy, to sell and to fit upgrades.
 - The shop is face up. Tier one cards cost two souls, tier two cards four. Any card that is not starting equipment sells for one soul and goes to the bottom of its deck. Starting equipment cannot be sold. Shops are restocked only when a boss is defeated.
 - Shop stock (the author's): 3 weapons, 3 armour, 2 shields, 2 upgrades, 2 spells in each tier; the tier one shop also holds ember cards equal to the number of characters. Tier two is stocked when the mini-boss falls.
-- Upgrades are fitted at Andre. Titanite stays on its weapon and is sold with it for no extra souls. Any other upgrade on a sold card returns to the character's inventory.
+- Upgrades are fitted at Andre, who also removes a fitted upgrade other than Titanite at no cost. Titanite stays on its weapon and is sold with it for no extra souls. Any other upgrade on a sold card returns to the character's inventory.
 
 ### 3.9 Treasure decks
 

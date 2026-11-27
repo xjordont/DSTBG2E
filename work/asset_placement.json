@@ -33,16 +33,16 @@
   "chapter header, chapter 10"
  ],
  "assets/art/ast-0128-ashen-one-key-art.jpg": [
-  "chapter 19"
+  "chapter 15"
  ],
  "assets/art/ast-0129-concept-blood-stained-roots.jpg": [
   "chapter header, chapter 9"
  ],
  "assets/art/ast-0129-concept-flooded-cavern-light-shaft.jpg": [
-  "chapter 9"
+  "chapter 2"
  ],
  "assets/art/ast-0129-concept-hooded-figure-and-light-pillars.jpg": [
-  "chapter 7"
+  "chapter 19"
  ],
  "assets/art/ast-0129-concept-misty-ruins-panorama.png": [
   "chapter header, chapter 7"
@@ -69,16 +69,16 @@
   "chapter 19"
  ],
  "assets/art/ast-0129-env-frost-knight.png": [
-  "chapter 17"
+  "chapter 8"
  ],
  "assets/art/ast-0129-env-gate-tower-phantoms.png": [
   "chapter 19"
  ],
  "assets/art/ast-0129-env-kalameet-breath-and-knight.png": [
-  "chapter 2"
+  "chapter 5"
  ],
  "assets/art/ast-0129-env-sealed-door-of-light.jpg": [
-  "chapter 19"
+  "chapter 6"
  ],
  "assets/art/ast-0129-env-white-city-spires-phantoms.png": [
   "chapter 19"
@@ -87,7 +87,7 @@
   "chapter 18"
  ],
  "assets/art/ast-0130-backcover-darkroot-artorias.jpg": [
-  "chapter 17"
+  "chapter 7"
  ],
  "assets/art/ast-0130-backcover-explorers-stone-arch.jpg": [
   "chapter header, chapter 22"
@@ -99,7 +99,7 @@
   "chapter header, chapter 17"
  ],
  "assets/art/ast-0130-backcover-phantoms-red-invader.jpg": [
-  "chapter 6"
+  "chapter 17"
  ],
  "assets/art/ast-0130-characters-pilgrim-before-golden-city.jpg": [
   "chapter header, chapter 3"
@@ -111,10 +111,10 @@
   "chapter 6"
  ],
  "assets/art/ast-0130-chariot-rope-bridge-at-dusk.png": [
-  "chapter 5"
+  "chapter 4"
  ],
  "assets/art/ast-0130-chariot-warrior-against-skeletons.png": [
-  "chapter 8"
+  "chapter 11"
  ],
  "assets/art/ast-0130-cover-characters-art-only.jpg": [
   "chapter header, chapter 4"
@@ -125,14 +125,11 @@
  "assets/art/ast-0130-cover-explorers-art-only.jpg": [
   "chapter header, chapter 13"
  ],
- "assets/art/ast-0130-cover-iron-keep-art-only.jpg": [
-  "chapter 4"
- ],
  "assets/art/ast-0130-cover-phantoms-art-only.jpg": [
   "chapter header, chapter 12"
  ],
  "assets/art/ast-0130-darkroot-artorias-concept-front-and-back.jpg": [
-  "chapter 15"
+  "chapter 19"
  ],
  "assets/art/ast-0130-darkroot-grave-with-planted-swords.jpg": [
   "chapter header, Appendix A"
@@ -150,13 +147,13 @@
   "chapter 5"
  ],
  "assets/art/ast-0130-explorers-shrine-mirrored-in-water.jpg": [
-  "chapter 2"
+  "chapter 9"
  ],
  "assets/art/ast-0130-explorers-wanderer-before-buried-door.jpg": [
   "chapter 18"
  ],
  "assets/art/ast-0130-iron-keep-throne-in-fire-clouds.png": [
-  "chapter 19"
+  "chapter 10"
  ],
  "assets/art/ast-0130-kalameet-over-lone-knight.jpg": [
   "chapter header, chapter 15"
@@ -168,7 +165,7 @@
   "chapter header, chapter 20"
  ],
  "assets/art/ast-0130-phantoms-procession-sketch.jpg": [
-  "chapter 10"
+  "chapter 17"
  ],
  "assets/art/ast-0130-phantoms-red-phantom-smear.jpg": [
   "chapter 17"
@@ -189,7 +186,7 @@
   "chapter 9"
  ],
  "assets/art/ast-0156-four-kings-cover-art-only.jpg": [
-  "chapter 11"
+  "chapter 17"
  ],
  "assets/art/ast-0157-gaping-dragon-cover-art-only.jpg": [
   "gallery, end of chapter 9"
@@ -202,9 +199,6 @@
  ],
  "assets/art/ast-0160-manus-cover-art-only.jpg": [
   "gallery, end of chapter 19"
- ],
- "assets/art/ast-0161-old-iron-king-cover-art-only.jpg": [
-  "chapter 17"
  ],
  "assets/art/ast-0162-vordt-cover-art-only.jpg": [
   "gallery, end of chapter 21"
@@ -232,12 +226,6 @@
  ],
  "assets/diagrams/ast-0105-character-board-anatomy-2017.png": [
   "figure, chapter 3"
- ],
- "assets/frames/ast-0089-card-back-encounter-level-1.png": [
-  "gallery, end of Appendix B"
- ],
- "assets/frames/ast-0089-card-back-treasure.png": [
-  "gallery, end of Appendix B"
  ],
  "assets/icons/ast-0006-primary-spawn-node.png": [
   "icon reference page",
@@ -599,12 +587,6 @@
  "assets/photography/ast-0135-character-dashboard-whole-thief.png": [
   "gallery, end of chapter 3"
  ],
- "assets/photography/ast-0137-card-fan-encounter-cards.png": [
-  "gallery, end of Appendix B"
- ],
- "assets/photography/ast-0137-card-fan-treasure-decks.png": [
-  "gallery, end of Appendix B"
- ],
  "assets/photography/ast-0138-expansion-miniature-armour-black-iron.png": [
   "gallery, end of Appendix A"
  ],
@@ -748,9 +730,6 @@
  ],
  "assets/photography/ast-0163-asylum-demon-game-board-boss-side.png": [
   "gallery, end of chapter 17"
- ],
- "assets/photography/ast-0163-asylum-demon-game-board-encounter-side.png": [
-  "chapter 15"
  ],
  "assets/photography/ast-0163-asylum-demon-miniature.png": [
   "figure, §17.3"

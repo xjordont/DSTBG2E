@@ -5,9 +5,8 @@ After each boss is defeated (*mini-boss*, *main-boss* and *mega-boss*), a player
 ## 20.1 Setup
 
 - Remove all enemy models and *trap* tokens from the boss tile.
-- A character who died in the boss encounter is left out of PvP.
-- *Summons* and *invaders* are left out of PvP.
-- Restore each character as a rest at the *bonfire* restores them (see §11.2).
+- A character who died in the boss encounter, a *summon* and an *invader* are left out of PvP.
+- Restore each character taking part as a *rest* at the *bonfire* restores them (see §11.2).
 - Place each character's model on a corner *node* of the boss tile, one character to a corner.
 - The *aggro* token is not used.
 
@@ -30,7 +29,7 @@ After each boss is defeated (*mini-boss*, *main-boss* and *mega-boss*), a player
 
 - After each character's turn, that character's player places one *trap* token face down on an outermost free *node* of the tile.
 - A free node holds no model, token or terrain. The outermost nodes are those along the edges of the tile; once the edges are full, the next ring inwards is used.
-- A character who moves or is pushed onto a trap token flips it and must dodge the trap (see §5.5).
+- A character who moves or is pushed onto a face-down trap token flips it. A blank token does nothing; any other must be dodged at its *dodge difficulty* (see §5.5).
 - A character who fails to dodge a trap dies at once. The damage on the token is not used, and no trap card is drawn.
 - A dead character's model is removed from the tile.
 

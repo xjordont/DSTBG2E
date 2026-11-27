@@ -3,12 +3,12 @@
 ## 10.1 Turn Order
 
 1. Recover one *stamina*.
-2. Take any of the *minor actions*, in any order, before or after the major action.
+2. Take any of the *minor actions*, in any order, before or after the *major action*.
    - *Walk*, once a turn: move to an adjacent *node* at no cost.
    - *Run*: move one further node for each stamina spent.
    - Equip: swap equipment cards among the *back-up slot*, the weapon slots and the armour slot. The *inventory* is closed during an encounter.
    - *Heroic action*: carry out the ability on the dashboard and flip the heroic action token to its used side.
-3. Take one *major action*.
+3. Take one major action.
    - Attack: use one attack option from the left weapon slot, the right, or both.
    - *Rest*: remove all stamina cubes. A character who runs in a turn cannot rest in it, and a character who rests cannot then run.
    - *Drink estus*: remove all damage cubes and flip the *estus flask* token to its used side. Stamina cubes stay.
@@ -27,11 +27,11 @@ With the attack action a character may make one attack with the weapon or *spell
 
 To attack, choose an attack option on the *equipped* card, pay its *stamina* cost and name an enemy within the weapon's *range* as the target. Roll the dice shown on the attack option, add up the results and apply any modifiers. The result is the attack value. The player may now use any reroll available, from the *luck* token (see §3.5) or otherwise.
 
-All weapons do physical damage. An attack option marked with the magical damage icon {{icon:ast-0042-deal-magical-damage}}, as on certain weapons and most spells, does magical damage instead. Subtract the enemy's *block* from a physical attack value, or its *resist* from a magical one; both are printed on its *data card*. Place one wound token on the enemy's base for each point of damage left (see §8.2). An attack on a boss also depends on the arc it is made from (see §15.6).
+All weapons do physical damage. An attack option marked with the magical damage icon {{icon:ast-0042-deal-magical-damage}}, as on certain weapons and most spells, does magical damage instead. Subtract the enemy's *block* from a physical attack value, or its *resist* from a magical one; both are printed on its *data card*. Place wound tokens on the enemy's base to the value of the damage left (see §8.2). An attack on a boss also depends on the arc it is made from (see §15.6).
 
 Many weapons simply deal damage. Some have special abilities given in the text on their cards or by icons: the magical damage icon, the *push* icon {{icon:ast-0058-push-affected-enemies}} (see §8.4), the *condition* icons and the icons below.
 
-*Example.* In a game with two characters, the Knight faces a Hollow Soldier with 3 health and a block of 1 on an adjacent *node*. The Knight holds a sword with a range of 1 and nothing in the other weapon slot. The Knight pays one stamina for one of its attack options and rolls two black dice, which show 0 and 2. Wielding the sword *two-handed*, the Knight rerolls the 0 and gets 2. The attack value is 4. Less the block of 1, the Hollow Soldier takes three wound tokens and dies.
+*Example.* In a game with two characters, the Warrior shares a *node* with a Hollow Soldier that has 3 health and a block of 1. The Warrior holds the Battle Axe, a one-handed weapon with a range of 0, and nothing in the other weapon slot. The Warrior chooses the attack option that costs no stamina and rolls its two black dice, which show 0 and 2. Wielding the axe *two-handed*, the Warrior rerolls the 0 and gets 2. The attack value is 4. Less the block of 1, the Hollow Soldier takes three wounds and dies.
 
 ### Range
 
@@ -61,7 +61,7 @@ A character with a *two-handed* weapon is decidedly on the offensive. An attack 
 
 *Stat scaling* gives a weapon extra damage in the hands of a character whose stats far exceed what it asks for.
 
-- A weapon is scaled while the character's stat is ten or more above the weapon's highest stat requirement.
+- A weapon is scaled while the character's value in the stat of the weapon's highest requirement is ten or more above that requirement.
 - If two requirements are tied for highest, either stat qualifies.
 - Mark a scaled weapon with a red damage cube. Remove the cube when the weapon is no longer scaled.
 - Every attack option of a scaled weapon gains +1 to its attack value. There is no further bonus for a higher stat.

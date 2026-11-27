@@ -10,7 +10,7 @@ Set up as in the standard game (see §6), with these changes.
 
 1. Choose no bosses. The bosses are those the campaign lists.
 2. Build the encounter decks from the *encounter cards* of every set the campaign needs, unless the campaign names the sets to use.
-3. Draw one encounter tile for each encounter in the first section and lay them in a line from the bonfire tile to the boss tile.
+3. Draw one encounter tile for each encounter in the first section and lay them in a line from the bonfire tile to the boss tile, or to the last encounter tile where the section lists no boss.
 4. Deal each tile a face-down encounter card of the level the section lists for it. Where the section names an encounter, place that card instead.
 
 A Level 4 encounter is fought on the Level 4 side of a *mega-boss* game board, which takes the place of an encounter tile (see §6.7). The board and the Level 4 encounter cards are those of the section's mega-boss. Where the section has no mega-boss, they are those of a mega-boss expansion the campaign needs. The board is dealt treasure cards as any other tile, and no boss treasure card. Two Level 4 encounters in one section are fought on the same board, one after the other. The mega-boss is fought on the other side of the board once the section's last Level 4 encounter is *cleared*.
@@ -18,6 +18,8 @@ A Level 4 encounter is fought on the Level 4 side of a *mega-boss* game board, w
 A section ends when its last boss is defeated. A section that lists no boss ends when its last encounter is first cleared. The party then restocks the *shop* (see §18.6), sets up the next section as it set up the first and *rests* without spending a *spark*. A boss that is not the last of its section is followed by no setup: the party plays on.
 
 The characters keep their stats, treasure cards and *souls* from one section to the next. The players win the campaign when its last section ends.
+
+With the Phantoms expansion, *embered* characters provoke one *invader* in each section, in place of once before and once after the mini-boss (see §12.2). The token drawn is standard until the *bonfire ascetic* is burnt and advanced afterwards (see §18.7).
 
 ## 18.2 The Fog Gate
 
@@ -43,7 +45,7 @@ A new player may join a campaign in progress at the cost of one *spark*. The new
 
 Each reward is paid in *souls* to each character.
 
-| | First clear | Reset encounter fought again |
+| Souls for each character | First clear | *Reset* encounter fought again |
 |---|---|---|
 | Level 1 encounter | 2 | 0 |
 | Level 2 encounter | 3 | 1 |
@@ -63,12 +65,12 @@ The *bonfire* works as in the standard game (see §11), with the changes below. 
 
 ### Stat Tier Costs
 
-| | Cost in *souls* |
+| Stat tier | Cost in *souls* |
 |---|---|
-| Stat tier one | 4 |
-| Stat tier two | 8 |
-| Stat tier three | 16 |
-| Stat tier four | 24 |
+| Tier one | 4 |
+| Tier two | 8 |
+| Tier three | 16 |
+| Tier four | 24 |
 
 ### Blacksmith Andre's Shop
 
@@ -87,13 +89,11 @@ In a campaign, defeating a boss does not open *tier two* treasure. The party ope
 - The tier two *shop* is stocked at once. The *tier one* shop is not restocked; both are next restocked when the *section* ends.
 - From then on, treasure cards dealt to tiles and placed under *chests* come from the tier two deck.
 - From then on, every attack of a non-boss enemy has +1 damage, on top of the scaling for party size (see §8.3). *Invaders* are not affected.
-- *Embered* characters provoke one invader in each section (see §12.2). Invader tokens are standard until the bonfire ascetic is burnt and advanced afterwards.
 
 ## 18.8 Transposition
 
 Once the first *section* has ended, a character may transpose *boss treasure* to obtain *legendary treasure*. A character may transpose only during a *rest*.
 
-1. The first time, gather every legendary treasure card and shuffle them to form the legendary treasure deck.
-2. Deal five legendary treasure cards face up beside the *bonfire* tile.
-3. The character removes one of their boss treasure cards from the campaign, pays four *souls* and takes any one of the five face-up cards.
-4. Deal another legendary treasure card face up, so that five are again on offer.
+1. The first time any character transposes, gather every legendary treasure card, shuffle them to form the legendary treasure deck and deal five face up beside the *bonfire* tile.
+2. The character removes one of their boss treasure cards from the campaign, pays four *souls* and takes any one of the five face-up cards.
+3. Deal another legendary treasure card face up, so that five are again on offer.

@@ -40,7 +40,7 @@ A boss *data card* holds much the same information as an enemy data card, but it
 - Threat, block and resist work as they do on an enemy data card (see §8.2).
 - A boss's health is tracked on its health dial in place of wound tokens.
 - The special ability gives the boss a theme and often a power of its own (see §17).
-- A card of the 2017 sets also prints the levels of the encounters on the road to that boss (see §6.5).
+- A boss data card may also print the levels of the encounters on the road to that boss; for the bosses of Tomb of Giants and Painted World of Ariamis, Appendix B gives them (see §6.5).
 
 A boss is never scaled (see §8.3).
 
@@ -81,7 +81,7 @@ In a boss encounter characters move by these further rules.
 - A character moving onto the boss's node stays in the arc of the node they leave. If that node is split between two arcs, the player chooses which of the two to move into.
 - A character on the boss's node may move to an adjacent arc of the base in place of moving off the node. A character who moves more than one node, as with a *run*, may do this more than once: from the front arc to a side arc, for instance, and then to the back arc.
 - A character moving off the boss's node stays in the same arc: a *walk* or a run takes them to an adjacent node within the arc they leave.
-- A character *pushed* off the boss's node moves to the centre-most node of the arc they are in. If the character cannot enter that node, the players choose any adjacent node.
+- A character *pushed* off the boss's node moves to the adjacent node at the centre of the arc they are in. If the character cannot enter that node, the players choose any adjacent node.
 - A character who *dodges* a boss's attack moves to an adjacent node as usual, but need not stay in the same arc: the character may move to any adjacent node or onto any arc of the boss's base.
 
 ### Attacking Bosses and Weak Arcs

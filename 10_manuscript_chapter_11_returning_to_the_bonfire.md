@@ -47,6 +47,7 @@ The *bonfire* is a safe haven in an otherwise treacherous world. Two strangers w
 - Andre attaches weapon upgrade cards {{icon:ast-0044-weapon-upgrade}} from a character's *inventory* to that character's *equipped* weapon cards, and armour upgrade cards {{icon:ast-0046-armour-upgrade}} to equipped armour.
 - An upgrade is fitted only where the equipment has a free upgrade slot and the character meets the upgrade card's stat requirements (see §4.1).
 - Andre charges no *souls* for fitting an upgrade.
+- Andre removes a fitted upgrade, other than *Titanite*, to its owner's inventory at no cost (see §4.2).
 - A visit to Andre resets nothing. The party goes on from the tile it had reached.
 
 ### Shop Rules

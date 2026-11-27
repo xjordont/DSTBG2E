@@ -6,7 +6,7 @@ With the Phantoms expansion, *summons* and *invaders* are in play.
 
 *Embered* characters may *summon* a friendly *phantom* at the *fog gate* before a boss encounter.
 
-1. Each embered character may pay two *souls* to draw one summon *data card* at random: a standard summon before a mini-boss, an advanced summon before a main-boss or *mega-boss*.
+1. Each embered character may pay two *souls* to draw one summon *data card* at random: a standard summon before a *mini-boss*, an advanced summon before a *main-boss* or *mega-boss*.
 2. The party must agree on one of the drawn summons. The other cards are returned, and the souls stay spent.
 3. Set the summon's health dial to the starting health {{icon:ast-0029-starting-health}} on its data card.
 4. Shuffle all of the summon's *behaviour cards* to form its behaviour deck.
@@ -33,7 +33,7 @@ An *invader* is a hostile *phantom* that joins one encounter and hunts the chara
 
 1. *Embered* characters provoke an invader, once before the *mini-boss* is defeated and once after it. The invader is provoked as soon as any character is embered while face-down *encounter cards* lie on the tiles.
 2. Draw one invader token at random from the supply: a standard invader before the mini-boss is defeated, an advanced invader after it.
-3. Shuffle it with enough blank invader tokens to make one token for each face-down encounter card. Any other tokens serve as blanks if these run out.
+3. Shuffle it with enough blank invader tokens to make one token for each face-down encounter card. If the blank tokens run out, make up the number with invader tokens of the other kind; such a token counts as a blank when flipped.
 4. Place one token face down on each face-down encounter card.
 5. When the party enters an encounter tile, flip its invader token face up before the encounter card is revealed.
 

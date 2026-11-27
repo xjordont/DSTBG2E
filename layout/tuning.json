@@ -228,7 +228,7 @@
    "after": 0
   }
  ],
- "target_pages": 70,
+ "target_pages": 68,
  "heroes": {
   "01": {
    "banner": {
@@ -592,7 +592,7 @@
    "header": {
     "file": "assets/art/ast-0130-phantoms-knight-among-blue-spirits.jpg",
     "pos": "center 40%",
-    "h": 150
+    "h": 132
    }
   },
   "21": {

@@ -10,7 +10,7 @@ Every tile except the *bonfire* tile is printed with a number of circular symbol
 - *Spawn nodes* {{icon:ast-0006-primary-spawn-node}} {{icon:ast-0010-secondary-spawn-node}} are where enemy models are placed at the start of an encounter.
 - *Terrain nodes* {{icon:ast-0014-primary-terrain-node}} {{icon:ast-0018-secondary-terrain-node}} are where terrain is placed at the start of an encounter.
 
-The mini-boss tile has a *mini-boss* spawn node and the main-boss tile a *main-boss* spawn node, where each boss starts its encounter.
+The *mini-boss* tile has a mini-boss spawn node and the *main-boss* tile a main-boss spawn node, where each boss starts its encounter.
 
 Models move onto an empty spawn node or terrain node as onto a basic node.
 
@@ -50,18 +50,18 @@ Terrain is placed as the *encounter card* shows. A *rest* at the *bonfire* moves
 
 ### Gravestones
 
-- Models cannot *walk*, *run*, *dodge* or be *pushed* onto a *node* containing a *gravestone* {{icon:ast-0017-gravestone}}.
+- No model may move, *dodge* or be *pushed* onto a *node* containing a *gravestone* {{icon:ast-0017-gravestone}}.
 - When an encounter containing a gravestone is *cleared*, the party may reveal one hidden card of its choice: the top card of either treasure deck, the top card of the next boss's behaviour deck, or one face-down encounter card or *event card* on any tile.
 - A card revealed from the top of a deck goes back on top of that deck or to the bottom of it. An encounter card or event card goes back on its tile or is replaced with the top card of its deck.
 
 ### Barrels
 
-- Models cannot walk or run onto a node containing a *barrel* {{icon:ast-0013-barrel}}.
+- No model may move onto a node containing a *barrel* {{icon:ast-0013-barrel}} except by a dodge or a push.
 - Models may dodge or be pushed onto a node containing a barrel. The barrel is then destroyed and its token removed.
 
 ### Chests
 
-- Models cannot walk, run, dodge or be pushed onto a node containing a *chest* {{icon:ast-0009-treasure-chest}}.
+- No model may move, dodge or be pushed onto a node containing a *chest* {{icon:ast-0009-treasure-chest}}.
 - A chest begins closed side up. When its encounter is cleared, the chest is flipped to its open side for good and its treasure is taken (see §7.5).
 - With the Explorers expansion, a chest is opened as the *mimic* rules direct (see §13).
 
@@ -73,4 +73,4 @@ Terrain is placed as the *encounter card* shows. A *rest* at the *bonfire* moves
 - A trap token is blank or shows a damage value and a *dodge difficulty*. Traps do not affect movement.
 - When a character moves or is pushed onto a node with a face-down trap token, flip the token. A blank token does nothing. Otherwise the trap is sprung and hits every model on that node, enemies included, for the damage shown.
 - A character may dodge a trap (see §9.5). The damage of a trap token cannot be *blocked* or *resisted*. A character who dodges a trap stays on the node.
-- With the Events Expansion II, the first trap token of an encounter that is flipped and is not blank is not resolved. Draw the top trap card instead and lay it with its foot towards the *entry nodes*. It hits every model on a node it marks, enemies included, with the damage and dodge difficulty it gives for the encounter's level. A character may dodge it and stays on the node, or *blocks* or *resists* it with the armour card and its *upgrades* alone. An enemy subtracts its block or resist. A model that is hit takes the condition shown, or is *pushed* to an adjacent node of the players' choice. Then shuffle the card back into the trap deck.
+- With the Events Expansion II, the first trap token of an encounter that is flipped and is not blank is not resolved. Draw the top trap card instead and lay it with its foot towards the *entry nodes*. It hits every model on a node it marks, enemies included, with the damage and dodge difficulty it gives for the encounter's level. A character may dodge it, and a character who dodges stays on the node. A character who does not dodge, or whose dodge fails, blocks or resists with the armour card and its *upgrades* alone. An enemy subtracts its block or resist. A model that is hit takes the condition shown, or is *pushed* to an adjacent node of the players' choice. Then shuffle the card back into the trap deck.

@@ -11,7 +11,7 @@ If the ambush card shows treasure, flip the chest to its open side. The party ta
 
 If the ambush card shows a mimic, the encounter goes on and the mimic is fought at once as a *mini-boss*.
 
-1. Take the Hungry Mimic's *data card* and *behaviour cards* if the party's chosen mini-boss has not yet been defeated, and the Voracious Mimic's if it has.
+1. Take the Hungry Mimic's *data card* and *behaviour cards* if the party's chosen mini-boss has not yet been defeated, and the Voracious Mimic's if it has. In a campaign that names no mimic, take the Hungry Mimic's until the *bonfire ascetic* is burnt and the Voracious Mimic's afterwards (see §18.7).
 2. Shuffle the behaviour cards and deal as many as the deck size {{icon:ast-0027-behaviour-deck-size}} on the data card to form the mimic's behaviour deck. Set the other cards aside.
 3. Set the mimic's health dial to its starting health {{icon:ast-0029-starting-health}}.
 4. Put the mimic's model in place of the chest.
@@ -26,6 +26,6 @@ If the party kills the mimic:
 - The encounter is cleared and the characters recover. Killing a mimic is not the defeat of a boss, and nothing that follows a boss's defeat applies (see §16.5).
 - The encounter may be fought again like any other, and the mimic does not return.
 
-If the encounter is *failed* against the mimic, the mimic's model is removed, the chest stays closed, and the ambush card stays face up.
+If the encounter is *failed* against the mimic, the mimic's model is removed, the chest is put back on its node closed side up, and the ambush card stays face up.
 
 A chest left closed, or one whose mimic was not killed, may be opened each time the party later clears that encounter. A mimic met again is set up afresh.

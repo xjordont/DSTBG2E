@@ -3579,3 +3579,77 @@ The book is for fans to print at home. Nothing is owed to a press: the notes for
 ### 40.5 State
 
 The book was rebuilt with these changes and keeps the name of version 3 (69 pages; both editions pass the automated checks). Manuscript 26,702 words; style check 0 violations; cross-references 0 broken; simulator tests pass. Nothing waits on a printed component, a measurement or a decision.
+
+
+## 41. Missing data looked up; the manuscript proofread again (2026-11-27)
+
+The author asked for any missing data to be looked up and every aspect of the manuscript put right. Four passes were run: two of research on the web, two of proofreading, each by a reader who had not worked on the book. Their findings were checked against the author's original manuscript and the brief before anything was changed.
+
+### 41.1 Where the facts came from
+
+| Source | Kind |
+|---|---|
+| The publisher's rulebooks for the core game, Iron Keep, Phantoms and Tomb of Giants | Official |
+| The publisher's errata and FAQ for the two 2022 sets (November 2022) and for the core game (April 2017) | Official |
+| The publisher's update on traps (November 2016) | Official |
+| Scans of the printed cards, as carried by a community Tabletop Simulator module | Printed cards, read from images |
+| Two community spreadsheets, the community guide and a community card application | Community |
+
+No rulebook for Painted World of Ariamis is published online, and the community wiki, BoardGameGeek and Reddit could not be reached. What rests on community sources alone is marked below.
+
+### 41.2 What the look-up settled
+
+| Question | Found | Done |
+|---|---|---|
+| Gravelord Nito's encounter in the published game | Two Skeleton Soldiers and one Giant Skeleton Soldier on the mini-boss spawn node, Nito on the main-boss node; his card: "The Gravelord's Call: When Nito heats up, place any enemies that have been killed during this encounter on" that node (rulebook picture; two community sources for the enemies) | Nothing: §17.7 is the published setup. The author's decision of 40.1 keeps the game as it is in the box |
+| The data cards of the four bosses and twelve enemies of the 2022 sets | Every figure in the tables of Appendix B agrees (official pictures for most of Tomb of Giants; two community sources for Painted World). The Skeleton Soldier's range of 0 is the publisher's own erratum | Nothing |
+| Black Knight and Heavy Knight abilities | "Parry" and "Brutal Impact", printed on their cards | Nothing: played as printed |
+| Crossbreed Priscilla's invisibility | Snowblind is on her card. That she begins invisible and is invisible again when her deck is renewed is confirmed by one review; what ends it was found nowhere | §17.10 stands. "Visible once an attack damages her" remains this book's reading |
+| Demon Titanite | One printing only: a common upgrade of Painted World of Ariamis (INT 10, FTH 10), new in that set. The Titanite Demon's own treasure is a card named Titanite | Added to the new cards of Appendix B, as printed. Its row in the table of revised cards, which spoke of two printings, is gone |
+| Dragon Scale | A new common upgrade of Tomb of Giants, missing from the book's list of added cards | Added, as printed: §6.2 adds every new card of those sets |
+| Sellsword Twinblades | Printed "Sellsword Twinblade" on both printings | Renamed |
+| Manikin Claws | Printed "Mannikin Claws" | Renamed |
+| Four-Pronged Plow | Printed so | Confirms 40.2 |
+| Titanite Chunk, Titanite Slab | In no published set, and not among the 14 treasure cards of the Events Expansion II | Removed from Appendix B with the paragraph on exchanging them. They were the author's own additions; no table owns the cards, and the principle of section 40 is to play with the published components. **The author may want them back:** they can return as two print-and-play cards |
+| Black Leather Armour, Eastern Armour, Sellsword Twinblade | The Characters expansion and Painted World print different cards under each name (other dice, other text, one-handed against two-handed). The book's text fits the Characters printing only | Each row now says the Characters card is used, and that a party owning only the Painted World card plays that card as printed. Before, such a party's Mercenary had no starting weapon |
+| The "revised treasure" table | Its heading said the book's text picks between two printings. For five cards the text is the author's own and matches neither | The heading now says the text given replaces the printed text |
+| Butcher Knife | Maneater Mildred's invader treasure; printed STR 25, FTH 15 | The author's table gives 25 / 0 / 0 / 0. Appendix A now says outright that every listed weapon has INT 0 and FTH 0 |
+| The core box | Every count in chapter 2 agrees with the rulebook, except that the box also holds a First Activation token | Listed in §2.8 as not used |
+| Trap tokens | 11 blank and 9 with values, as the book assumed. Official traps do not affect enemies and are sprung by a character's own movement | Nothing: the author's traps hit every model and are sprung by a push too (brief, 3.7) |
+| The spark dial's highest number | Not found | Nothing depends on it |
+
+### 41.3 The worked examples
+
+Every example was recomputed against the card data. Three described dice the printed cards do not show: the Knight has no dodge die and could not parry as written; the Knight's sword has a range of 0 and no option of two black dice; the Assassin's armour shows one dodge die, the second being the Target Shield's. The examples of §9.5, §9.6 and §10.3 now use the Assassin with armour and shield, and the Warrior with the Battle Axe, as their cards are printed.
+
+### 41.4 The proofread
+
+The two proofreaders reported 58 findings, three of them ranked as misleading play. 84 edits were made from them. Those that touch a rule:
+
+| Finding | Mended by |
+|---|---|
+| Setup after the mini-boss told the party to shuffle "the legendary treasure and boss treasure" into the deck: all of it | Five legendary cards drawn unseen, with the two bosses' treasure, as §6.2 says |
+| Gravestones, barrels and chests barred a "walk", "run", "dodge" or "push", which are character moves; enemy movement was not barred by the letter | "No model may move, dodge or be pushed onto" each |
+| A mimic is Hungry or Voracious by whether "the party's chosen mini-boss" has fallen; a campaign chooses no boss | In a campaign that names no mimic, Hungry until the bonfire ascetic is burnt, Voracious afterwards, as invaders go |
+| Wounds were counted in tokens, though the tokens are worth 1, 3 and 5 | Wound tokens "to the value of the damage" |
+| "Damage value" for an enemy's attack in two places, "attack value" everywhere else | "Attack value" |
+| Stagger "subtracts one from attack, block, resist and dodge": of what? | Stated for a character (each attack value, the sum of each block or resist roll, each dodge result) and for an enemy (each attack value, its block, resist and dodge difficulty), as the simulator has always played it |
+| Calamity and corrosion reduced "the results" of a roll, which reads as each die | The sum of the roll |
+| Stat scaling: "the character's stat", unnamed | The stat of the weapon's highest requirement |
+| Nothing said how an upgrade comes off, though Titanite is said to stay on | Andre removes a fitted upgrade other than Titanite, at no cost (the author's original rule, lost in the rewrite) |
+| A fourth starting card cannot be "equipped" | It goes in the back-up slot |
+| The Level 4 encounter after a rest or a lost mega-boss fight | Not fought again: its board has been flipped |
+| The one-invader-a-section rule of campaigns stood last in the list on the bonfire ascetic | Moved to §18.1 |
+| Transposition: as numbered, five more cards were dealt at every exchange | The five are dealt once |
+| A trap token in player versus player "must be dodged", blank or not | A blank token does nothing |
+| Four blank invader tokens are needed where five encounters lie face down; the box has three | Invader tokens of the other kind make up the number and count as blanks |
+| Mon Ring turned face up by "a rest", which is also a turn's action | A rest at the bonfire |
+| A discarded ember card went nowhere | To the box |
+
+The rest were pointers made exact, first-use italics, table headings, hyphenation, two rules stated twice, and one sentence that carried no rule. The author's own sentences of colour (the two-handed fighter "decidedly on the offensive", and the like) were left as written.
+
+Not taken: a definition of "shield" (the cards name their kinds in three or four ways and the shop has managed without); a rewrite of the push against a wall (the author's wording is kept, since no source gives a surer one); capitals for "strafe", "crawl" and "track" (the printed names were not seen).
+
+### 41.5 State
+
+Manuscript 26,888 words of 28,905; style check 0 violations; cross-references 0 broken. No rule the simulator plays was changed, so its figures and tests stand. The book was rebuilt as version 3, now 68 pages (Appendix B is a page shorter), and passes the automated checks in both editions. Two chapters that the corrections had pushed onto an extra page by a line or two were tightened in wording to fit again.

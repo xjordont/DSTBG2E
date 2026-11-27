@@ -1,6 +1,6 @@
 # 2. Game Components
 
-Each entry names the set that supplies it. PWA is the Painted World of Ariamis set and ToG is the Tomb of Giants set. Of those two sets this game uses the characters, the enemies, the bosses and the new treasure cards; their encounter cards and event cards are not used (see Appendix B).
+Each entry names the set that supplies it. PWA is the Painted World of Ariamis set and ToG is the Tomb of Giants set. Of those two sets this game uses the characters, the enemies, the bosses and the new treasure cards (see Appendix B); their encounter cards and event cards are not used.
 
 ## 2.1 Characters
 
@@ -110,7 +110,7 @@ The Asylum Demon expansion holds one model for both of its demons. For the Asylu
 - 11x Invader models, 12x Invader data cards, 64x Invader behaviour cards, 12x Invader treasure cards and 1x Invader health dial
 - 6x Standard invader tokens, 6x Advanced invader tokens and 3x Blank invader tokens
 
-Kirk, Knight of Thorns and Longfinger Kirk share one model.
+One model serves both Longfinger Kirk and Kirk, Knight of Thorns.
 
 ### Standard Summons
 
@@ -156,7 +156,7 @@ Kirk, Knight of Thorns and Longfinger Kirk share one model.
 | *Legendary treasure* | 10 | 20 |
 | *Boss treasure* | 18 | 48 |
 
-In all, 519 treasure cards. The table does not count the 12x *Invader* treasure cards (Phantoms) or the 3x Titanite Scale cards (Iron Keep). *Ember* cards are common treasure.
+In all, 519 treasure cards. The table does not count the 12x *Invader* treasure cards (Phantoms), the 3x Titanite Scale cards (Iron Keep) or the 14x treasure cards of the Events Expansion II. *Ember* cards are common treasure.
 
 ## 2.6 Encounter, Event and Ambush Cards
 
@@ -171,8 +171,8 @@ An *encounter card* shows the level, enemies, terrain and *traps* of one encount
 
 In all, 133 encounter cards. Of each of Levels 1 to 3, Darkroot and Iron Keep hold six cards each, Explorers five and Executioner's Chariot two. Level 4 cards come only with the mega-bosses.
 
-- Events Expansion II, a community expansion printed at home: 49x *Event cards* in three levels, 8x Trap cards and 14x treasure cards
-- Encounter decks, print-and-play modules of this book: 27x encounter cards for ToG and 27x for PWA (9 of each level), each with a key card
+- Events Expansion II, a community expansion printed at home: 49x *Event cards* in three levels, 8x Trap cards and 14x Treasure cards
+- Encounter decks, print-and-play modules of this book: 27x Encounter cards for ToG and 27x for PWA (9 of each level), each with a key card
 - 5x *Ambush cards* (Explorers), each showing Treasure or Mimic
 
 ## 2.7 Dice
@@ -201,6 +201,7 @@ Everything listed here is in the core set unless a set is named.
 - 32x *Stamina* cubes (black)
 - 16x Stat cubes (white); white cubes not in use as stat cubes serve as *hollow* cubes
 - 1x *Aggro* token
+- 1x First Activation token, not used by these rules
 - 4x *Luck* tokens
 - 4x *Heroic action* tokens
 - 4x *Estus flask* tokens

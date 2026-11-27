@@ -58,7 +58,7 @@ An upgrade card that shows a magic scroll is a *spell*, and Andre does not fit i
     - Pyromancies show red or purple magic effects and have both INT and FTH requirements.
     - Sorceries show blue or black magic effects and have only INT requirements.
     - Miracles show yellow or pink magic effects and have only FTH requirements.
-- A spell stored in its catalyst may use its attack options as if it were *equipped*, for as long as the catalyst is in a weapon slot.
+- A catalyst is a weapon card that stores spells of one kind. While a catalyst is in a weapon slot, the attack options of each spell stored in it are used as if the spell were *equipped*.
     - Pyromancy Flames store up to three pyromancies.
     - Staves and Catalysts store up to three sorceries.
     - Talismans and Chimes store up to three miracles.
@@ -72,5 +72,5 @@ An upgrade card that shows a magic scroll is a *spell*, and Andre does not fit i
 - An *embered* character cannot buy or use an ember card. One already held is kept.
 - There is no limit on the number of ember cards a character may carry.
 - An ember card may be kept in the *inventory*, but it must be in the *back-up slot* to be used during an encounter.
-- During an encounter, discarding an ember card is the character's *major action*. Between encounters it may be discarded from the back-up slot at any time.
+- During an encounter, discarding an ember card is the character's *major action*. Between encounters it may be discarded from the back-up slot at any time. A discarded ember card returns to the box.
 - A character who discards an ember card becomes embered (see §7.3).

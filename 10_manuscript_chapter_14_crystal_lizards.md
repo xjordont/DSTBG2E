@@ -7,4 +7,4 @@
 - The character who kills a crystal lizard takes one *Titanite* Scale card into their *inventory* at once (see §4.2).
 - The expansion holds three Titanite Scale cards. Once all three have been taken, a crystal lizard gives nothing.
 - When the last other enemy of the encounter dies, every crystal lizard still on the tile is removed from play. Those lizards have escaped and give no treasure. The encounter is *cleared* all the same.
-- If a crystal lizard dies during an encounter, no crystal lizard appears in later attempts at that encounter. Mark the tile with an upside-down crystal lizard model.
+- If a crystal lizard dies during an encounter, no crystal lizard appears in later attempts at that encounter. Mark the tile with an upside-down crystal lizard model, or with any spare token if both models are in use.

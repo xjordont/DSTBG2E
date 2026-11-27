@@ -4,7 +4,7 @@
 
 During a boss encounter the boss takes a turn before each character's turn. The characters take their turns in any order the party chooses, but none takes another turn until every other character has taken as many.
 
-Draw the top card of the behaviour deck at the start of every boss turn. The boss's actions are decided by resolving each icon on the *behaviour card* from left to right. When the right-most icon is resolved, the boss's turn ends and the card is placed face up on the discard pile.
+Draw the top card of the behaviour deck at the start of every boss turn. The boss's actions are decided by resolving each icon on the *behaviour card* from left to right. When the rightmost icon is resolved, the boss's turn ends and the card is placed face up on the discard pile.
 
 If no cards remain in the behaviour deck at the start of a boss's turn, flip the discard pile face down without shuffling it to renew the deck, then draw the top card as usual. Players gain an advantage over a boss by memorising the order in which its behaviour cards appear each time the deck is renewed.
 

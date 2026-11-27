@@ -23,7 +23,7 @@ The dashboard shows everything specific to the character's class:
 Each dashboard has four equipment slots: an armour slot, a left weapon slot, a right weapon slot and a *back-up slot*.
 
 - **Armour slot.** One armour card, marked with the armour icon {{icon:ast-0047-armour}}.
-- **Weapon slots.** One weapon card each, marked with the one-handed weapon icon {{icon:ast-0043-one-handed-weapon}} or the *two-handed* weapon icon {{icon:ast-0045-two-handed-weapon}}. While a two-handed weapon is in one weapon slot, the other must stay empty unless a card's text says otherwise. While a one-handed weapon is in one weapon slot, the other may hold another one-handed weapon.
+- **Weapon slots.** One weapon, shield or *spell* card each, marked with the one-handed weapon icon {{icon:ast-0043-one-handed-weapon}} or the *two-handed* weapon icon {{icon:ast-0045-two-handed-weapon}}. While a two-handed weapon is in one weapon slot, the other must stay empty unless a card's text says otherwise. While a one-handed weapon is in one weapon slot, the other may hold another one-handed weapon.
 - **Back-up slot.** Up to two treasure cards of any type. These cards are at hand during an encounter but are not *equipped*.
 
 Only the cards in the armour slot and the weapon slots are equipped.

@@ -4,7 +4,7 @@
 
 Each round of an encounter begins with every enemy model taking a turn, highest *threat* first (see §7.5), before the characters take theirs.
 
-Non-boss enemies follow the behaviour icons on their *data cards*. Bosses follow the icons on their *behaviour cards* instead. All behaviour icons are resolved from left to right. An enemy's behaviour can be as simple as one attack or can hold several moves and attacks. If an icon has no target or cannot otherwise be carried out, it is skipped and the next icon to the right is resolved. If the data card shows the *repeat* icon {{icon:ast-0061-repeat-behaviour-or-attack}}, the enemy resolves all of its icons the number of times shown. An enemy's turn ends once all of its icons have been resolved.
+Non-boss enemies follow the behaviour icons on their *data cards*. Bosses follow the icons on their *behaviour cards* instead. All behaviour icons are resolved from left to right. If an icon has no target or cannot otherwise be carried out, it is skipped and the next icon to the right is resolved. If the data card shows the *repeat* icon {{icon:ast-0061-repeat-behaviour-or-attack}}, the enemy resolves all of its icons the number of times shown. An enemy's turn ends once all of its icons have been resolved.
 
 ## 9.2 Enemy Movement
 
@@ -31,11 +31,11 @@ Some enemies of Tomb of Giants and Painted World of Ariamis leap. An enemy whose
 The attack icon {{icon:ast-0037-enemy-attack-composite-symbol}} shows the attack an enemy makes. Crossed swords mark a physical attack and a white circle {{icon:ast-0042-deal-magical-damage}} marks a magical attack. The number in the centre of the icon is the attack value. Smaller icons beside it modify the attack.
 
 - A skull or a ring gives the target, as it does for movement (see §9.2). If the target is beyond the enemy's *range*, the attack is skipped.
-- The node icon {{icon:ast-0054-node-attack}} makes a node attack, which targets every character on the target's *node*. Each defends separately.
+- The *area-of-effect* icon {{icon:ast-0054-node-attack}} makes a node attack, which targets every character on the target's *node*. Each defends separately.
 - The *push* icon makes a *push-attack* (see §8.4).
 - A *condition* icon marks each character hit with the matching condition token (see §8.5).
 
-A character attacked by an enemy must decide how to defend: *block* or *resist*, *dodge*, or *parry*. The enemy's attack value is fixed, so the character's dice decide the result. Only an attack with a damage value can be dodged or parried.
+A character attacked by an enemy must decide how to defend: *block* or *resist*, *dodge*, or *parry*. The enemy's attack value is fixed, so the character's dice decide the result. Only an attack that shows an attack value can be dodged or parried.
 
 When a character is hit, place the damage, then resolve the push, then place the condition token.
 
@@ -70,7 +70,7 @@ If the dodge result is less than the dodge difficulty, the attack hits.
 - The character rolls only the *block* or *resist* dice of the armour card and its *upgrades*. The dice of weapons, shields and *spells* are left out.
 - Keep the two highest results and work out the damage as for a block or resist (see §9.4).
 
-*Example.* A Hollow Soldier with a dodge difficulty of 1 attacks the Assassin for 5. The Assassin's armour shows two dodge dice and one block die. The Assassin places one stamina cube and rolls a result of 1 on the two dodge dice: the attack does not hit, and the Assassin steps to an adjacent node. On a result of 0 the Assassin rolls the armour's one block die and suffers 5 damage less the result.
+*Example.* A Hollow Soldier with a dodge difficulty of 1 attacks the Assassin for 5. The Assassin's armour shows one dodge die and one block die, and the Target Shield shows another dodge die. The Assassin places one stamina cube and rolls a result of 1 on the two dodge dice: the attack does not hit, and the Assassin steps to an adjacent node. On a result of 0 the Assassin rolls the armour's one block die and suffers 5 damage less the result.
 
 ## 9.6 Parry and Riposte
 
@@ -95,4 +95,4 @@ If the result is less than the dodge difficulty, the parry fails.
 - The character suffers the full attack value as damage. No dice are rolled.
 - Place a stagger token on the character's dashboard.
 
-*Example.* A Hollow Soldier with a dodge difficulty of 1 attacks the Knight for 5 from the Knight's own node. The Knight carries a shield in the left weapon slot and a sword in the right. The Knight places one stamina cube and rolls a dodge result of 1: the attack is parried and the Hollow Soldier is staggered. The Knight then pays one stamina for an attack option of the sword and ripostes. On a result of 0 the Knight suffers 5 damage and is staggered.
+*Example.* A Hollow Soldier with a dodge difficulty of 1 attacks the Warrior for 5 from the Warrior's own node. The Warrior carries the Round Shield in the left weapon slot and the Battle Axe in the right, and wears armour that shows one dodge die. The Warrior places one stamina cube and rolls a dodge result of 1: the attack is parried and the Hollow Soldier is staggered. The Warrior then ripostes with the Battle Axe's attack option that costs no stamina. On a result of 0 the Warrior suffers 5 damage and is staggered.

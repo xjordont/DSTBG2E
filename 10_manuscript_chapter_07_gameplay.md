@@ -60,14 +60,14 @@ An encounter is fought in rounds.
 
 1. Each enemy model takes a turn, one by one, in descending threat.
    - If several enemies share a threat value, the one closest to a character takes its turn first.
-   - If those enemies are equally close, the one with the most wound tokens takes its turn first.
+   - If those enemies are equally close, the one with the most wounds takes its turn first.
    - If they are still tied, the players decide.
 2. Each character takes a turn, in any order the party chooses each round.
 3. Rounds continue until every enemy model is dead or the encounter is *failed*.
 
 Whenever a character deals damage, the aggro token passes to that character. If no character deals damage, it stays where it is.
 
-A boss and an *invader* take their turns between the characters' turns (see §16.1, §12.2).
+A boss, a *summon* and an *invader* take their turns between the characters' turns (see §16.1, §12.1, §12.2).
 
 ### Encounter Resolution
 
@@ -99,7 +99,7 @@ A boss and an *invader* take their turns between the characters' turns (see §16
   - Place two hollow cubes on the endurance bar (see §3.4).
 - *Estus flask*, *luck* and *heroic action* tokens are not restored.
 - The hollow cubes of a character who was already hollow stay.
-- The party then goes on to the next tile. Before it does, it may rest at the bonfire or visit Blacksmith Andre (see §11.4).
+- The party then goes on to the next tile. It may first visit Blacksmith Andre (see §11.4). It may rest at the bonfire instead, and then sets out again from the first tile (see §11.2, §11.5).
 
 ### Event Cards
 

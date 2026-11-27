@@ -2,7 +2,7 @@
 
 Terms set in *italics* in this book are listed here with the section that gives their rule.
 
-**Aggro.** The token that marks one character as the target of every enemy movement and attack that shows the skull icon (see §7.5).
+**Aggro.** The token that marks one character as the target of every enemy movement and attack that shows the skull icon (see §7.5, §9.2).
 
 **Ambush card.** An Explorers card, face down beside an encounter tile, that shows whether the tile's chest holds treasure or a mimic (see §13).
 
@@ -18,7 +18,7 @@ Terms set in *italics* in this book are listed here with the section that gives 
 
 **Behaviour card.** A card from a boss's, mimic's, invader's or summon's deck, whose icons say what that model does on one turn (see §15.5).
 
-**Bleed.** A condition whose token lies on a model until a second bleed would be placed there, and then deals damage (see §8.5).
+**Bleed.** A condition whose token lies on a model until a second bleed token is due there; the model then suffers damage and the token is removed (see §8.5).
 
 **Block.** The defence against physical attacks: dice on a character's equipped cards, or a value on a data card (see §9.4).
 
@@ -94,11 +94,11 @@ Terms set in *italics* in this book are listed here with the section that gives 
 
 **Luck.** The character token, with a ready and a used side, flipped to reroll dice of one attack or defence roll (see §3.5).
 
-**Main-boss.** The boss fought after the mini-boss, on both boss tiles; the final boss unless the party chose a mega-boss (see §15.3).
+**Main-boss.** The boss fought after the mini-boss, on both boss tiles; the final boss unless the party chose a mega-boss (see §7.1, §15.3).
 
 **Major action.** The single main action of a character's turn, such as an attack, a rest, drinking estus or using an ember (see §10.1).
 
-**Mega-boss.** A boss with a game board of its own, fought last if the party chose one at setup (see §15.3).
+**Mega-boss.** A boss with a game board of its own, fought last if the party chose one at setup (see §7.1, §15.3).
 
 **Mimic.** An Explorers enemy that may hide in a chest and is fought as a mini-boss when the chest is opened (see §13).
 
@@ -124,7 +124,7 @@ Terms set in *italics* in this book are listed here with the section that gives 
 
 **Range.** The greatest distance, counted in nodes from one model to another, at which an attack or effect reaches (see §5.4).
 
-**Repeat.** An icon that has an attack option, or an enemy's or boss's whole behaviour, resolved the number of times shown (see §9.1, §10.3).
+**Repeat.** An icon that has an attack option, or an enemy's or boss's whole behaviour, resolved the number of times shown (see §9.1, §10.3, §16.3).
 
 **Reset.** To ready a cleared or failed encounter to be fought again, as every rest does; also said of that encounter (see §11.5).
 

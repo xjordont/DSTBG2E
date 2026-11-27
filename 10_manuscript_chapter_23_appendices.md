@@ -4,7 +4,7 @@ The stat requirements below replace those printed on the weapons listed.
 
 ## Revised Requirements
 
-A 0 is no requirement in that stat. No weapon listed has an INT or FTH requirement.
+A 0 is no requirement in that stat. The INT and FTH requirements of every weapon listed are 0.
 
 | Weapon | STR | DEX |
 |---|---|---|
@@ -37,7 +37,7 @@ A 0 is no requirement in that stat. No weapon listed has an INT or FTH requireme
 | Lifehunt Scythe | 32 | 23 |
 | Lucerne | 22 | 31 |
 | Mace | 16 | 0 |
-| Manikin Claws | 24 | 24 |
+| Mannikin Claws | 24 | 24 |
 | Morning Star | 16 | 0 |
 | Murakumo | 27 | 17 |
 | Onikiri and Ubadachi | 26 | 36 |
@@ -79,32 +79,27 @@ Only the cards below are added from Tomb of Giants and Painted World of Ariamis 
 
 | Added | Cards |
 |---|---|
-| As printed | Black Knight Shield, Black Knight Sword, Bloodshield, Bonewheel Shield, Cleric Armour, Crescent Axe, Divine Blessing, Exile Greatsword, Gravelord Sword Dance, Greatsword, Hollow Soldier Shield, Lothric Knight Greatsword, Painting Guardian Armour, Paladin Armour, Red and White Round Shield, Red Tearstone Ring, Skull Lantern, Soul Spear, Steel Armour, Sunlight Shield, Thorolund Talisman, Tower Shield, Velka's Rapier, Xanthous Robes |
+| As printed | Black Knight Shield, Black Knight Sword, Bloodshield, Bonewheel Shield, Cleric Armour, Crescent Axe, Demon Titanite, Divine Blessing, Dragon Scale, Exile Greatsword, Gravelord Sword Dance, Greatsword, Hollow Soldier Shield, Lothric Knight Greatsword, Painting Guardian Armour, Paladin Armour, Red and White Round Shield, Red Tearstone Ring, Skull Lantern, Soul Spear, Steel Armour, Sunlight Shield, Thorolund Talisman, Tower Shield, Velka's Rapier, Xanthous Robes |
 | With the requirements of Appendix A | Black Knight Greataxe, Black Knight Halberd, Carthus Curved Greatsword, Gravelord Sword, Lifehunt Scythe, Pike, Priscilla's Dagger, Throwing Knives |
 | As revised below | Blue Titanite, Mask of the Child |
 
 ## Revised Treasure
 
-Where a card has two printings, the one with the rules text given here is used. The wearer of a card is the character who has it *equipped*; the wearer of a ring is the character whose equipped card the ring is attached to.
+Each card below is played with the rules text given here in place of the text printed on it. The wearer of a card is the character who has it *equipped*; the wearer of a ring is the character whose equipped card the ring is attached to.
 
 | Card | Rules text | Other changes |
 |---|---|---|
-| Black Leather Armour | The wearer pays no *stamina* to *dodge*. | |
+| Black Leather Armour | The wearer pays no *stamina* to *dodge*. | The Characters expansion card is used. A party that owns only the Painted World of Ariamis card plays that card as printed. |
 | Blue Titanite | As printed. | *Legendary treasure*. INT requirement 25. |
 | Carthus Milkring | The wearer adds 1 to the dodge icons {{icon:ast-0062-dodge}} rolled for a dodge. | |
 | Chloranthy Ring | At the start of the wearer's turn, the wearer and every other character on the wearer's *node* each recover 1 stamina in addition to the turn's 1. | |
 | Covetous Silver Serpent Ring | The wearer gains 1 more soul with the reward for each *cleared* encounter. | |
-| Demon Titanite | As printed. | Where the party owns two printings, the Painted World of Ariamis one is used. |
-| Eastern Armour | The wearer pays 2 stamina to dodge in place of 1. | |
+| Eastern Armour | The wearer pays 2 stamina to dodge in place of 1. | The Characters expansion card is used. A party that owns only the Painted World of Ariamis card plays that card as printed. |
 | Mask of the Child | At the start of the wearer's turn, the wearer recovers 2 stamina in place of the turn's 1. | This text also replaces that of the Events Expansion II card of the same name. |
-| Mon Ring | As printed, and: the effect is used only while the card is face up, and using it turns the card face down. | A *rest* turns the card face up. |
-| Sellsword Twinblades | As printed. | The one-handed card is used. A two-handed card of this name returns to the box. |
+| Mon Ring | As printed, and: the effect is used only while the card is face up, and using it turns the card face down. | A *rest* at the *bonfire* turns the card face up. |
+| Sellsword Twinblade | As printed. | The one-handed card of the Characters expansion is used. A party that owns only the two-handed card of Painted World of Ariamis plays that card. |
 | Tiny Being's Ring | At the start of the wearer's turn, the wearer removes 1 damage cube. | |
-| Titanite Chunk | Every attack option of the weapon adds 2 to its attack value. Attached only in place of a Titanite Shard. | 25 STR, 25 DEX, 0 INT, 0 FTH. *Common treasure*, *tier two*. |
-| Titanite Slab | Every attack option of the weapon adds 3 to its attack value. Attached only in place of a Titanite Chunk. | 25 STR, 25 DEX, 0 INT, 0 FTH. Legendary treasure. |
 | Wolf Ring | After rolling a dodge, the wearer may pay 1 stamina to reroll any or all of the dice, once for each dodge. | |
-
-Blacksmith Andre exchanges a Titanite Shard for a Titanite Chunk, or a Titanite Chunk for a Titanite Slab, when the character holds the new card. The new card takes the upgrade slot of the old. A replaced Titanite Shard goes to the bottom of the *tier one* deck, a replaced Titanite Chunk to the bottom of the tier two deck. A weapon that holds a Titanite Chunk or a Titanite Slab asks for 25 STR and 25 DEX as well as its own requirements.
 
 ## Enemy Data Cards
 
@@ -130,9 +125,9 @@ The 12 enemies of Tomb of Giants and Painted World of Ariamis are played from th
 
 ## Boss Data and Behaviour Cards
 
-The four bosses of the same sets are played from their printed data cards and behaviour cards. Their cards print no encounter levels; use those below.
+The data cards of the four bosses of the same sets print no encounter levels; use those below.
 
-| Boss | Kind | Set | Health | Heat-up point | Block | Resist | Deck size | Encounter levels |
+| Boss | Type | Set | Health | Heat-up point | Block | Resist | Deck size | Encounter levels |
 |---|---|---|---|---|---|---|---|---|
 | Black Knight | *Mini-boss* | Tomb of Giants | 20 | 10 | 3 | 2 | 4 | 1, 1, 2, 2 |
 | Heavy Knight | Mini-boss | Painted World of Ariamis | 25 | 15 | 2 | 2 | 4 | 1, 1, 2, 2 |

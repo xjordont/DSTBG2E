@@ -6,10 +6,10 @@ How the book in `31_final_dark_souls_the_board_game_second_edition_v3.pdf` is ma
 
 | File | Edition | Ground | Images | Size | Use |
 |---|---|---|---|---|---|
-| `31_final_dark_souls_the_board_game_second_edition_v3.pdf` | screen | parchment `#f4f2ea` | 200 ppi at most at placed size; large opaque pictures as JPEG | 19 MB | reading on screen, home printing |
-| `31_final_dark_souls_the_board_game_second_edition_v3_print.pdf` | print | white | 300 ppi at most at placed size; lossless where the source is | 44 MB | print-on-demand or office printing on white stock |
+| `31_final_dark_souls_the_board_game_second_edition_v3.pdf` | screen | parchment `#f4f2ea` | 200 ppi at most at placed size; large opaque pictures as JPEG | 18 MB | reading on screen, home printing |
+| `31_final_dark_souls_the_board_game_second_edition_v3_print.pdf` | print | white | 300 ppi at most at placed size; lossless where the source is | 43 MB | print-on-demand or office printing on white stock |
 
-Both editions have the same metrics and the same pagination: 69 pages, US Letter (612 x 792 pt), two columns of 252 pt. Only the page ground and the image encoding differ. Internal links (contents, cross-references, glossary keywords, icon reference) and PDF bookmarks are live in both.
+Both editions have the same metrics and the same pagination: 68 pages, US Letter (612 x 792 pt), two columns of 252 pt. Only the page ground and the image encoding differ. Internal links (contents, cross-references, glossary keywords, icon reference) and PDF bookmarks are live in both.
 
 Version 3 (2026-11-25) is the book of the rules as finalised: the manuscript rewritten to the settled rules and consolidated (26,700 words; sections 22 and 38 of `41_rules_workshop.md`), laid out with the pipeline of version 2. What the layout needed for the shorter text, and what an independent page review found, is in section 39.4 of that record. Version 2 (124 pages, the 77,500-word text before the rewrite) and version 1 (99 pages) are in the repository history; `17_final_report.md` describes version 2.
 
@@ -81,16 +81,16 @@ Fonts are cut from the variable OFL files by `tools/make_fonts.py`, which also r
 | No overflow boxes | no text outside the side margins; all fonts embedded; no fallback typeface | pass |
 | No orphan headings | no heading within 34 pt of a column foot | pass |
 | No widow rows in tables | no body row alone at the head or foot of a column where a table breaks (32 tables, 2 broken) | pass |
-| All cross-references resolve | 2,445 internal links, none dangling; `tools/xref_check.py` reports 0 broken references in the manuscript | pass |
-| Page count within 10% of target | 69 pages against a target of 70 (the target follows the text: it was 130 for the 77,500 words of version 2) | pass |
+| All cross-references resolve | 2,463 internal links, none dangling; `tools/xref_check.py` reports 0 broken references in the manuscript | pass |
+| Page count within 10% of target | 68 pages against a target of 68 (the target follows the text: it was 130 for the 77,500 words of version 2) | pass |
 | Style report at zero | `13_style_enforcement_report.md`: 0 violations | pass |
 | No external citation | no rulebook, edition, publisher, or page citation in the PDF text (the colophon's nominative statement is the one permitted mention) | pass |
 | Every extracted asset present | see below | pass, with the deviation stated below |
-| (added) completeness | all 971 manuscript passages are found in the PDF text | pass |
+| (added) completeness | all 968 manuscript passages are found in the PDF text | pass |
 | (added) privacy | no purchaser watermark, name, or e-mail address in the PDF text | pass |
 | (added) no repeats | no painting, miniature, board, or card is shown twice | pass |
 
-**Deviation on "every extracted asset is present".** 496 asset files are extracted. 215 are placed in the book. 281 are not, and each carries a reason in the manifest's placement column: earlier-edition and unused icons, images of components these rules do not use, alternates and details of a picture that is placed, card faces and paintings for which the layout had no room, source diagrams that carry source text, reference frames, type specimens, spare ornaments and textures. QA checks both directions: everything marked `placed` is in the book, and everything extracted but not placed says why.
+**Deviation on "every extracted asset is present".** 496 asset files are extracted. 208 are placed in the book. 288 are not, and each carries a reason in the manifest's placement column: earlier-edition and unused icons, images of components these rules do not use, alternates and details of a picture that is placed, card faces and paintings for which the layout had no room, source diagrams that carry source text, reference frames, type specimens, spare ornaments and textures. QA checks both directions: everything marked `placed` is in the book, and everything extracted but not placed says why.
 
 Informational results (not failures): 18 columns end more than 60 pt short in mid-chapter (several of them only by the test's own tolerance, where a painting runs to the foot), where a table, an example box, a kept list, or a kept heading would not fit, or where a section starts the next column and the room was too small for a picture; measured line length is 56 characters (median).
 

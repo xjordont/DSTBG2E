@@ -91,7 +91,7 @@ Needs the core set and the Explorers expansion. The *chest* in Gallery of the Hi
 
 Needs the core set and the Darkroot, Explorers, Vordt of the Boreal Valley and Executioner's Chariot expansions.
 
-- The Level 1 to 3 encounter decks combine the core set, Darkroot and Explorers. The Level 4 deck combines the Level 4 cards of both mega-boss expansions.
+- The Level 1 to 3 encounter decks combine the core set, Darkroot and Explorers. The Level 4 deck combines the Level 4 cards of both mega-boss expansions, and each Level 4 encounter is fought on the game board its card belongs to.
 - The six named encounters are Executioner's Chariot *encounter cards*.
 - A *cleared* encounter does not *reset*: it is not fought again, and the party passes its tile at no cost.
 - Each cleared encounter pays every character two *souls* more than the reward for its level.
@@ -107,7 +107,7 @@ Needs the core set and the Darkroot, Explorers, Vordt of the Boreal Valley and E
 
 ## 19.10 Into the Depths
 
-Needs the core set and the Gaping Dragon expansion, and uses the Darkroot expansion if the players have it. Without Darkroot, the Dancer of the Boreal Valley replaces Artorias and the Level 1 to 3 encounter decks use the core set alone.
+Needs the core set and the Gaping Dragon expansion, and uses the Darkroot expansion if the party owns it. Without Darkroot, the Dancer of the Boreal Valley replaces Artorias and the Level 1 to 3 encounter decks use the core set alone.
 
 | Section | Encounters | Boss |
 |---|---|---|
@@ -131,7 +131,6 @@ Needs the core set and the Iron Keep expansion.
 
 Needs the core set, the Asylum Demon expansion, The Last Giant expansion and the Manus, Father of the Abyss expansion.
 
-- Every boss, the *mini-boss* included, is fought on a *mega-boss* game board.
 - When Section One ends, each character gains 16 *souls* on top of the boss reward.
 - The party then plays Sections Two A, Two B and Two C in the order it chooses. The players win when all three have ended.
 

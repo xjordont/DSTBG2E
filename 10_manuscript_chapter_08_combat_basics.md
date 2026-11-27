@@ -12,7 +12,7 @@ Each enemy type has a *data card*. It gives what is needed to take that enemy's 
 
 1. Name.
 2. *Threat* {{icon:ast-0026-threat-level}}. Enemies with higher threat take their turn first.
-3. Starting health {{icon:ast-0029-starting-health}}. The damage the enemy can suffer before it is killed in a game with one character.
+3. Starting health {{icon:ast-0029-starting-health}}. The damage that kills the enemy in a game with one character (see §8.3).
 4. Enemy icon.
 5. Attack *range* {{icon:ast-0060-attack-range}}. The maximum range at which the enemy can attack a character.
 6. *Block* {{icon:ast-0028-block-resist-shield}}. Reduces the damage the enemy suffers from physical attacks.
@@ -21,7 +21,7 @@ Each enemy type has a *data card*. It gives what is needed to take that enemy's 
 9. Behaviour icons. The movement icons {{icon:ast-0033-enemy-movement-composite-symbol}} and attack icons {{icon:ast-0037-enemy-attack-composite-symbol}} that determine what the enemy does during its turn.
 10. Set symbol.
 
-When an enemy suffers damage, place one wound token on the base of its model for each point of damage not prevented by its block or resist. The enemy dies when its wound tokens equal its scaled health (see §8.3) and is removed from the tile.
+When an enemy suffers damage, place wound tokens on the base of its model to the value of the damage not prevented by its block or resist. The enemy dies when the value of its wound tokens equals its scaled health (see §8.3) and is removed from the tile.
 
 The Phalanx of Painted World of Ariamis has no model of its own. Three Phalanx Hollow models on one node stand for it, and it moves, attacks and takes wounds as one enemy.
 
@@ -37,7 +37,7 @@ Enemies grow stronger with the number of characters in the game. Dead characters
 | 4 | 1 | +3 | +1 |
 
 - The *sparks* are those the party starts with (see §7.4).
-- The damage is added to every enemy attack, and to the damage value of a *push-move*.
+- The damage is added to the attack value of every enemy attack, and of a *push-move* that shows one (see §9.2).
 - Bosses, *mimics*, *invaders*, *summons* and *crystal lizards* are never scaled.
 - Nothing else printed on a *data card* changes.
 
@@ -85,7 +85,7 @@ A *frostbite* {{icon:ast-0064-frostbite}} or *stagger* {{icon:ast-0066-stagger}}
 ### Stagger
 
 - A model holds at most one stagger token.
-- A staggered model subtracts one from attack, block, resist and *dodge*.
+- A staggered character subtracts one from each attack value, each block or resist sum and each *dodge* result; a staggered enemy, from each attack value and from its block, resist and *dodge difficulty*.
 - The token is removed at the end of the model's turn.
 
 ### Calamity
@@ -93,13 +93,13 @@ A *frostbite* {{icon:ast-0064-frostbite}} or *stagger* {{icon:ast-0066-stagger}}
 With the Black Dragon Kalameet expansion:
 
 - A model holds at most one *calamity* token.
-- Calamity reduces the results of a model's block, resist and dodge rolls by one.
-- A calamity token is not removed at the end of a turn. It stays until the end of the encounter.
+- Calamity reduces each of a model's block and resist sums and dodge results by one.
+- A calamity token stays until the end of the encounter.
 
 ### Corrosion
 
 With the Gaping Dragon expansion:
 
 - A model holds at most one *corrosion* token.
-- Corrosion reduces the results of a model's block rolls by one.
-- A corrosion token is not removed at the end of a turn. It is removed when the affected character takes damage.
+- Corrosion reduces each of a model's block sums by one.
+- A corrosion token stays until the affected character takes damage.

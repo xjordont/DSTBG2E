@@ -109,12 +109,12 @@ The Old Dragonslayer is played with the Dragon Slayer Ornstein model of the core
 
 ## 17.7 Tomb of Giants
 
-The Black Knight and Gravelord Nito are played from their printed *data cards* and *behaviour cards* (see Appendix B). Each card's special ability applies as printed.
+The Black Knight and Gravelord Nito are played from their cards, special abilities included. Their encounter levels are in Appendix B.
 
 ### Gravelord Nito
 
-- Nito does not fight alone. Set up his encounter with two Skeleton Soldiers and one Giant Skeleton Soldier on the *mini-boss* *spawn node* of the main-boss tile.
-- Before each character's turn, every enemy model takes a turn in descending *threat*: Nito, then his skeletons (see §7.5).
+- Nito does not fight alone. Set up its encounter with two Skeleton Soldiers and one Giant Skeleton Soldier on the *mini-boss* *spawn node* of the main-boss tile.
+- Before each character's turn, every enemy model takes a turn in descending *threat*: Nito, then its skeletons (see §7.5).
 - The Gravelord's Call: when Nito heats up, return each of those three enemies that has been killed to the mini-boss spawn node, at full health.
 - The encounter is won when Nito is defeated, whatever enemies remain.
 
@@ -147,7 +147,7 @@ Before each character's turn, every enemy model on the board takes a turn, in de
 
 On its turn the Chariot resolves the top card of the track deck. The track deck is never shuffled: the four cards are resolved in order, and card 1 follows card 4.
 
-1. Move both models together to the node shown on the card.
+1. Move both models together to the node shown on the card. The other models on that node are not pushed off it yet: steps 4 and 5 push them.
 2. Turn both models so that their front *arc* faces directly away from the node they left.
 3. Make the card's physical marked-node attack (see §17.1), with the attack value and the *dodge difficulty* on the card. The marked nodes include the node the Chariot left and the node it entered.
 4. Push each character hit by the attack to an adjacent node that is not marked. The players choose the node.
@@ -173,9 +173,9 @@ From then on the skeletal horse is fought as any boss, against the block and res
 
 ### Heavy Knight and Crossbreed Priscilla
 
-The Heavy Knight and Crossbreed Priscilla, of Painted World of Ariamis, are played from their printed *data cards* and *behaviour cards* (see Appendix B). Each card's special ability applies as printed.
+The Heavy Knight and Crossbreed Priscilla, of Painted World of Ariamis, are played from their cards, special abilities included. Their encounter levels are in Appendix B.
 
-Priscilla begins her encounter invisible, and becomes invisible again each time her discard pile is turned over to renew her behaviour deck. She becomes visible the moment an attack damages her. While she is invisible, Snowblind applies: no attack gains the extra die for a *weak arc*.
+Priscilla begins its encounter invisible, and becomes invisible again each time its discard pile is turned over to renew its behaviour deck. It becomes visible the moment an attack damages it. While it is invisible, Snowblind applies: no attack gains the extra die for a *weak arc*.
 
 ### The Four Kings
 
@@ -227,8 +227,6 @@ The Last Giant has a heat-up of its own. When its health reaches its heat-up poi
 3. Add Falling Slam and three heat-up cards taken at random.
 4. Shuffle the seven cards to form the new behaviour deck.
 
-The Wind Up icon on the Last Giant's cards is resolved as for the Asylum Demon (see §17.3).
-
 ### Manus, Father of the Abyss
 
 - **Overextended.** At the end of each of Manus's turns, each character may spend one *stamina* to move to an adjacent node. This movement counts as a *run*.
@@ -250,7 +248,7 @@ When a Beam icon is resolved:
 
 ### Vordt of the Boreal Valley
 
-Vordt draws from two behaviour decks and heats up twice. The attack deck lies to the right of the movement deck and Frostbreath to its left. The two decks and their discard piles are kept apart.
+Vordt draws from two behaviour decks and heats up twice. Frostbreath, the movement deck and the attack deck lie in that order from left to right. The two decks and their discard piles are kept apart.
 
 - Each turn Vordt draws and resolves two cards: the top card of the movement deck, then the top card of the attack deck. Each card goes to the discard pile of its own deck. When a deck is empty as its card is due, turn its own discard pile face down without shuffling. The attack card shows the weak arcs.
 - **Icy Blows.** A character who *blocks* or *resists* one of Vordt's attacks and prevents four or more damage gains a *frostbite* token (see §8.5). The damage prevented is the attack value or the character's block or resist sum, whichever is lower. A character who dodges gains no token.
