@@ -1,0 +1,4978 @@
+[
+ [
+  "Painted World of Ariamis",
+  1,
+  "Cloak and Feathers",
+  {
+   "1": [
+    "Crow Demon"
+   ],
+   "2": [
+    "Crow Demon"
+   ],
+   "3": [
+    "Crow Demon"
+   ],
+   "4": [
+    "Crow Demon"
+   ]
+  },
+  true,
+  {
+   "enemySlots_by_players": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "slot_groups_1_player_tentative": [
+    {
+     "slot": 0,
+     "label": "tile1_row0",
+     "enemies": [
+      "Crow Demon"
+     ]
+    }
+   ],
+   "card_text": {
+    "flavour": "The key required to progress dangles from the neck of a horrifically emaciated demon.",
+    "objective": "Kill the [enemy icon].",
+    "rewards": "Souls: +3 Souls. Refresh: Heroic Action. Shortcut",
+    "rules": "Character attacks cost 1 additional stamina.\nReduce enemy block, resistance, and dodge values by 1."
+   },
+   "card_text_source": "DSBG-Shuffle image lib/dsbg_shuffle_images/encounters/Cloak and Feathers.jpg (community re-creation; enemy and some token icons are blank and are shown as [icon])"
+  }
+ ],
+ [
+  "Painted World of Ariamis",
+  1,
+  "Frozen Sentries",
+  {
+   "1": [
+    "Phalanx Hollow",
+    "Phalanx Hollow"
+   ],
+   "2": [
+    "Phalanx Hollow",
+    "Phalanx Hollow"
+   ],
+   "3": [
+    "Phalanx Hollow",
+    "Phalanx Hollow"
+   ],
+   "4": [
+    "Phalanx Hollow",
+    "Phalanx Hollow"
+   ]
+  },
+  true,
+  {
+   "enemySlots_by_players": [
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "slot_groups_1_player_tentative": [
+    {
+     "slot": 0,
+     "label": "tile1_row0",
+     "enemies": [
+      "Phalanx Hollow"
+     ]
+    },
+    {
+     "slot": 1,
+     "label": "tile1_row1",
+     "enemies": [
+      "Phalanx Hollow"
+     ]
+    }
+   ],
+   "card_text": {
+    "flavour": "A sputtering torch illuminates a frozen passage and a pair of undead guardians.",
+    "objective": "Kill all enemies.",
+    "rewards": "Souls: +1 Souls. Draw: 1x Event. Refresh: Estus Flask",
+    "rules": "Enemy attacks gain [push icon]."
+   },
+   "card_text_source": "DSBG-Shuffle image lib/dsbg_shuffle_images/encounters/Frozen Sentries.jpg (community re-creation; enemy and some token icons are blank and are shown as [icon])"
+  }
+ ],
+ [
+  "Painted World of Ariamis",
+  1,
+  "No Safe Haven",
+  {
+   "1": [
+    "Snow Rat",
+    "Snow Rat",
+    "Engorged Zombie"
+   ],
+   "2": [
+    "Snow Rat",
+    "Snow Rat",
+    "Engorged Zombie"
+   ],
+   "3": [
+    "Snow Rat",
+    "Snow Rat",
+    "Engorged Zombie"
+   ],
+   "4": [
+    "Snow Rat",
+    "Snow Rat",
+    "Engorged Zombie"
+   ]
+  },
+  true,
+  {
+   "enemySlots_by_players": [
+    2,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "slot_groups_1_player_tentative": [
+    {
+     "slot": 0,
+     "label": "tile1_row0",
+     "enemies": [
+      "Snow Rat",
+      "Snow Rat"
+     ]
+    },
+    {
+     "slot": 5,
+     "label": "tile2_row0",
+     "enemies": [
+      "Engorged Zombie"
+     ]
+    }
+   ],
+   "card_text": {
+    "flavour": "Lashed by winds, you seek shelter within a forsaken abode...",
+    "objective": "Kill the [enemy icon].",
+    "rewards": "Souls: +2 Souls. Search: [icon]",
+    "rules": "[spawn/enemy icon] (Tile 2)"
+   },
+   "card_text_source": "DSBG-Shuffle image lib/dsbg_shuffle_images/encounters/No Safe Haven.jpg (community re-creation; enemy and some token icons are blank and are shown as [icon])"
+  }
+ ],
+ [
+  "Painted World of Ariamis",
+  1,
+  "Painted Passage",
+  {
+   "1": [
+    "Snow Rat",
+    "Snow Rat",
+    "Phalanx Hollow"
+   ],
+   "2": [
+    "Snow Rat",
+    "Snow Rat",
+    "Phalanx Hollow"
+   ],
+   "3": [
+    "Snow Rat",
+    "Snow Rat",
+    "Phalanx Hollow"
+   ],
+   "4": [
+    "Snow Rat",
+    "Snow Rat",
+    "Phalanx Hollow"
+   ]
+  },
+  true,
+  {
+   "enemySlots_by_players": [
+    2,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "slot_groups_1_player_tentative": [
+    {
+     "slot": 0,
+     "label": "tile1_row0",
+     "enemies": [
+      "Snow Rat",
+      "Snow Rat"
+     ]
+    },
+    {
+     "slot": 1,
+     "label": "tile1_row1",
+     "enemies": [
+      "Phalanx Hollow"
+     ]
+    }
+   ],
+   "card_text": {
+    "flavour": "A storm rages, bitter wind your only welcome to this strange new world.",
+    "objective": "Kill all enemies.",
+    "rewards": "Souls: +2 Souls. Search: [icon]",
+    "rules": ""
+   },
+   "card_text_source": "DSBG-Shuffle image lib/dsbg_shuffle_images/encounters/Painted Passage.jpg (community re-creation; enemy and some token icons are blank and are shown as [icon])"
+  }
+ ],
+ [
+  "Painted World of Ariamis",
+  1,
+  "Promised Respite",
+  {
+   "1": [
+    "Phalanx Hollow",
+    "Snow Rat",
+    "Snow Rat",
+    "Engorged Zombie"
+   ],
+   "2": [
+    "Phalanx Hollow",
+    "Snow Rat",
+    "Snow Rat",
+    "Engorged Zombie"
+   ],
+   "3": [
+    "Phalanx Hollow",
+    "Snow Rat",
+    "Snow Rat",
+    "Engorged Zombie"
+   ],
+   "4": [
+    "Phalanx Hollow",
+    "Snow Rat",
+    "Snow Rat",
+    "Engorged Zombie"
+   ]
+  },
+  true,
+  {
+   "enemySlots_by_players": [
+    1,
+    1,
+    0,
+    0,
+    0,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0
+   ],
+   "slot_groups_1_player_tentative": [
+    {
+     "slot": 0,
+     "label": "tile1_row0",
+     "enemies": [
+      "Phalanx Hollow"
+     ]
+    },
+    {
+     "slot": 1,
+     "label": "tile1_row1",
+     "enemies": [
+      "Snow Rat"
+     ]
+    },
+    {
+     "slot": 5,
+     "label": "tile2_row0",
+     "enemies": [
+      "Snow Rat"
+     ]
+    },
+    {
+     "slot": 6,
+     "label": "tile2_row1",
+     "enemies": [
+      "Engorged Zombie"
+     ]
+    }
+   ],
+   "card_text": {
+    "flavour": "Vicious cold takes root, driving you towards even the slightest promise of warmth.",
+    "objective": "Reach the exit node.",
+    "rewards": "Souls: 2x Souls per enemy killed. Draw: 1x Treasure. Shortcut",
+    "rules": ""
+   },
+   "card_text_source": "DSBG-Shuffle image lib/dsbg_shuffle_images/encounters/Promised Respite.jpg (community re-creation; enemy and some token icons are blank and are shown as [icon])"
+  }
+ ],
+ [
+  "Painted World of Ariamis",
+  1,
+  "Roll Out",
+  {
+   "1": [
+    "Bonewheel Skeleton",
+    "Bonewheel Skeleton"
+   ],
+   "2": [
+    "Bonewheel Skeleton",
+    "Bonewheel Skeleton"
+   ],
+   "3": [
+    "Bonewheel Skeleton",
+    "Bonewheel Skeleton"
+   ],
+   "4": [
+    "Bonewheel Skeleton",
+    "Bonewheel Skeleton"
+   ]
+  },
+  true,
+  {
+   "enemySlots_by_players": [
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "slot_groups_1_player_tentative": [
+    {
+     "slot": 0,
+     "label": "tile1_row0",
+     "enemies": [
+      "Bonewheel Skeleton"
+     ]
+    },
+    {
+     "slot": 1,
+     "label": "tile1_row1",
+     "enemies": [
+      "Bonewheel Skeleton"
+     ]
+    }
+   ],
+   "card_text": {
+    "flavour": "Obstacles clutter this small space, but can they be used to your advantage?",
+    "objective": "Kill all enemies.",
+    "rewards": "Souls: +2 Souls. Draw: 1x Treasure",
+    "rules": "Enemies ignore barrels during movement.\nIf an enemy is pushed onto a node containing a barrel, it suffers [damage icon], then discard the barrel."
+   },
+   "card_text_source": "DSBG-Shuffle image lib/dsbg_shuffle_images/encounters/Roll Out.jpg (community re-creation; enemy and some token icons are blank and are shown as [icon])"
+  }
+ ],
+ [
+  "Painted World of Ariamis",
+  1,
+  "Skittering Frenzy",
+  {
+   "1": [
+    "Snow Rat",
+    "Snow Rat"
+   ],
+   "2": [
+    "Snow Rat",
+    "Snow Rat"
+   ],
+   "3": [
+    "Snow Rat",
+    "Snow Rat"
+   ],
+   "4": [
+    "Snow Rat",
+    "Snow Rat"
+   ]
+  },
+  true,
+  {
+   "enemySlots_by_players": [
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "slot_groups_1_player_tentative": [
+    {
+     "slot": 0,
+     "label": "tile1_row0",
+     "enemies": [
+      "Snow Rat"
+     ]
+    },
+    {
+     "slot": 1,
+     "label": "tile1_row1",
+     "enemies": [
+      "Snow Rat"
+     ]
+    }
+   ],
+   "card_text": {
+    "flavour": "The smell of spilled blood and decay attracts unwanted vermin, in a never-ending tide.",
+    "objective": "Survive for [character icon]+2 turns.",
+    "rewards": "Souls: 4 Souls. Draw: 1x Treasure. Refresh: Luck",
+    "rules": "Enemies add +1 to their block values.\nEnemy attacks gain +1 damage.\n\nIf an enemy is killed, respawn it on the closest enemy spawn node to the character with the aggro token at the end of the next enemy turn."
+   },
+   "card_text_source": "DSBG-Shuffle image lib/dsbg_shuffle_images/encounters/Skittering Frenzy.jpg (community re-creation; enemy and some token icons are blank and are shown as [icon])"
+  }
+ ],
+ [
+  "Painted World of Ariamis",
+  1,
+  "The First Bastion",
+  {
+   "1": [
+    "Snow Rat",
+    "Snow Rat",
+    "Phalanx Hollow",
+    "Engorged Zombie"
+   ],
+   "2": [
+    "Snow Rat",
+    "Snow Rat",
+    "Phalanx Hollow",
+    "Engorged Zombie"
+   ],
+   "3": [
+    "Snow Rat",
+    "Snow Rat",
+    "Phalanx Hollow",
+    "Engorged Zombie"
+   ],
+   "4": [
+    "Snow Rat",
+    "Snow Rat",
+    "Phalanx Hollow",
+    "Engorged Zombie"
+   ]
+  },
+  true,
+  {
+   "enemySlots_by_players": [
+    0,
+    1,
+    0,
+    0,
+    3,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "slot_groups_1_player_tentative": [
+    {
+     "slot": 1,
+     "label": "tile1_row1",
+     "enemies": [
+      "Snow Rat"
+     ]
+    },
+    {
+     "slot": 4,
+     "label": "tile1_spawn",
+     "enemies": [
+      "Snow Rat",
+      "Phalanx Hollow",
+      "Engorged Zombie"
+     ]
+    }
+   ],
+   "card_text": {
+    "flavour": "A rusted portcullis halts your progress, rattling loudly as you attempt to raise it...",
+    "objective": "Activate the lever three times. Reach the exit node.",
+    "rewards": "Souls: +2 Souls. Trial: 3 Souls",
+    "rules": "(Kill the [enemy icon])\nThe first time the lever is activated, spawn a [enemy icon] on [spawn node 1 icon]. The second time the lever is activated, spawn a [enemy icon] on [spawn node 2 icon]. The third time the lever is activated, spawn a [enemy icon] on [spawn node 1 icon]."
+   },
+   "card_text_source": "DSBG-Shuffle image lib/dsbg_shuffle_images/encounters/The First Bastion.jpg (community re-creation; enemy and some token icons are blank and are shown as [icon])"
+  }
+ ],
+ [
+  "Painted World of Ariamis",
+  1,
+  "Unseen Scurrying",
+  {
+   "1": [
+    "Snow Rat",
+    "Snow Rat"
+   ],
+   "2": [
+    "Snow Rat",
+    "Snow Rat"
+   ],
+   "3": [
+    "Snow Rat",
+    "Snow Rat"
+   ],
+   "4": [
+    "Snow Rat",
+    "Snow Rat"
+   ]
+  },
+  true,
+  {
+   "enemySlots_by_players": [
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "slot_groups_1_player_tentative": [
+    {
+     "slot": 0,
+     "label": "tile1_row0",
+     "enemies": [
+      "Snow Rat"
+     ]
+    },
+    {
+     "slot": 1,
+     "label": "tile1_row1",
+     "enemies": [
+      "Snow Rat"
+     ]
+    }
+   ],
+   "card_text": {
+    "flavour": "Rodents skitter underfoot, gnawing at your bootleather with jagged teeth.",
+    "objective": "Kill all enemies.",
+    "rewards": "Souls: +2 Souls. Search: [icon]",
+    "rules": ""
+   },
+   "card_text_source": "DSBG-Shuffle image lib/dsbg_shuffle_images/encounters/Unseen Scurrying.jpg (community re-creation; enemy and some token icons are blank and are shown as [icon])"
+  }
+ ],
+ [
+  "Painted World of Ariamis",
+  2,
+  "Abandoned and Forgotten",
+  {
+   "1": [
+    "Phalanx Hollow",
+    "Engorged Zombie",
+    "Crow Demon"
+   ],
+   "2": [
+    "Phalanx Hollow",
+    "Engorged Zombie",
+    "Crow Demon"
+   ],
+   "3": [
+    "Phalanx Hollow",
+    "Engorged Zombie",
+    "Crow Demon"
+   ],
+   "4": [
+    "Phalanx Hollow",
+    "Engorged Zombie",
+    "Crow Demon"
+   ]
+  },
+  true,
+  {
+   "enemySlots_by_players": [
+    0,
+    0,
+    0,
+    0,
+    3,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "slot_groups_1_player_tentative": [
+    {
+     "slot": 4,
+     "label": "tile1_spawn",
+     "enemies": [
+      "Phalanx Hollow",
+      "Engorged Zombie",
+      "Crow Demon"
+     ]
+    }
+   ],
+   "card_text": {
+    "flavour": "An unnerving silence has taken hold here. Hasten through, despite your quiet surroundings...",
+    "objective": "Reveal three blank trap tokens.",
+    "rewards": "Souls: [character icon] Souls per face down trap token. Draw: 1x Treasure, 1x Event. Shortcut",
+    "rules": "[table of trap tokens: trap token 1 -> spawn on enemy spawn node 1; trap token 2 -> spawn on enemy spawn node 2; trap token 3 -> spawn on enemy spawn node 1 (enemy to spawn not shown in the image)]"
+   },
+   "card_text_source": "DSBG-Shuffle image lib/dsbg_shuffle_images/encounters/Abandoned and Forgotten.jpg (community re-creation; enemy and some token icons are blank and are shown as [icon])"
+  }
+ ],
+ [
+  "Painted World of Ariamis",
+  2,
+  "Cold Snap",
+  {
+   "1": [
+    "Snow Rat",
+    "Snow Rat",
+    "Phalanx Hollow",
+    "Engorged Zombie",
+    "Phalanx Hollow"
+   ],
+   "2": [
+    "Snow Rat",
+    "Snow Rat",
+    "Phalanx Hollow",
+    "Engorged Zombie",
+    "Phalanx Hollow"
+   ],
+   "3": [
+    "Snow Rat",
+    "Snow Rat",
+    "Phalanx Hollow",
+    "Engorged Zombie",
+    "Phalanx Hollow"
+   ],
+   "4": [
+    "Snow Rat",
+    "Snow Rat",
+    "Phalanx Hollow",
+    "Engorged Zombie",
+    "Phalanx Hollow"
+   ]
+  },
+  true,
+  {
+   "enemySlots_by_players": [
+    1,
+    1,
+    0,
+    0,
+    0,
+    2,
+    1,
+    0,
+    0,
+    0,
+    0
+   ],
+   "slot_groups_1_player_tentative": [
+    {
+     "slot": 0,
+     "label": "tile1_row0",
+     "enemies": [
+      "Snow Rat"
+     ]
+    },
+    {
+     "slot": 1,
+     "label": "tile1_row1",
+     "enemies": [
+      "Snow Rat"
+     ]
+    },
+    {
+     "slot": 5,
+     "label": "tile2_row0",
+     "enemies": [
+      "Phalanx Hollow",
+      "Engorged Zombie"
+     ]
+    },
+    {
+     "slot": 6,
+     "label": "tile2_row1",
+     "enemies": [
+      "Phalanx Hollow"
+     ]
+    }
+   ],
+   "card_text": {
+    "flavour": "As bitter cold sets in, you spy the reanimated remains of explorers that didn't reach warmth in time...",
+    "objective": "Reach the exit node.",
+    "rewards": "Souls: +4 Souls. Draw: 1x Event. Trial: Ember",
+    "rules": "(Kill the [enemy icon])"
+   },
+   "card_text_source": "DSBG-Shuffle image lib/dsbg_shuffle_images/encounters/Cold Snap.jpg (community re-creation; enemy and some token icons are blank and are shown as [icon])"
+  }
+ ],
+ [
+  "Painted World of Ariamis",
+  2,
+  "Corrupted Hovel",
+  {
+   "1": [
+    "Snow Rat",
+    "Engorged Zombie",
+    "Phalanx Hollow",
+    "Engorged Zombie"
+   ],
+   "2": [
+    "Snow Rat",
+    "Engorged Zombie",
+    "Phalanx Hollow",
+    "Engorged Zombie"
+   ],
+   "3": [
+    "Snow Rat",
+    "Engorged Zombie",
+    "Phalanx Hollow",
+    "Engorged Zombie"
+   ],
+   "4": [
+    "Snow Rat",
+    "Engorged Zombie",
+    "Phalanx Hollow",
+    "Engorged Zombie"
+   ]
+  },
+  true,
+  {
+   "enemySlots_by_players": [
+    2,
+    2,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "slot_groups_1_player_tentative": [
+    {
+     "slot": 0,
+     "label": "tile1_row0",
+     "enemies": [
+      "Snow Rat",
+      "Engorged Zombie"
+     ]
+    },
+    {
+     "slot": 1,
+     "label": "tile1_row1",
+     "enemies": [
+      "Phalanx Hollow",
+      "Engorged Zombie"
+     ]
+    }
+   ],
+   "card_text": {
+    "flavour": "Horrors lurk within the depths of these forsaken ruins, although so too does the promise of treasures...",
+    "objective": "Kill all enemies.",
+    "rewards": "Souls: +2 Souls. Draw: 1x Event. Trial: 2x Treasure",
+    "rules": "(Kill all enemies within [character icon]+3 turns)\n[enemy icon] attacks gain [poison icon] and [node-attack icon]."
+   },
+   "card_text_source": "DSBG-Shuffle image lib/dsbg_shuffle_images/encounters/Corrupted Hovel.jpg (community re-creation; enemy and some token icons are blank and are shown as [icon])"
+  }
+ ],
+ [
+  "Painted World of Ariamis",
+  2,
+  "Distant Tower",
+  {
+   "1": [
+    "Phalanx Hollow",
+    "Phalanx Hollow",
+    "Snow Rat",
+    "Bonewheel Skeleton",
+    "Bonewheel Skeleton",
+    "Crow Demon"
+   ],
+   "2": [
+    "Phalanx Hollow",
+    "Phalanx Hollow",
+    "Snow Rat",
+    "Bonewheel Skeleton",
+    "Bonewheel Skeleton",
+    "Crow Demon"
+   ],
+   "3": [
+    "Phalanx Hollow",
+    "Phalanx Hollow",
+    "Snow Rat",
+    "Bonewheel Skeleton",
+    "Bonewheel Skeleton",
+    "Crow Demon"
+   ],
+   "4": [
+    "Phalanx Hollow",
+    "Phalanx Hollow",
+    "Snow Rat",
+    "Bonewheel Skeleton",
+    "Bonewheel Skeleton",
+    "Crow Demon"
+   ]
+  },
+  true,
+  {
+   "enemySlots_by_players": [
+    2,
+    1,
+    0,
+    0,
+    0,
+    1,
+    1,
+    0,
+    1,
+    0,
+    0
+   ],
+   "slot_groups_1_player_tentative": [
+    {
+     "slot": 0,
+     "label": "tile1_row0",
+     "enemies": [
+      "Phalanx Hollow",
+      "Phalanx Hollow"
+     ]
+    },
+    {
+     "slot": 1,
+     "label": "tile1_row1",
+     "enemies": [
+      "Snow Rat"
+     ]
+    },
+    {
+     "slot": 5,
+     "label": "tile2_row0",
+     "enemies": [
+      "Bonewheel Skeleton"
+     ]
+    },
+    {
+     "slot": 6,
+     "label": "tile2_row1",
+     "enemies": [
+      "Bonewheel Skeleton"
+     ]
+    },
+    {
+     "slot": 8,
+     "label": "tile3_row0",
+     "enemies": [
+      "Crow Demon"
+     ]
+    }
+   ],
+   "card_text": {
+    "flavour": "Arrows fall in a deadly rain, as archers unseen assail your passage.",
+    "objective": "Reach the exit node.",
+    "rewards": "Souls: +4 Souls. Draw: 1x Treasure. Refresh: Luck. Trial: [icon]",
+    "rules": "(Kill the [enemy icon])"
+   },
+   "card_text_source": "DSBG-Shuffle image lib/dsbg_shuffle_images/encounters/Distant Tower.jpg (community re-creation; enemy and some token icons are blank and are shown as [icon])"
+  }
+ ],
+ [
+  "Painted World of Ariamis",
+  2,
+  "Gnashing Beaks",
+  {
+   "1": [
+    "Snow Rat",
+    "Snow Rat",
+    "Phalanx Hollow",
+    "Phalanx Hollow",
+    "Crow Demon",
+    "Crow Demon"
+   ],
+   "2": [
+    "Snow Rat",
+    "Snow Rat",
+    "Phalanx Hollow",
+    "Phalanx Hollow",
+    "Crow Demon",
+    "Crow Demon"
+   ],
+   "3": [
+    "Snow Rat",
+    "Snow Rat",
+    "Phalanx Hollow",
+    "Phalanx Hollow",
+    "Crow Demon",
+    "Crow Demon"
+   ],
+   "4": [
+    "Snow Rat",
+    "Snow Rat",
+    "Phalanx Hollow",
+    "Phalanx Hollow",
+    "Crow Demon",
+    "Crow Demon"
+   ]
+  },
+  true,
+  {
+   "enemySlots_by_players": [
+    1,
+    1,
+    0,
+    0,
+    3,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "slot_groups_1_player_tentative": [
+    {
+     "slot": 0,
+     "label": "tile1_row0",
+     "enemies": [
+      "Snow Rat"
+     ]
+    },
+    {
+     "slot": 1,
+     "label": "tile1_row1",
+     "enemies": [
+      "Snow Rat"
+     ]
+    },
+    {
+     "slot": 4,
+     "label": "tile1_spawn",
+     "enemies": [
+      "Phalanx Hollow",
+      "Phalanx Hollow",
+      "Crow Demon"
+     ]
+    },
+    {
+     "slot": 5,
+     "label": "tile2_row0",
+     "enemies": [
+      "Crow Demon"
+     ]
+    }
+   ],
+   "card_text": {
+    "flavour": "Twisted creatures ambush the party as you make your way through the ruins.",
+    "objective": "Open the chest. Reach the exit node.",
+    "rewards": "Souls: +3 Souls. Draw: 1x Event. Trial: 4 Souls",
+    "rules": "(Open the chest within [character icon]+3 turns)\nWhen the chest is opened, spawn [enemy icon] on [spawn node 1 icon] on tile 1, and [enemy icon] on [spawn node 2 icon] on tile 1."
+   },
+   "card_text_source": "DSBG-Shuffle image lib/dsbg_shuffle_images/encounters/Gnashing Beaks.jpg (community re-creation; enemy and some token icons are blank and are shown as [icon])"
+  }
+ ],
+ [
+  "Painted World of Ariamis",
+  2,
+  "Inhospitable Ground",
+  {
+   "1": [
+    "Snow Rat",
+    "Engorged Zombie",
+    "Phalanx"
+   ],
+   "2": [
+    "Snow Rat",
+    "Engorged Zombie",
+    "Phalanx"
+   ],
+   "3": [
+    "Snow Rat",
+    "Engorged Zombie",
+    "Phalanx"
+   ],
+   "4": [
+    "Snow Rat",
+    "Engorged Zombie",
+    "Phalanx"
+   ]
+  },
+  true,
+  {
+   "enemySlots_by_players": [
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0
+   ],
+   "slot_groups_1_player_tentative": [
+    {
+     "slot": 0,
+     "label": "tile1_row0",
+     "enemies": [
+      "Snow Rat"
+     ]
+    },
+    {
+     "slot": 1,
+     "label": "tile1_row1",
+     "enemies": [
+      "Engorged Zombie"
+     ]
+    },
+    {
+     "slot": 6,
+     "label": "tile2_row1",
+     "enemies": [
+      "Phalanx"
+     ]
+    }
+   ],
+   "card_text": {
+    "flavour": "A disciplined wall of spears and shields block the way through the stowstorm.",
+    "objective": "Kill all enemies.",
+    "rewards": "Souls: +3 Souls. Search: [icon]. Shortcut",
+    "rules": "Enemy attacks gain [push icon]."
+   },
+   "card_text_source": "DSBG-Shuffle image lib/dsbg_shuffle_images/encounters/Inhospitable Ground.jpg (community re-creation; enemy and some token icons are blank and are shown as [icon])"
+  }
+ ],
+ [
+  "Painted World of Ariamis",
+  2,
+  "Monstrous Maw",
+  {
+   "1": [
+    "Snow Rat"
+   ],
+   "2": [
+    "Snow Rat"
+   ],
+   "3": [
+    "Snow Rat"
+   ],
+   "4": [
+    "Snow Rat"
+   ]
+  },
+  true,
+  {
+   "enemySlots_by_players": [
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "slot_groups_1_player_tentative": [
+    {
+     "slot": 1,
+     "label": "tile1_row1",
+     "enemies": [
+      "Snow Rat"
+     ]
+    }
+   ],
+   "card_text": {
+    "flavour": "Bloated and swollen, this creature has grown to monstrous proportions by feasting on its brethren.",
+    "objective": "Kill the [enemy icon].",
+    "rewards": "Souls: +6 Souls. Search: [icon]. Draw: 1x Event",
+    "rules": "Increase the [enemy icon] starting health to 10, and increase its block, resistance, and dodge difficulty values by +1."
+   },
+   "card_text_source": "DSBG-Shuffle image lib/dsbg_shuffle_images/encounters/Monstrous Maw.jpg (community re-creation; enemy and some token icons are blank and are shown as [icon])"
+  }
+ ],
+ [
+  "Painted World of Ariamis",
+  2,
+  "Skeletal Spokes",
+  {
+   "1": [
+    "Engorged Zombie",
+    "Engorged Zombie",
+    "Bonewheel Skeleton",
+    "Bonewheel Skeleton"
+   ],
+   "2": [
+    "Engorged Zombie",
+    "Engorged Zombie",
+    "Bonewheel Skeleton",
+    "Bonewheel Skeleton"
+   ],
+   "3": [
+    "Engorged Zombie",
+    "Engorged Zombie",
+    "Bonewheel Skeleton",
+    "Bonewheel Skeleton"
+   ],
+   "4": [
+    "Engorged Zombie",
+    "Engorged Zombie",
+    "Bonewheel Skeleton",
+    "Bonewheel Skeleton"
+   ]
+  },
+  true,
+  {
+   "enemySlots_by_players": [
+    1,
+    1,
+    0,
+    0,
+    0,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0
+   ],
+   "slot_groups_1_player_tentative": [
+    {
+     "slot": 0,
+     "label": "tile1_row0",
+     "enemies": [
+      "Engorged Zombie"
+     ]
+    },
+    {
+     "slot": 1,
+     "label": "tile1_row1",
+     "enemies": [
+      "Engorged Zombie"
+     ]
+    },
+    {
+     "slot": 5,
+     "label": "tile2_row0",
+     "enemies": [
+      "Bonewheel Skeleton"
+     ]
+    },
+    {
+     "slot": 6,
+     "label": "tile2_row1",
+     "enemies": [
+      "Bonewheel Skeleton"
+     ]
+    }
+   ],
+   "card_text": {
+    "flavour": "The sound of clattering wood echoes through the chamber, approaching at pace.",
+    "objective": "Survive for [character icon]+2 turns.",
+    "rewards": "Souls: +3 Souls. Draw: 1x Event",
+    "rules": "[enemy icon] ignore barrels during movement.\nIf a [enemy icon] is pushed onto a node containing a barrel, it suffers [damage icon], then discard the barrel.\nIf a [enemy icon] is killed, respawn it on the closest enemy node, then draw a treasure card from [deck icon] and add it to the inventory."
+   },
+   "card_text_source": "DSBG-Shuffle image lib/dsbg_shuffle_images/encounters/Skeletal Spokes.jpg (community re-creation; enemy and some token icons are blank and are shown as [icon])"
+  }
+ ],
+ [
+  "Painted World of Ariamis",
+  2,
+  "Snowblind",
+  {
+   "1": [
+    "Phalanx Hollow",
+    "Bonewheel Skeleton",
+    "Phalanx Hollow",
+    "Crow Demon"
+   ],
+   "2": [
+    "Phalanx Hollow",
+    "Bonewheel Skeleton",
+    "Phalanx Hollow",
+    "Crow Demon"
+   ],
+   "3": [
+    "Phalanx Hollow",
+    "Bonewheel Skeleton",
+    "Phalanx Hollow",
+    "Crow Demon"
+   ],
+   "4": [
+    "Phalanx Hollow",
+    "Bonewheel Skeleton",
+    "Phalanx Hollow",
+    "Crow Demon"
+   ]
+  },
+  true,
+  {
+   "enemySlots_by_players": [
+    1,
+    1,
+    0,
+    0,
+    0,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0
+   ],
+   "slot_groups_1_player_tentative": [
+    {
+     "slot": 0,
+     "label": "tile1_row0",
+     "enemies": [
+      "Phalanx Hollow"
+     ]
+    },
+    {
+     "slot": 1,
+     "label": "tile1_row1",
+     "enemies": [
+      "Bonewheel Skeleton"
+     ]
+    },
+    {
+     "slot": 5,
+     "label": "tile2_row0",
+     "enemies": [
+      "Phalanx Hollow"
+     ]
+    },
+    {
+     "slot": 6,
+     "label": "tile2_row1",
+     "enemies": [
+      "Crow Demon"
+     ]
+    }
+   ],
+   "card_text": {
+    "flavour": "A flurry of snow blinds the senses and numbs the extremities. You'll have to survive more than your foes here...",
+    "objective": "Kill all enemies.",
+    "rewards": "Souls: +4 Souls. Search: Ember. Draw: 1x Event. Refresh: Heroic Action",
+    "rules": ""
+   },
+   "card_text_source": "DSBG-Shuffle image lib/dsbg_shuffle_images/encounters/Snowblind.jpg (community re-creation; enemy and some token icons are blank and are shown as [icon])"
+  }
+ ],
+ [
+  "Painted World of Ariamis",
+  3,
+  "Central Plaza",
+  {
+   "1": [
+    "Phalanx Hollow",
+    "Phalanx Hollow",
+    "Phalanx Hollow",
+    "Engorged Zombie",
+    "Engorged Zombie",
+    "Snow Rat",
+    "Snow Rat",
+    "Crow Demon"
+   ],
+   "2": [
+    "Phalanx Hollow",
+    "Phalanx Hollow",
+    "Phalanx Hollow",
+    "Engorged Zombie",
+    "Engorged Zombie",
+    "Snow Rat",
+    "Snow Rat",
+    "Crow Demon"
+   ],
+   "3": [
+    "Phalanx Hollow",
+    "Phalanx Hollow",
+    "Phalanx Hollow",
+    "Engorged Zombie",
+    "Engorged Zombie",
+    "Snow Rat",
+    "Snow Rat",
+    "Crow Demon"
+   ],
+   "4": [
+    "Phalanx Hollow",
+    "Phalanx Hollow",
+    "Phalanx Hollow",
+    "Engorged Zombie",
+    "Engorged Zombie",
+    "Snow Rat",
+    "Snow Rat",
+    "Crow Demon"
+   ]
+  },
+  true,
+  {
+   "enemySlots_by_players": [
+    1,
+    2,
+    0,
+    0,
+    0,
+    1,
+    1,
+    0,
+    2,
+    1,
+    0
+   ],
+   "slot_groups_1_player_tentative": [
+    {
+     "slot": 0,
+     "label": "tile1_row0",
+     "enemies": [
+      "Phalanx Hollow"
+     ]
+    },
+    {
+     "slot": 1,
+     "label": "tile1_row1",
+     "enemies": [
+      "Phalanx Hollow",
+      "Phalanx Hollow"
+     ]
+    },
+    {
+     "slot": 5,
+     "label": "tile2_row0",
+     "enemies": [
+      "Engorged Zombie"
+     ]
+    },
+    {
+     "slot": 6,
+     "label": "tile2_row1",
+     "enemies": [
+      "Engorged Zombie"
+     ]
+    },
+    {
+     "slot": 8,
+     "label": "tile3_row0",
+     "enemies": [
+      "Snow Rat",
+      "Snow Rat"
+     ]
+    },
+    {
+     "slot": 9,
+     "label": "tile3_row1",
+     "enemies": [
+      "Crow Demon"
+     ]
+    }
+   ],
+   "card_text": {
+    "flavour": "You find yourself in a wide courtyard, surrounded on all sides by enemies, and hiding from a hail of arrows.",
+    "objective": "Kill all enemies on [character icon] tiles. Reach the exit node.",
+    "rewards": "Souls: 6x Souls per tile cleared. Draw: 1x Event. Shortcut",
+    "rules": "Characters can only leave a tile if there are no enemies on it."
+   },
+   "card_text_source": "DSBG-Shuffle image lib/dsbg_shuffle_images/encounters/Central Plaza.jpg (community re-creation; enemy and some token icons are blank and are shown as [icon])"
+  }
+ ],
+ [
+  "Painted World of Ariamis",
+  3,
+  "Corvian Host",
+  {
+   "1": [
+    "Phalanx Hollow",
+    "Phalanx Hollow",
+    "Crow Demon",
+    "Phalanx Hollow",
+    "Phalanx Hollow",
+    "Crow Demon",
+    "Crow Demon",
+    "Crow Demon"
+   ],
+   "2": [
+    "Phalanx Hollow",
+    "Phalanx Hollow",
+    "Crow Demon",
+    "Phalanx Hollow",
+    "Phalanx Hollow",
+    "Crow Demon",
+    "Crow Demon",
+    "Crow Demon"
+   ],
+   "3": [
+    "Phalanx Hollow",
+    "Phalanx Hollow",
+    "Crow Demon",
+    "Phalanx Hollow",
+    "Phalanx Hollow",
+    "Crow Demon",
+    "Crow Demon",
+    "Crow Demon"
+   ],
+   "4": [
+    "Phalanx Hollow",
+    "Phalanx Hollow",
+    "Crow Demon",
+    "Phalanx Hollow",
+    "Phalanx Hollow",
+    "Crow Demon",
+    "Crow Demon",
+    "Crow Demon"
+   ]
+  },
+  true,
+  {
+   "enemySlots_by_players": [
+    2,
+    1,
+    0,
+    0,
+    0,
+    2,
+    1,
+    0,
+    0,
+    0,
+    0
+   ],
+   "slot_groups_1_player_tentative": [
+    {
+     "slot": 0,
+     "label": "tile1_row0",
+     "enemies": [
+      "Phalanx Hollow",
+      "Phalanx Hollow"
+     ]
+    },
+    {
+     "slot": 1,
+     "label": "tile1_row1",
+     "enemies": [
+      "Crow Demon"
+     ]
+    },
+    {
+     "slot": 5,
+     "label": "tile2_row0",
+     "enemies": [
+      "Phalanx Hollow",
+      "Phalanx Hollow"
+     ]
+    },
+    {
+     "slot": 6,
+     "label": "tile2_row1",
+     "enemies": [
+      "Crow Demon"
+     ]
+    }
+   ],
+   "card_text": {
+    "flavour": "Vicious cries rend their way through the polluted air, a murder of fearsome demons cutting through the skies.",
+    "objective": "Defeat all enemies within [character icon]+5 turns.",
+    "rewards": "Souls: +8 Souls. Search: [icon]. Draw: 1x Event",
+    "rules": "[enemy icon] (Tile 2)\nWhen a tile is made active, reset the timer. Characters can only leave a tile if there are no [enemy icon] on it. When all [enemy icon] have been killed on tiles 1 and 2, spawn [enemy icon] on both enemy spawn nodes on tile 3.\nIncrease [enemy icon] block and resistance values by 1. [enemy icon] attacks gain [bleed icon]."
+   },
+   "card_text_source": "DSBG-Shuffle image lib/dsbg_shuffle_images/encounters/Corvian Host.jpg (community re-creation; enemy and some token icons are blank and are shown as [icon])"
+  }
+ ],
+ [
+  "Painted World of Ariamis",
+  3,
+  "Deathly Freeze",
+  {
+   "1": [
+    "Snow Rat",
+    "Snow Rat",
+    "Engorged Zombie",
+    "Phalanx Hollow",
+    "Bonewheel Skeleton",
+    "Bonewheel Skeleton",
+    "Engorged Zombie"
+   ],
+   "2": [
+    "Snow Rat",
+    "Snow Rat",
+    "Engorged Zombie",
+    "Phalanx Hollow",
+    "Bonewheel Skeleton",
+    "Bonewheel Skeleton",
+    "Engorged Zombie"
+   ],
+   "3": [
+    "Snow Rat",
+    "Snow Rat",
+    "Engorged Zombie",
+    "Phalanx Hollow",
+    "Bonewheel Skeleton",
+    "Bonewheel Skeleton",
+    "Engorged Zombie"
+   ],
+   "4": [
+    "Snow Rat",
+    "Snow Rat",
+    "Engorged Zombie",
+    "Phalanx Hollow",
+    "Bonewheel Skeleton",
+    "Bonewheel Skeleton",
+    "Engorged Zombie"
+   ]
+  },
+  true,
+  {
+   "enemySlots_by_players": [
+    3,
+    1,
+    0,
+    0,
+    0,
+    1,
+    2,
+    0,
+    0,
+    0,
+    0
+   ],
+   "slot_groups_1_player_tentative": [
+    {
+     "slot": 0,
+     "label": "tile1_row0",
+     "enemies": [
+      "Snow Rat",
+      "Snow Rat",
+      "Engorged Zombie"
+     ]
+    },
+    {
+     "slot": 1,
+     "label": "tile1_row1",
+     "enemies": [
+      "Phalanx Hollow"
+     ]
+    },
+    {
+     "slot": 5,
+     "label": "tile2_row0",
+     "enemies": [
+      "Bonewheel Skeleton"
+     ]
+    },
+    {
+     "slot": 6,
+     "label": "tile2_row1",
+     "enemies": [
+      "Bonewheel Skeleton",
+      "Engorged Zombie"
+     ]
+    }
+   ],
+   "card_text": {
+    "flavour": "Snow billows in from all directions, your bleak surroundings offering little respite in this eerie gauntlet.",
+    "objective": "Kill all enemies.",
+    "rewards": "Souls: +10 Souls. Draw: 2x Treasure. Search: Ember. Refresh: Luck",
+    "rules": "[enemy icon] attacks gain [node-attack icon] and become [magic icon]."
+   },
+   "card_text_source": "DSBG-Shuffle image lib/dsbg_shuffle_images/encounters/Deathly Freeze.jpg (community re-creation; enemy and some token icons are blank and are shown as [icon])"
+  }
+ ],
+ [
+  "Painted World of Ariamis",
+  3,
+  "Draconic Decay",
+  {
+   "1": [
+    "Bonewheel Skeleton",
+    "Bonewheel Skeleton",
+    "Engorged Zombie",
+    "Crow Demon",
+    "Phalanx Hollow",
+    "Phalanx Hollow"
+   ],
+   "2": [
+    "Bonewheel Skeleton",
+    "Bonewheel Skeleton",
+    "Engorged Zombie",
+    "Crow Demon",
+    "Phalanx Hollow",
+    "Phalanx Hollow"
+   ],
+   "3": [
+    "Bonewheel Skeleton",
+    "Bonewheel Skeleton",
+    "Engorged Zombie",
+    "Crow Demon",
+    "Phalanx Hollow",
+    "Phalanx Hollow"
+   ],
+   "4": [
+    "Bonewheel Skeleton",
+    "Bonewheel Skeleton",
+    "Engorged Zombie",
+    "Crow Demon",
+    "Phalanx Hollow",
+    "Phalanx Hollow"
+   ]
+  },
+  true,
+  {
+   "enemySlots_by_players": [
+    0,
+    1,
+    0,
+    0,
+    0,
+    1,
+    1,
+    0,
+    1,
+    2,
+    0
+   ],
+   "slot_groups_1_player_tentative": [
+    {
+     "slot": 1,
+     "label": "tile1_row1",
+     "enemies": [
+      "Bonewheel Skeleton"
+     ]
+    },
+    {
+     "slot": 5,
+     "label": "tile2_row0",
+     "enemies": [
+      "Bonewheel Skeleton"
+     ]
+    },
+    {
+     "slot": 6,
+     "label": "tile2_row1",
+     "enemies": [
+      "Engorged Zombie"
+     ]
+    },
+    {
+     "slot": 8,
+     "label": "tile3_row0",
+     "enemies": [
+      "Crow Demon"
+     ]
+    },
+    {
+     "slot": 9,
+     "label": "tile3_row1",
+     "enemies": [
+      "Phalanx Hollow",
+      "Phalanx Hollow"
+     ]
+    }
+   ],
+   "card_text": {
+    "flavour": "An undead dragon crashes from the skies behind, chasing you away with a tide of choking fumes.",
+    "objective": "Reach the exit node.",
+    "rewards": "Souls: +10 Souls. Draw: 1x Event, 2x Treasure",
+    "rules": "At the end of each enemy turn, place three poison mist tokens on the lowest numbered tile.\n\nWhen placing tokens, if every node on a tile has a poison mist token on it, remove the tile from play, then place any remaining tokens on the next lowest tile. Any models on the tile when it is removed are killed."
+   },
+   "card_text_source": "DSBG-Shuffle image lib/dsbg_shuffle_images/encounters/Draconic Decay.jpg (community re-creation; enemy and some token icons are blank and are shown as [icon])"
+  }
+ ],
+ [
+  "Painted World of Ariamis",
+  3,
+  "Eye of the Storm",
+  {
+   "1": [
+    "Phalanx Hollow",
+    "Phalanx Hollow",
+    "Phalanx Hollow",
+    "Phalanx Hollow",
+    "Engorged Zombie",
+    "Phalanx"
+   ],
+   "2": [
+    "Phalanx Hollow",
+    "Phalanx Hollow",
+    "Phalanx Hollow",
+    "Phalanx Hollow",
+    "Engorged Zombie",
+    "Phalanx"
+   ],
+   "3": [
+    "Phalanx Hollow",
+    "Phalanx Hollow",
+    "Phalanx Hollow",
+    "Phalanx Hollow",
+    "Engorged Zombie",
+    "Phalanx"
+   ],
+   "4": [
+    "Phalanx Hollow",
+    "Phalanx Hollow",
+    "Phalanx Hollow",
+    "Phalanx Hollow",
+    "Engorged Zombie",
+    "Phalanx"
+   ]
+  },
+  true,
+  {
+   "enemySlots_by_players": [
+    1,
+    1,
+    0,
+    0,
+    0,
+    2,
+    1,
+    0,
+    0,
+    0,
+    1
+   ],
+   "slot_groups_1_player_tentative": [
+    {
+     "slot": 0,
+     "label": "tile1_row0",
+     "enemies": [
+      "Phalanx Hollow"
+     ]
+    },
+    {
+     "slot": 1,
+     "label": "tile1_row1",
+     "enemies": [
+      "Phalanx Hollow"
+     ]
+    },
+    {
+     "slot": 5,
+     "label": "tile2_row0",
+     "enemies": [
+      "Phalanx Hollow",
+      "Phalanx Hollow"
+     ]
+    },
+    {
+     "slot": 6,
+     "label": "tile2_row1",
+     "enemies": [
+      "Engorged Zombie"
+     ]
+    },
+    {
+     "slot": 10,
+     "label": "tile3_spawn",
+     "enemies": [
+      "Phalanx"
+     ]
+    }
+   ],
+   "card_text": {
+    "flavour": "A series of figures lurch from within the blizzard surrounding you, barring your way forward.",
+    "objective": "Kill the [enemy icon].",
+    "rewards": "Souls: +6 Souls. Draw: 1x Treasure. Refresh: Heroic Action",
+    "rules": "Characters can only leave a tile if there are no enemies on it."
+   },
+   "card_text_source": "DSBG-Shuffle image lib/dsbg_shuffle_images/encounters/Eye of the Storm.jpg (community re-creation; enemy and some token icons are blank and are shown as [icon])"
+  }
+ ],
+ [
+  "Painted World of Ariamis",
+  3,
+  "Frozen Revolutions",
+  {
+   "1": [
+    "Snow Rat",
+    "Snow Rat",
+    "Phalanx Hollow",
+    "Phalanx Hollow",
+    "Phalanx Hollow",
+    "Phalanx Hollow",
+    "Bonewheel Skeleton",
+    "Bonewheel Skeleton"
+   ],
+   "2": [
+    "Snow Rat",
+    "Snow Rat",
+    "Phalanx Hollow",
+    "Phalanx Hollow",
+    "Phalanx Hollow",
+    "Phalanx Hollow",
+    "Bonewheel Skeleton",
+    "Bonewheel Skeleton"
+   ],
+   "3": [
+    "Snow Rat",
+    "Snow Rat",
+    "Phalanx Hollow",
+    "Phalanx Hollow",
+    "Phalanx Hollow",
+    "Phalanx Hollow",
+    "Bonewheel Skeleton",
+    "Bonewheel Skeleton"
+   ],
+   "4": [
+    "Snow Rat",
+    "Snow Rat",
+    "Phalanx Hollow",
+    "Phalanx Hollow",
+    "Phalanx Hollow",
+    "Phalanx Hollow",
+    "Bonewheel Skeleton",
+    "Bonewheel Skeleton"
+   ]
+  },
+  true,
+  {
+   "enemySlots_by_players": [
+    2,
+    2,
+    0,
+    0,
+    0,
+    2,
+    0,
+    0,
+    1,
+    1,
+    0
+   ],
+   "slot_groups_1_player_tentative": [
+    {
+     "slot": 0,
+     "label": "tile1_row0",
+     "enemies": [
+      "Snow Rat",
+      "Snow Rat"
+     ]
+    },
+    {
+     "slot": 1,
+     "label": "tile1_row1",
+     "enemies": [
+      "Phalanx Hollow",
+      "Phalanx Hollow"
+     ]
+    },
+    {
+     "slot": 5,
+     "label": "tile2_row0",
+     "enemies": [
+      "Phalanx Hollow",
+      "Phalanx Hollow"
+     ]
+    },
+    {
+     "slot": 8,
+     "label": "tile3_row0",
+     "enemies": [
+      "Bonewheel Skeleton"
+     ]
+    },
+    {
+     "slot": 9,
+     "label": "tile3_row1",
+     "enemies": [
+      "Bonewheel Skeleton"
+     ]
+    }
+   ],
+   "card_text": {
+    "flavour": "A portcullis blocks the path, and the party must brave a tide of bizarrely animated foes while searching for a solution.",
+    "objective": "Activate both levers. Reach the exit node.",
+    "rewards": "Souls: +8 Souls. Draw: 3x Treasure. Trial: [icon]",
+    "rules": "(No barrel tokens are discarded)\nReduce the node model limit to two.\n[enemy icon] behaviors gain +1 [repeat icon].\n[enemy icon] ignore barrels during movement. If a [enemy icon] is pushed onto a node containing a barrel, it suffers [damage icon], then discard the barrel."
+   },
+   "card_text_source": "DSBG-Shuffle image lib/dsbg_shuffle_images/encounters/Frozen Revolutions.jpg (community re-creation; enemy and some token icons are blank and are shown as [icon])"
+  }
+ ],
+ [
+  "Painted World of Ariamis",
+  3,
+  "The Last Bastion",
+  {
+   "1": [
+    "Phalanx",
+    "Crow Demon"
+   ],
+   "2": [
+    "Phalanx",
+    "Crow Demon"
+   ],
+   "3": [
+    "Phalanx",
+    "Crow Demon"
+   ],
+   "4": [
+    "Phalanx",
+    "Crow Demon"
+   ]
+  },
+  true,
+  {
+   "enemySlots_by_players": [
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "slot_groups_1_player_tentative": [
+    {
+     "slot": 0,
+     "label": "tile1_row0",
+     "enemies": [
+      "Phalanx"
+     ]
+    },
+    {
+     "slot": 1,
+     "label": "tile1_row1",
+     "enemies": [
+      "Crow Demon"
+     ]
+    }
+   ],
+   "card_text": {
+    "flavour": "A surprisingly disciplined row of spears await, wielded by the elite soldiers of this unnatural realm.",
+    "objective": "Kill all enemies.",
+    "rewards": "Souls: +6 Souls. Draw: 1x Event. Refresh: Estus Flask. Trial: 3x Treasure",
+    "rules": "(Kill the [enemy icon] first)\nIncrease the starting health of the [enemy icon] by 5, and its dodge difficulty value by 1. The [enemy icon] attacks gain [push icon] and +1 damage."
+   },
+   "card_text_source": "DSBG-Shuffle image lib/dsbg_shuffle_images/encounters/The Last Bastion.jpg (community re-creation; enemy and some token icons are blank and are shown as [icon])"
+  }
+ ],
+ [
+  "Painted World of Ariamis",
+  3,
+  "Trecherous Tower",
+  {
+   "1": [
+    "Phalanx Hollow",
+    "Phalanx Hollow",
+    "Phalanx Hollow",
+    "Engorged Zombie",
+    "Crow Demon"
+   ],
+   "2": [
+    "Phalanx Hollow",
+    "Phalanx Hollow",
+    "Phalanx Hollow",
+    "Engorged Zombie",
+    "Crow Demon"
+   ],
+   "3": [
+    "Phalanx Hollow",
+    "Phalanx Hollow",
+    "Phalanx Hollow",
+    "Engorged Zombie",
+    "Crow Demon"
+   ],
+   "4": [
+    "Phalanx Hollow",
+    "Phalanx Hollow",
+    "Phalanx Hollow",
+    "Engorged Zombie",
+    "Crow Demon"
+   ]
+  },
+  true,
+  {
+   "enemySlots_by_players": [
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "slot_groups_1_player_tentative": [
+    {
+     "slot": 0,
+     "label": "tile1_row0",
+     "enemies": [
+      "Phalanx Hollow"
+     ]
+    },
+    {
+     "slot": 1,
+     "label": "tile1_row1",
+     "enemies": [
+      "Phalanx Hollow"
+     ]
+    }
+   ],
+   "card_text": {
+    "flavour": "A dangerous path leads up to an old tower, surely the path to your final destination.",
+    "objective": "Reveal four blank trap tokens.",
+    "rewards": "Souls: +1 Souls per face down trap token. Draw: 1x Treasure. Shortcut",
+    "rules": "[table of trap tokens: 1 -> spawn on enemy spawn node 1; 2 -> spawn on enemy spawn node 2; 3 -> spawn on enemy spawn node 1 (enemy to spawn not shown in the image)]"
+   },
+   "card_text_source": "DSBG-Shuffle image lib/dsbg_shuffle_images/encounters/Trecherous Tower.jpg (community re-creation; enemy and some token icons are blank and are shown as [icon])"
+  }
+ ],
+ [
+  "Painted World of Ariamis",
+  3,
+  "Velka's Chosen",
+  {
+   "1": [
+    "Engorged Zombie",
+    "Engorged Zombie",
+    "Crow Demon",
+    "Snow Rat",
+    "Snow Rat"
+   ],
+   "2": [
+    "Engorged Zombie",
+    "Engorged Zombie",
+    "Crow Demon",
+    "Snow Rat",
+    "Snow Rat"
+   ],
+   "3": [
+    "Engorged Zombie",
+    "Engorged Zombie",
+    "Crow Demon",
+    "Snow Rat",
+    "Snow Rat"
+   ],
+   "4": [
+    "Engorged Zombie",
+    "Engorged Zombie",
+    "Crow Demon",
+    "Snow Rat",
+    "Snow Rat"
+   ]
+  },
+  true,
+  {
+   "enemySlots_by_players": [
+    1,
+    1,
+    0,
+    0,
+    0,
+    1,
+    2,
+    0,
+    0,
+    0,
+    0
+   ],
+   "slot_groups_1_player_tentative": [
+    {
+     "slot": 0,
+     "label": "tile1_row0",
+     "enemies": [
+      "Engorged Zombie"
+     ]
+    },
+    {
+     "slot": 1,
+     "label": "tile1_row1",
+     "enemies": [
+      "Engorged Zombie"
+     ]
+    },
+    {
+     "slot": 5,
+     "label": "tile2_row0",
+     "enemies": [
+      "Crow Demon"
+     ]
+    },
+    {
+     "slot": 6,
+     "label": "tile2_row1",
+     "enemies": [
+      "Snow Rat",
+      "Snow Rat"
+     ]
+    }
+   ],
+   "card_text": {
+    "flavour": "Hidden in the deepest corners of the painting, this disciple of Velka awaits a challenger.",
+    "objective": "Kill the [enemy icon].",
+    "rewards": "Souls: +8 Souls. Search: [icon]. Draw: 2x Treasure",
+    "rules": "Increase the starting health of [enemy icon] by [character icon]+2, and its block, resistance, and dodge difficulty values by 1. [enemy icon] attacks gain [poison icon]."
+   },
+   "card_text_source": "DSBG-Shuffle image lib/dsbg_shuffle_images/encounters/Velka's Chosen.jpg (community re-creation; enemy and some token icons are blank and are shown as [icon])"
+  }
+ ],
+ [
+  "Tomb of Giants",
+  1,
+  "Abandoned Storeroom",
+  {
+   "1": [
+    "Giant Skeleton Soldier"
+   ],
+   "2": [
+    "Giant Skeleton Soldier"
+   ],
+   "3": [
+    "Giant Skeleton Soldier"
+   ],
+   "4": [
+    "Giant Skeleton Soldier"
+   ]
+  },
+  true,
+  {
+   "enemySlots_by_players": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "slot_groups_1_player_tentative": [
+    {
+     "slot": 0,
+     "label": "tile1_row0",
+     "enemies": [
+      "Giant Skeleton Soldier"
+     ]
+    }
+   ],
+   "card_text": {
+    "flavour": "A simple and quiet chamber belies a nest of deadly traps.",
+    "objective": "Break all barrels.",
+    "rewards": "Refresh: Luck",
+    "rules": "During setup, place a barrel token on each node containing a trap token.\nIf a barrel is discarded on a node where a blank trap token was revealed, roll [black die icon], then add a number of souls equal to the number of pips to the soul cache."
+   },
+   "card_text_source": "DSBG-Shuffle image lib/dsbg_shuffle_images/encounters/Abandoned Storeroom.jpg (community re-creation; enemy and some token icons are blank and are shown as [icon])"
+  }
+ ],
+ [
+  "Tomb of Giants",
+  1,
+  "Bridge Too Far",
+  {
+   "1": [
+    "Skeleton Soldier",
+    "Skeleton Archer",
+    "Skeleton Soldier"
+   ],
+   "2": [
+    "Skeleton Soldier",
+    "Skeleton Archer",
+    "Skeleton Soldier"
+   ],
+   "3": [
+    "Skeleton Soldier",
+    "Skeleton Archer",
+    "Skeleton Soldier"
+   ],
+   "4": [
+    "Skeleton Soldier",
+    "Skeleton Archer",
+    "Skeleton Soldier"
+   ]
+  },
+  true,
+  {
+   "enemySlots_by_players": [
+    1,
+    2,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "slot_groups_1_player_tentative": [
+    {
+     "slot": 0,
+     "label": "tile1_row0",
+     "enemies": [
+      "Skeleton Soldier"
+     ]
+    },
+    {
+     "slot": 1,
+     "label": "tile1_row1",
+     "enemies": [
+      "Skeleton Archer",
+      "Skeleton Soldier"
+     ]
+    }
+   ],
+   "card_text": {
+    "flavour": "A series of bridges rotate unsteadily in the gloom. Secure a safe passage by using the levers to steady the path ahead.",
+    "objective": "Activate the lever three times.",
+    "rewards": "Souls: 1x Soul per enemy killed. Shortcut",
+    "rules": "When the lever is activated, respawn all enemies."
+   },
+   "card_text_source": "DSBG-Shuffle image lib/dsbg_shuffle_images/encounters/Bridge Too Far.jpg (community re-creation; enemy and some token icons are blank and are shown as [icon])"
+  }
+ ],
+ [
+  "Tomb of Giants",
+  1,
+  "Dark Resurrection",
+  {
+   "1": [
+    "Skeleton Soldier",
+    "Necromancer",
+    "Skeleton Soldier",
+    "Skeleton Soldier",
+    "Necromancer"
+   ],
+   "2": [
+    "Skeleton Soldier",
+    "Necromancer",
+    "Skeleton Soldier",
+    "Skeleton Soldier",
+    "Necromancer"
+   ],
+   "3": [
+    "Skeleton Soldier",
+    "Necromancer",
+    "Skeleton Soldier",
+    "Skeleton Soldier",
+    "Necromancer"
+   ],
+   "4": [
+    "Skeleton Soldier",
+    "Necromancer",
+    "Skeleton Soldier",
+    "Skeleton Soldier",
+    "Necromancer"
+   ]
+  },
+  true,
+  {
+   "enemySlots_by_players": [
+    1,
+    1,
+    0,
+    0,
+    0,
+    2,
+    1,
+    0,
+    0,
+    0,
+    0
+   ],
+   "slot_groups_1_player_tentative": [
+    {
+     "slot": 0,
+     "label": "tile1_row0",
+     "enemies": [
+      "Skeleton Soldier"
+     ]
+    },
+    {
+     "slot": 1,
+     "label": "tile1_row1",
+     "enemies": [
+      "Necromancer"
+     ]
+    },
+    {
+     "slot": 5,
+     "label": "tile2_row0",
+     "enemies": [
+      "Skeleton Soldier",
+      "Skeleton Soldier"
+     ]
+    },
+    {
+     "slot": 6,
+     "label": "tile2_row1",
+     "enemies": [
+      "Necromancer"
+     ]
+    }
+   ],
+   "card_text": {
+    "flavour": "The failing light cannot penetrate these murky depths. Soon all visibility shall be lost, unless a fresh source of illumination is found.",
+    "objective": "Place the torch on the shrine node.",
+    "rewards": "Souls: +1 Souls. Search: [icon]. Shortcut",
+    "rules": ""
+   },
+   "card_text_source": "DSBG-Shuffle image lib/dsbg_shuffle_images/encounters/Dark Resurrection.jpg (community re-creation; enemy and some token icons are blank and are shown as [icon])"
+  }
+ ],
+ [
+  "Tomb of Giants",
+  1,
+  "Deathly Magic",
+  {
+   "1": [
+    "Skeleton Soldier",
+    "Skeleton Soldier",
+    "Necromancer"
+   ],
+   "2": [
+    "Skeleton Soldier",
+    "Skeleton Soldier",
+    "Necromancer"
+   ],
+   "3": [
+    "Skeleton Soldier",
+    "Skeleton Soldier",
+    "Necromancer"
+   ],
+   "4": [
+    "Skeleton Soldier",
+    "Skeleton Soldier",
+    "Necromancer"
+   ]
+  },
+  true,
+  {
+   "enemySlots_by_players": [
+    2,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "slot_groups_1_player_tentative": [
+    {
+     "slot": 0,
+     "label": "tile1_row0",
+     "enemies": [
+      "Skeleton Soldier",
+      "Skeleton Soldier"
+     ]
+    },
+    {
+     "slot": 1,
+     "label": "tile1_row1",
+     "enemies": [
+      "Necromancer"
+     ]
+    }
+   ],
+   "card_text": {
+    "flavour": "The stench of decay assaults your senses as a necromancer steps out of the darkness, teeth bared in a vicious snarl.",
+    "objective": "Kill the [enemy icon].",
+    "rewards": "Souls: +1 Souls. Draw: 1x Event. Refresh: Estus Flask",
+    "rules": "The starting health of the [enemy icon] is [character icon]+5."
+   },
+   "card_text_source": "DSBG-Shuffle image lib/dsbg_shuffle_images/encounters/Deathly Magic.jpg (community re-creation; enemy and some token icons are blank and are shown as [icon])"
+  }
+ ],
+ [
+  "Tomb of Giants",
+  1,
+  "Grave Matters",
+  {
+   "1": [
+    "Skeleton Soldier",
+    "Skeleton Archer",
+    "Skeleton Soldier",
+    "Skeleton Archer"
+   ],
+   "2": [
+    "Skeleton Soldier",
+    "Skeleton Archer",
+    "Skeleton Soldier",
+    "Skeleton Archer"
+   ],
+   "3": [
+    "Skeleton Soldier",
+    "Skeleton Archer",
+    "Skeleton Soldier",
+    "Skeleton Archer"
+   ],
+   "4": [
+    "Skeleton Soldier",
+    "Skeleton Archer",
+    "Skeleton Soldier",
+    "Skeleton Archer"
+   ]
+  },
+  true,
+  {
+   "enemySlots_by_players": [
+    2,
+    2,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "slot_groups_1_player_tentative": [
+    {
+     "slot": 0,
+     "label": "tile1_row0",
+     "enemies": [
+      "Skeleton Soldier",
+      "Skeleton Archer"
+     ]
+    },
+    {
+     "slot": 1,
+     "label": "tile1_row1",
+     "enemies": [
+      "Skeleton Soldier",
+      "Skeleton Archer"
+     ]
+    }
+   ],
+   "card_text": {
+    "flavour": "The dead awaken as you traverse this unhallowed ground, slowly rising from their lonely graves.",
+    "objective": "Kill all enemies.",
+    "rewards": "Souls: +2 Souls. Search: [icon]",
+    "rules": "Enemies skip their first turn."
+   },
+   "card_text_source": "DSBG-Shuffle image lib/dsbg_shuffle_images/encounters/Grave Matters.jpg (community re-creation; enemy and some token icons are blank and are shown as [icon])"
+  }
+ ],
+ [
+  "Tomb of Giants",
+  1,
+  "Last Rites",
+  {
+   "1": [
+    "Skeleton Soldier",
+    "Skeleton Soldier"
+   ],
+   "2": [
+    "Skeleton Soldier",
+    "Skeleton Soldier"
+   ],
+   "3": [
+    "Skeleton Soldier",
+    "Skeleton Soldier"
+   ],
+   "4": [
+    "Skeleton Soldier",
+    "Skeleton Soldier"
+   ]
+  },
+  true,
+  {
+   "enemySlots_by_players": [
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "slot_groups_1_player_tentative": [
+    {
+     "slot": 0,
+     "label": "tile1_row0",
+     "enemies": [
+      "Skeleton Soldier"
+     ]
+    },
+    {
+     "slot": 1,
+     "label": "tile1_row1",
+     "enemies": [
+      "Skeleton Soldier"
+     ]
+    }
+   ],
+   "card_text": {
+    "flavour": "A frail shrine has somehow survived this miserable desolation. It is your charge to protect it now.",
+    "objective": "Survive for [character icon]+2 turns.",
+    "rewards": "Souls: 4 Souls. Draw: 2x Treasure, 1x Event",
+    "rules": "(2) Respawn all enemies.\n\nIf an enemy is adjacent to the node containing the shrine at the start of its turn, it will move onto the shrine. If an enemy moves onto the shrine, the party fails the encounter.\n\nEnemy attacks gain +1 damage."
+   },
+   "card_text_source": "DSBG-Shuffle image lib/dsbg_shuffle_images/encounters/Last Rites.jpg (community re-creation; enemy and some token icons are blank and are shown as [icon])"
+  }
+ ],
+ [
+  "Tomb of Giants",
+  1,
+  "Puppet Master",
+  {
+   "1": [
+    "Giant Skeleton Soldier",
+    "Necromancer"
+   ],
+   "2": [
+    "Giant Skeleton Soldier",
+    "Necromancer"
+   ],
+   "3": [
+    "Giant Skeleton Soldier",
+    "Necromancer"
+   ],
+   "4": [
+    "Giant Skeleton Soldier",
+    "Necromancer"
+   ]
+  },
+  true,
+  {
+   "enemySlots_by_players": [
+    2,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "slot_groups_1_player_tentative": [
+    {
+     "slot": 0,
+     "label": "tile1_row0",
+     "enemies": [
+      "Giant Skeleton Soldier",
+      "Necromancer"
+     ]
+    }
+   ],
+   "card_text": {
+    "flavour": "Vile necromancy has resurrected a powerful foe, and you must sever the blackened tendrils controlling it.",
+    "objective": "Kill the [enemy icon].",
+    "rewards": "Souls: +1 Souls. Search: [icon]. Refresh: Heroic Action",
+    "rules": "[enemy icon] cannot suffer damage."
+   },
+   "card_text_source": "DSBG-Shuffle image lib/dsbg_shuffle_images/encounters/Puppet Master.jpg (community re-creation; enemy and some token icons are blank and are shown as [icon])"
+  }
+ ],
+ [
+  "Tomb of Giants",
+  1,
+  "Rain of Filth",
+  {
+   "1": [
+    "Skeleton Archer",
+    "Skeleton Archer"
+   ],
+   "2": [
+    "Skeleton Archer",
+    "Skeleton Archer"
+   ],
+   "3": [
+    "Skeleton Archer",
+    "Skeleton Archer"
+   ],
+   "4": [
+    "Skeleton Archer",
+    "Skeleton Archer"
+   ]
+  },
+  true,
+  {
+   "enemySlots_by_players": [
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "slot_groups_1_player_tentative": [
+    {
+     "slot": 0,
+     "label": "tile1_row0",
+     "enemies": [
+      "Skeleton Archer"
+     ]
+    },
+    {
+     "slot": 1,
+     "label": "tile1_row1",
+     "enemies": [
+      "Skeleton Archer"
+     ]
+    }
+   ],
+   "card_text": {
+    "flavour": "A hail of rotten arrows is your only welcome to this bleak and lifeless domain.",
+    "objective": "Kill all enemies.",
+    "rewards": "Souls: +2 Souls. Search: [icon]",
+    "rules": "Enemy attacks gain [poison icon]."
+   },
+   "card_text_source": "DSBG-Shuffle image lib/dsbg_shuffle_images/encounters/Rain of Filth.jpg (community re-creation; enemy and some token icons are blank and are shown as [icon])"
+  }
+ ],
+ [
+  "Tomb of Giants",
+  1,
+  "The Beast From the Depths",
+  {
+   "1": [
+    "Skeleton Beast"
+   ],
+   "2": [
+    "Skeleton Beast"
+   ],
+   "3": [
+    "Skeleton Beast"
+   ],
+   "4": [
+    "Skeleton Beast"
+   ]
+  },
+  true,
+  {
+   "enemySlots_by_players": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "slot_groups_1_player_tentative": [
+    {
+     "slot": 0,
+     "label": "tile1_row0",
+     "enemies": [
+      "Skeleton Beast"
+     ]
+    }
+   ],
+   "card_text": {
+    "flavour": "A monstrosity lurches towards you, escaped from the depths below. A fragile relic is trapped in its maw. Can you defeat this foe before the jaws snap down?",
+    "objective": "Kill the [enemy icon].",
+    "rewards": "Souls: +1 Souls. Draw: 1x Treasure. Trial: [icon]",
+    "rules": "[timer icon] (6)\n\nIf [enemy icon] attacks causes 0 damage, the target adds one stamina token to their endurance bar."
+   },
+   "card_text_source": "DSBG-Shuffle image lib/dsbg_shuffle_images/encounters/The Beast From the Depths.jpg (community re-creation; enemy and some token icons are blank and are shown as [icon])"
+  }
+ ],
+ [
+  "Tomb of Giants",
+  2,
+  "Altar of Bones",
+  {
+   "1": [
+    "Skeleton Soldier",
+    "Giant Skeleton Archer",
+    "Skeleton Soldier",
+    "Skeleton Archer",
+    "Giant Skeleton Soldier"
+   ],
+   "2": [
+    "Skeleton Soldier",
+    "Giant Skeleton Archer",
+    "Skeleton Soldier",
+    "Skeleton Archer",
+    "Giant Skeleton Soldier"
+   ],
+   "3": [
+    "Skeleton Soldier",
+    "Giant Skeleton Archer",
+    "Skeleton Soldier",
+    "Skeleton Archer",
+    "Giant Skeleton Soldier"
+   ],
+   "4": [
+    "Skeleton Soldier",
+    "Giant Skeleton Archer",
+    "Skeleton Soldier",
+    "Skeleton Archer",
+    "Giant Skeleton Soldier"
+   ]
+  },
+  true,
+  {
+   "enemySlots_by_players": [
+    1,
+    1,
+    0,
+    0,
+    0,
+    2,
+    1,
+    0,
+    0,
+    0,
+    0
+   ],
+   "slot_groups_1_player_tentative": [
+    {
+     "slot": 0,
+     "label": "tile1_row0",
+     "enemies": [
+      "Skeleton Soldier"
+     ]
+    },
+    {
+     "slot": 1,
+     "label": "tile1_row1",
+     "enemies": [
+      "Giant Skeleton Archer"
+     ]
+    },
+    {
+     "slot": 5,
+     "label": "tile2_row0",
+     "enemies": [
+      "Skeleton Soldier",
+      "Skeleton Archer"
+     ]
+    },
+    {
+     "slot": 6,
+     "label": "tile2_row1",
+     "enemies": [
+      "Giant Skeleton Soldier"
+     ]
+    }
+   ],
+   "card_text": {
+    "flavour": "Only by paying fealty to this grisly altar can you progress, light from above illuminating your sacrifice in harsh relief.",
+    "objective": "Occupy the shrine for [character icon]+2 turns.",
+    "rewards": "Souls: +4 Souls. Draw: 2x Treasure, 1x Event",
+    "rules": "(2) Respawn all enemies.\n\nIf a character ends their turn on the same node they began the turn on, they suffer 1 damage."
+   },
+   "card_text_source": "DSBG-Shuffle image lib/dsbg_shuffle_images/encounters/Altar of Bones.jpg (community re-creation; enemy and some token icons are blank and are shown as [icon])"
+  }
+ ],
+ [
+  "Tomb of Giants",
+  2,
+  "Far From the Sun",
+  {
+   "1": [
+    "Skeleton Soldier",
+    "Giant Skeleton Soldier",
+    "Skeleton Soldier",
+    "Necromancer",
+    "Skeleton Soldier"
+   ],
+   "2": [
+    "Skeleton Soldier",
+    "Giant Skeleton Soldier",
+    "Skeleton Soldier",
+    "Necromancer",
+    "Skeleton Soldier"
+   ],
+   "3": [
+    "Skeleton Soldier",
+    "Giant Skeleton Soldier",
+    "Skeleton Soldier",
+    "Necromancer",
+    "Skeleton Soldier"
+   ],
+   "4": [
+    "Skeleton Soldier",
+    "Giant Skeleton Soldier",
+    "Skeleton Soldier",
+    "Necromancer",
+    "Skeleton Soldier"
+   ]
+  },
+  true,
+  {
+   "enemySlots_by_players": [
+    1,
+    1,
+    0,
+    0,
+    0,
+    1,
+    2,
+    0,
+    0,
+    0,
+    0
+   ],
+   "slot_groups_1_player_tentative": [
+    {
+     "slot": 0,
+     "label": "tile1_row0",
+     "enemies": [
+      "Skeleton Soldier"
+     ]
+    },
+    {
+     "slot": 1,
+     "label": "tile1_row1",
+     "enemies": [
+      "Giant Skeleton Soldier"
+     ]
+    },
+    {
+     "slot": 5,
+     "label": "tile2_row0",
+     "enemies": [
+      "Skeleton Soldier"
+     ]
+    },
+    {
+     "slot": 6,
+     "label": "tile2_row1",
+     "enemies": [
+      "Necromancer",
+      "Skeleton Soldier"
+     ]
+    }
+   ],
+   "card_text": {
+    "flavour": "A small mercy is bestowed upon you in this miserable place, a single flame beating back the sinister shroud of darkness.",
+    "objective": "Kill all enemies.",
+    "rewards": "Souls: 1x Soul per enemy killed. Draw: 1x Treasure, 2x Event",
+    "rules": "If a character makes an attack and is not on the same or an adjacent node to the torch, subtract 1 from the attack's damage total."
+   },
+   "card_text_source": "DSBG-Shuffle image lib/dsbg_shuffle_images/encounters/Far From the Sun.jpg (community re-creation; enemy and some token icons are blank and are shown as [icon])"
+  }
+ ],
+ [
+  "Tomb of Giants",
+  2,
+  "In Deep Water",
+  {
+   "1": [
+    "Giant Skeleton Archer",
+    "Skeleton Soldier",
+    "Skeleton Soldier",
+    "Skeleton Soldier",
+    "Skeleton Archer",
+    "Skeleton Archer"
+   ],
+   "2": [
+    "Giant Skeleton Archer",
+    "Skeleton Soldier",
+    "Skeleton Soldier",
+    "Skeleton Soldier",
+    "Skeleton Archer",
+    "Skeleton Archer"
+   ],
+   "3": [
+    "Giant Skeleton Archer",
+    "Skeleton Soldier",
+    "Skeleton Soldier",
+    "Skeleton Soldier",
+    "Skeleton Archer",
+    "Skeleton Archer"
+   ],
+   "4": [
+    "Giant Skeleton Archer",
+    "Skeleton Soldier",
+    "Skeleton Soldier",
+    "Skeleton Soldier",
+    "Skeleton Archer",
+    "Skeleton Archer"
+   ]
+  },
+  true,
+  {
+   "enemySlots_by_players": [
+    2,
+    2,
+    0,
+    0,
+    2,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "slot_groups_1_player_tentative": [
+    {
+     "slot": 0,
+     "label": "tile1_row0",
+     "enemies": [
+      "Giant Skeleton Archer",
+      "Skeleton Soldier"
+     ]
+    },
+    {
+     "slot": 1,
+     "label": "tile1_row1",
+     "enemies": [
+      "Skeleton Soldier",
+      "Skeleton Soldier"
+     ]
+    },
+    {
+     "slot": 4,
+     "label": "tile1_spawn",
+     "enemies": [
+      "Skeleton Archer",
+      "Skeleton Archer"
+     ]
+    }
+   ],
+   "card_text": {
+    "flavour": "The fetid waters have risen to waist height, forcing you to wade, yet the stench is the least of your concerns, as skeletal limbs and rusted weapons break the surface.",
+    "objective": "Survive for [character icon]+3 turns.",
+    "rewards": "Souls: 8 Souls. Search: [icon]. Draw: 1x Event",
+    "rules": "(3) Spawn a [enemy icon] on [enemy spawn node 1 icon] and a [enemy icon] on [enemy spawn node 2 icon].\n\nCharacters must spend 1 stamina if they make their normal movement during their turn. Running is unaffected."
+   },
+   "card_text_source": "DSBG-Shuffle image lib/dsbg_shuffle_images/encounters/In Deep Water.jpg (community re-creation; enemy and some token icons are blank and are shown as [icon])"
+  }
+ ],
+ [
+  "Tomb of Giants",
+  2,
+  "Lost Chapel",
+  {
+   "1": [
+    "Skeleton Soldier",
+    "Skeleton Soldier",
+    "Necromancer",
+    "Skeleton Archer",
+    "Skeleton Archer",
+    "Necromancer",
+    "Skeleton Soldier",
+    "Skeleton Beast"
+   ],
+   "2": [
+    "Skeleton Soldier",
+    "Skeleton Soldier",
+    "Necromancer",
+    "Skeleton Archer",
+    "Skeleton Archer",
+    "Necromancer",
+    "Skeleton Soldier",
+    "Skeleton Beast"
+   ],
+   "3": [
+    "Skeleton Soldier",
+    "Skeleton Soldier",
+    "Necromancer",
+    "Skeleton Archer",
+    "Skeleton Archer",
+    "Necromancer",
+    "Skeleton Soldier",
+    "Skeleton Beast"
+   ],
+   "4": [
+    "Skeleton Soldier",
+    "Skeleton Soldier",
+    "Necromancer",
+    "Skeleton Archer",
+    "Skeleton Archer",
+    "Necromancer",
+    "Skeleton Soldier",
+    "Skeleton Beast"
+   ]
+  },
+  true,
+  {
+   "enemySlots_by_players": [
+    2,
+    1,
+    0,
+    0,
+    0,
+    3,
+    1,
+    0,
+    1,
+    0,
+    0
+   ],
+   "slot_groups_1_player_tentative": [
+    {
+     "slot": 0,
+     "label": "tile1_row0",
+     "enemies": [
+      "Skeleton Soldier",
+      "Skeleton Soldier"
+     ]
+    },
+    {
+     "slot": 1,
+     "label": "tile1_row1",
+     "enemies": [
+      "Necromancer"
+     ]
+    },
+    {
+     "slot": 5,
+     "label": "tile2_row0",
+     "enemies": [
+      "Skeleton Archer",
+      "Skeleton Archer",
+      "Necromancer"
+     ]
+    },
+    {
+     "slot": 6,
+     "label": "tile2_row1",
+     "enemies": [
+      "Skeleton Soldier"
+     ]
+    },
+    {
+     "slot": 8,
+     "label": "tile3_row0",
+     "enemies": [
+      "Skeleton Beast"
+     ]
+    }
+   ],
+   "card_text": {
+    "flavour": "Warm light offers salvation, yet the fiends lurking in the shadows respect not your sanctuary. Secure your surroundings before you dare rest.",
+    "objective": "Reach the exit node.",
+    "rewards": "Souls: +2 Souls. Draw: 2x Event. Shortcut",
+    "rules": "Characters can only leave a tile if there are no enemies on it."
+   },
+   "card_text_source": "DSBG-Shuffle image lib/dsbg_shuffle_images/encounters/Lost Chapel.jpg (community re-creation; enemy and some token icons are blank and are shown as [icon])"
+  }
+ ],
+ [
+  "Tomb of Giants",
+  2,
+  "Maze of the Dead",
+  {
+   "1": [
+    "Skeleton Soldier",
+    "Necromancer",
+    "Skeleton Beast",
+    "Skeleton Archer",
+    "Skeleton Soldier",
+    "Skeleton Soldier"
+   ],
+   "2": [
+    "Skeleton Soldier",
+    "Necromancer",
+    "Skeleton Beast",
+    "Skeleton Archer",
+    "Skeleton Soldier",
+    "Skeleton Soldier"
+   ],
+   "3": [
+    "Skeleton Soldier",
+    "Necromancer",
+    "Skeleton Beast",
+    "Skeleton Archer",
+    "Skeleton Soldier",
+    "Skeleton Soldier"
+   ],
+   "4": [
+    "Skeleton Soldier",
+    "Necromancer",
+    "Skeleton Beast",
+    "Skeleton Archer",
+    "Skeleton Soldier",
+    "Skeleton Soldier"
+   ]
+  },
+  true,
+  {
+   "enemySlots_by_players": [
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    1,
+    2,
+    0
+   ],
+   "slot_groups_1_player_tentative": [
+    {
+     "slot": 0,
+     "label": "tile1_row0",
+     "enemies": [
+      "Skeleton Soldier"
+     ]
+    },
+    {
+     "slot": 1,
+     "label": "tile1_row1",
+     "enemies": [
+      "Necromancer"
+     ]
+    },
+    {
+     "slot": 6,
+     "label": "tile2_row1",
+     "enemies": [
+      "Skeleton Beast"
+     ]
+    },
+    {
+     "slot": 8,
+     "label": "tile3_row0",
+     "enemies": [
+      "Skeleton Archer"
+     ]
+    },
+    {
+     "slot": 9,
+     "label": "tile3_row1",
+     "enemies": [
+      "Skeleton Soldier",
+      "Skeleton Soldier"
+     ]
+    }
+   ],
+   "card_text": {
+    "flavour": "These burial chambers are narrow and close, foes lurching from hidden alcoves to attack, before disappearing from sight once more.",
+    "objective": "Activate all levers.",
+    "rewards": "Souls: +2 Souls. Draw: 1x Event. Shortcut",
+    "rules": "Reduce the node model limit to two.\n\nEnemies gain +1 dodge difficulty."
+   },
+   "card_text_source": "DSBG-Shuffle image lib/dsbg_shuffle_images/encounters/Maze of the Dead.jpg (community re-creation; enemy and some token icons are blank and are shown as [icon])"
+  }
+ ],
+ [
+  "Tomb of Giants",
+  2,
+  "Pitch Black",
+  {
+   "1": [
+    "Skeleton Archer",
+    "Necromancer",
+    "Skeleton Soldier",
+    "Skeleton Soldier",
+    "Skeleton Soldier",
+    "Necromancer"
+   ],
+   "2": [
+    "Skeleton Archer",
+    "Necromancer",
+    "Skeleton Soldier",
+    "Skeleton Soldier",
+    "Skeleton Soldier",
+    "Necromancer"
+   ],
+   "3": [
+    "Skeleton Archer",
+    "Necromancer",
+    "Skeleton Soldier",
+    "Skeleton Soldier",
+    "Skeleton Soldier",
+    "Necromancer"
+   ],
+   "4": [
+    "Skeleton Archer",
+    "Necromancer",
+    "Skeleton Soldier",
+    "Skeleton Soldier",
+    "Skeleton Soldier",
+    "Necromancer"
+   ]
+  },
+  true,
+  {
+   "enemySlots_by_players": [
+    2,
+    1,
+    0,
+    0,
+    0,
+    2,
+    1,
+    0,
+    0,
+    0,
+    0
+   ],
+   "slot_groups_1_player_tentative": [
+    {
+     "slot": 0,
+     "label": "tile1_row0",
+     "enemies": [
+      "Skeleton Archer",
+      "Necromancer"
+     ]
+    },
+    {
+     "slot": 1,
+     "label": "tile1_row1",
+     "enemies": [
+      "Skeleton Soldier"
+     ]
+    },
+    {
+     "slot": 5,
+     "label": "tile2_row0",
+     "enemies": [
+      "Skeleton Soldier",
+      "Skeleton Soldier"
+     ]
+    },
+    {
+     "slot": 6,
+     "label": "tile2_row1",
+     "enemies": [
+      "Necromancer"
+     ]
+    }
+   ],
+   "card_text": {
+    "flavour": "These are sewers most foul. Carrion rats gnaw at your ankles, and corpse gas stains the air, causing you to choke.",
+    "objective": "Kill the [enemy icon] that starts on tile 1 and the [enemy icon] that starts on tile 2.",
+    "rewards": "Souls: +2 Souls. Draw: 1x Event. Refresh: Estus Flask",
+    "rules": "At the end of each character turn, that character suffers 1 damage."
+   },
+   "card_text_source": "DSBG-Shuffle image lib/dsbg_shuffle_images/encounters/Pitch Black.jpg (community re-creation; enemy and some token icons are blank and are shown as [icon])"
+  }
+ ],
+ [
+  "Tomb of Giants",
+  2,
+  "The Abandoned Chest",
+  {
+   "1": [
+    "Skeleton Soldier",
+    "Skeleton Soldier",
+    "Skeleton Archer",
+    "Necromancer",
+    "Giant Skeleton Soldier",
+    "Giant Skeleton Archer"
+   ],
+   "2": [
+    "Skeleton Soldier",
+    "Skeleton Soldier",
+    "Skeleton Archer",
+    "Necromancer",
+    "Giant Skeleton Soldier",
+    "Giant Skeleton Archer"
+   ],
+   "3": [
+    "Skeleton Soldier",
+    "Skeleton Soldier",
+    "Skeleton Archer",
+    "Necromancer",
+    "Giant Skeleton Soldier",
+    "Giant Skeleton Archer"
+   ],
+   "4": [
+    "Skeleton Soldier",
+    "Skeleton Soldier",
+    "Skeleton Archer",
+    "Necromancer",
+    "Giant Skeleton Soldier",
+    "Giant Skeleton Archer"
+   ]
+  },
+  true,
+  {
+   "enemySlots_by_players": [
+    2,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    2,
+    0,
+    0,
+    0
+   ],
+   "slot_groups_1_player_tentative": [
+    {
+     "slot": 0,
+     "label": "tile1_row0",
+     "enemies": [
+      "Skeleton Soldier",
+      "Skeleton Soldier"
+     ]
+    },
+    {
+     "slot": 5,
+     "label": "tile2_row0",
+     "enemies": [
+      "Skeleton Archer"
+     ]
+    },
+    {
+     "slot": 6,
+     "label": "tile2_row1",
+     "enemies": [
+      "Necromancer"
+     ]
+    },
+    {
+     "slot": 7,
+     "label": "tile2_spawn",
+     "enemies": [
+      "Giant Skeleton Soldier",
+      "Giant Skeleton Archer"
+     ]
+    }
+   ],
+   "card_text": {
+    "flavour": "A once grand chest, gilded with tarnished gold, awaits. But so too do your enemies, adversaries that have guarded this treasure for centuries untold.",
+    "objective": "Open the chest. Kill all enemies.",
+    "rewards": "Souls: +4 Souls. Search: [icon]. Draw: 1x Event",
+    "rules": "When the chest is opened, spawn a [enemy icon] and a [enemy icon] on the enemy spawn node closest to the chest."
+   },
+   "card_text_source": "DSBG-Shuffle image lib/dsbg_shuffle_images/encounters/The Abandoned Chest.jpg (community re-creation; enemy and some token icons are blank and are shown as [icon])"
+  }
+ ],
+ [
+  "Tomb of Giants",
+  2,
+  "The Mass Grave",
+  {
+   "1": [
+    "Giant Skeleton Soldier",
+    "Skeleton Soldier",
+    "Skeleton Soldier",
+    "Giant Skeleton Soldier"
+   ],
+   "2": [
+    "Giant Skeleton Soldier",
+    "Skeleton Soldier",
+    "Skeleton Soldier",
+    "Giant Skeleton Soldier"
+   ],
+   "3": [
+    "Giant Skeleton Soldier",
+    "Skeleton Soldier",
+    "Skeleton Soldier",
+    "Giant Skeleton Soldier"
+   ],
+   "4": [
+    "Giant Skeleton Soldier",
+    "Skeleton Soldier",
+    "Skeleton Soldier",
+    "Giant Skeleton Soldier"
+   ]
+  },
+  true,
+  {
+   "enemySlots_by_players": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    2,
+    1,
+    0,
+    0,
+    0,
+    0
+   ],
+   "slot_groups_1_player_tentative": [
+    {
+     "slot": 0,
+     "label": "tile1_row0",
+     "enemies": [
+      "Giant Skeleton Soldier"
+     ]
+    },
+    {
+     "slot": 5,
+     "label": "tile2_row0",
+     "enemies": [
+      "Skeleton Soldier",
+      "Skeleton Soldier"
+     ]
+    },
+    {
+     "slot": 6,
+     "label": "tile2_row1",
+     "enemies": [
+      "Giant Skeleton Soldier"
+     ]
+    }
+   ],
+   "card_text": {
+    "flavour": "A moment of respite is snatched from you, as a gate ahead opens, and a tide of undead foes spills forth!",
+    "objective": "Activate the lever. Kill all enemies.",
+    "rewards": "Souls: +2 Souls per respawn. Draw: 1x Event. Shortcut",
+    "rules": "(3) Respawn all enemies on Tile 2.\n(6) Respawn all enemies on Tile 2.\n(9) Respawn all enemies on Tile 2.\nCharacters cannot be placed on tile 2. Remove tile 2 when the lever is activated.\n\nEnemies gain +1 movement during their turn."
+   },
+   "card_text_source": "DSBG-Shuffle image lib/dsbg_shuffle_images/encounters/The Mass Grave.jpg (community re-creation; enemy and some token icons are blank and are shown as [icon])"
+  }
+ ],
+ [
+  "Tomb of Giants",
+  2,
+  "Urns of the Fallen",
+  {
+   "1": [
+    "Skeleton Archer",
+    "Skeleton Soldier",
+    "Skeleton Soldier",
+    "Skeleton Archer",
+    "Skeleton Soldier"
+   ],
+   "2": [
+    "Skeleton Archer",
+    "Skeleton Soldier",
+    "Skeleton Soldier",
+    "Skeleton Archer",
+    "Skeleton Soldier"
+   ],
+   "3": [
+    "Skeleton Archer",
+    "Skeleton Soldier",
+    "Skeleton Soldier",
+    "Skeleton Archer",
+    "Skeleton Soldier"
+   ],
+   "4": [
+    "Skeleton Archer",
+    "Skeleton Soldier",
+    "Skeleton Soldier",
+    "Skeleton Archer",
+    "Skeleton Soldier"
+   ]
+  },
+  true,
+  {
+   "enemySlots_by_players": [
+    2,
+    1,
+    0,
+    0,
+    0,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0
+   ],
+   "slot_groups_1_player_tentative": [
+    {
+     "slot": 0,
+     "label": "tile1_row0",
+     "enemies": [
+      "Skeleton Archer",
+      "Skeleton Soldier"
+     ]
+    },
+    {
+     "slot": 1,
+     "label": "tile1_row1",
+     "enemies": [
+      "Skeleton Soldier"
+     ]
+    },
+    {
+     "slot": 5,
+     "label": "tile2_row0",
+     "enemies": [
+      "Skeleton Archer"
+     ]
+    },
+    {
+     "slot": 6,
+     "label": "tile2_row1",
+     "enemies": [
+      "Skeleton Soldier"
+     ]
+    }
+   ],
+   "card_text": {
+    "flavour": "Rows of cursed urns line the chambers ahead, undead wardens bound to each as eternal guardians.",
+    "objective": "Kill all enemies.",
+    "rewards": "Souls: +2 Souls. Search: [icon]. Draw: 1x Event",
+    "rules": "Enemies add +1 to their block and resist values for each barrel on their tile."
+   },
+   "card_text_source": "DSBG-Shuffle image lib/dsbg_shuffle_images/encounters/Urns of the Fallen.jpg (community re-creation; enemy and some token icons are blank and are shown as [icon])"
+  }
+ ],
+ [
+  "Tomb of Giants",
+  3,
+  "A Trusty Ally",
+  {
+   "1": [
+    "Skeleton Archer",
+    "Skeleton Soldier",
+    "Skeleton Archer",
+    "Giant Skeleton Soldier",
+    "Skeleton Soldier",
+    "Skeleton Soldier",
+    "Skeleton Beast"
+   ],
+   "2": [
+    "Skeleton Archer",
+    "Skeleton Soldier",
+    "Skeleton Archer",
+    "Giant Skeleton Soldier",
+    "Skeleton Soldier",
+    "Skeleton Soldier",
+    "Skeleton Beast"
+   ],
+   "3": [
+    "Skeleton Archer",
+    "Skeleton Soldier",
+    "Skeleton Archer",
+    "Giant Skeleton Soldier",
+    "Skeleton Soldier",
+    "Skeleton Soldier",
+    "Skeleton Beast"
+   ],
+   "4": [
+    "Skeleton Archer",
+    "Skeleton Soldier",
+    "Skeleton Archer",
+    "Giant Skeleton Soldier",
+    "Skeleton Soldier",
+    "Skeleton Soldier",
+    "Skeleton Beast"
+   ]
+  },
+  true,
+  {
+   "enemySlots_by_players": [
+    2,
+    2,
+    0,
+    0,
+    0,
+    2,
+    1,
+    0,
+    0,
+    0,
+    0
+   ],
+   "slot_groups_1_player_tentative": [
+    {
+     "slot": 0,
+     "label": "tile1_row0",
+     "enemies": [
+      "Skeleton Archer",
+      "Skeleton Soldier"
+     ]
+    },
+    {
+     "slot": 1,
+     "label": "tile1_row1",
+     "enemies": [
+      "Skeleton Archer",
+      "Giant Skeleton Soldier"
+     ]
+    },
+    {
+     "slot": 5,
+     "label": "tile2_row0",
+     "enemies": [
+      "Skeleton Soldier",
+      "Skeleton Soldier"
+     ]
+    },
+    {
+     "slot": 6,
+     "label": "tile2_row1",
+     "enemies": [
+      "Skeleton Beast"
+     ]
+    }
+   ],
+   "card_text": {
+    "flavour": "An odd figure leads you quietly through the depths, until eventually reaching a cliff-edge. As you peer down, a kick sends you plummeting into the pit...",
+    "objective": "Survive for [character icon]+4 turns.",
+    "rewards": "Souls: +4 Souls. Draw: 2x Treasure",
+    "rules": "Characters begin the encounter suffering the Stagger condition.\n\nCharacters cannot move onto tile two."
+   },
+   "card_text_source": "DSBG-Shuffle image lib/dsbg_shuffle_images/encounters/A Trusty Ally.jpg (community re-creation; enemy and some token icons are blank and are shown as [icon])"
+  }
+ ],
+ [
+  "Tomb of Giants",
+  3,
+  "Death's Precipice",
+  {
+   "1": [
+    "Skeleton Archer",
+    "Skeleton Soldier",
+    "Skeleton Soldier",
+    "Giant Skeleton Archer",
+    "Giant Skeleton Soldier",
+    "Giant Skeleton Archer",
+    "Giant Skeleton Soldier",
+    "Skeleton Beast"
+   ],
+   "2": [
+    "Skeleton Archer",
+    "Skeleton Soldier",
+    "Skeleton Soldier",
+    "Giant Skeleton Archer",
+    "Giant Skeleton Soldier",
+    "Giant Skeleton Archer",
+    "Giant Skeleton Soldier",
+    "Skeleton Beast"
+   ],
+   "3": [
+    "Skeleton Archer",
+    "Skeleton Soldier",
+    "Skeleton Soldier",
+    "Giant Skeleton Archer",
+    "Giant Skeleton Soldier",
+    "Giant Skeleton Archer",
+    "Giant Skeleton Soldier",
+    "Skeleton Beast"
+   ],
+   "4": [
+    "Skeleton Archer",
+    "Skeleton Soldier",
+    "Skeleton Soldier",
+    "Giant Skeleton Archer",
+    "Giant Skeleton Soldier",
+    "Giant Skeleton Archer",
+    "Giant Skeleton Soldier",
+    "Skeleton Beast"
+   ]
+  },
+  true,
+  {
+   "enemySlots_by_players": [
+    1,
+    2,
+    0,
+    0,
+    0,
+    1,
+    1,
+    0,
+    1,
+    2,
+    0
+   ],
+   "slot_groups_1_player_tentative": [
+    {
+     "slot": 0,
+     "label": "tile1_row0",
+     "enemies": [
+      "Skeleton Archer"
+     ]
+    },
+    {
+     "slot": 1,
+     "label": "tile1_row1",
+     "enemies": [
+      "Skeleton Soldier",
+      "Skeleton Soldier"
+     ]
+    },
+    {
+     "slot": 5,
+     "label": "tile2_row0",
+     "enemies": [
+      "Giant Skeleton Archer"
+     ]
+    },
+    {
+     "slot": 6,
+     "label": "tile2_row1",
+     "enemies": [
+      "Giant Skeleton Soldier"
+     ]
+    },
+    {
+     "slot": 8,
+     "label": "tile3_row0",
+     "enemies": [
+      "Giant Skeleton Archer"
+     ]
+    },
+    {
+     "slot": 9,
+     "label": "tile3_row1",
+     "enemies": [
+      "Giant Skeleton Soldier",
+      "Skeleton Beast"
+     ]
+    }
+   ],
+   "card_text": {
+    "flavour": "At last the threshold of the Gravelord's lair is within sight, but you must carefully navigate a series of narrow ledges leading to it.",
+    "objective": "Kill all enemies.",
+    "rewards": "Souls: +8 Souls. Draw: 2x Treasure. Search: Ember",
+    "rules": "Reduce the node model limit to two.\nCharacters can only leave a tile if there are no enemies on it.\nEnemy attacks gain [push icon]."
+   },
+   "card_text_source": "DSBG-Shuffle image lib/dsbg_shuffle_images/encounters/Death's Precipice.jpg (community re-creation; enemy and some token icons are blank and are shown as [icon])"
+  }
+ ],
+ [
+  "Tomb of Giants",
+  3,
+  "Giant's Coffin",
+  {
+   "1": [
+    "Giant Skeleton Soldier",
+    "Giant Skeleton Archer",
+    "Giant Skeleton Soldier",
+    "Giant Skeleton Archer",
+    "Giant Skeleton Archer",
+    "Giant Skeleton Soldier"
+   ],
+   "2": [
+    "Giant Skeleton Soldier",
+    "Giant Skeleton Archer",
+    "Giant Skeleton Soldier",
+    "Giant Skeleton Archer",
+    "Giant Skeleton Archer",
+    "Giant Skeleton Soldier"
+   ],
+   "3": [
+    "Giant Skeleton Soldier",
+    "Giant Skeleton Archer",
+    "Giant Skeleton Soldier",
+    "Giant Skeleton Archer",
+    "Giant Skeleton Archer",
+    "Giant Skeleton Soldier"
+   ],
+   "4": [
+    "Giant Skeleton Soldier",
+    "Giant Skeleton Archer",
+    "Giant Skeleton Soldier",
+    "Giant Skeleton Archer",
+    "Giant Skeleton Archer",
+    "Giant Skeleton Soldier"
+   ]
+  },
+  true,
+  {
+   "enemySlots_by_players": [
+    1,
+    1,
+    0,
+    0,
+    0,
+    1,
+    1,
+    2,
+    0,
+    0,
+    0
+   ],
+   "slot_groups_1_player_tentative": [
+    {
+     "slot": 0,
+     "label": "tile1_row0",
+     "enemies": [
+      "Giant Skeleton Soldier"
+     ]
+    },
+    {
+     "slot": 1,
+     "label": "tile1_row1",
+     "enemies": [
+      "Giant Skeleton Archer"
+     ]
+    },
+    {
+     "slot": 5,
+     "label": "tile2_row0",
+     "enemies": [
+      "Giant Skeleton Soldier"
+     ]
+    },
+    {
+     "slot": 6,
+     "label": "tile2_row1",
+     "enemies": [
+      "Giant Skeleton Archer"
+     ]
+    },
+    {
+     "slot": 7,
+     "label": "tile2_spawn",
+     "enemies": [
+      "Giant Skeleton Archer",
+      "Giant Skeleton Soldier"
+     ]
+    }
+   ],
+   "card_text": {
+    "flavour": "Huge coffins lie scattered where the light does not reach, forsaken creatures standing an unholy vigil upon them.",
+    "objective": "Kill all enemies.",
+    "rewards": "Souls: +3 Souls. Draw: 1x Event. Trial: [icon]",
+    "rules": "[timer icon] (7)\n(2) Spawn a [enemy icon] and [enemy icon] on tile 2, [enemy icon] on [enemy spawn node 1 icon].\nIf there are enemies on their tile, characters must spend 1 stamina if they move during their turn."
+   },
+   "card_text_source": "DSBG-Shuffle image lib/dsbg_shuffle_images/encounters/Giant's Coffin.jpg (community re-creation; enemy and some token icons are blank and are shown as [icon])"
+  }
+ ],
+ [
+  "Tomb of Giants",
+  3,
+  "Gravelord Nito Setup",
+  {
+   "1": [
+    "Skeleton Soldier",
+    "Skeleton Soldier",
+    "Giant Skeleton Soldier"
+   ],
+   "2": [
+    "Skeleton Soldier",
+    "Skeleton Soldier",
+    "Giant Skeleton Soldier"
+   ],
+   "3": [
+    "Skeleton Soldier",
+    "Skeleton Soldier",
+    "Giant Skeleton Soldier"
+   ],
+   "4": [
+    "Skeleton Soldier",
+    "Skeleton Soldier",
+    "Giant Skeleton Soldier"
+   ]
+  },
+  true,
+  {
+   "enemySlots_by_players": [
+    3,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "slot_groups_1_player_tentative": [
+    {
+     "slot": 0,
+     "label": "tile1_row0",
+     "enemies": [
+      "Skeleton Soldier",
+      "Skeleton Soldier",
+      "Giant Skeleton Soldier"
+     ]
+    }
+   ],
+   "card_text": {
+    "flavour": "The ground rumbles as the Gravelord emerges, his presence a challenge to thoes who disturb his unhallowed court.",
+    "objective": "Kill Gravelord Nito.",
+    "rewards": "You have completed the campaign!",
+    "rules": ""
+   },
+   "card_text_source": "DSBG-Shuffle image lib/dsbg_shuffle_images/encounters/Gravelord Nito Setup.jpg (community re-creation; enemy and some token icons are blank and are shown as [icon])"
+  }
+ ],
+ [
+  "Tomb of Giants",
+  3,
+  "Honour Guard",
+  {
+   "1": [
+    "Skeleton Soldier",
+    "Skeleton Archer",
+    "Skeleton Soldier",
+    "Skeleton Soldier",
+    "Skeleton Archer"
+   ],
+   "2": [
+    "Skeleton Soldier",
+    "Skeleton Archer",
+    "Skeleton Soldier",
+    "Skeleton Soldier",
+    "Skeleton Archer"
+   ],
+   "3": [
+    "Skeleton Soldier",
+    "Skeleton Archer",
+    "Skeleton Soldier",
+    "Skeleton Soldier",
+    "Skeleton Archer"
+   ],
+   "4": [
+    "Skeleton Soldier",
+    "Skeleton Archer",
+    "Skeleton Soldier",
+    "Skeleton Soldier",
+    "Skeleton Archer"
+   ]
+  },
+  true,
+  {
+   "enemySlots_by_players": [
+    2,
+    3,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "slot_groups_1_player_tentative": [
+    {
+     "slot": 0,
+     "label": "tile1_row0",
+     "enemies": [
+      "Skeleton Soldier",
+      "Skeleton Archer"
+     ]
+    },
+    {
+     "slot": 1,
+     "label": "tile1_row1",
+     "enemies": [
+      "Skeleton Soldier",
+      "Skeleton Soldier",
+      "Skeleton Archer"
+     ]
+    }
+   ],
+   "card_text": {
+    "flavour": "You have stumbled upon an ancient cairn, resting place of warriors once powerful in life, and undiminished in death.",
+    "objective": "Kill all enemies.",
+    "rewards": "Souls: +5 Souls. Refresh: Luck",
+    "rules": "Enemy attacks gain +1 damage.\n\nWhen a character makes an attack, roll a dodge die before rolling for the attack. If the result is a dodge symbol, the attack misses, then the target is placed in an adjacent node."
+   },
+   "card_text_source": "DSBG-Shuffle image lib/dsbg_shuffle_images/encounters/Honour Guard.jpg (community re-creation; enemy and some token icons are blank and are shown as [icon])"
+  }
+ ],
+ [
+  "Tomb of Giants",
+  3,
+  "Lakeview Refuge",
+  {
+   "1": [
+    "Necromancer",
+    "Skeleton Soldier",
+    "Skeleton Soldier",
+    "Skeleton Archer",
+    "Skeleton Archer",
+    "Necromancer",
+    "Giant Skeleton Archer",
+    "Giant Skeleton Soldier",
+    "Skeleton Beast",
+    "Skeleton Soldier"
+   ],
+   "2": [
+    "Necromancer",
+    "Skeleton Soldier",
+    "Skeleton Soldier",
+    "Skeleton Archer",
+    "Skeleton Archer",
+    "Necromancer",
+    "Giant Skeleton Archer",
+    "Giant Skeleton Soldier",
+    "Skeleton Beast",
+    "Skeleton Soldier",
+    "Skeleton Soldier"
+   ],
+   "3": [
+    "Necromancer",
+    "Skeleton Soldier",
+    "Skeleton Soldier",
+    "Skeleton Archer",
+    "Skeleton Archer",
+    "Necromancer",
+    "Giant Skeleton Archer",
+    "Giant Skeleton Soldier",
+    "Skeleton Beast",
+    "Skeleton Soldier",
+    "Skeleton Soldier",
+    "Skeleton Soldier"
+   ],
+   "4": [
+    "Necromancer",
+    "Skeleton Soldier",
+    "Skeleton Soldier",
+    "Skeleton Archer",
+    "Skeleton Archer",
+    "Necromancer",
+    "Giant Skeleton Archer",
+    "Giant Skeleton Soldier",
+    "Skeleton Beast",
+    "Skeleton Soldier",
+    "Skeleton Soldier",
+    "Skeleton Soldier",
+    "Skeleton Soldier"
+   ]
+  },
+  false,
+  {
+   "enemySlots_by_players": {
+    "1": [
+     1,
+     2,
+     0,
+     0,
+     0,
+     1,
+     1,
+     1,
+     1,
+     2,
+     1
+    ],
+    "2": [
+     1,
+     2,
+     0,
+     0,
+     0,
+     1,
+     1,
+     2,
+     1,
+     2,
+     1
+    ],
+    "3": [
+     1,
+     2,
+     0,
+     0,
+     0,
+     1,
+     1,
+     3,
+     1,
+     2,
+     1
+    ],
+    "4": [
+     1,
+     2,
+     0,
+     0,
+     0,
+     1,
+     1,
+     4,
+     1,
+     2,
+     1
+    ]
+   },
+   "slot_groups_1_player_tentative": [
+    {
+     "slot": 0,
+     "label": "tile1_row0",
+     "enemies": [
+      "Necromancer"
+     ]
+    },
+    {
+     "slot": 1,
+     "label": "tile1_row1",
+     "enemies": [
+      "Skeleton Soldier",
+      "Skeleton Soldier"
+     ]
+    },
+    {
+     "slot": 5,
+     "label": "tile2_row0",
+     "enemies": [
+      "Skeleton Archer"
+     ]
+    },
+    {
+     "slot": 6,
+     "label": "tile2_row1",
+     "enemies": [
+      "Skeleton Archer"
+     ]
+    },
+    {
+     "slot": 7,
+     "label": "tile2_spawn",
+     "enemies": [
+      "Necromancer"
+     ]
+    },
+    {
+     "slot": 8,
+     "label": "tile3_row0",
+     "enemies": [
+      "Giant Skeleton Archer"
+     ]
+    },
+    {
+     "slot": 9,
+     "label": "tile3_row1",
+     "enemies": [
+      "Giant Skeleton Soldier",
+      "Skeleton Beast"
+     ]
+    },
+    {
+     "slot": 10,
+     "label": "tile3_spawn",
+     "enemies": [
+      "Skeleton Soldier"
+     ]
+    }
+   ],
+   "card_text": {
+    "flavour": "A forgotten shrine watches over the Lake of Ash. A dangerous place yes, but worth your time to ignite the shrine once more.",
+    "objective": "Place the torch on the shrine node.",
+    "rewards": "Souls: 8 Souls. Draw: 2x Treasure. Trial: 6 Souls",
+    "rules": "(Kill the [enemy icon])\nThe first time a character is placed on the same node as a torch token, spawn [enemy icon] on [enemy spawn node 1 icon] on tile three, and the following enemies on tile two, on [enemy spawn node 2 icon]: [list of enemy icons not shown in the cropped image area; see notes]"
+   },
+   "card_text_source": "DSBG-Shuffle image lib/dsbg_shuffle_images/encounters/Lakeview Refuge.jpg (community re-creation; enemy and some token icons are blank and are shown as [icon])"
+  }
+ ],
+ [
+  "Tomb of Giants",
+  3,
+  "Last Shred of Light",
+  {
+   "1": [
+    "Skeleton Beast",
+    "Skeleton Soldier",
+    "Skeleton Archer",
+    "Giant Skeleton Archer"
+   ],
+   "2": [
+    "Skeleton Beast",
+    "Skeleton Soldier",
+    "Skeleton Archer",
+    "Giant Skeleton Archer"
+   ],
+   "3": [
+    "Skeleton Beast",
+    "Skeleton Soldier",
+    "Skeleton Archer",
+    "Giant Skeleton Archer"
+   ],
+   "4": [
+    "Skeleton Beast",
+    "Skeleton Soldier",
+    "Skeleton Archer",
+    "Giant Skeleton Archer"
+   ]
+  },
+  true,
+  {
+   "enemySlots_by_players": [
+    2,
+    1,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "slot_groups_1_player_tentative": [
+    {
+     "slot": 0,
+     "label": "tile1_row0",
+     "enemies": [
+      "Skeleton Beast",
+      "Skeleton Soldier"
+     ]
+    },
+    {
+     "slot": 1,
+     "label": "tile1_row1",
+     "enemies": [
+      "Skeleton Archer"
+     ]
+    },
+    {
+     "slot": 5,
+     "label": "tile2_row0",
+     "enemies": [
+      "Giant Skeleton Archer"
+     ]
+    }
+   ],
+   "card_text": {
+    "flavour": "Your torch sputters and dies, waning in the face of the deathly energies of this place. Find a refuge before you too are lost to the darkness.",
+    "objective": "Activate the lever three times.",
+    "rewards": "Souls: 10 Souls. Draw: 2x Treasure. Shortcut",
+    "rules": "The lever can only be activated when the torch is on the same or an adjacent node. When the lever is activated, respawn tile 2 enemies."
+   },
+   "card_text_source": "DSBG-Shuffle image lib/dsbg_shuffle_images/encounters/Last Shred of Light.jpg (community re-creation; enemy and some token icons are blank and are shown as [icon])"
+  }
+ ],
+ [
+  "Tomb of Giants",
+  3,
+  "Skeleton Overlord",
+  {
+   "1": [
+    "Giant Skeleton Soldier",
+    "Skeleton Soldier",
+    "Skeleton Soldier"
+   ],
+   "2": [
+    "Giant Skeleton Soldier",
+    "Skeleton Soldier",
+    "Skeleton Soldier"
+   ],
+   "3": [
+    "Giant Skeleton Soldier",
+    "Skeleton Soldier",
+    "Skeleton Soldier"
+   ],
+   "4": [
+    "Giant Skeleton Soldier",
+    "Skeleton Soldier",
+    "Skeleton Soldier"
+   ]
+  },
+  true,
+  {
+   "enemySlots_by_players": [
+    1,
+    0,
+    0,
+    0,
+    2,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "slot_groups_1_player_tentative": [
+    {
+     "slot": 0,
+     "label": "tile1_row0",
+     "enemies": [
+      "Giant Skeleton Soldier"
+     ]
+    },
+    {
+     "slot": 4,
+     "label": "tile1_spawn",
+     "enemies": [
+      "Skeleton Soldier",
+      "Skeleton Soldier"
+     ]
+    }
+   ],
+   "card_text": {
+    "flavour": "An immense skeletal foe emerges from the gloom, a retinue of bound soldiers chasing in its footsteps.",
+    "objective": "Kill the [enemy icon].",
+    "rewards": "Souls: +3 Souls. Draw: 2x Treasure, 1x Event",
+    "rules": "(2) Spawn [enemy icon] on [enemy spawn node 1 icon] and [enemy icon] on [enemy spawn node 2 icon], then reset the timer track.\n\nDouble the starting health of the [enemy icon], and increase its armour and resistance values by +1. Each time a [enemy icon] or [enemy icon] is killed, the [enemy icon] suffers 1 damage."
+   },
+   "card_text_source": "DSBG-Shuffle image lib/dsbg_shuffle_images/encounters/Skeleton Overlord.jpg (community re-creation; enemy and some token icons are blank and are shown as [icon])"
+  }
+ ],
+ [
+  "Tomb of Giants",
+  3,
+  "The Locked Grave",
+  {
+   "1": [
+    "Giant Skeleton Archer",
+    "Skeleton Soldier",
+    "Giant Skeleton Soldier",
+    "Necromancer",
+    "Giant Skeleton Archer",
+    "Skeleton Archer",
+    "Skeleton Archer",
+    "Skeleton Beast"
+   ],
+   "2": [
+    "Giant Skeleton Archer",
+    "Skeleton Soldier",
+    "Giant Skeleton Soldier",
+    "Necromancer",
+    "Giant Skeleton Archer",
+    "Skeleton Archer",
+    "Skeleton Archer",
+    "Skeleton Beast"
+   ],
+   "3": [
+    "Giant Skeleton Archer",
+    "Skeleton Soldier",
+    "Giant Skeleton Soldier",
+    "Necromancer",
+    "Giant Skeleton Archer",
+    "Skeleton Archer",
+    "Skeleton Archer",
+    "Skeleton Beast"
+   ],
+   "4": [
+    "Giant Skeleton Archer",
+    "Skeleton Soldier",
+    "Giant Skeleton Soldier",
+    "Necromancer",
+    "Giant Skeleton Archer",
+    "Skeleton Archer",
+    "Skeleton Archer",
+    "Skeleton Beast"
+   ]
+  },
+  true,
+  {
+   "enemySlots_by_players": [
+    1,
+    1,
+    0,
+    0,
+    0,
+    1,
+    1,
+    0,
+    1,
+    2,
+    1
+   ],
+   "slot_groups_1_player_tentative": [
+    {
+     "slot": 0,
+     "label": "tile1_row0",
+     "enemies": [
+      "Giant Skeleton Archer"
+     ]
+    },
+    {
+     "slot": 1,
+     "label": "tile1_row1",
+     "enemies": [
+      "Skeleton Soldier"
+     ]
+    },
+    {
+     "slot": 5,
+     "label": "tile2_row0",
+     "enemies": [
+      "Giant Skeleton Soldier"
+     ]
+    },
+    {
+     "slot": 6,
+     "label": "tile2_row1",
+     "enemies": [
+      "Necromancer"
+     ]
+    },
+    {
+     "slot": 8,
+     "label": "tile3_row0",
+     "enemies": [
+      "Giant Skeleton Archer"
+     ]
+    },
+    {
+     "slot": 9,
+     "label": "tile3_row1",
+     "enemies": [
+      "Skeleton Archer",
+      "Skeleton Archer"
+     ]
+    },
+    {
+     "slot": 10,
+     "label": "tile3_spawn",
+     "enemies": [
+      "Skeleton Beast"
+     ]
+    }
+   ],
+   "card_text": {
+    "flavour": "The passage ahead ends in a stout door, sealed by ancient lock, but where there is a lock there must also be a key...",
+    "objective": "Open all chests.",
+    "rewards": "Souls: 2x Souls per enemy killed. Draw: 1x Event. Trial: [icon]. Refresh: Estus Flask",
+    "rules": "(Kill the [enemy icon])\nIf the lever is activated, spawn a [enemy icon] on tile 3, on the closest enemy spawn node to the character."
+   },
+   "card_text_source": "DSBG-Shuffle image lib/dsbg_shuffle_images/encounters/The Locked Grave.jpg (community re-creation; enemy and some token icons are blank and are shown as [icon])"
+  }
+ ],
+ [
+  "Tomb of Giants",
+  3,
+  "The Skeleton Ball",
+  {
+   "1": [
+    "Necromancer",
+    "Giant Skeleton Archer",
+    "Skeleton Archer",
+    "Giant Skeleton Soldier",
+    "Giant Skeleton Archer",
+    "Necromancer",
+    "Skeleton Soldier",
+    "Skeleton Soldier"
+   ],
+   "2": [
+    "Necromancer",
+    "Giant Skeleton Archer",
+    "Skeleton Archer",
+    "Giant Skeleton Soldier",
+    "Giant Skeleton Archer",
+    "Necromancer",
+    "Skeleton Soldier",
+    "Skeleton Soldier"
+   ],
+   "3": [
+    "Necromancer",
+    "Giant Skeleton Archer",
+    "Skeleton Archer",
+    "Giant Skeleton Soldier",
+    "Giant Skeleton Archer",
+    "Necromancer",
+    "Skeleton Soldier",
+    "Skeleton Soldier"
+   ],
+   "4": [
+    "Necromancer",
+    "Giant Skeleton Archer",
+    "Skeleton Archer",
+    "Giant Skeleton Soldier",
+    "Giant Skeleton Archer",
+    "Necromancer",
+    "Skeleton Soldier",
+    "Skeleton Soldier"
+   ]
+  },
+  true,
+  {
+   "enemySlots_by_players": [
+    1,
+    1,
+    0,
+    0,
+    0,
+    1,
+    1,
+    0,
+    1,
+    3,
+    0
+   ],
+   "slot_groups_1_player_tentative": [
+    {
+     "slot": 0,
+     "label": "tile1_row0",
+     "enemies": [
+      "Necromancer"
+     ]
+    },
+    {
+     "slot": 1,
+     "label": "tile1_row1",
+     "enemies": [
+      "Giant Skeleton Archer"
+     ]
+    },
+    {
+     "slot": 5,
+     "label": "tile2_row0",
+     "enemies": [
+      "Skeleton Archer"
+     ]
+    },
+    {
+     "slot": 6,
+     "label": "tile2_row1",
+     "enemies": [
+      "Giant Skeleton Soldier"
+     ]
+    },
+    {
+     "slot": 8,
+     "label": "tile3_row0",
+     "enemies": [
+      "Giant Skeleton Archer"
+     ]
+    },
+    {
+     "slot": 9,
+     "label": "tile3_row1",
+     "enemies": [
+      "Necromancer",
+      "Skeleton Soldier",
+      "Skeleton Soldier"
+     ]
+    }
+   ],
+   "card_text": {
+    "flavour": "A bizarre sphere of reanimated bones rolls through these depths, smashing asunder all in its path.",
+    "objective": "Kill the [enemy icon] that starts on tile 1 and the [enemy icon] that starts on tile 3.",
+    "rewards": "Souls: +8 Souls. Search: [icon]. Shortcut",
+    "rules": "At the end of each enemy turn, move the skeleton ball token three nodes in the direction of the arrow. If the token hits a wall, flip the token so that the arrow faces the opposite direction.\n\nModels cannot move onto a node containing the skeleton ball. If the token moves onto a node containing one or more models, each model is pushed to an adjacent node and suffers 2 damage."
+   },
+   "card_text_source": "DSBG-Shuffle image lib/dsbg_shuffle_images/encounters/The Skeleton Ball.jpg (community re-creation; enemy and some token icons are blank and are shown as [icon])"
+  }
+ ],
+ [
+  "The Executioner's Chariot",
+  1,
+  "Quiet Graveyard",
+  {
+   "1": [
+    "Falchion Skeleton",
+    "Silver Knight Greatbowman",
+    "Hollow Soldier"
+   ],
+   "2": [
+    "Falchion Skeleton",
+    "Silver Knight Greatbowman",
+    "Hollow Soldier"
+   ],
+   "3": [
+    "Falchion Skeleton",
+    "Silver Knight Greatbowman",
+    "Hollow Soldier"
+   ],
+   "4": [
+    "Falchion Skeleton",
+    "Silver Knight Greatbowman",
+    "Hollow Soldier"
+   ]
+  },
+  true,
+  {
+   "enemySlots_by_players": [
+    2,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "slot_groups_1_player_tentative": [
+    {
+     "slot": 0,
+     "label": "tile1_row0",
+     "enemies": [
+      "Falchion Skeleton",
+      "Silver Knight Greatbowman"
+     ]
+    },
+    {
+     "slot": 1,
+     "label": "tile1_row1",
+     "enemies": [
+      "Hollow Soldier"
+     ]
+    }
+   ],
+   "card_text": null,
+   "card_text_source": "Only the enemy-placement face is in the repository image; objective/rules face not available",
+   "terrain_from_image": "barrel, chest (two purple terrain-node rows, in order)"
+  }
+ ],
+ [
+  "The Executioner's Chariot",
+  1,
+  "Silent Pathway",
+  {
+   "1": [
+    "Falchion Skeleton",
+    "Hollow Soldier",
+    "Crossbow Hollow"
+   ],
+   "2": [
+    "Falchion Skeleton",
+    "Hollow Soldier",
+    "Crossbow Hollow"
+   ],
+   "3": [
+    "Falchion Skeleton",
+    "Hollow Soldier",
+    "Crossbow Hollow"
+   ],
+   "4": [
+    "Falchion Skeleton",
+    "Hollow Soldier",
+    "Crossbow Hollow"
+   ]
+  },
+  true,
+  {
+   "enemySlots_by_players": [
+    1,
+    2,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "slot_groups_1_player_tentative": [
+    {
+     "slot": 0,
+     "label": "tile1_row0",
+     "enemies": [
+      "Falchion Skeleton"
+     ]
+    },
+    {
+     "slot": 1,
+     "label": "tile1_row1",
+     "enemies": [
+      "Hollow Soldier",
+      "Crossbow Hollow"
+     ]
+    }
+   ],
+   "card_text": null,
+   "card_text_source": "Only the enemy-placement face is in the repository image; objective/rules face not available",
+   "terrain_from_image": "gravestone, barrel (two purple terrain-node rows, in order)"
+  }
+ ],
+ [
+  "The Executioner's Chariot",
+  2,
+  "Mausoleum Ruins",
+  {
+   "1": [
+    "Large Hollow Soldier",
+    "Falchion Skeleton",
+    "Crossbow Hollow",
+    "Crossbow Hollow"
+   ],
+   "2": [
+    "Large Hollow Soldier",
+    "Falchion Skeleton",
+    "Crossbow Hollow",
+    "Crossbow Hollow"
+   ],
+   "3": [
+    "Large Hollow Soldier",
+    "Falchion Skeleton",
+    "Crossbow Hollow",
+    "Crossbow Hollow"
+   ],
+   "4": [
+    "Large Hollow Soldier",
+    "Falchion Skeleton",
+    "Crossbow Hollow",
+    "Crossbow Hollow"
+   ]
+  },
+  true,
+  {
+   "enemySlots_by_players": [
+    1,
+    3,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "slot_groups_1_player_tentative": [
+    {
+     "slot": 0,
+     "label": "tile1_row0",
+     "enemies": [
+      "Large Hollow Soldier"
+     ]
+    },
+    {
+     "slot": 1,
+     "label": "tile1_row1",
+     "enemies": [
+      "Falchion Skeleton",
+      "Crossbow Hollow",
+      "Crossbow Hollow"
+     ]
+    }
+   ],
+   "card_text": null,
+   "card_text_source": "Only the enemy-placement face is in the repository image; objective/rules face not available",
+   "terrain_from_image": "barrel, gravestone (two purple terrain-node rows, in order)"
+  }
+ ],
+ [
+  "The Executioner's Chariot",
+  2,
+  "Misty Burial Site",
+  {
+   "1": [
+    "Crossbow Hollow",
+    "Silver Knight Swordsman",
+    "Hollow Soldier",
+    "Falchion Skeleton"
+   ],
+   "2": [
+    "Crossbow Hollow",
+    "Silver Knight Swordsman",
+    "Hollow Soldier",
+    "Falchion Skeleton"
+   ],
+   "3": [
+    "Crossbow Hollow",
+    "Silver Knight Swordsman",
+    "Hollow Soldier",
+    "Falchion Skeleton"
+   ],
+   "4": [
+    "Crossbow Hollow",
+    "Silver Knight Swordsman",
+    "Hollow Soldier",
+    "Falchion Skeleton"
+   ]
+  },
+  true,
+  {
+   "enemySlots_by_players": [
+    2,
+    2,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "slot_groups_1_player_tentative": [
+    {
+     "slot": 0,
+     "label": "tile1_row0",
+     "enemies": [
+      "Crossbow Hollow",
+      "Silver Knight Swordsman"
+     ]
+    },
+    {
+     "slot": 1,
+     "label": "tile1_row1",
+     "enemies": [
+      "Hollow Soldier",
+      "Falchion Skeleton"
+     ]
+    }
+   ],
+   "card_text": null,
+   "card_text_source": "Only the enemy-placement face is in the repository image; objective/rules face not available",
+   "terrain_from_image": "(blank), chest (two purple terrain-node rows, in order)"
+  }
+ ],
+ [
+  "The Executioner's Chariot",
+  3,
+  "Corrupted Crypt",
+  {
+   "1": [
+    "Falchion Skeleton",
+    "Black Hollow Mage",
+    "Large Hollow Soldier",
+    "Crossbow Hollow"
+   ],
+   "2": [
+    "Falchion Skeleton",
+    "Black Hollow Mage",
+    "Large Hollow Soldier",
+    "Crossbow Hollow"
+   ],
+   "3": [
+    "Falchion Skeleton",
+    "Black Hollow Mage",
+    "Large Hollow Soldier",
+    "Crossbow Hollow"
+   ],
+   "4": [
+    "Falchion Skeleton",
+    "Black Hollow Mage",
+    "Large Hollow Soldier",
+    "Crossbow Hollow"
+   ]
+  },
+  true,
+  {
+   "enemySlots_by_players": [
+    2,
+    2,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "slot_groups_1_player_tentative": [
+    {
+     "slot": 0,
+     "label": "tile1_row0",
+     "enemies": [
+      "Falchion Skeleton",
+      "Black Hollow Mage"
+     ]
+    },
+    {
+     "slot": 1,
+     "label": "tile1_row1",
+     "enemies": [
+      "Large Hollow Soldier",
+      "Crossbow Hollow"
+     ]
+    }
+   ],
+   "card_text": null,
+   "card_text_source": "Only the enemy-placement face is in the repository image; objective/rules face not available",
+   "terrain_from_image": "gravestone, (blank) (two purple terrain-node rows, in order)"
+  }
+ ],
+ [
+  "The Executioner's Chariot",
+  3,
+  "Desolate Cemetery",
+  {
+   "1": [
+    "Falchion Skeleton",
+    "Silver Knight Greatbowman",
+    "Falchion Skeleton",
+    "Black Hollow Mage"
+   ],
+   "2": [
+    "Falchion Skeleton",
+    "Silver Knight Greatbowman",
+    "Falchion Skeleton",
+    "Black Hollow Mage"
+   ],
+   "3": [
+    "Falchion Skeleton",
+    "Silver Knight Greatbowman",
+    "Falchion Skeleton",
+    "Black Hollow Mage"
+   ],
+   "4": [
+    "Falchion Skeleton",
+    "Silver Knight Greatbowman",
+    "Falchion Skeleton",
+    "Black Hollow Mage"
+   ]
+  },
+  true,
+  {
+   "enemySlots_by_players": [
+    2,
+    2,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "slot_groups_1_player_tentative": [
+    {
+     "slot": 0,
+     "label": "tile1_row0",
+     "enemies": [
+      "Falchion Skeleton",
+      "Silver Knight Greatbowman"
+     ]
+    },
+    {
+     "slot": 1,
+     "label": "tile1_row1",
+     "enemies": [
+      "Falchion Skeleton",
+      "Black Hollow Mage"
+     ]
+    }
+   ],
+   "card_text": null,
+   "card_text_source": "Only the enemy-placement face is in the repository image; objective/rules face not available",
+   "terrain_from_image": "chest, gravestone (two purple terrain-node rows, in order)"
+  }
+ ]
+]

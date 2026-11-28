@@ -1,0 +1,5160 @@
+[
+ {
+  "id": "AST-0067.1",
+  "parent": "AST-0067",
+  "name": "2017 enemy icon: Hollow Soldier",
+  "type": "icon",
+  "src": "DS-Core-Rules-lores.pdf",
+  "page": 40,
+  "bbox_pt": [
+   302.5,
+   88.3,
+   325,
+   110.8
+  ],
+  "image_object": null,
+  "method": "pdftoppm 600 dpi render crop → parchment-key alpha (bg (218, 215, 211)) → trimmed to inked bounds",
+  "file": "assets/icons/ast-0067-enemy-icon-2017-hollow-soldier.png",
+  "format": "png",
+  "dims": "172×172 px",
+  "has_alpha": true,
+  "bytes": 31900,
+  "notes": "Source is a flattened 39 px raster (150 ppi) on parchment: the 600 dpi crop is a ×4 upsample, keyed like the 2022 set. Inline size only."
+ },
+ {
+  "id": "AST-0067.2",
+  "parent": "AST-0067",
+  "name": "2017 enemy icon: Crossbow Hollow",
+  "type": "icon",
+  "src": "DS-Core-Rules-lores.pdf",
+  "page": 40,
+  "bbox_pt": [
+   302.5,
+   112.3,
+   325,
+   134.8
+  ],
+  "image_object": null,
+  "method": "pdftoppm 600 dpi render crop → parchment-key alpha (bg (234, 231, 226)) → trimmed to inked bounds",
+  "file": "assets/icons/ast-0067-enemy-icon-2017-crossbow-hollow.png",
+  "format": "png",
+  "dims": "157×172 px",
+  "has_alpha": true,
+  "bytes": 30457,
+  "notes": "Source is a flattened 39 px raster (150 ppi) on parchment: the 600 dpi crop is a ×4 upsample, keyed like the 2022 set. Inline size only."
+ },
+ {
+  "id": "AST-0067.3",
+  "parent": "AST-0067",
+  "name": "2017 enemy icon: Large Hollow Soldier",
+  "type": "icon",
+  "src": "DS-Core-Rules-lores.pdf",
+  "page": 40,
+  "bbox_pt": [
+   302.5,
+   136.3,
+   325,
+   158.8
+  ],
+  "image_object": null,
+  "method": "pdftoppm 600 dpi render crop → parchment-key alpha (bg (241, 238, 233)) → trimmed to inked bounds",
+  "file": "assets/icons/ast-0067-enemy-icon-2017-large-hollow-soldier.png",
+  "format": "png",
+  "dims": "156×153 px",
+  "has_alpha": true,
+  "bytes": 31541,
+  "notes": "Source is a flattened 39 px raster (150 ppi) on parchment: the 600 dpi crop is a ×4 upsample, keyed like the 2022 set. Inline size only."
+ },
+ {
+  "id": "AST-0067.4",
+  "parent": "AST-0067",
+  "name": "2017 enemy icon: Silver Knight Swordsman",
+  "type": "icon",
+  "src": "DS-Core-Rules-lores.pdf",
+  "page": 40,
+  "bbox_pt": [
+   302.5,
+   160.3,
+   325,
+   182.8
+  ],
+  "image_object": null,
+  "method": "pdftoppm 600 dpi render crop → parchment-key alpha (bg (245, 242, 237)) → trimmed to inked bounds",
+  "file": "assets/icons/ast-0067-enemy-icon-2017-silver-knight-swordsman.png",
+  "format": "png",
+  "dims": "156×154 px",
+  "has_alpha": true,
+  "bytes": 31260,
+  "notes": "Source is a flattened 39 px raster (150 ppi) on parchment: the 600 dpi crop is a ×4 upsample, keyed like the 2022 set. Inline size only."
+ },
+ {
+  "id": "AST-0067.5",
+  "parent": "AST-0067",
+  "name": "2017 enemy icon: Silver Knight Greatbowman",
+  "type": "icon",
+  "src": "DS-Core-Rules-lores.pdf",
+  "page": 40,
+  "bbox_pt": [
+   302.5,
+   184.3,
+   325,
+   206.8
+  ],
+  "image_object": null,
+  "method": "pdftoppm 600 dpi render crop → parchment-key alpha (bg (245, 242, 237)) → trimmed to inked bounds",
+  "file": "assets/icons/ast-0067-enemy-icon-2017-silver-knight-greatbowman.png",
+  "format": "png",
+  "dims": "156×153 px",
+  "has_alpha": true,
+  "bytes": 31705,
+  "notes": "Source is a flattened 39 px raster (150 ppi) on parchment: the 600 dpi crop is a ×4 upsample, keyed like the 2022 set. Inline size only."
+ },
+ {
+  "id": "AST-0067.6",
+  "parent": "AST-0067",
+  "name": "2017 enemy icon: Sentinel",
+  "type": "icon",
+  "src": "DS-Core-Rules-lores.pdf",
+  "page": 40,
+  "bbox_pt": [
+   302.5,
+   208.3,
+   325,
+   230.8
+  ],
+  "image_object": null,
+  "method": "pdftoppm 600 dpi render crop → parchment-key alpha (bg (245, 242, 237)) → trimmed to inked bounds",
+  "file": "assets/icons/ast-0067-enemy-icon-2017-sentinel.png",
+  "format": "png",
+  "dims": "156×153 px",
+  "has_alpha": true,
+  "bytes": 32585,
+  "notes": "Source is a flattened 39 px raster (150 ppi) on parchment: the 600 dpi crop is a ×4 upsample, keyed like the 2022 set. Inline size only."
+ },
+ {
+  "id": "AST-0068",
+  "parent": "AST-0068",
+  "name": "Trapped-encounter sword icon (2017 horizontal variant)",
+  "type": "icon",
+  "src": "DS-Core-Rules-lores.pdf",
+  "page": 40,
+  "bbox_pt": [
+   82.7,
+   184.3,
+   130,
+   206.8
+  ],
+  "image_object": null,
+  "method": "pdftoppm 600 dpi render crop → parchment-key alpha (bg (220, 216, 213)) → trimmed to inked bounds",
+  "file": "assets/icons/ast-0068-trapped-encounter-icon-2017.png",
+  "format": "png",
+  "dims": "394×188 px",
+  "has_alpha": true,
+  "bytes": 25836,
+  "notes": "Source is a flattened 91×39 px raster on parchment (×4 upsample, keyed). Reference only: the 2022 three-spear trap icon supersedes it."
+ },
+ {
+  "id": "AST-0069.1",
+  "parent": "AST-0069",
+  "name": "Mini-boss (standard) skull icon",
+  "type": "icon",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 5,
+  "bbox_pt": [
+   60.5,
+   75.0,
+   91.2,
+   105.7
+  ],
+  "image_object": {
+   "xref": 339,
+   "pdfimages_num": 19,
+   "colour": "cmyk",
+   "native": "64×64",
+   "has_mask": true,
+   "smask_pdfimages_num": 20,
+   "ppi_as_placed": 150
+  },
+  "method": "pdfimages -png p.5 image #19 (object 339, 64×64 cmyk) + soft mask #20 composited to RGBA; trimmed to inked bounds (alpha > 12); native resolution",
+  "file": "assets/icons/ast-0069-boss-icon-mini-boss-standard-skull.png",
+  "format": "png",
+  "dims": "63×62 px",
+  "has_alpha": true,
+  "bytes": 10994,
+  "notes": "Native 64 px (150 ppi at its 15 pt printed size): use at inline size only. No larger copy exists as a separate object in any source PDF (searched by image similarity)."
+ },
+ {
+  "id": "AST-0069.2",
+  "parent": "AST-0069",
+  "name": "Main-boss (advanced) crowned skull icon",
+  "type": "icon",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 5,
+  "bbox_pt": [
+   308.5,
+   75.0,
+   339.3,
+   105.7
+  ],
+  "image_object": {
+   "xref": 335,
+   "pdfimages_num": 15,
+   "colour": "cmyk",
+   "native": "64×64",
+   "has_mask": true,
+   "smask_pdfimages_num": 16,
+   "ppi_as_placed": 150
+  },
+  "method": "pdfimages -png p.5 image #15 (object 335, 64×64 cmyk) + soft mask #16 composited to RGBA; trimmed to inked bounds (alpha > 12); native resolution",
+  "file": "assets/icons/ast-0069-boss-icon-main-boss-advanced-crowned-skull.png",
+  "format": "png",
+  "dims": "62×63 px",
+  "has_alpha": true,
+  "bytes": 11474,
+  "notes": "Native 64 px (150 ppi at its 15 pt printed size): use at inline size only. No larger copy exists as a separate object in any source PDF (searched by image similarity)."
+ },
+ {
+  "id": "AST-0070.1",
+  "parent": "AST-0070",
+  "name": "Mega-boss icon: Black Dragon Kalameet (dragon head with red glow)",
+  "type": "icon",
+  "src": "DS-BDK-Rules-web.pdf",
+  "page": 4,
+  "bbox_pt": [
+   37.0,
+   273.0,
+   120.8,
+   367.3
+  ],
+  "image_object": {
+   "xref": 67,
+   "pdfimages_num": 1,
+   "colour": "cmyk",
+   "native": "378×425",
+   "has_mask": true,
+   "smask_pdfimages_num": 2,
+   "ppi_as_placed": 325
+  },
+  "method": "pdfimages -png p.4 image #1 (object 67, 378×425 cmyk) + soft mask #2 composited to RGBA; trimmed to inked bounds (alpha > 12); native resolution",
+  "file": "assets/icons/ast-0070-mega-boss-icon-black-dragon-kalameet.png",
+  "format": "png",
+  "dims": "197×348 px",
+  "has_alpha": true,
+  "bytes": 83874,
+  "notes": "The embedded object beside the Kalameet miniature on the contents page (325 ppi); larger and cleaner than the data-card call-out on p.11."
+ },
+ {
+  "id": "AST-0070.2",
+  "parent": "AST-0070",
+  "name": "Mega-boss icon: Executioner's Chariot (chariot glyph with red glow)",
+  "type": "icon",
+  "src": "DS-EC-Rules-Web.pdf",
+  "page": 4,
+  "bbox_pt": [
+   139.9,
+   290.5,
+   219.7,
+   370.3
+  ],
+  "image_object": {
+   "xref": 88,
+   "pdfimages_num": 11,
+   "colour": "rgb",
+   "native": "167×167",
+   "has_mask": true,
+   "smask_pdfimages_num": 12,
+   "ppi_as_placed": 151
+  },
+  "method": "pdfimages -png p.4 image #11 (object 88, 167×167 rgb) + soft mask #12 composited to RGBA; trimmed to inked bounds (alpha > 12); native resolution",
+  "file": "assets/icons/ast-0070-mega-boss-icon-executioners-chariot.png",
+  "format": "png",
+  "dims": "109×95 px",
+  "has_alpha": true,
+  "bytes": 18376,
+  "notes": ""
+ },
+ {
+  "id": "AST-0071",
+  "parent": "AST-0071",
+  "status": "BLOCKED",
+  "reason": "Only the universal icon exists as a separate image object (extracted as AST-0071.1). The seven expansion set symbols occur only inside the low-resolution card rasters (about 12 to 15 px across), so no print-fit source exists: redraw as vectors or obtain card artwork from the owner.",
+  "file": null
+ },
+ {
+  "id": "AST-0071.1",
+  "parent": "AST-0071",
+  "name": "Universal (all-languages) card icon",
+  "type": "icon",
+  "src": "DS-Darkroot-Rules-web.pdf",
+  "page": 2,
+  "bbox_pt": [
+   109.9,
+   513.6,
+   122.1,
+   525.8
+  ],
+  "image_object": {
+   "xref": 51,
+   "pdfimages_num": 1,
+   "colour": "cmyk",
+   "native": "51×51",
+   "has_mask": true,
+   "smask_pdfimages_num": 2,
+   "ppi_as_placed": 300
+  },
+  "method": "pdfimages -png p.2 image #1 (object 51, 51×51 cmyk) + soft mask #2 composited to RGBA; trimmed to inked bounds (alpha > 12); native resolution",
+  "file": "assets/icons/ast-0071-set-symbol-universal-icon.png",
+  "format": "png",
+  "dims": "51×51 px",
+  "has_alpha": true,
+  "bytes": 3698,
+  "notes": "51 px at 300 ppi (12 pt glyph): inline size only."
+ },
+ {
+  "id": "AST-0072.1",
+  "parent": "AST-0072",
+  "name": "Summon icon: Ruined Aflis (portrait glyph in ring)",
+  "type": "icon",
+  "src": "DS-Phantoms-Rules-lores.pdf",
+  "page": 4,
+  "bbox_pt": [
+   52.7,
+   198.8,
+   102.3,
+   255.2
+  ],
+  "image_object": {
+   "xref": 74,
+   "pdfimages_num": 3,
+   "colour": "cmyk",
+   "native": "207×235",
+   "has_mask": true,
+   "smask_pdfimages_num": 4,
+   "ppi_as_placed": 300
+  },
+  "method": "pdfimages -png p.4 image #3 (object 74, 207×235 cmyk) + soft mask #4 composited to RGBA; trimmed to inked bounds (alpha > 12); native resolution",
+  "file": "assets/icons/ast-0072-phantom-icon-summon-ruined-aflis.png",
+  "format": "png",
+  "dims": "185×188 px",
+  "has_alpha": true,
+  "bytes": 61694,
+  "notes": "Named from the miniature caption it sits beside on the contents page."
+ },
+ {
+  "id": "AST-0072.2",
+  "parent": "AST-0072",
+  "name": "Summon icon: Eygon of Carim (portrait glyph in ring)",
+  "type": "icon",
+  "src": "DS-Phantoms-Rules-lores.pdf",
+  "page": 4,
+  "bbox_pt": [
+   120.8,
+   198.8,
+   170.5,
+   255.2
+  ],
+  "image_object": {
+   "xref": 110,
+   "pdfimages_num": 19,
+   "colour": "cmyk",
+   "native": "207×235",
+   "has_mask": true,
+   "smask_pdfimages_num": 20,
+   "ppi_as_placed": 300
+  },
+  "method": "pdfimages -png p.4 image #19 (object 110, 207×235 cmyk) + soft mask #20 composited to RGBA; trimmed to inked bounds (alpha > 12); native resolution",
+  "file": "assets/icons/ast-0072-phantom-icon-summon-eygon-of-carim.png",
+  "format": "png",
+  "dims": "185×189 px",
+  "has_alpha": true,
+  "bytes": 62555,
+  "notes": "Named from the miniature caption it sits beside on the contents page."
+ },
+ {
+  "id": "AST-0072.3",
+  "parent": "AST-0072",
+  "name": "Summon icon: Horace the Hushed (portrait glyph in ring)",
+  "type": "icon",
+  "src": "DS-Phantoms-Rules-lores.pdf",
+  "page": 4,
+  "bbox_pt": [
+   188.9,
+   198.8,
+   238.6,
+   255.2
+  ],
+  "image_object": {
+   "xref": 106,
+   "pdfimages_num": 15,
+   "colour": "cmyk",
+   "native": "207×235",
+   "has_mask": true,
+   "smask_pdfimages_num": 16,
+   "ppi_as_placed": 300
+  },
+  "method": "pdfimages -png p.4 image #15 (object 106, 207×235 cmyk) + soft mask #16 composited to RGBA; trimmed to inked bounds (alpha > 12); native resolution",
+  "file": "assets/icons/ast-0072-phantom-icon-summon-horace-the-hushed.png",
+  "format": "png",
+  "dims": "185×188 px",
+  "has_alpha": true,
+  "bytes": 56502,
+  "notes": "Named from the miniature caption it sits beside on the contents page."
+ },
+ {
+  "id": "AST-0072.4",
+  "parent": "AST-0072",
+  "name": "Summon icon: Siegward of Catarina (portrait glyph in ring)",
+  "type": "icon",
+  "src": "DS-Phantoms-Rules-lores.pdf",
+  "page": 4,
+  "bbox_pt": [
+   257.1,
+   198.8,
+   306.8,
+   255.2
+  ],
+  "image_object": {
+   "xref": 100,
+   "pdfimages_num": 9,
+   "colour": "cmyk",
+   "native": "207×235",
+   "has_mask": true,
+   "smask_pdfimages_num": 10,
+   "ppi_as_placed": 300
+  },
+  "method": "pdfimages -png p.4 image #9 (object 100, 207×235 cmyk) + soft mask #10 composited to RGBA; trimmed to inked bounds (alpha > 12); native resolution",
+  "file": "assets/icons/ast-0072-phantom-icon-summon-siegward-of-catarina.png",
+  "format": "png",
+  "dims": "185×188 px",
+  "has_alpha": true,
+  "bytes": 48202,
+  "notes": "Named from the miniature caption it sits beside on the contents page."
+ },
+ {
+  "id": "AST-0072.5",
+  "parent": "AST-0072",
+  "name": "Summon icon: Sword Master (portrait glyph in ring)",
+  "type": "icon",
+  "src": "DS-Phantoms-Rules-lores.pdf",
+  "page": 4,
+  "bbox_pt": [
+   325.2,
+   198.8,
+   374.9,
+   255.2
+  ],
+  "image_object": {
+   "xref": 102,
+   "pdfimages_num": 11,
+   "colour": "cmyk",
+   "native": "207×235",
+   "has_mask": true,
+   "smask_pdfimages_num": 12,
+   "ppi_as_placed": 300
+  },
+  "method": "pdfimages -png p.4 image #11 (object 102, 207×235 cmyk) + soft mask #12 composited to RGBA; trimmed to inked bounds (alpha > 12); native resolution",
+  "file": "assets/icons/ast-0072-phantom-icon-summon-sword-master.png",
+  "format": "png",
+  "dims": "185×188 px",
+  "has_alpha": true,
+  "bytes": 62654,
+  "notes": "Named from the miniature caption it sits beside on the contents page."
+ },
+ {
+  "id": "AST-0072.6",
+  "parent": "AST-0072",
+  "name": "Summon icon: Rogue Witch Beatrice (portrait glyph in ring, glowing: advanced tier)",
+  "type": "icon",
+  "src": "DS-Phantoms-Rules-lores.pdf",
+  "page": 4,
+  "bbox_pt": [
+   52.7,
+   383.7,
+   102.3,
+   442.5
+  ],
+  "image_object": {
+   "xref": 72,
+   "pdfimages_num": 1,
+   "colour": "cmyk",
+   "native": "207×245",
+   "has_mask": true,
+   "smask_pdfimages_num": 2,
+   "ppi_as_placed": 300
+  },
+  "method": "pdfimages -png p.4 image #1 (object 72, 207×245 cmyk) + soft mask #2 composited to RGBA; trimmed to inked bounds (alpha > 12); native resolution",
+  "file": "assets/icons/ast-0072-phantom-icon-summon-rogue-witch-beatrice.png",
+  "format": "png",
+  "dims": "200×215 px",
+  "has_alpha": true,
+  "bytes": 61987,
+  "notes": "Named from the miniature caption it sits beside on the contents page."
+ },
+ {
+  "id": "AST-0072.7",
+  "parent": "AST-0072",
+  "name": "Summon icon: Lucatiel of Mirrah (portrait glyph in ring, glowing: advanced tier)",
+  "type": "icon",
+  "src": "DS-Phantoms-Rules-lores.pdf",
+  "page": 4,
+  "bbox_pt": [
+   120.8,
+   383.7,
+   170.5,
+   442.5
+  ],
+  "image_object": {
+   "xref": 108,
+   "pdfimages_num": 17,
+   "colour": "cmyk",
+   "native": "207×245",
+   "has_mask": true,
+   "smask_pdfimages_num": 18,
+   "ppi_as_placed": 300
+  },
+  "method": "pdfimages -png p.4 image #17 (object 108, 207×245 cmyk) + soft mask #18 composited to RGBA; trimmed to inked bounds (alpha > 12); native resolution",
+  "file": "assets/icons/ast-0072-phantom-icon-summon-lucatiel-of-mirrah.png",
+  "format": "png",
+  "dims": "183×229 px",
+  "has_alpha": true,
+  "bytes": 68456,
+  "notes": "Named from the miniature caption it sits beside on the contents page."
+ },
+ {
+  "id": "AST-0072.8",
+  "parent": "AST-0072",
+  "name": "Summon icon: Sellsword Luet (portrait glyph in ring, glowing: advanced tier)",
+  "type": "icon",
+  "src": "DS-Phantoms-Rules-lores.pdf",
+  "page": 4,
+  "bbox_pt": [
+   188.9,
+   383.7,
+   238.6,
+   442.5
+  ],
+  "image_object": {
+   "xref": 104,
+   "pdfimages_num": 13,
+   "colour": "cmyk",
+   "native": "207×245",
+   "has_mask": true,
+   "smask_pdfimages_num": 14,
+   "ppi_as_placed": 300
+  },
+  "method": "pdfimages -png p.4 image #13 (object 104, 207×245 cmyk) + soft mask #14 composited to RGBA; trimmed to inked bounds (alpha > 12); native resolution",
+  "file": "assets/icons/ast-0072-phantom-icon-summon-sellsword-luet.png",
+  "format": "png",
+  "dims": "185×227 px",
+  "has_alpha": true,
+  "bytes": 70919,
+  "notes": "Named from the miniature caption it sits beside on the contents page."
+ },
+ {
+  "id": "AST-0072.9",
+  "parent": "AST-0072",
+  "name": "Summon icon: Sirris of the Sunless Realms (portrait glyph in ring, glowing: advanced tier)",
+  "type": "icon",
+  "src": "DS-Phantoms-Rules-lores.pdf",
+  "page": 4,
+  "bbox_pt": [
+   257.1,
+   383.7,
+   306.8,
+   442.5
+  ],
+  "image_object": {
+   "xref": 98,
+   "pdfimages_num": 7,
+   "colour": "cmyk",
+   "native": "207×245",
+   "has_mask": true,
+   "smask_pdfimages_num": 8,
+   "ppi_as_placed": 300
+  },
+  "method": "pdfimages -png p.4 image #7 (object 98, 207×245 cmyk) + soft mask #8 composited to RGBA; trimmed to inked bounds (alpha > 12); native resolution",
+  "file": "assets/icons/ast-0072-phantom-icon-summon-sirris-of-the-sunless-realms.png",
+  "format": "png",
+  "dims": "185×215 px",
+  "has_alpha": true,
+  "bytes": 74514,
+  "notes": "Named from the miniature caption it sits beside on the contents page."
+ },
+ {
+  "id": "AST-0072.10",
+  "parent": "AST-0072",
+  "name": "Summon icon: Solaire of Astora (portrait glyph in ring, glowing: advanced tier)",
+  "type": "icon",
+  "src": "DS-Phantoms-Rules-lores.pdf",
+  "page": 4,
+  "bbox_pt": [
+   327.5,
+   384.9,
+   372.6,
+   441.3
+  ],
+  "image_object": {
+   "xref": 96,
+   "pdfimages_num": 5,
+   "colour": "cmyk",
+   "native": "207×259",
+   "has_mask": true,
+   "smask_pdfimages_num": 6,
+   "ppi_as_placed": 331
+  },
+  "method": "pdfimages -png p.4 image #5 (object 96, 207×259 cmyk) + soft mask #6 composited to RGBA; trimmed to inked bounds (alpha > 12); native resolution",
+  "file": "assets/icons/ast-0072-phantom-icon-summon-solaire-of-astora.png",
+  "format": "png",
+  "dims": "186×220 px",
+  "has_alpha": true,
+  "bytes": 67458,
+  "notes": "Named from the miniature caption it sits beside on the contents page."
+ },
+ {
+  "id": "AST-0072.11",
+  "parent": "AST-0072",
+  "name": "Invader icon: Kirk, Knight of Thorns (portrait glyph in ring)",
+  "type": "icon",
+  "src": "DS-Phantoms-Rules-lores.pdf",
+  "page": 5,
+  "bbox_pt": [
+   319.5,
+   47.6,
+   369.2,
+   102.4
+  ],
+  "image_object": {
+   "xref": 141,
+   "pdfimages_num": 5,
+   "colour": "cmyk",
+   "native": "207×228",
+   "has_mask": true,
+   "smask_pdfimages_num": 6,
+   "ppi_as_placed": 300
+  },
+  "method": "pdfimages -png p.5 image #5 (object 141, 207×228 cmyk) + soft mask #6 composited to RGBA; trimmed to inked bounds (alpha > 12); native resolution",
+  "file": "assets/icons/ast-0072-phantom-icon-invader-kirk-knight-of-thorns.png",
+  "format": "png",
+  "dims": "185×188 px",
+  "has_alpha": true,
+  "bytes": 63242,
+  "notes": "Named from the miniature caption it sits beside on the contents page."
+ },
+ {
+  "id": "AST-0072.12",
+  "parent": "AST-0072",
+  "name": "Invader icon: Longfinger Kirk (portrait glyph in ring, glowing: advanced tier)",
+  "type": "icon",
+  "src": "DS-Phantoms-Rules-lores.pdf",
+  "page": 5,
+  "bbox_pt": [
+   319.5,
+   107.6,
+   369.2,
+   166.4
+  ],
+  "image_object": {
+   "xref": 149,
+   "pdfimages_num": 7,
+   "colour": "cmyk",
+   "native": "207×245",
+   "has_mask": true,
+   "smask_pdfimages_num": 8,
+   "ppi_as_placed": 300
+  },
+  "method": "pdfimages -png p.5 image #7 (object 149, 207×245 cmyk) + soft mask #8 composited to RGBA; trimmed to inked bounds (alpha > 12); native resolution",
+  "file": "assets/icons/ast-0072-phantom-icon-invader-longfinger-kirk.png",
+  "format": "png",
+  "dims": "185×215 px",
+  "has_alpha": true,
+  "bytes": 69143,
+  "notes": "Named from the miniature caption it sits beside on the contents page."
+ },
+ {
+  "id": "AST-0072.13",
+  "parent": "AST-0072",
+  "name": "Invader icon: Melinda the Butcher (portrait glyph in ring)",
+  "type": "icon",
+  "src": "DS-Phantoms-Rules-lores.pdf",
+  "page": 5,
+  "bbox_pt": [
+   47.0,
+   197.6,
+   96.7,
+   252.4
+  ],
+  "image_object": {
+   "xref": 119,
+   "pdfimages_num": 3,
+   "colour": "cmyk",
+   "native": "207×228",
+   "has_mask": true,
+   "smask_pdfimages_num": 4,
+   "ppi_as_placed": 300
+  },
+  "method": "pdfimages -png p.5 image #3 (object 119, 207×228 cmyk) + soft mask #4 composited to RGBA; trimmed to inked bounds (alpha > 12); native resolution",
+  "file": "assets/icons/ast-0072-phantom-icon-invader-melinda-the-butcher.png",
+  "format": "png",
+  "dims": "186×195 px",
+  "has_alpha": true,
+  "bytes": 59985,
+  "notes": "Named from the miniature caption it sits beside on the contents page."
+ },
+ {
+  "id": "AST-0072.14",
+  "parent": "AST-0072",
+  "name": "Invader icon: Maldron the Assassin (portrait glyph in ring)",
+  "type": "icon",
+  "src": "DS-Phantoms-Rules-lores.pdf",
+  "page": 5,
+  "bbox_pt": [
+   115.2,
+   197.6,
+   164.8,
+   252.4
+  ],
+  "image_object": {
+   "xref": 121,
+   "pdfimages_num": 21,
+   "colour": "cmyk",
+   "native": "207×228",
+   "has_mask": true,
+   "smask_pdfimages_num": 22,
+   "ppi_as_placed": 300
+  },
+  "method": "pdfimages -png p.5 image #21 (object 121, 207×228 cmyk) + soft mask #22 composited to RGBA; trimmed to inked bounds (alpha > 12); native resolution",
+  "file": "assets/icons/ast-0072-phantom-icon-invader-maldron-the-assassin.png",
+  "format": "png",
+  "dims": "185×188 px",
+  "has_alpha": true,
+  "bytes": 69988,
+  "notes": "Named from the miniature caption it sits beside on the contents page."
+ },
+ {
+  "id": "AST-0072.15",
+  "parent": "AST-0072",
+  "name": "Invader icon: Maneater Mildred (portrait glyph in ring)",
+  "type": "icon",
+  "src": "DS-Phantoms-Rules-lores.pdf",
+  "page": 5,
+  "bbox_pt": [
+   183.3,
+   197.6,
+   233.0,
+   252.4
+  ],
+  "image_object": {
+   "xref": 159,
+   "pdfimages_num": 17,
+   "colour": "cmyk",
+   "native": "207×228",
+   "has_mask": true,
+   "smask_pdfimages_num": 18,
+   "ppi_as_placed": 300
+  },
+  "method": "pdfimages -png p.5 image #17 (object 159, 207×228 cmyk) + soft mask #18 composited to RGBA; trimmed to inked bounds (alpha > 12); native resolution",
+  "file": "assets/icons/ast-0072-phantom-icon-invader-maneater-mildred.png",
+  "format": "png",
+  "dims": "185×188 px",
+  "has_alpha": true,
+  "bytes": 59090,
+  "notes": "Named from the miniature caption it sits beside on the contents page."
+ },
+ {
+  "id": "AST-0072.16",
+  "parent": "AST-0072",
+  "name": "Invader icon: Xanthous King Jeremiah (portrait glyph in ring)",
+  "type": "icon",
+  "src": "DS-Phantoms-Rules-lores.pdf",
+  "page": 5,
+  "bbox_pt": [
+   267.9,
+   197.6,
+   317.6,
+   252.4
+  ],
+  "image_object": {
+   "xref": 145,
+   "pdfimages_num": 43,
+   "colour": "cmyk",
+   "native": "207×228",
+   "has_mask": true,
+   "smask_pdfimages_num": 44,
+   "ppi_as_placed": 300
+  },
+  "method": "pdfimages -png p.5 image #43 (object 145, 207×228 cmyk) + soft mask #44 composited to RGBA; trimmed to inked bounds (alpha > 12); native resolution",
+  "file": "assets/icons/ast-0072-phantom-icon-invader-xanthous-king-jeremiah.png",
+  "format": "png",
+  "dims": "185×204 px",
+  "has_alpha": true,
+  "bytes": 65905,
+  "notes": "Named from the miniature caption it sits beside on the contents page."
+ },
+ {
+  "id": "AST-0072.17",
+  "parent": "AST-0072",
+  "name": "Invader icon: Oliver the Collector (portrait glyph in ring)",
+  "type": "icon",
+  "src": "DS-Phantoms-Rules-lores.pdf",
+  "page": 5,
+  "bbox_pt": [
+   319.6,
+   197.6,
+   369.3,
+   252.4
+  ],
+  "image_object": {
+   "xref": 155,
+   "pdfimages_num": 13,
+   "colour": "cmyk",
+   "native": "207×228",
+   "has_mask": true,
+   "smask_pdfimages_num": 14,
+   "ppi_as_placed": 300
+  },
+  "method": "pdfimages -png p.5 image #13 (object 155, 207×228 cmyk) + soft mask #14 composited to RGBA; trimmed to inked bounds (alpha > 12); native resolution",
+  "file": "assets/icons/ast-0072-phantom-icon-invader-oliver-the-collector.png",
+  "format": "png",
+  "dims": "185×188 px",
+  "has_alpha": true,
+  "bytes": 63532,
+  "notes": "Named from the miniature caption it sits beside on the contents page."
+ },
+ {
+  "id": "AST-0072.18",
+  "parent": "AST-0072",
+  "name": "Invader icon: Armorer Dennis (portrait glyph in ring, glowing: advanced tier)",
+  "type": "icon",
+  "src": "DS-Phantoms-Rules-lores.pdf",
+  "page": 5,
+  "bbox_pt": [
+   47.0,
+   383.7,
+   96.7,
+   442.5
+  ],
+  "image_object": {
+   "xref": 117,
+   "pdfimages_num": 1,
+   "colour": "cmyk",
+   "native": "207×245",
+   "has_mask": true,
+   "smask_pdfimages_num": 2,
+   "ppi_as_placed": 300
+  },
+  "method": "pdfimages -png p.5 image #1 (object 117, 207×245 cmyk) + soft mask #2 composited to RGBA; trimmed to inked bounds (alpha > 12); native resolution",
+  "file": "assets/icons/ast-0072-phantom-icon-invader-armorer-dennis.png",
+  "format": "png",
+  "dims": "184×228 px",
+  "has_alpha": true,
+  "bytes": 67430,
+  "notes": "Named from the miniature caption it sits beside on the contents page."
+ },
+ {
+  "id": "AST-0072.19",
+  "parent": "AST-0072",
+  "name": "Invader icon: Marvelous Chester (portrait glyph in ring, glowing: advanced tier)",
+  "type": "icon",
+  "src": "DS-Phantoms-Rules-lores.pdf",
+  "page": 5,
+  "bbox_pt": [
+   115.2,
+   383.7,
+   164.8,
+   442.5
+  ],
+  "image_object": {
+   "xref": 161,
+   "pdfimages_num": 19,
+   "colour": "cmyk",
+   "native": "207×245",
+   "has_mask": true,
+   "smask_pdfimages_num": 20,
+   "ppi_as_placed": 300
+  },
+  "method": "pdfimages -png p.5 image #19 (object 161, 207×245 cmyk) + soft mask #20 composited to RGBA; trimmed to inked bounds (alpha > 12); native resolution",
+  "file": "assets/icons/ast-0072-phantom-icon-invader-marvelous-chester.png",
+  "format": "png",
+  "dims": "185×218 px",
+  "has_alpha": true,
+  "bytes": 63679,
+  "notes": "Named from the miniature caption it sits beside on the contents page."
+ },
+ {
+  "id": "AST-0072.20",
+  "parent": "AST-0072",
+  "name": "Invader icon: Invader Brylex (portrait glyph in ring, glowing: advanced tier)",
+  "type": "icon",
+  "src": "DS-Phantoms-Rules-lores.pdf",
+  "page": 5,
+  "bbox_pt": [
+   183.3,
+   383.7,
+   233.0,
+   442.5
+  ],
+  "image_object": {
+   "xref": 157,
+   "pdfimages_num": 15,
+   "colour": "cmyk",
+   "native": "207×245",
+   "has_mask": true,
+   "smask_pdfimages_num": 16,
+   "ppi_as_placed": 300
+  },
+  "method": "pdfimages -png p.5 image #15 (object 157, 207×245 cmyk) + soft mask #16 composited to RGBA; trimmed to inked bounds (alpha > 12); native resolution",
+  "file": "assets/icons/ast-0072-phantom-icon-invader-invader-brylex.png",
+  "format": "png",
+  "dims": "186×234 px",
+  "has_alpha": true,
+  "bytes": 65859,
+  "notes": "Named from the miniature caption it sits beside on the contents page."
+ },
+ {
+  "id": "AST-0072.21",
+  "parent": "AST-0072",
+  "name": "Invader icon: Paladin Leeroy (portrait glyph in ring, glowing: advanced tier)",
+  "type": "icon",
+  "src": "DS-Phantoms-Rules-lores.pdf",
+  "page": 5,
+  "bbox_pt": [
+   251.5,
+   383.7,
+   301.1,
+   442.5
+  ],
+  "image_object": {
+   "xref": 153,
+   "pdfimages_num": 11,
+   "colour": "cmyk",
+   "native": "207×245",
+   "has_mask": true,
+   "smask_pdfimages_num": 12,
+   "ppi_as_placed": 300
+  },
+  "method": "pdfimages -png p.5 image #11 (object 153, 207×245 cmyk) + soft mask #12 composited to RGBA; trimmed to inked bounds (alpha > 12); native resolution",
+  "file": "assets/icons/ast-0072-phantom-icon-invader-paladin-leeroy.png",
+  "format": "png",
+  "dims": "185×220 px",
+  "has_alpha": true,
+  "bytes": 71528,
+  "notes": "Named from the miniature caption it sits beside on the contents page."
+ },
+ {
+  "id": "AST-0072.22",
+  "parent": "AST-0072",
+  "name": "Invader icon: Fencer Sharron (portrait glyph in ring, glowing: advanced tier)",
+  "type": "icon",
+  "src": "DS-Phantoms-Rules-lores.pdf",
+  "page": 5,
+  "bbox_pt": [
+   310.5,
+   383.7,
+   378.4,
+   442.5
+  ],
+  "image_object": {
+   "xref": 151,
+   "pdfimages_num": 9,
+   "colour": "cmyk",
+   "native": "283×245",
+   "has_mask": true,
+   "smask_pdfimages_num": 10,
+   "ppi_as_placed": 300
+  },
+  "method": "pdfimages -png p.5 image #9 (object 151, 283×245 cmyk) + soft mask #10 composited to RGBA; trimmed to inked bounds (alpha > 12); native resolution",
+  "file": "assets/icons/ast-0072-phantom-icon-invader-fencer-sharron.png",
+  "format": "png",
+  "dims": "260×215 px",
+  "has_alpha": true,
+  "bytes": 72900,
+  "notes": "Named from the miniature caption it sits beside on the contents page."
+ },
+ {
+  "id": "AST-0072.23",
+  "parent": "AST-0072",
+  "name": "Phantom token 01 of the p.10 set-up wheel (dark disc with portrait glyph)",
+  "type": "icon",
+  "src": "DS-Phantoms-Rules-lores.pdf",
+  "page": 10,
+  "bbox_pt": [
+   151.0,
+   267.8,
+   199.0,
+   315.8
+  ],
+  "image_object": {
+   "xref": 299,
+   "pdfimages_num": 17,
+   "colour": "cmyk",
+   "native": "201×201",
+   "has_mask": true,
+   "smask_pdfimages_num": 18,
+   "ppi_as_placed": 302
+  },
+  "method": "pdfimages -png p.10 image #17 (object 299, 201×201 cmyk) + soft mask #18 composited to RGBA; trimmed to inked bounds (alpha > 12); native resolution",
+  "file": "assets/icons/ast-0072-phantom-token-01.png",
+  "format": "png",
+  "dims": "201×201 px",
+  "has_alpha": true,
+  "bytes": 36191,
+  "notes": "Token face from the Game Setup with Invader Encounters diagram; same glyphs as the named portrait icons (unlabelled on the page). The two tokens of that diagram that carry painted art were left out (see Provenance Review)."
+ },
+ {
+  "id": "AST-0072.24",
+  "parent": "AST-0072",
+  "name": "Phantom token 02 of the p.10 set-up wheel (dark disc with portrait glyph)",
+  "type": "icon",
+  "src": "DS-Phantoms-Rules-lores.pdf",
+  "page": 10,
+  "bbox_pt": [
+   229.0,
+   267.8,
+   277.0,
+   315.8
+  ],
+  "image_object": {
+   "xref": 279,
+   "pdfimages_num": 21,
+   "colour": "cmyk",
+   "native": "201×201",
+   "has_mask": true,
+   "smask_pdfimages_num": 22,
+   "ppi_as_placed": 302
+  },
+  "method": "pdfimages -png p.10 image #21 (object 279, 201×201 cmyk) + soft mask #22 composited to RGBA; trimmed to inked bounds (alpha > 12); native resolution",
+  "file": "assets/icons/ast-0072-phantom-token-02.png",
+  "format": "png",
+  "dims": "201×201 px",
+  "has_alpha": true,
+  "bytes": 34327,
+  "notes": "Token face from the Game Setup with Invader Encounters diagram; same glyphs as the named portrait icons (unlabelled on the page). The two tokens of that diagram that carry painted art were left out (see Provenance Review)."
+ },
+ {
+  "id": "AST-0072.25",
+  "parent": "AST-0072",
+  "name": "Phantom token 03 of the p.10 set-up wheel (dark disc with portrait glyph)",
+  "type": "icon",
+  "src": "DS-Phantoms-Rules-lores.pdf",
+  "page": 10,
+  "bbox_pt": [
+   306.9,
+   267.8,
+   354.9,
+   315.8
+  ],
+  "image_object": {
+   "xref": 301,
+   "pdfimages_num": 19,
+   "colour": "cmyk",
+   "native": "201×201",
+   "has_mask": true,
+   "smask_pdfimages_num": 20,
+   "ppi_as_placed": 302
+  },
+  "method": "pdfimages -png p.10 image #19 (object 301, 201×201 cmyk) + soft mask #20 composited to RGBA; trimmed to inked bounds (alpha > 12); native resolution",
+  "file": "assets/icons/ast-0072-phantom-token-03.png",
+  "format": "png",
+  "dims": "201×201 px",
+  "has_alpha": true,
+  "bytes": 38568,
+  "notes": "Token face from the Game Setup with Invader Encounters diagram; same glyphs as the named portrait icons (unlabelled on the page). The two tokens of that diagram that carry painted art were left out (see Provenance Review)."
+ },
+ {
+  "id": "AST-0072.26",
+  "parent": "AST-0072",
+  "name": "Phantom token 04 of the p.10 set-up wheel (dark disc with portrait glyph)",
+  "type": "icon",
+  "src": "DS-Phantoms-Rules-lores.pdf",
+  "page": 10,
+  "bbox_pt": [
+   151.0,
+   339.8,
+   199.0,
+   387.8
+  ],
+  "image_object": {
+   "xref": 281,
+   "pdfimages_num": 23,
+   "colour": "cmyk",
+   "native": "201×201",
+   "has_mask": true,
+   "smask_pdfimages_num": 24,
+   "ppi_as_placed": 302
+  },
+  "method": "pdfimages -png p.10 image #23 (object 281, 201×201 cmyk) + soft mask #24 composited to RGBA; trimmed to inked bounds (alpha > 12); native resolution",
+  "file": "assets/icons/ast-0072-phantom-token-04.png",
+  "format": "png",
+  "dims": "201×201 px",
+  "has_alpha": true,
+  "bytes": 34162,
+  "notes": "Token face from the Game Setup with Invader Encounters diagram; same glyphs as the named portrait icons (unlabelled on the page). The two tokens of that diagram that carry painted art were left out (see Provenance Review)."
+ },
+ {
+  "id": "AST-0072.27",
+  "parent": "AST-0072",
+  "name": "Phantom token 05 of the p.10 set-up wheel (dark disc with portrait glyph)",
+  "type": "icon",
+  "src": "DS-Phantoms-Rules-lores.pdf",
+  "page": 10,
+  "bbox_pt": [
+   229.0,
+   339.8,
+   277.0,
+   387.8
+  ],
+  "image_object": {
+   "xref": 283,
+   "pdfimages_num": 25,
+   "colour": "cmyk",
+   "native": "201×201",
+   "has_mask": true,
+   "smask_pdfimages_num": 26,
+   "ppi_as_placed": 302
+  },
+  "method": "pdfimages -png p.10 image #25 (object 283, 201×201 cmyk) + soft mask #26 composited to RGBA; trimmed to inked bounds (alpha > 12); native resolution",
+  "file": "assets/icons/ast-0072-phantom-token-05.png",
+  "format": "png",
+  "dims": "201×201 px",
+  "has_alpha": true,
+  "bytes": 36417,
+  "notes": "Token face from the Game Setup with Invader Encounters diagram; same glyphs as the named portrait icons (unlabelled on the page). The two tokens of that diagram that carry painted art were left out (see Provenance Review)."
+ },
+ {
+  "id": "AST-0072.28",
+  "parent": "AST-0072",
+  "name": "Phantom token 06 of the p.10 set-up wheel (dark disc with portrait glyph)",
+  "type": "icon",
+  "src": "DS-Phantoms-Rules-lores.pdf",
+  "page": 10,
+  "bbox_pt": [
+   306.9,
+   339.8,
+   354.9,
+   387.8
+  ],
+  "image_object": {
+   "xref": 285,
+   "pdfimages_num": 27,
+   "colour": "cmyk",
+   "native": "201×201",
+   "has_mask": true,
+   "smask_pdfimages_num": 28,
+   "ppi_as_placed": 302
+  },
+  "method": "pdfimages -png p.10 image #27 (object 285, 201×201 cmyk) + soft mask #28 composited to RGBA; trimmed to inked bounds (alpha > 12); native resolution",
+  "file": "assets/icons/ast-0072-phantom-token-06.png",
+  "format": "png",
+  "dims": "201×201 px",
+  "has_alpha": true,
+  "bytes": 37075,
+  "notes": "Token face from the Game Setup with Invader Encounters diagram; same glyphs as the named portrait icons (unlabelled on the page). The two tokens of that diagram that carry painted art were left out (see Provenance Review)."
+ },
+ {
+  "id": "AST-0072.29",
+  "parent": "AST-0072",
+  "name": "Phantom token 07 of the p.10 set-up wheel (dark disc with portrait glyph)",
+  "type": "icon",
+  "src": "DS-Phantoms-Rules-lores.pdf",
+  "page": 10,
+  "bbox_pt": [
+   151.0,
+   411.8,
+   199.0,
+   459.8
+  ],
+  "image_object": {
+   "xref": 293,
+   "pdfimages_num": 11,
+   "colour": "cmyk",
+   "native": "201×201",
+   "has_mask": true,
+   "smask_pdfimages_num": 12,
+   "ppi_as_placed": 302
+  },
+  "method": "pdfimages -png p.10 image #11 (object 293, 201×201 cmyk) + soft mask #12 composited to RGBA; trimmed to inked bounds (alpha > 12); native resolution",
+  "file": "assets/icons/ast-0072-phantom-token-07.png",
+  "format": "png",
+  "dims": "201×201 px",
+  "has_alpha": true,
+  "bytes": 38849,
+  "notes": "Token face from the Game Setup with Invader Encounters diagram; same glyphs as the named portrait icons (unlabelled on the page). The two tokens of that diagram that carry painted art were left out (see Provenance Review)."
+ },
+ {
+  "id": "AST-0072.30",
+  "parent": "AST-0072",
+  "name": "Phantom token 08 of the p.10 set-up wheel (dark disc with portrait glyph)",
+  "type": "icon",
+  "src": "DS-Phantoms-Rules-lores.pdf",
+  "page": 10,
+  "bbox_pt": [
+   229.0,
+   411.8,
+   277.0,
+   459.8
+  ],
+  "image_object": {
+   "xref": 291,
+   "pdfimages_num": 9,
+   "colour": "cmyk",
+   "native": "201×201",
+   "has_mask": true,
+   "smask_pdfimages_num": 10,
+   "ppi_as_placed": 302
+  },
+  "method": "pdfimages -png p.10 image #9 (object 291, 201×201 cmyk) + soft mask #10 composited to RGBA; trimmed to inked bounds (alpha > 12); native resolution",
+  "file": "assets/icons/ast-0072-phantom-token-08.png",
+  "format": "png",
+  "dims": "201×201 px",
+  "has_alpha": true,
+  "bytes": 38106,
+  "notes": "Token face from the Game Setup with Invader Encounters diagram; same glyphs as the named portrait icons (unlabelled on the page). The two tokens of that diagram that carry painted art were left out (see Provenance Review)."
+ },
+ {
+  "id": "AST-0072.31",
+  "parent": "AST-0072",
+  "name": "Phantom token 09 of the p.10 set-up wheel (dark disc with portrait glyph)",
+  "type": "icon",
+  "src": "DS-Phantoms-Rules-lores.pdf",
+  "page": 10,
+  "bbox_pt": [
+   306.9,
+   411.8,
+   354.9,
+   459.8
+  ],
+  "image_object": {
+   "xref": 289,
+   "pdfimages_num": 7,
+   "colour": "cmyk",
+   "native": "201×201",
+   "has_mask": true,
+   "smask_pdfimages_num": 8,
+   "ppi_as_placed": 302
+  },
+  "method": "pdfimages -png p.10 image #7 (object 289, 201×201 cmyk) + soft mask #8 composited to RGBA; trimmed to inked bounds (alpha > 12); native resolution",
+  "file": "assets/icons/ast-0072-phantom-token-09.png",
+  "format": "png",
+  "dims": "201×201 px",
+  "has_alpha": true,
+  "bytes": 36020,
+  "notes": "Token face from the Game Setup with Invader Encounters diagram; same glyphs as the named portrait icons (unlabelled on the page). The two tokens of that diagram that carry painted art were left out (see Provenance Review)."
+ },
+ {
+  "id": "AST-0072.32",
+  "parent": "AST-0072",
+  "name": "Phantom token 10 of the p.10 set-up wheel (dark disc with portrait glyph)",
+  "type": "icon",
+  "src": "DS-Phantoms-Rules-lores.pdf",
+  "page": 10,
+  "bbox_pt": [
+   151.0,
+   483.8,
+   199.0,
+   531.8
+  ],
+  "image_object": {
+   "xref": 287,
+   "pdfimages_num": 5,
+   "colour": "cmyk",
+   "native": "201×201",
+   "has_mask": true,
+   "smask_pdfimages_num": 6,
+   "ppi_as_placed": 302
+  },
+  "method": "pdfimages -png p.10 image #5 (object 287, 201×201 cmyk) + soft mask #6 composited to RGBA; trimmed to inked bounds (alpha > 12); native resolution",
+  "file": "assets/icons/ast-0072-phantom-token-10.png",
+  "format": "png",
+  "dims": "201×201 px",
+  "has_alpha": true,
+  "bytes": 36889,
+  "notes": "Token face from the Game Setup with Invader Encounters diagram; same glyphs as the named portrait icons (unlabelled on the page). The two tokens of that diagram that carry painted art were left out (see Provenance Review)."
+ },
+ {
+  "id": "AST-0072.33",
+  "parent": "AST-0072",
+  "name": "Phantom token 11 of the p.10 set-up wheel (dark disc with portrait glyph)",
+  "type": "icon",
+  "src": "DS-Phantoms-Rules-lores.pdf",
+  "page": 10,
+  "bbox_pt": [
+   229.0,
+   483.8,
+   277.0,
+   531.8
+  ],
+  "image_object": {
+   "xref": 295,
+   "pdfimages_num": 13,
+   "colour": "cmyk",
+   "native": "201×201",
+   "has_mask": true,
+   "smask_pdfimages_num": 14,
+   "ppi_as_placed": 302
+  },
+  "method": "pdfimages -png p.10 image #13 (object 295, 201×201 cmyk) + soft mask #14 composited to RGBA; trimmed to inked bounds (alpha > 12); native resolution",
+  "file": "assets/icons/ast-0072-phantom-token-11.png",
+  "format": "png",
+  "dims": "201×201 px",
+  "has_alpha": true,
+  "bytes": 38916,
+  "notes": "Token face from the Game Setup with Invader Encounters diagram; same glyphs as the named portrait icons (unlabelled on the page). The two tokens of that diagram that carry painted art were left out (see Provenance Review)."
+ },
+ {
+  "id": "AST-0072.34",
+  "parent": "AST-0072",
+  "name": "Phantom token 12 of the p.10 set-up wheel (dark disc with portrait glyph)",
+  "type": "icon",
+  "src": "DS-Phantoms-Rules-lores.pdf",
+  "page": 10,
+  "bbox_pt": [
+   306.9,
+   483.8,
+   354.9,
+   531.8
+  ],
+  "image_object": {
+   "xref": 297,
+   "pdfimages_num": 15,
+   "colour": "cmyk",
+   "native": "201×201",
+   "has_mask": true,
+   "smask_pdfimages_num": 16,
+   "ppi_as_placed": 302
+  },
+  "method": "pdfimages -png p.10 image #15 (object 297, 201×201 cmyk) + soft mask #16 composited to RGBA; trimmed to inked bounds (alpha > 12); native resolution",
+  "file": "assets/icons/ast-0072-phantom-token-12.png",
+  "format": "png",
+  "dims": "201×201 px",
+  "has_alpha": true,
+  "bytes": 39491,
+  "notes": "Token face from the Game Setup with Invader Encounters diagram; same glyphs as the named portrait icons (unlabelled on the page). The two tokens of that diagram that carry painted art were left out (see Provenance Review)."
+ },
+ {
+  "id": "AST-0072.R1",
+  "parent": "AST-0072",
+  "status": "PROVENANCE REVIEW",
+  "name": "Two tokens of the invader set-up wheel, 201×201 px",
+  "src": "DS-Phantoms-Rules-lores.pdf",
+  "page": 10,
+  "image_object": "object(s) 275, 277",
+  "reason": "Token faces filled with painted art (red eye / red figure) instead of a glyph. Not extracted.",
+  "file": null
+ },
+ {
+  "id": "AST-0085",
+  "parent": "AST-0085",
+  "name": "Large art frame: compass corners + hairline rules around full-column illustrations",
+  "type": "frame",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 7,
+  "bbox_pt": [
+   44,
+   38,
+   540,
+   758
+  ],
+  "image_object": null,
+  "method": "pdftocairo -svg p.7 (from a working copy with the purchaser line redacted) → tools/svg_crop.py (raster images and all text glyphs dropped; vector paths inside the bbox kept)",
+  "file": "assets/frames/ast-0085-large-art-frame-compass-corners.svg",
+  "format": "svg",
+  "dims": "496×720 pt (vector)",
+  "has_alpha": true,
+  "bytes": 15791,
+  "notes": "62 vector paths; the framed painting is a raster and is not in the file. Scale by moving the corners, not the strokes."
+ },
+ {
+  "id": "AST-0087.1",
+  "parent": "AST-0087",
+  "name": "Encounter card frame, upper section: title banner, flavour strip and parchment text box (Grave Matters, card text printed in)",
+  "type": "frame",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 16,
+  "bbox_pt": [
+   391.3,
+   351.0,
+   531.3,
+   591.0
+  ],
+  "image_object": {
+   "xref": 1184,
+   "pdfimages_num": 2,
+   "colour": "cmyk",
+   "native": "584×1000",
+   "has_mask": false,
+   "crop_px": [
+    0,
+    0,
+    584,
+    458
+   ],
+   "ppi_as_placed": 300
+  },
+  "method": "pdfimages -png p.16 image #2 (object 1184, 584×1000 cmyk, no soft mask); cropped to px box (0, 0, 584, 458) of the object; native resolution, no resampling",
+  "file": "assets/frames/ast-0087-encounter-card-frame-upper-section-banner-and-text-box.png",
+  "format": "png",
+  "dims": "584×458 px",
+  "has_alpha": false,
+  "bytes": 221450,
+  "notes": "Top 458 px of the 584×1000 card raster (300 ppi). The lower right of the card carries a painted scene and is left out (see Provenance Review). Card text is part of the raster."
+ },
+ {
+  "id": "AST-0087.2",
+  "parent": "AST-0087",
+  "name": "Encounter card frame, node-map panel (parchment panel with the node layout diagram)",
+  "type": "frame",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 16,
+  "bbox_pt": [
+   391.3,
+   351.0,
+   531.3,
+   591.0
+  ],
+  "image_object": {
+   "xref": 1184,
+   "pdfimages_num": 2,
+   "colour": "cmyk",
+   "native": "584×1000",
+   "has_mask": false,
+   "crop_px": [
+    14,
+    466,
+    392,
+    996
+   ],
+   "ppi_as_placed": 300
+  },
+  "method": "pdfimages -png p.16 image #2 (object 1184, 584×1000 cmyk, no soft mask); cropped to px box (14, 466, 392, 996) of the object; native resolution, no resampling",
+  "file": "assets/frames/ast-0087-encounter-card-frame-node-map-panel.png",
+  "format": "png",
+  "dims": "378×530 px",
+  "has_alpha": false,
+  "bytes": 82308,
+  "notes": "Left panel of the lower half of the card raster; the painted scene to its right is left out (see Provenance Review)."
+ },
+ {
+  "id": "AST-0087.R1",
+  "parent": "AST-0087",
+  "status": "PROVENANCE REVIEW",
+  "name": "Whole encounter card (Grave Matters, 584×1000 px)",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 16,
+  "image_object": "object(s) 1184, 1188",
+  "reason": "Lower right of the card is a painted scene. Only the illustration-free parts were extracted (AST-0087.1, AST-0087.2).",
+  "file": null
+ },
+ {
+  "id": "AST-0088.1",
+  "parent": "AST-0088",
+  "name": "Boss data card frame, lower section: framed parchment text box (Gravelord Nito card, rule text printed in)",
+  "type": "frame",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 28,
+  "bbox_pt": [
+   138.7,
+   486.0,
+   295.5,
+   705.0
+  ],
+  "image_object": {
+   "xref": 1442,
+   "pdfimages_num": 2,
+   "colour": "cmyk",
+   "native": "653×912",
+   "has_mask": false,
+   "crop_px": [
+    0,
+    515,
+    653,
+    912
+   ],
+   "ppi_as_placed": 300
+  },
+  "method": "pdfimages -png p.28 image #2 (object 1442, 653×912 cmyk, no soft mask); cropped to px box (0, 515, 653, 912) of the object; native resolution, no resampling",
+  "file": "assets/frames/ast-0088-data-card-frame-boss-card-text-box.png",
+  "format": "png",
+  "dims": "653×397 px",
+  "has_alpha": false,
+  "bytes": 186525,
+  "notes": "Lower 397 px of the 653×912 card raster (300 ppi). The upper part of every enemy, boss and behaviour card is a character illustration and was not extracted (see Provenance Review)."
+ },
+ {
+  "id": "AST-0088.R1",
+  "parent": "AST-0088",
+  "status": "PROVENANCE REVIEW",
+  "name": "Whole enemy data card (Skeleton Soldier, 372×520 px)",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 24,
+  "image_object": "object(s) 1288",
+  "reason": "The card centre is a coloured character illustration, not the grey miniature render. Not extracted.",
+  "file": null
+ },
+ {
+  "id": "AST-0088.R2",
+  "parent": "AST-0088",
+  "status": "PROVENANCE REVIEW",
+  "name": "Whole boss data card (Gravelord Nito) and behaviour card (Death's Embrace)",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 28,
+  "image_object": "object(s) 1442, 1444",
+  "reason": "Upper half of both cards is a painted boss illustration. Only the text-box section of the data card was extracted (AST-0088.1).",
+  "file": null
+ },
+ {
+  "id": "AST-0089.1",
+  "parent": "AST-0089",
+  "name": "Treasure card back (gold ring with chest glyph)",
+  "type": "frame",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 5,
+  "bbox_pt": [
+   175.2,
+   473.2,
+   242.3,
+   567.4
+  ],
+  "image_object": {
+   "xref": 342,
+   "pdfimages_num": 22,
+   "colour": "cmyk",
+   "native": "124×186",
+   "has_mask": false,
+   "ppi_as_placed": 133
+  },
+  "method": "pdfimages -png p.5 image #22 (object 342, 124×186 cmyk, no soft mask); native resolution, no resampling",
+  "file": "assets/frames/ast-0089-card-back-treasure.png",
+  "format": "png",
+  "dims": "124×186 px",
+  "has_alpha": false,
+  "bytes": 19124,
+  "notes": "Card back, no illustration. Thumbnail-grade raster (about 130 to 150 ppi at the size printed in the rulebook): decorative use at small size only."
+ },
+ {
+  "id": "AST-0089.2",
+  "parent": "AST-0089",
+  "name": "Boss treasure card back (gold ring with glowing skull glyph)",
+  "type": "frame",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 5,
+  "bbox_pt": [
+   418.5,
+   473.2,
+   485.6,
+   567.4
+  ],
+  "image_object": {
+   "xref": 348,
+   "pdfimages_num": 30,
+   "colour": "cmyk",
+   "native": "124×186",
+   "has_mask": false,
+   "ppi_as_placed": 133
+  },
+  "method": "pdfimages -png p.5 image #30 (object 348, 124×186 cmyk, no soft mask); native resolution, no resampling",
+  "file": "assets/frames/ast-0089-card-back-boss-treasure.png",
+  "format": "png",
+  "dims": "124×186 px",
+  "has_alpha": false,
+  "bytes": 19604,
+  "notes": "Card back, no illustration. Thumbnail-grade raster (about 130 to 150 ppi at the size printed in the rulebook): decorative use at small size only."
+ },
+ {
+  "id": "AST-0089.3",
+  "parent": "AST-0089",
+  "name": "Encounter card back, level 1 (blue flame)",
+  "type": "frame",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 16,
+  "bbox_pt": [
+   89.4,
+   458.1,
+   173.3,
+   601.9
+  ],
+  "image_object": {
+   "xref": 1190,
+   "pdfimages_num": 24,
+   "colour": "cmyk",
+   "native": "175×300",
+   "has_mask": false,
+   "ppi_as_placed": 150
+  },
+  "method": "pdfimages -png p.16 image #24 (object 1190, 175×300 cmyk, no soft mask); native resolution, no resampling",
+  "file": "assets/frames/ast-0089-card-back-encounter-level-1.png",
+  "format": "png",
+  "dims": "175×300 px",
+  "has_alpha": false,
+  "bytes": 53292,
+  "notes": "Card back, no illustration. Thumbnail-grade raster (about 130 to 150 ppi at the size printed in the rulebook): decorative use at small size only."
+ },
+ {
+  "id": "AST-0089.4",
+  "parent": "AST-0089",
+  "name": "Event card back",
+  "type": "frame",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 6,
+  "bbox_pt": [
+   281.4,
+   125.2,
+   348.5,
+   219.4
+  ],
+  "image_object": {
+   "xref": 783,
+   "pdfimages_num": 211,
+   "colour": "cmyk",
+   "native": "124×186",
+   "has_mask": false,
+   "ppi_as_placed": 133
+  },
+  "method": "pdfimages -png p.6 image #211 (object 783, 124×186 cmyk, no soft mask); native resolution, no resampling",
+  "file": "assets/frames/ast-0089-card-back-event.png",
+  "format": "png",
+  "dims": "124×186 px",
+  "has_alpha": false,
+  "bytes": 19199,
+  "notes": "Card back, no illustration. Thumbnail-grade raster (about 130 to 150 ppi at the size printed in the rulebook): decorative use at small size only."
+ },
+ {
+  "id": "AST-0089.5",
+  "parent": "AST-0089",
+  "name": "Mini-boss card back (Black Knight glyph on orange lattice)",
+  "type": "frame",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 5,
+  "bbox_pt": [
+   84.9,
+   110.8,
+   156.4,
+   205.3
+  ],
+  "image_object": {
+   "xref": 328,
+   "pdfimages_num": 8,
+   "colour": "cmyk",
+   "native": "133×186",
+   "has_mask": false,
+   "ppi_as_placed": 134
+  },
+  "method": "pdfimages -png p.5 image #8 (object 328, 133×186 cmyk, no soft mask); native resolution, no resampling",
+  "file": "assets/frames/ast-0089-card-back-mini-boss-black-knight.png",
+  "format": "png",
+  "dims": "133×186 px",
+  "has_alpha": false,
+  "bytes": 39312,
+  "notes": "Card back, no illustration. Thumbnail-grade raster (about 130 to 150 ppi at the size printed in the rulebook): decorative use at small size only."
+ },
+ {
+  "id": "AST-0089.6",
+  "parent": "AST-0089",
+  "name": "Main-boss card back (Gravelord Nito glyph on red lattice)",
+  "type": "frame",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 5,
+  "bbox_pt": [
+   333.0,
+   110.8,
+   404.4,
+   205.3
+  ],
+  "image_object": {
+   "xref": 322,
+   "pdfimages_num": 2,
+   "colour": "cmyk",
+   "native": "133×186",
+   "has_mask": false,
+   "ppi_as_placed": 134
+  },
+  "method": "pdfimages -png p.5 image #2 (object 322, 133×186 cmyk, no soft mask); native resolution, no resampling",
+  "file": "assets/frames/ast-0089-card-back-main-boss-gravelord-nito.png",
+  "format": "png",
+  "dims": "133×186 px",
+  "has_alpha": false,
+  "bytes": 37292,
+  "notes": "Card back, no illustration. Thumbnail-grade raster (about 130 to 150 ppi at the size printed in the rulebook): decorative use at small size only."
+ },
+ {
+  "id": "AST-0111",
+  "parent": "AST-0111",
+  "name": "Encounter setup worked example (The Forgotten): encounter card and tile with placed tokens, framed example box",
+  "type": "diagram",
+  "src": "DS-Core-Rules-lores.pdf",
+  "page": 18,
+  "bbox_pt": [
+   66,
+   336,
+   558,
+   756
+  ],
+  "image_object": null,
+  "method": "pdftoppm 400 dpi page-region crop",
+  "file": "assets/diagrams/ast-0111-encounter-setup-example-2017.png",
+  "format": "png",
+  "dims": "2733×2333 px",
+  "has_alpha": false,
+  "bytes": 3377181,
+  "notes": "Whole example box with its compass-corner frame, heading and explanatory text, on the 2017 parchment. 2017 components (Hollow Soldiers, Silver Knight Greatbowman); the 2017 PDF carries no purchaser line."
+ },
+ {
+  "id": "AST-0112",
+  "parent": "AST-0112",
+  "name": "Node adjacency diagram (tile with the adjacent nodes highlighted in green)",
+  "type": "diagram",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 11,
+  "bbox_pt": [
+   63.0,
+   531.3,
+   272.8,
+   741.0
+  ],
+  "image_object": {
+   "xref": 945,
+   "pdfimages_num": 5,
+   "colour": "cmyk",
+   "native": "875×875",
+   "has_mask": false,
+   "ppi_as_placed": 300
+  },
+  "method": "pdfimages -png p.11 image #5 (object 945, 875×875 cmyk, no soft mask); native resolution, no resampling",
+  "file": "assets/diagrams/ast-0112-node-adjacency-diagram.png",
+  "format": "png",
+  "dims": "875×875 px",
+  "has_alpha": false,
+  "bytes": 686489,
+  "notes": "Embedded raster with the diagram artwork baked in (no page crop, so no parchment, caption or watermark). Mean difference to the page render of the same placement: 2.3/255 (nothing is drawn over it on the page)."
+ },
+ {
+  "id": "AST-0113",
+  "parent": "AST-0113",
+  "name": "Range / doorway diagram (two tile edges with an arrow through the doorway)",
+  "type": "diagram",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 11,
+  "bbox_pt": [
+   310.9,
+   182.9,
+   521.1,
+   285.1
+  ],
+  "image_object": {
+   "xref": 946,
+   "pdfimages_num": 6,
+   "colour": "cmyk",
+   "native": "438×213",
+   "has_mask": false,
+   "ppi_as_placed": 150
+  },
+  "method": "pdfimages -png p.11 image #6 (object 946, 438×213 cmyk, no soft mask); native resolution, no resampling",
+  "file": "assets/diagrams/ast-0113-range-and-doorway-diagram.png",
+  "format": "png",
+  "dims": "438×213 px",
+  "has_alpha": false,
+  "bytes": 131050,
+  "notes": "Embedded raster with the diagram artwork baked in (no page crop, so no parchment, caption or watermark). Mean difference to the page render of the same placement: 4.2/255 (nothing is drawn over it on the page)."
+ },
+ {
+  "id": "AST-0114",
+  "parent": "AST-0114",
+  "status": "not required",
+  "reason": "The timer track belongs to a rule this ruleset does not use; not extracted.",
+  "file": null
+ },
+ {
+  "id": "AST-0115",
+  "parent": "AST-0115",
+  "name": "Equipment modifier strip ([0] 1 +1 / [3] 2 +1)",
+  "type": "diagram",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 21,
+  "bbox_pt": [
+   62.0,
+   133.9,
+   273.9,
+   220.2
+  ],
+  "image_object": {
+   "xref": 1260,
+   "pdfimages_num": 9,
+   "colour": "cmyk",
+   "native": "884×360",
+   "has_mask": false,
+   "crop_px": [
+    0,
+    0,
+    884,
+    352
+   ],
+   "ppi_as_placed": 300
+  },
+  "method": "pdfimages -png p.21 image #9 (object 1260, 884×360 cmyk, no soft mask); cropped to px box (0, 0, 884, 352) of the object; native resolution, no resampling",
+  "file": "assets/diagrams/ast-0115-equipment-modifier-strip.png",
+  "format": "png",
+  "dims": "884×352 px",
+  "has_alpha": false,
+  "bytes": 255340,
+  "notes": "Embedded raster with the diagram artwork baked in (no page crop, so no parchment, caption or watermark). The bottom 8 px of the object (tops of the next row of card icons, clipped away on the page) are cropped off. Mean difference to the page render of the same placement: 12.5/255 (vector overlays are drawn over it on the page and are not in this file)."
+ },
+ {
+  "id": "AST-0116",
+  "parent": "AST-0116",
+  "name": "Enemy attack resolution strip (attack value 5, dice rolled, damage taken)",
+  "type": "diagram",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 25,
+  "bbox_pt": [
+   309,
+   417,
+   523,
+   479.5
+  ],
+  "image_object": null,
+  "method": "pdftoppm 600 dpi page-region crop; rendered from a working copy with the purchaser line redacted; crop verified pixel-identical to the unredacted page region and 30 pt clear of page head and foot",
+  "file": "assets/diagrams/ast-0116-enemy-attack-resolution-strip.png",
+  "format": "png",
+  "dims": "1783×521 px",
+  "has_alpha": false,
+  "bytes": 215315,
+  "notes": "Vector attack symbol with small dice and wound-token rasters (about 150 ppi) on the page parchment; strip only, the example-box frame and the italic caption below it are outside the crop."
+ },
+ {
+  "id": "AST-0117.1",
+  "parent": "AST-0117",
+  "name": "Black Dragon Kalameet mega-boss game board (forest clearing, node markers printed on the board)",
+  "type": "photography",
+  "src": "DS-BDK-Rules-web.pdf",
+  "page": 5,
+  "bbox_pt": [
+   44.7,
+   42.5,
+   369.0,
+   366.8
+  ],
+  "image_object": {
+   "xref": 663,
+   "pdfimages_num": 99,
+   "colour": "cmyk",
+   "native": "1352×1352",
+   "has_mask": true,
+   "smask_pdfimages_num": 100,
+   "ppi_as_placed": 300
+  },
+  "method": "pdfimages -png p.5 image #99 (object 663, 1352×1352 cmyk + soft mask #100 composited to RGBA); trimmed to alpha bounds; native resolution, no resampling",
+  "file": "assets/photography/ast-0117-mega-boss-board-kalameet-forest.png",
+  "format": "png",
+  "dims": "1352×1352 px",
+  "has_alpha": false,
+  "bytes": 2963345,
+  "notes": "Square board art with its own soft mask (rounded outline)."
+ },
+ {
+  "id": "AST-0117.2",
+  "parent": "AST-0117",
+  "name": "Executioner's Chariot mega-boss game board (round arena)",
+  "type": "photography",
+  "src": "DS-EC-Rules-Web.pdf",
+  "page": 5,
+  "bbox_pt": [
+   41.5,
+   39.3,
+   355.1,
+   352.9
+  ],
+  "image_object": {
+   "xref": 1127,
+   "pdfimages_num": 143,
+   "colour": "rgb",
+   "native": "654×654",
+   "has_mask": true,
+   "smask_pdfimages_num": 144,
+   "ppi_as_placed": 150
+  },
+  "method": "pdfimages -png p.5 image #143 (object 1127, 654×654 rgb + soft mask #144 composited to RGBA); trimmed to alpha bounds; native resolution, no resampling",
+  "file": "assets/photography/ast-0117-mega-boss-board-executioners-chariot-arena.png",
+  "format": "png",
+  "dims": "654×654 px",
+  "has_alpha": false,
+  "bytes": 507379,
+  "notes": ""
+ },
+ {
+  "id": "AST-0117.3",
+  "parent": "AST-0117",
+  "name": "Executioner's Chariot game board, second board image on p.9",
+  "type": "photography",
+  "src": "DS-EC-Rules-Web.pdf",
+  "page": 9,
+  "bbox_pt": [
+   53.5,
+   75.3,
+   343.4,
+   365.2
+  ],
+  "image_object": {
+   "xref": 1823,
+   "pdfimages_num": 1,
+   "colour": "rgb",
+   "native": "604×604",
+   "has_mask": true,
+   "smask_pdfimages_num": 2,
+   "ppi_as_placed": 150
+  },
+  "method": "pdfimages -png p.9 image #1 (object 1823, 604×604 rgb + soft mask #2 composited to RGBA); trimmed to alpha bounds; native resolution, no resampling",
+  "file": "assets/photography/ast-0117-mega-boss-board-executioners-chariot-reverse.png",
+  "format": "png",
+  "dims": "604×604 px",
+  "has_alpha": false,
+  "bytes": 590859,
+  "notes": ""
+ },
+ {
+  "id": "AST-0131.1",
+  "parent": "AST-0131",
+  "name": "Cleric miniature render (2022 core)",
+  "type": "photography",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 4,
+  "bbox_pt": [
+   116.2,
+   186.1,
+   207.2,
+   291.0
+  ],
+  "image_object": {
+   "xref": 222,
+   "pdfimages_num": 77,
+   "colour": "cmyk",
+   "native": "189×218",
+   "has_mask": true,
+   "smask_pdfimages_num": 78,
+   "ppi_as_placed": 150,
+   "clipped_edges": [
+    "bottom"
+   ]
+  },
+  "method": "pdfimages -png p.4 image #77 (object 222, 189×218 cmyk + soft mask #78 composited to RGBA); trimmed to alpha bounds; native resolution, no resampling",
+  "file": "assets/photography/ast-0131-miniature-cleric.png",
+  "format": "png",
+  "dims": "189×218 px",
+  "has_alpha": true,
+  "bytes": 41393,
+  "notes": "SFG miniature render (grey/coloured resin 3D render), cut out by its own soft mask. Subject is cut by the bottom edge of the source image (as in the rulebook): keep that edge against a frame, rule or page edge, or fade it."
+ },
+ {
+  "id": "AST-0131.2",
+  "parent": "AST-0131",
+  "name": "Pyromancer miniature render (2022 core)",
+  "type": "photography",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 4,
+  "bbox_pt": [
+   301.2,
+   143.7,
+   373.5,
+   291.0
+  ],
+  "image_object": {
+   "xref": 224,
+   "pdfimages_num": 79,
+   "colour": "cmyk",
+   "native": "150×307",
+   "has_mask": true,
+   "smask_pdfimages_num": 80,
+   "ppi_as_placed": 149,
+   "clipped_edges": [
+    "bottom"
+   ]
+  },
+  "method": "pdfimages -png p.4 image #79 (object 224, 150×307 cmyk + soft mask #80 composited to RGBA); trimmed to alpha bounds; native resolution, no resampling",
+  "file": "assets/photography/ast-0131-miniature-pyromancer.png",
+  "format": "png",
+  "dims": "150×307 px",
+  "has_alpha": true,
+  "bytes": 52998,
+  "notes": "SFG miniature render (grey/coloured resin 3D render), cut out by its own soft mask. Subject is cut by the bottom edge of the source image (as in the rulebook): keep that edge against a frame, rule or page edge, or fade it."
+ },
+ {
+  "id": "AST-0131.3",
+  "parent": "AST-0131",
+  "name": "Thief miniature render (2022 core)",
+  "type": "photography",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 4,
+  "bbox_pt": [
+   442.9,
+   189.0,
+   538.6,
+   291.0
+  ],
+  "image_object": {
+   "xref": 226,
+   "pdfimages_num": 81,
+   "colour": "cmyk",
+   "native": "199×212",
+   "has_mask": true,
+   "smask_pdfimages_num": 82,
+   "ppi_as_placed": 150,
+   "clipped_edges": [
+    "bottom"
+   ]
+  },
+  "method": "pdfimages -png p.4 image #81 (object 226, 199×212 cmyk + soft mask #82 composited to RGBA); trimmed to alpha bounds; native resolution, no resampling",
+  "file": "assets/photography/ast-0131-miniature-thief.png",
+  "format": "png",
+  "dims": "199×212 px",
+  "has_alpha": true,
+  "bytes": 43187,
+  "notes": "SFG miniature render (grey/coloured resin 3D render), cut out by its own soft mask. Subject is cut by the bottom edge of the source image (as in the rulebook): keep that edge against a frame, rule or page edge, or fade it."
+ },
+ {
+  "id": "AST-0131.4",
+  "parent": "AST-0131",
+  "name": "Giant Skeleton Archer miniature render",
+  "type": "photography",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 4,
+  "bbox_pt": [
+   103.1,
+   353.3,
+   250.7,
+   528.6
+  ],
+  "image_object": {
+   "xref": 216,
+   "pdfimages_num": 71,
+   "colour": "cmyk",
+   "native": "307×365",
+   "has_mask": true,
+   "smask_pdfimages_num": 72,
+   "ppi_as_placed": 150
+  },
+  "method": "pdfimages -png p.4 image #71 (object 216, 307×365 cmyk + soft mask #72 composited to RGBA); trimmed to alpha bounds; native resolution, no resampling",
+  "file": "assets/photography/ast-0131-miniature-giant-skeleton-archer.png",
+  "format": "png",
+  "dims": "307×365 px",
+  "has_alpha": true,
+  "bytes": 85242,
+  "notes": "SFG miniature render (grey/coloured resin 3D render), cut out by its own soft mask."
+ },
+ {
+  "id": "AST-0131.5",
+  "parent": "AST-0131",
+  "name": "Necromancer miniature render",
+  "type": "photography",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 4,
+  "bbox_pt": [
+   291.4,
+   404.2,
+   369.1,
+   526.5
+  ],
+  "image_object": {
+   "xref": 218,
+   "pdfimages_num": 73,
+   "colour": "cmyk",
+   "native": "162×255",
+   "has_mask": true,
+   "smask_pdfimages_num": 74,
+   "ppi_as_placed": 150
+  },
+  "method": "pdfimages -png p.4 image #73 (object 218, 162×255 cmyk + soft mask #74 composited to RGBA); trimmed to alpha bounds; native resolution, no resampling",
+  "file": "assets/photography/ast-0131-miniature-necromancer.png",
+  "format": "png",
+  "dims": "162×255 px",
+  "has_alpha": true,
+  "bytes": 52821,
+  "notes": "SFG miniature render (grey/coloured resin 3D render), cut out by its own soft mask."
+ },
+ {
+  "id": "AST-0131.6",
+  "parent": "AST-0131",
+  "name": "Giant Skeleton Soldier miniature render",
+  "type": "photography",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 4,
+  "bbox_pt": [
+   439.9,
+   354.6,
+   565.4,
+   528.5
+  ],
+  "image_object": {
+   "xref": 220,
+   "pdfimages_num": 75,
+   "colour": "cmyk",
+   "native": "261×362",
+   "has_mask": true,
+   "smask_pdfimages_num": 76,
+   "ppi_as_placed": 150
+  },
+  "method": "pdfimages -png p.4 image #75 (object 220, 261×362 cmyk + soft mask #76 composited to RGBA); trimmed to alpha bounds; native resolution, no resampling",
+  "file": "assets/photography/ast-0131-miniature-giant-skeleton-soldier.png",
+  "format": "png",
+  "dims": "261×362 px",
+  "has_alpha": true,
+  "bytes": 73118,
+  "notes": "SFG miniature render (grey/coloured resin 3D render), cut out by its own soft mask."
+ },
+ {
+  "id": "AST-0131.7",
+  "parent": "AST-0131",
+  "name": "Skeleton Archer miniature render",
+  "type": "photography",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 4,
+  "bbox_pt": [
+   136.5,
+   567.6,
+   207.4,
+   711.1
+  ],
+  "image_object": {
+   "xref": 215,
+   "pdfimages_num": 69,
+   "colour": "cmyk",
+   "native": "148×299",
+   "has_mask": true,
+   "smask_pdfimages_num": 70,
+   "ppi_as_placed": 150
+  },
+  "method": "pdfimages -png p.4 image #69 (object 215, 148×299 cmyk + soft mask #70 composited to RGBA); trimmed to alpha bounds; native resolution, no resampling",
+  "file": "assets/photography/ast-0131-miniature-skeleton-archer.png",
+  "format": "png",
+  "dims": "148×299 px",
+  "has_alpha": true,
+  "bytes": 41593,
+  "notes": "SFG miniature render (grey/coloured resin 3D render), cut out by its own soft mask."
+ },
+ {
+  "id": "AST-0131.8",
+  "parent": "AST-0131",
+  "name": "Skeleton Beast miniature render",
+  "type": "photography",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 4,
+  "bbox_pt": [
+   261.5,
+   603.2,
+   443.4,
+   708.1
+  ],
+  "image_object": {
+   "xref": 206,
+   "pdfimages_num": 63,
+   "colour": "cmyk",
+   "native": "379×218",
+   "has_mask": true,
+   "smask_pdfimages_num": 64,
+   "ppi_as_placed": 150
+  },
+  "method": "pdfimages -png p.4 image #63 (object 206, 379×218 cmyk + soft mask #64 composited to RGBA); trimmed to alpha bounds; native resolution, no resampling",
+  "file": "assets/photography/ast-0131-miniature-skeleton-beast.png",
+  "format": "png",
+  "dims": "379×218 px",
+  "has_alpha": true,
+  "bytes": 106086,
+  "notes": "SFG miniature render (grey/coloured resin 3D render), cut out by its own soft mask."
+ },
+ {
+  "id": "AST-0131.9",
+  "parent": "AST-0131",
+  "name": "Skeleton Soldier miniature render",
+  "type": "photography",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 4,
+  "bbox_pt": [
+   438.8,
+   583.2,
+   540.2,
+   711.0
+  ],
+  "image_object": {
+   "xref": 208,
+   "pdfimages_num": 65,
+   "colour": "cmyk",
+   "native": "211×266",
+   "has_mask": true,
+   "smask_pdfimages_num": 66,
+   "ppi_as_placed": 150
+  },
+  "method": "pdfimages -png p.4 image #65 (object 208, 211×266 cmyk + soft mask #66 composited to RGBA); trimmed to alpha bounds; native resolution, no resampling",
+  "file": "assets/photography/ast-0131-miniature-skeleton-soldier.png",
+  "format": "png",
+  "dims": "211×266 px",
+  "has_alpha": true,
+  "bytes": 47415,
+  "notes": "SFG miniature render (grey/coloured resin 3D render), cut out by its own soft mask."
+ },
+ {
+  "id": "AST-0131.10",
+  "parent": "AST-0131",
+  "name": "Black Knight mini-boss miniature render",
+  "type": "photography",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 5,
+  "bbox_pt": [
+   51.0,
+   155.5,
+   230.5,
+   339.0
+  ],
+  "image_object": {
+   "xref": 382,
+   "pdfimages_num": 65,
+   "colour": "cmyk",
+   "native": "374×382",
+   "has_mask": true,
+   "smask_pdfimages_num": 66,
+   "ppi_as_placed": 150
+  },
+  "method": "pdfimages -png p.5 image #65 (object 382, 374×382 cmyk + soft mask #66 composited to RGBA); trimmed to alpha bounds; native resolution, no resampling",
+  "file": "assets/photography/ast-0131-miniature-black-knight.png",
+  "format": "png",
+  "dims": "374×382 px",
+  "has_alpha": true,
+  "bytes": 130616,
+  "notes": "SFG miniature render (grey/coloured resin 3D render), cut out by its own soft mask."
+ },
+ {
+  "id": "AST-0131.11",
+  "parent": "AST-0131",
+  "name": "Gravelord Nito main-boss miniature render",
+  "type": "photography",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 5,
+  "bbox_pt": [
+   108.4,
+   114.2,
+   603.9,
+   339.0
+  ],
+  "image_object": {
+   "xref": 380,
+   "pdfimages_num": 63,
+   "colour": "cmyk",
+   "native": "903×410",
+   "has_mask": true,
+   "smask_pdfimages_num": 64,
+   "ppi_as_placed": 131
+  },
+  "method": "pdfimages -png p.5 image #63 (object 380, 903×410 cmyk + soft mask #64 composited to RGBA); trimmed to alpha bounds; native resolution, no resampling",
+  "file": "assets/photography/ast-0131-miniature-gravelord-nito.png",
+  "format": "png",
+  "dims": "903×410 px",
+  "has_alpha": true,
+  "bytes": 438985,
+  "notes": "SFG miniature render (grey/coloured resin 3D render), cut out by its own soft mask."
+ },
+ {
+  "id": "AST-0132.1",
+  "parent": "AST-0132",
+  "name": "Spark dial (2022 core, p.6)",
+  "type": "photography",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 6,
+  "bbox_pt": [
+   514.5,
+   348.6,
+   573.5,
+   407.5
+  ],
+  "image_object": {
+   "xref": 720,
+   "pdfimages_num": 118,
+   "colour": "index",
+   "native": "175×175",
+   "has_mask": true,
+   "smask_pdfimages_num": 119,
+   "ppi_as_placed": 214
+  },
+  "method": "pdfimages -png p.6 image #118 (object 720, 175×175 index + soft mask #119 composited to RGBA); trimmed to alpha bounds; native resolution, no resampling",
+  "file": "assets/photography/ast-0132-token-spark-dial.png",
+  "format": "png",
+  "dims": "175×175 px",
+  "has_alpha": true,
+  "bytes": 13900,
+  "notes": ""
+ },
+ {
+  "id": "AST-0132.2",
+  "parent": "AST-0132",
+  "name": "Gravestone terrain piece render (Explorers)",
+  "type": "photography",
+  "src": "DS-Explorers-Rules-Web.pdf",
+  "page": 5,
+  "bbox_pt": [
+   22.7,
+   26.9,
+   93.8,
+   148.5
+  ],
+  "image_object": {
+   "xref": 599,
+   "pdfimages_num": 300,
+   "colour": "rgb",
+   "native": "149×254",
+   "has_mask": true,
+   "smask_pdfimages_num": 301,
+   "ppi_as_placed": 151,
+   "clipped_edges": [
+    "bottom"
+   ]
+  },
+  "method": "pdfimages -png p.5 image #300 (object 599, 149×254 rgb + soft mask #301 composited to RGBA); trimmed to alpha bounds; native resolution, no resampling",
+  "file": "assets/photography/ast-0132-token-terrain-gravestone-render.png",
+  "format": "png",
+  "dims": "149×254 px",
+  "has_alpha": true,
+  "bytes": 37584,
+  "notes": "Subject is cut by the bottom edge of the source image (as in the rulebook): keep that edge against a frame, rule or page edge, or fade it."
+ },
+ {
+  "id": "AST-0132.3",
+  "parent": "AST-0132",
+  "name": "Bonfire terrain piece render (Explorers)",
+  "type": "photography",
+  "src": "DS-Explorers-Rules-Web.pdf",
+  "page": 5,
+  "bbox_pt": [
+   100.9,
+   43.3,
+   172.1,
+   148.6
+  ],
+  "image_object": {
+   "xref": 595,
+   "pdfimages_num": 296,
+   "colour": "rgb",
+   "native": "149×220",
+   "has_mask": true,
+   "smask_pdfimages_num": 297,
+   "ppi_as_placed": 151,
+   "clipped_edges": [
+    "bottom"
+   ]
+  },
+  "method": "pdfimages -png p.5 image #296 (object 595, 149×220 rgb + soft mask #297 composited to RGBA); trimmed to alpha bounds; native resolution, no resampling",
+  "file": "assets/photography/ast-0132-token-terrain-bonfire-render.png",
+  "format": "png",
+  "dims": "149×220 px",
+  "has_alpha": true,
+  "bytes": 20165,
+  "notes": "Subject is cut by the bottom edge of the source image (as in the rulebook): keep that edge against a frame, rule or page edge, or fade it."
+ },
+ {
+  "id": "AST-0132.4",
+  "parent": "AST-0132",
+  "name": "Barrels terrain piece render (Explorers)",
+  "type": "photography",
+  "src": "DS-Explorers-Rules-Web.pdf",
+  "page": 5,
+  "bbox_pt": [
+   175.3,
+   100.6,
+   219.1,
+   148.4
+  ],
+  "image_object": {
+   "xref": 603,
+   "pdfimages_num": 304,
+   "colour": "rgb",
+   "native": "92×100",
+   "has_mask": true,
+   "smask_pdfimages_num": 305,
+   "ppi_as_placed": 151
+  },
+  "method": "pdfimages -png p.5 image #304 (object 603, 92×100 rgb + soft mask #305 composited to RGBA); trimmed to alpha bounds; native resolution, no resampling",
+  "file": "assets/photography/ast-0132-token-terrain-barrels-render.png",
+  "format": "png",
+  "dims": "92×100 px",
+  "has_alpha": true,
+  "bytes": 12403,
+  "notes": ""
+ },
+ {
+  "id": "AST-0132.5",
+  "parent": "AST-0132",
+  "name": "Treasure Chest terrain piece render (Explorers)",
+  "type": "photography",
+  "src": "DS-Explorers-Rules-Web.pdf",
+  "page": 5,
+  "bbox_pt": [
+   243.1,
+   84.9,
+   371.1,
+   148.2
+  ],
+  "image_object": {
+   "xref": 597,
+   "pdfimages_num": 298,
+   "colour": "rgb",
+   "native": "267×132",
+   "has_mask": true,
+   "smask_pdfimages_num": 299,
+   "ppi_as_placed": 150,
+   "clipped_edges": [
+    "bottom"
+   ]
+  },
+  "method": "pdfimages -png p.5 image #298 (object 597, 267×132 rgb + soft mask #299 composited to RGBA); trimmed to alpha bounds; native resolution, no resampling",
+  "file": "assets/photography/ast-0132-token-terrain-treasure-chest-render.png",
+  "format": "png",
+  "dims": "267×132 px",
+  "has_alpha": true,
+  "bytes": 23927,
+  "notes": "Subject is cut by the bottom edge of the source image (as in the rulebook): keep that edge against a frame, rule or page edge, or fade it."
+ },
+ {
+  "id": "AST-0132.6",
+  "parent": "AST-0132",
+  "name": "Token and terrain-token array as arranged on p.6 (soul, wound, aggro, luck, heroic action, estus, ember, party, condition and terrain tokens, spark dial), captions omitted",
+  "type": "photography",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 6,
+  "bbox_pt": [
+   98.4,
+   294.0,
+   576.5,
+   463.1
+  ],
+  "image_object": {
+   "xrefs": [
+    640,
+    643,
+    646,
+    649,
+    652,
+    655,
+    658,
+    661,
+    664,
+    667,
+    670,
+    673,
+    676,
+    679,
+    682,
+    685,
+    688,
+    693,
+    696,
+    699,
+    702,
+    705,
+    708,
+    711,
+    714,
+    717,
+    720,
+    725,
+    746,
+    753,
+    760,
+    767
+   ],
+   "placements": 48,
+   "ppi_as_placed": 149,
+   "upsampled": 4.03
+  },
+  "method": "composite of 48 placements of 32 embedded image objects (objects 640, 643, 646, 649, 652, 655, 658, 661, 664, 667, 670, 673, 676, 679, 682, 685, 688, 693, 696, 699, 702, 705, 708, 711, 714, 717, 720, 725, 746, 753, 760, 767) decoded with pdfimages -png + soft masks, re-assembled with their page placement matrices in draw order on a transparent ground at 600 px/in of page size (objects are ~149 ppi as placed, i.e. upsampled ×4.0 bicubic); no page render involved",
+  "file": "assets/photography/ast-0132-token-array-souls-wounds-conditions-terrain.png",
+  "format": "png",
+  "dims": "3885×1359 px",
+  "has_alpha": true,
+  "bytes": 2436646,
+  "notes": "Source objects are only ~150 ppi at page size; this composite is an upsample for layout convenience, keep it small in print (≤ the size it has in the source rulebook, about 6.6 in wide, for full sharpness)."
+ },
+ {
+  "id": "AST-0132.7",
+  "parent": "AST-0132",
+  "name": "Enemy token set as arranged on p.6 (six enemy types)",
+  "type": "photography",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 6,
+  "bbox_pt": [
+   448.3,
+   497.0,
+   557.0,
+   631.1
+  ],
+  "image_object": {
+   "xrefs": [
+    728,
+    731,
+    734,
+    737,
+    740,
+    743
+   ],
+   "placements": 6,
+   "ppi_as_placed": 151,
+   "upsampled": 3.97
+  },
+  "method": "composite of 6 placements of 6 embedded image objects (objects 728, 731, 734, 737, 740, 743) decoded with pdfimages -png + soft masks, re-assembled with their page placement matrices in draw order on a transparent ground at 600 px/in of page size (objects are ~151 ppi as placed, i.e. upsampled ×4.0 bicubic); no page render involved",
+  "file": "assets/photography/ast-0132-token-enemy-tokens.png",
+  "format": "png",
+  "dims": "856×1067 px",
+  "has_alpha": true,
+  "bytes": 212554,
+  "notes": "Source objects are only ~150 ppi at page size; this composite is an upsample for layout convenience, keep it small in print (≤ the size it has in the source rulebook, about 1.5 in wide, for full sharpness)."
+ },
+ {
+  "id": "AST-0132.8",
+  "parent": "AST-0132",
+  "name": "Soul and wound token row as arranged on p.6 (1/3/5 soul tokens, 1/3/5 wound tokens and neighbours)",
+  "type": "photography",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 6,
+  "bbox_pt": [
+   118.6,
+   294.0,
+   562.0,
+   330.0
+  ],
+  "image_object": {
+   "xrefs": [
+    667,
+    670,
+    673,
+    676,
+    679,
+    682,
+    685,
+    688
+   ],
+   "placements": 8,
+   "ppi_as_placed": 150,
+   "upsampled": 4.0
+  },
+  "method": "composite of 8 placements of 8 embedded image objects (objects 667, 670, 673, 676, 679, 682, 685, 688) decoded with pdfimages -png + soft masks, re-assembled with their page placement matrices in draw order on a transparent ground at 600 px/in of page size (objects are ~150 ppi as placed, i.e. upsampled ×4.0 bicubic); no page render involved",
+  "file": "assets/photography/ast-0132-token-row-soul-and-wound-tokens.png",
+  "format": "png",
+  "dims": "3645×250 px",
+  "has_alpha": true,
+  "bytes": 493164,
+  "notes": "Source objects are only ~150 ppi at page size; this composite is an upsample for layout convenience, keep it small in print (≤ the size it has in the source rulebook, about 6.2 in wide, for full sharpness)."
+ },
+ {
+  "id": "AST-0132.9",
+  "parent": "AST-0132",
+  "name": "Terrain token row as arranged on p.6 (gravestone, shrine, barrel, lever, trap, skeleton ball and neighbours)",
+  "type": "photography",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 6,
+  "bbox_pt": [
+   164.3,
+   419.0,
+   570.6,
+   463.1
+  ],
+  "image_object": {
+   "xrefs": [
+    693,
+    696,
+    699,
+    702,
+    705,
+    708,
+    711,
+    714,
+    717
+   ],
+   "placements": 9,
+   "ppi_as_placed": 149,
+   "upsampled": 4.03
+  },
+  "method": "composite of 9 placements of 9 embedded image objects (objects 693, 696, 699, 702, 705, 708, 711, 714, 717) decoded with pdfimages -png + soft masks, re-assembled with their page placement matrices in draw order on a transparent ground at 600 px/in of page size (objects are ~149 ppi as placed, i.e. upsampled ×4.0 bicubic); no page render involved",
+  "file": "assets/photography/ast-0132-token-row-terrain-tokens.png",
+  "format": "png",
+  "dims": "3336×317 px",
+  "has_alpha": true,
+  "bytes": 740087,
+  "notes": "Source objects are only ~150 ppi at page size; this composite is an upsample for layout convenience, keep it small in print (≤ the size it has in the source rulebook, about 5.6 in wide, for full sharpness)."
+ },
+ {
+  "id": "AST-0133.1",
+  "parent": "AST-0133",
+  "name": "Tomb of Giants game tile A (2022 core, tile fan on p.6)",
+  "type": "photography",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 6,
+  "bbox_pt": [
+   96.9,
+   489.1,
+   244.8,
+   637.0
+  ],
+  "image_object": {
+   "xref": 774,
+   "pdfimages_num": 202,
+   "colour": "cmyk",
+   "native": "284×284",
+   "has_mask": false,
+   "ppi_as_placed": 138
+  },
+  "method": "pdfimages -png p.6 image #202 (object 774, 284×284 cmyk, no soft mask); native resolution, no resampling",
+  "file": "assets/photography/ast-0133-game-tile-tomb-of-giants-a.png",
+  "format": "png",
+  "dims": "284×284 px",
+  "has_alpha": false,
+  "bytes": 103840,
+  "notes": "284 px at ~140 ppi: small-scale use only."
+ },
+ {
+  "id": "AST-0133.2",
+  "parent": "AST-0133",
+  "name": "Tomb of Giants game tile B (2022 core)",
+  "type": "photography",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 6,
+  "bbox_pt": [
+   156.4,
+   487.6,
+   298.8,
+   629.9
+  ],
+  "image_object": {
+   "xref": 776,
+   "pdfimages_num": 204,
+   "colour": "cmyk",
+   "native": "284×284",
+   "has_mask": false,
+   "ppi_as_placed": 144
+  },
+  "method": "pdfimages -png p.6 image #204 (object 776, 284×284 cmyk, no soft mask); native resolution, no resampling",
+  "file": "assets/photography/ast-0133-game-tile-tomb-of-giants-b.png",
+  "format": "png",
+  "dims": "284×284 px",
+  "has_alpha": false,
+  "bytes": 93996,
+  "notes": "284 px at ~140 ppi: small-scale use only."
+ },
+ {
+  "id": "AST-0133.3",
+  "parent": "AST-0133",
+  "name": "Tomb of Giants game tile C (2022 core)",
+  "type": "photography",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 6,
+  "bbox_pt": [
+   210.5,
+   487.6,
+   352.9,
+   629.9
+  ],
+  "image_object": {
+   "xref": 778,
+   "pdfimages_num": 206,
+   "colour": "cmyk",
+   "native": "284×284",
+   "has_mask": false,
+   "ppi_as_placed": 144
+  },
+  "method": "pdfimages -png p.6 image #206 (object 778, 284×284 cmyk, no soft mask); native resolution, no resampling",
+  "file": "assets/photography/ast-0133-game-tile-tomb-of-giants-c.png",
+  "format": "png",
+  "dims": "284×284 px",
+  "has_alpha": false,
+  "bytes": 93110,
+  "notes": "284 px at ~140 ppi: small-scale use only."
+ },
+ {
+  "id": "AST-0133.4",
+  "parent": "AST-0133",
+  "name": "Tomb of Giants game tile D (2022 core)",
+  "type": "photography",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 6,
+  "bbox_pt": [
+   264.5,
+   489.1,
+   412.4,
+   637.0
+  ],
+  "image_object": {
+   "xref": 780,
+   "pdfimages_num": 208,
+   "colour": "cmyk",
+   "native": "284×284",
+   "has_mask": false,
+   "ppi_as_placed": 138
+  },
+  "method": "pdfimages -png p.6 image #208 (object 780, 284×284 cmyk, no soft mask); native resolution, no resampling",
+  "file": "assets/photography/ast-0133-game-tile-tomb-of-giants-d.png",
+  "format": "png",
+  "dims": "284×284 px",
+  "has_alpha": false,
+  "bytes": 93323,
+  "notes": "284 px at ~140 ppi: small-scale use only."
+ },
+ {
+  "id": "AST-0133.5",
+  "parent": "AST-0133",
+  "name": "Bonfire tile (2017 core set), clean tile art without the anatomy call-outs",
+  "type": "photography",
+  "src": "DS-Core-Rules-lores.pdf",
+  "page": 13,
+  "bbox_pt": [
+   87.4,
+   102.6,
+   465.4,
+   480.6
+  ],
+  "image_object": {
+   "xref": 1198,
+   "pdfimages_num": 1,
+   "colour": "rgb",
+   "native": "788×788",
+   "has_mask": false,
+   "ppi_as_placed": 150
+  },
+  "method": "pdfimages -png p.13 image #1 (object 1198, 788×788 rgb, no soft mask); native resolution, no resampling",
+  "file": "assets/photography/ast-0133-game-tile-bonfire-2017.png",
+  "format": "png",
+  "dims": "788×788 px",
+  "has_alpha": false,
+  "bytes": 886781,
+  "notes": "Opaque square tile (no soft mask in the 2017 PDF). The numbered call-outs of the p.13 anatomy diagram are vector overlays and are not in this image."
+ },
+ {
+  "id": "AST-0133.6",
+  "parent": "AST-0133",
+  "name": "Fan of the four double-sided Tomb of Giants game tiles as arranged on p.6",
+  "type": "photography",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 6,
+  "bbox_pt": [
+   93.9,
+   484.6,
+   415.4,
+   640.0
+  ],
+  "image_object": {
+   "xrefs": [
+    774,
+    776,
+    778,
+    780
+   ],
+   "placements": 4,
+   "ppi_as_placed": 150,
+   "upsampled": 4.0
+  },
+  "method": "composite of 4 placements of 4 embedded image objects (objects 774, 776, 778, 780) decoded with pdfimages -png + soft masks, re-assembled with their page placement matrices in draw order on a transparent ground at 600 px/in of page size (objects are ~150 ppi as placed, i.e. upsampled ×4.0 bicubic); no page render involved",
+  "file": "assets/photography/ast-0133-game-tile-tomb-of-giants-fan.png",
+  "format": "png",
+  "dims": "2630×1245 px",
+  "has_alpha": true,
+  "bytes": 2029826,
+  "notes": "Source objects are only ~150 ppi at page size; this composite is an upsample for layout convenience, keep it small in print (≤ the size it has in the source rulebook, about 4.5 in wide, for full sharpness)."
+ },
+ {
+  "id": "AST-0134.1",
+  "parent": "AST-0134",
+  "name": "Campaign board, left half (2022 core, p.13)",
+  "type": "photography",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 13,
+  "bbox_pt": [
+   57.0,
+   129.0,
+   527.0,
+   249.0
+  ],
+  "image_object": {
+   "xref": 1080,
+   "pdfimages_num": 1,
+   "colour": "cmyk",
+   "native": "979×250",
+   "has_mask": false,
+   "ppi_as_placed": 150
+  },
+  "method": "pdfimages -png p.13 image #1 (object 1080, 979×250 cmyk, no soft mask); native resolution, no resampling",
+  "file": "assets/photography/ast-0134-campaign-board-left-half.png",
+  "format": "png",
+  "dims": "979×250 px",
+  "has_alpha": false,
+  "bytes": 387340,
+  "notes": ""
+ },
+ {
+  "id": "AST-0134.2",
+  "parent": "AST-0134",
+  "name": "Campaign board, right half (2022 core, p.13)",
+  "type": "photography",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 13,
+  "bbox_pt": [
+   57.0,
+   267.0,
+   527.0,
+   387.0
+  ],
+  "image_object": {
+   "xref": 1088,
+   "pdfimages_num": 13,
+   "colour": "cmyk",
+   "native": "979×250",
+   "has_mask": false,
+   "ppi_as_placed": 150
+  },
+  "method": "pdfimages -png p.13 image #13 (object 1088, 979×250 cmyk, no soft mask); native resolution, no resampling",
+  "file": "assets/photography/ast-0134-campaign-board-right-half.png",
+  "format": "png",
+  "dims": "979×250 px",
+  "has_alpha": false,
+  "bytes": 437442,
+  "notes": ""
+ },
+ {
+  "id": "AST-0134.3",
+  "parent": "AST-0134",
+  "name": "Campaign board, full strip (2022 core, p.6)",
+  "type": "photography",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 6,
+  "bbox_pt": [
+   96.4,
+   655.6,
+   578.3,
+   735.0
+  ],
+  "image_object": {
+   "xref": 787,
+   "pdfimages_num": 215,
+   "colour": "cmyk",
+   "native": "1004×166",
+   "has_mask": false,
+   "ppi_as_placed": 150
+  },
+  "method": "pdfimages -png p.6 image #215 (object 787, 1004×166 cmyk, no soft mask); native resolution, no resampling",
+  "file": "assets/photography/ast-0134-campaign-board-full-strip.png",
+  "format": "png",
+  "dims": "1004×166 px",
+  "has_alpha": false,
+  "bytes": 280532,
+  "notes": "Lower resolution than the two halves (1004 px for the whole board)."
+ },
+ {
+  "id": "AST-0135.1",
+  "parent": "AST-0135",
+  "name": "Character dashboard, lower section (ability box, stat grid, equipment-slot labels, endurance bar), clean, no call-outs",
+  "type": "photography",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 8,
+  "bbox_pt": [
+   92.9,
+   345.6,
+   581.8,
+   732.5
+  ],
+  "image_object": {
+   "xref": 809,
+   "pdfimages_num": 4,
+   "colour": "cmyk",
+   "native": "1019×806",
+   "has_mask": true,
+   "smask_pdfimages_num": 5,
+   "crop_px": [
+    0,
+    236,
+    1019,
+    806
+   ],
+   "ppi_as_placed": 150
+  },
+  "method": "pdfimages -png p.8 image #4 (object 809, 1019×806 cmyk + soft mask #5 composited to RGBA); cropped to px box (0, 236, 1019, 806) of the object; trimmed to alpha bounds; native resolution, no resampling",
+  "file": "assets/photography/ast-0135-character-dashboard-lower-section-a.png",
+  "format": "png",
+  "dims": "1019×570 px",
+  "has_alpha": true,
+  "bytes": 706625,
+  "notes": "Cropped below the name band: the top 236 px of the dashboard object carry a painted class portrait and item roundels (see Provenance Review) and are left out. The cube slots of the grid and bar are transparent holes in the source mask."
+ },
+ {
+  "id": "AST-0135.2",
+  "parent": "AST-0135",
+  "name": "Character dashboard, lower section with printed stat values (second dashboard state on p.8), clean",
+  "type": "photography",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 8,
+  "bbox_pt": [
+   93.4,
+   346.0,
+   582.6,
+   674.9
+  ],
+  "image_object": {
+   "xref": 807,
+   "pdfimages_num": 2,
+   "colour": "cmyk",
+   "native": "1019×685",
+   "has_mask": false,
+   "crop_px": [
+    0,
+    236,
+    1019,
+    685
+   ],
+   "ppi_as_placed": 150
+  },
+  "method": "pdfimages -png p.8 image #2 (object 807, 1019×685 cmyk, no soft mask); cropped to px box (0, 236, 1019, 685) of the object; native resolution, no resampling",
+  "file": "assets/photography/ast-0135-character-dashboard-lower-section-b.png",
+  "format": "png",
+  "dims": "1019×449 px",
+  "has_alpha": false,
+  "bytes": 465401,
+  "notes": "Cropped below the name band (top 236 px with the painted class portrait left out, see Provenance Review). Opaque rectangle."
+ },
+ {
+  "id": "AST-0135.R1",
+  "parent": "AST-0135",
+  "status": "PROVENANCE REVIEW",
+  "name": "Whole character dashboard (1019×806 and 1019×685 px)",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 8,
+  "image_object": "object(s) 809, 807",
+  "reason": "The name band (top 236 px) is a painted class portrait with painted item roundels. Only the portrait-free lower section was extracted (AST-0135.1, AST-0135.2).",
+  "file": null
+ },
+ {
+  "id": "AST-0136.1",
+  "parent": "AST-0136",
+  "name": "Black die (2022 core, p.6)",
+  "type": "photography",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 6,
+  "bbox_pt": [
+   465.6,
+   93.0,
+   495.6,
+   123.0
+  ],
+  "image_object": {
+   "xref": 631,
+   "pdfimages_num": 15,
+   "colour": "cmyk",
+   "native": "63×63",
+   "has_mask": true,
+   "smask_pdfimages_num": 16,
+   "ppi_as_placed": 151
+  },
+  "method": "pdfimages -png p.6 image #15 (object 631, 63×63 cmyk + soft mask #16 composited to RGBA); trimmed to alpha bounds; native resolution, no resampling",
+  "file": "assets/photography/ast-0136-dice-black.png",
+  "format": "png",
+  "dims": "63×63 px",
+  "has_alpha": true,
+  "bytes": 8810,
+  "notes": "~63 px at 150 ppi: inline size only; see the dice-set composite for a larger arrangement."
+ },
+ {
+  "id": "AST-0136.2",
+  "parent": "AST-0136",
+  "name": "Blue die (2022 core, p.6)",
+  "type": "photography",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 6,
+  "bbox_pt": [
+   528.7,
+   93.0,
+   559.4,
+   123.0
+  ],
+  "image_object": {
+   "xref": 629,
+   "pdfimages_num": 9,
+   "colour": "cmyk",
+   "native": "64×62",
+   "has_mask": true,
+   "smask_pdfimages_num": 10,
+   "ppi_as_placed": 150
+  },
+  "method": "pdfimages -png p.6 image #9 (object 629, 64×62 cmyk + soft mask #10 composited to RGBA); trimmed to alpha bounds; native resolution, no resampling",
+  "file": "assets/photography/ast-0136-dice-blue.png",
+  "format": "png",
+  "dims": "64×62 px",
+  "has_alpha": true,
+  "bytes": 9642,
+  "notes": "~63 px at 150 ppi: inline size only."
+ },
+ {
+  "id": "AST-0136.3",
+  "parent": "AST-0136",
+  "name": "Orange die (2022 core, p.6)",
+  "type": "photography",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 6,
+  "bbox_pt": [
+   436.6,
+   177.0,
+   467.1,
+   207.0
+  ],
+  "image_object": {
+   "xref": 627,
+   "pdfimages_num": 7,
+   "colour": "cmyk",
+   "native": "64×62",
+   "has_mask": true,
+   "smask_pdfimages_num": 8,
+   "ppi_as_placed": 151
+  },
+  "method": "pdfimages -png p.6 image #7 (object 627, 64×62 cmyk + soft mask #8 composited to RGBA); trimmed to alpha bounds; native resolution, no resampling",
+  "file": "assets/photography/ast-0136-dice-orange.png",
+  "format": "png",
+  "dims": "64×62 px",
+  "has_alpha": true,
+  "bytes": 8675,
+  "notes": "~63 px at 150 ppi: inline size only."
+ },
+ {
+  "id": "AST-0136.4",
+  "parent": "AST-0136",
+  "name": "Green die (2022 core, p.6)",
+  "type": "photography",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 6,
+  "bbox_pt": [
+   528.8,
+   165.0,
+   559.4,
+   195.0
+  ],
+  "image_object": {
+   "xref": 625,
+   "pdfimages_num": 1,
+   "colour": "cmyk",
+   "native": "64×63",
+   "has_mask": true,
+   "smask_pdfimages_num": 2,
+   "ppi_as_placed": 151
+  },
+  "method": "pdfimages -png p.6 image #1 (object 625, 64×63 cmyk + soft mask #2 composited to RGBA); trimmed to alpha bounds; native resolution, no resampling",
+  "file": "assets/photography/ast-0136-dice-green.png",
+  "format": "png",
+  "dims": "64×63 px",
+  "has_alpha": true,
+  "bytes": 9361,
+  "notes": "~63 px at 150 ppi: inline size only."
+ },
+ {
+  "id": "AST-0136.5",
+  "parent": "AST-0136",
+  "name": "Dice set as arranged on p.6 (5 black, 4 blue, 2 orange, 4 green)",
+  "type": "photography",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 6,
+  "bbox_pt": [
+   424.1,
+   90.0,
+   581.3,
+   222.0
+  ],
+  "image_object": {
+   "xrefs": [
+    625,
+    627,
+    629,
+    631
+   ],
+   "placements": 15,
+   "ppi_as_placed": 151,
+   "upsampled": 3.97
+  },
+  "method": "composite of 15 placements of 4 embedded image objects (objects 625, 627, 629, 631) decoded with pdfimages -png + soft masks, re-assembled with their page placement matrices in draw order on a transparent ground at 600 px/in of page size (objects are ~151 ppi as placed, i.e. upsampled ×4.0 bicubic); no page render involved",
+  "file": "assets/photography/ast-0136-dice-set.png",
+  "format": "png",
+  "dims": "1260×1050 px",
+  "has_alpha": true,
+  "bytes": 871873,
+  "notes": "Source objects are only ~150 ppi at page size; this composite is an upsample for layout convenience, keep it small in print (≤ the size it has in the source rulebook, about 2.2 in wide, for full sharpness)."
+ },
+ {
+  "id": "AST-0137",
+  "parent": "AST-0137",
+  "status": "BLOCKED",
+  "reason": "Provenance review: every card fan in the sources shows card faces (encounter, event, treasure and boss cards) that carry painted illustrations, so no fan was extracted. The card backs, which carry none, are extracted singly as AST-0089.1 to AST-0089.6.",
+  "file": null
+ },
+ {
+  "id": "AST-0137.R1",
+  "parent": "AST-0137",
+  "status": "PROVENANCE REVIEW",
+  "name": "Encounter card fan and event card face (Lifegem)",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 6,
+  "image_object": "object(s) 638, 636, 634, 785",
+  "reason": "Card faces with painted scenes / a painted figure. Not extracted.",
+  "file": null
+ },
+ {
+  "id": "AST-0137.R2",
+  "parent": "AST-0137",
+  "status": "PROVENANCE REVIEW",
+  "name": "Treasure deck fan and boss data cards (Shortbow, Winged Spear, Dark Sword, Gravelord Sword, Black Knight, Gravelord Nito)",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 5,
+  "image_object": "object(s) 155, 344, 353, 350, 332, 326",
+  "reason": "Card faces with painted item and boss illustrations. Not extracted.",
+  "file": null
+ },
+ {
+  "id": "AST-0138.1",
+  "parent": "AST-0138",
+  "name": "Great Grey Wolf Sif miniature render (Darkroot)",
+  "type": "photography",
+  "src": "DS-Darkroot-Rules-web.pdf",
+  "page": 5,
+  "bbox_pt": [
+   42.2,
+   309.2,
+   422.0,
+   546.8
+  ],
+  "image_object": {
+   "xref": 347,
+   "pdfimages_num": 43,
+   "colour": "cmyk",
+   "native": "2175×1361",
+   "has_mask": true,
+   "smask_pdfimages_num": 44,
+   "ppi_as_placed": 412
+  },
+  "method": "pdfimages -png p.5 image #43 (object 347, 2175×1361 cmyk + soft mask #44 composited to RGBA); trimmed to alpha bounds; native resolution, no resampling",
+  "file": "assets/photography/ast-0138-expansion-miniature-great-grey-wolf-sif.png",
+  "format": "png",
+  "dims": "2175×1361 px",
+  "has_alpha": true,
+  "bytes": 1347375,
+  "notes": "SFG miniature render (grey/coloured resin 3D render), cut out by its own soft mask."
+ },
+ {
+  "id": "AST-0138.2",
+  "parent": "AST-0138",
+  "name": "Artorias miniature render (Darkroot)",
+  "type": "photography",
+  "src": "DS-Darkroot-Rules-web.pdf",
+  "page": 5,
+  "bbox_pt": [
+   200.7,
+   356.6,
+   422.0,
+   547.1
+  ],
+  "image_object": {
+   "xref": 349,
+   "pdfimages_num": 45,
+   "colour": "cmyk",
+   "native": "923×794",
+   "has_mask": true,
+   "smask_pdfimages_num": 46,
+   "ppi_as_placed": 300,
+   "clipped_edges": [
+    "bottom"
+   ]
+  },
+  "method": "pdfimages -png p.5 image #45 (object 349, 923×794 cmyk + soft mask #46 composited to RGBA); trimmed to alpha bounds; native resolution, no resampling",
+  "file": "assets/photography/ast-0138-expansion-miniature-artorias.png",
+  "format": "png",
+  "dims": "923×794 px",
+  "has_alpha": true,
+  "bytes": 369860,
+  "notes": "SFG miniature render (grey/coloured resin 3D render), cut out by its own soft mask. Subject is cut by the bottom edge of the source image (as in the rulebook): keep that edge against a frame, rule or page edge, or fade it."
+ },
+ {
+  "id": "AST-0138.3",
+  "parent": "AST-0138",
+  "name": "Stone Knight miniature render (Darkroot)",
+  "type": "photography",
+  "src": "DS-Darkroot-Rules-web.pdf",
+  "page": 5,
+  "bbox_pt": [
+   18.5,
+   70.4,
+   187.5,
+   252.8
+  ],
+  "image_object": {
+   "xref": 355,
+   "pdfimages_num": 53,
+   "colour": "cmyk",
+   "native": "705×761",
+   "has_mask": true,
+   "smask_pdfimages_num": 54,
+   "ppi_as_placed": 300,
+   "clipped_edges": [
+    "bottom"
+   ]
+  },
+  "method": "pdfimages -png p.5 image #53 (object 355, 705×761 cmyk + soft mask #54 composited to RGBA); trimmed to alpha bounds; native resolution, no resampling",
+  "file": "assets/photography/ast-0138-expansion-miniature-stone-knight.png",
+  "format": "png",
+  "dims": "705×761 px",
+  "has_alpha": true,
+  "bytes": 389459,
+  "notes": "SFG miniature render (grey/coloured resin 3D render), cut out by its own soft mask. Subject is cut by the bottom edge of the source image (as in the rulebook): keep that edge against a frame, rule or page edge, or fade it."
+ },
+ {
+  "id": "AST-0138.4",
+  "parent": "AST-0138",
+  "name": "Stone Guardian miniature render (Darkroot)",
+  "type": "photography",
+  "src": "DS-Darkroot-Rules-web.pdf",
+  "page": 5,
+  "bbox_pt": [
+   171.4,
+   71.7,
+   348.7,
+   252.8
+  ],
+  "image_object": {
+   "xref": 353,
+   "pdfimages_num": 51,
+   "colour": "cmyk",
+   "native": "739×755",
+   "has_mask": true,
+   "smask_pdfimages_num": 52,
+   "ppi_as_placed": 300,
+   "clipped_edges": [
+    "bottom"
+   ]
+  },
+  "method": "pdfimages -png p.5 image #51 (object 353, 739×755 cmyk + soft mask #52 composited to RGBA); trimmed to alpha bounds; native resolution, no resampling",
+  "file": "assets/photography/ast-0138-expansion-miniature-stone-guardian.png",
+  "format": "png",
+  "dims": "739×755 px",
+  "has_alpha": true,
+  "bytes": 340466,
+  "notes": "SFG miniature render (grey/coloured resin 3D render), cut out by its own soft mask. Subject is cut by the bottom edge of the source image (as in the rulebook): keep that edge against a frame, rule or page edge, or fade it."
+ },
+ {
+  "id": "AST-0138.5",
+  "parent": "AST-0138",
+  "name": "Mushroom Parent miniature render (Darkroot)",
+  "type": "photography",
+  "src": "DS-Darkroot-Rules-web.pdf",
+  "page": 4,
+  "bbox_pt": [
+   230.5,
+   228.3,
+   358.1,
+   372.8
+  ],
+  "image_object": {
+   "xref": 177,
+   "pdfimages_num": 36,
+   "colour": "cmyk",
+   "native": "532×603",
+   "has_mask": true,
+   "smask_pdfimages_num": 37,
+   "ppi_as_placed": 300,
+   "clipped_edges": [
+    "bottom"
+   ]
+  },
+  "method": "pdfimages -png p.4 image #36 (object 177, 532×603 cmyk + soft mask #37 composited to RGBA); trimmed to alpha bounds; native resolution, no resampling",
+  "file": "assets/photography/ast-0138-expansion-miniature-mushroom-parent.png",
+  "format": "png",
+  "dims": "532×603 px",
+  "has_alpha": true,
+  "bytes": 178162,
+  "notes": "SFG miniature render (grey/coloured resin 3D render), cut out by its own soft mask. Subject is cut by the bottom edge of the source image (as in the rulebook): keep that edge against a frame, rule or page edge, or fade it."
+ },
+ {
+  "id": "AST-0138.6",
+  "parent": "AST-0138",
+  "name": "Mushroom Child miniature render (Darkroot)",
+  "type": "photography",
+  "src": "DS-Darkroot-Rules-web.pdf",
+  "page": 4,
+  "bbox_pt": [
+   287.2,
+   111.3,
+   358.1,
+   192.8
+  ],
+  "image_object": {
+   "xref": 175,
+   "pdfimages_num": 34,
+   "colour": "cmyk",
+   "native": "296×340",
+   "has_mask": true,
+   "smask_pdfimages_num": 35,
+   "ppi_as_placed": 301,
+   "clipped_edges": [
+    "bottom"
+   ]
+  },
+  "method": "pdfimages -png p.4 image #34 (object 175, 296×340 cmyk + soft mask #35 composited to RGBA); trimmed to alpha bounds; native resolution, no resampling",
+  "file": "assets/photography/ast-0138-expansion-miniature-mushroom-child.png",
+  "format": "png",
+  "dims": "296×340 px",
+  "has_alpha": true,
+  "bytes": 77148,
+  "notes": "SFG miniature render (grey/coloured resin 3D render), cut out by its own soft mask. Subject is cut by the bottom edge of the source image (as in the rulebook): keep that edge against a frame, rule or page edge, or fade it."
+ },
+ {
+  "id": "AST-0138.7",
+  "parent": "AST-0138",
+  "name": "Shears Scarecrow miniature render (Darkroot)",
+  "type": "photography",
+  "src": "DS-Darkroot-Rules-web.pdf",
+  "page": 4,
+  "bbox_pt": [
+   76.0,
+   409.4,
+   141.4,
+   546.8
+  ],
+  "image_object": {
+   "xref": 181,
+   "pdfimages_num": 40,
+   "colour": "cmyk",
+   "native": "273×573",
+   "has_mask": true,
+   "smask_pdfimages_num": 41,
+   "ppi_as_placed": 300,
+   "clipped_edges": [
+    "bottom"
+   ]
+  },
+  "method": "pdfimages -png p.4 image #40 (object 181, 273×573 cmyk + soft mask #41 composited to RGBA); trimmed to alpha bounds; native resolution, no resampling",
+  "file": "assets/photography/ast-0138-expansion-miniature-shears-scarecrow.png",
+  "format": "png",
+  "dims": "273×573 px",
+  "has_alpha": true,
+  "bytes": 125640,
+  "notes": "SFG miniature render (grey/coloured resin 3D render), cut out by its own soft mask. Subject is cut by the bottom edge of the source image (as in the rulebook): keep that edge against a frame, rule or page edge, or fade it."
+ },
+ {
+  "id": "AST-0138.8",
+  "parent": "AST-0138",
+  "name": "Plow Scarecrow miniature render (Darkroot)",
+  "type": "photography",
+  "src": "DS-Darkroot-Rules-web.pdf",
+  "page": 4,
+  "bbox_pt": [
+   159.4,
+   426.6,
+   288.4,
+   546.8
+  ],
+  "image_object": {
+   "xref": 179,
+   "pdfimages_num": 38,
+   "colour": "cmyk",
+   "native": "538×502",
+   "has_mask": true,
+   "smask_pdfimages_num": 39,
+   "ppi_as_placed": 300,
+   "clipped_edges": [
+    "bottom"
+   ]
+  },
+  "method": "pdfimages -png p.4 image #38 (object 179, 538×502 cmyk + soft mask #39 composited to RGBA); trimmed to alpha bounds; native resolution, no resampling",
+  "file": "assets/photography/ast-0138-expansion-miniature-plow-scarecrow.png",
+  "format": "png",
+  "dims": "538×502 px",
+  "has_alpha": true,
+  "bytes": 164770,
+  "notes": "SFG miniature render (grey/coloured resin 3D render), cut out by its own soft mask. Subject is cut by the bottom edge of the source image (as in the rulebook): keep that edge against a frame, rule or page edge, or fade it."
+ },
+ {
+  "id": "AST-0138.9",
+  "parent": "AST-0138",
+  "name": "Demonic Foliage miniature render (Darkroot)",
+  "type": "photography",
+  "src": "DS-Darkroot-Rules-web.pdf",
+  "page": 4,
+  "bbox_pt": [
+   272.8,
+   418.6,
+   372.0,
+   546.8
+  ],
+  "image_object": {
+   "xref": 173,
+   "pdfimages_num": 32,
+   "colour": "cmyk",
+   "native": "414×535",
+   "has_mask": true,
+   "smask_pdfimages_num": 33,
+   "ppi_as_placed": 300
+  },
+  "method": "pdfimages -png p.4 image #32 (object 173, 414×535 cmyk + soft mask #33 composited to RGBA); trimmed to alpha bounds; native resolution, no resampling",
+  "file": "assets/photography/ast-0138-expansion-miniature-demonic-foliage.png",
+  "format": "png",
+  "dims": "414×535 px",
+  "has_alpha": true,
+  "bytes": 166342,
+  "notes": "SFG miniature render (grey/coloured resin 3D render), cut out by its own soft mask."
+ },
+ {
+  "id": "AST-0138.10",
+  "parent": "AST-0138",
+  "name": "Black Dragon Kalameet mega-boss miniature render",
+  "type": "photography",
+  "src": "DS-BDK-Rules-web.pdf",
+  "page": 4,
+  "bbox_pt": [
+   50.2,
+   270.8,
+   387.7,
+   552.8
+  ],
+  "image_object": {
+   "xref": 69,
+   "pdfimages_num": 3,
+   "colour": "cmyk",
+   "native": "2036×1701",
+   "has_mask": true,
+   "smask_pdfimages_num": 4,
+   "ppi_as_placed": 434
+  },
+  "method": "pdfimages -png p.4 image #3 (object 69, 2036×1701 cmyk + soft mask #4 composited to RGBA); trimmed to alpha bounds; native resolution, no resampling",
+  "file": "assets/photography/ast-0138-expansion-miniature-black-dragon-kalameet.png",
+  "format": "png",
+  "dims": "2036×1701 px",
+  "has_alpha": true,
+  "bytes": 2362445,
+  "notes": "SFG miniature render (grey/coloured resin 3D render), cut out by its own soft mask."
+ },
+ {
+  "id": "AST-0138.11",
+  "parent": "AST-0138",
+  "name": "Executioner's Chariot mega-boss miniature render",
+  "type": "photography",
+  "src": "DS-EC-Rules-Web.pdf",
+  "page": 4,
+  "bbox_pt": [
+   5.3,
+   289.1,
+   345.0,
+   521.1
+  ],
+  "image_object": {
+   "xref": 86,
+   "pdfimages_num": 7,
+   "colour": "rgb",
+   "native": "708×484",
+   "has_mask": true,
+   "smask_pdfimages_num": 8,
+   "ppi_as_placed": 150
+  },
+  "method": "pdfimages -png p.4 image #7 (object 86, 708×484 rgb + soft mask #8 composited to RGBA); trimmed to alpha bounds; native resolution, no resampling",
+  "file": "assets/photography/ast-0138-expansion-miniature-executioners-chariot.png",
+  "format": "png",
+  "dims": "708×484 px",
+  "has_alpha": true,
+  "bytes": 233158,
+  "notes": "SFG miniature render (grey/coloured resin 3D render), cut out by its own soft mask."
+ },
+ {
+  "id": "AST-0138.12",
+  "parent": "AST-0138",
+  "name": "Black Hollow Mage miniature render (Executioner's Chariot)",
+  "type": "photography",
+  "src": "DS-EC-Rules-Web.pdf",
+  "page": 4,
+  "bbox_pt": [
+   191.6,
+   398.2,
+   335.4,
+   511.6
+  ],
+  "image_object": {
+   "xref": 84,
+   "pdfimages_num": 5,
+   "colour": "rgb",
+   "native": "300×237",
+   "has_mask": true,
+   "smask_pdfimages_num": 6,
+   "ppi_as_placed": 150
+  },
+  "method": "pdfimages -png p.4 image #5 (object 84, 300×237 rgb + soft mask #6 composited to RGBA); trimmed to alpha bounds; native resolution, no resampling",
+  "file": "assets/photography/ast-0138-expansion-miniature-black-hollow-mage.png",
+  "format": "png",
+  "dims": "300×237 px",
+  "has_alpha": true,
+  "bytes": 62466,
+  "notes": "SFG miniature render (grey/coloured resin 3D render), cut out by its own soft mask."
+ },
+ {
+  "id": "AST-0138.13",
+  "parent": "AST-0138",
+  "name": "Falchion Skeleton miniature render (Executioner's Chariot)",
+  "type": "photography",
+  "src": "DS-EC-Rules-Web.pdf",
+  "page": 4,
+  "bbox_pt": [
+   204.5,
+   355.3,
+   353.6,
+   472.3
+  ],
+  "image_object": {
+   "xref": 76,
+   "pdfimages_num": 1,
+   "colour": "rgb",
+   "native": "311×244",
+   "has_mask": true,
+   "smask_pdfimages_num": 2,
+   "ppi_as_placed": 150
+  },
+  "method": "pdfimages -png p.4 image #1 (object 76, 311×244 rgb + soft mask #2 composited to RGBA); trimmed to alpha bounds; native resolution, no resampling",
+  "file": "assets/photography/ast-0138-expansion-miniature-falchion-skeleton.png",
+  "format": "png",
+  "dims": "311×244 px",
+  "has_alpha": true,
+  "bytes": 53418,
+  "notes": "SFG miniature render (grey/coloured resin 3D render), cut out by its own soft mask."
+ },
+ {
+  "id": "AST-0138.14",
+  "parent": "AST-0138",
+  "name": "Smelter Demon miniature render (Iron Keep)",
+  "type": "photography",
+  "src": "DS-IronKeep-Rules-Web.pdf",
+  "page": 3,
+  "bbox_pt": [
+   -1.2,
+   304.1,
+   372.8,
+   545.0
+  ],
+  "image_object": {
+   "xref": 289,
+   "pdfimages_num": 39,
+   "colour": "rgb",
+   "native": "780×502",
+   "has_mask": true,
+   "smask_pdfimages_num": 40,
+   "ppi_as_placed": 150,
+   "clipped_edges": [
+    "bottom"
+   ]
+  },
+  "method": "pdfimages -png p.3 image #39 (object 289, 780×502 rgb + soft mask #40 composited to RGBA); trimmed to alpha bounds; native resolution, no resampling",
+  "file": "assets/photography/ast-0138-expansion-miniature-smelter-demon.png",
+  "format": "png",
+  "dims": "780×502 px",
+  "has_alpha": true,
+  "bytes": 200995,
+  "notes": "SFG miniature render (grey/coloured resin 3D render), cut out by its own soft mask. Subject is cut by the bottom edge of the source image (as in the rulebook): keep that edge against a frame, rule or page edge, or fade it."
+ },
+ {
+  "id": "AST-0138.15",
+  "parent": "AST-0138",
+  "name": "Sir Alonne miniature render (Iron Keep)",
+  "type": "photography",
+  "src": "DS-IronKeep-Rules-Web.pdf",
+  "page": 3,
+  "bbox_pt": [
+   47.0,
+   270.0,
+   175.2,
+   545.2
+  ],
+  "image_object": {
+   "xref": 298,
+   "pdfimages_num": 47,
+   "colour": "rgb",
+   "native": "267×574",
+   "has_mask": true,
+   "smask_pdfimages_num": 48,
+   "ppi_as_placed": 150,
+   "clipped_edges": [
+    "bottom"
+   ]
+  },
+  "method": "pdfimages -png p.3 image #47 (object 298, 267×574 rgb + soft mask #48 composited to RGBA); trimmed to alpha bounds; native resolution, no resampling",
+  "file": "assets/photography/ast-0138-expansion-miniature-sir-alonne.png",
+  "format": "png",
+  "dims": "267×574 px",
+  "has_alpha": true,
+  "bytes": 81081,
+  "notes": "SFG miniature render (grey/coloured resin 3D render), cut out by its own soft mask. Subject is cut by the bottom edge of the source image (as in the rulebook): keep that edge against a frame, rule or page edge, or fade it."
+ },
+ {
+  "id": "AST-0138.16",
+  "parent": "AST-0138",
+  "name": "Ironclad Soldier miniature render (Iron Keep)",
+  "type": "photography",
+  "src": "DS-IronKeep-Rules-Web.pdf",
+  "page": 3,
+  "bbox_pt": [
+   224.8,
+   1.8,
+   317.2,
+   160.7
+  ],
+  "image_object": {
+   "xref": 302,
+   "pdfimages_num": 53,
+   "colour": "rgb",
+   "native": "193×332",
+   "has_mask": true,
+   "smask_pdfimages_num": 54,
+   "ppi_as_placed": 150,
+   "clipped_edges": [
+    "bottom"
+   ]
+  },
+  "method": "pdfimages -png p.3 image #53 (object 302, 193×332 rgb + soft mask #54 composited to RGBA); trimmed to alpha bounds; native resolution, no resampling",
+  "file": "assets/photography/ast-0138-expansion-miniature-ironclad-soldier.png",
+  "format": "png",
+  "dims": "193×332 px",
+  "has_alpha": true,
+  "bytes": 50789,
+  "notes": "SFG miniature render (grey/coloured resin 3D render), cut out by its own soft mask. Subject is cut by the bottom edge of the source image (as in the rulebook): keep that edge against a frame, rule or page edge, or fade it."
+ },
+ {
+  "id": "AST-0138.17",
+  "parent": "AST-0138",
+  "name": "Crystal Lizard miniature render (Iron Keep)",
+  "type": "photography",
+  "src": "DS-IronKeep-Rules-Web.pdf",
+  "page": 3,
+  "bbox_pt": [
+   272.7,
+   255.1,
+   343.9,
+   280.4
+  ],
+  "image_object": {
+   "xref": 296,
+   "pdfimages_num": 45,
+   "colour": "rgb",
+   "native": "149×53",
+   "has_mask": true,
+   "smask_pdfimages_num": 46,
+   "ppi_as_placed": 151,
+   "clipped_edges": [
+    "bottom"
+   ]
+  },
+  "method": "pdfimages -png p.3 image #45 (object 296, 149×53 rgb + soft mask #46 composited to RGBA); trimmed to alpha bounds; native resolution, no resampling",
+  "file": "assets/photography/ast-0138-expansion-miniature-crystal-lizard.png",
+  "format": "png",
+  "dims": "149×53 px",
+  "has_alpha": true,
+  "bytes": 6940,
+  "notes": "Only 149 px wide in the source (150 ppi): small-scale use only. Subject is cut by the bottom edge of the source image (as in the rulebook): keep that edge against a frame, rule or page edge, or fade it."
+ },
+ {
+  "id": "AST-0138.18",
+  "parent": "AST-0138",
+  "name": "Mimic miniature render, open (Explorers)",
+  "type": "photography",
+  "src": "DS-Explorers-Rules-Web.pdf",
+  "page": 4,
+  "bbox_pt": [
+   61.8,
+   362.1,
+   188.7,
+   544.8
+  ],
+  "image_object": {
+   "xref": 250,
+   "pdfimages_num": 111,
+   "colour": "rgb",
+   "native": "265×381",
+   "has_mask": true,
+   "smask_pdfimages_num": 112,
+   "ppi_as_placed": 150,
+   "clipped_edges": [
+    "bottom"
+   ]
+  },
+  "method": "pdfimages -png p.4 image #111 (object 250, 265×381 rgb + soft mask #112 composited to RGBA); trimmed to alpha bounds; native resolution, no resampling",
+  "file": "assets/photography/ast-0138-expansion-miniature-mimic.png",
+  "format": "png",
+  "dims": "265×381 px",
+  "has_alpha": true,
+  "bytes": 61222,
+  "notes": "SFG miniature render (grey/coloured resin 3D render), cut out by its own soft mask. Subject is cut by the bottom edge of the source image (as in the rulebook): keep that edge against a frame, rule or page edge, or fade it."
+ },
+ {
+  "id": "AST-0138.19",
+  "parent": "AST-0138",
+  "name": "Mimic miniature render, closed chest (Explorers)",
+  "type": "photography",
+  "src": "DS-Explorers-Rules-Web.pdf",
+  "page": 4,
+  "bbox_pt": [
+   222.9,
+   480.7,
+   353.1,
+   548.2
+  ],
+  "image_object": {
+   "xref": 248,
+   "pdfimages_num": 109,
+   "colour": "rgb",
+   "native": "272×141",
+   "has_mask": true,
+   "smask_pdfimages_num": 110,
+   "ppi_as_placed": 150
+  },
+  "method": "pdfimages -png p.4 image #109 (object 248, 272×141 rgb + soft mask #110 composited to RGBA); trimmed to alpha bounds; native resolution, no resampling",
+  "file": "assets/photography/ast-0138-expansion-miniature-mimic-closed.png",
+  "format": "png",
+  "dims": "268×135 px",
+  "has_alpha": true,
+  "bytes": 29960,
+  "notes": "SFG miniature render (grey/coloured resin 3D render), cut out by its own soft mask."
+ },
+ {
+  "id": "AST-0138.20",
+  "parent": "AST-0138",
+  "name": "The Pursuer miniature render (Explorers)",
+  "type": "photography",
+  "src": "DS-Explorers-Rules-Web.pdf",
+  "page": 5,
+  "bbox_pt": [
+   87.5,
+   344.9,
+   246.6,
+   544.8
+  ],
+  "image_object": {
+   "xref": 583,
+   "pdfimages_num": 286,
+   "colour": "rgb",
+   "native": "332×417",
+   "has_mask": true,
+   "smask_pdfimages_num": 287,
+   "ppi_as_placed": 150,
+   "clipped_edges": [
+    "bottom"
+   ]
+  },
+  "method": "pdfimages -png p.5 image #286 (object 583, 332×417 rgb + soft mask #287 composited to RGBA); trimmed to alpha bounds; native resolution, no resampling",
+  "file": "assets/photography/ast-0138-expansion-miniature-the-pursuer.png",
+  "format": "png",
+  "dims": "332×417 px",
+  "has_alpha": true,
+  "bytes": 92672,
+  "notes": "SFG miniature render (grey/coloured resin 3D render), cut out by its own soft mask. Subject is cut by the bottom edge of the source image (as in the rulebook): keep that edge against a frame, rule or page edge, or fade it."
+ },
+ {
+  "id": "AST-0138.21",
+  "parent": "AST-0138",
+  "name": "Silver Knight Spearman miniature render (Explorers)",
+  "type": "photography",
+  "src": "DS-Explorers-Rules-Web.pdf",
+  "page": 5,
+  "bbox_pt": [
+   52.0,
+   168.7,
+   137.5,
+   328.7
+  ],
+  "image_object": {
+   "xref": 591,
+   "pdfimages_num": 294,
+   "colour": "rgb",
+   "native": "179×334",
+   "has_mask": true,
+   "smask_pdfimages_num": 295,
+   "ppi_as_placed": 151,
+   "clipped_edges": [
+    "bottom"
+   ]
+  },
+  "method": "pdfimages -png p.5 image #294 (object 591, 179×334 rgb + soft mask #295 composited to RGBA); trimmed to alpha bounds; native resolution, no resampling",
+  "file": "assets/photography/ast-0138-expansion-miniature-silver-knight-spearman.png",
+  "format": "png",
+  "dims": "179×334 px",
+  "has_alpha": true,
+  "bytes": 39879,
+  "notes": "SFG miniature render (grey/coloured resin 3D render), cut out by its own soft mask. Subject is cut by the bottom edge of the source image (as in the rulebook): keep that edge against a frame, rule or page edge, or fade it."
+ },
+ {
+  "id": "AST-0138.22",
+  "parent": "AST-0138",
+  "name": "Firebomb Hollow miniature render (Explorers)",
+  "type": "photography",
+  "src": "DS-Explorers-Rules-Web.pdf",
+  "page": 5,
+  "bbox_pt": [
+   149.0,
+   249.9,
+   247.9,
+   328.5
+  ],
+  "image_object": {
+   "xref": 589,
+   "pdfimages_num": 292,
+   "colour": "rgb",
+   "native": "207×164",
+   "has_mask": true,
+   "smask_pdfimages_num": 293,
+   "ppi_as_placed": 151,
+   "clipped_edges": [
+    "bottom"
+   ]
+  },
+  "method": "pdfimages -png p.5 image #292 (object 589, 207×164 rgb + soft mask #293 composited to RGBA); trimmed to alpha bounds; native resolution, no resampling",
+  "file": "assets/photography/ast-0138-expansion-miniature-firebomb-hollow.png",
+  "format": "png",
+  "dims": "146×164 px",
+  "has_alpha": true,
+  "bytes": 24520,
+  "notes": "SFG miniature render (grey/coloured resin 3D render), cut out by its own soft mask. Subject is cut by the bottom edge of the source image (as in the rulebook): keep that edge against a frame, rule or page edge, or fade it."
+ },
+ {
+  "id": "AST-0138.23",
+  "parent": "AST-0138",
+  "name": "Summon: Ruined Aflis miniature render (Phantoms)",
+  "type": "photography",
+  "src": "DS-Phantoms-Rules-lores.pdf",
+  "page": 4,
+  "bbox_pt": [
+   22.6,
+   193.5,
+   114.3,
+   360.9
+  ],
+  "image_object": {
+   "xref": 80,
+   "pdfimages_num": 25,
+   "colour": "cmyk",
+   "native": "382×698",
+   "has_mask": true,
+   "smask_pdfimages_num": 26,
+   "ppi_as_placed": 300,
+   "clipped_edges": [
+    "bottom"
+   ]
+  },
+  "method": "pdfimages -png p.4 image #25 (object 80, 382×698 cmyk + soft mask #26 composited to RGBA); trimmed to alpha bounds; native resolution, no resampling",
+  "file": "assets/photography/ast-0138-expansion-miniature-summon-ruined-aflis.png",
+  "format": "png",
+  "dims": "382×698 px",
+  "has_alpha": true,
+  "bytes": 202379,
+  "notes": "SFG miniature render (grey/coloured resin 3D render), cut out by its own soft mask. Subject is cut by the bottom edge of the source image (as in the rulebook): keep that edge against a frame, rule or page edge, or fade it."
+ },
+ {
+  "id": "AST-0138.24",
+  "parent": "AST-0138",
+  "name": "Summon: Eygon of Carim miniature render (Phantoms)",
+  "type": "photography",
+  "src": "DS-Phantoms-Rules-lores.pdf",
+  "page": 4,
+  "bbox_pt": [
+   95.1,
+   220.1,
+   196.2,
+   360.9
+  ],
+  "image_object": {
+   "xref": 88,
+   "pdfimages_num": 33,
+   "colour": "cmyk",
+   "native": "422×587",
+   "has_mask": true,
+   "smask_pdfimages_num": 34,
+   "ppi_as_placed": 301,
+   "clipped_edges": [
+    "bottom"
+   ]
+  },
+  "method": "pdfimages -png p.4 image #33 (object 88, 422×587 cmyk + soft mask #34 composited to RGBA); trimmed to alpha bounds; native resolution, no resampling",
+  "file": "assets/photography/ast-0138-expansion-miniature-summon-eygon-of-carim.png",
+  "format": "png",
+  "dims": "422×587 px",
+  "has_alpha": true,
+  "bytes": 255228,
+  "notes": "SFG miniature render (grey/coloured resin 3D render), cut out by its own soft mask. Subject is cut by the bottom edge of the source image (as in the rulebook): keep that edge against a frame, rule or page edge, or fade it."
+ },
+ {
+  "id": "AST-0138.25",
+  "parent": "AST-0138",
+  "name": "Summon: Horace the Hushed miniature render (Phantoms)",
+  "type": "photography",
+  "src": "DS-Phantoms-Rules-lores.pdf",
+  "page": 4,
+  "bbox_pt": [
+   178.2,
+   241.4,
+   249.1,
+   360.9
+  ],
+  "image_object": {
+   "xref": 76,
+   "pdfimages_num": 21,
+   "colour": "cmyk",
+   "native": "296×498",
+   "has_mask": true,
+   "smask_pdfimages_num": 22,
+   "ppi_as_placed": 301,
+   "clipped_edges": [
+    "bottom"
+   ]
+  },
+  "method": "pdfimages -png p.4 image #21 (object 76, 296×498 cmyk + soft mask #22 composited to RGBA); trimmed to alpha bounds; native resolution, no resampling",
+  "file": "assets/photography/ast-0138-expansion-miniature-summon-horace-the-hushed.png",
+  "format": "png",
+  "dims": "296×498 px",
+  "has_alpha": true,
+  "bytes": 109198,
+  "notes": "SFG miniature render (grey/coloured resin 3D render), cut out by its own soft mask. Subject is cut by the bottom edge of the source image (as in the rulebook): keep that edge against a frame, rule or page edge, or fade it."
+ },
+ {
+  "id": "AST-0138.26",
+  "parent": "AST-0138",
+  "name": "Summon: Siegward of Catarina miniature render (Phantoms)",
+  "type": "photography",
+  "src": "DS-Phantoms-Rules-lores.pdf",
+  "page": 4,
+  "bbox_pt": [
+   245.5,
+   239.6,
+   325.2,
+   360.9
+  ],
+  "image_object": {
+   "xref": 92,
+   "pdfimages_num": 37,
+   "colour": "cmyk",
+   "native": "333×506",
+   "has_mask": true,
+   "smask_pdfimages_num": 38,
+   "ppi_as_placed": 301,
+   "clipped_edges": [
+    "bottom"
+   ]
+  },
+  "method": "pdfimages -png p.4 image #37 (object 92, 333×506 cmyk + soft mask #38 composited to RGBA); trimmed to alpha bounds; native resolution, no resampling",
+  "file": "assets/photography/ast-0138-expansion-miniature-summon-siegward-of-catarina.png",
+  "format": "png",
+  "dims": "333×506 px",
+  "has_alpha": true,
+  "bytes": 182783,
+  "notes": "SFG miniature render (grey/coloured resin 3D render), cut out by its own soft mask. Subject is cut by the bottom edge of the source image (as in the rulebook): keep that edge against a frame, rule or page edge, or fade it."
+ },
+ {
+  "id": "AST-0138.27",
+  "parent": "AST-0138",
+  "name": "Summon: Sword Master miniature render (Phantoms)",
+  "type": "photography",
+  "src": "DS-Phantoms-Rules-lores.pdf",
+  "page": 4,
+  "bbox_pt": [
+   290.9,
+   216.6,
+   384.1,
+   360.9
+  ],
+  "image_object": {
+   "xref": 84,
+   "pdfimages_num": 29,
+   "colour": "cmyk",
+   "native": "389×601",
+   "has_mask": true,
+   "smask_pdfimages_num": 30,
+   "ppi_as_placed": 300,
+   "clipped_edges": [
+    "bottom"
+   ]
+  },
+  "method": "pdfimages -png p.4 image #29 (object 84, 389×601 cmyk + soft mask #30 composited to RGBA); trimmed to alpha bounds; native resolution, no resampling",
+  "file": "assets/photography/ast-0138-expansion-miniature-summon-sword-master.png",
+  "format": "png",
+  "dims": "389×601 px",
+  "has_alpha": true,
+  "bytes": 135533,
+  "notes": "SFG miniature render (grey/coloured resin 3D render), cut out by its own soft mask. Subject is cut by the bottom edge of the source image (as in the rulebook): keep that edge against a frame, rule or page edge, or fade it."
+ },
+ {
+  "id": "AST-0138.28",
+  "parent": "AST-0138",
+  "name": "Summon: Rogue Witch Beatrice miniature render (Phantoms)",
+  "type": "photography",
+  "src": "DS-Phantoms-Rules-lores.pdf",
+  "page": 4,
+  "bbox_pt": [
+   43.4,
+   426.5,
+   120.8,
+   546.8
+  ],
+  "image_object": {
+   "xref": 86,
+   "pdfimages_num": 31,
+   "colour": "cmyk",
+   "native": "323×502",
+   "has_mask": true,
+   "smask_pdfimages_num": 32,
+   "ppi_as_placed": 301,
+   "clipped_edges": [
+    "bottom"
+   ]
+  },
+  "method": "pdfimages -png p.4 image #31 (object 86, 323×502 cmyk + soft mask #32 composited to RGBA); trimmed to alpha bounds; native resolution, no resampling",
+  "file": "assets/photography/ast-0138-expansion-miniature-summon-rogue-witch-beatrice.png",
+  "format": "png",
+  "dims": "323×502 px",
+  "has_alpha": true,
+  "bytes": 141804,
+  "notes": "SFG miniature render (grey/coloured resin 3D render), cut out by its own soft mask. Subject is cut by the bottom edge of the source image (as in the rulebook): keep that edge against a frame, rule or page edge, or fade it."
+ },
+ {
+  "id": "AST-0138.29",
+  "parent": "AST-0138",
+  "name": "Summon: Lucatiel of Mirrah miniature render (Phantoms)",
+  "type": "photography",
+  "src": "DS-Phantoms-Rules-lores.pdf",
+  "page": 4,
+  "bbox_pt": [
+   109.7,
+   406.0,
+   180.5,
+   546.8
+  ],
+  "image_object": {
+   "xref": 94,
+   "pdfimages_num": 39,
+   "colour": "cmyk",
+   "native": "296×588",
+   "has_mask": true,
+   "smask_pdfimages_num": 40,
+   "ppi_as_placed": 301,
+   "clipped_edges": [
+    "bottom"
+   ]
+  },
+  "method": "pdfimages -png p.4 image #39 (object 94, 296×588 cmyk + soft mask #40 composited to RGBA); trimmed to alpha bounds; native resolution, no resampling",
+  "file": "assets/photography/ast-0138-expansion-miniature-summon-lucatiel-of-mirrah.png",
+  "format": "png",
+  "dims": "296×588 px",
+  "has_alpha": true,
+  "bytes": 121836,
+  "notes": "SFG miniature render (grey/coloured resin 3D render), cut out by its own soft mask. Subject is cut by the bottom edge of the source image (as in the rulebook): keep that edge against a frame, rule or page edge, or fade it."
+ },
+ {
+  "id": "AST-0138.30",
+  "parent": "AST-0138",
+  "name": "Summon: Sellsword Luet miniature render (Phantoms)",
+  "type": "photography",
+  "src": "DS-Phantoms-Rules-lores.pdf",
+  "page": 4,
+  "bbox_pt": [
+   169.0,
+   425.5,
+   271.1,
+   546.8
+  ],
+  "image_object": {
+   "xref": 82,
+   "pdfimages_num": 27,
+   "colour": "cmyk",
+   "native": "426×506",
+   "has_mask": true,
+   "smask_pdfimages_num": 28,
+   "ppi_as_placed": 300,
+   "clipped_edges": [
+    "bottom"
+   ]
+  },
+  "method": "pdfimages -png p.4 image #27 (object 82, 426×506 cmyk + soft mask #28 composited to RGBA); trimmed to alpha bounds; native resolution, no resampling",
+  "file": "assets/photography/ast-0138-expansion-miniature-summon-sellsword-luet.png",
+  "format": "png",
+  "dims": "426×506 px",
+  "has_alpha": true,
+  "bytes": 258594,
+  "notes": "SFG miniature render (grey/coloured resin 3D render), cut out by its own soft mask. Subject is cut by the bottom edge of the source image (as in the rulebook): keep that edge against a frame, rule or page edge, or fade it."
+ },
+ {
+  "id": "AST-0138.31",
+  "parent": "AST-0138",
+  "name": "Summon: Sirris of the Sunless Realms miniature render (Phantoms)",
+  "type": "photography",
+  "src": "DS-Phantoms-Rules-lores.pdf",
+  "page": 4,
+  "bbox_pt": [
+   203.3,
+   430.2,
+   316.0,
+   546.8
+  ],
+  "image_object": {
+   "xref": 90,
+   "pdfimages_num": 35,
+   "colour": "cmyk",
+   "native": "470×487",
+   "has_mask": true,
+   "smask_pdfimages_num": 36,
+   "ppi_as_placed": 300,
+   "clipped_edges": [
+    "bottom"
+   ]
+  },
+  "method": "pdfimages -png p.4 image #35 (object 90, 470×487 cmyk + soft mask #36 composited to RGBA); trimmed to alpha bounds; native resolution, no resampling",
+  "file": "assets/photography/ast-0138-expansion-miniature-summon-sirris-of-the-sunless-realms.png",
+  "format": "png",
+  "dims": "470×487 px",
+  "has_alpha": true,
+  "bytes": 155882,
+  "notes": "SFG miniature render (grey/coloured resin 3D render), cut out by its own soft mask. Subject is cut by the bottom edge of the source image (as in the rulebook): keep that edge against a frame, rule or page edge, or fade it."
+ },
+ {
+  "id": "AST-0138.32",
+  "parent": "AST-0138",
+  "name": "Summon: Solaire of Astora miniature render (Phantoms)",
+  "type": "photography",
+  "src": "DS-Phantoms-Rules-lores.pdf",
+  "page": 4,
+  "bbox_pt": [
+   309.7,
+   420.9,
+   391.2,
+   547.5
+  ],
+  "image_object": {
+   "xref": 78,
+   "pdfimages_num": 23,
+   "colour": "cmyk",
+   "native": "340×528",
+   "has_mask": true,
+   "smask_pdfimages_num": 24,
+   "ppi_as_placed": 300,
+   "clipped_edges": [
+    "bottom"
+   ]
+  },
+  "method": "pdfimages -png p.4 image #23 (object 78, 340×528 cmyk + soft mask #24 composited to RGBA); trimmed to alpha bounds; native resolution, no resampling",
+  "file": "assets/photography/ast-0138-expansion-miniature-summon-solaire-of-astora.png",
+  "format": "png",
+  "dims": "340×528 px",
+  "has_alpha": true,
+  "bytes": 138110,
+  "notes": "SFG miniature render (grey/coloured resin 3D render), cut out by its own soft mask. Subject is cut by the bottom edge of the source image (as in the rulebook): keep that edge against a frame, rule or page edge, or fade it."
+ },
+ {
+  "id": "AST-0138.33",
+  "parent": "AST-0138",
+  "name": "Invader: Kirk, Knight of Thorns / Longfinger Kirk miniature render (Phantoms)",
+  "type": "photography",
+  "src": "DS-Phantoms-Rules-lores.pdf",
+  "page": 5,
+  "bbox_pt": [
+   276.8,
+   38.8,
+   366.9,
+   174.9
+  ],
+  "image_object": {
+   "xref": 129,
+   "pdfimages_num": 29,
+   "colour": "cmyk",
+   "native": "376×567",
+   "has_mask": true,
+   "smask_pdfimages_num": 30,
+   "ppi_as_placed": 300,
+   "clipped_edges": [
+    "bottom"
+   ]
+  },
+  "method": "pdfimages -png p.5 image #29 (object 129, 376×567 cmyk + soft mask #30 composited to RGBA); trimmed to alpha bounds; native resolution, no resampling",
+  "file": "assets/photography/ast-0138-expansion-miniature-invader-kirk-knight-of-thorns.png",
+  "format": "png",
+  "dims": "376×567 px",
+  "has_alpha": true,
+  "bytes": 179236,
+  "notes": "SFG miniature render (grey/coloured resin 3D render), cut out by its own soft mask. Subject is cut by the bottom edge of the source image (as in the rulebook): keep that edge against a frame, rule or page edge, or fade it."
+ },
+ {
+  "id": "AST-0138.34",
+  "parent": "AST-0138",
+  "name": "Invader: Melinda the Butcher miniature render (Phantoms)",
+  "type": "photography",
+  "src": "DS-Phantoms-Rules-lores.pdf",
+  "page": 5,
+  "bbox_pt": [
+   26.5,
+   236.4,
+   118.6,
+   360.9
+  ],
+  "image_object": {
+   "xref": 143,
+   "pdfimages_num": 41,
+   "colour": "cmyk",
+   "native": "384×519",
+   "has_mask": true,
+   "smask_pdfimages_num": 42,
+   "ppi_as_placed": 300,
+   "clipped_edges": [
+    "bottom"
+   ]
+  },
+  "method": "pdfimages -png p.5 image #41 (object 143, 384×519 cmyk + soft mask #42 composited to RGBA); trimmed to alpha bounds; native resolution, no resampling",
+  "file": "assets/photography/ast-0138-expansion-miniature-invader-melinda-the-butcher.png",
+  "format": "png",
+  "dims": "384×519 px",
+  "has_alpha": true,
+  "bytes": 142112,
+  "notes": "SFG miniature render (grey/coloured resin 3D render), cut out by its own soft mask. Subject is cut by the bottom edge of the source image (as in the rulebook): keep that edge against a frame, rule or page edge, or fade it."
+ },
+ {
+  "id": "AST-0138.35",
+  "parent": "AST-0138",
+  "name": "Invader: Maldron the Assassin miniature render (Phantoms)",
+  "type": "photography",
+  "src": "DS-Phantoms-Rules-lores.pdf",
+  "page": 5,
+  "bbox_pt": [
+   51.9,
+   254.9,
+   175.7,
+   360.9
+  ],
+  "image_object": {
+   "xref": 139,
+   "pdfimages_num": 39,
+   "colour": "cmyk",
+   "native": "517×442",
+   "has_mask": true,
+   "smask_pdfimages_num": 40,
+   "ppi_as_placed": 301,
+   "clipped_edges": [
+    "bottom"
+   ]
+  },
+  "method": "pdfimages -png p.5 image #39 (object 139, 517×442 cmyk + soft mask #40 composited to RGBA); trimmed to alpha bounds; native resolution, no resampling",
+  "file": "assets/photography/ast-0138-expansion-miniature-invader-maldron-the-assassin.png",
+  "format": "png",
+  "dims": "517×442 px",
+  "has_alpha": true,
+  "bytes": 169702,
+  "notes": "SFG miniature render (grey/coloured resin 3D render), cut out by its own soft mask. Subject is cut by the bottom edge of the source image (as in the rulebook): keep that edge against a frame, rule or page edge, or fade it."
+ },
+ {
+  "id": "AST-0138.36",
+  "parent": "AST-0138",
+  "name": "Invader: Maneater Mildred miniature render (Phantoms)",
+  "type": "photography",
+  "src": "DS-Phantoms-Rules-lores.pdf",
+  "page": 5,
+  "bbox_pt": [
+   169.2,
+   238.9,
+   262.6,
+   360.9
+  ],
+  "image_object": {
+   "xref": 137,
+   "pdfimages_num": 37,
+   "colour": "cmyk",
+   "native": "390×509",
+   "has_mask": true,
+   "smask_pdfimages_num": 38,
+   "ppi_as_placed": 300,
+   "clipped_edges": [
+    "bottom"
+   ]
+  },
+  "method": "pdfimages -png p.5 image #37 (object 137, 390×509 cmyk + soft mask #38 composited to RGBA); trimmed to alpha bounds; native resolution, no resampling",
+  "file": "assets/photography/ast-0138-expansion-miniature-invader-maneater-mildred.png",
+  "format": "png",
+  "dims": "390×509 px",
+  "has_alpha": true,
+  "bytes": 141696,
+  "notes": "SFG miniature render (grey/coloured resin 3D render), cut out by its own soft mask. Subject is cut by the bottom edge of the source image (as in the rulebook): keep that edge against a frame, rule or page edge, or fade it."
+ },
+ {
+  "id": "AST-0138.37",
+  "parent": "AST-0138",
+  "name": "Invader: Xanthous King Jeremiah miniature render (Phantoms)",
+  "type": "photography",
+  "src": "DS-Phantoms-Rules-lores.pdf",
+  "page": 5,
+  "bbox_pt": [
+   229.0,
+   185.7,
+   310.4,
+   360.9
+  ],
+  "image_object": {
+   "xref": 147,
+   "pdfimages_num": 45,
+   "colour": "cmyk",
+   "native": "340×730",
+   "has_mask": true,
+   "smask_pdfimages_num": 46,
+   "ppi_as_placed": 301,
+   "clipped_edges": [
+    "bottom"
+   ]
+  },
+  "method": "pdfimages -png p.5 image #45 (object 147, 340×730 cmyk + soft mask #46 composited to RGBA); trimmed to alpha bounds; native resolution, no resampling",
+  "file": "assets/photography/ast-0138-expansion-miniature-invader-xanthous-king-jeremiah.png",
+  "format": "png",
+  "dims": "340×730 px",
+  "has_alpha": true,
+  "bytes": 239436,
+  "notes": "SFG miniature render (grey/coloured resin 3D render), cut out by its own soft mask. Subject is cut by the bottom edge of the source image (as in the rulebook): keep that edge against a frame, rule or page edge, or fade it."
+ },
+ {
+  "id": "AST-0138.38",
+  "parent": "AST-0138",
+  "name": "Invader: Oliver the Collector miniature render (Phantoms)",
+  "type": "photography",
+  "src": "DS-Phantoms-Rules-lores.pdf",
+  "page": 5,
+  "bbox_pt": [
+   201.5,
+   205.8,
+   375.4,
+   360.9
+  ],
+  "image_object": {
+   "xref": 133,
+   "pdfimages_num": 33,
+   "colour": "cmyk",
+   "native": "725×647",
+   "has_mask": true,
+   "smask_pdfimages_num": 34,
+   "ppi_as_placed": 300,
+   "clipped_edges": [
+    "bottom"
+   ]
+  },
+  "method": "pdfimages -png p.5 image #33 (object 133, 725×647 cmyk + soft mask #34 composited to RGBA); trimmed to alpha bounds; native resolution, no resampling",
+  "file": "assets/photography/ast-0138-expansion-miniature-invader-oliver-the-collector.png",
+  "format": "png",
+  "dims": "725×647 px",
+  "has_alpha": true,
+  "bytes": 237123,
+  "notes": "SFG miniature render (grey/coloured resin 3D render), cut out by its own soft mask. Subject is cut by the bottom edge of the source image (as in the rulebook): keep that edge against a frame, rule or page edge, or fade it."
+ },
+ {
+  "id": "AST-0138.39",
+  "parent": "AST-0138",
+  "name": "Invader: Armorer Dennis miniature render (Phantoms)",
+  "type": "photography",
+  "src": "DS-Phantoms-Rules-lores.pdf",
+  "page": 5,
+  "bbox_pt": [
+   18.6,
+   445.6,
+   114.6,
+   546.8
+  ],
+  "image_object": {
+   "xref": 123,
+   "pdfimages_num": 23,
+   "colour": "cmyk",
+   "native": "400×423",
+   "has_mask": true,
+   "smask_pdfimages_num": 24,
+   "ppi_as_placed": 300,
+   "clipped_edges": [
+    "bottom"
+   ]
+  },
+  "method": "pdfimages -png p.5 image #23 (object 123, 400×423 cmyk + soft mask #24 composited to RGBA); trimmed to alpha bounds; native resolution, no resampling",
+  "file": "assets/photography/ast-0138-expansion-miniature-invader-armorer-dennis.png",
+  "format": "png",
+  "dims": "400×423 px",
+  "has_alpha": true,
+  "bytes": 159498,
+  "notes": "SFG miniature render (grey/coloured resin 3D render), cut out by its own soft mask. Subject is cut by the bottom edge of the source image (as in the rulebook): keep that edge against a frame, rule or page edge, or fade it."
+ },
+ {
+  "id": "AST-0138.40",
+  "parent": "AST-0138",
+  "name": "Invader: Marvelous Chester miniature render (Phantoms)",
+  "type": "photography",
+  "src": "DS-Phantoms-Rules-lores.pdf",
+  "page": 5,
+  "bbox_pt": [
+   89.8,
+   414.4,
+   181.3,
+   546.8
+  ],
+  "image_object": {
+   "xref": 131,
+   "pdfimages_num": 31,
+   "colour": "cmyk",
+   "native": "382×552",
+   "has_mask": true,
+   "smask_pdfimages_num": 32,
+   "ppi_as_placed": 301,
+   "clipped_edges": [
+    "bottom"
+   ]
+  },
+  "method": "pdfimages -png p.5 image #31 (object 131, 382×552 cmyk + soft mask #32 composited to RGBA); trimmed to alpha bounds; native resolution, no resampling",
+  "file": "assets/photography/ast-0138-expansion-miniature-invader-marvelous-chester.png",
+  "format": "png",
+  "dims": "382×552 px",
+  "has_alpha": true,
+  "bytes": 203246,
+  "notes": "SFG miniature render (grey/coloured resin 3D render), cut out by its own soft mask. Subject is cut by the bottom edge of the source image (as in the rulebook): keep that edge against a frame, rule or page edge, or fade it."
+ },
+ {
+  "id": "AST-0138.41",
+  "parent": "AST-0138",
+  "name": "Invader: Invader Brylex miniature render (Phantoms)",
+  "type": "photography",
+  "src": "DS-Phantoms-Rules-lores.pdf",
+  "page": 5,
+  "bbox_pt": [
+   90.9,
+   424.4,
+   248.5,
+   546.8
+  ],
+  "image_object": {
+   "xref": 125,
+   "pdfimages_num": 25,
+   "colour": "cmyk",
+   "native": "657×510",
+   "has_mask": true,
+   "smask_pdfimages_num": 26,
+   "ppi_as_placed": 300,
+   "clipped_edges": [
+    "bottom"
+   ]
+  },
+  "method": "pdfimages -png p.5 image #25 (object 125, 657×510 cmyk + soft mask #26 composited to RGBA); trimmed to alpha bounds; native resolution, no resampling",
+  "file": "assets/photography/ast-0138-expansion-miniature-invader-brylex.png",
+  "format": "png",
+  "dims": "657×510 px",
+  "has_alpha": true,
+  "bytes": 201256,
+  "notes": "SFG miniature render (grey/coloured resin 3D render), cut out by its own soft mask. Subject is cut by the bottom edge of the source image (as in the rulebook): keep that edge against a frame, rule or page edge, or fade it."
+ },
+ {
+  "id": "AST-0138.42",
+  "parent": "AST-0138",
+  "name": "Invader: Paladin Leeroy miniature render (Phantoms)",
+  "type": "photography",
+  "src": "DS-Phantoms-Rules-lores.pdf",
+  "page": 5,
+  "bbox_pt": [
+   230.3,
+   417.8,
+   311.9,
+   546.8
+  ],
+  "image_object": {
+   "xref": 135,
+   "pdfimages_num": 35,
+   "colour": "cmyk",
+   "native": "341×538",
+   "has_mask": true,
+   "smask_pdfimages_num": 36,
+   "ppi_as_placed": 301,
+   "clipped_edges": [
+    "bottom"
+   ]
+  },
+  "method": "pdfimages -png p.5 image #35 (object 135, 341×538 cmyk + soft mask #36 composited to RGBA); trimmed to alpha bounds; native resolution, no resampling",
+  "file": "assets/photography/ast-0138-expansion-miniature-invader-paladin-leeroy.png",
+  "format": "png",
+  "dims": "341×538 px",
+  "has_alpha": true,
+  "bytes": 177292,
+  "notes": "SFG miniature render (grey/coloured resin 3D render), cut out by its own soft mask. Subject is cut by the bottom edge of the source image (as in the rulebook): keep that edge against a frame, rule or page edge, or fade it."
+ },
+ {
+  "id": "AST-0138.43",
+  "parent": "AST-0138",
+  "name": "Invader: Fencer Sharron miniature render (Phantoms)",
+  "type": "photography",
+  "src": "DS-Phantoms-Rules-lores.pdf",
+  "page": 5,
+  "bbox_pt": [
+   297.0,
+   402.8,
+   410.9,
+   546.8
+  ],
+  "image_object": {
+   "xref": 127,
+   "pdfimages_num": 27,
+   "colour": "cmyk",
+   "native": "475×600",
+   "has_mask": true,
+   "smask_pdfimages_num": 28,
+   "ppi_as_placed": 300,
+   "clipped_edges": [
+    "bottom"
+   ]
+  },
+  "method": "pdfimages -png p.5 image #27 (object 127, 475×600 cmyk + soft mask #28 composited to RGBA); trimmed to alpha bounds; native resolution, no resampling",
+  "file": "assets/photography/ast-0138-expansion-miniature-invader-fencer-sharron.png",
+  "format": "png",
+  "dims": "475×600 px",
+  "has_alpha": true,
+  "bytes": 188736,
+  "notes": "SFG miniature render (grey/coloured resin 3D render), cut out by its own soft mask. Subject is cut by the bottom edge of the source image (as in the rulebook): keep that edge against a frame, rule or page edge, or fade it."
+ },
+ {
+  "id": "AST-0138.44",
+  "parent": "AST-0138",
+  "name": "Thief character miniature render (Characters expansion, 300 ppi)",
+  "type": "photography",
+  "src": "DS-Characters-Rules-lores.pdf",
+  "page": 4,
+  "bbox_pt": [
+   73.0,
+   142.0,
+   168.8,
+   244.0
+  ],
+  "image_object": {
+   "xref": 71,
+   "pdfimages_num": 23,
+   "colour": "cmyk",
+   "native": "399×426",
+   "has_mask": true,
+   "smask_pdfimages_num": 24,
+   "ppi_as_placed": 300,
+   "clipped_edges": [
+    "bottom"
+   ]
+  },
+  "method": "pdfimages -png p.4 image #23 (object 71, 399×426 cmyk + soft mask #24 composited to RGBA); trimmed to alpha bounds; native resolution, no resampling",
+  "file": "assets/photography/ast-0138-expansion-miniature-character-thief.png",
+  "format": "png",
+  "dims": "399×426 px",
+  "has_alpha": true,
+  "bytes": 129412,
+  "notes": "SFG miniature render (grey/coloured resin 3D render), cut out by its own soft mask. Subject is cut by the bottom edge of the source image (as in the rulebook): keep that edge against a frame, rule or page edge, or fade it."
+ },
+ {
+  "id": "AST-0138.45",
+  "parent": "AST-0138",
+  "name": "Mercenary character miniature render (Characters expansion)",
+  "type": "photography",
+  "src": "DS-Characters-Rules-lores.pdf",
+  "page": 4,
+  "bbox_pt": [
+   182.2,
+   128.8,
+   278.7,
+   244.0
+  ],
+  "image_object": {
+   "xref": 121,
+   "pdfimages_num": 17,
+   "colour": "cmyk",
+   "native": "402×481",
+   "has_mask": true,
+   "smask_pdfimages_num": 18,
+   "ppi_as_placed": 300,
+   "clipped_edges": [
+    "bottom"
+   ]
+  },
+  "method": "pdfimages -png p.4 image #17 (object 121, 402×481 cmyk + soft mask #18 composited to RGBA); trimmed to alpha bounds; native resolution, no resampling",
+  "file": "assets/photography/ast-0138-expansion-miniature-character-mercenary.png",
+  "format": "png",
+  "dims": "402×481 px",
+  "has_alpha": true,
+  "bytes": 138000,
+  "notes": "SFG miniature render (grey/coloured resin 3D render), cut out by its own soft mask. Subject is cut by the bottom edge of the source image (as in the rulebook): keep that edge against a frame, rule or page edge, or fade it."
+ },
+ {
+  "id": "AST-0138.46",
+  "parent": "AST-0138",
+  "name": "Cleric character miniature render (Characters expansion, 300 ppi)",
+  "type": "photography",
+  "src": "DS-Characters-Rules-lores.pdf",
+  "page": 4,
+  "bbox_pt": [
+   293.1,
+   139.1,
+   384.1,
+   244.0
+  ],
+  "image_object": {
+   "xref": 117,
+   "pdfimages_num": 13,
+   "colour": "cmyk",
+   "native": "379×438",
+   "has_mask": true,
+   "smask_pdfimages_num": 14,
+   "ppi_as_placed": 300
+  },
+  "method": "pdfimages -png p.4 image #13 (object 117, 379×438 cmyk + soft mask #14 composited to RGBA); trimmed to alpha bounds; native resolution, no resampling",
+  "file": "assets/photography/ast-0138-expansion-miniature-character-cleric.png",
+  "format": "png",
+  "dims": "379×438 px",
+  "has_alpha": true,
+  "bytes": 123375,
+  "notes": "SFG miniature render (grey/coloured resin 3D render), cut out by its own soft mask."
+ },
+ {
+  "id": "AST-0138.47",
+  "parent": "AST-0138",
+  "name": "Pyromancer character miniature render (Characters expansion, 300 ppi)",
+  "type": "photography",
+  "src": "DS-Characters-Rules-lores.pdf",
+  "page": 4,
+  "bbox_pt": [
+   41.1,
+   204.8,
+   113.4,
+   352.1
+  ],
+  "image_object": {
+   "xref": 123,
+   "pdfimages_num": 19,
+   "colour": "cmyk",
+   "native": "302×614",
+   "has_mask": true,
+   "smask_pdfimages_num": 20,
+   "ppi_as_placed": 301,
+   "clipped_edges": [
+    "bottom"
+   ]
+  },
+  "method": "pdfimages -png p.4 image #19 (object 123, 302×614 cmyk + soft mask #20 composited to RGBA); trimmed to alpha bounds; native resolution, no resampling",
+  "file": "assets/photography/ast-0138-expansion-miniature-character-pyromancer.png",
+  "format": "png",
+  "dims": "302×614 px",
+  "has_alpha": true,
+  "bytes": 155788,
+  "notes": "SFG miniature render (grey/coloured resin 3D render), cut out by its own soft mask. Subject is cut by the bottom edge of the source image (as in the rulebook): keep that edge against a frame, rule or page edge, or fade it."
+ },
+ {
+  "id": "AST-0138.48",
+  "parent": "AST-0138",
+  "name": "Sorcerer character miniature render (Characters expansion)",
+  "type": "photography",
+  "src": "DS-Characters-Rules-lores.pdf",
+  "page": 4,
+  "bbox_pt": [
+   127.9,
+   236.7,
+   222.3,
+   352.1
+  ],
+  "image_object": {
+   "xref": 69,
+   "pdfimages_num": 21,
+   "colour": "cmyk",
+   "native": "394×482",
+   "has_mask": true,
+   "smask_pdfimages_num": 22,
+   "ppi_as_placed": 301,
+   "clipped_edges": [
+    "bottom"
+   ]
+  },
+  "method": "pdfimages -png p.4 image #21 (object 69, 394×482 cmyk + soft mask #22 composited to RGBA); trimmed to alpha bounds; native resolution, no resampling",
+  "file": "assets/photography/ast-0138-expansion-miniature-character-sorcerer.png",
+  "format": "png",
+  "dims": "394×482 px",
+  "has_alpha": true,
+  "bytes": 147503,
+  "notes": "SFG miniature render (grey/coloured resin 3D render), cut out by its own soft mask. Subject is cut by the bottom edge of the source image (as in the rulebook): keep that edge against a frame, rule or page edge, or fade it."
+ },
+ {
+  "id": "AST-0138.49",
+  "parent": "AST-0138",
+  "name": "Deprived character miniature render (Characters expansion)",
+  "type": "photography",
+  "src": "DS-Characters-Rules-lores.pdf",
+  "page": 4,
+  "bbox_pt": [
+   248.8,
+   240.6,
+   331.5,
+   352.1
+  ],
+  "image_object": {
+   "xref": 119,
+   "pdfimages_num": 15,
+   "colour": "cmyk",
+   "native": "345×465",
+   "has_mask": true,
+   "smask_pdfimages_num": 16,
+   "ppi_as_placed": 301,
+   "clipped_edges": [
+    "bottom"
+   ]
+  },
+  "method": "pdfimages -png p.4 image #15 (object 119, 345×465 cmyk + soft mask #16 composited to RGBA); trimmed to alpha bounds; native resolution, no resampling",
+  "file": "assets/photography/ast-0138-expansion-miniature-character-deprived.png",
+  "format": "png",
+  "dims": "345×465 px",
+  "has_alpha": true,
+  "bytes": 117277,
+  "notes": "SFG miniature render (grey/coloured resin 3D render), cut out by its own soft mask. Subject is cut by the bottom edge of the source image (as in the rulebook): keep that edge against a frame, rule or page edge, or fade it."
+ },
+ {
+  "id": "AST-0138.50",
+  "parent": "AST-0138",
+  "name": "Black Iron Armour set miniature render (Characters expansion)",
+  "type": "photography",
+  "src": "DS-Characters-Rules-lores.pdf",
+  "page": 5,
+  "bbox_pt": [
+   38.3,
+   155.7,
+   112.6,
+   270.8
+  ],
+  "image_object": {
+   "xref": 157,
+   "pdfimages_num": 6,
+   "colour": "cmyk",
+   "native": "310×480",
+   "has_mask": true,
+   "smask_pdfimages_num": 7,
+   "ppi_as_placed": 301
+  },
+  "method": "pdfimages -png p.5 image #6 (object 157, 310×480 cmyk + soft mask #7 composited to RGBA); trimmed to alpha bounds; native resolution, no resampling",
+  "file": "assets/photography/ast-0138-expansion-miniature-armour-black-iron.png",
+  "format": "png",
+  "dims": "305×468 px",
+  "has_alpha": true,
+  "bytes": 138624,
+  "notes": "SFG miniature render (grey/coloured resin 3D render), cut out by its own soft mask."
+ },
+ {
+  "id": "AST-0138.51",
+  "parent": "AST-0138",
+  "name": "Catarina Armour set miniature render (Characters expansion)",
+  "type": "photography",
+  "src": "DS-Characters-Rules-lores.pdf",
+  "page": 5,
+  "bbox_pt": [
+   101.1,
+   153.3,
+   179.4,
+   270.8
+  ],
+  "image_object": {
+   "xref": 161,
+   "pdfimages_num": 10,
+   "colour": "cmyk",
+   "native": "327×490",
+   "has_mask": true,
+   "smask_pdfimages_num": 11,
+   "ppi_as_placed": 301
+  },
+  "method": "pdfimages -png p.5 image #10 (object 161, 327×490 cmyk + soft mask #11 composited to RGBA); trimmed to alpha bounds; native resolution, no resampling",
+  "file": "assets/photography/ast-0138-expansion-miniature-armour-catarina.png",
+  "format": "png",
+  "dims": "322×483 px",
+  "has_alpha": true,
+  "bytes": 150100,
+  "notes": "SFG miniature render (grey/coloured resin 3D render), cut out by its own soft mask."
+ },
+ {
+  "id": "AST-0138.52",
+  "parent": "AST-0138",
+  "name": "Black Knight Armour set miniature render (Characters expansion)",
+  "type": "photography",
+  "src": "DS-Characters-Rules-lores.pdf",
+  "page": 5,
+  "bbox_pt": [
+   128.2,
+   142.1,
+   240.9,
+   270.8
+  ],
+  "image_object": {
+   "xref": 159,
+   "pdfimages_num": 8,
+   "colour": "cmyk",
+   "native": "470×537",
+   "has_mask": true,
+   "smask_pdfimages_num": 9,
+   "ppi_as_placed": 300
+  },
+  "method": "pdfimages -png p.5 image #8 (object 159, 470×537 cmyk + soft mask #9 composited to RGBA); trimmed to alpha bounds; native resolution, no resampling",
+  "file": "assets/photography/ast-0138-expansion-miniature-armour-black-knight.png",
+  "format": "png",
+  "dims": "463×532 px",
+  "has_alpha": true,
+  "bytes": 175306,
+  "notes": "SFG miniature render (grey/coloured resin 3D render), cut out by its own soft mask."
+ },
+ {
+  "id": "AST-0138.53",
+  "parent": "AST-0138",
+  "name": "Guardian Armour set miniature render (Characters expansion)",
+  "type": "photography",
+  "src": "DS-Characters-Rules-lores.pdf",
+  "page": 5,
+  "bbox_pt": [
+   242.3,
+   146.7,
+   325.2,
+   270.8
+  ],
+  "image_object": {
+   "xref": 171,
+   "pdfimages_num": 20,
+   "colour": "cmyk",
+   "native": "346×518",
+   "has_mask": true,
+   "smask_pdfimages_num": 21,
+   "ppi_as_placed": 300
+  },
+  "method": "pdfimages -png p.5 image #20 (object 171, 346×518 cmyk + soft mask #21 composited to RGBA); trimmed to alpha bounds; native resolution, no resampling",
+  "file": "assets/photography/ast-0138-expansion-miniature-armour-guardian.png",
+  "format": "png",
+  "dims": "344×514 px",
+  "has_alpha": true,
+  "bytes": 167719,
+  "notes": "SFG miniature render (grey/coloured resin 3D render), cut out by its own soft mask."
+ },
+ {
+  "id": "AST-0138.54",
+  "parent": "AST-0138",
+  "name": "Havel's Armour set miniature render (Characters expansion)",
+  "type": "photography",
+  "src": "DS-Characters-Rules-lores.pdf",
+  "page": 5,
+  "bbox_pt": [
+   308.5,
+   134.8,
+   376.6,
+   273.3
+  ],
+  "image_object": {
+   "xref": 173,
+   "pdfimages_num": 22,
+   "colour": "cmyk",
+   "native": "284×578",
+   "has_mask": true,
+   "smask_pdfimages_num": 23,
+   "ppi_as_placed": 300
+  },
+  "method": "pdfimages -png p.5 image #22 (object 173, 284×578 cmyk + soft mask #23 composited to RGBA); trimmed to alpha bounds; native resolution, no resampling",
+  "file": "assets/photography/ast-0138-expansion-miniature-armour-havels.png",
+  "format": "png",
+  "dims": "275×569 px",
+  "has_alpha": true,
+  "bytes": 152999,
+  "notes": "SFG miniature render (grey/coloured resin 3D render), cut out by its own soft mask."
+ },
+ {
+  "id": "AST-0138.55",
+  "parent": "AST-0138",
+  "name": "Embraced Armour of Favour set miniature render (Characters expansion)",
+  "type": "photography",
+  "src": "DS-Characters-Rules-lores.pdf",
+  "page": 5,
+  "bbox_pt": [
+   17.6,
+   305.9,
+   107.7,
+   428.8
+  ],
+  "image_object": {
+   "xref": 155,
+   "pdfimages_num": 4,
+   "colour": "cmyk",
+   "native": "376×513",
+   "has_mask": true,
+   "smask_pdfimages_num": 5,
+   "ppi_as_placed": 300
+  },
+  "method": "pdfimages -png p.5 image #4 (object 155, 376×513 cmyk + soft mask #5 composited to RGBA); trimmed to alpha bounds; native resolution, no resampling",
+  "file": "assets/photography/ast-0138-expansion-miniature-armour-embraced-armour-of-favour.png",
+  "format": "png",
+  "dims": "365×505 px",
+  "has_alpha": true,
+  "bytes": 151065,
+  "notes": "SFG miniature render (grey/coloured resin 3D render), cut out by its own soft mask."
+ },
+ {
+  "id": "AST-0138.56",
+  "parent": "AST-0138",
+  "name": "Crimson Robes set miniature render (Characters expansion)",
+  "type": "photography",
+  "src": "DS-Characters-Rules-lores.pdf",
+  "page": 5,
+  "bbox_pt": [
+   105.5,
+   279.0,
+   172.6,
+   426.8
+  ],
+  "image_object": {
+   "xref": 167,
+   "pdfimages_num": 16,
+   "colour": "cmyk",
+   "native": "280×617",
+   "has_mask": true,
+   "smask_pdfimages_num": 17,
+   "ppi_as_placed": 301
+  },
+  "method": "pdfimages -png p.5 image #16 (object 167, 280×617 cmyk + soft mask #17 composited to RGBA); trimmed to alpha bounds; native resolution, no resampling",
+  "file": "assets/photography/ast-0138-expansion-miniature-armour-crimson-robes.png",
+  "format": "png",
+  "dims": "278×610 px",
+  "has_alpha": true,
+  "bytes": 140785,
+  "notes": "SFG miniature render (grey/coloured resin 3D render), cut out by its own soft mask."
+ },
+ {
+  "id": "AST-0138.57",
+  "parent": "AST-0138",
+  "name": "Adventurer's Armour set miniature render (Characters expansion)",
+  "type": "photography",
+  "src": "DS-Characters-Rules-lores.pdf",
+  "page": 5,
+  "bbox_pt": [
+   135.0,
+   296.4,
+   252.4,
+   427.5
+  ],
+  "image_object": {
+   "xref": 165,
+   "pdfimages_num": 14,
+   "colour": "cmyk",
+   "native": "489×547",
+   "has_mask": true,
+   "smask_pdfimages_num": 15,
+   "ppi_as_placed": 300
+  },
+  "method": "pdfimages -png p.5 image #14 (object 165, 489×547 cmyk + soft mask #15 composited to RGBA); trimmed to alpha bounds; native resolution, no resampling",
+  "file": "assets/photography/ast-0138-expansion-miniature-armour-adventurers.png",
+  "format": "png",
+  "dims": "489×547 px",
+  "has_alpha": true,
+  "bytes": 191543,
+  "notes": "SFG miniature render (grey/coloured resin 3D render), cut out by its own soft mask."
+ },
+ {
+  "id": "AST-0138.58",
+  "parent": "AST-0138",
+  "name": "Dark Armour set miniature render (Characters expansion)",
+  "type": "photography",
+  "src": "DS-Characters-Rules-lores.pdf",
+  "page": 5,
+  "bbox_pt": [
+   230.0,
+   305.8,
+   316.9,
+   428.2
+  ],
+  "image_object": {
+   "xref": 163,
+   "pdfimages_num": 12,
+   "colour": "cmyk",
+   "native": "363×511",
+   "has_mask": true,
+   "smask_pdfimages_num": 13,
+   "ppi_as_placed": 301
+  },
+  "method": "pdfimages -png p.5 image #12 (object 163, 363×511 cmyk + soft mask #13 composited to RGBA); trimmed to alpha bounds; native resolution, no resampling",
+  "file": "assets/photography/ast-0138-expansion-miniature-armour-dark.png",
+  "format": "png",
+  "dims": "357×505 px",
+  "has_alpha": true,
+  "bytes": 147124,
+  "notes": "SFG miniature render (grey/coloured resin 3D render), cut out by its own soft mask."
+ },
+ {
+  "id": "AST-0138.59",
+  "parent": "AST-0138",
+  "name": "Gold-Trimmed Black Robes set miniature render (Characters expansion)",
+  "type": "photography",
+  "src": "DS-Characters-Rules-lores.pdf",
+  "page": 5,
+  "bbox_pt": [
+   288.7,
+   322.7,
+   377.5,
+   426.1
+  ],
+  "image_object": {
+   "xref": 169,
+   "pdfimages_num": 18,
+   "colour": "cmyk",
+   "native": "370×431",
+   "has_mask": true,
+   "smask_pdfimages_num": 19,
+   "ppi_as_placed": 300
+  },
+  "method": "pdfimages -png p.5 image #18 (object 169, 370×431 cmyk + soft mask #19 composited to RGBA); trimmed to alpha bounds; native resolution, no resampling",
+  "file": "assets/photography/ast-0138-expansion-miniature-armour-gold-trimmed-black-robes.png",
+  "format": "png",
+  "dims": "364×425 px",
+  "has_alpha": true,
+  "bytes": 136901,
+  "notes": "SFG miniature render (grey/coloured resin 3D render), cut out by its own soft mask."
+ },
+ {
+  "id": "AST-0138.R1",
+  "parent": "AST-0138",
+  "status": "PROVENANCE REVIEW",
+  "name": "Phantom figure artwork, 815×1110 px with soft mask",
+  "src": "DS-Phantoms-Rules-lores.pdf",
+  "page": 6,
+  "image_object": "object(s) 187 (also p.12 object 393)",
+  "reason": "Looks like a painting (dark painted figure fading to black), not a miniature render. Not extracted.",
+  "file": null
+ },
+ {
+  "id": "AST-0138.R2",
+  "parent": "AST-0138",
+  "status": "PROVENANCE REVIEW",
+  "name": "Mushroom Parent and Child artwork, 1258×1576 px with soft mask",
+  "src": "DS-Darkroot-Rules-web.pdf",
+  "page": 7,
+  "image_object": "object(s) 378",
+  "reason": "Coloured character art on a dark ground, not the grey miniature render. Not extracted.",
+  "file": null
+ },
+ {
+  "id": "AST-0138.R3",
+  "parent": "AST-0138",
+  "status": "PROVENANCE REVIEW",
+  "name": "Knight in a burning landscape, 406×605 px with soft mask",
+  "src": "DS-IronKeep-Rules-Web.pdf",
+  "page": 6,
+  "image_object": "object(s) 338",
+  "reason": "Painting. Not extracted.",
+  "file": null
+ },
+ {
+  "id": "AST-0138.R4",
+  "parent": "AST-0138",
+  "status": "PROVENANCE REVIEW",
+  "name": "Executioner's Chariot horse artwork, 847×926 px with soft mask",
+  "src": "DS-EC-Rules-Web.pdf",
+  "page": 16,
+  "image_object": "object(s) 2867 (also p.17 object 2886)",
+  "reason": "Dark rendered creature art on a grey ground, not the miniature render. Not extracted.",
+  "file": null
+ },
+ {
+  "id": "AST-0138.R5",
+  "parent": "AST-0138",
+  "status": "PROVENANCE REVIEW",
+  "name": "Kalameet head artwork on the mega-boss data card, 530×721 px",
+  "src": "DS-BDK-Rules-web.pdf",
+  "page": 11,
+  "image_object": "object(s) 1431",
+  "reason": "Painted boss illustration. Not extracted.",
+  "file": null
+ },
+ {
+  "id": "AST-0145.1",
+  "parent": "AST-0145",
+  "name": "Card text-box parchment plate: blank worn-cream panel with its hairline frame (Phantoms summon card)",
+  "type": "texture",
+  "src": "DS-Phantoms-Rules-lores.pdf",
+  "page": 6,
+  "bbox_pt": [
+   77.3,
+   258.8,
+   187.7,
+   301.9
+  ],
+  "image_object": {
+   "xref": 207,
+   "pdfimages_num": 16,
+   "colour": "cmyk",
+   "native": "683×267",
+   "has_mask": true,
+   "smask_pdfimages_num": 17,
+   "ppi_as_placed": 445
+  },
+  "method": "pdfimages -png p.6 image #16 (object 207, 683×267 cmyk + soft mask #17 composited to RGBA); trimmed to alpha bounds; native resolution, no resampling",
+  "file": "assets/textures/ast-0145-card-textbox-parchment-blank-plate.png",
+  "format": "png",
+  "dims": "683×267 px",
+  "has_alpha": true,
+  "bytes": 319681,
+  "notes": "Blank plate with soft mask at 445 ppi as placed: the cleanest text-box parchment in the sources (the 2022 encounter card boxes have their text printed in). Crop the centre for a pure fill."
+ },
+ {
+  "id": "AST-0145.2",
+  "parent": "AST-0145",
+  "name": "Card text-box parchment fill: blank area of the Gravelord Nito data card text box",
+  "type": "texture",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 28,
+  "bbox_pt": [
+   138.7,
+   486.0,
+   295.5,
+   705.0
+  ],
+  "image_object": {
+   "xref": 1442,
+   "pdfimages_num": 2,
+   "colour": "cmyk",
+   "native": "653×912",
+   "has_mask": false,
+   "crop_px": [
+    45,
+    662,
+    608,
+    878
+   ],
+   "ppi_as_placed": 300
+  },
+  "method": "pdfimages -png p.28 image #2 (object 1442, 653×912 cmyk, no soft mask); cropped to px box (45, 662, 608, 878) of the object; native resolution, no resampling",
+  "file": "assets/textures/ast-0145-card-textbox-parchment-fill-2022-boss-card.png",
+  "format": "png",
+  "dims": "563×216 px",
+  "has_alpha": false,
+  "bytes": 34262,
+  "notes": "Text-free lower part of the text box of the 653×912 card raster (300 ppi)."
+ },
+ {
+  "id": "AST-0146",
+  "parent": "AST-0146",
+  "name": "Dashboard parchment panel texture (blank lower part of the ability box of the character dashboard)",
+  "type": "texture",
+  "src": "DS-TG-Rulebook-Compressed_compressed.pdf",
+  "page": 8,
+  "bbox_pt": [
+   92.9,
+   345.6,
+   581.8,
+   732.5
+  ],
+  "image_object": {
+   "xref": 809,
+   "pdfimages_num": 4,
+   "colour": "cmyk",
+   "native": "1019×806",
+   "has_mask": true,
+   "smask_pdfimages_num": 5,
+   "crop_px": [
+    112,
+    405,
+    292,
+    655
+   ],
+   "ppi_as_placed": 150
+  },
+  "method": "pdfimages -png p.8 image #4 (object 809, 1019×806 cmyk + soft mask #5 composited to RGBA); cropped to px box (112, 405, 292, 655) of the object; native resolution, no resampling",
+  "file": "assets/textures/ast-0146-dashboard-parchment-panel-texture.png",
+  "format": "png",
+  "dims": "180×250 px",
+  "has_alpha": false,
+  "bytes": 35439,
+  "notes": "180×250 px at 150 ppi: small swatch, tile or stretch with care. The dark stone ground of the dashboard is visible only as narrow margins and gives no usable swatch."
+ },
+ {
+  "id": "AST-0147",
+  "parent": "AST-0147",
+  "status": "BLOCKED",
+  "reason": "No usable floor texture can be cut from the sources: every tile and board raster is covered with node rings and markers at 70 to 170 px spacing (rasters are 140 to 300 ppi), and the largest marker-free square found by masking is 44 to 270 px. Whole tiles and boards are available as tile art (AST-0133, AST-0117); a seamless flagstone, dirt or bone-pit texture needs node-free tile artwork from the owner or a redraw.",
+  "file": null
+ }
+]

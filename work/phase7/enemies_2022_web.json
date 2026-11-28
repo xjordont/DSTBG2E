@@ -1,0 +1,393 @@
+{
+ "Skeleton Soldier": {
+  "threat": 5,
+  "hp": 1,
+  "armor": 2,
+  "resist": 1,
+  "steps": [
+   {
+    "k": "move",
+    "n": 1,
+    "dir": "to",
+    "tgt": "nearest",
+    "push": true,
+    "push_dmg": 2,
+    "effects": [
+     "bleed"
+    ]
+   }
+  ],
+  "source": "DSBG-Shuffle repo image lib/dsbg_shuffle_images/enemies/<name> - data.jpg (community re-creation of the printed data card, read by eye; damage/health/block numbers are overlaid blank) + icon legend from official Tomb of Giants rulebook (enemy icon key) and Core rulebook pp.24-25,40; cross-checked with DSBG-Shuffle behaviors.py (health/armor/resist/damage/dodge) and community spreadsheet 'DSBG - Enemy & Equipment' Enemies sheet",
+  "confidence": "high",
+  "expansion": "Tomb of Giants",
+  "notes": "Move-only card (no attack target icon). Printed range roundel shows 0 although there is no separate attack; the 2 physical damage is the damage-while-pushing of the move (official ToG icon key: 'Deal damage while pushing'; rulebook: attack resolved against each character pushed, physical, with defence rolls). Bleed applied. Dodge 1. Community FAQ states the ToG errata made it a range 0 attack. Sheet stores Range 1 (melee), DMG Phy 0, Move DMG 2, Bleed."
+ },
+ "Skeleton Archer": {
+  "threat": 3,
+  "hp": 1,
+  "armor": 1,
+  "resist": 1,
+  "steps": [
+   {
+    "k": "attack",
+    "tgt": "aggro",
+    "range": 9,
+    "node": false,
+    "push": false,
+    "repeat": 1,
+    "dmg": 4,
+    "magic": false,
+    "dodge": 1,
+    "effects": []
+   },
+   {
+    "k": "move",
+    "n": 2,
+    "dir": "away",
+    "tgt": "aggro",
+    "push": false
+   }
+  ],
+  "source": "DSBG-Shuffle repo image lib/dsbg_shuffle_images/enemies/<name> - data.jpg (community re-creation of the printed data card, read by eye; damage/health/block numbers are overlaid blank) + icon legend from official Tomb of Giants rulebook (enemy icon key) and Core rulebook pp.24-25,40; cross-checked with DSBG-Shuffle behaviors.py (health/armor/resist/damage/dodge) and community spreadsheet 'DSBG - Enemy & Equipment' Enemies sheet",
+  "confidence": "high",
+  "expansion": "Tomb of Giants",
+  "notes": "Attack first (left), then move away 2 from the aggro holder. Range infinity (9). Dodge 1."
+ },
+ "Skeleton Beast": {
+  "threat": 6,
+  "hp": 5,
+  "armor": 2,
+  "resist": 2,
+  "steps": [
+   {
+    "k": "move",
+    "n": 1,
+    "dir": "to",
+    "tgt": "nearest",
+    "push": true,
+    "push_dmg": 4,
+    "repeat": 2
+   }
+  ],
+  "source": "DSBG-Shuffle repo image lib/dsbg_shuffle_images/enemies/<name> - data.jpg (community re-creation of the printed data card, read by eye; damage/health/block numbers are overlaid blank) + icon legend from official Tomb of Giants rulebook (enemy icon key) and Core rulebook pp.24-25,40; cross-checked with DSBG-Shuffle behaviors.py (health/armor/resist/damage/dodge) and community spreadsheet 'DSBG - Enemy & Equipment' Enemies sheet",
+  "confidence": "medium",
+  "expansion": "Tomb of Giants",
+  "notes": "Move-only card (range dash). Push damage 4 and repeat 2 come from behaviors.py/sheet (Repeat Actions 2); no repeat icon is drawn on the image, so whether the repeat covers the move only is unverified. Dodge 2."
+ },
+ "Giant Skeleton Soldier": {
+  "threat": 2,
+  "hp": 5,
+  "armor": 1,
+  "resist": 1,
+  "steps": [
+   {
+    "k": "move",
+    "n": 1,
+    "dir": "to",
+    "tgt": "nearest",
+    "push": false
+   },
+   {
+    "k": "attack",
+    "tgt": "nearest",
+    "range": 1,
+    "node": false,
+    "push": true,
+    "repeat": 1,
+    "dmg": 5,
+    "magic": false,
+    "dodge": 1,
+    "effects": [],
+    "push_dmg": 2
+   }
+  ],
+  "source": "DSBG-Shuffle repo image lib/dsbg_shuffle_images/enemies/<name> - data.jpg (community re-creation of the printed data card, read by eye; damage/health/block numbers are overlaid blank) + icon legend from official Tomb of Giants rulebook (enemy icon key) and Core rulebook pp.24-25,40; cross-checked with DSBG-Shuffle behaviors.py (health/armor/resist/damage/dodge) and community spreadsheet 'DSBG - Enemy & Equipment' Enemies sheet",
+  "confidence": "high",
+  "expansion": "Tomb of Giants",
+  "notes": "Attack pushes; push damage 2 (behaviors left slot / sheet Move DMG 2). Dodge 1."
+ },
+ "Giant Skeleton Archer": {
+  "threat": 1,
+  "hp": 5,
+  "armor": 1,
+  "resist": 1,
+  "steps": [
+   {
+    "k": "move",
+    "n": 1,
+    "dir": "away",
+    "tgt": "nearest",
+    "push": false
+   },
+   {
+    "k": "attack",
+    "tgt": "aggro",
+    "range": 9,
+    "node": false,
+    "push": true,
+    "repeat": 1,
+    "dmg": 5,
+    "magic": false,
+    "dodge": 2,
+    "effects": [],
+    "push_dmg": 2
+   }
+  ],
+  "source": "DSBG-Shuffle repo image lib/dsbg_shuffle_images/enemies/<name> - data.jpg (community re-creation of the printed data card, read by eye; damage/health/block numbers are overlaid blank) + icon legend from official Tomb of Giants rulebook (enemy icon key) and Core rulebook pp.24-25,40; cross-checked with DSBG-Shuffle behaviors.py (health/armor/resist/damage/dodge) and community spreadsheet 'DSBG - Enemy & Equipment' Enemies sheet",
+  "confidence": "high",
+  "expansion": "Tomb of Giants",
+  "notes": "Move away 1 from nearest (arrow number sits on the bottom arrow; sheet Move -1), then attack aggro holder at infinite range with push (push dmg 2). Dodge 2 (behaviors.py and sheet agree)."
+ },
+ "Necromancer": {
+  "threat": 7,
+  "hp": 5,
+  "armor": 1,
+  "resist": 2,
+  "steps": [
+   {
+    "k": "attack",
+    "tgt": "aggro",
+    "range": 9,
+    "node": true,
+    "push": false,
+    "repeat": 1,
+    "dmg": 3,
+    "magic": true,
+    "dodge": 1,
+    "effects": [
+     "resurrect"
+    ]
+   }
+  ],
+  "source": "DSBG-Shuffle repo image lib/dsbg_shuffle_images/enemies/<name> - data.jpg (community re-creation of the printed data card, read by eye; damage/health/block numbers are overlaid blank) + icon legend from official Tomb of Giants rulebook (enemy icon key) and Core rulebook pp.24-25,40; cross-checked with DSBG-Shuffle behaviors.py (health/armor/resist/damage/dodge) and community spreadsheet 'DSBG - Enemy & Equipment' Enemies sheet",
+  "confidence": "high",
+  "expansion": "Tomb of Giants",
+  "notes": "No movement. Skeletal-hand icon on the card = Resurrect. Only printed card text found is the icon. Official ToG rulebook (Resurrect): 'If the resurrect symbol appears on an enemy card, at the end of the enemy's turn, place a skeleton soldier on the closest enemy spawn node to the enemy. If each skeleton soldier model is already on the playing area, ignore this rule.' Node-attack ring-dot icon at lower left of card. Dodge 1."
+ },
+ "Bonewheel Skeleton": {
+  "threat": 7,
+  "hp": 1,
+  "armor": 1,
+  "resist": 1,
+  "steps": [
+   {
+    "k": "move",
+    "n": 1,
+    "dir": "to",
+    "tgt": "nearest",
+    "push": true,
+    "push_dmg": 4,
+    "repeat": 2
+   }
+  ],
+  "source": "DSBG-Shuffle repo image lib/dsbg_shuffle_images/enemies/<name> - data.jpg (community re-creation of the printed data card, read by eye; damage/health/block numbers are overlaid blank) + icon legend from official Tomb of Giants rulebook (enemy icon key) and Core rulebook pp.24-25,40; cross-checked with DSBG-Shuffle behaviors.py (health/armor/resist/damage/dodge) and community spreadsheet 'DSBG - Enemy & Equipment' Enemies sheet",
+  "confidence": "medium",
+  "expansion": "Painted World of Ariamis",
+  "notes": "Move-only card (range dash). Push damage 4 and repeat 2 from behaviors.py/sheet (Move DMG 4, Move Push, Repeat 2); no repeat icon drawn, so repeat scope unverified. Dodge 2."
+ },
+ "Crow Demon": {
+  "threat": 9,
+  "hp": 5,
+  "armor": 1,
+  "resist": 2,
+  "steps": [
+   {
+    "k": "move",
+    "n": null,
+    "dir": "leap",
+    "tgt": "aggro",
+    "push": true,
+    "push_dmg": 6
+   }
+  ],
+  "source": "DSBG-Shuffle repo image lib/dsbg_shuffle_images/enemies/<name> - data.jpg (community re-creation of the printed data card, read by eye; damage/health/block numbers are overlaid blank) + icon legend from official Tomb of Giants rulebook (enemy icon key) and Core rulebook pp.24-25,40; cross-checked with DSBG-Shuffle behaviors.py (health/armor/resist/damage/dodge) and community spreadsheet 'DSBG - Enemy & Equipment' Enemies sheet",
+  "confidence": "medium",
+  "expansion": "Painted World of Ariamis",
+  "notes": "Leap icon on the move (no distance number) toward the aggro holder, with push damage 6 (sheet Leap, Move Push, Move DMG 6). Range dash, no separate attack. Community FAQ: on a leap the enemy immediately reaches the movement target and proceeds with the attack target if possible; push damage applies on the node where the leap ends. Dodge 2."
+ },
+ "Engorged Zombie": {
+  "threat": 8,
+  "hp": 1,
+  "armor": 2,
+  "resist": 2,
+  "steps": [
+   {
+    "k": "move",
+    "n": 1,
+    "dir": "to",
+    "tgt": "nearest",
+    "push": false
+   },
+   {
+    "k": "attack",
+    "tgt": "nearest",
+    "range": 0,
+    "node": false,
+    "push": false,
+    "repeat": 1,
+    "dmg": 4,
+    "magic": true,
+    "dodge": 1,
+    "effects": []
+   }
+  ],
+  "source": "DSBG-Shuffle repo image lib/dsbg_shuffle_images/enemies/<name> - data.jpg (community re-creation of the printed data card, read by eye; damage/health/block numbers are overlaid blank) + icon legend from official Tomb of Giants rulebook (enemy icon key) and Core rulebook pp.24-25,40; cross-checked with DSBG-Shuffle behaviors.py (health/armor/resist/damage/dodge) and community spreadsheet 'DSBG - Enemy & Equipment' Enemies sheet",
+  "confidence": "high",
+  "expansion": "Painted World of Ariamis",
+  "notes": "Dodge 1. Sheet has no Range value for this row (blank) whereas the card prints 0."
+ },
+ "Phalanx": {
+  "threat": 4,
+  "hp": 5,
+  "armor": 1,
+  "resist": 1,
+  "steps": [
+   {
+    "k": "attack",
+    "tgt": "nearest",
+    "range": 1,
+    "node": true,
+    "push": false,
+    "repeat": 1,
+    "dmg": 5,
+    "magic": false,
+    "dodge": 1,
+    "effects": []
+   },
+   {
+    "k": "move",
+    "n": 1,
+    "dir": "to",
+    "tgt": "aggro",
+    "push": false
+   }
+  ],
+  "source": "DSBG-Shuffle repo image lib/dsbg_shuffle_images/enemies/<name> - data.jpg (community re-creation of the printed data card, read by eye; damage/health/block numbers are overlaid blank) + icon legend from official Tomb of Giants rulebook (enemy icon key) and Core rulebook pp.24-25,40; cross-checked with DSBG-Shuffle behaviors.py (health/armor/resist/damage/dodge) and community spreadsheet 'DSBG - Enemy & Equipment' Enemies sheet",
+  "confidence": "medium",
+  "expansion": "Painted World of Ariamis",
+  "notes": "Attack first (ring at left), then move 1 toward aggro holder. Sheet flags 'Phalanx' = True (special rule). No special card text visible on the image and the Painted World rulebook was not found, so the Phalanx rule text could not be quoted. Per community guide the Phalanx is represented by three Phalanx Hollow miniatures pushed together."
+ },
+ "Phalanx Hollow": {
+  "threat": 4,
+  "hp": 1,
+  "armor": 1,
+  "resist": 1,
+  "steps": [
+   {
+    "k": "attack",
+    "tgt": "nearest",
+    "range": 1,
+    "node": false,
+    "push": false,
+    "repeat": 1,
+    "dmg": 4,
+    "magic": false,
+    "dodge": 1,
+    "effects": []
+   },
+   {
+    "k": "move",
+    "n": 1,
+    "dir": "to",
+    "tgt": "aggro",
+    "push": false
+   }
+  ],
+  "source": "DSBG-Shuffle repo image lib/dsbg_shuffle_images/enemies/<name> - data.jpg (community re-creation of the printed data card, read by eye; damage/health/block numbers are overlaid blank) + icon legend from official Tomb of Giants rulebook (enemy icon key) and Core rulebook pp.24-25,40; cross-checked with DSBG-Shuffle behaviors.py (health/armor/resist/damage/dodge) and community spreadsheet 'DSBG - Enemy & Equipment' Enemies sheet",
+  "confidence": "high",
+  "expansion": "Painted World of Ariamis",
+  "notes": "Attack first (ring at left), then move 1 toward aggro holder. Dodge 1."
+ },
+ "Snow Rat": {
+  "threat": 1,
+  "hp": 1,
+  "armor": 0,
+  "resist": 1,
+  "steps": [
+   {
+    "k": "move",
+    "n": null,
+    "dir": "leap",
+    "tgt": "aggro",
+    "push": false
+   },
+   {
+    "k": "attack",
+    "tgt": "aggro",
+    "range": 0,
+    "node": false,
+    "push": false,
+    "repeat": 1,
+    "dmg": 3,
+    "magic": false,
+    "dodge": 1,
+    "effects": [
+     "poison"
+    ]
+   }
+  ],
+  "source": "DSBG-Shuffle repo image lib/dsbg_shuffle_images/enemies/<name> - data.jpg (community re-creation of the printed data card, read by eye; damage/health/block numbers are overlaid blank) + icon legend from official Tomb of Giants rulebook (enemy icon key) and Core rulebook pp.24-25,40; cross-checked with DSBG-Shuffle behaviors.py (health/armor/resist/damage/dodge) and community spreadsheet 'DSBG - Enemy & Equipment' Enemies sheet",
+  "confidence": "medium",
+  "expansion": "Painted World of Ariamis",
+  "notes": "Leap to aggro holder (leap icon, no distance), then attack aggro holder range 0, 3 physical, poison. Armour 0."
+ },
+ "Black Hollow Mage": {
+  "threat": 8,
+  "hp": 5,
+  "armor": 2,
+  "resist": 3,
+  "steps": [
+   {
+    "k": "attack",
+    "tgt": "aggro",
+    "range": 9,
+    "node": false,
+    "push": false,
+    "repeat": 1,
+    "dmg": 4,
+    "magic": true,
+    "dodge": 2,
+    "effects": [
+     "resurrect"
+    ]
+   }
+  ],
+  "source": "DSBG-Shuffle repo image lib/dsbg_shuffle_images/enemies/<name> - data.jpg (community re-creation of the printed data card, read by eye; damage/health/block numbers are overlaid blank) + icon legend from official Tomb of Giants rulebook (enemy icon key) and Core rulebook pp.24-25,40; cross-checked with DSBG-Shuffle behaviors.py (health/armor/resist/damage/dodge) and community spreadsheet 'DSBG - Enemy & Equipment' Enemies sheet",
+  "confidence": "medium",
+  "expansion": "The Executioner's Chariot",
+  "notes": "No movement. Skeletal-hand icon = Resurrect (same icon as the Necromancer; see Necromancer note for the official ToG wording; Chariot rulebook not checked). Infinite range."
+ },
+ "Falchion Skeleton": {
+  "threat": 4,
+  "hp": 1,
+  "armor": 1,
+  "resist": 1,
+  "steps": [
+   {
+    "k": "move",
+    "n": 2,
+    "dir": "to",
+    "tgt": "nearest",
+    "push": false
+   },
+   {
+    "k": "attack",
+    "tgt": "nearest",
+    "range": 0,
+    "node": false,
+    "push": true,
+    "repeat": 1,
+    "dmg": 3,
+    "magic": false,
+    "dodge": 1,
+    "effects": [
+     "bleed"
+    ]
+   }
+  ],
+  "source": "DSBG-Shuffle repo image lib/dsbg_shuffle_images/enemies/<name> - data.jpg (community re-creation of the printed data card, read by eye; damage/health/block numbers are overlaid blank) + icon legend from official Tomb of Giants rulebook (enemy icon key) and Core rulebook pp.24-25,40; cross-checked with DSBG-Shuffle behaviors.py (health/armor/resist/damage/dodge) and community spreadsheet 'DSBG - Enemy & Equipment' Enemies sheet",
+  "confidence": "high",
+  "expansion": "The Executioner's Chariot",
+  "notes": "Dodge 1. Attack pushes (crown icon); no push damage number in the data."
+ }
+}

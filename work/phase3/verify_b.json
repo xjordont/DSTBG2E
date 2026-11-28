@@ -1,0 +1,186 @@
+[
+ {
+  "id": "VB-001",
+  "file": "10_manuscript_chapter_12_phantoms.md",
+  "section": "§12.2",
+  "old": "1. Draw one invader token at random and keep it face down: a standard invader token if the mini-boss has not been defeated, an advanced invader token if it has.",
+  "new": "1. Draw one invader token at random and keep it face down: a standard invader token if the mini-boss has not been defeated, an advanced invader token if it has. In campaign play, draw a standard invader token while the current tier is tier one and an advanced invader token once it is tier two (see §18.1, Section Setup).",
+  "rationale": "The numbered step gave only the standard-game test; §12.2's opening paragraph and §18.1 key the token to the current tier in campaign play."
+ },
+ {
+  "id": "VB-002",
+  "file": "10_manuscript_chapter_12_phantoms.md",
+  "section": "§12.2",
+  "old": "Some campaigns place named invaders in listed encounters and use no invader tokens (see §19.3; §19.4).",
+  "new": "Some campaigns place named invaders in listed encounters and use no invader tokens (see §19.3; §19.4; §19.15).",
+  "rationale": "§19.15, added today, is a third campaign that lists named invaders and places no tokens."
+ },
+ {
+  "id": "VB-003",
+  "file": "10_manuscript_chapter_15_boss_encounters.md",
+  "section": "§15.2",
+  "old": "If a boss's special rules state where the boss is placed or how it faces, those rules replace step 6 (see §17).",
+  "new": "If a boss's special rules state where the boss is placed or how it faces, those rules replace that part of step 6, and the rest of the step applies (see §17).",
+  "rationale": "Entries that name only a node (Four Kings, Old Iron King, Asylum Demon, Executioner's Chariot) otherwise lose the starting facing, which the Old Iron King's booklet and back-arc rule require."
+ },
+ {
+  "id": "VB-004",
+  "file": "10_manuscript_chapter_15_boss_encounters.md",
+  "section": "§15.3",
+  "old": "The boss model is placed on it at the start of every boss encounter (see §15.2).",
+  "new": "The boss model is placed on it at the start of every boss encounter, unless the boss's special rules name another node (see §15.2; §17).",
+  "rationale": "Smough, the Asylum Demon and the Old Iron King are placed on other nodes (§17.2, §17.3, §17.10)."
+ },
+ {
+  "id": "VB-005",
+  "file": "10_manuscript_chapter_15_boss_encounters.md",
+  "section": "§15.6",
+  "old": "A boss model is pushed only when another boss model moves onto its node (see §17.1).",
+  "new": "A boss model is pushed only when another boss model moves onto its node or is placed on it (see §17.1; §17.10, The Four Kings).",
+  "rationale": "The royal summons places a king on the spawn node and pushes every other model there, a king included (§17.10, step 2)."
+ },
+ {
+  "id": "VB-006",
+  "file": "10_manuscript_chapter_08_combat_basics.md",
+  "section": "§8.4",
+  "old": "The only push that affects a boss model is the push caused by another boss model moving onto its node (see §17.1).",
+  "new": "The only push that affects a boss model is the push caused by another boss model that moves onto its node or is placed on it (see §17.1; §17.10, The Four Kings).",
+  "rationale": "Outside half B; consequential on VB-005, so that §8.4 does not forbid the push that the royal summons requires."
+ },
+ {
+  "id": "VB-007",
+  "file": "10_manuscript_chapter_16_boss_turns.md",
+  "section": "§16.5",
+  "old": "In campaign play the spark, the rest, and the setup that follow a boss differ (see §18.1; §18.3).",
+  "new": "In campaign play the PvP encounter, the spark, the rest, and the setup that follow a boss differ (see §18.1; §18.3).",
+  "rationale": "Step 6 orders a PvP encounter after every boss; in campaign play it follows only a boss that completes a section (§18.1)."
+ },
+ {
+  "id": "VB-008",
+  "file": "10_manuscript_chapter_17_boss_special_rules.md",
+  "section": "§17.6",
+  "old": "When the Pursuer's health is reduced to or below its *heat-up* point {{icon:ast-0030-heat-up-point}}, one random heat-up card is shuffled into its behaviour deck, as for any *boss* (see §15.5). From that moment until the *encounter* ends, the *attack value* of every attack on the Pursuer's behaviour cards is increased by one.",
+  "new": "When the Pursuer's health is reduced to or below its *heat-up* point {{icon:ast-0030-heat-up-point}}, it heats up as the general rule directs (see §15.5, Heat-Up). From the moment the heat-up is carried out until the *encounter* ends, the *attack value* of every attack on the Pursuer's behaviour cards is increased by one.",
+  "rationale": "With the heat-up now carried out at the start of the next turn, 'From that moment' had two readings; the wording follows the Old Iron King's entry."
+ },
+ {
+  "id": "VB-011",
+  "file": "10_manuscript_chapter_19_campaigns.md",
+  "section": "§19.16",
+  "old": "The defeat of the Stray Demon does not complete Section Five.",
+  "new": "The encounters of Section Five are fought in the order listed: the Stray Demon is fought when the first Level 4 encounter is cleared, and the second Level 4 encounter is set up when the Stray Demon is defeated. The defeat of the Stray Demon does not complete Section Five.",
+  "rationale": "§18.1 sets a mega-boss up after the section's last Level 4 encounter; this section's listed order (and its booklet) puts the Stray Demon between the two."
+ },
+ {
+  "id": "VB-012",
+  "file": "10_manuscript_chapter_19_campaigns.md",
+  "section": "§19.12",
+  "old": "The party may replace the mega-boss of any of these three sections with another mega-boss it owns, and may add further sections of the same form.",
+  "new": "The party may replace the mega-boss of any of these three sections with another mega-boss it owns, and may add further sections of the same form; the players then win the campaign when every such section is completed.",
+  "rationale": "'The players win the campaign when all three are completed' does not hold once further sections are added."
+ },
+ {
+  "id": "VB-013",
+  "file": "10_manuscript_chapter_20_player_versus_player.md",
+  "section": "§20.1",
+  "old": "When PvP encounters are in play, one *PvP encounter* is fought after each *mini-boss*, *main-boss*, and *mega-boss* is defeated.",
+  "new": "When PvP encounters are in play, one *PvP encounter* is fought after each *mini-boss*, *main-boss*, and *mega-boss* is defeated. In campaign play it is fought only after a boss whose defeat completes a *section* (see §18.1, Player versus Player Encounters).",
+  "rationale": "§20.1 owns the rule and lacked the campaign exception made today in §18.1."
+ },
+ {
+  "id": "VB-014",
+  "file": "10_manuscript_chapter_22_faq.md",
+  "section": "§22.1",
+  "old": "**A.** Yes, while the characters are on the bonfire tile and at the cost of one *spark*. The new character begins with starting equipment, base stats, and no souls (see §18.4).",
+  "new": "**A.** Yes, while the characters are on the bonfire tile, no encounter is in progress, and the spark dial shows one or more. The party spends one *spark* for each player who joins. The new character begins with starting equipment, base stats, and no souls (see §18.4).",
+  "rationale": "The answer omitted two conditions of §18.4: no encounter in progress, and a spark dial that shows one or more."
+ },
+ {
+  "id": "VB-015",
+  "file": "10_manuscript_chapter_22_faq.md",
+  "section": "§22.6",
+  "old": "**A.** Yes. The invader vanishes at once and awards nothing, and the encounter continues against the remaining enemy models. The invader does not return (see §12.2, Combat with an Invader).",
+  "new": "**A.** Yes, unless that death fails the encounter. The invader vanishes at once and awards nothing, and the encounter continues against the remaining enemy models. The invader does not return, unless a campaign states otherwise (see §12.2, Combat with an Invader; §12.2, End of an Invasion).",
+  "rationale": "The death of a hollow or last character fails the encounter; the rule that the invader does not return, and its campaign exception, stand under End of an Invasion."
+ },
+ {
+  "id": "VB-016",
+  "file": "10_manuscript_chapter_22_faq.md",
+  "section": "§22.5",
+  "old": "**A.** Yes. The character is pushed to a valid adjacent node in the arc in which the character is placed. If a wall leaves no such node, the character is pushed to a valid adjacent node that touches the wall (see §15.6, Characters and Arcs).",
+  "new": "**A.** Yes, except after a *leap*. The character is pushed to a valid adjacent node in the arc in which the character is placed. If a wall leaves no such node, the character is pushed to a valid adjacent node that touches the wall. The push that follows a leap is not limited by arcs (see §15.6, Characters and Arcs; §16.2, Leap).",
+  "rationale": "The cited section excepts the push that follows a leap."
+ },
+ {
+  "id": "VB-017",
+  "file": "12_glossary.md",
+  "section": "Glossary, Round",
+  "old": "**Round.** One pass of the encounter turn order: every enemy model takes a turn in descending threat order, then every character takes a turn in descending threat order (see §7.5, Encounter Turn Order).",
+  "new": "**Round.** One pass of the encounter turn order: every enemy model takes a turn in descending threat order, then every character takes a turn in descending threat order (see §7.5, Encounter Turn Order). In a boss encounter a round is one turn by each living character, in an order the players choose, with one boss turn before each of those turns (see §16.1). In a *PvP encounter* a round is one turn by each character still in play (see §20.2).",
+  "rationale": "The term is used in italics for the rounds of boss encounters (§16.1) and PvP encounters (§20.2, §20.8), which the entry did not cover."
+ },
+ {
+  "id": "VB-018",
+  "file": "12_glossary.md",
+  "section": "Glossary, PvP encounter",
+  "old": "after each boss's defeat and before the rest that follows it.",
+  "new": "after each boss's defeat and before the rest that follows it (in campaign play, only after a boss whose defeat completes a *section*; see §18.1).",
+  "rationale": "Carries today's campaign rule of §18.1 into the entry."
+ },
+ {
+  "id": "VB-019",
+  "file": "12_glossary.md",
+  "section": "Glossary, Shop",
+  "old": "The tier one shop is stocked at setup and the tier two shop when the mini-boss is defeated; both are restocked only after a boss is defeated (in campaign play, after a section is completed), unsold cards going to the bottom of their deck first (see §6.3).",
+  "new": "The tier one shop is stocked at setup and the tier two shop when the mini-boss is defeated (in campaign play, when the *bonfire ascetic* is burnt); both are restocked only after a boss is defeated (in campaign play, after a section is completed), unsold cards going to the bottom of their deck first (see §6.3; §18.6).",
+  "rationale": "In campaign play the tier two shop opens with the bonfire ascetic, not with a mini-boss (§18.6, §18.7)."
+ },
+ {
+  "id": "VB-020",
+  "file": "12_glossary.md",
+  "section": "Glossary, Node",
+  "old": "**Node.** A circular space on a tile. Every model occupies exactly one node. Nodes are basic, spawn or terrain.",
+  "new": "**Node.** A circular space on a tile. During an encounter every model occupies exactly one node. Each node is one of three types: basic, spawn, or terrain (see §5.1).",
+  "rationale": "The entry cited no section; §5.1 states the rule."
+ },
+ {
+  "id": "VB-021",
+  "file": "12_glossary.md",
+  "section": "Glossary, Spawn node",
+  "old": "**Spawn node.** A node on which enemy models are placed at the start of an encounter. Boss tiles have a boss spawn node.",
+  "new": "**Spawn node.** A node on which enemy models are placed at the start of an encounter, as the encounter card directs. The mini-boss tile, the main-boss tile, and each mega-boss game board have a boss spawn node (see §5.1; §15.3).",
+  "rationale": "The entry cited no section and omitted the mega-boss spawn node of a game board."
+ },
+ {
+  "id": "VB-022",
+  "file": "12_glossary.md",
+  "section": "Glossary, Stamina cube",
+  "old": "**Stamina cube.** A black cube. Each point of stamina a character spends places one stamina cube on the endurance bar, filling from the left.",
+  "new": "**Stamina cube.** A black cube. Each point of stamina a character spends places one stamina cube on the endurance bar, filling from the left (see §3.4).",
+  "rationale": "The entry cited no section; §3.4 states the rule."
+ },
+ {
+  "id": "VB-023",
+  "file": "12_glossary.md",
+  "section": "Glossary, Transposed treasure",
+  "old": "**Transposed treasure.** A class treasure card marked with a blue light. All transposed treasure is tier two.",
+  "new": "**Transposed treasure.** A *class-specific treasure* card marked with a blue light in the top-right of the card. All transposed treasure is tier two (see §6.2).",
+  "rationale": "The entry cited no section and named the parent type otherwise than its headword."
+ },
+ {
+  "id": "VB-024",
+  "file": "12_glossary.md",
+  "section": "Glossary, Tier one treasure",
+  "old": "Encounter rewards and chests draw from tier one until the mini-boss is defeated (in campaign play, until the *bonfire ascetic* is burnt) (see §6.2).",
+  "new": "Encounter rewards and chests draw from tier one until the mini-boss is defeated (in campaign play, until the *bonfire ascetic* is burnt) (see §6.2; §18.5).",
+  "rationale": "The campaign clause is stated in §18.5, which was not cited."
+ },
+ {
+  "id": "VB-025",
+  "file": "12_glossary.md",
+  "section": "Glossary, Tier two treasure",
+  "old": "Encounter rewards and chests draw from tier two once the mini-boss is defeated (in campaign play, once the *bonfire ascetic* is burnt) (see §6.2).",
+  "new": "Encounter rewards and chests draw from tier two once the mini-boss is defeated (in campaign play, once the *bonfire ascetic* is burnt) (see §6.2; §18.5).",
+  "rationale": "The campaign clause is stated in §18.5, which was not cited."
+ }
+]
