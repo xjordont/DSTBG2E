@@ -3653,3 +3653,18 @@ Not taken: a definition of "shield" (the cards name their kinds in three or four
 ### 41.5 State
 
 Manuscript 26,888 words of 28,905; style check 0 violations; cross-references 0 broken. No rule the simulator plays was changed, so its figures and tests stand. The book was rebuilt as version 3, now 68 pages (Appendix B is a page shorter), and passes the automated checks in both editions. Two chapters that the corrections had pushed onto an extra page by a line or two were tightened in wording to fit again.
+
+### 41.6 The Painted World cards, read from a Tabletop Simulator module (2026-11-28)
+
+The author pointed to a Tabletop Simulator module of the 2022 sets ("DARK SOULS - New Sets (Scripted)", Steam Workshop 3767310398) in the hope that it carried the Painted World of Ariamis rulebook. Its save file holds three PDFs: the publisher's errata for the two 2022 sets, the Tomb of Giants rulebook and The Sunless City rulebook. The module it was built from ("NEW CORE SETS", 3553939334) holds the same three. Neither module holds the Painted World rulebook, nor any written rule for the set in its object descriptions or scripts. Both do hold scans of the set's printed cards, and these were read.
+
+| Card | Printed | Against the book |
+|---|---|---|
+| Crossbreed Priscilla, data card | Threat 10, health 40, heat-up 25, block 2, resist 1, deck 5. "Snowblind: While Crossbreed Priscilla is invisible, characters do not gain an additional [black die] when attacking her weak arc." | Agrees with Appendix B and §17.10 |
+| Crossbreed Priscilla, boss encounter card | Objective "Kill Crossbreed Priscilla"; no special rules; Priscilla alone on the boss spawn node | Nothing to add |
+| Priscilla's token | A round token showing her silhouette: the published game marks her invisibility with a token | No card says when it is placed or removed. §17.10 stands as written; "visible once an attack damages her" remains this book's reading |
+| Heavy Knight, data card | Threat 10, health 25, heat-up 15, block 2, resist 2, deck 4. "Brutal Impact: If a character with a stagger token is hit by an attack that inflicts the stagger condition, place a stamina token on their endurance bar." | Agrees; played as printed |
+| Phalanx; Phalanx Hollow | Separate data cards: threat 4, health 5, block 1, resist 1; and threat 4, health 1, block 1, resist 1 | Agree with Appendix B. Neither card says how the three models act together or what happens as they fall |
+| Snowblind, Level 2 encounter card | Special rules named by keyword only: Snowstorm, Bitter Cold, Hidden | The keywords are defined in the unpublished rulebook. This book does not use the printed encounter cards of the 2022 sets (§6.5), so nothing follows |
+
+Priscilla's behaviour cards are not in either module. Nothing in the manuscript changes.
